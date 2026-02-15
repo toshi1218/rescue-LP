@@ -5,13 +5,13 @@ const Hero: React.FC = () => {
   return (
     <header className="relative bg-secondary text-white overflow-hidden">
       {/* Background Image & Overlay */}
-      <div className="absolute inset-0 z-0 opacity-40">
-        <img 
-          alt="Tropical palm leaves and blue sky representing Philippines" 
-          className="w-full h-full object-cover" 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo_eTkYWW7XmTdNztc16TOkKCBZEkOAVd4xgCytXb785EnYuOTLT-QLwEXT42Ksr3lKhHAPoYKwgKK98IRdzqV8C3qql-OQDN2XMfgiJ3r9dciGEKFYAW0ZR7kx8nKNKzxtXnh-kNdjMjS4BsXH078WkKAkbHHb9KpzUd8YOz41OrBUl2FWYXxL2VY3TQ0Ex00RGrXKuwP7zf_2TmJEeEV9OjGOxIJJ3xrVt6ldBEG1n2bWXoRYU7fj_Woig3ST1vvgN_CwwqS4ie7"
+      <div className="absolute inset-0 z-0">
+        <img
+          alt="Philippine government documents and official papers"
+          className="w-full h-full object-cover"
+          src="https://images.unsplash.com/photo-1554224311-beee4cae80a5?q=80&w=2000&auto=format&fit=crop"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/90 via-secondary/80 to-secondary"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/95 via-secondary/90 to-secondary/95"></div>
       </div>
 
       {/* Content */}
