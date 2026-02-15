@@ -34,4 +34,20 @@ const PainPoints: React.FC = () => {
             <FileQuestion className="w-5 h-5" />
           </div>
           <h3 className="font-bold text-sm mb-1 text-gray-800">手続きが複雑</h3>
-          <p className="text
+          <p className="text-xs text-gray-500 leading-relaxed">必要な書類や手順が分かりにくい</p>
+        </div>
+
+        {/* Card 4 */}
+        <div className="bg-white p-4 rounded-xl shadow-card border border-gray-100 flex flex-col items-start h-full">
+          <div className="w-10 h-10 rounded-full bg-purple-50 text-purple-500 flex items-center justify-center mb-3 shrink-0">
+            <Frown className="w-5 h-5" />
+          </div>
+          <h3 className="font-bold text-sm mb-1 text-gray-800">サポートがない</h3>
+          <p className="text-xs text-gray-500 leading-relaxed">困った時に相談できる人がいない</p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PainPoints;
