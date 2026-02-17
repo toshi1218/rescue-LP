@@ -15,9 +15,9 @@ const WhyUs: React.FC = () => {
             <Building2 className="w-6 h-6 text-secondary" />
           </div>
           <div>
-            <h3 className="font-bold text-gray-800 mb-1">セブ島現地法人</h3>
+            <h3 className="font-bold text-gray-800 mb-1">日本法人運営</h3>
             <p className="text-sm text-gray-500 leading-relaxed">
-              フィリピン・セブ島にオフィスを構える正規登録法人です。現地の最新事情に精通しています。
+              日本法人が運営する信頼性の高いサービスです。現地の最新事情に精通しています。
             </p>
           </div>
         </div>
