@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   const ctaVariant = getCtaVariant();
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-100">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
         <button
           type="button"

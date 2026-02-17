@@ -149,6 +149,8 @@ const Pricing: React.FC = () => {
                 {/* 詳細アコーディオン */}
                 <button
                   onClick={() => setOpenId(isOpen ? null : plan.id)}
+                  aria-expanded={isOpen}
+                  aria-controls={`plan-details-${plan.id}`}
                   className={`w-full py-3 rounded-lg border font-bold text-sm transition-colors flex items-center justify-center gap-1 group mb-3 ${
                     plan.featured
                       ? 'border-secondary text-secondary hover:bg-secondary hover:text-white'
@@ -163,7 +165,7 @@ const Pricing: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="bg-gray-50 rounded-xl p-4 mb-3 text-sm text-gray-700 space-y-3">
+                  <div id={`plan-details-${plan.id}`} className="bg-gray-50 rounded-xl p-4 mb-3 text-sm text-gray-700 space-y-3">
                     <div>
                       <p className="font-bold text-secondary mb-1">取得できる書類</p>
                       <ul className="space-y-1">
