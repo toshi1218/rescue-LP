@@ -1,5 +1,5 @@
 import React from 'react';
-import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Languages, Car } from 'lucide-react';
+import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Languages, Car, ExternalLink } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -35,6 +35,49 @@ const Services: React.FC = () => {
               <p className="text-xs text-gray-500 leading-relaxed">{service.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <h3 className="text-sm font-bold text-secondary mb-3 text-center">関連する公式機関</h3>
+          <div className="flex flex-wrap justify-center gap-3 text-xs">
+            <a
+              href="https://www.psaserbilis.com.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              PSA（フィリピン統計庁）
+            </a>
+            <a
+              href="https://www.nbi.gov.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              NBI（国家捜査局）
+            </a>
+            <a
+              href="https://dfa.gov.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              DFA（フィリピン外務省）
+            </a>
+            <a
+              href="https://lto.gov.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              LTO（陸運局）
+            </a>
+          </div>
+          <p className="text-[10px] text-gray-400 mt-2 text-center">※ 各機関の公式ウェブサイトです。参考情報としてご利用ください。</p>
         </div>
       </div>
     </section>
