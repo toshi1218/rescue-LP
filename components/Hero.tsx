@@ -20,7 +20,8 @@ const Hero: React.FC = () => {
           日本法人運営
         </span>
         <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
-          CENOMAR・PSA・NBI取得代行<br />
+          cenomar 出生証明書<br />
+          アポスティーユ 取得代行<br />
           <span className="text-primary">日本語だけで完結</span>
         </h1>
         <p className="text-gray-300 mb-3 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto">
