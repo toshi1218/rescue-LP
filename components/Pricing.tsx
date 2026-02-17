@@ -7,7 +7,7 @@ const plans = [
     icon: FileText,
     title: 'PSA取得代行',
     subtitle: '出生証明書 / 婚姻証明書 / CENOMAR',
-    price: '¥45,000',
+    price: '¥40,000',
     note: '〜 (税・送料別)',
     highlights: [
       '役所申請手数料込み',
@@ -29,7 +29,7 @@ const plans = [
     icon: Fingerprint,
     title: 'NBI取得代行',
     subtitle: '無犯罪証明書の取得サポート',
-    price: '¥55,000',
+    price: '¥45,000',
     note: '〜 (税・送料別)',
     highlights: [
       '指紋採取サポート',
@@ -69,7 +69,7 @@ const plans = [
   {
     id: 'pack',
     icon: Gem,
-    title: '結婚手続きパック',
+    title: '婚姻具備証明書申請パック',
     subtitle: '必要書類一式の取得と翻訳',
     price: '¥85,000',
     note: '〜 (税・送料別)',
