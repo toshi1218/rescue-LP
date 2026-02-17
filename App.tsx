@@ -8,11 +8,10 @@ import Process from './components/Process';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import MobileStickyCTA from './components/MobileStickyCTA';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background-light text-gray-800 font-body pb-20 md:pb-0">
+    <div className="min-h-screen bg-background-light text-gray-800 font-body">
       <Navbar />
       <main>
         <Hero />
@@ -24,7 +23,6 @@ export default function App() {
         <FAQ />
         <Footer />
       </main>
-      <MobileStickyCTA />
     </div>
   );
 }
