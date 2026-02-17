@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           日本法人運営
         </span>
         <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
-          cenomar 出生証明書<br />
+          セノマー 出生証明書<br />
           アポスティーユ 取得代行<br />
           <span className="text-primary">日本語だけで完結</span>
         </h1>
