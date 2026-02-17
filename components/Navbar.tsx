@@ -1,16 +1,26 @@
 import React from 'react';
+import { trackEvent } from '../lib/analytics';
 
 const Navbar: React.FC = () => {
   return (
     <nav className="bg-white shadow-sm border-b border-gray-100">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <button
+          type="button"
+          aria-label="トップへ戻る"
+          className="flex items-center gap-2 cursor-pointer text-left"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <div className="w-8 h-8 rounded bg-secondary flex items-center justify-center text-white font-bold font-display text-lg shrink-0">
+            P
+          </div>
           <span className="font-bold text-secondary text-xs md:text-lg tracking-tight">
             フィリピン書類取得代行センター
           </span>
-        </div>
+        </button>
         <a 
           href="#contact" 
+          onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact' })}
           className="text-xs font-bold text-white bg-primary px-4 py-2 rounded-full hover:bg-primary-hover transition-colors shadow-md ml-2 whitespace-nowrap"
         >
           お問い合わせ

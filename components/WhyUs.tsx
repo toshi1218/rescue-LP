@@ -46,6 +46,21 @@ const WhyUs: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
+          <p className="text-xs text-gray-500">納期目安</p>
+          <p className="text-sm font-bold text-secondary mt-1">約1ヶ月</p>
+        </div>
+        <div className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
+          <p className="text-xs text-gray-500">キャンセル方針</p>
+          <p className="text-sm font-bold text-secondary mt-1">着手前は無料</p>
+        </div>
+        <div className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
+          <p className="text-xs text-gray-500">対応言語</p>
+          <p className="text-sm font-bold text-secondary mt-1">日本語・英語</p>
+        </div>
+      </div>
     </section>
   );
 };

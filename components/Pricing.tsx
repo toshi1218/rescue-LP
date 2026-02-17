@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FileText, Fingerprint, Gem, CheckCircle, ChevronRight, ChevronDown } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const plans = [
   {
@@ -182,6 +183,7 @@ const Pricing: React.FC = () => {
 
                 <a
                   href="#contact"
+                  onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id })}
                   className={`w-full py-3 rounded-lg font-bold text-sm flex items-center justify-center gap-1 transition-colors ${
                     plan.featured
                       ? 'bg-secondary text-white shadow-lg shadow-secondary/20 hover:bg-secondary-light'

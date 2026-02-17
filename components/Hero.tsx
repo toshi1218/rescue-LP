@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle, ArrowDown } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const Hero: React.FC = () => {
   return (
@@ -7,9 +8,13 @@ const Hero: React.FC = () => {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          alt="Philippine government documents and official papers"
+          alt="フィリピン書類取得代行センターの背景イメージ"
           className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1554224311-beee4cae80a5?q=80&w=2000&auto=format&fit=crop"
+          src="/hero-bg.svg"
+          width={1600}
+          height={900}
+          loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-secondary/95 via-secondary/90 to-secondary/95"></div>
       </div>
@@ -33,11 +38,19 @@ const Hero: React.FC = () => {
 
         {/* Desktop/Tablet Buttons (Hidden on mobile usually handled by sticky nav, but good to have here too) */}
         <div className="flex flex-col w-full gap-3 sm:flex-row sm:justify-center sm:w-auto">
-          <a href="#contact" className="w-full sm:w-auto bg-primary text-white font-bold py-3.5 px-8 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+          <a
+            href="#contact"
+            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact' })}
+            className="w-full sm:w-auto bg-primary text-white font-bold py-3.5 px-8 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+          >
             <MessageCircle className="w-5 h-5" />
             無料相談する
           </a>
-          <a href="#pricing" className="w-full sm:w-auto bg-transparent border border-white/30 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+          <a
+            href="#pricing"
+            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing' })}
+            className="w-full sm:w-auto bg-transparent border border-white/30 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+          >
             料金を見る
             <ArrowDown className="w-5 h-5" />
           </a>
