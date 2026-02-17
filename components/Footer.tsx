@@ -2,7 +2,7 @@ import React from 'react';
 import { Mail, Send } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/igrs20200601@gmail.com';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
 const Footer: React.FC = () => {
   return (
@@ -20,7 +20,6 @@ const Footer: React.FC = () => {
           onSubmit={() => trackEvent('form_submit', { location: 'contact', type: 'formspree' })}
         >
           <input type="hidden" name="_subject" value="【LPお問い合わせ】フィリピン書類取得代行" />
-          <input type="hidden" name="_replyto" value="igrs20200601@gmail.com" />
           <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
 
           <div>
