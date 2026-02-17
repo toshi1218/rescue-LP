@@ -1,5 +1,6 @@
 import React from 'react';
-import { Building2, Headset, Eye } from 'lucide-react';
+import { Building2, Headset, Eye, Send } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const WhyUs: React.FC = () => {
   return (
@@ -60,6 +61,19 @@ const WhyUs: React.FC = () => {
           <p className="text-xs text-gray-500">対応言語</p>
           <p className="text-sm font-bold text-secondary mt-1">日本語・英語</p>
         </div>
+      </div>
+
+      {/* CTA Button */}
+      <div className="mt-10 text-center">
+        <a
+          href="#contact"
+          onClick={() => trackEvent('cta_click', { location: 'why_us', type: 'contact' })}
+          className="inline-flex items-center justify-center gap-2 bg-secondary text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-secondary/90 hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-secondary/40"
+          aria-label="信頼できるサービスに今すぐ相談する"
+        >
+          <Send className="w-5 h-5" />
+          <span>信頼できるサービスで安心。今すぐ相談</span>
+        </a>
       </div>
     </section>
   );

@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import QuickFacts from './components/QuickFacts';
 import PainPoints from './components/PainPoints';
 import Services from './components/Services';
 import WhyUs from './components/WhyUs';
-import CaseStudies from './components/CaseStudies';
-import SocialProof from './components/SocialProof';
-import Process from './components/Process';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
 import { trackLandingView } from './lib/analytics';
+
+// Lazy load below-the-fold components
+const CaseStudies = lazy(() => import('./components/CaseStudies'));
+const SocialProof = lazy(() => import('./components/SocialProof'));
+const Process = lazy(() => import('./components/Process'));
+const Pricing = lazy(() => import('./components/Pricing'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const Footer = lazy(() => import('./components/Footer'));
 
 export default function App() {
   useEffect(() => {
@@ -30,12 +32,14 @@ export default function App() {
         <PainPoints />
         <Services />
         <WhyUs />
-        <CaseStudies />
-        <SocialProof />
-        <Process />
-        <Pricing />
-        <FAQ />
-        <Footer />
+        <Suspense fallback={<div className="min-h-[200px]" />}>
+          <CaseStudies />
+          <SocialProof />
+          <Process />
+          <Pricing />
+          <FAQ />
+          <Footer />
+        </Suspense>
       </main>
     </div>
   );

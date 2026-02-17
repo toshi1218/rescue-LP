@@ -1,5 +1,6 @@
 import React from 'react';
-import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Languages, Car, ExternalLink } from 'lucide-react';
+import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Languages, Car, ExternalLink, MessageCircle } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const Services: React.FC = () => {
   const services = [
@@ -78,6 +79,20 @@ const Services: React.FC = () => {
             </a>
           </div>
           <p className="text-[10px] text-gray-400 mt-2 text-center">※ 各機関の公式ウェブサイトです。参考情報としてご利用ください。</p>
+        </div>
+
+        {/* CTA Button */}
+        <div className="mt-10 text-center">
+          <a
+            href="#contact"
+            onClick={() => trackEvent('cta_click', { location: 'services', type: 'contact' })}
+            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+            aria-label="サービスについて無料相談する"
+          >
+            <MessageCircle className="w-5 h-5" />
+            <span>どの書類が必要？無料で相談する</span>
+          </a>
+          <p className="text-xs text-gray-500 mt-3">24時間以内に返信いたします</p>
         </div>
       </div>
     </section>

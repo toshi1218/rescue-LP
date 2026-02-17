@@ -21,6 +21,7 @@ const Footer: React.FC = () => {
           method="POST"
           className="space-y-3 text-left"
           onSubmit={() => trackEvent('form_submit', { location: 'contact', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource })}
+          aria-label="お問い合わせフォーム"
         >
           <input type="hidden" name="_subject" value="【LPお問い合わせ】フィリピン書類取得代行" />
           <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -34,8 +35,9 @@ const Footer: React.FC = () => {
               id="name"
               name="name"
               required
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               placeholder="山田 太郎"
+              aria-required="true"
             />
           </div>
 
@@ -46,8 +48,9 @@ const Footer: React.FC = () => {
               type="email"
               name="email"
               required
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               placeholder="example@email.com"
+              aria-required="true"
             />
           </div>
 
@@ -58,14 +61,16 @@ const Footer: React.FC = () => {
               name="message"
               required
               rows={5}
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               placeholder="必要な書類、用途、希望納期などをご記入ください。"
+              aria-required="true"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3"
+            className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 focus:outline-none focus:ring-4 focus:ring-primary/30"
+            aria-label="お問い合わせフォームを送信"
           >
             <Send className="w-5 h-5" />
             フォームで問い合わせる
