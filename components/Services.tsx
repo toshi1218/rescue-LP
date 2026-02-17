@@ -3,7 +3,7 @@ import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Languages, Car } from 'luc
 
 const Services: React.FC = () => {
   const services = [
-    { icon: UserX, title: 'CENOMAR', subtitle: '独身証明書（セノマール）', desc: '国際結婚・配偶者ビザに必須のCENOMAR PSA取得代行', badge: '人気No.1' },
+    { icon: UserX, title: 'CENOMAR', subtitle: '独身証明書（セノマー）', desc: '国際結婚・配偶者ビザに必須のCENOMAR PSA取得代行', badge: '人気No.1' },
     { icon: Baby, title: 'PSA Birth', subtitle: '出生証明書', desc: 'PSA出生証明書の取得代行。DFAアポスティーユ認証も対応', badge: null },
     { icon: Heart, title: 'PSA Marriage', subtitle: '結婚証明書', desc: 'PSA結婚証明書の取得代行。アポスティーユ込みも可', badge: null },
     { icon: Fingerprint, title: 'NBI Clearance', subtitle: '無犯罪証明書', desc: 'NBIクリアランス（フィリピン無犯罪証明書）取得サポート', badge: null },

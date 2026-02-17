@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           <span className="text-primary">日本語だけで完結</span>
         </h1>
         <p className="text-gray-300 mb-3 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto">
-          フィリピンの独身証明書（CENOMAR／セノマール）・出生証明書・NBI無犯罪証明書・DFAアポスティーユ認証の取得を完全代行。国際結婚・配偶者ビザ申請に必要な書類をセブ島現地法人が日本語でサポートします。
+          フィリピンの独身証明書（CENOMAR／セノマー）・出生証明書・NBI無犯罪証明書・DFAアポスティーユ認証の取得を完全代行。国際結婚・配偶者ビザ申請に必要な書類をセブ島現地法人が日本語でサポートします。
         </p>
         <p className="text-primary/80 text-xs mb-8">
           ※ LTO運転免許関連書類・NBI・CENOMAR PSA など、記載以外の書類もお気軽にご相談ください。
