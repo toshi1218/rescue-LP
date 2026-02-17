@@ -1,8 +1,11 @@
 import React from 'react';
 import { MessageCircle, ArrowDown } from 'lucide-react';
-import { trackEvent } from '../lib/analytics';
+import { getCtaVariant, trackEvent } from '../lib/analytics';
 
 const Hero: React.FC = () => {
+  const ctaVariant = getCtaVariant();
+  const primaryLabel = ctaVariant === 'A' ? '無料相談する' : '30秒で無料相談';
+
   return (
     <header className="relative bg-secondary text-white overflow-hidden">
       {/* Background Image & Overlay */}
@@ -40,15 +43,15 @@ const Hero: React.FC = () => {
         <div className="flex flex-col w-full gap-3 sm:flex-row sm:justify-center sm:w-auto">
           <a
             href="#contact"
-            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact' })}
+            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
             className="w-full sm:w-auto bg-primary text-white font-bold py-3.5 px-8 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
           >
             <MessageCircle className="w-5 h-5" />
-            無料相談する
+            {primaryLabel}
           </a>
           <a
             href="#pricing"
-            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing' })}
+            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
             className="w-full sm:w-auto bg-transparent border border-white/30 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
           >
             料金を見る

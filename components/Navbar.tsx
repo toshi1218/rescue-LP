@@ -1,7 +1,9 @@
 import React from 'react';
-import { trackEvent } from '../lib/analytics';
+import { getCtaVariant, trackEvent } from '../lib/analytics';
 
 const Navbar: React.FC = () => {
+  const ctaVariant = getCtaVariant();
+
   return (
     <nav className="bg-white shadow-sm border-b border-gray-100">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -17,7 +19,7 @@ const Navbar: React.FC = () => {
         </button>
         <a 
           href="#contact" 
-          onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact' })}
+          onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact', variant: ctaVariant })}
           className="text-xs font-bold text-white bg-primary px-4 py-2 rounded-full hover:bg-primary-hover transition-colors shadow-md ml-2 whitespace-nowrap"
         >
           お問い合わせ

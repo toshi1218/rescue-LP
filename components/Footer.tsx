@@ -1,10 +1,13 @@
 import React from 'react';
 import { Mail, Send } from 'lucide-react';
-import { trackEvent } from '../lib/analytics';
+import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
 const Footer: React.FC = () => {
+  const ctaVariant = getCtaVariant();
+  const trafficSource = getTrafficSource();
+
   return (
     <section className="py-16 bg-white border-t border-gray-100" id="contact">
       <div className="max-w-md md:max-w-xl mx-auto px-6 text-center">
@@ -17,10 +20,13 @@ const Footer: React.FC = () => {
           action={FORMSPREE_ENDPOINT}
           method="POST"
           className="space-y-3 text-left"
-          onSubmit={() => trackEvent('form_submit', { location: 'contact', type: 'formspree' })}
+          onSubmit={() => trackEvent('form_submit', { location: 'contact', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource })}
         >
           <input type="hidden" name="_subject" value="【LPお問い合わせ】フィリピン書類取得代行" />
           <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+          <input type="hidden" name="cta_variant" value={ctaVariant} />
+          <input type="hidden" name="traffic_source" value={trafficSource} />
+          <input type="hidden" name="landing_page" value="https://rescue-lp.pages.dev/" />
 
           <div>
             <label htmlFor="name" className="block text-xs text-gray-600 mb-1">お名前</label>

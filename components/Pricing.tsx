@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FileText, Fingerprint, Gem, CheckCircle, ChevronRight, ChevronDown } from 'lucide-react';
-import { trackEvent } from '../lib/analytics';
+import { getCtaVariant, trackEvent } from '../lib/analytics';
 
 const plans = [
   {
@@ -92,6 +92,7 @@ const plans = [
 
 const Pricing: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>(null);
+  const ctaVariant = getCtaVariant();
 
   return (
     <section className="py-12 px-4 max-w-md md:max-w-2xl lg:max-w-6xl mx-auto" id="pricing">
@@ -183,7 +184,7 @@ const Pricing: React.FC = () => {
 
                 <a
                   href="#contact"
-                  onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id })}
+                  onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
                   className={`w-full py-3 rounded-lg font-bold text-sm flex items-center justify-center gap-1 transition-colors ${
                     plan.featured
                       ? 'bg-secondary text-white shadow-lg shadow-secondary/20 hover:bg-secondary-light'
