@@ -46,6 +46,27 @@ const plans = [
     featured: false,
   },
   {
+    id: 'lto',
+    icon: FileText,
+    title: 'LTO関連書類取得代行',
+    subtitle: '運転免許関連書類の取得サポート',
+    price: '¥85,000',
+    note: '〜 (税・送料別)',
+    highlights: [
+      '役所申請手数料込み',
+      '国際送料別途',
+    ],
+    details: {
+      period: '約4週間',
+      note: '※税・国際送料は別途',
+      docs: [
+        'LTO運転免許証関連書類',
+        'LTOトランザクション履歴',
+      ],
+    },
+    featured: false,
+  },
+  {
     id: 'pack',
     icon: Gem,
     title: '結婚手続きパック',
