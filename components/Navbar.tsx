@@ -8,12 +8,9 @@ const Navbar: React.FC = () => {
         <button
           type="button"
           aria-label="トップへ戻る"
-          className="flex items-center gap-2 cursor-pointer text-left"
+          className="cursor-pointer text-left"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <div className="w-8 h-8 rounded bg-secondary flex items-center justify-center text-white font-bold font-display text-lg shrink-0">
-            P
-          </div>
           <span className="font-bold text-secondary text-xs md:text-lg tracking-tight">
             フィリピン書類取得代行センター
           </span>
