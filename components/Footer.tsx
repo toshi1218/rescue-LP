@@ -73,12 +73,12 @@ const Footer: React.FC = () => {
         </form>
 
         <a
-          href="mailto:info@igrs.co.jp"
+          href="mailto:igrs20200601@gmail.com"
           onClick={() => trackEvent('cta_click', { location: 'contact', type: 'mailto_fallback' })}
           className="mt-3 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors"
         >
           <Mail className="w-4 h-4" />
-          メールで直接送る: info@igrs.co.jp
+          メールで直接送る: igrs20200601@gmail.com
         </a>
 
         <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
