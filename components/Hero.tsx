@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          alt="フィリピン書類取得代行センターの背景イメージ"
+          alt="フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）"
           className="w-full h-full object-cover"
           style={{ objectPosition: '80% 50%' }}
           src="/hero-photo.png"
