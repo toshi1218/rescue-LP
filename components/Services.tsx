@@ -42,7 +42,7 @@ const Services: React.FC = () => {
           <h3 className="text-sm font-bold text-secondary mb-3 text-center">関連する公式機関</h3>
           <div className="flex flex-wrap justify-center gap-3 text-xs">
             <a
-              href="https://www.psaserbilis.com.ph/"
+              href="https://psa.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
