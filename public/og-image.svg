@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="OG画像">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1a365d"/>
+      <stop offset="100%" stop-color="#2c5282"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="180" cy="120" r="260" fill="#d69e2e" fill-opacity="0.22"/>
+  <circle cx="1080" cy="560" r="300" fill="#d69e2e" fill-opacity="0.18"/>
+  <g fill="#ffffff">
+    <text x="80" y="250" font-size="56" font-family="Noto Sans JP, sans-serif" font-weight="700">
+      フィリピン書類取得代行センター
+    </text>
+    <text x="80" y="330" font-size="40" font-family="Noto Sans JP, sans-serif" font-weight="600">
+      CENOMAR・PSA・NBI を日本語でサポート
+    </text>
+    <text x="80" y="420" font-size="30" font-family="Noto Sans JP, sans-serif" opacity="0.92">
+      株式会社IGRS / Cebu 現地法人運営
+    </text>
+  </g>
+</svg>

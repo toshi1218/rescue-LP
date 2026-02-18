@@ -1,5 +1,6 @@
 import React from 'react';
-import { Building2, Headset, Eye } from 'lucide-react';
+import { Building2, Headset, Eye, Send } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const WhyUs: React.FC = () => {
   return (
@@ -15,9 +16,9 @@ const WhyUs: React.FC = () => {
             <Building2 className="w-6 h-6 text-secondary" />
           </div>
           <div>
-            <h3 className="font-bold text-gray-800 mb-1">セブ島現地法人</h3>
+            <h3 className="font-bold text-gray-800 mb-1">日本法人運営</h3>
             <p className="text-sm text-gray-500 leading-relaxed">
-              フィリピン・セブ島にオフィスを構える正規登録法人です。現地の最新事情に精通しています。
+              日本法人が運営する信頼性の高いサービスです。現地の最新事情に精通しています。
             </p>
           </div>
         </div>
@@ -45,6 +46,34 @@ const WhyUs: React.FC = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
+          <p className="text-xs text-gray-500">納期目安</p>
+          <p className="text-sm font-bold text-secondary mt-1">約1ヶ月</p>
+        </div>
+        <div className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
+          <p className="text-xs text-gray-500">キャンセル方針</p>
+          <p className="text-sm font-bold text-secondary mt-1">着手前は無料</p>
+        </div>
+        <div className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
+          <p className="text-xs text-gray-500">対応言語</p>
+          <p className="text-sm font-bold text-secondary mt-1">日本語・英語</p>
+        </div>
+      </div>
+
+      {/* CTA Button */}
+      <div className="mt-10 text-center">
+        <a
+          href="#contact"
+          onClick={() => trackEvent('cta_click', { location: 'why_us', type: 'contact' })}
+          className="inline-flex items-center justify-center gap-2 bg-secondary text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-secondary/90 hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-secondary/40"
+          aria-label="信頼できるサービスに今すぐ相談する"
+        >
+          <Send className="w-5 h-5" />
+          <span>信頼できるサービスで安心。今すぐ相談</span>
+        </a>
       </div>
     </section>
   );

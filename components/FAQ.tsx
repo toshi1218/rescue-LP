@@ -1,5 +1,6 @@
 import React from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, HelpCircle } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const FAQ: React.FC = () => {
   const faqs = [
@@ -47,6 +48,22 @@ const FAQ: React.FC = () => {
               </div>
             </details>
           ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="mt-10 text-center bg-white rounded-xl shadow-md p-8 border border-gray-100">
+          <HelpCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+          <h3 className="text-lg font-bold text-secondary mb-2">まだ疑問や不安がありますか？</h3>
+          <p className="text-sm text-gray-600 mb-6">どんな些細なことでもお気軽にご相談ください。専門スタッフが丁寧にお答えします。</p>
+          <a
+            href="#contact"
+            onClick={() => trackEvent('cta_click', { location: 'faq', type: 'contact' })}
+            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+            aria-label="専門スタッフに直接相談する"
+          >
+            <span>専門スタッフに直接相談する</span>
+          </a>
+          <p className="text-xs text-gray-500 mt-3">平均返信時間：24時間以内</p>
         </div>
       </div>
     </section>

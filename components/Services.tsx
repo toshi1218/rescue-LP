@@ -1,5 +1,6 @@
 import React from 'react';
-import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Languages, Car } from 'lucide-react';
+import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Languages, Car, ExternalLink, MessageCircle } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const Services: React.FC = () => {
   const services = [
@@ -35,6 +36,63 @@ const Services: React.FC = () => {
               <p className="text-xs text-gray-500 leading-relaxed">{service.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+          <h3 className="text-sm font-bold text-secondary mb-3 text-center">関連する公式機関</h3>
+          <div className="flex flex-wrap justify-center gap-3 text-xs">
+            <a
+              href="https://www.psaserbilis.com.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              PSA（フィリピン統計庁）
+            </a>
+            <a
+              href="https://www.nbi.gov.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              NBI（国家捜査局）
+            </a>
+            <a
+              href="https://dfa.gov.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              DFA（フィリピン外務省）
+            </a>
+            <a
+              href="https://lto.gov.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
+            >
+              <ExternalLink className="w-3 h-3" />
+              LTO（陸運局）
+            </a>
+          </div>
+          <p className="text-[10px] text-gray-400 mt-2 text-center">※ 各機関の公式ウェブサイトです。参考情報としてご利用ください。</p>
+        </div>
+
+        {/* CTA Button */}
+        <div className="mt-10 text-center">
+          <a
+            href="#contact"
+            onClick={() => trackEvent('cta_click', { location: 'services', type: 'contact' })}
+            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+            aria-label="サービスについて無料相談する"
+          >
+            <MessageCircle className="w-5 h-5" />
+            <span>どの書類が必要？無料で相談する</span>
+          </a>
+          <p className="text-xs text-gray-500 mt-3">24時間以内に返信いたします</p>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FileText, Fingerprint, Gem, CheckCircle, ChevronRight, ChevronDown } from 'lucide-react';
+import { getCtaVariant, trackEvent } from '../lib/analytics';
 
 const plans = [
   {
@@ -91,6 +92,7 @@ const plans = [
 
 const Pricing: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>(null);
+  const ctaVariant = getCtaVariant();
 
   return (
     <section className="py-12 px-4 max-w-md md:max-w-2xl lg:max-w-6xl mx-auto" id="pricing">
@@ -147,6 +149,8 @@ const Pricing: React.FC = () => {
                 {/* 詳細アコーディオン */}
                 <button
                   onClick={() => setOpenId(isOpen ? null : plan.id)}
+                  aria-expanded={isOpen}
+                  aria-controls={`plan-details-${plan.id}`}
                   className={`w-full py-3 rounded-lg border font-bold text-sm transition-colors flex items-center justify-center gap-1 group mb-3 ${
                     plan.featured
                       ? 'border-secondary text-secondary hover:bg-secondary hover:text-white'
@@ -161,7 +165,7 @@ const Pricing: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="bg-gray-50 rounded-xl p-4 mb-3 text-sm text-gray-700 space-y-3">
+                  <div id={`plan-details-${plan.id}`} className="bg-gray-50 rounded-xl p-4 mb-3 text-sm text-gray-700 space-y-3">
                     <div>
                       <p className="font-bold text-secondary mb-1">取得できる書類</p>
                       <ul className="space-y-1">
@@ -182,6 +186,7 @@ const Pricing: React.FC = () => {
 
                 <a
                   href="#contact"
+                  onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
                   className={`w-full py-3 rounded-lg font-bold text-sm flex items-center justify-center gap-1 transition-colors ${
                     plan.featured
                       ? 'bg-secondary text-white shadow-lg shadow-secondary/20 hover:bg-secondary-light'
