@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
         <p className="text-gray-200 mb-3 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
           フィリピンの独身証明書（CENOMAR／セノマー）・出生証明書・NBI無犯罪証明書・DFAアポスティーユ認証の取得を完全代行。国際結婚・配偶者ビザ申請に必要な書類を日本法人が日本語でサポートします。
         </p>
-        <p className="text-primary/90 text-xs mb-8 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
+        <p className="text-white text-xs mb-8 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
           ※ LTO運転免許関連書類・NBI・CENOMAR PSA など、記載以外の書類もお気軽にご相談ください。
         </p>
 
