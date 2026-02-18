@@ -3,15 +3,20 @@ import { MessageCircle, ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <header className="relative bg-secondary text-white overflow-hidden">
+    <header className="relative bg-secondary text-white overflow-hidden min-h-[520px] md:min-h-[600px]">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          alt="Philippine government documents and official papers"
+          alt="フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）"
           className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1554224311-beee4cae80a5?q=80&w=2000&auto=format&fit=crop"
+          style={{ objectPosition: '80% 50%' }}
+          src="/hero-photo.png"
+          width={1600}
+          height={900}
+          loading="eager"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/95 via-secondary/90 to-secondary/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/50"></div>
       </div>
 
       {/* Content */}
