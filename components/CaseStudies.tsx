@@ -24,7 +24,7 @@ const CaseStudies: React.FC = () => {
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
         <div className="text-center mb-8">
           <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Case Studies</span>
-          <h2 id="case-studies-title" className="text-xl font-bold text-secondary">相談事例（匿名）</h2>
+          <h3 id="case-studies-title" className="text-xl font-bold text-secondary">相談事例（匿名）</h3>
           <p className="text-xs text-gray-500 mt-2">公開可能な範囲で、実際の相談パターンを要約して掲載しています。</p>
         </div>
 

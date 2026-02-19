@@ -36,7 +36,7 @@ const SocialProof: React.FC = () => {
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
         <div className="text-center mb-8">
           <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Proof</span>
-          <h2 id="social-proof-title" className="text-xl font-bold text-secondary">実績とレビュー</h2>
+          <h3 id="social-proof-title" className="text-xl font-bold text-secondary">実績とレビュー</h3>
           <p className="text-xs text-gray-500 mt-2">公開同意を得た相談者アンケートを要約して掲載しています。</p>
         </div>
 
