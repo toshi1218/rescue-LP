@@ -70,8 +70,8 @@ const plans = [
   {
     id: 'pack',
     icon: Gem,
-    title: '結婚パック',
-    subtitle: '婚姻具備証明書申請に必要な書類一式',
+    title: '国際結婚パック',
+    subtitle: '婚姻済証明書申請に必要な書類一式',
     price: '¥85,000',
     note: '〜 (税・送料別)',
     highlights: [
