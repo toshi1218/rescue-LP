@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="py-16 bg-white border-t border-gray-100" id="contact">
       <div className="max-w-md md:max-w-xl mx-auto px-6 text-center">
-        <h2 className="text-2xl font-bold text-secondary mb-2">まずは無料で相談</h2>
+        <h3 className="text-2xl font-bold text-secondary mb-2">まずは無料で相談</h3>
         <p className="text-sm text-gray-500 mb-8">
           どの書類が必要かわからない方も、<br />お気軽にお問い合わせください。
         </p>

@@ -10,16 +10,19 @@ const Hero: React.FC = () => {
     <header className="relative bg-secondary text-white overflow-hidden min-h-[520px] md:min-h-[600px]">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          alt="フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）"
-          className="w-full h-full object-cover"
-          style={{ objectPosition: '80% 50%' }}
-          src="/hero-photo.png"
-          width={1600}
-          height={900}
-          loading="eager"
-          decoding="async"
-        />
+        <picture>
+          <source srcSet="/hero-photo.webp" type="image/webp" />
+          <img
+            alt="フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: '80% 50%' }}
+            src="/hero-photo.png"
+            width={1600}
+            height={900}
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
         {/* 上部を暗くしてテキストを読みやすく、下部は写真を見せるグラデーション */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/50"></div>
       </div>

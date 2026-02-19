@@ -4,9 +4,9 @@ const QuickFacts: React.FC = () => {
   return (
     <section className="py-8 px-4 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto" aria-labelledby="quick-facts-title">
       <div className="bg-white border border-gray-100 rounded-2xl p-5 shadow-card">
-        <h2 id="quick-facts-title" className="text-lg font-bold text-secondary mb-3">
+        <h3 id="quick-facts-title" className="text-lg font-bold text-secondary mb-3">
           サービス要点
-        </h2>
+        </h3>
         <dl className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
           <div>
             <dt className="text-gray-500">対象書類</dt>

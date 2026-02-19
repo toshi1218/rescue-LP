@@ -44,7 +44,7 @@ const Services: React.FC = () => {
             <a
               href="https://psa.gov.ph/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
             >
               <ExternalLink className="w-3 h-3" />
@@ -53,7 +53,7 @@ const Services: React.FC = () => {
             <a
               href="https://www.nbi.gov.ph/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
             >
               <ExternalLink className="w-3 h-3" />
@@ -62,7 +62,7 @@ const Services: React.FC = () => {
             <a
               href="https://dfa.gov.ph/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
             >
               <ExternalLink className="w-3 h-3" />
@@ -71,7 +71,7 @@ const Services: React.FC = () => {
             <a
               href="https://lto.gov.ph/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors"
             >
               <ExternalLink className="w-3 h-3" />
