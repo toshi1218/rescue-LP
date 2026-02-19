@@ -93,8 +93,8 @@ const plans = [
     icon: Heart,
     title: '配偶者ビザ',
     subtitle: '在留資格「日本人の配偶者等」申請サポート',
-    price: '要相談',
-    note: '',
+    price: '¥85,000',
+    note: '〜 (税・送料別)',
     highlights: [
       '必要書類の準備サポート',
       '申請書類チェック',
@@ -114,8 +114,8 @@ const plans = [
     icon: Award,
     title: '帰化申請',
     subtitle: '日本国籍取得の申請サポート',
-    price: '要相談',
-    note: '',
+    price: '¥85,000',
+    note: '〜 (税・送料別)',
     highlights: [
       '必要書類の準備サポート',
       '継続的フォローアップ',
