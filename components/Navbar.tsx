@@ -140,6 +140,7 @@ const Navbar: React.FC = () => {
 
             <Link to="/pricing" className={linkClass('/pricing')}>料金</Link>
             <Link to="/contact" className={linkClass('/contact')}>お問い合わせ</Link>
+            <Link to="/company" className={linkClass('/company')}>会社概要</Link>
             <Link to="/privacy" className={linkClass('/privacy')}>プライバシーポリシー</Link>
 
           </div>
