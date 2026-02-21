@@ -16,16 +16,23 @@ const purposeTabs = [
   { label: '免許切替', path: '/gaimen-kirikae-guide' },
 ];
 
+const companyTabs = [
+  { label: '会社概要', path: '/company' },
+  { label: 'プライバシーポリシー', path: '/privacy' },
+];
+
 const Navbar: React.FC = () => {
   const ctaVariant = getCtaVariant();
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const [openMenu, setOpenMenu] = useState<'docs' | 'purpose' | null>(null);
-  const menuRef = useRef<HTMLDivElement>(null);
+  const [openMenu, setOpenMenu] = useState<'docs' | 'purpose' | 'company' | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
+  // クリック外で閉じる（モバイル対応）
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setOpenMenu(null);
       }
     };
@@ -33,12 +40,30 @@ const Navbar: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // ページ遷移時に閉じる
   useEffect(() => {
     setOpenMenu(null);
   }, [location.pathname]);
 
+  const handleMouseEnter = (menu: 'docs' | 'purpose' | 'company') => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenMenu(menu);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
+  };
+
   const isDocActive = documentTabs.some(t => t.path === location.pathname);
   const isPurposeActive = purposeTabs.some(t => t.path === location.pathname);
+  const isCompanyActive = companyTabs.some(t => t.path === location.pathname);
+
+  const dropdownLinkClass = (path: string) =>
+    `block px-4 py-2 text-xs font-medium transition-colors ${
+      location.pathname === path
+        ? 'text-secondary bg-gray-50'
+        : 'text-gray-600 hover:bg-gray-50 hover:text-secondary'
+    }`;
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
@@ -72,7 +97,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* ナビゲーションタブ行 */}
-      <div className="border-t border-gray-100 bg-white/95" ref={menuRef}>
+      <div className="border-t border-gray-100 bg-white/95" ref={navRef}>
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
           <div className="flex overflow-x-auto scrollbar-hide px-2 gap-1 py-1.5">
 
@@ -88,8 +113,12 @@ const Navbar: React.FC = () => {
               ホーム
             </Link>
 
-            {/* 書類から探す ドロップダウン */}
-            <div className="relative flex-shrink-0">
+            {/* 書類から探す */}
+            <div
+              className="relative flex-shrink-0"
+              onMouseEnter={() => handleMouseEnter('docs')}
+              onMouseLeave={handleMouseLeave}
+            >
               <button
                 onClick={() => setOpenMenu(openMenu === 'docs' ? null : 'docs')}
                 className={`flex items-center px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
@@ -106,15 +135,7 @@ const Navbar: React.FC = () => {
               {openMenu === 'docs' && (
                 <div className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50 min-w-max">
                   {documentTabs.map(tab => (
-                    <Link
-                      key={tab.path}
-                      to={tab.path}
-                      className={`block px-4 py-2 text-xs font-medium transition-colors ${
-                        location.pathname === tab.path
-                          ? 'text-secondary bg-gray-50'
-                          : 'text-gray-600 hover:bg-gray-50 hover:text-secondary'
-                      }`}
-                    >
+                    <Link key={tab.path} to={tab.path} className={dropdownLinkClass(tab.path)}>
                       {tab.label}
                     </Link>
                   ))}
@@ -122,8 +143,12 @@ const Navbar: React.FC = () => {
               )}
             </div>
 
-            {/* 目的から探す ドロップダウン */}
-            <div className="relative flex-shrink-0">
+            {/* 目的から探す */}
+            <div
+              className="relative flex-shrink-0"
+              onMouseEnter={() => handleMouseEnter('purpose')}
+              onMouseLeave={handleMouseLeave}
+            >
               <button
                 onClick={() => setOpenMenu(openMenu === 'purpose' ? null : 'purpose')}
                 className={`flex items-center px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
@@ -140,15 +165,7 @@ const Navbar: React.FC = () => {
               {openMenu === 'purpose' && (
                 <div className="absolute top-full left-0 mt-1 bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50 min-w-max">
                   {purposeTabs.map(tab => (
-                    <Link
-                      key={tab.path}
-                      to={tab.path}
-                      className={`block px-4 py-2 text-xs font-medium transition-colors ${
-                        location.pathname === tab.path
-                          ? 'text-secondary bg-gray-50'
-                          : 'text-gray-600 hover:bg-gray-50 hover:text-secondary'
-                      }`}
-                    >
+                    <Link key={tab.path} to={tab.path} className={dropdownLinkClass(tab.path)}>
                       {tab.label}
                     </Link>
                   ))}
@@ -179,6 +196,36 @@ const Navbar: React.FC = () => {
             >
               お問い合わせ
             </Link>
+
+            {/* 会社情報 */}
+            <div
+              className="relative flex-shrink-0"
+              onMouseEnter={() => handleMouseEnter('company')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                onClick={() => setOpenMenu(openMenu === 'company' ? null : 'company')}
+                className={`flex items-center px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
+                  isCompanyActive || openMenu === 'company'
+                    ? 'bg-secondary text-white'
+                    : 'text-gray-600 hover:bg-gray-100 hover:text-secondary'
+                }`}
+              >
+                会社情報
+                <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {openMenu === 'company' && (
+                <div className="absolute top-full right-0 mt-1 bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50 min-w-max">
+                  {companyTabs.map(tab => (
+                    <Link key={tab.path} to={tab.path} className={dropdownLinkClass(tab.path)}>
+                      {tab.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
           </div>
         </div>
