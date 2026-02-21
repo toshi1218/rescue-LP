@@ -1,6 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Send } from 'lucide-react';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
+
+const guideLinks = [
+  { to: '/cenomar-guide', label: 'CENOMAR（独身証明書）' },
+  { to: '/psa-shussei-shomeisho', label: 'PSA出生証明書' },
+  { to: '/nbi-clearance-guide', label: 'NBI無犯罪証明書' },
+  { to: '/kokusai-kekkon-guide', label: '国際結婚ガイド' },
+  { to: '/haigusha-visa-shorui', label: '配偶者ビザ書類' },
+  { to: '/apostille-guide', label: 'DFAアポスティーユ' },
+  { to: '/gaimen-kirikae-guide', label: '外免切替ガイド' },
+  { to: '/kekkon-shomeisho', label: 'PSA婚姻証明書' },
+];
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -9,8 +21,26 @@ const Footer: React.FC = () => {
   const trafficSource = getTrafficSource();
 
   return (
-    <footer className="py-16 bg-white border-t border-gray-100" id="contact">
-      <div className="max-w-md md:max-w-xl mx-auto px-6 text-center">
+    <footer className="bg-white border-t border-gray-100" id="contact">
+      {/* ガイド記事ナビゲーション */}
+      <div className="py-10 bg-gray-50 border-b border-gray-200">
+        <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
+          <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">ガイド記事</p>
+          <div className="flex flex-wrap gap-2">
+            {guideLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="inline-block text-sm text-secondary border border-gray-300 rounded-full px-4 py-1.5 hover:bg-secondary hover:text-white hover:border-secondary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="py-16 max-w-md md:max-w-xl mx-auto px-6 text-center">
         <h3 className="text-2xl font-bold text-secondary mb-2">まずは無料で相談</h3>
         <p className="text-sm text-gray-500 mb-8">
           どの書類が必要かわからない方も、<br />お気軽にお問い合わせください。
@@ -92,6 +122,7 @@ const Footer: React.FC = () => {
         <p className="text-[10px] text-gray-300 mt-4">© 2026 IGRS Inc.</p>
       </div>
     </footer>
+
   );
 };
 
