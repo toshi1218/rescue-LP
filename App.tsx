@@ -9,6 +9,10 @@ import HaigushaVisaPage from './pages/HaigushaVisaPage';
 import ApostillePage from './pages/ApostillePage';
 import GaimenKirikaeGuidePage from './pages/GaimenKirikaeGuidePage';
 import KekkonShomeishoPage from './pages/KekkonShomeishoPage';
+import CompanyPage from './pages/CompanyPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import ContactPage from './pages/ContactPage';
+import PricingPage from './pages/PricingPage';
 
 export default function App() {
   return (
@@ -22,6 +26,10 @@ export default function App() {
       <Route path="/apostille-guide" element={<ApostillePage />} />
       <Route path="/gaimen-kirikae-guide" element={<GaimenKirikaeGuidePage />} />
       <Route path="/kekkon-shomeisho" element={<KekkonShomeishoPage />} />
+      <Route path="/company" element={<CompanyPage />} />
+      <Route path="/privacy" element={<PrivacyPolicyPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/pricing" element={<PricingPage />} />
     </Routes>
   );
 }
