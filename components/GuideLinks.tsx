@@ -59,7 +59,7 @@ const GuideLinks: React.FC = () => {
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
         <div className="flex items-center gap-2 mb-6">
           <FileText className="w-5 h-5 text-secondary" />
-          <h2 className="text-lg font-bold text-secondary">書類・手続き ガイド記事</h2>
+          <h2 className="text-lg font-bold text-secondary">フィリピン書類・手続き一覧</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {guides.map((g) => (
