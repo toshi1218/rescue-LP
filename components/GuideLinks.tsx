@@ -1,0 +1,93 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FileText, ArrowRight } from 'lucide-react';
+
+const guides = [
+  {
+    to: '/cenomar-guide',
+    title: 'CENOMAR（独身証明書）',
+    desc: '取得方法・費用・期間を徹底解説',
+    tag: '人気No.1',
+  },
+  {
+    to: '/psa-shussei-shomeisho',
+    title: 'PSA出生証明書',
+    desc: '国際結婚・ビザ申請に必要な理由',
+    tag: null,
+  },
+  {
+    to: '/nbi-clearance-guide',
+    title: 'NBI無犯罪証明書',
+    desc: 'NBI HIT問題の対処法も解説',
+    tag: null,
+  },
+  {
+    to: '/kokusai-kekkon-guide',
+    title: '国際結婚完全ガイド',
+    desc: '手続きの流れ・必要書類・費用',
+    tag: '完全版',
+  },
+  {
+    to: '/haigusha-visa-shorui',
+    title: '配偶者ビザ書類チェックリスト',
+    desc: '申請に必要なフィリピン書類一覧',
+    tag: null,
+  },
+  {
+    to: '/apostille-guide',
+    title: 'DFAアポスティーユ認証',
+    desc: '対象書類・取得方法・費用',
+    tag: null,
+  },
+  {
+    to: '/gaimen-kirikae-guide',
+    title: '外免切替ガイド',
+    desc: 'LTO書類で日本の免許に切替',
+    tag: null,
+  },
+  {
+    to: '/kekkon-shomeisho',
+    title: 'PSA婚姻証明書',
+    desc: '国際結婚・配偶者ビザで必要',
+    tag: null,
+  },
+];
+
+const GuideLinks: React.FC = () => {
+  return (
+    <section className="py-12 bg-gray-50 border-t border-gray-100">
+      <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
+        <div className="flex items-center gap-2 mb-6">
+          <FileText className="w-5 h-5 text-secondary" />
+          <h2 className="text-lg font-bold text-secondary">フィリピン書類・手続き一覧</h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {guides.map((g) => (
+            <Link
+              key={g.to}
+              to={g.to}
+              className="flex items-start justify-between gap-2 bg-white rounded-xl border border-gray-200 px-4 py-3 hover:border-secondary hover:shadow-sm transition-all group"
+            >
+              <div>
+                <div className="flex items-center gap-2 mb-0.5">
+                  <span className="text-sm font-bold text-gray-800 group-hover:text-secondary transition-colors">
+                    {g.title}
+                  </span>
+                  {g.tag && (
+                    <span className="text-[10px] font-bold bg-primary/10 text-primary px-1.5 py-0.5 rounded-full">
+                      {g.tag}
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-gray-500">{g.desc}</p>
+              </div>
+              <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-secondary mt-1 flex-shrink-0 transition-colors" />
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default GuideLinks;

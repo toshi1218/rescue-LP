@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import QuickFacts from '../components/QuickFacts';
+import GuideLinks from '../components/GuideLinks';
 import PainPoints from '../components/PainPoints';
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
@@ -26,6 +27,7 @@ export default function HomePage() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <GuideLinks />
         <QuickFacts />
         <PainPoints />
         <Services />
