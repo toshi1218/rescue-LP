@@ -117,9 +117,12 @@ const Footer: React.FC = () => {
         </a>
 
         <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
-          <span className="font-medium text-gray-500">運営会社: 株式会社IGRS</span>
+          <Link to="/company" className="hover:text-secondary transition-colors">会社概要</Link>
+          <Link to="/privacy" className="hover:text-secondary transition-colors">プライバシーポリシー</Link>
+          <Link to="/pricing" className="hover:text-secondary transition-colors">料金</Link>
+          <Link to="/contact" className="hover:text-secondary transition-colors">お問い合わせ</Link>
         </div>
-        <p className="text-[10px] text-gray-300 mt-4">© 2026 IGRS Inc.</p>
+        <p className="text-[10px] text-gray-300 mt-4">© 2026 株式会社IGRS</p>
       </div>
     </footer>
 

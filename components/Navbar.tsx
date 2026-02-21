@@ -12,6 +12,8 @@ const navTabs = [
   { label: 'アポスティーユ', path: '/apostille-guide' },
   { label: '免許切替', path: '/gaimen-kirikae-guide' },
   { label: '婚姻証明書', path: '/kekkon-shomeisho' },
+  { label: '料金', path: '/pricing' },
+  { label: 'お問い合わせ', path: '/contact' },
 ];
 
 const Navbar: React.FC = () => {
