@@ -1,4 +1,6 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 const Process: React.FC = () => {
   const steps = [
@@ -55,6 +57,20 @@ const Process: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="mt-12 text-center">
+          <a
+            href="#contact"
+            onClick={() => trackEvent('cta_click', { location: 'process', type: 'contact' })}
+            className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+            aria-label="ステップ1から始める：お問い合わせ"
+          >
+            <span>ステップ1から始める：お問い合わせ</span>
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <p className="text-xs text-white/70 mt-3">まずは無料でご相談ください。匿名OK</p>
         </div>
       </div>
     </section>

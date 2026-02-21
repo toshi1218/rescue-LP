@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileText, Fingerprint, Gem, CheckCircle, ChevronRight, ChevronDown } from 'lucide-react';
+import { FileText, Fingerprint, Gem, CheckCircle, ChevronRight, ChevronDown, Heart, Award } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 
 const plans = [
@@ -50,7 +50,7 @@ const plans = [
     id: 'lto',
     icon: FileText,
     title: 'LTO関連書類取得代行',
-    subtitle: '運転免許関連書類の取得サポート',
+    subtitle: '運転免許関連書類の取得サポート（外免切り替え用）',
     price: '¥85,000',
     note: '〜 (税・送料別)',
     highlights: [
@@ -70,8 +70,8 @@ const plans = [
   {
     id: 'pack',
     icon: Gem,
-    title: '結婚パック',
-    subtitle: '婚姻具備証明書申請に必要な書類一式',
+    title: '国際結婚パック',
+    subtitle: '婚姻済証明書申請に必要な書類一式',
     price: '¥85,000',
     note: '〜 (税・送料別)',
     highlights: [
@@ -87,6 +87,48 @@ const plans = [
       ],
     },
     featured: true,
+  },
+  {
+    id: 'visa',
+    icon: Heart,
+    title: '配偶者ビザ',
+    subtitle: '在留資格「日本人の配偶者等」申請サポート',
+    price: '¥85,000',
+    note: '〜 (税・送料別)',
+    highlights: [
+      '必要書類の準備サポート',
+      '申請書類チェック',
+    ],
+    details: {
+      period: '要相談',
+      note: '※ケースにより異なります',
+      docs: [
+        '在留資格認定証明書交付申請書',
+        '婚姻証明書・戸籍謄本など',
+      ],
+    },
+    featured: false,
+  },
+  {
+    id: 'naturalization',
+    icon: Award,
+    title: '帰化申請',
+    subtitle: '日本国籍取得の申請サポート',
+    price: '¥85,000',
+    note: '〜 (税・送料別)',
+    highlights: [
+      '必要書類の準備サポート',
+      '継続的フォローアップ',
+    ],
+    details: {
+      period: '要相談',
+      note: '※ケースにより異なります',
+      docs: [
+        '帰化許可申請書類一式',
+        '居住・納税関連書類など',
+      ],
+    },
+    featured: false,
   },
 ];
 

@@ -7,19 +7,24 @@ const Hero: React.FC = () => {
   const primaryLabel = ctaVariant === 'A' ? '無料相談する' : '30秒で無料相談';
 
   return (
-    <header className="relative bg-secondary text-white overflow-hidden">
+    <header className="relative bg-secondary text-white overflow-hidden min-h-[520px] md:min-h-[600px]">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          alt="フィリピン書類取得代行センターの背景イメージ"
-          className="w-full h-full object-cover"
-          src="/hero-bg.svg"
-          width={1600}
-          height={900}
-          loading="eager"
-          decoding="async"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/95 via-secondary/90 to-secondary/95"></div>
+        <picture>
+          <source srcSet="/hero-photo.webp" type="image/webp" />
+          <img
+            alt="フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: '80% 50%' }}
+            src="/hero-photo.png"
+            width={1600}
+            height={900}
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+        {/* 上部を暗くしてテキストを読みやすく、下部は写真を見せるグラデーション */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/50"></div>
       </div>
 
       {/* Content */}
@@ -32,10 +37,10 @@ const Hero: React.FC = () => {
           アポスティーユ 取得代行<br />
           <span className="text-primary">日本語だけで完結</span>
         </h1>
-        <p className="text-gray-300 mb-3 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto">
+        <p className="text-gray-200 mb-3 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
           フィリピンの独身証明書（CENOMAR／セノマー）・出生証明書・NBI無犯罪証明書・DFAアポスティーユ認証の取得を完全代行。国際結婚・配偶者ビザ申請に必要な書類を日本法人が日本語でサポートします。
         </p>
-        <p className="text-primary/80 text-xs mb-8">
+        <p className="text-white text-xs mb-8 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
           ※ LTO運転免許関連書類・NBI・CENOMAR PSA など、記載以外の書類もお気軽にご相談ください。
         </p>
 
@@ -44,7 +49,8 @@ const Hero: React.FC = () => {
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
-            className="w-full sm:w-auto bg-primary text-white font-bold py-3.5 px-8 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+            className="w-full sm:w-auto bg-primary text-white font-bold py-3.5 px-8 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
+            aria-label="無料相談フォームへ移動"
           >
             <MessageCircle className="w-5 h-5" />
             {primaryLabel}
@@ -52,7 +58,8 @@ const Hero: React.FC = () => {
           <a
             href="#pricing"
             onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
-            className="w-full sm:w-auto bg-transparent border border-white/30 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
+            className="w-full sm:w-auto bg-transparent border border-white/30 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-white/30"
+            aria-label="料金プランへ移動"
           >
             料金を見る
             <ArrowDown className="w-5 h-5" />
