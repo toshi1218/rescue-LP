@@ -61,6 +61,27 @@ const routes: RouteConfig[] = [
     description: '配偶者ビザ申請に必要なフィリピン書類（CENOMAR・PSA・NBI等）をチェックリスト形式で解説。書類の取得代行にも対応。',
     canonical: 'https://ph-document.com/haigusha-visa-shorui/',
   },
+  {
+    path: '/apostille-guide',
+    outFile: path.join(projectRoot, 'dist', 'apostille-guide', 'index.html'),
+    title: 'フィリピンDFAアポスティーユ認証とは？対象書類・取得方法・費用【2026年】｜フィリピン書類取得代行センター',
+    description: 'フィリピンDFAアポスティーユ認証の取得方法・対象書類・費用・期間を解説。CENOMAR・PSA・NBI Clearanceへの認証取得を代行サービスで日本語対応。',
+    canonical: 'https://ph-document.com/apostille-guide/',
+  },
+  {
+    path: '/gaimen-kirikae-guide',
+    outFile: path.join(projectRoot, 'dist', 'gaimen-kirikae-guide', 'index.html'),
+    title: 'フィリピン運転免許の外免切替ガイド｜必要なLTO書類・手順・費用【2026年】｜フィリピン書類取得代行センター',
+    description: 'フィリピン運転免許を日本の免許に切り替える外免切替の手順・必要書類・LTO書類の取得方法を解説。LTO書類の代行取得に対応。',
+    canonical: 'https://ph-document.com/gaimen-kirikae-guide/',
+  },
+  {
+    path: '/kekkon-shomeisho',
+    outFile: path.join(projectRoot, 'dist', 'kekkon-shomeisho', 'index.html'),
+    title: 'フィリピンPSA婚姻証明書の取得方法｜国際結婚・配偶者ビザで必要な理由【2026年】｜フィリピン書類取得代行センター',
+    description: 'PSA婚姻証明書（フィリピン結婚証明書）の取得方法・必要な場面・費用・期間を解説。フィリピン先行婚姻後の報告手続きに必要な書類をガイド。',
+    canonical: 'https://ph-document.com/kekkon-shomeisho/',
+  },
 ];
 
 function updateHead(html: string, route: RouteConfig): string {
