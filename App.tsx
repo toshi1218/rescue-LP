@@ -1,42 +1,21 @@
-import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import QuickFacts from './components/QuickFacts';
-import PainPoints from './components/PainPoints';
-import Services from './components/Services';
-import WhyUs from './components/WhyUs';
-import CaseStudies from './components/CaseStudies';
-import SocialProof from './components/SocialProof';
-import Process from './components/Process';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
-import { trackLandingView } from './lib/analytics';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import CenomarGuidePage from './pages/CenomarGuidePage';
+import PsaPage from './pages/PsaPage';
+import NbiPage from './pages/NbiPage';
+import KokusaiKekkonGuidePage from './pages/KokusaiKekkonGuidePage';
+import HaigushaVisaPage from './pages/HaigushaVisaPage';
 
 export default function App() {
-  useEffect(() => {
-    trackLandingView();
-  }, []);
-
   return (
-    <div className="min-h-screen bg-background-light text-gray-800 font-body">
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] bg-white text-secondary text-sm font-bold px-3 py-2 rounded shadow">
-        メインコンテンツへスキップ
-      </a>
-      <Navbar />
-      <main id="main-content">
-        <Hero />
-        <QuickFacts />
-        <PainPoints />
-        <Services />
-        <WhyUs />
-        <CaseStudies />
-        <SocialProof />
-        <Process />
-        <Pricing />
-        <FAQ />
-        <Footer />
-      </main>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/cenomar-guide" element={<CenomarGuidePage />} />
+      <Route path="/psa-shussei-shomeisho" element={<PsaPage />} />
+      <Route path="/nbi-clearance-guide" element={<NbiPage />} />
+      <Route path="/kokusai-kekkon-guide" element={<KokusaiKekkonGuidePage />} />
+      <Route path="/haigusha-visa-shorui" element={<HaigushaVisaPage />} />
+    </Routes>
   );
 }
