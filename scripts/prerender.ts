@@ -4,204 +4,156 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
-import AppRoutes from '../App';
+import App from '../App';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
 const distIndexPath = path.join(projectRoot, 'dist', 'index.html');
 
-interface PageConfig {
-  route: string;
-  outputPath: string;
+interface RouteConfig {
+  path: string;
+  outFile: string;
   title: string;
   description: string;
   canonical: string;
-  ogTitle: string;
-  jsonLd: string;
 }
 
-const pages: PageConfig[] = [
+const routes: RouteConfig[] = [
   {
-    route: '/',
-    outputPath: path.join(projectRoot, 'dist', 'index.html'),
-    title: 'CENOMAR・PSA・NBI取得代行｜フィリピン書類取得代行センター',
-    description: 'CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。',
+    path: '/',
+    outFile: path.join(projectRoot, 'dist', 'index.html'),
+    title: 'セノマー（CENOMAR）・PSA・NBI取得代行｜フィリピン書類取得代行センター',
+    description: 'セノマー（CENOMAR）・PSA・NBI・DFAアポスティーユの取得代行。国際結婚・配偶者ビザに必要なフィリピン書類を日本語でサポート。',
     canonical: 'https://ph-document.com/',
-    ogTitle: 'CENOMAR・PSA・NBI取得代行｜フィリピン書類取得代行センター',
-    jsonLd: '', // Keep original JSON-LD from index.html
   },
   {
-    route: '/cenomar-guide',
-    outputPath: path.join(projectRoot, 'dist', 'cenomar-guide', 'index.html'),
-    title: 'フィリピン独身証明書（CENOMAR・セノマー）とは？取得方法・費用・期間を徹底解説｜フィリピン書類取得代行センター',
-    description: 'CENOMARとはフィリピンPSAが発行する独身証明書（セノマー）。国際結婚・配偶者ビザ申請に必要です。3つの取得方法（自分で・大使館・代行）・費用・有効期限・よくあるトラブルを初心者向けに解説。',
+    path: '/cenomar-guide',
+    outFile: path.join(projectRoot, 'dist', 'cenomar-guide', 'index.html'),
+    title: 'フィリピン独身証明書（CENOMAR）とは？取得方法・費用・期間を完全解説【2026年】｜フィリピン書類取得代行センター',
+    description: 'CENOMARの取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・有効期限・よくあるトラブルまで初心者向けに徹底ガイド。',
     canonical: 'https://ph-document.com/cenomar-guide/',
-    ogTitle: 'フィリピン独身証明書（CENOMAR・セノマー）とは？取得方法・費用・期間を徹底解説',
-    jsonLd: `
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://ph-document.com/" },
-        { "@type": "ListItem", "position": 2, "name": "CENOMAR（独身証明書）ガイド", "item": "https://ph-document.com/cenomar-guide/" }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "フィリピン独身証明書（CENOMAR・セノマー）とは？取得方法・費用・期間を徹底解説",
-      "description": "CENOMARとはフィリピンPSAが発行する独身証明書。国際結婚・配偶者ビザ申請に必要な書類の基本情報から取得方法3パターン・トラブル対処法まで解説。",
-      "url": "https://ph-document.com/cenomar-guide/",
-      "inLanguage": "ja",
-      "datePublished": "2026-02-21",
-      "dateModified": "2026-02-21",
-      "author": { "@type": "Organization", "name": "フィリピン書類取得代行センター（株式会社IGRS）" },
-      "publisher": { "@type": "Organization", "name": "フィリピン書類取得代行センター", "url": "https://ph-document.com/" },
-      "about": ["CENOMAR", "独身証明書", "セノマー", "フィリピン書類", "国際結婚", "配偶者ビザ"]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "CENOMARの有効期限はどのくらいですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PSAから発行された日を起算して、提出先が指定する期限（多くの場合6ヶ月、場合によっては3ヶ月以内）のものが求められます。日本の市区町村や出入国在留管理庁（入管）の窓口によって異なるため、事前に確認した上で余裕を持って取得することをお勧めします。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "フィリピンに行かなくてもCENOMARは取得できますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "はい、PSAのオンライン申請システムを利用すればフィリピンに渡航せずに取得できます。ただし、申請から書類が日本に届くまで通常1〜2ヶ月かかります。当センターの代行サービスをご利用いただくと、書類確認から発送手配まで一括してスムーズに進めることができます。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "日本語翻訳は必要ですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CENOMARは英語で発行されます。日本の市区町村に婚姻届を提出する際は、日本語翻訳文の添付が必要です。翻訳は本人またはパートナーが行うことも可能ですが、当センターでは翻訳込みのプランもご提供しています。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "過去に婚姻歴がある場合はどうなりますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "フィリピンに婚姻記録がある場合、PSAはCENOMARではなく婚姻証明書（Marriage Certificate）を発行します。再婚を希望する場合は、フィリピン法廷での婚姻無効判決（Annulment）や配偶者の死亡証明書など、状況に応じた追加書類が必要になります。複雑なケースはまず無料相談でご状況をお聞かせください。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "CENOMARとアポスティーユ認証は違うものですか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CENOMARはPSAが発行する独身証明書そのものです。DFAアポスティーユ認証はCENOMAR等の書類に付ける国際的な公証で、別の手続きです。日本での国際結婚・配偶者ビザ申請では、通常アポスティーユ認証は不要とされることが多いですが、提出先によって異なりますので事前にご確認ください。"
-          }
-        }
-      ]
-    }
-    </script>`,
+  },
+  {
+    path: '/psa-shussei-shomeisho',
+    outFile: path.join(projectRoot, 'dist', 'psa-shussei-shomeisho', 'index.html'),
+    title: 'フィリピンPSA出生証明書の取得方法｜国際結婚・ビザ申請で必要な理由【2026年】｜フィリピン書類取得代行センター',
+    description: 'PSA出生証明書（旧NSO）の取得方法を3パターンで解説。費用・期間・NO RECORD FOUNDのトラブル対処まで徹底ガイド。',
+    canonical: 'https://ph-document.com/psa-shussei-shomeisho/',
+  },
+  {
+    path: '/nbi-clearance-guide',
+    outFile: path.join(projectRoot, 'dist', 'nbi-clearance-guide', 'index.html'),
+    title: 'フィリピンNBI無犯罪証明書（NBI Clearance）とは？日本から取得する方法【2026年】｜フィリピン書類取得代行センター',
+    description: 'NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。',
+    canonical: 'https://ph-document.com/nbi-clearance-guide/',
+  },
+  {
+    path: '/kokusai-kekkon-guide',
+    outFile: path.join(projectRoot, 'dist', 'kokusai-kekkon-guide', 'index.html'),
+    title: 'フィリピン人との国際結婚 完全ガイド｜手続きの流れ・必要書類・費用【2026年最新】｜フィリピン書類取得代行センター',
+    description: 'フィリピン人との国際結婚の手順をステップ別に解説。日本先行・フィリピン先行の2パターン、必要書類（CENOMAR・PSA等）、費用・期間まで初心者向けに徹底ガイド。',
+    canonical: 'https://ph-document.com/kokusai-kekkon-guide/',
+  },
+  {
+    path: '/haigusha-visa-shorui',
+    outFile: path.join(projectRoot, 'dist', 'haigusha-visa-shorui', 'index.html'),
+    title: '配偶者ビザに必要なフィリピン書類チェックリスト【2026年最新】｜フィリピン書類取得代行センター',
+    description: '配偶者ビザ申請に必要なフィリピン書類（CENOMAR・PSA・NBI等）をチェックリスト形式で解説。書類の取得代行にも対応。',
+    canonical: 'https://ph-document.com/haigusha-visa-shorui/',
+  },
+  {
+    path: '/apostille-guide',
+    outFile: path.join(projectRoot, 'dist', 'apostille-guide', 'index.html'),
+    title: 'フィリピンDFAアポスティーユ認証とは？対象書類・取得方法・費用【2026年】｜フィリピン書類取得代行センター',
+    description: 'フィリピンDFAアポスティーユ認証の取得方法・対象書類・費用・期間を解説。CENOMAR・PSA・NBI Clearanceへの認証取得を代行サービスで日本語対応。',
+    canonical: 'https://ph-document.com/apostille-guide/',
+  },
+  {
+    path: '/gaimen-kirikae-guide',
+    outFile: path.join(projectRoot, 'dist', 'gaimen-kirikae-guide', 'index.html'),
+    title: 'フィリピン運転免許の外免切替ガイド｜必要なLTO書類・手順・費用【2026年】｜フィリピン書類取得代行センター',
+    description: 'フィリピン運転免許を日本の免許に切り替える外免切替の手順・必要書類・LTO書類の取得方法を解説。LTO書類の代行取得に対応。',
+    canonical: 'https://ph-document.com/gaimen-kirikae-guide/',
+  },
+  {
+    path: '/kekkon-shomeisho',
+    outFile: path.join(projectRoot, 'dist', 'kekkon-shomeisho', 'index.html'),
+    title: 'フィリピンPSA婚姻証明書の取得方法｜国際結婚・配偶者ビザで必要な理由【2026年】｜フィリピン書類取得代行センター',
+    description: 'PSA婚姻証明書（フィリピン結婚証明書）の取得方法・必要な場面・費用・期間を解説。フィリピン先行婚姻後の報告手続きに必要な書類をガイド。',
+    canonical: 'https://ph-document.com/kekkon-shomeisho/',
   },
 ];
 
-function buildPageHtml(template: string, config: PageConfig): string {
-  let html = template;
+function updateHead(html: string, route: RouteConfig): string {
+  let result = html;
 
-  if (config.route !== '/') {
-    // Replace title
-    html = html.replace(/<title>[^<]*<\/title>/, `<title>${config.title}</title>`);
+  // title
+  result = result.replace(
+    /<title>[^<]*<\/title>/,
+    `<title>${route.title}</title>`
+  );
 
-    // Replace meta description
-    html = html.replace(
-      /(<meta\s+name="description"\s+content=")[^"]*(")/,
-      `$1${config.description}$2`,
-    );
+  // meta description
+  result = result.replace(
+    /<meta name="description" content="[^"]*"/,
+    `<meta name="description" content="${route.description}"`
+  );
 
-    // Replace canonical
-    html = html.replace(
-      /(<link\s+rel="canonical"\s+href=")[^"]*(")/,
-      `$1${config.canonical}$2`,
-    );
+  // canonical
+  result = result.replace(
+    /<link rel="canonical" href="[^"]*"/,
+    `<link rel="canonical" href="${route.canonical}"`
+  );
 
-    // Remove hreflang (self-referencing only, replace with page-specific)
-    html = html.replace(
-      /<link\s+rel="alternate"\s+hreflang="ja"\s+href="[^"]*"\s*\/>/,
-      `<link rel="alternate" hreflang="ja" href="${config.canonical}" />`,
-    );
-    html = html.replace(
-      /<link\s+rel="alternate"\s+hreflang="x-default"\s+href="[^"]*"\s*\/>/,
-      `<link rel="alternate" hreflang="x-default" href="${config.canonical}" />`,
-    );
+  // og:url
+  result = result.replace(
+    /<meta property="og:url" content="[^"]*"/,
+    `<meta property="og:url" content="${route.canonical}"`
+  );
 
-    // Replace OG tags
-    html = html.replace(
-      /(<meta\s+property="og:url"\s+content=")[^"]*(")/,
-      `$1${config.canonical}$2`,
-    );
-    html = html.replace(
-      /(<meta\s+property="og:title"\s+content=")[^"]*(")/,
-      `$1${config.ogTitle}$2`,
-    );
-    html = html.replace(
-      /(<meta\s+property="og:description"\s+content=")[^"]*(")/,
-      `$1${config.description}$2`,
-    );
-    html = html.replace(
-      /(<meta\s+property="og:updated_time"\s+content=")[^"]*(")/,
-      `$12026-02-21T00:00:00+09:00$2`,
-    );
+  // og:title
+  result = result.replace(
+    /<meta property="og:title" content="[^"]*"/,
+    `<meta property="og:title" content="${route.title}"`
+  );
 
-    // Replace Twitter tags
-    html = html.replace(
-      /(<meta\s+name="twitter:title"\s+content=")[^"]*(")/,
-      `$1${config.ogTitle}$2`,
-    );
-    html = html.replace(
-      /(<meta\s+name="twitter:description"\s+content=")[^"]*(")/,
-      `$1${config.description}$2`,
-    );
+  // og:description
+  result = result.replace(
+    /<meta property="og:description" content="[^"]*"/,
+    `<meta property="og:description" content="${route.description}"`
+  );
 
-    // Remove all existing JSON-LD scripts and add page-specific ones
-    html = html.replace(/<script\s+type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
-
-    // Inject page-specific JSON-LD before </head>
-    html = html.replace('</head>', `${config.jsonLd}\n</head>`);
-  }
-
-  return html;
+  return result;
 }
 
 async function prerender() {
-  const template = await readFile(distIndexPath, 'utf8');
+  const baseHtml = await readFile(distIndexPath, 'utf8');
 
-  for (const page of pages) {
+  for (const route of routes) {
+    console.log(`Prerendering ${route.path}...`);
+
     const appHtml = renderToString(
       React.createElement(
         StaticRouter,
-        { location: page.route },
-        React.createElement(AppRoutes),
-      ),
+        { location: route.path },
+        React.createElement(App)
+      )
     );
 
-    let html = buildPageHtml(template, page);
-    html = html.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`);
+    let html = baseHtml.replace(
+      '<div id="root"></div>',
+      `<div id="root">${appHtml}</div>`
+    );
 
-    const outputDir = path.dirname(page.outputPath);
-    await mkdir(outputDir, { recursive: true });
-    await writeFile(page.outputPath, html, 'utf8');
+    html = updateHead(html, route);
 
-    console.log(`✓ Prerendered: ${page.route} → ${path.relative(projectRoot, page.outputPath)}`);
+    const outDir = path.dirname(route.outFile);
+    await mkdir(outDir, { recursive: true });
+    await writeFile(route.outFile, html, 'utf8');
+    console.log(`  → Written: ${route.outFile}`);
   }
+
+  console.log(`\nPrerendered ${routes.length} pages.`);
 }
 
 prerender().catch((error) => {

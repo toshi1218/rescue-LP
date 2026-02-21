@@ -1,18 +1,17 @@
-import React, { useEffect, lazy, Suspense } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
+import CaseStudies from '../components/CaseStudies';
+import SocialProof from '../components/SocialProof';
+import Process from '../components/Process';
+import Pricing from '../components/Pricing';
+import FAQ from '../components/FAQ';
+import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
-
-const CaseStudies = lazy(() => import('../components/CaseStudies'));
-const SocialProof = lazy(() => import('../components/SocialProof'));
-const Process = lazy(() => import('../components/Process'));
-const Pricing = lazy(() => import('../components/Pricing'));
-const FAQ = lazy(() => import('../components/FAQ'));
-const Footer = lazy(() => import('../components/Footer'));
 
 export default function HomePage() {
   useEffect(() => {
@@ -31,14 +30,12 @@ export default function HomePage() {
         <PainPoints />
         <Services />
         <WhyUs />
-        <Suspense fallback={<div className="min-h-[200px]" />}>
-          <CaseStudies />
-          <SocialProof />
-          <Process />
-          <Pricing />
-          <FAQ />
-          <Footer />
-        </Suspense>
+        <CaseStudies />
+        <SocialProof />
+        <Process />
+        <Pricing />
+        <FAQ />
+        <Footer />
       </main>
     </div>
   );
