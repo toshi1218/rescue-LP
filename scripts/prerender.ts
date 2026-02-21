@@ -82,6 +82,27 @@ const routes: RouteConfig[] = [
     description: 'PSA婚姻証明書（フィリピン結婚証明書）の取得方法・必要な場面・費用・期間を解説。フィリピン先行婚姻後の報告手続きに必要な書類をガイド。',
     canonical: 'https://ph-document.com/kekkon-shomeisho/',
   },
+  {
+    path: '/pricing',
+    outFile: path.join(projectRoot, 'dist', 'pricing', 'index.html'),
+    title: '料金・プラン一覧｜フィリピン書類取得代行センター',
+    description: 'PSA・CENOMAR・NBI・国際結婚パック・配偶者ビザなど各プランの代行料金を一覧で掲載。追加費用なしの明確な料金体系です。',
+    canonical: 'https://ph-document.com/pricing/',
+  },
+  {
+    path: '/company',
+    outFile: path.join(projectRoot, 'dist', 'company', 'index.html'),
+    title: '会社概要｜株式会社IGRS｜フィリピン書類取得代行センター',
+    description: '株式会社IGRSの会社概要。フィリピンへの企業進出支援およびフィリピン公的書類取得に関するBPOを提供。和歌山県和歌山市・フィリピン共和国セブ市に拠点。',
+    canonical: 'https://ph-document.com/company/',
+  },
+  {
+    path: '/contact',
+    outFile: path.join(projectRoot, 'dist', 'contact', 'index.html'),
+    title: 'お問い合わせ｜フィリピン書類取得代行センター',
+    description: 'フィリピン書類取得代行センターへのお問い合わせはこちら。CENOMAR・PSA・NBI・国際結婚・配偶者ビザに関するご相談を受け付けています。',
+    canonical: 'https://ph-document.com/contact/',
+  },
 ];
 
 function updateHead(html: string, route: RouteConfig): string {
