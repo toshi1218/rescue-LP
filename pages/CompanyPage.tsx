@@ -169,7 +169,7 @@ export default function CompanyPage() {
               igrs20200601@gmail.com
             </a>
             <Link
-              to="/contact"
+              to="/contact/"
               className="inline-block text-xs bg-primary text-white font-bold px-4 py-2 rounded-lg hover:bg-primary-hover transition-colors"
             >
               お問い合わせフォームはこちら
@@ -333,7 +333,7 @@ export default function CompanyPage() {
           <p className="text-sm font-bold text-secondary mb-2">まずは無料でご相談ください</p>
           <p className="text-xs text-gray-600 mb-4">どの書類が必要かわからない方も、状況をお聞きして最適な方法をご案内します。</p>
           <Link
-            to="/contact"
+            to="/contact/"
             className="inline-flex items-center gap-2 bg-primary text-white font-bold px-8 py-3 rounded-full hover:bg-primary-hover transition-colors shadow-md"
           >
             お問い合わせはこちら <ArrowRight className="w-4 h-4" />

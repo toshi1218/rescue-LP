@@ -16,6 +16,8 @@ interface RouteConfig {
   title: string;
   description: string;
   canonical: string;
+  hreflangJa?: string;
+  hreflangDefault?: string;
 }
 
 const routes: RouteConfig[] = [
@@ -103,6 +105,13 @@ const routes: RouteConfig[] = [
     description: 'フィリピン書類取得代行に関するお問い合わせ・無料相談はこちら。CENOMAR・PSA・NBI・国際結婚・配偶者ビザについて日本語でご相談いただけます。翌営業日以内に返信。',
     canonical: 'https://ph-document.com/contact/',
   },
+  {
+    path: '/privacy',
+    outFile: path.join(projectRoot, 'dist', 'privacy', 'index.html'),
+    title: 'プライバシーポリシー｜フィリピン書類取得代行センター',
+    description: 'フィリピン書類取得代行センター（株式会社IGRS）のプライバシーポリシー。個人情報の収集・利用・管理方針についてご説明します。',
+    canonical: 'https://ph-document.com/privacy/',
+  },
 ];
 
 function updateHead(html: string, route: RouteConfig): string {
@@ -142,6 +151,18 @@ function updateHead(html: string, route: RouteConfig): string {
   result = result.replace(
     /<meta property="og:description" content="[^"]*"/,
     `<meta property="og:description" content="${route.description}"`
+  );
+
+  // hreflang ja (self-reference)
+  result = result.replace(
+    /<link rel="alternate" hreflang="ja" href="[^"]*"/,
+    `<link rel="alternate" hreflang="ja" href="${route.canonical}"`
+  );
+
+  // hreflang x-default (self-reference)
+  result = result.replace(
+    /<link rel="alternate" hreflang="x-default" href="[^"]*"/,
+    `<link rel="alternate" hreflang="x-default" href="${route.canonical}"`
   );
 
   return result;

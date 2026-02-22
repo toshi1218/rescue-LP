@@ -3,17 +3,17 @@ import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 
 const documentTabs = [
-  { label: '独身証明書', path: '/cenomar-guide' },
-  { label: '出生証明書', path: '/psa-shussei-shomeisho' },
-  { label: '無犯罪証明書', path: '/nbi-clearance-guide' },
-  { label: 'アポスティーユ', path: '/apostille-guide' },
-  { label: '婚姻証明書', path: '/kekkon-shomeisho' },
+  { label: '独身証明書', path: '/cenomar-guide/' },
+  { label: '出生証明書', path: '/psa-shussei-shomeisho/' },
+  { label: '無犯罪証明書', path: '/nbi-clearance-guide/' },
+  { label: 'アポスティーユ', path: '/apostille-guide/' },
+  { label: '婚姻証明書', path: '/kekkon-shomeisho/' },
 ];
 
 const purposeTabs = [
-  { label: '国際結婚', path: '/kokusai-kekkon-guide' },
-  { label: '配偶者ビザ', path: '/haigusha-visa-shorui' },
-  { label: '免許切替', path: '/gaimen-kirikae-guide' },
+  { label: '国際結婚', path: '/kokusai-kekkon-guide/' },
+  { label: '配偶者ビザ', path: '/haigusha-visa-shorui/' },
+  { label: '免許切替', path: '/gaimen-kirikae-guide/' },
 ];
 
 type MenuType = 'docs' | 'purpose' | null;
@@ -45,8 +45,9 @@ const Navbar: React.FC = () => {
     closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
   };
 
-  const isDocActive = documentTabs.some(t => t.path === location.pathname);
-  const isPurposeActive = purposeTabs.some(t => t.path === location.pathname);
+  const normalizedPathname = location.pathname === '/' ? '/' : location.pathname.replace(/\/$/, '') + '/';
+  const isDocActive = documentTabs.some(t => t.path === normalizedPathname);
+  const isPurposeActive = purposeTabs.some(t => t.path === normalizedPathname);
 
   const currentTabs = openMenu === 'docs' ? documentTabs : openMenu === 'purpose' ? purposeTabs : [];
 
@@ -59,7 +60,7 @@ const Navbar: React.FC = () => {
 
   const linkClass = (path: string) =>
     `flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
-      location.pathname === path
+      normalizedPathname === path
         ? 'bg-secondary text-white'
         : 'text-gray-600 hover:bg-gray-100 hover:text-secondary'
     }`;
@@ -138,10 +139,10 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            <Link to="/pricing" className={linkClass('/pricing')}>料金</Link>
-            <Link to="/contact" className={linkClass('/contact')}>お問い合わせ</Link>
-            <Link to="/company" className={linkClass('/company')}>会社概要</Link>
-            <Link to="/privacy" className={linkClass('/privacy')}>プライバシーポリシー</Link>
+            <Link to="/pricing/" className={linkClass('/pricing/')}>料金</Link>
+            <Link to="/contact/" className={linkClass('/contact/')}>お問い合わせ</Link>
+            <Link to="/company/" className={linkClass('/company/')}>会社概要</Link>
+            <Link to="/privacy/" className={linkClass('/privacy/')}>プライバシーポリシー</Link>
 
           </div>
         </div>
@@ -160,7 +161,7 @@ const Navbar: React.FC = () => {
               key={tab.path}
               to={tab.path}
               className={`block px-4 py-2 text-xs font-medium transition-colors ${
-                location.pathname === tab.path
+                normalizedPathname === tab.path
                   ? 'text-secondary bg-gray-50'
                   : 'text-gray-600 hover:bg-gray-50 hover:text-secondary'
               }`}

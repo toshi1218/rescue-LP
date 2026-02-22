@@ -222,7 +222,7 @@ export default function PricingPage() {
             弊社は現地セブ拠点を活かし、<strong>すべて日本語でやり取りするだけ</strong>で書類を取得できるサービスを提供しています。
           </p>
           <Link
-            to="/contact"
+            to="/contact/"
             className="inline-flex items-center gap-2 text-sm text-primary font-bold hover:underline"
           >
             まずは無料相談する <ArrowRight className="w-4 h-4" />
@@ -342,7 +342,7 @@ export default function PricingPage() {
                     )}
 
                     <Link
-                      to="/contact"
+                      to="/contact/"
                       onClick={() => trackEvent('cta_click', { location: 'pricing_page', type: plan.id, variant: ctaVariant })}
                       className={`w-full py-3 rounded-lg font-bold text-sm flex items-center justify-center gap-1 transition-colors ${
                         plan.featured
@@ -386,7 +386,7 @@ export default function PricingPage() {
                   </button>
                 )}
                 {!s.planId && (
-                  <Link to="/contact" className="text-xs text-secondary hover:text-primary flex-shrink-0 flex items-center gap-1 transition-colors">
+                  <Link to="/contact/" className="text-xs text-secondary hover:text-primary flex-shrink-0 flex items-center gap-1 transition-colors">
                     相談する <ChevronRight className="w-3 h-3" />
                   </Link>
                 )}
@@ -478,7 +478,7 @@ export default function PricingPage() {
             状況をお聞きして、必要な書類と費用の概算をご案内します。
           </p>
           <Link
-            to="/contact"
+            to="/contact/"
             onClick={() => trackEvent('cta_click', { location: 'pricing_page_bottom', variant: ctaVariant })}
             className="inline-block bg-primary text-white font-bold px-10 py-4 rounded-xl hover:bg-primary-hover transition-colors shadow-lg"
           >
