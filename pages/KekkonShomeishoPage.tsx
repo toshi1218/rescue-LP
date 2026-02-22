@@ -39,6 +39,14 @@ const faqs = [
     q: 'フィリピンでの婚姻が無効・取り消しになった場合、PSA婚姻証明書はどうなりますか？',
     a: 'フィリピンではアニュルメント（婚姻無効・取り消し）が裁判所で認められると、PSAにその記録が登録されます。その後に改めてCENOMARを取得すると「独身」として発行されます。詳しい手続きについてはご相談ください。',
   },
+  {
+    q: 'PSA婚姻証明書に記載される情報はどのような内容ですか？',
+    a: 'PSA婚姻証明書（Marriage Certificate）には、①夫・妻それぞれの氏名・生年月日・出生地・国籍・宗教 ②婚姻日 ③婚姻場所（市・州・教会/市役所名） ④立会人の氏名 ⑤証人（ニナン・ニナン）の氏名 ⑥執行者（神父・牧師・市長等）の氏名・署名 ⑦地方市役所の登録番号・登録日が記載されています。すべて英語で記載されます。',
+  },
+  {
+    q: '地方市役所（LCR）に登録されたが、PSAに反映されるまでの状況を確認する方法はありますか？',
+    a: 'PSAのオンラインサービス（PSAHelpline.com）で確認申請をすることで、PSAのデータベースに婚姻記録が登録されているか確認できます。「NO RECORD FOUND」と返ってきた場合は、まだPSAへの登録が完了していない状態です。地方市役所での婚姻から3〜6ヶ月を目安に再度確認してください。当センターでも登録状況の確認を代行しています。',
+  },
 ];
 
 export default function KekkonShomeishoPage() {
@@ -228,6 +236,88 @@ export default function KekkonShomeishoPage() {
           </div>
           <div className="mt-4 text-xs text-gray-500">
             ※ 詳しい手順は<Link to="/kokusai-kekkon-guide" className="text-secondary underline">フィリピン国際結婚ガイド</Link>をご覧ください。
+          </div>
+        </section>
+
+        {/* Section: 婚姻証明書の記載内容と確認方法 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">PSA婚姻証明書に記載される内容</h2>
+          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+            PSA婚姻証明書（Marriage Certificate）にはどのような情報が記載されるかを事前に確認しておきましょう。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-secondary text-white">
+                  <th className="px-4 py-3 text-left font-semibold rounded-tl-lg">記載項目</th>
+                  <th className="px-4 py-3 text-left font-semibold rounded-tr-lg">確認ポイント</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['夫・妻の氏名（フルネーム）', 'パスポートの氏名と完全に一致しているか確認'],
+                  ['生年月日・出生地', '出生証明書（PSA Birth Certificate）と一致しているか'],
+                  ['婚姻日・婚姻場所', '実際の婚姻日と場所が正確に記録されているか'],
+                  ['登録番号・登録日', 'PSAのシリアルナンバーが付いているか（SECPA確認）'],
+                  ['証人・執行者の情報', '婚姻を証明する立会人・執行者の情報が記載されているか'],
+                ].map(([item, point], i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                    <td className="px-4 py-3 font-medium text-secondary border-b border-gray-100">{item}</td>
+                    <td className="px-4 py-3 text-gray-600 border-b border-gray-100 text-xs">{point}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 bg-amber-50 border border-amber-200 rounded-lg p-4 text-sm text-amber-800">
+            <AlertTriangle className="w-4 h-4 inline mr-2" />
+            記載内容に誤りがあった場合は、地方市役所（LCR）への訂正申請が必要です。氏名のスペルミスは後の手続きに影響するため、受け取り時に必ず確認してください。
+          </div>
+        </section>
+
+        {/* Section: 書類到着後チェックリスト */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">PSA婚姻証明書が届いたら確認すること</h2>
+          <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+            <p className="text-sm text-gray-700 mb-4">書類が届いたら、日本への婚姻届・ビザ申請に使用する前に以下をチェックしてください。</p>
+            <div className="space-y-3">
+              {[
+                { check: '夫・妻の氏名スペルがパスポートと完全に一致しているか', note: '特にミドルネームの有無を確認' },
+                { check: '婚姻日・婚姻場所が実際と一致しているか', note: '年月日の順番・場所名の英語表記を確認' },
+                { check: 'PSA発行のSECPA（セキュリティペーパー）で発行されているか', note: 'PSAの透かし・公印が確認できるか' },
+                { check: '発行日が十分に新しいか（6ヶ月以内）', note: '提出先によって異なる。必要なら再取得' },
+                { check: '日本語翻訳が必要かどうか確認する', note: '日本の役場・入管に提出する場合は必要' },
+                { check: 'DFAアポスティーユが必要かどうか確認する', note: '配偶者ビザ申請等では求められることがある' },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-3 items-start">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm text-secondary font-medium">{item.check}</p>
+                    <p className="text-xs text-gray-500">{item.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section: 代行費用目安 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">代行費用の目安</h2>
+          <div className="grid gap-3">
+            {[
+              { item: 'PSA婚姻証明書 取得代行', cost: '約40,000円〜', note: 'PSA手数料・国際郵便込み' },
+              { item: 'PSA婚姻証明書 + DFAアポスティーユ セット', cost: '約60,000円〜', note: 'DFA手数料・認証費用込み' },
+              { item: 'PSA登録状況の確認（事前照会）', cost: '別途お見積もり', note: 'フィリピン先行婚姻後の登録確認' },
+            ].map((row, i) => (
+              <div key={i} className="flex justify-between items-center bg-white border border-gray-100 rounded-lg px-4 py-3 shadow-card">
+                <div>
+                  <p className="text-sm font-medium text-secondary">{row.item}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{row.note}</p>
+                </div>
+                <span className="text-sm font-bold text-primary ml-4 flex-shrink-0">{row.cost}</span>
+              </div>
+            ))}
           </div>
         </section>
 

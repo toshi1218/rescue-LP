@@ -39,6 +39,14 @@ const faqs = [
     q: 'LTO書類の代行費用はどのくらいですか？',
     a: 'LTO運転記録証明書の代行取得費用は、DFAアポスティーユ認証なしで約4〜5万円、セットで約6〜7万円が目安です。LTO支局の状況・書類の種類によって変動します。詳細はお問い合わせください。',
   },
+  {
+    q: 'フィリピンの免許証を更新せずに期限切れにしてしまった場合はどうなりますか？',
+    a: 'フィリピンの運転免許証が有効期限切れの場合、外免切替はできません。LTOでの更新手続きを先に行う必要があります。ただし、LTOの更新手続きは現地（フィリピン）での対応が必要です。詳細はLTOまたは代行業者にご相談ください。',
+  },
+  {
+    q: '外免切替が完了したら、フィリピンの免許証はどうすればよいですか？',
+    a: '外免切替が完了すると、日本の運転免許センターからフィリピンの免許証と引き換えに日本の免許証が交付されます（フィリピンの免許証は返却されない場合があります）。フィリピンの免許証を手元に残したい場合は、事前に免許センターに確認してください。フィリピンで引き続き運転する場合は、改めてLTOで免許を取得する必要があります。',
+  },
 ];
 
 const requiredDocs = [
@@ -249,6 +257,61 @@ export default function GaimenKirikaeGuidePage() {
             ))}
           </div>
           <p className="text-xs text-gray-500 mt-3">※ 費用はLTO支局の状況・書類の種類によって変動します。詳細はお問い合わせください。</p>
+        </section>
+
+        {/* Section: 免許センター当日の流れ */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">免許センター当日の流れ</h2>
+          <p className="text-sm text-gray-700 mb-4">書類が揃ったら、居住地の都道府県運転免許センターで申請を行います。当日の一般的な流れは以下の通りです。</p>
+          <div className="space-y-3">
+            {[
+              { step: '受付・書類提出', desc: '事前に揃えた書類（LTO書類・フィリピン免許証・日本語翻訳・パスポート・在留カード・住民票）を窓口に提出します。' },
+              { step: '書類審査', desc: '担当官が書類の内容を確認します。不備や追加資料が必要な場合はここで指摘されます。' },
+              { step: '適性検査（視力・聴力など）', desc: '視力・聴力・運動能力などの基本的な適性検査を行います。眼鏡・コンタクトが必要な方は忘れずに。' },
+              { step: '口頭試問（場合による）', desc: '都道府県・担当官によっては、フィリピンでの免許取得経緯や運転経験について口頭で質問されることがあります。' },
+              { step: '写真撮影・免許証交付', desc: '審査が通れば写真撮影を行い、日本の運転免許証が交付されます。' },
+            ].map((s, i) => (
+              <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-lg p-4 shadow-card">
+                <div className="w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex-shrink-0 flex items-center justify-center mt-0.5">{i + 1}</div>
+                <div>
+                  <p className="text-sm font-bold text-secondary mb-1">{s.step}</p>
+                  <p className="text-xs text-gray-600">{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800">
+            ※ 手続きは都道府県・免許センターによって異なります。事前に各都道府県の運転免許センターのウェブサイトで確認するか、電話で問い合わせてください。
+          </div>
+        </section>
+
+        {/* Section: 申請前チェックリスト */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">申請前の最終確認チェックリスト</h2>
+          <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+            <p className="text-sm text-gray-700 mb-4">免許センターに行く前に、以下を確認してください。</p>
+            <div className="space-y-3">
+              {[
+                { check: 'フィリピン免許証の有効期限が切れていないか', note: '有効期限内のものが必要' },
+                { check: '免許取得からフィリピンで3ヶ月以上使用しているか', note: '取得後の日本入国前の期間が対象' },
+                { check: '日本に入国した後にフィリピルで取得した免許ではないか', note: '入国後取得は切替不可' },
+                { check: 'LTO書類（運転記録証明書）を取得済みか', note: '代行で取得した場合は原本が手元にあるか確認' },
+                { check: 'フィリピン免許の日本語翻訳を取得済みか', note: '自動車安全運転センター発行等が一般的' },
+                { check: '有効なパスポート（全ページコピー）を準備済みか', note: '入国日の確認に使用' },
+                { check: '在留カード・住民票を用意済みか', note: '現住所・在留資格の確認' },
+                { check: 'DFAアポスティーユが必要かどうか申請先に確認済みか', note: '都道府県によって異なる' },
+                { check: '免許センターへの予約が完了しているか', note: '都道府県によっては予約制' },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-3 items-start">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm text-secondary font-medium">{item.check}</p>
+                    <p className="text-xs text-gray-500">{item.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* CTA */}
