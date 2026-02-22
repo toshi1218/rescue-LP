@@ -397,7 +397,7 @@ export default function ContactPage() {
             <p className="text-xs text-gray-600">各プランの料金・納期・含まれるサービスを詳しくご覧いただけます。</p>
           </div>
           <Link
-            to="/pricing"
+            to="/pricing/"
             className="flex-shrink-0 inline-flex items-center gap-1 text-xs font-bold text-secondary hover:text-primary transition-colors"
           >
             料金を見る <ChevronRight className="w-3 h-3" />

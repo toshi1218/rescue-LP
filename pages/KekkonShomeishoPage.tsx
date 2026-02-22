@@ -235,7 +235,7 @@ export default function KekkonShomeishoPage() {
             </table>
           </div>
           <div className="mt-4 text-xs text-gray-500">
-            ※ 詳しい手順は<Link to="/kokusai-kekkon-guide" className="text-secondary underline">フィリピン国際結婚ガイド</Link>をご覧ください。
+            ※ 詳しい手順は<Link to="/kokusai-kekkon-guide/" className="text-secondary underline">フィリピン国際結婚ガイド</Link>をご覧ください。
           </div>
         </section>
 
