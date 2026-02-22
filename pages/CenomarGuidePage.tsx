@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, Clock, FileText, ArrowRight } from 'lucide-react';
+import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, Clock, FileText, ArrowRight, MapPin, Shield } from 'lucide-react';
 import Navbar from '../components/Navbar';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
@@ -25,6 +25,18 @@ const faqs = [
   {
     q: 'CENOMARが「MATCH FOUND」と出た場合はどうすればよいですか？',
     a: '「MATCH FOUND」はPSAのデータに婚姻記録が見つかったことを意味します。これが誤りの場合（例：同姓同名の別人の記録）は、PSAへの異議申し立てが必要です。過去に婚姻歴がある場合は、アニュルメント手続き後に改めてCENOMARを取得する必要があります。まずは状況をお聞かせください。',
+  },
+  {
+    q: 'CENOMARの申請に必要な情報は何ですか？',
+    a: 'PSAオンライン申請に必要な主な情報は、氏名（パスポートと同じスペル）、生年月日、生まれた市区町村（出生地）、父母の氏名です。パスポートのコピーがあると確認に便利です。',
+  },
+  {
+    q: '代行を依頼した場合、どのくらいで届きますか？',
+    a: '一般的に申請から3〜6週間程度が目安です。PSA側の処理状況や郵便事情により変動することがあります。お急ぎの場合は事前にご相談ください。',
+  },
+  {
+    q: 'CENOMARに日本語翻訳は必要ですか？',
+    a: '市区町村役場によって異なります。日本語訳の添付を求める役場がある一方、英語のまま受け付ける役場もあります。提出先に事前に確認することをおすすめします。翻訳が必要な場合は弊社でもご対応できますのでご相談ください。',
   },
 ];
 
@@ -89,7 +101,7 @@ export default function CenomarGuidePage() {
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-10 shadow-card">
           <p className="text-xs font-bold text-gray-400 mb-3">目次</p>
           <ol className="space-y-1 text-sm text-secondary">
-            {['CENOMARとは何か', 'どんな場面で必要か', '基本情報（発行元・費用・期間）', '取得方法3パターン比較', 'よくあるトラブルと注意点', 'よくある質問（FAQ）', '無料相談・お問い合わせ'].map((item, i) => (
+            {['CENOMARとは何か', 'どんな場面で必要か', '基本情報（発行元・費用・期間）', '取得方法3パターン比較', '申請の流れ・ステップ別ガイド', '在日フィリピン大使館・領事館の窓口', '書類が届いたあとの手続き', 'よくあるトラブルと注意点', 'よくある質問（FAQ）', '無料相談・お問い合わせ'].map((item, i) => (
               <li key={i}>
                 <a href={`#section-${i + 1}`} className="hover:underline">
                   {i + 1}. {item}
@@ -224,7 +236,7 @@ export default function CenomarGuidePage() {
         {/* Section 5 */}
         <section id="section-5" className="mb-10">
           <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
-            5. よくあるトラブルと注意点
+            8. よくあるトラブルと注意点
           </h2>
           <div className="space-y-4">
             {[
@@ -260,6 +272,83 @@ export default function CenomarGuidePage() {
           </div>
         </section>
 
+        {/* Section 5: ステップ別ガイド */}
+        <section id="section-5" className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
+            5. 申請の流れ・ステップ別ガイド
+          </h2>
+          <p className="text-sm text-gray-600 mb-5">代行サービスを利用した場合の一般的な流れです。</p>
+          <div className="space-y-3">
+            {[
+              { step: 1, title: 'お問い合わせ・無料相談', desc: 'フォームまたはメールでご連絡ください。氏名・生年月日・目的（国際結婚・ビザ申請など）をお知らせいただくと、スムーズにご案内できます。' },
+              { step: 2, title: '必要情報のご確認', desc: 'ご依頼内容をもとに、必要な情報（氏名のスペル・出生地・父母の情報など）を確認します。不明な点は一緒に調べます。' },
+              { step: 3, title: 'お見積もり・ご入金', desc: '費用と納期の概算をご提示します。ご了承いただいた後、銀行振込でのお支払いをお願いします。' },
+              { step: 4, title: 'フィリピン現地での申請', desc: 'セブ拠点のスタッフがPSAへの申請手続きを代行します。必要に応じてDFAアポスティーユ認証も同時に手配します。' },
+              { step: 5, title: '書類受領・日本へ転送', desc: '書類が発行され次第、国際郵便（EMSなど）で日本の住所へ転送します。追跡番号をお知らせします。' },
+              { step: 6, title: 'お受け取り・確認', desc: '書類が届いたら、氏名・生年月日・出生地など記載内容に誤りがないかご確認ください。不備があればすぐにご連絡ください。' },
+            ].map((s) => (
+              <div key={s.step} className="flex gap-4 bg-white border border-gray-100 rounded-xl p-4 shadow-card">
+                <div className="w-8 h-8 rounded-full bg-primary text-white font-bold text-sm flex items-center justify-center flex-shrink-0">{s.step}</div>
+                <div>
+                  <p className="font-bold text-secondary text-sm mb-1">{s.title}</p>
+                  <p className="text-xs text-gray-600 leading-relaxed">{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 6: 大使館窓口 */}
+        <section id="section-6" className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
+            6. 在日フィリピン大使館・領事館の窓口
+          </h2>
+          <p className="text-sm text-gray-600 mb-5">自力で申請する場合は、最寄りの窓口に事前予約のうえ来訪する必要があります。</p>
+          <div className="grid gap-3">
+            {[
+              { name: 'フィリピン大使館（東京）', addr: '東京都港区六本木5-15-5', note: '関東・東北・北海道方面の方' },
+              { name: 'フィリピン総領事館（大阪）', addr: '大阪府大阪市中央区久太郎町1-9-16', note: '近畿・中国・四国方面の方' },
+              { name: 'フィリピン総領事館（名古屋）', addr: '愛知県名古屋市中村区名駅4-4-38', note: '東海・北陸・甲信越方面の方' },
+            ].map((office) => (
+              <div key={office.name} className="flex gap-3 bg-white border border-gray-100 rounded-lg p-4 shadow-card">
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-bold text-secondary">{office.name}</p>
+                  <p className="text-xs text-gray-600 mt-0.5">{office.addr}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{office.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 flex gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4 text-xs text-amber-800">
+            <AlertTriangle className="w-4 h-4 flex-shrink-0 mt-0.5 text-amber-500" />
+            <p>大使館・領事館での申請は<strong>事前のオンライン予約が必須</strong>です。予約なしの来訪は対応不可の場合があります。余裕をもって手続きを進めてください。</p>
+          </div>
+        </section>
+
+        {/* Section 7: 書類が届いたあと */}
+        <section id="section-7" className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
+            7. 書類が届いたあとの手続き
+          </h2>
+          <p className="text-sm text-gray-600 mb-5">CENOMARを取得したら、目的別に次のステップへ進みます。</p>
+          <div className="space-y-4">
+            {[
+              { title: '国際結婚（日本先行）の場合', steps: ['CENOMARとPSA出生証明書を揃える', '必要に応じて日本語翻訳を準備する', '市区町村役場に婚姻届を提出する', '婚姻届受理証明書を取得してフィリピン大使館に報告（婚姻報告的届出）'], color: 'border-blue-200 bg-blue-50', textColor: 'text-blue-800' },
+              { title: '配偶者ビザ（在留資格）申請の場合', steps: ['CENOMARのほかにNBI Clearance・PSA婚姻証明書なども揃える', '在留資格認定証明書交付申請書を作成する', '入国管理局（入管）に申請書類一式を提出する', '認定証明書が発行されたらフィリピンにいる配偶者がビザを申請する'], color: 'border-green-200 bg-green-50', textColor: 'text-green-800' },
+            ].map((scenario) => (
+              <div key={scenario.title} className={`border rounded-xl p-5 ${scenario.color}`}>
+                <h3 className={`font-bold text-sm mb-3 ${scenario.textColor}`}>{scenario.title}</h3>
+                <ol className="space-y-1">
+                  {scenario.steps.map((step, i) => (
+                    <li key={i} className={`text-xs flex gap-2 ${scenario.textColor}`}><span className="font-bold flex-shrink-0">{i + 1}.</span>{step}</li>
+                  ))}
+                </ol>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* CTA Banner */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <p className="text-xs text-primary font-bold mb-2">手続きが面倒な方へ</p>
@@ -268,6 +357,13 @@ export default function CenomarGuidePage() {
             申請書類の確認から取得・郵送まで、日本語でサポートします。<br />
             どの書類が必要かわからない方もまずはご相談ください。
           </p>
+          <div className="flex flex-wrap justify-center gap-2 mb-5 text-xs">
+            {['日本語でやり取りのみ', 'トラブルもサポート', '現地セブ拠点あり', '翻訳対応も可能'].map((item) => (
+              <span key={item} className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">
+                <Shield className="w-3 h-3 text-primary" />{item}
+              </span>
+            ))}
+          </div>
           <a
             href="#contact"
             className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors shadow-lg"
@@ -276,10 +372,10 @@ export default function CenomarGuidePage() {
           </a>
         </div>
 
-        {/* Section 6: FAQ */}
-        <section id="section-6" className="mb-10">
+        {/* Section 9: FAQ */}
+        <section id="section-9" className="mb-10">
           <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
-            6. よくある質問（FAQ）
+            9. よくある質問（FAQ）
           </h2>
           <div className="space-y-2">
             {faqs.map((faq, i) => (
@@ -339,7 +435,8 @@ export default function CenomarGuidePage() {
             </div>
             <h2 className="text-xl font-bold text-secondary mb-2">お問い合わせ</h2>
             <p className="text-sm text-gray-500 mb-6">
-              どの書類が必要かわからない方も、お気軽にご相談ください。
+              どの書類が必要かわからない方も、お気軽にご相談ください。<br />
+              平日 9:00〜18:00（日本時間）・翌営業日以内にご返信します。
             </p>
             <form
               action={FORMSPREE_ENDPOINT}

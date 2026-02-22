@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileText, ArrowRight, ShieldCheck } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -25,6 +26,18 @@ const faqs = [
   {
     q: 'NBI クリアランスを日本語に翻訳する必要はありますか？',
     a: '日本の役所や入管に提出する場合は、英語原文への日本語翻訳が求められることがあります。翻訳サービスについてもご相談いただけます。',
+  },
+  {
+    q: 'NBI クリアランスの申請に必要なIDは何ですか？',
+    a: 'フィリピンの有効な政府発行IDが必要です。パスポート（最も確実）、UMID、フィリピン運転免許証などが使用できます。海外在住の方はパスポートを準備してください。',
+  },
+  {
+    q: 'NBI クリアランスを急いで取得したい場合はどうすればよいですか？',
+    a: 'NBI自体にエクスプレス処理の制度はありませんが、代行サービスを利用することで手続きの抜け漏れなく迅速に対応できます。HIT案件でない通常案件であれば、2〜3週間での取得を目指して対応します。お急ぎの場合はその旨をご相談時にお伝えください。',
+  },
+  {
+    q: 'フィリピンに住所がない在外フィリピン人でも申請できますか？',
+    a: 'はい、海外在住のフィリピン人（OFW・永住権取得者等）もNBI クリアランスを申請できます。ただしNBIオンラインシステムへの登録や現地での手続きに代理人が必要です。当センターで海外在住者の代行申請にも対応しています。',
   },
 ];
 
@@ -229,6 +242,26 @@ export default function NbiPage() {
           </div>
         </section>
 
+        {/* Section 7: なぜ代行が選ばれるか */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">7. 代行サービスが選ばれる理由</h2>
+          <div className="grid gap-4">
+            {[
+              { icon: '🇯🇵', title: '完全日本語対応', body: 'フィリピン機関とのやり取り・書類確認・発送まですべて日本語でOK。英語が不得意な方でも安心です。' },
+              { icon: '⚡', title: 'HIT案件にも対応', body: 'NBI HITが出た場合の追加手続き（Hit Clearance）もサポート。複雑なケースも経験豊富なスタッフが対応します。' },
+              { icon: '📦', title: 'DFAアポスティーユまで一括対応', body: 'NBI取得からDFAアポスティーユ認証・日本へ国際郵便発送まで、まるごとお任せいただけます。' },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+                <span className="text-2xl flex-shrink-0">{item.icon}</span>
+                <div>
+                  <p className="text-sm font-bold text-secondary mb-1">{item.title}</p>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">NBI クリアランス取得、まるごとお任せ</h2>
@@ -314,10 +347,8 @@ export default function NbiPage() {
           </div>
         </section>
 
-        <footer className="text-center text-xs text-gray-300 pb-8">
-          <p>© 2026 IGRS Inc. ｜ <Link to="/" className="hover:text-secondary">フィリピン書類取得代行センター</Link></p>
-        </footer>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileText, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -25,6 +26,18 @@ const faqs = [
   {
     q: 'フィリピン先行婚姻でPSA婚姻証明書が届くまでの間、何もできませんか？',
     a: 'PSA婚姻証明書の発行（3〜6ヶ月）を待つ間、日本での婚姻届提出はできません。ただし、配偶者ビザの申請準備（NBI Clearanceの取得など）は並行して進めることができます。スケジュールを見通して準備しましょう。',
+  },
+  {
+    q: 'PSA婚姻証明書はどこで申請できますか？',
+    a: 'PSA Helpline（PSAHelpline.com）でオンライン申請できます。フィリピン国内ではPSAのサービスセンターや郵便局（PhilPost）でも申請が可能です。日本から自分で申請する場合は国際配送に時間がかかります。代行サービスを利用すると、書類の取得状況の確認から発送まで日本語でサポートします。',
+  },
+  {
+    q: 'PSA婚姻証明書を複数部取得することはできますか？',
+    a: 'はい、PSA婚姻証明書は複数部の申請が可能です。配偶者ビザ申請・大使館提出・日本の市区町村役場提出など、複数の手続きで必要になることがあります。必要部数を事前に把握した上でまとめて申請することをおすすめします。',
+  },
+  {
+    q: 'フィリピンでの婚姻が無効・取り消しになった場合、PSA婚姻証明書はどうなりますか？',
+    a: 'フィリピンではアニュルメント（婚姻無効・取り消し）が裁判所で認められると、PSAにその記録が登録されます。その後に改めてCENOMARを取得すると「独身」として発行されます。詳しい手続きについてはご相談ください。',
   },
 ];
 
@@ -324,10 +337,8 @@ export default function KekkonShomeishoPage() {
           </div>
         </section>
 
-        <footer className="text-center text-xs text-gray-300 pb-8">
-          <p>© 2026 IGRS Inc. ｜ <Link to="/" className="hover:text-secondary">フィリピン書類取得代行センター</Link></p>
-        </footer>
       </main>
+      <Footer />
     </div>
   );
 }

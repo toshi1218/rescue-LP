@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileText, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -57,6 +58,18 @@ const faqs = [
   {
     q: '書類の取得は代行してもらえますか？',
     a: 'はい、CENOMAR・PSA出生証明書・PSA婚姻証明書・NBI Clearance（＋DFAアポスティーユ）の取得を代行いたします。日本語でのやり取りのみで完結しますので、お気軽にご相談ください。',
+  },
+  {
+    q: '配偶者ビザの申請は自分でできますか？行政書士に依頼すべきですか？',
+    a: '申請者本人（または日本人配偶者）が自分で申請することも可能です。ただし書類の準備や審査対応は複雑なため、配偶者ビザの申請手続き全体については行政書士への相談をおすすめします。当センターはフィリピン書類の取得代行に特化しています。',
+  },
+  {
+    q: '入管に不許可になった場合、どうすればよいですか？',
+    a: '不許可通知を受け取った際は、不許可の理由を入管に確認してください。書類の不備や収入証明の不足、交際経緯の説明不足などが主な原因です。再申請に向けて書類を補完することで、許可が下りるケースも多くあります。行政書士にご相談されることをおすすめします。',
+  },
+  {
+    q: 'フィリピン書類の取得から配偶者ビザ申請まで、全体でどのくらいの期間がかかりますか？',
+    a: 'フィリピン書類（CENOMAR・PSA・NBI等）の取得に約2〜6週間、配偶者ビザの審査に約1〜3ヶ月が目安です。書類取得から申請まで含めると、早くて3〜4ヶ月程度みておくことをおすすめします。書類の不備や追加提出があると時間が延びます。',
   },
 ];
 
@@ -199,6 +212,27 @@ export default function HaigushaVisaPage() {
           </div>
         </section>
 
+        {/* Section: 配偶者ビザ審査のポイント */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">4. 配偶者ビザ審査で重視されるポイント</h2>
+          <div className="grid gap-3">
+            {[
+              { num: '01', title: '婚姻の真正性', body: '入管は「形式的な婚姻ではないか」を厳しく審査します。出会いから交際・結婚に至る詳細な経緯書と証拠写真（一緒に撮影したスナップ・旅行記録等）が重要です。' },
+              { num: '02', title: '日本人配偶者の安定した収入', body: '収入証明書（在職証明書・源泉徴収票・確定申告書）や課税証明書、銀行残高証明書で経済的な安定を示します。年収の目安として200〜250万円以上が一般的に求められます。' },
+              { num: '03', title: '書類間の整合性', body: '申請書類に記載した内容（交際期間・会った回数・居住歴等）が全書類で一致していることが重要です。矛盾があると審査官からの追加質問や不許可の原因になります。' },
+              { num: '04', title: 'フィリピン側書類の完備', body: 'CENOMAR・PSA出生証明書・NBI Clearance（DFAアポスティーユ付き推奨）が揃っていることが審査をスムーズに進める上で重要です。有効期限切れがないか確認してください。' },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-xl p-4 shadow-card">
+                <span className="text-2xl font-bold text-primary/20 flex-shrink-0 w-8">{item.num}</span>
+                <div>
+                  <p className="text-sm font-bold text-secondary mb-1">{item.title}</p>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <p className="text-xs text-primary font-bold mb-2">フィリピン書類の取得はお任せください</p>
@@ -289,10 +323,8 @@ export default function HaigushaVisaPage() {
           </div>
         </section>
 
-        <footer className="text-center text-xs text-gray-300 pb-8">
-          <p>© 2026 IGRS Inc. ｜ <Link to="/" className="hover:text-secondary">フィリピン書類取得代行センター</Link></p>
-        </footer>
       </main>
+      <Footer />
     </div>
   );
 }

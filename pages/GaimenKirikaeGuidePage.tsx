@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileText, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -25,6 +26,18 @@ const faqs = [
   {
     q: 'LTO書類にDFAアポスティーユ認証は必要ですか？',
     a: '都道府県の運転免許センターによって要件が異なります。DFAアポスティーユ認証を求めるところもあれば、不要なところもあります。申請予定の免許センターに事前確認することを強くおすすめします。当センターではLTO書類＋DFAアポスティーユのセット代行も対応しています。',
+  },
+  {
+    q: '外免切替が不許可になる場合はどのようなケースですか？',
+    a: '主なケースとして、①日本に入国後にフィリピンで取得した免許、②免許取得から3ヶ月未満、③フィリピン免許の有効期限が切れている、④必要書類の不備などが挙げられます。事前に免許センターで要件を確認し、書類を完備した上で申請することが重要です。',
+  },
+  {
+    q: 'フィリピンの免許証の翻訳はどこで取得できますか？',
+    a: 'フィリピン運転免許証の日本語翻訳は、公益財団法人「自動車安全運転センター」が発行する書類が一般的に使用されます。または公証済みの翻訳も利用できます。都道府県によって受け付ける翻訳の種類が異なるため、申請先の免許センターに事前確認してください。',
+  },
+  {
+    q: 'LTO書類の代行費用はどのくらいですか？',
+    a: 'LTO運転記録証明書の代行取得費用は、DFAアポスティーユ認証なしで約4〜5万円、セットで約6〜7万円が目安です。LTO支局の状況・書類の種類によって変動します。詳細はお問い合わせください。',
   },
 ];
 
@@ -217,6 +230,27 @@ export default function GaimenKirikaeGuidePage() {
           </div>
         </section>
 
+        {/* Section: 費用の目安 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">6. 費用の目安</h2>
+          <div className="grid gap-3">
+            {[
+              { item: 'LTO運転記録証明書 代行取得', cost: '約40,000円〜', note: 'LTO手数料・国際郵便込み' },
+              { item: 'LTO書類＋DFAアポスティーユ セット', cost: '約60,000円〜', note: 'DFA手数料・認証費用込み' },
+              { item: '外免切替申請サポート（書類確認）', cost: '別途お見積もり', note: '申請書類の確認・アドバイス' },
+            ].map((row, i) => (
+              <div key={i} className="flex justify-between items-center bg-white border border-gray-100 rounded-lg px-4 py-3 shadow-card">
+                <div>
+                  <p className="text-sm font-medium text-secondary">{row.item}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{row.note}</p>
+                </div>
+                <span className="text-sm font-bold text-primary ml-4 flex-shrink-0">{row.cost}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※ 費用はLTO支局の状況・書類の種類によって変動します。詳細はお問い合わせください。</p>
+        </section>
+
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">LTO書類取得、まるごとお任せ</h2>
@@ -302,10 +336,8 @@ export default function GaimenKirikaeGuidePage() {
           </div>
         </section>
 
-        <footer className="text-center text-xs text-gray-300 pb-8">
-          <p>© 2026 IGRS Inc. ｜ <Link to="/" className="hover:text-secondary">フィリピン書類取得代行センター</Link></p>
-        </footer>
       </main>
+      <Footer />
     </div>
   );
 }
