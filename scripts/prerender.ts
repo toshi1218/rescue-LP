@@ -85,22 +85,22 @@ const routes: RouteConfig[] = [
   {
     path: '/pricing',
     outFile: path.join(projectRoot, 'dist', 'pricing', 'index.html'),
-    title: 'フィリピン書類取得代行の料金プラン｜CENOMAR・PSA・NBI・国際結婚パック【2026年】｜フィリピン書類取得代行センター',
-    description: 'CENOMAR・PSA・NBI・アポスティーユ・国際結婚パック・配偶者ビザの代行料金一覧。自力取得との費用比較、よくある質問、どのプランを選ぶべきかガイド。',
+    title: '料金・プラン一覧｜フィリピン書類取得代行センター',
+    description: 'CENOMAR・PSA・NBI・アポスティーユ・国際結婚パック・配偶者ビザの代行料金一覧。各プランの費用・期間・含まれるサービスを詳しく掲載。',
     canonical: 'https://ph-document.com/pricing/',
   },
   {
     path: '/company',
     outFile: path.join(projectRoot, 'dist', 'company', 'index.html'),
     title: '会社概要｜株式会社IGRS｜フィリピン書類取得代行センター',
-    description: '株式会社IGRSの会社概要。フィリピン企業進出支援・公的書類BPO専門。和歌山県和歌山市に本店、フィリピン共和国セブ市に営業所を置く。',
+    description: '株式会社IGRSの会社概要。フィリピンへの企業進出支援・公的書類BPO専門。和歌山県和歌山市に本店、フィリピン共和国セブ市に営業所を置く。',
     canonical: 'https://ph-document.com/company/',
   },
   {
     path: '/contact',
     outFile: path.join(projectRoot, 'dist', 'contact', 'index.html'),
     title: 'お問い合わせ｜フィリピン書類取得代行センター',
-    description: 'フィリピン書類取得代行に関するお問い合わせ・無料相談はこちら。CENOMAR・PSA・NBI・国際結婚・配偶者ビザについて日本語でご相談いただけます。',
+    description: 'フィリピン書類取得代行に関するお問い合わせ・無料相談はこちら。CENOMAR・PSA・NBI・国際結婚・配偶者ビザについて日本語でご相談いただけます。翌営業日以内に返信。',
     canonical: 'https://ph-document.com/contact/',
   },
 ];
