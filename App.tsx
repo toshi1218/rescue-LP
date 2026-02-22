@@ -13,6 +13,7 @@ import CompanyPage from './pages/CompanyPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import ContactPage from './pages/ContactPage';
 import PricingPage from './pages/PricingPage';
+import KikaShinseiGuidePage from './pages/KikaShinseiGuidePage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/kika-shinsei-guide" element={<KikaShinseiGuidePage />} />
       </Routes>
     </>
   );

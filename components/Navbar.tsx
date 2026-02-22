@@ -14,6 +14,7 @@ const purposeTabs = [
   { label: '国際結婚', path: '/kokusai-kekkon-guide/' },
   { label: '配偶者ビザ', path: '/haigusha-visa-shorui/' },
   { label: '免許切替', path: '/gaimen-kirikae-guide/' },
+  { label: '帰化申請', path: '/kika-shinsei-guide/' },
 ];
 
 type MenuType = 'docs' | 'purpose' | null;
