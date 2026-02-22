@@ -18,6 +18,7 @@ interface RouteConfig {
   canonical: string;
   hreflangJa?: string;
   hreflangDefault?: string;
+  ogType?: string;
 }
 
 const routes: RouteConfig[] = [
@@ -34,6 +35,7 @@ const routes: RouteConfig[] = [
     title: 'フィリピン独身証明書（CENOMAR）とは？取得方法・費用・期間を完全解説【2026年】｜フィリピン書類取得代行センター',
     description: 'CENOMARの取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・有効期限・よくあるトラブルまで初心者向けに徹底ガイド。',
     canonical: 'https://ph-document.com/cenomar-guide/',
+    ogType: 'article',
   },
   {
     path: '/psa-shussei-shomeisho',
@@ -41,6 +43,7 @@ const routes: RouteConfig[] = [
     title: 'フィリピンPSA出生証明書の取得方法｜国際結婚・ビザ申請で必要な理由【2026年】｜フィリピン書類取得代行センター',
     description: 'PSA出生証明書（旧NSO）の取得方法を3パターンで解説。費用・期間・NO RECORD FOUNDのトラブル対処まで徹底ガイド。',
     canonical: 'https://ph-document.com/psa-shussei-shomeisho/',
+    ogType: 'article',
   },
   {
     path: '/nbi-clearance-guide',
@@ -48,6 +51,7 @@ const routes: RouteConfig[] = [
     title: 'フィリピンNBI無犯罪証明書（NBI Clearance）とは？日本から取得する方法【2026年】｜フィリピン書類取得代行センター',
     description: 'NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。',
     canonical: 'https://ph-document.com/nbi-clearance-guide/',
+    ogType: 'article',
   },
   {
     path: '/kokusai-kekkon-guide',
@@ -55,6 +59,7 @@ const routes: RouteConfig[] = [
     title: 'フィリピン人との国際結婚 完全ガイド｜手続きの流れ・必要書類・費用【2026年最新】｜フィリピン書類取得代行センター',
     description: 'フィリピン人との国際結婚の手順をステップ別に解説。日本先行・フィリピン先行の2パターン、必要書類（CENOMAR・PSA等）、費用・期間まで初心者向けに徹底ガイド。',
     canonical: 'https://ph-document.com/kokusai-kekkon-guide/',
+    ogType: 'article',
   },
   {
     path: '/haigusha-visa-shorui',
@@ -62,6 +67,7 @@ const routes: RouteConfig[] = [
     title: '配偶者ビザに必要なフィリピン書類チェックリスト【2026年最新】｜フィリピン書類取得代行センター',
     description: '配偶者ビザ申請に必要なフィリピン書類（CENOMAR・PSA・NBI等）をチェックリスト形式で解説。書類の取得代行にも対応。',
     canonical: 'https://ph-document.com/haigusha-visa-shorui/',
+    ogType: 'article',
   },
   {
     path: '/apostille-guide',
@@ -69,6 +75,7 @@ const routes: RouteConfig[] = [
     title: 'フィリピンDFAアポスティーユ認証とは？対象書類・取得方法・費用【2026年】｜フィリピン書類取得代行センター',
     description: 'フィリピンDFAアポスティーユ認証の取得方法・対象書類・費用・期間を解説。CENOMAR・PSA・NBI Clearanceへの認証取得を代行サービスで日本語対応。',
     canonical: 'https://ph-document.com/apostille-guide/',
+    ogType: 'article',
   },
   {
     path: '/gaimen-kirikae-guide',
@@ -76,6 +83,7 @@ const routes: RouteConfig[] = [
     title: 'フィリピン運転免許の外免切替ガイド｜必要なLTO書類・手順・費用【2026年】｜フィリピン書類取得代行センター',
     description: 'フィリピン運転免許を日本の免許に切り替える外免切替の手順・必要書類・LTO書類の取得方法を解説。LTO書類の代行取得に対応。',
     canonical: 'https://ph-document.com/gaimen-kirikae-guide/',
+    ogType: 'article',
   },
   {
     path: '/kekkon-shomeisho',
@@ -83,6 +91,7 @@ const routes: RouteConfig[] = [
     title: 'フィリピンPSA婚姻証明書の取得方法｜国際結婚・配偶者ビザで必要な理由【2026年】｜フィリピン書類取得代行センター',
     description: 'PSA婚姻証明書（フィリピン結婚証明書）の取得方法・必要な場面・費用・期間を解説。フィリピン先行婚姻後の報告手続きに必要な書類をガイド。',
     canonical: 'https://ph-document.com/kekkon-shomeisho/',
+    ogType: 'article',
   },
   {
     path: '/pricing',
@@ -118,6 +127,7 @@ const routes: RouteConfig[] = [
     title: 'フィリピン人の帰化申請ガイド｜必要書類・手続きの流れ・PSA・NBI取得【2026年最新】｜フィリピン書類取得代行センター',
     description: 'フィリピン国籍の方が日本に帰化するための手続きの流れ・必要書類（PSA出生証明書・NBI Clearance等）・費用・審査期間をわかりやすく解説。',
     canonical: 'https://ph-document.com/kika-shinsei-guide/',
+    ogType: 'article',
   },
 ];
 
@@ -171,6 +181,26 @@ function updateHead(html: string, route: RouteConfig): string {
     /<link rel="alternate" hreflang="x-default" href="[^"]*"/,
     `<link rel="alternate" hreflang="x-default" href="${route.canonical}"`
   );
+
+  // twitter:title
+  result = result.replace(
+    /<meta name="twitter:title" content="[^"]*"/,
+    `<meta name="twitter:title" content="${route.title}"`
+  );
+
+  // twitter:description
+  result = result.replace(
+    /<meta name="twitter:description" content="[^"]*"/,
+    `<meta name="twitter:description" content="${route.description}"`
+  );
+
+  // og:type (article for guide pages, website for others)
+  if (route.ogType) {
+    result = result.replace(
+      /<meta property="og:type" content="[^"]*"/,
+      `<meta property="og:type" content="${route.ogType}"`
+    );
+  }
 
   return result;
 }
