@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, FileText, ArrowRight, AlertTriangle } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -60,6 +61,18 @@ const faqs = [
   {
     q: 'CENOMARの取得にどのくらい時間がかかりますか？',
     a: '代行サービス利用の場合、約3〜6週間が目安です。書類の準備を始めてから手続きが完了するまでの全体スケジュールを考えると、婚姻届提出の2〜3ヶ月前にはCENOMARの申請を始めることをおすすめします。',
+  },
+  {
+    q: 'フィリピン人側がすでに日本に住んでいる場合、どちら先行の手続きがおすすめですか？',
+    a: 'フィリピン人配偶者がすでに日本に在留している場合は「日本先行婚姻」がスムーズです。在留資格の状況に応じて変更申請か認定申請かを選ぶ必要があります。在留資格を確認した上で行政書士に相談することをおすすめします。',
+  },
+  {
+    q: '子どもが生まれた後に婚姻手続きをする場合、何か変わりますか？',
+    a: '子どもが先に生まれている場合、認知手続きや国籍確認など追加の手続きが必要になる場合があります。PSA出生証明書（子ども分）やPSA婚姻証明書が求められることがあります。ケースごとに状況が異なるため、早めにご相談ください。',
+  },
+  {
+    q: '国際結婚後、フィリピン人配偶者はフィリピン国籍を失いますか？',
+    a: 'いいえ、フィリピン人女性が日本人男性と結婚しても、フィリピン国籍は自動的に失われません。ただし、本人が自発的に外国籍を取得・申請した場合には状況が変わります。フィリピン国籍法に関しては、フィリピン大使館にご確認ください。',
   },
 ];
 
@@ -342,10 +355,8 @@ export default function KokusaiKekkonGuidePage() {
           </div>
         </section>
 
-        <footer className="text-center text-xs text-gray-300 pb-8">
-          <p>© 2026 IGRS Inc. ｜ <Link to="/" className="hover:text-secondary">フィリピン書類取得代行センター</Link></p>
-        </footer>
       </main>
+      <Footer />
     </div>
   );
 }

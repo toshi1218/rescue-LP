@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileText, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -25,6 +26,18 @@ const faqs = [
   {
     q: 'アポスティーユ認証後に日本語翻訳は必要ですか？',
     a: 'アポスティーユ認証自体は翻訳ではなく、書類の真正性を証明するものです。英語で書かれたフィリピン書類を日本の機関に提出する場合、別途日本語翻訳が必要になることがあります。',
+  },
+  {
+    q: 'アポスティーユはどこで申請できますか？自分でできますか？',
+    a: 'フィリピン国内のDFA（外務省）事務所で申請できます。マニラ・セブ・ダバオ等にオフィスがあります。日本からご自身で申請するには現地代理人が必要であり、DFAオンライン予約システムの利用も必要です。代行サービスを利用すれば、これらの手続きをすべてお任せいただけます。',
+  },
+  {
+    q: 'アポスティーユ認証の有効期限はありますか？',
+    a: 'アポスティーユ認証自体に法的な有効期限はありません。ただし、認証の対象となる書類（NBI ClearanceやCENOMAR等）に有効期限がある場合は、書類の期限切れ前に使用する必要があります。',
+  },
+  {
+    q: '複数の書類にまとめてアポスティーユ認証を取得できますか？',
+    a: 'はい、複数の書類（例：CENOMAR・PSA出生証明書・NBI Clearance）のアポスティーユをまとめて申請することが可能です。まとめて代行することで、個別に依頼するよりも効率的に手続きが完了します。',
   },
 ];
 
@@ -301,10 +314,8 @@ export default function ApostillePage() {
           </div>
         </section>
 
-        <footer className="text-center text-xs text-gray-300 pb-8">
-          <p>© 2026 IGRS Inc. ｜ <Link to="/" className="hover:text-secondary">フィリピン書類取得代行センター</Link></p>
-        </footer>
       </main>
+      <Footer />
     </div>
   );
 }

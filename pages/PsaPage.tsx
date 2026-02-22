@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileText, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -25,6 +26,18 @@ const faqs = [
   {
     q: '日本語翻訳は必要ですか？',
     a: '日本の市区町村役場に提出する場合、英語のPSA書類には日本語訳の添付が求められます（翻訳者の署名が必要）。大使館提出の場合は不要なことが多いです。提出先に事前確認されることをおすすめします。',
+  },
+  {
+    q: 'PSA出生証明書の取得代行にかかる費用はどのくらいですか？',
+    a: '代行費用はPSA手数料・国際郵便代込みで約4万円〜が目安です。DFAアポスティーユ認証もセットで依頼できます。詳細はお問い合わせください。',
+  },
+  {
+    q: '複数部数まとめて取得できますか？',
+    a: 'はい、PSA出生証明書は複数部の同時申請が可能です。婚姻届提出用・入管提出用など複数枚が必要な場合はご相談ください。まとめて代行することでスムーズに取得できます。',
+  },
+  {
+    q: '親の情報が誤っている場合、訂正はできますか？',
+    a: '出生証明書に記載された親の氏名・生年月日等の誤りを訂正するには、フィリピンの地方市役所（LCR）への申請が必要です。場合によっては裁判所の命令が必要になることもあります。複雑なケースは早めにご相談ください。',
   },
 ];
 
@@ -302,10 +315,8 @@ export default function PsaPage() {
           </div>
         </section>
 
-        <footer className="text-center text-xs text-gray-300 pb-8">
-          <p>© 2026 IGRS Inc. ｜ <Link to="/" className="hover:text-secondary">フィリピン書類取得代行センター</Link></p>
-        </footer>
       </main>
+      <Footer />
     </div>
   );
 }
