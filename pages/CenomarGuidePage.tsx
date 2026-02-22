@@ -55,13 +55,31 @@ export default function CenomarGuidePage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/cenomar-guide/',
+        },
         headline: 'フィリピン独身証明書（CENOMAR／セノマー）とは？取得方法・費用・期間を完全解説【2026年】',
         description: 'CENOMARの取得方法を自分で・大使館で・代行での3パターンで解説。費用・期間・有効期限・よくあるトラブルまで初心者向けに徹底ガイド。',
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/cenomar-guide/',
         inLanguage: 'ja',
+        datePublished: '2025-11-01',
         dateModified: '2026-02-22',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'フィリピン書類取得代行センター',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
       },
       {
         '@type': 'FAQPage',
@@ -103,7 +121,7 @@ export default function CenomarGuidePage() {
           <ol className="space-y-1 text-sm text-secondary">
             {['CENOMARとは何か', 'どんな場面で必要か', '基本情報（発行元・費用・期間）', '取得方法3パターン比較', '申請の流れ・ステップ別ガイド', '在日フィリピン大使館・領事館の窓口', '書類が届いたあとの手続き', 'よくあるトラブルと注意点', 'よくある質問（FAQ）', '無料相談・お問い合わせ'].map((item, i) => (
               <li key={i}>
-                <a href={`#section-${i + 1}`} className="hover:underline">
+                <a href={i === 9 ? '#contact' : `#section-${i + 1}`} className="hover:underline">
                   {i + 1}. {item}
                 </a>
               </li>
@@ -233,45 +251,6 @@ export default function CenomarGuidePage() {
           </div>
         </section>
 
-        {/* Section 5 */}
-        <section id="section-5" className="mb-10">
-          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
-            8. よくあるトラブルと注意点
-          </h2>
-          <div className="space-y-4">
-            {[
-              {
-                title: '書類が届かない',
-                body: 'PSAオンライン申請で支払い完了後、数週間経っても届かないケースがあります。国際郵便の遅延・紛失が原因のことが多く、再申請が必要になる場合も。',
-              },
-              {
-                title: 'MATCH FOUNDと記載されていた',
-                body: '婚姻記録が見つかった場合に「MATCH FOUND」と記載されます。過去に結婚歴がある場合は正常ですが、身に覚えがない場合はPSAへの異議申し立てが必要です。',
-              },
-              {
-                title: '名前のスペルが異なる',
-                body: 'パスポートの名前とCENOMARの名前が一致しない場合、大使館や役所で問題になることがあります。申請前に必ずパスポートと同じ名前で申請しましょう。',
-              },
-              {
-                title: '有効期限切れで再取得が必要',
-                body: '取得後に手続きが長引き、有効期限（6ヶ月）を過ぎてしまうケースがあります。手続きのスケジュールを逆算して取得時期を決めることが重要です。',
-              },
-              {
-                title: '翻訳が必要なケース',
-                body: '日本の市区町村役場によっては、英語のCENOMARに日本語翻訳の添付を求める場合があります。事前に提出先の窓口に確認しておきましょう。',
-              },
-            ].map((t, i) => (
-              <div key={i} className="flex gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4">
-                <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-bold text-amber-800 mb-1">{t.title}</p>
-                  <p className="text-xs text-amber-700">{t.body}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Section 5: ステップ別ガイド */}
         <section id="section-5" className="mb-10">
           <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
@@ -344,6 +323,45 @@ export default function CenomarGuidePage() {
                     <li key={i} className={`text-xs flex gap-2 ${scenario.textColor}`}><span className="font-bold flex-shrink-0">{i + 1}.</span>{step}</li>
                   ))}
                 </ol>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 8: よくあるトラブルと注意点 */}
+        <section id="section-8" className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
+            8. よくあるトラブルと注意点
+          </h2>
+          <div className="space-y-4">
+            {[
+              {
+                title: '書類が届かない',
+                body: 'PSAオンライン申請で支払い完了後、数週間経っても届かないケースがあります。国際郵便の遅延・紛失が原因のことが多く、再申請が必要になる場合も。',
+              },
+              {
+                title: 'MATCH FOUNDと記載されていた',
+                body: '婚姻記録が見つかった場合に「MATCH FOUND」と記載されます。過去に結婚歴がある場合は正常ですが、身に覚えがない場合はPSAへの異議申し立てが必要です。',
+              },
+              {
+                title: '名前のスペルが異なる',
+                body: 'パスポートの名前とCENOMARの名前が一致しない場合、大使館や役所で問題になることがあります。申請前に必ずパスポートと同じ名前で申請しましょう。',
+              },
+              {
+                title: '有効期限切れで再取得が必要',
+                body: '取得後に手続きが長引き、有効期限（6ヶ月）を過ぎてしまうケースがあります。手続きのスケジュールを逆算して取得時期を決めることが重要です。',
+              },
+              {
+                title: '翻訳が必要なケース',
+                body: '日本の市区町村役場によっては、英語のCENOMARに日本語翻訳の添付を求める場合があります。事前に提出先の窓口に確認しておきましょう。',
+              },
+            ].map((t, i) => (
+              <div key={i} className="flex gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4">
+                <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-bold text-amber-800 mb-1">{t.title}</p>
+                  <p className="text-xs text-amber-700">{t.body}</p>
+                </div>
               </div>
             ))}
           </div>
