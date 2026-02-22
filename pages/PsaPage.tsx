@@ -39,6 +39,14 @@ const faqs = [
     q: '親の情報が誤っている場合、訂正はできますか？',
     a: '出生証明書に記載された親の氏名・生年月日等の誤りを訂正するには、フィリピンの地方市役所（LCR）への申請が必要です。場合によっては裁判所の命令が必要になることもあります。複雑なケースは早めにご相談ください。',
   },
+  {
+    q: 'PSA出生証明書の内容はどのような情報が記載されていますか？',
+    a: 'PSA出生証明書（Birth Certificate）には、①氏名（フルネーム）②生年月日・出生時刻 ③出生地（市・州・病院名）④性別 ⑤父の氏名・国籍 ⑥母の旧姓・国籍 ⑦登録番号・登録日・登録機関が記載されています。書類はすべて英語で記載されており、日本の機関に提出する際は日本語翻訳が必要なことがあります。',
+  },
+  {
+    q: '「SECPA（Security Paper）」とはPSAのどの書類ですか？',
+    a: 'PSAが発行する出生証明書・婚姻証明書・死亡証明書は、セキュリティペーパー（SECPA）と呼ばれる専用の用紙に印刷されて発行されます。このSECPAが付いたものがPSA発行の公式書類であり、コピーや白紙への再印刷は公式書類として認められません。代行取得の場合は必ずSECPA付きの書類をお届けします。',
+  },
 ];
 
 export default function PsaPage() {
@@ -207,6 +215,90 @@ export default function PsaPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Section: 申請成功のポイント */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">PSA出生証明書の申請を成功させるポイント</h2>
+          <div className="space-y-4">
+            {[
+              {
+                num: '01',
+                title: '取得前に名前のスペル・生年月日を確認する',
+                body: 'PSA出生証明書に記載される氏名（英語表記）・生年月日が、パスポートや他の書類と一致しているか事前確認が重要です。不一致があると婚姻届・ビザ申請で問題になります。特にミドルネームの記載有無、ハイフン・スペースの違いに注意してください。',
+              },
+              {
+                num: '02',
+                title: '使用目的・提出先の「有効期限」要件を確認する',
+                body: 'PSA出生証明書自体に法的な有効期限はありませんが、提出先（日本の市区町村・入管・大使館）が「発行から6ヶ月以内」を求めることがあります。使用時期が決まったら逆算して取得してください。早めに取得しすぎると期限切れになる場合があります。',
+              },
+              {
+                num: '03',
+                title: '「NO RECORD FOUND」への対処を知っておく',
+                body: 'PSAに出生記録がない場合（NO RECORD FOUND）、地方市役所（LCR）に出生登録がされていない可能性があります。この場合、遅延登録（Late Registration）の手続きが必要です。手続きには出生を証明できる書類（病院の記録、学校の書類など）が必要になります。複雑な場合は早めにご相談ください。',
+              },
+              {
+                num: '04',
+                title: 'DFAアポスティーユの必要性を確認する',
+                body: '日本の市区町村への婚姻届ではアポスティーユは不要なことが多いですが、配偶者ビザ申請や特定の大使館手続きで必要になる場合があります。提出先に事前確認し、必要な場合はPSA取得と同時にDFAアポスティーユもセットで依頼することをおすすめします。',
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+                <span className="text-2xl font-bold text-primary/20 flex-shrink-0 w-8">{item.num}</span>
+                <div>
+                  <p className="text-sm font-bold text-secondary mb-2">{item.title}</p>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section: PSA書類到着後のチェックリスト */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">PSA書類が届いたら確認すること</h2>
+          <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+            <p className="text-sm text-gray-700 mb-4">PSA出生証明書を受け取ったら、提出前に以下を必ず確認してください。</p>
+            <div className="space-y-3">
+              {[
+                { check: '氏名（スペル）がパスポートと一致しているか', note: '大文字小文字・ミドルネームを含め確認' },
+                { check: '生年月日が正しいか', note: '日・月・年の順番に注意' },
+                { check: '書類がSECPA（セキュリティペーパー）で発行されているか', note: 'PSAの公印・透かしが入っているか確認' },
+                { check: '発行日付が新しいか（6ヶ月以内か）', note: '提出先の要件を確認' },
+                { check: '親の氏名・国籍情報が正確か', note: '日本の婚姻届・ビザ申請で確認されることがある' },
+                { check: '日本語翻訳が必要な場合は翻訳を用意する', note: '翻訳者の氏名・署名・翻訳日が必要' },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-3 items-start">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm text-secondary font-medium">{item.check}</p>
+                    <p className="text-xs text-gray-500">{item.note}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section: 代行費用目安 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">代行費用の目安</h2>
+          <div className="grid gap-3">
+            {[
+              { item: 'PSA出生証明書 取得代行', cost: '約40,000円〜', note: 'PSA手数料・国際郵便込み' },
+              { item: 'PSA出生証明書 + DFAアポスティーユ セット', cost: '約60,000円〜', note: 'DFA手数料・認証費用込み' },
+              { item: '複数部数（2枚目以降）', cost: '1枚あたり+5,000円〜', note: '同時申請でまとめて対応可能' },
+            ].map((row, i) => (
+              <div key={i} className="flex justify-between items-center bg-white border border-gray-100 rounded-lg px-4 py-3 shadow-card">
+                <div>
+                  <p className="text-sm font-medium text-secondary">{row.item}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{row.note}</p>
+                </div>
+                <span className="text-sm font-bold text-primary ml-4 flex-shrink-0">{row.cost}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※ NO RECORD FOUNDや訂正が必要な場合は別途費用・期間がかかります。</p>
         </section>
 
         {/* Section 5 */}

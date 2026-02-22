@@ -71,6 +71,14 @@ const faqs = [
     q: 'フィリピン書類の取得から配偶者ビザ申請まで、全体でどのくらいの期間がかかりますか？',
     a: 'フィリピン書類（CENOMAR・PSA・NBI等）の取得に約2〜6週間、配偶者ビザの審査に約1〜3ヶ月が目安です。書類取得から申請まで含めると、早くて3〜4ヶ月程度みておくことをおすすめします。書類の不備や追加提出があると時間が延びます。',
   },
+  {
+    q: 'CENOMAR・PSA書類の有効期限はいつまでですか？申請タイミングを教えてください。',
+    a: 'CENOMARは発行から約6ヶ月以内が一般的な目安です（婚姻届・ビザ申請の際に求められる場合があります）。PSA出生証明書は法的な有効期限はありませんが、6ヶ月以内のものを求められることが多いです。ビザ申請の予定日から逆算して、申請の2〜3ヶ月前にはフィリピン書類の取得を開始することをおすすめします。',
+  },
+  {
+    q: 'フィリピン人配偶者が現在フィリピンにいる場合（在外）と日本にいる場合（在留）で、申請方法が違いますか？',
+    a: 'はい、申請の種類が異なります。フィリピン人配偶者が海外（フィリピン等）にいる場合は「在留資格認定証明書交付申請」を行い、証明書取得後に大使館でビザを申請します。日本に在留している場合（他の在留資格を持っている）は「在留資格変更許可申請」を行います。どちらの場合も書類の要件は概ね同じですが、手続きの流れが異なります。行政書士への相談をおすすめします。',
+  },
 ];
 
 export default function HaigushaVisaPage() {
@@ -231,6 +239,74 @@ export default function HaigushaVisaPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Section: 認定申請 vs 変更申請 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">在留資格認定申請 vs 変更申請 どちらを選ぶ？</h2>
+          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+            配偶者ビザ（日本人の配偶者等）の申請方法は、フィリピン人配偶者が現在どこにいるかによって異なります。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-secondary text-white">
+                  <th className="px-4 py-3 text-left font-semibold rounded-tl-lg">申請の種類</th>
+                  <th className="px-4 py-3 text-left font-semibold">対象となる方</th>
+                  <th className="px-4 py-3 text-left font-semibold rounded-tr-lg">手続きの流れ</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  [
+                    '在留資格認定証明書交付申請',
+                    'フィリピン在住（または短期滞在中）のフィリピン人配偶者',
+                    '①入管に申請 → ②証明書取得（1〜3ヶ月）→ ③在フィリピン日本大使館でビザ申請 → ④来日',
+                  ],
+                  [
+                    '在留資格変更許可申請',
+                    '日本に在留中（留学・就労等）のフィリピン人配偶者',
+                    '①入管に申請 → ②審査（1〜3ヶ月）→ ③許可後に配偶者ビザに変更 → ④在留カード交付',
+                  ],
+                ].map(([type, target, flow], i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                    <td className="px-4 py-3 font-medium text-secondary border-b border-gray-100 text-sm">{type}</td>
+                    <td className="px-4 py-3 text-gray-700 border-b border-gray-100 text-xs">{target}</td>
+                    <td className="px-4 py-3 text-gray-500 border-b border-gray-100 text-xs">{flow}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800">
+            どちらの申請でも、フィリピン書類（CENOMAR・PSA出生証明書・NBI Clearance）の準備は共通です。当センターでは書類の取得代行のみ対応しています。申請手続き全体については行政書士へのご相談をおすすめします。
+          </div>
+        </section>
+
+        {/* Section: 書類取得タイムライン */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">フィリピン書類取得のタイムライン目安</h2>
+          <p className="text-sm text-gray-700 mb-4">代行で取得する場合の一般的な目安です（HIT・NO RECORD等のトラブルがない場合）。</p>
+          <div className="space-y-3">
+            {[
+              { period: '〜3週間', doc: 'CENOMAR（独身証明書）', note: 'PSA発行。通常2〜4週間が目安' },
+              { period: '〜4週間', doc: 'PSA出生証明書', note: 'PSA発行。状況により変動' },
+              { period: '〜4週間', doc: 'NBI Clearance（無犯罪証明書）', note: 'HIT案件は追加2〜4週間かかる場合あり' },
+              { period: '+2週間', doc: 'DFAアポスティーユ認証', note: '上記書類取得後に追加で実施' },
+              { period: 'すべて込みで4〜8週間', doc: '書類一式（セット代行）', note: 'まとめて依頼することで効率化' },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-lg px-4 py-3 shadow-card">
+                <div className="w-28 flex-shrink-0">
+                  <span className="text-xs font-bold text-primary">{item.period}</span>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-secondary">{item.doc}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{item.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※ 取得期間は書類の状況・機関の処理状況によって変動します。余裕をもったスケジュールを組んでください。</p>
         </section>
 
         {/* CTA */}

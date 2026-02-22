@@ -74,6 +74,14 @@ const faqs = [
     q: '国際結婚後、フィリピン人配偶者はフィリピン国籍を失いますか？',
     a: 'いいえ、フィリピン人女性が日本人男性と結婚しても、フィリピン国籍は自動的に失われません。ただし、本人が自発的に外国籍を取得・申請した場合には状況が変わります。フィリピン国籍法に関しては、フィリピン大使館にご確認ください。',
   },
+  {
+    q: '国際結婚の手続き中に子どもが生まれた場合、どうすればよいですか？',
+    a: '婚姻手続き中に子どもが生まれた場合、まず子どもの出生届を日本の市区町村役場に提出します。国籍の取得（日本国籍またはフィリピン国籍）についても対応が必要です。また、フィリピン大使館への出生報告（Report of Birth）も必要になる場合があります。婚姻手続きと並行して進める必要があるため、早めにご相談ください。',
+  },
+  {
+    q: 'フィリピン人側がOFW（海外就労者）の場合、CENOMAR取得は通常と異なりますか？',
+    a: 'OFW（Overseas Filipino Workers）の方もCENOMARの取得方法は基本的に同じです。ただし、住所がフィリピン国外の場合、PSAオンラインシステムへの登録や書類の受け取り方法に違いが生じることがあります。代行サービスを利用すれば、OFWの方でも日本語でスムーズに対応できます。',
+  },
 ];
 
 export default function KokusaiKekkonGuidePage() {
@@ -242,6 +250,74 @@ export default function KokusaiKekkonGuidePage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Section: 状況別おすすめルート */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">状況別おすすめルート</h2>
+          <p className="text-sm text-gray-700 mb-4">ご自身の状況に合わせてどちらのルートが向いているか確認してみましょう。</p>
+          <div className="grid gap-4">
+            {[
+              {
+                situation: 'フィリピン人がすでに日本に在留している',
+                recommend: '日本先行婚姻',
+                reason: '日本での婚姻届が比較的スムーズです。婚姻後は在留資格変更申請で配偶者ビザに切り替えます。CENOMARとPSA出生証明書を準備しておきましょう。',
+                color: 'border-blue-200 bg-blue-50',
+              },
+              {
+                situation: 'フィリピン人がフィリピンに在住で、フィリピンで結婚式をしたい',
+                recommend: 'フィリピン先行婚姻',
+                reason: 'フィリピンで正式な婚姻手続きを行います。日本人側はLCCM（婚姻要件具備証明書）を在フィリピン日本大使館で取得してから手続きを進めます。婚姻後はPSA婚姻証明書が発行されてから日本の役場で報告的届出を行います。',
+                color: 'border-green-200 bg-green-50',
+              },
+              {
+                situation: '急いで在留資格を取得したい',
+                recommend: '日本先行婚姻（書類を早めに準備）',
+                reason: 'フィリピン先行婚姻はPSA婚姻証明書の発行に3〜6ヶ月かかるため、急ぐ場合は日本先行が有利です。ただし、CENOMARやPSA出生証明書の取得も早めに開始することが重要です。',
+                color: 'border-amber-200 bg-amber-50',
+              },
+              {
+                situation: 'フィリピン人が離婚経験（アニュルメント）がある',
+                recommend: 'アニュルメント判決書の取得が最優先',
+                reason: 'フィリピンには離婚制度がないため、前の婚姻が法的に解消されていることを証明するアニュルメント（婚姻無効）判決書が必要です。これがなければ再婚できません。判決書取得後にCENOMAR・PSA手続きを進めます。',
+                color: 'border-red-100 bg-red-50',
+              },
+            ].map((item, i) => (
+              <div key={i} className={`border rounded-xl p-5 ${item.color}`}>
+                <p className="text-xs font-bold text-gray-500 mb-1">このような方に</p>
+                <p className="text-sm font-bold text-secondary mb-2">{item.situation}</p>
+                <p className="text-xs font-bold text-primary mb-1">おすすめルート：{item.recommend}</p>
+                <p className="text-xs text-gray-700 leading-relaxed">{item.reason}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section: 全体タイムライン */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">全体タイムラインの目安（日本先行婚姻の場合）</h2>
+          <p className="text-sm text-gray-700 mb-4">書類取得開始から配偶者ビザ取得までの一般的なスケジュールです。</p>
+          <div className="space-y-3">
+            {[
+              { period: '今すぐ〜', action: 'CENOMAR・PSA出生証明書の取得を代行依頼', note: 'この段階が一番重要。早めに動くほど全体が短縮される' },
+              { period: '1〜2ヶ月後', action: 'フィリピン書類が日本に到着', note: 'NBI Clearanceも必要な場合は同時並行で申請' },
+              { period: '2ヶ月後〜', action: '日本の市区町村役場に婚姻届を提出', note: 'フィリピン書類の日本語翻訳を添付' },
+              { period: '婚姻届受理後〜', action: 'フィリピン大使館でReport of Marriageを提出', note: '東京のフィリピン大使館で報告的届出' },
+              { period: '書類が揃ったら', action: '入管に配偶者ビザ申請', note: '認定申請（海外）または変更申請（日本在留）' },
+              { period: '申請から1〜3ヶ月後', action: '配偶者ビザ取得', note: '不許可の場合は追加書類提出または再申請' },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-lg px-4 py-3 shadow-card">
+                <div className="w-28 flex-shrink-0">
+                  <span className="text-xs font-bold text-primary">{item.period}</span>
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-secondary">{item.action}</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{item.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※ タイムラインは書類取得の状況・入管の審査状況によって変動します。HIT案件・NO RECORD FOUND等のトラブルがあると延長します。</p>
         </section>
 
         {/* Section 5: 注意点 */}

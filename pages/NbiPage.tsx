@@ -6,6 +6,25 @@ import Footer from '../components/Footer';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
+const cases = [
+  {
+    title: '配偶者ビザ申請のためにNBIが必要な方',
+    detail: '日本の入管（出入国在留管理庁）が配偶者ビザ（日本人の配偶者等）の申請書類としてNBI Clearanceを求める場合があります。DFAアポスティーユ認証付きのものが推奨されます。NBI Clearanceの有効期限（1年間）を考慮して、ビザ申請の2〜3ヶ月前に取得を開始しましょう。HIT案件の場合は追加で2〜4週間かかることがあるため、余裕をもったスケジュールが重要です。',
+  },
+  {
+    title: '日本・海外就職のためにNBIが必要な方',
+    detail: 'フィリピン人の方が日本や海外で就職する際、雇用主からNBI Clearanceを求められることがあります。企業によっては「3ヶ月以内」の書類を指定するケースもあります。就職確定後すぐに申請を開始し、入社日に間に合うようにスケジュールを組むことをおすすめします。',
+  },
+  {
+    title: '海外移住・永住権申請のためにNBIが必要な方',
+    detail: 'カナダ・オーストラリア・ニュージーランドなど多くの国の移民・永住権申請で、フィリピンのNBI Clearanceが必要です。移住先の国の要件によって「発行から6ヶ月以内」などの条件がある場合があります。移住エージェントや弁護士の指示に従い、必要部数・アポスティーユの有無を事前に確認してください。',
+  },
+  {
+    title: 'フィリピンのパスポート申請でNBIが必要な方',
+    detail: '成人のパスポート申請時に、NBI Clearanceを求められるケースがあります（特に初回申請や長期間パスポートを更新していない方）。DFA（フィリピン外務省）のパスポート申請要件は定期的に変わるため、最新情報をDFAの公式サイトで確認することをおすすめします。当センターでのNBI取得後、DFAへの申請準備もサポートします。',
+  },
+];
+
 const faqs = [
   {
     q: 'NBI クリアランスの有効期限はどのくらいですか？',
@@ -39,10 +58,19 @@ const faqs = [
     q: 'フィリピンに住所がない在外フィリピン人でも申請できますか？',
     a: 'はい、海外在住のフィリピン人（OFW・永住権取得者等）もNBI クリアランスを申請できます。ただしNBIオンラインシステムへの登録や現地での手続きに代理人が必要です。当センターで海外在住者の代行申請にも対応しています。',
   },
+  {
+    q: 'NBI クリアランスに記載される情報はどのような内容ですか？',
+    a: 'NBI クリアランスには、申請者の氏名・生年月日・出生地・申請日・発行日・有効期限・顔写真・指紋・シリアルナンバーが記載されています。「MATCH FOUND（HIT）」または「NO DEROGATORY RECORD（無犯罪）」の結果も明記されます。英語で記載されるため、日本の機関に提出する場合は日本語翻訳が必要なことがあります。',
+  },
+  {
+    q: 'NBI クリアランスを取得した後、次に何をすればよいですか？',
+    a: 'NBI Clearance取得後の次のステップは目的によって異なります。①配偶者ビザ申請の場合：DFAアポスティーユ認証を取得し、必要なら日本語翻訳を添付して入管に提出します。②就職・雇用先提出の場合：雇用主の指示に従い提出します。③海外移住の場合：移住先の国の要件に合わせてアポスティーユや認証を取得します。当センターではNBI取得後のDFAアポスティーユ認証・発送もセットで対応しています。',
+  },
 ];
 
 export default function NbiPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openCase, setOpenCase] = useState<number | null>(null);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -193,6 +221,30 @@ export default function NbiPage() {
           </div>
         </section>
 
+        {/* Section: ケース別ガイド */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-2 border-l-4 border-primary pl-3">どんな方がNBIを必要としているか</h2>
+          <p className="text-sm text-gray-500 mb-5">目的・状況別に、NBI Clearanceの取得ポイントをまとめました。</p>
+          <div className="space-y-2">
+            {cases.map((c, i) => (
+              <div key={i} className="bg-white border border-gray-200 rounded-lg shadow-card overflow-hidden">
+                <button
+                  className="w-full flex items-center justify-between px-5 py-4 text-left"
+                  onClick={() => setOpenCase(openCase === i ? null : i)}
+                >
+                  <span className="text-sm font-bold text-secondary pr-4">{c.title}</span>
+                  {openCase === i ? <ChevronUp className="w-4 h-4 text-primary flex-shrink-0" /> : <ChevronDown className="w-4 h-4 text-gray-400 flex-shrink-0" />}
+                </button>
+                {openCase === i && (
+                  <div className="px-5 pb-4 text-sm text-gray-700 leading-relaxed border-t border-gray-100">
+                    <p className="pt-3">{c.detail}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Section 5: NBI HIT */}
         <section id="nbi-5" className="mb-10">
           <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">5. NBI HITとは？対処法</h2>
@@ -240,6 +292,64 @@ export default function NbiPage() {
             <p>✓ 国際的な公文書として認証される</p>
             <p>✓ 当センターではNBI＋DFAアポスティーユのセット代行が可能</p>
           </div>
+        </section>
+
+        {/* Section: NBI申請成功のポイント */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">NBI申請を成功させるための重要ポイント</h2>
+          <div className="space-y-4">
+            {[
+              {
+                num: '01',
+                title: 'パスポートの有効期限と名前のスペルを確認する',
+                body: 'NBI申請に使用するIDは有効期限内のものが必要です。また、パスポートに記載されている名前のスペルがNBI申請書類と一致していることが重要です。スペルの不一致は後の配偶者ビザ審査や大使館提出でトラブルになります。全書類でスペルが統一されているか必ず事前確認してください。',
+              },
+              {
+                num: '02',
+                title: '有効期限を考慮して申請タイミングを計画する',
+                body: 'NBI Clearanceの有効期限は発行日から1年間です。使用目的（配偶者ビザ申請・就職・移住など）に合わせて、提出先が書類を必要とする日から逆算して取得しましょう。代行で取得する場合は2〜4週間かかるため、余裕をもって申請を開始してください。HIT案件はさらに時間がかかることも念頭に置いてください。',
+              },
+              {
+                num: '03',
+                title: 'DFAアポスティーユが必要かどうかを事前に確認する',
+                body: '日本の入管や大使館に提出するNBI Clearanceは、DFAアポスティーユ認証付きを求められる場合があります。提出先（入管の担当者・行政書士・大使館窓口）に事前に確認し、必要な場合はNBI取得と合わせてDFAアポスティーユもセットで代行依頼すると効率的です。アポスティーユ取得には別途1〜2週間かかります。',
+              },
+              {
+                num: '04',
+                title: '「MATCH FOUND（HIT）」の可能性を事前に把握する',
+                body: 'フィリピンは同姓同名の人が多いため、HIT（同名の犯罪記録との一致）が出るケースは珍しくありません。HITが出た場合、追加の確認手続き（Hit Clearance）が必要になり、さらに2〜4週間かかることがあります。急ぎの申請が必要な場合は、余裕のあるスケジュールを組むか、代行サービスにHIT対応も含めて相談することをおすすめします。',
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+                <span className="text-2xl font-bold text-primary/20 flex-shrink-0 w-8">{item.num}</span>
+                <div>
+                  <p className="text-sm font-bold text-secondary mb-2">{item.title}</p>
+                  <p className="text-xs text-gray-600 leading-relaxed">{item.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section: 料金目安 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">代行費用の目安</h2>
+          <div className="grid gap-3">
+            {[
+              { item: 'NBI Clearance 取得代行', cost: '約45,000円〜', note: 'NBI申請料・国際郵便込み' },
+              { item: 'NBI + DFAアポスティーユ セット', cost: '約65,000円〜', note: 'DFA手数料・認証費用込み' },
+              { item: 'NBI HIT案件（追加対応）', cost: '別途お見積もり', note: '状況によって費用が異なります' },
+            ].map((row, i) => (
+              <div key={i} className="flex justify-between items-center bg-white border border-gray-100 rounded-lg px-4 py-3 shadow-card">
+                <div>
+                  <p className="text-sm font-medium text-secondary">{row.item}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{row.note}</p>
+                </div>
+                <span className="text-sm font-bold text-primary ml-4 flex-shrink-0">{row.cost}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※ 費用は申請内容・HIT有無・書類の種類によって変動します。詳細はお問い合わせください。</p>
         </section>
 
         {/* Section 7: なぜ代行が選ばれるか */}

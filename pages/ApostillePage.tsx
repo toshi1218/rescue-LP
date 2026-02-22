@@ -39,6 +39,14 @@ const faqs = [
     q: '複数の書類にまとめてアポスティーユ認証を取得できますか？',
     a: 'はい、複数の書類（例：CENOMAR・PSA出生証明書・NBI Clearance）のアポスティーユをまとめて申請することが可能です。まとめて代行することで、個別に依頼するよりも効率的に手続きが完了します。',
   },
+  {
+    q: 'DFAアポスティーユを取得した後、書類の有効期間はどうなりますか？',
+    a: 'アポスティーユ認証自体に有効期限はありません。ただし、認証の対象となった元の書類（NBI ClearanceやCENOMARなど）に有効期限がある場合は、その書類の期限内に使用する必要があります。例えばNBI Clearanceは発行から1年間有効なため、取得後1年以内に使用してください。',
+  },
+  {
+    q: 'アポスティーユ認証されたフィリピン書類を日本の公証役場でさらに認証する必要はありますか？',
+    a: 'いいえ、ハーグ条約の趣旨はまさにこの「多重認証」を不要にすることです。フィリピン書類にDFAアポスティーユが付いていれば、日本の公証役場や大使館での追加認証なしに日本の機関で公文書として認められます。ただし提出先によって独自の要件がある場合もあるため、必ず事前確認してください。',
+  },
 ];
 
 const targetDocs = [
@@ -205,6 +213,103 @@ export default function ApostillePage() {
               </tbody>
             </table>
           </div>
+        </section>
+
+        {/* Section: 提出先別 アポスティーユ必要性チェック */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">提出先別 アポスティーユの必要性チェック</h2>
+          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+            アポスティーユが必要かどうかは提出先によって異なります。以下を参考にして、事前に提出先に確認してください。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-secondary text-white">
+                  <th className="px-4 py-3 text-left font-semibold rounded-tl-lg">提出先</th>
+                  <th className="px-4 py-3 text-left font-semibold">書類</th>
+                  <th className="px-4 py-3 text-left font-semibold rounded-tr-lg">アポスティーユの要否</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['日本の市区町村役場（婚姻届）', 'CENOMAR・PSA出生証明書', '不要なことが多い（要事前確認）'],
+                  ['日本の入管（配偶者ビザ）', 'NBI Clearance', '推奨（求められることが多い）'],
+                  ['日本の入管（配偶者ビザ）', 'CENOMAR・PSA', '不要なことが多い（要確認）'],
+                  ['フィリピン大使館（Report of Marriage等）', '各種PSA書類', '不要なことが多い（要確認）'],
+                  ['海外の移民局・永住権申請', 'NBI Clearance・PSA書類', '必要なことが多い（要件を確認）'],
+                  ['日本の雇用主・学校', 'NBI Clearance', '雇用主・学校の指示に従う'],
+                ].map(([dest, doc, req], i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                    <td className="px-4 py-3 text-secondary border-b border-gray-100">{dest}</td>
+                    <td className="px-4 py-3 text-gray-700 border-b border-gray-100 text-xs">{doc}</td>
+                    <td className={`px-4 py-3 border-b border-gray-100 text-xs font-medium ${req.includes('推奨') || req.includes('必要') ? 'text-amber-700' : 'text-green-700'}`}>{req}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※ 上記はあくまで一般的な傾向です。提出先・担当者によって要件が異なるため、必ず事前に確認してください。</p>
+        </section>
+
+        {/* Section: 認証後の書類活用ガイド */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">アポスティーユ認証後の書類活用ガイド</h2>
+          <div className="grid gap-4">
+            {[
+              {
+                title: '書類を受け取ったら最初に確認すること',
+                items: [
+                  'アポスティーユスタンプ（シールまたは印）が元の書類に正しく付いているか',
+                  '元の書類（PSA・NBI等）の情報（氏名・発行日）が正確か',
+                  'アポスティーユの発行日・シリアルナンバーが読み取れるか',
+                  '書類が破損・汚れていないか（原本の価値が損なわれないよう保管する）',
+                ],
+              },
+              {
+                title: '提出時の注意点',
+                items: [
+                  '提出先に「アポスティーユ付き書類」として提出することを明示する',
+                  '元の書類と一体になっているため、分離・切断しないこと',
+                  '日本語翻訳が必要な場合は、アポスティーユ部分の翻訳も必要なことがある',
+                  'コピーを提出する場合はコピーの正確性を申告する場合がある（提出先の要件による）',
+                ],
+              },
+            ].map((card, i) => (
+              <div key={i} className="bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+                <h3 className="text-sm font-bold text-secondary mb-3">{card.title}</h3>
+                <ul className="space-y-2">
+                  {card.items.map((item, j) => (
+                    <li key={j} className="flex gap-2 text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section: 代行費用目安 */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">代行費用の目安</h2>
+          <div className="grid gap-3">
+            {[
+              { item: 'DFAアポスティーユ認証のみ（書類1通）', cost: '約25,000円〜', note: 'DFA手数料・国際郵便込み（書類は事前に取得済みの場合）' },
+              { item: 'NBI Clearance + DFAアポスティーユ セット', cost: '約65,000円〜', note: 'NBI取得からアポスティーユまで一括' },
+              { item: 'CENOMAR + DFAアポスティーユ セット', cost: '約65,000円〜', note: 'CENOMAR取得からアポスティーユまで一括' },
+              { item: '複数書類まとめて（2通目以降）', cost: '1通あたり+15,000円〜', note: 'まとめて依頼で効率的' },
+            ].map((row, i) => (
+              <div key={i} className="flex justify-between items-center bg-white border border-gray-100 rounded-lg px-4 py-3 shadow-card">
+                <div>
+                  <p className="text-sm font-medium text-secondary">{row.item}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{row.note}</p>
+                </div>
+                <span className="text-sm font-bold text-primary ml-4 flex-shrink-0">{row.cost}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※ 費用は書類の種類・通数・エクスプレス処理の有無によって変動します。詳細はお問い合わせください。</p>
         </section>
 
         {/* Section 5 */}
