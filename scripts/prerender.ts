@@ -112,6 +112,13 @@ const routes: RouteConfig[] = [
     description: 'フィリピン書類取得代行センター（株式会社IGRS）のプライバシーポリシー。個人情報の収集・利用・管理方針についてご説明します。',
     canonical: 'https://ph-document.com/privacy/',
   },
+  {
+    path: '/kika-shinsei-guide',
+    outFile: path.join(projectRoot, 'dist', 'kika-shinsei-guide', 'index.html'),
+    title: 'フィリピン人の帰化申請ガイド｜必要書類・手続きの流れ・PSA・NBI取得【2026年最新】｜フィリピン書類取得代行センター',
+    description: 'フィリピン国籍の方が日本に帰化するための手続きの流れ・必要書類（PSA出生証明書・NBI Clearance等）・費用・審査期間をわかりやすく解説。',
+    canonical: 'https://ph-document.com/kika-shinsei-guide/',
+  },
 ];
 
 function updateHead(html: string, route: RouteConfig): string {
