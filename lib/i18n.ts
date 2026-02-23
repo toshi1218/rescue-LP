@@ -314,9 +314,14 @@ const LanguageContext = createContext<LanguageContextType>({
 
 function getInitialLang(): Lang {
   if (typeof window === 'undefined') return 'ja';
+
+  // 1. ユーザーが手動で切り替えた場合はそちらを優先
   const stored = window.localStorage.getItem(LANG_KEY);
   if (stored === 'ja' || stored === 'en') return stored;
-  return 'ja';
+
+  // 2. ブラウザ言語が日本語なら日本語、それ以外は英語
+  const browserLang = navigator.language || (navigator.languages && navigator.languages[0]) || '';
+  return browserLang.startsWith('ja') ? 'ja' : 'en';
 }
 
 interface LanguageProviderProps {
