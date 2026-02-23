@@ -1,35 +1,28 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
+import { useLanguage } from '../lib/i18n';
+
+const stepsData = {
+  ja: [
+    { num: 1, title: 'お問い合わせ', desc: 'メールにて、必要な書類と現状をお知らせください。' },
+    { num: 2, title: 'お見積もり・ご提案', desc: '内容を確認し、詳細な費用と納期をご案内いたします。' },
+    { num: 3, title: '着手金のお支払い', desc: '費用の50%を着手金としてお支払いいただき、手続きを開始します。' },
+    { num: 4, title: '成功報酬のお支払い・発送', desc: '取得した書類の写しをご確認いただいた後、成功報酬（残金）をお支払いいただき、原本を発送します。' },
+    { num: 5, title: '書類お届け', desc: 'ご指定の住所へ追跡可能な方法で書類をお届けします。到着後、内容をご確認ください。' },
+  ],
+  en: [
+    { num: 1, title: 'Contact Us', desc: 'Tell us via email which documents you need and your current situation.' },
+    { num: 2, title: 'Quote & Proposal', desc: "We'll review your request and provide a detailed cost and timeline." },
+    { num: 3, title: 'Initial Payment', desc: 'Pay 50% of the fee as a retainer to begin the process.' },
+    { num: 4, title: 'Final Payment & Dispatch', desc: 'After confirming document copies, pay the remaining balance and we dispatch the originals.' },
+    { num: 5, title: 'Document Delivery', desc: 'Documents are delivered to your address via trackable shipping. Please verify contents upon arrival.' },
+  ],
+};
 
 const Process: React.FC = () => {
-  const steps = [
-    {
-      num: 1,
-      title: "お問い合わせ",
-      desc: "メールにて、必要な書類と現状をお知らせください。"
-    },
-    {
-      num: 2,
-      title: "お見積もり・ご提案",
-      desc: "内容を確認し、詳細な費用と納期をご案内いたします。"
-    },
-    {
-      num: 3,
-      title: "着手金のお支払い",
-      desc: "費用の50%を着手金としてお支払いいただき、手続きを開始します。"
-    },
-    {
-      num: 4,
-      title: "成功報酬のお支払い・発送",
-      desc: "取得した書類の写しをご確認いただいた後、成功報酬（残金）をお支払いいただき、原本を発送します。"
-    },
-    {
-      num: 5,
-      title: "書類お届け",
-      desc: "ご指定の住所へ追跡可能な方法で書類をお届けします。到着後、内容をご確認ください。"
-    }
-  ];
+  const { lang, t } = useLanguage();
+  const steps = stepsData[lang];
 
   return (
     <section className="py-12 bg-secondary text-white relative overflow-hidden">
@@ -42,7 +35,7 @@ const Process: React.FC = () => {
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 relative z-10">
         <div className="text-center mb-10">
           <span className="text-primary-hover font-bold text-xs font-display tracking-widest uppercase mb-1 block">Process</span>
-          <h2 className="text-xl font-bold">ご依頼の流れ</h2>
+          <h2 className="text-xl font-bold">{t('process.title')}</h2>
         </div>
 
         <div className="relative pl-6 space-y-8 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-white/20">
@@ -65,12 +58,12 @@ const Process: React.FC = () => {
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'process', type: 'contact' })}
             className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
-            aria-label="ステップ1から始める：お問い合わせ"
+            aria-label={t('process.ctaAriaLabel')}
           >
-            <span>ステップ1から始める：お問い合わせ</span>
+            <span>{t('process.ctaBtn')}</span>
             <ArrowRight className="w-5 h-5" />
           </a>
-          <p className="text-xs text-white/70 mt-3">まずは無料でご相談ください。匿名OK</p>
+          <p className="text-xs text-white/70 mt-3">{t('process.ctaNote')}</p>
         </div>
       </div>
     </section>

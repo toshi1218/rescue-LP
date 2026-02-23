@@ -1,147 +1,207 @@
 import React, { useState } from 'react';
 import { FileText, Fingerprint, Gem, CheckCircle, ChevronRight, ChevronDown, Heart, Award } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
+import { useLanguage } from '../lib/i18n';
 
-const plans = [
-  {
-    id: 'psa',
-    icon: FileText,
-    title: 'PSA取得代行',
-    subtitle: '出生証明書 / 婚姻証明書 / CENOMAR',
-    price: '¥40,000',
-    note: '〜 (税・送料別)',
-    highlights: [
-      '役所申請手数料込み',
-      '国際送料別途',
-    ],
-    details: {
-      period: '約4週間',
-      note: '※税・国際送料は別途',
-      docs: [
-        '出生証明書（+ アポスティーユ）',
-        '婚姻証明書（+ アポスティーユ）',
-        'CENOMAR（+ アポスティーユ）',
-      ],
+const plansData = {
+  ja: [
+    {
+      id: 'psa',
+      icon: FileText,
+      title: 'PSA取得代行',
+      subtitle: '出生証明書 / 婚姻証明書 / CENOMAR',
+      price: '¥40,000',
+      note: '〜 (税・送料別)',
+      highlights: ['役所申請手数料込み', '国際送料別途'],
+      details: {
+        period: '約4週間',
+        note: '※税・国際送料は別途',
+        docs: ['出生証明書（+ アポスティーユ）', '婚姻証明書（+ アポスティーユ）', 'CENOMAR（+ アポスティーユ）'],
+      },
+      featured: false,
     },
-    featured: false,
-  },
-  {
-    id: 'nbi',
-    icon: Fingerprint,
-    title: 'NBI取得代行',
-    subtitle: '無犯罪証明書の取得サポート',
-    price: '¥45,000',
-    note: '〜 (税・送料別)',
-    highlights: [
-      '指紋採取サポート',
-      'DFA認証オプション可',
-    ],
-    details: {
-      period: '約4週間',
-      note: '※税・国際送料は別途',
-      docs: [
-        'NBI無犯罪証明書',
-        'DFAアポスティーユ認証（オプション）',
-      ],
+    {
+      id: 'nbi',
+      icon: Fingerprint,
+      title: 'NBI取得代行',
+      subtitle: '無犯罪証明書の取得サポート',
+      price: '¥45,000',
+      note: '〜 (税・送料別)',
+      highlights: ['指紋採取サポート', 'DFA認証オプション可'],
+      details: {
+        period: '約4週間',
+        note: '※税・国際送料は別途',
+        docs: ['NBI無犯罪証明書', 'DFAアポスティーユ認証（オプション）'],
+      },
+      featured: false,
     },
-    featured: false,
-  },
-  {
-    id: 'lto',
-    icon: FileText,
-    title: 'LTO関連書類取得代行',
-    subtitle: '運転免許関連書類の取得サポート（外免切り替え用）',
-    price: '¥85,000',
-    note: '〜 (税・送料別)',
-    highlights: [
-      '役所申請手数料込み',
-      '国際送料別途',
-    ],
-    details: {
-      period: '約4週間',
-      note: '※税・国際送料は別途',
-      docs: [
-        'LTO運転免許証関連書類',
-        'LTOトランザクション履歴',
-      ],
+    {
+      id: 'lto',
+      icon: FileText,
+      title: 'LTO関連書類取得代行',
+      subtitle: '運転免許関連書類の取得サポート（外免切り替え用）',
+      price: '¥85,000',
+      note: '〜 (税・送料別)',
+      highlights: ['役所申請手数料込み', '国際送料別途'],
+      details: {
+        period: '約4週間',
+        note: '※税・国際送料は別途',
+        docs: ['LTO運転免許証関連書類', 'LTOトランザクション履歴'],
+      },
+      featured: false,
     },
-    featured: false,
-  },
-  {
-    id: 'pack',
-    icon: Gem,
-    title: '国際結婚パック',
-    subtitle: '婚姻済証明書申請に必要な書類一式',
-    price: '¥85,000',
-    note: '〜 (税・送料別)',
-    highlights: [
-      '日本語翻訳込み',
-      '優先対応サポート',
-    ],
-    details: {
-      period: '約4週間',
-      note: '※税・国際送料は別途',
-      docs: [
-        '出生証明書（+ アポスティーユ）',
-        'セノマー独身証明書（+ アポスティーユ）',
-      ],
+    {
+      id: 'pack',
+      icon: Gem,
+      title: '国際結婚パック',
+      subtitle: '婚姻済証明書申請に必要な書類一式',
+      price: '¥85,000',
+      note: '〜 (税・送料別)',
+      highlights: ['日本語翻訳込み', '優先対応サポート'],
+      details: {
+        period: '約4週間',
+        note: '※税・国際送料は別途',
+        docs: ['出生証明書（+ アポスティーユ）', 'セノマー独身証明書（+ アポスティーユ）'],
+      },
+      featured: true,
     },
-    featured: true,
-  },
-  {
-    id: 'visa',
-    icon: Heart,
-    title: '配偶者ビザ',
-    subtitle: '在留資格「日本人の配偶者等」申請サポート',
-    price: '¥85,000',
-    note: '〜 (税・送料別)',
-    highlights: [
-      '必要書類の準備サポート',
-      '申請書類チェック',
-    ],
-    details: {
-      period: '要相談',
-      note: '※ケースにより異なります',
-      docs: [
-        '在留資格認定証明書交付申請書',
-        '婚姻証明書・戸籍謄本など',
-      ],
+    {
+      id: 'visa',
+      icon: Heart,
+      title: '配偶者ビザ',
+      subtitle: '在留資格「日本人の配偶者等」申請サポート',
+      price: '¥85,000',
+      note: '〜 (税・送料別)',
+      highlights: ['必要書類の準備サポート', '申請書類チェック'],
+      details: {
+        period: '要相談',
+        note: '※ケースにより異なります',
+        docs: ['在留資格認定証明書交付申請書', '婚姻証明書・戸籍謄本など'],
+      },
+      featured: false,
     },
-    featured: false,
-  },
-  {
-    id: 'naturalization',
-    icon: Award,
-    title: '帰化申請',
-    subtitle: '日本国籍取得の申請サポート',
-    price: '¥85,000',
-    note: '〜 (税・送料別)',
-    highlights: [
-      '必要書類の準備サポート',
-      '継続的フォローアップ',
-    ],
-    details: {
-      period: '要相談',
-      note: '※ケースにより異なります',
-      docs: [
-        '帰化許可申請書類一式',
-        '居住・納税関連書類など',
-      ],
+    {
+      id: 'naturalization',
+      icon: Award,
+      title: '帰化申請',
+      subtitle: '日本国籍取得の申請サポート',
+      price: '¥85,000',
+      note: '〜 (税・送料別)',
+      highlights: ['必要書類の準備サポート', '継続的フォローアップ'],
+      details: {
+        period: '要相談',
+        note: '※ケースにより異なります',
+        docs: ['帰化許可申請書類一式', '居住・納税関連書類など'],
+      },
+      featured: false,
     },
-    featured: false,
-  },
-];
+  ],
+  en: [
+    {
+      id: 'psa',
+      icon: FileText,
+      title: 'PSA Document Procurement',
+      subtitle: 'Birth Certificate / Marriage Certificate / CENOMAR',
+      price: '¥40,000',
+      note: '~ (excl. tax & shipping)',
+      highlights: ['Gov\'t filing fees included', 'Intl. shipping extra'],
+      details: {
+        period: 'Approx. 4 weeks',
+        note: '* Tax & intl. shipping extra',
+        docs: ['Birth Certificate (+ Apostille)', 'Marriage Certificate (+ Apostille)', 'CENOMAR (+ Apostille)'],
+      },
+      featured: false,
+    },
+    {
+      id: 'nbi',
+      icon: Fingerprint,
+      title: 'NBI Clearance Procurement',
+      subtitle: 'NBI Clearance acquisition support',
+      price: '¥45,000',
+      note: '~ (excl. tax & shipping)',
+      highlights: ['Fingerprint support included', 'DFA authentication optional'],
+      details: {
+        period: 'Approx. 4 weeks',
+        note: '* Tax & intl. shipping extra',
+        docs: ['NBI Clearance', 'DFA Apostille Authentication (optional)'],
+      },
+      featured: false,
+    },
+    {
+      id: 'lto',
+      icon: FileText,
+      title: 'LTO Document Procurement',
+      subtitle: "Driver's license documents for license transfer",
+      price: '¥85,000',
+      note: '~ (excl. tax & shipping)',
+      highlights: ['Gov\'t filing fees included', 'Intl. shipping extra'],
+      details: {
+        period: 'Approx. 4 weeks',
+        note: '* Tax & intl. shipping extra',
+        docs: ["LTO Driver's License Documents", 'LTO Transaction History'],
+      },
+      featured: false,
+    },
+    {
+      id: 'pack',
+      icon: Gem,
+      title: 'International Marriage Pack',
+      subtitle: 'Full document set for marriage registration',
+      price: '¥85,000',
+      note: '~ (excl. tax & shipping)',
+      highlights: ['Japanese translation included', 'Priority support'],
+      details: {
+        period: 'Approx. 4 weeks',
+        note: '* Tax & intl. shipping extra',
+        docs: ['Birth Certificate (+ Apostille)', 'CENOMAR (+ Apostille)'],
+      },
+      featured: true,
+    },
+    {
+      id: 'visa',
+      icon: Heart,
+      title: 'Spouse Visa',
+      subtitle: 'Spouse of Japanese national visa application support',
+      price: '¥85,000',
+      note: '~ (excl. tax & shipping)',
+      highlights: ['Document preparation support', 'Application review'],
+      details: {
+        period: 'Varies by case',
+        note: '* Timeline depends on individual case',
+        docs: ['Certificate of Eligibility application', 'Marriage certificate, family register, etc.'],
+      },
+      featured: false,
+    },
+    {
+      id: 'naturalization',
+      icon: Award,
+      title: 'Naturalization Application',
+      subtitle: 'Japanese citizenship application support',
+      price: '¥85,000',
+      note: '~ (excl. tax & shipping)',
+      highlights: ['Document preparation support', 'Ongoing follow-up'],
+      details: {
+        period: 'Varies by case',
+        note: '* Timeline depends on individual case',
+        docs: ['Naturalization application documents', 'Residency & tax documents, etc.'],
+      },
+      featured: false,
+    },
+  ],
+};
 
 const Pricing: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>(null);
   const ctaVariant = getCtaVariant();
+  const { lang, t } = useLanguage();
+  const plans = plansData[lang];
 
   return (
     <section className="py-12 px-4 max-w-md md:max-w-2xl lg:max-w-6xl mx-auto" id="pricing">
       <div className="text-center mb-10">
         <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Price</span>
-        <h2 className="text-xl font-bold text-secondary">料金プラン</h2>
-        <p className="text-xs text-gray-500 mt-2">※取得難易度により変動する場合があります</p>
+        <h2 className="text-xl font-bold text-secondary">{t('pricing.title')}</h2>
+        <p className="text-xs text-gray-500 mt-2">{t('pricing.note')}</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -160,7 +220,7 @@ const Pricing: React.FC = () => {
             >
               {plan.featured && (
                 <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">
-                  人気 No.1
+                  {t('pricing.featured')}
                 </div>
               )}
               <div className="p-6 flex-1 flex flex-col">
@@ -188,18 +248,13 @@ const Pricing: React.FC = () => {
                   ))}
                 </ul>
 
-                {/* 詳細アコーディオン */}
                 <button
                   onClick={() => setOpenId(isOpen ? null : plan.id)}
                   aria-expanded={isOpen}
                   aria-controls={`plan-details-${plan.id}`}
-                  className={`w-full py-3 rounded-lg border font-bold text-sm transition-colors flex items-center justify-center gap-1 group mb-3 ${
-                    plan.featured
-                      ? 'border-secondary text-secondary hover:bg-secondary hover:text-white'
-                      : 'border-secondary text-secondary hover:bg-secondary hover:text-white'
-                  }`}
+                  className="w-full py-3 rounded-lg border font-bold text-sm transition-colors flex items-center justify-center gap-1 group mb-3 border-secondary text-secondary hover:bg-secondary hover:text-white"
                 >
-                  詳細を見る
+                  {t('pricing.detailsBtn')}
                   {isOpen
                     ? <ChevronDown className="w-4 h-4 transition-transform" />
                     : <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -209,7 +264,7 @@ const Pricing: React.FC = () => {
                 {isOpen && (
                   <div id={`plan-details-${plan.id}`} className="bg-gray-50 rounded-xl p-4 mb-3 text-sm text-gray-700 space-y-3">
                     <div>
-                      <p className="font-bold text-secondary mb-1">取得できる書類</p>
+                      <p className="font-bold text-secondary mb-1">{t('pricing.docsTitle')}</p>
                       <ul className="space-y-1">
                         {plan.details.docs.map((doc) => (
                           <li key={doc} className="flex items-start gap-2">
@@ -220,7 +275,7 @@ const Pricing: React.FC = () => {
                       </ul>
                     </div>
                     <div className="flex gap-4 text-xs text-gray-500">
-                      <span>納期: {plan.details.period}</span>
+                      <span>{t('pricing.deliveryLabel')}: {plan.details.period}</span>
                       <span>{plan.details.note}</span>
                     </div>
                   </div>
@@ -235,7 +290,7 @@ const Pricing: React.FC = () => {
                       : 'bg-primary text-white hover:bg-primary-hover'
                   }`}
                 >
-                  相談して見積もる
+                  {t('pricing.ctaBtn')}
                 </a>
               </div>
             </div>
