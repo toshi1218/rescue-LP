@@ -2,19 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Send } from 'lucide-react';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
+import { useLanguage } from '../lib/i18n';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
 const Footer: React.FC = () => {
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-white border-t border-gray-100" id="contact">
       <div className="py-16 max-w-md md:max-w-xl mx-auto px-6 text-center">
-        <h3 className="text-2xl font-bold text-secondary mb-2">まずは無料で相談</h3>
-        <p className="text-sm text-gray-500 mb-8">
-          どの書類が必要かわからない方も、<br />お気軽にお問い合わせください。
+        <h3 className="text-2xl font-bold text-secondary mb-2">{t('footer.title')}</h3>
+        <p className="text-sm text-gray-500 mb-8 whitespace-pre-line">
+          {t('footer.subtitle')}
         </p>
 
         <form
@@ -22,7 +24,7 @@ const Footer: React.FC = () => {
           method="POST"
           className="space-y-3 text-left"
           onSubmit={() => trackEvent('form_submit', { location: 'contact', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource })}
-          aria-label="お問い合わせフォーム"
+          aria-label={t('footer.formAriaLabel')}
         >
           <input type="hidden" name="_subject" value="【LPお問い合わせ】フィリピン書類取得代行" />
           <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -31,39 +33,39 @@ const Footer: React.FC = () => {
           <input type="hidden" name="landing_page" value="https://rescue-lp.pages.dev/" />
 
           <div>
-            <label htmlFor="name" className="block text-xs text-gray-600 mb-1">お名前</label>
+            <label htmlFor="name" className="block text-xs text-gray-600 mb-1">{t('footer.nameLabel')}</label>
             <input
               id="name"
               name="name"
               required
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              placeholder="山田 太郎"
+              placeholder={t('footer.namePlaceholder')}
               aria-required="true"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-xs text-gray-600 mb-1">メールアドレス</label>
+            <label htmlFor="email" className="block text-xs text-gray-600 mb-1">{t('footer.emailLabel')}</label>
             <input
               id="email"
               type="email"
               name="email"
               required
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              placeholder="example@email.com"
+              placeholder={t('footer.emailPlaceholder')}
               aria-required="true"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-xs text-gray-600 mb-1">ご相談内容</label>
+            <label htmlFor="message" className="block text-xs text-gray-600 mb-1">{t('footer.messageLabel')}</label>
             <textarea
               id="message"
               name="message"
               required
               rows={5}
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              placeholder="必要な書類、用途、希望納期などをご記入ください。"
+              placeholder={t('footer.messagePlaceholder')}
               aria-required="true"
             />
           </div>
@@ -71,10 +73,10 @@ const Footer: React.FC = () => {
           <button
             type="submit"
             className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 focus:outline-none focus:ring-4 focus:ring-primary/30"
-            aria-label="お問い合わせフォームを送信"
+            aria-label={t('footer.submitAriaLabel')}
           >
             <Send className="w-5 h-5" />
-            フォームで問い合わせる
+            {t('footer.submit')}
           </button>
         </form>
 
@@ -84,19 +86,18 @@ const Footer: React.FC = () => {
           className="mt-3 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors"
         >
           <Mail className="w-4 h-4" />
-          メールで直接送る: igrs20200601@gmail.com
+          {t('footer.mailto')}
         </a>
 
         <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
-          <Link to="/company/" className="hover:text-secondary transition-colors">会社概要</Link>
-          <Link to="/privacy/" className="hover:text-secondary transition-colors">プライバシーポリシー</Link>
-          <Link to="/pricing/" className="hover:text-secondary transition-colors">料金</Link>
-          <Link to="/contact/" className="hover:text-secondary transition-colors">お問い合わせ</Link>
+          <Link to="/company/" className="hover:text-secondary transition-colors">{t('footer.company')}</Link>
+          <Link to="/privacy/" className="hover:text-secondary transition-colors">{t('footer.privacy')}</Link>
+          <Link to="/pricing/" className="hover:text-secondary transition-colors">{t('footer.pricingLink')}</Link>
+          <Link to="/contact/" className="hover:text-secondary transition-colors">{t('footer.contactLink')}</Link>
         </div>
-        <p className="text-[10px] text-gray-300 mt-4">© 2026 株式会社IGRS</p>
+        <p className="text-[10px] text-gray-300 mt-4">{t('footer.copyright')}</p>
       </div>
     </footer>
-
   );
 };
 

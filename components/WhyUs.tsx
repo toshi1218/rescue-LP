@@ -1,66 +1,51 @@
 import React from 'react';
 import { Building2, Headset, Eye, Send } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
+import { useLanguage } from '../lib/i18n';
 
 const WhyUs: React.FC = () => {
+  const { t } = useLanguage();
+
+  const reasons = [
+    { icon: Building2, titleKey: 'whyus.1.title' as const, descKey: 'whyus.1.desc' as const },
+    { icon: Headset, titleKey: 'whyus.2.title' as const, descKey: 'whyus.2.desc' as const },
+    { icon: Eye, titleKey: 'whyus.3.title' as const, descKey: 'whyus.3.desc' as const },
+  ];
+
+  const stats = [
+    { labelKey: 'whyus.stat1.label' as const, valueKey: 'whyus.stat1.value' as const },
+    { labelKey: 'whyus.stat2.label' as const, valueKey: 'whyus.stat2.value' as const },
+    { labelKey: 'whyus.stat3.label' as const, valueKey: 'whyus.stat3.value' as const },
+  ];
+
   return (
     <section className="py-12 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
       <div className="text-center mb-10">
         <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Why Us</span>
-        <h2 className="text-xl font-bold text-secondary">選ばれる理由</h2>
+        <h2 className="text-xl font-bold text-secondary">{t('whyus.title')}</h2>
       </div>
 
       <div className="space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-6">
-        <div className="flex gap-4 p-5 bg-white rounded-xl shadow-soft md:flex-col md:items-center md:text-center md:h-full">
-          <div className="shrink-0 w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
-            <Building2 className="w-6 h-6 text-secondary" />
+        {reasons.map(({ icon: Icon, titleKey, descKey }) => (
+          <div key={titleKey} className="flex gap-4 p-5 bg-white rounded-xl shadow-soft md:flex-col md:items-center md:text-center md:h-full">
+            <div className="shrink-0 w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
+              <Icon className="w-6 h-6 text-secondary" />
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-800 mb-1">{t(titleKey)}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed">{t(descKey)}</p>
+            </div>
           </div>
-          <div>
-            <h3 className="font-bold text-gray-800 mb-1">日本法人運営</h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              日本法人が運営する信頼性の高いサービスです。現地の最新事情に精通しています。
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-4 p-5 bg-white rounded-xl shadow-soft md:flex-col md:items-center md:text-center md:h-full">
-          <div className="shrink-0 w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
-            <Headset className="w-6 h-6 text-secondary" />
-          </div>
-          <div>
-            <h3 className="font-bold text-gray-800 mb-1">日本人スタッフ対応</h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              お問い合わせから納品まで、日本人スタッフが日本語で丁寧に対応いたします。
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-4 p-5 bg-white rounded-xl shadow-soft md:flex-col md:items-center md:text-center md:h-full">
-          <div className="shrink-0 w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
-            <Eye className="w-6 h-6 text-secondary" />
-          </div>
-          <div>
-            <h3 className="font-bold text-gray-800 mb-1">進捗の見える化</h3>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              申請状況を随時ご報告。不安な待ち時間を解消し、安心して完了をお待ちいただけます。
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
-        <div className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
-          <p className="text-xs text-gray-500">納期目安</p>
-          <p className="text-sm font-bold text-secondary mt-1">約1ヶ月</p>
-        </div>
-        <div className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
-          <p className="text-xs text-gray-500">キャンセル方針</p>
-          <p className="text-sm font-bold text-secondary mt-1">着手前は無料</p>
-        </div>
-        <div className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
-          <p className="text-xs text-gray-500">対応言語</p>
-          <p className="text-sm font-bold text-secondary mt-1">日本語・英語</p>
-        </div>
+        {stats.map(({ labelKey, valueKey }) => (
+          <div key={labelKey} className="bg-secondary/5 border border-secondary/10 rounded-lg p-4 text-center">
+            <p className="text-xs text-gray-500">{t(labelKey)}</p>
+            <p className="text-sm font-bold text-secondary mt-1">{t(valueKey)}</p>
+          </div>
+        ))}
       </div>
 
       {/* CTA Button */}
@@ -69,10 +54,10 @@ const WhyUs: React.FC = () => {
           href="#contact"
           onClick={() => trackEvent('cta_click', { location: 'why_us', type: 'contact' })}
           className="inline-flex items-center justify-center gap-2 bg-secondary text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-secondary/90 hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-secondary/40"
-          aria-label="信頼できるサービスに今すぐ相談する"
+          aria-label={t('whyus.ctaAriaLabel')}
         >
           <Send className="w-5 h-5" />
-          <span>信頼できるサービスで安心。今すぐ相談</span>
+          <span>{t('whyus.cta')}</span>
         </a>
       </div>
     </section>
