@@ -4,157 +4,7 @@ import { FileText, Fingerprint, Gem, CheckCircle, ChevronRight, ChevronDown, Hea
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
-
-const plans = [
-  {
-    id: 'psa',
-    icon: FileText,
-    title: 'PSA取得代行',
-    subtitle: '出生証明書 / 婚姻証明書 / CENOMAR',
-    price: '¥40,000',
-    note: '〜 (税・送料別)',
-    highlights: ['役所申請手数料込み', '国際送料別途'],
-    details: {
-      period: '約4週間',
-      note: '※税・国際送料は別途',
-      docs: ['出生証明書（+ アポスティーユ）', '婚姻証明書（+ アポスティーユ）', 'CENOMAR（+ アポスティーユ）'],
-    },
-    featured: false,
-  },
-  {
-    id: 'nbi',
-    icon: Fingerprint,
-    title: 'NBI取得代行',
-    subtitle: '無犯罪証明書の取得サポート',
-    price: '¥45,000',
-    note: '〜 (税・送料別)',
-    highlights: ['指紋採取サポート', 'DFA認証オプション可'],
-    details: {
-      period: '約4週間',
-      note: '※税・国際送料は別途',
-      docs: ['NBI無犯罪証明書', 'DFAアポスティーユ認証（オプション）'],
-    },
-    featured: false,
-  },
-  {
-    id: 'lto',
-    icon: FileText,
-    title: 'LTO関連書類取得代行',
-    subtitle: '運転免許関連書類（外免切り替え用）',
-    price: '¥85,000',
-    note: '〜 (税・送料別)',
-    highlights: ['役所申請手数料込み', '国際送料別途'],
-    details: {
-      period: '約4週間',
-      note: '※税・国際送料は別途',
-      docs: ['LTO運転免許証関連書類', 'LTOトランザクション履歴'],
-    },
-    featured: false,
-  },
-  {
-    id: 'pack',
-    icon: Gem,
-    title: '国際結婚パック',
-    subtitle: '婚姻済証明書申請に必要な書類一式',
-    price: '¥85,000',
-    note: '〜 (税・送料別)',
-    highlights: ['日本語翻訳込み', '優先対応サポート'],
-    details: {
-      period: '約4週間',
-      note: '※税・国際送料は別途',
-      docs: ['出生証明書（+ アポスティーユ）', 'セノマー独身証明書（+ アポスティーユ）'],
-    },
-    featured: true,
-  },
-  {
-    id: 'visa',
-    icon: Heart,
-    title: '配偶者ビザ',
-    subtitle: '在留資格「日本人の配偶者等」申請サポート',
-    price: '¥85,000',
-    note: '〜 (税・送料別)',
-    highlights: ['必要書類の準備サポート', '申請書類チェック'],
-    details: {
-      period: '要相談',
-      note: '※ケースにより異なります',
-      docs: ['在留資格認定証明書交付申請書', '婚姻証明書・戸籍謄本など'],
-    },
-    featured: false,
-  },
-  {
-    id: 'naturalization',
-    icon: Award,
-    title: '帰化申請',
-    subtitle: '日本国籍取得の申請サポート',
-    price: '¥85,000',
-    note: '〜 (税・送料別)',
-    highlights: ['必要書類の準備サポート', '継続的フォローアップ'],
-    details: {
-      period: '要相談',
-      note: '※ケースにより異なります',
-      docs: ['帰化許可申請書類一式', '居住・納税関連書類など'],
-    },
-    featured: false,
-  },
-];
-
-const faqs = [
-  { q: '料金に消費税は含まれていますか？', a: '表示金額はすべて税抜きです。別途消費税（10%）がかかります。' },
-  { q: '国際送料はいくらですか？', a: '送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね1,500〜3,000円程度が目安です。' },
-  { q: '取得難易度による変動とはどういう意味ですか？', a: 'フィリピン現地での追加調査や再申請が必要な場合（MATCH FOUND、NO RECORD FOUND等）は、別途費用が発生することがあります。事前に詳しくご説明しますのでご安心ください。' },
-  { q: '複数の書類をまとめて依頼できますか？', a: 'はい、まとめての対応が可能です。書類の組み合わせによってはセット割引が適用される場合もありますので、まずはご相談ください。' },
-  { q: '支払い方法は何がありますか？', a: '銀行振込でのお支払いをお願いしています。お見積もり確認後、着手前にお振り込みいただく形となります。詳細はお問い合わせ時にご案内します。' },
-  { q: '急ぎの場合は対応できますか？', a: '書類の種類によっては優先対応が可能な場合があります。ただし、PSA・NBI等フィリピン政府機関の処理期間は弊社でコントロールできないため、あらかじめご了承ください。まずはご相談ください。' },
-  { q: 'キャンセルは可能ですか？', a: '着手前のキャンセルは可能です。フィリピン現地機関への申請手続き完了後のキャンセルは、現地手数料が発生している関係でご対応が難しい場合があります。詳しくはお問い合わせください。' },
-  { q: '書類が取得できなかった場合はどうなりますか？', a: 'PSAの「NO RECORD FOUND」など、フィリピン政府機関の記録上の問題で取得できなかった場合は、代替手続きをご案内します。弊社の作業に起因する問題については責任をもって対応いたします。' },
-];
-
-const scenarios = [
-  {
-    icon: '💍',
-    title: 'フィリピン人と国際結婚したい',
-    desc: '日本での婚姻届にはCENOMARとPSA出生証明書が必要です。フィリピン先行の場合はさらに追加書類が必要になります。',
-    recommend: '国際結婚パック',
-    planId: 'pack',
-  },
-  {
-    icon: '🛂',
-    title: '配偶者ビザ（在留資格）を申請したい',
-    desc: '入管への配偶者ビザ申請では、PSA書類・NBI Clearance・日本語翻訳などの準備が必要です。',
-    recommend: '配偶者ビザサポート',
-    planId: 'visa',
-  },
-  {
-    icon: '🚗',
-    title: 'フィリピン免許を日本免許に切り替えたい',
-    desc: '外免切替にはLTO発行の書類（運転免許・トランザクション記録）が必要です。フィリピンに行かずに取得代行できます。',
-    recommend: 'LTO関連書類取得代行',
-    planId: 'lto',
-  },
-  {
-    icon: '📋',
-    title: 'まず何が必要か確認したい',
-    desc: '「どの書類が必要かわからない」という方も大歓迎です。状況をお聞きして最適なプランをご提案します。',
-    recommend: '無料相談から',
-    planId: null,
-  },
-];
-
-const included = [
-  'フィリピン各機関への申請手続き代行',
-  '書類の確認・不備チェック',
-  '日本語での進捗報告',
-  '書類受領後の日本への転送（国際送料別途）',
-  'DFAアポスティーユ認証の代行（オプション）',
-];
-
-const notIncluded = [
-  '消費税（別途10%）',
-  '国際郵便送料',
-  'フィリピン政府機関の申請手数料（一部プランで含む）',
-  '日本語翻訳費用（必要な場合は別途ご相談）',
-  '追加調査費用（MATCH FOUND等の異議申し立て）',
-];
+import { useLanguage } from '../lib/i18n';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -166,28 +16,207 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: '料金プラン', item: 'https://ph-document.com/pricing/' },
       ],
     },
-    {
-      '@type': 'ItemList',
-      name: 'フィリピン書類取得代行 料金プラン一覧',
-      itemListElement: plans.map((p, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: p.title,
-        description: p.subtitle,
-      })),
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: faqs.map((f) => ({
-        '@type': 'Question',
-        name: f.q,
-        acceptedAnswer: { '@type': 'Answer', text: f.a },
-      })),
-    },
   ],
 };
 
 export default function PricingPage() {
+  const { lang } = useLanguage();
+  const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  const plans = [
+    {
+      id: 'psa',
+      icon: FileText,
+      title: t('PSA取得代行', 'PSA Document Retrieval'),
+      subtitle: t('出生証明書 / 婚姻証明書 / CENOMAR', 'Birth Certificate / Marriage Certificate / CENOMAR'),
+      price: '¥40,000',
+      note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
+      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'International shipping extra')],
+      details: {
+        period: t('約4週間', 'Approx. 4 weeks'),
+        note: t('※税・国際送料は別途', '* Excl. tax & international shipping'),
+        docs: [
+          t('出生証明書（+ アポスティーユ）', 'Birth Certificate (+ Apostille)'),
+          t('婚姻証明書（+ アポスティーユ）', 'Marriage Certificate (+ Apostille)'),
+          t('CENOMAR（+ アポスティーユ）', 'CENOMAR (+ Apostille)'),
+        ],
+      },
+      featured: false,
+    },
+    {
+      id: 'nbi',
+      icon: Fingerprint,
+      title: t('NBI取得代行', 'NBI Clearance Retrieval'),
+      subtitle: t('無犯罪証明書の取得サポート', 'Support for NBI Clearance acquisition'),
+      price: '¥45,000',
+      note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
+      highlights: [t('指紋採取サポート', 'Fingerprint support'), t('DFA認証オプション可', 'DFA Apostille option available')],
+      details: {
+        period: t('約4週間', 'Approx. 4 weeks'),
+        note: t('※税・国際送料は別途', '* Excl. tax & international shipping'),
+        docs: [
+          t('NBI無犯罪証明書', 'NBI Clearance'),
+          t('DFAアポスティーユ認証（オプション）', 'DFA Apostille Authentication (optional)'),
+        ],
+      },
+      featured: false,
+    },
+    {
+      id: 'lto',
+      icon: FileText,
+      title: t('LTO関連書類取得代行', 'LTO Document Retrieval'),
+      subtitle: t('運転免許関連書類（外免切り替え用）', 'License-related documents (for license transfer)'),
+      price: '¥85,000',
+      note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
+      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'International shipping extra')],
+      details: {
+        period: t('約4週間', 'Approx. 4 weeks'),
+        note: t('※税・国際送料は別途', '* Excl. tax & international shipping'),
+        docs: [
+          t('LTO運転免許証関連書類', 'LTO Driver\'s License Documents'),
+          t('LTOトランザクション履歴', 'LTO Transaction History'),
+        ],
+      },
+      featured: false,
+    },
+    {
+      id: 'pack',
+      icon: Gem,
+      title: t('国際結婚パック', 'International Marriage Package'),
+      subtitle: t('婚姻済証明書申請に必要な書類一式', 'All documents for marriage certificate application'),
+      price: '¥85,000',
+      note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
+      highlights: [t('日本語翻訳込み', 'Japanese translation included'), t('優先対応サポート', 'Priority support')],
+      details: {
+        period: t('約4週間', 'Approx. 4 weeks'),
+        note: t('※税・国際送料は別途', '* Excl. tax & international shipping'),
+        docs: [
+          t('出生証明書（+ アポスティーユ）', 'Birth Certificate (+ Apostille)'),
+          t('セノマー独身証明書（+ アポスティーユ）', 'CENOMAR (+ Apostille)'),
+        ],
+      },
+      featured: true,
+    },
+    {
+      id: 'visa',
+      icon: Heart,
+      title: t('配偶者ビザ', 'Spouse Visa'),
+      subtitle: t('在留資格「日本人の配偶者等」申請サポート', 'Support for "Spouse of Japanese National" residence status'),
+      price: '¥85,000',
+      note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
+      highlights: [t('必要書類の準備サポート', 'Document preparation support'), t('申請書類チェック', 'Application document review')],
+      details: {
+        period: t('要相談', 'Contact for details'),
+        note: t('※ケースにより異なります', '* Varies by case'),
+        docs: [
+          t('在留資格認定証明書交付申請書', 'Certificate of Eligibility Application'),
+          t('婚姻証明書・戸籍謄本など', 'Marriage certificate, family register, etc.'),
+        ],
+      },
+      featured: false,
+    },
+    {
+      id: 'naturalization',
+      icon: Award,
+      title: t('帰化申請', 'Naturalization Application'),
+      subtitle: t('日本国籍取得の申請サポート', 'Support for acquiring Japanese nationality'),
+      price: '¥85,000',
+      note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
+      highlights: [t('必要書類の準備サポート', 'Document preparation support'), t('継続的フォローアップ', 'Ongoing follow-up')],
+      details: {
+        period: t('要相談', 'Contact for details'),
+        note: t('※ケースにより異なります', '* Varies by case'),
+        docs: [
+          t('帰化許可申請書類一式', 'Naturalization application documents'),
+          t('居住・納税関連書類など', 'Residency and tax documents, etc.'),
+        ],
+      },
+      featured: false,
+    },
+  ];
+
+  const faqs = [
+    {
+      q: t('料金に消費税は含まれていますか？', 'Does the price include consumption tax?'),
+      a: t('表示金額はすべて税抜きです。別途消費税（10%）がかかります。', 'All displayed prices are exclusive of tax. Consumption tax (10%) will be added separately.'),
+    },
+    {
+      q: t('国際送料はいくらですか？', 'How much is the international shipping fee?'),
+      a: t('送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね1,500〜3,000円程度が目安です。', 'It varies depending on the destination. Please confirm at the time of inquiry. For EMS shipping to Japan, the estimate is approximately ¥1,500–¥3,000.'),
+    },
+    {
+      q: t('取得難易度による変動とはどういう意味ですか？', 'What does "price may vary depending on difficulty" mean?'),
+      a: t('フィリピン現地での追加調査や再申請が必要な場合（MATCH FOUND、NO RECORD FOUND等）は、別途費用が発生することがあります。事前に詳しくご説明しますのでご安心ください。', 'If additional investigation or re-application is required in the Philippines (e.g., MATCH FOUND, NO RECORD FOUND), additional costs may apply. We will explain the details in advance so you can proceed with confidence.'),
+    },
+    {
+      q: t('複数の書類をまとめて依頼できますか？', 'Can I order multiple documents at once?'),
+      a: t('はい、まとめての対応が可能です。書類の組み合わせによってはセット割引が適用される場合もありますので、まずはご相談ください。', 'Yes, we can handle multiple documents at once. Set discounts may apply depending on the combination of documents, so please consult with us first.'),
+    },
+    {
+      q: t('支払い方法は何がありますか？', 'What payment methods are available?'),
+      a: t('銀行振込でのお支払いをお願いしています。お見積もり確認後、着手前にお振り込みいただく形となります。詳細はお問い合わせ時にご案内します。', 'We accept bank transfer. Payment is required before we begin, after you confirm the estimate. Details will be provided at the time of inquiry.'),
+    },
+    {
+      q: t('急ぎの場合は対応できますか？', 'Can you handle urgent requests?'),
+      a: t('書類の種類によっては優先対応が可能な場合があります。ただし、PSA・NBI等フィリピン政府機関の処理期間は弊社でコントロールできないため、あらかじめご了承ください。まずはご相談ください。', 'Priority handling may be available depending on the document type. However, please note that we cannot control the processing times of Philippine government agencies such as PSA and NBI. Please contact us first.'),
+    },
+    {
+      q: t('キャンセルは可能ですか？', 'Can I cancel my order?'),
+      a: t('着手前のキャンセルは可能です。フィリピン現地機関への申請手続き完了後のキャンセルは、現地手数料が発生している関係でご対応が難しい場合があります。詳しくはお問い合わせください。', 'Cancellation before we begin is possible. Cancellation after the application process has been completed with Philippine agencies may be difficult due to incurred local fees. Please contact us for details.'),
+    },
+    {
+      q: t('書類が取得できなかった場合はどうなりますか？', 'What happens if the documents cannot be obtained?'),
+      a: t('PSAの「NO RECORD FOUND」など、フィリピン政府機関の記録上の問題で取得できなかった場合は、代替手続きをご案内します。弊社の作業に起因する問題については責任をもって対応いたします。', 'If documents cannot be obtained due to issues in Philippine government records such as PSA "NO RECORD FOUND," we will guide you on alternative procedures. We will take full responsibility for any issues caused by our work.'),
+    },
+  ];
+
+  const scenarios = [
+    {
+      icon: '💍',
+      title: t('フィリピン人と国際結婚したい', 'I want to marry a Filipino/Filipina'),
+      desc: t('日本での婚姻届にはCENOMARとPSA出生証明書が必要です。フィリピン先行の場合はさらに追加書類が必要になります。', 'Marriage registration in Japan requires CENOMAR and PSA Birth Certificate. Additional documents are needed for Philippine-first marriage.'),
+      recommend: t('国際結婚パック', 'International Marriage Package'),
+      planId: 'pack',
+    },
+    {
+      icon: '🛂',
+      title: t('配偶者ビザ（在留資格）を申請したい', 'I want to apply for a spouse visa (residence status)'),
+      desc: t('入管への配偶者ビザ申請では、PSA書類・NBI Clearance・日本語翻訳などの準備が必要です。', 'Spouse visa application to immigration requires PSA documents, NBI Clearance, and Japanese translations.'),
+      recommend: t('配偶者ビザサポート', 'Spouse Visa Support'),
+      planId: 'visa',
+    },
+    {
+      icon: '🚗',
+      title: t('フィリピン免許を日本免許に切り替えたい', 'I want to convert my Philippine license to a Japanese license'),
+      desc: t('外免切替にはLTO発行の書類（運転免許・トランザクション記録）が必要です。フィリピンに行かずに取得代行できます。', 'License transfer requires LTO-issued documents (license and transaction records). We can handle retrieval without you traveling to the Philippines.'),
+      recommend: t('LTO関連書類取得代行', 'LTO Document Retrieval'),
+      planId: 'lto',
+    },
+    {
+      icon: '📋',
+      title: t('まず何が必要か確認したい', 'I want to find out what I need first'),
+      desc: t('「どの書類が必要かわからない」という方も大歓迎です。状況をお聞きして最適なプランをご提案します。', '"I don\'t know which documents I need" is perfectly fine. We will listen to your situation and recommend the best plan.'),
+      recommend: t('無料相談から', 'Start with a free consultation'),
+      planId: null,
+    },
+  ];
+
+  const included = [
+    t('フィリピン各機関への申請手続き代行', 'Application procedures with Philippine agencies'),
+    t('書類の確認・不備チェック', 'Document review and deficiency check'),
+    t('日本語での進捗報告', 'Progress updates in Japanese/English'),
+    t('書類受領後の日本への転送（国際送料別途）', 'Forwarding documents to Japan after receipt (int\'l shipping extra)'),
+    t('DFAアポスティーユ認証の代行（オプション）', 'DFA Apostille authentication (optional)'),
+  ];
+
+  const notIncluded = [
+    t('消費税（別途10%）', 'Consumption tax (10% extra)'),
+    t('国際郵便送料', 'International postal fee'),
+    t('フィリピン政府機関の申請手数料（一部プランで含む）', 'Philippine government agency fees (included in some plans)'),
+    t('日本語翻訳費用（必要な場合は別途ご相談）', 'Japanese translation fee (contact us if needed)'),
+    t('追加調査費用（MATCH FOUND等の異議申し立て）', 'Additional investigation fees (for MATCH FOUND cases, etc.)'),
+  ];
+
   const [openId, setOpenId] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const ctaVariant = getCtaVariant();
@@ -202,52 +231,76 @@ export default function PricingPage() {
 
       <main className="max-w-md md:max-w-2xl lg:max-w-6xl mx-auto px-4 py-10">
         {/* Breadcrumb */}
-        <nav className="text-xs text-gray-400 mb-6" aria-label="パンくずリスト">
-          <Link to="/" className="hover:text-secondary">ホーム</Link>
+        <nav className="text-xs text-gray-400 mb-6" aria-label={t('パンくずリスト', 'Breadcrumb')}>
+          <Link to="/" className="hover:text-secondary">{t('ホーム', 'Home')}</Link>
           <span className="mx-1">/</span>
-          <span className="text-gray-600">料金</span>
+          <span className="text-gray-600">{t('料金', 'Pricing')}</span>
         </nav>
 
         {/* ヘッダー */}
         <div className="text-center mb-4">
           <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Price</span>
-          <h1 className="text-2xl font-bold text-secondary">料金プラン</h1>
-          <p className="text-xs text-gray-500 mt-2">※取得難易度により変動する場合があります。すべて税抜き表示。</p>
+          <h1 className="text-2xl font-bold text-secondary">{t('料金プラン', 'Pricing Plans')}</h1>
+          <p className="text-xs text-gray-500 mt-2">{t('※取得難易度により変動する場合があります。すべて税抜き表示。', '* Prices may vary by document complexity. All prices exclude tax.')}</p>
         </div>
 
         {/* リード文 */}
         <div className="max-w-2xl mx-auto text-center mb-10">
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            フィリピン書類の取得は、言語の壁・手続きの煩雑さ・時間のロスが大きな負担になります。
-            弊社は現地セブ拠点を活かし、<strong>すべて日本語でやり取りするだけ</strong>で書類を取得できるサービスを提供しています。
+            {t(
+              'フィリピン書類の取得は、言語の壁・手続きの煩雑さ・時間のロスが大きな負担になります。弊社は現地セブ拠点を活かし、',
+              'Obtaining Philippine documents can be a significant burden due to language barriers, complex procedures, and time loss. Leveraging our Cebu base, we provide a service where '
+            )}
+            <strong>{t('すべて日本語でやり取りするだけ', 'you only need to communicate in English')}</strong>
+            {t('で書類を取得できるサービスを提供しています。', ' to obtain your documents.')}
           </p>
           <Link
             to="/contact/"
             className="inline-flex items-center gap-2 text-sm text-primary font-bold hover:underline"
           >
-            まずは無料相談する <ArrowRight className="w-4 h-4" />
+            {t('まずは無料相談する', 'Start with a free consultation')} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
         {/* 代行 vs 自力 比較表 */}
         <section className="mb-12 max-w-3xl mx-auto">
-          <h2 className="text-lg font-bold text-secondary mb-4 text-center">代行 vs 自力取得 どちらがいい？</h2>
+          <h2 className="text-lg font-bold text-secondary mb-4 text-center">{t('代行 vs 自力取得 どちらがいい？', 'Agency vs Self-Retrieval: Which is Better?')}</h2>
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-card">
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-secondary text-white">
-                  <th className="px-4 py-3 text-left font-semibold">比較項目</th>
-                  <th className="px-4 py-3 text-center font-semibold">自力取得</th>
-                  <th className="px-4 py-3 text-center font-semibold text-primary">弊社代行</th>
+                  <th className="px-4 py-3 text-left font-semibold">{t('比較項目', 'Comparison')}</th>
+                  <th className="px-4 py-3 text-center font-semibold">{t('自力取得', 'Self-Retrieval')}</th>
+                  <th className="px-4 py-3 text-center font-semibold text-primary">{t('弊社代行', 'Our Service')}</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['手続きの手間', '英語対応・申請書記入など自分でやる必要あり', '日本語でのやり取りのみ'],
-                  ['言語の壁', 'フィリピン機関は英語・タガログ語のみ', '現地スタッフが対応'],
-                  ['トラブル対応', '自分で解決が必要（MATCH FOUND等）', 'サポートあり'],
-                  ['日本にいながら取得', '大使館窓口への来訪や国際郵便手配が必要', '完全遠隔で対応可能'],
-                  ['費用', '手数料＋国際郵便のみ（安い）', '代行手数料が加算される'],
+                  [
+                    t('手続きの手間', 'Effort'),
+                    t('英語対応・申請書記入など自分でやる必要あり', 'Must handle English communication and forms yourself'),
+                    t('日本語でのやり取りのみ', 'English communication only'),
+                  ],
+                  [
+                    t('言語の壁', 'Language barrier'),
+                    t('フィリピン機関は英語・タガログ語のみ', 'Philippine agencies operate in English/Filipino only'),
+                    t('現地スタッフが対応', 'Our local staff handle it'),
+                  ],
+                  [
+                    t('トラブル対応', 'Trouble handling'),
+                    t('自分で解決が必要（MATCH FOUND等）', 'Must resolve issues yourself (MATCH FOUND, etc.)'),
+                    t('サポートあり', 'Full support provided'),
+                  ],
+                  [
+                    t('日本にいながら取得', 'Remote acquisition'),
+                    t('大使館窓口への来訪や国際郵便手配が必要', 'Embassy visits or international mail arrangements needed'),
+                    t('完全遠隔で対応可能', 'Fully remote'),
+                  ],
+                  [
+                    t('費用', 'Cost'),
+                    t('手数料＋国際郵便のみ（安い）', 'Fees + int\'l postage only (cheaper)'),
+                    t('代行手数料が加算される', 'Agency fee applies'),
+                  ],
                 ].map(([item, self, agency], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="px-4 py-3 font-medium text-secondary border-b border-gray-100">{item}</td>
@@ -267,7 +320,7 @@ export default function PricingPage() {
 
         {/* プランカード */}
         <section className="mb-14">
-          <h2 className="text-lg font-bold text-secondary mb-6 text-center">料金プラン一覧</h2>
+          <h2 className="text-lg font-bold text-secondary mb-6 text-center">{t('料金プラン一覧', 'Plan List')}</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {plans.map((plan) => {
               const Icon = plan.icon;
@@ -284,7 +337,7 @@ export default function PricingPage() {
                 >
                   {plan.featured && (
                     <div className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">
-                      人気 No.1
+                      {t('人気 No.1', 'Most Popular')}
                     </div>
                   )}
                   <div className="p-6 flex-1 flex flex-col">
@@ -317,14 +370,14 @@ export default function PricingPage() {
                       aria-expanded={isOpen}
                       className="w-full py-3 rounded-lg border border-secondary text-secondary font-bold text-sm transition-colors flex items-center justify-center gap-1 hover:bg-secondary hover:text-white mb-3"
                     >
-                      詳細を見る
+                      {t('詳細を見る', 'View Details')}
                       {isOpen ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
                     </button>
 
                     {isOpen && (
                       <div className="bg-gray-50 rounded-xl p-4 mb-3 text-sm text-gray-700 space-y-3">
                         <div>
-                          <p className="font-bold text-secondary mb-1">取得できる書類</p>
+                          <p className="font-bold text-secondary mb-1">{t('取得できる書類', 'Included Documents')}</p>
                           <ul className="space-y-1">
                             {plan.details.docs.map((doc) => (
                               <li key={doc} className="flex items-start gap-2">
@@ -335,7 +388,7 @@ export default function PricingPage() {
                           </ul>
                         </div>
                         <div className="flex gap-4 text-xs text-gray-500">
-                          <span>納期: {plan.details.period}</span>
+                          <span>{t('納期', 'Delivery')}: {plan.details.period}</span>
                           <span>{plan.details.note}</span>
                         </div>
                       </div>
@@ -350,7 +403,7 @@ export default function PricingPage() {
                           : 'bg-primary text-white hover:bg-primary-hover'
                       }`}
                     >
-                      相談して見積もる
+                      {t('相談して見積もる', 'Get a Quote')}
                     </Link>
                   </div>
                 </div>
@@ -361,8 +414,8 @@ export default function PricingPage() {
 
         {/* どのプランを選べばいい？ */}
         <section className="mb-12 max-w-3xl mx-auto">
-          <h2 className="text-lg font-bold text-secondary mb-4">どのプランを選べばいい？</h2>
-          <p className="text-sm text-gray-500 mb-5">状況別におすすめのプランをご案内します。</p>
+          <h2 className="text-lg font-bold text-secondary mb-4">{t('どのプランを選べばいい？', 'Which Plan Should I Choose?')}</h2>
+          <p className="text-sm text-gray-500 mb-5">{t('状況別におすすめのプランをご案内します。', 'We recommend plans based on your situation.')}</p>
           <div className="space-y-3">
             {scenarios.map((s) => (
               <div key={s.title} className="bg-white border border-gray-100 rounded-xl p-4 shadow-card flex gap-4 items-start">
@@ -371,7 +424,7 @@ export default function PricingPage() {
                   <h3 className="font-bold text-secondary text-sm mb-1">{s.title}</h3>
                   <p className="text-xs text-gray-600 mb-2">{s.desc}</p>
                   <span className="inline-block text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">
-                    推奨：{s.recommend}
+                    {t('推奨：', 'Recommended: ')}{s.recommend}
                   </span>
                 </div>
                 {s.planId && (
@@ -382,12 +435,12 @@ export default function PricingPage() {
                     }}
                     className="text-xs text-secondary hover:text-primary flex-shrink-0 flex items-center gap-1 transition-colors"
                   >
-                    詳細 <ChevronRight className="w-3 h-3" />
+                    {t('詳細', 'Details')} <ChevronRight className="w-3 h-3" />
                   </button>
                 )}
                 {!s.planId && (
                   <Link to="/contact/" className="text-xs text-secondary hover:text-primary flex-shrink-0 flex items-center gap-1 transition-colors">
-                    相談する <ChevronRight className="w-3 h-3" />
+                    {t('相談する', 'Consult')} <ChevronRight className="w-3 h-3" />
                   </Link>
                 )}
               </div>
@@ -397,12 +450,12 @@ export default function PricingPage() {
 
         {/* 料金に含まれるもの / 含まれないもの */}
         <section className="mb-12 max-w-3xl mx-auto">
-          <h2 className="text-lg font-bold text-secondary mb-4">料金に含まれるもの・含まれないもの</h2>
+          <h2 className="text-lg font-bold text-secondary mb-4">{t('料金に含まれるもの・含まれないもの', "What's Included / Not Included")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-green-50 border border-green-200 rounded-xl p-5">
               <h3 className="font-bold text-green-700 text-sm mb-3 flex items-center gap-2">
                 <CheckCircle className="w-4 h-4" />
-                含まれるもの
+                {t('含まれるもの', "What's Included")}
               </h3>
               <ul className="space-y-2">
                 {included.map((item) => (
@@ -416,7 +469,7 @@ export default function PricingPage() {
             <div className="bg-red-50 border border-red-200 rounded-xl p-5">
               <h3 className="font-bold text-red-700 text-sm mb-3 flex items-center gap-2">
                 <X className="w-4 h-4" />
-                含まれないもの（別途）
+                {t('含まれないもの（別途）', 'Not Included (Extra)')}
               </h3>
               <ul className="space-y-2">
                 {notIncluded.map((item) => (
@@ -435,9 +488,12 @@ export default function PricingPage() {
           <div className="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4">
             <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="text-sm font-bold text-amber-800 mb-1">料金についての注意点</p>
+              <p className="text-sm font-bold text-amber-800 mb-1">{t('料金についての注意点', 'Important Note on Pricing')}</p>
               <p className="text-xs text-amber-700">
-                表示価格はあくまで目安です。フィリピン現地の状況（MATCH FOUND、NO RECORD FOUND等）によっては追加対応が必要になる場合があります。お見積もり確定前に詳しくご説明しますので、まずはご相談ください。
+                {t(
+                  '表示価格はあくまで目安です。フィリピン現地の状況（MATCH FOUND、NO RECORD FOUND等）によっては追加対応が必要になる場合があります。お見積もり確定前に詳しくご説明しますので、まずはご相談ください。',
+                  'Displayed prices are estimates only. Additional handling may be required depending on the situation in the Philippines (e.g., MATCH FOUND, NO RECORD FOUND). We will explain the details before finalizing the estimate, so please consult with us first.'
+                )}
               </p>
             </div>
           </div>
@@ -447,7 +503,7 @@ export default function PricingPage() {
         <section className="max-w-2xl mx-auto mb-10">
           <h2 className="text-lg font-bold text-secondary mb-4 flex items-center gap-2">
             <HelpCircle className="w-5 h-5 text-primary" />
-            料金に関するよくある質問
+            {t('料金に関するよくある質問', 'Frequently Asked Questions about Pricing')}
           </h2>
           <div className="space-y-2">
             {faqs.map((faq, i) => (
@@ -472,17 +528,20 @@ export default function PricingPage() {
 
         {/* CTA */}
         <div className="text-center bg-secondary text-white rounded-2xl p-8 max-w-2xl mx-auto">
-          <p className="text-xs text-primary font-bold mb-2">まずはお気軽に</p>
-          <p className="text-xl font-bold mb-3">どの書類が必要か、わからなくて大丈夫です</p>
+          <p className="text-xs text-primary font-bold mb-2">{t('まずはお気軽に', 'Feel free to reach out')}</p>
+          <p className="text-xl font-bold mb-3">{t('どの書類が必要か、わからなくて大丈夫です', "It's okay if you don't know which documents you need")}</p>
           <p className="text-sm text-gray-300 mb-6">
-            状況をお聞きして、必要な書類と費用の概算をご案内します。
+            {t(
+              '状況をお聞きして、必要な書類と費用の概算をご案内します。',
+              'We will listen to your situation and provide an estimate of the required documents and costs.'
+            )}
           </p>
           <Link
             to="/contact/"
             onClick={() => trackEvent('cta_click', { location: 'pricing_page_bottom', variant: ctaVariant })}
             className="inline-block bg-primary text-white font-bold px-10 py-4 rounded-xl hover:bg-primary-hover transition-colors shadow-lg"
           >
-            無料で相談する
+            {t('無料で相談する', 'Get a Free Consultation')}
           </Link>
         </div>
       </main>
