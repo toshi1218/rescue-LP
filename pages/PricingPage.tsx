@@ -30,6 +30,7 @@ export default function PricingPage() {
       title: t('PSA取得代行', 'PSA Document Retrieval'),
       subtitle: t('出生証明書 / 婚姻証明書 / CENOMAR', 'Birth Certificate / Marriage Certificate / CENOMAR'),
       price: '¥40,000',
+      usdRef: '$270',
       note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
       highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'International shipping extra')],
       details: {
@@ -49,6 +50,7 @@ export default function PricingPage() {
       title: t('NBI取得代行', 'NBI Clearance Retrieval'),
       subtitle: t('無犯罪証明書の取得サポート', 'Support for NBI Clearance acquisition'),
       price: '¥45,000',
+      usdRef: '$300',
       note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
       highlights: [t('指紋採取サポート', 'Fingerprint support'), t('DFA認証オプション可', 'DFA Apostille option available')],
       details: {
@@ -67,6 +69,7 @@ export default function PricingPage() {
       title: t('LTO関連書類取得代行', 'LTO Document Retrieval'),
       subtitle: t('運転免許関連書類（外免切り替え用）', 'License-related documents (for license transfer)'),
       price: '¥85,000',
+      usdRef: '$570',
       note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
       highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'International shipping extra')],
       details: {
@@ -85,6 +88,7 @@ export default function PricingPage() {
       title: t('国際結婚パック', 'International Marriage Package'),
       subtitle: t('婚姻済証明書申請に必要な書類一式', 'All documents for marriage certificate application'),
       price: '¥85,000',
+      usdRef: '$570',
       note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
       highlights: [t('日本語翻訳込み', 'Japanese translation included'), t('優先対応サポート', 'Priority support')],
       details: {
@@ -103,6 +107,7 @@ export default function PricingPage() {
       title: t('配偶者ビザ', 'Spouse Visa'),
       subtitle: t('在留資格「日本人の配偶者等」申請サポート', 'Support for "Spouse of Japanese National" residence status'),
       price: '¥85,000',
+      usdRef: '$570',
       note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
       highlights: [t('必要書類の準備サポート', 'Document preparation support'), t('申請書類チェック', 'Application document review')],
       details: {
@@ -121,6 +126,7 @@ export default function PricingPage() {
       title: t('帰化申請', 'Naturalization Application'),
       subtitle: t('日本国籍取得の申請サポート', 'Support for acquiring Japanese nationality'),
       price: '¥85,000',
+      usdRef: '$570',
       note: t('〜 (税・送料別)', '~ (excl. tax & shipping)'),
       highlights: [t('必要書類の準備サポート', 'Document preparation support'), t('継続的フォローアップ', 'Ongoing follow-up')],
       details: {
@@ -351,9 +357,14 @@ export default function PricingPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-baseline gap-1 mb-4">
-                      <span className="text-2xl font-bold font-display text-primary">{plan.price}</span>
-                      <span className="text-xs text-gray-500">{plan.note}</span>
+                    <div className="mb-4">
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-2xl font-bold font-display text-primary">{plan.price}</span>
+                        <span className="text-xs text-gray-500">{plan.note}</span>
+                      </div>
+                      <p className="text-xs text-gray-400 mt-0.5">
+                        {t(`参考：約US${plan.usdRef}〜`, `Ref: approx. US${plan.usdRef}+`)}
+                      </p>
                     </div>
 
                     <ul className="space-y-2 mb-6 flex-1">
@@ -484,7 +495,7 @@ export default function PricingPage() {
         </section>
 
         {/* 注意点 */}
-        <div className="max-w-3xl mx-auto mb-12">
+        <div className="max-w-3xl mx-auto mb-12 space-y-3">
           <div className="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4">
             <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
             <div>
@@ -497,6 +508,12 @@ export default function PricingPage() {
               </p>
             </div>
           </div>
+          <p className="text-xs text-gray-400 leading-relaxed px-1">
+            {t(
+              '※USDは参考表示です。実際の請求は日本円（JPY）で行います。為替レート・決済手数料により変動があります（参考レート：1 USD ≈ ¥150）。',
+              '* USD prices are for reference only. Actual billing is in Japanese Yen (JPY). Amounts may vary due to exchange rates and payment fees (ref. rate: ¥150 ≈ 1 USD).'
+            )}
+          </p>
         </div>
 
         {/* FAQ */}

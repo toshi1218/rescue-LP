@@ -11,6 +11,7 @@ const plansData = {
       title: 'PSA取得代行',
       subtitle: '出生証明書 / 婚姻証明書 / CENOMAR',
       price: '¥40,000',
+      usdRef: '$270',
       note: '〜 (税・送料別)',
       highlights: ['役所申請手数料込み', '国際送料別途'],
       details: {
@@ -26,6 +27,7 @@ const plansData = {
       title: 'NBI取得代行',
       subtitle: '無犯罪証明書の取得サポート',
       price: '¥45,000',
+      usdRef: '$300',
       note: '〜 (税・送料別)',
       highlights: ['指紋採取サポート', 'DFA認証オプション可'],
       details: {
@@ -41,6 +43,7 @@ const plansData = {
       title: 'LTO関連書類取得代行',
       subtitle: '運転免許関連書類の取得サポート（外免切り替え用）',
       price: '¥85,000',
+      usdRef: '$570',
       note: '〜 (税・送料別)',
       highlights: ['役所申請手数料込み', '国際送料別途'],
       details: {
@@ -56,6 +59,7 @@ const plansData = {
       title: '国際結婚パック',
       subtitle: '婚姻済証明書申請に必要な書類一式',
       price: '¥85,000',
+      usdRef: '$570',
       note: '〜 (税・送料別)',
       highlights: ['日本語翻訳込み', '優先対応サポート'],
       details: {
@@ -71,6 +75,7 @@ const plansData = {
       title: '配偶者ビザ',
       subtitle: '在留資格「日本人の配偶者等」申請サポート',
       price: '¥85,000',
+      usdRef: '$570',
       note: '〜 (税・送料別)',
       highlights: ['必要書類の準備サポート', '申請書類チェック'],
       details: {
@@ -86,6 +91,7 @@ const plansData = {
       title: '帰化申請',
       subtitle: '日本国籍取得の申請サポート',
       price: '¥85,000',
+      usdRef: '$570',
       note: '〜 (税・送料別)',
       highlights: ['必要書類の準備サポート', '継続的フォローアップ'],
       details: {
@@ -103,6 +109,7 @@ const plansData = {
       title: 'PSA Document Procurement',
       subtitle: 'Birth Certificate / Marriage Certificate / CENOMAR',
       price: '¥40,000',
+      usdRef: '$270',
       note: '~ (excl. tax & shipping)',
       highlights: ['Gov\'t filing fees included', 'Intl. shipping extra'],
       details: {
@@ -118,6 +125,7 @@ const plansData = {
       title: 'NBI Clearance Procurement',
       subtitle: 'NBI Clearance acquisition support',
       price: '¥45,000',
+      usdRef: '$300',
       note: '~ (excl. tax & shipping)',
       highlights: ['Fingerprint support included', 'DFA authentication optional'],
       details: {
@@ -133,6 +141,7 @@ const plansData = {
       title: 'LTO Document Procurement',
       subtitle: "Driver's license documents for license transfer",
       price: '¥85,000',
+      usdRef: '$570',
       note: '~ (excl. tax & shipping)',
       highlights: ['Gov\'t filing fees included', 'Intl. shipping extra'],
       details: {
@@ -148,6 +157,7 @@ const plansData = {
       title: 'International Marriage Pack',
       subtitle: 'Full document set for marriage registration',
       price: '¥85,000',
+      usdRef: '$570',
       note: '~ (excl. tax & shipping)',
       highlights: ['Japanese translation included', 'Priority support'],
       details: {
@@ -163,6 +173,7 @@ const plansData = {
       title: 'Spouse Visa',
       subtitle: 'Spouse of Japanese national visa application support',
       price: '¥85,000',
+      usdRef: '$570',
       note: '~ (excl. tax & shipping)',
       highlights: ['Document preparation support', 'Application review'],
       details: {
@@ -178,6 +189,7 @@ const plansData = {
       title: 'Naturalization Application',
       subtitle: 'Japanese citizenship application support',
       price: '¥85,000',
+      usdRef: '$570',
       note: '~ (excl. tax & shipping)',
       highlights: ['Document preparation support', 'Ongoing follow-up'],
       details: {
@@ -234,9 +246,16 @@ const Pricing: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-2xl font-bold font-display text-primary">{plan.price}</span>
-                  <span className="text-xs text-gray-500">{plan.note}</span>
+                <div className="mb-4">
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-2xl font-bold font-display text-primary">{plan.price}</span>
+                    <span className="text-xs text-gray-500">{plan.note}</span>
+                  </div>
+                  <p className="text-xs text-gray-400 mt-0.5">
+                    {lang === 'ja'
+                      ? `参考：約US${plan.usdRef}〜`
+                      : `Ref: approx. US${plan.usdRef}+`}
+                  </p>
                 </div>
 
                 <ul className="space-y-2 mb-6 flex-1">
@@ -297,6 +316,12 @@ const Pricing: React.FC = () => {
           );
         })}
       </div>
+
+      <p className="text-xs text-gray-400 text-center mt-6 max-w-xl mx-auto leading-relaxed">
+        {lang === 'ja'
+          ? '※USDは参考表示です。実際の請求は日本円（JPY）で行います。為替レート・決済手数料により変動があります（参考レート：1 USD ≈ ¥150）。'
+          : '* USD prices are for reference only. Actual billing is in Japanese Yen (JPY). Amounts may vary due to exchange rates and payment fees (ref. rate: ¥150 ≈ 1 USD).'}
+      </p>
     </section>
   );
 };
