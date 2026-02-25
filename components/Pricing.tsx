@@ -108,9 +108,9 @@ const plansData = {
       icon: FileText,
       title: 'PSA Document Procurement',
       subtitle: 'Birth Certificate / Marriage Certificate / CENOMAR',
-      price: '¥40,000',
+      price: 'US$299–349',
       usdRef: '$270',
-      note: '~ (excl. tax & shipping)',
+      note: '(excl. tax & shipping)',
       highlights: ['Gov\'t filing fees included', 'Intl. shipping extra'],
       details: {
         period: 'Approx. 4 weeks',
@@ -124,9 +124,9 @@ const plansData = {
       icon: Fingerprint,
       title: 'NBI Clearance Procurement',
       subtitle: 'NBI Clearance acquisition support',
-      price: '¥45,000',
+      price: 'US$349–399',
       usdRef: '$300',
-      note: '~ (excl. tax & shipping)',
+      note: '(excl. tax & shipping)',
       highlights: ['Fingerprint support included', 'DFA authentication optional'],
       details: {
         period: 'Approx. 4 weeks',
@@ -140,9 +140,9 @@ const plansData = {
       icon: FileText,
       title: 'LTO Document Procurement',
       subtitle: "Driver's license documents for license transfer",
-      price: '¥85,000',
+      price: 'US$799–999',
       usdRef: '$570',
-      note: '~ (excl. tax & shipping)',
+      note: '(excl. tax & shipping)',
       highlights: ['Gov\'t filing fees included', 'Intl. shipping extra'],
       details: {
         period: 'Approx. 4 weeks',
@@ -156,9 +156,9 @@ const plansData = {
       icon: Gem,
       title: 'International Marriage Pack',
       subtitle: 'Full document set for marriage registration',
-      price: '¥85,000',
+      price: 'US$799–999',
       usdRef: '$570',
-      note: '~ (excl. tax & shipping)',
+      note: '(excl. tax & shipping)',
       highlights: ['Japanese translation included', 'Priority support'],
       details: {
         period: 'Approx. 4 weeks',
@@ -172,9 +172,9 @@ const plansData = {
       icon: Heart,
       title: 'Spouse Visa',
       subtitle: 'Spouse of Japanese national visa application support',
-      price: '¥85,000',
+      price: 'US$799–999',
       usdRef: '$570',
-      note: '~ (excl. tax & shipping)',
+      note: '(excl. tax & shipping)',
       highlights: ['Document preparation support', 'Application review'],
       details: {
         period: 'Varies by case',
@@ -188,9 +188,9 @@ const plansData = {
       icon: Award,
       title: 'Naturalization Application',
       subtitle: 'Japanese citizenship application support',
-      price: '¥85,000',
+      price: 'US$799–999',
       usdRef: '$570',
-      note: '~ (excl. tax & shipping)',
+      note: '(excl. tax & shipping)',
       highlights: ['Document preparation support', 'Ongoing follow-up'],
       details: {
         period: 'Varies by case',
@@ -251,11 +251,6 @@ const Pricing: React.FC = () => {
                     <span className="text-2xl font-bold font-display text-primary">{plan.price}</span>
                     <span className="text-xs text-gray-500">{plan.note}</span>
                   </div>
-                  <p className="text-xs text-gray-400 mt-0.5">
-                    {lang === 'ja'
-                      ? `参考：約US${plan.usdRef}〜`
-                      : `Ref: approx. US${plan.usdRef}+`}
-                  </p>
                 </div>
 
                 <ul className="space-y-2 mb-6 flex-1">
@@ -319,8 +314,8 @@ const Pricing: React.FC = () => {
 
       <p className="text-xs text-gray-400 text-center mt-6 max-w-xl mx-auto leading-relaxed">
         {lang === 'ja'
-          ? '※USDは参考表示です。実際の請求は日本円（JPY）で行います。為替レート・決済手数料により変動があります（参考レート：1 USD ≈ ¥150）。'
-          : '* USD prices are for reference only. Actual billing is in Japanese Yen (JPY). Amounts may vary due to exchange rates and payment fees (ref. rate: ¥150 ≈ 1 USD).'}
+          ? '※表示価格はすべて税抜きです。取得難易度により変動する場合があります。'
+          : '* Final quote depends on document condition, shipping destination, and exchange rate.'}
       </p>
     </section>
   );
