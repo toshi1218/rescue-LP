@@ -1,5 +1,5 @@
 import React from 'react';
-import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Languages, Car, ExternalLink, MessageCircle } from 'lucide-react';
+import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Car, ExternalLink, MessageCircle } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -11,7 +11,6 @@ const servicesData = {
     { icon: Fingerprint, title: 'NBI Clearance', subtitle: '無犯罪証明書', desc: 'NBIクリアランス（フィリピン無犯罪証明書）取得サポート', hasBadge: false },
     { icon: Car, title: 'LTO Documents', subtitle: '運転免許関連書類', desc: 'LTO運転免許証・OR/CR・外免切替に必要な書類取得', hasBadge: false },
     { icon: BadgeCheck, title: 'DFA Apostille', subtitle: 'アポスティーユ認証', desc: 'DFAアポスティーユ認証（フィリピン外務省認証）代行', hasBadge: false },
-    { icon: Languages, title: 'Translation', subtitle: '日本語翻訳', desc: 'フィリピン公的書類の日本語翻訳・認証翻訳対応', hasBadge: false },
   ],
   en: [
     { icon: UserX, title: 'CENOMAR', subtitle: 'Certificate of No Marriage Record', desc: 'CENOMAR PSA procurement required for international marriage & spouse visa', hasBadge: true },
@@ -20,7 +19,6 @@ const servicesData = {
     { icon: Fingerprint, title: 'NBI Clearance', subtitle: 'NBI Clearance', desc: 'NBI Clearance (Philippine national criminal clearance) procurement support', hasBadge: false },
     { icon: Car, title: 'LTO Documents', subtitle: "Driver's License Documents", desc: "LTO driver's license & OR/CR documents required for license transfer", hasBadge: false },
     { icon: BadgeCheck, title: 'DFA Apostille', subtitle: 'DFA Apostille Authentication', desc: 'DFA Apostille authentication (Philippine Dept. of Foreign Affairs) procurement', hasBadge: false },
-    { icon: Languages, title: 'Translation', subtitle: 'Japanese Translation', desc: 'Japanese translation & certified translation for Philippine official documents', hasBadge: false },
   ],
 };
 
