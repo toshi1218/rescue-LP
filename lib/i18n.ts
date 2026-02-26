@@ -319,7 +319,12 @@ function getInitialLang(): Lang {
   const stored = window.localStorage.getItem(LANG_KEY);
   if (stored === 'ja' || stored === 'en') return stored;
 
-  // 2. ブラウザ言語が日本語なら日本語、それ以外は英語
+  // 2. / (グローバルページ) 以外は日本語向けページなのでデフォルト ja
+  //    Cloudflare ジオリダイレクトで /jp/ に来た英語ブラウザのユーザーも
+  //    日本語で表示されるよう、ブラウザ言語に依存しない
+  if (window.location.pathname !== '/') return 'ja';
+
+  // 3. グローバルページ(/)のみブラウザ言語に従う
   const browserLang = navigator.language || (navigator.languages && navigator.languages[0]) || '';
   return browserLang.startsWith('ja') ? 'ja' : 'en';
 }
