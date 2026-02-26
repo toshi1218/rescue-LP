@@ -16,8 +16,10 @@ interface RouteConfig {
   title: string;
   description: string;
   canonical: string;
-  hreflangJa?: string;
-  hreflangDefault?: string;
+  hreflangSelf?: string;
+  hreflangCross?: string;
+  hreflangCrossHref?: string;
+  xDefault?: string;
   ogType?: string;
 }
 
@@ -25,9 +27,24 @@ const routes: RouteConfig[] = [
   {
     path: '/',
     outFile: path.join(projectRoot, 'dist', 'index.html'),
-    title: 'セノマー（CENOMAR）・PSA・NBI取得代行｜フィリピン書類取得代行センター',
-    description: 'セノマー（CENOMAR）・PSA・NBI・DFAアポスティーユの取得代行。国際結婚・配偶者ビザに必要なフィリピン書類を日本語でサポート。',
+    title: 'Philippine Document Service | CENOMAR, PSA, NBI for K-1 Visa & USCIS',
+    description: 'Get your Philippine documents (CENOMAR, PSA Birth Certificate, NBI Clearance) for K-1 visa and USCIS immigration. Fast, reliable, full English support.',
     canonical: 'https://ph-document.com/',
+    hreflangSelf: 'en',
+    hreflangCross: 'en-JP',
+    hreflangCrossHref: 'https://ph-document.com/jp/',
+    xDefault: 'https://ph-document.com/',
+  },
+  {
+    path: '/jp',
+    outFile: path.join(projectRoot, 'dist', 'jp', 'index.html'),
+    title: 'CENOMAR・PSA・NBI取得代行｜フィリピン書類取得代行センター',
+    description: 'CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザ・LTO免許切替に対応。日本語サポートあり。',
+    canonical: 'https://ph-document.com/jp/',
+    hreflangSelf: 'en-JP',
+    hreflangCross: 'en',
+    hreflangCrossHref: 'https://ph-document.com/',
+    xDefault: 'https://ph-document.com/',
   },
   {
     path: '/cenomar-guide',
@@ -170,17 +187,26 @@ function updateHead(html: string, route: RouteConfig): string {
     `<meta property="og:description" content="${route.description}"`
   );
 
-  // hreflang ja (self-reference)
-  result = result.replace(
-    /<link rel="alternate" hreflang="ja" href="[^"]*"/,
-    `<link rel="alternate" hreflang="ja" href="${route.canonical}"`
-  );
-
-  // hreflang x-default (self-reference)
-  result = result.replace(
-    /<link rel="alternate" hreflang="x-default" href="[^"]*"/,
-    `<link rel="alternate" hreflang="x-default" href="${route.canonical}"`
-  );
+  // hreflang tags: replace all three alternate links at once
+  // For regional pages (/ and /jp/): set hreflang="en", hreflang="en-JP", hreflang="x-default"
+  // For all other pages: keep pointing to the page's own canonical (no cross-link needed)
+  if (route.hreflangSelf && route.hreflangCross && route.hreflangCrossHref && route.xDefault) {
+    // Replace the existing hreflang block with the full three-tag set
+    result = result.replace(
+      /<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/>\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/>/,
+      `<link rel="alternate" hreflang="${route.hreflangSelf}" href="${route.canonical}" />\n    <link rel="alternate" hreflang="${route.hreflangCross}" href="${route.hreflangCrossHref}" />\n    <link rel="alternate" hreflang="x-default" href="${route.xDefault}" />`
+    );
+  } else {
+    // Non-regional pages: just update the existing self-referencing hreflang URLs
+    result = result.replace(
+      /<link rel="alternate" hreflang="en" href="[^"]*"/,
+      `<link rel="alternate" hreflang="en" href="${route.canonical}"`
+    );
+    result = result.replace(
+      /<link rel="alternate" hreflang="x-default" href="[^"]*"/,
+      `<link rel="alternate" hreflang="x-default" href="${route.canonical}"`
+    );
+  }
 
   // twitter:title
   result = result.replace(
