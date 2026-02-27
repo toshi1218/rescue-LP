@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Send, Mail, Clock, MessageSquare, CheckCircle, AlertCircle, Loader2, ChevronDown, ChevronRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
@@ -56,6 +56,13 @@ export default function ContactPage() {
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
   const [status, setStatus] = useState<FormStatus>('idle');
+
+  useEffect(() => {
+    const metaRobots = document.querySelector('meta[name="robots"]');
+    const prev = metaRobots?.getAttribute('content') ?? 'index, follow';
+    metaRobots?.setAttribute('content', 'noindex, nofollow');
+    return () => { metaRobots?.setAttribute('content', prev); };
+  }, []);
 
   const faqs = [
     {
