@@ -21,17 +21,17 @@ export default function NbiPage() {
 
   const cases = [
     {
-      title: t('配偶者ビザ申請のためにNBIが必要な方', 'Those Needing NBI for Spouse Visa Application'),
+      title: t('配偶者ビザ申請のためにNBIが必要な方', 'Those Needing NBI for a Spouse / Partner Visa'),
       detail: t(
         '日本の入管（出入国在留管理庁）が配偶者ビザ（日本人の配偶者等）の申請書類としてNBI Clearanceを求める場合があります。DFAアポスティーユ認証付きのものが推奨されます。NBI Clearanceの有効期限（1年間）を考慮して、ビザ申請の2〜3ヶ月前に取得を開始しましょう。HIT案件の場合は追加で2〜4週間かかることがあるため、余裕をもったスケジュールが重要です。',
-        'Japan Immigration (Immigration Services Agency) may require NBI Clearance as part of a spouse visa (spouse of Japanese national) application. One with DFA Apostille authentication is recommended. Considering the 1-year validity of NBI Clearance, start the process 2–3 months before your visa application. For HIT cases, an additional 2–4 weeks may be needed, so a flexible schedule is important.'
+        'Immigration offices worldwide (Japan, US, Canada, Australia, UK, and more) commonly require NBI Clearance for spouse or partner visa applications. DFA Apostille authentication is often recommended or required. Start the process at least 2–3 months before your visa application, as HIT cases can take an additional 2–4 weeks.'
       ),
     },
     {
-      title: t('日本・海外就職のためにNBIが必要な方', 'Those Needing NBI for Employment in Japan or Abroad'),
+      title: t('海外就職のためにNBIが必要な方', 'Those Needing NBI for Overseas Employment'),
       detail: t(
         'フィリピン人の方が日本や海外で就職する際、雇用主からNBI Clearanceを求められることがあります。企業によっては「3ヶ月以内」の書類を指定するケースもあります。就職確定後すぐに申請を開始し、入社日に間に合うようにスケジュールを組むことをおすすめします。',
-        'When Filipinos seek employment in Japan or overseas, employers may require NBI Clearance. Some companies specify a document issued "within 3 months." We recommend starting the application immediately after employment is confirmed and scheduling it to arrive by your start date.'
+        'Overseas employers and recruitment agencies frequently require NBI Clearance from Filipino applicants. Some companies specify a document issued "within 3 months." Start the application as soon as your employment is confirmed to ensure it arrives by your start date.'
       ),
     },
     {
@@ -66,10 +66,10 @@ export default function NbiPage() {
       ),
     },
     {
-      q: t('日本から自分でNBI クリアランスを申請できますか？', 'Can I apply for NBI Clearance from Japan on my own?'),
+      q: t('海外から自分でNBI クリアランスを申請できますか？', 'Can I apply for NBI Clearance from overseas on my own?'),
       a: t(
         'はい、可能です。NBI公式サイト（clearance.nbi.gov.ph）でオンライン申請し、代理人を立てて受け取る方法があります。ただし代理人の設定、支払い方法（フィリピン国内決済手段が必要なことが多い）など、海外からは手続きが複雑です。代行サービスの利用が最もスムーズです。',
-        'Yes, it is possible. You can apply online at the NBI official website (clearance.nbi.gov.ph) and have a representative pick it up. However, the process can be complex from overseas, including setting up a representative and payment methods (often requiring Philippine payment methods). Using a proxy service is the smoothest option.'
+        'Yes, it is possible. You can apply online at the NBI official website (clearance.nbi.gov.ph) and have a local representative pick it up on your behalf. However, the process can be complex from overseas due to payment method restrictions and the need to coordinate a local representative. Using a proxy service is by far the easiest option.'
       ),
     },
     {
@@ -181,7 +181,7 @@ export default function NbiPage() {
           {lang === 'ja' ? (
             <>フィリピンNBI無犯罪証明書（NBI Clearance）とは？<br className="hidden md:block" />日本から取得する方法【2026年最新】</>
           ) : (
-            <>What is Philippine NBI Clearance (Criminal Record Certificate)?<br className="hidden md:block" />How to Obtain It from Japan [2026 Guide]</>
+            <>Philippine NBI Clearance: Complete Guide [2026]<br className="hidden md:block" />How to Obtain It from Overseas</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月22日 ｜ 株式会社IGRS', 'Last updated: February 22, 2026 | IGRS Inc.')}</p>
@@ -220,7 +220,7 @@ export default function NbiPage() {
           <p className="text-sm leading-relaxed text-gray-700">
             {t(
               '日本でいう「警察証明書」に相当する書類で、海外移住・就労ビザ・国際結婚など、あらゆる場面で求められる重要な書類です。',
-              'It is the equivalent of a "police certificate" in Japan, and is an important document required in a wide range of situations such as overseas migration, work visas, and international marriage.'
+              'It is the Philippine equivalent of a police clearance or background check certificate. It is an important document required worldwide for overseas employment, immigration, partner visas, and international marriage procedures.'
             )}
           </p>
         </section>
@@ -233,12 +233,12 @@ export default function NbiPage() {
           <div className="grid gap-3">
             {[
               {
-                title: t('配偶者ビザ・在留資格の申請', 'Spouse Visa / Residence Status Application'),
-                desc: t('日本の入管が配偶者ビザ申請の書類として求める場合があります。', 'Japan Immigration may require it as a document for spouse visa applications.'),
+                title: t('配偶者ビザ・在留資格の申請', 'Spouse / Partner Visa Application'),
+                desc: t('日本の入管が配偶者ビザ申請の書類として求める場合があります。', 'Immigration authorities in many countries require NBI Clearance as part of a spouse or partner visa application.'),
               },
               {
                 title: t('就労ビザ・海外就職', 'Work Visa / Overseas Employment'),
-                desc: t('日本・海外での就職時に雇用主から提出を求められます。', 'Employers may require submission when seeking employment in Japan or overseas.'),
+                desc: t('日本・海外での就職時に雇用主から提出を求められます。', 'Employers and foreign immigration offices may require NBI Clearance when a Filipino applies for work overseas.'),
               },
               {
                 title: t('フィリピンのパスポート申請', 'Philippine Passport Application'),
@@ -327,16 +327,16 @@ export default function NbiPage() {
                 step: 'STEP 4',
                 title: t('（必要に応じて）DFAアポスティーユ認証', '(If Needed) DFA Apostille Authentication'),
                 desc: t(
-                  '日本の入管・大使館に提出する場合はDFA認証もセットで対応します。',
-                  'If submitting to Japanese immigration or embassies, DFA authentication can be handled as a set.'
+                  '入管・大使館に提出する場合はDFA認証もセットで対応します。',
+                  'If your destination country or immigration office requires Apostille authentication, we arrange it at the same time.'
                 ),
               },
               {
                 step: 'STEP 5',
-                title: t('日本へ国際郵便で発送', 'International Shipping to Japan'),
+                title: t('国際郵便で発送', 'International Shipping'),
                 desc: t(
-                  '取得した書類を速達・追跡付きで日本の住所へお届けします。',
-                  'The obtained documents are delivered to your Japanese address via express mail with tracking.'
+                  '取得した書類を速達・追跡付きでご指定の住所へお届けします。',
+                  'The obtained documents are shipped to your address anywhere in the world via express tracked courier.'
                 ),
               },
             ].map((s, i) => (
@@ -441,14 +441,14 @@ export default function NbiPage() {
             {lang === 'ja' ? (
               <>日本の入管・大使館に提出するNBI クリアランスには、<strong>DFA（フィリピン外務省）のアポスティーユ認証</strong>が必要な場合があります。</>
             ) : (
-              <>NBI Clearance submitted to Japanese immigration or embassies may require <strong>DFA (Department of Foreign Affairs) Apostille authentication</strong>.</>
+              <>NBI Clearance submitted to foreign immigration offices or embassies often requires <strong>DFA (Department of Foreign Affairs) Apostille authentication</strong>, especially for visa and immigration procedures overseas.</>
             )}
           </p>
           <div className="bg-white border border-gray-100 rounded-lg p-4 shadow-card text-sm text-gray-700 space-y-2">
             <p>✓ {t('NBI クリアランス取得後、DFAに書類を提出', 'After obtaining NBI Clearance, submit documents to the DFA')}</p>
             <p>✓ {t('アポスティーユスタンプ（認証印）が付与される', 'An Apostille stamp (authentication mark) is applied')}</p>
             <p>✓ {t('国際的な公文書として認証される', 'The document is authenticated as an official international public document')}</p>
-            <p>✓ {t('当センターではNBI＋DFAアポスティーユのセット代行が可能', 'Our center can handle NBI + DFA Apostille as a combined proxy service')}</p>
+            <p>✓ {t('当センターではNBI＋DFAアポスティーユのセット代行が可能', 'We can handle NBI + DFA Apostille as a combined proxy service, shipped worldwide')}</p>
           </div>
         </section>
 
@@ -551,11 +551,11 @@ export default function NbiPage() {
           <div className="grid gap-4">
             {[
               {
-                icon: '🇯🇵',
-                title: t('完全日本語対応', 'Full Japanese & English Support'),
+                icon: '🌐',
+                title: t('完全日本語対応', 'Full English Support — No Filipino Required'),
                 body: t(
                   'フィリピン機関とのやり取り・書類確認・発送まですべて日本語でOK。英語が不得意な方でも安心です。',
-                  'Everything from communicating with Philippine agencies to document checking and shipping is handled in English. Even those not fluent in Filipino can proceed with confidence.'
+                  'Everything — communicating with Philippine agencies, document verification, and international shipping — is handled in English. You never need to deal with local offices in the Philippines.'
                 ),
               },
               {
@@ -568,10 +568,10 @@ export default function NbiPage() {
               },
               {
                 icon: '📦',
-                title: t('DFAアポスティーユまで一括対応', 'All-Inclusive Including DFA Apostille'),
+                title: t('DFAアポスティーユまで一括対応', 'All-Inclusive: NBI + Apostille + Worldwide Shipping'),
                 body: t(
-                  'NBI取得からDFAアポスティーユ認証・日本へ国際郵便発送まで、まるごとお任せいただけます。',
-                  'From NBI acquisition to DFA Apostille authentication and international shipping to Japan — leave everything to us.'
+                  'NBI取得からDFAアポスティーユ認証・国際郵便発送まで、まるごとお任せいただけます。',
+                  'From NBI acquisition to DFA Apostille authentication and international shipping to your address — everything handled in one service.'
                 ),
               },
             ].map((item, i) => (
