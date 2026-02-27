@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
-import LanguageSwitcher from './LanguageSwitcher';
 
 type MenuType = 'docs' | 'purpose' | null;
 
@@ -105,8 +104,7 @@ const Navbar: React.FC = () => {
             </span>
           </Link>
         )}
-        <div className="flex items-center gap-2 ml-2">
-          <LanguageSwitcher />
+        <div className="flex items-center ml-2">
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact', variant: ctaVariant })}
