@@ -121,6 +121,13 @@ export default function NbiPage() {
         'The next steps after obtaining NBI Clearance depend on your purpose. ① For spouse visa applications: obtain DFA Apostille authentication, attach a Japanese translation if needed, and submit to immigration. ② For employment/employer submission: follow the employer\'s instructions. ③ For overseas migration: obtain Apostille or authentication according to the destination country\'s requirements. Our center also handles DFA Apostille authentication and shipping after NBI acquisition as a set.'
       ),
     },
+    {
+      q: t('NBI クリアランスのアポスティーユに有効期限はありますか？', 'Does NBI Clearance apostille expire? What is the expiration date?'),
+      a: t(
+        'DFAアポスティーユ認証自体に法的な有効期限はありません。ただし、アポスティーユが付いているNBI Clearance本体の有効期限は発行日から1年です。NBI Clearanceが失効すれば書類全体が無効になるため、実質的な有効期限はNBI発行日から1年となります。また入管・大使館など提出先によっては「発行から6ヶ月以内」の書類を求める場合もあります。提出先の要件を確認のうえ、アポスティーユ取得後はなるべく早く提出するか、提出予定日の3〜4ヶ月前に取得を開始することをおすすめします。',
+        'DFA Apostille authentication itself has no legal expiration date. However, the NBI Clearance to which the Apostille is attached is valid for 1 year from the date of issuance. Since the entire document becomes invalid once the NBI Clearance expires, the practical expiration date is 1 year from the NBI issuance date. Some destinations such as immigration offices and embassies may also require documents "issued within 6 months." We recommend confirming the destination\'s requirements and submitting as soon as possible after obtaining Apostille, or starting the process 3–4 months before your planned submission date.'
+      ),
+    },
   ];
 
   const jsonLd = {
