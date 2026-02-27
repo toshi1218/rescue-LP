@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileTex
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -11,6 +12,11 @@ export default function ApostillePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    'DFAアポスティーユ 取得方法【2026年最新】費用・期間・対象書類｜フィリピン書類センター',
+    'フィリピンDFAアポスティーユ認証の取得方法・費用・期間を解説。CENOMAR・PSA・NBI対応。日本語サポートあり・無料見積もり受付中。'
+  );
 
   const faqs = [
     {

@@ -14,10 +14,16 @@ import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 export default function HomePage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    'フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【2026年対応】',
+    'CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。'
+  );
 
   useEffect(() => {
     trackLandingView();

@@ -4,6 +4,7 @@ import { Mail, MapPin, Clock, Building2, Globe, FileCheck, Users, Target, Heart,
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -46,6 +47,11 @@ const jsonLd = {
 export default function CompanyPage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    '会社概要｜株式会社IGRS（フィリピン書類取得代行センター）',
+    'フィリピン書類取得代行センターを運営する株式会社IGRSの会社概要。所在地・代表者・事業内容・特定商取引法表記をご案内。'
+  );
 
   const serviceFeatures = [
     {
