@@ -24,8 +24,22 @@ const FAQ: React.FC = () => {
   const { lang, t } = useLanguage();
   const faqs = faqsData[lang];
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
   return (
     <section className="py-12 bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
         <div className="text-center mb-10">
           <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">FAQ</span>
