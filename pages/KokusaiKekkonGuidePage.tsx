@@ -4,12 +4,18 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, FileText, ArrowRight, 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
 export default function KokusaiKekkonGuidePage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    'フィリピン国際結婚ガイド【2026年最新版】手続き・必要書類・費用を徹底解説',
+    'フィリピン人との国際結婚手続きをステップ別に解説。日本先行・フィリピン先行の2パターン、必要書類（CENOMAR・PSA等）・費用・期間まで網羅。'
+  );
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 

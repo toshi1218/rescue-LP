@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileTex
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -11,6 +12,11 @@ export default function PsaPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    'PSA出生証明書 要件・費用・取得方法【2026年最新版】｜PSA birth certificate Philippines 2026',
+    'PSA出生証明書の申請要件・費用・取得方法を解説。2026年最新の必要情報・PSA手数料（365ペソ）・代行費用まで。NO RECORD FOUND対処も。無料相談受付中。'
+  );
 
   const faqs = [
     {
@@ -146,15 +152,17 @@ export default function PsaPage() {
           <p className="text-xs font-bold text-gray-400 mb-3">{t('目次', 'Table of Contents')}</p>
           <ol className="space-y-1 text-sm text-secondary">
             {[
-              t('PSA出生証明書とは', 'What is PSA Birth Certificate'),
-              t('必要になる場面', 'When It Is Needed'),
-              t('基本情報', 'Basic Information'),
-              t('取得方法3パターン', '3 Ways to Obtain'),
-              t('よくあるトラブル', 'Common Issues'),
-              t('よくある質問（FAQ）', 'FAQ'),
-              t('お問い合わせ', 'Contact Us'),
+              { href: '#ps-1', label: t('PSA出生証明書とは', 'What is PSA Birth Certificate') },
+              { href: '#ps-2', label: t('必要になる場面', 'When It Is Needed') },
+              { href: '#ps-3', label: t('基本情報', 'Basic Information') },
+              { href: '#ps-requirements', label: t('申請要件 2026', 'Requirements 2026') },
+              { href: '#ps-cost', label: t('取得費用 2026', 'Cost 2026') },
+              { href: '#ps-4', label: t('取得方法3パターン', '3 Ways to Obtain') },
+              { href: '#ps-5', label: t('よくあるトラブル', 'Common Issues') },
+              { href: '#ps-6', label: t('よくある質問（FAQ）', 'FAQ') },
+              { href: '#contact', label: t('お問い合わせ', 'Contact Us') },
             ].map((item, i) => (
-              <li key={i}><a href={`#ps-${i + 1}`} className="hover:underline">{i + 1}. {item}</a></li>
+              <li key={i}><a href={item.href} className="hover:underline">{i + 1}. {item.label}</a></li>
             ))}
           </ol>
         </div>
@@ -244,6 +252,110 @@ export default function PsaPage() {
               </tbody>
             </table>
           </div>
+        </section>
+
+        {/* Requirements Section — SEO: "PSA birth certificate requirements Philippines 2026" */}
+        <section id="ps-requirements" className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
+            {t('PSA出生証明書 申請要件（2026年・フィリピン）', 'PSA Birth Certificate Requirements Philippines 2026')}
+          </h2>
+          <p className="text-sm leading-relaxed text-gray-700 mb-4">
+            {t(
+              'PSA出生証明書の取得には、以下の情報・書類が必要です。事前に確認しておくとスムーズに申請できます。',
+              'To obtain a PSA Birth Certificate, the following information and documents are required. Confirming these in advance will make the application process smoother.'
+            )}
+          </p>
+          <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-card mb-4">
+            <p className="text-xs font-bold text-gray-400 mb-3">{t('申請に必要な情報（証明書に記載された内容）', 'Required Information (as recorded on the certificate)')}</p>
+            <div className="space-y-2">
+              {[
+                t('氏名（英語フルネーム・パスポートと同じスペル）', 'Full name in English (same spelling as on passport)'),
+                t('生年月日', 'Date of birth'),
+                t('出生地（市・州）', 'Place of birth (city and province)'),
+                t('父の英語フルネーム', "Father's full name in English"),
+                t('母の旧姓（英語フルネーム）', "Mother's maiden name in English"),
+              ].map((item, i) => (
+                <div key={i} className="flex gap-2 text-sm text-gray-700">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+            <p className="text-xs font-bold text-gray-400 mb-3">{t('本人以外が申請する場合の追加要件', 'Additional Requirements for Third-Party Requests')}</p>
+            <div className="space-y-2">
+              {[
+                t('申請者本人の有効なID（パスポート等）のコピー', "Copy of requester's valid ID (passport, etc.)"),
+                t('証明書記載者との関係を示す書類（婚姻証明書など）', 'Document showing relationship to the person on the certificate (e.g., marriage certificate)'),
+                t('委任状（代理申請の場合）', 'Authorization letter (for proxy applications)'),
+              ].map((item, i) => (
+                <div key={i} className="flex gap-2 text-sm text-gray-700">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <p className="text-xs text-gray-500 mt-3">
+            {t(
+              '※ 代行サービスをご利用の場合は、必要情報を確認フォームでご提出いただくだけで対応します。',
+              '* When using our proxy service, simply submit the required information via our intake form — we handle the rest.'
+            )}
+          </p>
+        </section>
+
+        {/* Cost Section — SEO: "PSA birth certificate Philippines cost 2026" */}
+        <section id="ps-cost" className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
+            {t('PSA出生証明書の費用（2026年・フィリピン）', 'PSA Birth Certificate Philippines Cost 2026')}
+          </h2>
+          <p className="text-sm leading-relaxed text-gray-700 mb-4">
+            {t(
+              'PSA出生証明書の取得にかかる費用は申請方法によって異なります。以下に公式費用と代行利用時の目安をまとめました。',
+              'The cost of obtaining a PSA Birth Certificate varies depending on how you apply. Below is a summary of the official fees and estimated costs when using a proxy service.'
+            )}
+          </p>
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-secondary text-white">
+                  <th className="px-4 py-3 text-left font-semibold rounded-tl-lg">{t('費用項目', 'Cost Item')}</th>
+                  <th className="px-4 py-3 text-left font-semibold">{t('金額', 'Amount')}</th>
+                  <th className="px-4 py-3 text-left font-semibold rounded-tr-lg">{t('備考', 'Notes')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  [
+                    t('PSA公式手数料', 'Official PSA Fee'),
+                    t('約365ペソ（約900円・$7相当）', 'Approx. 365 PHP (~$7 USD / ¥900)'),
+                    t('1通あたり。複数部は追加料金', 'Per copy. Additional fee for multiple copies'),
+                  ],
+                  [
+                    t('国際配送料', 'International Shipping Fee'),
+                    t('約500〜2,000円', 'Approx. ¥500–2,000'),
+                    t('速達・追跡付き郵便の場合', 'For express tracked international mail'),
+                  ],
+                  [
+                    t('代行手数料（代行サービス利用の場合）', 'Proxy Service Fee (if using proxy)'),
+                    t('約40,000円〜（全込み）', 'From ~¥40,000 (all-inclusive)'),
+                    t('PSA手数料・国際郵便・日本語サポート込み', 'Includes PSA fee, shipping & support'),
+                  ],
+                ].map(([item, amount, note], i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                    <td className="px-4 py-3 font-medium text-secondary border-b border-gray-100">{item}</td>
+                    <td className="px-4 py-3 text-gray-700 border-b border-gray-100 font-bold">{amount}</td>
+                    <td className="px-4 py-3 text-gray-500 text-xs border-b border-gray-100">{note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <a href="#contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-hover transition-colors">
+            <ArrowRight className="w-4 h-4" />
+            {t('費用の詳細・無料見積もりはこちら', 'Get a detailed cost breakdown & free quote')}
+          </a>
         </section>
 
         {/* Section 4 */}

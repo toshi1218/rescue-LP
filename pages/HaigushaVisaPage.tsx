@@ -4,12 +4,18 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileTex
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
 export default function HaigushaVisaPage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    '配偶者ビザ フィリピン書類チェックリスト【2026年版】必要書類・取得方法',
+    '配偶者ビザ申請に必要なフィリピン書類を完全リスト化。PSA・CENOMAR・NBI等の取得方法・費用・注意点を解説。代行サービスで一括取得対応。'
+  );
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 

@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileTex
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -12,6 +13,11 @@ export default function NbiPage() {
   const [openCase, setOpenCase] = useState<number | null>(null);
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    'NBI Clearance 取得方法【2026年最新】無犯罪証明書・NBI HIT対処｜フィリピン書類センター',
+    'NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。'
+  );
 
   const cases = [
     {
@@ -113,6 +119,13 @@ export default function NbiPage() {
       a: t(
         'NBI Clearance取得後の次のステップは目的によって異なります。①配偶者ビザ申請の場合：DFAアポスティーユ認証を取得し、必要なら日本語翻訳を添付して入管に提出します。②就職・雇用先提出の場合：雇用主の指示に従い提出します。③海外移住の場合：移住先の国の要件に合わせてアポスティーユや認証を取得します。当センターではNBI取得後のDFAアポスティーユ認証・発送もセットで対応しています。',
         'The next steps after obtaining NBI Clearance depend on your purpose. ① For spouse visa applications: obtain DFA Apostille authentication, attach a Japanese translation if needed, and submit to immigration. ② For employment/employer submission: follow the employer\'s instructions. ③ For overseas migration: obtain Apostille or authentication according to the destination country\'s requirements. Our center also handles DFA Apostille authentication and shipping after NBI acquisition as a set.'
+      ),
+    },
+    {
+      q: t('NBI クリアランスのアポスティーユに有効期限はありますか？', 'Does NBI Clearance apostille expire? What is the expiration date?'),
+      a: t(
+        'DFAアポスティーユ認証自体に法的な有効期限はありません。ただし、アポスティーユが付いているNBI Clearance本体の有効期限は発行日から1年です。NBI Clearanceが失効すれば書類全体が無効になるため、実質的な有効期限はNBI発行日から1年となります。また入管・大使館など提出先によっては「発行から6ヶ月以内」の書類を求める場合もあります。提出先の要件を確認のうえ、アポスティーユ取得後はなるべく早く提出するか、提出予定日の3〜4ヶ月前に取得を開始することをおすすめします。',
+        'DFA Apostille authentication itself has no legal expiration date. However, the NBI Clearance to which the Apostille is attached is valid for 1 year from the date of issuance. Since the entire document becomes invalid once the NBI Clearance expires, the practical expiration date is 1 year from the NBI issuance date. Some destinations such as immigration offices and embassies may also require documents "issued within 6 months." We recommend confirming the destination\'s requirements and submitting as soon as possible after obtaining Apostille, or starting the process 3–4 months before your planned submission date.'
       ),
     },
   ];

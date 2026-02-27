@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileTex
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -11,6 +12,11 @@ export default function GaimenKirikaeGuidePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    'フィリピン運転免許 外免切替ガイド【2026年最新】LTO書類・手続き・費用',
+    'フィリピン運転免許を日本免許に切り替える手順・必要LTO書類・費用を解説。LTO書類の代行取得に対応。無料相談受付中。'
+  );
 
   const faqs = [
     {

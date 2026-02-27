@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, FileText, ArrowRight, 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -11,6 +12,11 @@ export default function KikaShinseiGuidePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    'フィリピン人 帰化申請ガイド【2026年最新版】必要書類・手続きの流れ・費用',
+    'フィリピン国籍の方が日本に帰化するための手続き・必要書類（PSA・NBI等）・費用・審査期間をわかりやすく解説。'
+  );
 
   const steps = [
     { step: 'STEP 1', title: t('帰化の要件を確認する', 'Check Naturalization Requirements'), desc: t('在留期間・就労・納税・素行要件などを確認します。フィリピン国籍の方は原則5年以上の継続在留が必要です。', 'Check residency period, employment, tax, and conduct requirements. Philippine nationals generally need continuous residency of 5 or more years.') },

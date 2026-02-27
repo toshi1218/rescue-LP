@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -22,6 +23,11 @@ const jsonLd = {
 export default function PricingPage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    '料金一覧【2026年最新版】フィリピン書類取得代行の費用・プラン',
+    'フィリピン書類取得代行の料金一覧。CENOMAR・PSA・NBI・DFAアポスティーユの費用・処理期間・プランをご案内。無料見積もり受付中。'
+  );
 
   const plans = [
     {

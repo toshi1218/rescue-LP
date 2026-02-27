@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, FileTex
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -11,6 +12,11 @@ export default function ApostillePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    'DFAアポスティーユ 処理期間・取得方法【2026年最新】要件・費用｜DFA Apostille processing time Philippines 2026',
+    'フィリピンDFAアポスティーユ認証の処理期間・取得方法・費用・要件を解説。CENOMAR・PSA・NBI対応。日本語サポートあり・無料見積もり受付中。'
+  );
 
   const faqs = [
     {
@@ -170,15 +176,16 @@ export default function ApostillePage() {
           <p className="text-xs font-bold text-gray-400 mb-3">{t('目次', 'Table of Contents')}</p>
           <ol className="space-y-1 text-sm text-secondary">
             {[
-              t('アポスティーユ認証とは', 'What is Apostille Authentication'),
-              t('対象となる書類', 'Target Documents'),
-              t('取得手順', 'Acquisition Process'),
-              t('基本情報（費用・期間）', 'Basic Info (Fees & Timeline)'),
-              t('注意点', 'Important Notes'),
-              t('よくある質問（FAQ）', 'FAQ'),
-              t('お問い合わせ', 'Contact Us'),
+              { href: '#ap-1', label: t('アポスティーユ認証とは', 'What is Apostille Authentication') },
+              { href: '#ap-2', label: t('対象となる書類', 'Target Documents') },
+              { href: '#ap-3', label: t('取得手順', 'Acquisition Process') },
+              { href: '#ap-processing-time', label: t('DFA処理期間 2026', 'DFA Apostille Processing Time 2026') },
+              { href: '#ap-4', label: t('基本情報（費用・期間）', 'Basic Info (Fees & Timeline)') },
+              { href: '#ap-5', label: t('注意点', 'Important Notes') },
+              { href: '#ap-6', label: t('よくある質問（FAQ）', 'FAQ') },
+              { href: '#contact', label: t('お問い合わせ', 'Contact Us') },
             ].map((item, i) => (
-              <li key={i}><a href={`#ap-${i + 1}`} className="hover:underline">{i + 1}. {item}</a></li>
+              <li key={i}><a href={item.href} className="hover:underline">{i + 1}. {item.label}</a></li>
             ))}
           </ol>
         </div>
@@ -301,6 +308,66 @@ export default function ApostillePage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Processing Time Section — SEO: "DFA apostille processing time Philippines 2026" */}
+        <section id="ap-processing-time" className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
+            {t('DFAアポスティーユ 処理期間（フィリピン・2026年）', 'DFA Apostille Processing Time Philippines 2026')}
+          </h2>
+          <p className="text-sm leading-relaxed text-gray-700 mb-4">
+            {t(
+              'DFAアポスティーユの処理にかかる日数は、主に3つの要因によって変わります：①DFAオフィスの予約枠の空き状況、②申請するオフィスの場所（マニラ・セブ・ダバオ等）、③日本への配送手段（国際クーリエ・郵便の種別）。',
+              'DFA Apostille processing time depends on three main factors: (1) appointment slot availability at the DFA office, (2) the office location (Manila, Cebu, Davao, etc.), and (3) the courier or postal service used to ship to Japan.'
+            )}
+          </p>
+          <div className="overflow-x-auto mb-5">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-secondary text-white">
+                  <th className="px-4 py-3 text-left font-semibold rounded-tl-lg">{t('処理区分', 'Processing Type')}</th>
+                  <th className="px-4 py-3 text-left font-semibold">{t('DFA処理日数', 'DFA Processing Days')}</th>
+                  <th className="px-4 py-3 text-left font-semibold rounded-tr-lg">{t('代行利用時の目安総期間', 'Est. Total Time (Proxy)')}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  [
+                    t('通常処理（Regular）', 'Regular Processing'),
+                    t('5〜7営業日', '5–7 business days'),
+                    t('4〜8週間（書類取得含む）', '4–8 weeks (incl. document acquisition)'),
+                  ],
+                  [
+                    t('エクスプレス処理（Express）', 'Express Processing'),
+                    t('3営業日', '3 business days'),
+                    t('3〜5週間（書類取得含む）', '3–5 weeks (incl. document acquisition)'),
+                  ],
+                  [
+                    t('予約待ち・繁忙期', 'High-demand / Busy Periods'),
+                    t('予約取得に+1〜2週間', '+1–2 weeks for appointment'),
+                    t('6〜10週間', '6–10 weeks'),
+                  ],
+                ].map(([type, days, total], i) => (
+                  <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                    <td className="px-4 py-3 font-medium text-secondary border-b border-gray-100">{type}</td>
+                    <td className="px-4 py-3 text-gray-700 border-b border-gray-100">{days}</td>
+                    <td className="px-4 py-3 text-gray-700 border-b border-gray-100">{total}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800 mb-4">
+            <strong>{t('当サービスの実績目安：', 'Our Typical Service Timeline: ')}</strong>
+            {t(
+              'ご依頼から書類の日本到着まで、通常4〜8週間が目安です。エクスプレス処理希望の場合は3〜5週間程度を見込んでいます。DFA予約の手配も代行するため、お急ぎの場合はお早めにご連絡ください。',
+              'From your inquiry to document delivery in Japan, the typical timeline is 4–8 weeks. With express processing, we estimate 3–5 weeks. We handle DFA appointment scheduling on your behalf, so if you are in a hurry, please contact us as early as possible.'
+            )}
+          </div>
+          <a href="#contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-hover transition-colors">
+            <ArrowRight className="w-4 h-4" />
+            {t('処理期間の詳細・無料見積もりはこちら', 'Ask about processing time & get a free quote')}
+          </a>
         </section>
 
         {/* Section 4 */}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, Clock, FileText, ArrowRight, MapPin, Shield } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -10,6 +11,11 @@ export default function CenomarGuidePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    'CENOMAR（独身証明書）取得方法【2026年最新版】費用・期間・代行｜フィリピン書類センター',
+    'フィリピン独身証明書CENOMARの取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・有効期限・トラブル対処まで徹底ガイド。'
+  );
 
   const faqs = [
     {
@@ -150,20 +156,21 @@ export default function CenomarGuidePage() {
           <p className="text-xs font-bold text-gray-400 mb-3">{t('目次', 'Table of Contents')}</p>
           <ol className="space-y-1 text-sm text-secondary">
             {[
-              t('CENOMARとは何か', 'What is CENOMAR'),
-              t('どんな場面で必要か', 'When It Is Needed'),
-              t('基本情報（発行元・費用・期間）', 'Basic Info (Issuer, Fees & Timeline)'),
-              t('取得方法3パターン比較', 'Comparison of 3 Acquisition Methods'),
-              t('申請の流れ・ステップ別ガイド', 'Step-by-Step Application Guide'),
-              t('在日フィリピン大使館・領事館の窓口', 'Philippine Embassy / Consulate Offices in Japan'),
-              t('書類が届いたあとの手続き', 'Procedures After Documents Arrive'),
-              t('よくあるトラブルと注意点', 'Common Issues & Notes'),
-              t('よくある質問（FAQ）', 'FAQ'),
-              t('無料相談・お問い合わせ', 'Free Consultation / Contact'),
+              { href: '#section-1', label: t('CENOMARとは何か', 'What is CENOMAR') },
+              { href: '#section-2', label: t('どんな場面で必要か', 'When It Is Needed') },
+              { href: '#section-3', label: t('基本情報（発行元・費用・期間）', 'Basic Info (Issuer, Fees & Timeline)') },
+              { href: '#section-4', label: t('取得方法3パターン比較', 'Comparison of 3 Acquisition Methods') },
+              { href: '#section-5', label: t('申請の流れ・ステップ別ガイド', 'Step-by-Step Application Guide') },
+              { href: '#section-6', label: t('在日フィリピン大使館・領事館の窓口', 'Philippine Embassy / Consulate Offices in Japan') },
+              { href: '#section-7', label: t('書類が届いたあとの手続き', 'Procedures After Documents Arrive') },
+              { href: '#section-8', label: t('よくあるトラブルと注意点', 'Common Issues & Notes') },
+              { href: '#section-terms', label: t('用語解説：CENOMAR・SECPA・PSA', 'Terminology: CENOMAR / SECPA / PSA') },
+              { href: '#section-9', label: t('よくある質問（FAQ）', 'FAQ') },
+              { href: '#contact', label: t('無料相談・お問い合わせ', 'Free Consultation / Contact') },
             ].map((item, i) => (
               <li key={i}>
-                <a href={i === 9 ? '#contact' : `#section-${i + 1}`} className="hover:underline">
-                  {i + 1}. {item}
+                <a href={item.href} className="hover:underline">
+                  {i + 1}. {item.label}
                 </a>
               </li>
             ))}
@@ -595,6 +602,65 @@ export default function CenomarGuidePage() {
             {t('無料相談する', 'Free Consultation')}
           </a>
         </div>
+
+        {/* Section Terms — SEO: "what is CENOMAR in Tagalog / in Philippines" + SECPA */}
+        <section id="section-terms" className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
+            {t('用語解説：CENOMAR・SECPA・PSA（英語・フィリピノ語対照）', 'Terminology: What is CENOMAR in Tagalog / Filipino — CENOMAR, SECPA & PSA Explained')}
+          </h2>
+          <p className="text-sm text-gray-600 mb-5">
+            {t(
+              'CENOMAR申請・PSA書類に関わる重要用語を日本語・英語・フィリピノ語（タガログ語）で解説します。',
+              'Key terms related to CENOMAR and PSA documents, explained in English and Filipino (Tagalog).'
+            )}
+          </p>
+          <div className="space-y-4">
+            {[
+              {
+                term: 'CENOMAR',
+                en: 'Certificate of No Marriage Record',
+                tl: 'Sertipiko ng Walang Rekord ng Kasal',
+                ja: t('独身証明書（婚姻記録不存在証明書）', 'Certificate of No Marriage / Proof of Unmarried Status'),
+                desc: t(
+                  'PSA（フィリピン統計局）が発行する、婚姻記録が存在しないことを証明する公文書。日本や海外での国際結婚・ビザ申請に使われます。フィリピノ語（タガログ語）では "Sertipiko ng Walang Rekord ng Kasal"（婚姻記録のない証明書）とも呼ばれますが、日常会話でも "CENOMAR" がそのまま使われます。かつては "NSO独身証明書" とも呼ばれていました。',
+                  'An official document issued by PSA (Philippine Statistics Authority) certifying no marriage record exists. Used for international marriage and visa applications in Japan and overseas. In Filipino/Tagalog, it is called "Sertipiko ng Walang Rekord ng Kasal" (certificate with no marriage record), though "CENOMAR" is used in everyday speech as well. It was formerly known as the "NSO Certificate of No Marriage."'
+                ),
+              },
+              {
+                term: 'SECPA',
+                en: 'Security Paper',
+                tl: 'Security Paper (Seguridad na Papel)',
+                ja: t('セキュリティペーパー（PSA公式発行用紙）', 'PSA Official Security Paper'),
+                desc: t(
+                  'PSAが発行する出生証明書・婚姻証明書・死亡証明書・CENOMARは、このSECPA（Security Paper：専用のセキュリティ印刷用紙）に印刷されて発行されます。透かし・公印が入ったこの用紙に印刷されたもののみが公式書類として認められます。コピーや白紙への再印刷は公式書類として認められません。代行取得の場合は必ずSECPA付きの書類をお届けします。',
+                  'Birth certificates, marriage certificates, death certificates, and CENOMAR issued by PSA are printed on SECPA (Security Paper — a dedicated security-grade paper). Only documents printed on this paper with watermarks and official seals are recognized as official documents. Copies or reprints on plain paper are not accepted as official documents. When obtaining through our proxy service, we always deliver documents with SECPA.'
+                ),
+              },
+              {
+                term: 'PSA',
+                en: 'Philippine Statistics Authority',
+                tl: 'Pangasiwaan ng Estadistika ng Pilipinas',
+                ja: t('フィリピン統計局', 'Philippine Statistics Authority'),
+                desc: t(
+                  'フィリピンの政府機関で、出生・婚姻・死亡・CENOMARなどの公文書を発行します。2014年以前はNSO（National Statistics Office）と呼ばれていましたが、PSAに統合されました。PSAが発行するすべての書類はSECPA（セキュリティペーパー）に印刷されます。',
+                  'A Philippine government agency that issues official documents including birth, marriage, death certificates and CENOMAR. Before 2014, it was called NSO (National Statistics Office) before being merged into PSA. All documents issued by PSA are printed on SECPA (Security Paper).'
+                ),
+              },
+            ].map((item, i) => (
+              <div key={i} className="bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <span className="text-base font-bold text-secondary">{item.term}</span>
+                  <span className="text-xs text-gray-300">|</span>
+                  <span className="text-xs text-gray-500">{item.en}</span>
+                  <span className="text-xs text-gray-300">|</span>
+                  <span className="text-xs text-gray-500 italic">{item.tl} {t('（フィリピノ語）', '(Filipino/Tagalog)')}</span>
+                </div>
+                <p className="text-xs font-bold text-primary mb-2">{item.ja}</p>
+                <p className="text-sm text-gray-700 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Section 9: FAQ */}
         <section id="section-9" className="mb-10">
