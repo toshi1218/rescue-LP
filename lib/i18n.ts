@@ -1,8 +1,7 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export type Lang = 'ja' | 'en';
-
-const LANG_KEY = 'lang';
 
 const ja = {
   // ── Navbar ──────────────────────────────────────────────────────────
@@ -312,32 +311,16 @@ const LanguageContext = createContext<LanguageContextType>({
   t: (key) => ja[key],
 });
 
-function getInitialLang(): Lang {
-  if (typeof window === 'undefined') return 'ja';
-
-  // 1. ユーザーが手動で切り替えた場合はそちらを優先
-  const stored = window.localStorage.getItem(LANG_KEY);
-  if (stored === 'ja' || stored === 'en') return stored;
-
-  // 2. ブラウザ言語が日本語なら日本語、それ以外は英語
-  const browserLang = navigator.language || (navigator.languages && navigator.languages[0]) || '';
-  return browserLang.startsWith('ja') ? 'ja' : 'en';
-}
-
 interface LanguageProviderProps {
   children: ReactNode;
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [lang, setLangState] = useState<Lang>(getInitialLang);
+  const { pathname } = useLocation();
+  const lang: Lang = pathname.startsWith('/ja') ? 'ja' : 'en';
 
-  const setLang = (newLang: Lang) => {
-    setLangState(newLang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(LANG_KEY, newLang);
-      document.documentElement.lang = newLang;
-    }
-  };
+  // setLang is a no-op: language is determined solely by URL
+  const setLang = (_newLang: Lang) => {};
 
   useEffect(() => {
     if (typeof document !== 'undefined') {

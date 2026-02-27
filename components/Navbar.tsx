@@ -9,28 +9,35 @@ type MenuType = 'docs' | 'purpose' | null;
 const Navbar: React.FC = () => {
   const ctaVariant = getCtaVariant();
   const location = useLocation();
-  const isHome = location.pathname === '/';
   const [openMenu, setOpenMenu] = useState<MenuType>(null);
   const [dropdownPos, setDropdownPos] = useState<{ left: number; top: number }>({ left: 0, top: 0 });
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const docsRef = useRef<HTMLDivElement>(null);
   const purposeRef = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+
+  const isJa = lang === 'ja';
+  const homePath = isJa ? '/ja/' : '/';
 
   const documentTabs = [
-    { label: t('navbar.doc.cenomar'), path: '/cenomar-guide/' },
-    { label: t('navbar.doc.birth'), path: '/psa-shussei-shomeisho/' },
-    { label: t('navbar.doc.nbi'), path: '/nbi-clearance-guide/' },
-    { label: t('navbar.doc.apostille'), path: '/apostille-guide/' },
-    { label: t('navbar.doc.marriage'), path: '/kekkon-shomeisho/' },
+    { label: t('navbar.doc.cenomar'),  path: isJa ? '/ja/cenomar'              : '/cenomar' },
+    { label: t('navbar.doc.birth'),    path: isJa ? '/ja/psa-shussei-shomeisho': '/psa-birth-certificate' },
+    { label: t('navbar.doc.nbi'),      path: isJa ? '/ja/nbi-clearance'        : '/nbi-clearance' },
+    { label: t('navbar.doc.apostille'),path: isJa ? '/ja/apostille'            : '/apostille' },
+    { label: t('navbar.doc.marriage'), path: isJa ? '/ja/psa-kekkon-shomeisho' : '/psa-marriage-certificate' },
   ];
 
   const purposeTabs = [
-    { label: t('navbar.purpose.marriage'), path: '/kokusai-kekkon-guide/' },
-    { label: t('navbar.purpose.visa'), path: '/haigusha-visa-shorui/' },
-    { label: t('navbar.purpose.license'), path: '/gaimen-kirikae-guide/' },
-    { label: t('navbar.purpose.naturalization'), path: '/kika-shinsei-guide/' },
+    { label: t('navbar.purpose.marriage'),      path: isJa ? '/ja/kokusai-kekkon-guide' : '/international-marriage-guide' },
+    { label: t('navbar.purpose.visa'),          path: isJa ? '/ja/haigusha-visa'        : '/spouse-visa-documents' },
+    { label: t('navbar.purpose.license'),       path: isJa ? '/ja/gaimen-kirikae-guide' : '/drivers-license-conversion' },
+    { label: t('navbar.purpose.naturalization'),path: isJa ? '/ja/kika-shinsei-guide'   : '/naturalization-guide' },
   ];
+
+  const pricingPath = isJa ? '/ja/ryokin'  : '/pricing';
+  const contactPath = isJa ? '/ja/contact' : '/contact';
+  const companyPath = isJa ? '/ja/company' : '/company';
+  const privacyPath = isJa ? '/ja/privacy' : '/privacy';
 
   useEffect(() => {
     setOpenMenu(null);
@@ -49,9 +56,16 @@ const Navbar: React.FC = () => {
     closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
   };
 
-  const normalizedPathname = location.pathname === '/' ? '/' : location.pathname.replace(/\/$/, '') + '/';
-  const isDocActive = documentTabs.some(t => t.path === normalizedPathname);
-  const isPurposeActive = purposeTabs.some(t => t.path === normalizedPathname);
+  // Normalize current path for active-link comparison (strip trailing slash, keep root as-is)
+  const currentPath = location.pathname;
+  const matchesPath = (path: string) =>
+    currentPath === path ||
+    currentPath === path.replace(/\/$/, '') ||
+    currentPath + '/' === path;
+
+  const isHome = matchesPath(homePath);
+  const isDocActive = documentTabs.some(tab => matchesPath(tab.path));
+  const isPurposeActive = purposeTabs.some(tab => matchesPath(tab.path));
 
   const currentTabs = openMenu === 'docs' ? documentTabs : openMenu === 'purpose' ? purposeTabs : [];
 
@@ -64,7 +78,7 @@ const Navbar: React.FC = () => {
 
   const linkClass = (path: string) =>
     `flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
-      normalizedPathname === path
+      matchesPath(path)
         ? 'bg-secondary text-white'
         : 'text-gray-600 hover:bg-gray-100 hover:text-secondary'
     }`;
@@ -85,7 +99,7 @@ const Navbar: React.FC = () => {
             </span>
           </button>
         ) : (
-          <Link to="/" className="text-left">
+          <Link to={homePath} className="text-left">
             <span className="font-bold text-secondary text-xs md:text-lg tracking-tight">
               {t('navbar.logo')}
             </span>
@@ -108,9 +122,9 @@ const Navbar: React.FC = () => {
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
           <div className="flex overflow-x-auto scrollbar-hide px-2 gap-1 py-1.5">
 
-            <Link to="/" className={linkClass('/')}>{t('navbar.home')}</Link>
+            <Link to={homePath} className={linkClass(homePath)}>{t('navbar.home')}</Link>
 
-            {/* 書類から探す */}
+            {/* 書類から探す / By Document */}
             <div
               ref={docsRef}
               className="flex-shrink-0"
@@ -128,7 +142,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            {/* 目的から探す */}
+            {/* 目的から探す / By Purpose */}
             <div
               ref={purposeRef}
               className="flex-shrink-0"
@@ -146,10 +160,10 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            <Link to="/pricing/" className={linkClass('/pricing/')}>{t('navbar.pricing')}</Link>
-            <Link to="/contact/" className={linkClass('/contact/')}>{t('navbar.contact')}</Link>
-            <Link to="/company/" className={linkClass('/company/')}>{t('navbar.company')}</Link>
-            <Link to="/privacy/" className={linkClass('/privacy/')}>{t('navbar.privacy')}</Link>
+            <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
+            <Link to={contactPath} className={linkClass(contactPath)}>{t('navbar.contact')}</Link>
+            <Link to={companyPath} className={linkClass(companyPath)}>{t('navbar.company')}</Link>
+            <Link to={privacyPath} className={linkClass(privacyPath)}>{t('navbar.privacy')}</Link>
 
           </div>
         </div>
@@ -168,7 +182,7 @@ const Navbar: React.FC = () => {
               key={tab.path}
               to={tab.path}
               className={`block px-4 py-2 text-xs font-medium transition-colors ${
-                normalizedPathname === tab.path
+                matchesPath(tab.path)
                   ? 'text-secondary bg-gray-50'
                   : 'text-gray-600 hover:bg-gray-50 hover:text-secondary'
               }`}

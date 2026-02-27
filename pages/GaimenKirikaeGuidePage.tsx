@@ -177,9 +177,9 @@ export default function GaimenKirikaeGuidePage() {
   ];
 
   const relatedLinks = [
-    { to: '/apostille-guide', title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'), desc: t('LTO書類への認証取得方法', 'How to get Apostille on LTO documents') },
-    { to: '/cenomar-guide', title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法', 'How to obtain a certificate of no marriage record') },
-    { to: '/nbi-clearance-guide', title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues explained and how to obtain') },
+    { to: t('/ja/apostille', '/apostille'), title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'), desc: t('LTO書類への認証取得方法', 'How to get Apostille on LTO documents') },
+    { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法', 'How to obtain a certificate of no marriage record') },
+    { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues explained and how to obtain') },
   ];
 
   return (

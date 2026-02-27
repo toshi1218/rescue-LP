@@ -695,10 +695,10 @@ export default function CenomarGuidePage() {
           <h2 className="text-lg font-bold text-secondary mb-4">{t('関連ガイド', 'Related Guides')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { to: '/psa-shussei-shomeisho', title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('国際結婚・ビザに必要なPSA書類の取得方法', 'How to obtain PSA documents for international marriage & visa') },
-              { to: '/nbi-clearance-guide', title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と日本からの取得手順', 'NBI HIT issues explained & how to obtain from Japan') },
-              { to: '/kokusai-kekkon-guide', title: t('フィリピン国際結婚ガイド', 'Philippines International Marriage Guide'), desc: t('手続き全体の流れ・必要書類・費用', 'Overall process, required documents & fees') },
-              { to: '/haigusha-visa-shorui', title: t('配偶者ビザ書類チェックリスト', 'Spouse Visa Documents Checklist'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents needed for spouse visa') },
+              { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('国際結婚・ビザに必要なPSA書類の取得方法', 'How to obtain PSA documents for international marriage & visa') },
+              { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と日本からの取得手順', 'NBI HIT issues explained & how to obtain from Japan') },
+              { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'Philippines International Marriage Guide'), desc: t('手続き全体の流れ・必要書類・費用', 'Overall process, required documents & fees') },
+              { to: t('/ja/haigusha-visa', '/spouse-visa-documents'), title: t('配偶者ビザ書類チェックリスト', 'Spouse Visa Documents Checklist'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents needed for spouse visa') },
             ].map((link) => (
               <Link
                 key={link.to}

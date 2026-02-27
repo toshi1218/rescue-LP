@@ -224,9 +224,9 @@ export default function KokusaiKekkonGuidePage() {
           </p>
           <div className="grid gap-3">
             {[
-              { icon: '📄', title: t('CENOMAR（独身証明書）を申請', 'Apply for CENOMAR'), desc: t('取得まで3〜6週間。婚姻届提出の2〜3ヶ月前には申請開始を。', '3–6 weeks to obtain. Start the application 2–3 months before the planned marriage registration.'), link: '/cenomar-guide' },
-              { icon: '📋', title: t('PSA出生証明書を申請', 'Apply for PSA Birth Certificate'), desc: t('最新のPSA発行のものが必要。古い書類は受け付けない場合あり。', 'The latest PSA-issued document is required. Old documents may not be accepted.'), link: '/psa-shussei-shomeisho' },
-              { icon: '🛡️', title: t('（必要な場合）NBI Clearanceを申請', '(If needed) Apply for NBI Clearance'), desc: t('配偶者ビザ申請で求められることがある。HIT案件は早めに対応。', 'May be required for spouse visa application. Address HIT cases early.'), link: '/nbi-clearance-guide' },
+              { icon: '📄', title: t('CENOMAR（独身証明書）を申請', 'Apply for CENOMAR'), desc: t('取得まで3〜6週間。婚姻届提出の2〜3ヶ月前には申請開始を。', '3–6 weeks to obtain. Start the application 2–3 months before the planned marriage registration.'), link: t('/ja/cenomar', '/cenomar') },
+              { icon: '📋', title: t('PSA出生証明書を申請', 'Apply for PSA Birth Certificate'), desc: t('最新のPSA発行のものが必要。古い書類は受け付けない場合あり。', 'The latest PSA-issued document is required. Old documents may not be accepted.'), link: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate') },
+              { icon: '🛡️', title: t('（必要な場合）NBI Clearanceを申請', '(If needed) Apply for NBI Clearance'), desc: t('配偶者ビザ申請で求められることがある。HIT案件は早めに対応。', 'May be required for spouse visa application. Address HIT cases early.'), link: t('/ja/nbi-clearance', '/nbi-clearance') },
             ].map((item, i) => (
               <Link key={i} to={item.link} className="flex gap-4 bg-white border border-gray-100 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">
                 <span className="text-2xl flex-shrink-0">{item.icon}</span>
@@ -449,10 +449,10 @@ export default function KokusaiKekkonGuidePage() {
           <h2 className="text-lg font-bold text-secondary mb-4">{t('個別書類のガイド', 'Individual Document Guides')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { to: '/cenomar-guide', title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, costs, and timeline') },
-              { to: '/psa-shussei-shomeisho', title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain the birth certificate and key points') },
-              { to: '/nbi-clearance-guide', title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'Explanation of NBI HIT issues and retrieval steps') },
-              { to: '/haigusha-visa-shorui', title: t('配偶者ビザ書類ガイド', 'Spouse Visa Document Guide'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents required for spouse visa') },
+              { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, costs, and timeline') },
+              { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain the birth certificate and key points') },
+              { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'Explanation of NBI HIT issues and retrieval steps') },
+              { to: t('/ja/haigusha-visa', '/spouse-visa-documents'), title: t('配偶者ビザ書類ガイド', 'Spouse Visa Document Guide'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents required for spouse visa') },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">
                 <FileText className="w-5 h-5 text-primary flex-shrink-0" />
