@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import JpHomePage from './pages/JpHomePage';
 import CenomarGuidePage from './pages/CenomarGuidePage';
@@ -29,21 +29,59 @@ export default function App() {
     <>
       <ScrollToTop />
       <Routes>
+        {/* ── EN canonical routes ──────────────────────────────── */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/jp" element={<JpHomePage />} />
-        <Route path="/cenomar-guide" element={<CenomarGuidePage />} />
-        <Route path="/psa-shussei-shomeisho" element={<PsaPage />} />
-        <Route path="/nbi-clearance-guide" element={<NbiPage />} />
-        <Route path="/kokusai-kekkon-guide" element={<KokusaiKekkonGuidePage />} />
-        <Route path="/haigusha-visa-shorui" element={<HaigushaVisaPage />} />
-        <Route path="/apostille-guide" element={<ApostillePage />} />
-        <Route path="/gaimen-kirikae-guide" element={<GaimenKirikaeGuidePage />} />
-        <Route path="/kekkon-shomeisho" element={<KekkonShomeishoPage />} />
-        <Route path="/company" element={<CompanyPage />} />
-        <Route path="/privacy" element={<PrivacyPolicyPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/cenomar" element={<CenomarGuidePage />} />
+        <Route path="/psa-birth-certificate" element={<PsaPage />} />
+        <Route path="/nbi-clearance" element={<NbiPage />} />
+        <Route path="/apostille" element={<ApostillePage />} />
+        <Route path="/international-marriage-guide" element={<KokusaiKekkonGuidePage />} />
+        <Route path="/spouse-visa-documents" element={<HaigushaVisaPage />} />
+        <Route path="/psa-marriage-certificate" element={<KekkonShomeishoPage />} />
+        <Route path="/drivers-license-conversion" element={<GaimenKirikaeGuidePage />} />
+        <Route path="/naturalization-guide" element={<KikaShinseiGuidePage />} />
         <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/kika-shinsei-guide" element={<KikaShinseiGuidePage />} />
+        <Route path="/company" element={<CompanyPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy" element={<PrivacyPolicyPage />} />
+
+        {/* ── JA canonical routes ──────────────────────────────── */}
+        <Route path="/ja" element={<Navigate to="/ja/" replace />} />
+        <Route path="/ja/" element={<JpHomePage />} />
+        <Route path="/ja/cenomar" element={<CenomarGuidePage />} />
+        <Route path="/ja/psa-shussei-shomeisho" element={<PsaPage />} />
+        <Route path="/ja/nbi-clearance" element={<NbiPage />} />
+        <Route path="/ja/apostille" element={<ApostillePage />} />
+        <Route path="/ja/kokusai-kekkon-guide" element={<KokusaiKekkonGuidePage />} />
+        <Route path="/ja/haigusha-visa" element={<HaigushaVisaPage />} />
+        <Route path="/ja/psa-kekkon-shomeisho" element={<KekkonShomeishoPage />} />
+        <Route path="/ja/gaimen-kirikae-guide" element={<GaimenKirikaeGuidePage />} />
+        <Route path="/ja/kika-shinsei-guide" element={<KikaShinseiGuidePage />} />
+        <Route path="/ja/ryokin" element={<PricingPage />} />
+        <Route path="/ja/company" element={<CompanyPage />} />
+        <Route path="/ja/contact" element={<ContactPage />} />
+        <Route path="/ja/privacy" element={<PrivacyPolicyPage />} />
+
+        {/* ── Old URL redirects → JA canonical ────────────────── */}
+        <Route path="/jp" element={<Navigate to="/ja/" replace />} />
+        <Route path="/cenomar-guide" element={<Navigate to="/ja/cenomar" replace />} />
+        <Route path="/cenomar-guide/" element={<Navigate to="/ja/cenomar" replace />} />
+        <Route path="/psa-shussei-shomeisho" element={<Navigate to="/ja/psa-shussei-shomeisho" replace />} />
+        <Route path="/psa-shussei-shomeisho/" element={<Navigate to="/ja/psa-shussei-shomeisho" replace />} />
+        <Route path="/nbi-clearance-guide" element={<Navigate to="/ja/nbi-clearance" replace />} />
+        <Route path="/nbi-clearance-guide/" element={<Navigate to="/ja/nbi-clearance" replace />} />
+        <Route path="/apostille-guide" element={<Navigate to="/ja/apostille" replace />} />
+        <Route path="/apostille-guide/" element={<Navigate to="/ja/apostille" replace />} />
+        <Route path="/kokusai-kekkon-guide" element={<Navigate to="/ja/kokusai-kekkon-guide" replace />} />
+        <Route path="/kokusai-kekkon-guide/" element={<Navigate to="/ja/kokusai-kekkon-guide" replace />} />
+        <Route path="/haigusha-visa-shorui" element={<Navigate to="/ja/haigusha-visa" replace />} />
+        <Route path="/haigusha-visa-shorui/" element={<Navigate to="/ja/haigusha-visa" replace />} />
+        <Route path="/kekkon-shomeisho" element={<Navigate to="/ja/psa-kekkon-shomeisho" replace />} />
+        <Route path="/kekkon-shomeisho/" element={<Navigate to="/ja/psa-kekkon-shomeisho" replace />} />
+        <Route path="/gaimen-kirikae-guide" element={<Navigate to="/ja/gaimen-kirikae-guide" replace />} />
+        <Route path="/gaimen-kirikae-guide/" element={<Navigate to="/ja/gaimen-kirikae-guide" replace />} />
+        <Route path="/kika-shinsei-guide" element={<Navigate to="/ja/kika-shinsei-guide" replace />} />
+        <Route path="/kika-shinsei-guide/" element={<Navigate to="/ja/kika-shinsei-guide" replace />} />
       </Routes>
     </>
   );

@@ -175,10 +175,10 @@ export default function KekkonShomeishoPage() {
   ];
 
   const relatedLinks = [
-    { to: '/kokusai-kekkon-guide', title: t('フィリピン国際結婚ガイド', 'Philippine International Marriage Guide'), desc: t('日本先行・フィリピン先行の手続き流れ', 'Japan-first and Philippines-first procedure overview') },
-    { to: '/cenomar-guide', title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, costs, and timeframes') },
-    { to: '/psa-shussei-shomeisho', title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain a birth certificate and key notes') },
-    { to: '/haigusha-visa-shorui', title: t('配偶者ビザ書類ガイド', 'Spouse Visa Document Guide'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents required for a spouse visa') },
+    { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'Philippine International Marriage Guide'), desc: t('日本先行・フィリピン先行の手続き流れ', 'Japan-first and Philippines-first procedure overview') },
+    { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, costs, and timeframes') },
+    { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain a birth certificate and key notes') },
+    { to: t('/ja/haigusha-visa', '/spouse-visa-documents'), title: t('配偶者ビザ書類ガイド', 'Spouse Visa Document Guide'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents required for a spouse visa') },
   ];
 
   return (

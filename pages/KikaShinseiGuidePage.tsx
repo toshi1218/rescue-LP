@@ -118,9 +118,9 @@ export default function KikaShinseiGuidePage() {
   ];
 
   const bottleneckItems = [
-    { icon: '📋', title: t('PSA出生証明書を取得', 'Obtain PSA Birth Certificate'), desc: t('帰化申請の核となる書類。アポスティーユ推奨。', 'The core document for naturalization. Apostille recommended.'), link: '/psa-shussei-shomeisho' },
-    { icon: '🛡️', title: t('NBI Clearanceを取得', 'Obtain NBI Clearance'), desc: t('フィリピン国内の無犯罪証明。HIT案件は早めに対応。', 'Certificate of no criminal record in the Philippines. Address HIT cases early.'), link: '/nbi-clearance-guide' },
-    { icon: '🔏', title: t('DFAアポスティーユ認証', 'DFA Apostille Authentication'), desc: t('PSA・NBI書類への認証付加。法務局要求時に対応。', 'Adds authentication to PSA and NBI documents. For when required by the Legal Affairs Bureau.'), link: '/apostille-guide' },
+    { icon: '📋', title: t('PSA出生証明書を取得', 'Obtain PSA Birth Certificate'), desc: t('帰化申請の核となる書類。アポスティーユ推奨。', 'The core document for naturalization. Apostille recommended.'), link: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate') },
+    { icon: '🛡️', title: t('NBI Clearanceを取得', 'Obtain NBI Clearance'), desc: t('フィリピン国内の無犯罪証明。HIT案件は早めに対応。', 'Certificate of no criminal record in the Philippines. Address HIT cases early.'), link: t('/ja/nbi-clearance', '/nbi-clearance') },
+    { icon: '🔏', title: t('DFAアポスティーユ認証', 'DFA Apostille Authentication'), desc: t('PSA・NBI書類への認証付加。法務局要求時に対応。', 'Adds authentication to PSA and NBI documents. For when required by the Legal Affairs Bureau.'), link: t('/ja/apostille', '/apostille') },
   ];
 
   const costItems = [
@@ -140,10 +140,10 @@ export default function KikaShinseiGuidePage() {
   ];
 
   const relatedLinks = [
-    { to: '/psa-shussei-shomeisho', title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain a birth certificate and key notes') },
-    { to: '/nbi-clearance-guide', title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues explained and how to obtain') },
-    { to: '/apostille-guide', title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'), desc: t('フィリピン書類への認証取得方法', 'How to get Apostille on Philippine documents') },
-    { to: '/kokusai-kekkon-guide', title: t('国際結婚ガイド', 'International Marriage Guide'), desc: t('フィリピン人との国際結婚手続き', 'Procedures for international marriage with a Filipino') },
+    { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain a birth certificate and key notes') },
+    { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues explained and how to obtain') },
+    { to: t('/ja/apostille', '/apostille'), title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'), desc: t('フィリピン書類への認証取得方法', 'How to get Apostille on Philippine documents') },
+    { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('国際結婚ガイド', 'International Marriage Guide'), desc: t('フィリピン人との国際結婚手続き', 'Procedures for international marriage with a Filipino') },
   ];
 
   return (

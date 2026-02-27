@@ -9,7 +9,12 @@ const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 const Footer: React.FC = () => {
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const isJa = lang === 'ja';
+  const companyPath = isJa ? '/ja/company'  : '/company';
+  const privacyPath = isJa ? '/ja/privacy'  : '/privacy';
+  const pricingPath = isJa ? '/ja/ryokin'   : '/pricing';
+  const contactPath = isJa ? '/ja/contact'  : '/contact';
 
   return (
     <footer className="bg-white border-t border-gray-100" id="contact">
@@ -90,10 +95,10 @@ const Footer: React.FC = () => {
         </a>
 
         <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
-          <Link to="/company/" className="hover:text-secondary transition-colors">{t('footer.company')}</Link>
-          <Link to="/privacy/" className="hover:text-secondary transition-colors">{t('footer.privacy')}</Link>
-          <Link to="/pricing/" className="hover:text-secondary transition-colors">{t('footer.pricingLink')}</Link>
-          <Link to="/contact/" className="hover:text-secondary transition-colors">{t('footer.contactLink')}</Link>
+          <Link to={companyPath} className="hover:text-secondary transition-colors">{t('footer.company')}</Link>
+          <Link to={privacyPath} className="hover:text-secondary transition-colors">{t('footer.privacy')}</Link>
+          <Link to={pricingPath} className="hover:text-secondary transition-colors">{t('footer.pricingLink')}</Link>
+          <Link to={contactPath} className="hover:text-secondary transition-colors">{t('footer.contactLink')}</Link>
         </div>
         <p className="text-[10px] text-gray-300 mt-4">{t('footer.copyright')}</p>
       </div>

@@ -226,9 +226,9 @@ export default function HaigushaVisaPage() {
           <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">2. {t('フィリピン書類の取得ポイント', 'Key Points for Philippine Document Retrieval')}</h2>
           <div className="grid gap-4">
             {[
-              { to: '/cenomar-guide', icon: '📄', title: 'CENOMAR', point: t('婚姻届提出済みでも、念のため最新版を手元に用意しておくと審査がスムーズです。有効期限（6ヶ月）に注意。', 'Having the latest version ready makes the review smoother. Note the 6-month validity.') },
-              { to: '/psa-shussei-shomeisho', icon: '📋', title: t('PSA出生証明書', 'PSA Birth Certificate'), point: t('婚姻前に取得していたものでも使用できますが、発行から時間が経っている場合は再取得を推奨。', 'Pre-marriage documents can be used, but re-obtaining is recommended if old.') },
-              { to: '/nbi-clearance-guide', icon: '🛡️', title: 'NBI Clearance', point: t('入管がNBI Clearanceを求める場合はDFAアポスティーユ付が推奨されます。HIT案件は早めに相談を。', 'DFA Apostille is recommended when immigration requires NBI Clearance. Contact us early for HIT cases.') },
+              { to: t('/ja/cenomar', '/cenomar'), icon: '📄', title: 'CENOMAR', point: t('婚姻届提出済みでも、念のため最新版を手元に用意しておくと審査がスムーズです。有効期限（6ヶ月）に注意。', 'Having the latest version ready makes the review smoother. Note the 6-month validity.') },
+              { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), icon: '📋', title: t('PSA出生証明書', 'PSA Birth Certificate'), point: t('婚姻前に取得していたものでも使用できますが、発行から時間が経っている場合は再取得を推奨。', 'Pre-marriage documents can be used, but re-obtaining is recommended if old.') },
+              { to: t('/ja/nbi-clearance', '/nbi-clearance'), icon: '🛡️', title: 'NBI Clearance', point: t('入管がNBI Clearanceを求める場合はDFAアポスティーユ付が推奨されます。HIT案件は早めに相談を。', 'DFA Apostille is recommended when immigration requires NBI Clearance. Contact us early for HIT cases.') },
             ].map((item) => (
               <Link key={item.to} to={item.to} className="bg-white border border-gray-200 rounded-xl p-4 shadow-card hover:border-primary transition-colors group block">
                 <div className="flex items-center gap-2 mb-2">
@@ -381,10 +381,10 @@ export default function HaigushaVisaPage() {
           <h2 className="text-lg font-bold text-secondary mb-4">{t('関連ガイド', 'Related Guides')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { to: '/cenomar-guide', title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR') },
-              { to: '/psa-shussei-shomeisho', title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain the birth certificate') },
-              { to: '/nbi-clearance-guide', title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues and retrieval steps') },
-              { to: '/kokusai-kekkon-guide', title: t('フィリピン国際結婚ガイド', 'International Marriage Guide'), desc: t('手続き全体の流れ・必要書類', 'Overall process and required documents') },
+              { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR') },
+              { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain the birth certificate') },
+              { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues and retrieval steps') },
+              { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'International Marriage Guide'), desc: t('手続き全体の流れ・必要書類', 'Overall process and required documents') },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">
                 <FileText className="w-5 h-5 text-primary flex-shrink-0" />
