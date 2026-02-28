@@ -228,6 +228,74 @@ const routes: RouteConfig[] = [
     description: 'フィリピン書類取得に関するお役立ちガイドとFAQ集。CENOMAR・NBI・DFAアポスティーユ・LTOについての疑問を解決するガイドページ一覧。',
     canonical: 'https://ph-document.com/ja/guides',
   },
+
+  /* ── Phase 2 新規ガイドページ (EN canonical) ─────────────── */
+  {
+    path: '/psa-birth-certificate-cost',
+    outFile: path.join(projectRoot, 'dist', 'psa-birth-certificate-cost', 'index.html'),
+    title: 'PSA Birth Certificate Cost 2026 — Official Fees, Proxy Pricing & Total Estimates | Philippine Document Service',
+    description: 'Complete breakdown of PSA birth certificate costs in 2026: official PSA fees (~PHP 365), online ordering, proxy service pricing (from US$199), and DFA Apostille add-on.',
+    canonical: 'https://ph-document.com/psa-birth-certificate-cost',
+    ogType: 'article',
+  },
+  {
+    path: '/apostille-fee',
+    outFile: path.join(projectRoot, 'dist', 'apostille-fee', 'index.html'),
+    title: 'DFA Apostille Fee Philippines 2026 — PHP 200 Standard, PHP 400 Express & Proxy Pricing | Philippine Document Service',
+    description: 'Complete DFA Apostille fee guide for 2026: PHP 200 standard vs PHP 400 express, proxy service pricing from US$80, and total cost estimates by document type.',
+    canonical: 'https://ph-document.com/apostille-fee',
+    ogType: 'article',
+  },
+  {
+    path: '/nbi-validity',
+    outFile: path.join(projectRoot, 'dist', 'nbi-validity', 'index.html'),
+    title: 'NBI Clearance Validity Period 2026 — 1-Year Rule, 6-Month Practice & Use Case Guide | Philippine Document Service',
+    description: 'NBI Clearance is officially valid for 1 year, but most institutions require it within 6 months. Learn requirements by use case and the ideal timing for obtaining yours.',
+    canonical: 'https://ph-document.com/nbi-validity',
+    ogType: 'article',
+  },
+  {
+    path: '/driver-record',
+    outFile: path.join(projectRoot, 'dist', 'driver-record', 'index.html'),
+    title: 'LTO Driver\'s Record for Gaimen Kirikae (Foreign License Conversion) Philippines [2026] | Philippine Document Service',
+    description: 'How to obtain the LTO Driver\'s Record for foreign license conversion in Japan. Covers required documents, 3–8 week processing time, DFA Apostille requirements, and proxy service.',
+    canonical: 'https://ph-document.com/driver-record',
+    ogType: 'article',
+  },
+
+  /* ── Phase 2 新規ガイドページ (JA canonical) ─────────────── */
+  {
+    path: '/ja/psa-shussei-cost',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-cost', 'index.html'),
+    title: 'PSA出生証明書の費用・料金【2026年最新】公式料金 vs 代行費用の比較｜フィリピン書類取得代行センター',
+    description: 'PSA出生証明書の公式取得費用（PHP 365〜/通）・代行サービス利用時の総費用（US$199〜）・DFAアポスティーユ込みの料金を解説。日本から自分で取得する場合との比較も掲載。',
+    canonical: 'https://ph-document.com/ja/psa-shussei-cost',
+    ogType: 'article',
+  },
+  {
+    path: '/ja/apostille-ryokin',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
+    title: 'DFAアポスティーユ料金【2026年最新】公式費用・代行費用・エクスプレスの違い｜フィリピン書類取得代行センター',
+    description: 'フィリピンDFAアポスティーユ認証の公式料金（通常PHP 200・エクスプレスPHP 400）・代行利用時の総費用（US$80〜）・書類別の費用目安を解説。',
+    canonical: 'https://ph-document.com/ja/apostille-ryokin',
+    ogType: 'article',
+  },
+  {
+    path: '/ja/nbi-koyukigen',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-koyukigen', 'index.html'),
+    title: 'NBI Clearanceの有効期限は？【2026年版】1年ルールと用途別の注意点｜フィリピン書類取得代行センター',
+    description: 'NBI Clearanceの公式有効期限は1年。ただし配偶者ビザ・国際結婚など用途によっては6ヶ月以内が実務的な基準。帰化申請では3ヶ月以内の場合も。取得タイミングの目安を解説。',
+    canonical: 'https://ph-document.com/ja/nbi-koyukigen',
+    ogType: 'article',
+  },
+  {
+    path: '/ja/driver-record',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'driver-record', 'index.html'),
+    title: '外免切替に必要なLTOドライバーズレコード（運転記録）取得ガイド【2026年】｜フィリピン書類取得代行センター',
+    description: 'フィリピンLTO発行の運転記録証明書（Driver\'s Record）の取得方法・必要書類・処理期間（3〜8週間）・DFAアポスティーユの要否を解説。代行取得にも対応。',
+    canonical: 'https://ph-document.com/ja/driver-record',
+    ogType: 'article',
+  },
 ];
 
 function updateHead(html: string, route: RouteConfig): string {
