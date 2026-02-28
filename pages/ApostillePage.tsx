@@ -178,6 +178,7 @@ export default function ApostillePage() {
             {[
               { href: '#ap-1', label: t('アポスティーユ認証とは', 'What is Apostille Authentication') },
               { href: '#ap-2', label: t('対象となる書類', 'Target Documents') },
+              { href: '#ap-requirements', label: t('申請要件 2026', 'Requirements 2026') },
               { href: '#ap-3', label: t('取得手順', 'Acquisition Process') },
               { href: '#ap-processing-time', label: t('DFA処理期間 2026', 'DFA Apostille Processing Time 2026') },
               { href: '#ap-4', label: t('基本情報（費用・期間）', 'Basic Info (Fees & Timeline)') },
@@ -253,6 +254,64 @@ export default function ApostillePage() {
             {t(
               '※ 必要かどうかは提出先（市区町村・入管・大使館等）によって異なります。事前確認をおすすめします。',
               '* Whether Apostille is required depends on the destination (municipal office, immigration, embassy, etc.). We recommend confirming in advance.'
+            )}
+          </p>
+        </section>
+
+        {/* Requirements Section — SEO: "dfa apostille requirements philippines 2026" */}
+        <section id="ap-requirements" className="mb-10">
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
+            {t('DFAアポスティーユの申請要件（フィリピン・2026年）', 'DFA Apostille Requirements Philippines 2026')}
+          </h2>
+          <p className="text-sm leading-relaxed text-gray-700 mb-4">
+            {t(
+              'DFAアポスティーユを申請する際に必要な書類・要件を以下にまとめました。代行サービスを利用する場合は、必要書類の準備もすべてサポートします。',
+              'Below is a summary of the documents and requirements needed to apply for DFA Apostille. When using a proxy service, we handle all document preparation on your behalf.'
+            )}
+          </p>
+          <div className="grid gap-4">
+            <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+              <p className="text-xs font-bold text-gray-400 mb-3">{t('本人申請の場合（必須要件）', 'For Self-Application (Required)')}</p>
+              <div className="space-y-2">
+                {[
+                  t('アポスティーユを受ける元の書類のオリジナル（PSA発行・NBI発行・LTO書類等）', 'Original document to be apostilled (PSA-issued, NBI, LTO, etc.)'),
+                  t('申請者の有効な政府発行ID（パスポート、フィリピン国民IDなど）', "Applicant's valid government-issued ID (passport, Philippine national ID, etc.)"),
+                  t('DFAオンライン予約の確認番号（予約制のため事前予約が必要）', 'DFA online appointment confirmation number (advance booking required)'),
+                  t('申請手数料（通常処理：約100〜200ペソ／通、エクスプレス：追加料金）', 'Processing fee (Regular: approx. 100–200 PHP per document; Express: additional fee)'),
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-2 text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-card">
+              <p className="text-xs font-bold text-gray-400 mb-3">{t('代理申請の場合（追加要件）', 'For Third-Party / Proxy Application (Additional Requirements)')}</p>
+              <div className="space-y-2">
+                {[
+                  t('委任状（Special Power of Attorney / SPA）：公証が必要', 'Special Power of Attorney (SPA) — must be notarized'),
+                  t('代理人の有効なID（政府発行）', "Representative's valid government-issued ID"),
+                  t('元の書類所有者のIDコピー', "Copy of the document owner's ID"),
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-2 text-sm text-gray-700">
+                    <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800">
+            {t(
+              '当センターの代行サービスでは、SPA・代理人手配・DFA予約・申請・受取・国際発送まですべて対応しています。お客様はIDコピーと必要情報をご提供いただくだけでOKです。',
+              'Our proxy service handles everything: SPA preparation, local representative, DFA appointment booking, application, pickup, and international shipping. All you need to provide is a copy of your ID and the required information.'
+            )}
+          </div>
+          <p className="text-xs text-gray-500 mt-3">
+            {t(
+              '※ DFAの要件は変更される場合があります。最新情報はDFA公式サイト（dfa.gov.ph）でご確認ください。',
+              '* DFA requirements are subject to change. Always check the latest information on the official DFA website (dfa.gov.ph).'
             )}
           </p>
         </section>

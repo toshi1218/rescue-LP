@@ -444,11 +444,31 @@ export default function NbiPage() {
               <>NBI Clearance submitted to foreign immigration offices or embassies often requires <strong>DFA (Department of Foreign Affairs) Apostille authentication</strong>, especially for visa and immigration procedures overseas.</>
             )}
           </p>
-          <div className="bg-white border border-gray-100 rounded-lg p-4 shadow-card text-sm text-gray-700 space-y-2">
+          <div className="bg-white border border-gray-100 rounded-lg p-4 shadow-card text-sm text-gray-700 space-y-2 mb-6">
             <p>✓ {t('NBI クリアランス取得後、DFAに書類を提出', 'After obtaining NBI Clearance, submit documents to the DFA')}</p>
             <p>✓ {t('アポスティーユスタンプ（認証印）が付与される', 'An Apostille stamp (authentication mark) is applied')}</p>
             <p>✓ {t('国際的な公文書として認証される', 'The document is authenticated as an official international public document')}</p>
             <p>✓ {t('当センターではNBI＋DFAアポスティーユのセット代行が可能', 'We can handle NBI + DFA Apostille as a combined proxy service, shipped worldwide')}</p>
+          </div>
+
+          {/* LLMO/SEO: "does nbi apostille expire" / "nbi apostille expiration date" */}
+          <h3 className="text-sm font-bold text-secondary mb-2">
+            {t('NBI ClearanceのアポスティーユはExpire（期限切れ）になりますか？', 'Does NBI Clearance Apostille Expire?')}
+          </h3>
+          <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-sm text-amber-800">
+            <p className="mb-2">
+              {lang === 'ja' ? (
+                <><strong>DFAアポスティーユ認証自体に法的な有効期限はありません。</strong>ただし、アポスティーユが付いているNBI Clearance本体の有効期限は発行日から<strong>1年間</strong>です。</>
+              ) : (
+                <><strong>DFA Apostille authentication itself has no legal expiration date.</strong> However, the NBI Clearance to which the Apostille is attached is valid for <strong>1 year</strong> from the date of issuance.</>
+              )}
+            </p>
+            <p>
+              {t(
+                'NBI Clearanceが失効すれば書類全体が無効となるため、実質的な有効期限はNBI発行日から1年です。入管・大使館など提出先によっては「発行から6ヶ月以内」を求める場合もあります。',
+                'Once NBI Clearance expires, the entire document (including the Apostille) becomes invalid. The practical expiration date is therefore 1 year from the NBI issuance date. Some submission destinations (immigration offices, embassies) may additionally require documents issued within 6 months.'
+              )}
+            </p>
           </div>
         </section>
 
