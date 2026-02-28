@@ -22,21 +22,21 @@ export default function CenomarGuidePage() {
       q: t('CENOMARとNSO独身証明書は同じですか？', 'Is CENOMAR the same as NSO Certificate of No Marriage?'),
       a: t(
         'はい、同じ書類です。NSOは旧称で、2014年にPSA（フィリピン統計局）に改組されたため、現在は「PSA CENOMAR」と呼ばれます。日本の役所や大使館ではどちらの名称でも通用します。',
-        'Yes, they are the same document. NSO is the former name; since it was reorganized into PSA (Philippine Statistics Authority) in 2014, it is now called "PSA CENOMAR." Both names are accepted at Japanese municipal offices and embassies.'
+        'Yes, they are the same document. NSO is the former name; since it was reorganized into PSA (Philippine Statistics Authority) in 2014, it is now called "PSA CENOMAR." Both names are accepted at government offices and embassies worldwide.'
       ),
     },
     {
       q: t('CENOMARの有効期限はどのくらいですか？', 'How long is CENOMAR valid?'),
       a: t(
         '発行日から6ヶ月が目安です。ただし、使用目的（日本での婚姻届、ビザ申請など）によって求められる発行日の基準が異なります。早めに取得しすぎると無効になる場合があるため、使用予定日の2〜3ヶ月前に申請するのが理想的です。',
-        'Approximately 6 months from the date of issuance. However, the required issuance date standard varies depending on the purpose (Japanese marriage registration, visa application, etc.). Obtaining it too early may result in it expiring before use, so applying 2–3 months before the planned use date is ideal.'
+        'Approximately 6 months from the date of issuance. However, the required issuance date standard varies depending on the purpose (marriage registration, visa application, etc.). Obtaining it too early may result in it expiring before use, so applying 2–3 months before the planned use date is ideal.'
       ),
     },
     {
-      q: t('日本に住んでいる場合、CENOMARは取得できますか？', 'Can I obtain CENOMAR while living in Japan?'),
+      q: t('海外に住んでいる場合、CENOMARは取得できますか？', 'Can I obtain CENOMAR while living overseas?'),
       a: t(
-        '取得できます。方法は2つあります。①在日フィリピン大使館・領事館で申請する、②PSAオンライン（PSAHelpline.com）で申請し国際郵便で受け取る、の2つです。ただし大使館・領事館経由の場合は予約が必要で時間がかかります。代行サービスを利用すれば手続きをすべてお任せいただけます。',
-        'Yes, you can obtain it. There are two methods: ① Apply at the Philippine Embassy or Consulate in Japan, ② Apply through PSA online (PSAHelpline.com) and receive it by international mail. However, the embassy/consulate route requires an appointment and takes time. Using a proxy service allows you to leave all procedures to us.'
+        '取得できます。方法は2つあります。①在住国のフィリピン大使館・領事館で申請する、②PSAオンライン（PSAHelpline.com）で申請し国際郵便で受け取る、の2つです。ただし大使館・領事館経由の場合は予約が必要で時間がかかります。代行サービスを利用すれば手続きをすべてお任せいただけます。',
+        'Yes, you can obtain it from anywhere in the world. There are two main methods: ① Apply at the nearest Philippine Embassy or Consulate in your country, ② Apply through PSA online (PSAHelpline.com) and receive it by international mail. Using a proxy service lets you skip the hassle entirely — we handle everything from the Philippines on your behalf.'
       ),
     },
     {
@@ -50,28 +50,28 @@ export default function CenomarGuidePage() {
       q: t('CENOMARが「MATCH FOUND」と出た場合はどうすればよいですか？', 'What should I do if CENOMAR shows "MATCH FOUND"?'),
       a: t(
         '「MATCH FOUND」はPSAのデータに婚姻記録が見つかったことを意味します。これが誤りの場合（例：同姓同名の別人の記録）は、PSAへの異議申し立てが必要です。過去に婚姻歴がある場合は、アニュルメント手続き後に改めてCENOMARを取得する必要があります。まずは状況をお聞かせください。',
-        '"MATCH FOUND" means a marriage record was found in the PSA data. If this is an error (e.g., a record for a different person with the same name), a dispute with PSA is required. If you have a history of marriage, you will need to obtain CENOMAR again after the annulment process. Please tell us your situation first.'
+        '"MATCH FOUND" means a marriage record was found in the PSA database. If this is an error (e.g., a record belonging to someone with the same name), a dispute with PSA is required. If you have a prior marriage, you will need to complete annulment proceedings before a new CENOMAR can be issued. Please contact us with your situation and we will advise you.'
       ),
     },
     {
       q: t('CENOMARの申請に必要な情報は何ですか？', 'What information is needed to apply for CENOMAR?'),
       a: t(
         'PSAオンライン申請に必要な主な情報は、氏名（パスポートと同じスペル）、生年月日、生まれた市区町村（出生地）、父母の氏名です。パスポートのコピーがあると確認に便利です。',
-        'The main information required for PSA online application is: name (same spelling as passport), date of birth, city/municipality of birth (place of birth), and parents\' names. Having a copy of your passport is helpful for confirmation.'
+        'The main information required for PSA online application is: full name (same spelling as on your passport), date of birth, city/municipality of birth, and parents\' full names. Having a copy of your passport is helpful for confirmation.'
       ),
     },
     {
       q: t('代行を依頼した場合、どのくらいで届きますか？', 'How long does it take when using a proxy service?'),
       a: t(
         '一般的に申請から3〜6週間程度が目安です。PSA側の処理状況や郵便事情により変動することがあります。お急ぎの場合は事前にご相談ください。',
-        'Generally, approximately 3–6 weeks from application is the guideline. This may vary depending on PSA processing status and postal conditions. Please consult us in advance if you are in a hurry.'
+        'Generally, approximately 3–6 weeks from application is the guideline. This may vary depending on PSA processing status and international shipping conditions. Please let us know if you have an urgent deadline.'
       ),
     },
     {
-      q: t('CENOMARに日本語翻訳は必要ですか？', 'Is a Japanese translation of CENOMAR required?'),
+      q: t('CENOMARに翻訳は必要ですか？', 'Does CENOMAR need to be translated?'),
       a: t(
-        '市区町村役場によって異なります。日本語訳の添付を求める役場がある一方、英語のまま受け付ける役場もあります。提出先に事前に確認することをおすすめします。翻訳が必要な場合は弊社でもご対応できますのでご相談ください。',
-        'It varies by municipal office. Some offices require a Japanese translation, while others accept the English version as is. We recommend confirming with the destination in advance. If translation is needed, we can assist — please consult us.'
+        '提出先によって異なります。日本語訳の添付を求める役場がある一方、英語のまま受け付ける役場もあります。提出先に事前に確認することをおすすめします。翻訳が必要な場合は弊社でもご対応できますのでご相談ください。',
+        'It depends on the destination country and authority. Since CENOMAR is issued in English, most English-speaking countries accept it as-is. Some countries may require a certified translation into the local language. We recommend confirming with your submission office in advance.'
       ),
     },
   ];
@@ -161,8 +161,8 @@ export default function CenomarGuidePage() {
               { href: '#section-3', label: t('基本情報（発行元・費用・期間）', 'Basic Info (Issuer, Fees & Timeline)') },
               { href: '#section-4', label: t('取得方法3パターン比較', 'Comparison of 3 Acquisition Methods') },
               { href: '#section-5', label: t('申請の流れ・ステップ別ガイド', 'Step-by-Step Application Guide') },
-              { href: '#section-6', label: t('在日フィリピン大使館・領事館の窓口', 'Philippine Embassy / Consulate Offices in Japan') },
-              { href: '#section-7', label: t('書類が届いたあとの手続き', 'Procedures After Documents Arrive') },
+              { href: '#section-6', label: t('在日フィリピン大使館・領事館の窓口', 'Applying from Overseas') },
+              { href: '#section-7', label: t('書類が届いたあとの手続き', 'Next Steps After Receiving CENOMAR') },
               { href: '#section-8', label: t('よくあるトラブルと注意点', 'Common Issues & Notes') },
               { href: '#section-terms', label: t('用語解説：CENOMAR・SECPA・PSA', 'Terminology: CENOMAR / SECPA / PSA') },
               { href: '#section-9', label: t('よくある質問（FAQ）', 'FAQ') },
@@ -212,31 +212,38 @@ export default function CenomarGuidePage() {
           <div className="grid gap-3">
             {[
               {
-                title: t('日本でフィリピン人との国際結婚手続き', 'International Marriage Procedures with a Filipino in Japan'),
+                title: t('国際結婚手続き', 'International Marriage Registration'),
                 desc: t(
                   '日本の市区町村役場に婚姻届を提出する際、フィリピン側の独身証明として必須。配偶者となるフィリピン人が取得します。',
-                  'Required as proof of unmarried status on the Philippine side when submitting a marriage registration at a Japanese municipal office. Obtained by the Filipino who will become the spouse.'
+                  'Required as proof of unmarried status from the Philippine side when registering a marriage abroad. The Filipino applicant obtains this document to present to the civil registrar in their country of residence.'
                 ),
               },
               {
-                title: t('日本の配偶者ビザ（在留資格）の申請', 'Japanese Spouse Visa (Residence Status) Application'),
+                title: t('配偶者ビザ・在留資格の申請', 'Spouse / Partner Visa Application'),
                 desc: t(
                   '配偶者ビザ（「日本人の配偶者等」）の申請書類として入管が求める場合があります。',
-                  'Immigration may require it as a document for spouse visa ("Spouse of Japanese National") applications.'
+                  'Immigration authorities in many countries — including Japan, the US, Canada, Australia, and Europe — may require CENOMAR as part of a spouse or partner visa application.'
+                ),
+              },
+              {
+                title: t('海外就労・就業ビザ（OFW）', 'Overseas Employment / OFW Requirements'),
+                desc: t(
+                  '海外で就労するフィリピン人（OFW）が現地の雇用手続き・ビザ申請のために取得するケースがあります。',
+                  'Filipinos working abroad (OFWs) may be required to submit CENOMAR as part of employment processing or visa applications in their destination country.'
                 ),
               },
               {
                 title: t('フィリピン国内での婚姻届', 'Marriage Registration in the Philippines'),
                 desc: t(
                   'フィリピン市役所（Local Civil Registry）での婚姻届にも必要な場合があります。',
-                  'May also be required for marriage registration at a Philippine Local Civil Registry.'
+                  'May also be required for marriage registration at a Philippine Local Civil Registry (LCR) when marrying in the Philippines.'
                 ),
               },
               {
                 title: t('再婚手続き', 'Remarriage Procedures'),
                 desc: t(
                   '離婚歴がある方が再婚する場合、アニュルメント判決書と合わせて提出します。',
-                  'For those with a history of divorce who are remarrying, submitted together with the annulment judgment.'
+                  'For those with a prior marriage who are remarrying, submitted together with court-issued annulment or recognition documents.'
                 ),
               },
             ].map((item, i) => (
@@ -305,25 +312,25 @@ export default function CenomarGuidePage() {
               },
               {
                 label: t('方法②', 'Option ②'),
-                title: t('在日フィリピン大使館・領事館で申請', 'Apply at Philippine Embassy / Consulate in Japan'),
+                title: t('在住国のフィリピン大使館・領事館で申請', 'Apply at Philippine Embassy / Consulate in Your Country'),
                 items: [
-                  t('東京・大阪・名古屋の領事館で申請可能', 'Available at consulates in Tokyo, Osaka, Nagoya'),
+                  t('在住国のフィリピン大使館・総領事館で申請可能', 'Available at Philippine embassies/consulates worldwide'),
                   t('事前予約（オンライン予約）が必要', 'Prior online appointment required'),
                   t('窓口で申請書を記入し手数料を支払う', 'Fill in application form and pay fee at the counter'),
                 ],
                 pros: t('比較的安い', 'Relatively inexpensive'),
-                cons: t('予約が取りにくい。平日のみ。窓口まで出向く手間', 'Appointments hard to get. Weekdays only. Must visit in person'),
+                cons: t('予約が取りにくい。平日のみ。窓口まで出向く手間', 'Appointments can be hard to get. Weekdays only. Must visit in person'),
                 color: 'border-gray-200',
               },
               {
                 label: t('方法③ おすすめ', 'Option ③ Recommended'),
                 title: t('代行サービスに依頼', 'Use a Proxy Service'),
                 items: [
-                  t('日本語でやり取りするだけ', 'Just communicate in English'),
-                  t('必要書類の確認から郵送まで完全サポート', 'Complete support from document check to mailing'),
-                  t('書類の不備リスクを最小化', 'Minimizes risk of document errors'),
+                  t('日本語でやり取りするだけ', 'Communicate only in English — no Filipino required'),
+                  t('必要書類の確認から郵送まで完全サポート', 'Full support from document check to worldwide shipping'),
+                  t('書類の不備リスクを最小化', 'Minimizes risk of errors and rejections'),
                 ],
-                pros: t('手間が一切かからない。日本語サポートあり', 'Zero hassle. English support available'),
+                pros: t('手間が一切かからない。日本語サポートあり', 'Zero hassle. Delivered anywhere in the world'),
                 cons: t('代行手数料がかかる', 'Proxy service fee applies'),
                 color: 'border-primary',
               },
@@ -393,10 +400,10 @@ export default function CenomarGuidePage() {
               },
               {
                 step: 5,
-                title: t('書類受領・日本へ転送', 'Document Receipt & Forwarding to Japan'),
+                title: t('書類受領・転送', 'Document Receipt & International Shipping'),
                 desc: t(
-                  '書類が発行され次第、国際郵便（EMSなど）で日本の住所へ転送します。追跡番号をお知らせします。',
-                  'Once documents are issued, they are forwarded to your Japanese address via international mail (EMS, etc.). We will provide you with a tracking number.'
+                  '書類が発行され次第、国際郵便（EMSなど）でご指定の住所へ転送します。追跡番号をお知らせします。',
+                  'Once documents are issued, they are shipped to your address anywhere in the world via tracked international courier. We will provide you with a tracking number.'
                 ),
               },
               {
@@ -419,33 +426,33 @@ export default function CenomarGuidePage() {
           </div>
         </section>
 
-        {/* Section 6: 大使館窓口 */}
+        {/* Section 6: 海外からの申請 */}
         <section id="section-6" className="mb-10">
           <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
-            {t('6. 在日フィリピン大使館・領事館の窓口', '6. Philippine Embassy / Consulate Offices in Japan')}
+            {t('6. 在日フィリピン大使館・領事館の窓口', '6. Applying from Overseas')}
           </h2>
           <p className="text-sm text-gray-600 mb-5">
             {t(
               '自力で申請する場合は、最寄りの窓口に事前予約のうえ来訪する必要があります。',
-              'If applying on your own, you must make an advance appointment and visit the nearest office.'
+              'There are two practical ways to obtain CENOMAR when you are living outside the Philippines.'
             )}
           </p>
           <div className="grid gap-3">
             {[
               {
-                name: t('フィリピン大使館（東京）', 'Philippine Embassy (Tokyo)'),
-                addr: t('東京都港区六本木5-15-5', '5-15-5 Roppongi, Minato-ku, Tokyo'),
-                note: t('関東・東北・北海道方面の方', 'For those in Kanto, Tohoku, Hokkaido regions'),
+                name: t('フィリピン大使館（東京）', 'PSA Online (PSAHelpline.com)'),
+                addr: t('東京都港区六本木5-15-5', 'Apply at PSAHelpline.com and choose international delivery'),
+                note: t('関東・東北・北海道方面の方', 'Delivered by international courier to your address'),
               },
               {
-                name: t('フィリピン総領事館（大阪）', 'Philippine Consulate General (Osaka)'),
-                addr: t('大阪府大阪市中央区久太郎町1-9-16', '1-9-16 Kutarocho, Chuo-ku, Osaka'),
-                note: t('近畿・中国・四国方面の方', 'For those in Kinki, Chugoku, Shikoku regions'),
+                name: t('フィリピン総領事館（大阪）', 'Philippine Embassy / Consulate in Your Country'),
+                addr: t('大阪府大阪市中央区久太郎町1-9-16', 'Visit the nearest Philippine Embassy or Consulate — advance appointment required'),
+                note: t('近畿・中国・四国方面の方', 'Check the DFA website for your nearest consulate'),
               },
               {
-                name: t('フィリピン総領事館（名古屋）', 'Philippine Consulate General (Nagoya)'),
-                addr: t('愛知県名古屋市中村区名駅4-4-38', '4-4-38 Meieki, Nakamura-ku, Nagoya, Aichi'),
-                note: t('東海・北陸・甲信越方面の方', 'For those in Tokai, Hokuriku, Koshinetsu regions'),
+                name: t('フィリピン総領事館（名古屋）', 'Proxy Service (Recommended)'),
+                addr: t('愛知県名古屋市中村区名駅4-4-38', 'Our Cebu-based team applies at PSA on your behalf and ships worldwide'),
+                note: t('東海・北陸・甲信越方面の方', 'No travel required — fastest and most reliable option'),
               },
             ].map((office) => (
               <div key={office.name} className="flex gap-3 bg-white border border-gray-100 rounded-lg p-4 shadow-card">
@@ -464,7 +471,7 @@ export default function CenomarGuidePage() {
               {lang === 'ja' ? (
                 <>大使館・領事館での申請は<strong>事前のオンライン予約が必須</strong>です。予約なしの来訪は対応不可の場合があります。余裕をもって手続きを進めてください。</>
               ) : (
-                <><strong>Prior online appointment is mandatory</strong> for applications at embassies and consulates. Walk-in visits may not be accommodated. Please proceed with your procedures with ample time.</>
+                <>If applying at an embassy or consulate, <strong>prior online appointment is mandatory</strong>. Walk-in visits are generally not accepted. Build in ample lead time — using a proxy service is the most reliable option for overseas applicants.</>
               )}
             </p>
           </div>
@@ -473,34 +480,34 @@ export default function CenomarGuidePage() {
         {/* Section 7: 書類が届いたあと */}
         <section id="section-7" className="mb-10">
           <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">
-            {t('7. 書類が届いたあとの手続き', '7. Procedures After Documents Arrive')}
+            {t('7. 書類が届いたあとの手続き', '7. Next Steps After Receiving CENOMAR')}
           </h2>
           <p className="text-sm text-gray-600 mb-5">
             {t(
               'CENOMARを取得したら、目的別に次のステップへ進みます。',
-              'After obtaining CENOMAR, proceed to the next steps based on your purpose.'
+              'Once CENOMAR arrives, the next steps depend on your purpose. Here are the most common scenarios.'
             )}
           </p>
           <div className="space-y-4">
             {[
               {
-                title: t('国際結婚（日本先行）の場合', 'For International Marriage (Japan First)'),
+                title: t('国際結婚（日本先行）の場合', 'For Marriage Registration Abroad'),
                 steps: [
                   t('CENOMARとPSA出生証明書を揃える', 'Gather CENOMAR and PSA Birth Certificate'),
-                  t('必要に応じて日本語翻訳を準備する', 'Prepare Japanese translation if required'),
-                  t('市区町村役場に婚姻届を提出する', 'Submit marriage registration at a municipal office'),
-                  t('婚姻届受理証明書を取得してフィリピン大使館に報告（婚姻報告的届出）', 'Obtain acceptance certificate of marriage registration and report to Philippine Embassy (Report of Marriage)'),
+                  t('必要に応じて翻訳を準備する（提出先の要件を確認）', 'Prepare a certified translation if required by your country'),
+                  t('婚姻届を提出する（在住国の市役所・登記所など）', 'Submit marriage registration at your local civil registry or municipal office'),
+                  t('婚姻後、フィリピン大使館への婚姻報告届を提出する', 'After marriage, file a Report of Marriage at the nearest Philippine Embassy'),
                 ],
                 color: 'border-blue-200 bg-blue-50',
                 textColor: 'text-blue-800',
               },
               {
-                title: t('配偶者ビザ（在留資格）申請の場合', 'For Spouse Visa (Residence Status) Application'),
+                title: t('配偶者ビザ（在留資格）申請の場合', 'For Spouse / Partner Visa Application'),
                 steps: [
-                  t('CENOMARのほかにNBI Clearance・PSA婚姻証明書なども揃える', 'In addition to CENOMAR, gather NBI Clearance, PSA Marriage Certificate, etc.'),
-                  t('在留資格認定証明書交付申請書を作成する', 'Prepare the Certificate of Eligibility application form'),
-                  t('入国管理局（入管）に申請書類一式を提出する', 'Submit the complete set of application documents to the Immigration Services Agency'),
-                  t('認定証明書が発行されたらフィリピンにいる配偶者がビザを申請する', 'Once the Certificate of Eligibility is issued, the spouse in the Philippines applies for a visa'),
+                  t('CENOMARのほかにNBI Clearance・PSA婚姻証明書なども揃える', 'Gather CENOMAR along with NBI Clearance, PSA Marriage Certificate, etc.'),
+                  t('在住国の移民局・入管が求める書類リストを確認する', 'Check the document checklist required by the immigration authority in your country'),
+                  t('必要に応じてDFAアポスティーユ認証を取得する', 'Obtain DFA Apostille authentication if required by the destination'),
+                  t('ビザ申請書類を揃えて移民局に提出する', 'Compile the full set of documents and submit to the immigration office'),
                 ],
                 color: 'border-green-200 bg-green-50',
                 textColor: 'text-green-800',
@@ -554,10 +561,10 @@ export default function CenomarGuidePage() {
                 ),
               },
               {
-                title: t('翻訳が必要なケース', 'Cases where translation is required'),
+                title: t('翻訳が必要なケース', 'Cases where a translation is required'),
                 body: t(
                   '日本の市区町村役場によっては、英語のCENOMARに日本語翻訳の添付を求める場合があります。事前に提出先の窓口に確認しておきましょう。',
-                  'Some Japanese municipal offices may require a Japanese translation to be attached to the English CENOMAR. Check with the destination counter in advance.'
+                  'Depending on the country and institution, a certified translation of CENOMAR may be required. Since CENOMAR is issued in English, non-English-speaking countries (e.g., Japan, Germany) may ask for a local-language translation. Always confirm with the submission office in advance.'
                 ),
               },
             ].map((item, i) => (
@@ -587,8 +594,8 @@ export default function CenomarGuidePage() {
             {[
               t('日本語でやり取りのみ', 'English communication only'),
               t('トラブルもサポート', 'Troubleshooting support'),
-              t('現地セブ拠点あり', 'Cebu office on-site'),
-              t('翻訳対応も可能', 'Translation available'),
+              t('現地セブ拠点あり', 'Cebu-based office'),
+              t('翻訳対応も可能', 'Worldwide delivery'),
             ].map((item) => (
               <span key={item} className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">
                 <Shield className="w-3 h-3 text-primary" />{item}
@@ -728,7 +735,7 @@ export default function CenomarGuidePage() {
               {lang === 'ja' ? (
                 <>どの書類が必要かわからない方も、お気軽にご相談ください。<br />平日 9:00〜18:00（日本時間）・翌営業日以内にご返信します。</>
               ) : (
-                <>Even if you are unsure which documents you need, please feel free to consult us.<br />Weekdays 9:00–18:00 (Japan time) · We reply within the next business day.</>
+                <>Not sure which documents you need? Feel free to send us a message anytime.<br />We reply within 24 hours on business days (Japan time).</>
               )}
             </p>
             <form

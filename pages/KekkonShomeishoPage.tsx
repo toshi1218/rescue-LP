@@ -141,8 +141,8 @@ export default function KekkonShomeishoPage() {
   ];
 
   const comparisonRows = [
-    [t('日本先行婚姻', 'Japan-first marriage'), t('配偶者ビザ申請・大使館Report of Marriage時に必要な場合あり', 'May be required for spouse visa application or embassy Report of Marriage'), t('婚姻届受理後（数ヶ月以内）', 'After marriage registration (within a few months)')],
-    [t('フィリピン先行婚姻', 'Philippines-first marriage'), t('日本への婚姻届（報告的届出）に必須', 'Required for marriage registration (report) in Japan'), t('フィリピン婚姻から3〜6ヶ月後以降', '3–6 months after Philippines marriage')],
+    [t('日本先行婚姻', 'Country-first marriage'), t('配偶者ビザ申請・大使館Report of Marriage時に必要な場合あり', 'May be required for spouse visa application or embassy Report of Marriage'), t('婚姻届受理後（数ヶ月以内）', 'After marriage registration (within a few months)')],
+    [t('フィリピン先行婚姻', 'Philippines-first marriage'), t('日本への婚姻届（報告的届出）に必須', 'Required for marriage registration (report) in your country of residence'), t('フィリピン婚姻から3〜6ヶ月後以降', '3–6 months after Philippines marriage')],
   ];
 
   const contentRows = [
@@ -175,7 +175,7 @@ export default function KekkonShomeishoPage() {
   ];
 
   const relatedLinks = [
-    { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'Philippine International Marriage Guide'), desc: t('日本先行・フィリピン先行の手続き流れ', 'Japan-first and Philippines-first procedure overview') },
+    { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'Philippine International Marriage Guide'), desc: t('日本先行・フィリピン先行の手続き流れ', 'Country-first and Philippines-first procedure overview') },
     { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, costs, and timeframes') },
     { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain a birth certificate and key notes') },
     { to: t('/ja/haigusha-visa', '/spouse-visa-documents'), title: t('配偶者ビザ書類ガイド', 'Spouse Visa Document Guide'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents required for a spouse visa') },
@@ -292,7 +292,7 @@ export default function KekkonShomeishoPage() {
 
         {/* Section 5 */}
         <section id="ks-5" className="mb-10">
-          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">5. {t('日本先行 vs フィリピン先行での違い', 'Japan-First vs Philippines-First Differences')}</h2>
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">5. {t('日本先行 vs フィリピン先行での違い', 'Country-First vs Philippines-First Differences')}</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>

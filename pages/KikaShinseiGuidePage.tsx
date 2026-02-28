@@ -311,7 +311,7 @@ export default function KikaShinseiGuidePage() {
             {lang === 'ja' ? (
               <>PSA出生証明書・NBI Clearance・アポスティーユ認証の取得代行まで、<br />日本語だけで完結します。まずは無料相談からどうぞ。</>
             ) : (
-              <>From PSA Birth Certificate, NBI Clearance, to Apostille authentication procurement,<br />everything is handled in Japanese. Start with a free consultation.</>
+              <>From PSA Birth Certificate, NBI Clearance, to Apostille authentication — all Philippine documents needed for naturalization in Japan,<br />handled with full English support. Start with a free consultation.</>
             )}
           </p>
           <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">

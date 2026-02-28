@@ -48,10 +48,10 @@ export default function PsaPage() {
       ),
     },
     {
-      q: t('日本語翻訳は必要ですか？', 'Is a Japanese translation required?'),
+      q: t('翻訳は必要ですか？', 'Is a translation of PSA Birth Certificate required?'),
       a: t(
         '日本の市区町村役場に提出する場合、英語のPSA書類には日本語訳の添付が求められます（翻訳者の署名が必要）。大使館提出の場合は不要なことが多いです。提出先に事前確認されることをおすすめします。',
-        'When submitting to Japanese municipal offices, a Japanese translation of the English PSA document is required (translator\'s signature needed). For embassy submissions, it is often not required. We recommend confirming with the destination in advance.'
+        'PSA Birth Certificate is issued in English. For countries where English is not the official language, a certified translation into the local language may be required. Always confirm with your submission office. We can assist with translation if needed.'
       ),
     },
     {
@@ -79,7 +79,7 @@ export default function PsaPage() {
       q: t('PSA出生証明書の内容はどのような情報が記載されていますか？', 'What information is included on PSA Birth Certificate?'),
       a: t(
         'PSA出生証明書（Birth Certificate）には、①氏名（フルネーム）②生年月日・出生時刻 ③出生地（市・州・病院名）④性別 ⑤父の氏名・国籍 ⑥母の旧姓・国籍 ⑦登録番号・登録日・登録機関が記載されています。書類はすべて英語で記載されており、日本の機関に提出する際は日本語翻訳が必要なことがあります。',
-        'PSA Birth Certificate includes: ① Full name ② Date and time of birth ③ Place of birth (city, province, hospital name) ④ Sex ⑤ Father\'s name and nationality ⑥ Mother\'s maiden name and nationality ⑦ Registration number, registration date, and registering authority. The document is entirely in English, so a Japanese translation may be required when submitting to Japanese institutions.'
+        'PSA Birth Certificate includes: ① Full name ② Date and time of birth ③ Place of birth (city, province, hospital name) ④ Sex ⑤ Father\'s name and nationality ⑥ Mother\'s maiden name and nationality ⑦ Registration number, registration date, and registering authority. The document is issued entirely in English, which is accepted in most countries. A certified translation may be required in non-English-speaking countries.'
       ),
     },
     {
@@ -142,7 +142,7 @@ export default function PsaPage() {
           {lang === 'ja' ? (
             <>フィリピンPSA出生証明書の取得方法｜<br className="hidden md:block" />国際結婚・ビザ申請で必要な理由【2026年最新】</>
           ) : (
-            <>How to Obtain Philippine PSA Birth Certificate |<br className="hidden md:block" />Why It's Needed for International Marriage & Visa [2026 Guide]</>
+            <>Philippine PSA Birth Certificate:<br className="hidden md:block" />Complete Guide to Requirements, Cost & How to Obtain It [2026]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月22日 ｜ 株式会社IGRS', 'Last updated: February 22, 2026 | IGRS Inc.')}</p>
@@ -182,7 +182,7 @@ export default function PsaPage() {
           <p className="text-sm leading-relaxed text-gray-700">
             {t(
               '日本でいう「戸籍謄本」に相当するもので、国際結婚・ビザ申請・海外移住など、あらゆる手続きで提出を求められます。',
-              'It is equivalent to the Japanese "family register (koseki tohon)" and is required for all procedures such as international marriage, visa applications, and overseas migration.'
+              'It serves as the foundational proof of a Filipino\'s identity and civil status — equivalent to a birth certificate in other countries. It is required for international marriage, visa applications, overseas migration, and many other procedures worldwide.'
             )}
           </p>
         </section>
@@ -195,20 +195,24 @@ export default function PsaPage() {
           <div className="grid gap-3">
             {[
               {
-                title: t('日本での国際結婚手続き', 'International Marriage Procedures in Japan'),
-                desc: t('市区町村役場への婚姻届提出時に、フィリピン人配偶者の出生証明書が必要です。', 'The Philippine spouse\'s birth certificate is required when submitting a marriage registration at a Japanese municipal office.'),
+                title: t('国際結婚手続き', 'International Marriage Registration'),
+                desc: t('婚姻届提出時に、フィリピン人配偶者の出生証明書が必要です。', 'The Philippine spouse\'s birth certificate is commonly required when registering a marriage abroad — in any country.'),
               },
               {
-                title: t('配偶者ビザの申請', 'Spouse Visa Application'),
-                desc: t('日本の入管局（出入国在留管理庁）への配偶者ビザ申請書類として求められます。', 'Required as a document for spouse visa applications to the Japanese Immigration Services Agency.'),
+                title: t('配偶者・パートナービザの申請', 'Spouse / Partner Visa Application'),
+                desc: t('入管局への配偶者ビザ申請書類として求められます。', 'Immigration authorities in many countries (Japan, US, Canada, Australia, EU, etc.) require it as part of a spouse or partner visa application.'),
+              },
+              {
+                title: t('海外移住・永住権申請', 'Overseas Migration / Permanent Residency'),
+                desc: t('海外移住・永住権申請の際に身分証明書類として必要になります。', 'Required for immigration and permanent residency applications in many countries as proof of identity and civil status.'),
               },
               {
                 title: t('フィリピン大使館でのRPU（Report of Birth）', 'Philippine Embassy Report of Birth (RPU)'),
-                desc: t('海外生まれのフィリピン人の子どもをPSAに登録する手続きに必要です。', 'Required for the procedure to register overseas-born Filipino children with PSA.'),
+                desc: t('海外生まれのフィリピン人の子どもをPSAに登録する手続きに必要です。', 'Required for registering overseas-born Filipino children with PSA through the nearest Philippine Embassy.'),
               },
               {
                 title: t('パスポート申請・更新', 'Passport Application / Renewal'),
-                desc: t('フィリピンのパスポート申請・更新時に本人確認書類として使用します。', 'Used as an identity document for Philippine passport applications and renewals.'),
+                desc: t('フィリピンのパスポート申請・更新時に本人確認書類として使用します。', 'Used as a primary identity document for Philippine passport applications and renewals.'),
               },
             ].map((item, i) => (
               <div key={i} className="flex gap-3 bg-white border border-gray-100 rounded-lg p-4 shadow-card">
@@ -379,9 +383,9 @@ export default function PsaPage() {
               },
               {
                 label: t('方法②', 'Option ②'),
-                title: t('在日フィリピン大使館で申請', 'Apply at Philippine Embassy in Japan'),
+                title: t('在住国のフィリピン大使館で申請', 'Apply at Philippine Embassy in Your Country'),
                 items: [
-                  t('東京・大阪・名古屋の領事館で受付', 'Available at consulates in Tokyo, Osaka, Nagoya'),
+                  t('在住国のフィリピン大使館・総領事館で申請可能', 'Available at Philippine embassies/consulates worldwide'),
                   t('予約が必要', 'Appointment required'),
                   t('現地に出向く必要あり', 'Must visit in person'),
                 ],
@@ -393,11 +397,11 @@ export default function PsaPage() {
                 label: t('方法③ おすすめ', 'Option ③ Recommended'),
                 title: t('代行サービスに依頼', 'Use a Proxy Service'),
                 items: [
-                  t('日本語のみでやり取り完結', 'Everything handled in English only'),
-                  t('書類確認から郵送まで一括サポート', 'Full support from document check to mailing'),
-                  t('不備によるトラブルリスクを最小化', 'Minimizes risk of issues due to document errors'),
+                  t('日本語のみでやり取り完結', 'Communicate in English — no Filipino needed'),
+                  t('書類確認から郵送まで一括サポート', 'Full support from document check to worldwide delivery'),
+                  t('不備によるトラブルリスクを最小化', 'Minimizes risk of errors and rejections'),
                 ],
-                pros: t('手間ゼロ。日本語サポートあり', 'Zero hassle. English support available'),
+                pros: t('手間ゼロ。日本語サポートあり', 'Zero hassle. Ships to any country'),
                 cons: t('代行手数料がかかる', 'Proxy service fee applies'),
                 color: 'border-primary',
               },
@@ -433,15 +437,15 @@ export default function PsaPage() {
                 title: t('取得前に名前のスペル・生年月日を確認する', 'Check Name Spelling and Date of Birth Before Applying'),
                 body: t(
                   'PSA出生証明書に記載される氏名（英語表記）・生年月日が、パスポートや他の書類と一致しているか事前確認が重要です。不一致があると婚姻届・ビザ申請で問題になります。特にミドルネームの記載有無、ハイフン・スペースの違いに注意してください。',
-                  'It is important to confirm in advance that the name (English spelling) and date of birth on the PSA Birth Certificate match the passport and other documents. Discrepancies can cause problems with marriage registration and visa applications. Pay special attention to the presence of middle names and differences in hyphens or spaces.'
+                  'Confirm that the name and date of birth on the PSA Birth Certificate match your passport exactly. Discrepancies can cause problems with marriage registration and visa applications in any country. Pay special attention to middle names and differences in hyphens or spacing.'
                 ),
               },
               {
                 num: '02',
-                title: t('使用目的・提出先の「有効期限」要件を確認する', 'Confirm the "Validity" Requirements of the Submission Destination'),
+                title: t('使用目的・提出先の「有効期限」要件を確認する', 'Confirm the Validity Requirements of Your Submission Destination'),
                 body: t(
                   'PSA出生証明書自体に法的な有効期限はありませんが、提出先（日本の市区町村・入管・大使館）が「発行から6ヶ月以内」を求めることがあります。使用時期が決まったら逆算して取得してください。早めに取得しすぎると期限切れになる場合があります。',
-                  'PSA Birth Certificate itself has no legal expiration date, but the submission destination (Japanese municipal office, immigration, embassy) may require one "issued within 6 months." Once your use date is determined, work backward to plan acquisition. Obtaining it too early may result in it expiring before use.'
+                  'PSA Birth Certificate has no legal expiration date, but many immigration offices and embassies worldwide require one "issued within 6 months." Once you know your planned submission date, work backward to time your application. Obtaining it too early may mean you need to reapply.'
                 ),
               },
               {
@@ -449,7 +453,7 @@ export default function PsaPage() {
                 title: t('「NO RECORD FOUND」への対処を知っておく', 'Know How to Handle "NO RECORD FOUND"'),
                 body: t(
                   'PSAに出生記録がない場合（NO RECORD FOUND）、地方市役所（LCR）に出生登録がされていない可能性があります。この場合、遅延登録（Late Registration）の手続きが必要です。手続きには出生を証明できる書類（病院の記録、学校の書類など）が必要になります。複雑な場合は早めにご相談ください。',
-                  'If there is no birth record in PSA (NO RECORD FOUND), the birth may not have been registered at the Local Civil Registry (LCR). In this case, a Late Registration procedure is required. Documentation proving the birth (hospital records, school documents, etc.) will be needed. For complex cases, please consult us early.'
+                  'If PSA returns "NO RECORD FOUND," the birth may not have been registered at the Local Civil Registry (LCR). A Late Registration procedure will be required, along with documents proving the birth (hospital records, school records, etc.). Contact us early for complex cases — we can guide you through the process.'
                 ),
               },
               {
@@ -457,7 +461,7 @@ export default function PsaPage() {
                 title: t('DFAアポスティーユの必要性を確認する', 'Confirm Whether DFA Apostille Is Required'),
                 body: t(
                   '日本の市区町村への婚姻届ではアポスティーユは不要なことが多いですが、配偶者ビザ申請や特定の大使館手続きで必要になる場合があります。提出先に事前確認し、必要な場合はPSA取得と同時にDFAアポスティーユもセットで依頼することをおすすめします。',
-                  'Apostille is often not required for Japanese municipal marriage registration, but may be needed for spouse visa applications or specific embassy procedures. Confirm with the destination in advance. If needed, we recommend requesting DFA Apostille together with PSA acquisition.'
+                  'Apostille is not always required for marriage registration, but many countries require it for spouse visa applications or immigration procedures. Confirm with your local immigration office in advance. If needed, we can arrange DFA Apostille together with PSA acquisition as a combined service.'
                 ),
               },
             ].map((item, i) => (
@@ -491,7 +495,7 @@ export default function PsaPage() {
                 { check: t('書類がSECPA（セキュリティペーパー）で発行されているか', 'Document is issued on SECPA (Security Paper)'), note: t('PSAの公印・透かしが入っているか確認', 'Check for PSA official seal and watermark') },
                 { check: t('発行日付が新しいか（6ヶ月以内か）', 'Issue date is recent (within 6 months)'), note: t('提出先の要件を確認', 'Confirm the destination\'s requirements') },
                 { check: t('親の氏名・国籍情報が正確か', 'Parent names and nationality information are accurate'), note: t('日本の婚姻届・ビザ申請で確認されることがある', 'May be checked during Japanese marriage registration or visa application') },
-                { check: t('日本語翻訳が必要な場合は翻訳を用意する', 'Prepare a Japanese translation if required'), note: t('翻訳者の氏名・署名・翻訳日が必要', 'Translator\'s name, signature, and translation date are required') },
+                { check: t('翻訳が必要な場合は翻訳を用意する', 'Prepare a certified translation if required'), note: t('翻訳者の氏名・署名・翻訳日が必要', 'Translator\'s name, signature, and translation date are required') },
               ].map((item, i) => (
                 <div key={i} className="flex gap-3 items-start">
                   <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />

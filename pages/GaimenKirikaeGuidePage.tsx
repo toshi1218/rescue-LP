@@ -374,7 +374,7 @@ export default function GaimenKirikaeGuidePage() {
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">{t('LTO書類取得、まるごとお任せ', 'Leave LTO Document Procurement to Us')}</h2>
-          <p className="text-sm text-gray-300 mb-5">{t('外免切替に必要なLTO書類・DFAアポスティーユを日本語サポートで代行します。', 'We proxy-obtain LTO documents and DFA Apostille needed for foreign license conversion, with full Japanese-language support.')}</p>
+          <p className="text-sm text-gray-300 mb-5">{t('外免切替に必要なLTO書類・DFAアポスティーユを日本語サポートで代行します。', 'We proxy-obtain LTO documents and DFA Apostille needed for foreign license conversion in Japan, with full English support.')}</p>
           <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
             {t('無料相談する', 'Free Consultation')}
           </a>
