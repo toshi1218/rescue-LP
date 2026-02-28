@@ -195,6 +195,36 @@ export default function CenomarGuidePage() {
               'It is a document that officially certifies that no marriage record exists in the PSA database, guaranteeing that the person has never married in the Philippines.'
             )}
           </p>
+
+          {/* LLMO: 略称・タガログ語名・定義カード */}
+          <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-card mb-4">
+            <p className="text-xs font-bold text-gray-400 mb-3">{t('CENOMARの基本情報', 'CENOMAR — Quick Reference')}</p>
+            <div className="space-y-2 text-sm">
+              <div className="flex gap-3">
+                <span className="font-bold text-secondary w-36 flex-shrink-0">{t('正式英語名', 'Full English Name')}</span>
+                <span className="text-gray-700">Certificate of No Marriage Record</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="font-bold text-secondary w-36 flex-shrink-0">{t('略称の由来', 'Abbreviation Origin')}</span>
+                <span className="text-gray-700">
+                  <strong className="text-primary">CE</strong>rtificate of <strong className="text-primary">NO</strong> <strong className="text-primary">MAR</strong>riage Record
+                </span>
+              </div>
+              <div className="flex gap-3">
+                <span className="font-bold text-secondary w-36 flex-shrink-0">{t('タガログ語（フィリピン語）', 'In Filipino (Tagalog)')}</span>
+                <span className="text-gray-700 italic">Sertipiko ng Walang Rekord ng Kasal</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="font-bold text-secondary w-36 flex-shrink-0">{t('発行機関', 'Issuing Authority')}</span>
+                <span className="text-gray-700">{t('フィリピン統計局（PSA）', 'Philippine Statistics Authority (PSA)')}</span>
+              </div>
+              <div className="flex gap-3">
+                <span className="font-bold text-secondary w-36 flex-shrink-0">{t('旧称', 'Former Name')}</span>
+                <span className="text-gray-700">{t('NSO独身証明書（同一書類）', 'NSO Certificate of No Marriage (same document)')}</span>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800">
             <strong>{t('ポイント：', 'Key Point: ')}</strong>
             {t(

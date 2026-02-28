@@ -80,6 +80,13 @@ export default function GuidesPage() {
           tags: [t('FAQ', 'FAQ'), t('新着', 'New')],
           isPopular: false,
         },
+        {
+          to: t('/ja/nbi-koyukigen', '/nbi-validity'),
+          title: t('NBI Clearanceの有効期限は？アポスティーユはExpireする？', 'NBI Clearance Validity & Does Apostille Expire?'),
+          desc: t('1年ルール・用途別の注意点・アポスティーユの期限切れ問題を解説', '"1-year rule," usage-specific notes, and whether Apostille expires'),
+          tags: [t('FAQ', 'FAQ')],
+          isPopular: false,
+        },
       ],
     },
     {
@@ -89,7 +96,7 @@ export default function GuidesPage() {
         {
           to: t('/ja/apostille', '/apostille'),
           title: t('DFAアポスティーユガイド 完全版', 'DFA Apostille Complete Guide'),
-          desc: t('対象書類・取得方法・費用・期間を総合解説', 'Eligible documents, acquisition method, fees, and timeline'),
+          desc: t('対象書類・申請要件・取得方法・費用・期間を総合解説', 'Eligible documents, requirements, acquisition method, fees, and timeline'),
           tags: [t('基本ガイド', 'Basic Guide'), t('人気', 'Popular')],
           isPopular: true,
         },
@@ -98,6 +105,13 @@ export default function GuidesPage() {
           title: t('DFAアポスティーユ処理期間【2026年最新】', 'DFA Apostille Processing Time [2026]'),
           desc: t('通常・エクスプレスの日数目安と代行スケジュール', 'Standard & express day estimates and proxy service schedule'),
           tags: [t('FAQ', 'FAQ'), t('新着', 'New')],
+          isPopular: false,
+        },
+        {
+          to: t('/ja/apostille-ryokin', '/apostille-fee'),
+          title: t('DFAアポスティーユの費用【2026年最新】', 'DFA Apostille Fee [2026]'),
+          desc: t('DFA手数料・代行費用・セット料金の目安を解説', 'DFA fees, proxy service costs, and set pricing explained'),
+          tags: [t('FAQ', 'FAQ')],
           isPopular: false,
         },
       ],
@@ -110,7 +124,14 @@ export default function GuidesPage() {
           to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'),
           title: t('PSA出生証明書の取得方法', 'How to Obtain PSA Birth Certificate'),
           desc: t('国際結婚・ビザ申請で必要な出生証明書の完全ガイド', 'Complete guide for birth certificate needed for international marriage and visa'),
-          tags: [t('基本ガイド', 'Basic Guide')],
+          tags: [t('基本ガイド', 'Basic Guide'), t('人気', 'Popular')],
+          isPopular: true,
+        },
+        {
+          to: t('/ja/psa-shussei-cost', '/psa-birth-certificate-cost'),
+          title: t('PSA出生証明書の費用【2026年最新】', 'PSA Birth Certificate Cost [2026]'),
+          desc: t('PSA手数料・代行費用・DFAアポスティーユとのセット料金を解説', 'PSA official fee, proxy costs, and DFA Apostille set pricing explained'),
+          tags: [t('FAQ', 'FAQ')],
           isPopular: false,
         },
         {
@@ -188,7 +209,7 @@ export default function GuidesPage() {
         {/* 統計バナー */}
         <div className="grid grid-cols-3 gap-3 mb-10">
           {[
-            { icon: <FileText className="w-5 h-5 text-primary" />, num: t('13本', '13'), label: t('ガイドページ', 'Guide Pages') },
+            { icon: <FileText className="w-5 h-5 text-primary" />, num: t('16本', '16'), label: t('ガイドページ', 'Guide Pages') },
             { icon: <HelpCircle className="w-5 h-5 text-primary" />, num: t('60+', '60+'), label: t('FAQ項目', 'FAQ Items') },
             { icon: <Clock className="w-5 h-5 text-primary" />, num: t('2026年', '2026'), label: t('最新情報', 'Latest Info') },
           ].map((item, i) => (
@@ -248,10 +269,10 @@ export default function GuidesPage() {
           <h2 className="text-lg font-bold text-secondary mb-4">{t('よく検索されるキーワード', 'Frequently Searched Keywords')}</h2>
           <div className="flex flex-wrap gap-2">
             {[
-              'CENOMAR', 'CENOMAR 有効期限', 'CENOMAR アポスティーユ',
-              'NBI HIT', 'NBI Clearance 有効期限',
-              'DFA アポスティーユ 処理期間', 'DFA apostille processing time 2026',
-              'PSA 出生証明書', 'PSA 婚姻証明書',
+              'CENOMAR', 'CENOMAR meaning', 'what is CENOMAR', 'CENOMAR 有効期限', 'CENOMAR アポスティーユ',
+              'NBI HIT', 'NBI Clearance 有効期限', 'does NBI apostille expire', 'NBI Clearance Philippines', 'フィリピン NBI',
+              'DFA アポスティーユ 処理期間', 'DFA apostille processing time 2026', 'DFA apostille requirements',
+              'PSA 出生証明書', 'PSA birth certificate cost 2026', 'PSA birth certificate requirements 2026', 'PSA 出生証明書 費用', 'PSA 婚姻証明書',
               'フィリピン 国際結婚', '配偶者ビザ 書類',
               '外免切替 フィリピン', '帰化申請 フィリピン人',
             ].map((kw, i) => (
