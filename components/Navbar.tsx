@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
-type MenuType = 'docs' | 'purpose' | null;
+type MenuType = 'docs' | 'purpose' | 'guides' | null;
 
 const Navbar: React.FC = () => {
   const ctaVariant = getCtaVariant();
@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const docsRef = useRef<HTMLDivElement>(null);
   const purposeRef = useRef<HTMLDivElement>(null);
+  const guidesRef = useRef<HTMLDivElement>(null);
   const { lang, t } = useLanguage();
 
   const isJa = lang === 'ja';
@@ -35,6 +36,41 @@ const Navbar: React.FC = () => {
 
   const guidesPath  = isJa ? '/ja/guides/'  : '/guides/';
   const pricingPath = isJa ? '/ja/ryokin/'  : '/pricing/';
+
+  const guidesSections = [
+    {
+      category: isJa ? 'CENOMAR（独身証明書）' : 'CENOMAR',
+      items: [
+        { label: isJa ? 'CENOMARガイド 完全版' : 'CENOMAR Complete Guide', path: isJa ? '/ja/cenomar/' : '/cenomar/' },
+        { label: isJa ? 'CENOMARの有効期限は？' : 'CENOMAR Validity', path: isJa ? '/ja/cenomar-koyukigen/' : '/cenomar-validity/' },
+        { label: isJa ? 'DFAアポスティーユは必要？' : 'Need Apostille?', path: isJa ? '/ja/cenomar-apostille/' : '/cenomar-apostille/' },
+      ],
+    },
+    {
+      category: 'NBI Clearance（無犯罪証明書）',
+      items: [
+        { label: isJa ? 'NBI Clearanceガイド 完全版' : 'NBI Clearance Complete Guide', path: isJa ? '/ja/nbi-clearance/' : '/nbi-clearance/' },
+        { label: isJa ? 'NBI HITとは？' : 'What is NBI HIT?', path: isJa ? '/ja/nbi-hit/' : '/nbi-hit/' },
+        { label: isJa ? 'NBI Clearanceの有効期限' : 'NBI Validity & Apostille', path: isJa ? '/ja/nbi-koyukigen/' : '/nbi-validity/' },
+      ],
+    },
+    {
+      category: isJa ? 'DFAアポスティーユ認証' : 'DFA Apostille',
+      items: [
+        { label: isJa ? 'アポスティーユガイド 完全版' : 'Apostille Complete Guide', path: isJa ? '/ja/apostille/' : '/apostille/' },
+        { label: isJa ? '処理期間【2026年】' : 'Processing Time 2026', path: isJa ? '/ja/apostille-shori-kikan/' : '/apostille-processing-time/' },
+        { label: isJa ? '費用・料金【2026年】' : 'Fees 2026', path: isJa ? '/ja/apostille-ryokin/' : '/apostille-fee/' },
+      ],
+    },
+    {
+      category: isJa ? 'PSA書類（出生・婚姻証明書）' : 'PSA Documents',
+      items: [
+        { label: isJa ? 'PSA出生証明書の取得方法' : 'PSA Birth Certificate Guide', path: isJa ? '/ja/psa-shussei-shomeisho/' : '/psa-birth-certificate/' },
+        { label: isJa ? 'PSA出生証明書の費用' : 'PSA Birth Certificate Cost', path: isJa ? '/ja/psa-shussei-cost/' : '/psa-birth-certificate-cost/' },
+        { label: isJa ? 'PSA婚姻証明書の取得方法' : 'PSA Marriage Certificate', path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/psa-marriage-certificate/' },
+      ],
+    },
+  ];
   const contactPath = isJa ? '/ja/contact/' : '/contact/';
   const companyPath = isJa ? '/ja/company/' : '/company/';
   const privacyPath = isJa ? '/ja/privacy/' : '/privacy/';
@@ -66,6 +102,7 @@ const Navbar: React.FC = () => {
   const isHome = matchesPath(homePath);
   const isDocActive = documentTabs.some(tab => matchesPath(tab.path));
   const isPurposeActive = purposeTabs.some(tab => matchesPath(tab.path));
+  const isGuidesActive = guidesSections.some(sec => sec.items.some(item => matchesPath(item.path)));
 
   const currentTabs = openMenu === 'docs' ? documentTabs : openMenu === 'purpose' ? purposeTabs : [];
 
@@ -159,7 +196,23 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            <Link to={guidesPath} className={linkClass(guidesPath)}>{isJa ? 'お役立ち' : 'Guides'}</Link>
+            {/* お役立ち / Guides dropdown */}
+            <div
+              ref={guidesRef}
+              className="flex-shrink-0"
+              onMouseEnter={() => handleMouseEnter('guides', guidesRef)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                onClick={() => setOpenMenu(openMenu === 'guides' ? null : 'guides')}
+                className={tabBtnClass(isGuidesActive || openMenu === 'guides' || matchesPath(guidesPath))}
+              >
+                {isJa ? 'お役立ち' : 'Guides'}
+                <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
             <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
             <Link to={contactPath} className={linkClass(contactPath)}>{t('navbar.contact')}</Link>
             <Link to={companyPath} className={linkClass(companyPath)}>{t('navbar.company')}</Link>
@@ -169,8 +222,8 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* ドロップダウン（overflow回避のためfixed配置） */}
-      {openMenu && currentTabs.length > 0 && (
+      {/* ドロップダウン：docs / purpose（flat list） */}
+      {openMenu && (openMenu === 'docs' || openMenu === 'purpose') && currentTabs.length > 0 && (
         <div
           className="fixed bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-[100] min-w-max"
           style={{ left: dropdownPos.left, top: dropdownPos.top }}
@@ -190,6 +243,50 @@ const Navbar: React.FC = () => {
               {tab.label}
             </Link>
           ))}
+        </div>
+      )}
+
+      {/* ドロップダウン：guides（グループ2カラム） */}
+      {openMenu === 'guides' && (
+        <div
+          className="fixed bg-white rounded-xl shadow-lg border border-gray-100 z-[100] p-3"
+          style={{ left: dropdownPos.left, top: dropdownPos.top, width: '480px', maxWidth: 'calc(100vw - 16px)' }}
+          onMouseEnter={() => { if (closeTimer.current) clearTimeout(closeTimer.current); }}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="grid grid-cols-2 gap-x-2">
+            {guidesSections.map((section) => (
+              <div key={section.category} className="mb-2">
+                <p className="px-2 pt-1 pb-0.5 text-[10px] font-bold text-gray-400 uppercase tracking-wide">
+                  {section.category}
+                </p>
+                {section.items.map(item => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`block px-2 py-1.5 text-xs rounded-md transition-colors ${
+                      matchesPath(item.path)
+                        ? 'text-secondary bg-gray-50 font-medium'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-secondary'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="border-t border-gray-100 mt-1 pt-1">
+            <Link
+              to={guidesPath}
+              className="flex items-center justify-end gap-1 px-2 py-1 text-xs text-primary font-medium hover:underline"
+            >
+              {isJa ? 'すべてのガイドを見る' : 'See all guides'}
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
         </div>
       )}
     </nav>
