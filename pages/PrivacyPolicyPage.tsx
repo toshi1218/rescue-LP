@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 export default function PrivacyPolicyPage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    t('プライバシーポリシー｜フィリピン書類取得代行センター', 'Privacy Policy | Philippine Document Service'),
+    t(
+      'フィリピン書類取得代行センター（株式会社IGRS）のプライバシーポリシー。個人情報の収集・利用・管理方針についてご説明します。',
+      'Privacy policy of Philippine Document Service (IGRS Inc.). Explains how we collect, use, and manage your personal information.'
+    )
+  );
 
   const sections = [
     {
