@@ -1,22 +1,31 @@
 import { useEffect } from 'react';
 
+const BASE = 'https://ph-document.com';
 const DEFAULT_TITLE = 'CENOMAR・PSA・NBI取得代行｜フィリピン書類取得代行センター';
 const DEFAULT_DESCRIPTION =
   'CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。';
+const DEFAULT_CANONICAL = `${BASE}/`;
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
   const el = document.querySelector<HTMLMetaElement>(`meta[${attr}="${name}"]`);
   if (el) el.setAttribute('content', content);
 }
 
-export function useMeta(title: string, description: string) {
+function setCanonical(href: string) {
+  const el = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+  if (el) el.setAttribute('href', href);
+}
+
+export function useMeta(title: string, description: string, canonical?: string) {
   useEffect(() => {
+    const canonicalHref = canonical ?? `${BASE}${window.location.pathname.replace(/\/?$/, '/')}`;
     document.title = title;
     setMeta('description', description);
     setMeta('og:title', title, 'property');
     setMeta('og:description', description, 'property');
     setMeta('twitter:title', title);
     setMeta('twitter:description', description);
+    setCanonical(canonicalHref);
 
     return () => {
       document.title = DEFAULT_TITLE;
@@ -25,6 +34,7 @@ export function useMeta(title: string, description: string) {
       setMeta('og:description', DEFAULT_DESCRIPTION, 'property');
       setMeta('twitter:title', DEFAULT_TITLE);
       setMeta('twitter:description', DEFAULT_DESCRIPTION);
+      setCanonical(DEFAULT_CANONICAL);
     };
-  }, [title, description]);
+  }, [title, description, canonical]);
 }
