@@ -20,6 +20,10 @@ import ContactPage from './pages/ContactPage';
 import PricingPage from './pages/PricingPage';
 import KikaShinseiGuidePage from './pages/KikaShinseiGuidePage';
 import GuidesPage from './pages/GuidesPage';
+import PsaBirthCertificateCostPage from './pages/PsaBirthCertificateCostPage';
+import ApostilleFeePage from './pages/ApostilleFeePage';
+import NbiValidityPage from './pages/NbiValidityPage';
+import DriverRecordPage from './pages/DriverRecordPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -50,6 +54,10 @@ export default function App() {
         <Route path="/drivers-license-conversion" element={<GaimenKirikaeGuidePage />} />
         <Route path="/naturalization-guide" element={<KikaShinseiGuidePage />} />
         <Route path="/guides" element={<GuidesPage />} />
+        <Route path="/psa-birth-certificate-cost" element={<PsaBirthCertificateCostPage />} />
+        <Route path="/apostille-fee" element={<ApostilleFeePage />} />
+        <Route path="/nbi-validity" element={<NbiValidityPage />} />
+        <Route path="/driver-record" element={<DriverRecordPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -72,6 +80,10 @@ export default function App() {
         <Route path="/ja/gaimen-kirikae-guide" element={<GaimenKirikaeGuidePage />} />
         <Route path="/ja/kika-shinsei-guide" element={<KikaShinseiGuidePage />} />
         <Route path="/ja/guides" element={<GuidesPage />} />
+        <Route path="/ja/psa-shussei-cost" element={<PsaBirthCertificateCostPage />} />
+        <Route path="/ja/apostille-ryokin" element={<ApostilleFeePage />} />
+        <Route path="/ja/nbi-koyukigen" element={<NbiValidityPage />} />
+        <Route path="/ja/driver-record" element={<DriverRecordPage />} />
         <Route path="/ja/ryokin" element={<PricingPage />} />
         <Route path="/ja/company" element={<CompanyPage />} />
         <Route path="/ja/contact" element={<ContactPage />} />
