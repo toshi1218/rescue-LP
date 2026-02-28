@@ -146,6 +146,88 @@ const routes: RouteConfig[] = [
     canonical: 'https://ph-document.com/kika-shinsei-guide/',
     ogType: 'article',
   },
+
+  /* ── Phase 1 新規ガイドページ (EN canonical) ─────────────── */
+  {
+    path: '/cenomar-apostille',
+    outFile: path.join(projectRoot, 'dist', 'cenomar-apostille', 'index.html'),
+    title: 'Does CENOMAR Need DFA Apostille? [2026] Answer by Use Case | Philippine Document Service',
+    description: 'Find out if your CENOMAR needs DFA Apostille for LCCM, spouse visa, or naturalization. Clear answers by use case with 2026 practical information.',
+    canonical: 'https://ph-document.com/cenomar-apostille',
+    ogType: 'article',
+  },
+  {
+    path: '/cenomar-validity',
+    outFile: path.join(projectRoot, 'dist', 'cenomar-validity', 'index.html'),
+    title: 'How Long Is CENOMAR Valid? The "6-Month Rule" Explained [2026] | Philippine Document Service',
+    description: 'CENOMAR has no legal expiration, but most institutions require it within 6 months. Learn the basis of this rule and the ideal timing to obtain your CENOMAR.',
+    canonical: 'https://ph-document.com/cenomar-validity',
+    ogType: 'article',
+  },
+  {
+    path: '/nbi-hit',
+    outFile: path.join(projectRoot, 'dist', 'nbi-hit', 'index.html'),
+    title: 'What is NBI HIT? Causes, Resolution Steps & Delay Time [2026] | Philippine Document Service',
+    description: 'NBI HIT (MATCH FOUND) explained: what it means, why it happens, how to resolve it, and how much additional time to expect. Proxy service available for HIT cases.',
+    canonical: 'https://ph-document.com/nbi-hit',
+    ogType: 'article',
+  },
+  {
+    path: '/apostille-processing-time',
+    outFile: path.join(projectRoot, 'dist', 'apostille-processing-time', 'index.html'),
+    title: 'DFA Apostille Processing Time Philippines 2026 — Standard, Express & Proxy Schedule',
+    description: 'Up-to-date DFA Apostille processing times for 2026: standard (10–15 business days), express (3–5 days), and total proxy service timeline. Common delay causes explained.',
+    canonical: 'https://ph-document.com/apostille-processing-time',
+    ogType: 'article',
+  },
+  {
+    path: '/guides',
+    outFile: path.join(projectRoot, 'dist', 'guides', 'index.html'),
+    title: 'All Guides & FAQ | CENOMAR, NBI, DFA Apostille, PSA [2026] | Philippine Document Service',
+    description: 'Complete list of Philippine document guides and FAQ pages for 2026. Find answers about CENOMAR, NBI Clearance, DFA Apostille, PSA certificates, spouse visa, and more.',
+    canonical: 'https://ph-document.com/guides',
+  },
+
+  /* ── Phase 1 新規ガイドページ (JA canonical) ─────────────── */
+  {
+    path: '/ja/cenomar-apostille',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-apostille', 'index.html'),
+    title: 'CENOMARにDFAアポスティーユは必要？【2026年最新】用途別の結論｜フィリピン書類取得代行センター',
+    description: 'CENOMARにDFAアポスティーユ認証が必要かどうかを用途別（国際結婚LCCM・配偶者ビザ・帰化）に解説。東京フィリピン大使館の要件をもとに正確な情報を提供。',
+    canonical: 'https://ph-document.com/ja/cenomar-apostille',
+    ogType: 'article',
+  },
+  {
+    path: '/ja/cenomar-koyukigen',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-koyukigen', 'index.html'),
+    title: 'CENOMARの有効期限は？【2026年版】"6ヶ月"の根拠と用途別の考え方｜フィリピン書類取得代行センター',
+    description: 'CENOMARの有効期限は発行から6ヶ月が目安。この"6ヶ月"の根拠、用途（国際結婚・配偶者ビザ・帰化）別の期限の考え方、取得タイミングの目安を解説。',
+    canonical: 'https://ph-document.com/ja/cenomar-koyukigen',
+    ogType: 'article',
+  },
+  {
+    path: '/ja/nbi-hit',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-hit', 'index.html'),
+    title: 'NBI HITとは？【2026年版】原因・対処法・どれくらい遅れるか徹底解説｜フィリピン書類取得代行センター',
+    description: 'NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。NBI Clearance申請でHIT（MATCH FOUND）が出た場合の対処法と代行サービスの活用方法。',
+    canonical: 'https://ph-document.com/ja/nbi-hit',
+    ogType: 'article',
+  },
+  {
+    path: '/ja/apostille-shori-kikan',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-shori-kikan', 'index.html'),
+    title: 'DFAアポスティーユ 処理期間【2026年最新】通常・エクスプレス・代行の日数目安｜フィリピン書類取得代行センター',
+    description: 'フィリピンDFAアポスティーユ認証の処理期間を2026年最新情報で解説。通常・エクスプレス申請の日数目安、代行利用時のトータル期間、遅れる原因も紹介。',
+    canonical: 'https://ph-document.com/ja/apostille-shori-kikan',
+    ogType: 'article',
+  },
+  {
+    path: '/ja/guides',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'guides', 'index.html'),
+    title: 'お役立ちガイド一覧｜CENOMAR・NBI・DFAアポスティーユのFAQ集【2026年】｜フィリピン書類取得代行センター',
+    description: 'フィリピン書類取得に関するお役立ちガイドとFAQ集。CENOMAR・NBI・DFAアポスティーユ・LTOについての疑問を解決するガイドページ一覧。',
+    canonical: 'https://ph-document.com/ja/guides',
+  },
 ];
 
 function updateHead(html: string, route: RouteConfig): string {

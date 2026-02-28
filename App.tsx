@@ -3,11 +3,15 @@ import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import JpHomePage from './pages/JpHomePage';
 import CenomarGuidePage from './pages/CenomarGuidePage';
+import CenomarApostillePage from './pages/CenomarApostillePage';
+import CenomarValidityPage from './pages/CenomarValidityPage';
 import PsaPage from './pages/PsaPage';
 import NbiPage from './pages/NbiPage';
+import NbiHitPage from './pages/NbiHitPage';
 import KokusaiKekkonGuidePage from './pages/KokusaiKekkonGuidePage';
 import HaigushaVisaPage from './pages/HaigushaVisaPage';
 import ApostillePage from './pages/ApostillePage';
+import DfaProcessingTimePage from './pages/DfaProcessingTimePage';
 import GaimenKirikaeGuidePage from './pages/GaimenKirikaeGuidePage';
 import KekkonShomeishoPage from './pages/KekkonShomeishoPage';
 import CompanyPage from './pages/CompanyPage';
@@ -15,6 +19,7 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import ContactPage from './pages/ContactPage';
 import PricingPage from './pages/PricingPage';
 import KikaShinseiGuidePage from './pages/KikaShinseiGuidePage';
+import GuidesPage from './pages/GuidesPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -32,14 +37,19 @@ export default function App() {
         {/* ── EN canonical routes ──────────────────────────────── */}
         <Route path="/" element={<HomePage />} />
         <Route path="/cenomar" element={<CenomarGuidePage />} />
+        <Route path="/cenomar-apostille" element={<CenomarApostillePage />} />
+        <Route path="/cenomar-validity" element={<CenomarValidityPage />} />
         <Route path="/psa-birth-certificate" element={<PsaPage />} />
         <Route path="/nbi-clearance" element={<NbiPage />} />
+        <Route path="/nbi-hit" element={<NbiHitPage />} />
         <Route path="/apostille" element={<ApostillePage />} />
+        <Route path="/apostille-processing-time" element={<DfaProcessingTimePage />} />
         <Route path="/international-marriage-guide" element={<KokusaiKekkonGuidePage />} />
         <Route path="/spouse-visa-documents" element={<HaigushaVisaPage />} />
         <Route path="/psa-marriage-certificate" element={<KekkonShomeishoPage />} />
         <Route path="/drivers-license-conversion" element={<GaimenKirikaeGuidePage />} />
         <Route path="/naturalization-guide" element={<KikaShinseiGuidePage />} />
+        <Route path="/guides" element={<GuidesPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/contact" element={<ContactPage />} />
@@ -49,14 +59,19 @@ export default function App() {
         <Route path="/ja" element={<Navigate to="/ja/" replace />} />
         <Route path="/ja/" element={<JpHomePage />} />
         <Route path="/ja/cenomar" element={<CenomarGuidePage />} />
+        <Route path="/ja/cenomar-apostille" element={<CenomarApostillePage />} />
+        <Route path="/ja/cenomar-koyukigen" element={<CenomarValidityPage />} />
         <Route path="/ja/psa-shussei-shomeisho" element={<PsaPage />} />
         <Route path="/ja/nbi-clearance" element={<NbiPage />} />
+        <Route path="/ja/nbi-hit" element={<NbiHitPage />} />
         <Route path="/ja/apostille" element={<ApostillePage />} />
+        <Route path="/ja/apostille-shori-kikan" element={<DfaProcessingTimePage />} />
         <Route path="/ja/kokusai-kekkon-guide" element={<KokusaiKekkonGuidePage />} />
         <Route path="/ja/haigusha-visa" element={<HaigushaVisaPage />} />
         <Route path="/ja/psa-kekkon-shomeisho" element={<KekkonShomeishoPage />} />
         <Route path="/ja/gaimen-kirikae-guide" element={<GaimenKirikaeGuidePage />} />
         <Route path="/ja/kika-shinsei-guide" element={<KikaShinseiGuidePage />} />
+        <Route path="/ja/guides" element={<GuidesPage />} />
         <Route path="/ja/ryokin" element={<PricingPage />} />
         <Route path="/ja/company" element={<CompanyPage />} />
         <Route path="/ja/contact" element={<ContactPage />} />
