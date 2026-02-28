@@ -19,25 +19,25 @@ const Navbar: React.FC = () => {
   const homePath = isJa ? '/ja/' : '/';
 
   const documentTabs = [
-    { label: t('navbar.doc.cenomar'),  path: isJa ? '/ja/cenomar'              : '/cenomar' },
-    { label: t('navbar.doc.birth'),    path: isJa ? '/ja/psa-shussei-shomeisho': '/psa-birth-certificate' },
-    { label: t('navbar.doc.nbi'),      path: isJa ? '/ja/nbi-clearance'        : '/nbi-clearance' },
-    { label: t('navbar.doc.apostille'),path: isJa ? '/ja/apostille'            : '/apostille' },
-    { label: t('navbar.doc.marriage'), path: isJa ? '/ja/psa-kekkon-shomeisho' : '/psa-marriage-certificate' },
+    { label: t('navbar.doc.cenomar'),  path: isJa ? '/ja/cenomar/'              : '/cenomar/' },
+    { label: t('navbar.doc.birth'),    path: isJa ? '/ja/psa-shussei-shomeisho/': '/psa-birth-certificate/' },
+    { label: t('navbar.doc.nbi'),      path: isJa ? '/ja/nbi-clearance/'        : '/nbi-clearance/' },
+    { label: t('navbar.doc.apostille'),path: isJa ? '/ja/apostille/'            : '/apostille/' },
+    { label: t('navbar.doc.marriage'), path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/psa-marriage-certificate/' },
   ];
 
   const purposeTabs = [
-    { label: t('navbar.purpose.marriage'),      path: isJa ? '/ja/kokusai-kekkon-guide' : '/international-marriage-guide' },
-    { label: t('navbar.purpose.visa'),          path: isJa ? '/ja/haigusha-visa'        : '/spouse-visa-documents' },
-    { label: t('navbar.purpose.license'),       path: isJa ? '/ja/gaimen-kirikae-guide' : '/drivers-license-conversion' },
-    { label: t('navbar.purpose.naturalization'),path: isJa ? '/ja/kika-shinsei-guide'   : '/naturalization-guide' },
+    { label: t('navbar.purpose.marriage'),      path: isJa ? '/ja/kokusai-kekkon-guide/' : '/international-marriage-guide/' },
+    { label: t('navbar.purpose.visa'),          path: isJa ? '/ja/haigusha-visa/'        : '/spouse-visa-documents/' },
+    { label: t('navbar.purpose.license'),       path: isJa ? '/ja/gaimen-kirikae-guide/' : '/drivers-license-conversion/' },
+    { label: t('navbar.purpose.naturalization'),path: isJa ? '/ja/kika-shinsei-guide/'   : '/naturalization-guide/' },
   ];
 
-  const guidesPath  = isJa ? '/ja/guides'  : '/guides';
-  const pricingPath = isJa ? '/ja/ryokin'  : '/pricing';
-  const contactPath = isJa ? '/ja/contact' : '/contact';
-  const companyPath = isJa ? '/ja/company' : '/company';
-  const privacyPath = isJa ? '/ja/privacy' : '/privacy';
+  const guidesPath  = isJa ? '/ja/guides/'  : '/guides/';
+  const pricingPath = isJa ? '/ja/ryokin/'  : '/pricing/';
+  const contactPath = isJa ? '/ja/contact/' : '/contact/';
+  const companyPath = isJa ? '/ja/company/' : '/company/';
+  const privacyPath = isJa ? '/ja/privacy/' : '/privacy/';
 
   useEffect(() => {
     setOpenMenu(null);

@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -51,6 +52,14 @@ type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 export default function ContactPage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+
+  useMeta(
+    t('お問い合わせ｜フィリピン書類取得代行センター', 'Contact Us | Philippine Document Service'),
+    t(
+      'フィリピン書類取得代行・国際結婚・配偶者ビザに関するご相談・お問い合わせはこちらから。平日9:00〜18:00、翌営業日以内に返信します。',
+      'Contact us for Philippine document procurement, international marriage, and spouse visa inquiries. We reply within 1 business day.'
+    )
+  );
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const ctaVariant = getCtaVariant();
