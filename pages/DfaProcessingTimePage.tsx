@@ -25,8 +25,8 @@ export default function DfaProcessingTimePage() {
         'How long does standard DFA Apostille processing take?'
       ),
       a: t(
-        '2026年現在、DFAアポスティーユの通常処理（Regular Processing）は申請から約10〜15営業日（2〜3週間）が目安です。ただし申請件数・窓口の混雑状況によって変動することがあります。',
-        'As of 2026, DFA Apostille standard processing (Regular Processing) typically takes approximately 10–15 business days (2–3 weeks) from application. This can vary depending on application volume and congestion at the office.'
+        '2026年現在、DFAアポスティーユの通常処理（Regular Processing）は申請から約5営業日が目安です。ただし申請件数・窓口の混雑状況によって変動することがあります。',
+        'As of 2026, DFA Apostille standard processing (Regular Processing) typically takes approximately 5 working days from application. This can vary depending on application volume and congestion at the office.'
       ),
     },
     {
@@ -35,8 +35,8 @@ export default function DfaProcessingTimePage() {
         'How long does DFA Apostille express processing take?'
       ),
       a: t(
-        'エクスプレス処理（Expedited Processing）は通常3〜5営業日が目安です。ただしDFAは「エクスプレス」の正式な時間保証をしていないため、繁忙期（クリスマスシーズン・連休前後）は遅れる場合があります。',
-        'Expedited processing typically takes about 3–5 business days. However, DFA does not provide an official time guarantee for "express" processing, so delays can occur during peak seasons (Christmas, national holidays).'
+        'エクスプレス処理（Expedited Processing）は通常3営業日が目安です。ただしDFAは「エクスプレス」の正式な時間保証をしていないため、繁忙期（クリスマスシーズン・連休前後）は遅れる場合があります。',
+        'Expedited processing typically takes about 3 working days. However, DFA does not provide an official time guarantee for "express" processing, so delays can occur during peak seasons (Christmas, national holidays).'
       ),
     },
     {
@@ -54,8 +54,8 @@ export default function DfaProcessingTimePage() {
         'How much does DFA Apostille authentication cost?'
       ),
       a: t(
-        '2026年現在、DFA公定料金は1通あたり200ペソ（通常）または400ペソ（エクスプレス）が目安です。代行サービスを利用する場合は、DFA手数料に加えて代行手数料・国際配送料が別途かかります。詳細は料金ページをご参照ください。',
-        'As of 2026, the official DFA fee is approximately 200 PHP per document (regular) or 400 PHP (expedited). When using a proxy service, proxy fees and international shipping are added on top of the DFA fee. See our pricing page for details.'
+        '2026年現在、DFA公定料金は1通あたり100ペソ（通常）または200ペソ（エクスプレス）が目安です。代行サービスを利用する場合は、DFA手数料に加えて代行手数料・国際配送料が別途かかります。詳細は料金ページをご参照ください。',
+        'As of 2026, the official DFA fee is approximately 100 PHP per document (regular) or 200 PHP (expedited). When using a proxy service, proxy fees and international shipping are added on top of the DFA fee. See our pricing page for details.'
       ),
     },
     {
@@ -155,13 +155,13 @@ export default function DfaProcessingTimePage() {
             {[
               {
                 label: t('通常処理', 'Regular Processing'),
-                days: t('10〜15営業日', '10–15 business days'),
-                sub: t('（約2〜3週間）', '(approx. 2–3 weeks)'),
+                days: t('5営業日', '5 working days'),
+                sub: t('（目安。繁忙期は遅延あり）', '(guideline; delays possible during peak season)'),
                 color: 'border-secondary',
               },
               {
                 label: t('エクスプレス処理', 'Express Processing'),
-                days: t('3〜5営業日', '3–5 business days'),
+                days: t('3営業日', '3 working days'),
                 sub: t('（繁忙期は遅延あり）', '(delays possible during peak season)'),
                 color: 'border-primary',
               },
@@ -234,8 +234,8 @@ export default function DfaProcessingTimePage() {
               </thead>
               <tbody>
                 {[
-                  [t('処理日数（目安）', 'Processing Days (Guideline)'), t('10〜15営業日', '10–15 business days'), t('3〜5営業日', '3–5 business days')],
-                  [t('公定料金（1通）', 'Official Fee (per document)'), '200 PHP', '400 PHP'],
+                  [t('処理日数（目安）', 'Processing Days (Guideline)'), t('5営業日', '5 working days'), t('3営業日', '3 working days')],
+                  [t('公定料金（1通）', 'Official Fee (per document)'), '100 PHP', '200 PHP'],
                   [t('オンライン予約', 'Online Appointment'), t('必要', 'Required'), t('必要', 'Required')],
                   [t('繁忙期の遅延リスク', 'Delay Risk in Peak Season'), t('中程度', 'Moderate'), t('高め（保証なし）', 'Higher (no guarantee)')],
                 ].map(([item, regular, express], i) => (
@@ -284,7 +284,7 @@ export default function DfaProcessingTimePage() {
               {
                 phase: t('Phase 2', 'Phase 2'),
                 title: t('DFAアポスティーユ認証', 'DFA Apostille Authentication'),
-                duration: t('通常：2〜3週間 / エクスプレス：1週間', 'Regular: 2–3 weeks / Express: ~1 week'),
+                duration: t('通常：5営業日 / エクスプレス：3営業日', 'Regular: 5 working days / Express: 3 working days'),
                 note: t('繁忙期は遅延リスクあり', 'Delay risk during peak season'),
                 color: 'bg-secondary/10 text-secondary',
               },
