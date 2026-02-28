@@ -175,12 +175,16 @@ export default function HaigushaVisaPage() {
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10 text-sm text-blue-900 leading-relaxed">
           {t(
             'このページでは、フィリピン人配偶者の「在留資格（配偶者ビザ）」申請に必要なフィリピン側の書類を中心にチェックリスト形式で解説します。',
-            'This page explains the Philippine documents required for the spouse visa application in checklist format.'
+            <>
+              <strong>Note:</strong> This guide is specifically for <strong>Japanese spouse visa (配偶者ビザ)</strong> applications — the checklist includes Japan-specific documents such as the Certificate of Eligibility and Family Register.
+              <br /><br />
+              If you are applying for a spouse visa in a country other than Japan, the Philippine documents section (CENOMAR, PSA Birth Certificate, NBI Clearance) still applies — but the non-Filipino spouse\'s documents and application forms will differ by country. Please check with your local immigration authority.
+            </>
           )}
           <br /><br />
           {t(
             '※ビザ申請書類全体については行政書士への相談をおすすめします。当センターはフィリピン書類の取得代行に特化しています。',
-            '* For the entire visa application, we recommend consulting an administrative scrivener. Our center specializes in Philippine document retrieval.'
+            '* We specialize in obtaining Philippine documents (CENOMAR, PSA, NBI, Apostille). For visa application strategy and immigration forms, please consult a licensed immigration specialist in your country.'
           )}
         </div>
 

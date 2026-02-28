@@ -30,7 +30,7 @@ export default function ApostillePage() {
       q: t('国際結婚でアポスティーユは必ず必要ですか？', 'Is Apostille always required for international marriage?'),
       a: t(
         '日本の市区町村役場での婚姻届提出には、フィリピン書類（CENOMAR・PSA出生証明書）へのアポスティーユは必須ではないことが多いです。ただし、入管（配偶者ビザ申請）や公証機関によって異なるため、提出先に事前確認することをおすすめします。NBI Clearanceについては、アポスティーユ付きを求められる場合があります。',
-        'Apostille is often not required for Philippine documents (CENOMAR, PSA Birth Certificate) when submitting a marriage registration at a Japanese municipal office. However, requirements vary for immigration offices (spouse visa applications) and notarial authorities, so we recommend confirming with the destination office in advance. For NBI Clearance, Apostille may be required.'
+        'No — it depends on the country and institution. For marriage registration, Apostille is often not required. However, for spouse visa or immigration applications, it is frequently required. NBI Clearance in particular is commonly requested with Apostille for visa procedures. Always confirm with the specific office you are submitting to.'
       ),
     },
     {
@@ -48,17 +48,17 @@ export default function ApostillePage() {
       ),
     },
     {
-      q: t('アポスティーユ認証後に日本語翻訳は必要ですか？', 'Is a Japanese translation needed after Apostille authentication?'),
+      q: t('アポスティーユ認証後に日本語翻訳は必要ですか？', 'Is a translation needed after Apostille authentication?'),
       a: t(
         'アポスティーユ認証自体は翻訳ではなく、書類の真正性を証明するものです。英語で書かれたフィリピン書類を日本の機関に提出する場合、別途日本語翻訳が必要になることがあります。',
-        'Apostille authentication itself is not a translation—it certifies the authenticity of the document. When submitting English-language Philippine documents to Japanese institutions, a separate Japanese translation may be required.'
+        'Apostille authentication certifies the authenticity of a document — it is not a translation. Philippine documents are issued in English, which is accepted in most English-speaking countries without further translation. However, non-English-speaking countries (e.g., Japan, Germany) may require a certified translation into the local language in addition to the Apostille. Confirm with your submission office in advance.'
       ),
     },
     {
       q: t('アポスティーユはどこで申請できますか？自分でできますか？', 'Where can I apply for Apostille? Can I do it myself?'),
       a: t(
         'フィリピン国内のDFA（外務省）事務所で申請できます。マニラ・セブ・ダバオ等にオフィスがあります。日本からご自身で申請するには現地代理人が必要であり、DFAオンライン予約システムの利用も必要です。代行サービスを利用すれば、これらの手続きをすべてお任せいただけます。',
-        'You can apply at DFA (Department of Foreign Affairs) offices within the Philippines, which have offices in Manila, Cebu, Davao, and other locations. Applying from Japan requires a local representative and use of the DFA online appointment system. Using a proxy service allows you to leave all of these procedures to us.'
+        'Applications must be submitted at a DFA (Department of Foreign Affairs) office inside the Philippines — in Manila, Cebu, Davao, and other cities. Applying from overseas requires arranging a local representative in the Philippines and booking an appointment through the DFA online system. Using a proxy service handles all of this for you remotely.'
       ),
     },
     {
@@ -83,10 +83,10 @@ export default function ApostillePage() {
       ),
     },
     {
-      q: t('アポスティーユ認証されたフィリピン書類を日本の公証役場でさらに認証する必要はありますか？', 'Do I need additional authentication at a Japanese notary for Apostille-certified Philippine documents?'),
+      q: t('アポスティーユ認証されたフィリピン書類を日本の公証役場でさらに認証する必要はありますか？', 'Do I need additional authentication at a local notary after Apostille?'),
       a: t(
         'いいえ、ハーグ条約の趣旨はまさにこの「多重認証」を不要にすることです。フィリピン書類にDFAアポスティーユが付いていれば、日本の公証役場や大使館での追加認証なしに日本の機関で公文書として認められます。ただし提出先によって独自の要件がある場合もあるため、必ず事前確認してください。',
-        'No, the very purpose of the Hague Convention is to eliminate such "multiple authentication." If a Philippine document has a DFA Apostille, it is recognized as an official document by Japanese institutions without additional authentication at a Japanese notary or embassy. However, some destinations may have their own requirements, so always confirm in advance.'
+        'No — the entire purpose of the Hague Apostille Convention is to eliminate "chain authentication." A DFA Apostille on a Philippine document is accepted as-is by government offices in all Hague Convention member countries, without any additional notarization or embassy legalization. That said, always double-check with your specific submission destination, as individual offices occasionally have their own requirements.'
       ),
     },
   ];
@@ -104,18 +104,18 @@ export default function ApostillePage() {
     },
     {
       doc: t('PSA婚姻証明書', 'PSA Marriage Certificate'),
-      use: t('婚姻の証明・ビザ申請', 'Proof of marriage, visa application'),
-      note: t('入管提出時に求められることあり', 'May be required for immigration submission'),
+      use: t('婚姻の証明・ビザ申請', 'Proof of marriage, visa/immigration application'),
+      note: t('入管提出時に求められることあり', 'May be required by immigration offices worldwide'),
     },
     {
       doc: t('NBI Clearance（無犯罪証明書）', 'NBI Clearance (Criminal Record Certificate)'),
-      use: t('配偶者ビザ・海外就労', 'Spouse visa, overseas employment'),
-      note: t('推奨・入管が求めることが多い', 'Recommended — immigration often requires it'),
+      use: t('配偶者ビザ・海外就労', 'Spouse visa, overseas employment, immigration'),
+      note: t('推奨・入管が求めることが多い', 'Commonly required by immigration worldwide'),
     },
     {
-      doc: t('LTO関連書類（外免切替用）', 'LTO Documents (for license transfer)'),
-      use: t('日本の免許切替申請', 'Japanese license transfer application'),
-      note: t('都道府県によって要否が異なる', 'Requirements vary by prefecture'),
+      doc: t('LTO関連書類（外免切替用）', 'LTO Documents (for license conversion abroad)'),
+      use: t('日本の免許切替申請', 'Driving license conversion in another country'),
+      note: t('都道府県によって要否が異なる', 'Requirements vary by destination country'),
     },
   ];
 
@@ -206,14 +206,14 @@ export default function ApostillePage() {
             {lang === 'ja' ? (
               <>フィリピンでは<strong>DFA（Department of Foreign Affairs／外務省）</strong>がこの認証を行います。PSA・NBIなどが発行した書類にDFAのアポスティーユスタンプを取得することで、その書類が日本の機関でも公式に認められます。</>
             ) : (
-              <>In the Philippines, the <strong>DFA (Department of Foreign Affairs)</strong> performs this authentication. By obtaining the DFA Apostille stamp on documents issued by PSA, NBI, and others, those documents are officially recognized by Japanese institutions.</>
+              <>In the Philippines, the <strong>DFA (Department of Foreign Affairs)</strong> performs this authentication. By obtaining the DFA Apostille stamp on documents issued by PSA, NBI, and others, those documents are officially recognized in any Hague Convention member country.</>
             )}
           </p>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800">
             <strong>{t('ポイント：', 'Key Point: ')}</strong>
             {t(
               '日本とフィリピンはどちらもハーグ条約加盟国のため、フィリピン書類にアポスティーユ認証を付けることで、日本での公的な効力が保証されます。',
-              'Since both Japan and the Philippines are members of the Hague Convention, adding Apostille authentication to Philippine documents guarantees their official validity in Japan.'
+              'The Philippines is a member of the Hague Convention. Adding DFA Apostille authentication to Philippine documents guarantees their official validity in all other Hague Convention member countries — including Japan, the US, Canada, Australia, most of Europe, and more.'
             )}
           </div>
         </section>
@@ -290,10 +290,10 @@ export default function ApostillePage() {
               },
               {
                 step: 'STEP 4',
-                title: t('日本へ発送', 'Ship to Japan'),
+                title: t('日本へ発送', 'International Shipping'),
                 desc: t(
                   'アポスティーユ付きの書類を速達・追跡付きの国際郵便で日本の住所へお届けします。',
-                  'Apostille-stamped documents are delivered to your Japanese address via express international mail with tracking.'
+                  'Apostille-stamped documents are shipped to your address anywhere in the world via express tracked international courier.'
                 ),
               },
             ].map((s, i) => (
@@ -361,7 +361,7 @@ export default function ApostillePage() {
             <strong>{t('当サービスの実績目安：', 'Our Typical Service Timeline: ')}</strong>
             {t(
               'ご依頼から書類の日本到着まで、通常4〜8週間が目安です。エクスプレス処理希望の場合は3〜5週間程度を見込んでいます。DFA予約の手配も代行するため、お急ぎの場合はお早めにご連絡ください。',
-              'From your inquiry to document delivery in Japan, the typical timeline is 4–8 weeks. With express processing, we estimate 3–5 weeks. We handle DFA appointment scheduling on your behalf, so if you are in a hurry, please contact us as early as possible.'
+              'From your inquiry to document delivery at your address, the typical timeline is 4–8 weeks. With express processing, we estimate 3–5 weeks. We handle DFA appointment scheduling on your behalf — if you have a deadline, please contact us as early as possible.'
             )}
           </div>
           <a href="#contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-hover transition-colors">
@@ -425,34 +425,34 @@ export default function ApostillePage() {
               <tbody>
                 {[
                   [
-                    t('日本の市区町村役場（婚姻届）', 'Japanese Municipal Office (Marriage Registration)'),
+                    t('日本の市区町村役場（婚姻届）', 'Marriage Registration (your country of residence)'),
                     t('CENOMAR・PSA出生証明書', 'CENOMAR, PSA Birth Certificate'),
-                    t('不要なことが多い（要事前確認）', 'Often not required (confirm in advance)'),
+                    t('不要なことが多い（要事前確認）', 'Varies by country — often not required (confirm in advance)'),
                   ],
                   [
-                    t('日本の入管（配偶者ビザ）', 'Japan Immigration (Spouse Visa)'),
+                    t('日本の入管（配偶者ビザ）', 'Immigration Office — Spouse / Partner Visa'),
                     t('NBI Clearance', 'NBI Clearance'),
-                    t('推奨（求められることが多い）', 'Recommended (often required)'),
+                    t('推奨（求められることが多い）', 'Often required — confirm with your local immigration office'),
                   ],
                   [
-                    t('日本の入管（配偶者ビザ）', 'Japan Immigration (Spouse Visa)'),
-                    t('CENOMAR・PSA', 'CENOMAR, PSA'),
-                    t('不要なことが多い（要確認）', 'Often not required (confirm)'),
+                    t('日本の入管（配偶者ビザ）', 'Immigration Office — Spouse / Partner Visa'),
+                    t('CENOMAR・PSA', 'CENOMAR, PSA Birth Certificate'),
+                    t('不要なことが多い（要確認）', 'Often not required (confirm in advance)'),
                   ],
                   [
                     t('フィリピン大使館（Report of Marriage等）', 'Philippine Embassy (Report of Marriage, etc.)'),
                     t('各種PSA書類', 'Various PSA documents'),
-                    t('不要なことが多い（要確認）', 'Often not required (confirm)'),
+                    t('不要なことが多い（要確認）', 'Often not required (confirm with the embassy)'),
                   ],
                   [
-                    t('海外の移民局・永住権申請', 'Overseas Immigration Office / Permanent Residency'),
+                    t('海外の移民局・永住権申請', 'Overseas Permanent Residency / Migration Application'),
                     t('NBI Clearance・PSA書類', 'NBI Clearance, PSA documents'),
-                    t('必要なことが多い（要件を確認）', 'Often required (confirm requirements)'),
+                    t('必要なことが多い（要件を確認）', 'Commonly required — confirm the specific requirements'),
                   ],
                   [
-                    t('日本の雇用主・学校', 'Japanese Employer / School'),
+                    t('日本の雇用主・学校', 'Overseas Employer / Institution'),
                     t('NBI Clearance', 'NBI Clearance'),
-                    t('雇用主・学校の指示に従う', 'Follow employer/school instructions'),
+                    t('雇用主・学校の指示に従う', 'Follow employer / institution instructions'),
                   ],
                 ].map(([dest, doc, req], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
@@ -576,7 +576,7 @@ export default function ApostillePage() {
                 title: t('アポスティーユが必要かどうか提出先に確認する', 'Confirm Apostille Necessity with the Submission Destination'),
                 body: t(
                   '日本の婚姻届提出にはアポスティーユ不要なことが多いです。入管・大使館など提出先によって異なるため、必ず事前確認をしてください。',
-                  'Apostille is often not required for Japanese marriage registration submissions. Requirements vary by destination (immigration, embassy, etc.), so always confirm in advance.'
+                  'Apostille is not always required — it depends on the country and specific institution. Marriage registration often does not require it, but immigration offices and visa applications frequently do. Always confirm with your destination before proceeding.'
                 ),
               },
               {
@@ -590,7 +590,7 @@ export default function ApostillePage() {
                 title: t('DFA認証とアポスティーユの混同に注意', 'Avoid Confusing DFA Authentication with Apostille'),
                 body: t(
                   'フィリピン書類を日本で使う場合は「アポスティーユ」で対応できます。「DFA Authentication（DFA公証）」は別制度（ハーグ条約非加盟国向け）です。',
-                  'For Philippine documents to be used in Japan, "Apostille" is applicable. "DFA Authentication" is a separate system for non-Hague Convention countries.'
+                  'For Philippine documents used in Hague Convention member countries (Japan, US, Canada, Australia, most of Europe, etc.), "Apostille" is the correct procedure. "DFA Authentication" is a separate process only for non-Hague countries. Make sure to request the right one.'
                 ),
               },
             ].map((item, i) => (

@@ -22,24 +22,24 @@ export default function KokusaiKekkonGuidePage() {
   const steps = [
     {
       phase: t('フェーズ①', 'Phase ①'),
-      title: t('日本先行婚姻（日本で先に婚姻届を出す場合）', 'Japan-First Marriage (Registering in Japan first)'),
+      title: t('日本先行婚姻（日本で先に婚姻届を出す場合）', 'Country-First Marriage (Registering in Your Country of Residence First)'),
       steps: [
-        { step: 'STEP 1', title: t('フィリピン側の書類を準備', 'Prepare Philippine documents'), desc: t('CENOMAR（独身証明書）・PSA出生証明書・有効なパスポートが必要です。', 'CENOMAR, PSA Birth Certificate, and valid passport are required.') },
-        { step: 'STEP 2', title: t('日本の市区町村役場に婚姻届を提出', 'Submit marriage registration at Japanese municipal office'), desc: t('日本人側の戸籍謄本とフィリピン人側の書類（英文＋日本語訳）を用意します。', 'Prepare the Japanese spouse\'s family register and Philippine documents (English + Japanese translation).') },
-        { step: 'STEP 3', title: t('戸籍謄本を取得', 'Obtain family register'), desc: t('婚姻が受理されたら、日本人側の戸籍謄本に配偶者情報が記載されます。', 'Once the marriage is accepted, the Japanese spouse\'s family register will include the partner\'s information.') },
-        { step: 'STEP 4', title: t('フィリピン大使館で婚姻の報告的届出（Report of Marriage）', 'Report of Marriage at the Philippine Embassy'), desc: t('東京のフィリピン大使館に婚姻を報告します。必要書類をまとめて提出。', 'Report the marriage to the Philippine Embassy in Tokyo. Submit all required documents together.') },
-        { step: 'STEP 5', title: t('配偶者ビザの申請（在留資格の変更）', 'Apply for spouse visa (residence status change)'), desc: t('配偶者ビザ（日本人の配偶者等）を入管に申請します。PSA書類・NBI等が必要です。', 'Apply for spouse visa (Spouse of Japanese National) at immigration. PSA documents and NBI are required.') },
+        { step: 'STEP 1', title: t('フィリピン側の書類を準備', 'Prepare Philippine documents'), desc: t('CENOMAR（独身証明書）・PSA出生証明書・有効なパスポートが必要です。', 'CENOMAR, PSA Birth Certificate, and a valid passport are required from the Filipino side.') },
+        { step: 'STEP 2', title: t('日本の市区町村役場に婚姻届を提出', 'Submit marriage registration at your local civil registry'), desc: t('日本人側の戸籍謄本とフィリピン人側の書類（英文＋日本語訳）を用意します。', 'Gather your country\'s required identity/civil status documents along with the Philippine documents. A certified translation may be required depending on the country.') },
+        { step: 'STEP 3', title: t('戸籍謄本を取得', 'Obtain proof of marriage registration'), desc: t('婚姻が受理されたら、日本人側の戸籍謄本に配偶者情報が記載されます。', 'Once the marriage is accepted, obtain official proof of the registration (e.g., marriage certificate or family register update) from the local registry.') },
+        { step: 'STEP 4', title: t('フィリピン大使館で婚姻の報告的届出（Report of Marriage）', 'Report of Marriage at the nearest Philippine Embassy or Consulate'), desc: t('東京のフィリピン大使館に婚姻を報告します。必要書類をまとめて提出。', 'Report the marriage to the nearest Philippine Embassy or Consulate. Submit all required documents together.') },
+        { step: 'STEP 5', title: t('配偶者ビザの申請（在留資格の変更）', 'Apply for spouse / partner visa'), desc: t('配偶者ビザ（日本人の配偶者等）を入管に申請します。PSA書類・NBI等が必要です。', 'Apply for a spouse or partner visa with your country\'s immigration office. PSA documents and NBI Clearance are commonly required.') },
       ],
     },
     {
       phase: t('フェーズ②', 'Phase ②'),
       title: t('フィリピン先行婚姻（フィリピンで先に婚姻届を出す場合）', 'Philippines-First Marriage (Registering in the Philippines first)'),
       steps: [
-        { step: 'STEP 1', title: t('婚姻要件具備証明書（LCCM）の取得', 'Obtain Certificate of Legal Capacity to Contract Marriage (LCCM)'), desc: t('日本人側が在フィリピン日本大使館で「独身であり婚姻能力がある」ことを証明する書類を取得します。', 'The Japanese spouse obtains a document from the Japanese Embassy in the Philippines certifying that they are single and capable of marriage.') },
-        { step: 'STEP 2', title: t('フィリピン市役所で婚姻申請', 'Marriage application at Philippine City Hall'), desc: t('フィリピン人側の書類（CENOMAR・PSA出生証明書等）と日本人側のLCCMを提出します。', 'Submit the Philippine spouse\'s documents (CENOMAR, PSA Birth Certificate, etc.) and the Japanese spouse\'s LCCM.') },
+        { step: 'STEP 1', title: t('婚姻要件具備証明書（LCCM）の取得', 'Obtain Certificate of Legal Capacity to Contract Marriage (LCCM)'), desc: t('日本人側が在フィリピン日本大使館で「独身であり婚姻能力がある」ことを証明する書類を取得します。', 'The non-Filipino spouse obtains an LCCM (Certificate of Legal Capacity to Contract Marriage) from their country\'s embassy in the Philippines, certifying they are single and eligible to marry.') },
+        { step: 'STEP 2', title: t('フィリピン市役所で婚姻申請', 'Marriage application at Philippine City Hall'), desc: t('フィリピン人側の書類（CENOMAR・PSA出生証明書等）と日本人側のLCCMを提出します。', 'Submit the Filipino spouse\'s documents (CENOMAR, PSA Birth Certificate, etc.) and the non-Filipino spouse\'s LCCM at the Philippine Local Civil Registry.') },
         { step: 'STEP 3', title: t('婚姻証明書（PSA Marriage Certificate）の取得', 'Obtain PSA Marriage Certificate'), desc: t('フィリピン市役所での婚姻後、PSAが発行する婚姻証明書を取得します（約3〜6ヶ月後）。', 'After marriage at the Philippine City Hall, obtain the PSA-issued marriage certificate (approximately 3–6 months later).') },
-        { step: 'STEP 4', title: t('日本の市区町村役場に婚姻届を提出', 'Submit marriage registration at Japanese municipal office'), desc: t('PSA婚姻証明書の日本語訳とともに、外国方式による婚姻として報告的届出を行います。', 'Submit a report of foreign marriage together with a Japanese translation of the PSA Marriage Certificate.') },
-        { step: 'STEP 5', title: t('配偶者ビザの申請', 'Apply for spouse visa'), desc: t('日本での在留資格（配偶者ビザ）を申請します。', 'Apply for the spouse visa (residence status) in Japan.') },
+        { step: 'STEP 4', title: t('日本の市区町村役場に婚姻届を提出', 'Submit marriage registration in your country of residence'), desc: t('PSA婚姻証明書の日本語訳とともに、外国方式による婚姻として報告的届出を行います。', 'Report the foreign marriage at your local civil registry using the PSA Marriage Certificate. A certified translation may be required.') },
+        { step: 'STEP 5', title: t('配偶者ビザの申請', 'Apply for spouse / partner visa'), desc: t('日本での在留資格（配偶者ビザ）を申請します。', 'Apply for a spouse or partner visa with your country\'s immigration office using the PSA Marriage Certificate and other required documents.') },
       ],
     },
   ];
@@ -48,10 +48,10 @@ export default function KokusaiKekkonGuidePage() {
     { doc: 'CENOMAR', who: t('フィリピン人側', 'Philippine spouse'), note: t('PSA発行・発行から6ヶ月以内が目安', 'PSA-issued, within 6 months of issue') },
     { doc: t('PSA出生証明書', 'PSA Birth Certificate'), who: t('フィリピン人側', 'Philippine spouse'), note: t('PSA発行・最新のもの', 'PSA-issued, most recent') },
     { doc: t('有効なパスポート（コピー）', 'Valid Passport (copy)'), who: t('フィリピン人側', 'Philippine spouse'), note: t('全ページのコピーが必要な場合あり', 'All pages may be required') },
-    { doc: t('戸籍謄本', 'Family Register'), who: t('日本人側', 'Japanese spouse'), note: t('市区町村役場で取得', 'Obtained at municipal office') },
-    { doc: t('婚姻届', 'Marriage Registration Form'), who: t('両者', 'Both parties'), note: t('役所所定の様式', 'Official form from the registry office') },
-    { doc: t('日本語翻訳', 'Japanese Translation'), who: t('フィリピン人書類全般', 'All Philippine documents'), note: t('翻訳者の署名が必要な場合あり', 'Translator\'s signature may be required') },
-    { doc: 'NBI Clearance', who: t('フィリピン人側（ビザ申請時）', 'Philippine spouse (at visa application)'), note: t('配偶者ビザ申請で求められる場合あり', 'May be required for spouse visa application') },
+    { doc: t('戸籍謄本', 'Civil Status Documents (non-Filipino spouse)'), who: t('日本人側', 'Non-Filipino spouse'), note: t('市区町村役場で取得', 'Varies by country — check with your local registry') },
+    { doc: t('婚姻届', 'Marriage Registration Form'), who: t('両者', 'Both parties'), note: t('役所所定の様式', 'Use the official form of your local registry office') },
+    { doc: t('日本語翻訳', 'Certified Translation (if required)'), who: t('フィリピン人書類全般', 'Philippine documents'), note: t('翻訳者の署名が必要な場合あり', 'Required in non-English-speaking countries — confirm with the registry') },
+    { doc: 'NBI Clearance', who: t('フィリピン人側（ビザ申請時）', 'Filipino spouse (at visa application)'), note: t('配偶者ビザ申請で求められる場合あり', 'Commonly required for spouse/partner visa applications') },
   ];
 
   const faqs = [
@@ -59,21 +59,21 @@ export default function KokusaiKekkonGuidePage() {
       q: t('フィリピン人と国際結婚するとき、最初に何をすればよいですか？', 'What should I do first when marrying a Filipino/Filipina?'),
       a: t(
         'まずCENOMAR（独身証明書）とPSA出生証明書を取得してください。これらは取得に時間がかかるため、結婚の準備段階で早めに申請することをおすすめします。その後、日本先行かフィリピン先行かを決めて手続きを進めます。',
-        'Start by obtaining CENOMAR and PSA Birth Certificate. These take time to obtain, so we recommend applying early in the preparation stage. Then decide whether to proceed with Japan-first or Philippines-first marriage.'
+        'Start by obtaining CENOMAR and PSA Birth Certificate from the Filipino side — these take time, so apply early. At the same time, decide whether to register the marriage in the Philippines first or in your country of residence first. Both paths are valid; the right choice depends on where you both live and your timeline.'
       ),
     },
     {
-      q: t('日本とフィリピン、どちらで先に婚姻手続きをするべきですか？', 'Should I register the marriage in Japan or the Philippines first?'),
+      q: t('日本とフィリピン、どちらで先に婚姻手続きをするべきですか？', 'Should I register the marriage in the Philippines or my country of residence first?'),
       a: t(
         '一般的にはフィリピン人が日本に住んでいる場合は「日本先行」、フィリピンに住んでいる場合や結婚式をフィリピンで行う場合は「フィリピン先行」が多いです。どちらにもメリット・デメリットがあるため、状況に応じて判断しましょう。',
-        'In general, "Japan-first" is common when the Filipino/Filipina already lives in Japan, while "Philippines-first" is chosen when they live in the Philippines or when the wedding is held there. Both options have pros and cons, so choose based on your situation.'
+        'If the Filipino spouse already lives in your country, registering there first ("country-first") is generally smoother. If they are still in the Philippines, or if you plan to have the ceremony there, "Philippines-first" is a common choice. Both paths eventually require registration in both countries — the order affects the timeline for visa applications.'
       ),
     },
     {
       q: t('国際結婚にかかる費用はどれくらいですか？', 'How much does international marriage cost?'),
       a: t(
         'フィリピン書類の取得代行費用（CENOMARなど）で約4〜8万円が目安です。配偶者ビザ申請費用は別途かかります（行政書士への依頼費用を含めると15〜30万円程度）。詳細はご相談ください。',
-        'The fee for Philippine document retrieval (such as CENOMAR) is approximately ¥40,000–¥80,000. Spouse visa application costs extra (approximately ¥150,000–¥300,000 including administrative scrivener fees). Please contact us for details.'
+        'Our proxy fee for Philippine documents (CENOMAR, PSA Birth Certificate, NBI Clearance, etc.) is approximately USD $300–$600 depending on the combination. Spouse or partner visa application fees vary by country. Please contact us for a free estimate.'
       ),
     },
     {
@@ -91,10 +91,10 @@ export default function KokusaiKekkonGuidePage() {
       ),
     },
     {
-      q: t('フィリピン人側がすでに日本に住んでいる場合、どちら先行の手続きがおすすめですか？', 'If the Filipino/Filipina already lives in Japan, which should come first?'),
+      q: t('フィリピン人側がすでに日本に住んでいる場合、どちら先行の手続きがおすすめですか？', 'If the Filipino/Filipina already lives in my country, which should come first?'),
       a: t(
         'フィリピン人配偶者がすでに日本に在留している場合は「日本先行婚姻」がスムーズです。在留資格の状況に応じて変更申請か認定申請かを選ぶ必要があります。在留資格を確認した上で行政書士に相談することをおすすめします。',
-        'If the Filipino/Filipina spouse is already residing in Japan, "Japan-first marriage" is smoother. You will need to choose between a change application or a certification application depending on the residence status. We recommend consulting an administrative scrivener after checking the residence status.'
+        'If the Filipino spouse is already living in your country, registering there first is generally the smoother path — it avoids the need to apply for a visa just to come and get married. The exact process depends on your country\'s marriage registration requirements. Contact us for guidance on the Philippine documents you\'ll need regardless of which path you choose.'
       ),
     },
     {
@@ -108,14 +108,14 @@ export default function KokusaiKekkonGuidePage() {
       q: t('国際結婚後、フィリピン人配偶者はフィリピン国籍を失いますか？', 'Will the Filipino/Filipina spouse lose their Philippine nationality after marriage?'),
       a: t(
         'いいえ、フィリピン人女性が日本人男性と結婚しても、フィリピン国籍は自動的に失われません。ただし、本人が自発的に外国籍を取得・申請した場合には状況が変わります。フィリピン国籍法に関しては、フィリピン大使館にご確認ください。',
-        'No, a Filipina woman does not automatically lose Philippine nationality upon marrying a Japanese man. However, the situation changes if she voluntarily acquires or applies for foreign nationality. Please consult the Philippine Embassy regarding Philippine nationality law.'
+        'No — marrying a foreign national does not automatically cause a Filipino/Filipina to lose Philippine citizenship. However, if they voluntarily acquire a foreign nationality, Philippine citizenship may be affected. Please consult the nearest Philippine Embassy for guidance on Philippine nationality law.'
       ),
     },
     {
       q: t('国際結婚の手続き中に子どもが生まれた場合、どうすればよいですか？', 'What should we do if a child is born during the marriage registration process?'),
       a: t(
         '婚姻手続き中に子どもが生まれた場合、まず子どもの出生届を日本の市区町村役場に提出します。国籍の取得（日本国籍またはフィリピン国籍）についても対応が必要です。また、フィリピン大使館への出生報告（Report of Birth）も必要になる場合があります。婚姻手続きと並行して進める必要があるため、早めにご相談ください。',
-        'If a child is born during the marriage registration process, first submit the birth registration at the Japanese municipal office. Handling of nationality acquisition (Japanese or Philippine) is also necessary. A Report of Birth to the Philippine Embassy may also be required. Since this needs to proceed in parallel with marriage procedures, please contact us early.'
+        'If a child is born before or during the marriage process, additional procedures around birth registration, acknowledgment, and nationality may be required in both your country and the Philippines. A Report of Birth to the nearest Philippine Embassy is typically needed. Please contact us early — we can advise on which Philippine documents you\'ll need.'
       ),
     },
     {
