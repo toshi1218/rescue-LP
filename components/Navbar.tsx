@@ -33,6 +33,7 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.naturalization'),path: isJa ? '/ja/kika-shinsei-guide'   : '/naturalization-guide' },
   ];
 
+  const guidesPath  = isJa ? '/ja/guides'  : '/guides';
   const pricingPath = isJa ? '/ja/ryokin'  : '/pricing';
   const contactPath = isJa ? '/ja/contact' : '/contact';
   const companyPath = isJa ? '/ja/company' : '/company';
@@ -158,6 +159,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
+            <Link to={guidesPath} className={linkClass(guidesPath)}>{isJa ? 'お役立ち' : 'Guides'}</Link>
             <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
             <Link to={contactPath} className={linkClass(contactPath)}>{t('navbar.contact')}</Link>
             <Link to={companyPath} className={linkClass(companyPath)}>{t('navbar.company')}</Link>
