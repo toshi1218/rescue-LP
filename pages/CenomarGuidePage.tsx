@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, Clock, FileText, ArrowRight, MapPin, Shield } from 'lucide-react';
+import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, Clock, FileText, ArrowRight, MapPin, Shield, ExternalLink } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
@@ -443,26 +443,30 @@ export default function CenomarGuidePage() {
                 name: t('フィリピン大使館（東京）', 'PSA Online (PSAHelpline.com)'),
                 addr: t('東京都港区六本木5-15-5', 'Apply at PSAHelpline.com and choose international delivery'),
                 note: t('関東・東北・北海道方面の方', 'Delivered by international courier to your address'),
+                url: 'https://tokyo.philembassy.net/',
               },
               {
                 name: t('フィリピン総領事館（大阪）', 'Philippine Embassy / Consulate in Your Country'),
                 addr: t('大阪府大阪市中央区久太郎町1-9-16', 'Visit the nearest Philippine Embassy or Consulate — advance appointment required'),
                 note: t('近畿・中国・四国方面の方', 'Check the DFA website for your nearest consulate'),
+                url: 'https://osakapcg.dfa.gov.ph/',
               },
               {
                 name: t('フィリピン総領事館（名古屋）', 'Proxy Service (Recommended)'),
                 addr: t('愛知県名古屋市中村区名駅4-4-38', 'Our Cebu-based team applies at PSA on your behalf and ships worldwide'),
                 note: t('東海・北陸・甲信越方面の方', 'No travel required — fastest and most reliable option'),
+                url: 'https://nagoyapcg.dfa.gov.ph/',
               },
             ].map((office) => (
-              <div key={office.name} className="flex gap-3 bg-white border border-gray-100 rounded-lg p-4 shadow-card">
+              <a key={office.name} href={office.url} target="_blank" rel="noopener noreferrer" className="flex gap-3 bg-white border border-gray-100 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-sm font-bold text-secondary">{office.name}</p>
+                <div className="flex-1">
+                  <p className="text-sm font-bold text-secondary group-hover:text-primary">{office.name}</p>
                   <p className="text-xs text-gray-600 mt-0.5">{office.addr}</p>
                   <p className="text-xs text-gray-400 mt-0.5">{office.note}</p>
                 </div>
-              </div>
+                <ExternalLink className="w-4 h-4 text-gray-300 flex-shrink-0 mt-0.5 group-hover:text-primary" />
+              </a>
             ))}
           </div>
           <div className="mt-4 flex gap-3 bg-amber-50 border border-amber-200 rounded-lg p-4 text-xs text-amber-800">
