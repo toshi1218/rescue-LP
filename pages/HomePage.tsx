@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import QuickFacts from '../components/QuickFacts';
@@ -19,6 +20,16 @@ import { useMeta } from '../lib/useMeta';
 export default function HomePage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
+  const navigate = useNavigate();
+
+  // Client-side language detection: redirect Japanese browser users to /ja/
+  // This runs only in the browser — Googlebot (en-US) is unaffected.
+  useEffect(() => {
+    const browserLang = navigator.language || '';
+    if (/^ja\b/i.test(browserLang)) {
+      navigate('/ja/', { replace: true });
+    }
+  }, [navigate]);
 
   useMeta(
     'フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【2026年対応】',
