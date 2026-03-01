@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MapPin, Clock, Building2, Globe, FileCheck, Users, Target, Heart, Award, CheckCircle, ArrowRight } from 'lucide-react';
+import { Mail, MapPin, Clock, Building2, Globe, FileCheck, Users, Target, Heart, Award, CheckCircle, ArrowRight, Scale, ShieldAlert } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
@@ -414,6 +414,82 @@ export default function CompanyPage() {
                   </ul>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 法務連携について */}
+        <section className="mb-10">
+          <h2 className="text-lg font-bold text-secondary mb-4 flex items-center gap-2">
+            <Scale className="w-5 h-5 text-primary" />
+            {t('法務が関係する案件について', 'Cases Involving Legal Procedures')}
+          </h2>
+          <div className="bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden">
+            <div className="p-6 space-y-4">
+              <p className="text-sm text-gray-700 leading-relaxed">
+                {t(
+                  '不動産・相続・銀行など、フィリピン国内で法務手続きが必要となる案件については、フィリピンの弁護士が受任して対応します。日本国内の法務手続きは日本の弁護士等の専門家領域です。',
+                  'For cases requiring legal procedures in the Philippines — such as real estate, inheritance, or banking matters — a Philippine attorney will accept and handle the engagement. Legal procedures within Japan fall under the domain of Japanese attorneys and specialists.'
+                )}
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed font-medium">
+                {t(
+                  'IGRSは、記録取得・現地確認・証跡保全・案件管理を担当し、法律相談や法的判断は行いません。',
+                  'IGRS handles document retrieval, on-site verification, evidence preservation, and case management. We do not provide legal consultations or legal judgments.'
+                )}
+              </p>
+
+              {/* 役割分担 */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+                <div className="bg-secondary/5 rounded-xl p-4">
+                  <p className="text-xs font-bold text-secondary mb-2 uppercase tracking-wide">
+                    {t('IGRSが担当すること', 'What IGRS Handles')}
+                  </p>
+                  <ul className="space-y-1.5">
+                    {[
+                      t('フィリピン書類・記録の取得', 'Document & record retrieval in the Philippines'),
+                      t('現地確認・証跡保全', 'On-site verification & evidence preservation'),
+                      t('案件管理・進捗報告', 'Case management & progress reporting'),
+                      t('必要に応じた弁護士との調整窓口', 'Coordination with attorneys as needed'),
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-xs text-gray-700">
+                        <CheckCircle className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-4">
+                  <p className="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wide">
+                    {t('弁護士が担当すること', 'What Attorneys Handle')}
+                  </p>
+                  <ul className="space-y-1.5">
+                    {[
+                      t('法務案件の受任・見積・請求', 'Accepting, quoting & billing for legal matters'),
+                      t('法的判断・法律相談', 'Legal judgments & legal consultations'),
+                      t('法務手続きの遂行責任', 'Responsibility for legal procedure execution'),
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-xs text-gray-600">
+                        <CheckCircle className="w-3.5 h-3.5 text-gray-400 flex-shrink-0 mt-0.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* 免責事項 */}
+              <div className="flex gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4 mt-2">
+                <ShieldAlert className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <p className="text-xs font-bold text-amber-800">{t('免責事項', 'Disclaimer')}</p>
+                  <ul className="space-y-1 text-xs text-amber-700">
+                    <li>・{t('IGRSは法律相談・法的判断を提供しません', 'IGRS does not provide legal consultations or legal judgments')}</li>
+                    <li>・{t('弁護士業務は弁護士が受任し、弁護士の責任で遂行します', 'Legal engagements are accepted and executed under the responsibility of the attorney')}</li>
+                    <li>・{t('提出先による受理や手続き結果を保証するものではありません', 'We do not guarantee acceptance by the receiving authority or the outcome of any procedure')}</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
