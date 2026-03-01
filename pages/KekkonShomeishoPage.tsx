@@ -14,38 +14,38 @@ export default function KekkonShomeishoPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('PSA婚姻証明書 取得方法【2026年最新版】費用・期間・国際結婚・配偶者ビザ向け', 'PSA Marriage Certificate: How to Get It [2026 Guide]'),
-    t('PSA婚姻証明書の取得方法・必要な場面・費用・期間を解説。国際結婚・配偶者ビザ申請に必要なフィリピン結婚証明書の代行取得に対応。', 'How to obtain a PSA Marriage Certificate from the Philippines. Required for international marriage and spouse visa applications. Retrieval service available.')
+    t('PSA婚姻証明書 取得方法【2026年最新版】費用・期間・国際結婚・配偶者ビザ向け', 'PSA Marriage Certificate: How to Get It for US Visa (CR-1/IR-1 & K-1) [2026]'),
+    t('PSA婚姻証明書の取得方法・必要な場面・費用・期間を解説。国際結婚・配偶者ビザ申請に必要なフィリピン結婚証明書の代行取得に対応。', 'How to obtain a Philippine PSA Marriage Certificate for US CR-1/IR-1 spousal visa NVC submission. With DFA Apostille authentication. Retrieval service ships to USA.')
   );
 
   const faqs = [
     {
       q: t('PSA婚姻証明書とはどのような書類ですか？', 'What is a PSA Marriage Certificate?'),
-      a: t('PSA婚姻証明書（PSA Marriage Certificate）は、フィリピン統計局（PSA）が発行する婚姻の公式記録です。婚姻した日時・場所・両者の情報が記載されており、フィリピン国内で法的に婚姻が成立したことを証明します。日本での国際結婚報告届・配偶者ビザ申請などで必要になります。', 'The PSA Marriage Certificate is an official record of marriage issued by the Philippine Statistics Authority (PSA). It contains the date, location, and information of both parties of the marriage, certifying that the marriage was legally established in the Philippines. It is required for reporting international marriages in Japan and for spouse visa applications.'),
+      a: t('PSA婚姻証明書（PSA Marriage Certificate）は、フィリピン統計局（PSA）が発行する婚姻の公式記録です。婚姻した日時・場所・両者の情報が記載されており、フィリピン国内で法的に婚姻が成立したことを証明します。日本での国際結婚報告届・配偶者ビザ申請などで必要になります。', 'The PSA Marriage Certificate is an official marriage record issued by the Philippine Statistics Authority (PSA). It documents the date, location, and details of both parties, certifying the marriage was legally established in the Philippines. It is required for US CR-1/IR-1 spousal immigrant visa NVC submissions and is also relevant when a previously married Filipino applies for a K-1 visa.'),
     },
     {
       q: t('PSA婚姻証明書はいつ取得できますか？', 'When can I obtain a PSA Marriage Certificate?'),
       a: t('フィリピンの地方市役所（Local Civil Registry）で婚姻が登録された後、PSAのデータベースに記録されるまで通常3〜6ヶ月かかります。PSAへの登録が完了してからPSA婚姻証明書の申請・取得が可能になります。', 'After the marriage is registered at the Philippine Local Civil Registry, it typically takes 3–6 months for the record to appear in the PSA database. Once registration is complete, you can apply for and obtain the PSA Marriage Certificate.'),
     },
     {
-      q: t('日本の婚姻届提出後にPSA婚姻証明書は必要ですか？', 'Is a PSA Marriage Certificate required after submitting a marriage registration in Japan?'),
-      a: t('「日本先行婚姻」の場合、日本での婚姻届が受理されたら、次にフィリピン大使館で「婚姻の報告的届出（Report of Marriage）」を行います。この際にPSA婚姻証明書は不要で、日本の戸籍謄本等を使います。ただし、配偶者ビザ申請では必要になる場合があります。', 'For "Japan-first marriage," after the Japanese marriage registration is accepted, you file a "Report of Marriage" at the Philippine Embassy. A PSA Marriage Certificate is not required for this step — a Japanese family register (koseki) is used instead. However, it may be required for spouse visa applications.'),
+      q: t('日本の婚姻届提出後にPSA婚姻証明書は必要ですか？', 'Is a PSA Marriage Certificate required for the CR-1/IR-1 or K-1 visa?'),
+      a: t('「日本先行婚姻」の場合、日本での婚姻届が受理されたら、次にフィリピン大使館で「婚姻の報告的届出（Report of Marriage）」を行います。この際にPSA婚姻証明書は不要で、日本の戸籍謄本等を使います。ただし、配偶者ビザ申請では必要になる場合があります。', 'For the CR-1/IR-1 spousal immigrant visa: yes, the PSA Marriage Certificate is required for NVC document submission and must have DFA Apostille. For the K-1 fiancé visa: if the Filipino applicant was previously married and divorced/annulled, a PSA Marriage Certificate from the prior marriage (plus proof of dissolution) may be required. For first-time unmarried K-1 applicants, a CENOMAR is typically sufficient.'),
     },
     {
       q: t('PSA婚姻証明書の有効期限はありますか？', 'Does the PSA Marriage Certificate have an expiration date?'),
       a: t('法的な有効期限はありませんが、提出先の機関（入管・大使館など）が「発行から6ヶ月以内」を求める場合があります。使用予定日から逆算して取得することをおすすめします。', 'There is no legal expiration date, but submitting institutions (immigration, embassy, etc.) may require documents issued within 6 months. We recommend obtaining it by calculating backward from your intended date of use.'),
     },
     {
-      q: t('フィリピン先行婚姻でPSA婚姻証明書が届くまでの間、何もできませんか？', 'Is there nothing I can do while waiting for the PSA Marriage Certificate after a Philippines-first marriage?'),
-      a: t('PSA婚姻証明書の発行（3〜6ヶ月）を待つ間、日本での婚姻届提出はできません。ただし、配偶者ビザの申請準備（NBI Clearanceの取得など）は並行して進めることができます。スケジュールを見通して準備しましょう。', 'While waiting for the PSA Marriage Certificate to be issued (3–6 months), you cannot submit a marriage registration in Japan. However, you can simultaneously prepare for a spouse visa application (such as obtaining an NBI Clearance). Plan your schedule accordingly.'),
+      q: t('フィリピン先行婚姻でPSA婚姻証明書が届くまでの間、何もできませんか？', 'Can I start the CR-1/IR-1 process while waiting for the PSA Marriage Certificate?'),
+      a: t('PSA婚姻証明書の発行（3〜6ヶ月）を待つ間、日本での婚姻届提出はできません。ただし、配偶者ビザの申請準備（NBI Clearanceの取得など）は並行して進めることができます。スケジュールを見通して準備しましょう。', 'Yes. The US citizen petitioner can file Form I-130 with USCIS immediately after the marriage. You do not need the PSA Marriage Certificate at the I-130 stage. However, it will be required later at the NVC document submission stage, so order it as soon as possible — PSA registration takes 3–6 months after the marriage at the Local Civil Registry. Use that time to also obtain NBI Clearance and PSA Birth Certificate.'),
     },
     {
       q: t('PSA婚姻証明書はどこで申請できますか？', 'Where can I apply for a PSA Marriage Certificate?'),
-      a: t('PSA Helpline（PSAHelpline.com）でオンライン申請できます。フィリピン国内ではPSAのサービスセンターや郵便局（PhilPost）でも申請が可能です。日本から自分で申請する場合は国際配送に時間がかかります。代行サービスを利用すると、書類の取得状況の確認から発送まで日本語でサポートします。', 'You can apply online at PSA Helpline (PSAHelpline.com). Within the Philippines, applications can also be made at PSA service centers or post offices (PhilPost). When applying yourself from Japan, international shipping takes time. Using a proxy service provides Japanese-language support from status checking to delivery.'),
+      a: t('PSA Helpline（PSAHelpline.com）でオンライン申請できます。フィリピン国内ではPSAのサービスセンターや郵便局（PhilPost）でも申請が可能です。日本から自分で申請する場合は国際配送に時間がかかります。代行サービスを利用すると、書類の取得状況の確認から発送まで日本語でサポートします。', 'You can apply online at PSA Helpline (PSAHelpline.com). Within the Philippines, you can also apply at PSA service centers or PhilPost offices. When applying from the USA, international shipping takes time. Our retrieval service handles everything in the Philippines — from PSA application to DFA Apostille — and ships directly to your US address via DHL.'),
     },
     {
       q: t('PSA婚姻証明書を複数部取得することはできますか？', 'Can I obtain multiple copies of the PSA Marriage Certificate?'),
-      a: t('はい、PSA婚姻証明書は複数部の申請が可能です。配偶者ビザ申請・大使館提出・日本の市区町村役場提出など、複数の手続きで必要になることがあります。必要部数を事前に把握した上でまとめて申請することをおすすめします。', 'Yes, multiple copies of the PSA Marriage Certificate can be requested. It may be needed for multiple procedures such as spouse visa applications, embassy submissions, and Japanese municipal office submissions. We recommend determining the number of copies needed in advance and applying for them all at once.'),
+      a: t('はい、PSA婚姻証明書は複数部の申請が可能です。配偶者ビザ申請・大使館提出・日本の市区町村役場提出など、複数の手続きで必要になることがあります。必要部数を事前に把握した上でまとめて申請することをおすすめします。', 'Yes, multiple copies can be requested at once. For the CR-1/IR-1 process, you may need one for NVC submission, one for the embassy interview, and one to keep. We recommend ordering at least 2–3 copies with DFA Apostille to avoid delays from re-ordering later.'),
     },
     {
       q: t('フィリピンでの婚姻が無効・取り消しになった場合、PSA婚姻証明書はどうなりますか？', 'What happens to the PSA Marriage Certificate if the marriage in the Philippines is annulled?'),
@@ -119,14 +119,14 @@ export default function KekkonShomeishoPage() {
 
   const tocItems = t(
     'PSA婚姻証明書とは,必要になる場面,基本情報,取得方法,日本先行 vs フィリピン先行での違い,よくあるトラブル,よくある質問（FAQ）,お問い合わせ',
-    'What Is the PSA Marriage Certificate,When Is It Required,Basic Information,How to Obtain,Japan-First vs Philippines-First Differences,Common Issues,FAQ,Contact'
+    'What Is the PSA Marriage Certificate,When Is It Required,Basic Information,How to Obtain,CR-1/IR-1 vs K-1 Usage,Common Issues,FAQ,Contact'
   ).split(',');
 
   const useCases = [
-    { title: t('日本の市区町村役場への婚姻届（フィリピン先行婚姻の場合）', 'Marriage Registration at Japanese Municipal Office (Philippines-first marriage)'), desc: t('フィリピンで先に婚姻手続きをした場合、日本への「報告的届出」にPSA婚姻証明書が必要です。', 'If you married in the Philippines first, the PSA Marriage Certificate is required for the "report-type registration" in Japan.') },
-    { title: t('配偶者ビザ（在留資格）の申請', 'Spouse Visa (Residence Status) Application'), desc: t('日本の入管に配偶者ビザを申請する際、婚姻の証明としてPSA婚姻証明書を求められます。', 'When applying for a spouse visa at the Japanese immigration authority, the PSA Marriage Certificate is required as proof of marriage.') },
-    { title: t('フィリピン大使館での婚姻報告（日本先行婚姻の場合）', 'Marriage Report at Philippine Embassy (Japan-first marriage)'), desc: t('日本で婚姻届が受理された後、フィリピン大使館への「Report of Marriage」手続きで使用する場合があります（日本の戸籍謄本で代替可能なことも）。', 'After the Japanese marriage registration is accepted, it may be used for the "Report of Marriage" procedure at the Philippine Embassy (a Japanese family register may also be acceptable).') },
-    { title: t('子どもの出生登録・国籍確認', 'Child\'s Birth Registration & Nationality Confirmation'), desc: t('両親の婚姻を証明する書類として使用します。', 'Used as a document to prove the parents\' marriage.') },
+    { title: t('日本の市区町村役場への婚姻届（フィリピン先行婚姻の場合）', 'CR-1/IR-1 Spousal Immigrant Visa — NVC Document Submission'), desc: t('フィリピンで先に婚姻手続きをした場合、日本への「報告的届出」にPSA婚姻証明書が必要です。', 'The PSA Marriage Certificate (with DFA Apostille) is required by the National Visa Center (NVC) as proof of the marriage for the CR-1/IR-1 immigrant visa process.') },
+    { title: t('配偶者ビザ（在留資格）の申請', 'US Embassy Interview — CR-1/IR-1 Visa'), desc: t('日本の入管に配偶者ビザを申請する際、婚姻の証明としてPSA婚姻証明書を求められます。', 'The PSA Marriage Certificate is also required at the US Embassy Manila visa interview as part of the immigrant visa package.') },
+    { title: t('フィリピン大使館での婚姻報告（日本先行婚姻の場合）', 'K-1 Fiancé Visa — Prior Marriage History'), desc: t('日本で婚姻届が受理された後、フィリピン大使館への「Report of Marriage」手続きで使用する場合があります（日本の戸籍謄本で代替可能なことも）。', 'If the Filipino K-1 applicant was previously married, the PSA Marriage Certificate from the prior marriage (plus proof of annulment or death certificate) must be submitted at the embassy interview.') },
+    { title: t('子どもの出生登録・国籍確認', 'Child\'s US Citizenship or Permanent Residence'), desc: t('両親の婚姻を証明する書類として使用します。', 'Used to prove the parents\' marriage when filing for a child\'s US citizenship documentation or immigrant visa.') },
   ];
 
   const basicInfo = [
@@ -155,19 +155,19 @@ export default function KekkonShomeishoPage() {
       label: t('方法② おすすめ', 'Option ② Recommended'),
       title: t('代行サービスに依頼', 'Use a Proxy Service'),
       items: [
-        t('日本語のみでやり取り完結', 'All communication in Japanese'),
+        t('日本語のみでやり取り完結', 'All communication in English via email'),
         t('書類確認から郵送まで一括サポート', 'One-stop support from document verification to mailing'),
         t('フィリピン先行婚姻後の登録状況確認も対応', 'Also handles registration status verification after Philippines-first marriage'),
       ],
-      pros: t('手間ゼロ。日本語サポートあり', 'Zero hassle. Japanese support available.'),
+      pros: t('手間ゼロ。日本語サポートあり', 'Zero hassle. English support. Ships to USA.'),
       cons: t('代行手数料がかかる', 'Proxy service fee required'),
       color: 'border-primary',
     },
   ];
 
   const comparisonRows = [
-    [t('日本先行婚姻', 'Country-first marriage'), t('配偶者ビザ申請・大使館Report of Marriage時に必要な場合あり', 'May be required for spouse visa application or embassy Report of Marriage'), t('婚姻届受理後（数ヶ月以内）', 'After marriage registration (within a few months)')],
-    [t('フィリピン先行婚姻', 'Philippines-first marriage'), t('日本への婚姻届（報告的届出）に必須', 'Required for marriage registration (report) in your country of residence'), t('フィリピン婚姻から3〜6ヶ月後以降', '3–6 months after Philippines marriage')],
+    [t('日本先行婚姻', 'CR-1/IR-1 Visa (married in Philippines)'), t('配偶者ビザ申請・大使館Report of Marriage時に必要な場合あり', 'Required at NVC document stage and US Embassy interview. Must have DFA Apostille.'), t('婚姻届受理後（数ヶ月以内）', '3–6 months after marriage (PSA registration time)')],
+    [t('フィリピン先行婚姻', 'K-1 Visa (fiancé — prior marriage only)'), t('日本への婚姻届（報告的届出）に必須', 'Only required if the Filipino applicant was previously married. Proof of dissolution also needed.'), t('フィリピン婚姻から3〜6ヶ月後以降', 'Before the embassy interview date')],
   ];
 
   const contentRows = [
@@ -183,14 +183,14 @@ export default function KekkonShomeishoPage() {
     { check: t('婚姻日・婚姻場所が実際と一致しているか', 'Marriage date and location match actual records'), note: t('年月日の順番・場所名の英語表記を確認', 'Check date order and English spelling of location') },
     { check: t('PSA発行のSECPA（セキュリティペーパー）で発行されているか', 'Issued on PSA SECPA (security paper)'), note: t('PSAの透かし・公印が確認できるか', 'PSA watermark and official seal visible') },
     { check: t('発行日が十分に新しいか（6ヶ月以内）', 'Issued recently enough (within 6 months)'), note: t('提出先によって異なる。必要なら再取得', 'Varies by submitting institution. Re-obtain if needed.') },
-    { check: t('日本語翻訳が必要かどうか確認する', 'Check whether Japanese translation is required'), note: t('日本の役場・入管に提出する場合は必要', 'Required for submission to Japanese municipal office or immigration') },
-    { check: t('DFAアポスティーユが必要かどうか確認する', 'Check whether DFA Apostille is required'), note: t('配偶者ビザ申請等では求められることがある', 'May be required for spouse visa applications, etc.') },
+    { check: t('日本語翻訳が必要かどうか確認する', 'Check whether a certified English translation is required'), note: t('日本の役場・入管に提出する場合は必要', 'PSA documents are already in English, but USCIS/NVC may require a certified translation if any entry is unclear') },
+    { check: t('DFAアポスティーユが必要かどうか確認する', 'Confirm DFA Apostille is attached'), note: t('配偶者ビザ申請等では求められることがある', 'Required for NVC submission. Always include Apostille for CR-1/IR-1 applications.') },
   ];
 
   const costItems = [
-    { item: t('PSA婚姻証明書 取得代行', 'PSA Marriage Certificate Procurement'), cost: t('約40,000円〜', 'From ¥40,000'), note: t('PSA手数料・国際郵便込み', 'Includes PSA fee and international postage') },
-    { item: t('PSA婚姻証明書 + DFAアポスティーユ セット', 'PSA Marriage Certificate + DFA Apostille Set'), cost: t('約60,000円〜', 'From ¥60,000'), note: t('DFA手数料・認証費用込み', 'Includes DFA fee and authentication costs') },
-    { item: t('PSA登録状況の確認（事前照会）', 'PSA Registration Status Verification'), cost: t('別途お見積もり', 'Quote on request'), note: t('フィリピン先行婚姻後の登録確認', 'Registration check after Philippines-first marriage') },
+    { item: t('PSA婚姻証明書 取得代行', 'PSA Marriage Certificate Retrieval'), cost: t('約40,000円〜', 'From US$259'), note: t('PSA手数料・国際郵便込み', 'Includes PSA fee and DHL shipping to USA') },
+    { item: t('PSA婚姻証明書 + DFAアポスティーユ セット', 'PSA Marriage Certificate + DFA Apostille'), cost: t('約60,000円〜', 'From US$389'), note: t('DFA手数料・認証費用込み', 'Includes DFA authentication and DHL shipping') },
+    { item: t('PSA登録状況の確認（事前照会）', 'PSA Registration Status Verification'), cost: t('別途お見積もり', 'Quote on request'), note: t('フィリピン先行婚姻後の登録確認', 'Check if your marriage record is in the PSA database') },
   ];
 
   const troubleItems = [
@@ -200,10 +200,10 @@ export default function KekkonShomeishoPage() {
   ];
 
   const relatedLinks = [
-    { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'Philippine International Marriage Guide'), desc: t('日本先行・フィリピン先行の手続き流れ', 'Country-first and Philippines-first procedure overview') },
-    { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, costs, and timeframes') },
+    { to: t('/ja/kokusai-kekkon-guide', '/cr1-visa-documents'), title: t('フィリピン国際結婚ガイド', 'CR-1/IR-1 Visa Documents Guide'), desc: t('日本先行・フィリピン先行の手続き流れ', 'Full checklist of Philippine documents for the CR-1/IR-1 spouse visa') },
+    { to: t('/ja/cenomar', '/cenomar/'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, costs, and timeframes') },
     { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain a birth certificate and key notes') },
-    { to: t('/ja/haigusha-visa', '/spouse-visa-documents'), title: t('配偶者ビザ書類ガイド', 'Spouse Visa Document Guide'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents required for a spouse visa') },
+    { to: t('/ja/haigusha-visa', '/k1-visa-documents'), title: t('配偶者ビザ書類ガイド', 'K-1 Fiancé Visa Documents Guide'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'CENOMAR, PSA Birth Certificate & NBI Clearance for the K-1 fiancé visa') },
   ];
 
   return (
@@ -222,7 +222,7 @@ export default function KekkonShomeishoPage() {
           {lang === 'ja' ? (
             <>フィリピンPSA婚姻証明書の取得方法<br className="hidden md:block" />国際結婚・配偶者ビザで必要な理由【2026年最新】</>
           ) : (
-            <>How to Obtain a Philippine PSA Marriage Certificate<br className="hidden md:block" />Why It&apos;s Required for International Marriage &amp; Spouse Visa [2026]</>
+            <>How to Obtain a Philippine PSA Marriage Certificate<br className="hidden md:block" />Required for US CR-1/IR-1 Spouse Visa (NVC) [2026]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月22日 ｜ 株式会社IGRS', 'Last updated: February 22, 2026 | IGRS Inc.')}</p>
@@ -248,7 +248,7 @@ export default function KekkonShomeishoPage() {
             )}
           </p>
           <p className="text-sm leading-relaxed text-gray-700">
-            {t('CENOMARが「独身」を証明するのに対し、PSA婚姻証明書は「フィリピンで法的に婚姻が成立した」ことを証明します。フィリピン先行婚姻後の日本への婚姻届報告や、配偶者ビザ申請で使用します。', 'While the CENOMAR proves "single" status, the PSA Marriage Certificate proves that a marriage was legally established in the Philippines. It is used for reporting the marriage in Japan after a Philippines-first marriage, and for spouse visa applications.')}
+            {t('CENOMARが「独身」を証明するのに対し、PSA婚姻証明書は「フィリピンで法的に婚姻が成立した」ことを証明します。フィリピン先行婚姻後の日本への婚姻届報告や、配偶者ビザ申請で使用します。', 'While the CENOMAR proves "single" status, the PSA Marriage Certificate proves a marriage was legally established in the Philippines. It is a core document for the US CR-1/IR-1 spousal immigrant visa NVC submission, and is also needed for K-1 applicants with prior marriage history.')}
           </p>
         </section>
 
@@ -317,7 +317,7 @@ export default function KekkonShomeishoPage() {
 
         {/* Section 5 */}
         <section id="ks-5" className="mb-10">
-          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">5. {t('日本先行 vs フィリピン先行での違い', 'Country-First vs Philippines-First Differences')}</h2>
+          <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">5. {t('日本先行 vs フィリピン先行での違い', 'CR-1/IR-1 vs K-1: When You Need a PSA Marriage Certificate')}</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -340,7 +340,7 @@ export default function KekkonShomeishoPage() {
           </div>
           <div className="mt-4 text-xs text-gray-500">
             {t('※ 詳しい手順は', '※ For detailed procedures, see the ')}
-            <Link to="/kokusai-kekkon-guide/" className="text-secondary underline">{t('フィリピン国際結婚ガイド', 'Philippine International Marriage Guide')}</Link>
+            <Link to={t('/ja/kokusai-kekkon-guide/', '/cr1-visa-documents/')} className="text-secondary underline">{t('フィリピン国際結婚ガイド', 'CR-1/IR-1 Visa Documents Guide')}</Link>
             {t('をご覧ください。', '.')}
           </div>
         </section>
@@ -379,7 +379,7 @@ export default function KekkonShomeishoPage() {
         <section className="mb-10">
           <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">{t('PSA婚姻証明書が届いたら確認すること', 'What to Check When Your PSA Marriage Certificate Arrives')}</h2>
           <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-card">
-            <p className="text-sm text-gray-700 mb-4">{t('書類が届いたら、日本への婚姻届・ビザ申請に使用する前に以下をチェックしてください。', 'When documents arrive, check the following before using them for Japanese marriage registration or visa applications.')}</p>
+            <p className="text-sm text-gray-700 mb-4">{t('書類が届いたら、日本への婚姻届・ビザ申請に使用する前に以下をチェックしてください。', 'When documents arrive, verify the following before submitting to NVC or the US Embassy.')}</p>
             <div className="space-y-3">
               {arrivalCheckItems.map((item, i) => (
                 <div key={i} className="flex gap-3 items-start">
@@ -429,7 +429,7 @@ export default function KekkonShomeishoPage() {
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">{t('PSA婚姻証明書、まるごとお任せ', 'Leave PSA Marriage Certificate Procurement to Us')}</h2>
-          <p className="text-sm text-gray-300 mb-5">{t('PSAへの登録状況確認から取得・郵送まで、日本語でサポートします。', 'We support you in Japanese from registration status verification to procurement and mailing.')}</p>
+          <p className="text-sm text-gray-300 mb-5">{t('PSAへの登録状況確認から取得・郵送まで、日本語でサポートします。', 'From PSA registration verification to DFA Apostille and DHL shipping to the USA — we handle it all.')}</p>
           <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
             {t('無料相談する', 'Free Consultation')}
           </a>
