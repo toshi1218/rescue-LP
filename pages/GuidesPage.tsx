@@ -175,6 +175,13 @@ export default function GuidesPage() {
           tags: [t('目的別', 'By Purpose')],
           isPopular: false,
         },
+        {
+          to: t('/ja/us-visa-documents', '/us-visa-documents'),
+          title: t('米国ビザ（CR-1/IR-1・K-1）フィリピン書類ガイド', 'Philippine Documents for US Visa (CR-1/IR-1 & K-1)'),
+          desc: t('米国ビザ申請に必要なPSA・CENOMAR・NBI書類の取得方法とDFAアポスティーユを解説', 'How to obtain PSA, CENOMAR & NBI documents with DFA Apostille for US visa applications'),
+          tags: [t('目的別', 'By Purpose'), t('新着', 'New')],
+          isPopular: false,
+        },
       ],
     },
   ];
@@ -219,7 +226,7 @@ export default function GuidesPage() {
         {/* 統計バナー */}
         <div className="grid grid-cols-3 gap-3 mb-10">
           {[
-            { icon: <FileText className="w-5 h-5 text-primary" />, num: t('16本', '16'), label: t('ガイドページ', 'Guide Pages') },
+            { icon: <FileText className="w-5 h-5 text-primary" />, num: t('17本', '17'), label: t('ガイドページ', 'Guide Pages') },
             { icon: <HelpCircle className="w-5 h-5 text-primary" />, num: t('60+', '60+'), label: t('FAQ項目', 'FAQ Items') },
             { icon: <Clock className="w-5 h-5 text-primary" />, num: t('2026年', '2026'), label: t('最新情報', 'Latest Info') },
           ].map((item, i) => (

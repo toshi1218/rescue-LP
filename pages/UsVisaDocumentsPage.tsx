@@ -193,7 +193,7 @@ export default function UsVisaDocumentsPage() {
       <main className="max-w-2xl lg:max-w-3xl mx-auto px-4 py-10">
         {/* Breadcrumb */}
         <nav className="text-xs text-gray-400 mb-6" aria-label={t('パンくずリスト', 'Breadcrumb')}>
-          <Link to="/" className="hover:text-secondary">{t('ホーム', 'Home')}</Link>
+          <Link to={t('/ja/', '/')} className="hover:text-secondary">{t('ホーム', 'Home')}</Link>
           <span className="mx-1">/</span>
           <span className="text-gray-600">{t('米国ビザ書類ガイド', 'US Visa Documents Guide')}</span>
         </nav>
