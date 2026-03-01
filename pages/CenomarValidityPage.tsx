@@ -344,8 +344,8 @@ export default function CenomarValidityPage() {
               <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
               <p className="text-xs text-amber-800">
                 {t(
-                  '代行サービスを利用した場合、CENOMARの取得に2〜4週間かかります。HIT案件（同姓同名問題）が発生した場合はさらに2〜4週間追加される可能性があります。余裕をもったスケジュールで進めてください。',
-                  'When using a proxy service, CENOMAR acquisition typically takes 2–4 weeks. HIT cases (same-name matching issue) can add another 2–4 weeks. Plan with sufficient lead time.'
+                  '代行サービスを利用した場合、CENOMARの取得に2〜3週間かかります。HIT案件（同姓同名問題）が発生した場合はさらに2〜4週間追加される可能性があります。余裕をもったスケジュールで進めてください。',
+                  'When using a proxy service, CENOMAR acquisition typically takes 2–3 weeks. HIT cases (same-name matching issue) can add another 2–4 weeks. Plan with sufficient lead time.'
                 )}
               </p>
             </div>
@@ -375,7 +375,7 @@ export default function CenomarValidityPage() {
               },
               {
                 icon: <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />,
-                title: t('再取得にも同じく2〜4週間', 'Re-acquisition also takes 2–4 weeks'),
+                title: t('再取得にも同じく2〜3週間', 'Re-acquisition also takes 2–3 weeks'),
                 body: t(
                   '再取得の場合も通常の取得と同様の時間がかかります。手続きのタイムラインをあらかじめ把握しておくことが重要です。',
                   'Re-acquisition takes the same amount of time as initial acquisition. Understanding the procedure timeline in advance is crucial.'

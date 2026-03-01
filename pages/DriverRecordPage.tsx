@@ -64,8 +64,8 @@ export default function DriverRecordPage() {
     {
       q: t('外免切替の手続き全体にどのくらいかかりますか？', 'How long does the entire foreign license conversion process take?'),
       a: t(
-        'LTO書類取得（3〜8週間）＋DFAアポスティーユ（必要な場合・2〜4週間）＋日本への国際配送（1〜2週間）＋免許センターでの審査（当日〜数週間）というのが一般的な流れです。準備から完了まで最低2〜3ヶ月を見込んでください。',
-        'The general flow is: LTO document procurement (3–8 weeks) + DFA Apostille (if required, 2–4 weeks) + international shipping to Japan (1–2 weeks) + license center review (same day to several weeks). Plan for at least 2–3 months from preparation to completion.'
+        'LTO書類取得（3〜8週間）＋DFAアポスティーユ（必要な場合・約2週間）＋日本への国際配送（3〜5営業日）＋免許センターでの審査（当日〜数週間）というのが一般的な流れです。準備から完了まで最低2〜3ヶ月を見込んでください。',
+        'The general flow is: LTO document procurement (3–8 weeks) + DFA Apostille (if required, approx. 2 weeks) + international shipping to Japan (3–5 business days) + license center review (same day to several weeks). Plan for at least 2–3 months from preparation to completion.'
       ),
     },
   ];
@@ -322,8 +322,8 @@ export default function DriverRecordPage() {
                 step: 'STEP 5',
                 title: t('国際配送', 'International Shipping'),
                 desc: t(
-                  '書類をEMS等の国際郵便で日本にお届けします。通常1〜2週間でお手元に届きます。',
-                  'Documents are shipped to Japan via EMS or international mail. Typically arrives within 1–2 weeks.'
+                  '書類をEMS・DHL等の国際郵便で日本にお届けします。通常3〜5営業日でお手元に届きます。',
+                  'Documents are shipped to Japan via EMS, DHL, or international mail. Typically arrives within 3–5 business days.'
                 ),
               },
             ].map((s, i) => (
@@ -356,10 +356,10 @@ export default function DriverRecordPage() {
               <tbody>
                 {[
                   [t('LTO Driver\'s Record 取得', 'LTO Driver\'s Record Procurement'), t('3〜8週間', '3–8 weeks')],
-                  [t('DFAアポスティーユ認証（必要な場合）', 'DFA Apostille (if required)'), t('2〜4週間', '2–4 weeks')],
-                  [t('日本への国際配送', 'International Shipping to Japan'), t('1〜2週間', '1–2 weeks')],
-                  [t('合計（アポスティーユあり）', 'Total (with Apostille)'), t('6〜14週間', '6–14 weeks')],
-                  [t('合計（アポスティーユなし）', 'Total (without Apostille)'), t('4〜10週間', '4–10 weeks')],
+                  [t('DFAアポスティーユ認証（必要な場合）', 'DFA Apostille (if required)'), t('約2週間（10〜15営業日）', 'Approx. 2 weeks (10–15 business days)')],
+                  [t('日本への国際配送', 'International Shipping to Japan'), t('3〜5営業日', '3–5 business days')],
+                  [t('合計（アポスティーユあり）', 'Total (with Apostille)'), t('5〜11週間', '5–11 weeks')],
+                  [t('合計（アポスティーユなし）', 'Total (without Apostille)'), t('3〜9週間', '3–9 weeks')],
                 ].map(([stage, time], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="px-4 py-3 text-secondary border-b border-gray-100">{stage}</td>

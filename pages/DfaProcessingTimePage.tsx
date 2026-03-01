@@ -25,8 +25,8 @@ export default function DfaProcessingTimePage() {
         'How long does standard DFA Apostille processing take?'
       ),
       a: t(
-        '2026年現在、DFAアポスティーユの通常処理（Regular Processing）は申請から約5営業日が目安です。ただし申請件数・窓口の混雑状況によって変動することがあります。',
-        'As of 2026, DFA Apostille standard processing (Regular Processing) typically takes approximately 5 working days from application. This can vary depending on application volume and congestion at the office.'
+        '2026年現在、DFAアポスティーユの通常処理（Regular Processing）は申請から約2週間（10〜15営業日）が目安です。ただし申請件数・窓口の混雑状況によって変動することがあります。',
+        'As of 2026, DFA Apostille standard processing (Regular Processing) typically takes approximately 2 weeks (10–15 working days) from application. This can vary depending on application volume and congestion at the office.'
       ),
     },
     {
@@ -35,8 +35,8 @@ export default function DfaProcessingTimePage() {
         'How long does DFA Apostille express processing take?'
       ),
       a: t(
-        'エクスプレス処理（Expedited Processing）は通常3営業日が目安です。ただしDFAは「エクスプレス」の正式な時間保証をしていないため、繁忙期（クリスマスシーズン・連休前後）は遅れる場合があります。',
-        'Expedited processing typically takes about 3 working days. However, DFA does not provide an official time guarantee for "express" processing, so delays can occur during peak seasons (Christmas, national holidays).'
+        'エクスプレス処理（Expedited Processing）は通常3〜5営業日が目安です。ただしDFAは「エクスプレス」の正式な時間保証をしていないため、繁忙期（クリスマスシーズン・連休前後）は遅れる場合があります。',
+        'Expedited processing typically takes about 3–5 working days. However, DFA does not provide an official time guarantee for "express" processing, so delays can occur during peak seasons (Christmas, national holidays).'
       ),
     },
     {
@@ -181,19 +181,19 @@ export default function DfaProcessingTimePage() {
             {[
               {
                 label: t('通常処理', 'Regular Processing'),
-                days: t('5営業日', '5 working days'),
+                days: t('約2週間（10〜15営業日）', 'Approx. 2 weeks (10–15 working days)'),
                 sub: t('（目安。繁忙期は遅延あり）', '(guideline; delays possible during peak season)'),
                 color: 'border-secondary',
               },
               {
                 label: t('エクスプレス処理', 'Express Processing'),
-                days: t('3営業日', '3 working days'),
+                days: t('3〜5営業日', '3–5 working days'),
                 sub: t('（繁忙期は遅延あり）', '(delays possible during peak season)'),
                 color: 'border-primary',
               },
               {
                 label: t('代行サービス（書類取得含む）', 'Proxy Service (incl. document acquisition)'),
-                days: t('3〜6週間（目安）', '3–6 weeks (guideline)'),
+                days: t('4〜6週間（目安）', '4–6 weeks (guideline)'),
                 sub: t('（書類種別・HIT有無による）', '(varies by document type & HIT status)'),
                 color: 'border-blue-400',
               },
@@ -260,7 +260,7 @@ export default function DfaProcessingTimePage() {
               </thead>
               <tbody>
                 {[
-                  [t('処理日数（目安）', 'Processing Days (Guideline)'), t('5営業日', '5 working days'), t('3営業日', '3 working days')],
+                  [t('処理日数（目安）', 'Processing Days (Guideline)'), t('10〜15営業日（約2週間）', '10–15 working days (approx. 2 weeks)'), t('3〜5営業日', '3–5 working days')],
                   [t('公定料金（1通）', 'Official Fee (per document)'), '100 PHP', '200 PHP'],
                   [t('オンライン予約', 'Online Appointment'), t('必要', 'Required'), t('必要', 'Required')],
                   [t('繁忙期の遅延リスク', 'Delay Risk in Peak Season'), t('中程度', 'Moderate'), t('高め（保証なし）', 'Higher (no guarantee)')],
@@ -303,21 +303,21 @@ export default function DfaProcessingTimePage() {
               {
                 phase: t('Phase 1', 'Phase 1'),
                 title: t('PSA書類取得（CENOMAR・出生証明書等）', 'PSA Document Acquisition (CENOMAR, Birth Certificate, etc.)'),
-                duration: t('約2〜4週間', 'Approx. 2–4 weeks'),
+                duration: t('約2〜3週間', 'Approx. 2–3 weeks'),
                 note: t('NBI HIT案件は追加で2〜4週間', 'NBI HIT cases add 2–4 weeks'),
                 color: 'bg-primary/10 text-primary',
               },
               {
                 phase: t('Phase 2', 'Phase 2'),
                 title: t('DFAアポスティーユ認証', 'DFA Apostille Authentication'),
-                duration: t('通常：5営業日 / エクスプレス：3営業日', 'Regular: 5 working days / Express: 3 working days'),
+                duration: t('通常：約2週間（10〜15営業日） / エクスプレス：3〜5営業日', 'Regular: approx. 2 weeks (10–15 working days) / Express: 3–5 working days'),
                 note: t('繁忙期は遅延リスクあり', 'Delay risk during peak season'),
                 color: 'bg-secondary/10 text-secondary',
               },
               {
                 phase: t('Phase 3', 'Phase 3'),
                 title: t('国際配送（EMS / DHL等）', 'International Shipping (EMS / DHL, etc.)'),
-                duration: t('約1〜2週間', 'Approx. 1–2 weeks'),
+                duration: t('3〜5営業日', '3–5 business days'),
                 note: t('配送先・方法によって異なる', 'Varies by destination and shipping method'),
                 color: 'bg-green-100 text-green-700',
               },
@@ -338,7 +338,7 @@ export default function DfaProcessingTimePage() {
             ))}
             <div className="bg-secondary text-white rounded-lg p-4 text-center">
               <p className="text-sm font-bold">{t('トータル目安：', 'Total Guideline: ')}</p>
-              <p className="text-2xl font-bold text-primary mt-1">{t('3〜6週間', '3–6 weeks')}</p>
+              <p className="text-2xl font-bold text-primary mt-1">{t('約4〜6週間', 'Approx. 4–6 weeks')}</p>
               <p className="text-xs text-gray-300 mt-1">
                 {t('（PSA書類の種別・HIT有無・配送速度による）', '(Depends on PSA document type, HIT status, and shipping speed)')}
               </p>

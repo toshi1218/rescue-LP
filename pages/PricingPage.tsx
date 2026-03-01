@@ -44,7 +44,7 @@ export default function PricingPage() {
         ...(lang === 'en' ? ['DFA Apostille authentication included'] : []),
       ],
       details: {
-        period: t('約4週間', 'Approx. 4 weeks'),
+        period: t('約4〜6週間', 'Approx. 4–6 weeks'),
         note: t('※税・国際送料は別途', '* Apostille, tax & DHL intl. shipping included'),
         docs: [
           t('出生証明書（+ アポスティーユ）', 'Birth Certificate + DFA Apostille'),
@@ -68,7 +68,7 @@ export default function PricingPage() {
         ...(lang === 'en' ? ['MATCH FOUND resolution support'] : []),
       ],
       details: {
-        period: t('約4週間', 'Approx. 4 weeks'),
+        period: t('約4〜6週間', 'Approx. 4–6 weeks'),
         note: t('※税・国際送料は別途', '* Apostille, tax & DHL intl. shipping included'),
         docs: [
           t('NBI無犯罪証明書', 'NBI Clearance'),
@@ -87,7 +87,7 @@ export default function PricingPage() {
       note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
       highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'DHL shipping included')],
       details: {
-        period: t('約4週間', 'Approx. 4 weeks'),
+        period: t('約4〜6週間', 'Approx. 4–6 weeks'),
         note: t('※税・国際送料は別途', '* Tax & DHL intl. shipping included'),
         docs: [
           t('LTO運転免許証関連書類', 'LTO Driver\'s License Documents'),
@@ -110,7 +110,7 @@ export default function PricingPage() {
         ...(lang === 'en' ? ['Apostille Ready – submit directly to US immigration'] : []),
       ],
       details: {
-        period: t('約4週間', 'Approx. 4 weeks'),
+        period: t('約4〜6週間', 'Approx. 4–6 weeks'),
         note: t('※税・国際送料は別途', '* Apostille, tax & DHL intl. shipping included'),
         docs: [
           t('出生証明書（+ アポスティーユ）', 'Birth Certificate + DFA Apostille'),

@@ -376,13 +376,13 @@ export default function ApostilleFeePage() {
                   [
                     t('代行サービス（通常処理）', 'Proxy Service (Standard)'),
                     'US$80〜（全込み）',
-                    t('3〜5週間（配送含む）', '3–5 weeks (incl. shipping)'),
+                    t('4〜6週間（配送含む）', '4–6 weeks (incl. shipping)'),
                     t('日本在住・余裕あり', 'Japan residents, flexible timeline'),
                   ],
                   [
                     t('代行サービス（エクスプレス）', 'Proxy Service (Express)'),
                     'US$110〜（全込み）',
-                    t('2〜3週間（配送含む）', '2–3 weeks (incl. shipping)'),
+                    t('4〜5週間（配送含む）', '4–5 weeks (incl. shipping)'),
                     t('日本在住・急ぎ', 'Japan residents, urgent'),
                   ],
                 ].map(([method, cost, time, best], i) => (

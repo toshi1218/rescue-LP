@@ -65,8 +65,8 @@ export default function CenomarApostillePage() {
         'How long does it take to obtain Apostille authentication?'
       ),
       a: t(
-        'DFAアポスティーユ認証には通常1〜3週間程度かかります（エクスプレス処理の場合は数日）。CENOMARの取得期間（2〜4週間）と合わせると、トータルで1〜2ヶ月かかることが多いため、余裕をもったスケジュールで進めることをおすすめします。',
-        'DFA Apostille authentication typically takes 1–3 weeks (or a few days for express processing). Combined with CENOMAR acquisition (2–4 weeks), the total process often takes 1–2 months. We recommend planning well in advance.'
+        'DFAアポスティーユ認証には通常約2週間（10〜15営業日）かかります（エクスプレス処理の場合は3〜5営業日）。CENOMARの取得期間（2〜3週間）と国際配送（3〜5営業日）を合わせると、トータルで4〜6週間が目安です。余裕をもったスケジュールで進めることをおすすめします。',
+        'DFA Apostille authentication typically takes approximately 2 weeks (10–15 business days) (or 3–5 business days for express processing). Combined with CENOMAR acquisition (2–3 weeks) and international shipping (3–5 business days), the total guideline is approximately 4–6 weeks. We recommend planning well in advance.'
       ),
     },
     {

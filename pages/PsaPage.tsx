@@ -271,7 +271,7 @@ export default function PsaPage() {
                   [t('旧称', 'Former Name'), t('NSO出生証明書（同じ書類）', 'NSO Birth Certificate (same document)')],
                   [t('有効期限', 'Validity'), t('法的な期限なし（ただし6ヶ月以内のものを求められることが多い）', 'No legal expiration (but most institutions require one issued within 6 months)')],
                   [t('申請費用', 'Application Fee'), t('約365ペソ（約900円）＋配送料', 'Approx. 365 PHP (~$7 USD) + shipping')],
-                  [t('取得期間（代行）', 'Acquisition Time (Proxy)'), t('約3〜6週間', 'Approximately 3–6 weeks')],
+                  [t('取得期間（代行）', 'Acquisition Time (Proxy)'), t('約4〜6週間（PSA取得2〜3週間＋DFAアポスティーユ2週間＋国際配送3〜5営業日）', 'Approx. 4–6 weeks (PSA 2–3 wks + DFA Apostille 2 wks + shipping 3–5 business days)')],
                   [t('言語', 'Language'), t('英語', 'English')],
                 ].map(([k, v], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>

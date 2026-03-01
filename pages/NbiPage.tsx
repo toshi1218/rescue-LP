@@ -525,8 +525,8 @@ export default function NbiPage() {
                 num: '03',
                 title: t('DFAアポスティーユが必要かどうかを事前に確認する', 'Confirm Whether DFA Apostille Is Required'),
                 body: t(
-                  '日本の入管や大使館に提出するNBI Clearanceは、DFAアポスティーユ認証付きを求められる場合があります。提出先（入管の担当者・行政書士・大使館窓口）に事前に確認し、必要な場合はNBI取得と合わせてDFAアポスティーユもセットで代行依頼すると効率的です。アポスティーユ取得には別途1〜2週間かかります。',
-                  'NBI Clearance submitted to Japanese immigration or embassies may require DFA Apostille authentication. Confirm with the destination (immigration officer, administrative scrivener, embassy counter) in advance. If needed, requesting DFA Apostille together with NBI acquisition is more efficient. Obtaining Apostille takes an additional 1–2 weeks.'
+                  '日本の入管や大使館に提出するNBI Clearanceは、DFAアポスティーユ認証付きを求められる場合があります。提出先（入管の担当者・行政書士・大使館窓口）に事前に確認し、必要な場合はNBI取得と合わせてDFAアポスティーユもセットで代行依頼すると効率的です。アポスティーユ取得には別途約2週間（10〜15営業日）かかります。',
+                  'NBI Clearance submitted to Japanese immigration or embassies may require DFA Apostille authentication. Confirm with the destination (immigration officer, administrative scrivener, embassy counter) in advance. If needed, requesting DFA Apostille together with NBI acquisition is more efficient. Obtaining Apostille takes an additional approx. 2 weeks (10–15 business days).'
                 ),
               },
               {
