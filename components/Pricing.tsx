@@ -10,13 +10,13 @@ const plansData = {
       icon: FileText,
       title: 'PSA取得代行',
       subtitle: '出生証明書 / 婚姻証明書 / CENOMAR',
-      price: '¥50,000',
+      price: '¥40,000',
       usdRef: '$270',
-      note: '〜 (税・送料込み)',
-      highlights: ['役所申請手数料込み', 'DHL送料込み'],
+      note: '〜 (税・送料別)',
+      highlights: ['役所申請手数料込み', '国際送料別途'],
       details: {
         period: '約4週間',
-        note: '※税・DHL国際送料込みの価格',
+        note: '※税・国際送料は別途',
         docs: ['出生証明書（+ アポスティーユ）', '婚姻証明書（+ アポスティーユ）', 'CENOMAR（+ アポスティーユ）'],
       },
       featured: false,
@@ -26,13 +26,13 @@ const plansData = {
       icon: Fingerprint,
       title: 'NBI取得代行',
       subtitle: '無犯罪証明書の取得サポート',
-      price: '¥55,000',
+      price: '¥45,000',
       usdRef: '$300',
-      note: '〜 (税・送料込み)',
-      highlights: ['指紋採取サポート', 'DHL送料込み'],
+      note: '〜 (税・送料別)',
+      highlights: ['指紋採取サポート', '国際送料別途'],
       details: {
         period: '約4週間',
-        note: '※税・DHL国際送料込みの価格',
+        note: '※税・国際送料は別途',
         docs: ['NBI無犯罪証明書（+ アポスティーユ）'],
       },
       featured: false,
@@ -42,13 +42,13 @@ const plansData = {
       icon: FileText,
       title: 'LTO関連書類取得代行',
       subtitle: '運転免許関連書類の取得サポート（外免切り替え用）',
-      price: '¥100,000',
+      price: '¥85,000',
       usdRef: '$570',
-      note: '〜 (税・送料込み)',
-      highlights: ['役所申請手数料込み', 'DHL送料込み'],
+      note: '〜 (税・送料別)',
+      highlights: ['役所申請手数料込み', '国際送料別途'],
       details: {
         period: '約4週間',
-        note: '※税・DHL国際送料込みの価格',
+        note: '※税・国際送料は別途',
         docs: ['LTO運転免許証関連書類', 'LTOトランザクション履歴'],
       },
       featured: false,
@@ -58,13 +58,13 @@ const plansData = {
       icon: Gem,
       title: '国際結婚パック',
       subtitle: '婚姻済証明書申請に必要な書類一式',
-      price: '¥100,000',
+      price: '¥85,000',
       usdRef: '$570',
-      note: '〜 (税・送料込み)',
-      highlights: ['日本語翻訳込み', 'DHL国際送料込み'],
+      note: '〜 (税・送料別)',
+      highlights: ['日本語翻訳込み', '優先対応サポート'],
       details: {
         period: '約4週間',
-        note: '※税・DHL国際送料込みの価格',
+        note: '※税・国際送料は別途',
         docs: ['出生証明書（+ アポスティーユ）', 'セノマー独身証明書（+ アポスティーユ）'],
       },
       featured: true,
@@ -74,9 +74,9 @@ const plansData = {
       icon: Heart,
       title: '配偶者ビザ',
       subtitle: '在留資格「日本人の配偶者等」申請サポート',
-      price: '¥100,000',
+      price: '¥85,000',
       usdRef: '$570',
-      note: '〜 (税・送料込み)',
+      note: '〜 (税・送料別)',
       highlights: ['必要書類の準備サポート', '申請書類チェック'],
       details: {
         period: '要相談',
@@ -90,9 +90,9 @@ const plansData = {
       icon: Award,
       title: '帰化申請',
       subtitle: '日本国籍取得の申請サポート',
-      price: '¥100,000',
+      price: '¥85,000',
       usdRef: '$570',
-      note: '〜 (税・送料込み)',
+      note: '〜 (税・送料別)',
       highlights: ['必要書類の準備サポート', '継続的フォローアップ'],
       details: {
         period: '要相談',
@@ -314,7 +314,7 @@ const Pricing: React.FC = () => {
 
       <p className="text-xs text-gray-400 text-center mt-6 max-w-xl mx-auto leading-relaxed">
         {lang === 'ja'
-          ? '※表示価格はすべて税・DHL国際送料込みです。取得難易度により変動する場合があります。'
+          ? '※表示価格はすべて税抜きです。取得難易度により変動する場合があります。'
           : '* All prices include Philippine tax and DHL international shipping to the USA. Final amount may vary by document condition.'}
       </p>
     </section>
