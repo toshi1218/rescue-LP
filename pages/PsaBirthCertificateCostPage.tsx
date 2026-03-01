@@ -36,8 +36,8 @@ export default function PsaBirthCertificateCostPage() {
     {
       q: t('PSA出生証明書のDFAアポスティーユ認証の費用は別途かかりますか？', 'Is the DFA Apostille authentication fee for PSA birth certificates separate?'),
       a: t(
-        'はい、DFAアポスティーユ認証は別途費用がかかります。公式のDFA費用は1通あたりPHP 200（通常処理）またはPHP 400（エクスプレス）です。代行サービスでは、PSA取得＋DFAアポスティーユのセットプランで対応できます。',
-        'Yes, DFA Apostille authentication incurs a separate fee. The official DFA fee is PHP 200 per document (standard) or PHP 400 (express). Our proxy service offers a combined PSA acquisition + DFA Apostille set plan.'
+        'はい、DFAアポスティーユ認証は別途費用がかかります。公式のDFA費用は1通あたりPHP 100（通常処理）またはPHP 200（エクスプレス）です。代行サービスでは、PSA取得＋DFAアポスティーユのセットプランで対応できます。',
+        'Yes, DFA Apostille authentication incurs a separate fee. The official DFA fee is PHP 100 per document (standard) or PHP 200 (express). Our proxy service offers a combined PSA acquisition + DFA Apostille set plan.'
       ),
     },
     {

@@ -22,15 +22,15 @@ export default function ApostilleFeePage() {
     {
       q: t('DFAアポスティーユの公式費用はいくらですか？', 'What is the official DFA Apostille fee?'),
       a: t(
-        'DFA（フィリピン外務省）のアポスティーユ認証の公式費用は、通常処理でPHP 200（1通あたり）、エクスプレス処理でPHP 400（1通あたり）です。ただし、予約システム手数料やDFA公認カウンターの取り扱い手数料が別途かかる場合があります。',
-        'The official DFA (Department of Foreign Affairs) Apostille fee is PHP 200 per document (standard processing) or PHP 400 per document (express processing). However, additional booking system fees or handling fees at DFA-accredited counters may apply.'
+        'DFA（フィリピン外務省）のアポスティーユ認証の公式費用は、通常処理でPHP 100（1通あたり）、エクスプレス処理でPHP 200（1通あたり）です。ただし、予約システム手数料やDFA公認カウンターの取り扱い手数料が別途かかる場合があります。',
+        'The official DFA (Department of Foreign Affairs) Apostille fee is PHP 100 per document (standard processing) or PHP 200 per document (express processing). However, additional booking system fees or handling fees at DFA-accredited counters may apply.'
       ),
     },
     {
       q: t('エクスプレス申請は通常申請と何が違いますか？', 'What is the difference between express and standard DFA Apostille?'),
       a: t(
-        '通常処理（Standard）は10〜15営業日程度かかるのに対し、エクスプレス処理（Express）は3〜5営業日で完了します。エクスプレスは費用がPHP 200追加になりますが、急ぎの手続きには有効です。ただしエクスプレス枠は予約が埋まりやすいため、早めの予約が必要です。',
-        'Standard processing takes about 10–15 business days, while express processing is completed in 3–5 business days. Express costs an additional PHP 200, making it valuable for urgent procedures. However, express slots fill up quickly, so early booking is essential.'
+        '通常処理（Standard）は10〜15営業日程度かかるのに対し、エクスプレス処理（Express）は3〜5営業日で完了します。エクスプレスは費用がPHP 100追加になりますが、急ぎの手続きには有効です。ただしエクスプレス枠は予約が埋まりやすいため、早めの予約が必要です。',
+        'Standard processing takes about 10–15 business days, while express processing is completed in 3–5 business days. Express costs an additional PHP 100, making it valuable for urgent procedures. However, express slots fill up quickly, so early booking is essential.'
       ),
     },
     {
@@ -85,7 +85,7 @@ export default function ApostilleFeePage() {
           },
         },
         headline: 'DFA Apostille Fee Philippines 2026 — Official Rates, Express vs Standard & Proxy Pricing',
-        description: 'Complete DFA Apostille fee guide for 2026: PHP 200 standard vs PHP 400 express, proxy service pricing, and total cost estimates by document type.',
+        description: 'Complete DFA Apostille fee guide for 2026: PHP 100 standard vs PHP 200 express, proxy service pricing, and total cost estimates by document type.',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/apostille-fee/',
         inLanguage: 'en',
@@ -154,7 +154,7 @@ export default function ApostilleFeePage() {
             <div>
               <p className="text-sm font-bold text-blue-800 mb-1">{t('このページの結論（要点）', 'Key Summary')}</p>
               <ul className="text-sm text-blue-700 space-y-1">
-                <li>✓ {t('公式費用：PHP 200 /通（通常）・PHP 400 /通（エクスプレス）', 'Official fee: PHP 200/doc (standard) · PHP 400/doc (express)')}</li>
+                <li>✓ {t('公式費用：PHP 100 /通（通常）・PHP 200 /通（エクスプレス）', 'Official fee: PHP 100/doc (standard) · PHP 200/doc (express)')}</li>
                 <li>✓ {t('代行利用時の総費用：US$80〜（1通・国際配送込み）', 'Proxy service total: from US$80/doc (incl. international shipping)')}</li>
                 <li>✓ {t('PSA/CENOMAR/NBIとのセットプランがお得', 'Set plans with PSA/CENOMAR/NBI are more cost-effective')}</li>
                 <li>✓ {t('エクスプレス枠は予約制・早めの手配が必要', 'Express slots are by appointment — book early')}</li>
@@ -194,7 +194,7 @@ export default function ApostilleFeePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-card">
               <p className="text-xs font-bold text-gray-400 mb-1">{t('通常処理（Regular）', 'Standard Processing')}</p>
-              <p className="text-2xl font-bold text-secondary mb-1">PHP 200</p>
+              <p className="text-2xl font-bold text-secondary mb-1">PHP 100</p>
               <p className="text-xs text-gray-500 mb-3">{t('1通あたり', 'per document')}</p>
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-xs text-gray-600">
@@ -209,7 +209,7 @@ export default function ApostilleFeePage() {
             </div>
             <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 shadow-card">
               <p className="text-xs font-bold text-primary mb-1">{t('エクスプレス処理（Express）', 'Express Processing')}</p>
-              <p className="text-2xl font-bold text-secondary mb-1">PHP 400</p>
+              <p className="text-2xl font-bold text-secondary mb-1">PHP 200</p>
               <p className="text-xs text-gray-500 mb-3">{t('1通あたり', 'per document')}</p>
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-xs text-gray-600">
@@ -251,27 +251,27 @@ export default function ApostilleFeePage() {
                 {[
                   [
                     t('CENOMAR（独身証明書）', 'CENOMAR (Certificate of No Marriage)'),
-                    'PHP 200〜400',
+                    'PHP 100〜200',
                     t('通常/エクスプレスで変動', 'Varies: standard/express'),
                   ],
                   [
                     t('PSA出生証明書', 'PSA Birth Certificate'),
-                    'PHP 200〜400',
+                    'PHP 100〜200',
                     t('通常/エクスプレスで変動', 'Varies: standard/express'),
                   ],
                   [
                     t('NBI Clearance', 'NBI Clearance'),
-                    'PHP 200〜400',
+                    'PHP 100〜200',
                     t('NBI取得後にDFA申請', 'Apply to DFA after obtaining NBI'),
                   ],
                   [
                     t('PSA婚姻証明書', 'PSA Marriage Certificate'),
-                    'PHP 200〜400',
+                    'PHP 100〜200',
                     t('通常/エクスプレスで変動', 'Varies: standard/express'),
                   ],
                   [
                     t('LTO書類（運転記録）', 'LTO Documents (Driver Record)'),
-                    'PHP 200〜400',
+                    'PHP 100〜200',
                     t('LTO書類取得後にDFA申請', 'Apply to DFA after obtaining LTO docs'),
                   ],
                 ].map(([doc, fee, note], i) => (
@@ -363,13 +363,13 @@ export default function ApostilleFeePage() {
                 {[
                   [
                     t('DFA窓口・通常（自己申請）', 'DFA Counter Standard (Self)'),
-                    'PHP 200+手数料',
+                    'PHP 100+手数料',
                     t('10〜15営業日', '10–15 business days'),
                     t('フィリピン在住者', 'Philippines residents'),
                   ],
                   [
                     t('DFA窓口・エクスプレス（自己申請）', 'DFA Counter Express (Self)'),
-                    'PHP 400+手数料',
+                    'PHP 200+手数料',
                     t('3〜5営業日', '3–5 business days'),
                     t('フィリピン在住・急ぎ', 'Philippines residents, urgent'),
                   ],
