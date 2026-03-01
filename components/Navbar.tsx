@@ -9,6 +9,8 @@ const Navbar: React.FC = () => {
   const ctaVariant = getCtaVariant();
   const location = useLocation();
   const [openMenu, setOpenMenu] = useState<MenuType>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSection, setMobileSection] = useState<MenuType>(null);
   const [dropdownPos, setDropdownPos] = useState<{ left: number; top: number }>({ left: 0, top: 0 });
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const docsRef = useRef<HTMLDivElement>(null);
@@ -77,7 +79,19 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     setOpenMenu(null);
+    setMobileOpen(false);
+    setMobileSection(null);
   }, [location.pathname]);
+
+  // Close mobile menu on outside body scroll
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
 
   const handleMouseEnter = (menu: MenuType, ref: React.RefObject<HTMLDivElement>) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -142,7 +156,7 @@ const Navbar: React.FC = () => {
             </span>
           </Link>
         )}
-        <div className="flex items-center ml-2">
+        <div className="flex items-center gap-2 ml-2">
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact', variant: ctaVariant })}
@@ -150,6 +164,18 @@ const Navbar: React.FC = () => {
           >
             {t('navbar.cta')}
           </a>
+          {/* Hamburger button — mobile only */}
+          <button
+            type="button"
+            aria-label={mobileOpen ? (isJa ? 'メニューを閉じる' : 'Close menu') : (isJa ? 'メニューを開く' : 'Open menu')}
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen(prev => !prev)}
+            className="md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            <span className={`block w-5 h-0.5 bg-gray-600 transition-transform duration-200 ${mobileOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
+            <span className={`block w-5 h-0.5 bg-gray-600 mt-1 transition-opacity duration-200 ${mobileOpen ? 'opacity-0' : ''}`} />
+            <span className={`block w-5 h-0.5 bg-gray-600 mt-1 transition-transform duration-200 ${mobileOpen ? '-rotate-45 -translate-y-1.5' : ''}`} />
+          </button>
         </div>
       </div>
 
@@ -243,6 +269,108 @@ const Navbar: React.FC = () => {
               {tab.label}
             </Link>
           ))}
+        </div>
+      )}
+
+      {/* モバイルメニュー */}
+      {mobileOpen && (
+        <div className="md:hidden fixed inset-0 top-[104px] z-[200] bg-white overflow-y-auto">
+          <div className="px-4 py-4 space-y-1">
+            <Link to={homePath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-secondary hover:bg-gray-50">
+              {t('navbar.home')}
+            </Link>
+
+            {/* 書類から探す */}
+            <div>
+              <button
+                onClick={() => setMobileSection(mobileSection === 'docs' ? null : 'docs')}
+                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                {t('navbar.findByDoc')}
+                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'docs' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === 'docs' && (
+                <div className="ml-4 mt-1 space-y-0.5">
+                  {documentTabs.map(tab => (
+                    <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                      {tab.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* 目的から探す */}
+            <div>
+              <button
+                onClick={() => setMobileSection(mobileSection === 'purpose' ? null : 'purpose')}
+                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                {t('navbar.findByPurpose')}
+                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'purpose' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === 'purpose' && (
+                <div className="ml-4 mt-1 space-y-0.5">
+                  {purposeTabs.map(tab => (
+                    <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                      {tab.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* ガイド */}
+            <div>
+              <button
+                onClick={() => setMobileSection(mobileSection === 'guides' ? null : 'guides')}
+                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                {isJa ? 'お役立ちガイド' : 'Guides'}
+                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'guides' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === 'guides' && (
+                <div className="ml-4 mt-1 space-y-3">
+                  {guidesSections.map(section => (
+                    <div key={section.category}>
+                      <p className="px-3 pt-2 pb-1 text-[10px] font-bold text-gray-400 uppercase tracking-wide">{section.category}</p>
+                      {section.items.map(item => (
+                        <Link key={item.path} to={item.path} className="block px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                  <Link to={guidesPath} className="block px-3 py-2 text-sm text-primary font-medium hover:underline">
+                    {isJa ? 'すべてのガイドを見る →' : 'See all guides →'}
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div className="border-t border-gray-100 pt-2 mt-2 space-y-0.5">
+              <Link to={pricingPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.pricing')}</Link>
+              <Link to={contactPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.contact')}</Link>
+              <Link to={companyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.company')}</Link>
+              <Link to={privacyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.privacy')}</Link>
+            </div>
+
+            <div className="pt-3">
+              <a
+                href="#contact"
+                onClick={() => { trackEvent('cta_click', { location: 'mobile_menu', type: 'contact', variant: ctaVariant }); setMobileOpen(false); }}
+                className="block text-center text-sm font-bold text-white bg-primary px-6 py-3 rounded-xl hover:bg-primary-hover transition-colors shadow-md"
+              >
+                {t('navbar.cta')}
+              </a>
+            </div>
+          </div>
         </div>
       )}
 

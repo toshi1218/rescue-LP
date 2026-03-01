@@ -1,7 +1,9 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Mail, FileText, CreditCard, CheckCircle, PackageCheck } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
+
+const stepIcons = [Mail, FileText, CreditCard, CheckCircle, PackageCheck];
 
 const stepsData = {
   ja: [
@@ -38,18 +40,46 @@ const Process: React.FC = () => {
           <h2 className="text-xl font-bold">{t('process.title')}</h2>
         </div>
 
-        <div className="relative pl-6 space-y-8 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-white/20">
-          {steps.map((step) => (
-            <div key={step.num} className="relative group">
-              <div className="absolute -left-[1.65rem] top-1 w-6 h-6 rounded-full bg-primary border-4 border-secondary flex items-center justify-center z-10">
-                <span className="text-[10px] font-bold text-secondary">{step.num}</span>
+        {/* Desktop: horizontal flowchart */}
+        <div className="hidden md:flex items-start gap-0 mb-4">
+          {steps.map((step, idx) => {
+            const Icon = stepIcons[idx];
+            return (
+              <React.Fragment key={step.num}>
+                <div className="flex-1 flex flex-col items-center text-center px-2">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center mb-2 relative">
+                    <Icon className="w-5 h-5 text-primary" />
+                    <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-primary text-secondary text-[9px] font-bold flex items-center justify-center">{step.num}</span>
+                  </div>
+                  <h3 className="text-xs font-bold mb-1 leading-snug">{step.title}</h3>
+                  <p className="text-[10px] text-gray-300 leading-relaxed">{step.desc}</p>
+                </div>
+                {idx < steps.length - 1 && (
+                  <div className="flex-shrink-0 mt-5 text-primary/60">
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                )}
+              </React.Fragment>
+            );
+          })}
+        </div>
+
+        {/* Mobile: vertical timeline */}
+        <div className="md:hidden relative pl-6 space-y-6 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-white/20">
+          {steps.map((step, idx) => {
+            const Icon = stepIcons[idx];
+            return (
+              <div key={step.num} className="relative group">
+                <div className="absolute -left-[1.65rem] top-1 w-6 h-6 rounded-full bg-primary border-4 border-secondary flex items-center justify-center z-10">
+                  <Icon className="w-3 h-3 text-secondary" />
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:bg-white/15 transition-colors">
+                  <h3 className="font-bold mb-1 text-sm">{step.title}</h3>
+                  <p className="text-xs text-gray-300 leading-relaxed">{step.desc}</p>
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:bg-white/15 transition-colors">
-                <h3 className="font-bold mb-1">{step.title}</h3>
-                <p className="text-xs text-gray-300 leading-relaxed">{step.desc}</p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA Button */}

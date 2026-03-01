@@ -17,6 +17,35 @@ export default function PrivacyPolicyPage() {
     )
   );
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: t('ホーム', 'Home'), item: 'https://ph-document.com/' },
+          { '@type': 'ListItem', position: 2, name: t('プライバシーポリシー', 'Privacy Policy'), item: 'https://ph-document.com/privacy-policy/' },
+        ],
+      },
+      {
+        '@type': 'WebPage',
+        '@id': 'https://ph-document.com/privacy-policy/',
+        name: t('プライバシーポリシー｜フィリピン書類取得代行センター', 'Privacy Policy | Philippine Document Service'),
+        description: t(
+          'フィリピン書類取得代行センター（株式会社IGRS）のプライバシーポリシー。個人情報の収集・利用・管理方針についてご説明します。',
+          'Privacy policy of Philippine Document Service (IGRS Inc.). Explains how we collect, use, and manage your personal information.'
+        ),
+        url: 'https://ph-document.com/privacy-policy/',
+        inLanguage: lang,
+        publisher: {
+          '@type': 'Organization',
+          name: t('株式会社IGRS', 'IGRS Inc.'),
+          url: 'https://ph-document.com/',
+        },
+      },
+    ],
+  };
+
   const sections = [
     {
       title: t('個人情報の収集について', 'Collection of Personal Information'),
@@ -96,6 +125,7 @@ Email: igrs20200601@gmail.com`
 
   return (
     <div className="min-h-screen bg-background-light text-gray-800 font-body">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Navbar />
 
       <main className="max-w-2xl lg:max-w-3xl mx-auto px-4 py-10">
