@@ -142,13 +142,39 @@ export default function NbiPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/nbi-clearance-guide/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'フィリピンNBI無犯罪証明書（NBI Clearance）とは？日本から取得する方法【2026年】',
         description: 'NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。',
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/nbi-clearance-guide/',
         inLanguage: lang,
+        datePublished: '2025-11-01',
         dateModified: '2026-02-22',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'フィリピン書類取得代行センター',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.nbi.gov.ph',
+          'https://clearance.nbi.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

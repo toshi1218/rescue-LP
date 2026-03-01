@@ -139,13 +139,40 @@ export default function KokusaiKekkonGuidePage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/kokusai-kekkon-guide/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'Complete Guide to International Marriage with a Filipino/Filipina | Procedures, Documents & Costs [2026]',
         description: 'Step-by-step guide to international marriage with a Filipino/Filipina. Covers Japan-first and Philippines-first patterns, required documents (CENOMAR, PSA, etc.), costs, and timelines.',
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/kokusai-kekkon-guide/',
         inLanguage: lang,
+        datePublished: '2025-11-01',
         dateModified: '2026-02-22',
-        author: { '@type': 'Organization', name: 'IGRS Inc.' },
-        publisher: { '@type': 'Organization', name: 'Philippine Document Procurement Center' },
+        author: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Philippine Document Procurement Center',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://psa.gov.ph',
+          'https://www.dfa.gov.ph',
+          'https://www.mofa.go.jp',
+        ],
       },
       {
         '@type': 'FAQPage',

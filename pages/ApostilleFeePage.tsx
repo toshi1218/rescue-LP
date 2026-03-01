@@ -76,13 +76,39 @@ export default function ApostilleFeePage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/apostille-fee/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'DFA Apostille Fee Philippines 2026 — Official Rates, Express vs Standard & Proxy Pricing',
         description: 'Complete DFA Apostille fee guide for 2026: PHP 200 standard vs PHP 400 express, proxy service pricing, and total cost estimates by document type.',
-        url: 'https://ph-document.com/apostille-fee',
+        image: 'https://ph-document.com/og-image.png',
+        url: 'https://ph-document.com/apostille-fee/',
         inLanguage: 'en',
+        datePublished: '2025-12-01',
         dateModified: '2026-02-28',
-        author: { '@type': 'Organization', name: 'IGRS Inc.' },
-        publisher: { '@type': 'Organization', name: 'Philippine Document Service' },
+        author: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Philippine Document Service',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.dfa.gov.ph',
+          'https://apostille.dfa.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

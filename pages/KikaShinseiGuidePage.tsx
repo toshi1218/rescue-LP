@@ -85,13 +85,40 @@ export default function KikaShinseiGuidePage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/kika-shinsei-guide/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: t('フィリピン人の帰化申請ガイド｜必要書類・手続きの流れ・PSA・NBI取得【2026年最新】', 'Naturalization Guide for Philippine Nationals | Required Documents, Procedures, PSA & NBI [2026]'),
         description: t('フィリピン国籍の方が日本に帰化するための手続きの流れ・必要書類（PSA出生証明書・NBI Clearance等）・費用・審査期間をわかりやすく解説。', 'A comprehensive guide on the procedure, required documents (PSA Birth Certificate, NBI Clearance, etc.), costs, and review period for Philippine nationals applying for Japanese naturalization.'),
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/kika-shinsei-guide/',
         inLanguage: lang,
+        datePublished: '2025-11-01',
         dateModified: '2026-02-22',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: t('フィリピン書類取得代行センター', 'Philippine Document Procurement Center') },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: t('フィリピン書類取得代行センター', 'Philippine Document Procurement Center'),
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.moj.go.jp',
+          'https://psa.gov.ph',
+          'https://www.nbi.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

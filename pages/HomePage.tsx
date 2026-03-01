@@ -36,12 +36,38 @@ export default function HomePage() {
     t('CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。', 'We retrieve CENOMAR, PSA Birth/Marriage Certificates, NBI Clearance, and DFA Apostille from the Philippines on your behalf. Trusted by international couples. Free consultation.')
   );
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://ph-document.com/',
+        name: 'Philippine Document Retrieval Service | CENOMAR, PSA, NBI [2026]',
+        description: 'We retrieve CENOMAR, PSA Birth/Marriage Certificates, NBI Clearance, and DFA Apostille from the Philippines on your behalf. Trusted by international couples. Free consultation.',
+        url: 'https://ph-document.com/',
+        inLanguage: 'en',
+        dateModified: '2026-02-17',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', 'h2'],
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/' },
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     trackLandingView();
   }, []);
 
   return (
     <div className="min-h-screen bg-background-light text-gray-800 font-body">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] bg-white text-secondary text-sm font-bold px-3 py-2 rounded shadow">
         {t('メインコンテンツへスキップ', 'Skip to main content')}
       </a>

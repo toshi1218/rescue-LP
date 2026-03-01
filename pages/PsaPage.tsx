@@ -103,13 +103,39 @@ export default function PsaPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/psa-shussei-shomeisho/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'フィリピンPSA出生証明書の取得方法｜国際結婚・ビザ申請で必要な理由【2026年】',
         description: 'PSA出生証明書（旧NSO）の取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・NO RECORD FOUNDのトラブル対処まで徹底ガイド。',
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/psa-shussei-shomeisho/',
         inLanguage: lang,
+        datePublished: '2025-11-01',
         dateModified: '2026-02-22',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'フィリピン書類取得代行センター',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://psa.gov.ph',
+          'https://www.psaserbilis.com.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

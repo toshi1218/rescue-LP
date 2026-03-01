@@ -131,13 +131,39 @@ export default function ApostillePage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/apostille-guide/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'フィリピンDFAアポスティーユ認証とは？対象書類・取得方法・費用【2026年】',
         description: 'フィリピンDFAアポスティーユ認証の取得方法・対象書類・費用・期間を解説。CENOMAR・PSA・NBI Clearanceへの認証取得を代行サービスで日本語対応。',
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/apostille-guide/',
         inLanguage: lang,
+        datePublished: '2025-11-01',
         dateModified: '2026-02-22',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'フィリピン書類取得代行センター',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.dfa.gov.ph',
+          'https://apostille.dfa.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

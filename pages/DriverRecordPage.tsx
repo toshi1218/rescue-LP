@@ -83,13 +83,39 @@ export default function DriverRecordPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/driver-record/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'LTO Driver\'s Record for Gaimen Kirikae (Foreign License Conversion) [2026 Guide]',
         description: 'How to obtain the LTO Driver\'s Record for foreign license conversion in Japan. Covers required documents, processing time, DFA Apostille requirements, and proxy service.',
-        url: 'https://ph-document.com/driver-record',
+        image: 'https://ph-document.com/og-image.png',
+        url: 'https://ph-document.com/driver-record/',
         inLanguage: 'en',
+        datePublished: '2025-12-01',
         dateModified: '2026-02-28',
-        author: { '@type': 'Organization', name: 'IGRS Inc.' },
-        publisher: { '@type': 'Organization', name: 'Philippine Document Service' },
+        author: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Philippine Document Service',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.lto.gov.ph',
+          'https://www.dfa.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',
