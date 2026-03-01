@@ -35,17 +35,21 @@ export default function PricingPage() {
       icon: FileText,
       title: t('PSA取得代行', 'PSA Document Retrieval'),
       subtitle: t('出生証明書 / 婚姻証明書 / CENOMAR', 'Birth Certificate / Marriage Certificate / CENOMAR'),
-      price: t('¥40,000', 'US$399–449'),
-      usdRef: '$270',
-      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
-      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'DHL shipping incl.')],
+      price: t('¥40,000', 'US$289–359'),
+      basicPrice: lang === 'en' ? 'US$199–259' : undefined,
+      note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
+      highlights: [
+        t('役所申請手数料込み', 'Govt. application fee included'),
+        t('国際送料別途', 'DHL shipping to USA included'),
+        ...(lang === 'en' ? ['DFA Apostille authentication included'] : []),
+      ],
       details: {
         period: t('約4週間', 'Approx. 4 weeks'),
-        note: t('※税・国際送料は別途', '* Incl. tax & DHL intl. shipping'),
+        note: t('※税・国際送料は別途', '* Apostille, tax & DHL intl. shipping included'),
         docs: [
-          t('出生証明書（+ アポスティーユ）', 'Birth Certificate (+ Apostille)'),
-          t('婚姻証明書（+ アポスティーユ）', 'Marriage Certificate (+ Apostille)'),
-          t('CENOMAR（+ アポスティーユ）', 'CENOMAR (+ Apostille)'),
+          t('出生証明書（+ アポスティーユ）', 'Birth Certificate + DFA Apostille'),
+          t('婚姻証明書（+ アポスティーユ）', 'Marriage Certificate + DFA Apostille'),
+          t('CENOMAR（+ アポスティーユ）', 'CENOMAR + DFA Apostille'),
         ],
       },
       featured: false,
@@ -54,17 +58,21 @@ export default function PricingPage() {
       id: 'nbi',
       icon: Fingerprint,
       title: t('NBI取得代行', 'NBI Clearance Retrieval'),
-      subtitle: t('無犯罪証明書の取得サポート', 'Support for NBI Clearance acquisition'),
-      price: t('¥45,000', 'US$469–549'),
-      usdRef: '$300',
-      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
-      highlights: [t('指紋採取サポート', 'Fingerprint support'), t('DFA認証オプション可', 'DFA Apostille option available')],
+      subtitle: t('無犯罪証明書の取得サポート', 'NBI Clearance with DFA Apostille'),
+      price: t('¥45,000', 'US$329–429'),
+      basicPrice: lang === 'en' ? 'US$249–329' : undefined,
+      note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
+      highlights: [
+        t('指紋採取サポート', 'Fingerprint appointment support'),
+        t('DFA認証オプション可', 'DFA Apostille included'),
+        ...(lang === 'en' ? ['MATCH FOUND resolution support'] : []),
+      ],
       details: {
         period: t('約4週間', 'Approx. 4 weeks'),
-        note: t('※税・国際送料は別途', '* Incl. tax & DHL intl. shipping'),
+        note: t('※税・国際送料は別途', '* Apostille, tax & DHL intl. shipping included'),
         docs: [
           t('NBI無犯罪証明書', 'NBI Clearance'),
-          t('DFAアポスティーユ認証（オプション）', 'DFA Apostille Authentication (optional)'),
+          t('DFAアポスティーユ認証（オプション）', 'DFA Apostille Authentication'),
         ],
       },
       featured: false,
@@ -73,14 +81,14 @@ export default function PricingPage() {
       id: 'lto',
       icon: FileText,
       title: t('LTO関連書類取得代行', 'LTO Document Retrieval'),
-      subtitle: t('運転免許関連書類（外免切り替え用）', 'License-related documents (for license transfer)'),
-      price: t('¥85,000', 'US$999–1,199'),
-      usdRef: '$570',
+      subtitle: t('運転免許関連書類（外免切り替え用）', 'License-related documents (for license conversion)'),
+      price: t('¥85,000', 'US$699–899'),
+      basicPrice: undefined,
       note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
-      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'DHL shipping incl.')],
+      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'DHL shipping included')],
       details: {
         period: t('約4週間', 'Approx. 4 weeks'),
-        note: t('※税・国際送料は別途', '* Incl. tax & DHL intl. shipping'),
+        note: t('※税・国際送料は別途', '* Tax & DHL intl. shipping included'),
         docs: [
           t('LTO運転免許証関連書類', 'LTO Driver\'s License Documents'),
           t('LTOトランザクション履歴', 'LTO Transaction History'),
@@ -93,16 +101,20 @@ export default function PricingPage() {
       icon: Gem,
       title: t('国際結婚パック', 'International Marriage Package'),
       subtitle: t('婚姻済証明書申請に必要な書類一式', 'All documents for marriage certificate application'),
-      price: t('¥85,000', 'US$999–1,199'),
-      usdRef: '$570',
-      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
-      highlights: [t('日本語翻訳込み', 'Japanese translation included'), t('優先対応サポート', 'Priority support')],
+      price: t('¥85,000', 'US$799–1,049'),
+      basicPrice: undefined,
+      note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
+      highlights: [
+        t('日本語翻訳込み', 'English document review included'),
+        t('優先対応サポート', 'Priority support'),
+        ...(lang === 'en' ? ['Apostille Ready – submit directly to US immigration'] : []),
+      ],
       details: {
         period: t('約4週間', 'Approx. 4 weeks'),
-        note: t('※税・国際送料は別途', '* Incl. tax & DHL intl. shipping'),
+        note: t('※税・国際送料は別途', '* Apostille, tax & DHL intl. shipping included'),
         docs: [
-          t('出生証明書（+ アポスティーユ）', 'Birth Certificate (+ Apostille)'),
-          t('セノマー独身証明書（+ アポスティーユ）', 'CENOMAR (+ Apostille)'),
+          t('出生証明書（+ アポスティーユ）', 'Birth Certificate + DFA Apostille'),
+          t('セノマー独身証明書（+ アポスティーユ）', 'CENOMAR + DFA Apostille'),
         ],
       },
       featured: true,
@@ -110,18 +122,22 @@ export default function PricingPage() {
     {
       id: 'visa',
       icon: Heart,
-      title: t('配偶者ビザ', 'Spouse Visa'),
-      subtitle: t('在留資格「日本人の配偶者等」申請サポート', 'Support for "Spouse of Japanese National" residence status'),
-      price: t('¥85,000', 'US$999–1,199'),
-      usdRef: '$570',
-      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
-      highlights: [t('必要書類の準備サポート', 'Document preparation support'), t('申請書類チェック', 'Application document review')],
+      title: t('配偶者ビザ', 'Spouse / CR-1 Visa Support'),
+      subtitle: t('在留資格「日本人の配偶者等」申請サポート', 'Document support for CR-1/IR-1 & K-1 visa applicants'),
+      price: t('¥85,000', 'US$799–1,049'),
+      basicPrice: undefined,
+      note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
+      highlights: [
+        t('必要書類の準備サポート', 'Document preparation support'),
+        t('申請書類チェック', 'Application document review'),
+        ...(lang === 'en' ? ['Apostille Ready for USCIS/NVC submission'] : []),
+      ],
       details: {
         period: t('要相談', 'Contact for details'),
         note: t('※ケースにより異なります', '* Varies by case'),
         docs: [
-          t('在留資格認定証明書交付申請書', 'Certificate of Eligibility Application'),
-          t('婚姻証明書・戸籍謄本など', 'Marriage certificate, family register, etc.'),
+          t('在留資格認定証明書交付申請書', 'PSA Birth Certificate + Apostille'),
+          t('婚姻証明書・戸籍謄本など', 'CENOMAR + Apostille, NBI Clearance + Apostille'),
         ],
       },
       featured: false,
@@ -131,9 +147,9 @@ export default function PricingPage() {
       icon: Award,
       title: t('帰化申請', 'Naturalization Application'),
       subtitle: t('日本国籍取得の申請サポート', 'Support for acquiring Japanese nationality'),
-      price: t('¥85,000', 'US$999–1,199'),
-      usdRef: '$570',
-      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
+      price: t('¥85,000', 'US$799–1,049'),
+      basicPrice: undefined,
+      note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
       highlights: [t('必要書類の準備サポート', 'Document preparation support'), t('継続的フォローアップ', 'Ongoing follow-up')],
       details: {
         period: t('要相談', 'Contact for details'),
@@ -205,6 +221,13 @@ export default function PricingPage() {
       planId: 'lto',
     },
     {
+      icon: '🇺🇸',
+      title: t('米国ビザ（CR-1/IR-1・K-1）の書類を準備したい', 'Applying for a US CR-1/IR-1 or K-1 visa'),
+      desc: t('USCIS・NVC提出にはApostille付きのPSA・CENOMAR・NBI書類が必要です。', 'USCIS and NVC submissions require PSA, CENOMAR, and NBI documents with DFA Apostille.'),
+      recommend: t('配偶者ビザサポート', 'Spouse / CR-1 Visa Support'),
+      planId: 'visa',
+    },
+    {
       icon: '📋',
       title: t('まず何が必要か確認したい', 'I want to find out what I need first'),
       desc: t('「どの書類が必要かわからない」という方も大歓迎です。状況をお聞きして最適なプランをご提案します。', '"I don\'t know which documents I need" is perfectly fine. We will listen to your situation and recommend the best plan.'),
@@ -216,16 +239,17 @@ export default function PricingPage() {
   const included = [
     t('フィリピン各機関への申請手続き代行', 'Application procedures with Philippine agencies'),
     t('書類の確認・不備チェック', 'Document review and deficiency check'),
-    t('日本語での進捗報告', 'Progress updates in Japanese/English'),
-    t('書類受領後の日本への転送（国際送料別途）', 'DHL international shipping to the USA (included)'),
-    t('DFAアポスティーユ認証の代行（オプション）', 'DFA Apostille authentication (optional)'),
+    t('日本語での進捗報告', 'Progress updates in English'),
+    t('書類受領後の日本への転送（国際送料別途）', 'DHL Express international shipping to the USA'),
+    t('DFAアポスティーユ認証の代行（オプション）', 'DFA Apostille authentication (Premium plans)'),
+    ...(lang === 'en' ? ['Philippine government agency fees'] : []),
   ];
 
   const notIncluded = [
     t('消費税（別途10%）', 'Consumption tax (already included)'),
     t('国際郵便送料', 'DHL shipping (already included)'),
-    t('フィリピン政府機関の申請手数料（一部プランで含む）', 'Philippine government agency fees (included in some plans)'),
-    t('日本語翻訳費用（必要な場合は別途ご相談）', 'Japanese translation fee (contact us if needed)'),
+    t('フィリピン政府機関の申請手数料（一部プランで含む）', 'Japanese translation (contact us if needed)'),
+    t('日本語翻訳費用（必要な場合は別途ご相談）', 'Additional investigation fees (MATCH FOUND resolution)'),
     t('追加調査費用（MATCH FOUND等の異議申し立て）', 'Additional investigation fees (for MATCH FOUND cases, etc.)'),
   ];
 
@@ -257,7 +281,7 @@ export default function PricingPage() {
         </div>
 
         {/* リード文 */}
-        <div className="max-w-2xl mx-auto text-center mb-10">
+        <div className="max-w-2xl mx-auto text-center mb-6">
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
             {t(
               'フィリピン書類の取得は、言語の壁・手続きの煩雑さ・時間のロスが大きな負担になります。弊社は現地セブ拠点を活かし、',
@@ -273,6 +297,35 @@ export default function PricingPage() {
             {t('まずは無料相談する', 'Start with a free consultation')} <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
+
+        {/* EN: Apostille Ready callout */}
+        {lang === 'en' && (
+          <div className="max-w-2xl mx-auto mb-10 bg-primary/5 border border-primary/20 rounded-2xl p-5">
+            <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Apostille Ready</p>
+            <p className="text-sm font-bold text-secondary mb-1">Documents ready for direct submission to USCIS, NVC, or the US Embassy</p>
+            <p className="text-xs text-gray-600 leading-relaxed mb-3">
+              Our Premium plans include <strong>DFA Apostille authentication</strong> — the official Philippine government stamp recognized under the Hague Convention. No extra steps needed: just submit your documents directly to immigration.
+            </p>
+            <div className="grid grid-cols-3 gap-3 text-center text-xs">
+              <div className="bg-white rounded-lg p-3 border border-gray-100">
+                <p className="font-bold text-secondary">DIY total</p>
+                <p className="text-gray-500">~US$60–150</p>
+                <p className="text-gray-400 text-[10px] mt-1">+ weeks of coordination</p>
+              </div>
+              <div className="bg-white rounded-lg p-3 border border-primary/30 relative">
+                <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-primary text-white text-[9px] px-2 py-0.5 rounded-full font-bold">Our Service</span>
+                <p className="font-bold text-primary">Premium</p>
+                <p className="text-primary font-semibold">from US$289</p>
+                <p className="text-gray-400 text-[10px] mt-1">Apostille incl.</p>
+              </div>
+              <div className="bg-white rounded-lg p-3 border border-gray-100">
+                <p className="font-bold text-secondary">Basic</p>
+                <p className="text-gray-500">from US$199</p>
+                <p className="text-gray-400 text-[10px] mt-1">No Apostille</p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* 代行 vs 自力 比較表 */}
         <section className="mb-12 max-w-3xl mx-auto">
@@ -364,10 +417,24 @@ export default function PricingPage() {
                     </div>
 
                     <div className="mb-4">
-                      <div className="flex items-baseline gap-1">
-                        <span className="text-2xl font-bold font-display text-primary">{plan.price}</span>
-                        <span className="text-xs text-gray-500">{plan.note}</span>
-                      </div>
+                      {plan.basicPrice && (
+                        <div className="mb-2 flex flex-col gap-1">
+                          <div className="flex items-baseline gap-1">
+                            <span className="text-2xl font-bold font-display text-primary">{plan.price}</span>
+                            <span className="text-xs text-gray-500">{plan.note}</span>
+                          </div>
+                          <span className="inline-block text-[11px] bg-primary/10 text-primary font-bold px-2 py-0.5 rounded-full w-fit">Premium – Apostille Ready ✓</span>
+                          <div className="text-xs text-gray-400 mt-1">
+                            Basic (no Apostille): <span className="font-semibold text-gray-600">{plan.basicPrice}</span>
+                          </div>
+                        </div>
+                      )}
+                      {!plan.basicPrice && (
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-2xl font-bold font-display text-primary">{plan.price}</span>
+                          <span className="text-xs text-gray-500">{plan.note}</span>
+                        </div>
+                      )}
                     </div>
 
                     <ul className="space-y-2 mb-6 flex-1">
