@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -14,7 +15,7 @@ export default function NbiHitPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('NBI HITとは？【2026年版】原因・対処法・どれくらい遅れるか徹底解説｜フィリピン書類センター', 'What Is an NBI HIT? Causes, Solutions & Delays [2026]'),
+    t(`NBI HITとは？【${SEO_YEAR_MONTH_JA}版】原因・対処法・どれくらい遅れるか徹底解説｜フィリピン書類センター`, `What Is an NBI HIT? Causes, Solutions & Delays [${SEO_YEAR_MONTH_EN}]`),
     t('NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。NBI Clearance申請でHIT（MATCH FOUND）が出た場合の対処法と代行サービスの活用方法。', 'Understand what an NBI HIT (MATCH FOUND) means, why it happens, how to resolve it, and how long the delay will be.')
   );
 
@@ -91,13 +92,13 @@ export default function NbiHitPage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'NBI HITとは？原因・対処法・どれくらい遅れるか【2026年版】',
+        headline: `NBI HITとは？原因・対処法・どれくらい遅れるか【${SEO_YEAR_MONTH_JA}版】`,
         description: 'NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。代行サービスでのHIT対応も紹介。',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/nbi-hit/',
         inLanguage: lang,
         datePublished: '2025-12-01',
-        dateModified: '2026-02-28',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: '株式会社IGRS',
@@ -148,11 +149,11 @@ export default function NbiHitPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'NBI HITとは？原因・解決手順・どれくらい遅れるか【2026年完全解説】',
-            'What is NBI HIT? Causes, Resolution Steps & Delay Time [2026 Complete Guide]'
+            `NBI HITとは？原因・解決手順・どれくらい遅れるか【${SEO_YEAR_MONTH_JA}完全解説】`,
+            `What is NBI HIT? Causes, Resolution Steps & Delay Time [${SEO_YEAR_MONTH_EN} Complete Guide]`
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月28日 ｜ 株式会社IGRS', 'Last updated: February 28, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* Alert box */}
         <div className="bg-amber-50 border border-amber-300 rounded-xl p-5 mb-10">

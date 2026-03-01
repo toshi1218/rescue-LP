@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -14,7 +15,7 @@ export default function PsaBirthCertificateCostPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('PSA出生証明書の費用・料金【2026年最新】自分で取得 vs 代行の比較｜フィリピン書類センター', 'PSA Birth Certificate Cost [2026]: DIY vs. Retrieval Service'),
+    t(`PSA出生証明書の費用・料金【${SEO_YEAR_MONTH_JA}最新】自分で取得 vs 代行の比較｜フィリピン書類センター`, `PSA Birth Certificate Cost [${SEO_YEAR_MONTH_EN}]: DIY vs. Retrieval Service`),
     t('PSA出生証明書の公式料金・自分で取得する場合の費用・代行利用時の総費用を解説。DFAアポスティーユ込みの料金も紹介。', 'Compare the cost of getting a PSA Birth Certificate yourself vs. using a retrieval service. Includes official PSA fees and DFA Apostille costs.')
   );
 
@@ -90,7 +91,7 @@ export default function PsaBirthCertificateCostPage() {
         url: 'https://ph-document.com/psa-birth-certificate-cost/',
         inLanguage: 'en',
         datePublished: '2025-12-01',
-        dateModified: '2026-02-28',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -141,11 +142,11 @@ export default function PsaBirthCertificateCostPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'PSA出生証明書の費用・料金【2026年最新】公式料金 vs 代行費用の比較',
+            `PSA出生証明書の費用・料金【${SEO_YEAR_MONTH_JA}最新】公式料金 vs 代行費用の比較`,
             'PSA Birth Certificate Cost 2026 — Official Fees, Proxy Pricing & Total Estimates'
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月28日 ｜ 株式会社IGRS', 'Last updated: February 28, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* Summary box */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10">

@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function Cr1VisaDocumentsPage() {
   const { lang } = useLanguage();
@@ -13,7 +14,7 @@ export default function Cr1VisaDocumentsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useMeta(
-    t('CR-1/IR-1配偶者ビザ フィリピン書類ガイド【2026年版】PSA・NBI・Apostille', 'CR-1/IR-1 Spouse Visa: Philippine Documents Guide [2026] — PSA, NBI & Apostille'),
+    t(`CR-1/IR-1配偶者ビザ フィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】PSA・NBI・Apostille`, `CR-1/IR-1 Spouse Visa: Philippine Documents Guide [${SEO_YEAR_MONTH_EN}] — PSA, NBI & Apostille`),
     t('CR-1/IR-1ビザ申請に必要なフィリピン書類（PSA婚姻証明書・NBI Clearance）の取得方法とDFAアポスティーユを解説。NVC提出対応。', 'Full guide to Philippine documents for the CR-1/IR-1 spousal immigrant visa: PSA Marriage Certificate, NBI Clearance, and DFA Apostille for NVC submission. Retrieval service available.')
   );
 
@@ -34,7 +35,7 @@ export default function Cr1VisaDocumentsPage() {
           '@id': 'https://ph-document.com/cr1-visa-documents/',
           speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', 'h2'] },
         },
-        headline: t('CR-1/IR-1配偶者ビザ フィリピン書類ガイド【2026年版】', 'CR-1/IR-1 Spouse Visa: Philippine Documents Checklist [2026]'),
+        headline: t(`CR-1/IR-1配偶者ビザ フィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】`, `CR-1/IR-1 Spouse Visa: Philippine Documents Checklist [${SEO_YEAR_MONTH_EN}]`),
         description: t('CR-1/IR-1ビザ申請に必要なPSA婚姻証明書・NBI Clearance・DFAアポスティーユの取得方法とNVC提出手順を解説。', 'How to obtain PSA Marriage Certificate, NBI Clearance, and DFA Apostille for the CR-1/IR-1 spousal immigrant visa NVC submission.'),
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/cr1-visa-documents/',
@@ -132,7 +133,7 @@ export default function Cr1VisaDocumentsPage() {
     {
       doc: t('医療診断書（大使館指定パネル医）', 'Medical Examination (Embassy-Designated Panel Physician)'),
       required: true,
-      note: t('マニラのSt. Luke's Extension Clinic等、大使館指定機関のみ有効。', 'Only from a US Embassy-designated clinic (e.g. St. Luke's Extension Clinic in Manila).'),
+      note: t("マニラのSt. Luke's Extension Clinic等、大使館指定機関のみ有効。", "Only from a US Embassy-designated clinic (e.g. St. Luke's Extension Clinic in Manila)."),
     },
     {
       doc: t('婚姻関係証明（写真・渡航記録等）', 'Evidence of Bona Fide Marriage (photos, travel records, etc.)'),
@@ -215,8 +216,8 @@ export default function Cr1VisaDocumentsPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'CR-1/IR-1配偶者ビザに必要なフィリピン書類ガイド【2026年版】',
-            'Philippine Documents for the CR-1/IR-1 Spouse Visa [2026 Guide]'
+            `CR-1/IR-1配偶者ビザに必要なフィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】`,
+            `Philippine Documents for the CR-1/IR-1 Spouse Visa [${SEO_YEAR_MONTH_EN} Guide]`
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年3月1日 ｜ IGRS Inc.', 'Last updated: March 1, 2026 | IGRS Inc.')}</p>

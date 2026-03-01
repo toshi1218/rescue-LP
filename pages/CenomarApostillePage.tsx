@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -14,7 +15,7 @@ export default function CenomarApostillePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('CENOMARにDFAアポスティーユは必要？【2026年最新】用途別の結論｜フィリピン書類センター', 'Does CENOMAR Need DFA Apostille? [2026 Guide]'),
+    t(`CENOMARにDFAアポスティーユは必要？【${SEO_YEAR_MONTH_JA}最新】用途別の結論｜フィリピン書類センター`, `Does CENOMAR Need DFA Apostille? [${SEO_YEAR_MONTH_EN} Guide]`),
     t('CENOMARにDFAアポスティーユ認証が必要かどうかを用途別（国際結婚LCCM・配偶者ビザ・帰化）に解説。東京フィリピン大使館の要件をもとに正確な情報を提供。', 'Find out whether your CENOMAR needs DFA Apostille authentication. Covers international marriage (LCCM), spouse visa, and naturalization use cases.')
   );
 
@@ -112,13 +113,13 @@ export default function CenomarApostillePage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'CENOMARにDFAアポスティーユは必要？用途別の結論【2026年最新】',
+        headline: `CENOMARにDFAアポスティーユは必要？用途別の結論【${SEO_YEAR_MONTH_JA}最新】`,
         description: 'CENOMARにDFAアポスティーユ認証が必要かどうかを用途別（国際結婚LCCM・配偶者ビザ・帰化）に解説。',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/cenomar-apostille/',
         inLanguage: lang,
         datePublished: '2025-12-01',
-        dateModified: '2026-02-28',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: '株式会社IGRS',
@@ -169,11 +170,11 @@ export default function CenomarApostillePage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'CENOMARにDFAアポスティーユは必要？用途別の結論【2026年最新】',
-            'Does CENOMAR Need DFA Apostille? [2026 Answer by Use Case]'
+            `CENOMARにDFAアポスティーユは必要？用途別の結論【${SEO_YEAR_MONTH_JA}最新】`,
+            `Does CENOMAR Need DFA Apostille? [${SEO_YEAR_MONTH_EN} Answer by Use Case]`
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月28日 ｜ 株式会社IGRS', 'Last updated: February 28, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* リード文 */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10">

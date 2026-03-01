@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -14,7 +15,7 @@ export default function KikaShinseiGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('フィリピン人 帰化申請ガイド【2026年最新版】必要書類・手続きの流れ・費用', 'Naturalization Guide for Filipinos in Japan [2026]'),
+    t(`フィリピン人 帰化申請ガイド【${SEO_YEAR_MONTH_JA}最新】必要書類・手続きの流れ・費用`, `Naturalization Guide for Filipinos in Japan [${SEO_YEAR_MONTH_EN}]`),
     t('フィリピン国籍の方が日本に帰化するための手続き・必要書類（PSA・NBI等）・費用・審査期間をわかりやすく解説。', 'Guide to Japanese naturalization for Filipino nationals. Covers required documents (PSA, NBI), procedures, fees, and processing timeline.')
   );
 
@@ -93,13 +94,13 @@ export default function KikaShinseiGuidePage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: t('フィリピン人の帰化申請ガイド｜必要書類・手続きの流れ・PSA・NBI取得【2026年最新】', 'Naturalization Guide for Philippine Nationals | Required Documents, Procedures, PSA & NBI [2026]'),
+        headline: t(`フィリピン人の帰化申請ガイド｜必要書類・手続きの流れ・PSA・NBI取得【${SEO_YEAR_MONTH_JA}最新】`, `Naturalization Guide for Philippine Nationals | Required Documents, Procedures, PSA & NBI [${SEO_YEAR_MONTH_EN}]`),
         description: t('フィリピン国籍の方が日本に帰化するための手続きの流れ・必要書類（PSA出生証明書・NBI Clearance等）・費用・審査期間をわかりやすく解説。', 'A comprehensive guide on the procedure, required documents (PSA Birth Certificate, NBI Clearance, etc.), costs, and review period for Philippine nationals applying for Japanese naturalization.'),
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/kika-shinsei-guide/',
         inLanguage: lang,
         datePublished: '2025-11-01',
-        dateModified: '2026-02-22',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: '株式会社IGRS',
@@ -191,12 +192,12 @@ export default function KikaShinseiGuidePage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {lang === 'ja' ? (
-            <>フィリピン人の帰化申請 完全ガイド<br className="hidden md:block" />必要書類・手続きの流れ・PSA・NBI取得【2026年最新】</>
+            <>フィリピン人の帰化申請 完全ガイド<br className="hidden md:block" />必要書類・手続きの流れ・PSA・NBI取得【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>Complete Guide to Naturalization for Philippine Nationals<br className="hidden md:block" />Required Documents, Procedures, PSA &amp; NBI [2026]</>
+            <>Complete Guide to Naturalization for Philippine Nationals<br className="hidden md:block" />Required Documents, Procedures, PSA &amp; NBI [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月22日 ｜ 株式会社IGRS', 'Last updated: February 22, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* Lead */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10 text-sm text-blue-900 leading-relaxed">

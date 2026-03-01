@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -14,7 +15,7 @@ export default function ApostilleFeePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('DFAアポスティーユ 料金【2026年最新】公式費用・代行費用・エクスプレスの違い｜フィリピン書類センター', 'DFA Apostille Fees [2026]: Official Costs & Service Pricing'),
+    t(`DFAアポスティーユ 料金【${SEO_YEAR_MONTH_JA}最新】公式費用・代行費用・エクスプレスの違い｜フィリピン書類センター`, `DFA Apostille Fees [${SEO_YEAR_MONTH_EN}]: Official Costs & Service Pricing`),
     t('フィリピンDFAアポスティーユ認証の公式料金・代行費用・エクスプレス追加料金を解説。CENOMAR・PSA・NBI書類ごとの費用目安も掲載。', 'Official DFA Apostille fees and retrieval service pricing. Includes express surcharges and cost estimates for CENOMAR, PSA, and NBI documents.')
   );
 
@@ -90,7 +91,7 @@ export default function ApostilleFeePage() {
         url: 'https://ph-document.com/apostille-fee/',
         inLanguage: 'en',
         datePublished: '2025-12-01',
-        dateModified: '2026-02-28',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -141,11 +142,11 @@ export default function ApostilleFeePage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'DFAアポスティーユ料金【2026年最新】公式費用・代行費用・エクスプレスの違い',
+            `DFAアポスティーユ料金【${SEO_YEAR_MONTH_JA}最新】公式費用・代行費用・エクスプレスの違い`,
             'DFA Apostille Fee 2026 — Official Rates, Express vs Standard & Proxy Pricing'
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月28日 ｜ 株式会社IGRS', 'Last updated: February 28, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* Summary box */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10">

@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -14,7 +15,7 @@ export default function NbiValidityPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('NBI Clearanceの有効期限は？【2026年版】1年ルールと用途別の注意点｜フィリピン書類センター', 'NBI Clearance Validity: How Long Is It Valid? [2026]'),
+    t(`NBI Clearanceの有効期限は？【${SEO_YEAR_MONTH_JA}版】1年ルールと用途別の注意点｜フィリピン書類センター`, `NBI Clearance Validity: How Long Is It Valid? [${SEO_YEAR_MONTH_EN}]`),
     t('NBI Clearanceの有効期限は発行から1年。ただし配偶者ビザ・国際結婚など用途によっては6ヶ月以内が実務的な基準。取得タイミングの目安を解説。', 'NBI Clearance is valid for 1 year from issuance. Learn how validity applies to spouse visa and international marriage use cases.')
   );
 
@@ -90,7 +91,7 @@ export default function NbiValidityPage() {
         url: 'https://ph-document.com/nbi-validity/',
         inLanguage: 'en',
         datePublished: '2025-12-01',
-        dateModified: '2026-02-28',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -141,11 +142,11 @@ export default function NbiValidityPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'NBI Clearanceの有効期限は？【2026年版】1年ルールと用途別の注意点',
-            'How Long Is NBI Clearance Valid? [2026] The 1-Year Rule & Use Case Requirements'
+            `NBI Clearanceの有効期限は？【${SEO_YEAR_MONTH_JA}版】1年ルールと用途別の注意点`,
+            `How Long Is NBI Clearance Valid? [${SEO_YEAR_MONTH_EN}] The 1-Year Rule & Use Case Requirements`
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月28日 ｜ 株式会社IGRS', 'Last updated: February 28, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* Summary box */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10">

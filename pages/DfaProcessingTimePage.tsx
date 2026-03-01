@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -14,7 +15,7 @@ export default function DfaProcessingTimePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('DFAアポスティーユ 処理期間【2026年最新】通常・エクスプレス・代行の日数目安｜フィリピン書類センター', 'DFA Apostille Processing Time [2026]: Regular vs. Express'),
+    t(`DFAアポスティーユ 処理期間【${SEO_YEAR_MONTH_JA}最新】通常・エクスプレス・代行の日数目安｜フィリピン書類センター`, `DFA Apostille Processing Time [${SEO_YEAR_MONTH_EN}]: Regular vs. Express`),
     t('フィリピンDFAアポスティーユ認証の処理期間（processing time）を2026年最新情報で解説。通常・エクスプレス申請の日数目安、代行利用時のトータル期間、遅れる原因も紹介。', 'How long does DFA Apostille take in 2026? Compare regular and express processing times, total timeline with retrieval, and common causes of delays.')
   );
 
@@ -117,7 +118,7 @@ export default function DfaProcessingTimePage() {
         url: 'https://ph-document.com/apostille-processing-time/',
         inLanguage: lang,
         datePublished: '2025-12-01',
-        dateModified: '2026-02-28',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: '株式会社IGRS',
@@ -168,11 +169,11 @@ export default function DfaProcessingTimePage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'DFAアポスティーユ 処理期間【2026年最新】通常・エクスプレスの日数と代行でのスケジュール',
-            'DFA Apostille Processing Time Philippines [2026] — Standard, Express & Proxy Schedule'
+            `DFAアポスティーユ 処理期間【${SEO_YEAR_MONTH_JA}最新】通常・エクスプレスの日数と代行でのスケジュール`,
+            `DFA Apostille Processing Time Philippines [${SEO_YEAR_MONTH_EN}] — Standard, Express & Proxy Schedule`
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月28日 ｜ 株式会社IGRS', 'Last updated: February 28, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* Summary box */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-10 shadow-card">

@@ -5,13 +5,14 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 export default function GuidesPage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('お役立ちガイド一覧｜CENOMAR・NBI・DFAアポスティーユ FAQ【2026年】', 'Document Guides | CENOMAR, NBI, DFA Apostille FAQs [2026]'),
+    t(`お役立ちガイド一覧｜CENOMAR・NBI・DFAアポスティーユ FAQ【${SEO_YEAR_MONTH_JA}】`, `Document Guides | CENOMAR, NBI, DFA Apostille FAQs [${SEO_YEAR_MONTH_EN}]`),
     t('フィリピン書類取得に関するお役立ちガイドとFAQ集。CENOMAR・NBI・DFAアポスティーユ・LTOについての疑問を解決するガイドページ一覧。', 'Helpful guides and FAQs for Philippine document retrieval. Find answers about CENOMAR, NBI Clearance, DFA Apostille, and LTO documents.')
   );
 
@@ -102,14 +103,14 @@ export default function GuidesPage() {
         },
         {
           to: t('/ja/apostille-shori-kikan', '/apostille-processing-time'),
-          title: t('DFAアポスティーユ処理期間【2026年最新】', 'DFA Apostille Processing Time [2026]'),
+          title: t(`DFAアポスティーユ処理期間【${SEO_YEAR_MONTH_JA}最新】`, `DFA Apostille Processing Time [${SEO_YEAR_MONTH_EN}]`),
           desc: t('通常・エクスプレスの日数目安と代行スケジュール', 'Standard & express day estimates and proxy service schedule'),
           tags: [t('FAQ', 'FAQ'), t('新着', 'New')],
           isPopular: false,
         },
         {
           to: t('/ja/apostille-ryokin', '/apostille-fee'),
-          title: t('DFAアポスティーユの費用【2026年最新】', 'DFA Apostille Fee [2026]'),
+          title: t(`DFAアポスティーユの費用【${SEO_YEAR_MONTH_JA}最新】`, `DFA Apostille Fee [${SEO_YEAR_MONTH_EN}]`),
           desc: t('DFA手数料・代行費用・セット料金の目安を解説', 'DFA fees, proxy service costs, and set pricing explained'),
           tags: [t('FAQ', 'FAQ')],
           isPopular: false,
@@ -129,7 +130,7 @@ export default function GuidesPage() {
         },
         {
           to: t('/ja/psa-shussei-cost', '/psa-birth-certificate-cost'),
-          title: t('PSA出生証明書の費用【2026年最新】', 'PSA Birth Certificate Cost [2026]'),
+          title: t(`PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}最新】`, `PSA Birth Certificate Cost [${SEO_YEAR_MONTH_EN}]`),
           desc: t('PSA手数料・代行費用・DFAアポスティーユとのセット料金を解説', 'PSA official fee, proxy costs, and DFA Apostille set pricing explained'),
           tags: [t('FAQ', 'FAQ')],
           isPopular: false,
@@ -221,7 +222,7 @@ export default function GuidesPage() {
             'We\'ve compiled common questions about Philippine document acquisition, organized by document type and purpose. Find the guide that matches your situation.'
           )}
         </p>
-        <p className="text-sm text-gray-500 mb-10">{t('最終更新：2026年2月28日', 'Last updated: February 28, 2026')}</p>
+        <p className="text-sm text-gray-500 mb-10">{t(`最終更新：${SEO_LAST_UPDATED_JA}`, `Last updated: ${SEO_LAST_UPDATED_EN}`)}</p>
 
         {/* 統計バナー */}
         <div className="grid grid-cols-3 gap-3 mb-10">

@@ -6,13 +6,14 @@ import Footer from '../components/Footer';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function UsVisaDocumentsPage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('米国ビザ（CR-1/IR-1・K-1）フィリピン書類ガイド【2026年版】', 'Philippine Documents for US Visa: CR-1, IR-1 & K-1 [2026]'),
+    t(`米国ビザ（CR-1/IR-1・K-1）フィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】`, `Philippine Documents for US Visa: CR-1, IR-1 & K-1 [${SEO_YEAR_MONTH_EN}]`),
     t('CR-1/IR-1・K-1ビザ申請に必要なフィリピン書類（PSA・CENOMAR・NBI）の取得方法とDFAアポスティーユを解説。', 'Complete guide to Philippine documents required for US CR-1/IR-1 and K-1 visa applications. Covers PSA, CENOMAR, and NBI Clearance with DFA Apostille.')
   );
 
@@ -38,7 +39,7 @@ export default function UsVisaDocumentsPage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: t('米国ビザ（CR-1/IR-1・K-1）フィリピン書類ガイド【2026年版】', 'Philippine Documents for US Visa (CR-1/IR-1 & K-1) [2026 Guide]'),
+        headline: t(`米国ビザ（CR-1/IR-1・K-1）フィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】`, `Philippine Documents for US Visa (CR-1/IR-1 & K-1) [${SEO_YEAR_MONTH_EN} Guide]`),
         description: t('米国ビザ（CR-1/IR-1配偶者移民ビザ・K-1婚約者ビザ）申請に必要なフィリピン書類（CENOMAR・PSA・NBI）の取得方法を解説。', 'Guide to obtaining Philippine documents (CENOMAR, PSA, NBI) required for US visa applications (CR-1/IR-1 spousal immigration visa and K-1 fiancé visa).'),
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/us-visa-documents/',
@@ -200,8 +201,8 @@ export default function UsVisaDocumentsPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            '米国ビザ（CR-1/IR-1・K-1）に必要なフィリピン書類ガイド【2026年版】',
-            'Philippine Documents for US Visa (CR-1/IR-1 & K-1) [2026 Guide]'
+            `米国ビザ（CR-1/IR-1・K-1）に必要なフィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】`,
+            `Philippine Documents for US Visa (CR-1/IR-1 & K-1) [${SEO_YEAR_MONTH_EN} Guide]`
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年3月1日 ｜ IGRS Inc.', 'Last updated: March 1, 2026 | IGRS Inc.')}</p>

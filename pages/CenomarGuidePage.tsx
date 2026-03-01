@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, Clock, 
 import Navbar from '../components/Navbar';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -13,7 +14,7 @@ export default function CenomarGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('CENOMAR（独身証明書）取得方法【2026年最新版】費用・期間・代行｜フィリピン書類センター', 'How to Get CENOMAR [2026 Guide] – Fees, Timeline & Service'),
+    t(`CENOMAR（独身証明書）取得方法【${SEO_YEAR_MONTH_JA}最新】費用・期間・代行｜フィリピン書類センター`, `How to Get CENOMAR [${SEO_YEAR_MONTH_EN} Guide] – Fees, Timeline & Service`),
     t('フィリピン独身証明書CENOMARの取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・有効期限・トラブル対処まで徹底ガイド。', 'Complete guide to getting a CENOMAR (Certificate of No Marriage Record) from the Philippines. Covers DIY, embassy, and retrieval service options.')
   );
 
@@ -92,13 +93,13 @@ export default function CenomarGuidePage() {
           '@type': 'WebPage',
           '@id': 'https://ph-document.com/cenomar-guide/',
         },
-        headline: 'フィリピン独身証明書（CENOMAR／セノマー）とは？取得方法・費用・期間を完全解説【2026年】',
+        headline: `フィリピン独身証明書（CENOMAR／セノマー）とは？取得方法・費用・期間を完全解説【${SEO_YEAR_MONTH_JA}】`,
         description: 'CENOMARの取得方法を自分で・大使館で・代行での3パターンで解説。費用・期間・有効期限・よくあるトラブルまで初心者向けに徹底ガイド。',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/cenomar-guide/',
         inLanguage: lang,
         datePublished: '2025-11-01',
-        dateModified: '2026-02-22',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: '株式会社IGRS',
@@ -148,12 +149,12 @@ export default function CenomarGuidePage() {
         {/* H1 */}
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {lang === 'ja' ? (
-            <>フィリピン独身証明書（CENOMAR／セノマー）とは？<br className="hidden md:block" />取得方法・費用・期間を完全解説【2026年最新】</>
+            <>フィリピン独身証明書（CENOMAR／セノマー）とは？<br className="hidden md:block" />取得方法・費用・期間を完全解説【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>What is Philippine CENOMAR (Certificate of No Marriage)?<br className="hidden md:block" />Complete Guide to Obtaining It [2026]</>
+            <>What is Philippine CENOMAR (Certificate of No Marriage)?<br className="hidden md:block" />Complete Guide to Obtaining It [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月22日 ｜ 株式会社IGRS', 'Last updated: February 22, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* 目次 */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-10 shadow-card">

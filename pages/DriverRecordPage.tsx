@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -14,7 +15,7 @@ export default function DriverRecordPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('外免切替に必要なLTOドライバーズレコード（運転記録）取得ガイド【2026年】｜フィリピン書類センター', "LTO Driver's Record for Japanese License Conversion [2026 Guide]"),
+    t(`外免切替に必要なLTOドライバーズレコード（運転記録）取得ガイド【${SEO_YEAR_MONTH_JA}】｜フィリピン書類センター`, `LTO Driver's Record for Japanese License Conversion [${SEO_YEAR_MONTH_EN} Guide]`),
     t('フィリピンLTO発行の運転記録証明書（Driver\'s Record）の取得方法・必要書類・期間・DFAアポスティーユの要否を解説。外免切替を目指す方向けの完全ガイド。', 'How to obtain a Philippine LTO Driver\'s Record for Japanese license conversion. Covers requirements, processing time, and DFA Apostille.')
   );
 
@@ -91,13 +92,13 @@ export default function DriverRecordPage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'LTO Driver\'s Record for Gaimen Kirikae (Foreign License Conversion) [2026 Guide]',
+        headline: `LTO Driver's Record for Gaimen Kirikae (Foreign License Conversion) [${SEO_YEAR_MONTH_EN} Guide]`,
         description: 'How to obtain the LTO Driver\'s Record for foreign license conversion in Japan. Covers required documents, processing time, DFA Apostille requirements, and proxy service.',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/driver-record/',
         inLanguage: 'en',
         datePublished: '2025-12-01',
-        dateModified: '2026-02-28',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -148,11 +149,11 @@ export default function DriverRecordPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            '外免切替に必要なLTOドライバーズレコード（運転記録）完全ガイド【2026年】',
-            'LTO Driver\'s Record for Foreign License Conversion (Gaimen Kirikae) [2026 Complete Guide]'
+            `外免切替に必要なLTOドライバーズレコード（運転記録）完全ガイド【${SEO_YEAR_MONTH_JA}】`,
+            `LTO Driver's Record for Foreign License Conversion (Gaimen Kirikae) [${SEO_YEAR_MONTH_EN} Complete Guide]`
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月28日 ｜ 株式会社IGRS', 'Last updated: February 28, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* Summary box */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10">
