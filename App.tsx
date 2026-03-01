@@ -87,6 +87,7 @@ export default function App() {
         <Route path="/ja/nbi-koyukigen" element={<NbiValidityPage />} />
         <Route path="/ja/driver-record" element={<DriverRecordPage />} />
         <Route path="/ja/ryokin" element={<PricingPage />} />
+        <Route path="/ja/us-visa-documents" element={<UsVisaDocumentsPage />} />
         <Route path="/ja/company" element={<CompanyPage />} />
         <Route path="/ja/contact" element={<ContactPage />} />
         <Route path="/ja/privacy" element={<PrivacyPolicyPage />} />
