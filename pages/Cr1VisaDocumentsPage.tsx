@@ -133,7 +133,7 @@ export default function Cr1VisaDocumentsPage() {
     {
       doc: t('医療診断書（大使館指定パネル医）', 'Medical Examination (Embassy-Designated Panel Physician)'),
       required: true,
-      note: t('マニラのSt. Luke's Extension Clinic等、大使館指定機関のみ有効。', 'Only from a US Embassy-designated clinic (e.g. St. Luke's Extension Clinic in Manila).'),
+      note: t("マニラのSt. Luke's Extension Clinic等、大使館指定機関のみ有効。", "Only from a US Embassy-designated clinic (e.g. St. Luke's Extension Clinic in Manila)."),
     },
     {
       doc: t('婚姻関係証明（写真・渡航記録等）', 'Evidence of Bona Fide Marriage (photos, travel records, etc.)'),

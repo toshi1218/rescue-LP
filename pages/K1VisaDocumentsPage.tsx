@@ -113,7 +113,7 @@ export default function K1VisaDocumentsPage() {
     {
       doc: t('医療診断書（指定パネル医）', 'Medical Examination (Designated Panel Physician)'),
       required: true,
-      note: t('マニラのSt. Luke's Extension Clinic等、大使館指定機関のみ有効。', 'Only valid from a US Embassy-designated clinic, e.g. St. Luke's Extension Clinic in Manila.'),
+      note: t("マニラのSt. Luke's Extension Clinic等、大使館指定機関のみ有効。", "Only valid from a US Embassy-designated clinic, e.g. St. Luke's Extension Clinic in Manila."),
     },
     {
       doc: t('証明写真', 'Passport-Style Photos'),
