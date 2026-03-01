@@ -14,7 +14,7 @@ export default function KokusaiKekkonGuidePage() {
 
   useMeta(
     t('フィリピン国際結婚ガイド【2026年最新版】手続き・必要書類・費用を徹底解説', 'International Marriage with a Filipino: Complete Guide [2026]'),
-    t('フィリピン人との国際結婚手続きをステップ別に解説。日本先行・フィリピン先行の2パターン、必要書類（CENOMAR・PSA等）・費用・期間まで網羅。', 'Step-by-step guide to international marriage procedures. Covers Japan-first and Philippines-first processes, required documents (CENOMAR, PSA), costs, and timelines.')
+    t('フィリピン人との国際結婚手続きをステップ別に解説。日本先行・フィリピン先行の2パターン、必要書類（CENOMAR・PSA等）・費用・期間まで網羅。', 'Step-by-step guide to international marriage procedures. Covers Japan-first and Philippines-first options, required documents (CENOMAR, PSA), costs, and timelines.')
   );
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

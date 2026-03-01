@@ -14,7 +14,7 @@ export default function ApostillePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('DFAアポスティーユ 処理期間・取得方法【2026年最新】要件・費用｜DFA Apostille processing time Philippines 2026', 'DFA Apostille: How to Get It, Processing Time & Fees [2026]'),
+    t('DFAアポスティーユ 処理期間・取得方法・費用【2026年最新版】', 'DFA Apostille: How to Get It, Processing Time & Fees [2026]'),
     t('フィリピンDFAアポスティーユ認証の処理期間・取得方法・費用・要件を解説。CENOMAR・PSA・NBI対応。日本語サポートあり・無料見積もり受付中。', 'Complete guide to DFA Apostille authentication in the Philippines. Covers CENOMAR, PSA, and NBI documents. English support available.')
   );
 

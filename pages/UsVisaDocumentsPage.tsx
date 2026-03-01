@@ -12,7 +12,7 @@ export default function UsVisaDocumentsPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('米国ビザ（CR-1/IR-1・K-1）フィリピン書類ガイド【2026年版】', 'Philippine Documents for US Visa (CR-1/IR-1 & K-1) [2026 Guide]'),
+    t('米国ビザ（CR-1/IR-1・K-1）フィリピン書類ガイド【2026年版】', 'Philippine Documents for US Visa: CR-1, IR-1 & K-1 [2026]'),
     t('CR-1/IR-1・K-1ビザ申請に必要なフィリピン書類（PSA・CENOMAR・NBI）の取得方法とDFAアポスティーユを解説。', 'Complete guide to Philippine documents required for US CR-1/IR-1 and K-1 visa applications. Covers PSA, CENOMAR, and NBI Clearance with DFA Apostille.')
   );
 
