@@ -66,12 +66,6 @@ export default function ContactPage() {
   const trafficSource = getTrafficSource();
   const [status, setStatus] = useState<FormStatus>('idle');
 
-  useEffect(() => {
-    const metaRobots = document.querySelector('meta[name="robots"]');
-    const prev = metaRobots?.getAttribute('content') ?? 'index, follow';
-    metaRobots?.setAttribute('content', 'noindex, nofollow');
-    return () => { metaRobots?.setAttribute('content', prev); };
-  }, []);
 
   const faqs = [
     {
