@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 export default function GuidesPage() {
   const { lang } = useLanguage();
@@ -221,7 +222,7 @@ export default function GuidesPage() {
             'We\'ve compiled common questions about Philippine document acquisition, organized by document type and purpose. Find the guide that matches your situation.'
           )}
         </p>
-        <p className="text-sm text-gray-500 mb-10">{t('最終更新：2026年2月28日', 'Last updated: February 28, 2026')}</p>
+        <p className="text-sm text-gray-500 mb-10">{t(`最終更新：${SEO_LAST_UPDATED_JA}`, `Last updated: ${SEO_LAST_UPDATED_EN}`)}</p>
 
         {/* 統計バナー */}
         <div className="grid grid-cols-3 gap-3 mb-10">

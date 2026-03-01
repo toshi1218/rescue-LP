@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -97,7 +98,7 @@ export default function NbiHitPage() {
         url: 'https://ph-document.com/nbi-hit/',
         inLanguage: lang,
         datePublished: '2025-12-01',
-        dateModified: '2026-02-28',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: '株式会社IGRS',
@@ -152,7 +153,7 @@ export default function NbiHitPage() {
             'What is NBI HIT? Causes, Resolution Steps & Delay Time [2026 Complete Guide]'
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月28日 ｜ 株式会社IGRS', 'Last updated: February 28, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* Alert box */}
         <div className="bg-amber-50 border border-amber-300 rounded-xl p-5 mb-10">

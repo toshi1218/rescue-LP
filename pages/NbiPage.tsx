@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -156,7 +157,7 @@ export default function NbiPage() {
         url: 'https://ph-document.com/nbi-clearance-guide/',
         inLanguage: lang,
         datePublished: '2025-11-01',
-        dateModified: '2026-02-22',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: '株式会社IGRS',
@@ -210,7 +211,7 @@ export default function NbiPage() {
             <>Philippine NBI Clearance: Complete Guide [2026]<br className="hidden md:block" />How to Obtain It from Overseas</>
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月22日 ｜ 株式会社IGRS', 'Last updated: February 22, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* 目次 */}
         <div className="bg-white border border-gray-200 rounded-xl p-5 mb-10 shadow-card">

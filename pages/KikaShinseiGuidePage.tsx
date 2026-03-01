@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -99,7 +100,7 @@ export default function KikaShinseiGuidePage() {
         url: 'https://ph-document.com/kika-shinsei-guide/',
         inLanguage: lang,
         datePublished: '2025-11-01',
-        dateModified: '2026-02-22',
+        dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
           name: '株式会社IGRS',
@@ -196,7 +197,7 @@ export default function KikaShinseiGuidePage() {
             <>Complete Guide to Naturalization for Philippine Nationals<br className="hidden md:block" />Required Documents, Procedures, PSA &amp; NBI [2026]</>
           )}
         </h1>
-        <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年2月22日 ｜ 株式会社IGRS', 'Last updated: February 22, 2026 | IGRS Inc.')}</p>
+        <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 
         {/* Lead */}
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10 text-sm text-blue-900 leading-relaxed">
