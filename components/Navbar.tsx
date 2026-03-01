@@ -34,6 +34,7 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.visa'),          path: isJa ? '/ja/haigusha-visa/'        : '/spouse-visa-documents/' },
     { label: t('navbar.purpose.license'),       path: isJa ? '/ja/gaimen-kirikae-guide/' : '/drivers-license-conversion/' },
     { label: t('navbar.purpose.naturalization'),path: isJa ? '/ja/kika-shinsei-guide/'   : '/naturalization-guide/' },
+    { label: t('navbar.purpose.usVisa'),        path: isJa ? '/ja/us-visa-documents/'    : '/us-visa-documents/' },
   ];
 
   const guidesPath  = isJa ? '/ja/guides/'  : '/guides/';

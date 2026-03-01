@@ -24,6 +24,7 @@ const ja = {
   'navbar.purpose.visa': '配偶者ビザ',
   'navbar.purpose.license': '免許切替',
   'navbar.purpose.naturalization': '帰化申請',
+  'navbar.purpose.usVisa': '米国ビザ書類',
 
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': '日本法人運営',
@@ -81,7 +82,7 @@ const ja = {
   'footer.submit': 'フォームで問い合わせる',
   'footer.submitAriaLabel': 'お問い合わせフォームを送信',
   'footer.formAriaLabel': 'お問い合わせフォーム',
-  'footer.mailto': 'メールで直接送る: igrs20200601@gmail.com',
+  'footer.mailto': 'メールで直接送る: info@ph-document.com',
   'footer.company': '会社概要',
   'footer.privacy': 'プライバシーポリシー',
   'footer.pricingLink': '料金',
@@ -170,6 +171,7 @@ const en: typeof ja = {
   'navbar.purpose.visa': 'Spouse Visa',
   'navbar.purpose.license': 'License Transfer',
   'navbar.purpose.naturalization': 'Naturalization',
+  'navbar.purpose.usVisa': 'US Visa Documents',
 
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': 'Japan-Based Company',
@@ -227,7 +229,7 @@ const en: typeof ja = {
   'footer.submit': 'Send Message',
   'footer.submitAriaLabel': 'Submit contact form',
   'footer.formAriaLabel': 'Contact Form',
-  'footer.mailto': 'Send directly by email: igrs20200601@gmail.com',
+  'footer.mailto': 'Send directly by email: info@ph-document.com',
   'footer.company': 'Company',
   'footer.privacy': 'Privacy Policy',
   'footer.pricingLink': 'Pricing',

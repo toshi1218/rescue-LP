@@ -21,6 +21,7 @@ export const enToJa: Record<string, string> = {
   '/nbi-validity': '/ja/nbi-koyukigen',
   '/driver-record': '/ja/driver-record',
   '/pricing': '/ja/ryokin',
+  '/us-visa-documents': '/ja/us-visa-documents',
   '/company': '/ja/company',
   '/contact': '/ja/contact',
   '/privacy': '/ja/privacy',
