@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, ArrowRight, Clock, HelpCircle, Star } from 'lucide-react';
+import { FileText, ArrowRight, Clock, HelpCircle, Star, UserX, Fingerprint, BadgeCheck, Baby, Compass } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
@@ -37,7 +37,7 @@ export default function GuidesPage() {
   const categories = [
     {
       title: t('CENOMAR（独身証明書）', 'CENOMAR (Certificate of No Marriage)'),
-      icon: '📄',
+      icon: UserX,
       guides: [
         {
           to: t('/ja/cenomar', '/cenomar'),
@@ -64,7 +64,7 @@ export default function GuidesPage() {
     },
     {
       title: t('NBI Clearance（無犯罪証明書）', 'NBI Clearance (Criminal Record Certificate)'),
-      icon: '🛡️',
+      icon: Fingerprint,
       guides: [
         {
           to: t('/ja/nbi-clearance', '/nbi-clearance'),
@@ -91,7 +91,7 @@ export default function GuidesPage() {
     },
     {
       title: t('DFAアポスティーユ認証', 'DFA Apostille Authentication'),
-      icon: '🔏',
+      icon: BadgeCheck,
       guides: [
         {
           to: t('/ja/apostille', '/apostille'),
@@ -118,7 +118,7 @@ export default function GuidesPage() {
     },
     {
       title: t('PSA書類（出生・婚姻証明書）', 'PSA Documents (Birth & Marriage Certificate)'),
-      icon: '📋',
+      icon: Baby,
       guides: [
         {
           to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'),
@@ -145,7 +145,7 @@ export default function GuidesPage() {
     },
     {
       title: t('目的別ガイド', 'Guides by Purpose'),
-      icon: '🎯',
+      icon: Compass,
       guides: [
         {
           to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'),
@@ -195,6 +195,16 @@ export default function GuidesPage() {
           <span className="text-gray-600">{t('お役立ちガイド一覧', 'All Guides')}</span>
         </nav>
 
+        {/* Hero Image */}
+        <div className="rounded-2xl overflow-hidden mb-6 shadow-card">
+          <img
+            src="/hero-photo.webp"
+            alt={t('フィリピン書類取得ガイド', 'Philippine Document Procurement Guide')}
+            className="w-full h-40 md:h-52 object-cover"
+            loading="eager"
+          />
+        </div>
+
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t('お役立ちガイド・FAQ一覧', 'All Guides & FAQ')}
         </h1>
@@ -226,7 +236,9 @@ export default function GuidesPage() {
           {categories.map((cat, ci) => (
             <section key={ci}>
               <div className="flex items-center gap-3 mb-5">
-                <span className="text-2xl">{cat.icon}</span>
+                <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <cat.icon className="w-5 h-5 text-primary" />
+                </div>
                 <h2 className="text-lg font-bold text-secondary">{cat.title}</h2>
               </div>
               <div className="space-y-3">
