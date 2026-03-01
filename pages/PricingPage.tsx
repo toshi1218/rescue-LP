@@ -35,13 +35,13 @@ export default function PricingPage() {
       icon: FileText,
       title: t('PSA取得代行', 'PSA Document Retrieval'),
       subtitle: t('出生証明書 / 婚姻証明書 / CENOMAR', 'Birth Certificate / Marriage Certificate / CENOMAR'),
-      price: t('¥40,000', 'US$299–349'),
+      price: t('¥40,000', 'US$399–449'),
       usdRef: '$270',
-      note: t('〜 (税・送料別)', '(excl. tax & shipping)'),
-      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'International shipping extra')],
+      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
+      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'DHL shipping incl.')],
       details: {
         period: t('約4週間', 'Approx. 4 weeks'),
-        note: t('※税・国際送料は別途', '* Excl. tax & international shipping'),
+        note: t('※税・国際送料は別途', '* Incl. tax & DHL intl. shipping'),
         docs: [
           t('出生証明書（+ アポスティーユ）', 'Birth Certificate (+ Apostille)'),
           t('婚姻証明書（+ アポスティーユ）', 'Marriage Certificate (+ Apostille)'),
@@ -55,13 +55,13 @@ export default function PricingPage() {
       icon: Fingerprint,
       title: t('NBI取得代行', 'NBI Clearance Retrieval'),
       subtitle: t('無犯罪証明書の取得サポート', 'Support for NBI Clearance acquisition'),
-      price: t('¥45,000', 'US$349–399'),
+      price: t('¥45,000', 'US$469–549'),
       usdRef: '$300',
-      note: t('〜 (税・送料別)', '(excl. tax & shipping)'),
+      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
       highlights: [t('指紋採取サポート', 'Fingerprint support'), t('DFA認証オプション可', 'DFA Apostille option available')],
       details: {
         period: t('約4週間', 'Approx. 4 weeks'),
-        note: t('※税・国際送料は別途', '* Excl. tax & international shipping'),
+        note: t('※税・国際送料は別途', '* Incl. tax & DHL intl. shipping'),
         docs: [
           t('NBI無犯罪証明書', 'NBI Clearance'),
           t('DFAアポスティーユ認証（オプション）', 'DFA Apostille Authentication (optional)'),
@@ -74,13 +74,13 @@ export default function PricingPage() {
       icon: FileText,
       title: t('LTO関連書類取得代行', 'LTO Document Retrieval'),
       subtitle: t('運転免許関連書類（外免切り替え用）', 'License-related documents (for license transfer)'),
-      price: t('¥85,000', 'US$799–999'),
+      price: t('¥85,000', 'US$999–1,199'),
       usdRef: '$570',
-      note: t('〜 (税・送料別)', '(excl. tax & shipping)'),
-      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'International shipping extra')],
+      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
+      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'DHL shipping incl.')],
       details: {
         period: t('約4週間', 'Approx. 4 weeks'),
-        note: t('※税・国際送料は別途', '* Excl. tax & international shipping'),
+        note: t('※税・国際送料は別途', '* Incl. tax & DHL intl. shipping'),
         docs: [
           t('LTO運転免許証関連書類', 'LTO Driver\'s License Documents'),
           t('LTOトランザクション履歴', 'LTO Transaction History'),
@@ -93,13 +93,13 @@ export default function PricingPage() {
       icon: Gem,
       title: t('国際結婚パック', 'International Marriage Package'),
       subtitle: t('婚姻済証明書申請に必要な書類一式', 'All documents for marriage certificate application'),
-      price: t('¥85,000', 'US$799–999'),
+      price: t('¥85,000', 'US$999–1,199'),
       usdRef: '$570',
-      note: t('〜 (税・送料別)', '(excl. tax & shipping)'),
+      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
       highlights: [t('日本語翻訳込み', 'Japanese translation included'), t('優先対応サポート', 'Priority support')],
       details: {
         period: t('約4週間', 'Approx. 4 weeks'),
-        note: t('※税・国際送料は別途', '* Excl. tax & international shipping'),
+        note: t('※税・国際送料は別途', '* Incl. tax & DHL intl. shipping'),
         docs: [
           t('出生証明書（+ アポスティーユ）', 'Birth Certificate (+ Apostille)'),
           t('セノマー独身証明書（+ アポスティーユ）', 'CENOMAR (+ Apostille)'),
@@ -112,9 +112,9 @@ export default function PricingPage() {
       icon: Heart,
       title: t('配偶者ビザ', 'Spouse Visa'),
       subtitle: t('在留資格「日本人の配偶者等」申請サポート', 'Support for "Spouse of Japanese National" residence status'),
-      price: t('¥85,000', 'US$799–999'),
+      price: t('¥85,000', 'US$999–1,199'),
       usdRef: '$570',
-      note: t('〜 (税・送料別)', '(excl. tax & shipping)'),
+      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
       highlights: [t('必要書類の準備サポート', 'Document preparation support'), t('申請書類チェック', 'Application document review')],
       details: {
         period: t('要相談', 'Contact for details'),
@@ -131,9 +131,9 @@ export default function PricingPage() {
       icon: Award,
       title: t('帰化申請', 'Naturalization Application'),
       subtitle: t('日本国籍取得の申請サポート', 'Support for acquiring Japanese nationality'),
-      price: t('¥85,000', 'US$799–999'),
+      price: t('¥85,000', 'US$999–1,199'),
       usdRef: '$570',
-      note: t('〜 (税・送料別)', '(excl. tax & shipping)'),
+      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
       highlights: [t('必要書類の準備サポート', 'Document preparation support'), t('継続的フォローアップ', 'Ongoing follow-up')],
       details: {
         period: t('要相談', 'Contact for details'),
@@ -150,11 +150,11 @@ export default function PricingPage() {
   const faqs = [
     {
       q: t('料金に消費税は含まれていますか？', 'Does the price include consumption tax?'),
-      a: t('表示金額はすべて税抜きです。別途消費税（10%）がかかります。', 'All displayed prices are exclusive of tax. Consumption tax (10%) will be added separately.'),
+      a: t('表示金額はすべて税抜きです。別途消費税（10%）がかかります。', 'All displayed prices are all-inclusive: Philippine tax and DHL international shipping to the USA are already included.'),
     },
     {
       q: t('国際送料はいくらですか？', 'How much is the international shipping fee?'),
-      a: t('送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね1,500〜3,000円程度が目安です。', 'It varies depending on the destination. Please confirm at the time of inquiry. For EMS shipping to Japan, the estimate is approximately ¥1,500–¥3,000.'),
+      a: t('送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね1,500〜3,000円程度が目安です。', 'DHL Express international shipping to the USA is already included in the displayed price. No additional shipping fee will be charged.'),
     },
     {
       q: t('取得難易度による変動とはどういう意味ですか？', 'What does "price may vary depending on difficulty" mean?'),
@@ -217,13 +217,13 @@ export default function PricingPage() {
     t('フィリピン各機関への申請手続き代行', 'Application procedures with Philippine agencies'),
     t('書類の確認・不備チェック', 'Document review and deficiency check'),
     t('日本語での進捗報告', 'Progress updates in Japanese/English'),
-    t('書類受領後の日本への転送（国際送料別途）', 'Forwarding documents to Japan after receipt (int\'l shipping extra)'),
+    t('書類受領後の日本への転送（国際送料別途）', 'DHL international shipping to the USA (included)'),
     t('DFAアポスティーユ認証の代行（オプション）', 'DFA Apostille authentication (optional)'),
   ];
 
   const notIncluded = [
-    t('消費税（別途10%）', 'Consumption tax (10% extra)'),
-    t('国際郵便送料', 'International postal fee'),
+    t('消費税（別途10%）', 'Consumption tax (already included)'),
+    t('国際郵便送料', 'DHL shipping (already included)'),
     t('フィリピン政府機関の申請手数料（一部プランで含む）', 'Philippine government agency fees (included in some plans)'),
     t('日本語翻訳費用（必要な場合は別途ご相談）', 'Japanese translation fee (contact us if needed)'),
     t('追加調査費用（MATCH FOUND等の異議申し立て）', 'Additional investigation fees (for MATCH FOUND cases, etc.)'),
@@ -253,7 +253,7 @@ export default function PricingPage() {
         <div className="text-center mb-4">
           <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Price</span>
           <h1 className="text-2xl font-bold text-secondary">{t('料金プラン', 'Pricing Plans')}</h1>
-          <p className="text-xs text-gray-500 mt-2">{t('※取得難易度により変動する場合があります。すべて税抜き表示。', '* Prices may vary by document complexity. All prices exclude tax.')}</p>
+          <p className="text-xs text-gray-500 mt-2">{t('※取得難易度により変動する場合があります。すべて税抜き表示。', '* Prices may vary by document complexity. All prices include tax & DHL shipping to the USA.')}</p>
         </div>
 
         {/* リード文 */}
@@ -514,7 +514,7 @@ export default function PricingPage() {
           <p className="text-xs text-gray-400 leading-relaxed px-1">
             {t(
               '※表示価格はすべて税抜きです。取得難易度により変動する場合があります。',
-              '* Final quote depends on document condition, shipping destination, and exchange rate.'
+              '* All prices include Philippine tax and DHL international shipping to the USA. Final amount may vary by document condition.'
             )}
           </p>
         </div>
