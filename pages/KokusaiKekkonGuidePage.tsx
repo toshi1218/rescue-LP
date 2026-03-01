@@ -14,7 +14,7 @@ export default function KokusaiKekkonGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('フィリピン国際結婚ガイド【2026年最新版】手続き・必要書類・費用を徹底解説', 'International Marriage with a Filipino: Complete Guide [2026]'),
+    t(`フィリピン国際結婚ガイド【${SEO_YEAR_MONTH_JA}最新】手続き・必要書類・費用を徹底解説`, `International Marriage with a Filipino: Complete Guide [${SEO_YEAR_MONTH_EN}]`),
     t('フィリピン人との国際結婚手続きをステップ別に解説。日本先行・フィリピン先行の2パターン、必要書類（CENOMAR・PSA等）・費用・期間まで網羅。', 'Step-by-step guide to international marriage procedures. Covers Japan-first and Philippines-first options, required documents (CENOMAR, PSA), costs, and timelines.')
   );
 
@@ -148,7 +148,7 @@ export default function KokusaiKekkonGuidePage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'Complete Guide to International Marriage with a Filipino/Filipina | Procedures, Documents & Costs [2026]',
+        headline: `Complete Guide to International Marriage with a Filipino/Filipina | Procedures, Documents & Costs [${SEO_YEAR_MONTH_EN}]`,
         description: 'Step-by-step guide to international marriage with a Filipino/Filipina. Covers Japan-first and Philippines-first patterns, required documents (CENOMAR, PSA, etc.), costs, and timelines.',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/kokusai-kekkon-guide/',
@@ -217,7 +217,7 @@ export default function KokusaiKekkonGuidePage() {
             'フィリピン人との国際結婚 完全ガイド',
             'Complete Guide to International Marriage with a Filipino/Filipina'
           )}<br className="hidden md:block" />
-          {t('手続きの流れ・必要書類・費用【2026年最新】', 'Procedures, Documents & Costs [2026]')}
+          {t(`手続きの流れ・必要書類・費用【${SEO_YEAR_MONTH_JA}最新】`, `Procedures, Documents & Costs [${SEO_YEAR_MONTH_EN}]`)}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 

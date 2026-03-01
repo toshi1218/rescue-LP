@@ -14,7 +14,7 @@ export default function HaigushaVisaPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('配偶者ビザ フィリピン書類チェックリスト【2026年版】必要書類・取得方法', 'Philippine Documents for Spouse Visa Application [2026 Checklist]'),
+    t(`配偶者ビザ フィリピン書類チェックリスト【${SEO_YEAR_MONTH_JA}版】必要書類・取得方法`, `Philippine Documents for Spouse Visa Application [${SEO_YEAR_MONTH_EN} Checklist]`),
     t('配偶者ビザ申請に必要なフィリピン書類を完全リスト化。PSA・CENOMAR・NBI等の取得方法・費用・注意点を解説。代行サービスで一括取得対応。', 'Complete checklist of Philippine documents required for a Japanese spouse visa application. Covers PSA, CENOMAR, and NBI Clearance retrieval.')
   );
 
@@ -145,7 +145,7 @@ export default function HaigushaVisaPage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'Philippine Document Checklist for Spouse Visa Application [2026]',
+        headline: `Philippine Document Checklist for Spouse Visa Application [${SEO_YEAR_MONTH_EN}]`,
         description: 'Complete checklist of Philippine documents required for Japanese spouse visa applications: CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille.',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/haigusha-visa-shorui/',
@@ -196,7 +196,7 @@ export default function HaigushaVisaPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t('配偶者ビザに必要なフィリピン書類', 'Philippine Documents for Spouse Visa')}<br className="hidden md:block" />
-          {t('チェックリスト【2026年最新】', 'Checklist [2026]')}
+          {t(`チェックリスト【${SEO_YEAR_MONTH_JA}最新】`, `Checklist [${SEO_YEAR_MONTH_EN}]`)}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
 

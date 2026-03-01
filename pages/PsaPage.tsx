@@ -15,7 +15,7 @@ export default function PsaPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('PSA出生証明書 要件・費用・取得方法【2026年最新版】｜PSA birth certificate Philippines 2026', 'PSA Birth Certificate: Requirements, Fees & How to Get It [2026]'),
+    t(`PSA出生証明書 要件・費用・取得方法【${SEO_YEAR_MONTH_JA}最新】｜PSA birth certificate Philippines ${SEO_YEAR_MONTH_EN}`, `PSA Birth Certificate: Requirements, Fees & How to Get It [${SEO_YEAR_MONTH_EN}]`),
     t('PSA出生証明書の申請要件・費用・取得方法を解説。2026年最新の必要情報・PSA手数料（365ペソ）・代行費用まで。NO RECORD FOUND対処も。無料相談受付中。', 'Complete guide to getting a PSA Birth Certificate from the Philippines. Learn requirements, fees, processing time, and how our service can help.')
   );
 
@@ -112,7 +112,7 @@ export default function PsaPage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'フィリピンPSA出生証明書の取得方法｜国際結婚・ビザ申請で必要な理由【2026年】',
+        headline: `フィリピンPSA出生証明書の取得方法｜国際結婚・ビザ申請で必要な理由【${SEO_YEAR_MONTH_JA}】`,
         description: 'PSA出生証明書（旧NSO）の取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・NO RECORD FOUNDのトラブル対処まで徹底ガイド。',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/psa-shussei-shomeisho/',
@@ -167,9 +167,9 @@ export default function PsaPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {lang === 'ja' ? (
-            <>フィリピンPSA出生証明書の取得方法｜<br className="hidden md:block" />国際結婚・ビザ申請で必要な理由【2026年最新】</>
+            <>フィリピンPSA出生証明書の取得方法｜<br className="hidden md:block" />国際結婚・ビザ申請で必要な理由【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>Philippine PSA Birth Certificate:<br className="hidden md:block" />Complete Guide to Requirements, Cost & How to Obtain It [2026]</>
+            <>Philippine PSA Birth Certificate:<br className="hidden md:block" />Complete Guide to Requirements, Cost & How to Obtain It [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

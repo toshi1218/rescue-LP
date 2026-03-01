@@ -12,7 +12,7 @@ export default function GuidesPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('お役立ちガイド一覧｜CENOMAR・NBI・DFAアポスティーユ FAQ【2026年】', 'Document Guides | CENOMAR, NBI, DFA Apostille FAQs [2026]'),
+    t(`お役立ちガイド一覧｜CENOMAR・NBI・DFAアポスティーユ FAQ【${SEO_YEAR_MONTH_JA}】`, `Document Guides | CENOMAR, NBI, DFA Apostille FAQs [${SEO_YEAR_MONTH_EN}]`),
     t('フィリピン書類取得に関するお役立ちガイドとFAQ集。CENOMAR・NBI・DFAアポスティーユ・LTOについての疑問を解決するガイドページ一覧。', 'Helpful guides and FAQs for Philippine document retrieval. Find answers about CENOMAR, NBI Clearance, DFA Apostille, and LTO documents.')
   );
 
@@ -103,14 +103,14 @@ export default function GuidesPage() {
         },
         {
           to: t('/ja/apostille-shori-kikan', '/apostille-processing-time'),
-          title: t('DFAアポスティーユ処理期間【2026年最新】', 'DFA Apostille Processing Time [2026]'),
+          title: t(`DFAアポスティーユ処理期間【${SEO_YEAR_MONTH_JA}最新】`, `DFA Apostille Processing Time [${SEO_YEAR_MONTH_EN}]`),
           desc: t('通常・エクスプレスの日数目安と代行スケジュール', 'Standard & express day estimates and proxy service schedule'),
           tags: [t('FAQ', 'FAQ'), t('新着', 'New')],
           isPopular: false,
         },
         {
           to: t('/ja/apostille-ryokin', '/apostille-fee'),
-          title: t('DFAアポスティーユの費用【2026年最新】', 'DFA Apostille Fee [2026]'),
+          title: t(`DFAアポスティーユの費用【${SEO_YEAR_MONTH_JA}最新】`, `DFA Apostille Fee [${SEO_YEAR_MONTH_EN}]`),
           desc: t('DFA手数料・代行費用・セット料金の目安を解説', 'DFA fees, proxy service costs, and set pricing explained'),
           tags: [t('FAQ', 'FAQ')],
           isPopular: false,
@@ -130,7 +130,7 @@ export default function GuidesPage() {
         },
         {
           to: t('/ja/psa-shussei-cost', '/psa-birth-certificate-cost'),
-          title: t('PSA出生証明書の費用【2026年最新】', 'PSA Birth Certificate Cost [2026]'),
+          title: t(`PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}最新】`, `PSA Birth Certificate Cost [${SEO_YEAR_MONTH_EN}]`),
           desc: t('PSA手数料・代行費用・DFAアポスティーユとのセット料金を解説', 'PSA official fee, proxy costs, and DFA Apostille set pricing explained'),
           tags: [t('FAQ', 'FAQ')],
           isPopular: false,

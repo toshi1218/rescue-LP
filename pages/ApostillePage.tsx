@@ -15,7 +15,7 @@ export default function ApostillePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('DFAアポスティーユ 処理期間・取得方法・費用【2026年最新版】', 'DFA Apostille: How to Get It, Processing Time & Fees [2026]'),
+    t(`DFAアポスティーユ 処理期間・取得方法・費用【${SEO_YEAR_MONTH_JA}最新】`, `DFA Apostille: How to Get It, Processing Time & Fees [${SEO_YEAR_MONTH_EN}]`),
     t('フィリピンDFAアポスティーユ認証の処理期間・取得方法・費用・要件を解説。CENOMAR・PSA・NBI対応。日本語サポートあり・無料見積もり受付中。', 'Complete guide to DFA Apostille authentication in the Philippines. Covers CENOMAR, PSA, and NBI documents. English support available.')
   );
 
@@ -140,7 +140,7 @@ export default function ApostillePage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'フィリピンDFAアポスティーユ認証とは？対象書類・取得方法・費用【2026年】',
+        headline: `フィリピンDFAアポスティーユ認証とは？対象書類・取得方法・費用【${SEO_YEAR_MONTH_JA}】`,
         description: 'フィリピンDFAアポスティーユ認証の取得方法・対象書類・費用・期間を解説。CENOMAR・PSA・NBI Clearanceへの認証取得を代行サービスで日本語対応。',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/apostille-guide/',
@@ -191,9 +191,9 @@ export default function ApostillePage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {lang === 'ja' ? (
-            <>フィリピンDFAアポスティーユ認証とは？<br className="hidden md:block" />対象書類・取得方法・費用【2026年最新】</>
+            <>フィリピンDFAアポスティーユ認証とは？<br className="hidden md:block" />対象書類・取得方法・費用【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>What is Philippine DFA Apostille Authentication?<br className="hidden md:block" />Documents, Process & Fees [2026 Guide]</>
+            <>What is Philippine DFA Apostille Authentication?<br className="hidden md:block" />Documents, Process & Fees [{SEO_YEAR_MONTH_EN} Guide]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

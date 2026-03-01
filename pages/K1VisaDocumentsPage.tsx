@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function K1VisaDocumentsPage() {
   const { lang } = useLanguage();
@@ -13,7 +14,7 @@ export default function K1VisaDocumentsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useMeta(
-    t('K-1婚約者ビザ フィリピン書類ガイド【2026年版】CENOMAR・PSA・NBI', 'K-1 Fiancé Visa: Philippine Documents Guide [2026] — CENOMAR, PSA & NBI'),
+    t(`K-1婚約者ビザ フィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】CENOMAR・PSA・NBI`, `K-1 Fiancé Visa: Philippine Documents Guide [${SEO_YEAR_MONTH_EN}] — CENOMAR, PSA & NBI`),
     t('K-1ビザ申請に必要なフィリピン書類（CENOMAR・PSA出生証明書・NBI Clearance）の取得方法とDFAアポスティーユを解説。', 'Complete checklist of Philippine documents for the K-1 fiancé(e) visa: CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille. Retrieval service available.')
   );
 
@@ -34,7 +35,7 @@ export default function K1VisaDocumentsPage() {
           '@id': 'https://ph-document.com/k1-visa-documents/',
           speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', 'h2'] },
         },
-        headline: t('K-1婚約者ビザ フィリピン書類ガイド【2026年版】', 'K-1 Fiancé Visa: Philippine Documents Checklist [2026]'),
+        headline: t(`K-1婚約者ビザ フィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】`, `K-1 Fiancé Visa: Philippine Documents Checklist [${SEO_YEAR_MONTH_EN}]`),
         description: t('K-1ビザ申請に必要なCENOMAR・PSA出生証明書・NBI Clearanceの取得方法とDFAアポスティーユを解説。', 'How to obtain CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille for the K-1 fiancé visa application.'),
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/k1-visa-documents/',
@@ -200,8 +201,8 @@ export default function K1VisaDocumentsPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'K-1婚約者ビザに必要なフィリピン書類ガイド【2026年版】',
-            'Philippine Documents for the K-1 Fiancé Visa [2026 Guide]'
+            `K-1婚約者ビザに必要なフィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】`,
+            `Philippine Documents for the K-1 Fiancé Visa [${SEO_YEAR_MONTH_EN} Guide]`
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t('最終更新：2026年3月1日 ｜ IGRS Inc.', 'Last updated: March 1, 2026 | IGRS Inc.')}</p>

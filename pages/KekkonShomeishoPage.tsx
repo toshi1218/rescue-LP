@@ -15,7 +15,7 @@ export default function KekkonShomeishoPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('PSA婚姻証明書 取得方法【2026年最新版】費用・期間・国際結婚・配偶者ビザ向け', 'PSA Marriage Certificate: How to Get It for US Visa (CR-1/IR-1 & K-1) [2026]'),
+    t(`PSA婚姻証明書 取得方法【${SEO_YEAR_MONTH_JA}最新】費用・期間・国際結婚・配偶者ビザ向け`, `PSA Marriage Certificate: How to Get It for US Visa (CR-1/IR-1 & K-1) [${SEO_YEAR_MONTH_EN}]`),
     t('PSA婚姻証明書の取得方法・必要な場面・費用・期間を解説。国際結婚・配偶者ビザ申請に必要なフィリピン結婚証明書の代行取得に対応。', 'How to obtain a Philippine PSA Marriage Certificate for US CR-1/IR-1 spousal visa NVC submission. With DFA Apostille authentication. Retrieval service ships to USA.')
   );
 
@@ -82,7 +82,7 @@ export default function KekkonShomeishoPage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: t('フィリピンPSA婚姻証明書の取得方法｜国際結婚・配偶者ビザで必要な理由【2026年】', 'How to Obtain a Philippine PSA Marriage Certificate | Why It\'s Required for International Marriage & Spouse Visa [2026]'),
+        headline: t(`フィリピンPSA婚姻証明書の取得方法｜国際結婚・配偶者ビザで必要な理由【${SEO_YEAR_MONTH_JA}】`, `How to Obtain a Philippine PSA Marriage Certificate | Why It's Required for International Marriage & Spouse Visa [${SEO_YEAR_MONTH_EN}]`),
         description: t('PSA婚姻証明書（フィリピン結婚証明書）の取得方法・必要な場面・費用・期間を解説。フィリピン先行婚姻後の報告手続きに必要な書類をガイド。', 'A guide on how to obtain a PSA Marriage Certificate (Philippine marriage certificate), when it is required, costs, and timeframes. Guides you through documents needed after a Philippines-first marriage.'),
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/kekkon-shomeisho/',
@@ -221,9 +221,9 @@ export default function KekkonShomeishoPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {lang === 'ja' ? (
-            <>フィリピンPSA婚姻証明書の取得方法<br className="hidden md:block" />国際結婚・配偶者ビザで必要な理由【2026年最新】</>
+            <>フィリピンPSA婚姻証明書の取得方法<br className="hidden md:block" />国際結婚・配偶者ビザで必要な理由【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>How to Obtain a Philippine PSA Marriage Certificate<br className="hidden md:block" />Required for US CR-1/IR-1 Spouse Visa (NVC) [2026]</>
+            <>How to Obtain a Philippine PSA Marriage Certificate<br className="hidden md:block" />Required for US CR-1/IR-1 Spouse Visa (NVC) [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

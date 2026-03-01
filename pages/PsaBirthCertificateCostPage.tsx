@@ -15,7 +15,7 @@ export default function PsaBirthCertificateCostPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('PSA出生証明書の費用・料金【2026年最新】自分で取得 vs 代行の比較｜フィリピン書類センター', 'PSA Birth Certificate Cost [2026]: DIY vs. Retrieval Service'),
+    t(`PSA出生証明書の費用・料金【${SEO_YEAR_MONTH_JA}最新】自分で取得 vs 代行の比較｜フィリピン書類センター`, `PSA Birth Certificate Cost [${SEO_YEAR_MONTH_EN}]: DIY vs. Retrieval Service`),
     t('PSA出生証明書の公式料金・自分で取得する場合の費用・代行利用時の総費用を解説。DFAアポスティーユ込みの料金も紹介。', 'Compare the cost of getting a PSA Birth Certificate yourself vs. using a retrieval service. Includes official PSA fees and DFA Apostille costs.')
   );
 
@@ -142,7 +142,7 @@ export default function PsaBirthCertificateCostPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'PSA出生証明書の費用・料金【2026年最新】公式料金 vs 代行費用の比較',
+            `PSA出生証明書の費用・料金【${SEO_YEAR_MONTH_JA}最新】公式料金 vs 代行費用の比較`,
             'PSA Birth Certificate Cost 2026 — Official Fees, Proxy Pricing & Total Estimates'
           )}
         </h1>

@@ -15,7 +15,7 @@ export default function ApostilleFeePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('DFAアポスティーユ 料金【2026年最新】公式費用・代行費用・エクスプレスの違い｜フィリピン書類センター', 'DFA Apostille Fees [2026]: Official Costs & Service Pricing'),
+    t(`DFAアポスティーユ 料金【${SEO_YEAR_MONTH_JA}最新】公式費用・代行費用・エクスプレスの違い｜フィリピン書類センター`, `DFA Apostille Fees [${SEO_YEAR_MONTH_EN}]: Official Costs & Service Pricing`),
     t('フィリピンDFAアポスティーユ認証の公式料金・代行費用・エクスプレス追加料金を解説。CENOMAR・PSA・NBI書類ごとの費用目安も掲載。', 'Official DFA Apostille fees and retrieval service pricing. Includes express surcharges and cost estimates for CENOMAR, PSA, and NBI documents.')
   );
 
@@ -142,7 +142,7 @@ export default function ApostilleFeePage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
-            'DFAアポスティーユ料金【2026年最新】公式費用・代行費用・エクスプレスの違い',
+            `DFAアポスティーユ料金【${SEO_YEAR_MONTH_JA}最新】公式費用・代行費用・エクスプレスの違い`,
             'DFA Apostille Fee 2026 — Official Rates, Express vs Standard & Proxy Pricing'
           )}
         </h1>

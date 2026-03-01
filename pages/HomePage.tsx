@@ -16,6 +16,7 @@ import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 export default function HomePage() {
   const { lang } = useLanguage();
@@ -32,7 +33,7 @@ export default function HomePage() {
   }, [navigate]);
 
   useMeta(
-    t('フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【2026年対応】', 'Philippine Document Service | CENOMAR, PSA, NBI [2026]'),
+    t(`フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`, `Philippine Document Service | CENOMAR, PSA, NBI [${SEO_YEAR_MONTH_EN}]`),
     t('CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。', 'We retrieve CENOMAR, PSA, NBI, and DFA Apostille from the Philippines on your behalf. Trusted by international couples. Free consultation.')
   );
 
@@ -42,11 +43,11 @@ export default function HomePage() {
       {
         '@type': 'WebPage',
         '@id': 'https://ph-document.com/',
-        name: 'Philippine Document Retrieval Service | CENOMAR, PSA, NBI [2026]',
+        name: `Philippine Document Retrieval Service | CENOMAR, PSA, NBI [${SEO_YEAR_MONTH_EN}]`,
         description: 'We retrieve CENOMAR, PSA Birth/Marriage Certificates, NBI Clearance, and DFA Apostille from the Philippines on your behalf. Trusted by international couples. Free consultation.',
         url: 'https://ph-document.com/',
         inLanguage: 'en',
-        dateModified: '2026-02-17',
+        dateModified: SEO_DATE_ISO,
         speakable: {
           '@type': 'SpeakableSpecification',
           cssSelector: ['h1', 'h2'],

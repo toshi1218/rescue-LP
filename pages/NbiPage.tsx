@@ -16,7 +16,7 @@ export default function NbiPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('NBI Clearance 取得方法【2026年最新】無犯罪証明書・NBI HIT対処｜フィリピン書類センター', 'NBI Clearance: How to Get It from the Philippines [2026 Guide]'),
+    t(`NBI Clearance 取得方法【${SEO_YEAR_MONTH_JA}最新】無犯罪証明書・NBI HIT対処｜フィリピン書類センター`, `NBI Clearance: How to Get It from the Philippines [${SEO_YEAR_MONTH_EN} Guide]`),
     t('NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。', 'Complete guide to NBI Clearance acquisition, NBI HIT resolution, and DFA Apostille. How our service retrieves NBI Clearance on your behalf.')
   );
 
@@ -151,7 +151,7 @@ export default function NbiPage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'フィリピンNBI無犯罪証明書（NBI Clearance）とは？日本から取得する方法【2026年】',
+        headline: `フィリピンNBI無犯罪証明書（NBI Clearance）とは？日本から取得する方法【${SEO_YEAR_MONTH_JA}】`,
         description: 'NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/nbi-clearance-guide/',
@@ -206,9 +206,9 @@ export default function NbiPage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {lang === 'ja' ? (
-            <>フィリピンNBI無犯罪証明書（NBI Clearance）とは？<br className="hidden md:block" />日本から取得する方法【2026年最新】</>
+            <>フィリピンNBI無犯罪証明書（NBI Clearance）とは？<br className="hidden md:block" />日本から取得する方法【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>Philippine NBI Clearance: Complete Guide [2026]<br className="hidden md:block" />How to Obtain It from Overseas</>
+            <>Philippine NBI Clearance: Complete Guide [{SEO_YEAR_MONTH_EN}]<br className="hidden md:block" />How to Obtain It from Overseas</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

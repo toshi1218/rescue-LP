@@ -15,7 +15,7 @@ export default function GaimenKirikaeGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t('フィリピン運転免許 外免切替ガイド【2026年最新】LTO書類・手続き・費用', 'Filipino License to Japanese License Conversion Guide [2026]'),
+    t(`フィリピン運転免許 外免切替ガイド【${SEO_YEAR_MONTH_JA}最新】LTO書類・手続き・費用`, `Filipino License to Japanese License Conversion Guide [${SEO_YEAR_MONTH_EN}]`),
     t('フィリピン運転免許を日本免許に切り替える手順・必要LTO書類・費用を解説。LTO書類の代行取得に対応。無料相談受付中。', 'Step-by-step guide to converting a Philippine driving license to a Japanese license. Covers required LTO documents, fees, and procedures.')
   );
 
@@ -101,7 +101,7 @@ export default function GaimenKirikaeGuidePage() {
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: t('フィリピン運転免許の外免切替ガイド｜必要なLTO書類・手順・費用【2026年】', 'Philippine Driver\'s License Conversion Guide | Required LTO Documents, Procedures & Costs [2026]'),
+        headline: t(`フィリピン運転免許の外免切替ガイド｜必要なLTO書類・手順・費用【${SEO_YEAR_MONTH_JA}】`, `Philippine Driver's License Conversion Guide | Required LTO Documents, Procedures & Costs [${SEO_YEAR_MONTH_EN}]`),
         description: t('フィリピン運転免許を日本の免許に切り替える（外免切替）ための手順・必要書類・LTO書類の取得方法を解説。LTO書類の代行取得に対応。', 'A guide on procedures, required documents, and how to obtain LTO documents for converting a Philippine driver\'s license to a Japanese license. Proxy procurement of LTO documents available.'),
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/gaimen-kirikae-guide/',
@@ -222,9 +222,9 @@ export default function GaimenKirikaeGuidePage() {
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {lang === 'ja' ? (
-            <>フィリピン運転免許の外免切替ガイド<br className="hidden md:block" />必要なLTO書類・手順・費用【2026年最新】</>
+            <>フィリピン運転免許の外免切替ガイド<br className="hidden md:block" />必要なLTO書類・手順・費用【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>Philippine Driver&apos;s License Conversion Guide<br className="hidden md:block" />Required LTO Documents, Procedures &amp; Costs [2026]</>
+            <>Philippine Driver&apos;s License Conversion Guide<br className="hidden md:block" />Required LTO Documents, Procedures &amp; Costs [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
