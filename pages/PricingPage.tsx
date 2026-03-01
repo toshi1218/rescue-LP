@@ -7,26 +7,26 @@ import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/' },
-        { '@type': 'ListItem', position: 2, name: '料金プラン', item: 'https://ph-document.com/pricing/' },
-      ],
-    },
-  ],
-};
-
 export default function PricingPage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: t('ホーム', 'Home'), item: 'https://ph-document.com/' },
+          { '@type': 'ListItem', position: 2, name: t('料金プラン', 'Pricing Plans'), item: 'https://ph-document.com/pricing/' },
+        ],
+      },
+    ],
+  };
+
   useMeta(
-    '料金一覧【2026年最新版】フィリピン書類取得代行の費用・プラン',
-    'フィリピン書類取得代行の料金一覧。CENOMAR・PSA・NBI・DFAアポスティーユの費用・処理期間・プランをご案内。無料見積もり受付中。'
+    t('料金一覧【2026年最新版】フィリピン書類取得代行の費用・プラン', 'Pricing Plans [2026] | Philippine Document Retrieval Service'),
+    t('フィリピン書類取得代行の料金一覧。CENOMAR・PSA・NBI・DFAアポスティーユの費用・処理期間・プランをご案内。無料見積もり受付中。', 'View pricing for CENOMAR, PSA, NBI, and DFA Apostille retrieval. All plans include tax and DHL international shipping. Free quote available.')
   );
 
   const plans = [

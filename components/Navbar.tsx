@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
       ],
     },
     {
-      category: 'NBI Clearance（無犯罪証明書）',
+      category: isJa ? 'NBI Clearance（無犯罪証明書）' : 'NBI Clearance',
       items: [
         { label: isJa ? 'NBI Clearanceガイド 完全版' : 'NBI Clearance Complete Guide', path: isJa ? '/ja/nbi-clearance/' : '/nbi-clearance/' },
         { label: isJa ? 'NBI HITとは？' : 'What is NBI HIT?', path: isJa ? '/ja/nbi-hit/' : '/nbi-hit/' },

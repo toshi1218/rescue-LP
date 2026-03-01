@@ -14,8 +14,8 @@ export default function PsaPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'PSA出生証明書 要件・費用・取得方法【2026年最新版】｜PSA birth certificate Philippines 2026',
-    'PSA出生証明書の申請要件・費用・取得方法を解説。2026年最新の必要情報・PSA手数料（365ペソ）・代行費用まで。NO RECORD FOUND対処も。無料相談受付中。'
+    t('PSA出生証明書 要件・費用・取得方法【2026年最新版】｜PSA birth certificate Philippines 2026', 'PSA Birth Certificate – Requirements, Fees & How to Get It [2026]'),
+    t('PSA出生証明書の申請要件・費用・取得方法を解説。2026年最新の必要情報・PSA手数料（365ペソ）・代行費用まで。NO RECORD FOUND対処も。無料相談受付中。', 'Complete guide to getting a PSA Birth Certificate from the Philippines. Learn requirements, fees, processing time, and how our retrieval service can handle it for you.')
   );
 
   const faqs = [
@@ -106,7 +106,7 @@ export default function PsaPage() {
         headline: 'フィリピンPSA出生証明書の取得方法｜国際結婚・ビザ申請で必要な理由【2026年】',
         description: 'PSA出生証明書（旧NSO）の取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・NO RECORD FOUNDのトラブル対処まで徹底ガイド。',
         url: 'https://ph-document.com/psa-shussei-shomeisho/',
-        inLanguage: 'ja',
+        inLanguage: lang,
         dateModified: '2026-02-22',
         author: { '@type': 'Organization', name: '株式会社IGRS' },
         publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },

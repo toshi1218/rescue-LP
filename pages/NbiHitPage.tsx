@@ -14,8 +14,8 @@ export default function NbiHitPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'NBI HITとは？【2026年版】原因・対処法・どれくらい遅れるか徹底解説｜フィリピン書類センター',
-    'NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。NBI Clearance申請でHIT（MATCH FOUND）が出た場合の対処法と代行サービスの活用方法。'
+    t('NBI HITとは？【2026年版】原因・対処法・どれくらい遅れるか徹底解説｜フィリピン書類センター', 'What Is an NBI HIT? Causes, Solutions & Delays [2026]'),
+    t('NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。NBI Clearance申請でHIT（MATCH FOUND）が出た場合の対処法と代行サービスの活用方法。', 'Understand what an NBI HIT (MATCH FOUND) means, why it happens, how to resolve it, and how long the delay will be.')
   );
 
   const faqs = [
@@ -86,7 +86,7 @@ export default function NbiHitPage() {
         headline: 'NBI HITとは？原因・対処法・どれくらい遅れるか【2026年版】',
         description: 'NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。代行サービスでのHIT対応も紹介。',
         url: 'https://ph-document.com/nbi-hit',
-        inLanguage: 'ja',
+        inLanguage: lang,
         dateModified: '2026-02-28',
         author: { '@type': 'Organization', name: '株式会社IGRS' },
         publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },

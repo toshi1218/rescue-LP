@@ -13,8 +13,8 @@ export default function CenomarGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'CENOMAR（独身証明書）取得方法【2026年最新版】費用・期間・代行｜フィリピン書類センター',
-    'フィリピン独身証明書CENOMARの取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・有効期限・トラブル対処まで徹底ガイド。'
+    t('CENOMAR（独身証明書）取得方法【2026年最新版】費用・期間・代行｜フィリピン書類センター', 'How to Get CENOMAR [2026 Guide] – Fees, Timeline & Service'),
+    t('フィリピン独身証明書CENOMARの取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・有効期限・トラブル対処まで徹底ガイド。', 'Complete guide to getting a CENOMAR (Certificate of No Marriage Record) from the Philippines. Covers DIY, embassy, and retrieval service options.')
   );
 
   const faqs = [
@@ -96,7 +96,7 @@ export default function CenomarGuidePage() {
         description: 'CENOMARの取得方法を自分で・大使館で・代行での3パターンで解説。費用・期間・有効期限・よくあるトラブルまで初心者向けに徹底ガイド。',
         image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/cenomar-guide/',
-        inLanguage: 'ja',
+        inLanguage: lang,
         datePublished: '2025-11-01',
         dateModified: '2026-02-22',
         author: {

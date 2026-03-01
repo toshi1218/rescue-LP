@@ -32,8 +32,8 @@ export default function HomePage() {
   }, [navigate]);
 
   useMeta(
-    'フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【2026年対応】',
-    'CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。'
+    t('フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【2026年対応】', 'Philippine Document Retrieval Service | CENOMAR, PSA, NBI [2026]'),
+    t('CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。', 'We retrieve CENOMAR, PSA Birth/Marriage Certificates, NBI Clearance, and DFA Apostille from the Philippines on your behalf. Trusted by international couples. Free consultation.')
   );
 
   useEffect(() => {

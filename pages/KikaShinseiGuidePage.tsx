@@ -14,8 +14,8 @@ export default function KikaShinseiGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'フィリピン人 帰化申請ガイド【2026年最新版】必要書類・手続きの流れ・費用',
-    'フィリピン国籍の方が日本に帰化するための手続き・必要書類（PSA・NBI等）・費用・審査期間をわかりやすく解説。'
+    t('フィリピン人 帰化申請ガイド【2026年最新版】必要書類・手続きの流れ・費用', 'Naturalization Guide for Filipinos in Japan [2026]'),
+    t('フィリピン国籍の方が日本に帰化するための手続き・必要書類（PSA・NBI等）・費用・審査期間をわかりやすく解説。', 'Guide to Japanese naturalization for Filipino nationals. Covers required documents (PSA, NBI), procedures, fees, and processing timeline.')
   );
 
   const steps = [

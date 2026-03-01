@@ -14,8 +14,8 @@ export default function DriverRecordPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    '外免切替に必要なLTOドライバーズレコード（運転記録）取得ガイド【2026年】｜フィリピン書類センター',
-    'フィリピンLTO発行の運転記録証明書（Driver\'s Record）の取得方法・必要書類・期間・DFAアポスティーユの要否を解説。外免切替を目指す方向けの完全ガイド。'
+    t('外免切替に必要なLTOドライバーズレコード（運転記録）取得ガイド【2026年】｜フィリピン書類センター', "LTO Driver's Record for Japanese License Conversion [2026 Guide]"),
+    t('フィリピンLTO発行の運転記録証明書（Driver\'s Record）の取得方法・必要書類・期間・DFAアポスティーユの要否を解説。外免切替を目指す方向けの完全ガイド。', 'How to obtain a Philippine LTO Driver\'s Record for Japanese license conversion. Covers requirements, processing time, and DFA Apostille.')
   );
 
   const faqs = [

@@ -14,8 +14,8 @@ export default function GaimenKirikaeGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'フィリピン運転免許 外免切替ガイド【2026年最新】LTO書類・手続き・費用',
-    'フィリピン運転免許を日本免許に切り替える手順・必要LTO書類・費用を解説。LTO書類の代行取得に対応。無料相談受付中。'
+    t('フィリピン運転免許 外免切替ガイド【2026年最新】LTO書類・手続き・費用', 'Filipino License to Japanese License Conversion Guide [2026]'),
+    t('フィリピン運転免許を日本免許に切り替える手順・必要LTO書類・費用を解説。LTO書類の代行取得に対応。無料相談受付中。', 'Step-by-step guide to converting a Philippine driving license to a Japanese license. Covers required LTO documents, fees, and procedures.')
   );
 
   const faqs = [
