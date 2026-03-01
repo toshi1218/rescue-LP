@@ -299,7 +299,7 @@ export default function NbiHitPage() {
                 {[
                   [t('通常のHIT（同姓同名）', 'Standard HIT (same name)'), t('2〜4週間', '2–4 weeks')],
                   [t('係争記録・未解決事案のHIT', 'HIT with pending/unresolved case'), t('4〜8週間以上（案件による）', '4–8 weeks+ (case-dependent)')],
-                  [t('HIT解決後のDFAアポスティーユ（必要な場合）', 'DFA Apostille after HIT resolution (if needed)'), t('さらに2〜3週間', 'Another 2–3 weeks')],
+                  [t('HIT解決後のDFAアポスティーユ（必要な場合）', 'DFA Apostille after HIT resolution (if needed)'), t('さらに約2週間（10〜15営業日）', 'Another approx. 2 weeks (10–15 business days)')],
                 ].map(([scenario, time], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="px-4 py-3 text-secondary border-b border-gray-100">{scenario}</td>

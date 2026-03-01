@@ -86,8 +86,8 @@ export default function KokusaiKekkonGuidePage() {
     {
       q: t('CENOMARの取得にどのくらい時間がかかりますか？', 'How long does it take to obtain CENOMAR?'),
       a: t(
-        '代行サービス利用の場合、約3〜6週間が目安です。書類の準備を始めてから手続きが完了するまでの全体スケジュールを考えると、婚姻届提出の2〜3ヶ月前にはCENOMARの申請を始めることをおすすめします。',
-        'When using our agency service, the estimate is approximately 3–6 weeks. Considering the overall schedule from starting document preparation to completing procedures, we recommend starting the CENOMAR application 2–3 months before the planned marriage registration.'
+        '代行サービス利用の場合、CENOMAR取得（2〜3週間）＋DFAアポスティーユ（約2週間）＋国際配送（3〜5営業日）を合わせ、約4〜6週間が目安です。書類の準備を始めてから手続きが完了するまでの全体スケジュールを考えると、婚姻届提出の2〜3ヶ月前にはCENOMARの申請を始めることをおすすめします。',
+        'When using our agency service, CENOMAR acquisition (2–3 weeks) + DFA Apostille (approx. 2 weeks) + international shipping (3–5 business days) totals approximately 4–6 weeks. Considering the overall schedule from starting document preparation to completing procedures, we recommend starting the CENOMAR application 2–3 months before the planned marriage registration.'
       ),
     },
     {
@@ -251,7 +251,7 @@ export default function KokusaiKekkonGuidePage() {
           </p>
           <div className="grid gap-3">
             {[
-              { icon: '📄', title: t('CENOMAR（独身証明書）を申請', 'Apply for CENOMAR'), desc: t('取得まで3〜6週間。婚姻届提出の2〜3ヶ月前には申請開始を。', '3–6 weeks to obtain. Start the application 2–3 months before the planned marriage registration.'), link: t('/ja/cenomar', '/cenomar') },
+              { icon: '📄', title: t('CENOMAR（独身証明書）を申請', 'Apply for CENOMAR'), desc: t('取得まで4〜6週間（アポスティーユ・配送含む）。婚姻届提出の2〜3ヶ月前には申請開始を。', '4–6 weeks to obtain (incl. Apostille & shipping). Start the application 2–3 months before the planned marriage registration.'), link: t('/ja/cenomar', '/cenomar') },
               { icon: '📋', title: t('PSA出生証明書を申請', 'Apply for PSA Birth Certificate'), desc: t('最新のPSA発行のものが必要。古い書類は受け付けない場合あり。', 'The latest PSA-issued document is required. Old documents may not be accepted.'), link: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate') },
               { icon: '🛡️', title: t('（必要な場合）NBI Clearanceを申請', '(If needed) Apply for NBI Clearance'), desc: t('配偶者ビザ申請で求められることがある。HIT案件は早めに対応。', 'May be required for spouse visa application. Address HIT cases early.'), link: t('/ja/nbi-clearance', '/nbi-clearance') },
             ].map((item, i) => (

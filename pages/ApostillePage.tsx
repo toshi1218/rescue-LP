@@ -36,8 +36,8 @@ export default function ApostillePage() {
     {
       q: t('アポスティーユの取得にどのくらいかかりますか？', 'How long does it take to obtain Apostille?'),
       a: t(
-        'DFA窓口での通常申請は5〜7営業日程度、エクスプレス申請は3営業日程度が目安です。代行サービスを利用した場合、書類の取得からアポスティーユ認証まで合計で約4〜8週間かかります（書類の種類・状況による）。',
-        'Standard processing at the DFA office takes approximately 5–7 business days, while express processing takes about 3 business days. When using a proxy service, the total time from document acquisition to Apostille authentication is approximately 4–8 weeks (depending on the type and condition of documents).'
+        'DFA窓口での通常申請は約2週間（10〜15営業日）程度、エクスプレス申請は3〜5営業日程度が目安です。代行サービスを利用した場合、書類の取得からアポスティーユ認証・国際配送まで合計で約4〜6週間かかります（書類の種類・状況による）。',
+        'Standard processing at the DFA office takes approximately 2 weeks (10–15 business days), while express processing takes about 3–5 business days. When using a proxy service, the total time from document acquisition through Apostille authentication and international shipping is approximately 4–6 weeks (depending on the type and condition of documents).'
       ),
     },
     {
@@ -369,8 +369,8 @@ export default function ApostillePage() {
                 step: 'STEP 3',
                 title: t('アポスティーユスタンプの取得', 'Obtain the Apostille Stamp'),
                 desc: t(
-                  'DFAが書類の真正性を確認し、アポスティーユスタンプを押します。通常5〜7営業日、エクスプレスは3営業日。',
-                  'The DFA verifies the authenticity of the documents and applies the Apostille stamp. Standard: 5–7 business days; Express: 3 business days.'
+                  'DFAが書類の真正性を確認し、アポスティーユスタンプを押します。通常約2週間（10〜15営業日）、エクスプレスは3〜5営業日。',
+                  'The DFA verifies the authenticity of the documents and applies the Apostille stamp. Standard: approx. 2 weeks (10–15 business days); Express: 3–5 business days.'
                 ),
               },
               {
@@ -419,13 +419,13 @@ export default function ApostillePage() {
                 {[
                   [
                     t('通常処理（Regular）', 'Regular Processing'),
-                    t('5〜7営業日', '5–7 business days'),
-                    t('4〜8週間（書類取得含む）', '4–8 weeks (incl. document acquisition)'),
+                    t('10〜15営業日（約2週間）', '10–15 business days (approx. 2 weeks)'),
+                    t('4〜6週間（書類取得含む）', '4–6 weeks (incl. document acquisition)'),
                   ],
                   [
                     t('エクスプレス処理（Express）', 'Express Processing'),
-                    t('3営業日', '3 business days'),
-                    t('3〜5週間（書類取得含む）', '3–5 weeks (incl. document acquisition)'),
+                    t('3〜5営業日', '3–5 business days'),
+                    t('4〜5週間（書類取得含む）', '4–5 weeks (incl. document acquisition)'),
                   ],
                   [
                     t('予約待ち・繁忙期', 'High-demand / Busy Periods'),
@@ -445,8 +445,8 @@ export default function ApostillePage() {
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-sm text-blue-800 mb-4">
             <strong>{t('当サービスの実績目安：', 'Our Typical Service Timeline: ')}</strong>
             {t(
-              'ご依頼から書類の日本到着まで、通常4〜8週間が目安です。エクスプレス処理希望の場合は3〜5週間程度を見込んでいます。DFA予約の手配も代行するため、お急ぎの場合はお早めにご連絡ください。',
-              'From your inquiry to document delivery at your address, the typical timeline is 4–8 weeks. With express processing, we estimate 3–5 weeks. We handle DFA appointment scheduling on your behalf — if you have a deadline, please contact us as early as possible.'
+              'ご依頼から書類の日本到着まで、通常4〜6週間が目安です。エクスプレス処理希望の場合は4〜5週間程度を見込んでいます。DFA予約の手配も代行するため、お急ぎの場合はお早めにご連絡ください。',
+              'From your inquiry to document delivery at your address, the typical timeline is 4–6 weeks. With express processing, we estimate 4–5 weeks. We handle DFA appointment scheduling on your behalf — if you have a deadline, please contact us as early as possible.'
             )}
           </div>
           <a href="#contact" className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-primary-hover transition-colors">
@@ -472,9 +472,9 @@ export default function ApostillePage() {
                 {[
                   [t('認証機関', 'Authentication Authority'), t('DFA（Department of Foreign Affairs／フィリピン外務省）', 'DFA (Department of Foreign Affairs, Philippines)')],
                   [t('DFA手数料', 'DFA Fee'), t('約100〜200ペソ（約250〜500円）／1通', 'Approx. 100–200 PHP (~$2–4 USD) per document')],
-                  [t('処理期間（通常）', 'Processing Time (Standard)'), t('5〜7営業日', '5–7 business days')],
-                  [t('処理期間（エクスプレス）', 'Processing Time (Express)'), t('3営業日（追加料金あり）', '3 business days (additional fee applies)')],
-                  [t('代行取得期間の目安', 'Estimated Proxy Procurement Time'), t('書類取得からアポスティーユまで合計4〜8週間', '4–8 weeks total from document acquisition to Apostille')],
+                  [t('処理期間（通常）', 'Processing Time (Standard)'), t('10〜15営業日（約2週間）', '10–15 business days (approx. 2 weeks)')],
+                  [t('処理期間（エクスプレス）', 'Processing Time (Express)'), t('3〜5営業日（追加料金あり）', '3–5 business days (additional fee applies)')],
+                  [t('代行取得期間の目安', 'Estimated Proxy Procurement Time'), t('書類取得〜アポスティーユ〜国際配送まで合計約4〜6週間', 'Approx. 4–6 weeks total from document acquisition to Apostille to delivery')],
                   [t('対象書類', 'Applicable Documents'), t('PSA書類・NBI Clearance・LTO書類 等', 'PSA documents, NBI Clearance, LTO documents, etc.')],
                 ].map(([k, v], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>

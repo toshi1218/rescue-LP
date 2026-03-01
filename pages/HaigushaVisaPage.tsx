@@ -104,8 +104,8 @@ export default function HaigushaVisaPage() {
     {
       q: t('フィリピン書類の取得から配偶者ビザ申請まで、全体でどのくらいの期間がかかりますか？', 'How long does the entire process take?'),
       a: t(
-        'フィリピン書類（CENOMAR・PSA・NBI等）の取得に約2〜6週間、配偶者ビザの審査に約1〜3ヶ月が目安です。書類取得から申請まで含めると、早くて3〜4ヶ月程度みておくことをおすすめします。',
-        'Philippine documents take approximately 2–6 weeks, and the visa review takes 1–3 months. Allow at least 3–4 months from document retrieval to completion.'
+        'フィリピン書類（CENOMAR・PSA・NBI等）の取得からDFAアポスティーユ・国際配送まで約4〜6週間、配偶者ビザの審査に約1〜3ヶ月が目安です。書類取得から申請まで含めると、早くて3〜4ヶ月程度みておくことをおすすめします。',
+        'Philippine documents (CENOMAR, PSA, NBI, etc.) through DFA Apostille and international shipping take approximately 4–6 weeks, and the visa review takes 1–3 months. Allow at least 3–4 months from document retrieval to completion.'
       ),
     },
     {
@@ -361,11 +361,11 @@ export default function HaigushaVisaPage() {
           <h2 className="text-xl font-bold text-secondary mb-4 border-l-4 border-primary pl-3">{t('フィリピン書類取得のタイムライン目安', 'Document Retrieval Timeline')}</h2>
           <div className="space-y-3">
             {[
-              { period: t('〜3週間', 'Up to 3 weeks'), doc: 'CENOMAR', note: t('通常2〜4週間が目安', 'Typically 2–4 weeks') },
-              { period: t('〜4週間', 'Up to 4 weeks'), doc: t('PSA出生証明書', 'PSA Birth Certificate'), note: t('状況により変動', 'May vary') },
-              { period: t('〜4週間', 'Up to 4 weeks'), doc: 'NBI Clearance', note: t('HIT案件は追加2〜4週間', 'HIT cases take 2–4 weeks extra') },
-              { period: t('+2週間', '+2 weeks'), doc: t('DFAアポスティーユ認証', 'DFA Apostille'), note: t('上記書類取得後に実施', 'After above documents obtained') },
-              { period: t('4〜8週間', '4–8 weeks'), doc: t('書類一式（セット代行）', 'All documents (package)'), note: t('まとめて依頼で効率化', 'More efficient when ordered together') },
+              { period: t('2〜3週間', '2–3 weeks'), doc: 'CENOMAR', note: t('CENOMAR取得の目安', 'CENOMAR acquisition guideline') },
+              { period: t('2〜3週間', '2–3 weeks'), doc: t('PSA出生証明書', 'PSA Birth Certificate'), note: t('状況により変動', 'May vary') },
+              { period: t('2〜4週間', '2–4 weeks'), doc: 'NBI Clearance', note: t('HIT案件は追加2〜4週間', 'HIT cases take 2–4 weeks extra') },
+              { period: t('+約2週間', '+approx. 2 weeks'), doc: t('DFAアポスティーユ認証', 'DFA Apostille'), note: t('上記書類取得後に実施', 'After above documents obtained') },
+              { period: t('約4〜6週間', 'Approx. 4–6 weeks'), doc: t('書類一式（セット代行）', 'All documents (package)'), note: t('まとめて依頼で効率化', 'More efficient when ordered together') },
             ].map((item, i) => (
               <div key={i} className="flex gap-4 bg-white border border-gray-100 rounded-lg px-4 py-3 shadow-card">
                 <div className="w-28 flex-shrink-0"><span className="text-xs font-bold text-primary">{item.period}</span></div>

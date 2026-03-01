@@ -105,8 +105,8 @@ export default function ContactPage() {
     {
       q: t('依頼してからどのくらいで書類が届きますか？', 'How long does it take for the documents to arrive?'),
       a: t(
-        '書類の種類によって異なりますが、PSA・NBI・LTO関連はおおよそ4週間が目安です。フィリピン政府機関の処理状況によって前後する場合があります。お急ぎの場合はご相談ください。',
-        'It varies by document type, but PSA, NBI, and LTO-related documents typically take about 4 weeks. This may vary depending on the processing status of Philippine government agencies. Please contact us if you are in a hurry.'
+        '書類の種類によって異なりますが、PSA・NBI・LTO関連はおおよそ4〜6週間が目安です（PSA取得2〜3週間＋DFAアポスティーユ約2週間＋国際配送3〜5営業日）。フィリピン政府機関の処理状況によって前後する場合があります。お急ぎの場合はご相談ください。',
+        'It varies by document type, but PSA, NBI, and LTO-related documents typically take about 4–6 weeks (PSA acquisition 2–3 weeks + DFA Apostille approx. 2 weeks + international shipping 3–5 business days). This may vary depending on the processing status of Philippine government agencies. Please contact us if you are in a hurry.'
       ),
     },
     {

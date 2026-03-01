@@ -57,8 +57,8 @@ export default function PsaBirthCertificateCostPage() {
     {
       q: t('PSA出生証明書の取得にかかる期間と費用の関係は？', 'What is the relationship between cost and turnaround time for PSA birth certificates?'),
       a: t(
-        '自分でPSAHelpLine経由で申請する場合、通常2〜4週間で書類が届きます（フィリピン国内）。代行サービスで日本への国際配送まで含めると3〜5週間が目安です。エクスプレス対応（DFAアポスティーユのエクスプレス申請含む）の場合は費用が上がりますが、期間を短縮できます。',
-        'When applying yourself through PSAHelpLine, documents typically arrive within 2–4 weeks (within the Philippines). With proxy services including international delivery to Japan, expect 3–5 weeks. Express processing (including DFA Apostille express) costs more but reduces turnaround time.'
+        '自分でPSAHelpLine経由で申請する場合、通常2〜3週間で書類が届きます（フィリピン国内）。代行サービスでDFAアポスティーユ・日本への国際配送まで含めると4〜6週間が目安です。エクスプレス対応（DFAアポスティーユのエクスプレス申請含む）の場合は費用が上がりますが、期間を短縮できます。',
+        'When applying yourself through PSAHelpLine, documents typically arrive within 2–3 weeks (within the Philippines). With proxy services including DFA Apostille and international delivery to Japan, expect 4–6 weeks. Express processing (including DFA Apostille express) costs more but reduces turnaround time.'
       ),
     },
   ];

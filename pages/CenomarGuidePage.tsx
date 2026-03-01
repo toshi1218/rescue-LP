@@ -63,8 +63,8 @@ export default function CenomarGuidePage() {
     {
       q: t('代行を依頼した場合、どのくらいで届きますか？', 'How long does it take when using a proxy service?'),
       a: t(
-        '一般的に申請から3〜6週間程度が目安です。PSA側の処理状況や郵便事情により変動することがあります。お急ぎの場合は事前にご相談ください。',
-        'Generally, approximately 3–6 weeks from application is the guideline. This may vary depending on PSA processing status and international shipping conditions. Please let us know if you have an urgent deadline.'
+        '一般的にCENOMAR取得に2〜3週間、DFAアポスティーユに約2週間、国際配送に3〜5営業日かかります。トータルで4〜6週間程度が目安です。PSA側の処理状況等により変動することがあります。お急ぎの場合は事前にご相談ください。',
+        'Generally, CENOMAR acquisition takes 2–3 weeks, DFA Apostille approx. 2 weeks, and international shipping 3–5 business days. The total guideline is approximately 4–6 weeks. This may vary depending on PSA processing status. Please let us know if you have an urgent deadline.'
       ),
     },
     {
@@ -311,7 +311,7 @@ export default function CenomarGuidePage() {
                   [t('発行機関', 'Issuing Authority'), t('フィリピン統計局（PSA: Philippine Statistics Authority）', 'Philippine Statistics Authority (PSA)')],
                   [t('有効期限', 'Validity'), t('発行日から約6ヶ月（使用目的により異なる）', 'Approximately 6 months from issuance (varies by purpose)')],
                   [t('PSA申請費用', 'PSA Application Fee'), t('約365ペソ（約900円）＋国際郵便料金', 'Approx. 365 PHP (~$7 USD) + international shipping')],
-                  [t('取得期間（代行）', 'Acquisition Time (Proxy)'), t('約3〜6週間（状況による）', 'Approximately 3–6 weeks (depends on situation)')],
+                  [t('取得期間（代行）', 'Acquisition Time (Proxy)'), t('約4〜6週間（CENOMAR 2〜3週間＋DFA 2週間＋配送3〜5営業日）', 'Approx. 4–6 weeks (CENOMAR 2–3 wks + DFA 2 wks + shipping 3–5 business days)')],
                   [t('言語', 'Language'), t('英語（日本語翻訳が必要な場合あり）', 'English (Japanese translation may be required)')],
                   [t('対象者', 'Eligible Applicants'), t('フィリピン国籍を持つ方（海外生まれのフィリピン人も対象）', 'Philippine nationals (including overseas-born Filipinos)')],
                 ].map(([k, v], i) => (
@@ -338,7 +338,7 @@ export default function CenomarGuidePage() {
                 items: [
                   t('PSAHelpline.comまたはPSA公式サイトで申請', 'Apply at PSAHelpline.com or the PSA official website'),
                   t('支払いはクレジットカードまたはPayPal', 'Payment by credit card or PayPal'),
-                  t('国際郵便で日本の住所へ届く（3〜8週間）', 'Delivered to your Japanese address by international mail (3–8 weeks)'),
+                  t('国際郵便で日本の住所へ届く（3〜5営業日）', 'Delivered to your Japanese address by international mail (3–5 business days)'),
                 ],
                 pros: t('コストが最も安い', 'Lowest cost'),
                 cons: t('英語対応必須。届くまで時間がかかる。届かないリスクあり', 'English required. Takes time to arrive. Risk of non-delivery'),
