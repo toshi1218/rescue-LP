@@ -526,8 +526,8 @@ export default function NbiValidityPage() {
                 <Send className="w-5 h-5" />{t('送信する', 'Send')}
               </button>
             </form>
-            <a href="mailto:igrs20200601@gmail.com" className="mt-3 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors">
-              <Mail className="w-4 h-4" />{t('メールで直接送る: igrs20200601@gmail.com', 'Send directly by email: igrs20200601@gmail.com')}
+            <a href="mailto:info@ph-document.com" className="mt-3 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors">
+              <Mail className="w-4 h-4" />{t('メールで直接送る: info@ph-document.com', 'Send directly by email: info@ph-document.com')}
             </a>
           </div>
         </section>

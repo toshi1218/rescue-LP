@@ -20,7 +20,7 @@ const jsonLd = {
       '@type': 'Organization',
       name: '株式会社IGRS',
       url: 'https://ph-document.com/',
-      email: 'igrs20200601@gmail.com',
+      email: 'info@ph-document.com',
       foundingDate: '2020-06-01',
       address: {
         '@type': 'PostalAddress',
@@ -31,7 +31,7 @@ const jsonLd = {
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer service',
-        email: 'igrs20200601@gmail.com',
+        email: 'info@ph-document.com',
         availableLanguage: 'Japanese',
         hoursAvailable: {
           '@type': 'OpeningHoursSpecification',
@@ -184,7 +184,7 @@ export default function CompanyPage() {
         </ul>
       ),
     },
-    { label: t('メール', 'Email'), value: 'igrs20200601@gmail.com' },
+    { label: t('メール', 'Email'), value: 'info@ph-document.com' },
     { label: t('対応言語', 'Languages'), value: t('日本語・英語・タガログ語', 'Japanese / English / Tagalog') },
   ];
 
@@ -295,10 +295,10 @@ export default function CompanyPage() {
               <h3 className="font-bold text-secondary text-sm">{t('ご連絡先', 'Contact')}</h3>
             </div>
             <a
-              href="mailto:igrs20200601@gmail.com"
+              href="mailto:info@ph-document.com"
               className="text-sm text-primary hover:underline block mb-3"
             >
-              igrs20200601@gmail.com
+              info@ph-document.com
             </a>
             <Link
               to="/contact/"
