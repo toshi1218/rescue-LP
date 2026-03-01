@@ -115,10 +115,10 @@ export default function PrivacyPolicyPage() {
       content: t(
         `個人情報の取り扱いに関するご質問・ご相談は、以下までご連絡ください。
 会社名：株式会社IGRS
-メール：info@ph-document.com`,
+メール：igrs20200601@gmail.com`,
         `For questions or concerns regarding the handling of personal information, please contact us:
 Company: IGRS Inc.
-Email: info@ph-document.com`
+Email: igrs20200601@gmail.com`
       ),
     },
   ];

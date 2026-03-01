@@ -25,6 +25,8 @@ import ApostilleFeePage from './pages/ApostilleFeePage';
 import NbiValidityPage from './pages/NbiValidityPage';
 import DriverRecordPage from './pages/DriverRecordPage';
 import UsVisaDocumentsPage from './pages/UsVisaDocumentsPage';
+import K1VisaDocumentsPage from './pages/K1VisaDocumentsPage';
+import Cr1VisaDocumentsPage from './pages/Cr1VisaDocumentsPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -49,18 +51,20 @@ export default function App() {
         <Route path="/nbi-hit" element={<NbiHitPage />} />
         <Route path="/apostille" element={<ApostillePage />} />
         <Route path="/apostille-processing-time" element={<DfaProcessingTimePage />} />
-        <Route path="/international-marriage-guide" element={<KokusaiKekkonGuidePage />} />
-        <Route path="/spouse-visa-documents" element={<HaigushaVisaPage />} />
+        <Route path="/international-marriage-guide" element={<Navigate to="/ja/kokusai-kekkon-guide" replace />} />
+        <Route path="/spouse-visa-documents" element={<Navigate to="/ja/haigusha-visa" replace />} />
         <Route path="/psa-marriage-certificate" element={<KekkonShomeishoPage />} />
-        <Route path="/drivers-license-conversion" element={<GaimenKirikaeGuidePage />} />
-        <Route path="/naturalization-guide" element={<KikaShinseiGuidePage />} />
+        <Route path="/drivers-license-conversion" element={<Navigate to="/ja/gaimen-kirikae-guide" replace />} />
+        <Route path="/naturalization-guide" element={<Navigate to="/ja/kika-shinsei-guide" replace />} />
         <Route path="/guides" element={<GuidesPage />} />
         <Route path="/psa-birth-certificate-cost" element={<PsaBirthCertificateCostPage />} />
         <Route path="/apostille-fee" element={<ApostilleFeePage />} />
         <Route path="/nbi-validity" element={<NbiValidityPage />} />
-        <Route path="/driver-record" element={<DriverRecordPage />} />
+        <Route path="/driver-record" element={<Navigate to="/ja/driver-record" replace />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/us-visa-documents" element={<UsVisaDocumentsPage />} />
+        <Route path="/k1-visa-documents" element={<K1VisaDocumentsPage />} />
+        <Route path="/cr1-visa-documents" element={<Cr1VisaDocumentsPage />} />
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<PrivacyPolicyPage />} />

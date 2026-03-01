@@ -29,12 +29,16 @@ const Navbar: React.FC = () => {
     { label: t('navbar.doc.marriage'), path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/psa-marriage-certificate/' },
   ];
 
-  const purposeTabs = [
-    { label: t('navbar.purpose.marriage'),      path: isJa ? '/ja/kokusai-kekkon-guide/' : '/international-marriage-guide/' },
-    { label: t('navbar.purpose.visa'),          path: isJa ? '/ja/haigusha-visa/'        : '/spouse-visa-documents/' },
-    { label: t('navbar.purpose.license'),       path: isJa ? '/ja/gaimen-kirikae-guide/' : '/drivers-license-conversion/' },
-    { label: t('navbar.purpose.naturalization'),path: isJa ? '/ja/kika-shinsei-guide/'   : '/naturalization-guide/' },
-    { label: t('navbar.purpose.usVisa'),        path: isJa ? '/ja/us-visa-documents/'    : '/us-visa-documents/' },
+  const purposeTabs = isJa ? [
+    { label: t('navbar.purpose.marriage'),      path: '/ja/kokusai-kekkon-guide/' },
+    { label: t('navbar.purpose.visa'),          path: '/ja/haigusha-visa/' },
+    { label: t('navbar.purpose.license'),       path: '/ja/gaimen-kirikae-guide/' },
+    { label: t('navbar.purpose.naturalization'),path: '/ja/kika-shinsei-guide/' },
+    { label: t('navbar.purpose.usVisa'),        path: '/ja/us-visa-documents/' },
+  ] : [
+    { label: 'K-1 Fiancé Visa',    path: '/k1-visa-documents/' },
+    { label: 'CR-1 / IR-1 Visa',   path: '/cr1-visa-documents/' },
+    { label: 'US Visa Documents',   path: '/us-visa-documents/' },
   ];
 
   const guidesPath  = isJa ? '/ja/guides/'  : '/guides/';

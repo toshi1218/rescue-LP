@@ -34,7 +34,7 @@ const jsonLd = {
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer service',
-        email: 'info@ph-document.com',
+        email: 'igrs20200601@gmail.com',
         availableLanguage: ['Japanese', 'English'],
         hoursAvailable: {
           '@type': 'OpeningHoursSpecification',
@@ -220,7 +220,7 @@ export default function ContactPage() {
             {
               icon: Mail,
               title: t('メールで相談', 'Contact via Email'),
-              desc: 'info@ph-document.com\n' + t('そのままメーラーで送信できます。', 'Send directly from your email client.'),
+              desc: 'igrs20200601@gmail.com\n' + t('そのままメーラーで送信できます。', 'Send directly from your email client.'),
               highlight: false,
             },
             {
@@ -330,7 +330,7 @@ export default function ContactPage() {
                 <p className="font-bold text-red-700 mb-1">{t('送信に失敗しました', 'Failed to send')}</p>
                 <p className="text-red-600">
                   {t('お手数ですが、直接メールでご連絡ください：', 'Please contact us directly by email:')}
-                  <a href="mailto:info@ph-document.com" className="underline ml-1">info@ph-document.com</a>
+                  <a href="mailto:igrs20200601@gmail.com" className="underline ml-1">igrs20200601@gmail.com</a>
                 </p>
               </div>
             </div>
@@ -439,12 +439,12 @@ export default function ContactPage() {
 
           {status !== 'success' && (
             <a
-              href="mailto:info@ph-document.com"
+              href="mailto:igrs20200601@gmail.com"
               onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'mailto_fallback' })}
               className="mt-4 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors"
             >
               <Mail className="w-4 h-4" />
-              {t('メールで直接送る: info@ph-document.com', 'Send directly by email: info@ph-document.com')}
+              {t('メールで直接送る: igrs20200601@gmail.com', 'Send directly by email: igrs20200601@gmail.com')}
             </a>
           )}
         </div>
