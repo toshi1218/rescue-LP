@@ -14,8 +14,8 @@ export default function DfaProcessingTimePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'DFAアポスティーユ 処理期間【2026年最新】通常・エクスプレス・代行の日数目安｜フィリピン書類センター',
-    'フィリピンDFAアポスティーユ認証の処理期間（processing time）を2026年最新情報で解説。通常・エクスプレス申請の日数目安、代行利用時のトータル期間、遅れる原因も紹介。'
+    t('DFAアポスティーユ 処理期間【2026年最新】通常・エクスプレス・代行の日数目安｜フィリピン書類センター', 'DFA Apostille Processing Time [2026]: Regular vs. Express'),
+    t('フィリピンDFAアポスティーユ認証の処理期間（processing time）を2026年最新情報で解説。通常・エクスプレス申請の日数目安、代行利用時のトータル期間、遅れる原因も紹介。', 'How long does DFA Apostille take in 2026? Compare regular and express processing times, total timeline with retrieval, and common causes of delays.')
   );
 
   const faqs = [
@@ -106,7 +106,7 @@ export default function DfaProcessingTimePage() {
         headline: 'DFA Apostille Processing Time Philippines 2026 — 通常・エクスプレスの日数目安',
         description: 'DFAアポスティーユ認証の処理期間を2026年最新情報で解説。通常・エクスプレスの日数目安、代行利用時のトータル期間。',
         url: 'https://ph-document.com/apostille-processing-time',
-        inLanguage: 'ja',
+        inLanguage: lang,
         dateModified: '2026-02-28',
         author: { '@type': 'Organization', name: '株式会社IGRS' },
         publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },

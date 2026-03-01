@@ -14,8 +14,8 @@ export default function KekkonShomeishoPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'PSA婚姻証明書 取得方法【2026年最新版】費用・期間・国際結婚・配偶者ビザ向け',
-    'PSA婚姻証明書の取得方法・必要な場面・費用・期間を解説。国際結婚・配偶者ビザ申請に必要なフィリピン結婚証明書の代行取得に対応。'
+    t('PSA婚姻証明書 取得方法【2026年最新版】費用・期間・国際結婚・配偶者ビザ向け', 'PSA Marriage Certificate: How to Get It [2026 Guide]'),
+    t('PSA婚姻証明書の取得方法・必要な場面・費用・期間を解説。国際結婚・配偶者ビザ申請に必要なフィリピン結婚証明書の代行取得に対応。', 'How to obtain a PSA Marriage Certificate from the Philippines. Required for international marriage and spouse visa applications. Retrieval service available.')
   );
 
   const faqs = [

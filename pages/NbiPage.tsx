@@ -15,8 +15,8 @@ export default function NbiPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'NBI Clearance 取得方法【2026年最新】無犯罪証明書・NBI HIT対処｜フィリピン書類センター',
-    'NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。'
+    t('NBI Clearance 取得方法【2026年最新】無犯罪証明書・NBI HIT対処｜フィリピン書類センター', 'NBI Clearance: How to Get It from the Philippines [2026 Guide]'),
+    t('NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。', 'Complete guide to NBI Clearance acquisition, NBI HIT resolution, and DFA Apostille. How our service retrieves NBI Clearance on your behalf.')
   );
 
   const cases = [
@@ -145,7 +145,7 @@ export default function NbiPage() {
         headline: 'フィリピンNBI無犯罪証明書（NBI Clearance）とは？日本から取得する方法【2026年】',
         description: 'NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。',
         url: 'https://ph-document.com/nbi-clearance-guide/',
-        inLanguage: 'ja',
+        inLanguage: lang,
         dateModified: '2026-02-22',
         author: { '@type': 'Organization', name: '株式会社IGRS' },
         publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },

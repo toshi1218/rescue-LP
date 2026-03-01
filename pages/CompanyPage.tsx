@@ -49,8 +49,8 @@ export default function CompanyPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    '会社概要｜株式会社IGRS（フィリピン書類取得代行センター）',
-    'フィリピン書類取得代行センターを運営する株式会社IGRSの会社概要。所在地・代表者・事業内容・特定商取引法表記をご案内。'
+    t('会社概要｜株式会社IGRS（フィリピン書類取得代行センター）', 'About Us | IGRS Co., Ltd. (Philippine Document Service)'),
+    t('フィリピン書類取得代行センターを運営する株式会社IGRSの会社概要。所在地・代表者・事業内容・特定商取引法表記をご案内。', 'Learn about IGRS Co., Ltd., the company behind the Philippine Document Retrieval Service. Office location, representative, and business details.')
   );
 
   const serviceFeatures = [

@@ -5,7 +5,7 @@ import { useLanguage } from '../lib/i18n';
 
 const Hero: React.FC = () => {
   const ctaVariant = getCtaVariant();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const primaryLabel = ctaVariant === 'A' ? t('hero.ctaA') : t('hero.ctaB');
 
   return (
@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         <picture>
           <source srcSet="/hero-photo.webp" type="image/webp" />
           <img
-            alt="フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）"
+            alt={lang === 'ja' ? 'フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）' : 'Philippine document retrieval service – background image with Philippine and Japanese flags'}
             className="w-full h-full object-cover"
             style={{ objectPosition: '80% 50%' }}
             src="/hero-photo.png"

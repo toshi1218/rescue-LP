@@ -11,8 +11,8 @@ export default function GuidesPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'お役立ちガイド一覧｜CENOMAR・NBI・DFAアポスティーユのFAQ集【2026年】｜フィリピン書類センター',
-    'フィリピン書類取得に関するお役立ちガイドとFAQ集。CENOMAR・NBI・DFAアポスティーユ・LTOについての疑問を解決するガイドページ一覧。'
+    t('お役立ちガイド一覧｜CENOMAR・NBI・DFAアポスティーユのFAQ集【2026年】｜フィリピン書類センター', 'Document Guides | CENOMAR, NBI, DFA Apostille FAQs [2026]'),
+    t('フィリピン書類取得に関するお役立ちガイドとFAQ集。CENOMAR・NBI・DFAアポスティーユ・LTOについての疑問を解決するガイドページ一覧。', 'Helpful guides and FAQs for Philippine document retrieval. Find answers about CENOMAR, NBI Clearance, DFA Apostille, and LTO documents.')
   );
 
   const jsonLd = {

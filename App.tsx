@@ -24,6 +24,7 @@ import PsaBirthCertificateCostPage from './pages/PsaBirthCertificateCostPage';
 import ApostilleFeePage from './pages/ApostilleFeePage';
 import NbiValidityPage from './pages/NbiValidityPage';
 import DriverRecordPage from './pages/DriverRecordPage';
+import UsVisaDocumentsPage from './pages/UsVisaDocumentsPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -59,6 +60,7 @@ export default function App() {
         <Route path="/nbi-validity" element={<NbiValidityPage />} />
         <Route path="/driver-record" element={<DriverRecordPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/us-visa-documents" element={<UsVisaDocumentsPage />} />
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<PrivacyPolicyPage />} />

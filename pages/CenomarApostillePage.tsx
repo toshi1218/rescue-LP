@@ -14,8 +14,8 @@ export default function CenomarApostillePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    'CENOMARにDFAアポスティーユは必要？【2026年最新】用途別の結論｜フィリピン書類センター',
-    'CENOMARにDFAアポスティーユ認証が必要かどうかを用途別（国際結婚LCCM・配偶者ビザ・帰化）に解説。東京フィリピン大使館の要件をもとに正確な情報を提供。'
+    t('CENOMARにDFAアポスティーユは必要？【2026年最新】用途別の結論｜フィリピン書類センター', 'Does CENOMAR Need DFA Apostille? [2026 Guide]'),
+    t('CENOMARにDFAアポスティーユ認証が必要かどうかを用途別（国際結婚LCCM・配偶者ビザ・帰化）に解説。東京フィリピン大使館の要件をもとに正確な情報を提供。', 'Find out whether your CENOMAR needs DFA Apostille authentication. Covers international marriage (LCCM), spouse visa, and naturalization use cases.')
   );
 
   const faqs = [
@@ -107,7 +107,7 @@ export default function CenomarApostillePage() {
         headline: 'CENOMARにDFAアポスティーユは必要？用途別の結論【2026年最新】',
         description: 'CENOMARにDFAアポスティーユ認証が必要かどうかを用途別（国際結婚LCCM・配偶者ビザ・帰化）に解説。',
         url: 'https://ph-document.com/cenomar-apostille',
-        inLanguage: 'ja',
+        inLanguage: lang,
         dateModified: '2026-02-28',
         author: { '@type': 'Organization', name: '株式会社IGRS' },
         publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },

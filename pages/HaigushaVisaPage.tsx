@@ -13,8 +13,8 @@ export default function HaigushaVisaPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    '配偶者ビザ フィリピン書類チェックリスト【2026年版】必要書類・取得方法',
-    '配偶者ビザ申請に必要なフィリピン書類を完全リスト化。PSA・CENOMAR・NBI等の取得方法・費用・注意点を解説。代行サービスで一括取得対応。'
+    t('配偶者ビザ フィリピン書類チェックリスト【2026年版】必要書類・取得方法', 'Philippine Documents for Spouse Visa Application [2026 Checklist]'),
+    t('配偶者ビザ申請に必要なフィリピン書類を完全リスト化。PSA・CENOMAR・NBI等の取得方法・費用・注意点を解説。代行サービスで一括取得対応。', 'Complete checklist of Philippine documents required for a Japanese spouse visa application. Covers PSA, CENOMAR, and NBI Clearance retrieval.')
   );
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -67,9 +67,9 @@ export default function HaigushaVisaPage() {
       ),
     },
     {
-      q: t('NBI ClclearanceにDFAアポスティーユ認証は必要ですか？', 'Is DFA Apostille required for NBI Clearance?'),
+      q: t('NBI ClearanceにDFAアポスティーユ認証は必要ですか？', 'Is DFA Apostille required for NBI Clearance?'),
       a: t(
-        '入管に提出するNBI ClclearanceにはDFAアポスティーユ認証を付けることが推奨されます（必須ではない場合もありますが、審査官によって判断が異なるため、付けておく方が安全です）。当センターでNBI取得＋DFAアポスティーユのセット代行が可能です。',
+        '入管に提出するNBI ClearanceにはDFAアポスティーユ認証を付けることが推奨されます（必須ではない場合もありますが、審査官によって判断が異なるため、付けておく方が安全です）。当センターでNBI取得＋DFAアポスティーユのセット代行が可能です。',
         'DFA Apostille is recommended for NBI Clearance submitted to immigration (not always mandatory, but safer to include). Our center can handle NBI + DFA Apostille as a package.'
       ),
     },
