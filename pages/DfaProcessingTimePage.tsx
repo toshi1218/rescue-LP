@@ -103,13 +103,39 @@ export default function DfaProcessingTimePage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/apostille-processing-time/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'DFA Apostille Processing Time Philippines 2026 — 通常・エクスプレスの日数目安',
         description: 'DFAアポスティーユ認証の処理期間を2026年最新情報で解説。通常・エクスプレスの日数目安、代行利用時のトータル期間。',
-        url: 'https://ph-document.com/apostille-processing-time',
+        image: 'https://ph-document.com/og-image.png',
+        url: 'https://ph-document.com/apostille-processing-time/',
         inLanguage: lang,
+        datePublished: '2025-12-01',
         dateModified: '2026-02-28',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'フィリピン書類取得代行センター',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.dfa.gov.ph',
+          'https://apostille.dfa.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

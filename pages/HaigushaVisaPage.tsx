@@ -136,12 +136,39 @@ export default function HaigushaVisaPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/haigusha-visa-shorui/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'Philippine Document Checklist for Spouse Visa Application [2026]',
+        description: 'Complete checklist of Philippine documents required for Japanese spouse visa applications: CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille.',
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/haigusha-visa-shorui/',
         inLanguage: lang,
+        datePublished: '2025-11-01',
         dateModified: '2026-02-22',
-        author: { '@type': 'Organization', name: 'IGRS Inc.' },
-        publisher: { '@type': 'Organization', name: 'Philippine Document Procurement Center' },
+        author: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Philippine Document Procurement Center',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.moj.go.jp',
+          'https://www.immi-moj.go.jp',
+        ],
       },
       {
         '@type': 'FAQPage',

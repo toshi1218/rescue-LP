@@ -92,13 +92,38 @@ export default function GaimenKirikaeGuidePage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/gaimen-kirikae-guide/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: t('フィリピン運転免許の外免切替ガイド｜必要なLTO書類・手順・費用【2026年】', 'Philippine Driver\'s License Conversion Guide | Required LTO Documents, Procedures & Costs [2026]'),
         description: t('フィリピン運転免許を日本の免許に切り替える（外免切替）ための手順・必要書類・LTO書類の取得方法を解説。LTO書類の代行取得に対応。', 'A guide on procedures, required documents, and how to obtain LTO documents for converting a Philippine driver\'s license to a Japanese license. Proxy procurement of LTO documents available.'),
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/gaimen-kirikae-guide/',
         inLanguage: lang,
+        datePublished: '2025-11-01',
         dateModified: '2026-02-22',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: t('フィリピン書類取得代行センター', 'Philippine Document Procurement Center') },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: t('フィリピン書類取得代行センター', 'Philippine Document Procurement Center'),
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.lto.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

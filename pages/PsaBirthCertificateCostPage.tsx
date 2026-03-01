@@ -76,13 +76,39 @@ export default function PsaBirthCertificateCostPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/psa-birth-certificate-cost/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'PSA Birth Certificate Cost 2026 — Official Fees, Proxy Service Pricing & Total Estimates',
         description: 'Complete breakdown of PSA birth certificate costs in 2026: official PSA fees, online ordering, proxy service pricing, and DFA Apostille add-on.',
-        url: 'https://ph-document.com/psa-birth-certificate-cost',
+        image: 'https://ph-document.com/og-image.png',
+        url: 'https://ph-document.com/psa-birth-certificate-cost/',
         inLanguage: 'en',
+        datePublished: '2025-12-01',
         dateModified: '2026-02-28',
-        author: { '@type': 'Organization', name: 'IGRS Inc.' },
-        publisher: { '@type': 'Organization', name: 'Philippine Document Service' },
+        author: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Philippine Document Service',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://psa.gov.ph',
+          'https://www.psaserbilis.com.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

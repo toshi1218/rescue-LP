@@ -83,13 +83,39 @@ export default function NbiHitPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/nbi-hit/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'NBI HITとは？原因・対処法・どれくらい遅れるか【2026年版】',
         description: 'NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。代行サービスでのHIT対応も紹介。',
-        url: 'https://ph-document.com/nbi-hit',
+        image: 'https://ph-document.com/og-image.png',
+        url: 'https://ph-document.com/nbi-hit/',
         inLanguage: lang,
+        datePublished: '2025-12-01',
         dateModified: '2026-02-28',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'フィリピン書類取得代行センター',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.nbi.gov.ph',
+          'https://clearance.nbi.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

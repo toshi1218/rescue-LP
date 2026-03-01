@@ -83,13 +83,38 @@ export default function CenomarValidityPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/cenomar-validity/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'CENOMARの有効期限は？"6ヶ月"の根拠と用途別の考え方【2026年版】',
         description: 'CENOMARの有効期限は発行から6ヶ月が目安。根拠、用途別の期限の考え方、取得タイミングの目安を解説。',
-        url: 'https://ph-document.com/cenomar-validity',
+        image: 'https://ph-document.com/og-image.png',
+        url: 'https://ph-document.com/cenomar-validity/',
         inLanguage: lang,
+        datePublished: '2025-12-01',
         dateModified: '2026-02-28',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'フィリピン書類取得代行センター',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://psa.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

@@ -30,12 +30,41 @@ export default function UsVisaDocumentsPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/us-visa-documents/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: t('米国ビザ（CR-1/IR-1・K-1）フィリピン書類ガイド【2026年版】', 'Philippine Documents for US Visa (CR-1/IR-1 & K-1) [2026 Guide]'),
+        description: t('米国ビザ（CR-1/IR-1配偶者移民ビザ・K-1婚約者ビザ）申請に必要なフィリピン書類（CENOMAR・PSA・NBI）の取得方法を解説。', 'Guide to obtaining Philippine documents (CENOMAR, PSA, NBI) required for US visa applications (CR-1/IR-1 spousal immigration visa and K-1 fiancé visa).'),
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/us-visa-documents/',
         inLanguage: lang,
+        datePublished: '2026-01-01',
         dateModified: '2026-03-01',
-        author: { '@type': 'Organization', name: 'IGRS Inc.' },
-        publisher: { '@type': 'Organization', name: 'Philippine Document Retrieval Service' },
+        author: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Philippine Document Retrieval Service',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://travel.state.gov',
+          'https://ph.usembassy.gov',
+          'https://psa.gov.ph',
+          'https://www.nbi.gov.ph',
+        ],
       },
     ],
   };

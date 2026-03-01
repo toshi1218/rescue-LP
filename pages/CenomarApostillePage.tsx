@@ -104,13 +104,39 @@ export default function CenomarApostillePage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/cenomar-apostille/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'CENOMARにDFAアポスティーユは必要？用途別の結論【2026年最新】',
         description: 'CENOMARにDFAアポスティーユ認証が必要かどうかを用途別（国際結婚LCCM・配偶者ビザ・帰化）に解説。',
-        url: 'https://ph-document.com/cenomar-apostille',
+        image: 'https://ph-document.com/og-image.png',
+        url: 'https://ph-document.com/cenomar-apostille/',
         inLanguage: lang,
+        datePublished: '2025-12-01',
         dateModified: '2026-02-28',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: 'フィリピン書類取得代行センター' },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'フィリピン書類取得代行センター',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://psa.gov.ph',
+          'https://www.dfa.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

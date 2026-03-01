@@ -113,6 +113,10 @@ export default function CenomarGuidePage() {
             url: 'https://ph-document.com/favicon.svg',
           },
         },
+        citation: [
+          'https://psa.gov.ph',
+          'https://www.psaserbilis.com.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

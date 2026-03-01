@@ -76,13 +76,39 @@ export default function NbiValidityPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/nbi-validity/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: 'NBI Clearance Validity Period 2026 — 1-Year Rule, Institutional Requirements & Timing Guide',
         description: 'NBI Clearance is valid for 1 year, but many institutions require it within 6 months. Learn the rules by use case and the ideal timing for obtaining yours.',
-        url: 'https://ph-document.com/nbi-validity',
+        image: 'https://ph-document.com/og-image.png',
+        url: 'https://ph-document.com/nbi-validity/',
         inLanguage: 'en',
+        datePublished: '2025-12-01',
         dateModified: '2026-02-28',
-        author: { '@type': 'Organization', name: 'IGRS Inc.' },
-        publisher: { '@type': 'Organization', name: 'Philippine Document Service' },
+        author: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Philippine Document Service',
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://www.nbi.gov.ph',
+          'https://clearance.nbi.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',

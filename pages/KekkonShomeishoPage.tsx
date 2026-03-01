@@ -73,13 +73,38 @@ export default function KekkonShomeishoPage() {
       },
       {
         '@type': 'Article',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://ph-document.com/kekkon-shomeisho/',
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['h1', 'h2'],
+          },
+        },
         headline: t('フィリピンPSA婚姻証明書の取得方法｜国際結婚・配偶者ビザで必要な理由【2026年】', 'How to Obtain a Philippine PSA Marriage Certificate | Why It\'s Required for International Marriage & Spouse Visa [2026]'),
         description: t('PSA婚姻証明書（フィリピン結婚証明書）の取得方法・必要な場面・費用・期間を解説。フィリピン先行婚姻後の報告手続きに必要な書類をガイド。', 'A guide on how to obtain a PSA Marriage Certificate (Philippine marriage certificate), when it is required, costs, and timeframes. Guides you through documents needed after a Philippines-first marriage.'),
+        image: 'https://ph-document.com/og-image.png',
         url: 'https://ph-document.com/kekkon-shomeisho/',
         inLanguage: lang,
+        datePublished: '2025-11-01',
         dateModified: '2026-02-22',
-        author: { '@type': 'Organization', name: '株式会社IGRS' },
-        publisher: { '@type': 'Organization', name: t('フィリピン書類取得代行センター', 'Philippine Document Procurement Center') },
+        author: {
+          '@type': 'Organization',
+          name: '株式会社IGRS',
+          url: 'https://ph-document.com/',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: t('フィリピン書類取得代行センター', 'Philippine Document Procurement Center'),
+          url: 'https://ph-document.com/',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ph-document.com/favicon.svg',
+          },
+        },
+        citation: [
+          'https://psa.gov.ph',
+        ],
       },
       {
         '@type': 'FAQPage',
