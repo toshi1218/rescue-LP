@@ -83,7 +83,7 @@ export default function PricingPage() {
       icon: FileText,
       title: t('LTO関連書類取得代行', 'LTO Document Retrieval'),
       subtitle: t('運転免許関連書類（外免切り替え用）', 'License-related documents (for license conversion)'),
-      price: t('¥85,000', 'US$699–899'),
+      price: t('¥100,000', 'US$699–899'),
       basicPrice: undefined,
       note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
       highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'DHL shipping included')],
