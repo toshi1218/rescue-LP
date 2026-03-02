@@ -171,7 +171,7 @@ export default function PricingPage() {
     },
     {
       q: t('国際送料はいくらですか？', 'How much is the international shipping fee?'),
-      a: t('送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね1,500〜3,000円程度が目安です。', 'DHL Express international shipping to the USA is already included in the displayed price. No additional shipping fee will be charged.'),
+      a: t('送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね5,000〜6,000円程度が目安です。', 'DHL Express international shipping to the USA is already included in the displayed price. No additional shipping fee will be charged.'),
     },
     {
       q: t('取得難易度による変動とはどういう意味ですか？', 'What does "price may vary depending on difficulty" mean?'),
