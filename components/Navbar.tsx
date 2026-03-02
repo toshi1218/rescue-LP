@@ -198,7 +198,7 @@ const Navbar: React.FC = () => {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                onClick={() => setOpenMenu(openMenu === 'docs' ? null : 'docs')}
+                onClick={() => { if (docsRef.current) { const r = docsRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'docs' ? null : 'docs'); }}
                 className={tabBtnClass(isDocActive || openMenu === 'docs')}
               >
                 {t('navbar.findByDoc')}
@@ -216,7 +216,7 @@ const Navbar: React.FC = () => {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                onClick={() => setOpenMenu(openMenu === 'purpose' ? null : 'purpose')}
+                onClick={() => { if (purposeRef.current) { const r = purposeRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'purpose' ? null : 'purpose'); }}
                 className={tabBtnClass(isPurposeActive || openMenu === 'purpose')}
               >
                 {t('navbar.findByPurpose')}
@@ -234,7 +234,7 @@ const Navbar: React.FC = () => {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                onClick={() => setOpenMenu(openMenu === 'guides' ? null : 'guides')}
+                onClick={() => { if (guidesRef.current) { const r = guidesRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'guides' ? null : 'guides'); }}
                 className={tabBtnClass(isGuidesActive || openMenu === 'guides' || matchesPath(guidesPath))}
               >
                 {isJa ? 'お役立ち' : 'Guides'}
