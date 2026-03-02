@@ -273,13 +273,8 @@ export default function ContactPage() {
               },
               {
                 icon: '📄',
-                title: t('翻訳・アポスティーユが必要', 'Need translation or Apostille'),
-                desc: t('PSA書類のDFAアポスティーユ認証や日本語翻訳が必要', 'Need DFA Apostille authentication or Japanese translation of PSA documents'),
-              },
-              {
-                icon: '🏢',
-                title: t('フィリピンへの企業進出', 'Business expansion to the Philippines'),
-                desc: t('フィリピンへの法人設立・進出に関する手続きサポートを依頼したい', 'Support with procedures for establishing a company or expanding to the Philippines'),
+                title: t('アポスティーユが必要', 'Need Apostille'),
+                desc: t('PSA書類のDFAアポスティーユ認証が必要', 'Need DFA Apostille authentication for PSA documents'),
               },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="bg-white border border-gray-100 rounded-xl p-4 shadow-card flex gap-3">
@@ -501,7 +496,7 @@ export default function ContactPage() {
             <p className="text-xs text-gray-600">{t('各プランの料金・納期・含まれるサービスを詳しくご覧いただけます。', 'View detailed pricing, timelines, and included services for each plan.')}</p>
           </div>
           <Link
-            to="/pricing/"
+            to={lang === 'ja' ? '/ja/ryokin/' : '/pricing/'}
             className="flex-shrink-0 inline-flex items-center gap-1 text-xs font-bold text-secondary hover:text-primary transition-colors"
           >
             {t('料金を見る', 'View Pricing')} <ChevronRight className="w-3 h-3" />
