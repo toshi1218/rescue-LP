@@ -34,7 +34,6 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.visa'),          path: '/ja/haigusha-visa/' },
     { label: t('navbar.purpose.license'),       path: '/ja/gaimen-kirikae-guide/' },
     { label: t('navbar.purpose.naturalization'),path: '/ja/kika-shinsei-guide/' },
-    { label: t('navbar.purpose.usVisa'),        path: '/ja/us-visa-documents/' },
   ] : [
     { label: 'K-1 Fiancé Visa',    path: '/k1-visa-documents/' },
     { label: 'CR-1 / IR-1 Visa',   path: '/cr1-visa-documents/' },
@@ -199,7 +198,7 @@ const Navbar: React.FC = () => {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                onClick={() => setOpenMenu(openMenu === 'docs' ? null : 'docs')}
+                onClick={() => { if (docsRef.current) { const r = docsRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'docs' ? null : 'docs'); }}
                 className={tabBtnClass(isDocActive || openMenu === 'docs')}
               >
                 {t('navbar.findByDoc')}
@@ -217,7 +216,7 @@ const Navbar: React.FC = () => {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                onClick={() => setOpenMenu(openMenu === 'purpose' ? null : 'purpose')}
+                onClick={() => { if (purposeRef.current) { const r = purposeRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'purpose' ? null : 'purpose'); }}
                 className={tabBtnClass(isPurposeActive || openMenu === 'purpose')}
               >
                 {t('navbar.findByPurpose')}
@@ -235,7 +234,7 @@ const Navbar: React.FC = () => {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                onClick={() => setOpenMenu(openMenu === 'guides' ? null : 'guides')}
+                onClick={() => { if (guidesRef.current) { const r = guidesRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'guides' ? null : 'guides'); }}
                 className={tabBtnClass(isGuidesActive || openMenu === 'guides' || matchesPath(guidesPath))}
               >
                 {isJa ? 'お役立ち' : 'Guides'}
@@ -390,7 +389,7 @@ const Navbar: React.FC = () => {
           <div className="grid grid-cols-2 gap-x-2">
             {guidesSections.map((section) => (
               <div key={section.category} className="mb-2">
-                <p className="px-2 pt-1 pb-0.5 text-[10px] font-bold text-gray-400 uppercase tracking-wide">
+                <p className="px-2 pt-1 pb-1 text-[10px] font-bold text-primary uppercase tracking-wide border-b border-primary/20 mb-1">
                   {section.category}
                 </p>
                 {section.items.map(item => (
@@ -399,8 +398,8 @@ const Navbar: React.FC = () => {
                     to={item.path}
                     className={`block px-2 py-1.5 text-xs rounded-md transition-colors ${
                       matchesPath(item.path)
-                        ? 'text-secondary bg-gray-50 font-medium'
-                        : 'text-gray-600 hover:bg-gray-50 hover:text-secondary'
+                        ? 'text-secondary bg-secondary/5 font-semibold'
+                        : 'text-gray-700 hover:bg-primary/5 hover:text-primary'
                     }`}
                   >
                     {item.label}

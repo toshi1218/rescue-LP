@@ -24,7 +24,6 @@ const ja = {
   'navbar.purpose.visa': '配偶者ビザ',
   'navbar.purpose.license': '免許切替',
   'navbar.purpose.naturalization': '帰化申請',
-  'navbar.purpose.usVisa': '米国ビザ書類',
 
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': '日本法人運営',
@@ -171,7 +170,6 @@ const en: typeof ja = {
   'navbar.purpose.visa': 'Spouse Visa',
   'navbar.purpose.license': 'License Transfer',
   'navbar.purpose.naturalization': 'Naturalization',
-  'navbar.purpose.usVisa': 'US Visa Documents',
 
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': 'Japan-Based Company',

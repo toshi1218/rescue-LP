@@ -171,7 +171,7 @@ export default function PricingPage() {
     },
     {
       q: t('国際送料はいくらですか？', 'How much is the international shipping fee?'),
-      a: t('送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね1,500〜3,000円程度が目安です。', 'DHL Express international shipping to the USA is already included in the displayed price. No additional shipping fee will be charged.'),
+      a: t('送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね5,000〜6,000円程度が目安です。', 'DHL Express international shipping to the USA is already included in the displayed price. No additional shipping fee will be charged.'),
     },
     {
       q: t('取得難易度による変動とはどういう意味ですか？', 'What does "price may vary depending on difficulty" mean?'),
@@ -221,13 +221,13 @@ export default function PricingPage() {
       recommend: t('LTO関連書類取得代行', 'LTO Document Retrieval'),
       planId: 'lto',
     },
-    {
+    ...(lang === 'en' ? [{
       icon: '🇺🇸',
-      title: t('米国ビザ（CR-1/IR-1・K-1）の書類を準備したい', 'Applying for a US CR-1/IR-1 or K-1 visa'),
-      desc: t('USCIS・NVC提出にはApostille付きのPSA・CENOMAR・NBI書類が必要です。', 'USCIS and NVC submissions require PSA, CENOMAR, and NBI documents with DFA Apostille.'),
-      recommend: t('配偶者ビザサポート', 'Spouse / CR-1 Visa Support'),
+      title: 'Applying for a US CR-1/IR-1 or K-1 visa',
+      desc: 'USCIS and NVC submissions require PSA, CENOMAR, and NBI documents with DFA Apostille.',
+      recommend: 'Spouse / CR-1 Visa Support',
       planId: 'visa',
-    },
+    }] : []),
     {
       icon: '📋',
       title: t('まず何が必要か確認したい', 'I want to find out what I need first'),
