@@ -42,7 +42,7 @@ const plansData = {
       icon: FileText,
       title: 'LTO関連書類取得代行',
       subtitle: '運転免許関連書類の取得サポート（外免切り替え用）',
-      price: '¥85,000',
+      price: '¥100,000',
       usdRef: '$570',
       note: '〜 (税・送料別)',
       highlights: ['役所申請手数料込み', '国際送料別途'],
