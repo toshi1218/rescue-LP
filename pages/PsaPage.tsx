@@ -15,7 +15,7 @@ export default function PsaPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`PSA出生証明書 要件・費用・取得方法【${SEO_YEAR_MONTH_JA}最新】｜PSA birth certificate Philippines ${SEO_YEAR_MONTH_EN}`, `PSA Birth Certificate: Requirements, Fees & How to Get It [${SEO_YEAR_MONTH_EN}]`),
+    t(`PSA出生証明書 要件・費用・取得方法【${SEO_YEAR_MONTH_JA}最新】｜フィリピン書類取得代行センター`, `PSA Birth Certificate: Requirements, Fees & How to Get It [${SEO_YEAR_MONTH_EN}]`),
     t('PSA出生証明書の申請要件・費用・取得方法を解説。2026年最新の必要情報・PSA手数料（365ペソ）・代行費用まで。NO RECORD FOUND対処も。無料相談受付中。', 'Complete guide to getting a PSA Birth Certificate from the Philippines. Learn requirements, fees, processing time, and how our service can help.')
   );
 

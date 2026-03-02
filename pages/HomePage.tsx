@@ -33,8 +33,8 @@ export default function HomePage() {
   }, [navigate]);
 
   useMeta(
-    t(`フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`, `Philippine Document Service | CENOMAR, PSA, NBI [${SEO_YEAR_MONTH_EN}]`),
-    t('CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。', 'We retrieve CENOMAR, PSA, NBI, and DFA Apostille from the Philippines on your behalf. Trusted by international couples. Free consultation.')
+    t(`フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`, `Philippine Document Service | PSA, CENOMAR, NBI & Apostille for US Visa [${SEO_YEAR_MONTH_EN}]`),
+    t('CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。', 'Get Philippine documents (PSA Birth Certificate, CENOMAR, NBI Clearance) with DFA Apostille for USCIS, NVC & US Embassy. Ships to USA via DHL. Free consultation.')
   );
 
   const jsonLd = {
