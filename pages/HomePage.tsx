@@ -33,7 +33,7 @@ export default function HomePage() {
   }, [navigate]);
 
   useMeta(
-    t(`フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`, `Philippine Document Service | PSA, CENOMAR & NBI Apostille for K-1 / CR-1 Visa [${SEO_YEAR_MONTH_EN}]`),
+    t(`フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`, `PSA, CENOMAR & NBI Apostille for K-1 / CR-1 Visa [${SEO_YEAR_MONTH_EN}]`),
     t('CENOMAR・PSA・NBI・LTO・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。渡航不要・最短納期。国際結婚・配偶者ビザ・外免切替・帰化申請に対応。日本語サポートあり。無料相談受付中。', 'Get PSA Birth Certificate, CENOMAR, NBI Clearance with DFA Apostille for K-1 / CR-1 visa (USCIS, NVC & US Embassy). Ships to your US address via DHL. Free consultation.')
   );
 
@@ -43,7 +43,7 @@ export default function HomePage() {
       {
         '@type': 'WebPage',
         '@id': 'https://ph-document.com/',
-        name: `Philippine Document Service | PSA, CENOMAR & NBI Apostille for K-1 / CR-1 Visa [${SEO_YEAR_MONTH_EN}]`,
+        name: `PSA, CENOMAR & NBI Apostille for K-1 / CR-1 Visa [${SEO_YEAR_MONTH_EN}]`,
         description: 'We retrieve PSA Birth Certificates, CENOMAR, NBI Clearance with DFA Apostille for USCIS, NVC & US Embassy requirements. Ships to your US address via DHL. Trusted by US visa applicants. Free consultation.',
         url: 'https://ph-document.com/',
         inLanguage: 'en',
