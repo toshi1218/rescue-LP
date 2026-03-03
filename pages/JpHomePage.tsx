@@ -22,8 +22,8 @@ export default function JpHomePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    `フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`,
-    'CENOMAR・PSA・NBI・LTO・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。渡航不要・最短納期。国際結婚・配偶者ビザ・外免切替・帰化申請に対応。日本語サポートあり。無料相談受付中。'
+    `フィリピン書類取得代行｜CENOMAR・PSA・LTO最短依頼【${SEO_YEAR_MONTH_JA}】`,
+    '日本在住でフィリピン書類が急ぎで必要な方へ。CENOMAR（独身証明書）・PSA出生証明書・LTO・DFAアポスティーユを現地スタッフが代行取得。国際結婚・外免切替・配偶者ビザに最短対応。無料相談受付中。'
   );
 
   const jsonLd = {
@@ -32,8 +32,8 @@ export default function JpHomePage() {
       {
         '@type': 'WebPage',
         '@id': 'https://ph-document.com/ja/',
-        name: `フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`,
-        description: 'CENOMAR・PSA・NBI・LTO・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。渡航不要・最短納期。国際結婚・配偶者ビザ・外免切替・帰化申請に対応。日本語サポートあり。無料相談受付中。',
+        name: `フィリピン書類取得代行｜CENOMAR・PSA・LTO最短依頼【${SEO_YEAR_MONTH_JA}】`,
+        description: '日本在住でフィリピン書類が急ぎで必要な方へ。CENOMAR（独身証明書）・PSA出生証明書・LTO・DFAアポスティーユを現地スタッフが代行取得。国際結婚・外免切替・配偶者ビザに最短対応。無料相談受付中。',
         url: 'https://ph-document.com/ja/',
         inLanguage: 'ja',
         dateModified: SEO_DATE_ISO,

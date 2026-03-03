@@ -5,20 +5,20 @@ import { useLanguage } from '../lib/i18n';
 
 const servicesData = {
   ja: [
-    { icon: UserX, title: 'CENOMAR', subtitle: '独身証明書（セノマー）', desc: '国際結婚・配偶者ビザに必須のCENOMAR PSA取得代行', hasBadge: true },
-    { icon: Baby, title: 'PSA Birth', subtitle: '出生証明書', desc: 'PSA出生証明書の取得代行。DFAアポスティーユ認証も対応', hasBadge: false },
-    { icon: Heart, title: 'PSA Marriage', subtitle: '結婚証明書', desc: 'PSA結婚証明書の取得代行。アポスティーユ込みも可', hasBadge: false },
-    { icon: Fingerprint, title: 'NBI Clearance', subtitle: '無犯罪証明書', desc: 'NBIクリアランス（フィリピン無犯罪証明書）取得サポート', hasBadge: false },
-    { icon: Car, title: 'LTO Documents', subtitle: '運転免許関連書類', desc: 'LTO運転免許証・OR/CR・外免切替に必要な書類取得', hasBadge: false },
-    { icon: BadgeCheck, title: 'DFA Apostille', subtitle: 'アポスティーユ認証', desc: 'DFAアポスティーユ認証（フィリピン外務省認証）代行', hasBadge: false },
+    { icon: UserX, title: 'CENOMAR', subtitle: '独身証明書（セノマー）取得代行', desc: '国際結婚・配偶者ビザに必須。独身証明書を現地スタッフが代行取得', hasBadge: true },
+    { icon: Baby, title: 'PSA Birth', subtitle: 'PSA出生証明書 取得代行', desc: 'PSA出生証明書の代行取得。DFAアポスティーユも一括対応', hasBadge: false },
+    { icon: Heart, title: 'PSA Marriage', subtitle: 'PSA婚姻証明書 取得代行', desc: 'PSA婚姻証明書の代行取得。アポスティーユ込みも相談可', hasBadge: false },
+    { icon: Fingerprint, title: 'NBI Clearance', subtitle: 'NBI無犯罪証明書 取得代行', desc: '配偶者ビザ・帰化申請向けNBI証明書を代行取得。DFA認証も対応', hasBadge: false },
+    { icon: Car, title: 'LTO Documents', subtitle: 'LTO書類 取得代行（外免切替）', desc: '外免切替に必要なLTO書類を代行取得。OR/CRも対応', hasBadge: false },
+    { icon: BadgeCheck, title: 'DFA Apostille', subtitle: 'DFAアポスティーユ認証 代行', desc: 'DFAアポスティーユ認証（外務省認証）を書類と一括代行', hasBadge: false },
   ],
   en: [
-    { icon: UserX, title: 'CENOMAR', subtitle: 'Certificate of No Marriage Record', desc: 'CENOMAR PSA procurement required for international marriage & spouse visa', hasBadge: true },
-    { icon: Baby, title: 'PSA Birth', subtitle: 'Birth Certificate', desc: 'PSA Birth Certificate procurement. DFA Apostille authentication also available', hasBadge: false },
-    { icon: Heart, title: 'PSA Marriage', subtitle: 'Marriage Certificate', desc: 'PSA Marriage Certificate procurement. Apostille bundle available', hasBadge: false },
-    { icon: Fingerprint, title: 'NBI Clearance', subtitle: 'NBI Clearance', desc: 'NBI Clearance (Philippine national criminal clearance) procurement support', hasBadge: false },
-    { icon: Car, title: 'LTO Documents', subtitle: "Driver's License Documents", desc: "LTO driver's license & OR/CR documents required for license transfer", hasBadge: false },
-    { icon: BadgeCheck, title: 'DFA Apostille', subtitle: 'DFA Apostille Authentication', desc: 'DFA Apostille authentication (Philippine Dept. of Foreign Affairs) procurement', hasBadge: false },
+    { icon: UserX, title: 'CENOMAR', subtitle: 'CENOMAR Procurement (Certificate of No Marriage)', desc: 'Required for international marriage & spouse visa. We handle the full procurement.', hasBadge: true },
+    { icon: Baby, title: 'PSA Birth', subtitle: 'PSA Birth Certificate Procurement', desc: 'Full PSA Birth Certificate procurement. DFA Apostille bundling available.', hasBadge: false },
+    { icon: Heart, title: 'PSA Marriage', subtitle: 'PSA Marriage Certificate Procurement', desc: 'Full PSA Marriage Certificate procurement. Apostille bundle option available.', hasBadge: false },
+    { icon: Fingerprint, title: 'NBI Clearance', subtitle: 'NBI Clearance Procurement', desc: 'NBI Clearance for spouse visa and naturalization. DFA authentication included on request.', hasBadge: false },
+    { icon: Car, title: 'LTO Documents', subtitle: 'LTO Document Procurement (License Transfer)', desc: 'LTO documents for foreign license conversion. OR/CR also handled.', hasBadge: false },
+    { icon: BadgeCheck, title: 'DFA Apostille', subtitle: 'DFA Apostille Authentication', desc: 'DFA Apostille (Philippine DFA) bundled with document procurement.', hasBadge: false },
   ],
 };
 
