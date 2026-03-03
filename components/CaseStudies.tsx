@@ -4,36 +4,36 @@ import { useLanguage } from '../lib/i18n';
 const caseStudiesData = {
   ja: [
     {
-      title: '国際結婚手続き向け',
-      summary: 'セノマー（CENOMAR）・PSA出生証明書・翻訳をまとめて相談',
-      support: '必要書類の整理、取得順序の設計、進捗を段階報告',
+      title: '国際結婚：CENOMAR・PSA・翻訳を一括代行',
+      summary: 'フィリピン人パートナーとの婚姻届提出に必要な書類をまとめて相談',
+      support: '取得順序の設計から進捗報告まで一括対応。渡航不要で完結',
     },
     {
-      title: '配偶者ビザ申請向け',
-      summary: 'NBI無犯罪証明書とDFAアポスティーユ認証の取得を依頼',
-      support: '不備リスクの高い項目を事前確認し、追加手続きの発生を抑制',
+      title: '配偶者ビザ：NBI・アポスティーユをまとめて取得',
+      summary: '配偶者ビザ申請に必要なNBI無犯罪証明書とDFAアポスティーユ認証を代行',
+      support: '不備リスクの高い項目を事前確認し、追加手続きの発生を最小化',
     },
     {
-      title: '外免切替準備向け',
-      summary: 'LTO関連書類の取得方法が不明な状態から相談開始',
-      support: '用途に合わせた取得書類を整理し、問い合わせ負荷を軽減',
+      title: '外免切替：LTO関連書類を完全サポート',
+      summary: 'LTO運転免許証明書・ドライバーレコードの取得方法が不明な状態から相談',
+      support: '外免切替に必要な書類を整理し、公認翻訳への手配もワンストップ対応',
     },
   ],
   en: [
     {
-      title: 'International Marriage',
-      summary: 'Consulted on CENOMAR, PSA Birth Certificate, and translation as a bundle',
-      support: 'Organized required documents, designed acquisition order, and provided step-by-step progress updates',
+      title: 'K-1 Fiancé Visa (USCIS Petition)',
+      summary: 'Needed PSA Birth Certificate, CENOMAR, and NBI Clearance for I-129F petition filing',
+      support: 'Identified exact USCIS requirements, coordinated DFA Apostille before the US Embassy interview',
     },
     {
-      title: 'Spouse Visa Application',
-      summary: 'Requested NBI Clearance and DFA Apostille Authentication procurement',
-      support: 'Pre-checked high-risk items for errors to prevent additional procedures from arising',
+      title: 'CR-1 Spouse Visa (NVC Submission)',
+      summary: 'Required PSA Birth Certificate and NBI Clearance with DFA Apostille for NVC document submission',
+      support: 'Confirmed NVC-specific format requirements and shipped all documents via DHL to the US address',
     },
     {
-      title: 'License Transfer Preparation',
-      summary: 'Started consultation with no knowledge of how to obtain LTO documents',
-      support: 'Identified the right documents for the specific use case, reducing back-and-forth inquiries',
+      title: 'US Embassy Interview Prep',
+      summary: 'Needed fresh NBI Clearance (within 6 months) and PSA Marriage Certificate before the interview date',
+      support: 'Verified Embassy interview checklist, obtained NBI renewal and Apostille within the client\'s deadline',
     },
   ],
 };

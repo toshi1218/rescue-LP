@@ -23,7 +23,7 @@ export default function JpHomePage() {
 
   useMeta(
     `フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`,
-    'CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。'
+    'CENOMAR・PSA・NBI・LTO・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。渡航不要・最短納期。国際結婚・配偶者ビザ・外免切替・帰化申請に対応。日本語サポートあり。無料相談受付中。'
   );
 
   const jsonLd = {
@@ -33,7 +33,7 @@ export default function JpHomePage() {
         '@type': 'WebPage',
         '@id': 'https://ph-document.com/ja/',
         name: `フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`,
-        description: 'CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。',
+        description: 'CENOMAR・PSA・NBI・LTO・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。渡航不要・最短納期。国際結婚・配偶者ビザ・外免切替・帰化申請に対応。日本語サポートあり。無料相談受付中。',
         url: 'https://ph-document.com/ja/',
         inLanguage: 'ja',
         dateModified: SEO_DATE_ISO,

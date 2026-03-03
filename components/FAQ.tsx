@@ -12,11 +12,11 @@ const faqsData = {
     { q: 'どの書類が必要かわからないのですが...', a: 'ご安心ください。目的（結婚、ビザ申請など）をお伝えいただければ、こちらで必要な書類を確認してご案内いたします。詳細が未定でも、まずは無料相談にてお問い合わせください。' },
   ],
   en: [
-    { q: 'What payment methods are accepted?', a: 'Payment can be made via bank transfer to a Japanese bank account.' },
-    { q: 'How long does procurement take?', a: 'Typically about 1 month. Please contact us if you have an urgent timeline.' },
-    { q: 'Can I cancel?', a: 'Cancellations before we begin are free. After we start, we will refund the amount minus actual expenses and fees incurred.' },
-    { q: 'Can you handle documents not listed on the site?', a: 'Yes, absolutely. We can handle most documents obtainable locally in the Philippines, even if not listed on our site. Please feel free to reach out.' },
-    { q: "I'm not sure which documents I need...", a: "No problem. Just tell us your goal (e.g., international marriage, visa application) and we'll identify exactly which documents you need. You're welcome to inquire even if details aren't finalized." },
+    { q: 'Do you ship documents to the United States?', a: 'Yes. We ship original documents and apostilled copies via DHL Express directly to your US address. Shipping is coordinated after procurement is complete.' },
+    { q: 'What documents are needed for a K-1 or CR-1 visa?', a: 'For USCIS and NVC: typically a PSA Birth Certificate, CENOMAR (if single), and NBI Clearance. A DFA Apostille is usually required for the US Embassy interview stage. We confirm exact requirements for your case.' },
+    { q: 'How long does the whole process take?', a: 'Typically about 1 month from order to delivery at your US address. Timelines can vary by document type and agency processing speed. Expedited options are available — please ask.' },
+    { q: 'Can I cancel if my visa situation changes?', a: 'Cancellations before we begin are free. After we start, we refund the amount minus actual expenses and fees already incurred.' },
+    { q: "I'm not sure which documents I need for my visa stage...", a: "No problem. Just tell us your visa type (K-1, CR-1, etc.) and your current stage (USCIS petition, NVC submission, or Embassy interview) and we'll identify the exact documents required." },
   ],
 };
 
