@@ -4,36 +4,36 @@ import { useLanguage } from '../lib/i18n';
 const caseStudiesData = {
   ja: [
     {
-      title: '国際結婚手続き向け',
-      summary: 'セノマー（CENOMAR）・PSA出生証明書・翻訳をまとめて相談',
-      support: '必要書類の整理、取得順序の設計、進捗を段階報告',
+      title: '国際結婚：CENOMAR・PSA一括代行',
+      summary: 'CENOMAR（独身証明書）・PSA出生証明書・翻訳をまとめて代行依頼。日本からフィリピン現地の手続きを完全丸投げ',
+      support: '必要書類を一式整理し取得順序を設計。進捗を段階的に報告し、手続き全体をスムーズに完了',
     },
     {
-      title: '配偶者ビザ申請向け',
-      summary: 'NBI無犯罪証明書とDFAアポスティーユ認証の取得を依頼',
-      support: '不備リスクの高い項目を事前確認し、追加手続きの発生を抑制',
+      title: '配偶者ビザ：NBI・アポスティーユ代行',
+      summary: 'NBI無犯罪証明書とDFAアポスティーユ認証の取得を代行依頼。ビザ申請の期限に間に合わせたい',
+      support: '不備リスクの高い項目を事前確認。追加手続きの発生を抑え、期限内に書類を届け',
     },
     {
-      title: '外免切替準備向け',
-      summary: 'LTO関連書類の取得方法が不明な状態から相談開始',
-      support: '用途に合わせた取得書類を整理し、問い合わせ負荷を軽減',
+      title: '外免切替：LTO書類取得代行',
+      summary: 'LTO関連書類の取得方法が不明な状態から代行依頼をスタート。渡航ゼロでLTO書類を取得',
+      support: '外免切替に必要な書類を整理し、最短経路で取得。お客様の手間を最小限に',
     },
   ],
   en: [
     {
-      title: 'International Marriage',
-      summary: 'Consulted on CENOMAR, PSA Birth Certificate, and translation as a bundle',
-      support: 'Organized required documents, designed acquisition order, and provided step-by-step progress updates',
+      title: 'International Marriage: CENOMAR + PSA Bundle',
+      summary: 'Ordered CENOMAR, PSA Birth Certificate, and translation as a bundle — fully handled from Japan',
+      support: 'Full document list organized, acquisition sequence planned, step-by-step progress updates provided throughout',
     },
     {
-      title: 'Spouse Visa Application',
-      summary: 'Requested NBI Clearance and DFA Apostille Authentication procurement',
-      support: 'Pre-checked high-risk items for errors to prevent additional procedures from arising',
+      title: 'Spouse Visa: NBI + DFA Apostille',
+      summary: 'Requested NBI Clearance and DFA Apostille procurement to meet visa application deadline',
+      support: 'Pre-checked high-risk items for errors; delivered documents on time without additional procedures',
     },
     {
-      title: 'License Transfer Preparation',
-      summary: 'Started consultation with no knowledge of how to obtain LTO documents',
-      support: 'Identified the right documents for the specific use case, reducing back-and-forth inquiries',
+      title: 'License Transfer: LTO Document Procurement',
+      summary: 'Started with no knowledge of LTO procedures — completed entirely without traveling to the Philippines',
+      support: 'Identified the exact documents needed for foreign license conversion and delivered them via the fastest route',
     },
   ],
 };
