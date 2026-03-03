@@ -35,14 +35,14 @@ export default function PricingPage() {
       id: 'psa',
       icon: FileText,
       title: t('PSA取得代行', 'PSA Document Retrieval'),
-      subtitle: t('出生証明書 / 婚姻証明書 / CENOMAR', 'Birth Certificate / Marriage Certificate / CENOMAR'),
+      subtitle: t('出生証明書 / 婚姻証明書 / CENOMAR', 'Birth Certificate / Marriage Certificate / CENOMAR + DFA Apostille'),
       price: t('¥40,000', 'US$289–359'),
       basicPrice: lang === 'en' ? 'US$199–259' : undefined,
       note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
       highlights: [
-        t('役所申請手数料込み', 'Govt. application fee included'),
-        t('国際送料別途', 'DHL shipping to USA included'),
-        ...(lang === 'en' ? ['DFA Apostille authentication included'] : []),
+        t('役所申請手数料込み', 'DFA Apostille authentication included'),
+        t('国際送料別途', 'DHL Express to USA / Canada / Australia'),
+        ...(lang === 'en' ? ['Accepted by USCIS, NVC & US Embassy'] : []),
       ],
       details: {
         period: t('約4〜6週間', 'Approx. 4–6 weeks'),
@@ -59,7 +59,7 @@ export default function PricingPage() {
       id: 'nbi',
       icon: Fingerprint,
       title: t('NBI取得代行', 'NBI Clearance Retrieval'),
-      subtitle: t('無犯罪証明書の取得サポート', 'NBI Clearance with DFA Apostille'),
+      subtitle: t('無犯罪証明書の取得サポート', 'NBI Clearance + DFA Apostille — required for K-1 & CR-1 visas'),
       price: t('¥45,000', 'US$329–429'),
       basicPrice: lang === 'en' ? 'US$249–329' : undefined,
       note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
@@ -82,16 +82,16 @@ export default function PricingPage() {
       id: 'lto',
       icon: FileText,
       title: t('LTO関連書類取得代行', 'LTO Document Retrieval'),
-      subtitle: t('運転免許関連書類（外免切り替え用）', 'LTO driver\'s license records for Philippine nationals'),
+      subtitle: t('運転免許関連書類（外免切り替え用）', "Philippine driver's license records for immigration background checks"),
       price: t('¥100,000', 'US$699–899'),
       basicPrice: undefined,
-      note: t('〜 (税・送料別)', '(tax & DHL shipping incl.)'),
-      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'DHL shipping to USA included')],
+      note: t('〜 (税・送料別)', '(tax & DHL incl.)'),
+      highlights: [t('役所申請手数料込み', 'Govt. application fee included'), t('国際送料別途', 'DHL Express to USA / Canada / Australia')],
       details: {
         period: t('約4〜6週間', 'Approx. 4–6 weeks'),
         note: t('※税・国際送料は別途', '* Tax & DHL intl. shipping included'),
         docs: [
-          t('LTO運転免許証関連書類', 'LTO Driver\'s License Documents'),
+          t('LTO運転免許証関連書類', "LTO Driver's License Documents"),
           t('LTOトランザクション履歴', 'LTO Transaction History'),
         ],
       },
@@ -100,21 +100,21 @@ export default function PricingPage() {
     {
       id: 'pack',
       icon: Gem,
-      title: t('国際結婚パック', 'International Marriage Package'),
-      subtitle: t('婚姻済証明書申請に必要な書類一式', 'All documents for marriage certificate application'),
+      title: t('国際結婚パック', 'K-1 / CR-1 Visa Document Package'),
+      subtitle: t('婚姻済証明書申請に必要な書類一式', 'All PSA & NBI docs Apostille-ready for USCIS / NVC submission'),
       price: t('¥85,000', 'US$799–1,049'),
       basicPrice: undefined,
       note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
       highlights: [
-        t('日本語翻訳込み', 'English document review included'),
+        t('日本語翻訳込み', 'Apostille Ready — submit directly to USCIS/NVC'),
         t('優先対応サポート', 'Priority support'),
-        ...(lang === 'en' ? ['Apostille Ready – submit directly to US immigration'] : []),
+        ...(lang === 'en' ? ['DHL Express shipped to your US address'] : []),
       ],
       details: {
         period: t('約4〜6週間', 'Approx. 4–6 weeks'),
         note: t('※税・国際送料は別途', '* Apostille, tax & DHL intl. shipping included'),
         docs: [
-          t('出生証明書（+ アポスティーユ）', 'Birth Certificate + DFA Apostille'),
+          t('出生証明書（+ アポスティーユ）', 'PSA Birth Certificate + DFA Apostille'),
           t('セノマー独身証明書（+ アポスティーユ）', 'CENOMAR + DFA Apostille'),
         ],
       },
@@ -123,22 +123,23 @@ export default function PricingPage() {
     {
       id: 'visa',
       icon: Heart,
-      title: t('配偶者ビザ', 'Spouse / CR-1 Visa Support'),
-      subtitle: t('在留資格「日本人の配偶者等」申請サポート', 'Document support for CR-1/IR-1 & K-1 visa applicants'),
+      title: t('配偶者ビザ', 'CR-1 / IR-1 Spouse Visa Support'),
+      subtitle: t('在留資格「日本人の配偶者等」申請サポート', 'Document support for CR-1, IR-1 & K-1 fiancé visa applicants'),
       price: t('¥85,000', 'US$799–1,049'),
       basicPrice: undefined,
       note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
       highlights: [
         t('必要書類の準備サポート', 'Document preparation support'),
-        t('申請書類チェック', 'Application document review'),
-        ...(lang === 'en' ? ['Apostille Ready for USCIS/NVC submission'] : []),
+        t('申請書類チェック', 'Apostille Ready for USCIS / NVC submission'),
+        ...(lang === 'en' ? ['Application document review included'] : []),
       ],
       details: {
         period: t('要相談', 'Contact for details'),
         note: t('※ケースにより異なります', '* Varies by case'),
         docs: [
           t('在留資格認定証明書交付申請書', 'PSA Birth Certificate + Apostille'),
-          t('婚姻証明書・戸籍謄本など', 'CENOMAR + Apostille, NBI Clearance + Apostille'),
+          t('婚姻証明書・戸籍謄本など', 'CENOMAR + Apostille'),
+          ...(lang === 'en' ? ['NBI Clearance + Apostille'] : []),
         ],
       },
       featured: false,
@@ -147,115 +148,196 @@ export default function PricingPage() {
       id: 'naturalization',
       icon: Award,
       title: t('帰化申請', 'US Embassy Interview Prep'),
-      subtitle: t('日本国籍取得の申請サポート', 'All documents ready before your US Embassy interview'),
+      subtitle: t('日本国籍取得の申請サポート', 'All Philippine documents ready before your US Embassy interview'),
       price: t('¥85,000', 'US$799–1,049'),
       basicPrice: undefined,
       note: t('〜 (税・送料別)', '(Apostille + tax + DHL incl.)'),
       highlights: [
         t('必要書類の準備サポート', 'Document preparation support'),
-        t('継続的フォローアップ', 'Ongoing follow-up'),
-        ...(lang === 'en' ? ['Apostille Ready for US Embassy checklist'] : []),
+        t('継続的フォローアップ', 'Apostille Ready for US Embassy checklist'),
+        ...(lang === 'en' ? ['Ongoing follow-up until interview'] : []),
       ],
       details: {
         period: t('要相談', 'Contact for details'),
         note: t('※ケースにより異なります', '* Varies by case'),
         docs: [
           t('帰化許可申請書類一式', 'PSA Birth Certificate + Apostille'),
-          t('居住・納税関連書類など', 'CENOMAR + Apostille, NBI Clearance + Apostille'),
+          t('居住・納税関連書類など', 'CENOMAR + Apostille'),
+          ...(lang === 'en' ? ['NBI Clearance + Apostille'] : []),
         ],
       },
       featured: false,
     },
   ];
 
-  const faqs = [
+  const faqs = lang === 'en' ? [
     {
-      q: t('料金に消費税は含まれていますか？', 'Does the price include consumption tax?'),
-      a: t('表示金額はすべて税抜きです。別途消費税（10%）がかかります。', 'All displayed prices are all-inclusive: Philippine tax and DHL international shipping to the USA are already included.'),
+      q: 'Are prices all-inclusive? What exactly is covered?',
+      a: 'Yes — all displayed prices include Philippine government agency fees, DFA Apostille authentication (Premium plans), Philippine tax, and DHL Express international shipping to the USA, Canada, or Australia. No hidden fees.',
     },
     {
-      q: t('国際送料はいくらですか？', 'How much is the international shipping fee?'),
-      a: t('送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね5,000〜6,000円程度が目安です。', 'DHL Express international shipping to the USA is already included in the displayed price. No additional shipping fee will be charged.'),
+      q: 'Are the documents accepted by USCIS, NVC, and the US Embassy?',
+      a: 'Yes. Our Premium plans include DFA Apostille authentication — the official Philippine government certification recognized under the Hague Convention. These documents are accepted by USCIS, NVC, the US Embassy, and immigration authorities in Canada and Australia.',
     },
     {
-      q: t('取得難易度による変動とはどういう意味ですか？', 'What does "price may vary depending on difficulty" mean?'),
-      a: t('フィリピン現地での追加調査や再申請が必要な場合（MATCH FOUND、NO RECORD FOUND等）は、別途費用が発生することがあります。事前に詳しくご説明しますのでご安心ください。', 'If additional investigation or re-application is required in the Philippines (e.g., MATCH FOUND, NO RECORD FOUND), additional costs may apply. We will explain the details in advance so you can proceed with confidence.'),
+      q: 'What does "price may vary" mean?',
+      a: 'If additional investigation or re-application is required in the Philippines (e.g., NBI MATCH FOUND, PSA NO RECORD FOUND), additional costs may apply. We will explain everything before finalizing your estimate — no surprises.',
     },
     {
-      q: t('複数の書類をまとめて依頼できますか？', 'Can I order multiple documents at once?'),
-      a: t('はい、まとめての対応が可能です。書類の組み合わせによってはセット割引が適用される場合もありますので、まずはご相談ください。', 'Yes, we can handle multiple documents at once. Set discounts may apply depending on the combination of documents, so please consult with us first.'),
+      q: 'Can I order PSA, CENOMAR, and NBI together?',
+      a: 'Yes. We recommend our K-1 / CR-1 Visa Document Package, which bundles the most commonly required documents for US visa petitions. Package discounts may apply — please consult us first.',
     },
     {
-      q: t('支払い方法は何がありますか？', 'What payment methods are available?'),
-      a: t('銀行振込でのお支払いをお願いしています。お見積もり確認後、着手前にお振り込みいただく形となります。詳細はお問い合わせ時にご案内します。', 'We accept bank transfer. Payment is required before we begin, after you confirm the estimate. Details will be provided at the time of inquiry.'),
+      q: 'How long does it take? Will it arrive before my USCIS deadline?',
+      a: 'Typical delivery is 4–6 weeks from order to DHL delivery at your door. If you have a specific USCIS or NVC deadline, please let us know upfront and we will advise on feasibility. Priority handling may be available.',
     },
     {
-      q: t('急ぎの場合は対応できますか？', 'Can you handle urgent requests?'),
-      a: t('書類の種類によっては優先対応が可能な場合があります。ただし、PSA・NBI等フィリピン政府機関の処理期間は弊社でコントロールできないため、あらかじめご了承ください。まずはご相談ください。', 'Priority handling may be available depending on the document type. However, please note that we cannot control the processing times of Philippine government agencies such as PSA and NBI. Please contact us first.'),
+      q: 'What payment methods do you accept?',
+      a: 'We accept bank transfer (wire transfer). Payment is required before we begin, after you confirm the estimate. Details will be provided at the time of inquiry.',
     },
     {
-      q: t('キャンセルは可能ですか？', 'Can I cancel my order?'),
-      a: t('着手前のキャンセルは可能です。フィリピン現地機関への申請手続き完了後のキャンセルは、現地手数料が発生している関係でご対応が難しい場合があります。詳しくはお問い合わせください。', 'Cancellation before we begin is possible. Cancellation after the application process has been completed with Philippine agencies may be difficult due to incurred local fees. Please contact us for details.'),
+      q: 'Can I cancel my order?',
+      a: 'Cancellation before we begin is free. Cancellation after the application process has been submitted to Philippine agencies may be difficult due to incurred local fees. Please contact us for details.',
     },
     {
-      q: t('書類が取得できなかった場合はどうなりますか？', 'What happens if the documents cannot be obtained?'),
-      a: t('PSAの「NO RECORD FOUND」など、フィリピン政府機関の記録上の問題で取得できなかった場合は、代替手続きをご案内します。弊社の作業に起因する問題については責任をもって対応いたします。', 'If documents cannot be obtained due to issues in Philippine government records such as PSA "NO RECORD FOUND," we will guide you on alternative procedures. We will take full responsibility for any issues caused by our work.'),
+      q: 'What if the documents cannot be obtained (NO RECORD FOUND)?',
+      a: 'If PSA or NBI cannot locate records, we will guide you through alternative procedures such as late registration or annotation. We take full responsibility for any issues caused by our work.',
+    },
+  ] : [
+    {
+      q: '料金に消費税は含まれていますか？',
+      a: '表示金額はすべて税抜きです。別途消費税（10%）がかかります。',
+    },
+    {
+      q: '国際送料はいくらですか？',
+      a: '送り先の国・地域によって異なります。お問い合わせ時にご確認ください。日本へのEMS発送の場合、概ね5,000〜6,000円程度が目安です。',
+    },
+    {
+      q: '取得難易度による変動とはどういう意味ですか？',
+      a: 'フィリピン現地での追加調査や再申請が必要な場合（MATCH FOUND、NO RECORD FOUND等）は、別途費用が発生することがあります。事前に詳しくご説明しますのでご安心ください。',
+    },
+    {
+      q: '複数の書類をまとめて依頼できますか？',
+      a: 'はい、まとめての対応が可能です。書類の組み合わせによってはセット割引が適用される場合もありますので、まずはご相談ください。',
+    },
+    {
+      q: '支払い方法は何がありますか？',
+      a: '銀行振込でのお支払いをお願いしています。お見積もり確認後、着手前にお振り込みいただく形となります。詳細はお問い合わせ時にご案内します。',
+    },
+    {
+      q: '急ぎの場合は対応できますか？',
+      a: '書類の種類によっては優先対応が可能な場合があります。ただし、PSA・NBI等フィリピン政府機関の処理期間は弊社でコントロールできないため、あらかじめご了承ください。まずはご相談ください。',
+    },
+    {
+      q: 'キャンセルは可能ですか？',
+      a: '着手前のキャンセルは可能です。フィリピン現地機関への申請手続き完了後のキャンセルは、現地手数料が発生している関係でご対応が難しい場合があります。詳しくはお問い合わせください。',
+    },
+    {
+      q: '書類が取得できなかった場合はどうなりますか？',
+      a: 'PSAの「NO RECORD FOUND」など、フィリピン政府機関の記録上の問題で取得できなかった場合は、代替手続きをご案内します。弊社の作業に起因する問題については責任をもって対応いたします。',
     },
   ];
 
-  const scenarios = [
+  const scenarios = lang === 'en' ? [
     {
       icon: '💍',
-      title: t('フィリピン人と国際結婚したい', 'I want to marry a Filipino/Filipina (K-1 Fiancé Visa)'),
-      desc: t('日本での婚姻届にはCENOMARとPSA出生証明書が必要です。フィリピン先行の場合はさらに追加書類が必要になります。', 'K-1 petition requires CENOMAR and PSA Birth Certificate with DFA Apostille. We handle everything from retrieval to DHL shipping to your US address.'),
-      recommend: t('国際結婚パック', 'International Marriage Package'),
+      title: 'Filing a K-1 Fiancé Visa petition (USCIS)',
+      desc: 'USCIS I-129F requires CENOMAR and PSA Birth Certificate with DFA Apostille. We handle everything from retrieval to DHL shipping directly to your US address.',
+      recommend: 'K-1 / CR-1 Visa Document Package',
       planId: 'pack',
     },
     {
       icon: '🛂',
-      title: t('配偶者ビザ（在留資格）を申請したい', 'I want to apply for a CR-1/IR-1 Spouse Visa'),
-      desc: t('入管への配偶者ビザ申請では、PSA書類・NBI Clearance・日本語翻訳などの準備が必要です。', 'NVC submission requires PSA Marriage Certificate and NBI Clearance with DFA Apostille. We prepare all documents to USCIS/NVC standards.'),
-      recommend: t('配偶者ビザサポート', 'Spouse Visa Support'),
+      title: 'Applying for a CR-1 / IR-1 Spouse Visa (NVC)',
+      desc: 'NVC submission requires PSA Marriage Certificate, CENOMAR, and NBI Clearance — all with DFA Apostille. We prepare all documents to USCIS/NVC standards.',
+      recommend: 'CR-1 / IR-1 Spouse Visa Support',
+      planId: 'visa',
+    },
+    {
+      icon: '🏛️',
+      title: 'Preparing for a US Embassy interview in Manila',
+      desc: 'The US Embassy checklist requires Apostille-authenticated PSA and NBI documents. We get everything ready before your interview date.',
+      recommend: 'US Embassy Interview Prep',
+      planId: 'naturalization',
+    },
+    {
+      icon: '🇨🇦',
+      title: 'Applying for a Canadian Spousal Sponsorship (IRCC)',
+      desc: 'IRCC requires PSA Birth Certificate, CENOMAR, and NBI Clearance with DFA Apostille. We ship directly to your Canadian address via DHL.',
+      recommend: 'K-1 / CR-1 Visa Document Package',
+      planId: 'pack',
+    },
+    {
+      icon: '🇦🇺',
+      title: 'Applying for an Australian Partner Visa (subclass 309/100)',
+      desc: 'The Department of Home Affairs requires Apostille-authenticated PSA and NBI documents. We handle retrieval and DHL shipping to Australia.',
+      recommend: 'CR-1 / IR-1 Spouse Visa Support',
+      planId: 'visa',
+    },
+    {
+      icon: '📋',
+      title: "I'm not sure which documents I need",
+      desc: '"I don\'t know which documents I need" is perfectly fine. We will listen to your situation and recommend the best plan.',
+      recommend: 'Start with a free consultation',
+      planId: null,
+    },
+  ] : [
+    {
+      icon: '💍',
+      title: 'フィリピン人と国際結婚したい',
+      desc: '日本での婚姻届にはCENOMARとPSA出生証明書が必要です。フィリピン先行の場合はさらに追加書類が必要になります。',
+      recommend: '国際結婚パック',
+      planId: 'pack',
+    },
+    {
+      icon: '🛂',
+      title: '配偶者ビザ（在留資格）を申請したい',
+      desc: '入管への配偶者ビザ申請では、PSA書類・NBI Clearance・日本語翻訳などの準備が必要です。',
+      recommend: '配偶者ビザサポート',
       planId: 'visa',
     },
     {
       icon: '🚗',
-      title: t('フィリピン免許を日本免許に切り替えたい', 'I need LTO records for my Filipino spouse'),
-      desc: t('外免切替にはLTO発行の書類（運転免許・トランザクション記録）が必要です。フィリピンに行かずに取得代行できます。', 'LTO driver\'s license records may be required for certain US immigration or background check purposes. We retrieve them without requiring travel to the Philippines.'),
-      recommend: t('LTO関連書類取得代行', 'LTO Document Retrieval'),
+      title: 'フィリピン免許を日本免許に切り替えたい',
+      desc: '外免切替にはLTO発行の書類（運転免許・トランザクション記録）が必要です。フィリピンに行かずに取得代行できます。',
+      recommend: 'LTO関連書類取得代行',
       planId: 'lto',
     },
-    ...(lang === 'en' ? [{
-      icon: '🇺🇸',
-      title: 'Applying for a US CR-1/IR-1 or K-1 visa',
-      desc: 'USCIS and NVC submissions require PSA, CENOMAR, and NBI documents with DFA Apostille.',
-      recommend: 'Spouse / CR-1 Visa Support',
-      planId: 'visa',
-    }] : []),
     {
       icon: '📋',
-      title: t('まず何が必要か確認したい', 'I want to find out what I need first'),
-      desc: t('「どの書類が必要かわからない」という方も大歓迎です。状況をお聞きして最適なプランをご提案します。', '"I don\'t know which documents I need" is perfectly fine. We will listen to your situation and recommend the best plan.'),
-      recommend: t('無料相談から', 'Start with a free consultation'),
+      title: 'まず何が必要か確認したい',
+      desc: '「どの書類が必要かわからない」という方も大歓迎です。状況をお聞きして最適なプランをご提案します。',
+      recommend: '無料相談から',
       planId: null,
     },
   ];
 
-  const included = [
-    t('フィリピン各機関への申請手続き代行', 'Application procedures with Philippine agencies'),
-    t('書類の確認・不備チェック', 'Document review and deficiency check'),
-    t('日本語での進捗報告', 'Progress updates in English'),
-    t('書類受領後の日本への転送（国際送料別途）', 'DHL Express international shipping to the USA'),
-    t('DFAアポスティーユ認証の代行（オプション）', 'DFA Apostille authentication (Premium plans)'),
-    ...(lang === 'en' ? ['Philippine government agency fees'] : []),
+  const included = lang === 'en' ? [
+    'Application procedures with PSA, NBI, DFA & LTO agencies',
+    'DFA Apostille authentication (Premium plans)',
+    'Document review and deficiency check',
+    'Progress updates in English',
+    'DHL Express international shipping to USA / Canada / Australia',
+    'Philippine government agency fees',
+  ] : [
+    'フィリピン各機関への申請手続き代行',
+    '書類の確認・不備チェック',
+    '日本語での進捗報告',
+    '書類受領後の日本への転送（国際送料別途）',
+    'DFAアポスティーユ認証の代行（オプション）',
   ];
 
-  const notIncluded = [
-    t('消費税（別途10%）', 'Consumption tax (already included)'),
-    t('国際郵便送料', 'DHL shipping (already included)'),
-    t('フィリピン政府機関の申請手数料（一部プランで含む）', 'Japanese translation (contact us if needed)'),
-    t('日本語翻訳費用（必要な場合は別途ご相談）', 'Additional investigation fees (MATCH FOUND resolution)'),
-    t('追加調査費用（MATCH FOUND等の異議申し立て）', 'Additional investigation fees (for MATCH FOUND cases, etc.)'),
+  const notIncluded = lang === 'en' ? [
+    'Translation fees (contact us if needed)',
+    'Additional investigation fees (MATCH FOUND resolution)',
+    'Re-application fees for NO RECORD FOUND cases',
+    'US immigration filing fees (USCIS / NVC / Embassy)',
+  ] : [
+    '消費税（別途10%）',
+    '国際郵便送料',
+    'フィリピン政府機関の申請手数料（一部プランで含む）',
+    '日本語翻訳費用（必要な場合は別途ご相談）',
+    '追加調査費用（MATCH FOUND等の異議申し立て）',
   ];
 
   const [openId, setOpenId] = useState<string | null>(null);
@@ -288,12 +370,18 @@ export default function PricingPage() {
         {/* リード文 */}
         <div className="max-w-2xl mx-auto text-center mb-6">
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            {t(
-              'フィリピン書類の取得は、言語の壁・手続きの煩雑さ・時間のロスが大きな負担になります。弊社は現地セブ拠点を活かし、',
-              'Obtaining Philippine documents can be a significant burden due to language barriers, complex procedures, and time loss. Leveraging our Cebu base, we provide a service where '
+            {lang === 'en' ? (
+              <>
+                Getting Philippine documents from the US, Canada, or Australia is complicated — PSA, NBI, and DFA each have different requirements, and mistakes can delay your visa by months.{' '}
+                <strong>We handle everything from retrieval to Apostille to DHL delivery at your door.</strong>
+              </>
+            ) : (
+              <>
+                フィリピン書類の取得は、言語の壁・手続きの煩雑さ・時間のロスが大きな負担になります。弊社は現地セブ拠点を活かし、
+                <strong>すべて日本語でやり取りするだけ</strong>
+                で書類を取得できるサービスを提供しています。
+              </>
             )}
-            <strong>{t('すべて日本語でやり取りするだけ', 'you only need to communicate in English')}</strong>
-            {t('で書類を取得できるサービスを提供しています。', ' to obtain your documents.')}
           </p>
           <Link
             to="/contact/"
@@ -345,33 +433,59 @@ export default function PricingPage() {
                 </tr>
               </thead>
               <tbody>
-                {[
+                {(lang === 'en' ? [
                   [
-                    t('手続きの手間', 'Effort'),
-                    t('英語対応・申請書記入など自分でやる必要あり', 'Must handle English communication and forms yourself'),
-                    t('日本語でのやり取りのみ', 'English communication only'),
+                    'Effort',
+                    'Must navigate PSA, NBI & DFA websites, fill forms, and coordinate in Filipino/English',
+                    'We handle everything — just send us your details',
                   ],
                   [
-                    t('言語の壁', 'Language barrier'),
-                    t('フィリピン機関は英語・タガログ語のみ', 'Philippine agencies operate in English/Filipino only'),
-                    t('現地スタッフが対応', 'Our local staff handle it'),
+                    'USCIS / NVC compliance',
+                    'Easy to get the wrong format — rejected documents delay your visa',
+                    'We ensure Apostille-authenticated docs meet USCIS/NVC standards',
                   ],
                   [
-                    t('トラブル対応', 'Trouble handling'),
-                    t('自分で解決が必要（MATCH FOUND等）', 'Must resolve issues yourself (MATCH FOUND, etc.)'),
-                    t('サポートあり', 'Full support provided'),
+                    'MATCH FOUND / errors',
+                    'Must resolve NBI MATCH FOUND or PSA discrepancies yourself from abroad',
+                    'Full resolution support included',
                   ],
                   [
-                    t('日本にいながら取得', 'Remote acquisition'),
-                    t('大使館窓口への来訪や国際郵便手配が必要', 'Embassy visits or international mail arrangements needed'),
-                    t('完全遠隔で対応可能', 'Fully remote'),
+                    'Remote from USA/Canada/AU',
+                    'Philippine agencies require in-person visits or local representatives',
+                    'Fully remote — we ship DHL Express to your door',
                   ],
                   [
-                    t('費用', 'Cost'),
-                    t('手数料＋国際郵便のみ（安い）', 'Fees + int\'l postage only (cheaper)'),
-                    t('代行手数料が加算される', 'Agency fee applies'),
+                    'Cost',
+                    'Agency fees + int\'l postage only (cheaper)',
+                    'Agency fee applies — but saves weeks of delays',
                   ],
-                ].map(([item, self, agency], i) => (
+                ] : [
+                  [
+                    '手続きの手間',
+                    '英語対応・申請書記入など自分でやる必要あり',
+                    '日本語でのやり取りのみ',
+                  ],
+                  [
+                    '言語の壁',
+                    'フィリピン機関は英語・タガログ語のみ',
+                    '現地スタッフが対応',
+                  ],
+                  [
+                    'トラブル対応',
+                    '自分で解決が必要（MATCH FOUND等）',
+                    'サポートあり',
+                  ],
+                  [
+                    '日本にいながら取得',
+                    '大使館窓口への来訪や国際郵便手配が必要',
+                    '完全遠隔で対応可能',
+                  ],
+                  [
+                    '費用',
+                    '手数料＋国際郵便のみ（安い）',
+                    '代行手数料が加算される',
+                  ],
+                ]).map(([item, self, agency], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="px-4 py-3 font-medium text-secondary border-b border-gray-100">{item}</td>
                     <td className="px-4 py-3 text-gray-600 text-center border-b border-gray-100">
