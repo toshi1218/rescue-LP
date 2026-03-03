@@ -123,14 +123,14 @@ const ja = {
   'whyus.ctaAriaLabel': 'フィリピン書類取得代行を今すぐ依頼する',
 
   // ── SocialProof ──────────────────────────────────────────────────────
-  'social.title': '実績とレビュー',
+  'social.title': '代行依頼の実績・お客様の声',
   'social.note': '公開同意を得た相談者アンケートを要約して掲載しています。',
   'social.stat1.label': '公開レビュー',
   'social.stat2.label': '平均評価',
   'social.stat3.label': '相談から着手まで',
 
   // ── QuickFacts ───────────────────────────────────────────────────────
-  'quickfacts.title': '代行サービス要点',
+  'quickfacts.title': '代行の費用・納期・依頼方法まとめ',
   'quickfacts.docs.label': '代行できる書類',
   'quickfacts.docs.value': 'CENOMAR（独身証明書）・PSA・NBI・DFAアポスティーユ・LTO関連',
   'quickfacts.period.label': '最短納期目安',
@@ -269,14 +269,14 @@ const en: typeof ja = {
   'whyus.ctaAriaLabel': 'Order Philippine document procurement now',
 
   // ── SocialProof ──────────────────────────────────────────────────────
-  'social.title': 'Track Record & Reviews',
+  'social.title': 'Procurement Results & Client Reviews',
   'social.note': 'Summaries of client surveys shared with consent.',
   'social.stat1.label': 'Reviews',
   'social.stat2.label': 'Avg. Rating',
   'social.stat3.label': 'Inquiry to Start',
 
   // ── QuickFacts ───────────────────────────────────────────────────────
-  'quickfacts.title': 'Procurement Service Highlights',
+  'quickfacts.title': 'Cost, Delivery & How to Order',
   'quickfacts.docs.label': 'Documents We Handle',
   'quickfacts.docs.value': 'CENOMAR, PSA, NBI, DFA Apostille, LTO',
   'quickfacts.period.label': 'Fastest Delivery',
