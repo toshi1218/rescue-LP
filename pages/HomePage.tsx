@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import QuickFacts from '../components/QuickFacts';
@@ -21,17 +20,6 @@ import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_DATE_ISO } from '../lib/seoDa
 export default function HomePage() {
   const { lang } = useLanguage();
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
-  const navigate = useNavigate();
-
-  // Client-side language detection: redirect Japanese browser users to /ja/
-  // This runs only in the browser — Googlebot (en-US) is unaffected.
-  useEffect(() => {
-    const browserLang = navigator.language || '';
-    if (/^ja\b/i.test(browserLang)) {
-      navigate('/ja/', { replace: true });
-    }
-  }, [navigate]);
-
   useMeta(
     t(`フィリピン書類取得代行センター｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}対応】`, `PSA, CENOMAR & NBI Apostille for K-1 / CR-1 Visa [${SEO_YEAR_MONTH_EN}]`),
     t('CENOMAR・PSA・NBI・LTO・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。渡航不要・最短納期。国際結婚・配偶者ビザ・外免切替・帰化申請に対応。日本語サポートあり。無料相談受付中。', 'Get PSA Birth Certificate, CENOMAR, NBI Clearance with DFA Apostille for K-1 / CR-1 visa (USCIS, NVC & US Embassy). Ships to your US address via DHL. Free consultation.')
