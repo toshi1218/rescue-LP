@@ -63,35 +63,47 @@ const SocialProof: React.FC = () => {
   const statLabels = [t('social.stat1.label'), t('social.stat2.label'), t('social.stat3.label')];
 
   return (
-    <section className="py-12 bg-gray-50" aria-labelledby="social-proof-title">
-      <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
-        <div className="text-center mb-8">
-          <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Proof</span>
+    <section className="py-16 bg-gray-50 relative overflow-hidden" aria-labelledby="social-proof-title">
+      {/* 背景装飾 */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute right-0 top-0 w-72 h-72 bg-primary/5 rounded-full blur-[80px]"></div>
+      </div>
+
+      <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-10">
+          <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-2 block">Proof</span>
           <h2 id="social-proof-title" className="text-xl font-bold text-secondary">{t('social.title')}</h2>
           <p className="text-xs text-gray-500 mt-2">{t('social.note')}</p>
+          <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+        {/* 統計数値 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
           {statLabels.map((label, i) => (
-            <div key={label} className="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-card">
-              <p className="text-xs text-gray-500">{label}</p>
-              <p className="text-lg font-bold text-secondary mt-1">{statValues[i]}</p>
+            <div key={label} className="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-card relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-primary"></div>
+              <p className="text-2xl font-bold text-secondary mt-1">{statValues[i]}</p>
+              <p className="text-xs text-gray-500 mt-1">{label}</p>
             </div>
           ))}
         </div>
 
+        {/* レビューカード */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {reviews.map((item) => (
-            <article key={item.title} className="bg-white border border-gray-100 rounded-xl p-4 shadow-card">
-              <div className="flex items-center justify-between mb-2">
-                <p className="text-primary text-sm" aria-label={`Rating: ${item.rating} out of 5`} role="img">
+            <article key={item.title} className="bg-white border border-gray-100 rounded-2xl p-5 shadow-card border-l-4 border-l-primary hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-between mb-3">
+                <p className="text-primary text-base" aria-label={`Rating: ${item.rating} out of 5`} role="img">
                   {'★'.repeat(item.rating)}{'☆'.repeat(5 - item.rating)}
                 </p>
-                <span className="text-[10px] text-gray-400">{item.date}</span>
+                <span className="text-[10px] text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">{item.date}</span>
               </div>
               <h3 className="text-sm font-bold text-secondary mb-1">{item.title}</h3>
-              <p className="text-[11px] text-gray-500 mb-2">{item.author}</p>
-              <p className="text-xs text-gray-600 leading-relaxed">{item.body}</p>
+              <p className="text-[11px] text-gray-400 mb-3 flex items-center gap-1">
+                <span className="inline-block w-4 h-4 rounded-full bg-secondary/10 text-secondary text-[8px] flex items-center justify-center font-bold">✓</span>
+                {item.author}
+              </p>
+              <p className="text-xs text-gray-600 leading-relaxed italic">"{item.body}"</p>
             </article>
           ))}
         </div>

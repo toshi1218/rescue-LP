@@ -27,17 +27,19 @@ const Process: React.FC = () => {
   const steps = stepsData[lang];
 
   return (
-    <section className="py-12 bg-secondary text-white relative overflow-hidden">
-      {/* Decorative blobs */}
+    <section className="py-16 bg-secondary text-white relative overflow-hidden">
+      {/* 背景装飾 */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute -right-20 -top-20 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-20"></div>
-        <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-20"></div>
+        <div className="absolute -right-20 -top-20 w-80 h-80 bg-primary rounded-full blur-[120px] opacity-15"></div>
+        <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-primary rounded-full blur-[120px] opacity-15"></div>
+        <div className="absolute inset-0 opacity-[0.025]" style={{backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '28px 28px'}}></div>
       </div>
 
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-10">
-          <span className="text-primary-hover font-bold text-xs font-display tracking-widest uppercase mb-1 block">Process</span>
+        <div className="text-center mb-12">
+          <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-2 block">Process</span>
           <h2 className="text-xl font-bold">{t('process.title')}</h2>
+          <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
         </div>
 
         {/* Desktop: horizontal flowchart */}
@@ -46,17 +48,17 @@ const Process: React.FC = () => {
             const Icon = stepIcons[idx];
             return (
               <React.Fragment key={step.num}>
-                <div className="flex-1 flex flex-col items-center text-center px-2">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center mb-2 relative">
-                    <Icon className="w-5 h-5 text-primary" />
-                    <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-primary text-secondary text-[9px] font-bold flex items-center justify-center">{step.num}</span>
+                <div className="flex-1 flex flex-col items-center text-center px-2 group">
+                  <div className="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/40 flex items-center justify-center mb-3 relative group-hover:bg-primary/30 transition-colors">
+                    <Icon className="w-6 h-6 text-primary" />
+                    <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-primary text-secondary text-[9px] font-bold flex items-center justify-center shadow-md">{step.num}</span>
                   </div>
-                  <h3 className="text-xs font-bold mb-1 leading-snug">{step.title}</h3>
-                  <p className="text-[10px] text-gray-300 leading-relaxed">{step.desc}</p>
+                  <h3 className="text-xs font-bold mb-1.5 leading-snug text-white">{step.title}</h3>
+                  <p className="text-[10px] text-white/50 leading-relaxed">{step.desc}</p>
                 </div>
                 {idx < steps.length - 1 && (
-                  <div className="flex-shrink-0 mt-5 text-primary/60">
-                    <ArrowRight className="w-4 h-4" />
+                  <div className="flex-shrink-0 mt-6 text-primary/40">
+                    <ArrowRight className="w-5 h-5" />
                   </div>
                 )}
               </React.Fragment>
@@ -65,17 +67,20 @@ const Process: React.FC = () => {
         </div>
 
         {/* Mobile: vertical timeline */}
-        <div className="md:hidden relative pl-6 space-y-6 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-white/20">
+        <div className="md:hidden relative pl-8 space-y-5 before:absolute before:left-3.5 before:top-3 before:bottom-3 before:w-0.5 before:bg-gradient-to-b before:from-primary/60 before:via-primary/30 before:to-primary/10">
           {steps.map((step, idx) => {
             const Icon = stepIcons[idx];
             return (
               <div key={step.num} className="relative group">
-                <div className="absolute -left-[1.65rem] top-1 w-6 h-6 rounded-full bg-primary border-4 border-secondary flex items-center justify-center z-10">
-                  <Icon className="w-3 h-3 text-secondary" />
+                <div className="absolute -left-[2rem] top-1 w-7 h-7 rounded-xl bg-primary border-2 border-secondary flex items-center justify-center z-10 shadow-md">
+                  <Icon className="w-3.5 h-3.5 text-secondary" />
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/10 hover:bg-white/15 transition-colors">
-                  <h3 className="font-bold mb-1 text-sm">{step.title}</h3>
-                  <p className="text-xs text-gray-300 leading-relaxed">{step.desc}</p>
+                <div className="bg-white/8 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:bg-white/12 transition-colors">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[10px] font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded-full">STEP {step.num}</span>
+                    <h3 className="font-bold text-sm text-white">{step.title}</h3>
+                  </div>
+                  <p className="text-xs text-white/50 leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             );
@@ -87,13 +92,13 @@ const Process: React.FC = () => {
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'process', type: 'contact' })}
-            className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-4 px-8 rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
             aria-label={t('process.ctaAriaLabel')}
           >
             <span>{t('process.ctaBtn')}</span>
             <ArrowRight className="w-5 h-5" />
           </a>
-          <p className="text-xs text-white/70 mt-3">{t('process.ctaNote')}</p>
+          <p className="text-xs text-white/50 mt-3">{t('process.ctaNote')}</p>
         </div>
       </div>
     </section>
