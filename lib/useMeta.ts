@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
 const BASE = 'https://ph-document.com';
-const DEFAULT_TITLE = 'CENOMAR・PSA・NBI取得代行｜フィリピン書類取得代行センター';
+const DEFAULT_TITLE = 'フィリピン書類取得代行｜CENOMAR・PSA・LTO最短依頼';
 const DEFAULT_DESCRIPTION =
-  'CENOMAR・PSA・NBI・DFAアポスティーユ等フィリピン書類取得を日本法人が完全代行。国際結婚・配偶者ビザに対応。日本語サポートあり。無料相談受付中。';
+  '日本在住でフィリピン書類が急ぎで必要な方へ。CENOMAR（独身証明書）・PSA出生証明書・LTO・DFAアポスティーユを現地スタッフが代行取得。国際結婚・外免切替・配偶者ビザに最短対応。無料相談受付中。';
 const DEFAULT_CANONICAL = `${BASE}/`;
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {

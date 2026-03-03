@@ -5,18 +5,18 @@ import { useLanguage } from '../lib/i18n';
 
 const faqsData = {
   ja: [
-    { q: '支払い方法は？', a: '日本の銀行口座へのお振込みが可能です。' },
-    { q: '取得までどのくらいかかりますか？', a: '約1ヶ月程度が目安です。お急ぎの場合はご相談ください。' },
+    { q: '費用はいくらかかりますか？', a: 'CENOMAR・PSA書類は¥40,000〜、LTO書類は¥100,000〜が目安です。必要書類の組み合わせやDFAアポスティーユ認証の有無で変わります。無料相談時に正確なお見積もりをご案内します。' },
+    { q: '最短何日で取得できますか？', a: '目安は約1ヶ月です。書類の種類や現地の取得状況により前後します。急ぎの場合はまずご相談ください。' },
+    { q: '日本から依頼できますか？フィリピンに行く必要はありますか？', a: 'はい、すべて日本からご依頼いただけます。フィリピンへの渡航は不要です。現地スタッフが書類取得から発送まで対応します。' },
+    { q: 'どの書類が必要か分からないのですが...', a: 'ご安心ください。国際結婚・外免切替・配偶者ビザなど目的をお伝えいただければ、必要書類を一式ご提案します。まずは無料相談でお問い合わせください。' },
     { q: 'キャンセルはできますか？', a: '着手前のキャンセルは無料です。申請開始後は実費と手数料を差し引いた金額をご返金いたします。' },
-    { q: '記載のない書類も対応できますか？', a: 'はい、お任せください。ウェブサイトに掲載されていない書類でも、現地で取得可能なものであれば対応いたします。まずはお気軽にご相談ください。' },
-    { q: 'どの書類が必要かわからないのですが...', a: 'ご安心ください。目的（結婚、ビザ申請など）をお伝えいただければ、こちらで必要な書類を確認してご案内いたします。詳細が未定でも、まずは無料相談にてお問い合わせください。' },
   ],
   en: [
-    { q: 'What payment methods are accepted?', a: 'Payment can be made via bank transfer to a Japanese bank account.' },
-    { q: 'How long does procurement take?', a: 'Typically about 1 month. Please contact us if you have an urgent timeline.' },
+    { q: 'How much does it cost?', a: 'CENOMAR and PSA documents start from ¥40,000. LTO documents start from ¥100,000. The total depends on the documents required and whether DFA Apostille is included. We provide an exact quote during the free consultation.' },
+    { q: 'What is the fastest turnaround time?', a: 'Typically about 1 month. It varies by document type and local availability. Contact us if you have an urgent deadline.' },
+    { q: 'Can I order from Japan? Do I need to travel to the Philippines?', a: 'Yes, you can order entirely from Japan. No travel required. Our local Philippine staff handle everything from procurement to shipping.' },
+    { q: "I'm not sure which documents I need...", a: "No problem. Just tell us your goal — international marriage, license transfer, spouse visa — and we'll provide a complete document list. Feel free to inquire even if the details aren't finalized." },
     { q: 'Can I cancel?', a: 'Cancellations before we begin are free. After we start, we will refund the amount minus actual expenses and fees incurred.' },
-    { q: 'Can you handle documents not listed on the site?', a: 'Yes, absolutely. We can handle most documents obtainable locally in the Philippines, even if not listed on our site. Please feel free to reach out.' },
-    { q: "I'm not sure which documents I need...", a: "No problem. Just tell us your goal (e.g., international marriage, visa application) and we'll identify exactly which documents you need. You're welcome to inquire even if details aren't finalized." },
   ],
 };
 
