@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import App from '../App';
+import { LanguageProvider } from '../lib/i18n';
 import {
   SEO_YEAR,
   SEO_YEAR_MONTH_JA,
@@ -670,7 +671,11 @@ async function prerender() {
       React.createElement(
         StaticRouter,
         { location: route.path },
-        React.createElement(App)
+        React.createElement(
+          LanguageProvider,
+          null,
+          React.createElement(App)
+        )
       )
     );
 

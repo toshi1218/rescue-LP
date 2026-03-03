@@ -28,6 +28,13 @@ import UsVisaDocumentsPage from './pages/UsVisaDocumentsPage';
 import K1VisaDocumentsPage from './pages/K1VisaDocumentsPage';
 import Cr1VisaDocumentsPage from './pages/Cr1VisaDocumentsPage';
 
+
+function EnPrefixRedirect() {
+  const { pathname } = useLocation();
+  const target = pathname.replace(/^\/en(?=\/|$)/, '') || '/';
+  return <Navigate to={target} replace />;
+}
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -41,6 +48,10 @@ export default function App() {
     <>
       <ScrollToTop />
       <Routes>
+        {/* ── Legacy /en prefixed URLs → EN canonical ─────────── */}
+        <Route path="/en" element={<EnPrefixRedirect />} />
+        <Route path="/en/*" element={<EnPrefixRedirect />} />
+
         {/* ── EN canonical routes ──────────────────────────────── */}
         <Route path="/" element={<HomePage />} />
         <Route path="/cenomar" element={<CenomarGuidePage />} />
@@ -89,6 +100,7 @@ export default function App() {
         <Route path="/ja/psa-shussei-cost" element={<PsaBirthCertificateCostPage />} />
         <Route path="/ja/apostille-ryokin" element={<ApostilleFeePage />} />
         <Route path="/ja/nbi-koyukigen" element={<NbiValidityPage />} />
+        <Route path="/ja/us-visa-documents" element={<UsVisaDocumentsPage />} />
         <Route path="/ja/driver-record" element={<DriverRecordPage />} />
         <Route path="/ja/ryokin" element={<PricingPage />} />
         <Route path="/ja/company" element={<CompanyPage />} />
