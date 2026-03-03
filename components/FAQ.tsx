@@ -12,11 +12,11 @@ const faqsData = {
     { q: 'キャンセルはできますか？', a: '着手前のキャンセルは無料です。申請開始後は実費と手数料を差し引いた金額をご返金いたします。' },
   ],
   en: [
-    { q: 'How much does it cost?', a: 'CENOMAR and PSA documents start from ¥40,000. LTO documents start from ¥100,000. The total depends on the documents required and whether DFA Apostille is included. We provide an exact quote during the free consultation.' },
-    { q: 'What is the fastest turnaround time?', a: 'Typically about 1 month. It varies by document type and local availability. Contact us if you have an urgent deadline.' },
-    { q: 'Can I order from Japan? Do I need to travel to the Philippines?', a: 'Yes, you can order entirely from Japan. No travel required. Our local Philippine staff handle everything from procurement to shipping.' },
-    { q: "I'm not sure which documents I need...", a: "No problem. Just tell us your goal — international marriage, license transfer, spouse visa — and we'll provide a complete document list. Feel free to inquire even if the details aren't finalized." },
-    { q: 'Can I cancel?', a: 'Cancellations before we begin are free. After we start, we will refund the amount minus actual expenses and fees incurred.' },
+    { q: 'Do you ship documents to the United States?', a: 'Yes. We ship original documents and apostilled copies via DHL Express directly to your US address. Shipping is coordinated after procurement is complete.' },
+    { q: 'What documents are needed for a K-1 or CR-1 visa?', a: 'For USCIS and NVC: typically a PSA Birth Certificate, CENOMAR (if single), and NBI Clearance. A DFA Apostille is usually required for the US Embassy interview stage. We confirm exact requirements for your case.' },
+    { q: 'How long does the whole process take?', a: 'Typically about 1 month from order to delivery at your US address. Timelines can vary by document type and agency processing speed. Expedited options are available — please ask.' },
+    { q: 'Can I cancel if my visa situation changes?', a: 'Cancellations before we begin are free. After we start, we refund the amount minus actual expenses and fees already incurred.' },
+    { q: "I'm not sure which documents I need for my visa stage...", a: "No problem. Just tell us your visa type (K-1, CR-1, etc.) and your current stage (USCIS petition, NVC submission, or Embassy interview) and we'll identify the exact documents required." },
   ],
 };
 

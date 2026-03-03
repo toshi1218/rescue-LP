@@ -123,14 +123,14 @@ const ja = {
   'whyus.ctaAriaLabel': 'フィリピン書類取得代行を今すぐ依頼する',
 
   // ── SocialProof ──────────────────────────────────────────────────────
-  'social.title': '実績とレビュー',
+  'social.title': '代行依頼の実績・お客様の声',
   'social.note': '公開同意を得た相談者アンケートを要約して掲載しています。',
   'social.stat1.label': '公開レビュー',
   'social.stat2.label': '平均評価',
   'social.stat3.label': '相談から着手まで',
 
   // ── QuickFacts ───────────────────────────────────────────────────────
-  'quickfacts.title': '代行サービス要点',
+  'quickfacts.title': '代行の費用・納期・依頼方法まとめ',
   'quickfacts.docs.label': '代行できる書類',
   'quickfacts.docs.value': 'CENOMAR（独身証明書）・PSA・NBI・DFAアポスティーユ・LTO関連',
   'quickfacts.period.label': '最短納期目安',
@@ -172,14 +172,14 @@ const en: typeof ja = {
   'navbar.purpose.naturalization': 'Naturalization',
 
   // ── Hero ─────────────────────────────────────────────────────────────
-  'hero.badge': 'Japan-Based · Local PH Staff',
-  'hero.h1line1': 'Philippine Documents — Fast,',
-  'hero.h1line2': 'Order from Japan. Fully Handled.',
-  'hero.h1line3': 'Local Staff Acts Immediately',
-  'hero.description': 'No trip to the Philippines required. We fully handle CENOMAR, PSA Birth Certificate, LTO documents, and DFA Apostille on your behalf. Fastest response for international marriage, license transfer, and spouse visa. 100% in English.',
-  'hero.disclaimer': '* Tell us the documents you need and your purpose — our local staff will respond promptly.',
-  'hero.ctaA': 'Free Consultation Now',
-  'hero.ctaB': 'Consult Now',
+  'hero.badge': 'Trusted by US Visa Applicants',
+  'hero.h1line1': 'PSA, CENOMAR & NBI',
+  'hero.h1line2': 'Apostille for US Visa',
+  'hero.h1line3': 'Ships to USA via DHL',
+  'hero.description': 'We retrieve PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille from the Philippines for your K-1 or CR-1 visa petition. Serving USCIS, NVC & US Embassy requirements — shipped directly to your US address.',
+  'hero.disclaimer': '* Also handling LTO driver records, PSA Marriage Certificates, and other Philippine documents not listed above. Feel free to ask.',
+  'hero.ctaA': 'Free Consultation',
+  'hero.ctaB': 'Consult in 30 Sec',
   'hero.pricingCta': 'View Pricing',
   'hero.ctaAriaLabel': 'Go to free consultation form',
   'hero.pricingAriaLabel': 'Go to pricing plans',
@@ -235,15 +235,15 @@ const en: typeof ja = {
   'footer.copyright': '© 2026 IGRS Inc.',
 
   // ── PainPoints ───────────────────────────────────────────────────────
-  'painpoints.title': 'Who Our Service Is For',
-  'painpoints.1.title': "Can't Go to the Philippines",
-  'painpoints.1.desc': 'Based in Japan? We handle all local government procedures on your behalf',
-  'painpoints.2.title': 'Documents Needed Urgently',
-  'painpoints.2.desc': 'Fastest turnaround for marriage, visa, and license deadlines',
-  'painpoints.3.title': "Don't Know What's Needed",
-  'painpoints.3.desc': 'Just tell us your goal — we propose the full document list',
-  'painpoints.4.title': 'No English or Tagalog',
-  'painpoints.4.desc': 'We handle all communication with local agencies. English only on your end.',
+  'painpoints.title': 'Sound Familiar?',
+  'painpoints.1.title': 'USCIS Deadlines',
+  'painpoints.1.desc': 'Strict immigration timelines leave no room for document delays or errors',
+  'painpoints.2.title': "Can't Travel",
+  'painpoints.2.desc': 'Living in the US with no way to visit Philippine government offices in person',
+  'painpoints.3.title': 'Confusing Requirements',
+  'painpoints.3.desc': 'USCIS, NVC & US Embassy each require different document formats and certifications',
+  'painpoints.4.title': 'No Trusted Agent',
+  'painpoints.4.desc': 'No reliable service to handle Philippine agencies on your behalf',
 
   // ── Process ──────────────────────────────────────────────────────────
   'process.title': 'From Order to Delivery: How It Works',
@@ -252,13 +252,13 @@ const en: typeof ja = {
   'process.ctaNote': '100% in English. Anonymous inquiries welcome.',
 
   // ── WhyUs ────────────────────────────────────────────────────────────
-  'whyus.title': 'Local Staff Who Act Fast — The Safe Choice for Procurement',
-  'whyus.1.title': 'Japan Office + Philippines Local Staff',
-  'whyus.1.desc': 'Japan-based point of contact with local Philippine staff who know current procedures inside out.',
-  'whyus.2.title': 'No Filipino or English Needed',
-  'whyus.2.desc': 'We handle all communication with local agencies. You only need to contact us in English.',
-  'whyus.3.title': 'Progress Updates — No Anxious Waiting',
-  'whyus.3.desc': 'Regular status reports at every stage so you always know exactly where your documents stand.',
+  'whyus.title': 'Why Choose Us',
+  'whyus.1.title': 'Ships Directly to the US',
+  'whyus.1.desc': 'We ship originals and apostilled documents via DHL Express straight to your US address — no forwarding needed.',
+  'whyus.2.title': 'English-Speaking Staff',
+  'whyus.2.desc': 'Our staff handle everything from inquiry to delivery, fully in English — no language barrier on your end.',
+  'whyus.3.title': 'Progress Transparency',
+  'whyus.3.desc': 'We send regular status updates so you always know where your documents stand — no guessing while waiting.',
   'whyus.stat1.label': 'Typical Delivery',
   'whyus.stat1.value': 'Approx. 1 Month+',
   'whyus.stat2.label': 'Cancellation',
@@ -269,14 +269,14 @@ const en: typeof ja = {
   'whyus.ctaAriaLabel': 'Order Philippine document procurement now',
 
   // ── SocialProof ──────────────────────────────────────────────────────
-  'social.title': 'Track Record & Reviews',
+  'social.title': 'Procurement Results & Client Reviews',
   'social.note': 'Summaries of client surveys shared with consent.',
   'social.stat1.label': 'Reviews',
   'social.stat2.label': 'Avg. Rating',
   'social.stat3.label': 'Inquiry to Start',
 
   // ── QuickFacts ───────────────────────────────────────────────────────
-  'quickfacts.title': 'Procurement Service Highlights',
+  'quickfacts.title': 'Cost, Delivery & How to Order',
   'quickfacts.docs.label': 'Documents We Handle',
   'quickfacts.docs.value': 'CENOMAR, PSA, NBI, DFA Apostille, LTO',
   'quickfacts.period.label': 'Fastest Delivery',

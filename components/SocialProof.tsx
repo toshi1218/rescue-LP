@@ -67,7 +67,7 @@ const SocialProof: React.FC = () => {
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
         <div className="text-center mb-8">
           <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Proof</span>
-          <h3 id="social-proof-title" className="text-xl font-bold text-secondary">{t('social.title')}</h3>
+          <h2 id="social-proof-title" className="text-xl font-bold text-secondary">{t('social.title')}</h2>
           <p className="text-xs text-gray-500 mt-2">{t('social.note')}</p>
         </div>
 

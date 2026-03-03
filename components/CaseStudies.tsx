@@ -21,19 +21,19 @@ const caseStudiesData = {
   ],
   en: [
     {
-      title: 'International Marriage: CENOMAR + PSA Bundle',
-      summary: 'Ordered CENOMAR, PSA Birth Certificate, and translation as a bundle — fully handled from Japan',
-      support: 'Full document list organized, acquisition sequence planned, step-by-step progress updates provided throughout',
+      title: 'K-1 Fiancé Visa (USCIS Petition)',
+      summary: 'Needed PSA Birth Certificate, CENOMAR, and NBI Clearance for I-129F petition filing',
+      support: 'Identified exact USCIS requirements, coordinated DFA Apostille before the US Embassy interview',
     },
     {
-      title: 'Spouse Visa: NBI + DFA Apostille',
-      summary: 'Requested NBI Clearance and DFA Apostille procurement to meet visa application deadline',
-      support: 'Pre-checked high-risk items for errors; delivered documents on time without additional procedures',
+      title: 'CR-1 Spouse Visa (NVC Submission)',
+      summary: 'Required PSA Birth Certificate and NBI Clearance with DFA Apostille for NVC document submission',
+      support: 'Confirmed NVC-specific format requirements and shipped all documents via DHL to the US address',
     },
     {
-      title: 'License Transfer: LTO Document Procurement',
-      summary: 'Started with no knowledge of LTO procedures — completed entirely without traveling to the Philippines',
-      support: 'Identified the exact documents needed for foreign license conversion and delivered them via the fastest route',
+      title: 'US Embassy Interview Prep',
+      summary: 'Needed fresh NBI Clearance (within 6 months) and PSA Marriage Certificate before the interview date',
+      support: 'Verified Embassy interview checklist, obtained NBI renewal and Apostille within the client\'s deadline',
     },
   ],
 };
