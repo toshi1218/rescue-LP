@@ -29,12 +29,6 @@ import K1VisaDocumentsPage from './pages/K1VisaDocumentsPage';
 import Cr1VisaDocumentsPage from './pages/Cr1VisaDocumentsPage';
 
 
-function EnPrefixRedirect() {
-  const { pathname } = useLocation();
-  const target = pathname.replace(/^\/en(?=\/|$)/, '') || '/';
-  return <Navigate to={target} replace />;
-}
-
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -48,39 +42,37 @@ export default function App() {
     <>
       <ScrollToTop />
       <Routes>
-        {/* ── Legacy /en prefixed URLs → EN canonical ─────────── */}
-        <Route path="/en" element={<EnPrefixRedirect />} />
-        <Route path="/en/*" element={<EnPrefixRedirect />} />
 
-        {/* ── EN canonical routes ──────────────────────────────── */}
-        <Route path="/" element={<HomePage />} />
-        <Route path="/cenomar" element={<CenomarGuidePage />} />
-        <Route path="/cenomar-apostille" element={<CenomarApostillePage />} />
-        <Route path="/cenomar-validity" element={<CenomarValidityPage />} />
-        <Route path="/psa-birth-certificate" element={<PsaPage />} />
-        <Route path="/nbi-clearance" element={<NbiPage />} />
-        <Route path="/nbi-hit" element={<NbiHitPage />} />
-        <Route path="/apostille" element={<ApostillePage />} />
-        <Route path="/apostille-processing-time" element={<DfaProcessingTimePage />} />
-        <Route path="/international-marriage-guide" element={<Navigate to="/ja/kokusai-kekkon-guide" replace />} />
-        <Route path="/spouse-visa-documents" element={<Navigate to="/ja/haigusha-visa" replace />} />
-        <Route path="/psa-marriage-certificate" element={<KekkonShomeishoPage />} />
-        <Route path="/drivers-license-conversion" element={<Navigate to="/ja/gaimen-kirikae-guide" replace />} />
-        <Route path="/naturalization-guide" element={<Navigate to="/ja/kika-shinsei-guide" replace />} />
-        <Route path="/guides" element={<GuidesPage />} />
-        <Route path="/psa-birth-certificate-cost" element={<PsaBirthCertificateCostPage />} />
-        <Route path="/apostille-fee" element={<ApostilleFeePage />} />
-        <Route path="/nbi-validity" element={<NbiValidityPage />} />
-        <Route path="/driver-record" element={<Navigate to="/ja/driver-record" replace />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/us-visa-documents" element={<UsVisaDocumentsPage />} />
-        <Route path="/k1-visa-documents" element={<K1VisaDocumentsPage />} />
-        <Route path="/cr1-visa-documents" element={<Cr1VisaDocumentsPage />} />
-        <Route path="/company" element={<CompanyPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/privacy" element={<PrivacyPolicyPage />} />
+        {/* ── EN canonical routes (/en/*) ───────────────────────── */}
+        <Route path="/en" element={<Navigate to="/en/" replace />} />
+        <Route path="/en/" element={<HomePage />} />
+        <Route path="/en/cenomar" element={<CenomarGuidePage />} />
+        <Route path="/en/cenomar-apostille" element={<CenomarApostillePage />} />
+        <Route path="/en/cenomar-validity" element={<CenomarValidityPage />} />
+        <Route path="/en/psa-birth-certificate" element={<PsaPage />} />
+        <Route path="/en/nbi-clearance" element={<NbiPage />} />
+        <Route path="/en/nbi-hit" element={<NbiHitPage />} />
+        <Route path="/en/apostille" element={<ApostillePage />} />
+        <Route path="/en/apostille-processing-time" element={<DfaProcessingTimePage />} />
+        <Route path="/en/international-marriage-guide" element={<KokusaiKekkonGuidePage />} />
+        <Route path="/en/spouse-visa-documents" element={<HaigushaVisaPage />} />
+        <Route path="/en/psa-marriage-certificate" element={<KekkonShomeishoPage />} />
+        <Route path="/en/drivers-license-conversion" element={<GaimenKirikaeGuidePage />} />
+        <Route path="/en/naturalization-guide" element={<KikaShinseiGuidePage />} />
+        <Route path="/en/guides" element={<GuidesPage />} />
+        <Route path="/en/psa-birth-certificate-cost" element={<PsaBirthCertificateCostPage />} />
+        <Route path="/en/apostille-fee" element={<ApostilleFeePage />} />
+        <Route path="/en/nbi-validity" element={<NbiValidityPage />} />
+        <Route path="/en/driver-record" element={<DriverRecordPage />} />
+        <Route path="/en/pricing" element={<PricingPage />} />
+        <Route path="/en/us-visa-documents" element={<UsVisaDocumentsPage />} />
+        <Route path="/en/k1-visa-documents" element={<K1VisaDocumentsPage />} />
+        <Route path="/en/cr1-visa-documents" element={<Cr1VisaDocumentsPage />} />
+        <Route path="/en/company" element={<CompanyPage />} />
+        <Route path="/en/contact" element={<ContactPage />} />
+        <Route path="/en/privacy" element={<PrivacyPolicyPage />} />
 
-        {/* ── JA canonical routes ──────────────────────────────── */}
+        {/* ── JA canonical routes (/ja/*) ───────────────────────── */}
         <Route path="/ja" element={<Navigate to="/ja/" replace />} />
         <Route path="/ja/" element={<JpHomePage />} />
         <Route path="/ja/cenomar" element={<CenomarGuidePage />} />
@@ -107,7 +99,35 @@ export default function App() {
         <Route path="/ja/contact" element={<ContactPage />} />
         <Route path="/ja/privacy" element={<PrivacyPolicyPage />} />
 
-        {/* ── Old URL redirects → JA canonical ────────────────── */}
+        {/* ── 旧 EN canonical (/ 系) → /en/* へ 301 ────────────── */}
+        <Route path="/" element={<Navigate to="/en/" replace />} />
+        <Route path="/cenomar" element={<Navigate to="/en/cenomar" replace />} />
+        <Route path="/cenomar-apostille" element={<Navigate to="/en/cenomar-apostille" replace />} />
+        <Route path="/cenomar-validity" element={<Navigate to="/en/cenomar-validity" replace />} />
+        <Route path="/psa-birth-certificate" element={<Navigate to="/en/psa-birth-certificate" replace />} />
+        <Route path="/nbi-clearance" element={<Navigate to="/en/nbi-clearance" replace />} />
+        <Route path="/nbi-hit" element={<Navigate to="/en/nbi-hit" replace />} />
+        <Route path="/apostille" element={<Navigate to="/en/apostille" replace />} />
+        <Route path="/apostille-processing-time" element={<Navigate to="/en/apostille-processing-time" replace />} />
+        <Route path="/international-marriage-guide" element={<Navigate to="/en/international-marriage-guide" replace />} />
+        <Route path="/spouse-visa-documents" element={<Navigate to="/en/spouse-visa-documents" replace />} />
+        <Route path="/psa-marriage-certificate" element={<Navigate to="/en/psa-marriage-certificate" replace />} />
+        <Route path="/drivers-license-conversion" element={<Navigate to="/en/drivers-license-conversion" replace />} />
+        <Route path="/naturalization-guide" element={<Navigate to="/en/naturalization-guide" replace />} />
+        <Route path="/guides" element={<Navigate to="/en/guides" replace />} />
+        <Route path="/psa-birth-certificate-cost" element={<Navigate to="/en/psa-birth-certificate-cost" replace />} />
+        <Route path="/apostille-fee" element={<Navigate to="/en/apostille-fee" replace />} />
+        <Route path="/nbi-validity" element={<Navigate to="/en/nbi-validity" replace />} />
+        <Route path="/driver-record" element={<Navigate to="/en/driver-record" replace />} />
+        <Route path="/pricing" element={<Navigate to="/en/pricing" replace />} />
+        <Route path="/us-visa-documents" element={<Navigate to="/en/us-visa-documents" replace />} />
+        <Route path="/k1-visa-documents" element={<Navigate to="/en/k1-visa-documents" replace />} />
+        <Route path="/cr1-visa-documents" element={<Navigate to="/en/cr1-visa-documents" replace />} />
+        <Route path="/company" element={<Navigate to="/en/company" replace />} />
+        <Route path="/contact" element={<Navigate to="/en/contact" replace />} />
+        <Route path="/privacy" element={<Navigate to="/en/privacy" replace />} />
+
+        {/* ── 旧 URL → JA canonical へ 301 ─────────────────────── */}
         <Route path="/jp" element={<Navigate to="/ja/" replace />} />
         <Route path="/cenomar-guide" element={<Navigate to="/ja/cenomar" replace />} />
         <Route path="/cenomar-guide/" element={<Navigate to="/ja/cenomar" replace />} />
@@ -127,6 +147,7 @@ export default function App() {
         <Route path="/gaimen-kirikae-guide/" element={<Navigate to="/ja/gaimen-kirikae-guide" replace />} />
         <Route path="/kika-shinsei-guide" element={<Navigate to="/ja/kika-shinsei-guide" replace />} />
         <Route path="/kika-shinsei-guide/" element={<Navigate to="/ja/kika-shinsei-guide" replace />} />
+
       </Routes>
     </>
   );

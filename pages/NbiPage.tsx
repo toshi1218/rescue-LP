@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { NbiClearanceSample } from '../components/DocumentSampleImage';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -250,6 +251,7 @@ export default function NbiPage() {
               'It is the Philippine equivalent of a police clearance or background check certificate. It is an important document required worldwide for overseas employment, immigration, partner visas, and international marriage procedures.'
             )}
           </p>
+          <NbiClearanceSample lang={lang} />
         </section>
 
         {/* Section 2 */}

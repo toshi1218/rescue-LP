@@ -53,30 +53,37 @@ export default function CompanyPage() {
     t('フィリピン書類取得代行センターを運営する株式会社IGRSの会社概要。所在地・代表者・事業内容・特定商取引法表記をご案内。', 'Learn about IGRS Co., Ltd., the company behind the Philippine Document Retrieval Service. Office location, representative, and business details.')
   );
 
-  const serviceFeatures = [
+  const serviceFeatures = lang === 'en' ? [
     {
       icon: Globe,
-      title: t('日本とフィリピンの架け橋', 'Bridge Between Japan & the Philippines'),
-      desc: t(
-        '和歌山（日本）とセブ（フィリピン）の両拠点を持ち、現地の情報と日本側の手続き要件を両方把握したうえでサポートします。',
-        'With offices in Wakayama (Japan) and Cebu (Philippines), we understand both local Philippine conditions and Japanese procedural requirements.'
-      ),
+      title: 'Philippines-Based Operations',
+      desc: 'Our staff are based in Cebu City and work directly with PSA, NBI, DFA, and LTO — giving you real-time access to the latest procedures and office conditions on the ground.',
     },
     {
       icon: FileCheck,
-      title: t('書類取得のBPO専門', 'Document Procurement BPO'),
-      desc: t(
-        'フィリピン公的書類の取得に特化したBPOサービス。PSA・NBI・LTOなど各機関とのやり取りを一括代行します。',
-        'A BPO service specializing in Philippine official document retrieval. We handle all communications with PSA, NBI, LTO, and other agencies on your behalf.'
-      ),
+      title: 'Ships Directly to the US',
+      desc: 'Completed documents — including originals and apostilled copies — are shipped via DHL Express straight to your US address. No forwarding or middlemen needed.',
     },
     {
       icon: Building2,
-      title: t('企業進出支援も対応', 'Business Entry Support'),
-      desc: t(
-        '個人の書類取得だけでなく、フィリピンへの法人設立・進出支援も承っています。まずはご相談ください。',
-        'Beyond personal document services, we also support companies looking to establish or expand operations in the Philippines. Contact us to learn more.'
-      ),
+      title: 'USCIS & NVC Ready',
+      desc: 'We understand the specific document formats and certification requirements for K-1, CR-1/IR-1, and other US visa petitions. We prepare documents to meet USCIS and NVC standards.',
+    },
+  ] : [
+    {
+      icon: Globe,
+      title: '日本とフィリピンの架け橋',
+      desc: '和歌山（日本）とセブ（フィリピン）の両拠点を持ち、現地の情報と日本側の手続き要件を両方把握したうえでサポートします。',
+    },
+    {
+      icon: FileCheck,
+      title: '書類取得のBPO専門',
+      desc: 'フィリピン公的書類の取得に特化したBPOサービス。PSA・NBI・LTOなど各機関とのやり取りを一括代行します。',
+    },
+    {
+      icon: Building2,
+      title: '企業進出支援も対応',
+      desc: '個人の書類取得だけでなく、フィリピンへの法人設立・進出支援も承っています。まずはご相談ください。',
     },
   ];
 
@@ -162,30 +169,52 @@ export default function CompanyPage() {
     t('アポスティーユ認証手続き', 'Apostille authentication procedures'),
   ];
 
-  const stats = [
-    { value: t('2020年', '2020'), label: t('創業', 'Founded'), sub: t('6月1日設立', 'June 1, 2020') },
-    { value: '100+', label: t('取扱い実績', 'Cases Handled'), sub: t('累計対応案件数', 'Total cases to date') },
-    { value: t('2拠点', '2 Offices'), label: t('日本×フィリピン', 'Japan × Philippines'), sub: t('和歌山・セブ', 'Wakayama · Cebu') },
-    { value: t('3言語', '3 Languages'), label: t('対応言語', 'Languages'), sub: t('日本語・英語・タガログ語', 'Japanese / English / Tagalog') },
+  const stats = lang === 'en' ? [
+    { value: '2020', label: 'Founded', sub: 'June 1, 2020' },
+    { value: '100+', label: 'Cases Handled', sub: 'Total cases to date' },
+    { value: 'Cebu', label: 'Philippines Office', sub: 'On-the-ground operations' },
+    { value: 'DHL', label: 'Ships to USA', sub: 'Direct to your US address' },
+  ] : [
+    { value: '2020年', label: '創業', sub: '6月1日設立' },
+    { value: '100+', label: '取扱い実績', sub: '累計対応案件数' },
+    { value: '2拠点', label: '日本×フィリピン', sub: '和歌山・セブ' },
+    { value: '3言語', label: '対応言語', sub: '日本語・英語・タガログ語' },
   ];
 
-  const tableRows = [
-    { label: t('商号', 'Company Name'), value: t('株式会社IGRS', 'IGRS Inc.') },
-    { label: t('設立', 'Established'), value: t('2020年6月1日', 'June 1, 2020') },
-    { label: t('本店所在地', 'Head Office (Japan)'), value: t('和歌山県和歌山市', 'Wakayama City, Wakayama Prefecture, Japan') },
-    { label: t('セブ営業所在地', 'Cebu Office (Philippines)'), value: t('フィリピン共和国 セブ市', 'Cebu City, Republic of the Philippines') },
+  const tableRows = lang === 'en' ? [
+    { label: 'Company Name', value: 'IGRS Inc.' },
+    { label: 'Established', value: 'June 1, 2020' },
+    { label: 'Office', value: 'Cebu City, Philippines' },
     {
-      label: t('事業内容', 'Business'),
+      label: 'Services',
       value: null,
       custom: (
         <ul className="space-y-1 text-gray-700">
-          <li>・{t('フィリピンへの企業進出支援', 'Support for companies entering the Philippine market')}</li>
-          <li>・{t('フィリピン公的書類取得に関する業務プロセスアウトソーシング（BPO）', 'Business process outsourcing (BPO) for Philippine official document procurement')}</li>
+          <li>· Philippine official document procurement (PSA, NBI, DFA, LTO)</li>
+          <li>· DFA Apostille authentication for USCIS / NVC / US Embassy</li>
+          <li>· DHL Express shipping directly to US addresses</li>
         </ul>
       ),
     },
-    { label: t('メール', 'Email'), value: 'igrs20200601@gmail.com' },
-    { label: t('対応言語', 'Languages'), value: t('日本語・英語・タガログ語', 'Japanese / English / Tagalog') },
+    { label: 'Email', value: 'igrs20200601@gmail.com' },
+    { label: 'Languages', value: 'English / Tagalog' },
+  ] : [
+    { label: '商号', value: '株式会社IGRS' },
+    { label: '設立', value: '2020年6月1日' },
+    { label: '本店所在地', value: '和歌山県和歌山市' },
+    { label: 'セブ営業所在地', value: 'フィリピン共和国 セブ市' },
+    {
+      label: '事業内容',
+      value: null,
+      custom: (
+        <ul className="space-y-1 text-gray-700">
+          <li>・フィリピンへの企業進出支援</li>
+          <li>・フィリピン公的書類取得に関する業務プロセスアウトソーシング（BPO）</li>
+        </ul>
+      ),
+    },
+    { label: 'メール', value: 'igrs20200601@gmail.com' },
+    { label: '対応言語', value: '日本語・英語・タガログ語' },
   ];
 
   return (
@@ -213,13 +242,13 @@ export default function CompanyPage() {
           <h2 className="text-xl font-bold mb-3 leading-snug">
             {t(
               <>書類の壁をなくして、<br />国境を越えた人生を支える。</>,
-              'Breaking down document barriers to support people living across borders.'
+              <>Get your Philippine documents done right —<br />so you can focus on your visa, not the paperwork.</>
             )}
           </h2>
           <p className="text-sm text-gray-300 leading-relaxed">
             {t(
               'フィリピンの公的書類取得は、言語・距離・手続きの複雑さという三重の壁があります。私たちは日本とフィリピン両国に拠点を持つことで、その壁を取り除き、お客様が本来やるべきことに集中できる環境を提供します。',
-              'Obtaining official Philippine documents involves a triple barrier of language, distance, and procedural complexity. By maintaining offices in both Japan and the Philippines, we remove those barriers and provide an environment where clients can focus on what truly matters to them.'
+              'Getting PSA, NBI, and apostilled documents from the Philippines is confusing, slow, and easy to get wrong. Our Cebu-based team handles everything on your behalf — and ships directly to your US address via DHL.'
             )}
           </p>
         </section>
@@ -252,19 +281,19 @@ export default function CompanyPage() {
             <p className="text-sm text-gray-700 leading-relaxed">
               {t(
                 '弊社代表は、フィリピン人パートナーとの国際結婚手続きを経験するなかで、PSA書類・NBI Clearanceなどの取得がいかに困難かを身をもって知りました。英語での窓口対応、長い待ち時間、書類不備による再申請——多くの人が同じ壁にぶつかっています。',
-                'Our founder experienced first-hand the difficulty of obtaining PSA documents and NBI Clearance during the international marriage process with a Filipino partner. Navigating English-language counters, long wait times, and resubmissions due to document errors — these are challenges many people face.'
+                'IGRS was founded in 2020 by someone who experienced first-hand how difficult it is to obtain Philippine documents for a US visa petition. Long queues, confusing requirements, rejected documents — these are problems that cost applicants weeks of delay.'
               )}
             </p>
             <p className="text-sm text-gray-700 leading-relaxed">
               {t(
                 '「日本語だけで、日本にいながら取得できる仕組みを作りたい」——その思いから、2020年に和歌山（日本）とセブ（フィリピン）の二拠点体制で株式会社IGRSを設立しました。',
-                'With the goal of creating a system where clients in Japan can obtain these documents entirely in Japanese, IGRS Inc. was established in 2020 with dual offices in Wakayama (Japan) and Cebu (Philippines).'
+                'We built a Cebu-based team with direct relationships at PSA, NBI, DFA, and LTO — so we can retrieve documents faster, catch errors before submission, and ship results straight to you in the US.'
               )}
             </p>
             <p className="text-sm text-gray-700 leading-relaxed">
               {t(
                 '以来、国際結婚・配偶者ビザ・外免切替・帰化申請など多岐にわたる案件を支援しており、「日本語で気軽に相談できる」というスタンスは創業当初から変わりません。',
-                'Since then, we have supported clients with a wide range of cases including international marriage, spouse visas, license conversions, and naturalization applications. Our commitment to easy, accessible consultations has remained unchanged since day one.'
+                'Since then, we have handled 100+ cases for K-1, CR-1/IR-1, and other US visa applicants. Our commitment to clear communication and accurate documents has remained unchanged from day one.'
               )}
             </p>
           </div>
@@ -272,16 +301,38 @@ export default function CompanyPage() {
 
         {/* Track Record */}
         <section className="mb-10">
-          <h2 className="text-lg font-bold text-secondary mb-4">{t('実績・強み', 'Track Record & Strengths')}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {stats.map(({ value, label, sub }) => (
-              <div key={label} className="bg-white rounded-xl p-4 shadow-card border border-gray-100 text-center">
-                <p className="text-xl font-bold text-primary font-display">{value}</p>
-                <p className="text-xs font-bold text-secondary mt-1">{label}</p>
-                <p className="text-[10px] text-gray-400 mt-0.5">{sub}</p>
-              </div>
-            ))}
-          </div>
+          <h2 className="text-lg font-bold text-secondary mb-4">{t('実績・強み', 'Why Clients Choose Us')}</h2>
+          {lang === 'en' ? (
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                { icon: MapPin,    value: 'Cebu-Based',     label: 'Philippines Office',    sub: 'On-the-ground operations' },
+                { icon: Globe,     value: 'DHL Express',    label: 'Ships to USA',          sub: 'Direct to your US address' },
+                { icon: FileCheck, value: 'USCIS Ready',    label: 'Correct Format',        sub: 'NVC & US Embassy standards' },
+                { icon: Clock,     value: '24h Reply',      label: 'Free Consultation',     sub: 'No commitment required' },
+              ].map(({ icon: Icon, value, label, sub }) => (
+                <div key={label} className="bg-white rounded-xl p-4 shadow-card border border-gray-100 flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Icon className="w-4 h-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-base font-bold text-primary font-display leading-tight">{value}</p>
+                    <p className="text-xs font-bold text-secondary mt-0.5">{label}</p>
+                    <p className="text-[10px] text-gray-400 mt-0.5">{sub}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {stats.map(({ value, label, sub }) => (
+                <div key={label} className="bg-white rounded-xl p-4 shadow-card border border-gray-100 text-center">
+                  <p className="text-xl font-bold text-primary font-display">{value}</p>
+                  <p className="text-xs font-bold text-secondary mt-1">{label}</p>
+                  <p className="text-[10px] text-gray-400 mt-0.5">{sub}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Contact & Hours */}
@@ -316,8 +367,8 @@ export default function CompanyPage() {
               </div>
               <h3 className="font-bold text-secondary text-sm">{t('対応時間', 'Business Hours')}</h3>
             </div>
-            <p className="text-sm text-gray-700 mb-1">{t('平日 9:00〜18:00（日本時間）', 'Mon–Fri 9:00–18:00 (JST)')}</p>
-            <p className="text-xs text-gray-500">{t('※お問い合わせへの返信は原則翌営業日以内', '* We aim to reply to all inquiries within the next business day.')}</p>
+            <p className="text-sm text-gray-700 mb-1">{t('平日 9:00〜18:00（日本時間）', 'Mon–Fri, within 24 hours')}</p>
+            <p className="text-xs text-gray-500">{t('※お問い合わせへの返信は原則翌営業日以内', '* We reply to all inquiries within 24 hours. Anonymous OK.')}</p>
           </div>
         </div>
 
@@ -359,17 +410,22 @@ export default function CompanyPage() {
 
         {/* Our Locations */}
         <section className="mb-10">
-          <h2 className="text-lg font-bold text-secondary mb-4">{t('拠点情報', 'Our Locations')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <h2 className="text-lg font-bold text-secondary mb-4">{t('拠点情報', 'Our Office')}</h2>
+          {lang === 'en' ? (
             <div className="bg-white rounded-xl p-5 shadow-card border border-gray-100">
               <div className="flex items-center gap-2 mb-3">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <h3 className="font-bold text-secondary text-sm">{t('本店（日本）', 'Head Office (Japan)')}</h3>
+                <h3 className="font-bold text-secondary text-sm">Philippines Office (Operations)</h3>
               </div>
-              <p className="text-sm text-gray-700">{t('和歌山県和歌山市', 'Wakayama City, Wakayama Prefecture, Japan')}</p>
-              <p className="text-xs text-gray-500 mt-1 mb-3">{t('日本側の書類対応・お客様サポート窓口', 'Japan-side document handling & client support')}</p>
+              <p className="text-sm text-gray-700">Cebu City, Republic of the Philippines</p>
+              <p className="text-xs text-gray-500 mt-1 mb-3">On-the-ground document procurement — direct access to PSA, NBI, DFA & LTO</p>
               <ul className="space-y-1">
-                {japanOfficeItems.map(item => (
+                {[
+                  'Direct applications to PSA, NBI, DFA & LTO',
+                  'Apostille authentication procedures',
+                  'DHL Express shipping to US addresses',
+                  'Real-time status updates to clients',
+                ].map(item => (
                   <li key={item} className="flex items-center gap-1.5 text-xs text-gray-600">
                     <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
                     {item}
@@ -377,23 +433,42 @@ export default function CompanyPage() {
                 ))}
               </ul>
             </div>
-            <div className="bg-white rounded-xl p-5 shadow-card border border-gray-100">
-              <div className="flex items-center gap-2 mb-3">
-                <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <h3 className="font-bold text-secondary text-sm">{t('セブ営業所（フィリピン）', 'Cebu Office (Philippines)')}</h3>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white rounded-xl p-5 shadow-card border border-gray-100">
+                <div className="flex items-center gap-2 mb-3">
+                  <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                  <h3 className="font-bold text-secondary text-sm">本店（日本）</h3>
+                </div>
+                <p className="text-sm text-gray-700">和歌山県和歌山市</p>
+                <p className="text-xs text-gray-500 mt-1 mb-3">日本側の書類対応・お客様サポート窓口</p>
+                <ul className="space-y-1">
+                  {japanOfficeItems.map(item => (
+                    <li key={item} className="flex items-center gap-1.5 text-xs text-gray-600">
+                      <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-sm text-gray-700">{t('フィリピン共和国 セブ市', 'Cebu City, Republic of the Philippines')}</p>
-              <p className="text-xs text-gray-500 mt-1 mb-3">{t('現地書類取得・PSA/NBI/LTO各機関への対応', 'On-site document procurement & liaison with PSA/NBI/LTO')}</p>
-              <ul className="space-y-1">
-                {cebuOfficeItems.map(item => (
-                  <li key={item} className="flex items-center gap-1.5 text-xs text-gray-600">
-                    <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <div className="bg-white rounded-xl p-5 shadow-card border border-gray-100">
+                <div className="flex items-center gap-2 mb-3">
+                  <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                  <h3 className="font-bold text-secondary text-sm">セブ営業所（フィリピン）</h3>
+                </div>
+                <p className="text-sm text-gray-700">フィリピン共和国 セブ市</p>
+                <p className="text-xs text-gray-500 mt-1 mb-3">現地書類取得・PSA/NBI/LTO各機関への対応</p>
+                <ul className="space-y-1">
+                  {cebuOfficeItems.map(item => (
+                    <li key={item} className="flex items-center gap-1.5 text-xs text-gray-600">
+                      <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          )}
         </section>
 
         {/* Documents & Services */}

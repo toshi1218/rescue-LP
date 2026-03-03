@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { CenomarSample } from '../components/DocumentSampleImage';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -237,6 +238,7 @@ export default function CenomarGuidePage() {
               'CENOMAR was formerly also called "NSO Certificate of No Marriage." Since NSO was merged into PSA in 2014, "PSA CENOMAR" is now the official name. Both refer to the same document.'
             )}
           </div>
+          <CenomarSample lang={lang} />
         </section>
 
         {/* Section 2 */}

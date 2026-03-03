@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { DfaApostilleSample } from '../components/DocumentSampleImage';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -244,6 +245,7 @@ export default function ApostillePage() {
               'The Philippines is a member of the Hague Convention. Adding DFA Apostille authentication to Philippine documents guarantees their official validity in all other Hague Convention member countries — including Japan, the US, Canada, Australia, most of Europe, and more.'
             )}
           </div>
+          <DfaApostilleSample lang={lang} />
         </section>
 
         {/* Section 2 */}

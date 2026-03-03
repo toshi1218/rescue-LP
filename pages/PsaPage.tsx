@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { PsaBirthCertSample } from '../components/DocumentSampleImage';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -212,6 +213,7 @@ export default function PsaPage() {
               'It serves as the foundational proof of a Filipino\'s identity and civil status — equivalent to a birth certificate in other countries. It is required for international marriage, visa applications, overseas migration, and many other procedures worldwide.'
             )}
           </p>
+          <PsaBirthCertSample lang={lang} />
         </section>
 
         {/* Section 2 */}

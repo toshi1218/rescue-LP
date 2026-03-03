@@ -14,8 +14,8 @@ export default function KokusaiKekkonGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`フィリピン国際結婚ガイド【${SEO_YEAR_MONTH_JA}最新】手続き・必要書類・費用を徹底解説`, `International Marriage with a Filipino: Complete Guide [${SEO_YEAR_MONTH_EN}]`),
-    t('フィリピン人との国際結婚手続きをステップ別に解説。日本先行・フィリピン先行の2パターン、必要書類（CENOMAR・PSA等）・費用・期間まで網羅。', 'Step-by-step guide to international marriage procedures. Covers Japan-first and Philippines-first options, required documents (CENOMAR, PSA), costs, and timelines.')
+    t(`フィリピン国際結婚ガイド【${SEO_YEAR_MONTH_JA}最新】手続き・必要書類・費用を徹底解説`, `Marrying a Filipino/Filipina: Complete Document Guide [${SEO_YEAR_MONTH_EN}]`),
+    t('フィリピン人との国際結婚手続きをステップ別に解説。日本先行・フィリピン先行の2パターン、必要書類（CENOMAR・PSA等）・費用・期間まで網羅。', 'Step-by-step guide to marrying a Filipino/Filipina. Covers Philippines-first process, required documents (CENOMAR, PSA Birth Certificate, NBI Clearance), and DFA Apostille for US visa.')
   );
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

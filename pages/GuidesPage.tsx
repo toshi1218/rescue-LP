@@ -170,9 +170,9 @@ export default function GuidesPage() {
           isPopular: false,
         },
         {
-          to: t('/ja/kika-shinsei-guide', '/psa-marriage-certificate'),
-          title: t('フィリピン人の帰化申請ガイド', 'PSA Marriage Certificate Guide'),
-          desc: t('日本帰化に必要なPSA・NBI書類と手続きの流れ', 'How to obtain a PSA Marriage Certificate for US visa and international use'),
+          to: t('/ja/kika-shinsei-guide', '/psa-birth-certificate'),
+          title: t('フィリピン人の帰化申請ガイド', 'PSA Birth Certificate Guide'),
+          desc: t('日本帰化に必要なPSA・NBI書類と手続きの流れ', 'How to obtain a PSA Birth Certificate for K-1 and CR-1 visa applications'),
           tags: [t('目的別', 'By Purpose')],
           isPopular: false,
         },
@@ -288,14 +288,21 @@ export default function GuidesPage() {
         <section className="mt-12 mb-10">
           <h2 className="text-lg font-bold text-secondary mb-4">{t('よく検索されるキーワード', 'Frequently Searched Keywords')}</h2>
           <div className="flex flex-wrap gap-2">
-            {[
-              'CENOMAR', 'CENOMAR meaning', 'what is CENOMAR', 'CENOMAR 有効期限', 'CENOMAR アポスティーユ',
-              'NBI HIT', 'NBI Clearance 有効期限', 'does NBI apostille expire', 'NBI Clearance Philippines', 'フィリピン NBI',
-              'DFA アポスティーユ 処理期間', 'DFA apostille processing time 2026', 'DFA apostille requirements',
-              'PSA 出生証明書', 'PSA birth certificate cost 2026', 'PSA birth certificate requirements 2026', 'PSA 出生証明書 費用', 'PSA 婚姻証明書',
-              'フィリピン 国際結婚', '配偶者ビザ 書類',
-              '外免切替 フィリピン', '帰化申請 フィリピン人',
-            ].map((kw, i) => (
+        {(lang === 'ja' ? [
+          'CENOMAR', 'CENOMAR 意味', 'CENOMAR 有効期限', 'CENOMAR アポスティーユ',
+          'NBI HIT', 'NBI Clearance 有効期限', 'NBI Clearance Philippines', 'フィリピン NBI',
+          'DFA アポスティーユ 処理期間', 'DFA アポスティーユ 費用',
+          'PSA 出生証明書', 'PSA 出生証明書 費用', 'PSA 婚姻証明書',
+          'フィリピン 国際結婚', '配偶者ビザ 書類',
+          '外免切替 フィリピン', '帰化申請 フィリピン人',
+        ] : [
+          'CENOMAR', 'CENOMAR meaning', 'what is CENOMAR', 'CENOMAR validity', 'CENOMAR apostille',
+          'NBI HIT', 'NBI Clearance validity', 'does NBI apostille expire', 'NBI Clearance Philippines',
+          'DFA apostille processing time 2026', 'DFA apostille requirements', 'DFA apostille fee 2026',
+          'PSA birth certificate', 'PSA birth certificate cost 2026', 'PSA birth certificate requirements 2026', 'PSA marriage certificate',
+          'K-1 visa documents', 'CR-1 visa documents', 'USCIS Philippine documents', 'NVC document requirements',
+          'Philippine documents for US visa', 'apostille for USCIS',
+        ]).map((kw, i) => (
               <span key={i} className="inline-block text-xs bg-white border border-gray-200 text-gray-600 px-3 py-1.5 rounded-full shadow-sm">
                 {kw}
               </span>

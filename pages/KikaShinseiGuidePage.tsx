@@ -15,8 +15,8 @@ export default function KikaShinseiGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`フィリピン人 帰化申請ガイド【${SEO_YEAR_MONTH_JA}最新】必要書類・手続きの流れ・費用`, `Naturalization Guide for Filipinos in Japan [${SEO_YEAR_MONTH_EN}]`),
-    t('フィリピン国籍の方が日本に帰化するための手続き・必要書類（PSA・NBI等）・費用・審査期間をわかりやすく解説。', 'Guide to Japanese naturalization for Filipino nationals. Covers required documents (PSA, NBI), procedures, fees, and processing timeline.')
+    t(`フィリピン人 帰化申請ガイド【${SEO_YEAR_MONTH_JA}最新】必要書類・手続きの流れ・費用`, `Philippine Documents for Naturalization [${SEO_YEAR_MONTH_EN}]: PSA & NBI Guide`),
+    t('フィリピン国籍の方が日本に帰化するための手続き・必要書類（PSA・NBI等）・費用・審査期間をわかりやすく解説。', 'How to obtain Philippine documents (PSA Birth Certificate, NBI Clearance) required for naturalization applications. DFA Apostille included. Proxy service ships to USA.')
   );
 
   const steps = [

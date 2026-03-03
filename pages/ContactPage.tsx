@@ -90,10 +90,10 @@ export default function ContactPage() {
       ),
     },
     {
-      q: t('日本にいながら依頼できますか？', 'Can I place an order from Japan?'),
+      q: t('日本にいながら依頼できますか？', 'Can I place an order from the US?'),
       a: t(
         'はい、完全リモートで対応可能です。やり取りはすべてメール・フォームで行い、書類は国際郵便で日本のご自宅に転送します。フィリピンへの渡航は不要です。',
-        'Yes, we handle everything remotely. All communication is done by email or form, and documents are forwarded to your home in Japan by international mail. No travel to the Philippines is required.'
+        'Yes, we handle everything remotely. All communication is done by email or form, and documents are shipped via DHL Express directly to your US address. No travel to the Philippines is required.'
       ),
     },
     {
@@ -104,10 +104,10 @@ export default function ContactPage() {
       ),
     },
     {
-      q: t('英語が話せなくても大丈夫ですか？', 'Is it okay if I don\'t speak English?'),
+      q: t('英語が話せなくても大丈夫ですか？', 'Do you ship documents to the US?'),
       a: t(
         'もちろんです。弊社とのやり取りはすべて日本語で行います。フィリピン機関とのやり取りは弊社スタッフが英語・タガログ語で代行します。',
-        'Of course. All communication with us is conducted in English. Our staff handle all communication with Philippine agencies in English and Filipino.'
+        'Yes. All documents are shipped via DHL Express directly to your US address. Tracking information is provided so you can monitor the delivery status in real time.'
       ),
     },
     {
@@ -145,7 +145,7 @@ export default function ContactPage() {
     {
       step: '04',
       title: t('書類取得・転送', 'Document Retrieval & Delivery'),
-      desc: t('フィリピン機関に申請し、取得後日本へ転送します。', 'We apply to Philippine agencies and forward the documents to Japan after retrieval.'),
+      desc: t('フィリピン機関に申請し、取得後日本へ転送します。', 'We apply to Philippine agencies and ship the documents via DHL Express to your US address.'),
     },
   ];
 
@@ -226,7 +226,7 @@ export default function ContactPage() {
             {
               icon: Clock,
               title: t('対応時間', 'Business Hours'),
-              desc: t('平日 9:00〜18:00（日本時間）\n土日祝はメールのみ対応', 'Weekdays 9:00–18:00 (JST)\nEmail only on weekends & holidays'),
+              desc: t('平日 9:00〜18:00（日本時間）\n土日祝はメールのみ対応', 'Weekdays 9:00–18:00 (PHT)\nEmail only on weekends & holidays'),
               highlight: false,
             },
           ].map(({ icon: Icon, title, desc, highlight }) => (
@@ -253,24 +253,24 @@ export default function ContactPage() {
             {[
               {
                 icon: '💍',
-                title: t('国際結婚の書類を準備したい', 'Prepare documents for international marriage'),
-                desc: t('CENOMAR・PSA出生証明書など婚姻届に必要な書類を一式取得したい', 'Obtain all required documents such as CENOMAR and PSA Birth Certificate for marriage registration'),
+                title: t('国際結婚の書類を準備したい', 'Prepare documents for K-1 or marriage visa'),
+                desc: t('CENOMAR・PSA出生証明書など婚姻届に必要な書類を一式取得したい', 'Obtain CENOMAR, PSA Birth Certificate & NBI Clearance with DFA Apostille for USCIS petition'),
               },
-              {
-                icon: '🛂',
-                title: t('配偶者ビザを申請したい', 'Apply for a spouse visa'),
-                desc: t('日本の入管へのビザ申請に必要な書類の準備・サポートを依頼したい', 'Prepare and support documents required for visa application to Japanese immigration'),
-              },
-              {
-                icon: '🚗',
-                title: t('フィリピン免許を日本免許に切替えたい', 'Convert Philippine license to Japanese license'),
-                desc: t('LTO書類（免許・トランザクション記録）を取得したい', 'Obtain LTO documents (license and transaction records)'),
-              },
-              {
-                icon: '📋',
-                title: t('NBI Clearanceが必要', 'Need NBI Clearance'),
-                desc: t('就職・ビザ・帰化申請のためにNBI無犯罪証明書を取得したい', 'Obtain NBI Clearance for employment, visa, or naturalization application'),
-              },
+    {
+      icon: '🛂',
+      title: t('配偶者ビザを申請したい', 'Apply for a CR-1/IR-1 or K-1 visa'),
+      desc: t('日本の入管へのビザ申請に必要な書類の準備・サポートを依頼したい', 'Prepare PSA, CENOMAR & NBI documents with DFA Apostille for USCIS/NVC submission'),
+    },
+    {
+      icon: '🚗',
+      title: t('フィリピン免許を日本免許に切替えたい', 'Need LTO driver\'s license records'),
+      desc: t('LTO書類（免許・トランザクション記録）を取得したい', 'Obtain LTO documents (license and transaction records) for your Filipino spouse'),
+    },
+    {
+      icon: '📋',
+      title: t('NBI Clearanceが必要', 'Need NBI Clearance'),
+      desc: t('就職・ビザ・帰化申請のためにNBI無犯罪証明書を取得したい', 'Obtain NBI Clearance with DFA Apostille for US visa or US Embassy interview'),
+    },
               {
                 icon: '📄',
                 title: t('アポスティーユが必要', 'Need Apostille'),

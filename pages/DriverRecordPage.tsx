@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { LtoDriversRecordSample } from '../components/DocumentSampleImage';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -15,8 +16,8 @@ export default function DriverRecordPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`外免切替に必要なLTOドライバーズレコード（運転記録）取得ガイド【${SEO_YEAR_MONTH_JA}】｜フィリピン書類センター`, `LTO Driver's Record for Japanese License Conversion [${SEO_YEAR_MONTH_EN} Guide]`),
-    t('フィリピンLTO発行の運転記録証明書（Driver\'s Record）の取得方法・必要書類・期間・DFAアポスティーユの要否を解説。外免切替を目指す方向けの完全ガイド。', 'How to obtain a Philippine LTO Driver\'s Record for Japanese license conversion. Covers requirements, processing time, and DFA Apostille.')
+    t(`外免切替に必要なLTOドライバーズレコード（運転記録）取得ガイド【${SEO_YEAR_MONTH_JA}】｜フィリピン書類センター`, `LTO Driver's Record Philippines [${SEO_YEAR_MONTH_EN}]: How to Obtain & What It Contains`),
+    t('フィリピンLTO発行の運転記録証明書（Driver\'s Record）の取得方法・必要書類・期間・DFAアポスティーユの要否を解説。外免切替を目指す方向けの完全ガイド。', "How to obtain a Philippine LTO Driver's Record. Covers required documents, 3–8 week processing time, DFA Apostille requirements, and proxy service shipping to USA.")
   );
 
   const faqs = [
@@ -223,6 +224,7 @@ export default function DriverRecordPage() {
               </div>
             ))}
           </div>
+          <LtoDriversRecordSample lang={lang} />
         </section>
 
         {/* Section 2 */}

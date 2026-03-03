@@ -186,7 +186,7 @@ const en: typeof ja = {
 
   // ── Services ─────────────────────────────────────────────────────────
   'services.title': 'CENOMAR, PSA, LTO & Apostille Procurement Service',
-  'services.subtitle': 'Full-service Philippine document procurement — order from Japan',
+  'services.subtitle': 'Full-service Philippine document procurement — order from the US',
   'services.badge': 'Most Popular',
   'services.agencies.title': 'Issuing Agencies',
   'services.agencies.psa': 'PSA (Philippine Statistics Authority)',
@@ -284,7 +284,7 @@ const en: typeof ja = {
   'quickfacts.lang.label': 'How to Order',
   'quickfacts.lang.value': 'English only — no Philippines trip needed',
   'quickfacts.company.label': 'Operated By',
-  'quickfacts.company.value': 'IGRS Inc. (Japan-based)',
+  'quickfacts.company.value': 'IGRS Inc. (Cebu, Philippines)',
   'quickfacts.updated': 'Last updated: 2026-03-01',
 
   // ── GuideLinks ───────────────────────────────────────────────────────
@@ -318,6 +318,8 @@ interface LanguageProviderProps {
 export function LanguageProvider({ children }: LanguageProviderProps) {
   const { pathname } = useLocation();
   const lang: Lang = pathname.startsWith('/ja') ? 'ja' : 'en';
+  // Note: /en/* paths are now the EN canonical routes.
+  // Any path not starting with /ja is treated as English (including /en/* and legacy / routes).
 
   // setLang is a no-op: language is determined solely by URL
   const setLang = (_newLang: Lang) => {};
