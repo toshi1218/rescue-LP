@@ -195,7 +195,7 @@ export default function HaigushaVisaPage() {
         </nav>
 
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
-          {t('配偶者ビザに必要なフィリピン書類', 'Philippine Documents for Spouse Visa')}<br className="hidden md:block" />
+          {t('配偶者ビザに必要なフィリピン書類', 'Philippine Documents for Spouse Visa')}<br className="hidden md:block" />{' '}
           {t(`チェックリスト【${SEO_YEAR_MONTH_JA}最新】`, `Checklist [${SEO_YEAR_MONTH_EN}]`)}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

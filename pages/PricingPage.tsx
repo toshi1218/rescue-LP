@@ -363,7 +363,7 @@ export default function PricingPage() {
         {/* ヘッダー */}
         <div className="text-center mb-4">
           <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Price</span>
-          <h1 className="text-2xl font-bold text-secondary">{t('料金プラン', 'Pricing Plans')}</h1>
+          <h1 className="text-2xl font-bold text-secondary">{t('料金プラン', `Pricing Plans [${SEO_YEAR_MONTH_EN}]: CENOMAR, PSA & NBI for US Visa`)}</h1>
           <p className="text-xs text-gray-500 mt-2">{t('※取得難易度により変動する場合があります。すべて税抜き表示。', '* Prices may vary by document complexity. All prices include tax & DHL shipping to the USA.')}</p>
         </div>
 

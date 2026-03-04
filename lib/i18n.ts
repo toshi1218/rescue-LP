@@ -174,8 +174,8 @@ const en: typeof ja = {
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': 'Trusted by US Visa Applicants',
   'hero.h1line1': 'PSA, CENOMAR & NBI',
-  'hero.h1line2': 'Apostille for US Visa',
-  'hero.h1line3': 'Ships to USA via DHL',
+  'hero.h1line2': 'Apostille for US Visa (K-1 & CR-1)',
+  'hero.h1line3': 'Delivered to USA via DHL',
   'hero.description': 'We retrieve PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille from the Philippines for your K-1 or CR-1 visa petition. Serving USCIS, NVC & US Embassy requirements — shipped directly to your US address.',
   'hero.disclaimer': '* Also handling LTO driver records, PSA Marriage Certificates, and other Philippine documents not listed above. Feel free to ask.',
   'hero.ctaA': 'Free Consultation',

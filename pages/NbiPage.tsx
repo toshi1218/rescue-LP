@@ -209,7 +209,7 @@ export default function NbiPage() {
           {lang === 'ja' ? (
             <>フィリピンNBI無犯罪証明書（NBI Clearance）とは？<br className="hidden md:block" />日本から取得する方法【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>Philippine NBI Clearance: Complete Guide [{SEO_YEAR_MONTH_EN}]<br className="hidden md:block" />How to Obtain It from Overseas</>
+            <>Philippine NBI Clearance: Complete Guide [{SEO_YEAR_MONTH_EN}]<br className="hidden md:block" />{' '}How to Get It for US Visa, K-1 & CR-1</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

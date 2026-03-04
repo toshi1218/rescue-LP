@@ -40,8 +40,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/',
     outFile: path.join(projectRoot, 'dist', 'en', 'index.html'),
-    title: `Philippine Document Service | PSA, CENOMAR, NBI & Apostille for US Visa [${SEO_YEAR_MONTH_EN}]`,
-    description: 'Get Philippine documents (PSA Birth Certificate, CENOMAR, NBI Clearance) with DFA Apostille for USCIS, NVC & US Embassy. Ships to USA via DHL. Free consultation.',
+    title: `Philippine Document Service | CENOMAR, PSA & NBI for US Visa, K-1 & CR-1 [${SEO_YEAR_MONTH_EN}]`,
+    description: `Need Philippine documents for a US K-1 or CR-1 visa? We retrieve CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille for USCIS, NVC & US Embassy requirements. Ships to USA via DHL. Free consultation.`,
     canonical: `${BASE}/en/`,
     lang: 'en',
     enCanonical: `${BASE}/en/`,
@@ -50,8 +50,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
-    title: `CENOMAR Guide ${SEO_TITLE_BADGE_EN}: How to Get PSA Certificate of No Marriage | Philippine Document Service`,
-    description: `Complete guide to obtaining your PSA CENOMAR (Certificate of No Marriage) from Japan in ${SEO_YEAR}. Self-apply, embassy, or proxy service options explained with costs and timelines.`,
+    title: `What is CENOMAR? PSA Certificate of No Marriage: Meaning, Requirements & How to Get It ${SEO_TITLE_BADGE_EN}`,
+    description: `What is CENOMAR (Certificate of No Marriage Record)? Complete ${SEO_YEAR} guide: PSA CENOMAR meaning, requirements, how to get it for US visa, K-1, CR-1, or international marriage. Retrieval service ships worldwide.`,
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -61,8 +61,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar-apostille',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-apostille', 'index.html'),
-    title: `Does CENOMAR Need DFA Apostille? ${SEO_TITLE_BADGE_EN} Answer by Use Case | Philippine Document Service`,
-    description: `Find out if your CENOMAR needs DFA Apostille for LCCM, spouse visa, or naturalization. Clear answers by use case with ${SEO_YEAR} practical information.`,
+    title: `Does CENOMAR Need Apostille? ${SEO_TITLE_BADGE_EN} - US Visa, K-1, CR-1 & Marriage Use Cases | Philippine Document Service`,
+    description: `Does CENOMAR need DFA Apostille for your US K-1 visa, CR-1 spousal visa, or international marriage? Clear ${SEO_YEAR} answers by use case. Retrieval service available - ships to USA.`,
     canonical: `${BASE}/en/cenomar-apostille/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar-apostille/`,
@@ -72,8 +72,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar-validity',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-validity', 'index.html'),
-    title: `How Long Is CENOMAR Valid? The "6-Month Rule" Explained ${SEO_TITLE_BADGE_EN} | Philippine Document Service`,
-    description: 'CENOMAR has no legal expiration, but most institutions require it within 6 months. Learn the basis of this rule and the ideal timing to obtain your CENOMAR.',
+    title: `How Long Is CENOMAR Valid? ${SEO_TITLE_BADGE_EN} - 6-Month Rule for US Visa & Marriage | Philippine Document Service`,
+    description: `How long is CENOMAR valid for US visa (K-1, CR-1) or marriage applications? CENOMAR has no legal expiration, but most US embassies and USCIS require it within 6 months. ${SEO_YEAR} guide.`,
     canonical: `${BASE}/en/cenomar-validity/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar-validity/`,
@@ -83,8 +83,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate', 'index.html'),
-    title: `PSA Birth Certificate ${SEO_TITLE_BADGE_EN}: Requirements, Cost & How to Get It | Philippine Document Service`,
-    description: `Complete guide to PSA Birth Certificate in ${SEO_YEAR}: requirements, fees (PHP 365), processing time, DFA Apostille, and NO RECORD FOUND solutions. Retrieval service ships worldwide.`,
+    title: `PSA Birth Certificate ${SEO_TITLE_BADGE_EN}: What It Is, Requirements & How to Get It for US Visa | Philippine Document Service`,
+    description: `What is a PSA Birth Certificate and how do you get one for a US visa or immigration? Complete ${SEO_YEAR} guide: requirements, fees (PHP 365), DFA Apostille, and NO RECORD FOUND solutions. Ships to USA.`,
     canonical: `${BASE}/en/psa-birth-certificate/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate/`,
@@ -94,8 +94,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/nbi-clearance',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance', 'index.html'),
-    title: `NBI Clearance ${SEO_TITLE_BADGE_YEAR_EN}: How to Get It, Cost & NBI HIT Guide | Philippine Document Service`,
-    description: `Step-by-step guide to getting NBI Clearance from Japan in ${SEO_YEAR}. Learn how to handle NBI HIT, DFA Apostille requirements, and proxy service options.`,
+    title: `NBI Clearance ${SEO_TITLE_BADGE_YEAR_EN}: What It Is, How to Get It & NBI HIT Guide | Philippine Document Service`,
+    description: `What is NBI Clearance and how do you get it for a US visa or immigration? Complete ${SEO_YEAR} guide: requirements, cost, DFA Apostille, NBI HIT resolution, and retrieval service shipping to USA.`,
     canonical: `${BASE}/en/nbi-clearance/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-clearance/`,
@@ -105,8 +105,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/nbi-hit',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-hit', 'index.html'),
-    title: `What is NBI HIT? Causes, Resolution Steps & Delay Time ${SEO_TITLE_BADGE_YEAR_EN} | Philippine Document Service`,
-    description: 'NBI HIT (MATCH FOUND) explained: what it means, why it happens, how to resolve it, and how much additional time to expect. Proxy service available for HIT cases.',
+    title: `What is NBI HIT (MATCH FOUND)? ${SEO_TITLE_BADGE_YEAR_EN} - Causes, How to Fix & US Visa Impact | Philippine Document Service`,
+    description: `NBI HIT (MATCH FOUND) explained for US visa applicants: what it means, why it happens, how to resolve it, and how long it delays your K-1 or CR-1 visa process. Proxy service available.`,
     canonical: `${BASE}/en/nbi-hit/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-hit/`,
@@ -116,8 +116,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille', 'index.html'),
-    title: `DFA Apostille Authentication ${SEO_TITLE_BADGE_EN}: Requirements, Cost & Processing Time | Philippine Document Service`,
-    description: `Complete guide to DFA Apostille authentication in ${SEO_YEAR}. Documents covered, cost (PHP 200 standard / PHP 400 express), processing time, and proxy service.`,
+    title: `What is DFA Apostille? ${SEO_TITLE_BADGE_EN} - Requirements, Cost & How to Get It for US Visa | Philippine Document Service`,
+    description: `What is DFA Apostille and do you need it for a US visa or USCIS? Complete ${SEO_YEAR} guide: documents covered, cost (PHP 200 standard / PHP 400 express), processing time, and retrieval service.`,
     canonical: `${BASE}/en/apostille/`,
     lang: 'en',
     enCanonical: `${BASE}/en/apostille/`,
@@ -127,8 +127,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille-processing-time',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille-processing-time', 'index.html'),
-    title: `DFA Apostille Processing Time Philippines ${SEO_YEAR_MONTH_EN} — Standard, Express & Proxy Schedule`,
-    description: `Up-to-date DFA Apostille processing times for ${SEO_YEAR}: standard (10–15 business days), express (3–5 days), and total proxy service timeline. Common delay causes explained.`,
+    title: `DFA Apostille Processing Time ${SEO_YEAR_MONTH_EN} - How Long Does It Take for US Visa Documents?`,
+    description: `How long does DFA Apostille take for US visa documents in ${SEO_YEAR}? Standard: 10–15 business days. Express: 3–5 days. Total proxy service timeline and common delay causes explained.`,
     canonical: `${BASE}/en/apostille-processing-time/`,
     lang: 'en',
     enCanonical: `${BASE}/en/apostille-processing-time/`,
@@ -138,8 +138,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/international-marriage-guide',
     outFile: path.join(projectRoot, 'dist', 'en', 'international-marriage-guide', 'index.html'),
-    title: `Marrying a Filipino/Filipina ${SEO_TITLE_BADGE_YEAR_EN}: Required Documents & Process Guide | Philippine Document Service`,
-    description: 'Complete guide to marrying a Filipino/Filipina. Required documents (CENOMAR, PSA Birth Certificate), Philippines-first vs US-first process, cost and timeline explained.',
+    title: `Marrying a Filipino/Filipina ${SEO_TITLE_BADGE_YEAR_EN}: Required Documents, CENOMAR & Step-by-Step Guide | Philippine Document Service`,
+    description: `How to marry a Filipino or Filipina — complete ${SEO_YEAR} guide for US citizens. Required documents (CENOMAR, PSA Birth Certificate), Philippines-first vs US-first process, USCIS requirements, cost and timeline.`,
     canonical: `${BASE}/en/international-marriage-guide/`,
     lang: 'en',
     enCanonical: `${BASE}/en/international-marriage-guide/`,
@@ -149,8 +149,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/spouse-visa-documents',
     outFile: path.join(projectRoot, 'dist', 'en', 'spouse-visa-documents', 'index.html'),
-    title: `Spouse Visa Philippine Documents Checklist ${SEO_TITLE_BADGE_YEAR_EN} | Philippine Document Service`,
-    description: 'Complete Philippine document checklist for spouse visa applications. PSA, CENOMAR, NBI and other required documents explained with cost and proxy service options.',
+    title: `Philippine Documents for Spouse Visa ${SEO_TITLE_BADGE_YEAR_EN}: CENOMAR, PSA & NBI Checklist | Philippine Document Service`,
+    description: `Complete Philippine document checklist for US CR-1/IR-1 spouse visa applications in ${SEO_YEAR}. PSA Birth Certificate, CENOMAR, NBI Clearance, DFA Apostille — what you need and how to get it.`,
     canonical: `${BASE}/en/spouse-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/spouse-visa-documents/`,
@@ -160,8 +160,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-marriage-certificate',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-marriage-certificate', 'index.html'),
-    title: `PSA Marriage Certificate ${SEO_TITLE_BADGE_YEAR_EN}: How to Get It for CR-1/IR-1 Visa | Philippine Document Service`,
-    description: `How to obtain a Philippine PSA Marriage Certificate for US CR-1/IR-1 spousal visa NVC submission in ${SEO_YEAR}. With DFA Apostille. Retrieval service ships to USA via DHL.`,
+    title: `PSA Marriage Certificate ${SEO_TITLE_BADGE_YEAR_EN}: What It Is & How to Get It for CR-1/IR-1 Visa | Philippine Document Service`,
+    description: `What is a PSA Marriage Certificate and how do you get one for a US CR-1/IR-1 spousal visa NVC submission? Complete ${SEO_YEAR} guide with DFA Apostille requirements. Retrieval service ships to USA via DHL.`,
     canonical: `${BASE}/en/psa-marriage-certificate/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-marriage-certificate/`,
@@ -171,8 +171,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/drivers-license-conversion',
     outFile: path.join(projectRoot, 'dist', 'en', 'drivers-license-conversion', 'index.html'),
-    title: `Philippine LTO Driver's License Documents ${SEO_TITLE_BADGE_EN}: How to Obtain LTO Records | Philippine Document Service`,
-    description: "How to obtain Philippine LTO driver's license records (Driver's Record & Certification). Required for license conversion or background checks. Proxy service ships to USA.",
+    title: `Philippine LTO Driver's License Records ${SEO_TITLE_BADGE_EN}: What They Are & How to Get Them | Philippine Document Service`,
+    description: `What are Philippine LTO driver's license records and how do you get them from the US? Complete ${SEO_YEAR} guide: Driver's Record & Certification, required for US license conversion or background checks. Ships to USA.`,
     canonical: `${BASE}/en/drivers-license-conversion/`,
     lang: 'en',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
@@ -182,8 +182,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/naturalization-guide',
     outFile: path.join(projectRoot, 'dist', 'en', 'naturalization-guide', 'index.html'),
-    title: `Philippine Documents for Naturalization ${SEO_TITLE_BADGE_YEAR_EN}: PSA & NBI Guide | Philippine Document Service`,
-    description: 'Guide to obtaining Philippine documents (PSA Birth Certificate, NBI Clearance) required for naturalization applications. Apostille authentication included. Ships to USA.',
+    title: `Philippine Documents for US Naturalization ${SEO_TITLE_BADGE_YEAR_EN}: PSA Birth Certificate & NBI Guide | Philippine Document Service`,
+    description: `What Philippine documents do you need for US naturalization or citizenship applications? Complete ${SEO_YEAR} guide: PSA Birth Certificate, NBI Clearance, DFA Apostille. Retrieval service ships to USA.`,
     canonical: `${BASE}/en/naturalization-guide/`,
     lang: 'en',
     enCanonical: `${BASE}/en/naturalization-guide/`,
@@ -193,8 +193,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/guides',
     outFile: path.join(projectRoot, 'dist', 'en', 'guides', 'index.html'),
-    title: `All Guides & FAQ | CENOMAR, NBI, DFA Apostille, PSA ${SEO_TITLE_BADGE_YEAR_EN} | Philippine Document Service`,
-    description: `Complete list of Philippine document guides and FAQ pages for ${SEO_YEAR}. Find answers about CENOMAR, NBI Clearance, DFA Apostille, PSA certificates, spouse visa, and more.`,
+    title: `Philippine Document Guides & FAQ ${SEO_TITLE_BADGE_YEAR_EN} | CENOMAR, NBI, PSA & Apostille Explained | Philippine Document Service`,
+    description: `Complete ${SEO_YEAR} guide library for Philippine documents: What is CENOMAR? What is NBI Clearance? What is DFA Apostille? Answers for US visa, K-1, CR-1, and immigration applicants.`,
     canonical: `${BASE}/en/guides/`,
     lang: 'en',
     enCanonical: `${BASE}/en/guides/`,
@@ -203,8 +203,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Cost ${SEO_YEAR_MONTH_EN} — Official Fees, Proxy Pricing & Total Estimates | Philippine Document Service`,
-    description: `Complete breakdown of PSA birth certificate costs in ${SEO_YEAR}: official PSA fees (~PHP 365), online ordering, proxy service pricing (from US$199), and DFA Apostille add-on.`,
+    title: `PSA Birth Certificate Cost ${SEO_YEAR_MONTH_EN} - How Much Does It Cost for US Visa? | Philippine Document Service`,
+    description: `How much does a PSA Birth Certificate cost for a US visa application? Complete ${SEO_YEAR} breakdown: official PSA fees (~PHP 365), online ordering, proxy service pricing (from US$199), and DFA Apostille add-on.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -214,8 +214,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille-fee',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille-fee', 'index.html'),
-    title: `DFA Apostille Fee Philippines ${SEO_YEAR_MONTH_EN} — PHP 200 Standard, PHP 400 Express & Proxy Pricing | Philippine Document Service`,
-    description: `Complete DFA Apostille fee guide for ${SEO_YEAR}: PHP 200 standard vs PHP 400 express, proxy service pricing from US$80, and total cost estimates by document type.`,
+    title: `DFA Apostille Fee ${SEO_YEAR_MONTH_EN} - How Much Does It Cost for US Visa Documents? | Philippine Document Service`,
+    description: `How much does DFA Apostille cost for US visa documents in ${SEO_YEAR}? PHP 200 standard vs PHP 400 express, proxy service pricing from US$80, and total cost estimates by document type.`,
     canonical: `${BASE}/en/apostille-fee/`,
     lang: 'en',
     enCanonical: `${BASE}/en/apostille-fee/`,
@@ -225,8 +225,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/nbi-validity',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-validity', 'index.html'),
-    title: `NBI Clearance Validity Period ${SEO_YEAR} — 1-Year Rule, 6-Month Practice & Use Case Guide | Philippine Document Service`,
-    description: 'NBI Clearance is officially valid for 1 year, but most institutions require it within 6 months. Learn requirements by use case and the ideal timing for obtaining yours.',
+    title: `How Long Is NBI Clearance Valid? ${SEO_YEAR} - 1-Year Rule & US Visa Requirements | Philippine Document Service`,
+    description: `How long is NBI Clearance valid for a US visa or immigration application? Officially 1 year, but most US embassies and USCIS require it within 6 months. ${SEO_YEAR} guide with use-case breakdown.`,
     canonical: `${BASE}/en/nbi-validity/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-validity/`,
@@ -236,8 +236,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/driver-record',
     outFile: path.join(projectRoot, 'dist', 'en', 'driver-record', 'index.html'),
-    title: `LTO Driver's Record Philippines ${SEO_TITLE_BADGE_EN}: How to Obtain & What It Contains | Philippine Document Service`,
-    description: "How to obtain the Philippine LTO Driver's Record. Covers required documents, 3–8 week processing time, DFA Apostille requirements, and proxy service shipping to USA.",
+    title: `Philippine LTO Driver's Record ${SEO_TITLE_BADGE_EN}: What It Is, What It Contains & How to Get It | Philippine Document Service`,
+    description: `What is the Philippine LTO Driver's Record and how do you get it from the US? Complete ${SEO_YEAR} guide: required documents, 3–8 week processing time, DFA Apostille requirements, and retrieval service shipping to USA.`,
     canonical: `${BASE}/en/driver-record/`,
     lang: 'en',
     enCanonical: `${BASE}/en/driver-record/`,
@@ -247,8 +247,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/us-visa-documents',
     outFile: path.join(projectRoot, 'dist', 'en', 'us-visa-documents', 'index.html'),
-    title: `Philippine Documents for US Visa: CR-1, IR-1 & K-1 ${SEO_TITLE_BADGE_EN} | Philippine Document Service`,
-    description: `Complete guide to Philippine documents required for US CR-1/IR-1 and K-1 visa applications. Covers PSA, CENOMAR, and NBI Clearance with DFA Apostille.`,
+    title: `Philippine Documents for US Visa ${SEO_TITLE_BADGE_EN}: What You Need for CR-1, IR-1 & K-1 | Philippine Document Service`,
+    description: `What Philippine documents do you need for a US CR-1/IR-1 or K-1 visa? Complete ${SEO_YEAR} checklist: PSA Birth Certificate, CENOMAR, NBI Clearance, and DFA Apostille — with costs and retrieval service.`,
     canonical: `${BASE}/en/us-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/us-visa-documents/`,
@@ -258,8 +258,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/k1-visa-documents',
     outFile: path.join(projectRoot, 'dist', 'en', 'k1-visa-documents', 'index.html'),
-    title: `K-1 Fiancé Visa: Philippine Documents Guide ${SEO_TITLE_BADGE_EN} — CENOMAR, PSA & NBI | Philippine Document Service`,
-    description: `Complete checklist of Philippine documents for the K-1 fiancé(e) visa: CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille. Retrieval service available.`,
+    title: `K-1 Fiancé Visa Philippine Documents ${SEO_TITLE_BADGE_EN}: CENOMAR, PSA & NBI Checklist | Philippine Document Service`,
+    description: `What Philippine documents does your Filipino fiancé(e) need for a K-1 visa? Complete ${SEO_YEAR} checklist: CENOMAR (Certificate of No Marriage), PSA Birth Certificate, and NBI Clearance with DFA Apostille. Retrieval service ships to USA.`,
     canonical: `${BASE}/en/k1-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/k1-visa-documents/`,
@@ -269,8 +269,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cr1-visa-documents',
     outFile: path.join(projectRoot, 'dist', 'en', 'cr1-visa-documents', 'index.html'),
-    title: `CR-1/IR-1 Spouse Visa: Philippine Documents Guide ${SEO_TITLE_BADGE_EN} — PSA, NBI & Apostille | Philippine Document Service`,
-    description: `Full guide to Philippine documents for the CR-1/IR-1 spousal immigrant visa: PSA Marriage Certificate, NBI Clearance, and DFA Apostille for NVC submission. Retrieval service available.`,
+    title: `CR-1/IR-1 Spouse Visa Philippine Documents ${SEO_TITLE_BADGE_EN}: PSA, NBI & Apostille Checklist | Philippine Document Service`,
+    description: `What Philippine documents does your spouse need for a CR-1/IR-1 immigrant visa NVC submission? Complete ${SEO_YEAR} checklist: PSA Marriage Certificate, NBI Clearance, DFA Apostille. Retrieval service ships to USA.`,
     canonical: `${BASE}/en/cr1-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cr1-visa-documents/`,
@@ -280,8 +280,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/pricing',
     outFile: path.join(projectRoot, 'dist', 'en', 'pricing', 'index.html'),
-    title: `Pricing Plans [${SEO_YEAR_MONTH_EN}] | Philippine Document Service`,
-    description: 'View pricing for CENOMAR, PSA, NBI, and DFA Apostille retrieval. All plans include tax and DHL international shipping. Free quote available.',
+    title: `Pricing [${SEO_YEAR_MONTH_EN}]: CENOMAR, PSA & NBI Retrieval for US Visa | Philippine Document Service`,
+    description: `How much does Philippine document retrieval cost for a US visa? View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille. All plans include DHL shipping to USA. Free quote.`,
     canonical: `${BASE}/en/pricing/`,
     lang: 'en',
     enCanonical: `${BASE}/en/pricing/`,
@@ -622,6 +622,29 @@ function updateHead(html: string, route: RouteConfig): string {
   result = result.replace(
     /<meta property="og:description" content="[^"]*"/,
     `<meta property="og:description" content="${route.description}"`
+  );
+
+  // og:locale
+  const ogLocale = route.lang === 'en' ? 'en_US' : 'ja_JP';
+  result = result.replace(
+    /<meta property="og:locale" content="[^"]*"/,
+    `<meta property="og:locale" content="${ogLocale}"`
+  );
+
+  // og:site_name
+  const ogSiteName = route.lang === 'en' ? 'Philippine Document Service' : 'フィリピン書類取得代行センター';
+  result = result.replace(
+    /<meta property="og:site_name" content="[^"]*"/,
+    `<meta property="og:site_name" content="${ogSiteName}"`
+  );
+
+  // meta keywords
+  const keywords = route.lang === 'en'
+    ? 'Philippine document service, CENOMAR, PSA Birth Certificate, NBI Clearance, DFA Apostille, US Visa, K-1 Visa, CR-1 Visa, USCIS, NVC, US Embassy, DHL shipping, document retrieval'
+    : 'フィリピン書類取得代行,CENOMAR取得代行,PSA出生証明書代行,LTO書類代行,DFAアポスティーユ代行,独身証明書取り寄せ,日本から依頼,外免切替,国際結婚,配偶者ビザ,最短取得';
+  result = result.replace(
+    /<meta name="keywords" content="[^"]*"/,
+    `<meta name="keywords" content="${keywords}"`
   );
 
   // Replace all three hreflang tags at once to ensure correct bidirectional linking

@@ -170,7 +170,7 @@ export default function PsaPage() {
           {lang === 'ja' ? (
             <>フィリピンPSA出生証明書の取得方法｜<br className="hidden md:block" />国際結婚・ビザ申請で必要な理由【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>Philippine PSA Birth Certificate:<br className="hidden md:block" />Complete Guide to Requirements, Cost & How to Obtain It [{SEO_YEAR_MONTH_EN}]</>
+            <>Philippine PSA Birth Certificate:<br className="hidden md:block" />{' '}Complete Guide to Requirements, Cost & How to Obtain It [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

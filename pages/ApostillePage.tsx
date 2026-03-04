@@ -194,7 +194,7 @@ export default function ApostillePage() {
           {lang === 'ja' ? (
             <>フィリピンDFAアポスティーユ認証とは？<br className="hidden md:block" />対象書類・取得方法・費用【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>What is Philippine DFA Apostille Authentication?<br className="hidden md:block" />Documents, Process & Fees [{SEO_YEAR_MONTH_EN} Guide]</>
+            <>What is Philippine DFA Apostille Authentication?<br className="hidden md:block" />{' '}Documents, Process & Fees [{SEO_YEAR_MONTH_EN} Guide]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

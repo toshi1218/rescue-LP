@@ -194,7 +194,7 @@ export default function KikaShinseiGuidePage() {
           {lang === 'ja' ? (
             <>フィリピン人の帰化申請 完全ガイド<br className="hidden md:block" />必要書類・手続きの流れ・PSA・NBI取得【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>Complete Guide to Naturalization for Philippine Nationals<br className="hidden md:block" />Required Documents, Procedures, PSA &amp; NBI [{SEO_YEAR_MONTH_EN}]</>
+            <>Complete Guide to Naturalization for Philippine Nationals<br className="hidden md:block" />{' '}Required Documents, Procedures, PSA &amp; NBI [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

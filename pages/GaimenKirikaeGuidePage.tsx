@@ -224,7 +224,7 @@ export default function GaimenKirikaeGuidePage() {
           {lang === 'ja' ? (
             <>フィリピン運転免許の外免切替ガイド<br className="hidden md:block" />必要なLTO書類・手順・費用【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>Philippine Driver&apos;s License Conversion Guide<br className="hidden md:block" />Required LTO Documents, Procedures &amp; Costs [{SEO_YEAR_MONTH_EN}]</>
+            <>Philippine Driver&apos;s License Conversion Guide<br className="hidden md:block" />{' '}Required LTO Documents, Procedures &amp; Costs [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

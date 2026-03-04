@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp, Send, Mail, CheckCircle, AlertTriangle, Clock, 
 import Navbar from '../components/Navbar';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { SEO_YEAR, SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 import { CenomarSample } from '../components/DocumentSampleImage';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
@@ -15,8 +15,8 @@ export default function CenomarGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`CENOMAR（独身証明書）取得方法【${SEO_YEAR_MONTH_JA}最新】費用・期間・代行｜フィリピン書類センター`, `How to Get CENOMAR [${SEO_YEAR_MONTH_EN} Guide] – Fees, Timeline & Service`),
-    t('フィリピン独身証明書CENOMARの取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・有効期限・トラブル対処まで徹底ガイド。', 'Complete guide to getting a CENOMAR (Certificate of No Marriage Record) from the Philippines. Covers DIY, embassy, and retrieval service options.')
+    t(`CENOMAR（独身証明書）取得方法【${SEO_YEAR_MONTH_JA}最新】費用・期間・代行｜フィリピン書類センター`, `What is CENOMAR? PSA Certificate of No Marriage: Meaning, Requirements & How to Get It [${SEO_YEAR_MONTH_EN}]`),
+    t('フィリピン独身証明書CENOMARの取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・有効期限・トラブル対処まで徹底ガイド。', `What is CENOMAR (Certificate of No Marriage Record)? Complete ${SEO_YEAR} guide: PSA CENOMAR meaning, requirements, how to get it for US visa, K-1, CR-1, or international marriage. Retrieval service ships worldwide.`)
   );
 
   const faqs = [
@@ -63,10 +63,10 @@ export default function CenomarGuidePage() {
       ),
     },
     {
-      q: t('代行を依頼した場合、どのくらいで届きますか？', 'How long does it take when using a proxy service?'),
+      q: t('代行を依頼した場合、どのくらいで届きますか？', 'How long does it take to receive CENOMAR at my US address?'),
       a: t(
         '一般的にCENOMAR取得に2〜3週間、DFAアポスティーユに約2週間、国際配送に3〜5営業日かかります。トータルで4〜6週間程度が目安です。PSA側の処理状況等により変動することがあります。お急ぎの場合は事前にご相談ください。',
-        'Generally, CENOMAR acquisition takes 2–3 weeks, DFA Apostille approx. 2 weeks, and international shipping 3–5 business days. The total guideline is approximately 4–6 weeks. This may vary depending on PSA processing status. Please let us know if you have an urgent deadline.'
+        'When using our proxy service, CENOMAR acquisition takes 2–3 weeks, DFA Apostille approx. 2 weeks (if required), and DHL shipping to the US takes 3–5 business days. Total: approximately 4–6 weeks. This may vary depending on PSA processing status. If you have a USCIS or NVC deadline, please let us know upfront so we can prioritize.'
       ),
     },
     {
@@ -83,32 +83,41 @@ export default function CenomarGuidePage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'CENOMARガイド', item: 'https://ph-document.com/cenomar-guide/' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'CENOMARガイド', item: 'https://ph-document.com/ja/cenomar/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'CENOMAR Guide', item: 'https://ph-document.com/en/cenomar/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/cenomar-guide/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/cenomar/' : 'https://ph-document.com/en/cenomar/',
         },
-        headline: `フィリピン独身証明書（CENOMAR／セノマー）とは？取得方法・費用・期間を完全解説【${SEO_YEAR_MONTH_JA}】`,
-        description: 'CENOMARの取得方法を自分で・大使館で・代行での3パターンで解説。費用・期間・有効期限・よくあるトラブルまで初心者向けに徹底ガイド。',
+        headline: lang === 'ja'
+          ? `フィリピン独身証明書（CENOMAR／セノマー）とは？取得方法・費用・期間を完全解説【${SEO_YEAR_MONTH_JA}】`
+          : `What is CENOMAR? PSA Certificate of No Marriage Record: Meaning, Requirements & How to Get It [${SEO_YEAR_MONTH_EN}]`,
+        description: lang === 'ja'
+          ? 'CENOMARの取得方法を自分で・大使館で・代行での3パターンで解説。費用・期間・有効期限・よくあるトラブルまで初心者向けに徹底ガイド。'
+          : `What is CENOMAR (Certificate of No Marriage Record)? Complete ${SEO_YEAR} guide: PSA CENOMAR meaning, requirements, how to get it for US visa, K-1, CR-1, or international marriage. Retrieval service ships worldwide.`,
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/cenomar-guide/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/cenomar/' : 'https://ph-document.com/en/cenomar/',
         inLanguage: lang,
         datePublished: '2025-11-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: '株式会社IGRS',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'フィリピン書類取得代行センター',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -117,7 +126,7 @@ export default function CenomarGuidePage() {
         },
         citation: [
           'https://psa.gov.ph',
-          'https://www.psaserbilis.com.ph',
+          'https://www.psahelpline.ph',
         ],
       },
       {
@@ -152,7 +161,7 @@ export default function CenomarGuidePage() {
           {lang === 'ja' ? (
             <>フィリピン独身証明書（CENOMAR／セノマー）とは？<br className="hidden md:block" />取得方法・費用・期間を完全解説【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>What is Philippine CENOMAR (Certificate of No Marriage)?<br className="hidden md:block" />Complete Guide to Obtaining It [{SEO_YEAR_MONTH_EN}]</>
+            <>What is CENOMAR? Philippine Certificate of No Marriage Record:<br className="hidden md:block" />{' '}Meaning, Requirements & How to Get It [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
@@ -249,17 +258,17 @@ export default function CenomarGuidePage() {
           <div className="grid gap-3">
             {[
               {
-                title: t('国際結婚手続き', 'International Marriage Registration'),
+                title: t('国際結婚手続き', 'International Marriage Registration (Including US)'),
                 desc: t(
                   '日本の市区町村役場に婚姻届を提出する際、フィリピン側の独身証明として必須。配偶者となるフィリピン人が取得します。',
-                  'Required as proof of unmarried status from the Philippine side when registering a marriage abroad. The Filipino applicant obtains this document to present to the civil registrar in their country of residence.'
+                  'Required as proof of unmarried status when registering a marriage in the US or abroad. The Filipino applicant obtains CENOMAR to present to the county clerk or civil registrar. Often required before applying for a K-1 fiancé visa as well.'
                 ),
               },
               {
-                title: t('配偶者ビザ・在留資格の申請', 'Spouse / Partner Visa Application'),
+                title: t('配偶者ビザ・在留資格の申請', 'US Spouse Visa (CR-1/IR-1) Application'),
                 desc: t(
                   '配偶者ビザ（「日本人の配偶者等」）の申請書類として入管が求める場合があります。',
-                  'Immigration authorities in many countries — including Japan, the US, Canada, Australia, and Europe — may require CENOMAR as part of a spouse or partner visa application.'
+                  'USCIS, NVC, and the US Embassy require CENOMAR as part of a CR-1/IR-1 spousal immigrant visa application. It proves your Filipino spouse has no prior marriage on record in the Philippines.'
                 ),
               },
               {
@@ -315,8 +324,8 @@ export default function CenomarGuidePage() {
                   [t('有効期限', 'Validity'), t('発行日から約6ヶ月（使用目的により異なる）', 'Approximately 6 months from issuance (varies by purpose)')],
                   [t('PSA申請費用', 'PSA Application Fee'), t('約365ペソ（約900円）＋国際郵便料金', 'Approx. 365 PHP (~$7 USD) + international shipping')],
                   [t('取得期間（代行）', 'Acquisition Time (Proxy)'), t('約4〜6週間（CENOMAR 2〜3週間＋DFA 2週間＋配送3〜5営業日）', 'Approx. 4–6 weeks (CENOMAR 2–3 wks + DFA 2 wks + shipping 3–5 business days)')],
-                  [t('言語', 'Language'), t('英語（日本語翻訳が必要な場合あり）', 'English (Japanese translation may be required)')],
-                  [t('対象者', 'Eligible Applicants'), t('フィリピン国籍を持つ方（海外生まれのフィリピン人も対象）', 'Philippine nationals (including overseas-born Filipinos)')],
+                  [t('言語', 'Language'), t('英語（日本語翻訳が必要な場合あり）', 'English (accepted as-is by USCIS, NVC & US Embassy)')],
+                  [t('対象者', 'Eligible Applicants'), t('フィリピン国籍を持つ方（海外生まれのフィリピン人も対象）', 'Philippine nationals (including Filipinos living in the US or abroad)')],
                 ].map(([k, v], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="px-4 py-3 font-medium text-secondary border-b border-gray-100">{k}</td>
@@ -361,13 +370,13 @@ export default function CenomarGuidePage() {
               },
               {
                 label: t('方法③ おすすめ', 'Option ③ Recommended'),
-                title: t('代行サービスに依頼', 'Use a Proxy Service'),
+                title: t('代行サービスに依頼', 'Use a Proxy Service (Best for US Applicants)'),
                 items: [
-                  t('日本語でやり取りするだけ', 'Communicate only in English — no Filipino required'),
-                  t('必要書類の確認から郵送まで完全サポート', 'Full support from document check to worldwide shipping'),
-                  t('書類の不備リスクを最小化', 'Minimizes risk of errors and rejections'),
+                  t('日本語でやり取りするだけ', 'Communicate fully in English — no trip to the Philippines'),
+                  t('必要書類の確認から郵送まで完全サポート', 'Full support from document check to DHL delivery to your US address'),
+                  t('書類の不備リスクを最小化', 'Minimizes risk of USCIS/NVC rejection due to document errors'),
                 ],
-                pros: t('手間が一切かからない。日本語サポートあり', 'Zero hassle. Delivered anywhere in the world'),
+                pros: t('手間が一切かからない。日本語サポートあり', 'Zero hassle. Ships directly to your US address via DHL'),
                 cons: t('代行手数料がかかる', 'Proxy service fee applies'),
                 color: 'border-primary',
               },
@@ -429,18 +438,18 @@ export default function CenomarGuidePage() {
               },
               {
                 step: 4,
-                title: t('フィリピン現地での申請', 'Application in the Philippines'),
+                title: t('フィリピン現地での申請', 'Document Retrieval in the Philippines'),
                 desc: t(
                   'セブ拠点のスタッフがPSAへの申請手続きを代行します。必要に応じてDFAアポスティーユ認証も同時に手配します。',
-                  'Our Cebu-based staff handle the PSA application procedures on your behalf. DFA Apostille authentication is also arranged simultaneously if needed.'
+                  'Our Cebu-based staff handle the PSA application procedures on your behalf. DFA Apostille authentication (required by USCIS/NVC for some documents) is also arranged simultaneously if needed.'
                 ),
               },
               {
                 step: 5,
-                title: t('書類受領・転送', 'Document Receipt & International Shipping'),
+                title: t('書類受領・転送', 'DHL Delivery to Your US Address'),
                 desc: t(
                   '書類が発行され次第、国際郵便（EMSなど）でご指定の住所へ転送します。追跡番号をお知らせします。',
-                  'Once documents are issued, they are shipped to your address anywhere in the world via tracked international courier. We will provide you with a tracking number.'
+                  'Once documents are issued, they are shipped directly to your US address via DHL Express with full tracking. We will provide you with the tracking number immediately upon shipment.'
                 ),
               },
               {
@@ -471,28 +480,28 @@ export default function CenomarGuidePage() {
           <p className="text-sm text-gray-600 mb-5">
             {t(
               '自力で申請する場合は、最寄りの窓口に事前予約のうえ来訪する必要があります。',
-              'There are two practical ways to obtain CENOMAR when you are living outside the Philippines.'
+              'There are three practical ways to obtain CENOMAR when you are living in the US or outside the Philippines.'
             )}
           </p>
           <div className="grid gap-3">
             {[
               {
                 name: t('フィリピン大使館（東京）', 'PSA Online (PSAHelpline.com)'),
-                addr: t('東京都港区六本木5-15-5', 'Apply at PSAHelpline.com and choose international delivery'),
-                note: t('関東・東北・北海道方面の方', 'Delivered by international courier to your address'),
-                url: 'https://tokyo.philembassy.net/',
+                addr: t('東京都港区六本木5-15-5', 'Apply at PSAHelpline.com and choose international delivery to your US address'),
+                note: t('関東・東北・北海道方面の方', 'Delivered by international courier — processing time: 2–3 weeks + shipping'),
+                url: t('https://tokyo.philembassy.net/', 'https://www.psahelpline.ph/'),
               },
               {
-                name: t('フィリピン総領事館（大阪）', 'Philippine Embassy / Consulate in Your Country'),
-                addr: t('大阪府大阪市中央区久太郎町1-9-16', 'Visit the nearest Philippine Embassy or Consulate — advance appointment required'),
-                note: t('近畿・中国・四国方面の方', 'Check the DFA website for your nearest consulate'),
-                url: 'https://osakapcg.dfa.gov.ph/',
+                name: t('フィリピン総領事館（大阪）', 'Philippine Consulate in the US'),
+                addr: t('大阪府大阪市中央区久太郎町1-9-16', 'Visit the nearest Philippine Consulate (Los Angeles, New York, San Francisco, etc.) — advance appointment required'),
+                note: t('近畿・中国・四国方面の方', 'Check the DFA website for your nearest US consulate location'),
+                url: t('https://www.dfa.gov.ph/consular-offices/consulates-general/', 'https://www.dfa.gov.ph/consular-offices/consulates-general/'),
               },
               {
-                name: t('フィリピン総領事館（名古屋）', 'Proxy Service (Recommended)'),
-                addr: t('愛知県名古屋市中村区名駅4-4-38', 'Our Cebu-based team applies at PSA on your behalf and ships worldwide'),
-                note: t('東海・北陸・甲信越方面の方', 'No travel required — fastest and most reliable option'),
-                url: 'https://nagoyapcg.dfa.gov.ph/',
+                name: t('フィリピン総領事館（名古屋）', 'Proxy Service — Recommended for US Applicants'),
+                addr: t('愛知県名古屋市中村区名駅4-4-38', 'Our Cebu-based team applies at PSA on your behalf and ships directly to your US address via DHL'),
+                note: t('東海・北陸・甲信越方面の方', 'No travel required — fastest and most reliable option for K-1 / CR-1 visa applicants'),
+                url: t('https://www.dfa.gov.ph/consular-offices/consulates-general/', 'https://ph-document.com/en/cenomar/'),
               },
             ].map((office) => (
               <a key={office.name} href={office.url} target="_blank" rel="noopener noreferrer" className="flex gap-3 bg-white border border-gray-100 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">
@@ -512,7 +521,7 @@ export default function CenomarGuidePage() {
               {lang === 'ja' ? (
                 <>大使館・領事館での申請は<strong>事前のオンライン予約が必須</strong>です。予約なしの来訪は対応不可の場合があります。余裕をもって手続きを進めてください。</>
               ) : (
-                <>If applying at an embassy or consulate, <strong>prior online appointment is mandatory</strong>. Walk-in visits are generally not accepted. Build in ample lead time — using a proxy service is the most reliable option for overseas applicants.</>
+                <>If applying at a Philippine Consulate in the US, <strong>prior online appointment is mandatory</strong>. Walk-in visits are generally not accepted. Build in ample lead time — using a proxy service is the most reliable option for US-based applicants with USCIS or NVC deadlines.</>
               )}
             </p>
           </div>
@@ -532,23 +541,23 @@ export default function CenomarGuidePage() {
           <div className="space-y-4">
             {[
               {
-                title: t('国際結婚（日本先行）の場合', 'For Marriage Registration Abroad'),
+                title: t('国際結婚（日本先行）の場合', 'For Marriage Registration in the US'),
                 steps: [
-                  t('CENOMARとPSA出生証明書を揃える', 'Gather CENOMAR and PSA Birth Certificate'),
-                  t('必要に応じて翻訳を準備する（提出先の要件を確認）', 'Prepare a certified translation if required by your country'),
-                  t('婚姻届を提出する（在住国の市役所・登記所など）', 'Submit marriage registration at your local civil registry or municipal office'),
-                  t('婚姻後、フィリピン大使館への婚姻報告届を提出する', 'After marriage, file a Report of Marriage at the nearest Philippine Embassy'),
+                  t('CENOMARとPSA出生証明書を揃える', 'Gather CENOMAR and PSA Birth Certificate (both required for most US county clerk offices)'),
+                  t('必要に応じて翻訳を準備する（提出先の要件を確認）', 'CENOMAR is in English — no translation needed for US marriage registration'),
+                  t('婚姻届を提出する（在住国の市役所・登記所など）', 'Submit marriage registration at your local US county clerk or civil registrar'),
+                  t('婚姻後、フィリピン大使館への婚姻報告届を提出する', 'After marriage, file a Report of Marriage at the nearest Philippine Consulate in the US'),
                 ],
                 color: 'border-blue-200 bg-blue-50',
                 textColor: 'text-blue-800',
               },
               {
-                title: t('配偶者ビザ（在留資格）申請の場合', 'For Spouse / Partner Visa Application'),
+                title: t('配偶者ビザ（在留資格）申請の場合', 'For US CR-1/IR-1 Spousal Visa (NVC Submission)'),
                 steps: [
-                  t('CENOMARのほかにNBI Clearance・PSA婚姻証明書なども揃える', 'Gather CENOMAR along with NBI Clearance, PSA Marriage Certificate, etc.'),
-                  t('在住国の移民局・入管が求める書類リストを確認する', 'Check the document checklist required by the immigration authority in your country'),
-                  t('必要に応じてDFAアポスティーユ認証を取得する', 'Obtain DFA Apostille authentication if required by the destination'),
-                  t('ビザ申請書類を揃えて移民局に提出する', 'Compile the full set of documents and submit to the immigration office'),
+                  t('CENOMARのほかにNBI Clearance・PSA婚姻証明書なども揃える', 'Gather CENOMAR along with NBI Clearance, PSA Marriage Certificate, and PSA Birth Certificate'),
+                  t('在住国の移民局・入管が求める書類リストを確認する', 'Check the NVC document checklist — CENOMAR is typically required for the Filipino beneficiary'),
+                  t('必要に応じてDFAアポスティーユ認証を取得する', 'Obtain DFA Apostille authentication if required by the US Embassy in Manila'),
+                  t('ビザ申請書類を揃えて移民局に提出する', 'Upload documents to the NVC portal or submit to the US Embassy for the immigrant visa interview'),
                 ],
                 color: 'border-green-200 bg-green-50',
                 textColor: 'text-green-800',
@@ -602,10 +611,10 @@ export default function CenomarGuidePage() {
                 ),
               },
               {
-                title: t('翻訳が必要なケース', 'Cases where a translation is required'),
+                title: t('翻訳が必要なケース', 'Translation requirements by country'),
                 body: t(
                   '日本の市区町村役場によっては、英語のCENOMARに日本語翻訳の添付を求める場合があります。事前に提出先の窓口に確認しておきましょう。',
-                  'Depending on the country and institution, a certified translation of CENOMAR may be required. Since CENOMAR is issued in English, non-English-speaking countries (e.g., Japan, Germany) may ask for a local-language translation. Always confirm with the submission office in advance.'
+                  'CENOMAR is issued in English, so USCIS, NVC, and the US Embassy generally accept it as-is — no translation needed for US visa purposes. However, if submitting to a non-English-speaking country (e.g., Japan, Germany), a certified translation may be required. Always confirm with the submission office in advance.'
                 ),
               },
             ].map((item, i) => (
@@ -628,15 +637,15 @@ export default function CenomarGuidePage() {
             {lang === 'ja' ? (
               <>申請書類の確認から取得・郵送まで、日本語でサポートします。<br />どの書類が必要かわからない方もまずはご相談ください。</>
             ) : (
-              <>From document confirmation to acquisition and mailing, we support you in English.<br />Even if you are unsure which documents you need, please consult us first.</>
+              <>From document confirmation to retrieval and DHL delivery to your US address — we handle everything.<br />Not sure which documents you need for your K-1 or CR-1 visa? Just ask us.</>
             )}
           </p>
           <div className="flex flex-wrap justify-center gap-2 mb-5 text-xs">
             {[
               t('日本語でやり取りのみ', 'English communication only'),
-              t('トラブルもサポート', 'Troubleshooting support'),
-              t('現地セブ拠点あり', 'Cebu-based office'),
-              t('翻訳対応も可能', 'Worldwide delivery'),
+              t('トラブルもサポート', 'USCIS/NVC compliant documents'),
+              t('現地セブ拠点あり', 'Cebu-based office in Philippines'),
+              t('翻訳対応も可能', 'DHL ships to USA'),
             ].map((item) => (
               <span key={item} className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">
                 <Shield className="w-3 h-3 text-primary" />{item}
@@ -784,7 +793,7 @@ export default function CenomarGuidePage() {
               method="POST"
               className="space-y-3"
             >
-              <input type="hidden" name="_subject" value="【CENOMARガイドからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【CENOMARガイドからのお問い合わせ】' : '[CENOMAR Guide Inquiry] Philippine Document Service'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/cenomar-guide/" />
               <div>

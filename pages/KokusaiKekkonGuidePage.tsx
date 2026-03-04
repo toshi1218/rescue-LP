@@ -216,7 +216,7 @@ export default function KokusaiKekkonGuidePage() {
           {t(
             'フィリピン人との国際結婚 完全ガイド',
             'Complete Guide to International Marriage with a Filipino/Filipina'
-          )}<br className="hidden md:block" />
+          )}<br className="hidden md:block" />{' '}
           {t(`手続きの流れ・必要書類・費用【${SEO_YEAR_MONTH_JA}最新】`, `Procedures, Documents & Costs [${SEO_YEAR_MONTH_EN}]`)}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>

@@ -223,7 +223,7 @@ export default function KekkonShomeishoPage() {
           {lang === 'ja' ? (
             <>フィリピンPSA婚姻証明書の取得方法<br className="hidden md:block" />国際結婚・配偶者ビザで必要な理由【{SEO_YEAR_MONTH_JA}最新】</>
           ) : (
-            <>How to Obtain a Philippine PSA Marriage Certificate<br className="hidden md:block" />Required for US CR-1/IR-1 Spouse Visa (NVC) [{SEO_YEAR_MONTH_EN}]</>
+            <>How to Obtain a Philippine PSA Marriage Certificate<br className="hidden md:block" />{' '}Required for US CR-1/IR-1 Spouse Visa (NVC) [{SEO_YEAR_MONTH_EN}]</>
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
