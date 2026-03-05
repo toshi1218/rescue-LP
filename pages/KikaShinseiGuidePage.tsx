@@ -168,10 +168,10 @@ export default function KikaShinseiGuidePage() {
   ];
 
   const relatedLinks = [
-    { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain a birth certificate and key notes') },
-    { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues explained and how to obtain') },
-    { to: t('/ja/apostille', '/apostille'), title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'), desc: t('フィリピン書類への認証取得方法', 'How to get Apostille on Philippine documents') },
-    { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('国際結婚ガイド', 'International Marriage Guide'), desc: t('フィリピン人との国際結婚手続き', 'Procedures for international marriage with a Filipino') },
+    { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'Requirements, cost PHP 365 & how to obtain') },
+    { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'How to get NBI Clearance, HIT guide & fees') },
+    { to: t('/ja/apostille', '/apostille'), title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'), desc: t('フィリピン書類への認証取得方法', 'What is Apostille, eligible documents & fees') },
+    { to: t('/ja/pricing', '/en/pricing'), title: t('料金プラン', 'Pricing Plans'), desc: t('書類取得代行の費用・パッケージ一覧', 'PSA + NBI + Apostille + DHL packages from $199') },
   ];
 
   return (
@@ -334,17 +334,22 @@ export default function KikaShinseiGuidePage() {
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <p className="text-xs text-primary font-bold mb-2">{t('帰化申請のフィリピン書類でお困りの方へ', 'For those struggling with Philippine documents for naturalization')}</p>
-          <h2 className="text-xl font-bold mb-3">{t('PSA・NBI取得はまるごとお任せください', 'Leave PSA & NBI Procurement to Us')}</h2>
+          <h2 className="text-xl font-bold mb-3">{t('PSA・NBI取得はまるごとお任せください', 'Too Much Hassle? Let Us Handle It')}</h2>
           <p className="text-sm text-gray-300 mb-5">
             {lang === 'ja' ? (
               <>PSA出生証明書・NBI Clearance・アポスティーユ認証の取得代行まで、<br />日本語だけで完結します。まずは無料相談からどうぞ。</>
             ) : (
-              <>From PSA Birth Certificate, NBI Clearance, to Apostille authentication — all Philippine documents needed for naturalization in Japan,<br />handled with full English support. Start with a free consultation.</>
+              <>PSA Birth Certificate + NBI Clearance + DFA Apostille + DHL to your address — all-in-one from $199.<br />Full English support. Start with a free consultation.</>
             )}
           </p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}

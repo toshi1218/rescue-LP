@@ -201,10 +201,10 @@ export default function KekkonShomeishoPage() {
   ];
 
   const relatedLinks = [
-    { to: t('/ja/kokusai-kekkon-guide', '/cr1-visa-documents'), title: t('フィリピン国際結婚ガイド', 'CR-1/IR-1 Visa Documents Guide'), desc: t('日本先行・フィリピン先行の手続き流れ', 'Full checklist of Philippine documents for the CR-1/IR-1 spouse visa') },
-    { to: t('/ja/cenomar', '/cenomar/'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, costs, and timeframes') },
-    { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain a birth certificate and key notes') },
-    { to: t('/ja/haigusha-visa', '/k1-visa-documents'), title: t('配偶者ビザ書類ガイド', 'K-1 Fiancé Visa Documents Guide'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'CENOMAR, PSA Birth Certificate & NBI Clearance for the K-1 fiancé visa') },
+    { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'What is CENOMAR, requirements & how to get it') },
+    { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'Requirements, cost PHP 365 & how to obtain') },
+    { to: t('/ja/pricing', '/en/pricing'), title: t('料金プラン', 'Pricing Plans'), desc: t('PSA書類取得代行の費用・パッケージ一覧', 'PSA + Apostille + DHL shipping packages from $199') },
+    { to: t('/ja/haigusha-visa', '/k1-visa-documents'), title: t('配偶者ビザ書類ガイド', 'K-1 / CR-1 Visa Documents Checklist'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'All Philippine documents required for K-1 & CR-1 visa') },
   ];
 
   return (
@@ -429,11 +429,16 @@ export default function KekkonShomeishoPage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
-          <h2 className="text-xl font-bold mb-3">{t('PSA婚姻証明書、まるごとお任せ', 'Leave PSA Marriage Certificate Procurement to Us')}</h2>
-          <p className="text-sm text-gray-300 mb-5">{t('PSAへの登録状況確認から取得・郵送まで、日本語でサポートします。', 'From PSA registration verification to DFA Apostille and DHL shipping to the USA — we handle it all.')}</p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <h2 className="text-xl font-bold mb-3">{t('PSA婚姻証明書、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}</h2>
+          <p className="text-sm text-gray-300 mb-5">{t('PSAへの登録状況確認から取得・郵送まで、日本語でサポートします。', 'PSA Marriage Certificate + DFA Apostille + DHL to USA — all-in-one from $199. USCIS & NVC compliant.')}</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}

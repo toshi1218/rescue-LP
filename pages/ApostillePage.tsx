@@ -695,16 +695,21 @@ export default function ApostillePage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
-          <h2 className="text-xl font-bold mb-3">{t('アポスティーユ認証、まるごとお任せ', 'Leave Apostille Authentication to Us')}</h2>
+          <h2 className="text-xl font-bold mb-3">{t('アポスティーユ認証、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}</h2>
           <p className="text-sm text-gray-300 mb-5">
             {t(
               'PSA・NBI書類の取得からDFAアポスティーユまで一括代行。日本語でサポートします。',
-              'Full proxy service from PSA/NBI document acquisition to DFA Apostille. We support you in English.'
+              'PSA/NBI + DFA Apostille (PHP 200 standard / PHP 400 express) + DHL to USA — all-in-one from $199.'
             )}
           </p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}
@@ -738,10 +743,10 @@ export default function ApostillePage() {
           <h2 className="text-lg font-bold text-secondary mb-4">{t('関連ガイド', 'Related Guides')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, fees & timeline') },
-              { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues explained & acquisition steps') },
-              { to: t('/ja/haigusha-visa', '/spouse-visa-documents'), title: t('配偶者ビザ書類ガイド', 'Spouse Visa Documents Guide'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents for spouse visa') },
-              { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'Philippines International Marriage Guide'), desc: t('手続き全体の流れ・必要書類', 'Overall process flow & required documents') },
+              { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'What is CENOMAR, requirements & how to get it') },
+              { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'How to get NBI Clearance, HIT guide & fees') },
+              { to: t('/ja/pricing', '/en/pricing'), title: t('料金プラン', 'Pricing Plans'), desc: t('アポスティーユ代行の費用・パッケージ一覧', 'Apostille + DHL shipping packages from $199') },
+              { to: t('/ja/haigusha-visa', '/k1-visa-documents'), title: t('配偶者ビザ書類ガイド', 'K-1 / CR-1 Visa Documents Checklist'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'All Philippine documents required for K-1 & CR-1 visa') },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">
                 <FileText className="w-5 h-5 text-primary flex-shrink-0" />

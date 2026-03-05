@@ -203,9 +203,9 @@ export default function GaimenKirikaeGuidePage() {
   ];
 
   const relatedLinks = [
+    { to: t('/ja/driver-record', '/driver-record'), title: t('LTO運転記録証明書ガイド', 'LTO Driver Record Guide'), desc: t('LTO書類の取得方法・費用・期間', 'What is LTO Driver Record, how to obtain & fees') },
     { to: t('/ja/apostille', '/apostille'), title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'), desc: t('LTO書類への認証取得方法', 'How to get Apostille on LTO documents') },
-    { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法', 'How to obtain a certificate of no marriage record') },
-    { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues explained and how to obtain') },
+    { to: t('/ja/pricing', '/en/pricing'), title: t('料金プラン', 'Pricing Plans'), desc: t('LTO書類代行の費用・パッケージ一覧', 'LTO + Apostille + DHL shipping packages from $199') },
   ];
 
   return (
@@ -399,11 +399,16 @@ export default function GaimenKirikaeGuidePage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
-          <h2 className="text-xl font-bold mb-3">{t('LTO書類取得、まるごとお任せ', 'Leave LTO Document Procurement to Us')}</h2>
-          <p className="text-sm text-gray-300 mb-5">{t('外免切替に必要なLTO書類・DFAアポスティーユを日本語サポートで代行します。', 'We proxy-obtain LTO documents and DFA Apostille needed for foreign license conversion in Japan, with full English support.')}</p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <h2 className="text-xl font-bold mb-3">{t('LTO書類取得、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}</h2>
+          <p className="text-sm text-gray-300 mb-5">{t('外免切替に必要なLTO書類・DFAアポスティーユを日本語サポートで代行します。', 'LTO Driver Record + DFA Apostille + DHL to your address — all-in-one from $199. Full English support.')}</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}

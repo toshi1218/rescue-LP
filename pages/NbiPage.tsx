@@ -638,17 +638,22 @@ export default function NbiPage() {
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">
-            {t('NBI クリアランス取得、まるごとお任せ', 'Leave NBI Clearance Acquisition to Us')}
+            {t('NBI クリアランス取得、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
             {t(
               'HIT案件・DFAアポスティーユも対応。日本語でサポートします。',
-              'HIT cases and DFA Apostille also handled. Full support in English.'
+              'NBI Clearance + DFA Apostille + DHL to USA — from $199. HIT cases also handled.'
             )}
           </p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}
@@ -682,9 +687,10 @@ export default function NbiPage() {
           <h2 className="text-lg font-bold text-secondary mb-4">{t('関連ガイド', 'Related Guides')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, fees & timeline') },
-              { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('出生証明書の取得方法と注意点', 'How to obtain birth certificate & key notes') },
-              { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'Philippines International Marriage Guide'), desc: t('手続き全体の流れ・必要書類', 'Overall process flow & required documents') },
+              { to: t('/ja/nbi-hit', '/nbi-hit'), title: t('NBI HITとは？', 'NBI HIT Guide'), desc: t('NBI HIT問題の原因・解決手順', 'What is NBI HIT, causes & how to resolve it') },
+              { to: t('/ja/nbi-koyukigen', '/nbi-validity'), title: t('NBI Clearanceの有効期限', 'NBI Clearance Validity'), desc: t('1年間の有効期限と更新タイミング', '1-year validity rule & when to renew for visa') },
+              { to: t('/ja/pricing', '/en/pricing'), title: t('料金プラン', 'Pricing Plans'), desc: t('NBI取得代行の費用・パッケージ一覧', 'NBI + Apostille + DHL shipping packages from $199') },
+              { to: t('/ja/haigusha-visa', '/k1-visa-documents'), title: t('配偶者ビザ書類チェックリスト', 'K-1 / CR-1 Visa Documents Checklist'), desc: t('ビザ申請に必要な全書類', 'All Philippine documents required for K-1 & CR-1 visa') },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">
                 <FileText className="w-5 h-5 text-primary flex-shrink-0" />

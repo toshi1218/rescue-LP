@@ -652,12 +652,17 @@ export default function CenomarGuidePage() {
               </span>
             ))}
           </div>
-          <a
-            href="#contact"
-            className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors shadow-lg"
-          >
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm shadow-lg">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a
+              href="#contact"
+              className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors shadow-lg text-sm"
+            >
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* Section Terms — SEO: "what is CENOMAR in Tagalog / in Philippines" + SECPA */}
@@ -752,10 +757,10 @@ export default function CenomarGuidePage() {
           <h2 className="text-lg font-bold text-secondary mb-4">{t('関連ガイド', 'Related Guides')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { to: t('/ja/psa-shussei-shomeisho', '/psa-birth-certificate'), title: t('PSA出生証明書ガイド', 'PSA Birth Certificate Guide'), desc: t('国際結婚・ビザに必要なPSA書類の取得方法', 'How to obtain PSA documents for international marriage & visa') },
-              { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と日本からの取得手順', 'NBI HIT issues explained & how to obtain from Japan') },
-              { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'Philippines International Marriage Guide'), desc: t('手続き全体の流れ・必要書類・費用', 'Overall process, required documents & fees') },
-              { to: t('/ja/haigusha-visa', '/spouse-visa-documents'), title: t('配偶者ビザ書類チェックリスト', 'Spouse Visa Documents Checklist'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'List of Philippine documents needed for spouse visa') },
+              { to: t('/ja/cenomar-koyukigen', '/cenomar-validity'), title: t('CENOMARの有効期限', 'CENOMAR Validity Period'), desc: t('"6ヶ月"の根拠と用途別の考え方', 'How long is CENOMAR valid for K-1 & CR-1 visa?') },
+              { to: t('/ja/cenomar-apostille', '/cenomar-apostille'), title: t('CENOMARにアポスティーユは必要？', 'Does CENOMAR Need Apostille?'), desc: t('用途別の結論を解説', 'Required for K-1, CR-1, USCIS? Answer by use case') },
+              { to: t('/ja/pricing', '/en/pricing'), title: t('料金プラン', 'Pricing Plans'), desc: t('CENOMAR取得代行の費用・パッケージ一覧', 'CENOMAR + Apostille + DHL shipping packages from $199') },
+              { to: t('/ja/haigusha-visa', '/k1-visa-documents'), title: t('配偶者ビザ書類チェックリスト', 'K-1 / CR-1 Visa Documents Checklist'), desc: t('配偶者ビザに必要なフィリピン書類一覧', 'All Philippine documents required for K-1 & CR-1 visa') },
             ].map((link) => (
               <Link
                 key={link.to}

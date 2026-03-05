@@ -495,14 +495,19 @@ export default function DriverRecordPage() {
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">
-            {t('LTO書類の取得、当センターにお任せください', 'Leave LTO Document Acquisition to Us')}
+            {t('LTO書類の取得、当センターにお任せください', 'Too Much Hassle? Let Us Handle It')}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('外免切替に必要なLTO書類からDFAアポスティーユまで一括対応。日本語サポートあり。', 'From LTO documents for foreign license conversion to DFA Apostille — all handled together. Japanese language support available.')}
+            {t('外免切替に必要なLTO書類からDFAアポスティーユまで一括対応。日本語サポートあり。', 'LTO Driver Record + DFA Apostille + DHL to your address — all-in-one from $199. Full English support.')}
           </p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}
@@ -538,23 +543,23 @@ export default function DriverRecordPage() {
             {[
               {
                 to: t('/ja/gaimen-kirikae-guide', '/drivers-license-conversion'),
-                title: t('外免切替ガイド（基本）', 'Foreign License Conversion Guide (Basics)'),
-                desc: t('手続き全体の流れ・必要書類・費用', 'Overall process, required documents & fees'),
-              },
-              {
-                to: t('/ja/apostille-ryokin', '/apostille-fee'),
-                title: t('DFAアポスティーユ料金', 'DFA Apostille Fee'),
-                desc: t('公式料金・代行費用の詳細', 'Official fees & proxy service pricing'),
+                title: t('外免切替ガイド（基本）', 'Philippine License Conversion Guide'),
+                desc: t('手続き全体の流れ・必要書類・費用', 'Required LTO documents, procedures & costs'),
               },
               {
                 to: t('/ja/apostille', '/apostille'),
                 title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'),
-                desc: t('アポスティーユとは・対象書類・手続き', 'What Apostille is, eligible documents, process'),
+                desc: t('アポスティーユとは・対象書類・手続き', 'What is Apostille, eligible documents & fees'),
+              },
+              {
+                to: t('/ja/pricing', '/en/pricing'),
+                title: t('料金プラン', 'Pricing Plans'),
+                desc: t('LTO書類代行の費用・パッケージ一覧', 'LTO + Apostille + DHL shipping packages from $199'),
               },
               {
                 to: t('/ja/apostille-shori-kikan', '/apostille-processing-time'),
                 title: t('DFAアポスティーユ処理期間', 'DFA Apostille Processing Time'),
-                desc: t('通常・エクスプレスの日数目安', 'Standard & express processing timelines'),
+                desc: t('通常・エクスプレスの日数目安', 'Standard 10–15 days / Express 3–5 days'),
               },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">

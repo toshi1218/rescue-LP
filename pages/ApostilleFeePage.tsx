@@ -447,14 +447,19 @@ export default function ApostilleFeePage() {
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">
-            {t('DFAアポスティーユの代行依頼・お見積もり', 'DFA Apostille Proxy & Quote Request')}
+            {t('DFAアポスティーユの代行依頼・お見積もり', 'Too Much Hassle? Let Us Handle It')}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('書類の種類・通数・エクスプレス要否をお知らせいただければ、最適なプランをご案内します。', 'Tell us the document types, quantity, and whether express is needed — we will recommend the best plan.')}
+            {t('書類の種類・通数・エクスプレス要否をお知らせいただければ、最適なプランをご案内します。', 'PSA/NBI + DFA Apostille (PHP 200 standard / PHP 400 express) + DHL to USA — all-in-one from $199.')}
           </p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}
@@ -490,23 +495,23 @@ export default function ApostilleFeePage() {
             {[
               {
                 to: t('/ja/apostille', '/apostille'),
-                title: t('DFAアポスティーユガイド（基本）', 'DFA Apostille Guide (Basics)'),
-                desc: t('アポスティーユとは・対象書類・手続き', 'What Apostille is, eligible documents, process'),
+                title: t('DFAアポスティーユガイド（基本）', 'DFA Apostille Guide'),
+                desc: t('アポスティーユとは・対象書類・手続き', 'What is Apostille, eligible documents & process'),
               },
               {
                 to: t('/ja/apostille-shori-kikan', '/apostille-processing-time'),
                 title: t('DFAアポスティーユ処理期間', 'DFA Apostille Processing Time'),
-                desc: t('通常・エクスプレスの日数目安', 'Standard & express processing timelines'),
+                desc: t('通常・エクスプレスの日数目安', 'Standard 10–15 days / Express 3–5 days'),
               },
               {
-                to: t('/ja/cenomar-apostille', '/cenomar-apostille'),
-                title: t('CENOMARにアポスティーユは必要？', 'Does CENOMAR Need Apostille?'),
-                desc: t('用途別の結論を解説', 'Answer by use case'),
+                to: t('/ja/pricing', '/en/pricing'),
+                title: t('料金プラン', 'Pricing Plans'),
+                desc: t('アポスティーユ代行の費用・パッケージ一覧', 'Apostille + DHL shipping packages from $199'),
               },
               {
-                to: t('/ja/psa-shussei-cost', '/psa-birth-certificate-cost'),
-                title: t('PSA出生証明書の費用', 'PSA Birth Certificate Cost'),
-                desc: t('PSA費用・代行費用の詳細', 'PSA & proxy service cost details'),
+                to: t('/ja/haigusha-visa', '/k1-visa-documents'),
+                title: t('配偶者ビザ書類チェックリスト', 'K-1 / CR-1 Visa Documents Checklist'),
+                desc: t('ビザ申請に必要な全書類', 'All Philippine documents required for K-1 & CR-1 visa'),
               },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">

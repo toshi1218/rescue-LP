@@ -423,14 +423,19 @@ export default function NbiValidityPage() {
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">
-            {t('NBI Clearanceの取得、当センターにお任せください', 'Leave Your NBI Clearance Acquisition to Us')}
+            {t('NBI Clearanceの取得、当センターにお任せください', 'Too Much Hassle? Let Us Handle It')}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('取得タイミングのご相談からDFAアポスティーユまで一括サポート。', 'From timing advice to DFA Apostille — comprehensive support.')}
+            {t('取得タイミングのご相談からDFAアポスティーユまで一括サポート。', 'NBI Clearance + DFA Apostille + DHL to USA — from $199. No Philippine address needed.')}
           </p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}
@@ -466,23 +471,23 @@ export default function NbiValidityPage() {
             {[
               {
                 to: t('/ja/nbi-clearance', '/nbi-clearance'),
-                title: t('NBI Clearanceガイド（基本）', 'NBI Clearance Guide (Basics)'),
-                desc: t('NBI Clearanceとは・取得方法・費用', 'What it is, how to obtain it, fees'),
+                title: t('NBI Clearanceガイド（基本）', 'NBI Clearance Guide'),
+                desc: t('NBI Clearanceとは・取得方法・費用', 'How to get NBI Clearance, requirements & fees'),
               },
               {
                 to: t('/ja/nbi-hit', '/nbi-hit'),
-                title: t('NBI HITとは？', 'What is NBI HIT?'),
-                desc: t('原因・解決手順・遅延時間', 'Causes, resolution steps & delay time'),
+                title: t('NBI HITとは？', 'NBI HIT Guide'),
+                desc: t('原因・解決手順・遅延時間', 'What is NBI HIT, causes & how to resolve'),
               },
               {
-                to: t('/ja/apostille-shori-kikan', '/apostille-processing-time'),
-                title: t('DFAアポスティーユ処理期間', 'DFA Apostille Processing Time'),
-                desc: t('通常・エクスプレスの日数目安', 'Standard & express processing timelines'),
+                to: t('/ja/pricing', '/en/pricing'),
+                title: t('料金プラン', 'Pricing Plans'),
+                desc: t('NBI取得代行の費用・パッケージ一覧', 'NBI + Apostille + DHL shipping packages from $199'),
               },
               {
-                to: t('/ja/haigusha-visa', '/spouse-visa-documents'),
-                title: t('配偶者ビザ書類チェックリスト', 'Spouse Visa Document Checklist'),
-                desc: t('ビザ申請に必要な全書類', 'All documents required for visa application'),
+                to: t('/ja/haigusha-visa', '/k1-visa-documents'),
+                title: t('配偶者ビザ書類チェックリスト', 'K-1 / CR-1 Visa Documents Checklist'),
+                desc: t('ビザ申請に必要な全書類', 'All Philippine documents required for K-1 & CR-1 visa'),
               },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">

@@ -442,14 +442,19 @@ export default function CenomarApostillePage() {
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">
-            {t('CENOMAR＋アポスティーユ、まるごとお任せ', 'Leave CENOMAR + Apostille Entirely to Us')}
+            {t('CENOMAR＋アポスティーユ、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('用途確認からフィリピン現地対応まで日本語サポート。', 'From confirming your use case to Philippines-side processing — full support.')}
+            {t('用途確認からフィリピン現地対応まで日本語サポート。', 'CENOMAR + DFA Apostille + DHL to USA — all-in-one from $199. USCIS & NVC compliant.')}
           </p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}
@@ -485,23 +490,23 @@ export default function CenomarApostillePage() {
             {[
               {
                 to: t('/ja/cenomar', '/cenomar'),
-                title: t('CENOMARガイド（基本）', 'CENOMAR Guide (Basics)'),
-                desc: t('CENOMARとは何か・取得方法・費用', 'What is CENOMAR, how to obtain it, fees'),
+                title: t('CENOMARガイド（基本）', 'CENOMAR Guide'),
+                desc: t('CENOMARとは何か・取得方法・費用', 'What is CENOMAR, requirements & how to get it'),
               },
               {
                 to: t('/ja/cenomar-koyukigen', '/cenomar-validity'),
                 title: t('CENOMARの有効期限', 'CENOMAR Validity Period'),
-                desc: t('"6ヶ月"の根拠と用途別の考え方', 'The basis of "6 months" and how to think by use case'),
+                desc: t('"6ヶ月"の根拠と用途別の考え方', 'How long is CENOMAR valid for K-1 & CR-1 visa?'),
               },
               {
-                to: t('/ja/apostille', '/apostille'),
-                title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'),
-                desc: t('アポスティーユの対象書類・取得方法・費用', 'Target documents, how to obtain, fees'),
+                to: t('/ja/pricing', '/en/pricing'),
+                title: t('料金プラン', 'Pricing Plans'),
+                desc: t('CENOMAR+アポスティーユ代行の費用一覧', 'CENOMAR + Apostille + DHL shipping packages from $199'),
               },
               {
-                to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'),
-                title: t('フィリピン国際結婚ガイド', 'Philippines International Marriage Guide'),
-                desc: t('手続き全体の流れ・必要書類', 'Overall process flow & required documents'),
+                to: t('/ja/haigusha-visa', '/k1-visa-documents'),
+                title: t('配偶者ビザ書類チェックリスト', 'K-1 / CR-1 Visa Documents Checklist'),
+                desc: t('ビザ申請に必要な全書類', 'All Philippine documents required for K-1 & CR-1 visa'),
               },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">

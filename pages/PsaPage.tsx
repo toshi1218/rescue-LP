@@ -627,16 +627,21 @@ export default function PsaPage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
-          <h2 className="text-xl font-bold mb-3">{t('PSA書類取得、まるごとお任せ', 'Leave PSA Document Acquisition to Us')}</h2>
+          <h2 className="text-xl font-bold mb-3">{t('PSA書類取得、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}</h2>
           <p className="text-sm text-gray-300 mb-5">
             {t(
               '面倒な手続きはプロにお任せください。日本語でサポートします。',
-              'Leave the complicated procedures to the professionals. Full support in English.'
+              'PSA Birth Certificate + DFA Apostille + DHL to USA — all-in-one from $199. No Philippine address needed.'
             )}
           </p>
-          <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
-            {t('無料相談する', 'Free Consultation')}
-          </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+              {t('料金プランを見る', 'View Pricing Plans')}
+            </Link>
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+              {t('無料相談する', 'Free Consultation')}
+            </a>
+          </div>
         </div>
 
         {/* FAQ */}
@@ -670,9 +675,10 @@ export default function PsaPage() {
           <h2 className="text-lg font-bold text-secondary mb-4">{t('関連ガイド', 'Related Guides')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { to: t('/ja/cenomar', '/cenomar'), title: t('CENOMARガイド', 'CENOMAR Guide'), desc: t('独身証明書の取得方法・費用・期間', 'How to obtain CENOMAR, fees & timeline') },
-              { to: t('/ja/nbi-clearance', '/nbi-clearance'), title: t('NBI無犯罪証明書ガイド', 'NBI Clearance Guide'), desc: t('NBI HIT問題の解説と取得手順', 'NBI HIT issues explained & acquisition steps') },
-              { to: t('/ja/kokusai-kekkon-guide', '/international-marriage-guide'), title: t('フィリピン国際結婚ガイド', 'Philippines International Marriage Guide'), desc: t('手続き全体の流れ・必要書類', 'Overall process flow & required documents') },
+              { to: t('/ja/psa-shussei-cost', '/psa-birth-certificate-cost'), title: t('PSA出生証明書の費用', 'PSA Birth Certificate Cost'), desc: t('公式料金・代行費用の詳細', 'Official fee PHP 365 + proxy pricing from $199') },
+              { to: t('/ja/apostille', '/apostille'), title: t('DFAアポスティーユガイド', 'DFA Apostille Guide'), desc: t('アポスティーユとは・対象書類・費用', 'What is Apostille, eligible documents & fees') },
+              { to: t('/ja/pricing', '/en/pricing'), title: t('料金プラン', 'Pricing Plans'), desc: t('PSA書類取得代行の費用・パッケージ一覧', 'PSA + Apostille + DHL shipping packages from $199') },
+              { to: t('/ja/haigusha-visa', '/k1-visa-documents'), title: t('配偶者ビザ書類チェックリスト', 'K-1 / CR-1 Visa Documents Checklist'), desc: t('ビザ申請に必要な全書類', 'All Philippine documents required for K-1 & CR-1 visa') },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="flex items-center gap-3 bg-white border border-gray-200 rounded-lg p-4 shadow-card hover:border-primary transition-colors group">
                 <FileText className="w-5 h-5 text-primary flex-shrink-0" />
