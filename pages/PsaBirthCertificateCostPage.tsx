@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { SEO_YEAR, SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -15,8 +15,8 @@ export default function PsaBirthCertificateCostPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`PSA出生証明書の費用・料金【${SEO_YEAR_MONTH_JA}最新】自分で取得 vs 代行の比較｜フィリピン書類センター`, `PSA Birth Certificate Cost [${SEO_YEAR_MONTH_EN}]: DIY vs. Retrieval Service`),
-    t('PSA出生証明書の公式料金・自分で取得する場合の費用・代行利用時の総費用を解説。DFAアポスティーユ込みの料金も紹介。', 'Compare the cost of getting a PSA Birth Certificate yourself vs. using a retrieval service. Includes official PSA fees and DFA Apostille costs.')
+    t(`PSA出生証明書の費用・料金【${SEO_YEAR_MONTH_JA}最新】自分で取得 vs 代行の比較｜フィリピン書類センター`, `PSA Birth Certificate Price & Cost [${SEO_YEAR_MONTH_EN}] - Official Fee PHP 365+`),
+    t('PSA出生証明書の公式料金・自分で取得する場合の費用・代行利用時の総費用を解説。DFAアポスティーユ込みの料金も紹介。', `How much does a PSA birth certificate cost in ${SEO_YEAR}? Official PSA fee: PHP 365 (~$6.50). PSAHelpLine online: PHP 500-600. Proxy service with DHL shipping: from $199. Full price comparison inside.`)
   );
 
   const faqs = [
@@ -59,7 +59,7 @@ export default function PsaBirthCertificateCostPage() {
       q: t('PSA出生証明書の取得にかかる期間と費用の関係は？', 'What is the relationship between cost and turnaround time for PSA birth certificates?'),
       a: t(
         '自分でPSAHelpLine経由で申請する場合、通常2〜3週間で書類が届きます（フィリピン国内）。代行サービスでDFAアポスティーユ・日本への国際配送まで含めると4〜6週間が目安です。エクスプレス対応（DFAアポスティーユのエクスプレス申請含む）の場合は費用が上がりますが、期間を短縮できます。',
-        'When applying yourself through PSAHelpLine, documents typically arrive within 2–3 weeks (within the Philippines). With proxy services including DFA Apostille and international delivery to Japan, expect 4–6 weeks. Express processing (including DFA Apostille express) costs more but reduces turnaround time.'
+        'When applying yourself through PSAHelpLine, documents arrive within 2-3 weeks (within the Philippines). With proxy services including DFA Apostille and DHL delivery to the USA, expect 4-6 weeks total. Express DFA Apostille processing costs more but reduces turnaround time.'
       ),
     },
   ];
@@ -70,26 +70,29 @@ export default function PsaBirthCertificateCostPage() {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'PSA Birth Certificate', item: 'https://ph-document.com/psa-birth-certificate' },
-          { '@type': 'ListItem', position: 3, name: 'PSA Birth Certificate Cost', item: 'https://ph-document.com/psa-birth-certificate-cost' },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: t('https://ph-document.com/ja/', 'https://ph-document.com/en/') },
+          { '@type': 'ListItem', position: 2, name: t('PSA出生証明書', 'PSA Birth Certificate'), item: t('https://ph-document.com/ja/psa-shussei-shomeisho/', 'https://ph-document.com/en/psa-birth-certificate/') },
+          { '@type': 'ListItem', position: 3, name: t('費用・料金', 'Price & Cost'), item: t('https://ph-document.com/ja/psa-shussei-cost/', 'https://ph-document.com/en/psa-birth-certificate-cost/') },
         ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/psa-birth-certificate-cost/',
+          '@id': t('https://ph-document.com/ja/psa-shussei-cost/', 'https://ph-document.com/en/psa-birth-certificate-cost/'),
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'PSA Birth Certificate Cost 2026 — Official Fees, Proxy Service Pricing & Total Estimates',
-        description: 'Complete breakdown of PSA birth certificate costs in 2026: official PSA fees, online ordering, proxy service pricing, and DFA Apostille add-on.',
+        headline: t('PSA出生証明書の費用・料金 公式料金 vs 代行費用の比較', `PSA Birth Certificate Price & Cost ${SEO_YEAR} - Official Fee PHP 365+`),
+        description: t(
+          'PSA出生証明書の公式取得費用・代行費用を解説。DFAアポスティーユ込みの料金も紹介。',
+          `PSA birth certificate price & cost breakdown (${SEO_YEAR}): official PSA fee PHP 365, PSAHelpLine PHP 500-600, proxy service from $199, DFA Apostille add-on.`
+        ),
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/psa-birth-certificate-cost/',
-        inLanguage: 'en',
+        url: t('https://ph-document.com/ja/psa-shussei-cost/', 'https://ph-document.com/en/psa-birth-certificate-cost/'),
+        inLanguage: lang,
         datePublished: '2025-12-01',
         dateModified: SEO_DATE_ISO,
         author: {
@@ -143,7 +146,7 @@ export default function PsaBirthCertificateCostPage() {
         <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-tight mb-4">
           {t(
             `PSA出生証明書の費用・料金【${SEO_YEAR_MONTH_JA}最新】公式料金 vs 代行費用の比較`,
-            'PSA Birth Certificate Cost 2026 — Official Fees, Proxy Pricing & Total Estimates'
+            `PSA Birth Certificate Price & Cost [${SEO_YEAR_MONTH_EN}]: How Much Does It Cost? Official Fee PHP 365+`
           )}
         </h1>
         <p className="text-sm text-gray-500 mb-8">{t(`最終更新：${SEO_LAST_UPDATED_JA} ｜ 株式会社IGRS`, `Last updated: ${SEO_LAST_UPDATED_EN} | IGRS Inc.`)}</p>
@@ -158,7 +161,7 @@ export default function PsaBirthCertificateCostPage() {
                 <li>✓ {t('PSA公式費用：1通あたり約PHP 365（約USD 6.50）', 'PSA official fee: ~PHP 365 per copy (~USD 6.50)')}</li>
                 <li>✓ {t('代行サービス利用時の総費用：US$199〜（国際配送込み）', 'Proxy service total: from US$199 (incl. international shipping)')}</li>
                 <li>✓ {t('DFAアポスティーユ込みセット：US$299〜', 'With DFA Apostille set plan: from US$299')}</li>
-                <li>✓ {t('日本から自分で取得する場合：難易度高・フィリピン現地住所が必要', 'Self-acquisition from Japan: difficult — requires a Philippines address')}</li>
+                <li>✓ {t('日本から自分で取得する場合：難易度高・フィリピン現地住所が必要', 'Self-acquisition from overseas: requires a Philippines address for delivery')}</li>
               </ul>
             </div>
           </div>
@@ -246,7 +249,7 @@ export default function PsaBirthCertificateCostPage() {
           <p className="text-sm text-gray-700 mb-5">
             {t(
               'PSAHelpLine（psahelpline.com）はPSAの公式オンライン申請サービスです。フィリピン国内の住所へのデリバリーに対応していますが、海外（日本）への直接発送は行っていません。日本在住の方が利用するには、フィリピンの親族等の住所が必要です。',
-              'PSAHelpLine (psahelpline.com) is the official PSA online application service. It supports delivery to Philippine addresses but does not ship directly overseas (Japan). Residents in Japan need a Philippine address (e.g., a relative\'s) to use this service.'
+              'PSAHelpLine (psahelpline.com) is the official PSA online application service. It supports delivery to Philippine addresses but does not ship directly overseas. Applicants outside the Philippines need a local Philippine address (e.g., a relative\'s) to use this service.'
             )}
           </p>
           <div className="space-y-4">
@@ -256,7 +259,7 @@ export default function PsaBirthCertificateCostPage() {
                 title: t('日本在住者がPSAHelpLineを使う場合の費用', 'PSAHelpLine Costs for Japan Residents'),
                 body: t(
                   'PSA書類費（PHP 365〜）＋フィリピン国内デリバリー料（PHP 100〜150）＋日本への国際転送費用（別途）。フィリピンの親族に受け取ってもらい、日本へEMS等で転送すると総額約PHP 2,000〜4,000（約USD 35〜70）になることが多いです。',
-                  'PSA document fee (PHP 365+) + Philippines domestic delivery (PHP 100–150) + international forwarding to Japan (extra). When having a Philippine relative receive and forward via EMS, total is often PHP 2,000–4,000 (approx. USD 35–70).'
+                  'PSA document fee (PHP 365+) + Philippines domestic delivery (PHP 100-150) + international forwarding to your country (extra). When having a Philippine relative receive and forward via EMS or DHL, total is often PHP 2,000-4,000 (approx. USD 35-70).'
                 ),
               },
               {
@@ -287,7 +290,7 @@ export default function PsaBirthCertificateCostPage() {
           <p className="text-sm text-gray-700 mb-5">
             {t(
               '代行サービスを利用した場合、PSA書類費・フィリピン現地手数料・国際配送費がすべて含まれた価格が提示されます。手間なく日本まで書類を届けてもらえます。',
-              'When using a proxy service, a single price covers PSA document fees, local Philippines handling, and international shipping. Documents are delivered to Japan with no hassle on your part.'
+                  'When using a proxy service, a single price covers PSA document fees, local Philippines handling, and international DHL shipping. Documents are delivered to your US address with no hassle on your part.'
             )}
           </p>
           <div className="grid gap-3 mb-5">
@@ -409,11 +412,11 @@ export default function PsaBirthCertificateCostPage() {
                 {[
                   [t('PSA書類費', 'PSA document fee'), '~PHP 365', t('込み', 'Included')],
                   [t('フィリピン国内配送', 'Philippines domestic delivery'), 'PHP 100〜150', t('込み', 'Included')],
-                  [t('日本への国際配送', 'International shipping to Japan'), 'PHP 1,500〜3,000+', t('込み', 'Included')],
-                  [t('フィリピン側の手間・連絡', 'Philippines-side coordination'), t('親族等が必要', 'Relative needed'), t('不要', 'Not needed')],
+                  [t('日本への国際配送', 'International DHL shipping'), 'PHP 1,500〜3,000+', t('込み', 'Included')],
+                  [t('フィリピン側の手間・連絡', 'Philippines-side coordination'), t('親族等が必要', 'Relative/contact needed'), t('不要', 'Not needed')],
                   [t('DFAアポスティーユ（必要な場合）', 'DFA Apostille (if needed)'), t('別途手配', 'Arrange separately'), t('セットで対応', 'Set plan available')],
-                  [t('日本語サポート', 'Japanese language support'), t('なし', 'None'), t('あり', 'Available')],
-                  [t('総費用目安', 'Total estimated cost'), t('USD 35〜100+（転送費含む）', 'USD 35–100+ (incl. forwarding)'), t('US$199〜（すべて込み）', 'US$199~ (all inclusive)')],
+                  [t('日本語サポート', 'English/Japanese support'), t('なし', 'None'), t('あり', 'Available')],
+                  [t('総費用目安', 'Total estimated cost'), t('USD 35〜100+（転送費含む）', 'USD 35-100+ (incl. forwarding)'), t('US$199〜（すべて込み）', 'US$199+ (all inclusive, DHL to USA)')],
                 ].map(([item, self, proxy], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="px-4 py-3 text-secondary border-b border-gray-100 font-medium">{item}</td>
@@ -431,10 +434,10 @@ export default function PsaBirthCertificateCostPage() {
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
           <h2 className="text-xl font-bold mb-3">
-            {t('PSA出生証明書の取得、ご相談ください', 'Inquire About PSA Birth Certificate Acquisition')}
+            {t('PSA出生証明書の取得、ご相談ください', 'Get Your PSA Birth Certificate — Ships to USA via DHL')}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('費用・期間・DFAアポスティーユの要否など、まずはお気軽にご相談ください。', 'For questions about cost, timeline, and whether DFA Apostille is needed — feel free to reach out.')}
+            {t('費用・期間・DFAアポスティーユの要否など、まずはお気軽にご相談ください。', 'Questions about cost, timeline, or whether DFA Apostille is needed? Free consultation — we reply within 24 hours.')}
           </p>
           <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors">
             {t('無料相談する', 'Free Consultation')}
@@ -516,7 +519,7 @@ export default function PsaBirthCertificateCostPage() {
               )}
             </p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【PSA出生証明書費用ページからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={t('【PSA出生証明書費用ページからのお問い合わせ】', '[PSA Birth Certificate Cost Inquiry - EN]')} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/psa-birth-certificate-cost" />
               <div>
