@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -69,37 +70,47 @@ export default function NbiValidityPage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'NBI Clearance', item: 'https://ph-document.com/nbi-clearance' },
-          { '@type': 'ListItem', position: 3, name: 'NBI Clearance Validity', item: 'https://ph-document.com/nbi-validity' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'NBI Clearanceガイド', item: 'https://ph-document.com/ja/nbi-clearance/' },
+              { '@type': 'ListItem', position: 3, name: 'NBI Clearance有効期限', item: 'https://ph-document.com/ja/nbi-koyukigen/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'NBI Clearance Guide', item: 'https://ph-document.com/en/nbi-clearance/' },
+              { '@type': 'ListItem', position: 3, name: 'NBI Clearance Validity', item: 'https://ph-document.com/en/nbi-validity/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/nbi-validity/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/nbi-koyukigen/' : 'https://ph-document.com/en/nbi-validity/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'NBI Clearance Validity Period 2026 — 1-Year Rule, Institutional Requirements & Timing Guide',
-        description: 'NBI Clearance is valid for 1 year, but many institutions require it within 6 months. Learn the rules by use case and the ideal timing for obtaining yours.',
+        headline: lang === 'ja'
+          ? `NBI Clearanceの有効期限は？1年ルールと用途別の考え方【${SEO_YEAR_MONTH_JA}版】`
+          : `NBI Clearance Validity [${SEO_YEAR_MONTH_EN}]: How Long Is It Valid?`,
+        description: lang === 'ja'
+          ? 'NBI Clearanceの有効期限は発行から1年。ただし機関によっては6ヶ月以内を求める場合も。用途別の考え方と取得タイミングを解説。'
+          : 'NBI Clearance is valid for 1 year, but many institutions require it within 6 months. Learn the rules by use case and the ideal timing for obtaining yours.',
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/nbi-validity/',
-        inLanguage: 'en',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/nbi-koyukigen/' : 'https://ph-document.com/en/nbi-validity/',
+        inLanguage: lang,
         datePublished: '2025-12-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: 'IGRS Inc.',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'Philippine Document Service',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -429,10 +440,10 @@ export default function NbiValidityPage() {
             {t('取得タイミングのご相談からDFAアポスティーユまで一括サポート。', 'NBI Clearance + DFA Apostille + DHL to USA — from $199. No Philippine address needed.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'nbi_validity', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'nbi_validity', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -513,7 +524,7 @@ export default function NbiValidityPage() {
               )}
             </p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【NBI Clearance有効期限ページからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【NBI Clearance有効期限ページからのお問い合わせ】' : '[NBI Clearance Validity Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/nbi-validity" />
               <div>

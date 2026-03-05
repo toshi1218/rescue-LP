@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 import { LtoDriversRecordSample } from '../components/DocumentSampleImage';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
@@ -77,37 +78,47 @@ export default function DriverRecordPage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'Driver\'s License Conversion', item: 'https://ph-document.com/drivers-license-conversion' },
-          { '@type': 'ListItem', position: 3, name: 'LTO Driver\'s Record', item: 'https://ph-document.com/driver-record' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: '外免切替ガイド', item: 'https://ph-document.com/ja/gaimen-kirikae-guide/' },
+              { '@type': 'ListItem', position: 3, name: 'LTOドライバーズレコード', item: 'https://ph-document.com/ja/driver-record/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: "Driver's License Conversion", item: 'https://ph-document.com/en/drivers-license-conversion/' },
+              { '@type': 'ListItem', position: 3, name: "LTO Driver's Record", item: 'https://ph-document.com/en/driver-record/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/driver-record/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/driver-record/' : 'https://ph-document.com/en/driver-record/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: `LTO Driver's Record for Gaimen Kirikae (Foreign License Conversion) [${SEO_YEAR_MONTH_EN} Guide]`,
-        description: 'How to obtain the LTO Driver\'s Record for foreign license conversion in Japan. Covers required documents, processing time, DFA Apostille requirements, and proxy service.',
+        headline: lang === 'ja'
+          ? `LTOドライバーズレコード取得ガイド｜外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】`
+          : `LTO Driver's Record Guide [${SEO_YEAR_MONTH_EN}]: How to Get It for License Conversion`,
+        description: lang === 'ja'
+          ? 'LTOドライバーズレコードの取得方法・必要書類・DFAアポスティーユ要否・代行サービスを解説。外免切替に必要な書類を完全ガイド。'
+          : "How to obtain the LTO Driver's Record for foreign license conversion. Covers required documents, processing time, DFA Apostille requirements, and proxy service.",
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/driver-record/',
-        inLanguage: 'en',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/driver-record/' : 'https://ph-document.com/en/driver-record/',
+        inLanguage: lang,
         datePublished: '2025-12-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: 'IGRS Inc.',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'Philippine Document Service',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -501,10 +512,10 @@ export default function DriverRecordPage() {
             {t('外免切替に必要なLTO書類からDFAアポスティーユまで一括対応。日本語サポートあり。', 'LTO Driver Record + DFA Apostille + DHL to your address — all-in-one from $199. Full English support.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'driver_record', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'driver_record', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -585,7 +596,7 @@ export default function DriverRecordPage() {
               )}
             </p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【LTOドライバーズレコードページからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【LTOドライバーズレコードページからのお問い合わせ】' : '[LTO Driver Record Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/driver-record" />
               <div>

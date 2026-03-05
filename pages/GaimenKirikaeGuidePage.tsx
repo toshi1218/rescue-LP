@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -86,16 +87,21 @@ export default function GaimenKirikaeGuidePage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: t('ホーム', 'Home'), item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: t('フィリピン免許の外免切替ガイド', 'Philippine License Conversion Guide'), item: 'https://ph-document.com/gaimen-kirikae-guide/' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'フィリピン免許の外免切替ガイド', item: 'https://ph-document.com/ja/gaimen-kirikae-guide/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'Philippine License Conversion Guide', item: 'https://ph-document.com/en/drivers-license-conversion/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/gaimen-kirikae-guide/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/gaimen-kirikae-guide/' : 'https://ph-document.com/en/drivers-license-conversion/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
@@ -104,18 +110,18 @@ export default function GaimenKirikaeGuidePage() {
         headline: t(`フィリピン運転免許の外免切替ガイド｜必要なLTO書類・手順・費用【${SEO_YEAR_MONTH_JA}】`, `Philippine Driver's License Conversion Guide | Required LTO Documents, Procedures & Costs [${SEO_YEAR_MONTH_EN}]`),
         description: t('フィリピン運転免許を日本の免許に切り替える（外免切替）ための手順・必要書類・LTO書類の取得方法を解説。LTO書類の代行取得に対応。', 'A guide on procedures, required documents, and how to obtain LTO documents for converting a Philippine driver\'s license to a Japanese license. Proxy procurement of LTO documents available.'),
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/gaimen-kirikae-guide/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/gaimen-kirikae-guide/' : 'https://ph-document.com/en/drivers-license-conversion/',
         inLanguage: lang,
         datePublished: '2025-11-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: '株式会社IGRS',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: t('フィリピン書類取得代行センター', 'Philippine Document Procurement Center'),
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -402,10 +408,10 @@ export default function GaimenKirikaeGuidePage() {
           <h2 className="text-xl font-bold mb-3">{t('LTO書類取得、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}</h2>
           <p className="text-sm text-gray-300 mb-5">{t('外免切替に必要なLTO書類・DFAアポスティーユを日本語サポートで代行します。', 'LTO Driver Record + DFA Apostille + DHL to your address — all-in-one from $199. Full English support.')}</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'drivers_license_conversion', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'drivers_license_conversion', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -458,7 +464,7 @@ export default function GaimenKirikaeGuidePage() {
             <h2 className="text-xl font-bold text-secondary mb-2">{t('お問い合わせ', 'Contact Us')}</h2>
             <p className="text-sm text-gray-500 mb-6">{t('LTO書類の代行取得・DFAアポスティーユについてお気軽にご相談ください。', 'Feel free to contact us about proxy procurement of LTO documents and DFA Apostille.')}</p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【外免切替ガイドからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【外免切替ガイドからのお問い合わせ】' : '[Foreign License Conversion Guide Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/gaimen-kirikae-guide/" />
               <div>

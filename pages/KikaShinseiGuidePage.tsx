@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -79,16 +80,21 @@ export default function KikaShinseiGuidePage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: t('ホーム', 'Home'), item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: t('帰化申請ガイド', 'Naturalization Guide'), item: 'https://ph-document.com/kika-shinsei-guide/' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: '帰化申請ガイド', item: 'https://ph-document.com/ja/kika-shinsei-guide/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'Naturalization Guide', item: 'https://ph-document.com/en/naturalization-guide/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/kika-shinsei-guide/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/kika-shinsei-guide/' : 'https://ph-document.com/en/naturalization-guide/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
@@ -97,18 +103,18 @@ export default function KikaShinseiGuidePage() {
         headline: t(`フィリピン人の帰化申請ガイド｜必要書類・手続きの流れ・PSA・NBI取得【${SEO_YEAR_MONTH_JA}最新】`, `Naturalization Guide for Philippine Nationals | Required Documents, Procedures, PSA & NBI [${SEO_YEAR_MONTH_EN}]`),
         description: t('フィリピン国籍の方が日本に帰化するための手続きの流れ・必要書類（PSA出生証明書・NBI Clearance等）・費用・審査期間をわかりやすく解説。', 'A comprehensive guide on the procedure, required documents (PSA Birth Certificate, NBI Clearance, etc.), costs, and review period for Philippine nationals applying for Japanese naturalization.'),
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/kika-shinsei-guide/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/kika-shinsei-guide/' : 'https://ph-document.com/en/naturalization-guide/',
         inLanguage: lang,
         datePublished: '2025-11-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: '株式会社IGRS',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: t('フィリピン書類取得代行センター', 'Philippine Document Procurement Center'),
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -343,10 +349,10 @@ export default function KikaShinseiGuidePage() {
             )}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'naturalization_guide', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'naturalization_guide', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -399,7 +405,7 @@ export default function KikaShinseiGuidePage() {
             <h2 className="text-xl font-bold text-secondary mb-2">{t('お問い合わせ', 'Contact Us')}</h2>
             <p className="text-sm text-gray-500 mb-6">{t('PSA・NBI等のフィリピン書類取得に関するご相談はお気軽にどうぞ。', 'Feel free to contact us about obtaining Philippine documents such as PSA and NBI.')}</p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【帰化申請ガイドからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【帰化申請ガイドからのお問い合わせ】' : '[Naturalization Guide Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/kika-shinsei-guide/" />
               <div>

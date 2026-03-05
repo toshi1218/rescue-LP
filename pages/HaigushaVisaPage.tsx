@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -130,36 +131,45 @@ export default function HaigushaVisaPage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'Spouse Visa Document Guide', item: 'https://ph-document.com/haigusha-visa-shorui/' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: '配偶者ビザ書類ガイド', item: 'https://ph-document.com/ja/haigusha-visa/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'Spouse Visa Document Guide', item: 'https://ph-document.com/en/spouse-visa-documents/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/haigusha-visa-shorui/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/haigusha-visa/' : 'https://ph-document.com/en/spouse-visa-documents/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: `Philippine Document Checklist for Spouse Visa Application [${SEO_YEAR_MONTH_EN}]`,
-        description: 'Complete checklist of Philippine documents required for Japanese spouse visa applications: CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille.',
+        headline: lang === 'ja'
+          ? `配偶者ビザ申請に必要なフィリピン書類チェックリスト [${SEO_YEAR_MONTH_JA}]`
+          : `Philippine Document Checklist for Spouse Visa Application [${SEO_YEAR_MONTH_EN}]`,
+        description: lang === 'ja'
+          ? '配偶者ビザ申請に必要なフィリピン書類（CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユ）の完全チェックリスト。'
+          : 'Complete checklist of Philippine documents required for spouse visa applications: CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille.',
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/haigusha-visa-shorui/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/haigusha-visa/' : 'https://ph-document.com/en/spouse-visa-documents/',
         inLanguage: lang,
         datePublished: '2025-11-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: 'IGRS Inc.',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'Philippine Document Procurement Center',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -386,10 +396,10 @@ export default function HaigushaVisaPage() {
             {t('ビザ申請に必要なフィリピン書類を英語サポートで取得代行。\nまずは無料相談からどうぞ。', 'CENOMAR + PSA + NBI + DFA Apostille + DHL to USA — all-in-one from $199. USCIS & NVC compliant.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'haigusha_visa', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'haigusha_visa', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -440,7 +450,7 @@ export default function HaigushaVisaPage() {
             <h2 className="text-xl font-bold text-secondary mb-2">{t('お問い合わせ', 'Contact Us')}</h2>
             <p className="text-sm text-gray-500 mb-6">{t('書類の取得代行・翻訳サポートについてお気軽にご相談ください。', 'Feel free to contact us about document retrieval and translation support.')}</p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【配偶者ビザ書類ガイドからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【配偶者ビザ書類ガイドからのお問い合わせ】' : '[Spouse Visa Documents Guide Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/haigusha-visa-shorui/" />
               <div>

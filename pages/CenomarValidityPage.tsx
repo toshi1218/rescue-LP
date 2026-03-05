@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -76,37 +77,47 @@ export default function CenomarValidityPage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'CENOMARガイド', item: 'https://ph-document.com/cenomar' },
-          { '@type': 'ListItem', position: 3, name: 'CENOMARの有効期限', item: 'https://ph-document.com/cenomar-validity' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'CENOMARガイド', item: 'https://ph-document.com/ja/cenomar/' },
+              { '@type': 'ListItem', position: 3, name: 'CENOMARの有効期限', item: 'https://ph-document.com/ja/cenomar-koyukigen/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'CENOMAR Guide', item: 'https://ph-document.com/en/cenomar/' },
+              { '@type': 'ListItem', position: 3, name: 'CENOMAR Validity', item: 'https://ph-document.com/en/cenomar-validity/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/cenomar-validity/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/cenomar-koyukigen/' : 'https://ph-document.com/en/cenomar-validity/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: `CENOMARの有効期限は？"6ヶ月"の根拠と用途別の考え方【${SEO_YEAR_MONTH_JA}版】`,
-        description: 'CENOMARの有効期限は発行から6ヶ月が目安。根拠、用途別の期限の考え方、取得タイミングの目安を解説。',
+        headline: lang === 'ja'
+          ? `CENOMARの有効期限は？"6ヶ月"の根拠と用途別の考え方【${SEO_YEAR_MONTH_JA}版】`
+          : `CENOMAR Validity Period: How Long Is It Valid? [${SEO_YEAR_MONTH_EN}]`,
+        description: lang === 'ja'
+          ? 'CENOMARの有効期限は発行から6ヶ月が目安。根拠、用途別の期限の考え方、取得タイミングの目安を解説。'
+          : 'CENOMAR validity explained: the 6-month rule, why it matters for US visa (K-1, CR-1), USCIS, and international marriage, and when to obtain it.',
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/cenomar-validity/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/cenomar-koyukigen/' : 'https://ph-document.com/en/cenomar-validity/',
         inLanguage: lang,
         datePublished: '2025-12-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: '株式会社IGRS',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'フィリピン書類取得代行センター',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -438,10 +449,10 @@ export default function CenomarValidityPage() {
             {t('手続きスケジュールに合わせた取得タイミングをご案内します。', 'CENOMAR + DFA Apostille + DHL to USA — from $199. We advise on timing for your K-1 or CR-1 visa.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'cenomar_validity', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'cenomar_validity', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -522,7 +533,7 @@ export default function CenomarValidityPage() {
               )}
             </p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【CENOMAR有効期限ページからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【CENOMAR有効期限ページからのお問い合わせ】' : '[CENOMAR Validity Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/cenomar-validity" />
               <div>

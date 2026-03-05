@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 import { DfaApostilleSample } from '../components/DocumentSampleImage';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
@@ -126,36 +127,45 @@ export default function ApostillePage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'DFAアポスティーユガイド', item: 'https://ph-document.com/apostille-guide/' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'DFAアポスティーユガイド', item: 'https://ph-document.com/ja/apostille/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'DFA Apostille Guide', item: 'https://ph-document.com/en/apostille/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/apostille-guide/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/apostille/' : 'https://ph-document.com/en/apostille/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: `フィリピンDFAアポスティーユ認証とは？対象書類・取得方法・費用【${SEO_YEAR_MONTH_JA}】`,
-        description: 'フィリピンDFAアポスティーユ認証の取得方法・対象書類・費用・期間を解説。CENOMAR・PSA・NBI Clearanceへの認証取得を代行サービスで日本語対応。',
+        headline: lang === 'ja'
+          ? `フィリピンDFAアポスティーユ認証とは？対象書類・取得方法・費用【${SEO_YEAR_MONTH_JA}】`
+          : `What is DFA Apostille? Requirements, Cost & How to Get It [${SEO_YEAR_MONTH_EN}]`,
+        description: lang === 'ja'
+          ? 'フィリピンDFAアポスティーユ認証の取得方法・対象書類・費用・期間を解説。CENOMAR・PSA・NBI Clearanceへの認証取得を代行サービスで日本語対応。'
+          : 'Complete guide to DFA Apostille authentication in the Philippines: requirements, fees (PHP 200+), processing time, and proxy service for CENOMAR, PSA, and NBI documents.',
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/apostille-guide/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/apostille/' : 'https://ph-document.com/en/apostille/',
         inLanguage: lang,
         datePublished: '2025-11-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: '株式会社IGRS',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'フィリピン書類取得代行センター',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -703,10 +713,10 @@ export default function ApostillePage() {
             )}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'apostille', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'apostille', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -771,7 +781,7 @@ export default function ApostillePage() {
               )}
             </p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【アポスティーユガイドからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【アポスティーユガイドからのお問い合わせ】' : '[DFA Apostille Guide Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/apostille-guide/" />
               <div>

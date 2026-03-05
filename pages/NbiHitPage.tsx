@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -76,37 +77,47 @@ export default function NbiHitPage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'NBI Clearanceガイド', item: 'https://ph-document.com/nbi-clearance' },
-          { '@type': 'ListItem', position: 3, name: 'NBI HITとは', item: 'https://ph-document.com/nbi-hit' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'NBI Clearanceガイド', item: 'https://ph-document.com/ja/nbi-clearance/' },
+              { '@type': 'ListItem', position: 3, name: 'NBI HITとは', item: 'https://ph-document.com/ja/nbi-hit/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'NBI Clearance Guide', item: 'https://ph-document.com/en/nbi-clearance/' },
+              { '@type': 'ListItem', position: 3, name: 'NBI HIT Guide', item: 'https://ph-document.com/en/nbi-hit/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/nbi-hit/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/nbi-hit/' : 'https://ph-document.com/en/nbi-hit/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: `NBI HITとは？原因・対処法・どれくらい遅れるか【${SEO_YEAR_MONTH_JA}版】`,
-        description: 'NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。代行サービスでのHIT対応も紹介。',
+        headline: lang === 'ja'
+          ? `NBI HITとは？原因・対処法・どれくらい遅れるか【${SEO_YEAR_MONTH_JA}版】`
+          : `What is NBI HIT? Causes, How to Resolve It & How Long It Takes [${SEO_YEAR_MONTH_EN}]`,
+        description: lang === 'ja'
+          ? 'NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。代行サービスでのHIT対応も紹介。'
+          : 'NBI HIT explained: what it means, why it happens, how to resolve it, and how much extra time it adds. Proxy service handles HIT cases.',
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/nbi-hit/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/nbi-hit/' : 'https://ph-document.com/en/nbi-hit/',
         inLanguage: lang,
         datePublished: '2025-12-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: '株式会社IGRS',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'フィリピン書類取得代行センター',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -492,10 +503,10 @@ export default function NbiHitPage() {
             {t('HIT解決からDFAアポスティーユ・国際配送まで一括サポート。', 'NBI HIT resolution + DFA Apostille + DHL to USA — all handled together from $199.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'nbi_hit', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'nbi_hit', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -576,7 +587,7 @@ export default function NbiHitPage() {
               )}
             </p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【NBI HITページからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【NBI HITページからのお問い合わせ】' : '[NBI HIT Guide Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/nbi-hit" />
               <div>

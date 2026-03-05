@@ -31,11 +31,11 @@ const Footer: React.FC = () => {
           onSubmit={() => trackEvent('form_submit', { location: 'contact', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource })}
           aria-label={t('footer.formAriaLabel')}
         >
-          <input type="hidden" name="_subject" value="【LPお問い合わせ】フィリピン書類取得代行" />
+          <input type="hidden" name="_subject" value={isJa ? '【LPお問い合わせ】フィリピン書類取得代行' : '[Philippine Document Service Inquiry - EN]'} />
           <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
           <input type="hidden" name="cta_variant" value={ctaVariant} />
           <input type="hidden" name="traffic_source" value={trafficSource} />
-          <input type="hidden" name="landing_page" value="https://rescue-lp.pages.dev/" />
+          <input type="hidden" name="landing_page" value="https://ph-document.com/" />
 
           <div>
             <label htmlFor="name" className="block text-xs text-gray-600 mb-1">{t('footer.nameLabel')}</label>

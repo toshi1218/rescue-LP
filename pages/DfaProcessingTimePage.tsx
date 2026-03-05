@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -96,37 +97,47 @@ export default function DfaProcessingTimePage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'DFAアポスティーユガイド', item: 'https://ph-document.com/apostille' },
-          { '@type': 'ListItem', position: 3, name: 'DFAアポスティーユ処理期間', item: 'https://ph-document.com/apostille-processing-time' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'DFAアポスティーユガイド', item: 'https://ph-document.com/ja/apostille/' },
+              { '@type': 'ListItem', position: 3, name: 'DFAアポスティーユ処理期間', item: 'https://ph-document.com/ja/apostille-shori-kikan/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'DFA Apostille Guide', item: 'https://ph-document.com/en/apostille/' },
+              { '@type': 'ListItem', position: 3, name: 'DFA Apostille Processing Time', item: 'https://ph-document.com/en/apostille-processing-time/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/apostille-processing-time/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/apostille-shori-kikan/' : 'https://ph-document.com/en/apostille-processing-time/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'DFA Apostille Processing Time Philippines 2026 — 通常・エクスプレスの日数目安',
-        description: 'DFAアポスティーユ認証の処理期間を2026年最新情報で解説。通常・エクスプレスの日数目安、代行利用時のトータル期間。',
+        headline: lang === 'ja'
+          ? `DFAアポスティーユ処理期間【${SEO_YEAR_MONTH_JA}最新】通常・エクスプレスの日数目安`
+          : `DFA Apostille Processing Time [${SEO_YEAR_MONTH_EN}]: How Long Does It Take?`,
+        description: lang === 'ja'
+          ? 'DFAアポスティーユ認証の処理期間を2026年最新情報で解説。通常・エクスプレスの日数目安、代行利用時のトータル期間。'
+          : 'DFA Apostille processing time explained: standard (10-15 business days) vs express (3-5 days), total timeline with proxy service, and tips for US visa applications.',
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/apostille-processing-time/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/apostille-shori-kikan/' : 'https://ph-document.com/en/apostille-processing-time/',
         inLanguage: lang,
         datePublished: '2025-12-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: '株式会社IGRS',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'フィリピン書類取得代行センター',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -487,10 +498,10 @@ export default function DfaProcessingTimePage() {
             {t('書類取得からアポスティーユ認証・国際配送まで一括対応。', 'PSA/NBI + DFA Apostille + DHL to USA — from $199. Standard 10–15 days or Express 3–5 days.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'apostille_processing_time', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'apostille_processing_time', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -571,7 +582,7 @@ export default function DfaProcessingTimePage() {
               )}
             </p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【DFAアポスティーユ処理期間ページからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【DFAアポスティーユ処理期間ページからのお問い合わせ】' : '[DFA Apostille Processing Time Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/apostille-processing-time" />
               <div>

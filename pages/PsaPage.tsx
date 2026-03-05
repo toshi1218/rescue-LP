@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 import { PsaBirthCertSample } from '../components/DocumentSampleImage';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
@@ -98,36 +99,45 @@ export default function PsaPage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'PSA出生証明書ガイド', item: 'https://ph-document.com/psa-shussei-shomeisho/' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'PSA出生証明書ガイド', item: 'https://ph-document.com/ja/psa-shussei-shomeisho/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'PSA Birth Certificate Guide', item: 'https://ph-document.com/en/psa-birth-certificate/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/psa-shussei-shomeisho/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/psa-shussei-shomeisho/' : 'https://ph-document.com/en/psa-birth-certificate/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: `フィリピンPSA出生証明書の取得方法｜国際結婚・ビザ申請で必要な理由【${SEO_YEAR_MONTH_JA}】`,
-        description: 'PSA出生証明書（旧NSO）の取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・NO RECORD FOUNDのトラブル対処まで徹底ガイド。',
+        headline: lang === 'ja'
+          ? `フィリピンPSA出生証明書の取得方法｜国際結婚・ビザ申請で必要な理由【${SEO_YEAR_MONTH_JA}】`
+          : `PSA Birth Certificate: Requirements, Price & How to Get It [${SEO_YEAR_MONTH_EN}]`,
+        description: lang === 'ja'
+          ? 'PSA出生証明書（旧NSO）の取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・NO RECORD FOUNDのトラブル対処まで徹底ガイド。'
+          : 'Complete guide to PSA Birth Certificate: requirements, fees (PHP 365), how to get it, and proxy service for US visa (K-1, CR-1), USCIS, and international marriage.',
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/psa-shussei-shomeisho/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/psa-shussei-shomeisho/' : 'https://ph-document.com/en/psa-birth-certificate/',
         inLanguage: lang,
         datePublished: '2025-11-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: '株式会社IGRS',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'フィリピン書類取得代行センター',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -635,10 +645,10 @@ export default function PsaPage() {
             )}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'psa_birth_certificate', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'psa_birth_certificate', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -703,7 +713,7 @@ export default function PsaPage() {
               )}
             </p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【PSAガイドからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【PSAガイドからのお問い合わせ】' : '[PSA Birth Certificate Guide Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/psa-shussei-shomeisho/" />
               <div>

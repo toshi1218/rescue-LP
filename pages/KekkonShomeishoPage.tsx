@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -67,16 +68,21 @@ export default function KekkonShomeishoPage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: t('ホーム', 'Home'), item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: t('PSA婚姻証明書ガイド', 'PSA Marriage Certificate Guide'), item: 'https://ph-document.com/kekkon-shomeisho/' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'PSA婚姻証明書ガイド', item: 'https://ph-document.com/ja/psa-kekkon-shomeisho/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'PSA Marriage Certificate Guide', item: 'https://ph-document.com/en/psa-marriage-certificate/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/kekkon-shomeisho/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/psa-kekkon-shomeisho/' : 'https://ph-document.com/en/psa-marriage-certificate/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
@@ -85,18 +91,18 @@ export default function KekkonShomeishoPage() {
         headline: t(`フィリピンPSA婚姻証明書の取得方法｜国際結婚・配偶者ビザで必要な理由【${SEO_YEAR_MONTH_JA}】`, `How to Obtain a Philippine PSA Marriage Certificate | Why It's Required for International Marriage & Spouse Visa [${SEO_YEAR_MONTH_EN}]`),
         description: t('PSA婚姻証明書（フィリピン結婚証明書）の取得方法・必要な場面・費用・期間を解説。フィリピン先行婚姻後の報告手続きに必要な書類をガイド。', 'A guide on how to obtain a PSA Marriage Certificate (Philippine marriage certificate), when it is required, costs, and timeframes. Guides you through documents needed after a Philippines-first marriage.'),
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/kekkon-shomeisho/',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/psa-kekkon-shomeisho/' : 'https://ph-document.com/en/psa-marriage-certificate/',
         inLanguage: lang,
         datePublished: '2025-11-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: '株式会社IGRS',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: t('フィリピン書類取得代行センター', 'Philippine Document Procurement Center'),
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -432,10 +438,10 @@ export default function KekkonShomeishoPage() {
           <h2 className="text-xl font-bold mb-3">{t('PSA婚姻証明書、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}</h2>
           <p className="text-sm text-gray-300 mb-5">{t('PSAへの登録状況確認から取得・郵送まで、日本語でサポートします。', 'PSA Marriage Certificate + DFA Apostille + DHL to USA — all-in-one from $199. USCIS & NVC compliant.')}</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'psa_marriage_certificate', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'psa_marriage_certificate', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -488,7 +494,7 @@ export default function KekkonShomeishoPage() {
             <h2 className="text-xl font-bold text-secondary mb-2">{t('お問い合わせ', 'Contact Us')}</h2>
             <p className="text-sm text-gray-500 mb-6">{t('PSA婚姻証明書の取得代行についてお気軽にご相談ください。', 'Feel free to contact us about proxy procurement of PSA Marriage Certificates.')}</p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【PSA婚姻証明書ガイドからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【PSA婚姻証明書ガイドからのお問い合わせ】' : '[PSA Marriage Certificate Guide Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/kekkon-shomeisho/" />
               <div>

@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_YEAR_MONTH_EN, SEO_LAST_UPDATED_JA, SEO_LAST_UPDATED_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
@@ -69,37 +70,47 @@ export default function ApostilleFeePage() {
     '@graph': [
       {
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/' },
-          { '@type': 'ListItem', position: 2, name: 'DFA Apostille', item: 'https://ph-document.com/apostille' },
-          { '@type': 'ListItem', position: 3, name: 'DFA Apostille Fee', item: 'https://ph-document.com/apostille-fee' },
-        ],
+        itemListElement: lang === 'ja'
+          ? [
+              { '@type': 'ListItem', position: 1, name: 'ホーム', item: 'https://ph-document.com/ja/' },
+              { '@type': 'ListItem', position: 2, name: 'DFAアポスティーユガイド', item: 'https://ph-document.com/ja/apostille/' },
+              { '@type': 'ListItem', position: 3, name: 'DFAアポスティーユ料金', item: 'https://ph-document.com/ja/apostille-ryokin/' },
+            ]
+          : [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ph-document.com/en/' },
+              { '@type': 'ListItem', position: 2, name: 'DFA Apostille Guide', item: 'https://ph-document.com/en/apostille/' },
+              { '@type': 'ListItem', position: 3, name: 'DFA Apostille Fee', item: 'https://ph-document.com/en/apostille-fee/' },
+            ],
       },
       {
         '@type': 'Article',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://ph-document.com/apostille-fee/',
+          '@id': lang === 'ja' ? 'https://ph-document.com/ja/apostille-ryokin/' : 'https://ph-document.com/en/apostille-fee/',
           speakable: {
             '@type': 'SpeakableSpecification',
             cssSelector: ['h1', 'h2'],
           },
         },
-        headline: 'DFA Apostille Fee Philippines 2026 — Official Rates, Express vs Standard & Proxy Pricing',
-        description: 'Complete DFA Apostille fee guide for 2026: PHP 100 standard vs PHP 200 express, proxy service pricing, and total cost estimates by document type.',
+        headline: lang === 'ja'
+          ? `DFAアポスティーユ料金【${SEO_YEAR_MONTH_JA}最新】公式料金・代行費用の比較`
+          : `DFA Apostille Price & Cost [${SEO_YEAR_MONTH_EN}]: How Much Does It Cost?`,
+        description: lang === 'ja'
+          ? 'DFAアポスティーユ認証の公式料金・代行費用を解説。通常・エクスプレスの料金比較と書類種別ごとの費用目安。'
+          : 'Complete DFA Apostille fee guide: PHP 200 standard vs PHP 400 express, proxy service pricing, and total cost estimates by document type.',
         image: 'https://ph-document.com/og-image.png',
-        url: 'https://ph-document.com/apostille-fee/',
-        inLanguage: 'en',
+        url: lang === 'ja' ? 'https://ph-document.com/ja/apostille-ryokin/' : 'https://ph-document.com/en/apostille-fee/',
+        inLanguage: lang,
         datePublished: '2025-12-01',
         dateModified: SEO_DATE_ISO,
         author: {
           '@type': 'Organization',
-          name: 'IGRS Inc.',
+          name: lang === 'ja' ? '株式会社IGRS' : 'IGRS Inc.',
           url: 'https://ph-document.com/',
         },
         publisher: {
           '@type': 'Organization',
-          name: 'Philippine Document Service',
+          name: lang === 'ja' ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
           url: 'https://ph-document.com/',
           logo: {
             '@type': 'ImageObject',
@@ -453,10 +464,10 @@ export default function ApostilleFeePage() {
             {t('書類の種類・通数・エクスプレス要否をお知らせいただければ、最適なプランをご案内します。', 'PSA/NBI + DFA Apostille (PHP 200 standard / PHP 400 express) + DHL to USA — all-in-one from $199.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'apostille_fee', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}
             </Link>
-            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm">
+            <a href="#contact" className="inline-block bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-hover transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'apostille_fee', type: 'consultation' })}>
               {t('無料相談する', 'Free Consultation')}
             </a>
           </div>
@@ -537,7 +548,7 @@ export default function ApostilleFeePage() {
               )}
             </p>
             <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-3">
-              <input type="hidden" name="_subject" value="【DFAアポスティーユ料金ページからのお問い合わせ】" />
+              <input type="hidden" name="_subject" value={lang === 'ja' ? '【DFAアポスティーユ料金ページからのお問い合わせ】' : '[DFA Apostille Fee Inquiry - EN]'} />
               <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
               <input type="hidden" name="landing_page" value="https://ph-document.com/apostille-fee" />
               <div>
