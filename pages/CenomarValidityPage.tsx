@@ -16,8 +16,8 @@ export default function CenomarValidityPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`CENOMARの有効期限は？【${SEO_YEAR_MONTH_JA}版】"6ヶ月"の根拠と用途別の考え方｜フィリピン書類センター`, `CENOMAR Validity Period: How Long Is It Valid? [${SEO_YEAR_MONTH_EN}]`),
-    t('CENOMARの有効期限は発行から6ヶ月が目安。この"6ヶ月"の根拠、用途（国際結婚・配偶者ビザ・帰化）別の期限の考え方、取得タイミングの目安を解説。', 'CENOMAR is typically valid for 6 months. Learn the basis for this period and how it applies to different uses (international marriage, spouse visa, naturalization).')
+    t(`CENOMARの有効期限【${SEO_YEAR_MONTH_JA}】結婚・ビザ申請に間に合う取得タイミングとは`, `CENOMAR Validity [${SEO_YEAR_MONTH_EN}]: When to Get It for Marriage or Visa`),
+    t('CENOMARは6ヶ月以内が目安。国際結婚・配偶者ビザの手続き中に期限切れになると再取得が必要です。当センターなら最適なタイミングで代行取得。まずは無料相談を。', "CENOMAR is typically valid for 6 months. If it expires during your marriage or visa process, you\u2019ll need a new one. We time the retrieval perfectly. Free consultation.")
   );
 
   const faqs = [
@@ -442,11 +442,12 @@ export default function CenomarValidityPage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
+          <p className="text-xs font-bold text-primary mb-2">{t('結婚・ビザ手続き中の方へ', 'For Those in the Middle of Marriage or Visa Procedures')}</p>
           <h2 className="text-xl font-bold mb-3">
-            {t('タイミングの相談も含めてお任せ', 'Too Much Hassle? Let Us Handle It')}
+            {t('期限切れで再取得になる前に。最適なタイミングで代行取得します', "Don\u2019t let CENOMAR expire mid-process. We time the retrieval perfectly for your schedule")}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('手続きスケジュールに合わせた取得タイミングをご案内します。', 'CENOMAR + DFA Apostille + DHL to USA — from $199. We advise on timing for your K-1 or CR-1 visa.')}
+            {t('手続きスケジュールに合わせた取得タイミングをご案内。CENOMAR＋DFAアポスティーユまで一括対応。', 'We advise on the right timing and handle CENOMAR + DFA Apostille retrieval to fit your K-1, CR-1, or marriage schedule.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'cenomar_validity', type: 'pricing' })}>

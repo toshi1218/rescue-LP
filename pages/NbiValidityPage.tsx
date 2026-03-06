@@ -16,8 +16,8 @@ export default function NbiValidityPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`NBI Clearanceの有効期限は？【${SEO_YEAR_MONTH_JA}版】1年ルールと用途別の注意点｜フィリピン書類センター`, `NBI Clearance Validity: How Long Is It Valid? [${SEO_YEAR_MONTH_EN}]`),
-    t('NBI Clearanceの有効期限は発行から1年。ただし配偶者ビザ・国際結婚など用途によっては6ヶ月以内が実務的な基準。取得タイミングの目安を解説。', 'NBI Clearance is valid for 1 year from issuance. Learn how validity applies to spouse visa and international marriage use cases.')
+    t(`NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】ビザ申請に間に合う期限で取得するには`, `NBI Clearance Validity [${SEO_YEAR_MONTH_EN}]: Get It in Time for Your Visa Application`),
+    t('NBI Clearanceは発行から1年有効ですが、配偶者ビザ申請では6ヶ月以内が実務的な基準。取得タイミングを間違えると再取得が必要に。当センターが最適なタイミングでご案内します。', "NBI Clearance is valid for 1 year, but spouse visa applications often require it within 6 months. Timing matters \u2014 we help you get it at the right time. Free consultation.")
   );
 
   const faqs = [
@@ -433,11 +433,12 @@ export default function NbiValidityPage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
+          <p className="text-xs font-bold text-primary mb-2">{t('配偶者ビザ申請中の方へ', 'For Spouse Visa Petitioners')}</p>
           <h2 className="text-xl font-bold mb-3">
-            {t('NBI Clearanceの取得、当センターにお任せください', 'Too Much Hassle? Let Us Handle It')}
+            {t('ビザ申請の締切に間に合う時期に、NBI取得を代行します', "We retrieve NBI Clearance at the right time to meet your visa application deadline")}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('取得タイミングのご相談からDFAアポスティーユまで一括サポート。', 'NBI Clearance + DFA Apostille + DHL to USA — from $199. No Philippine address needed.')}
+            {t('取得タイミングのご相談からDFAアポスティーユ・郵送まで一括サポート。期限切れリスクをなくします。', 'From timing consultation to NBI retrieval, DFA Apostille, and DHL shipping — we eliminate the risk of expiry during your visa process.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'nbi_validity', type: 'pricing' })}>

@@ -16,8 +16,8 @@ export default function KikaShinseiGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`フィリピン人 帰化申請ガイド【${SEO_YEAR_MONTH_JA}最新】必要書類・手続きの流れ・費用`, `Philippine Documents for Naturalization [${SEO_YEAR_MONTH_EN}]: PSA & NBI Guide`),
-    t('フィリピン国籍の方が日本に帰化するための手続き・必要書類（PSA・NBI等）・費用・審査期間をわかりやすく解説。', 'How to obtain Philippine documents (PSA Birth Certificate, NBI Clearance) required for naturalization applications. DFA Apostille included. Proxy service ships to USA.')
+    t(`フィリピン人の帰化申請 必要書類を代行取得【${SEO_YEAR_MONTH_JA}】PSA・NBI・アポスティーユ`, `Philippine Documents for Japan Naturalization [${SEO_YEAR_MONTH_EN}]: PSA & NBI Retrieval Service`),
+    t('帰化申請に必要なPSA出生証明書・NBI Clearance・DFAアポスティーユ、当センターが一括代行。法務局提出に間に合うよう迅速対応。日本人配偶者の方もご相談ください。', "Applying for naturalization in Japan? We retrieve PSA Birth Certificate, NBI Clearance + DFA Apostille for your application. Fast turnaround. Free consultation for applicants and their spouses.")
   );
 
   const steps = [
@@ -339,13 +339,13 @@ export default function KikaShinseiGuidePage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
-          <p className="text-xs text-primary font-bold mb-2">{t('帰化申請のフィリピン書類でお困りの方へ', 'For those struggling with Philippine documents for naturalization')}</p>
-          <h2 className="text-xl font-bold mb-3">{t('PSA・NBI取得はまるごとお任せください', 'Too Much Hassle? Let Us Handle It')}</h2>
+          <p className="text-xs text-primary font-bold mb-2">{t('帰化申請中の方・日本人配偶者の方へ', 'For Naturalization Applicants & Their Japanese Spouses')}</p>
+          <h2 className="text-xl font-bold mb-3">{t('帰化申請は一生に一度。フィリピン書類はプロに任せて、審査に集中してください', "Naturalization happens once. Let us handle the Philippine documents so you can focus on the application itself")}</h2>
           <p className="text-sm text-gray-300 mb-5">
             {lang === 'ja' ? (
-              <>PSA出生証明書・NBI Clearance・アポスティーユ認証の取得代行まで、<br />日本語だけで完結します。まずは無料相談からどうぞ。</>
+              <>PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。<br />法務局の要件を熟知したスタッフが、必要書類を漏れなく揃えます。</>
             ) : (
-              <>PSA Birth Certificate + NBI Clearance + DFA Apostille + DHL to your address — all-in-one from $199.<br />Full English support. Start with a free consultation.</>
+              <>PSA Birth Certificate + NBI Clearance + DFA Apostille + DHL to your address — all-in-one.<br />Our staff know exactly what Japan's Legal Affairs Bureau requires. Free consultation.</>
             )}
           </p>
           <div className="flex flex-wrap justify-center gap-3">

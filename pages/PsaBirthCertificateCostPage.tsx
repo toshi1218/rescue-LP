@@ -16,8 +16,8 @@ export default function PsaBirthCertificateCostPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`PSA出生証明書の費用・料金【${SEO_YEAR_MONTH_JA}最新】自分で取得 vs 代行の比較｜フィリピン書類センター`, `PSA Birth Certificate Price & Cost [${SEO_YEAR_MONTH_EN}] - Official Fee PHP 365+`),
-    t('PSA出生証明書の公式料金・自分で取得する場合の費用・代行利用時の総費用を解説。DFAアポスティーユ込みの料金も紹介。', `How much does a PSA birth certificate cost in ${SEO_YEAR}? Official PSA fee: PHP 365 (~$6.50). PSAHelpLine online: PHP 500-600. Proxy service with DHL shipping: from $199. Full price comparison inside.`)
+    t(`PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】自分で取得は損？代行が安心な理由｜フィリピン書類センター`, `PSA Birth Certificate Cost [${SEO_YEAR_MONTH_EN}]: Why DIY Costs More Than You Think`),
+    t('PSA出生証明書は自分で取れても、DFAアポスティーユなしでは日本で使えません。結局かかる費用と手間を比較すると代行が確実。料金・無料見積もりはこちら。', `PSA birth certificate official fee is PHP 365, but you also need DFA Apostille to use it abroad. Compare total DIY cost vs. our all-in-one service from $199. Free quote.`)
   );
 
   const faqs = [

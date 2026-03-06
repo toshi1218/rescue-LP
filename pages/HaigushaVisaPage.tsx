@@ -15,8 +15,8 @@ export default function HaigushaVisaPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`配偶者ビザ フィリピン書類チェックリスト【${SEO_YEAR_MONTH_JA}版】必要書類・取得方法`, `Philippine Documents for Spouse Visa Application [${SEO_YEAR_MONTH_EN} Checklist]`),
-    t('配偶者ビザ申請に必要なフィリピン書類を完全リスト化。PSA・CENOMAR・NBI等の取得方法・費用・注意点を解説。代行サービスで一括取得対応。', 'Complete checklist of Philippine documents required for a Japanese spouse visa application. Covers PSA, CENOMAR, and NBI Clearance retrieval.')
+    t(`配偶者ビザ申請 フィリピン書類を丸ごと代行取得【${SEO_YEAR_MONTH_JA}】PSA・NBI・アポスティーユ`, `Spouse Visa Documents: We Get Everything for You [${SEO_YEAR_MONTH_EN}] — PSA, NBI & Apostille`),
+    t('配偶者ビザに必要なフィリピン書類、何が必要かわからなくても大丈夫。当センターがPSA・CENOMAR・NBI・アポスティーユをまとめて取得。日本人配偶者の方、まずは無料相談を。', "Overwhelmed by Philippine document requirements for a spouse visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship everything to you. Free consultation for petitioners.")
   );
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -390,10 +390,10 @@ export default function HaigushaVisaPage() {
         </section>
 
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
-          <p className="text-xs text-primary font-bold mb-2">{t('フィリピン書類の取得はお任せください', 'Leave Philippine document retrieval to us')}</p>
-          <h2 className="text-xl font-bold mb-3">{t('CENOMAR・PSA・NBI、まとめて代行', 'Too Much Hassle? Let Us Handle It')}</h2>
+          <p className="text-xs text-primary font-bold mb-2">{t('日本人・アメリカ人の申請者の方へ', 'For Japanese & American Visa Petitioners')}</p>
+          <h2 className="text-xl font-bold mb-3">{t('配偶者ビザは書類が命。必要なものを全部揃えてお届けします', "Spouse visa applications live or die by the documents. We make sure you have everything \u2014 right and on time")}</h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('ビザ申請に必要なフィリピン書類を英語サポートで取得代行。\nまずは無料相談からどうぞ。', 'CENOMAR + PSA + NBI + DFA Apostille + DHL to USA — all-in-one from $199. USCIS & NVC compliant.')}
+            {t('CENOMAR・PSA・NBI・DFAアポスティーユを一括代行。入管・大使館の要件を熟知したスタッフが対応します。', 'CENOMAR + PSA + NBI + DFA Apostille + DHL to your address. Our staff know exactly what Japanese immigration and US embassies require.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'haigusha_visa', type: 'pricing' })}>

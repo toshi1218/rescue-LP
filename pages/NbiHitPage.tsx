@@ -16,8 +16,8 @@ export default function NbiHitPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`NBI HITとは？【${SEO_YEAR_MONTH_JA}版】原因・対処法・どれくらい遅れるか徹底解説｜フィリピン書類センター`, `What Is an NBI HIT? Causes, Solutions & Delays [${SEO_YEAR_MONTH_EN}]`),
-    t('NBI HITの意味・原因・解決手順・追加でかかる日数を詳しく解説。NBI Clearance申請でHIT（MATCH FOUND）が出た場合の対処法と代行サービスの活用方法。', 'Understand what an NBI HIT (MATCH FOUND) means, why it happens, how to resolve it, and how long the delay will be.')
+    t(`NBI HITが出た！配偶者ビザに間に合う？プロに任せれば最短解決【${SEO_YEAR_MONTH_JA}】`, `NBI HIT? Don\u2019t Panic \u2014 We Resolve It Fast for Your Visa [${SEO_YEAR_MONTH_EN}]`),
+    t('NBI HITが出てビザ申請に間に合うか不安な方へ。当センターがHIT解決からDFAアポスティーユまで代行。配偶者ビザ・就労ビザの締切に間に合わせます。まず無料相談を。', "NBI HIT (MATCH FOUND) delaying your spouse visa or immigration? We handle HIT resolution + NBI Clearance + DFA Apostille. We\u2019ve helped many petitioners meet their deadlines. Free consultation.")
   );
 
   const faqs = [
@@ -496,11 +496,12 @@ export default function NbiHitPage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
+          <p className="text-xs font-bold text-primary mb-2">{t('ビザ申請の締切が迫っている方へ', 'Visa Deadline Approaching?')}</p>
           <h2 className="text-xl font-bold mb-3">
-            {t('NBI HIT案件、当センターにお任せください', 'Too Much Hassle? Let Us Handle It')}
+            {t('NBI HITで足止めされている時間はありません。今すぐご相談ください', "NBI HIT is stalling your visa \u2014 contact us now and we\u2019ll move fast")}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('HIT解決からDFAアポスティーユ・国際配送まで一括サポート。', 'NBI HIT resolution + DFA Apostille + DHL to USA — all handled together from $199.')}
+            {t('HIT解決からDFAアポスティーユ・国際配送まで一括サポート。配偶者ビザ・就労ビザの締切に間に合わせます。', 'HIT resolution + DFA Apostille + DHL to USA — all handled together. We\u2019ve helped many petitioners meet tight deadlines.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'nbi_hit', type: 'pricing' })}>

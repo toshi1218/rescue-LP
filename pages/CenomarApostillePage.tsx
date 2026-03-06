@@ -16,8 +16,8 @@ export default function CenomarApostillePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`CENOMARにDFAアポスティーユは必要？【${SEO_YEAR_MONTH_JA}最新】用途別の結論｜フィリピン書類センター`, `Does CENOMAR Need DFA Apostille? [${SEO_YEAR_MONTH_EN} Guide]`),
-    t('CENOMARにDFAアポスティーユ認証が必要かどうかを用途別（国際結婚LCCM・配偶者ビザ・帰化）に解説。東京フィリピン大使館の要件をもとに正確な情報を提供。', 'Find out whether your CENOMAR needs DFA Apostille authentication. Covers international marriage (LCCM), spouse visa, and naturalization use cases.')
+    t(`CENOMARのアポスティーユ【${SEO_YEAR_MONTH_JA}】必要かどうか用途別に即答＋代行取得`, `CENOMAR Apostille [${SEO_YEAR_MONTH_EN}]: Do You Need It? We Handle It Either Way`),
+    t('CENOMARにアポスティーユが必要かどうか、用途（国際結婚・配偶者ビザ・帰化）によって異なります。判断に迷ったら当センターへ。アポスティーユ付き代行取得も対応。無料相談。', "Not sure if your CENOMAR needs DFA Apostille? It depends on your use case. We advise and handle retrieval with or without Apostille. Free consultation for marriage and visa applicants.")
   );
 
   const faqs = [
@@ -452,11 +452,12 @@ export default function CenomarApostillePage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
+          <p className="text-xs font-bold text-primary mb-2">{t('国際結婚・配偶者ビザ申請中の方へ', 'For International Marriage & Visa Applicants')}</p>
           <h2 className="text-xl font-bold mb-3">
-            {t('CENOMAR＋アポスティーユ、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}
+            {t('アポスティーユが必要かどうか、まず相談してください。判断から取得まで任せられます', "Not sure if you need Apostille? Ask us first \u2014 we\u2019ll advise and handle everything")}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('用途確認からフィリピン現地対応まで日本語サポート。', 'CENOMAR + DFA Apostille + DHL to USA — all-in-one from $199. USCIS & NVC compliant.')}
+            {t('CENOMAR＋DFAアポスティーユを一括代行。国際結婚・配偶者ビザの要件を熟知したスタッフが対応します。', 'CENOMAR + DFA Apostille + DHL to USA — all-in-one. Our staff know exactly what USCIS, NVC, and Japanese immigration require.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'cenomar_apostille', type: 'pricing' })}>

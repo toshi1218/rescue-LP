@@ -16,8 +16,8 @@ export default function CenomarGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`CENOMAR（独身証明書）取得方法【${SEO_YEAR_MONTH_JA}最新】費用・期間・代行｜フィリピン書類センター`, `What is CENOMAR? PSA Certificate of No Marriage: Meaning, Requirements & How to Get It [${SEO_YEAR_MONTH_EN}]`),
-    t('フィリピン独身証明書CENOMARの取得方法を自分で・大使館・代行の3パターンで解説。費用・期間・有効期限・トラブル対処まで徹底ガイド。', `What is CENOMAR (Certificate of No Marriage Record)? Complete ${SEO_YEAR} guide: PSA CENOMAR meaning, requirements, how to get it for US visa, K-1, CR-1, or international marriage. Retrieval service ships worldwide.`)
+    t(`CENOMAR（独身証明書）代行取得【${SEO_YEAR_MONTH_JA}】日本語だけでOK｜フィリピン書類センター`, `CENOMAR: What It Is & How We Get It for You [${SEO_YEAR_MONTH_EN}] — Ships Worldwide`),
+    t('国際結婚・配偶者ビザに必要なCENOMAR、自分で取るのは大変です。当センターなら日本語だけで依頼OK、DFAアポスティーユ付きで届きます。まずは無料相談。', `Need a CENOMAR for marriage or visa? Don\u2019t struggle alone \u2014 we retrieve it from PSA with DFA Apostille and ship it to you. Free consultation available.`)
   );
 
   const faqs = [

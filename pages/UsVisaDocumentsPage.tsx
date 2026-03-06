@@ -13,8 +13,8 @@ export default function UsVisaDocumentsPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`米国ビザ（CR-1/IR-1・K-1）フィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】`, `Philippine Documents for US Visa: CR-1, IR-1 & K-1 [${SEO_YEAR_MONTH_EN}]`),
-    t('CR-1/IR-1・K-1ビザ申請に必要なフィリピン書類（PSA・CENOMAR・NBI）の取得方法とDFAアポスティーユを解説。', 'Complete guide to Philippine documents required for US CR-1/IR-1 and K-1 visa applications. Covers PSA, CENOMAR, and NBI Clearance with DFA Apostille.')
+    t(`米国ビザ（CR-1/IR-1・K-1）フィリピン書類を代行取得【${SEO_YEAR_MONTH_JA}】アポスティーユ付き`, `K-1 / CR-1 Visa: We Get All Philippine Documents for You [${SEO_YEAR_MONTH_EN}]`),
+    t('K-1・CR-1/IR-1ビザに必要なPSA・CENOMAR・NBI書類、アメリカ人の申請者の方が代わりに手配できます。当センターがアポスティーユ付きで一括取得。まずは無料相談。', "US petitioner for a K-1 or CR-1/IR-1 visa? We retrieve all Philippine documents \u2014 PSA, CENOMAR, NBI + DFA Apostille \u2014 and ship to your door. Free consultation for American petitioners.")
   );
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);

@@ -17,8 +17,8 @@ export default function PsaPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`PSA出生証明書 要件・費用・取得方法【${SEO_YEAR_MONTH_JA}最新】｜フィリピン書類取得代行センター`, `PSA Birth Certificate: Requirements, Fees & How to Get It [${SEO_YEAR_MONTH_EN}]`),
-    t('PSA出生証明書の申請要件・費用・取得方法を解説。2026年最新の必要情報・PSA手数料（365ペソ）・代行費用まで。NO RECORD FOUND対処も。無料相談受付中。', 'Complete guide to getting a PSA Birth Certificate from the Philippines. Learn requirements, fees, processing time, and how our service can help.')
+    t(`PSA出生証明書の代行取得【${SEO_YEAR_MONTH_JA}】アポスティーユ付きで届く｜フィリピン書類センター`, `PSA Birth Certificate: We Retrieve It for You + DFA Apostille [${SEO_YEAR_MONTH_EN}]`),
+    t('フィリピンのPSA出生証明書、自分で取り寄せても結局アポスティーユが必要です。当センターならPSA取得からDFA認証・郵送まで丸ごとお任せ。日本語対応・無料相談。', 'Need a PSA Birth Certificate from the Philippines? We handle retrieval + DFA Apostille + shipping to your door. No trip to the Philippines needed. Free consultation.')
   );
 
   const faqs = [
@@ -637,11 +637,12 @@ export default function PsaPage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
-          <h2 className="text-xl font-bold mb-3">{t('PSA書類取得、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}</h2>
+          <p className="text-xs font-bold text-primary mb-2">{t('日本人・アメリカ人の配偶者の方へ', 'For Japanese & American Petitioners')}</p>
+          <h2 className="text-xl font-bold mb-3">{t('大切なパートナーのために、書類はプロに任せてください', "Your partner's documents — handled by professionals, so you can focus on what matters")}</h2>
           <p className="text-sm text-gray-300 mb-5">
             {t(
-              '面倒な手続きはプロにお任せください。日本語でサポートします。',
-              'PSA Birth Certificate + DFA Apostille + DHL to USA — all-in-one from $199. No Philippine address needed.'
+              '国際結婚・配偶者ビザは人生の一大イベント。PSA取得からDFAアポスティーユ・郵送まで、当センターが責任を持って代行します。',
+              'International marriage and spouse visas are life-changing events. We handle PSA retrieval, DFA Apostille, and shipping — so nothing falls through the cracks.'
             )}
           </p>
           <div className="flex flex-wrap justify-center gap-3">

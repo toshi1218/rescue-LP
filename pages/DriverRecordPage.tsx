@@ -17,8 +17,8 @@ export default function DriverRecordPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`外免切替に必要なLTOドライバーズレコード（運転記録）取得ガイド【${SEO_YEAR_MONTH_JA}】｜フィリピン書類センター`, `LTO Driver's Record Philippines [${SEO_YEAR_MONTH_EN}]: How to Obtain & What It Contains`),
-    t('フィリピンLTO発行の運転記録証明書（Driver\'s Record）の取得方法・必要書類・期間・DFAアポスティーユの要否を解説。外免切替を目指す方向けの完全ガイド。', "How to obtain a Philippine LTO Driver's Record. Covers required documents, 3–8 week processing time, DFA Apostille requirements, and proxy service shipping to USA.")
+    t(`LTOドライバーズレコード代行取得【${SEO_YEAR_MONTH_JA}】外免切替・企業採用に｜フィリピン書類センター`, `LTO Driver\u2019s Record: We Get It for You [${SEO_YEAR_MONTH_EN}] \u2014 License Conversion & Employment`),
+    t('外免切替やフィリピン人採用に必要なLTOドライバーズレコード、自分では取りにくい書類です。当センターが代行取得しDFAアポスティーユ付きでお届け。企業様もご相談ください。', "Need an LTO Driver\u2019s Record for license conversion or employment verification? We retrieve it with DFA Apostille and ship to you. Ideal for employers and spouses. Free consultation.")
   );
 
   const faqs = [
@@ -505,11 +505,12 @@ export default function DriverRecordPage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
+          <p className="text-xs font-bold text-primary mb-2">{t('企業担当者・日本人配偶者の方へ', 'For Employers & Japanese Spouses')}</p>
           <h2 className="text-xl font-bold mb-3">
-            {t('LTO書類の取得、当センターにお任せください', 'Too Much Hassle? Let Us Handle It')}
+            {t('フィリピン人スタッフの免許切替、会社でまとめてお任せください', "Handling license conversion for your Filipino employee? We make it easy for employers.")}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('外免切替に必要なLTO書類からDFAアポスティーユまで一括対応。日本語サポートあり。', 'LTO Driver Record + DFA Apostille + DHL to your address — all-in-one from $199. Full English support.')}
+            {t('LTOドライバーズレコード取得からDFAアポスティーユ・郵送まで一括対応。個人・企業どちらもご相談ください。', 'LTO Driver Record + DFA Apostille + DHL shipping — all-in-one. We work with both individuals and companies.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'driver_record', type: 'pricing' })}>

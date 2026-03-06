@@ -15,8 +15,8 @@ export default function KokusaiKekkonGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`フィリピン国際結婚ガイド【${SEO_YEAR_MONTH_JA}最新】手続き・必要書類・費用を徹底解説`, `Marrying a Filipino/Filipina: Complete Document Guide [${SEO_YEAR_MONTH_EN}]`),
-    t('フィリピン人との国際結婚手続きをステップ別に解説。日本先行・フィリピン先行の2パターン、必要書類（CENOMAR・PSA等）・費用・期間まで網羅。', 'Step-by-step guide to marrying a Filipino/Filipina. Covers Philippines-first process, required documents (CENOMAR, PSA Birth Certificate, NBI Clearance), and DFA Apostille for US visa.')
+    t(`フィリピン人との国際結婚 必要書類を丸ごと代行【${SEO_YEAR_MONTH_JA}】CENOMAR・PSA・NBI`, `Marrying a Filipino? We Get All the Documents You Need [${SEO_YEAR_MONTH_EN}]`),
+    t('フィリピン人との結婚手続き、書類集めが一番大変です。CENOMAR・PSA出生証明書・NBI、当センターがまとめて取得しアポスティーユ付きでお届け。日本人配偶者の方もご安心ください。', "Planning to marry a Filipino/Filipina? We handle all Philippine documents \u2014 CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille. Shipped to your door. Free consultation for US and JP petitioners.")
   );
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -445,12 +445,12 @@ export default function KokusaiKekkonGuidePage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
-          <p className="text-xs text-primary font-bold mb-2">{t('書類の準備でお困りの方へ', 'For those struggling with document preparation')}</p>
-          <h2 className="text-xl font-bold mb-3">{t('書類取得はまるごとお任せください', 'Too Much Hassle? Let Us Handle It')}</h2>
+          <p className="text-xs text-primary font-bold mb-2">{t('日本人・アメリカ人の配偶者の方へ', 'For Japanese & American Petitioners')}</p>
+          <h2 className="text-xl font-bold mb-3">{t('国際結婚は人生の一大イベント。書類の心配はこちらに任せてください', "International marriage is a once-in-a-lifetime event. Leave the documents to us \u2014 we\u2019ve done this many times")}</h2>
           <p className="text-sm text-gray-300 mb-5">
             {t(
-              'CENOMAR・PSA・NBI取得の代行から翻訳サポートまで、\n日本語だけで完結します。まずは無料相談からどうぞ。',
-              'CENOMAR + PSA + NBI + DFA Apostille + DHL to USA — all-in-one from $199. USCIS & NVC compliant.'
+              'CENOMAR・PSA・NBI取得からDFAアポスティーユまで、日本語だけで完結。大切なパートナーのために、書類はプロに任せてください。',
+              'CENOMAR + PSA + NBI + DFA Apostille + DHL to your door. We handle every document your Filipino partner needs for your marriage or visa application.'
             )}
           </p>
           <div className="flex flex-wrap justify-center gap-3">

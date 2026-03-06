@@ -16,8 +16,8 @@ export default function ApostilleFeePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`DFAアポスティーユ 料金【${SEO_YEAR_MONTH_JA}最新】公式費用・代行費用・エクスプレスの違い｜フィリピン書類センター`, `DFA Apostille Fees [${SEO_YEAR_MONTH_EN}]: Official Costs & Service Pricing`),
-    t('フィリピンDFAアポスティーユ認証の公式料金・代行費用・エクスプレス追加料金を解説。CENOMAR・PSA・NBI書類ごとの費用目安も掲載。', 'Official DFA Apostille fees and retrieval service pricing. Includes express surcharges and cost estimates for CENOMAR, PSA, and NBI documents.')
+    t(`DFAアポスティーユの料金【${SEO_YEAR_MONTH_JA}】代行費用込みの総額を公開｜フィリピン書類センター`, `DFA Apostille Cost [${SEO_YEAR_MONTH_EN}]: Full Pricing Including Proxy Service`),
+    t('DFAアポスティーユの公式料金＋代行費用＋国際郵便の総額を公開。CENOMAR・PSA・NBI別の費用目安も掲載。見積もり無料、まずはお気軽にご相談ください。', "Full cost breakdown for DFA Apostille: official fees + proxy service + international shipping. Compare CENOMAR, PSA, and NBI pricing. Free quote available.")
   );
 
   const faqs = [
@@ -457,11 +457,12 @@ export default function ApostilleFeePage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
+          <p className="text-xs font-bold text-primary mb-2">{t('費用が気になる方へ', 'Wondering About the Total Cost?')}</p>
           <h2 className="text-xl font-bold mb-3">
-            {t('DFAアポスティーユの代行依頼・お見積もり', 'Too Much Hassle? Let Us Handle It')}
+            {t('何通必要か、アポスティーユは要るか、まず相談してください。無料で見積もります', "Not sure how many documents or whether Apostille is needed? Ask us \u2014 free quote, no obligation")}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('書類の種類・通数・エクスプレス要否をお知らせいただければ、最適なプランをご案内します。', 'PSA/NBI + DFA Apostille (PHP 200 standard / PHP 400 express) + DHL to USA — all-in-one from $199.')}
+            {t('書類の種類・通数・エクスプレス要否をお知らせいただければ、最適なプランと総費用をご案内します。', 'Tell us your document type, quantity, and urgency \u2014 we\u2019ll give you a full cost breakdown including DFA fees and shipping.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'apostille_fee', type: 'pricing' })}>

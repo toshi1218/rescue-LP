@@ -16,8 +16,8 @@ export default function KekkonShomeishoPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`PSA婚姻証明書 取得方法【${SEO_YEAR_MONTH_JA}最新】費用・期間・国際結婚・配偶者ビザ向け`, `PSA Marriage Certificate: How to Get It for US Visa (CR-1/IR-1 & K-1) [${SEO_YEAR_MONTH_EN}]`),
-    t('PSA婚姻証明書の取得方法・必要な場面・費用・期間を解説。国際結婚・配偶者ビザ申請に必要なフィリピン結婚証明書の代行取得に対応。', 'How to obtain a Philippine PSA Marriage Certificate for US CR-1/IR-1 spousal visa NVC submission. With DFA Apostille authentication. Retrieval service ships to USA.')
+    t(`PSA婚姻証明書の代行取得【${SEO_YEAR_MONTH_JA}】配偶者ビザ・国際結婚に｜フィリピン書類センター`, `PSA Marriage Certificate + Apostille: We Handle It All [${SEO_YEAR_MONTH_EN}]`),
+    t('配偶者ビザ・国際結婚に必要なPSA婚姻証明書、自分で取ってもDFAアポスティーユがないと受理されません。当センターが取得から認証まで一括代行。まずは無料相談。', 'Need a PSA Marriage Certificate for your visa or marriage registration? We retrieve it with DFA Apostille and ship it to you. No trip to the Philippines. Free consultation.')
   );
 
   const faqs = [

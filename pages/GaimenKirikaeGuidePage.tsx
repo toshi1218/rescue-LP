@@ -16,8 +16,8 @@ export default function GaimenKirikaeGuidePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`フィリピン運転免許 外免切替ガイド【${SEO_YEAR_MONTH_JA}最新】LTO書類・手続き・費用`, `Philippine LTO Driver's License Documents Guide [${SEO_YEAR_MONTH_EN}]`),
-    t('フィリピン運転免許を日本免許に切り替える手順・必要LTO書類・費用を解説。LTO書類の代行取得に対応。無料相談受付中。', "How to obtain Philippine LTO driver's license records. Required for license conversion or background checks. Proxy service ships to your US address via DHL.")
+    t(`フィリピン免許→日本免許 外免切替の書類代行【${SEO_YEAR_MONTH_JA}】LTO取得からアポスティーユまで`, `Convert Philippine License to US/Japan: LTO Documents We Get for You [${SEO_YEAR_MONTH_EN}]`),
+    t('フィリピン人従業員やご家族の運転免許切替に必要なLTO書類、自分で取るのは困難です。当センターがLTO書類取得からDFAアポスティーユまで一括代行。企業様もご相談ください。', "Need Philippine LTO documents for a driver's license conversion? We handle LTO record retrieval + DFA Apostille + shipping. Ideal for employers and spouses. Free consultation.")
   );
 
   const faqs = [
@@ -405,8 +405,9 @@ export default function GaimenKirikaeGuidePage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
-          <h2 className="text-xl font-bold mb-3">{t('LTO書類取得、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}</h2>
-          <p className="text-sm text-gray-300 mb-5">{t('外免切替に必要なLTO書類・DFAアポスティーユを日本語サポートで代行します。', 'LTO Driver Record + DFA Apostille + DHL to your address — all-in-one from $199. Full English support.')}</p>
+          <p className="text-xs font-bold text-primary mb-2">{t('企業担当者・日本人配偶者の方へ', 'For Employers & Spouses Sponsoring License Conversion')}</p>
+          <h2 className="text-xl font-bold mb-3">{t('フィリピン人の免許切替、書類はこちらで全部揃えます', "We handle all LTO documents for your Filipino employee or spouse\u2019s license conversion")}</h2>
+          <p className="text-sm text-gray-300 mb-5">{t('LTO書類取得からDFAアポスティーユ・郵送まで一括代行。企業・個人どちらもご相談ください。', 'LTO Driver Record + DFA Apostille + DHL shipping — all-in-one. We work with both companies and individuals.')}</p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'drivers_license_conversion', type: 'pricing' })}>
               {t('料金プランを見る', 'View Pricing Plans')}

@@ -14,8 +14,8 @@ export default function Cr1VisaDocumentsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useMeta(
-    t(`CR-1/IR-1配偶者ビザ フィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】PSA・NBI・Apostille`, `CR-1/IR-1 Spouse Visa: Philippine Documents Guide [${SEO_YEAR_MONTH_EN}] — PSA, NBI & Apostille`),
-    t('CR-1/IR-1ビザ申請に必要なフィリピン書類（PSA婚姻証明書・NBI Clearance）の取得方法とDFAアポスティーユを解説。NVC提出対応。', 'Full guide to Philippine documents for the CR-1/IR-1 spousal immigrant visa: PSA Marriage Certificate, NBI Clearance, and DFA Apostille for NVC submission. Retrieval service available.')
+    t(`CR-1/IR-1配偶者ビザ フィリピン書類を代行取得【${SEO_YEAR_MONTH_JA}】NVC提出用アポスティーユ付き`, `CR-1/IR-1 Spouse Visa Documents: We Get Them for You [${SEO_YEAR_MONTH_EN}] \u2014 NVC Ready`),
+    t('CR-1/IR-1ビザのNVC提出に必要なPSA婚姻証明書・NBI Clearance・DFAアポスティーユ、アメリカ人の申請者の方が代わりに手配できます。一括取得・郵送。まずは無料相談。', "US petitioner for CR-1/IR-1 visa? We retrieve PSA Marriage Certificate, NBI Clearance + DFA Apostille for NVC submission and ship to your US address. Free consultation for American petitioners.")
   );
 
   const jsonLd = {

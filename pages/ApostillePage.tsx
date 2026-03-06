@@ -17,8 +17,8 @@ export default function ApostillePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`DFAアポスティーユ 処理期間・取得方法・費用【${SEO_YEAR_MONTH_JA}最新】`, `DFA Apostille: How to Get It, Processing Time & Fees [${SEO_YEAR_MONTH_EN}]`),
-    t('フィリピンDFAアポスティーユ認証の処理期間・取得方法・費用・要件を解説。CENOMAR・PSA・NBI対応。日本語サポートあり・無料見積もり受付中。', 'Complete guide to DFA Apostille authentication in the Philippines. Covers CENOMAR, PSA, and NBI documents. English support available.')
+    t(`DFAアポスティーユ取得代行【${SEO_YEAR_MONTH_JA}】日本にいながら最短2週間｜フィリピン書類センター`, `DFA Apostille Service: We Get It for You [${SEO_YEAR_MONTH_EN}] — No Trip to Philippines`),
+    t('フィリピンに行かずにDFAアポスティーユを取得。PSA・NBI・CENOMAR対応、現地スタッフが代行取得し国際郵便でお届け。日本語だけで完結。まずは無料相談。', 'Need a DFA Apostille but can\u2019t go to the Philippines? We handle everything \u2014 PSA, NBI, CENOMAR authentication \u2014 and ship to you. Free consultation available.')
   );
 
   const faqs = [

@@ -14,8 +14,8 @@ export default function K1VisaDocumentsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useMeta(
-    t(`K-1婚約者ビザ フィリピン書類ガイド【${SEO_YEAR_MONTH_JA}版】CENOMAR・PSA・NBI`, `K-1 Fiancé Visa: Philippine Documents Guide [${SEO_YEAR_MONTH_EN}] — CENOMAR, PSA & NBI`),
-    t('K-1ビザ申請に必要なフィリピン書類（CENOMAR・PSA出生証明書・NBI Clearance）の取得方法とDFAアポスティーユを解説。', 'Complete checklist of Philippine documents for the K-1 fiancé(e) visa: CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille. Retrieval service available.')
+    t(`K-1婚約者ビザ フィリピン書類を代行取得【${SEO_YEAR_MONTH_JA}】CENOMAR・PSA・NBI一括`, `K-1 Fiancé Visa Documents: We Handle Everything [${SEO_YEAR_MONTH_EN}] \u2014 CENOMAR, PSA & NBI`),
+    t('K-1ビザに必要なCENOMAR・PSA出生証明書・NBI Clearance、アメリカ人の婚約者の方が代わりに手配できます。DFAアポスティーユ付きで一括取得・郵送。まずは無料相談。', "American petitioner for a K-1 visa? We retrieve CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille for your Filipino fianc\u00e9(e). Ships to your US address. Free consultation.")
   );
 
   const jsonLd = {

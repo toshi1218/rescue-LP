@@ -16,8 +16,8 @@ export default function DfaProcessingTimePage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`DFAアポスティーユ 処理期間【${SEO_YEAR_MONTH_JA}最新】通常・エクスプレス・代行の日数目安｜フィリピン書類センター`, `DFA Apostille Processing Time [${SEO_YEAR_MONTH_EN}]: Regular vs. Express`),
-    t('フィリピンDFAアポスティーユ認証の処理期間（processing time）を2026年最新情報で解説。通常・エクスプレス申請の日数目安、代行利用時のトータル期間、遅れる原因も紹介。', 'How long does DFA Apostille take in 2026? Compare regular and express processing times, total timeline with retrieval, and common causes of delays.')
+    t(`DFAアポスティーユの処理期間【${SEO_YEAR_MONTH_JA}】ビザ申請に間に合う？代行なら最短対応`, `DFA Apostille Processing Time [${SEO_YEAR_MONTH_EN}]: Will It Make Your Visa Deadline?`),
+    t('DFAアポスティーユの処理期間は通常5〜10営業日。ビザ申請の締切に間に合うか不安な方、当センターのエクスプレス代行なら最短対応。まずは無料相談で日程を確認。', "DFA Apostille takes 5\u201310 business days. Worried about your visa deadline? Our express proxy service can help you meet it. Free consultation to check your timeline.")
   );
 
   const faqs = [
@@ -491,11 +491,12 @@ export default function DfaProcessingTimePage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
+          <p className="text-xs font-bold text-primary mb-2">{t('ビザ申請の締切が迫っている方へ', 'Visa Deadline Coming Up?')}</p>
           <h2 className="text-xl font-bold mb-3">
-            {t('DFAアポスティーユ、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}
+            {t('間に合うかどうか、まず相談してください。エクスプレス対応で締切に合わせます', "Worried about your deadline? Contact us first \u2014 we\u2019ll tell you if express service can make it")}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
-            {t('書類取得からアポスティーユ認証・国際配送まで一括対応。', 'PSA/NBI + DFA Apostille + DHL to USA — from $199. Standard 10–15 days or Express 3–5 days.')}
+            {t('書類取得からDFAアポスティーユ認証・国際配送まで一括対応。通常10〜15営業日、エクスプレスなら3〜5営業日。', 'PSA/NBI + DFA Apostille + DHL to USA — standard 10\u201315 business days or express 3\u20135 business days. We work around your timeline.')}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link to={t('/ja/pricing', '/en/pricing')} className="inline-block bg-white text-secondary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm" onClick={() => trackEvent('cta_click', { location: 'apostille_processing_time', type: 'pricing' })}>

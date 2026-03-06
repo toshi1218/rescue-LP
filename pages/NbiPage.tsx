@@ -18,8 +18,8 @@ export default function NbiPage() {
   const t = (ja: string, en: string) => lang === 'ja' ? ja : en;
 
   useMeta(
-    t(`NBI Clearance 取得方法【${SEO_YEAR_MONTH_JA}最新】無犯罪証明書・NBI HIT対処｜フィリピン書類センター`, `NBI Clearance: How to Get It from the Philippines [${SEO_YEAR_MONTH_EN} Guide]`),
-    t('NBI Clearanceの取得方法・NBI HITの対処法・DFAアポスティーユ認証まで完全解説。日本から代行で取得する手順をわかりやすくガイド。', 'Complete guide to NBI Clearance acquisition, NBI HIT resolution, and DFA Apostille. How our service retrieves NBI Clearance on your behalf.')
+    t(`NBI Clearance 代行取得【${SEO_YEAR_MONTH_JA}】配偶者ビザ・就労に必要な無犯罪証明書｜フィリピン書類センター`, `NBI Clearance + Apostille: We Get It for Your Visa [${SEO_YEAR_MONTH_EN}]`),
+    t('配偶者ビザや就労に必要なNBI Clearance、フィリピンに行かずに取得できます。HIT案件も対応。DFAアポスティーユ付きでお届け。日本語サポート・無料相談。', "Need NBI Clearance for a spouse visa or immigration? We retrieve it with DFA Apostille and ship it to you. HIT cases handled. Free consultation for petitioners and employers.")
   );
 
   const cases = [
@@ -647,13 +647,14 @@ export default function NbiPage() {
 
         {/* CTA */}
         <div className="bg-secondary text-white rounded-2xl p-6 mb-10 text-center">
+          <p className="text-xs font-bold text-primary mb-2">{t('配偶者ビザ申請中の方・雇用主の方へ', 'For Visa Petitioners & Employers')}</p>
           <h2 className="text-xl font-bold mb-3">
-            {t('NBI クリアランス取得、まるごとお任せ', 'Too Much Hassle? Let Us Handle It')}
+            {t('NBI取得で詰まっている時間はありません。プロに任せて先へ進みましょう', "Don\u2019t let NBI paperwork stall your visa. Let us handle it fast.")}
           </h2>
           <p className="text-sm text-gray-300 mb-5">
             {t(
-              'HIT案件・DFAアポスティーユも対応。日本語でサポートします。',
-              'NBI Clearance + DFA Apostille + DHL to USA — from $199. HIT cases also handled.'
+              'HIT案件も含めてDFAアポスティーユまで一括対応。ビザ申請の締切に間に合わせます。',
+              'HIT resolution, DFA Apostille, and DHL shipping — all handled together. We help you meet your visa deadline.'
             )}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
