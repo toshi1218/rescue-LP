@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function PsaBirthCertJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'PSA出生証明書取得代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA出生証明書取得代行',
@@ -35,7 +35,46 @@ export default function PsaBirthCertJa() {
             description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '料金はいくらですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'PSAに記録がない場合はどうなりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'LCR（地方民事登録局）への申請が必要になります。対応経験がありますので、まずご相談ください。追加費用が発生する場合は事前にご説明します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '出生証明書とアポスティーユ、両方必要ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '日本の提出先では通常、PSA出生証明書＋DFAアポスティーユの両方が必要です。提出先を確認した上でご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'いつ届きますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="PSA出生証明書、日本語だけで取り寄せます"

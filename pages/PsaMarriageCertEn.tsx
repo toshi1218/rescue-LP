@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 
 export default function PsaMarriageCertEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'PSA Marriage Certificate Retrieval' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Marriage Certificate Retrieval Service (+ DFA Apostille)',
@@ -34,13 +35,63 @@ export default function PsaMarriageCertEn() {
             description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Do I need an annotated marriage certificate?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'If you have gone through annulment or foreign divorce recognition, an annotated version may be required. Share your situation and we will confirm.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="PSA Marriage Certificate — Retrieved and Shipped to the USA"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="We retrieve your PSA Marriage Certificate with DFA Apostille and ship it to your US address."
+        points={[
+          'Required for CR-1/IR-1 spouse visa, NVC submission, and marriage registration',
+          'Annotated or standard format available based on your needs',
+          'DFA Apostille included for USCIS and NVC acceptance',
+          'All-inclusive pricing with DHL Express shipping to USA',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

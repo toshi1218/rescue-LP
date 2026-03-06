@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Clock } from 'lucide-react';
 
 export default function K1VisaDocsEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'K-1 Fiancé Visa Documents Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'K-1 Fiancé Visa Philippine Documents Retrieval Service',
@@ -34,13 +35,63 @@ export default function K1VisaDocsEn() {
             description: 'K-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What Philippine documents does USCIS require for K-1?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Typically CENOMAR, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements may vary. We confirm for your specific case.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your USCIS or interview deadline and we will confirm whether priority processing is feasible.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="K-1 Fiancé Visa: Philippine Documents Retrieved and Shipped to the USA"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="Filing a K-1 fiance visa? We get CENOMAR, PSA Birth Certificate, and NBI Clearance with Apostille."
+        points={[
+          'USCIS requires CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille',
+          'We handle the entire document chain from retrieval to authentication',
+          'Shipped via DHL Express to your US address',
+          'All-inclusive pricing: no hidden fees for Apostille or shipping',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

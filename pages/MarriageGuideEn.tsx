@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 
 export default function MarriageGuideEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'International Marriage Documents Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Philippine Marriage Documents Retrieval Service (CENOMAR + PSA + Apostille)',
@@ -34,13 +35,63 @@ export default function MarriageGuideEn() {
             description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What documents are needed for a CR-1 visa?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Typically PSA Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by NVC case. We confirm for your specific case.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="Philippine Marriage Documents for Your US Visa Petition"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="Marrying a Filipino? We get all the Philippine documents you need and ship them to your door."
+        points={[
+          'CENOMAR, PSA Birth Certificate, and NBI Clearance retrieved in one order',
+          'DFA Apostille included for all documents',
+          'Works for both K-1 fiance visa and direct marriage registration',
+          'All-inclusive pricing with DHL Express shipping to USA',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

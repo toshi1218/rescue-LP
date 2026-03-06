@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function CenomarApostilleJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'CENOMARアポスティーユ代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMARのDFAアポスティーユ取得代行',
@@ -35,7 +35,46 @@ export default function CenomarApostilleJa() {
             description: 'CENOMAR取得・DFAアポスティーユ・国際郵送込み（税抜）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '料金はいくらですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'PSA取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'いつ届きますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '急ぎの場合は対応できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '電子アポスティーユ（e-Apostille）でも大丈夫ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '日本の提出先では紙のアポスティーユ原本が求められるケースが多いです。提出先を確認した上で適切な形式で手配します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="CENOMARのDFAアポスティーユ、まとめてお任せください"

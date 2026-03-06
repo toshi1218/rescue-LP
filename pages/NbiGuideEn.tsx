@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 
 export default function NbiGuideEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'NBI Clearance Retrieval' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI Clearance Retrieval Service (+ DFA Apostille)',
@@ -34,13 +35,63 @@ export default function NbiGuideEn() {
             description: 'NBI retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. NBI retrieval, DFA Apostille, and DHL shipping are all included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total: NBI takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What if the NBI result shows a HIT?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'A HIT means a record was found in the NBI database. This requires separate handling. Share your situation and we will advise on next steps.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="NBI Clearance — Retrieved and Shipped to the USA"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="We retrieve NBI Clearance with DFA Apostille and ship it to your US address. HIT cases handled."
+        points={[
+          'NBI Clearance is required for K-1, CR-1/IR-1 visa, and immigration applications',
+          'Our Cebu team handles fingerprint appointment and NBI office processing',
+          'If HIT (MATCH FOUND) occurs, we manage the resolution process',
+          'DFA Apostille + DHL Express shipping included in one price',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function ApostilleGuideJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'DFAアポスティーユ取得代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFAアポスティーユ取得代行',
@@ -35,7 +35,46 @@ export default function ApostilleGuideJa() {
             description: 'DFAアポスティーユ・国際郵送込み（税抜）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'アポスティーユだけ依頼できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'はい。すでにPSA書類をお持ちの場合、DFAアポスティーユのみの代行が可能です。書類をフィリピンに送付していただく形で対応します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '電子アポスティーユ（e-Apostille）と紙のアポスティーユ、どちらが必要ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '日本の入管・役所・大使館では紙のアポスティーユ原本が求められるケースがほとんどです。提出先を確認した上でご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '処理期間はどのくらいですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'DFAアポスティーユは通常1〜2週間です。書類取得から一括で依頼した場合、全体で約1ヶ月〜が目安です。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '急ぎの場合は対応できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '可能です。提出期限をお知らせいただければ、優先処理の可否を確認してご案内します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="DFAアポスティーユ、フィリピンに行かずに取得できます"

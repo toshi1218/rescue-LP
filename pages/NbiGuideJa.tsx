@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function NbiGuideJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI Clearance取得代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI Clearance（無犯罪証明書）取得代行',
@@ -35,7 +35,46 @@ export default function NbiGuideJa() {
             description: 'NBI取得・DFAアポスティーユ・国際郵送込み（税抜）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '料金はいくらですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'NBI取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'HIT（同名者あり）が出た場合はどうなりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'HITが出ると追加審査が必要になり、通常より時間がかかります。HIT対応の経験があるスタッフが対応しますので、まずご相談ください。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'フィリピン人本人が日本にいても取得できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'はい。本人がフィリピンにいなくても、現地スタッフが代理で指紋採取・申請を行います。委任状等の書類が必要な場合はご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '有効期限はいつから数えますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'NBI Clearanceの有効期限は発行日から1年です。ビザ申請のタイミングに合わせて取得時期を調整することをお勧めします。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="NBI Clearance、日本語だけで取り寄せます"

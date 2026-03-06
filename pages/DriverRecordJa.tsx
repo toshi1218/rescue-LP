@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function DriverRecordJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'LTOドライバーズレコード取得代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'LTOドライバーズレコード取得代行',
@@ -35,7 +35,46 @@ export default function DriverRecordJa() {
             description: 'LTO書類取得・DFAアポスティーユ・国際郵送込み（税抜）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '外免切替に必要な書類は何ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '一般的にLTOドライバーズレコード（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '料金はいくらですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'LTO取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '複数名分まとめて依頼できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'はい、可能です。人数と状況をお知らせいただければ、まとめて手配します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '急ぎの場合は対応できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="LTOドライバーズレコード、日本語だけで取り寄せます"

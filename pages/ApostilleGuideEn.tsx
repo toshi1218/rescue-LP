@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 
 export default function ApostilleGuideEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'DFA Apostille Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service',
@@ -34,13 +35,63 @@ export default function ApostilleGuideEn() {
             description: 'DFA Apostille + DHL shipping to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What is the difference between e-Apostille and paper Apostille?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'e-Apostille is a digital authentication issued online. Most US immigration authorities (USCIS, NVC) require a paper Apostille original. We provide paper originals.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="DFA Apostille for Philippine Documents — Shipped to the USA"
         badges={['Paper Apostille Original', 'Ships via DHL', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="We handle DFA Apostille for any Philippine document and ship the authenticated original to your door."
+        points={[
+          'DFA Apostille is required for Philippine documents to be accepted abroad',
+          'We authenticate PSA, NBI, CENOMAR, and other government documents',
+          'Paper Apostille original shipped via DHL Express worldwide',
+          'Can be combined with document retrieval for a seamless one-stop service',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

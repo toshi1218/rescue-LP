@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Clock } from 'lucide-react';
 
 export default function Cr1VisaDocsEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'CR-1/IR-1 Spouse Visa Documents Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CR-1/IR-1 Spouse Visa Philippine Documents Retrieval Service',
@@ -34,13 +35,63 @@ export default function Cr1VisaDocsEn() {
             description: 'CR-1/IR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What Philippine documents does NVC require for CR-1/IR-1?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Typically PSA Marriage Certificate, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements may vary. We confirm for your specific case.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="CR-1/IR-1 Spouse Visa: Philippine Documents Retrieved and Shipped to the USA"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="Filing a CR-1 or IR-1 spouse visa? We retrieve all Philippine documents NVC-ready and ship to your door."
+        points={[
+          'PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille',
+          'Documents formatted for NVC submission requirements',
+          'We verify what your specific case needs before starting',
+          'All-inclusive pricing with DHL Express shipping to USA',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

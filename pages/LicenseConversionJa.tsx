@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function LicenseConversionJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '外免切替 LTO書類代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: '外免切替 LTO書類取得代行',
@@ -35,7 +35,46 @@ export default function LicenseConversionJa() {
             description: 'LTO書類取得・DFAアポスティーユ・国際郵送込み（税抜）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '外免切替に必要なLTO書類は何ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'ドライバーズレコード（運転記録証明書）が主な書類です。試験場によって必要な書類が異なる場合があるため、提出先をお知らせください。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '試験場の予約日が決まっています。間に合いますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '予約日をお知らせいただければ、逆算してスケジュールをご案内します。まずご相談ください。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '複数名分まとめて依頼できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'はい。会社が従業員の外免切替をサポートする場合など、複数名分の書類取得にも対応します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '書類が試験場で受け付けられなかった場合はどうなりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '書類の形式を事前に確認しますが、万が一問題があった場合は再取得対応します。詳細は相談時にご確認ください。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="外免切替のLTO書類、日本語だけで取り寄せます"

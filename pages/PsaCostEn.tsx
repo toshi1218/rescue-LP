@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 
 export default function PsaCostEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'PSA Birth Certificate Cost' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Birth Certificate Retrieval — All-Inclusive Pricing',
@@ -34,13 +35,63 @@ export default function PsaCostEn() {
             description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included in one quote.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Why is your price higher than some agencies?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Some agencies quote only the PSA retrieval fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Is Apostille always required?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="PSA Birth Certificate: Know the Real Total Cost Before You Start"
         badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="The real cost of a PSA Birth Certificate is more than the PHP 365 government fee. We quote everything upfront."
+        points={[
+          'Government fee is only the base; DFA Apostille, shipping, and handling add up',
+          'Our all-inclusive price covers PSA retrieval + DFA Apostille + DHL shipping',
+          'No surprise add-ons after you start the process',
+          'Compare total costs, not just base fees, when choosing a service',
+        ]}
+        ctaText="Get Your Total Quote"
       />
 
       <FeatureList

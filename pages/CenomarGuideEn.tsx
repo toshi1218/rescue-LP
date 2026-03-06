@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 
 export default function CenomarGuideEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'CENOMAR Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMAR Retrieval Service (PSA + DFA Apostille)',
@@ -34,13 +35,63 @@ export default function CenomarGuideEn() {
             description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Our all-inclusive price covers PSA retrieval, DFA Apostille, and DHL shipping to the USA. Contact us for an exact quote based on your situation.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL shipping to the USA takes 3–5 business days.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle rush orders?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Let us know your deadline and we will check if expedited processing is available.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Do I need a physical Apostille or is e-Apostille OK?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Most USCIS offices require a physical Apostille original. We will confirm the requirement for your specific case before processing.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="CENOMAR from the Philippines — Delivered to Your Door in the USA"
         badges={['Ships to USA via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="We retrieve your CENOMAR from PSA, get DFA Apostille, and ship it to your US address. No trip to the Philippines needed."
+        points={[
+          'All-inclusive service: PSA retrieval + DFA Apostille + DHL Express shipping',
+          'Required for K-1 fiance visa and CR-1/IR-1 spouse visa applications',
+          'You consult in English; our Cebu team handles all Philippine government offices',
+          'Transparent pricing with no hidden fees or surprise add-ons',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

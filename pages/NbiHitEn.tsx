@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { AlertTriangle, FileCheck, Globe, Clock } from 'lucide-react';
 
 export default function NbiHitEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'NBI HIT Resolution Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI MATCH FOUND (HIT) Resolution + NBI Clearance Retrieval Service',
@@ -34,13 +35,63 @@ export default function NbiHitEn() {
             description: 'NBI retrieval + HIT resolution support + DFA Apostille + DHL to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'Does a HIT mean my visa will be denied?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Not necessarily. A HIT means a record exists in the NBI database, which could be a name match with another person. The content of the HIT determines the impact. We help you find out.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does HIT resolution take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'It depends on the nature of the HIT. Verification alone can take several weeks. Starting early is strongly recommended.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Pricing depends on the resolution approach required. We provide a quote after reviewing your specific situation in a free consultation.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We will do our best. Share your deadline and we will confirm what is feasible given your timeline.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="NBI HIT Result? We Help You Resolve It"
         badges={['English Support', 'Case-by-Case Handling', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="NBI HIT does not mean your visa is denied. We resolve HIT cases and get your NBI Clearance on time."
+        points={[
+          'HIT (MATCH FOUND) is common and usually caused by name similarities',
+          'We handle the HIT verification and resolution process at NBI offices',
+          'NBI Clearance + DFA Apostille shipped to your US address after resolution',
+          'Many petitioners have met their visa deadlines with our help',
+        ]}
+        ctaText="Get Help Now"
       />
 
       <FeatureList

@@ -1,10 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 
 export default function NbiValidityEn() {
@@ -73,6 +74,17 @@ export default function NbiValidityEn() {
         badges={['Ships via DHL', 'Deadline-Aware Scheduling', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="NBI Clearance is valid for 1 year, but timing matters. We help you get it at the right time for your visa."
+        points={[
+          'NBI Clearance expires 1 year from issuance',
+          'Some visa processes require it within 6 months of issuance',
+          'Getting it too early risks expiration before your interview date',
+          'We calculate the optimal retrieval date based on your visa timeline',
+        ]}
+        ctaText="Check Your Timeline"
       />
 
       <FeatureList

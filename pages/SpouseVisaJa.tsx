@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function SpouseVisaJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '配偶者ビザ 書類代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: '配偶者ビザ申請 フィリピン書類取得代行',
@@ -35,7 +35,46 @@ export default function SpouseVisaJa() {
             description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '配偶者ビザ申請に必要な書類は何ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'PSA婚姻証明書・PSA出生証明書・DFAアポスティーユが基本です。申請の状況によって異なるため、まずご相談ください。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '入管は電子アポスティーユ（e-Apostille）を受け付けますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '入国管理局では紙のアポスティーユ原本が求められるケースがほとんどです。提出先を確認した上でご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '書類の有効期限はありますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'PSA書類・CENOMARは発行から6ヶ月〜1年が有効期限の目安です。申請タイミングに合わせた取得時期をご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '更新・変更申請でも書類が必要ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '更新・変更申請でも書類の再取得が必要なケースがあります。現在お持ちの書類の有効期限を確認した上でご案内します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="配偶者ビザのフィリピン書類、一括で手配します"

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function UsVisaDocsJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '米国ビザ フィリピン書類代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: '米国ビザ（K-1・CR-1・IR-1）フィリピン書類取得代行',
@@ -35,7 +35,46 @@ export default function UsVisaDocsJa() {
             description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '米国ビザに必要な書類は何ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'ビザの種類によって異なります。K-1はCENOMAR・出生証明書・NBI Clearance、CR-1は婚姻証明書・出生証明書などが必要です。無料相談で確認します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '料金はいくらですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '必要書類・DFAアポスティーユ・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'いつ届きますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '急ぎの場合は対応できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="米国ビザ申請のフィリピン書類、まとめて手配します"

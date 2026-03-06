@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 
 export default function SpouseVisaEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Spouse Visa Documents Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Spouse Visa Philippine Documents Retrieval Service',
@@ -34,13 +35,63 @@ export default function SpouseVisaEn() {
             description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What documents does NVC require for a spouse visa?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Typically PSA Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by case. We confirm for your specific petition.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="Philippine Documents for Your Spouse Visa Petition"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="We retrieve all Philippine documents needed for your spouse visa and ship them Apostille-ready."
+        points={[
+          'PSA Marriage Certificate, Birth Certificate, NBI Clearance, and CENOMAR available',
+          'DFA Apostille included so documents are accepted by USCIS and NVC',
+          'We verify requirements for your specific visa type before starting',
+          'All-inclusive pricing with DHL Express shipping to your US address',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

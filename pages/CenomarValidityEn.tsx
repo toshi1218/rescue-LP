@@ -1,10 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 
 export default function CenomarValidityEn() {
@@ -73,6 +74,17 @@ export default function CenomarValidityEn() {
         badges={['Ships via DHL', 'Deadline-Aware Scheduling', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="CENOMAR validity matters for your visa timeline. We time the retrieval so it does not expire before submission."
+        points={[
+          'Most authorities require CENOMAR issued within 6 months',
+          'We calculate the optimal retrieval date based on your submission deadline',
+          'If your CENOMAR expires, you will need to re-order and pay again',
+          'Free consultation to map out your document timeline',
+        ]}
+        ctaText="Check Your Timeline"
       />
 
       <FeatureList

@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 
 export default function PsaBirthCertEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'PSA Birth Certificate Retrieval' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Birth Certificate Retrieval Service (+ DFA Apostille)',
@@ -34,13 +35,63 @@ export default function PsaBirthCertEn() {
             description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can I order CENOMAR and Birth Certificate together?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Bundling multiple documents is common for K-1 and CR-1 petitions. We handle them together at no extra coordination cost.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="PSA Birth Certificate — Retrieved and Shipped to the USA"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="We retrieve your PSA Birth Certificate with DFA Apostille and ship it to your US address. No trip to the Philippines."
+        points={[
+          'PSA Birth Certificate is required for nearly every US visa and immigration case',
+          'DFA Apostille included so it is accepted by USCIS, NVC, and US Embassy',
+          'Shipped via DHL Express directly to your US address',
+          'All-inclusive pricing: no hidden fees for Apostille or shipping',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Heart } from 'lucide-react';
 
 export default function NaturalizationEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Naturalization Documents Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Philippine Documents for US Naturalization (PSA + NBI + Apostille)',
@@ -34,13 +35,63 @@ export default function NaturalizationEn() {
             description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive, per document)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What Philippine documents does USCIS require for naturalization?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Requirements vary by case. Typically Birth Certificate and/or Marriage Certificate with DFA Apostille. We confirm for your specific application.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your USCIS deadline and we will confirm whether priority processing is feasible.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="Philippine Documents for US Naturalization — Retrieved and Shipped"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="Applying for US naturalization? We retrieve all Philippine civil documents USCIS requires."
+        points={[
+          'PSA Birth Certificate, NBI Clearance, and other documents with DFA Apostille',
+          'USCIS-ready format so you can submit directly',
+          'We confirm exact requirements for your naturalization case',
+          'All-inclusive pricing with DHL Express shipping to USA',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

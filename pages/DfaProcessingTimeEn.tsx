@@ -1,10 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 
 export default function DfaProcessingTimeEn() {
@@ -73,6 +74,17 @@ export default function DfaProcessingTimeEn() {
         badges={['Deadline-Aware Scheduling', 'Ships via DHL', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="DFA Apostille takes 5-10 business days. We help you meet your visa deadline with express options."
+        points={[
+          'Regular processing: 4-5 business days at DFA',
+          'Express processing available for urgent cases',
+          'Total timeline includes PSA/NBI retrieval + DFA + shipping',
+          'Share your deadline and we will confirm if we can meet it',
+        ]}
+        ctaText="Check Your Deadline"
       />
 
       <FeatureList

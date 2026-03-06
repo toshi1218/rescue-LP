@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe } from 'lucide-react';
 
 export default function CenomarApostilleEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'CENOMAR Apostille Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMAR DFA Apostille Authentication Service',
@@ -34,13 +35,63 @@ export default function CenomarApostilleEn() {
             description: 'CENOMAR retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Does USCIS accept e-Apostille?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Most USCIS and NVC submissions require a paper Apostille original. We confirm the required format for your specific case.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="CENOMAR with DFA Apostille — Shipped to the USA"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="Need DFA Apostille on your CENOMAR? We handle the entire process from PSA to Apostille and ship to your door."
+        points={[
+          'DFA Apostille is required for CENOMAR to be accepted by USCIS, NVC, and US Embassy',
+          'We retrieve CENOMAR from PSA and authenticate at DFA in one seamless process',
+          'Paper Apostille original shipped via DHL Express to your US address',
+          'No need to visit the Philippines or coordinate with multiple agencies',
+        ]}
+        ctaText="Get a Free Quote"
       />
 
       <FeatureList

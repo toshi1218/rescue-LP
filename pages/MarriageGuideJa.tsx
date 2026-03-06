@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function MarriageGuideJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '国際結婚 書類代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'フィリピン人との国際結婚 必要書類取得代行',
@@ -35,7 +35,46 @@ export default function MarriageGuideJa() {
             description: '国際結婚パック（CENOMAR・PSA・DFAアポスティーユ・国際郵送込み、税抜）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '日本先行婚とフィリピン先行婚、どちらがいいですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'どちらが適切かはご状況によります。それぞれのメリット・デメリットを含めてご案内しますので、まずご相談ください。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'CENOMARとPSA出生証明書、両方必要ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '日本の市区町村役場への提出では、通常CENOMARとPSA出生証明書の両方が必要です。提出先によって異なる場合があるため、確認してからご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '書類の有効期限はありますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'PSA書類・CENOMARは発行から6ヶ月〜1年が有効期限の目安です。提出タイミングに合わせた取得時期をご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '配偶者ビザ申請の書類も一緒に頼めますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'はい。婚姻書類と配偶者ビザ申請書類を一括で手配できます。二度手間を防ぐためにも、まとめてご相談ください。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="フィリピン人との国際結婚、必要書類を一括で手配します"

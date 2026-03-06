@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Heart } from 'lucide-react';
 
 export default function UsVisaDocsEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'US Visa Documents Service' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'US Visa Philippine Documents Retrieval Service (K-1 / CR-1 / IR-1)',
@@ -34,13 +35,63 @@ export default function UsVisaDocsEn() {
             description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What documents are required for a K-1 visa?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Typically CENOMAR, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements vary by USCIS case. We confirm for your specific petition.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What documents are required for a CR-1 visa?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Typically Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by NVC case. We confirm for your specific petition.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="Philippine Documents for Your US Visa Petition"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="K-1, CR-1, or IR-1 visa? We retrieve all required Philippine documents with Apostille and ship to you."
+        points={[
+          'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
+          'DFA Apostille included for USCIS, NVC, and US Embassy acceptance',
+          'We confirm exact requirements for your specific visa type',
+          'All-inclusive pricing with DHL Express shipping to USA',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList

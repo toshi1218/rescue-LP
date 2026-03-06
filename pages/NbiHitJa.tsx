@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,7 +12,7 @@ export default function NbiHitJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI HIT対応代行' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI HIT（同名者あり）解消・NBI Clearance取得代行',
@@ -35,7 +35,46 @@ export default function NbiHitJa() {
             description: 'NBI取得・HIT対応・DFAアポスティーユ・国際郵送込み（税抜）',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'HITが出たら必ずビザが却下されますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'HITはデータベースに記録があることを示すだけで、必ずしも犯罪歴を意味しません。同姓同名の別人の記録の場合もあります。まず内容を確認することが重要です。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'HIT対応にはどのくらい時間がかかりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '内容によって異なります。確認手続きだけで数週間かかる場合もあります。早めにご相談いただくことをおすすめします。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '料金はいくらですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '状況によって対応内容が異なるため、無料相談後に料金をご提示します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '急ぎの場合は対応できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '可能な限り対応します。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="NBI HITが出た——次に何をすべきか、一緒に確認します"

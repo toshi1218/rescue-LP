@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 
 export default function ApostilleFeeEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'DFA Apostille Fee & Pricing' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service — All-Inclusive Pricing',
@@ -34,13 +35,63 @@ export default function ApostilleFeeEn() {
             description: 'DFA Apostille + DHL shipping to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does DFA Apostille cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included in one quote.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Why is your price higher than some agencies?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Some agencies quote only the base fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Is Apostille always required?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle urgent cases?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="DFA Apostille Pricing: Know the Real Total Before You Start"
         badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="DFA Apostille costs more than the government fee alone. We quote the real total upfront."
+        points={[
+          'Government fee is just the base; handling, shipping, and retrieval add up',
+          'Our all-inclusive price covers DFA Apostille + document retrieval + DHL shipping',
+          'No surprise add-ons after you commit',
+          'Compare total costs across providers before deciding',
+        ]}
+        ctaText="Get Your Total Quote"
       />
 
       <FeatureList

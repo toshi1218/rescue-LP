@@ -1,17 +1,18 @@
-import React from 'react';
+﻿import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Car } from 'lucide-react';
 
 export default function DriverRecordEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'LTO Driver Record Retrieval' }]}
-      jsonLd={{
+      jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'LTO Driver\'s Record Retrieval Service (+ DFA Apostille)',
@@ -34,13 +35,55 @@ export default function DriverRecordEn() {
             description: 'LTO retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
           },
         },
-      }}
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does it cost?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'We provide all-inclusive pricing after reviewing your case. LTO retrieval, DFA Apostille, and DHL shipping are all included.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can you handle multiple employees at once?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share the number of applicants and we will coordinate bulk processing.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does it take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks total: LTO takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="LTO Driver's Record — Retrieved and Shipped to the USA"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="We retrieve your LTO Driver Record with DFA Apostille and ship it to your US address."
+        points={[
+          'Required for license conversion, employment verification, and immigration',
+          'DFA Apostille included for acceptance by US state DMVs',
+          'Bulk orders available for employers and fleet operators',
+          'All-inclusive pricing with DHL Express shipping',
+        ]}
+        ctaText="Start Free Consultation"
       />
 
       <FeatureList
