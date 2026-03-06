@@ -19,6 +19,14 @@ export default {
       boxShadow: {
         soft: '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
         card: '0 2px 10px rgba(0, 0, 0, 0.03)',
+        'card-hover': '0 8px 24px rgba(0, 0, 0, 0.08)',
+        'primary-glow': '0 4px 16px rgba(214, 158, 46, 0.3)',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      transitionTimingFunction: {
+        smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
     },
   },
