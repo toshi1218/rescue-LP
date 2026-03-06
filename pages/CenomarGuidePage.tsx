@@ -350,6 +350,7 @@ export default function CenomarGuidePage() {
                 title: t('PSAオンライン申請（自分で）', 'PSA Online Application (Self)'),
                 items: [
                   t('PSAHelpline.comまたはPSA公式サイトで申請', 'Apply at PSAHelpline.com or the PSA official website'),
+                  t('申請費用：約365ペソ（約900円）＋国際郵便料金（約6,000円）', 'Fee: approx. PHP 365 (~$6.50) + international shipping (~$40)'),
                   t('支払いはクレジットカードまたはPayPal', 'Payment by credit card or PayPal'),
                   t('国際郵便で日本の住所へ届く（3〜5営業日）', 'Delivered to your Japanese address by international mail (3–5 business days)'),
                 ],
@@ -402,29 +403,31 @@ export default function CenomarGuidePage() {
             ))}
           </div>
 
-          {/* アポスティーユ注意ボックス */}
+          {/* 説得ブロック＋CTA */}
           <div className="mt-5 bg-amber-50 border border-amber-300 rounded-xl p-5">
             <div className="flex gap-3">
               <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="text-sm font-bold text-amber-800 mb-2">
+                <p className="text-sm font-bold text-amber-800 mb-3">
                   {t(
-                    'PSA書類を取得するだけでは受け付けてもらえないことがあります',
-                    'Getting the PSA document alone is often not enough'
+                    '安く済ませたつもりが、あとで一番高くつくことがあります',
+                    'Trying to save money upfront can end up costing you more in the end.'
                   )}
                 </p>
-                <p className="text-xs text-amber-700 leading-relaxed">
-                  {t(
-                    '日本の婚姻届・配偶者ビザ申請では、出生証明書やCENOMARに加えて、DFA（フィリピン外務省）発行のアポスティーユが基本的に必要です。PSAオンラインで書類を取り寄せても、アポスティーユはフィリピン現地でのDFA申請が別途必要で、追加の費用と時間がかかります。他社の格安代行サービスも、アポスティーユは別途料金となるケースがほとんどです。結果的に、自分で手続きするより費用も手間も増えてしまうことがあります。',
-                    'For marriage registration and visa applications, DFA Apostille authentication is typically required on top of the PSA document. Even if you order the PSA document online yourself, Apostille requires a separate in-Philippines procedure — extra cost, extra wait time. Budget services from other agencies usually charge Apostille separately as well. Self-service often ends up costing more time and money than expected.'
-                  )}
-                </p>
-                <p className="text-xs font-bold text-amber-800 mt-3">
-                  {t(
-                    '弊社では、必要書類の判断からアポスティーユ取得まで一括で対応します。追加費用の発生を防ぐためにも、まずはご相談ください。',
-                    'Our service covers everything from document assessment to DFA Apostille in one go — no hidden extra steps. Consult us first to avoid unexpected costs.'
-                  )}
-                </p>
+                <div className="text-xs text-amber-700 leading-relaxed space-y-2">
+                  <p>{t(
+                    'PSA書類は、取得できれば終わりではありません。大事なのは、日本の提出先でそのまま使える形になっているかです。',
+                    'Getting the PSA document is not the finish line. What matters is whether it is in the form your submission authority in Japan will actually accept.'
+                  )}</p>
+                  <p>{t(
+                    '自分で申請しても、あとから追加書類や認証が必要になれば、結局は取り直し、再申請、再送料で余計な手間と費用がかかります。',
+                    'If you apply yourself and later find out you need additional documents or authentication, you end up paying for re-procurement, re-application, and re-shipping — wasting both time and money.'
+                  )}</p>
+                  <p className="font-bold text-amber-800">{t(
+                    '当社は、書類を取るだけの代行ではありません。提出先に合わせて、必要な形まで見越して手配する代行です。',
+                    'We are not just a document retrieval service. We arrange everything with your specific submission authority in mind — so you get it right the first time.'
+                  )}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -432,10 +435,10 @@ export default function CenomarGuidePage() {
           {/* 比較表直下CTA */}
           <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-5 text-center">
             <p className="text-sm font-bold text-secondary mb-1">
-              {t('どの方法が自分に合うか分からない方へ', 'Not sure which option is right for you?')}
+              {t('迷ったまま進めるより、最初に確認したほうが早くて確実です。', 'Confirming upfront is faster and more reliable than guessing as you go.')}
             </p>
             <p className="text-xs text-gray-600 mb-4">
-              {t('1分で確認できます。用途に応じて必要書類・アポスティーユの要否を案内します。', "Check in 1 minute. We'll tell you exactly which documents and Apostille you need for your situation.")}
+              {t('まずはご相談ください。', 'Please feel free to consult us first.')}
             </p>
             <a
               href="#contact"
