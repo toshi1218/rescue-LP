@@ -1,34 +1,55 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import JpHomePage from './pages/JpHomePage';
-import CenomarGuideJa from './pages/CenomarGuideJa';
+import HomeEn from './pages/HomeEn';
+import HomeJa from './pages/HomeJa';
 import CenomarGuideEn from './pages/CenomarGuideEn';
-import CenomarApostillePage from './pages/CenomarApostillePage';
-import CenomarValidityPage from './pages/CenomarValidityPage';
-import PsaPage from './pages/PsaPage';
-import NbiPage from './pages/NbiPage';
-import NbiHitPage from './pages/NbiHitPage';
-import KokusaiKekkonGuidePage from './pages/KokusaiKekkonGuidePage';
-import HaigushaVisaPage from './pages/HaigushaVisaPage';
-import ApostillePage from './pages/ApostillePage';
-import DfaProcessingTimePage from './pages/DfaProcessingTimePage';
-import GaimenKirikaeGuidePage from './pages/GaimenKirikaeGuidePage';
-import KekkonShomeishoPage from './pages/KekkonShomeishoPage';
-import CompanyPage from './pages/CompanyPage';
-import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
-import ContactPage from './pages/ContactPage';
-import PricingPage from './pages/PricingPage';
-import KikaShinseiGuidePage from './pages/KikaShinseiGuidePage';
-import GuidesPage from './pages/GuidesPage';
-import PsaBirthCertificateCostPage from './pages/PsaBirthCertificateCostPage';
-import ApostilleFeePage from './pages/ApostilleFeePage';
-import NbiValidityPage from './pages/NbiValidityPage';
-import DriverRecordPage from './pages/DriverRecordPage';
-import UsVisaDocumentsPage from './pages/UsVisaDocumentsPage';
-import K1VisaDocumentsPage from './pages/K1VisaDocumentsPage';
-import Cr1VisaDocumentsPage from './pages/Cr1VisaDocumentsPage';
-
+import CenomarGuideJa from './pages/CenomarGuideJa';
+import CenomarApostilleEn from './pages/CenomarApostilleEn';
+import CenomarApostilleJa from './pages/CenomarApostilleJa';
+import CenomarValidityEn from './pages/CenomarValidityEn';
+import CenomarValidityJa from './pages/CenomarValidityJa';
+import PsaBirthCertEn from './pages/PsaBirthCertEn';
+import PsaBirthCertJa from './pages/PsaBirthCertJa';
+import NbiGuideEn from './pages/NbiGuideEn';
+import NbiGuideJa from './pages/NbiGuideJa';
+import NbiHitEn from './pages/NbiHitEn';
+import NbiHitJa from './pages/NbiHitJa';
+import ApostilleGuideEn from './pages/ApostilleGuideEn';
+import ApostilleGuideJa from './pages/ApostilleGuideJa';
+import DfaProcessingTimeEn from './pages/DfaProcessingTimeEn';
+import DfaProcessingTimeJa from './pages/DfaProcessingTimeJa';
+import MarriageGuideEn from './pages/MarriageGuideEn';
+import MarriageGuideJa from './pages/MarriageGuideJa';
+import SpouseVisaEn from './pages/SpouseVisaEn';
+import SpouseVisaJa from './pages/SpouseVisaJa';
+import PsaMarriageCertEn from './pages/PsaMarriageCertEn';
+import PsaMarriageCertJa from './pages/PsaMarriageCertJa';
+import LicenseConversionEn from './pages/LicenseConversionEn';
+import LicenseConversionJa from './pages/LicenseConversionJa';
+import NaturalizationEn from './pages/NaturalizationEn';
+import NaturalizationJa from './pages/NaturalizationJa';
+import GuidesEn from './pages/GuidesEn';
+import GuidesJa from './pages/GuidesJa';
+import PsaCostEn from './pages/PsaCostEn';
+import PsaCostJa from './pages/PsaCostJa';
+import ApostilleFeeEn from './pages/ApostilleFeeEn';
+import ApostilleFeeJa from './pages/ApostilleFeeJa';
+import NbiValidityEn from './pages/NbiValidityEn';
+import NbiValidityJa from './pages/NbiValidityJa';
+import DriverRecordEn from './pages/DriverRecordEn';
+import DriverRecordJa from './pages/DriverRecordJa';
+import PricingEn from './pages/PricingEn';
+import PricingJa from './pages/PricingJa';
+import UsVisaDocsEn from './pages/UsVisaDocsEn';
+import UsVisaDocsJa from './pages/UsVisaDocsJa';
+import K1VisaDocsEn from './pages/K1VisaDocsEn';
+import Cr1VisaDocsEn from './pages/Cr1VisaDocsEn';
+import CompanyEn from './pages/CompanyEn';
+import CompanyJa from './pages/CompanyJa';
+import ContactEn from './pages/ContactEn';
+import ContactJa from './pages/ContactJa';
+import PrivacyEn from './pages/PrivacyEn';
+import PrivacyJa from './pages/PrivacyJa';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -43,64 +64,60 @@ export default function App() {
     <>
       <ScrollToTop />
       <Routes>
-
-        {/* ── EN canonical routes (/en/*) ───────────────────────── */}
         <Route path="/en" element={<Navigate to="/en/" replace />} />
-        <Route path="/en/" element={<HomePage />} />
-        <Route path="/en/cenomar" element={<CenomarGuideEn />} />
-        <Route path="/en/cenomar-apostille" element={<CenomarApostillePage />} />
-        <Route path="/en/cenomar-validity" element={<CenomarValidityPage />} />
-        <Route path="/en/psa-birth-certificate" element={<PsaPage />} />
-        <Route path="/en/nbi-clearance" element={<NbiPage />} />
-        <Route path="/en/nbi-hit" element={<NbiHitPage />} />
-        <Route path="/en/apostille" element={<ApostillePage />} />
-        <Route path="/en/apostille-processing-time" element={<DfaProcessingTimePage />} />
-        <Route path="/en/international-marriage-guide" element={<KokusaiKekkonGuidePage />} />
-        <Route path="/en/spouse-visa-documents" element={<HaigushaVisaPage />} />
-        <Route path="/en/psa-marriage-certificate" element={<KekkonShomeishoPage />} />
-        <Route path="/en/drivers-license-conversion" element={<GaimenKirikaeGuidePage />} />
-        <Route path="/en/naturalization-guide" element={<KikaShinseiGuidePage />} />
-        <Route path="/en/guides" element={<GuidesPage />} />
-        <Route path="/en/psa-birth-certificate-cost" element={<PsaBirthCertificateCostPage />} />
-        <Route path="/en/apostille-fee" element={<ApostilleFeePage />} />
-        <Route path="/en/nbi-validity" element={<NbiValidityPage />} />
-        <Route path="/en/driver-record" element={<DriverRecordPage />} />
-        <Route path="/en/pricing" element={<PricingPage />} />
-        <Route path="/en/us-visa-documents" element={<UsVisaDocumentsPage />} />
-        <Route path="/en/k1-visa-documents" element={<K1VisaDocumentsPage />} />
-        <Route path="/en/cr1-visa-documents" element={<Cr1VisaDocumentsPage />} />
-        <Route path="/en/company" element={<CompanyPage />} />
-        <Route path="/en/contact" element={<ContactPage />} />
-        <Route path="/en/privacy" element={<PrivacyPolicyPage />} />
-
-        {/* ── JA canonical routes (/ja/*) ───────────────────────── */}
+        <Route path="/en/" element={<HomeEn />} />
         <Route path="/ja" element={<Navigate to="/ja/" replace />} />
-        <Route path="/ja/" element={<JpHomePage />} />
-        <Route path="/ja/cenomar" element={<CenomarGuideJa />} />
-        <Route path="/ja/cenomar-apostille" element={<CenomarApostillePage />} />
-        <Route path="/ja/cenomar-koyukigen" element={<CenomarValidityPage />} />
-        <Route path="/ja/psa-shussei-shomeisho" element={<PsaPage />} />
-        <Route path="/ja/nbi-clearance" element={<NbiPage />} />
-        <Route path="/ja/nbi-hit" element={<NbiHitPage />} />
-        <Route path="/ja/apostille" element={<ApostillePage />} />
-        <Route path="/ja/apostille-shori-kikan" element={<DfaProcessingTimePage />} />
-        <Route path="/ja/kokusai-kekkon-guide" element={<KokusaiKekkonGuidePage />} />
-        <Route path="/ja/haigusha-visa" element={<HaigushaVisaPage />} />
-        <Route path="/ja/psa-kekkon-shomeisho" element={<KekkonShomeishoPage />} />
-        <Route path="/ja/gaimen-kirikae-guide" element={<GaimenKirikaeGuidePage />} />
-        <Route path="/ja/kika-shinsei-guide" element={<KikaShinseiGuidePage />} />
-        <Route path="/ja/guides" element={<GuidesPage />} />
-        <Route path="/ja/psa-shussei-cost" element={<PsaBirthCertificateCostPage />} />
-        <Route path="/ja/apostille-ryokin" element={<ApostilleFeePage />} />
-        <Route path="/ja/nbi-koyukigen" element={<NbiValidityPage />} />
-        <Route path="/ja/us-visa-documents" element={<UsVisaDocumentsPage />} />
-        <Route path="/ja/driver-record" element={<DriverRecordPage />} />
-        <Route path="/ja/ryokin" element={<PricingPage />} />
-        <Route path="/ja/company" element={<CompanyPage />} />
-        <Route path="/ja/contact" element={<ContactPage />} />
-        <Route path="/ja/privacy" element={<PrivacyPolicyPage />} />
+        <Route path="/ja/" element={<HomeJa />} />
 
-        {/* ── 旧 EN canonical (/ 系) → /en/* へ 301 ────────────── */}
+        <Route path="/en/cenomar" element={<CenomarGuideEn />} />
+        <Route path="/ja/cenomar" element={<CenomarGuideJa />} />
+        <Route path="/en/cenomar-apostille" element={<CenomarApostilleEn />} />
+        <Route path="/ja/cenomar-apostille" element={<CenomarApostilleJa />} />
+        <Route path="/en/cenomar-validity" element={<CenomarValidityEn />} />
+        <Route path="/ja/cenomar-koyukigen" element={<CenomarValidityJa />} />
+        <Route path="/en/psa-birth-certificate" element={<PsaBirthCertEn />} />
+        <Route path="/ja/psa-shussei-shomeisho" element={<PsaBirthCertJa />} />
+        <Route path="/en/nbi-clearance" element={<NbiGuideEn />} />
+        <Route path="/ja/nbi-clearance" element={<NbiGuideJa />} />
+        <Route path="/en/nbi-hit" element={<NbiHitEn />} />
+        <Route path="/ja/nbi-hit" element={<NbiHitJa />} />
+        <Route path="/en/apostille" element={<ApostilleGuideEn />} />
+        <Route path="/ja/apostille" element={<ApostilleGuideJa />} />
+        <Route path="/en/apostille-processing-time" element={<DfaProcessingTimeEn />} />
+        <Route path="/ja/apostille-shori-kikan" element={<DfaProcessingTimeJa />} />
+        <Route path="/en/international-marriage-guide" element={<MarriageGuideEn />} />
+        <Route path="/ja/kokusai-kekkon-guide" element={<MarriageGuideJa />} />
+        <Route path="/en/spouse-visa-documents" element={<SpouseVisaEn />} />
+        <Route path="/ja/haigusha-visa" element={<SpouseVisaJa />} />
+        <Route path="/en/psa-marriage-certificate" element={<PsaMarriageCertEn />} />
+        <Route path="/ja/psa-kekkon-shomeisho" element={<PsaMarriageCertJa />} />
+        <Route path="/en/drivers-license-conversion" element={<LicenseConversionEn />} />
+        <Route path="/ja/gaimen-kirikae-guide" element={<LicenseConversionJa />} />
+        <Route path="/en/naturalization-guide" element={<NaturalizationEn />} />
+        <Route path="/ja/kika-shinsei-guide" element={<NaturalizationJa />} />
+        <Route path="/en/guides" element={<GuidesEn />} />
+        <Route path="/ja/guides" element={<GuidesJa />} />
+        <Route path="/en/psa-birth-certificate-cost" element={<PsaCostEn />} />
+        <Route path="/ja/psa-shussei-cost" element={<PsaCostJa />} />
+        <Route path="/en/apostille-fee" element={<ApostilleFeeEn />} />
+        <Route path="/ja/apostille-ryokin" element={<ApostilleFeeJa />} />
+        <Route path="/en/nbi-validity" element={<NbiValidityEn />} />
+        <Route path="/ja/nbi-koyukigen" element={<NbiValidityJa />} />
+        <Route path="/en/driver-record" element={<DriverRecordEn />} />
+        <Route path="/ja/driver-record" element={<DriverRecordJa />} />
+        <Route path="/en/pricing" element={<PricingEn />} />
+        <Route path="/ja/ryokin" element={<PricingJa />} />
+        <Route path="/en/us-visa-documents" element={<UsVisaDocsEn />} />
+        <Route path="/ja/us-visa-documents" element={<UsVisaDocsJa />} />
+        <Route path="/en/k1-visa-documents" element={<K1VisaDocsEn />} />
+        <Route path="/en/cr1-visa-documents" element={<Cr1VisaDocsEn />} />
+        <Route path="/en/company" element={<CompanyEn />} />
+        <Route path="/ja/company" element={<CompanyJa />} />
+        <Route path="/en/contact" element={<ContactEn />} />
+        <Route path="/ja/contact" element={<ContactJa />} />
+        <Route path="/en/privacy" element={<PrivacyEn />} />
+        <Route path="/ja/privacy" element={<PrivacyJa />} />
+
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar" replace />} />
         <Route path="/cenomar-apostille" element={<Navigate to="/en/cenomar-apostille" replace />} />
@@ -128,7 +145,6 @@ export default function App() {
         <Route path="/contact" element={<Navigate to="/en/contact" replace />} />
         <Route path="/privacy" element={<Navigate to="/en/privacy" replace />} />
 
-        {/* ── 旧 URL → JA canonical へ 301 ─────────────────────── */}
         <Route path="/jp" element={<Navigate to="/ja/" replace />} />
         <Route path="/cenomar-guide" element={<Navigate to="/ja/cenomar" replace />} />
         <Route path="/cenomar-guide/" element={<Navigate to="/ja/cenomar" replace />} />
@@ -148,7 +164,6 @@ export default function App() {
         <Route path="/gaimen-kirikae-guide/" element={<Navigate to="/ja/gaimen-kirikae-guide" replace />} />
         <Route path="/kika-shinsei-guide" element={<Navigate to="/ja/kika-shinsei-guide" replace />} />
         <Route path="/kika-shinsei-guide/" element={<Navigate to="/ja/kika-shinsei-guide" replace />} />
-
       </Routes>
     </>
   );

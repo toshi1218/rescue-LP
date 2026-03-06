@@ -1,12 +1,12 @@
 import React from 'react';
 import ServicePageTemplate from './ServicePageTemplate';
 
-export default function CenomarGuideJa() {
+export default function NaturalizationJa() {
   return (
     <ServicePageTemplate
       lang="ja"
-      routePath="/ja/cenomar"
-      title="CENOMAR Daiko JA"
+      routePath="/ja/kika-shinsei-guide"
+      title="Naturalization Docs JA"
       badges={["Nihongo Support", "All-Inclusive", "About 1 Month"]}
     />
   );

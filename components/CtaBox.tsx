@@ -1,29 +1,39 @@
 import React from 'react';
-import { Send } from 'lucide-react';
 
-interface Props {
+type CtaBoxProps = {
   title: string;
-  description?: string;
+  description: string;
   buttonText: string;
-  href?: string;
+  href: string;
   variant?: 'primary' | 'secondary';
-}
+};
 
-export default function CtaBox({ title, description, buttonText, href = '#contact', variant = 'primary' }: Props) {
-  const bg = variant === 'primary'
-    ? 'bg-gradient-to-r from-secondary to-secondary-light text-white'
-    : 'bg-primary/5 border border-primary/20 text-secondary';
+export default function CtaBox({
+  title,
+  description,
+  buttonText,
+  href,
+  variant = 'primary',
+}: CtaBoxProps) {
+  const rootClass =
+    variant === 'secondary'
+      ? 'bg-secondary text-white border border-secondary'
+      : 'bg-primary/5 text-gray-800 border border-primary/20';
+
+  const buttonClass =
+    variant === 'secondary'
+      ? 'bg-primary text-white hover:bg-primary-hover'
+      : 'bg-secondary text-white hover:bg-secondary-light';
+
   return (
-    <div className={`rounded-xl p-6 text-center my-8 ${bg}`}>
-      <p className="font-bold text-lg mb-2">{title}</p>
-      {description && <p className="text-sm opacity-90 mb-4">{description}</p>}
-      <a
-        href={href}
-        className="inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-8 rounded-xl hover:bg-primary-hover transition-all"
-      >
-        <Send className="w-4 h-4" />
+    <section className={`rounded-2xl p-6 md:p-7 mb-10 ${rootClass}`}>
+      <h2 className="text-xl font-bold mb-2">{title}</h2>
+      <p className={`text-sm mb-5 ${variant === 'secondary' ? 'text-gray-100' : 'text-gray-600'}`}>
+        {description}
+      </p>
+      <a href={href} className={`inline-block font-bold py-3 px-6 rounded-lg transition-colors ${buttonClass}`}>
         {buttonText}
       </a>
-    </div>
+    </section>
   );
 }
