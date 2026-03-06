@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import JpHomePage from './pages/JpHomePage';
-import CenomarGuidePage from './pages/CenomarGuidePage';
+import CenomarGuideJa from './pages/CenomarGuideJa';
+import CenomarGuideEn from './pages/CenomarGuideEn';
 import CenomarApostillePage from './pages/CenomarApostillePage';
 import CenomarValidityPage from './pages/CenomarValidityPage';
 import PsaPage from './pages/PsaPage';
@@ -46,7 +47,7 @@ export default function App() {
         {/* ── EN canonical routes (/en/*) ───────────────────────── */}
         <Route path="/en" element={<Navigate to="/en/" replace />} />
         <Route path="/en/" element={<HomePage />} />
-        <Route path="/en/cenomar" element={<CenomarGuidePage />} />
+        <Route path="/en/cenomar" element={<CenomarGuideEn />} />
         <Route path="/en/cenomar-apostille" element={<CenomarApostillePage />} />
         <Route path="/en/cenomar-validity" element={<CenomarValidityPage />} />
         <Route path="/en/psa-birth-certificate" element={<PsaPage />} />
@@ -75,7 +76,7 @@ export default function App() {
         {/* ── JA canonical routes (/ja/*) ───────────────────────── */}
         <Route path="/ja" element={<Navigate to="/ja/" replace />} />
         <Route path="/ja/" element={<JpHomePage />} />
-        <Route path="/ja/cenomar" element={<CenomarGuidePage />} />
+        <Route path="/ja/cenomar" element={<CenomarGuideJa />} />
         <Route path="/ja/cenomar-apostille" element={<CenomarApostillePage />} />
         <Route path="/ja/cenomar-koyukigen" element={<CenomarValidityPage />} />
         <Route path="/ja/psa-shussei-shomeisho" element={<PsaPage />} />
