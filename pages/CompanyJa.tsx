@@ -11,7 +11,7 @@ export default function CompanyJa() {
         <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-soft">
           {[
             { label: '会社名', value: 'IGRS Inc.' },
-            { label: '本店所在地', value: '〒640-8033　和歌山県和歌山市本町' },
+            { label: '本店所在地', value: '和歌山県和歌山市' },
             { label: '営業所', value: 'フィリピン共和国 セブ市' },
             { label: '事業内容', value: 'フィリピン公的書類取得代行（PSA・NBI・LTO・DFAアポスティーユ）' },
             { label: '対応言語', value: '日本語・英語' },

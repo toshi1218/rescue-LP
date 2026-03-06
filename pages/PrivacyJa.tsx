@@ -119,7 +119,7 @@ export default function PrivacyJa() {
             <h2 className="text-base font-bold text-secondary mb-3">9. お問い合わせ先</h2>
             <div className="bg-gray-50 rounded-xl p-5 space-y-1">
               <p className="font-bold text-secondary">IGRS Inc.</p>
-              <p className="text-gray-600">〒640-8033　和歌山県和歌山市本町</p>
+              <p className="text-gray-600">和歌山県和歌山市</p>
               <p className="text-gray-600">
                 メール：<a href="/ja/contact" className="text-primary hover:underline">お問い合わせフォームよりご連絡ください</a>
               </p>
