@@ -12,7 +12,7 @@ type Breadcrumb = {
 
 type PageLayoutProps = {
   breadcrumbs: Breadcrumb[];
-  jsonLd?: Record<string, unknown>;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   children: React.ReactNode;
 };
 
@@ -37,12 +37,13 @@ export default function PageLayout({ breadcrumbs, jsonLd, children }: PageLayout
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {/* ページ固有の構造化データ */}
-      {jsonLd && (
+      {jsonLd && (Array.isArray(jsonLd) ? jsonLd : [jsonLd]).map((ld, i) => (
         <script
+          key={i}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
         />
-      )}
+      ))}
       {/* ページ上部のゴールドアクセントバー */}
       <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-primary to-transparent" />
       <Navbar />

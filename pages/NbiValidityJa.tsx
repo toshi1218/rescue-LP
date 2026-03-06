@@ -12,19 +12,62 @@ export default function NbiValidityJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI Clearance有効期限と取得タイミング' }]}
-      jsonLd={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: 'NBI Clearance有効期限・最適タイミングでの代行取得',
-        description: 'NBI Clearanceの有効期限（発行から1年、提出先によっては6ヶ月以内）を踏まえ、提出予定日から逆算して最適なタイミングで代行取得。期限切れによる再取得リスクをなくします。',
-        url: 'https://ph-document.com/ja/nbi-koyukigen',
-        provider: {
-          '@type': 'Organization',
-          name: 'IGRS Inc.',
-          url: 'https://ph-document.com/ja/',
+      jsonLd={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'NBI Clearance有効期限・最適タイミングでの代行取得',
+          description: 'NBI Clearanceの有効期限（発行から1年、提出先によっては6ヶ月以内）を踏まえ、提出予定日から逆算して最適なタイミングで代行取得。期限切れによる再取得リスクをなくします。',
+          url: 'https://ph-document.com/ja/nbi-koyukigen',
+          provider: {
+            '@type': 'Organization',
+            name: 'IGRS Inc.',
+            url: 'https://ph-document.com/ja/',
+          },
+          areaServed: { '@type': 'Country', name: 'JP' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'JPY',
+            price: '45000',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '45000',
+              priceCurrency: 'JPY',
+              description: 'NBI Clearance取得・DFAアポスティーユ・国際郵送込み（税抜）',
+            },
+          },
         },
-        areaServed: { '@type': 'Country', name: 'JP' },
-      }}
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'NBI Clearanceの有効期限はどのくらいですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '発行から1年間有効です。ただし提出先によっては6ヶ月以内のものを求める場合があります。提出スケジュールに合わせて取得時期を決めることが重要です。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '取得してから使うまでに時間がかかりそうです',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '提出予定日をお知らせいただければ、逆算して最適な申請開始時期をご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '急ぎで必要です',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="NBI Clearanceの取得タイミング、一緒に確認します"
@@ -66,8 +109,8 @@ export default function NbiValidityJa() {
       />
 
       <CtaBox
-        title="提出予定日を教えてください"
-        description="逆算して最適な申請開始時期をご案内します。「いつ頃取ればいいか」という相談だけでも大丈夫です。"
+        title="配偶者ビザ・帰化申請の提出予定日を教えてください"
+        description="NBI Clearanceは発行から1年有効ですが、提出先によっては6ヶ月以内が求められます。提出予定日から逆算して、最適な申請開始時期をご案内します。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
@@ -95,8 +138,8 @@ export default function NbiValidityJa() {
       />
 
       <CtaBox
-        title="期限に間に合わせるために、早めのご相談を"
-        description="手続き全体に約1ヶ月〜かかります。余裕を持って動き始めることが、一番のリスク回避です。"
+        title="NBI Clearanceは「ギリギリで取る」と失敗します"
+        description="NBI取得・DFAアポスティーユ・郵送で全体約1ヶ月〜かかります。HITが出た場合はさらに時間が必要です。余裕を持って動き始めることが、ビザ申請を止めない唯一の方法です。"
         buttonText="今すぐ相談する"
         href="#contact"
         variant="secondary"
@@ -105,10 +148,10 @@ export default function NbiValidityJa() {
       <StepList
         heading="ご依頼の流れ"
         steps={[
-          { title: '提出予定日を共有', description: '配偶者ビザ申請などの提出予定日をお知らせください。' },
-          { title: '申請開始時期を確認', description: '逆算して最適な申請開始時期と料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'NBI取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。' },
+          { title: 'ビザ申請・帰化申請の提出予定日を共有', description: '「いつまでに提出が必要か」をお知らせください。NBI Clearanceの有効期限（1年、提出先によっては6ヶ月）を考慮して申請開始時期を確認します。' },
+          { title: '申請開始時期と料金をご提示', description: 'HIT（同名者あり）のリスクも考慮した余裕のあるスケジュールと、コミコミ料金をご案内します。' },
+          { title: 'NBI取得・DFAアポスティーユを代行', description: '現地スタッフがNBI申請・DFAアポスティーユを進めます。HITが出た場合も対応します。' },
+          { title: '日本へ郵送・完了', description: '追跡付きでお届けします。提出期限に間に合うよう、スケジュールを管理します。' },
         ]}
       />
 

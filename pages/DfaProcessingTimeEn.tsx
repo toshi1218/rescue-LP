@@ -11,19 +11,62 @@ export default function DfaProcessingTimeEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'DFA Apostille Processing Time' }]}
-      jsonLd={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: 'DFA Apostille Service — Timed for Your Visa Deadline',
-        description: 'DFA Apostille takes 4 business days (Regular) or next business day (Express). We schedule processing to meet your USCIS or NVC submission deadline. Free consultation to check your timeline.',
-        url: 'https://ph-document.com/en/apostille-processing-time',
-        provider: {
-          '@type': 'Organization',
-          name: 'IGRS Inc.',
-          url: 'https://ph-document.com/en/',
+      jsonLd={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'DFA Apostille Service — Timed for Your Visa Deadline',
+          description: 'DFA Apostille takes 4 business days (Regular) or next business day (Express). We schedule processing to meet your USCIS or NVC submission deadline. Free consultation to check your timeline.',
+          url: 'https://ph-document.com/en/apostille-processing-time',
+          provider: {
+            '@type': 'Organization',
+            name: 'IGRS Inc.',
+            url: 'https://ph-document.com/en/',
+          },
+          areaServed: { '@type': 'Country', name: 'US' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'USD',
+            price: '199',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '199',
+              priceCurrency: 'USD',
+              description: 'DFA Apostille authentication + DHL shipping to USA (all-inclusive)',
+            },
+          },
         },
-        areaServed: { '@type': 'Country', name: 'US' },
-      }}
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How long does DFA Apostille take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including PSA retrieval and DHL shipping is approximately 4–6 weeks.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Can I request Express DFA Apostille processing?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. If your deadline requires it, we will arrange Express DFA Apostille. Share your deadline and we will confirm what is needed.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'I am worried about missing my visa deadline',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Share your deadline and we will confirm whether it is feasible. Starting early is the best way to stay on track.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="DFA Apostille Processing Time: We Plan Around Your Deadline"

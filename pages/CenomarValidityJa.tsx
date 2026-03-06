@@ -12,19 +12,62 @@ export default function CenomarValidityJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'CENOMAR有効期限と取得タイミング' }]}
-      jsonLd={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: 'CENOMAR有効期限・最適タイミングでの代行取得',
-        description: 'CENOMARの有効期限（多くの提出先で6ヶ月以内）を踏まえ、提出予定日から逆算して最適なタイミングで代行取得。期限切れによる再取得リスクをなくします。',
-        url: 'https://ph-document.com/ja/cenomar-koyukigen',
-        provider: {
-          '@type': 'Organization',
-          name: 'IGRS Inc.',
-          url: 'https://ph-document.com/ja/',
+      jsonLd={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'CENOMAR有効期限・最適タイミングでの代行取得',
+          description: 'CENOMARの有効期限（多くの提出先で6ヶ月以内）を踏まえ、提出予定日から逆算して最適なタイミングで代行取得。期限切れによる再取得リスクをなくします。',
+          url: 'https://ph-document.com/ja/cenomar-koyukigen',
+          provider: {
+            '@type': 'Organization',
+            name: 'IGRS Inc.',
+            url: 'https://ph-document.com/ja/',
+          },
+          areaServed: { '@type': 'Country', name: 'JP' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'JPY',
+            price: '40000',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '40000',
+              priceCurrency: 'JPY',
+              description: 'PSA CENOMAR取得・DFAアポスティーユ・国際郵送込み（税抜）',
+            },
+          },
         },
-        areaServed: { '@type': 'Country', name: 'JP' },
-      }}
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'CENOMARの有効期限はどのくらいですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '法律上の有効期限はありませんが、ほとんどの提出先（大使館・市役所・入管）が発行から6ヶ月以内のものを求めます。提出スケジュールに合わせて取得時期を決めることが重要です。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '取得してから使うまでに時間がかかりそうです',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '提出予定日をお知らせいただければ、逆算して最適な申請開始時期をご案内します。早すぎると有効期限切れのリスクがあります。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '急ぎで必要です',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="CENOMARの取得タイミング、一緒に確認します"
@@ -66,8 +109,8 @@ export default function CenomarValidityJa() {
       />
 
       <CtaBox
-        title="提出予定日を教えてください"
-        description="逆算して最適な申請開始時期をご案内します。「いつ頃取ればいいか」という相談だけでも大丈夫です。"
+        title="婚姻届・ビザ申請の予定日を教えてください"
+        description="CENOMARは取得から6ヶ月以内が求められるケースが多いです。提出予定日から逆算して、最適な申請開始時期をご案内します。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
@@ -95,8 +138,8 @@ export default function CenomarValidityJa() {
       />
 
       <CtaBox
-        title="期限に間に合わせるために、早めのご相談を"
-        description="手続き全体に約1ヶ月〜かかります。余裕を持って動き始めることが、一番のリスク回避です。"
+        title="「早すぎた」より「間に合わなかった」の方が困ります"
+        description="CENOMARの取得から婚姻届・ビザ申請まで、全体で約1〜2ヶ月かかります。余裕を持って動き始めることが、再取得リスクをゼロにする最善策です。"
         buttonText="今すぐ相談する"
         href="#contact"
         variant="secondary"
@@ -105,10 +148,10 @@ export default function CenomarValidityJa() {
       <StepList
         heading="ご依頼の流れ"
         steps={[
-          { title: '提出予定日を共有', description: '婚姻届・ビザ申請などの提出予定日をお知らせください。' },
-          { title: '申請開始時期を確認', description: '逆算して最適な申請開始時期と料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。' },
+          { title: '婚姻届・ビザ申請の予定日を共有', description: '「いつまでに提出が必要か」をお知らせください。逆算してCENOMARの申請開始時期を確認します。' },
+          { title: '申請開始時期と料金をご提示', description: 'CENOMARの有効期限（6ヶ月）を考慮した最適なタイミングと、コミコミ料金をご案内します。' },
+          { title: 'PSA取得・DFAアポスティーユを代行', description: '現地スタッフがPSA申請・DFAアポスティーユを進めます。進捗は随時ご報告します。' },
+          { title: '日本へ郵送・完了', description: '追跡付きでお届けします。提出期限に間に合うよう、スケジュールを管理します。' },
         ]}
       />
 

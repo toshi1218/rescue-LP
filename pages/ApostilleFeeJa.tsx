@@ -12,30 +12,62 @@ export default function ApostilleFeeJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'DFAアポスティーユの料金と代行費用' }]}
-      jsonLd={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: 'DFAアポスティーユ取得代行（料金・費用）',
-        description: 'DFAアポスティーユの代行費用をコミコミ料金で公開。PSA・CENOMAR・NBI別の費用目安も確認可能。後から追加請求なし。無料見積もり受付中。',
-        url: 'https://ph-document.com/ja/apostille-ryokin',
-        provider: {
-          '@type': 'Organization',
-          name: 'IGRS Inc.',
-          url: 'https://ph-document.com/ja/',
-        },
-        areaServed: { '@type': 'Country', name: 'JP' },
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'JPY',
-          price: '30000',
-          priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            price: '30000',
+      jsonLd={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'DFAアポスティーユ取得代行（料金・費用）',
+          description: 'DFAアポスティーユの代行費用をコミコミ料金で公開。PSA・CENOMAR・NBI別の費用目安も確認可能。後から追加請求なし。無料見積もり受付中。',
+          url: 'https://ph-document.com/ja/apostille-ryokin',
+          provider: {
+            '@type': 'Organization',
+            name: 'IGRS Inc.',
+            url: 'https://ph-document.com/ja/',
+          },
+          areaServed: { '@type': 'Country', name: 'JP' },
+          offers: {
+            '@type': 'Offer',
             priceCurrency: 'JPY',
-            description: 'DFAアポスティーユ・国際郵送込み（税抜）',
+            price: '30000',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '30000',
+              priceCurrency: 'JPY',
+              description: 'DFAアポスティーユ・国際郵送込み（税抜）',
+            },
           },
         },
-      }}
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'DFAアポスティーユの料金はいくらですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '他社より高くなりませんか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めたコミコミ料金なので、最終的な総額で比較してください。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'アポスティーユが必要かどうかわかりません',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '提出先によって異なります。無料相談で確認してからご案内します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="DFAアポスティーユの費用、総額でご案内します"
@@ -77,8 +109,8 @@ export default function ApostilleFeeJa() {
       />
 
       <CtaBox
-        title="まず総額を確認しましょう"
-        description="DFAアポスティーユ・PSA取得・国際郵送を含めたコミコミ料金を無料相談後にご提示します。"
+        title="「アポスティーユが必要かどうか」から確認できます"
+        description="提出先によってはアポスティーユが不要な場合もあります。まず用途をお知らせいただければ、必要な書類と総額をご案内します。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
@@ -106,8 +138,8 @@ export default function ApostilleFeeJa() {
       />
 
       <CtaBox
-        title="後から「こんなはずじゃなかった」を防ぐために"
-        description="最初に総額を確認することが、一番のコスト削減です。まずはご相談ください。"
+        title="DFAアポスティーユは「取ってから気づく」では遅い"
+        description="書類の種類・提出先・枚数によって費用が変わります。最初に確認することで、不要な認証に費用をかけずに済みます。"
         buttonText="今すぐ相談する"
         href="#contact"
         variant="secondary"
@@ -116,10 +148,10 @@ export default function ApostilleFeeJa() {
       <StepList
         heading="ご依頼の流れ"
         steps={[
-          { title: 'フォームで相談', description: '用途と提出先をお知らせください。' },
-          { title: 'コミコミ料金をご提示', description: 'DFAアポスティーユ・PSA・郵送を含めた総額をご案内します。' },
-          { title: 'フィリピン現地で手配', description: '現地スタッフがPSA取得・DFAアポスティーユを進めます。' },
-          { title: '日本へ郵送', description: '追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: '書類の種類と提出先を共有', description: 'CENOMAR・PSA・NBI等の種類と、提出先（市役所・大使館・入管など）をお知らせください。アポスティーユが必要かどうかも確認します。' },
+          { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めたコミコミ料金をご案内します。' },
+          { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（4営業日）またはExpress（翌営業日）を状況に応じて選択します。' },
+          { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安は約1ヶ月〜。' },
         ]}
       />
 

@@ -11,19 +11,62 @@ export default function CenomarValidityEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'CENOMAR Validity & Timing' }]}
-      jsonLd={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: 'CENOMAR Retrieval — Timed for Your Visa Deadline',
-        description: 'CENOMAR is typically valid for 6 months. We time the retrieval to match your USCIS or NVC submission deadline, so it does not expire before you can use it.',
-        url: 'https://ph-document.com/en/cenomar-validity',
-        provider: {
-          '@type': 'Organization',
-          name: 'IGRS Inc.',
-          url: 'https://ph-document.com/en/',
+      jsonLd={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'CENOMAR Retrieval — Timed for Your Visa Deadline',
+          description: 'CENOMAR is typically valid for 6 months. We time the retrieval to match your USCIS or NVC submission deadline, so it does not expire before you can use it.',
+          url: 'https://ph-document.com/en/cenomar-validity',
+          provider: {
+            '@type': 'Organization',
+            name: 'IGRS Inc.',
+            url: 'https://ph-document.com/en/',
+          },
+          areaServed: { '@type': 'Country', name: 'US' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'USD',
+            price: '289',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '289',
+              priceCurrency: 'USD',
+              description: 'PSA CENOMAR retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+            },
+          },
         },
-        areaServed: { '@type': 'Country', name: 'US' },
-      }}
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How long is CENOMAR valid?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'There is no legal expiration, but most submission authorities (USCIS, NVC, embassies) require a document issued within 6 months. We time retrieval to match your schedule.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does the full CENOMAR retrieval process take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'My CENOMAR expired — can I get a new one quickly?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your new deadline and we will confirm priority options. Re-retrieval follows the same process.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="CENOMAR Timing: We Help You Get It Right the First Time"
@@ -54,8 +97,8 @@ export default function CenomarValidityEn() {
       />
 
       <CtaBox
-        title="Tell us your target date — we will plan the rest"
-        description="We calculate the optimal start date based on your submission deadline. Consulting on timing alone is welcome."
+        title="Tell us your K-1 interview or NVC submission date"
+        description="CENOMAR is typically required within 6 months of issuance. We calculate the optimal retrieval start date so it arrives valid — not expired."
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
@@ -83,8 +126,8 @@ export default function CenomarValidityEn() {
       />
 
       <CtaBox
-        title="The earlier you start, the more options you have"
-        description="The full process takes approximately 4–6 weeks. Starting early gives you buffer time if anything needs to be re-done."
+        title="Getting CENOMAR 'just in time' is a risk you don't need"
+        description="PSA retrieval + DFA Apostille + DHL shipping takes approximately 4–6 weeks. If you start too late and the document expires before your interview, you will need to start over."
         buttonText="Check My Timeline"
         href="#contact"
         variant="secondary"
@@ -93,10 +136,10 @@ export default function CenomarValidityEn() {
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Share your target date', description: 'Tell us your K-1 interview, NVC submission, or other deadline.' },
-          { title: 'We plan the timeline and quote', description: 'We confirm the optimal start date and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille.' },
-          { title: 'DHL delivery to the USA', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
+          { title: 'Share your K-1 or NVC deadline', description: 'Tell us your interview date or NVC submission deadline. We calculate when CENOMAR retrieval must start so it arrives within the 6-month validity window.' },
+          { title: 'We confirm the timeline and quote', description: 'We provide the optimal start date and all-inclusive pricing (PSA retrieval + DFA Apostille + DHL shipping).' },
+          { title: 'PSA retrieval and DFA Apostille in the Philippines', description: 'Our Cebu team handles everything locally. We update you on progress.' },
+          { title: 'DHL delivery to your US address', description: 'Tracked shipment directly to your door. Estimated total: 4–6 weeks from start.' },
         ]}
       />
 

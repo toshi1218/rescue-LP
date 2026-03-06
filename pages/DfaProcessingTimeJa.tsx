@@ -12,19 +12,62 @@ export default function DfaProcessingTimeJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'DFAアポスティーユの処理期間' }]}
-      jsonLd={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: 'DFAアポスティーユ処理期間・提出期限に合わせた代行取得',
-        description: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請可能。提出予定日から逆算して最適なスケジュールで手配。ビザ申請の期限に間に合わせます。',
-        url: 'https://ph-document.com/ja/apostille-shori-kikan',
-        provider: {
-          '@type': 'Organization',
-          name: 'IGRS Inc.',
-          url: 'https://ph-document.com/ja/',
+      jsonLd={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'DFAアポスティーユ処理期間・提出期限に合わせた代行取得',
+          description: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請可能。提出予定日から逆算して最適なスケジュールで手配。ビザ申請の期限に間に合わせます。',
+          url: 'https://ph-document.com/ja/apostille-shori-kikan',
+          provider: {
+            '@type': 'Organization',
+            name: 'IGRS Inc.',
+            url: 'https://ph-document.com/ja/',
+          },
+          areaServed: { '@type': 'Country', name: 'JP' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'JPY',
+            price: '30000',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '30000',
+              priceCurrency: 'JPY',
+              description: 'DFAアポスティーユ認証・国際郵送込み（税抜）',
+            },
+          },
         },
-        areaServed: { '@type': 'Country', name: 'JP' },
-      }}
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'DFAアポスティーユにはどのくらいかかりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請できます。PSA取得・郵送を含めた全体の目安は約1ヶ月〜です。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '急ぎの場合はExpressで申請できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '可能です。提出期限をお知らせいただければ、Expressが必要かどうかを含めてご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '期限に間に合うかどうか不安です',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '提出予定日をお知らせいただければ、間に合うかどうかを確認してご案内します。まずはご相談ください。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="DFAアポスティーユの処理期間、提出期限に合わせて手配します"

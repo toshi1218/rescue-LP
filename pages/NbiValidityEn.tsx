@@ -11,19 +11,62 @@ export default function NbiValidityEn() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'NBI Clearance Validity' }]}
-      jsonLd={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: 'NBI Clearance Retrieval — Timed for Your Visa Deadline',
-        description: 'NBI Clearance is valid for 1 year, but USCIS and NVC often require it within 6 months of submission. We time the retrieval to match your specific deadline.',
-        url: 'https://ph-document.com/en/nbi-validity',
-        provider: {
-          '@type': 'Organization',
-          name: 'IGRS Inc.',
-          url: 'https://ph-document.com/en/',
+      jsonLd={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'NBI Clearance Retrieval — Timed for Your Visa Deadline',
+          description: 'NBI Clearance is valid for 1 year, but USCIS and NVC often require it within 6 months of submission. We time the retrieval to match your specific deadline.',
+          url: 'https://ph-document.com/en/nbi-validity',
+          provider: {
+            '@type': 'Organization',
+            name: 'IGRS Inc.',
+            url: 'https://ph-document.com/en/',
+          },
+          areaServed: { '@type': 'Country', name: 'US' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'USD',
+            price: '329',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '329',
+              priceCurrency: 'USD',
+              description: 'NBI Clearance retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+            },
+          },
         },
-        areaServed: { '@type': 'Country', name: 'US' },
-      }}
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How long is NBI Clearance valid?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'NBI Clearance is valid for 1 year from issuance. However, some submission authorities require a document issued within 6 months. We time retrieval to match your schedule.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'How long does the full NBI Clearance retrieval process take?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Approximately 4–6 weeks: NBI takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'My NBI Clearance expired — can I get a new one quickly?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. Share your new deadline and we will confirm priority options. Re-retrieval follows the same process.',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="NBI Clearance Timing: Get It Right for Your Visa Interview"
@@ -54,8 +97,8 @@ export default function NbiValidityEn() {
       />
 
       <CtaBox
-        title="Tell us your target date — we will plan the rest"
-        description="We calculate the optimal start date based on your submission deadline. Consulting on timing alone is welcome."
+        title="Tell us your K-1 interview or CR-1 submission date"
+        description="NBI Clearance is valid for 1 year, but USCIS and NVC often require it within 6 months. We calculate the optimal retrieval start date — and flag if a MATCH FOUND (HIT) could delay things."
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
@@ -83,8 +126,8 @@ export default function NbiValidityEn() {
       />
 
       <CtaBox
-        title="The earlier you start, the more options you have"
-        description="The full process takes approximately 4–6 weeks. Starting early gives you buffer time if anything needs to be re-done."
+        title="NBI Clearance has one hidden risk: MATCH FOUND"
+        description="If a MATCH FOUND (HIT) appears during NBI processing, resolution can add 2–4 extra weeks. Starting early is the only way to protect your visa timeline."
         buttonText="Check My Timeline"
         href="#contact"
         variant="secondary"
@@ -93,10 +136,10 @@ export default function NbiValidityEn() {
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Share your target date', description: 'Tell us your K-1 interview, NVC submission, or other deadline.' },
-          { title: 'We plan the timeline and quote', description: 'We confirm the optimal start date and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles NBI retrieval and DFA Apostille.' },
-          { title: 'DHL delivery to the USA', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
+          { title: 'Share your K-1 or CR-1 deadline', description: 'Tell us your interview date or NVC submission deadline. We factor in the 1-year validity and any MATCH FOUND risk to set a safe start date.' },
+          { title: 'We confirm the timeline and quote', description: 'We provide the optimal start date and all-inclusive pricing (NBI retrieval + DFA Apostille + DHL shipping).' },
+          { title: 'NBI retrieval and DFA Apostille in the Philippines', description: 'Our Cebu team handles the NBI application and DFA Apostille. If a MATCH FOUND occurs, we manage the resolution process.' },
+          { title: 'DHL delivery to your US address', description: 'Tracked shipment directly to your door. Estimated total: 4–6 weeks (longer if MATCH FOUND resolution is needed).' },
         ]}
       />
 

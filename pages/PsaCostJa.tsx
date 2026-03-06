@@ -12,30 +12,62 @@ export default function PsaCostJa() {
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'PSA出生証明書の費用と代行' }]}
-      jsonLd={{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: 'PSA出生証明書取得代行（費用・料金）',
-        description: 'PSA出生証明書の代行費用をコミコミ料金で公開。PSA取得・DFAアポスティーユ・国際郵送をまとめた総額。後から追加請求なし。無料見積もり受付中。',
-        url: 'https://ph-document.com/ja/psa-shussei-cost',
-        provider: {
-          '@type': 'Organization',
-          name: 'IGRS Inc.',
-          url: 'https://ph-document.com/ja/',
-        },
-        areaServed: { '@type': 'Country', name: 'JP' },
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'JPY',
-          price: '40000',
-          priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            price: '40000',
+      jsonLd={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'PSA出生証明書取得代行（費用・料金）',
+          description: 'PSA出生証明書の代行費用をコミコミ料金で公開。PSA取得・DFAアポスティーユ・国際郵送をまとめた総額。後から追加請求なし。無料見積もり受付中。',
+          url: 'https://ph-document.com/ja/psa-shussei-cost',
+          provider: {
+            '@type': 'Organization',
+            name: 'IGRS Inc.',
+            url: 'https://ph-document.com/ja/',
+          },
+          areaServed: { '@type': 'Country', name: 'JP' },
+          offers: {
+            '@type': 'Offer',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜）',
+            price: '40000',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '40000',
+              priceCurrency: 'JPY',
+              description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜）',
+            },
           },
         },
-      }}
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'PSA出生証明書の取得代行料金はいくらですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '他社より高くなりませんか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めたコミコミ料金なので、最終的な総額で比較してください。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'アポスティーユが必要かどうかわかりません',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '提出先によって異なります。無料相談で確認してからご案内します。不要な認証に費用をかけないようにします。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
         title="「安く取れる」と思ったら、後から高くなった——そうなる前にご相談ください"
@@ -77,8 +109,8 @@ export default function PsaCostJa() {
       />
 
       <CtaBox
-        title="まず総額を確認しましょう"
-        description="PSA取得だけでなく、アポスティーユ・郵送まで含めたコミコミ料金を無料相談後にご提示します。"
+        title="「PSA取得費用」だけで比較しないでください"
+        description="PSA書類の取得費用だけを安く見せているサービスがあります。アポスティーユ・国際郵送まで含めた総額で比較することが重要です。まず無料相談でご確認ください。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
@@ -106,8 +138,8 @@ export default function PsaCostJa() {
       />
 
       <CtaBox
-        title="後から「こんなはずじゃなかった」を防ぐために"
-        description="最初に総額を確認することが、一番のコスト削減です。まずはご相談ください。"
+        title="「取ったけど使えなかった」が一番の無駄です"
+        description="提出先に合った形式・認証なしで取得してしまうと、再取得が必要になります。最初に用途を確認してから手配することで、無駄な費用をゼロにします。"
         buttonText="今すぐ相談する"
         href="#contact"
         variant="secondary"
@@ -116,10 +148,10 @@ export default function PsaCostJa() {
       <StepList
         heading="ご依頼の流れ"
         steps={[
-          { title: 'フォームで相談', description: '用途と提出先をお知らせください。' },
-          { title: 'コミコミ料金をご提示', description: 'PSA・アポスティーユ・郵送を含めた総額をご案内します。' },
-          { title: 'フィリピン現地で手配', description: '現地スタッフがPSA取得・DFAアポスティーユを進めます。' },
-          { title: '日本へ郵送', description: '追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: '用途と提出先を共有', description: '国際結婚・配偶者ビザ・帰化申請など、PSA書類の用途と提出先をお知らせください。必要な書類の種類と形式を確認します。' },
+          { title: 'コミコミ料金をご提示', description: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送を含めた総額をご案内します。見積もり後の追加請求はありません。' },
+          { title: 'PSA取得・DFAアポスティーユを代行', description: '現地スタッフがPSA申請・DFAアポスティーユを進めます。提出先に合った形式で取得します。' },
+          { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安は約1ヶ月〜。' },
         ]}
       />
 
