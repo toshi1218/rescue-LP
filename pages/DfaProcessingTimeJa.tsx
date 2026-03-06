@@ -51,7 +51,7 @@ export default function DfaProcessingTimeJa() {
             },
             {
               '@type': 'Question',
-              name: '急ぎの場合はExpressで申請できますか？',
+              name: '提出期限に合わせてExpressで申請できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: '可能です。提出期限をお知らせいただければ、Expressが必要かどうかを含めてご案内します。',
@@ -158,7 +158,7 @@ export default function DfaProcessingTimeJa() {
       <FaqSection
         items={[
           { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請できます。PSA取得・郵送を含めた全体の目安は約1ヶ月〜です。' },
-          { q: '急ぎの場合はExpressで申請できますか？', a: '可能です。提出期限をお知らせいただければ、Expressが必要かどうかを含めてご案内します。' },
+          { q: '提出期限に合わせてExpressで申請できますか？', a: 'はい。提出予定日をお知らせいただければ、RegularとExpressどちらが適切かを含めてご案内します。確実に間に合うスケジュールで進めます。' },
           { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
           { q: '期限に間に合うかどうか不安です', a: '提出予定日をお知らせいただければ、間に合うかどうかを確認してご案内します。まずはご相談ください。' },
         ]}

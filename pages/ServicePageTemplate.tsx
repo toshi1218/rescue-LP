@@ -60,7 +60,7 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
 
       <CtaBox
         title={isJa ? 'まずは無料相談で要件確認' : 'Start with a quick requirements check'}
-        description={isJa ? '過不足を確認し、最短ルートで進めます。' : 'We verify your case and proceed with only required steps.'}
+        description={isJa ? '必要書類を過不足なく確認し、確実に進めます。' : 'We verify your case and proceed with only required steps.'}
         buttonText={isJa ? '無料で相談する' : 'Talk to Us'}
         href="#contact"
         variant="primary"
@@ -117,7 +117,7 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
           ? [
               { q: '料金はいくらですか？', a: '案件ごとに必要書類が異なるため、無料相談後にコミコミ料金を提示します。' },
               { q: 'いつ届きますか？', a: '通常は約1か月〜です。期限がある場合は先に可否を案内します。' },
-              { q: '急ぎ対応はできますか？', a: '可能です。希望日程を共有いただければ優先可否を確認します。' },
+              { q: '提出期限に合わせて確実に手配できますか？', a: 'はい。提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。進捗は随時ご報告します。' },
             ]
           : [
               { q: 'How much does it cost?', a: 'Pricing depends on your case. We provide all-inclusive pricing after review.' },

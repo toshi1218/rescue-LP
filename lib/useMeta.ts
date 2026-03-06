@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
 const BASE = 'https://ph-document.com';
-const DEFAULT_TITLE = 'フィリピン書類取得代行｜CENOMAR・PSA・LTO最短依頼';
+const DEFAULT_TITLE = 'フィリピン書類取得代行｜CENOMAR・PSA・LTO 日本語だけで確実に取り寄せ';
 const DEFAULT_DESCRIPTION =
-  '日本在住でフィリピン書類が急ぎで必要な方へ。CENOMAR（独身証明書）・PSA出生証明書・LTO・DFAアポスティーユを現地スタッフが代行取得。国際結婚・外免切替・配偶者ビザに最短対応。無料相談受付中。';
+  'フィリピン書類の取得を日本語だけで安心おまかせ。CENOMAR（独身証明書）・PSA出生証明書・LTO・DFAアポスティーユを現地スタッフが完全代行。進捗は随時ご報告。国際結婚・外免切替・配偶者ビザに対応。無料相談受付中。';
 const DEFAULT_CANONICAL = `${BASE}/`;
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {

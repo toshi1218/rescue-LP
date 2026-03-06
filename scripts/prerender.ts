@@ -322,8 +322,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'index.html'),
-    title: `フィリピン書類、日本語だけで取り寄せできます｜CENOMAR・PSA・NBI代行${SEO_TITLE_BADGE_JA}`,
-    description: 'CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユを日本語だけで代行取得。フィリピン渡航不要、約1ヶ月〜でお届け。国際結婚・配偶者ビザ・帰化申請に対応。無料相談受付中。',
+    title: `フィリピン書類、日本語だけで確実に取り寄せできます｜CENOMAR・PSA・NBI代行${SEO_TITLE_BADGE_JA}`,
+    description: 'CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユを日本語だけで安心代行。フィリピン渡航不要。進捗は随時ご報告。国際結婚・配偶者ビザ・帰化申請に対応。無料相談受付中。',
     canonical: `${BASE}/ja/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/`,
@@ -641,7 +641,7 @@ function updateHead(html: string, route: RouteConfig): string {
   // meta keywords
   const keywords = route.lang === 'en'
     ? 'Philippine document service, CENOMAR, PSA Birth Certificate, NBI Clearance, DFA Apostille, US Visa, K-1 Visa, CR-1 Visa, USCIS, NVC, US Embassy, DHL shipping, document retrieval'
-    : 'フィリピン書類取得代行,CENOMAR取得代行,PSA出生証明書代行,LTO書類代行,DFAアポスティーユ代行,独身証明書取り寄せ,日本から依頼,外免切替,国際結婚,配偶者ビザ,最短取得';
+    : 'フィリピン書類取得代行,CENOMAR取得代行,PSA出生証明書代行,LTO書類代行,DFAアポスティーユ代行,独身証明書取り寄せ,日本から依頼,外免切替,国際結婚,配偶者ビザ,安心代行';
   result = result.replace(
     /<meta name="keywords" content="[^"]*"/,
     `<meta name="keywords" content="${keywords}"`

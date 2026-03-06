@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../lib/i18n';
 
 const statsValues = {
-  ja: ['12件', '4.8 / 5.0', '最短24時間'],
+  ja: ['12件', '4.8 / 5.0', '24時間以内に返信'],
   en: ['12', '4.8 / 5.0', 'Within 24 hrs'],
 };
 
