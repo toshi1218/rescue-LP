@@ -14,9 +14,26 @@ export default function PsaBirthCertEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'PSA Birth Certificate Retrieval Service',
+        name: 'PSA Birth Certificate Retrieval Service (+ DFA Apostille)',
+        description: 'We retrieve PSA Birth Certificate from the Philippines with DFA Apostille and ship to your US address via DHL. Required for K-1, CR-1, naturalization, and immigration applications.',
         url: 'https://ph-document.com/en/psa-birth-certificate',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '289',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '289',
+            priceCurrency: 'USD',
+            description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

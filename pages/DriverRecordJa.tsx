@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { FileCheck, Globe, Users, Car } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function DriverRecordJa() {
   return (
@@ -15,8 +16,25 @@ export default function DriverRecordJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'LTOドライバーズレコード取得代行',
+        description: 'フィリピンのLTOドライバーズレコードをDFAアポスティーユ付きで代行取得。外免切替・フィリピン人採用に対応。複数名まとめ依頼も可能。フィリピン渡航不要。',
         url: 'https://ph-document.com/ja/driver-record',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '100000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '100000',
+            priceCurrency: 'JPY',
+            description: 'LTO書類取得・DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function DriverRecordJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み対応', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="LTOドライバーズレコードを、日本語だけで取り寄せできます。外免切替の書類準備を一括代行します。"
+        points={[
+          '現地スタッフがフィリピン陸運局（LTO）に直接申請・取得',
+          '提出先の都道府県に合わせた正規書類で手配',
+          'DFAアポスティーユが必要な場合も一括対応',
+          '複数名分のまとめ依頼にも対応',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

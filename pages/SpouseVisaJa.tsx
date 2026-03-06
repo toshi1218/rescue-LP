@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function SpouseVisaJa() {
   return (
@@ -14,9 +15,26 @@ export default function SpouseVisaJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: '配偶者ビザ フィリピン書類代行',
+        name: '配偶者ビザ申請 フィリピン書類取得代行',
+        description: '配偶者ビザ（在留資格「日本人の配偶者等」）申請に必要なPSA婚姻証明書・出生証明書・CENOMAR・DFAアポスティーユを一括代行。入管要件に合わせた形式で手配。',
         url: 'https://ph-document.com/ja/haigusha-visa',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '40000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '40000',
+            priceCurrency: 'JPY',
+            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function SpouseVisaJa() {
         badges={['日本語だけでOK', '入管要件に合わせて手配', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="配偶者ビザ（在留資格「日本人の配偶者等」）に必要なフィリピン書類を、日本語だけで取り寄せできます。"
+        points={[
+          '入管が求める「紙の原本＋DFAアポスティーユ」形式で手配',
+          'PSA婚姻証明書・PSA出生証明書・CENOMARをまとめて代行',
+          '有効期限に合わせた取得タイミングもアドバイス',
+          '新規申請・更新・変更、どの申請にも対応',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       {/* 訴求ブロック */}

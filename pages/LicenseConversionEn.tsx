@@ -14,9 +14,26 @@ export default function LicenseConversionEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'Philippine License Conversion Documents Service',
+        name: 'Philippine License Conversion — LTO Driver\'s Record Retrieval Service',
+        description: 'We retrieve the LTO Driver\'s Record with DFA Apostille for Philippine license conversion at US state DMVs. Bulk orders for employers welcome. Ships to your US address via DHL.',
         url: 'https://ph-document.com/en/drivers-license-conversion',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '699',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '699',
+            priceCurrency: 'USD',
+            description: 'LTO retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

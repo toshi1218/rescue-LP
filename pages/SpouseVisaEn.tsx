@@ -14,9 +14,26 @@ export default function SpouseVisaEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'Spouse Visa Documents Service',
+        name: 'Spouse Visa Philippine Documents Retrieval Service',
+        description: 'We retrieve all Philippine documents required for a CR-1/IR-1 spouse visa — PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille. NVC-ready. Ships to USA via DHL.',
         url: 'https://ph-document.com/en/spouse-visa-documents',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '799',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '799',
+            priceCurrency: 'USD',
+            description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

@@ -14,9 +14,26 @@ export default function ApostilleGuideEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'DFA Apostille Service',
+        name: 'DFA Apostille Authentication Service',
+        description: 'We handle DFA Apostille authentication for PSA, NBI, CENOMAR, and LTO documents. Physical paper Apostille provided. Ships to your US address via DHL. No trip to the Philippines needed.',
         url: 'https://ph-document.com/en/apostille',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '199',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '199',
+            priceCurrency: 'USD',
+            description: 'DFA Apostille + DHL shipping to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

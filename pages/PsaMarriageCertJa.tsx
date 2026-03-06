@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function PsaMarriageCertJa() {
   return (
@@ -15,8 +16,25 @@ export default function PsaMarriageCertJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA婚姻証明書取得代行',
+        description: 'フィリピンのPSA婚姻証明書をDFAアポスティーユ付きで日本語だけで代行取得。配偶者ビザ・国際結婚・帰化申請に対応。注釈付き（Annotated）にも対応。約1ヶ月〜。',
         url: 'https://ph-document.com/ja/psa-kekkon-shomeisho',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '40000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '40000',
+            priceCurrency: 'JPY',
+            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function PsaMarriageCertJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み対応', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="PSA婚姻証明書（アポスティーユ付き）を、日本語だけで取り寄せできます。"
+        points={[
+          '現地スタッフがPSA申請・DFAアポスティーユを代行',
+          '配偶者ビザ・帰化申請に必要な「紙の原本」形式で対応',
+          '注釈付き（Annotated）婚姻証明書にも対応',
+          '約1ヶ月〜で日本のご住所へ郵送',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

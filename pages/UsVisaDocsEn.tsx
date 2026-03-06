@@ -14,9 +14,26 @@ export default function UsVisaDocsEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'US Visa Philippine Documents Service',
+        name: 'US Visa Philippine Documents Retrieval Service (K-1 / CR-1 / IR-1)',
+        description: 'We retrieve all Philippine documents for K-1, CR-1, and IR-1 visa applications — CENOMAR, PSA Birth Certificate, Marriage Certificate, NBI Clearance with DFA Apostille. Ships to USA via DHL.',
         url: 'https://ph-document.com/en/us-visa-documents',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '799',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '799',
+            priceCurrency: 'USD',
+            description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

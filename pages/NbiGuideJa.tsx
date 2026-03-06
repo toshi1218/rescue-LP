@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Fingerprint, AlertTriangle, Clock, Users, FileCheck, Globe } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function NbiGuideJa() {
   return (
@@ -14,9 +15,26 @@ export default function NbiGuideJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'NBI Clearance取得代行',
+        name: 'NBI Clearance（無犯罪証明書）取得代行',
+        description: 'フィリピンのNBI Clearanceを日本語だけで代行取得。DFAアポスティーユ付き対応、HIT案件も対応。配偶者ビザ・就労ビザ・帰化申請に。フィリピン渡航不要、約1ヶ月〜。',
         url: 'https://ph-document.com/ja/nbi-clearance',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '45000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '45000',
+            priceCurrency: 'JPY',
+            description: 'NBI取得・DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function NbiGuideJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み対応', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="NBI Clearance（無犯罪証明書）は、日本語だけで取り寄せできます。フィリピンに行く必要はありません。"
+        points={[
+          '現地スタッフが指紋採取・申請・受け取りをすべて代行',
+          'HIT（同名者あり）が出た場合も対応経験あり',
+          'DFAアポスティーユ付きで日本のご住所へ郵送。約1ヶ月〜',
+          '配偶者ビザ・帰化申請・就労ビザ、どの用途にも対応',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       {/* 訴求ブロック */}

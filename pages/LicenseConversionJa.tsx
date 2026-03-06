@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Car, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function LicenseConversionJa() {
   return (
@@ -15,8 +16,25 @@ export default function LicenseConversionJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: '外免切替 LTO書類取得代行',
+        description: 'フィリピン免許から日本免許への外免切替に必要なLTO書類をDFAアポスティーユ付きで代行取得。試験場の予約日から逆算して手配。複数名まとめ依頼も対応。',
         url: 'https://ph-document.com/ja/gaimen-kirikae-guide',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '100000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '100000',
+            priceCurrency: 'JPY',
+            description: 'LTO書類取得・DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function LicenseConversionJa() {
         badges={['日本語だけでOK', 'LTO正規書類', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="外免切替（フィリピン免許→日本免許）に必要なLTO書類を、日本語だけで取り寄せできます。"
+        points={[
+          '現地スタッフがフィリピン陸運局（LTO）に直接申請・取得',
+          '試験場の要件に合わせた正規書類で手配',
+          '試験場の予約日に合わせた逆算スケジュールでご案内',
+          '複数名分のまとめ依頼にも対応',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       {/* 訴求ブロック */}

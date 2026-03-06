@@ -14,9 +14,26 @@ export default function NbiHitEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'NBI HIT Resolution Service',
+        name: 'NBI MATCH FOUND (HIT) Resolution + NBI Clearance Retrieval Service',
+        description: 'NBI MATCH FOUND does not always mean a criminal record. We handle HIT resolution, NBI Clearance retrieval, and DFA Apostille. Ships to your US address via DHL. Visa deadlines met.',
         url: 'https://ph-document.com/en/nbi-hit',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '329',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '329',
+            priceCurrency: 'USD',
+            description: 'NBI retrieval + HIT resolution support + DFA Apostille + DHL to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

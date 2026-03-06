@@ -14,9 +14,26 @@ export default function DriverRecordEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'LTO Driver Record Retrieval Service',
+        name: 'LTO Driver\'s Record Retrieval Service (+ DFA Apostille)',
+        description: 'We retrieve the LTO Driver\'s Record from the Philippines with DFA Apostille and ship to your US address via DHL. Required for Philippine license conversion at US state DMVs.',
         url: 'https://ph-document.com/en/driver-record',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '699',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '699',
+            priceCurrency: 'USD',
+            description: 'LTO retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

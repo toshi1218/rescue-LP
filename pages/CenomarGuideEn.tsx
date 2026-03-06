@@ -14,9 +14,26 @@ export default function CenomarGuideEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'CENOMAR Retrieval Service',
+        name: 'CENOMAR Retrieval Service (PSA + DFA Apostille)',
+        description: 'We retrieve CENOMAR from PSA with DFA Apostille and ship to your US address via DHL. Required for K-1 fiancé visa and CR-1/IR-1 spouse visa. No trip to the Philippines needed.',
         url: 'https://ph-document.com/en/cenomar',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '289',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '289',
+            priceCurrency: 'USD',
+            description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

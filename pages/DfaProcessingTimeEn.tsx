@@ -14,9 +14,15 @@ export default function DfaProcessingTimeEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'DFA Apostille Processing Time Service',
+        name: 'DFA Apostille Service — Timed for Your Visa Deadline',
+        description: 'DFA Apostille takes 4 business days (Regular) or next business day (Express). We schedule processing to meet your USCIS or NVC submission deadline. Free consultation to check your timeline.',
         url: 'https://ph-document.com/en/apostille-processing-time',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
       }}
     >
       <HeroBanner

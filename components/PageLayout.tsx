@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
+const BASE_URL = 'https://ph-document.com';
+
 type Breadcrumb = {
   label: string;
   href?: string;
@@ -15,8 +17,26 @@ type PageLayoutProps = {
 };
 
 export default function PageLayout({ breadcrumbs, jsonLd, children }: PageLayoutProps) {
+  // BreadcrumbList JSON-LD を自動生成
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      ...(item.href ? { item: `${BASE_URL}${item.href}` } : {}),
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background-light text-gray-800 font-body">
+      {/* BreadcrumbList 構造化データ */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {/* ページ固有の構造化データ */}
       {jsonLd && (
         <script
           type="application/ld+json"

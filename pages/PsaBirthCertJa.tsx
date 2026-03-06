@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Baby, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function PsaBirthCertJa() {
   return (
@@ -15,8 +16,25 @@ export default function PsaBirthCertJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA出生証明書取得代行',
+        description: 'フィリピンのPSA出生証明書をDFAアポスティーユ付きで日本語だけで代行取得。国際結婚・配偶者ビザ・帰化申請に対応。フィリピン渡航不要、約1ヶ月〜。',
         url: 'https://ph-document.com/ja/psa-shussei-shomeisho',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '40000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '40000',
+            priceCurrency: 'JPY',
+            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function PsaBirthCertJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み対応', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="PSA出生証明書（アポスティーユ付き）を、日本語だけで取り寄せできます。"
+        points={[
+          '現地スタッフがPSA申請・DFAアポスティーユを代行',
+          '日本の提出先が求める「紙の原本＋アポスティーユ」形式で対応',
+          '「PSAに記録がない」複雑なケースも相談可能',
+          '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       {/* 訴求ブロック */}

@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { BadgeCheck, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function ApostilleGuideJa() {
   return (
@@ -15,15 +16,43 @@ export default function ApostilleGuideJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFAアポスティーユ取得代行',
+        description: 'フィリピン外務省（DFA）のアポスティーユ認証を日本語だけで代行取得。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。約2週間〜。',
         url: 'https://ph-document.com/ja/apostille',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '30000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '30000',
+            priceCurrency: 'JPY',
+            description: 'DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
-        title="DFAアポスティーユの処理期間、提出期限に合わせて手配します"
-        badges={['日本語だけでOK', '提出期限に合わせて手配', 'コミコミ料金']}
+        title="DFAアポスティーユ、フィリピンに行かずに取得できます"
+        badges={['日本語だけでOK', '書類取得から一括代行', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="DFAアポスティーユは、フィリピンに行かずに取得できます。書類取得からアポスティーユまで一括で代行します。"
+        points={[
+          '日本語でご相談 → 現地スタッフがDFA申請・認証を代行',
+          '紙の原本アポスティーユで対応（入管・役所・大使館に提出可能）',
+          'PSA・CENOMAR・NBI等の書類取得と同時依頼OK',
+          '認証済み書類を日本のご住所へ郵送。約2週間〜',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       {/* 訴求ブロック */}

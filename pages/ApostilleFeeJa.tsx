@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function ApostilleFeeJa() {
   return (
@@ -14,9 +15,26 @@ export default function ApostilleFeeJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'DFAアポスティーユ料金・代行費用',
+        name: 'DFAアポスティーユ取得代行（料金・費用）',
+        description: 'DFAアポスティーユの代行費用をコミコミ料金で公開。PSA・CENOMAR・NBI別の費用目安も確認可能。後から追加請求なし。無料見積もり受付中。',
         url: 'https://ph-document.com/ja/apostille-ryokin',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '30000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '30000',
+            priceCurrency: 'JPY',
+            description: 'DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function ApostilleFeeJa() {
         badges={['コミコミ料金', '追加費用なし', '日本語だけでOK']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="DFAアポスティーユの費用は、コミコミ料金で最初から明示します。後から追加請求はありません。"
+        points={[
+          'DFAアポスティーユ・PSA取得・国際郵送をまとめたコミコミ料金',
+          '他社の「1通○○円〜」は書類取得費用のみの場合が多い',
+          '提出先によってアポスティーユが不要な場合も。無料相談で確認',
+          '見積もり後の追加請求なし。総額で比較してください',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, FileCheck, Globe, Clock } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function NbiHitJa() {
   return (
@@ -14,9 +15,26 @@ export default function NbiHitJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'NBI HIT対応代行',
+        name: 'NBI HIT（同名者あり）解消・NBI Clearance取得代行',
+        description: 'NBI ClearanceでHIT（同名者あり）が出た場合の解消手続きからNBI取得・DFAアポスティーユまで一括代行。配偶者ビザ・就労ビザの期限に間に合わせます。',
         url: 'https://ph-document.com/ja/nbi-hit',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '45000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '45000',
+            priceCurrency: 'JPY',
+            description: 'NBI取得・HIT対応・DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function NbiHitJa() {
         badges={['日本語だけでOK', '状況確認から対応', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="NBI HITが出ても、あきらめないでください。HIT解消からNBI Clearance取得まで、一括で対応します。"
+        points={[
+          'HITは必ずしも犯罪歴ではない。同姓同名の別人の記録の場合も多い',
+          'HIT確認・解消手続き・NBI取得・DFAアポスティーユまで一括代行',
+          'ビザ申請の期限が迫っている場合も、まず状況をご相談ください',
+          '日本語だけで対応可能。フィリピンに行く必要なし',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

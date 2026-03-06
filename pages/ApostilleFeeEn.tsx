@@ -14,9 +14,26 @@ export default function ApostilleFeeEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'DFA Apostille Fee and Pricing',
+        name: 'DFA Apostille Authentication Service — All-Inclusive Pricing',
+        description: 'Full cost breakdown for DFA Apostille: official fees + proxy service + DHL shipping to USA. All-inclusive pricing with no hidden fees. Free quote available for CENOMAR, PSA, and NBI.',
         url: 'https://ph-document.com/en/apostille-fee',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '199',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '199',
+            priceCurrency: 'USD',
+            description: 'DFA Apostille + DHL shipping to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

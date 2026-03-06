@@ -14,9 +14,15 @@ export default function NbiValidityEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'NBI Clearance Validity and Timing Service',
+        name: 'NBI Clearance Retrieval — Timed for Your Visa Deadline',
+        description: 'NBI Clearance is valid for 1 year, but USCIS and NVC often require it within 6 months of submission. We time the retrieval to match your specific deadline.',
         url: 'https://ph-document.com/en/nbi-validity',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
       }}
     >
       <HeroBanner

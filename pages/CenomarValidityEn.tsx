@@ -14,9 +14,15 @@ export default function CenomarValidityEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'CENOMAR Validity and Timing Service',
+        name: 'CENOMAR Retrieval — Timed for Your Visa Deadline',
+        description: 'CENOMAR is typically valid for 6 months. We time the retrieval to match your USCIS or NVC submission deadline, so it does not expire before you can use it.',
         url: 'https://ph-document.com/en/cenomar-validity',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
       }}
     >
       <HeroBanner

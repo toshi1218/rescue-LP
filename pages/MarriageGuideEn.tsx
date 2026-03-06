@@ -14,9 +14,26 @@ export default function MarriageGuideEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'International Marriage Documents Service',
+        name: 'Philippine Marriage Documents Retrieval Service (CENOMAR + PSA + Apostille)',
+        description: 'We retrieve all Philippine documents needed to marry a Filipino/Filipina — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships to your US address via DHL.',
         url: 'https://ph-document.com/en/international-marriage-guide',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '799',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '799',
+            priceCurrency: 'USD',
+            description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

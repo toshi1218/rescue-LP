@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function MarriageGuideJa() {
   return (
@@ -14,9 +15,26 @@ export default function MarriageGuideJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'フィリピン人との国際結婚 書類代行',
+        name: 'フィリピン人との国際結婚 必要書類取得代行',
+        description: 'フィリピン人との国際結婚に必要なCENOMAR・PSA出生証明書・DFAアポスティーユを一括代行。日本先行婚・フィリピン先行婚どちらにも対応。日本語だけで完結。',
         url: 'https://ph-document.com/ja/kokusai-kekkon-guide',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '85000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '85000',
+            priceCurrency: 'JPY',
+            description: '国際結婚パック（CENOMAR・PSA・DFAアポスティーユ・国際郵送込み、税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function MarriageGuideJa() {
         badges={['日本語だけでOK', '書類一式まとめて代行', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="フィリピン人との国際結婚に必要な書類を、日本語だけで一括取り寄せできます。"
+        points={[
+          'CENOMAR・PSA出生証明書・DFAアポスティーユをまとめて代行',
+          '日本先行婚・フィリピン先行婚、どちらの方式にも対応',
+          '婚姻届から配偶者ビザ申請まで、必要書類を一式ご案内',
+          '書類の有効期限に合わせた取得タイミングもアドバイス',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       {/* 訴求ブロック */}

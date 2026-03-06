@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { FileCheck, Globe, Users, Heart } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function NaturalizationJa() {
   return (
@@ -15,8 +16,25 @@ export default function NaturalizationJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: '帰化申請 フィリピン書類取得代行',
+        description: '帰化申請に必要なPSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。法務局の要件に合わせた形式で手配。司法書士・行政書士からの依頼も対応。',
         url: 'https://ph-document.com/ja/kika-shinsei-guide',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '40000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '40000',
+            priceCurrency: 'JPY',
+            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function NaturalizationJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="帰化申請に必要なフィリピン書類を、日本語だけで一括取り寄せできます。"
+        points={[
+          'PSA出生証明書・婚姻証明書・CENOMARをまとめて代行',
+          'DFAアポスティーユ付きで法務局の要件に対応',
+          '司法書士・行政書士の先生からのご依頼も対応',
+          '必要書類が不明な場合も、無料相談で整理します',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

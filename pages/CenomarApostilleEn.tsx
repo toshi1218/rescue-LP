@@ -14,9 +14,26 @@ export default function CenomarApostilleEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'CENOMAR Apostille Service',
+        name: 'CENOMAR DFA Apostille Authentication Service',
+        description: 'We handle DFA Apostille authentication for CENOMAR. Physical paper Apostille provided — required by USCIS for K-1 and CR-1 visa applications. Ships to your US address via DHL.',
         url: 'https://ph-document.com/en/cenomar-apostille',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '289',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '289',
+            priceCurrency: 'USD',
+            description: 'CENOMAR retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

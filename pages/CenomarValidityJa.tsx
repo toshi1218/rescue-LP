@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function CenomarValidityJa() {
   return (
@@ -14,9 +15,15 @@ export default function CenomarValidityJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'CENOMAR有効期限・取得タイミング相談',
+        name: 'CENOMAR有効期限・最適タイミングでの代行取得',
+        description: 'CENOMARの有効期限（多くの提出先で6ヶ月以内）を踏まえ、提出予定日から逆算して最適なタイミングで代行取得。期限切れによる再取得リスクをなくします。',
         url: 'https://ph-document.com/ja/cenomar-koyukigen',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
       }}
     >
       <HeroBanner
@@ -24,6 +31,17 @@ export default function CenomarValidityJa() {
         badges={['日本語だけでOK', '提出期限に合わせて手配', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="CENOMARの有効期限と取得タイミング、一緒に確認します。期限切れで再取得になるリスクをなくします。"
+        points={[
+          'CENOMARは多くの提出先で「発行から6ヶ月以内」が求められる',
+          '提出予定日から逆算して、最適な申請開始時期をご案内',
+          '取得後に期限切れになった場合の再取得にも対応',
+          '婚姻届・ビザ申請・帰化申請、どのスケジュールにも対応',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

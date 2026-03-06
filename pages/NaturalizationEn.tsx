@@ -14,9 +14,26 @@ export default function NaturalizationEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'Naturalization Documents Service',
+        name: 'Philippine Documents for US Naturalization (PSA + NBI + Apostille)',
+        description: 'We retrieve PSA Birth Certificate, NBI Clearance, and other Philippine civil documents with DFA Apostille for USCIS naturalization applications. Ships to your US address via DHL.',
         url: 'https://ph-document.com/en/naturalization-guide',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '289',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '289',
+            priceCurrency: 'USD',
+            description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive, per document)',
+          },
+        },
       }}
     >
       <HeroBanner

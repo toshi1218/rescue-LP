@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { FileCheck, Globe, Users, Heart } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function UsVisaDocsJa() {
   return (
@@ -14,9 +15,26 @@ export default function UsVisaDocsJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: '米国ビザ フィリピン書類取得代行',
+        name: '米国ビザ（K-1・CR-1・IR-1）フィリピン書類取得代行',
+        description: 'K-1・CR-1・IR-1ビザに必要なCENOMAR・PSA出生証明書・婚姻証明書・NBI ClearanceをDFAアポスティーユ付きで一括代行。USCIS・NVC提出に対応。',
         url: 'https://ph-document.com/ja/us-visa-documents',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '40000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '40000',
+            priceCurrency: 'JPY',
+            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function UsVisaDocsJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="米国ビザ（K-1・CR-1・IR-1）に必要なフィリピン書類を、日本語だけで一括取り寄せできます。"
+        points={[
+          'CENOMAR・PSA出生証明書・婚姻証明書・NBI Clearanceをまとめて代行',
+          'USCIS・NVC提出に必要なDFAアポスティーユ付きで対応',
+          '英語の書類も当社が確認・手配。日本語だけで完結',
+          '必要書類が不明な場合も、無料相談で整理します',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

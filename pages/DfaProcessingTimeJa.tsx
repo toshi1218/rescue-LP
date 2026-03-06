@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function DfaProcessingTimeJa() {
   return (
@@ -14,9 +15,15 @@ export default function DfaProcessingTimeJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'DFAアポスティーユ処理期間・代行',
+        name: 'DFAアポスティーユ処理期間・提出期限に合わせた代行取得',
+        description: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請可能。提出予定日から逆算して最適なスケジュールで手配。ビザ申請の期限に間に合わせます。',
         url: 'https://ph-document.com/ja/apostille-shori-kikan',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
       }}
     >
       <HeroBanner
@@ -24,6 +31,17 @@ export default function DfaProcessingTimeJa() {
         badges={['日本語だけでOK', '提出期限に合わせて手配', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="DFAアポスティーユの処理期間は通常4〜5営業日。提出期限に合わせて手配します。"
+        points={[
+          'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請可能',
+          'PSA取得・アポスティーユ・郵送を含めた全体の目安は約1ヶ月〜',
+          '提出予定日から逆算して、最適な申請開始時期をご案内',
+          '期限に間に合うかどうかも、無料相談で確認できます',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

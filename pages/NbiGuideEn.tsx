@@ -14,9 +14,26 @@ export default function NbiGuideEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'NBI Clearance Retrieval Service',
+        name: 'NBI Clearance Retrieval Service (+ DFA Apostille)',
+        description: 'We retrieve NBI Clearance from the Philippines with DFA Apostille and ship to your US address via DHL. Required for K-1, CR-1, and immigration applications. MATCH FOUND (HIT) cases handled.',
         url: 'https://ph-document.com/en/nbi-clearance',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '329',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '329',
+            priceCurrency: 'USD',
+            description: 'NBI retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function PsaCostJa() {
   return (
@@ -14,9 +15,26 @@ export default function PsaCostJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'PSA出生証明書取得代行（費用）',
+        name: 'PSA出生証明書取得代行（費用・料金）',
+        description: 'PSA出生証明書の代行費用をコミコミ料金で公開。PSA取得・DFAアポスティーユ・国際郵送をまとめた総額。後から追加請求なし。無料見積もり受付中。',
         url: 'https://ph-document.com/ja/psa-shussei-cost',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '40000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '40000',
+            priceCurrency: 'JPY',
+            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function PsaCostJa() {
         badges={['コミコミ料金', '追加費用なし', '日本語だけでOK']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="PSA出生証明書の費用は、コミコミ料金で最初から明示します。後から追加請求はありません。"
+        points={[
+          'PSA取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金',
+          '他社の「1通○○円〜」はアポスティーユ・郵送が別途加算されることが多い',
+          '提出先に合った形式で最初から手配。「取ったけど使えなかった」を防ぐ',
+          '見積もり後の追加請求なし。総額で比較してください',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

@@ -14,9 +14,26 @@ export default function PsaCostEn() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'PSA Birth Certificate Cost and Retrieval Service',
+        name: 'PSA Birth Certificate Retrieval — All-Inclusive Pricing',
+        description: 'Full cost breakdown for PSA Birth Certificate retrieval: PSA fee + DFA Apostille + DHL shipping to USA. All-inclusive pricing with no hidden fees. Free quote available.',
         url: 'https://ph-document.com/en/psa-birth-certificate-cost',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/en/',
+        },
+        areaServed: { '@type': 'Country', name: 'US' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          price: '289',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '289',
+            priceCurrency: 'USD',
+            description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+          },
+        },
       }}
     >
       <HeroBanner

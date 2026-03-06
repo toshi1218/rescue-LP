@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function NbiValidityJa() {
   return (
@@ -14,9 +15,15 @@ export default function NbiValidityJa() {
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'NBI Clearance有効期限・取得タイミング相談',
+        name: 'NBI Clearance有効期限・最適タイミングでの代行取得',
+        description: 'NBI Clearanceの有効期限（発行から1年、提出先によっては6ヶ月以内）を踏まえ、提出予定日から逆算して最適なタイミングで代行取得。期限切れによる再取得リスクをなくします。',
         url: 'https://ph-document.com/ja/nbi-koyukigen',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
       }}
     >
       <HeroBanner
@@ -24,6 +31,17 @@ export default function NbiValidityJa() {
         badges={['日本語だけでOK', '提出期限に合わせて手配', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="NBI Clearanceの有効期限と取得タイミング、一緒に確認します。期限切れで再取得になるリスクをなくします。"
+        points={[
+          'NBI Clearanceは発行から1年有効。ただし提出先によっては6ヶ月以内を求める場合も',
+          '提出予定日から逆算して、最適な申請開始時期をご案内',
+          '取得後に期限切れになった場合の再取得にも対応',
+          '配偶者ビザ・帰化申請・就労ビザ、どのスケジュールにも対応',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       <FeatureList

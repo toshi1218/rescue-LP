@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Heart, FileCheck, Globe, AlertTriangle, Clock, Users } from 'lucide-react';
+import SummaryBlock from '../components/SummaryBlock';
 
 export default function CenomarGuideJa() {
   return (
@@ -15,8 +16,25 @@ export default function CenomarGuideJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMAR（独身証明書）取得代行',
+        description: 'フィリピンのCENOMAR（独身証明書）をDFAアポスティーユ付きで日本語だけで代行取得。国際結婚・配偶者ビザ・帰化申請に対応。フィリピン渡航不要、約1ヶ月〜。',
         url: 'https://ph-document.com/ja/cenomar',
-        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '40000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '40000',
+            priceCurrency: 'JPY',
+            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜）',
+          },
+        },
       }}
     >
       <HeroBanner
@@ -24,6 +42,17 @@ export default function CenomarGuideJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み', '約1ヶ月〜']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+      />
+
+      <SummaryBlock
+        conclusion="CENOMAR（独身証明書）は、日本語だけで取り寄せできます。フィリピンに行く必要はありません。"
+        points={[
+          '日本語でご相談 → 現地スタッフがPSA取得・DFAアポスティーユを代行',
+          'アポスティーユ付き原本を日本のご住所へ郵送。約1ヶ月〜',
+          '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
+          '追加費用の後出しなし。コミコミ料金で見積もりをご提示',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
 
       {/* 訴求ブロック：なぜ自力取得が難しいか */}
