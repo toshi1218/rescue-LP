@@ -155,7 +155,7 @@ export default function KekkonShomeishoPage() {
         t('国際郵便で日本に届く', 'Delivered to Japan by international mail'),
       ],
       pros: t('コストが安い', 'Lower cost'),
-      cons: t('英語対応必須。配送に時間がかかる', 'English required. Delivery takes time.'),
+      cons: t('英語での申請が必要。提出先によっては追加書類の確認が必要になることがある。書類不備や再取得で、結果的に時間と手間が増えることがある', 'English required. Depending on your submission authority, additional document verification may be needed. Errors or re-procurement can add significant time and effort.'),
       color: 'border-gray-200',
     },
     {
@@ -166,7 +166,7 @@ export default function KekkonShomeishoPage() {
         t('書類確認から郵送まで一括サポート', 'One-stop support from document verification to mailing'),
         t('フィリピン先行婚姻後の登録状況確認も対応', 'Also handles registration status verification after Philippines-first marriage'),
       ],
-      pros: t('手間ゼロ。日本語サポートあり', 'Zero hassle. English support. Ships to USA.'),
+      pros: t('提出先に応じて必要書類を確認。取得漏れ・再提出・再送料のリスクを減らせる。日本語で完結', 'We verify required documents for your specific submission authority. Reduces the risk of missing documents, resubmission, and reshipping costs.'),
       cons: t('代行手数料がかかる', 'Proxy service fee required'),
       color: 'border-primary',
     },
@@ -319,6 +319,50 @@ export default function KekkonShomeishoPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* アポスティーユ注意ボックス */}
+          <div className="mt-5 bg-amber-50 border border-amber-300 rounded-xl p-5">
+            <div className="flex gap-3">
+              <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-bold text-amber-800 mb-2">
+                  {t(
+                    'PSA婚姻証明書を取得するだけでは受け付けてもらえないことがあります',
+                    'Getting the PSA Marriage Certificate alone is often not enough'
+                  )}
+                </p>
+                <p className="text-xs text-amber-700 leading-relaxed">
+                  {t(
+                    '配偶者ビザ申請やNVCへの書類提出では、PSA婚姻証明書に加えて、DFA（フィリピン外務省）発行のアポスティーユが基本的に必要です。PSAオンラインで書類を取り寄せても、アポスティーユはフィリピン現地でのDFA申請が別途必要で、追加の費用と時間がかかります。他社の格安代行サービスも、アポスティーユは別途料金となるケースがほとんどです。結果的に、自分で手続きするより費用も手間も増えてしまうことがあります。',
+                    'For CR-1/IR-1 visa applications and NVC document submission, DFA Apostille is typically required on top of the PSA Marriage Certificate. Even ordering via PSA online, Apostille requires a separate in-Philippines procedure — extra cost, extra wait. Budget agencies usually charge Apostille separately too. Self-service often ends up costing more than expected.'
+                  )}
+                </p>
+                <p className="text-xs font-bold text-amber-800 mt-3">
+                  {t(
+                    '弊社では、必要書類の判断からアポスティーユ取得まで一括で対応します。追加費用の発生を防ぐためにも、まずはご相談ください。',
+                    'Our service covers everything from document assessment to DFA Apostille in one go — no hidden extra steps. Consult us first to avoid unexpected costs.'
+                  )}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 比較表直下CTA */}
+          <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-5 text-center">
+            <p className="text-sm font-bold text-secondary mb-1">
+              {t('どの方法が自分に合うか分からない方へ', 'Not sure which option is right for you?')}
+            </p>
+            <p className="text-xs text-gray-600 mb-4">
+              {t('1分で確認できます。用途に応じて必要書類・アポスティーユの要否を案内します。', "Check in 1 minute. We'll tell you exactly which documents and Apostille you need for your situation.")}
+            </p>
+            <a
+              href="#contact"
+              className="inline-block bg-primary text-white text-sm font-bold py-2.5 px-6 rounded-lg hover:bg-primary-hover transition-colors"
+              onClick={() => trackEvent('cta_click', { location: 'psa_marriage_certificate_comparison', type: 'consultation' })}
+            >
+              {t('まずは無料相談', 'Start with a Free Consultation')}
+            </a>
           </div>
         </section>
 
