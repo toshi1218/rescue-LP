@@ -171,8 +171,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/drivers-license-conversion',
     outFile: path.join(projectRoot, 'dist', 'en', 'drivers-license-conversion', 'index.html'),
-    title: `Convert Philippine License to US/Japan: LTO Documents We Get for You [${SEO_YEAR_MONTH_EN}]`,
-    description: `Need Philippine LTO documents for a driver's license conversion? We handle LTO record retrieval + DFA Apostille + shipping. Ideal for employers and spouses. Free consultation.`,
+    title: `Philippine License Conversion to US: LTO Documents We Get for You [${SEO_YEAR_MONTH_EN}]`,
+    description: `Converting a Philippine driver's license to a US state license? We retrieve the LTO Driver's Record with DFA Apostille and ship it to your US address. Bulk orders for employers welcome. Free consultation.`,
     canonical: `${BASE}/en/drivers-license-conversion/`,
     lang: 'en',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
@@ -182,8 +182,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/naturalization-guide',
     outFile: path.join(projectRoot, 'dist', 'en', 'naturalization-guide', 'index.html'),
-    title: `Philippine Documents for Japan Naturalization [${SEO_YEAR_MONTH_EN}]: PSA & NBI Retrieval Service`,
-    description: `Applying for naturalization in Japan? We retrieve PSA Birth Certificate, NBI Clearance + DFA Apostille for your application. Fast turnaround. Free consultation for applicants and their spouses.`,
+    title: `Philippine Documents for US Naturalization [${SEO_YEAR_MONTH_EN}]: PSA & NBI — Shipped to Your Door`,
+    description: `Applying for US naturalization and need Philippine civil documents? We retrieve PSA Birth Certificate, NBI Clearance + DFA Apostille and ship to your US address. USCIS-ready. Free consultation.`,
     canonical: `${BASE}/en/naturalization-guide/`,
     lang: 'en',
     enCanonical: `${BASE}/en/naturalization-guide/`,
@@ -290,8 +290,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/company',
     outFile: path.join(projectRoot, 'dist', 'en', 'company', 'index.html'),
-    title: 'About Us | IGRS Co., Ltd. (Philippine Document Service)',
-    description: 'Learn about IGRS Co., Ltd., the company behind the Philippine Document Retrieval Service. Offices in Japan and the Philippines. Japanese, English, and Tagalog support.',
+    title: 'About Us | IGRS Inc. — Philippine Document Retrieval Service',
+    description: 'IGRS Inc. is a document retrieval agency with an operations office in Cebu, Philippines. We retrieve PSA, NBI, LTO, and DFA Apostille documents for US visa and immigration applicants. English support.',
     canonical: `${BASE}/en/company/`,
     lang: 'en',
     enCanonical: `${BASE}/en/company/`,
