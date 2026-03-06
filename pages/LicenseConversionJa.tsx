@@ -5,7 +5,7 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { FileCheck, Globe, Users, Car } from 'lucide-react';
+import { Car, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
 
 export default function LicenseConversionJa() {
   return (
@@ -20,53 +20,72 @@ export default function LicenseConversionJa() {
       }}
     >
       <HeroBanner
-        title="フィリピン運転免許の外免切替、必要書類をまとめて手配します"
-        badges={['日本語だけでOK', 'アポスティーユ込み対応', 'コミコミ料金']}
+        title="外免切替のLTO書類、日本語だけで取り寄せます"
+        badges={['日本語だけでOK', 'LTO正規書類', 'コミコミ料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
 
+      {/* 訴求ブロック */}
+      <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
+        <div className="flex items-start gap-3 mb-4">
+          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-amber-900">外免切替のLTO書類、こんな落とし穴があります</h2>
+        </div>
+        <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>LTO書類は<strong>フィリピン陸運局（LTO）への直接申請が必要</strong>。日本からオンラインでは取得不可</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>運転免許試験場が求める書類の形式は<strong>試験場によって異なる</strong>ケースがある</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>書類の不備で<strong>試験場での手続きが止まる</strong>と、再取得に数週間〜数ヶ月かかる</li>
+        </ul>
+        <p className="mt-4 text-sm font-semibold text-amber-900">→ 提出先の試験場に合わせた形式で、LTO書類を代行取得します。</p>
+      </section>
+
       <FeatureList
-        heading="こんな方へ"
+        heading="こんな方に選ばれています"
         items={[
           {
             icon: <Car className="w-4 h-4" />,
-            title: 'フィリピン人従業員の外免切替を手配したい',
-            description: '企業様からのご依頼も対応しています。LTOドライバーズレコード・DFAアポスティーユ・公式レシートをまとめて手配します。',
+            title: '日本でフィリピン免許を日本免許に切り替えたい方',
+            description: '運転免許試験場への外免切替申請に必要なLTO書類（ドライバーズレコード等）を代行取得します。提出先の試験場に合わせた形式で手配します。',
           },
           {
             icon: <Users className="w-4 h-4" />,
-            title: '複数名分をまとめて依頼したい',
-            description: '複数名分の一括手配も可能です。まずは人数と状況をお知らせください。',
+            title: '会社が従業員の外免切替をサポートしている方',
+            description: '複数名分の書類取得にも対応します。会社担当者様からまとめてご依頼いただけます。',
+          },
+          {
+            icon: <Clock className="w-4 h-4" />,
+            title: '試験場の予約日が決まっている方',
+            description: '試験場の予約日に間に合わせるため、取得スケジュールを逆算してご案内します。まず予約日をお知らせください。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: '都道府県によって必要書類が違うと聞いた',
-            description: '提出先の都道府県によって必要書類が異なります。提出先を確認した上で適切な書類を手配します。',
+            title: '何が必要かわからない方',
+            description: '試験場によって必要書類が異なる場合があります。提出先をお知らせいただければ、必要なものを整理してご案内します。',
           },
         ]}
       />
 
       <CtaBox
-        title="まず「何が必要か」を確認しましょう"
-        description="外免切替の必要書類は提出先の都道府県によって異なります。無料相談で整理してから進めます。"
+        title="試験場の予約日に間に合わせます"
+        description="予約日が決まっている場合は、まず日程をお知らせください。逆算してスケジュールをご案内します。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
       />
 
       <FeatureList
-        heading="料金に含まれるもの"
+        heading="料金に含まれるもの（コミコミ）"
         items={[
           {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'LTOドライバーズレコード取得',
-            description: 'フィリピン陸運局（LTO）へのドライバーズレコード申請・取得を代行します。',
+            icon: <Car className="w-4 h-4" />,
+            title: 'LTO書類取得（ドライバーズレコード等）',
+            description: 'フィリピン陸運局（LTO）への申請・取得を代行。外免切替に必要な書類を正規の形式で取得します。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（必要な場合）',
-            description: '提出先の要件に応じてDFAアポスティーユ認証を手配します。',
+            title: '書類確認・形式チェック',
+            description: '取得した書類が試験場の要件を満たしているか確認します。不備があれば再取得します。',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -78,7 +97,7 @@ export default function LicenseConversionJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="LTO取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。"
+        description="LTO書類取得・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -87,19 +106,19 @@ export default function LicenseConversionJa() {
       <StepList
         heading="ご依頼の流れ"
         steps={[
-          { title: 'フォームで相談', description: '提出先の都道府県・対象者の人数・提出期限をお知らせください。' },
-          { title: '必要書類・料金の確認', description: '必要書類をリストアップし、コミコミ料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'LTO取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: 'フォームで相談（無料）', description: '提出先の試験場と試験場の予約日（決まっている場合）をお知らせください。' },
+          { title: '必要書類・料金の確認', description: 'コミコミ料金をご提示します。納得いただいてからお支払い。' },
+          { title: 'フィリピン現地で手配', description: 'LTO書類を現地スタッフが取得します。書類の形式を確認してから発送します。' },
+          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。試験場の予約日に間に合うよう進めます。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '外免切替に必要な書類は何ですか？', a: '一般的にLTOドライバーズレコード（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。' },
-          { q: '料金はいくらですか？', a: 'LTO取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
-          { q: '複数名分まとめて依頼できますか？', a: 'はい、可能です。人数と状況をお知らせいただければ、まとめて手配します。' },
-          { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
+          { q: '外免切替に必要なLTO書類は何ですか？', a: 'ドライバーズレコード（運転記録証明書）が主な書類です。試験場によって必要な書類が異なる場合があるため、提出先をお知らせください。' },
+          { q: '試験場の予約日が決まっています。間に合いますか？', a: '予約日をお知らせいただければ、逆算してスケジュールをご案内します。まずご相談ください。' },
+          { q: '複数名分まとめて依頼できますか？', a: 'はい。会社が従業員の外免切替をサポートする場合など、複数名分の書類取得にも対応します。' },
+          { q: '書類が試験場で受け付けられなかった場合はどうなりますか？', a: '書類の形式を事前に確認しますが、万が一問題があった場合は再取得対応します。詳細は相談時にご確認ください。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"

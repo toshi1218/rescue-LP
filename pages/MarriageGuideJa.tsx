@@ -5,68 +5,87 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
 
 export default function MarriageGuideJa() {
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'フィリピン人との国際結婚 書類代行' }]}
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '国際結婚 書類代行' }]}
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'フィリピン人との国際結婚 書類取得代行',
+        name: 'フィリピン人との国際結婚 書類代行',
         url: 'https://ph-document.com/ja/kokusai-kekkon-guide',
         provider: { '@type': 'Organization', name: 'IGRS Inc.' },
       }}
     >
       <HeroBanner
-        title="フィリピン人との国際結婚、必要書類をまとめて手配します"
-        badges={['日本語だけでOK', 'アポスティーユ込み', 'コミコミ料金']}
+        title="フィリピン人との国際結婚、必要書類を一括で手配します"
+        badges={['日本語だけでOK', '書類一式まとめて代行', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
 
+      {/* 訴求ブロック */}
+      <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
+        <div className="flex items-start gap-3 mb-4">
+          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-amber-900">国際結婚の書類準備、こんな落とし穴があります</h2>
+        </div>
+        <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>CENOMAR・PSA書類は<strong>DFAアポスティーユが必要</strong>。フィリピン現地での手続きが必須</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>「日本先行婚」か「フィリピン先行婚」かで<strong>必要書類が変わる</strong>。間違えると再取得に</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>書類の有効期限は<strong>発行から6ヶ月〜1年</strong>。取得タイミングを間違えると使えなくなる</li>
+        </ul>
+        <p className="mt-4 text-sm font-semibold text-amber-900">→ 婚姻の方式（日本先行・フィリピン先行）に合わせて、必要書類を一式整理してご案内します。</p>
+      </section>
+
       <FeatureList
-        heading="こんな方へ"
+        heading="こんな方に選ばれています"
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
-            title: '日本先行で婚姻届を提出したい',
-            description: '日本の市区町村役場への婚姻届に必要なCENOMAR・PSA出生証明書（DFAアポスティーユ付き）をまとめて手配します。',
+            title: '日本で先に婚姻届を出す方（日本先行婚）',
+            description: '日本の市区町村役場への提出には、フィリピン人配偶者のCENOMAR（独身証明書）とPSA出生証明書、DFAアポスティーユが必要です。書類一式を代行します。',
           },
           {
             icon: <Users className="w-4 h-4" />,
-            title: 'フィリピン大使館でLCCMを取得したい',
-            description: '婚姻要件具備証明書（LCCM）の申請に必要な書類の確認・手配をサポートします。',
+            title: 'フィリピンで先に婚姻する方（フィリピン先行婚）',
+            description: 'フィリピンでの婚姻には、日本人側の婚姻要件具備証明書（LCCM）が必要です。その後の日本での届け出に必要な書類もまとめてご案内します。',
+          },
+          {
+            icon: <Clock className="w-4 h-4" />,
+            title: '何から始めればいいかわからない方',
+            description: '婚姻の方式・提出先・必要書類の順番——複雑に見えますが、用途をお伝えいただければ必要なものを整理してご案内します。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: '何が必要かわからない',
-            description: '婚姻届の提出先・状況によって必要書類が異なります。まず相談いただければ、必要なものをリストアップしてご案内します。',
+            title: '配偶者ビザ申請まで見据えている方',
+            description: '婚姻後の配偶者ビザ（在留資格「日本人の配偶者等」）申請に必要な書類も一括で手配できます。二度手間を防ぎます。',
           },
         ]}
       />
 
       <CtaBox
-        title="まず「何が必要か」を確認しましょう"
-        description="国際結婚の必要書類は提出先・状況によって異なります。無料相談で整理してから進めます。"
+        title="「何が必要か」から一緒に整理します"
+        description="日本先行婚・フィリピン先行婚、どちらの方式でも対応します。まず用途をお知らせください。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
       />
 
       <FeatureList
-        heading="料金に含まれるもの"
+        heading="料金に含まれるもの（コミコミ）"
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA書類取得（CENOMAR・出生証明書など）',
-            description: '必要なPSA書類をまとめて取得します。複数書類の一括手配も可能です。',
+            title: 'CENOMAR・PSA書類取得',
+            description: 'フィリピン統計局（PSA）へのCENOMAR・出生証明書・婚姻証明書の申請・取得を代行します。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFAアポスティーユ認証',
-            description: '提出先の要件に応じてDFAアポスティーユ認証を手配します。',
+            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -77,8 +96,8 @@ export default function MarriageGuideJa() {
       />
 
       <CtaBox
-        title="追加費用の後出しはありません"
-        description="必要書類・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。"
+        title="書類一式まとめて依頼できます"
+        description="CENOMAR・PSA出生証明書・DFAアポスティーユをまとめたコミコミ料金でご案内します。追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -87,19 +106,19 @@ export default function MarriageGuideJa() {
       <StepList
         heading="ご依頼の流れ"
         steps={[
-          { title: 'フォームで相談', description: '婚姻届の提出先（市区町村役場・大使館など）と状況をお知らせください。' },
-          { title: '必要書類・料金の確認', description: '必要書類をリストアップし、コミコミ料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: 'フォームで相談（無料）', description: '婚姻の方式（日本先行・フィリピン先行）と提出先をお知らせください。必要書類を整理してご案内します。' },
+          { title: '必要書類・料金の確認', description: '書類一式のコミコミ料金をご提示します。納得いただいてからお支払い。' },
+          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。進捗は随時ご報告します。' },
+          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。受け取り後に不明点があればフォローします。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '国際結婚に必要な書類は何ですか？', a: '一般的にCENOMAR・PSA出生証明書（DFAアポスティーユ付き）が必要です。提出先によって追加書類が必要な場合もあります。無料相談で確認します。' },
-          { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユ・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
-          { q: 'いつ届きますか？', a: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。' },
-          { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
+          { q: '日本先行婚とフィリピン先行婚、どちらがいいですか？', a: 'どちらが適切かはご状況によります。それぞれのメリット・デメリットを含めてご案内しますので、まずご相談ください。' },
+          { q: 'CENOMARとPSA出生証明書、両方必要ですか？', a: '日本の市区町村役場への提出では、通常CENOMARとPSA出生証明書の両方が必要です。提出先によって異なる場合があるため、確認してからご案内します。' },
+          { q: '書類の有効期限はありますか？', a: 'PSA書類・CENOMARは発行から6ヶ月〜1年が有効期限の目安です。提出タイミングに合わせた取得時期をご案内します。' },
+          { q: '配偶者ビザ申請の書類も一緒に頼めますか？', a: 'はい。婚姻書類と配偶者ビザ申請書類を一括で手配できます。二度手間を防ぐためにも、まとめてご相談ください。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"

@@ -5,7 +5,7 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { Fingerprint, AlertTriangle, Clock, Users, FileCheck, Globe } from 'lucide-react';
 
 export default function NbiGuideJa() {
   return (
@@ -26,47 +26,66 @@ export default function NbiGuideJa() {
         ctaHref="#contact"
       />
 
+      {/* 訴求ブロック */}
+      <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
+        <div className="flex items-start gap-3 mb-4">
+          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-amber-900">NBI Clearanceは「指紋採取」が必要です</h2>
+        </div>
+        <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>オンライン申請しても、<strong>指紋採取のためにフィリピン現地のNBIオフィスへの来訪が必要</strong></li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>「HIT（同名者あり）」が出ると<strong>追加審査で数週間〜数ヶ月の遅延</strong>が発生することも</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>有効期限は<strong>発行から1年</strong>。ビザ申請のタイミングに合わせた取得が必要</li>
+        </ul>
+        <p className="mt-4 text-sm font-semibold text-amber-900">→ 現地での指紋採取から書類受け取りまで、すべて代行します。</p>
+      </section>
+
       <FeatureList
-        heading="こんな方へ"
+        heading="こんな方に選ばれています"
         items={[
           {
-            icon: <Heart className="w-4 h-4" />,
-            title: '配偶者ビザ・在留資格の申請中',
-            description: '入国管理局への在留資格申請に、NBI Clearanceが必要です。DFAアポスティーユが必要かどうかも含めて確認します。',
+            icon: <Users className="w-4 h-4" />,
+            title: '配偶者ビザ・在留資格の申請中の方',
+            description: '入国管理局への配偶者ビザ申請では、NBI Clearanceが必要なケースがあります。DFAアポスティーユ付きで手配します。',
           },
           {
-            icon: <Users className="w-4 h-4" />,
-            title: 'フィリピン人従業員の書類を手配したい',
-            description: '企業様からのご依頼も対応しています。複数名分の一括手配も可能です。',
+            icon: <Fingerprint className="w-4 h-4" />,
+            title: '帰化申請を進めている方',
+            description: '法務局への帰化申請では、フィリピン人配偶者のNBI Clearanceが求められます。提出先の要件を確認した上で手配します。',
+          },
+          {
+            icon: <Clock className="w-4 h-4" />,
+            title: 'HIT（同名者あり）が出て困っている方',
+            description: 'NBI申請でHITが出ると通常より時間がかかります。HIT対応の経験があるスタッフが対応します。まずは状況をご相談ください。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: '本人がフィリピンに行けない',
-            description: 'NBI Clearanceは本人申請が原則ですが、代理人申請の手配についてもご相談ください。状況に応じてご案内します。',
+            title: '何が必要かわからない方',
+            description: '提出先によってアポスティーユの要否が異なります。用途をお伝えいただければ、必要な形式で手配します。',
           },
         ]}
       />
 
       <CtaBox
-        title="まず「何が必要か」を確認しましょう"
-        description="提出先によって必要な形式が異なります。無料相談で整理してから進めます。"
+        title="HIT対応・アポスティーユ込みで相談できます"
+        description="「HITが出た」「期限が迫っている」「何が必要かわからない」——どんな状況でもまずご相談ください。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
       />
 
       <FeatureList
-        heading="料金に含まれるもの"
+        heading="料金に含まれるもの（コミコミ）"
         items={[
           {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'NBI Clearance取得手配',
-            description: 'フィリピン国家捜査局（NBI）への申請・取得を代行します。',
+            icon: <Fingerprint className="w-4 h-4" />,
+            title: 'NBI Clearance取得（指紋採取含む）',
+            description: '現地スタッフがNBIオフィスで指紋採取・申請・受け取りを代行します。本人がフィリピンにいなくても対応可能です。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ（必要な場合）',
-            description: '提出先の要件に応じてDFAアポスティーユ認証も手配します。',
+            title: 'DFAアポスティーユ認証（必要な場合）',
+            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -78,7 +97,7 @@ export default function NbiGuideJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="NBI取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。"
+        description="NBI取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -87,19 +106,19 @@ export default function NbiGuideJa() {
       <StepList
         heading="ご依頼の流れ"
         steps={[
-          { title: 'フォームで相談', description: '用途（配偶者ビザ・帰化申請など）と提出先をお知らせください。' },
+          { title: 'フォームで相談（無料）', description: '用途（ビザ申請・帰化申請など）と提出先をお知らせください。24時間以内に返信します。' },
           { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、コミコミ料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'NBI取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: 'フィリピン現地で手配', description: '現地スタッフがNBIオフィスで指紋採取・申請・受け取りを進めます。HITが出た場合も対応します。' },
+          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
       />
 
       <FaqSection
         items={[
           { q: '料金はいくらですか？', a: 'NBI取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
-          { q: 'いつ届きますか？', a: '目安は約1ヶ月〜です。NBI発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。' },
-          { q: 'HITが出た場合はどうなりますか？', a: 'HITが出た場合は別途対応が必要です。まずは状況をお知らせください。HIT対応についてもご相談を承っています。' },
-          { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
+          { q: 'HIT（同名者あり）が出た場合はどうなりますか？', a: 'HITが出ると追加審査が必要になり、通常より時間がかかります。HIT対応の経験があるスタッフが対応しますので、まずご相談ください。' },
+          { q: 'フィリピン人本人が日本にいても取得できますか？', a: 'はい。本人がフィリピンにいなくても、現地スタッフが代理で指紋採取・申請を行います。委任状等の書類が必要な場合はご案内します。' },
+          { q: '有効期限はいつから数えますか？', a: 'NBI Clearanceの有効期限は発行日から1年です。ビザ申請のタイミングに合わせて取得時期を調整することをお勧めします。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"

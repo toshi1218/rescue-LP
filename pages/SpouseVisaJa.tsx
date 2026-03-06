@@ -5,68 +5,87 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
 
 export default function SpouseVisaJa() {
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '配偶者ビザ フィリピン書類代行' }]}
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '配偶者ビザ 書類代行' }]}
       jsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: '配偶者ビザ フィリピン書類取得代行',
+        name: '配偶者ビザ フィリピン書類代行',
         url: 'https://ph-document.com/ja/haigusha-visa',
         provider: { '@type': 'Organization', name: 'IGRS Inc.' },
       }}
     >
       <HeroBanner
-        title="配偶者ビザ申請、フィリピン書類をまとめて手配します"
-        badges={['日本語だけでOK', 'アポスティーユ込み', 'コミコミ料金']}
+        title="配偶者ビザのフィリピン書類、一括で手配します"
+        badges={['日本語だけでOK', '入管要件に合わせて手配', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
 
+      {/* 訴求ブロック */}
+      <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
+        <div className="flex items-start gap-3 mb-4">
+          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-amber-900">配偶者ビザの書類準備、こんな落とし穴があります</h2>
+        </div>
+        <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>入国管理局は<strong>電子アポスティーユ（e-Apostille）を受け付けないケースが多い</strong>。紙の原本が必要</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>書類の<strong>有効期限（発行から6ヶ月〜1年）</strong>を過ぎると再取得が必要</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>PSA書類・CENOMAR・NBI——<strong>どれが必要かは申請の状況によって異なる</strong></li>
+        </ul>
+        <p className="mt-4 text-sm font-semibold text-amber-900">→ 入管の要件に合わせた形式で、必要書類を一括手配します。</p>
+      </section>
+
       <FeatureList
-        heading="こんな方へ"
+        heading="こんな方に選ばれています"
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
-            title: '日本人配偶者等の在留資格を申請中',
-            description: '入国管理局への在留資格申請に必要なPSA書類（出生証明書・婚姻証明書・CENOMAR）をまとめて手配します。',
+            title: '在留資格「日本人の配偶者等」を申請する方',
+            description: 'PSA婚姻証明書・PSA出生証明書・DFAアポスティーユが必要です。入管の要件に合わせた形式で手配します。',
           },
           {
             icon: <Users className="w-4 h-4" />,
-            title: '日本人の配偶者が手続きを進めている',
-            description: '日本語だけで全て対応します。フィリピン語・英語の書類も当社が確認・手配します。',
+            title: '配偶者ビザの更新・変更を予定している方',
+            description: '更新・変更申請でも書類の再取得が必要なケースがあります。有効期限を確認した上で、必要なものだけを手配します。',
+          },
+          {
+            icon: <Clock className="w-4 h-4" />,
+            title: '申請期限が迫っている方',
+            description: 'ビザの期限が近い場合でも、まず現状をお知らせください。優先対応の可否を確認してご案内します。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: '何が必要かわからない',
-            description: '入管への申請に必要な書類は状況によって異なります。まず相談いただければ、必要なものをリストアップしてご案内します。',
+            title: '何が必要かわからない方',
+            description: '初めての申請・更新・変更、それぞれで必要書類が異なります。状況をお伝えいただければ、必要なものを整理してご案内します。',
           },
         ]}
       />
 
       <CtaBox
-        title="まず「何が必要か」を確認しましょう"
-        description="配偶者ビザの必要書類は状況によって異なります。無料相談で整理してから進めます。"
+        title="入管要件に合わせた書類を手配します"
+        description="「電子か紙か」「何が必要か」——入管の要件を確認した上で、正しい形式で手配します。まずご相談ください。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
       />
 
       <FeatureList
-        heading="料金に含まれるもの"
+        heading="料金に含まれるもの（コミコミ）"
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA書類取得（出生証明書・婚姻証明書・CENOMARなど）',
-            description: '必要なPSA書類をまとめて取得します。',
+            title: 'PSA書類・CENOMAR取得',
+            description: 'フィリピン統計局（PSA）への申請・取得を代行。婚姻証明書・出生証明書・CENOMARに対応します。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFAアポスティーユ認証',
-            description: '提出先の要件に応じてDFAアポスティーユ認証を手配します。',
+            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -78,7 +97,7 @@ export default function SpouseVisaJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="必要書類・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。"
+        description="書類取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -87,19 +106,19 @@ export default function SpouseVisaJa() {
       <StepList
         heading="ご依頼の流れ"
         steps={[
-          { title: 'フォームで相談', description: '在留資格の種類・申請状況・提出期限をお知らせください。' },
-          { title: '必要書類・料金の確認', description: '必要書類をリストアップし、コミコミ料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: 'フォームで相談（無料）', description: '申請の種類（新規・更新・変更）と必要書類をお知らせください。入管の要件を確認してご案内します。' },
+          { title: '必要書類・料金の確認', description: 'コミコミ料金をご提示します。納得いただいてからお支払い。' },
+          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。進捗は随時ご報告します。' },
+          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '配偶者ビザに必要な書類は何ですか？', a: '一般的にPSA出生証明書・婚姻証明書（DFAアポスティーユ付き）が必要です。状況によって追加書類が必要な場合もあります。無料相談で確認します。' },
-          { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユ・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
-          { q: 'いつ届きますか？', a: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。' },
-          { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
+          { q: '配偶者ビザ申請に必要な書類は何ですか？', a: 'PSA婚姻証明書・PSA出生証明書・DFAアポスティーユが基本です。申請の状況によって異なるため、まずご相談ください。' },
+          { q: '入管は電子アポスティーユ（e-Apostille）を受け付けますか？', a: '入国管理局では紙のアポスティーユ原本が求められるケースがほとんどです。提出先を確認した上でご案内します。' },
+          { q: '書類の有効期限はありますか？', a: 'PSA書類・CENOMARは発行から6ヶ月〜1年が有効期限の目安です。申請タイミングに合わせた取得時期をご案内します。' },
+          { q: '更新・変更申請でも書類が必要ですか？', a: '更新・変更申請でも書類の再取得が必要なケースがあります。現在お持ちの書類の有効期限を確認した上でご案内します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
