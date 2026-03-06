@@ -434,7 +434,7 @@ export default function CenomarGuidePage() {
 
           </div>
 
-          {/* 説得ブロック */}
+          {/* 説得ブロック① — 自分でやる場合の落とし穴 */}
           <div className="mt-5 bg-amber-50 border border-amber-300 rounded-xl p-5">
             <div className="flex gap-3">
               <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
@@ -454,11 +454,61 @@ export default function CenomarGuidePage() {
                     '自分で申請しても、あとから追加書類や認証が必要になれば、結局は取り直し、再申請、再送料で余計な手間と費用がかかります。',
                     'If you apply yourself and later find out you need additional documents or authentication, you end up paying for re-procurement, re-application, and re-shipping — wasting both time and money.'
                   )}</p>
-                  <p className="font-bold text-amber-800">{t(
-                    '当社は、書類を取るだけの代行ではありません。提出先に合わせて、必要な形まで見越して手配する代行です。',
-                    'We are not just a document retrieval service. We arrange everything with your specific submission authority in mind — so you get it right the first time.'
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 説得ブロック② — 他社の「1個安い」罠 */}
+          <div className="mt-4 bg-red-50 border border-red-300 rounded-xl p-5">
+            <div className="flex gap-3">
+              <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-bold text-red-800 mb-3">
+                  {t(
+                    '「1通○○円〜」の表示価格だけで選んでいませんか？',
+                    'Are you choosing based on the "from $XX per document" price tag alone?'
+                  )}
+                </p>
+                <div className="text-xs text-red-700 leading-relaxed space-y-2">
+                  <p>{t(
+                    '他社の代行サービスでは、PSA書類1通の取得費用だけを安く見せていることがあります。しかし実際には、アポスティーユ認証料・国際郵便料（EMS/DHL）・追加書類の取得費用・翻訳料・手数料などが別々に加算され、最終的な見積もりが想定よりはるかに高くなるケースが少なくありません。',
+                    'Some agencies advertise a low per-document fee for PSA retrieval. But in reality, DFA Apostille fees, international shipping (EMS/DHL), additional document procurement, translation charges, and handling fees are added separately — and the final quote often turns out to be far higher than expected.'
                   )}</p>
                   <p>{t(
+                    '「安いと思って頼んだのに、見積もりが出てきたら結局高かった」——そうなってからでは、時間もお金も無駄になります。',
+                    '"I thought it was cheap, but the final quote was way more than I expected" — by that point, you have already wasted both time and money.'
+                  )}</p>
+                  <p className="font-bold text-red-800">{t(
+                    '当社は、必要書類・アポスティーユ・国際郵送をまとめたコミコミ料金でご案内しています。あとから追加費用が膨らむ心配がありません。',
+                    'We offer all-inclusive pricing that covers document retrieval, DFA Apostille, and international shipping. No surprise add-ons or hidden costs.'
+                  )}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 説得ブロック③ — 結論：うちに頼むのが正解 */}
+          <div className="mt-4 bg-blue-50 border border-blue-300 rounded-xl p-5">
+            <div className="flex gap-3">
+              <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-bold text-blue-900 mb-3">
+                  {t(
+                    '当社は、書類を取るだけの代行ではありません',
+                    'We are not just a document retrieval service'
+                  )}
+                </p>
+                <div className="text-xs text-blue-800 leading-relaxed space-y-2">
+                  <p>{t(
+                    '提出先に合わせて、必要な形まで見越して手配する代行です。「何が必要か」「アポスティーユは要るのか」「電子版で足りるのか」——お客様が判断に迷うポイントを、最初の段階で確認します。',
+                    'We arrange everything with your specific submission authority in mind. "What documents do I need?" "Is Apostille required?" "Will a digital copy suffice?" — we clarify all of these at the very first step.'
+                  )}</p>
+                  <p>{t(
+                    '取り直し・再申請・再送料で余計な費用がかかるリスクを減らし、最短で提出先に通る書類をお届けします。',
+                    'We minimize the risk of re-procurement, re-application, and re-shipping costs, and deliver documents that your submission authority will accept — as fast as possible.'
+                  )}</p>
+                  <p className="font-bold text-blue-900">{t(
                     '迷ったまま進めるより、最初に確認したほうが早くて確実です。',
                     'Confirming upfront is faster and more reliable than guessing as you go.'
                   )}</p>
