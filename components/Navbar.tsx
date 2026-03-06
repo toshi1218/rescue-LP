@@ -19,14 +19,14 @@ const Navbar: React.FC = () => {
   const { lang, t } = useLanguage();
 
   const isJa = lang === 'ja';
-  const homePath = isJa ? '/ja/' : '/';
+  const homePath = isJa ? '/ja/' : '/en/';
 
   const documentTabs = [
-    { label: t('navbar.doc.cenomar'),  path: isJa ? '/ja/cenomar/'              : '/cenomar/' },
-    { label: t('navbar.doc.birth'),    path: isJa ? '/ja/psa-shussei-shomeisho/': '/psa-birth-certificate/' },
-    { label: t('navbar.doc.nbi'),      path: isJa ? '/ja/nbi-clearance/'        : '/nbi-clearance/' },
-    { label: t('navbar.doc.apostille'),path: isJa ? '/ja/apostille/'            : '/apostille/' },
-    { label: t('navbar.doc.marriage'), path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/psa-marriage-certificate/' },
+    { label: t('navbar.doc.cenomar'),  path: isJa ? '/ja/cenomar/'              : '/en/cenomar/' },
+    { label: t('navbar.doc.birth'),    path: isJa ? '/ja/psa-shussei-shomeisho/': '/en/psa-birth-certificate/' },
+    { label: t('navbar.doc.nbi'),      path: isJa ? '/ja/nbi-clearance/'        : '/en/nbi-clearance/' },
+    { label: t('navbar.doc.apostille'),path: isJa ? '/ja/apostille/'            : '/en/apostille/' },
+    { label: t('navbar.doc.marriage'), path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/en/psa-marriage-certificate/' },
   ];
 
   const purposeTabs = isJa ? [
@@ -35,51 +35,51 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.license'),       path: '/ja/gaimen-kirikae-guide/' },
     { label: t('navbar.purpose.naturalization'),path: '/ja/kika-shinsei-guide/' },
   ] : [
-    { label: 'K-1 Fiancé Visa',    path: '/k1-visa-documents/' },
-    { label: 'CR-1 / IR-1 Visa',   path: '/cr1-visa-documents/' },
-    { label: 'US Visa Documents',   path: '/us-visa-documents/' },
+    { label: 'K-1 Fiancé Visa',    path: '/en/k1-visa-documents/' },
+    { label: 'CR-1 / IR-1 Visa',   path: '/en/cr1-visa-documents/' },
+    { label: 'US Visa Documents',   path: '/en/us-visa-documents/' },
   ];
 
-  const guidesPath  = isJa ? '/ja/guides/'  : '/guides/';
-  const pricingPath = isJa ? '/ja/ryokin/'  : '/pricing/';
+  const guidesPath  = isJa ? '/ja/guides/'  : '/en/guides/';
+  const pricingPath = isJa ? '/ja/ryokin/'  : '/en/pricing/';
 
   const guidesSections = [
     {
       category: isJa ? 'CENOMAR（独身証明書）' : 'CENOMAR',
       items: [
-        { label: isJa ? 'CENOMARガイド 完全版' : 'CENOMAR Complete Guide', path: isJa ? '/ja/cenomar/' : '/cenomar/' },
-        { label: isJa ? 'CENOMARの有効期限は？' : 'CENOMAR Validity', path: isJa ? '/ja/cenomar-koyukigen/' : '/cenomar-validity/' },
-        { label: isJa ? 'DFAアポスティーユは必要？' : 'Need Apostille?', path: isJa ? '/ja/cenomar-apostille/' : '/cenomar-apostille/' },
+        { label: isJa ? 'CENOMARガイド 完全版' : 'CENOMAR Complete Guide', path: isJa ? '/ja/cenomar/' : '/en/cenomar/' },
+        { label: isJa ? 'CENOMARの有効期限は？' : 'CENOMAR Validity', path: isJa ? '/ja/cenomar-koyukigen/' : '/en/cenomar-validity/' },
+        { label: isJa ? 'DFAアポスティーユは必要？' : 'Need Apostille?', path: isJa ? '/ja/cenomar-apostille/' : '/en/cenomar-apostille/' },
       ],
     },
     {
       category: isJa ? 'NBI Clearance（無犯罪証明書）' : 'NBI Clearance',
       items: [
-        { label: isJa ? 'NBI Clearanceガイド 完全版' : 'NBI Clearance Complete Guide', path: isJa ? '/ja/nbi-clearance/' : '/nbi-clearance/' },
-        { label: isJa ? 'NBI HITとは？' : 'What is NBI HIT?', path: isJa ? '/ja/nbi-hit/' : '/nbi-hit/' },
-        { label: isJa ? 'NBI Clearanceの有効期限' : 'NBI Validity & Apostille', path: isJa ? '/ja/nbi-koyukigen/' : '/nbi-validity/' },
+        { label: isJa ? 'NBI Clearanceガイド 完全版' : 'NBI Clearance Complete Guide', path: isJa ? '/ja/nbi-clearance/' : '/en/nbi-clearance/' },
+        { label: isJa ? 'NBI HITとは？' : 'What is NBI HIT?', path: isJa ? '/ja/nbi-hit/' : '/en/nbi-hit/' },
+        { label: isJa ? 'NBI Clearanceの有効期限' : 'NBI Validity & Apostille', path: isJa ? '/ja/nbi-koyukigen/' : '/en/nbi-validity/' },
       ],
     },
     {
       category: isJa ? 'DFAアポスティーユ認証' : 'DFA Apostille',
       items: [
-        { label: isJa ? 'アポスティーユガイド 完全版' : 'Apostille Complete Guide', path: isJa ? '/ja/apostille/' : '/apostille/' },
-        { label: isJa ? '処理期間【2026年】' : 'Processing Time 2026', path: isJa ? '/ja/apostille-shori-kikan/' : '/apostille-processing-time/' },
-        { label: isJa ? '費用・料金【2026年】' : 'Fees 2026', path: isJa ? '/ja/apostille-ryokin/' : '/apostille-fee/' },
+        { label: isJa ? 'アポスティーユガイド 完全版' : 'Apostille Complete Guide', path: isJa ? '/ja/apostille/' : '/en/apostille/' },
+        { label: isJa ? '処理期間【2026年】' : 'Processing Time 2026', path: isJa ? '/ja/apostille-shori-kikan/' : '/en/apostille-processing-time/' },
+        { label: isJa ? '費用・料金【2026年】' : 'Fees 2026', path: isJa ? '/ja/apostille-ryokin/' : '/en/apostille-fee/' },
       ],
     },
     {
       category: isJa ? 'PSA書類（出生・婚姻証明書）' : 'PSA Documents',
       items: [
-        { label: isJa ? 'PSA出生証明書の取得方法' : 'PSA Birth Certificate Guide', path: isJa ? '/ja/psa-shussei-shomeisho/' : '/psa-birth-certificate/' },
-        { label: isJa ? 'PSA出生証明書の費用' : 'PSA Birth Certificate Cost', path: isJa ? '/ja/psa-shussei-cost/' : '/psa-birth-certificate-cost/' },
-        { label: isJa ? 'PSA婚姻証明書の取得方法' : 'PSA Marriage Certificate', path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/psa-marriage-certificate/' },
+        { label: isJa ? 'PSA出生証明書の取得方法' : 'PSA Birth Certificate Guide', path: isJa ? '/ja/psa-shussei-shomeisho/' : '/en/psa-birth-certificate/' },
+        { label: isJa ? 'PSA出生証明書の費用' : 'PSA Birth Certificate Cost', path: isJa ? '/ja/psa-shussei-cost/' : '/en/psa-birth-certificate-cost/' },
+        { label: isJa ? 'PSA婚姻証明書の取得方法' : 'PSA Marriage Certificate', path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/en/psa-marriage-certificate/' },
       ],
     },
   ];
-  const contactPath = isJa ? '/ja/contact/' : '/contact/';
-  const companyPath = isJa ? '/ja/company/' : '/company/';
-  const privacyPath = isJa ? '/ja/privacy/' : '/privacy/';
+  const contactPath = isJa ? '/ja/contact/' : '/en/contact/';
+  const companyPath = isJa ? '/ja/company/' : '/en/company/';
+  const privacyPath = isJa ? '/ja/privacy/' : '/en/privacy/';
 
   useEffect(() => {
     setOpenMenu(null);

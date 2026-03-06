@@ -15,14 +15,14 @@ const guidesData = {
     { to: '/ja/psa-kekkon-shomeisho/', title: 'PSA婚姻証明書',                   desc: '国際結婚・配偶者ビザで必要',              tag: null },
   ],
   en: [
-    { to: '/cenomar/',                   title: 'CENOMAR (Certificate of No Marriage)', desc: 'How to obtain, cost & timeline',                          tag: 'Most Popular' },
-    { to: '/psa-birth-certificate/',     title: 'PSA Birth Certificate',               desc: 'Why you need it for marriage & visa',                     tag: null },
-    { to: '/nbi-clearance/',             title: 'NBI Clearance',                       desc: 'Including how to handle NBI HIT issues',                  tag: null },
-    { to: '/international-marriage-guide/', title: 'International Marriage Guide',     desc: 'Process, required documents & costs',                     tag: 'Complete' },
-    { to: '/spouse-visa-documents/',     title: 'Spouse Visa Document Checklist',      desc: 'Philippine documents needed for application',             tag: null },
-    { to: '/apostille/',                 title: 'DFA Apostille Authentication',        desc: 'Eligible documents, process & cost',                      tag: null },
-    { to: '/drivers-license-conversion/',title: 'License Transfer Guide',              desc: 'LTO documents to transfer to Japan license',              tag: null },
-    { to: '/psa-marriage-certificate/',  title: 'PSA Marriage Certificate',            desc: 'Required for international marriage & spouse visa',       tag: null },
+    { to: '/en/cenomar/',                   title: 'CENOMAR (Certificate of No Marriage)', desc: 'How to obtain, cost & timeline',                          tag: 'Most Popular' },
+    { to: '/en/psa-birth-certificate/',     title: 'PSA Birth Certificate',               desc: 'Why you need it for marriage & visa',                     tag: null },
+    { to: '/en/nbi-clearance/',             title: 'NBI Clearance',                       desc: 'Including how to handle NBI HIT issues',                  tag: null },
+    { to: '/en/international-marriage-guide/', title: 'International Marriage Guide',     desc: 'Process, required documents & costs',                     tag: 'Complete' },
+    { to: '/en/spouse-visa-documents/',     title: 'Spouse Visa Document Checklist',      desc: 'Philippine documents needed for application',             tag: null },
+    { to: '/en/apostille/',                 title: 'DFA Apostille Authentication',        desc: 'Eligible documents, process & cost',                      tag: null },
+    { to: '/en/drivers-license-conversion/',title: 'License Transfer Guide',              desc: 'LTO documents to transfer to Japan license',              tag: null },
+    { to: '/en/psa-marriage-certificate/',  title: 'PSA Marriage Certificate',            desc: 'Required for international marriage & spouse visa',       tag: null },
   ],
 };
 

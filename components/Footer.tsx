@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
   const trafficSource = getTrafficSource();
   const { lang, t } = useLanguage();
   const isJa = lang === 'ja';
-  const companyPath = isJa ? '/ja/company'  : '/company';
-  const privacyPath = isJa ? '/ja/privacy'  : '/privacy';
-  const pricingPath = isJa ? '/ja/ryokin'   : '/pricing';
-  const contactPath = isJa ? '/ja/contact'  : '/contact';
+  const companyPath = isJa ? '/ja/company'  : '/en/company';
+  const privacyPath = isJa ? '/ja/privacy'  : '/en/privacy';
+  const pricingPath = isJa ? '/ja/ryokin'   : '/en/pricing';
+  const contactPath = isJa ? '/ja/contact'  : '/en/contact';
 
   return (
     <footer className="bg-white border-t border-gray-100" id="contact">
