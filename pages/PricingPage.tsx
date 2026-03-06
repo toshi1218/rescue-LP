@@ -455,9 +455,9 @@ export default function PricingPage() {
                     'Fully remote — we ship DHL Express to your door',
                   ],
                   [
-                    'Missing documents risk',
-                    'Easy to miss required docs — re-procurement and reshipping add cost and delay',
-                    'We verify what your submission authority actually requires — preventing costly re-orders',
+                    'DFA Apostille',
+                    'PSA documents alone are typically not accepted — Apostille requires a separate in-Philippines procedure. Even budget agencies charge it separately',
+                    'We assess whether Apostille is needed and handle it in one package — no surprise extra costs',
                   ],
                   [
                     'Cost',
@@ -476,9 +476,9 @@ export default function PricingPage() {
                     '現地スタッフが対応',
                   ],
                   [
-                    '追加書類リスク',
-                    '提出先によっては追加確認・再取得が必要になることがある',
-                    '用途に応じて必要書類を事前確認。取得漏れを防ぐ',
+                    'DFAアポスティーユ',
+                    'PSA書類だけでは受け付けてもらえないことが多い。アポスティーユは別途フィリピン現地での手続きが必要で、他社の格安代行でも別料金になるケースがほとんど',
+                    '必要かどうかを事前に確認したうえで、取得まで一括対応。追加費用の発生を防ぐ',
                   ],
                   [
                     'トラブル対応',

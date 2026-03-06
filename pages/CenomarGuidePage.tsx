@@ -354,7 +354,7 @@ export default function CenomarGuidePage() {
                   t('国際郵便で日本の住所へ届く（3〜5営業日）', 'Delivered to your Japanese address by international mail (3–5 business days)'),
                 ],
                 pros: t('コストが最も安い', 'Lowest cost'),
-                cons: t('英語での申請が必要。提出先によっては追加書類の確認が必要になることがある。書類不備や再取得で、結果的に時間と手間が増えることがある', 'English required. Depending on your submission authority, additional document verification may be needed. Errors or re-procurement can add significant time and effort.'),
+                cons: t('英語での申請が必要。日本の婚姻届・ビザ申請には、PSA書類に加えてDFAアポスティーユが別途必要になることが多い。アポスティーユは現地での別手続きのため、追加の費用と時間がかかる', 'English required. For most immigration and marriage purposes, DFA Apostille is also required separately — meaning additional cost and in-Philippines procedures on top of the PSA document itself.'),
                 color: 'border-gray-200',
               },
               {
@@ -375,9 +375,9 @@ export default function CenomarGuidePage() {
                 items: [
                   t('日本語でやり取りするだけ', 'Communicate fully in English — no trip to the Philippines'),
                   t('必要書類の確認から郵送まで完全サポート', 'Full support from document check to DHL delivery to your US address'),
-                  t('書類の不備リスクを最小化', 'Minimizes risk of USCIS/NVC rejection due to document errors'),
+                  t('DFAアポスティーユも同時に手配可能', 'DFA Apostille authentication arranged simultaneously if required'),
                 ],
-                pros: t('提出先に応じて必要書類を確認。取得漏れ・再提出・再送料のリスクを減らせる。日本語で完結', 'We verify required documents for your specific submission authority. Reduces the risk of missing documents, resubmission, and reshipping costs.'),
+                pros: t('提出先に応じて必要書類とアポスティーユの要否を確認。取得漏れ・再提出・再送料のリスクを減らせる。日本語で完結', 'We verify required documents and Apostille requirements for your specific submission authority. Reduces the risk of missing documents, resubmission, and reshipping costs.'),
                 cons: t('代行手数料がかかる', 'Proxy service fee applies'),
                 color: 'border-primary',
               },
@@ -402,13 +402,40 @@ export default function CenomarGuidePage() {
             ))}
           </div>
 
+          {/* アポスティーユ注意ボックス */}
+          <div className="mt-5 bg-amber-50 border border-amber-300 rounded-xl p-5">
+            <div className="flex gap-3">
+              <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-bold text-amber-800 mb-2">
+                  {t(
+                    'PSA書類を取得するだけでは受け付けてもらえないことがあります',
+                    'Getting the PSA document alone is often not enough'
+                  )}
+                </p>
+                <p className="text-xs text-amber-700 leading-relaxed">
+                  {t(
+                    '日本の婚姻届・配偶者ビザ申請では、出生証明書やCENOMARに加えて、DFA（フィリピン外務省）発行のアポスティーユが基本的に必要です。PSAオンラインで書類を取り寄せても、アポスティーユはフィリピン現地でのDFA申請が別途必要で、追加の費用と時間がかかります。他社の格安代行サービスも、アポスティーユは別途料金となるケースがほとんどです。結果的に、自分で手続きするより費用も手間も増えてしまうことがあります。',
+                    'For marriage registration and visa applications, DFA Apostille authentication is typically required on top of the PSA document. Even if you order the PSA document online yourself, Apostille requires a separate in-Philippines procedure — extra cost, extra wait time. Budget services from other agencies usually charge Apostille separately as well. Self-service often ends up costing more time and money than expected.'
+                  )}
+                </p>
+                <p className="text-xs font-bold text-amber-800 mt-3">
+                  {t(
+                    '弊社では、必要書類の判断からアポスティーユ取得まで一括で対応します。追加費用の発生を防ぐためにも、まずはご相談ください。',
+                    'Our service covers everything from document assessment to DFA Apostille in one go — no hidden extra steps. Consult us first to avoid unexpected costs.'
+                  )}
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* 比較表直下CTA */}
-          <div className="mt-6 bg-primary/5 border border-primary/20 rounded-xl p-5 text-center">
+          <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-5 text-center">
             <p className="text-sm font-bold text-secondary mb-1">
               {t('どの方法が自分に合うか分からない方へ', 'Not sure which option is right for you?')}
             </p>
             <p className="text-xs text-gray-600 mb-4">
-              {t('1分で確認できます。用途に応じて必要書類を案内します。', 'Check in 1 minute. We'll guide you on the exact documents needed for your situation.')}
+              {t('1分で確認できます。用途に応じて必要書類・アポスティーユの要否を案内します。', 'Check in 1 minute. We'll tell you exactly which documents and Apostille you need for your situation.')}
             </p>
             <a
               href="#contact"
