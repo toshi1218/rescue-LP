@@ -155,7 +155,7 @@ export default function KekkonShomeishoPage() {
         t('国際郵便で日本に届く', 'Delivered to Japan by international mail'),
       ],
       pros: t('コストが安い', 'Lower cost'),
-      cons: t('英語対応必須。配送に時間がかかる', 'English required. Delivery takes time.'),
+      cons: t('英語での申請が必要。提出先によっては追加書類の確認が必要になることがある。書類不備や再取得で、結果的に時間と手間が増えることがある', 'English required. Depending on your submission authority, additional document verification may be needed. Errors or re-procurement can add significant time and effort.'),
       color: 'border-gray-200',
     },
     {
@@ -166,7 +166,7 @@ export default function KekkonShomeishoPage() {
         t('書類確認から郵送まで一括サポート', 'One-stop support from document verification to mailing'),
         t('フィリピン先行婚姻後の登録状況確認も対応', 'Also handles registration status verification after Philippines-first marriage'),
       ],
-      pros: t('手間ゼロ。日本語サポートあり', 'Zero hassle. English support. Ships to USA.'),
+      pros: t('提出先に応じて必要書類を確認。取得漏れ・再提出・再送料のリスクを減らせる。日本語で完結', 'We verify required documents for your specific submission authority. Reduces the risk of missing documents, resubmission, and reshipping costs.'),
       cons: t('代行手数料がかかる', 'Proxy service fee required'),
       color: 'border-primary',
     },
@@ -319,6 +319,23 @@ export default function KekkonShomeishoPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* 比較表直下CTA */}
+          <div className="mt-6 bg-primary/5 border border-primary/20 rounded-xl p-5 text-center">
+            <p className="text-sm font-bold text-secondary mb-1">
+              {t('どの方法が自分に合うか分からない方へ', 'Not sure which option is right for you?')}
+            </p>
+            <p className="text-xs text-gray-600 mb-4">
+              {t('1分で確認できます。用途に応じて必要書類を案内します。', 'Check in 1 minute. We'll guide you on the exact documents needed for your situation.')}
+            </p>
+            <a
+              href="#contact"
+              className="inline-block bg-primary text-white text-sm font-bold py-2.5 px-6 rounded-lg hover:bg-primary-hover transition-colors"
+              onClick={() => trackEvent('cta_click', { location: 'psa_marriage_certificate_comparison', type: 'consultation' })}
+            >
+              {t('まずは無料相談', 'Start with a Free Consultation')}
+            </a>
           </div>
         </section>
 

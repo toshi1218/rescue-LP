@@ -158,7 +158,7 @@ export default function GaimenKirikaeGuidePage() {
         t('処理時間はLTO支局によって異なる', 'Processing time varies by LTO branch'),
       ],
       pros: t('コストが安い', 'Lower cost'),
-      cons: t('代理人が必要。英語でのやり取り必須。時間がかかる場合あり', 'Requires a representative. English communication required. May take longer.'),
+      cons: t('代理人が必要。英語でのやり取り必須。提出先によっては追加書類の確認が必要になることがある。書類不備や再取得で、結果的に時間と手間が増えることがある', 'Requires a representative. English communication required. Depending on the submission authority, additional document verification may be needed. Errors or re-procurement can add significant time and effort.'),
       color: 'border-gray-200',
     },
     {
@@ -169,7 +169,7 @@ export default function GaimenKirikaeGuidePage() {
         t('LTO書類取得からDFAアポスティーユまで一括対応', 'One-stop service from LTO document procurement to DFA Apostille'),
         t('トラブル時もプロが対応', 'Professionals handle any issues'),
       ],
-      pros: t('手間ゼロ。日本語サポートあり', 'Zero hassle. Japanese support available.'),
+      pros: t('必要書類を用途に応じて確認。取得漏れ・再提出・再送料のリスクを減らせる。日本語で完結', 'We verify required documents based on your specific situation. Reduces the risk of missing documents, resubmission, and reshipping costs.'),
       cons: t('代行手数料がかかる', 'Proxy service fee required'),
       color: 'border-primary',
     },
@@ -328,6 +328,23 @@ export default function GaimenKirikaeGuidePage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* 比較表直下CTA */}
+          <div className="mt-6 bg-primary/5 border border-primary/20 rounded-xl p-5 text-center">
+            <p className="text-sm font-bold text-secondary mb-1">
+              {t('どの方法が自分に合うか分からない方へ', 'Not sure which option is right for you?')}
+            </p>
+            <p className="text-xs text-gray-600 mb-4">
+              {t('1分で確認できます。用途に応じて必要書類を案内します。', 'Check in 1 minute. We'll guide you on the exact documents needed for your situation.')}
+            </p>
+            <a
+              href="#contact"
+              className="inline-block bg-primary text-white text-sm font-bold py-2.5 px-6 rounded-lg hover:bg-primary-hover transition-colors"
+              onClick={() => trackEvent('cta_click', { location: 'lto_comparison', type: 'consultation' })}
+            >
+              {t('まずは無料相談', 'Start with a Free Consultation')}
+            </a>
           </div>
         </section>
 

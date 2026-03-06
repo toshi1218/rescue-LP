@@ -455,9 +455,14 @@ export default function PricingPage() {
                     'Fully remote — we ship DHL Express to your door',
                   ],
                   [
+                    'Missing documents risk',
+                    'Easy to miss required docs — re-procurement and reshipping add cost and delay',
+                    'We verify what your submission authority actually requires — preventing costly re-orders',
+                  ],
+                  [
                     'Cost',
-                    'Agency fees + int\'l postage only (cheaper)',
-                    'Agency fee applies — but saves weeks of delays',
+                    'Agency fees + int\'l postage only (cheaper) — but re-procurement adds hidden costs',
+                    'Agency fee applies — but reduces resubmission and reshipping risk',
                   ],
                 ] : [
                   [
@@ -471,6 +476,11 @@ export default function PricingPage() {
                     '現地スタッフが対応',
                   ],
                   [
+                    '追加書類リスク',
+                    '提出先によっては追加確認・再取得が必要になることがある',
+                    '用途に応じて必要書類を事前確認。取得漏れを防ぐ',
+                  ],
+                  [
                     'トラブル対応',
                     '自分で解決が必要（MATCH FOUND等）',
                     'サポートあり',
@@ -482,8 +492,8 @@ export default function PricingPage() {
                   ],
                   [
                     '費用',
-                    '手数料＋国際郵便のみ（安い）',
-                    '代行手数料が加算される',
+                    '手数料＋国際郵便のみ（安い）ただし再取得が発生すると追加コスト',
+                    '代行手数料あり。再提出・再送料のリスクを減らせる',
                   ],
                 ]).map(([item, self, agency], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
@@ -499,6 +509,22 @@ export default function PricingPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* 比較表直下CTA */}
+          <div className="mt-6 bg-primary/5 border border-primary/20 rounded-xl p-5 text-center">
+            <p className="text-sm font-bold text-secondary mb-1">
+              {t('どの方法が自分に合うか分からない方へ', 'Not sure which option is right for you?')}
+            </p>
+            <p className="text-xs text-gray-600 mb-4">
+              {t('1分で確認できます。用途に応じて必要書類を案内します。', 'Check in 1 minute. We'll guide you on the exact documents needed for your situation.')}
+            </p>
+            <a
+              href="#contact"
+              className="inline-block bg-primary text-white text-sm font-bold py-2.5 px-6 rounded-lg hover:bg-primary-hover transition-colors"
+            >
+              {t('まずは無料相談', 'Start with a Free Consultation')}
+            </a>
           </div>
         </section>
 
