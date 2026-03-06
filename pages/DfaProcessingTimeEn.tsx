@@ -1,14 +1,109 @@
 import React from 'react';
-import ServicePageTemplate from './ServicePageTemplate';
+import PageLayout from '../components/PageLayout';
+import HeroBanner from '../components/HeroBanner';
+import FeatureList from '../components/FeatureList';
+import CtaBox from '../components/CtaBox';
+import StepList from '../components/StepList';
+import FaqSection from '../components/FaqSection';
+import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 
 export default function DfaProcessingTimeEn() {
   return (
-    <ServicePageTemplate
-      lang="en"
-      routePath="/en/apostille-processing-time"
-      title="DFA Apostille Processing Time"
-      badges={["Ships to USA via DHL", "All-Inclusive Pricing", "Approx. 4-6 Weeks"]}
-    />
+    <PageLayout
+      breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'DFA Apostille Processing Time' }]}
+      jsonLd={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'DFA Apostille Processing Time Service',
+        url: 'https://ph-document.com/en/apostille-processing-time',
+        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+      }}
+    >
+      <HeroBanner
+        title="DFA Apostille Processing Time: We Plan Around Your Deadline"
+        badges={['Deadline-Aware Scheduling', 'Ships via DHL', 'All-Inclusive Pricing']}
+        ctaText="Start Free Consultation"
+        ctaHref="#contact"
+      />
+
+      <FeatureList
+        heading="Who This Is For"
+        items={[
+          {
+            icon: <Clock className="w-4 h-4" />,
+            title: 'Want to know how long DFA Apostille takes',
+            description: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including PSA and DHL shipping is approximately 4–6 weeks.',
+          },
+          {
+            icon: <Calendar className="w-4 h-4" />,
+            title: 'Have a K-1 or CR-1 interview date coming up',
+            description: 'We work backward from your target date to determine when to start — and whether Express processing is needed.',
+          },
+          {
+            icon: <FileCheck className="w-4 h-4" />,
+            title: 'Want to bundle document retrieval and Apostille',
+            description: 'We handle PSA retrieval, DFA Apostille, and DHL shipping together in one flow.',
+          },
+        ]}
+      />
+
+      <CtaBox
+        title="Tell us your deadline — we will plan the timeline"
+        description="We calculate the optimal start date and confirm whether Express processing is needed for your case."
+        buttonText="Talk to Us"
+        href="#contact"
+        variant="primary"
+      />
+
+      <FeatureList
+        heading="What's Included"
+        items={[
+          {
+            icon: <FileCheck className="w-4 h-4" />,
+            title: 'DFA Apostille authentication',
+            description: 'We arrange DFA Apostille (Regular or Express based on your timeline). Paper original provided.',
+          },
+          {
+            icon: <FileCheck className="w-4 h-4" />,
+            title: 'PSA document retrieval (when needed)',
+            description: 'We can bundle PSA retrieval with Apostille for a single all-inclusive price.',
+          },
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'DHL shipping to your US address',
+            description: 'Tracked delivery directly to your door. No forwarding needed.',
+          },
+        ]}
+      />
+
+      <CtaBox
+        title="The earlier you start, the more options you have"
+        description="The full process takes approximately 4–6 weeks. Starting early gives you buffer time and avoids the need for Express processing."
+        buttonText="Check My Timeline"
+        href="#contact"
+        variant="secondary"
+      />
+
+      <StepList
+        heading="How It Works"
+        steps={[
+          { title: 'Share your target date', description: 'Tell us your K-1 interview, NVC submission, or other deadline.' },
+          { title: 'We plan the timeline and quote', description: 'We confirm whether Express is needed and provide all-inclusive pricing.' },
+          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille (Regular or Express).' },
+          { title: 'DHL delivery to the USA', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
+        ]}
+      />
+
+      <FaqSection
+        items={[
+          { q: 'How long does DFA Apostille take?', a: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including PSA retrieval and DHL shipping is approximately 4–6 weeks.' },
+          { q: 'Can I request Express processing?', a: 'Yes. If your deadline requires it, we will arrange Express DFA Apostille. Share your deadline and we will confirm what is needed.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included.' },
+          { q: 'I am worried about missing my deadline', a: 'Share your deadline and we will confirm whether it is feasible. Starting early is the best way to stay on track.' },
+        ]}
+        ctaTitle="Share your case and we will guide your next step"
+        ctaButton="Go to Contact Form"
+      />
+    </PageLayout>
   );
 }
-

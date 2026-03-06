@@ -1,14 +1,109 @@
 import React from 'react';
-import ServicePageTemplate from './ServicePageTemplate';
+import PageLayout from '../components/PageLayout';
+import HeroBanner from '../components/HeroBanner';
+import FeatureList from '../components/FeatureList';
+import CtaBox from '../components/CtaBox';
+import StepList from '../components/StepList';
+import FaqSection from '../components/FaqSection';
+import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 
 export default function DfaProcessingTimeJa() {
   return (
-    <ServicePageTemplate
-      lang="ja"
-      routePath="/ja/apostille-shori-kikan"
-      title="DFA Processing Time JA"
-      badges={["Nihongo Support", "All-Inclusive", "About 1 Month"]}
-    />
+    <PageLayout
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'DFAアポスティーユの処理期間' }]}
+      jsonLd={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'DFAアポスティーユ処理期間・代行',
+        url: 'https://ph-document.com/ja/apostille-shori-kikan',
+        provider: { '@type': 'Organization', name: 'IGRS Inc.' },
+      }}
+    >
+      <HeroBanner
+        title="DFAアポスティーユの処理期間、提出期限に合わせて手配します"
+        badges={['日本語だけでOK', '提出期限に合わせて手配', 'コミコミ料金']}
+        ctaText="無料相談はこちら"
+        ctaHref="#contact"
+      />
+
+      <FeatureList
+        heading="こんな方へ"
+        items={[
+          {
+            icon: <Clock className="w-4 h-4" />,
+            title: 'DFAアポスティーユにどのくらいかかるか知りたい',
+            description: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請できます。PSA取得・郵送を含めた全体の目安は約1ヶ月〜です。',
+          },
+          {
+            icon: <Calendar className="w-4 h-4" />,
+            title: '提出期限が決まっている',
+            description: '提出予定日から逆算して、最適なタイミングで申請を開始します。期限に間に合うかどうかも確認します。',
+          },
+          {
+            icon: <FileCheck className="w-4 h-4" />,
+            title: 'PSA書類の取得からまとめて頼みたい',
+            description: 'PSA書類の取得からDFAアポスティーユ・国際郵送まで一括で手配できます。',
+          },
+        ]}
+      />
+
+      <CtaBox
+        title="提出予定日を教えてください"
+        description="逆算して最適な申請開始時期をご案内します。期限に間に合うかどうかも確認します。"
+        buttonText="無料で相談する"
+        href="#contact"
+        variant="primary"
+      />
+
+      <FeatureList
+        heading="料金に含まれるもの"
+        items={[
+          {
+            icon: <FileCheck className="w-4 h-4" />,
+            title: 'DFAアポスティーユ認証',
+            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。Regular/Expressを状況に応じて選択。',
+          },
+          {
+            icon: <FileCheck className="w-4 h-4" />,
+            title: 'PSA書類取得（必要な場合）',
+            description: 'PSA書類の取得からまとめて依頼いただけます。',
+          },
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: '国際郵送（日本へ）',
+            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
+          },
+        ]}
+      />
+
+      <CtaBox
+        title="期限に間に合わせるために、早めのご相談を"
+        description="手続き全体に約1ヶ月〜かかります。余裕を持って動き始めることが、一番のリスク回避です。"
+        buttonText="今すぐ相談する"
+        href="#contact"
+        variant="secondary"
+      />
+
+      <StepList
+        heading="ご依頼の流れ"
+        steps={[
+          { title: '提出予定日を共有', description: '婚姻届・ビザ申請などの提出予定日をお知らせください。' },
+          { title: '申請開始時期を確認', description: '逆算して最適な申請開始時期と料金をご提示します。' },
+          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
+          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。' },
+        ]}
+      />
+
+      <FaqSection
+        items={[
+          { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請できます。PSA取得・郵送を含めた全体の目安は約1ヶ月〜です。' },
+          { q: '急ぎの場合はExpressで申請できますか？', a: '可能です。提出期限をお知らせいただければ、Expressが必要かどうかを含めてご案内します。' },
+          { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '期限に間に合うかどうか不安です', a: '提出予定日をお知らせいただければ、間に合うかどうかを確認してご案内します。まずはご相談ください。' },
+        ]}
+        ctaTitle="まずは状況をお聞かせください"
+        ctaButton="無料相談フォームへ"
+      />
+    </PageLayout>
   );
 }
-
