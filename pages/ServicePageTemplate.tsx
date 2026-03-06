@@ -18,11 +18,11 @@ type ServicePageTemplateProps = {
 export default function ServicePageTemplate({ lang, routePath, title, badges }: ServicePageTemplateProps) {
   const isJa = lang === 'ja';
 
-  const homeLabel = isJa ? 'ƒz[ƒ€' : 'Home';
+  const homeLabel = isJa ? 'ãƒ›ãƒ¼ãƒ ' : 'Home';
   const homeHref = isJa ? '/ja/' : '/en/';
-  const audienceHeading = isJa ? '‚±‚ñ‚È•û‚Ö' : 'Who This Is For';
-  const includesHeading = isJa ? '—¿‹à‚ÉŠÜ‚Ü‚ê‚é‚à‚Ì' : "What's Included";
-  const stepsHeading = isJa ? '‚²ˆË—Š‚Ì—¬‚ê' : 'How It Works';
+  const audienceHeading = isJa ? 'ã“ã‚“ãªæ–¹ã¸' : 'Who This Is For';
+  const includesHeading = isJa ? 'æ–™é‡‘ã«å«ã¾ã‚Œã‚‹ã‚‚ã®' : "What's Included";
+  const stepsHeading = isJa ? 'ã”ä¾é ¼ã®æµã‚Œ' : 'How It Works';
 
   return (
     <PageLayout
@@ -35,33 +35,33 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
         provider: { '@type': 'Organization', name: 'IGRS Inc.' },
       }}
     >
-      <HeroBanner title={title} badges={badges} ctaText={isJa ? '–³—¿‘Š’k‚Í‚±‚¿‚ç' : 'Start Free Consultation'} ctaHref="#contact" />
+      <HeroBanner title={title} badges={badges} ctaText={isJa ? 'ç„¡æ–™ç›¸è«‡ã¯ã“ã¡ã‚‰' : 'Start Free Consultation'} ctaHref="#contact" />
 
       <FeatureList
         heading={audienceHeading}
         items={[
           {
             icon: '01',
-            title: isJa ? '“ú–{İZ‚ÅƒtƒBƒŠƒsƒ“‘—Ş‚ª•K—v' : 'Applying from the USA',
-            description: isJa ? '•K—v‘—Ş‚ğæ‚É®—‚µAÄ’ñoƒŠƒXƒN‚ğŒ¸‚ç‚µ‚Ü‚·B' : 'We confirm requirements first to reduce re-submission risk.',
+            title: isJa ? 'æ—¥æœ¬åœ¨ä½ã§ãƒ•ã‚£ãƒªãƒ”ãƒ³æ›¸é¡ãŒå¿…è¦' : 'Applying from the USA',
+            description: isJa ? 'å¿…è¦æ›¸é¡ã‚’å…ˆã«æ•´ç†ã—ã€å†æå‡ºãƒªã‚¹ã‚¯ã‚’æ¸›ã‚‰ã—ã¾ã™ã€‚' : 'We confirm requirements first to reduce re-submission risk.',
           },
           {
             icon: '02',
-            title: isJa ? '’ñoŠúŒÀ‚É‡‚í‚¹‚Äi‚ß‚½‚¢' : 'Need USCIS or NVC-ready documents',
-            description: isJa ? '’ñoæ—vŒ‚É‡‚í‚¹‚Ä’iæ‚è‚ğì¬‚µ‚Ü‚·B' : 'We align document flow with submission requirements.',
+            title: isJa ? 'æå‡ºæœŸé™ã«åˆã‚ã›ã¦é€²ã‚ãŸã„' : 'Need USCIS or NVC-ready documents',
+            description: isJa ? 'æå‡ºå…ˆè¦ä»¶ã«åˆã‚ã›ã¦æ®µå–ã‚Šã‚’ä½œæˆã—ã¾ã™ã€‚' : 'We align document flow with submission requirements.',
           },
           {
             icon: '03',
-            title: isJa ? '“ú–{Œê‚¾‚¯‚Åi‚ß‚½‚¢' : 'Want one contact point in English',
-            description: isJa ? 'i’»‹¤—L‚ğŠÜ‚ß“ú–{Œê‚Å‘Î‰‚µ‚Ü‚·B' : 'All communication is in English with clear status updates.',
+            title: isJa ? 'æ—¥æœ¬èªã ã‘ã§é€²ã‚ãŸã„' : 'Want one contact point in English',
+            description: isJa ? 'é€²æ—å…±æœ‰ã‚’å«ã‚æ—¥æœ¬èªã§å¯¾å¿œã—ã¾ã™ã€‚' : 'All communication is in English with clear status updates.',
           },
         ]}
       />
 
       <CtaBox
-        title={isJa ? '‚Ü‚¸‚Í–³—¿‘Š’k‚Å—vŒŠm”F' : 'Start with a quick requirements check'}
-        description={isJa ? '‰ß•s‘«‚ğŠm”F‚µAÅ’Zƒ‹[ƒg‚Åi‚ß‚Ü‚·B' : 'We verify your case and proceed with only required steps.'}
-        buttonText={isJa ? '–³—¿‚Å‘Š’k‚·‚é' : 'Talk to Us'}
+        title={isJa ? 'ã¾ãšã¯ç„¡æ–™ç›¸è«‡ã§è¦ä»¶ç¢ºèª' : 'Start with a quick requirements check'}
+        description={isJa ? 'éä¸è¶³ã‚’ç¢ºèªã—ã€æœ€çŸ­ãƒ«ãƒ¼ãƒˆã§é€²ã‚ã¾ã™ã€‚' : 'We verify your case and proceed with only required steps.'}
+        buttonText={isJa ? 'ç„¡æ–™ã§ç›¸è«‡ã™ã‚‹' : 'Talk to Us'}
         href="#contact"
         variant="primary"
       />
@@ -71,26 +71,26 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
         items={[
           {
             icon: 'A',
-            title: isJa ? '‘—Şæ“¾è”z' : 'Document retrieval handling',
-            description: isJa ? '•K—v‘—Ş‚Ìæ“¾‚ğˆêŠ‡‚Åi‚ß‚Ü‚·B' : 'Core retrieval process is handled end-to-end.',
+            title: isJa ? 'æ›¸é¡å–å¾—æ‰‹é…' : 'Document retrieval handling',
+            description: isJa ? 'å¿…è¦æ›¸é¡ã®å–å¾—ã‚’ä¸€æ‹¬ã§é€²ã‚ã¾ã™ã€‚' : 'Core retrieval process is handled end-to-end.',
           },
           {
             icon: 'B',
-            title: isJa ? '•K—v‚Ì”FØè”z' : 'Certification when required',
-            description: isJa ? '—p“r‚É‰‚¶‚Ä”FØè‘±‚«‚Ü‚Å‘Î‰‚µ‚Ü‚·B' : 'Certification flow is included when your case needs it.',
+            title: isJa ? 'å¿…è¦æ™‚ã®èªè¨¼æ‰‹é…' : 'Certification when required',
+            description: isJa ? 'ç”¨é€”ã«å¿œã˜ã¦èªè¨¼æ‰‹ç¶šãã¾ã§å¯¾å¿œã—ã¾ã™ã€‚' : 'Certification flow is included when your case needs it.',
           },
           {
             icon: 'C',
-            title: isJa ? '‘Û”z‘—' : 'International DHL shipping',
-            description: isJa ? '’ÇÕ•t‚«‚Å“ú–{ZŠ‚Ö”z‘—‚µ‚Ü‚·B' : 'Tracked delivery to your US address.',
+            title: isJa ? 'å›½éš›é…é€' : 'International DHL shipping',
+            description: isJa ? 'è¿½è·¡ä»˜ãã§æ—¥æœ¬ä½æ‰€ã¸é…é€ã—ã¾ã™ã€‚' : 'Tracked delivery to your US address.',
           },
         ]}
       />
 
       <CtaBox
-        title={isJa ? '’ñoŠúŒÀ‚ª‚ ‚éˆÄŒ‚à‘Î‰' : 'Deadline-sensitive cases are supported'}
-        description={isJa ? 'ŠJn‘O‚É‰Â”Û‚ğŠm”F‚µ‚ÄˆÄ“à‚µ‚Ü‚·B' : 'We confirm feasibility before start when a deadline exists.'}
-        buttonText={isJa ? '”[Šú‚ğ‘Š’k‚·‚é' : 'Check Timeline'}
+        title={isJa ? 'æå‡ºæœŸé™ãŒã‚ã‚‹æ¡ˆä»¶ã‚‚å¯¾å¿œ' : 'Deadline-sensitive cases are supported'}
+        description={isJa ? 'é–‹å§‹å‰ã«å¯å¦ã‚’ç¢ºèªã—ã¦æ¡ˆå†…ã—ã¾ã™ã€‚' : 'We confirm feasibility before start when a deadline exists.'}
+        buttonText={isJa ? 'ç´æœŸã‚’ç›¸è«‡ã™ã‚‹' : 'Check Timeline'}
         href="#contact"
         variant="secondary"
       />
@@ -99,10 +99,10 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
         heading={stepsHeading}
         steps={isJa
           ? [
-              { title: 'ƒtƒH[ƒ€‘—M', description: '—p“r‚Æ’ño—\’è“ú‚ğ‹¤—L' },
-              { title: '•K—v‘—ŞŠm”F', description: '•K—v‘—Ş‚ğŠm’è‚µ‚ÄŒ©Ï’ñ¦' },
-              { title: 'æ“¾è‘±‚«', description: 'Œ»’n‚Åæ“¾E•K—v”FØ‚ğis' },
-              { title: '”z‘—Š®—¹', description: '’ÇÕ”Ô†•t‚«‚Å‚¨“Í‚¯' },
+              { title: 'ãƒ•ã‚©ãƒ¼ãƒ é€ä¿¡', description: 'ç”¨é€”ã¨æå‡ºäºˆå®šæ—¥ã‚’å…±æœ‰' },
+              { title: 'å¿…è¦æ›¸é¡ç¢ºèª', description: 'å¿…è¦æ›¸é¡ã‚’ç¢ºå®šã—ã¦è¦‹ç©æç¤º' },
+              { title: 'å–å¾—æ‰‹ç¶šã', description: 'ç¾åœ°ã§å–å¾—ãƒ»å¿…è¦èªè¨¼ã‚’é€²è¡Œ' },
+              { title: 'é…é€å®Œäº†', description: 'è¿½è·¡ç•ªå·ä»˜ãã§ãŠå±Šã‘' },
             ]
           : [
               { title: 'Submit inquiry', description: 'Share your use case and target date' },
@@ -115,17 +115,17 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
       <FaqSection
         items={isJa
           ? [
-              { q: '—¿‹à‚Í‚¢‚­‚ç‚Å‚·‚©H', a: 'ˆÄŒ‚²‚Æ‚É•K—v‘—Ş‚ªˆÙ‚È‚é‚½‚ßA–³—¿‘Š’kŒã‚ÉƒRƒ~ƒRƒ~—¿‹à‚ğ’ñ¦‚µ‚Ü‚·B' },
-              { q: '‚¢‚Â“Í‚«‚Ü‚·‚©H', a: '’Êí‚Í–ñ1‚©Œ?‚Å‚·BŠúŒÀ‚ª‚ ‚éê‡‚Íæ‚É‰Â”Û‚ğˆÄ“à‚µ‚Ü‚·B' },
-              { q: '‹}‚¬‘Î‰‚Í‚Å‚«‚Ü‚·‚©H', a: '‰Â”\‚Å‚·BŠó–]“ú’ö‚ğ‹¤—L‚¢‚½‚¾‚¯‚ê‚Î—Dæ‰Â”Û‚ğŠm”F‚µ‚Ü‚·B' },
+              { q: 'æ–™é‡‘ã¯ã„ãã‚‰ã§ã™ã‹ï¼Ÿ', a: 'æ¡ˆä»¶ã”ã¨ã«å¿…è¦æ›¸é¡ãŒç•°ãªã‚‹ãŸã‚ã€ç„¡æ–™ç›¸è«‡å¾Œã«ã‚³ãƒŸã‚³ãƒŸæ–™é‡‘ã‚’æç¤ºã—ã¾ã™ã€‚' },
+              { q: 'ã„ã¤å±Šãã¾ã™ã‹ï¼Ÿ', a: 'é€šå¸¸ã¯ç´„1ã‹æœˆã€œã§ã™ã€‚æœŸé™ãŒã‚ã‚‹å ´åˆã¯å…ˆã«å¯å¦ã‚’æ¡ˆå†…ã—ã¾ã™ã€‚' },
+              { q: 'æ€¥ãå¯¾å¿œã¯ã§ãã¾ã™ã‹ï¼Ÿ', a: 'å¯èƒ½ã§ã™ã€‚å¸Œæœ›æ—¥ç¨‹ã‚’å…±æœ‰ã„ãŸã ã‘ã‚Œã°å„ªå…ˆå¯å¦ã‚’ç¢ºèªã—ã¾ã™ã€‚' },
             ]
           : [
               { q: 'How much does it cost?', a: 'Pricing depends on your case. We provide all-inclusive pricing after review.' },
               { q: 'How long does it take?', a: 'Most cases complete in about 4-6 weeks including DHL shipping.' },
               { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm priority options first.' },
             ]}
-        ctaTitle={isJa ? '‚Ü‚¸‚Íó‹µ‚ğ‹¤—L‚µ‚Ä‚­‚¾‚³‚¢' : 'Share your case and we will guide your next step'}
-        ctaButton={isJa ? '–³—¿‘Š’kƒtƒH[ƒ€‚Ö' : 'Go to Contact Form'}
+        ctaTitle={isJa ? 'ã¾ãšã¯çŠ¶æ³ã‚’å…±æœ‰ã—ã¦ãã ã•ã„' : 'Share your case and we will guide your next step'}
+        ctaButton={isJa ? 'ç„¡æ–™ç›¸è«‡ãƒ•ã‚©ãƒ¼ãƒ ã¸' : 'Go to Contact Form'}
       />
     </PageLayout>
   );
