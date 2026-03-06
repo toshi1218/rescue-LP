@@ -349,29 +349,35 @@ export default function CenomarGuidePage() {
             <div className="bg-white border-2 border-gray-200 rounded-xl p-5 shadow-card">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">{t('方法①', 'Option ①')}</span>
-                <h3 className="font-bold text-secondary">{t('PSAオンライン申請を自分で行う', 'Apply for PSA Documents Yourself Online')}</h3>
+                <h3 className="font-bold text-secondary">{t('オンラインで自分で申請する', 'Apply Online Yourself')}</h3>
               </div>
               <p className="text-sm text-gray-600 mb-3">
                 {t(
-                  'PSA Helplineなどのオンラインサービスを使って、自分でPSA書類を取り寄せる方法です。費用を抑えやすく、手続きに慣れている方には向いています。',
-                  'Use an online service like PSA Helpline to order PSA documents yourself. This can be cost-effective for those familiar with the process.'
+                  'オンラインサービスを使って、PSA書類を自分で取り寄せる方法です。最初の費用は安く見えるため、まず自分でやってみようと考える方も多いです。',
+                  'This method involves ordering PSA documents yourself through an online service. The initial cost appears low, so many people try this first.'
                 )}
               </p>
               <div className="text-xs space-y-2">
                 <div>
                   <p className="font-bold text-green-600 mb-0.5">{t('メリット', 'Pros')}</p>
-                  <p className="text-gray-700">{t('費用を比較的安く抑えやすい', 'Relatively low cost')}</p>
+                  <p className="text-gray-700">{t('費用を安く抑えやすい', 'Easy to keep costs low')}</p>
                 </div>
                 <div>
                   <p className="font-bold text-red-500 mb-0.5">{t('デメリット', 'Cons')}</p>
                   <p className="text-gray-700">
                     {t(
-                      '英語での申請が必要です。また、PSA書類を取得できても、それだけで日本の提出先にそのまま使えるとは限りません。電子版で足りるのか、紙の原本やアポスティーユ付き書類が必要なのかを自分で判断する必要があり、判断を誤ると、取り直しや再送料でかえって高くつくことがあります。',
-                      'Application must be done in English. Even if you obtain the PSA document, it may not be accepted as-is by your submission authority. You need to determine yourself whether a digital copy is sufficient or if a paper original with Apostille is required — a misjudgment can end up costing more due to re-procurement and re-shipping.'
+                      '英語での申請が必要です。また、取得できるのは基本的にPSA書類だけで、提出に必要な状態（紙のアポスティーユ付き）にすることができません。日本の提出先では、紙ベースのアポスティーユ原本が前提になるケースが多いため、結局あとから別手配が必要になります。',
+                      'Application must be done in English. Also, what you receive is essentially just the PSA document — it cannot be put into the required state (with paper Apostille) for submission. Since most Japanese authorities require a paper-based Apostille original, you will end up needing separate arrangements later.'
                     )}
                   </p>
                 </div>
               </div>
+              <p className="text-xs text-gray-500 mt-3 italic">
+                {t(
+                  '一見いちばん安く見えますが、結果的に一番時間がかかり無駄が多い方法です。',
+                  'It looks like the cheapest option at first glance, but it often ends up being the most time-consuming and wasteful.'
+                )}
+              </p>
             </div>
 
             {/* 方法② */}
