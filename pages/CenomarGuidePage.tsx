@@ -344,66 +344,97 @@ export default function CenomarGuidePage() {
             {t('4. 取得方法3パターン比較', '4. Comparison of 3 Acquisition Methods')}
           </h2>
           <div className="grid gap-4">
-            {[
-              {
-                label: t('方法①', 'Option ①'),
-                title: t('PSAオンライン申請（自分で）', 'PSA Online Application (Self)'),
-                items: [
-                  t('PSAHelpline.comまたはPSA公式サイトで申請', 'Apply at PSAHelpline.com or the PSA official website'),
-                  t('申請費用：約365ペソ（約900円）＋国際郵便料金（約6,000円）', 'Fee: approx. PHP 365 (~$6.50) + international shipping (~$40)'),
-                  t('支払いはクレジットカードまたはPayPal', 'Payment by credit card or PayPal'),
-                  t('国際郵便で日本の住所へ届く（3〜5営業日）', 'Delivered to your Japanese address by international mail (3–5 business days)'),
-                ],
-                pros: t('コストが最も安い', 'Lowest cost'),
-                cons: t('英語での申請が必要。日本の婚姻届・ビザ申請には、PSA書類に加えてDFAアポスティーユが別途必要になることが多い。アポスティーユは現地での別手続きのため、追加の費用と時間がかかる', 'English required. For most immigration and marriage purposes, DFA Apostille is also required separately — meaning additional cost and in-Philippines procedures on top of the PSA document itself.'),
-                color: 'border-gray-200',
-              },
-              {
-                label: t('方法②', 'Option ②'),
-                title: t('在住国のフィリピン大使館・領事館で申請', 'Apply at Philippine Embassy / Consulate in Your Country'),
-                items: [
-                  t('在住国のフィリピン大使館・総領事館で申請可能', 'Available at Philippine embassies/consulates worldwide'),
-                  t('事前予約（オンライン予約）が必要', 'Prior online appointment required'),
-                  t('窓口で申請書を記入し手数料を支払う', 'Fill in application form and pay fee at the counter'),
-                ],
-                pros: t('比較的安い', 'Relatively inexpensive'),
-                cons: t('予約が取りにくい。平日のみ。窓口まで出向く手間', 'Appointments can be hard to get. Weekdays only. Must visit in person'),
-                color: 'border-gray-200',
-              },
-              {
-                label: t('方法③ おすすめ', 'Option ③ Recommended'),
-                title: t('代行サービスに依頼', 'Use a Proxy Service (Best for US Applicants)'),
-                items: [
-                  t('日本語でやり取りするだけ', 'Communicate fully in English — no trip to the Philippines'),
-                  t('必要書類の確認から郵送まで完全サポート', 'Full support from document check to DHL delivery to your US address'),
-                  t('DFAアポスティーユも同時に手配可能', 'DFA Apostille authentication arranged simultaneously if required'),
-                ],
-                pros: t('提出先に応じて必要書類とアポスティーユの要否を確認。取得漏れ・再提出・再送料のリスクを減らせる。日本語で完結', 'We verify required documents and Apostille requirements for your specific submission authority. Reduces the risk of missing documents, resubmission, and reshipping costs.'),
-                cons: t('代行手数料がかかる', 'Proxy service fee applies'),
-                color: 'border-primary',
-              },
-            ].map((m, i) => (
-              <div key={i} className={`bg-white border-2 ${m.color} rounded-xl p-5 shadow-card`}>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">{m.label}</span>
-                  <h3 className="font-bold text-secondary">{m.title}</h3>
+
+            {/* 方法① */}
+            <div className="bg-white border-2 border-gray-200 rounded-xl p-5 shadow-card">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">{t('方法①', 'Option ①')}</span>
+                <h3 className="font-bold text-secondary">{t('PSAオンライン申請を自分で行う', 'Apply for PSA Documents Yourself Online')}</h3>
+              </div>
+              <p className="text-sm text-gray-600 mb-3">
+                {t(
+                  'PSA Helplineなどのオンラインサービスを使って、自分でPSA書類を取り寄せる方法です。費用を抑えやすく、手続きに慣れている方には向いています。',
+                  'Use an online service like PSA Helpline to order PSA documents yourself. This can be cost-effective for those familiar with the process.'
+                )}
+              </p>
+              <div className="text-xs space-y-2">
+                <div>
+                  <p className="font-bold text-green-600 mb-0.5">{t('メリット', 'Pros')}</p>
+                  <p className="text-gray-700">{t('費用を比較的安く抑えやすい', 'Relatively low cost')}</p>
                 </div>
-                <ul className="space-y-1 mb-3">
-                  {m.items.map((item, j) => (
-                    <li key={j} className="text-sm text-gray-700 flex gap-2">
-                      <span className="text-primary flex-shrink-0">▸</span>{item}
-                    </li>
-                  ))}
-                </ul>
-                <div className="text-xs space-y-1">
-                  <p><span className="text-green-600 font-bold">{t('メリット：', 'Pros: ')}</span>{m.pros}</p>
-                  <p><span className="text-red-500 font-bold">{t('デメリット：', 'Cons: ')}</span>{m.cons}</p>
+                <div>
+                  <p className="font-bold text-red-500 mb-0.5">{t('デメリット', 'Cons')}</p>
+                  <p className="text-gray-700">
+                    {t(
+                      '英語での申請が必要です。また、PSA書類を取得できても、それだけで日本の提出先にそのまま使えるとは限りません。電子版で足りるのか、紙の原本やアポスティーユ付き書類が必要なのかを自分で判断する必要があり、判断を誤ると、取り直しや再送料でかえって高くつくことがあります。',
+                      'Application must be done in English. Even if you obtain the PSA document, it may not be accepted as-is by your submission authority. You need to determine yourself whether a digital copy is sufficient or if a paper original with Apostille is required — a misjudgment can end up costing more due to re-procurement and re-shipping.'
+                    )}
+                  </p>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* 方法② */}
+            <div className="bg-white border-2 border-gray-200 rounded-xl p-5 shadow-card">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">{t('方法②', 'Option ②')}</span>
+                <h3 className="font-bold text-secondary">{t('在住国のフィリピン大使館・総領事館に相談する', 'Consult the Philippine Embassy / Consulate in Your Country')}</h3>
+              </div>
+              <p className="text-sm text-gray-600 mb-3">
+                {t(
+                  'フィリピン大使館・総領事館では、婚姻や各種届出に関する相談、公証、在外手続きの案内を受けられることがあります。手続き全体の確認先としては役立ちます。',
+                  'Philippine embassies and consulates can provide guidance on marriage registration, notarization, and overseas procedures. They can be useful for general process confirmation.'
+                )}
+              </p>
+              <div className="text-xs space-y-2">
+                <div>
+                  <p className="font-bold text-green-600 mb-0.5">{t('メリット', 'Pros')}</p>
+                  <p className="text-gray-700">{t('公的機関に相談できる安心感がある', 'Reassurance of consulting an official government institution')}</p>
+                </div>
+                <div>
+                  <p className="font-bold text-red-500 mb-0.5">{t('デメリット', 'Cons')}</p>
+                  <p className="text-gray-700">
+                    {t(
+                      'フィリピンで発行されたPSA書類に対するDFAアポスティーユの申請・取得はできません。つまり、PSA書類の取得やアポスティーユ手配をここだけで完結させることはできません。予約や来館の手間もかかります。',
+                      'DFA Apostille for PSA documents issued in the Philippines cannot be applied for or obtained here. In other words, you cannot complete PSA document retrieval or Apostille arrangements through the embassy alone. Appointments and in-person visits are also required.'
+                    )}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 方法③ */}
+            <div className="bg-white border-2 border-primary rounded-xl p-5 shadow-card">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">{t('方法③ おすすめ', 'Option ③ Recommended')}</span>
+                <h3 className="font-bold text-secondary">{t('代行サービスに依頼する', 'Use a Proxy Service')}</h3>
+              </div>
+              <p className="text-sm text-gray-600 mb-3">
+                {t(
+                  '日本語でやり取りしながら、必要書類の確認から取得、必要に応じたアポスティーユ手配までまとめて進める方法です。',
+                  'Communicate in your language while we handle everything — from confirming required documents to retrieval and Apostille arrangement as needed.'
+                )}
+              </p>
+              <div className="text-xs space-y-2">
+                <div>
+                  <p className="font-bold text-green-600 mb-0.5">{t('メリット', 'Pros')}</p>
+                  <p className="text-gray-700">
+                    {t(
+                      '提出先に合わせて、最初から通る形で手配できます。「電子版で足りるのか」「紙の原本が必要か」「追加書類が必要か」を見落としにくく、取得漏れ、再提出、再送料のリスクを減らせます。日本語で完結できるため、手間も少なく済みます。',
+                      'We arrange everything in the form your submission authority will accept from the start. Less risk of missing documents, resubmission, or re-shipping costs. All communication handled in Japanese — minimal effort on your part.'
+                    )}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-bold text-red-500 mb-0.5">{t('デメリット', 'Cons')}</p>
+                  <p className="text-gray-700">{t('代行手数料がかかります', 'Proxy service fee applies')}</p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          {/* 説得ブロック＋CTA */}
+          {/* 説得ブロック */}
           <div className="mt-5 bg-amber-50 border border-amber-300 rounded-xl p-5">
             <div className="flex gap-3">
               <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
@@ -417,7 +448,7 @@ export default function CenomarGuidePage() {
                 <div className="text-xs text-amber-700 leading-relaxed space-y-2">
                   <p>{t(
                     'PSA書類は、取得できれば終わりではありません。大事なのは、日本の提出先でそのまま使える形になっているかです。',
-                    'Getting the PSA document is not the finish line. What matters is whether it is in the form your submission authority in Japan will actually accept.'
+                    'Getting the PSA document is not the finish line. What matters is whether it is in a form your submission authority in Japan will actually accept.'
                   )}</p>
                   <p>{t(
                     '自分で申請しても、あとから追加書類や認証が必要になれば、結局は取り直し、再申請、再送料で余計な手間と費用がかかります。',
@@ -427,18 +458,19 @@ export default function CenomarGuidePage() {
                     '当社は、書類を取るだけの代行ではありません。提出先に合わせて、必要な形まで見越して手配する代行です。',
                     'We are not just a document retrieval service. We arrange everything with your specific submission authority in mind — so you get it right the first time.'
                   )}</p>
+                  <p>{t(
+                    '迷ったまま進めるより、最初に確認したほうが早くて確実です。',
+                    'Confirming upfront is faster and more reliable than guessing as you go.'
+                  )}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* 比較表直下CTA */}
+          {/* CTA */}
           <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-5 text-center">
-            <p className="text-sm font-bold text-secondary mb-1">
-              {t('迷ったまま進めるより、最初に確認したほうが早くて確実です。', 'Confirming upfront is faster and more reliable than guessing as you go.')}
-            </p>
-            <p className="text-xs text-gray-600 mb-4">
-              {t('まずはご相談ください。', 'Please feel free to consult us first.')}
+            <p className="text-sm font-bold text-secondary mb-4">
+              {t('この書類で本当に足りるのか不安な方は、申請前にご相談ください。', 'Not sure if this document is really enough? Consult us before you apply.')}
             </p>
             <a
               href="#contact"
