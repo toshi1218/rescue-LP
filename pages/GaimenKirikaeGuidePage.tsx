@@ -336,7 +336,7 @@ export default function GaimenKirikaeGuidePage() {
               {t('どの方法が自分に合うか分からない方へ', 'Not sure which option is right for you?')}
             </p>
             <p className="text-xs text-gray-600 mb-4">
-              {t('1分で確認できます。用途に応じて必要書類を案内します。', 'Check in 1 minute. We'll guide you on the exact documents needed for your situation.')}
+              {t('1分で確認できます。用途に応じて必要書類を案内します。', "Check in 1 minute. We'll guide you on the exact documents needed for your situation.")}
             </p>
             <a
               href="#contact"
