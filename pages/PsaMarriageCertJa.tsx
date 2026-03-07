@@ -121,7 +121,7 @@ export default function PsaMarriageCertJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="逹謇句燕繧ｭ繝｣繝ｳ繧ｻ繝ｫ辟｡譁吶・騾ｲ謐励ｒ髫乗凾縺泌ｱ蜻翫・譖ｸ鬘槫・縺礼｢ｺ隱榊ｾ後↓谿矩≡縺頑髪謇輔＞"
+        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
       />
 
       <FeatureList

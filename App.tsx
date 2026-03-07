@@ -45,8 +45,11 @@ import UsVisaDocsJa from './pages/UsVisaDocsJa';
 import K1VisaDocsEn from './pages/K1VisaDocsEn';
 import Cr1VisaDocsEn from './pages/Cr1VisaDocsEn';
 import CanadaDocsEn from './pages/CanadaDocsEn';
+import CanadaDocsJa from './pages/CanadaDocsJa';
 import AustraliaDocsEn from './pages/AustraliaDocsEn';
+import AustraliaDocsJa from './pages/AustraliaDocsJa';
 import UkDocsEn from './pages/UkDocsEn';
+import UkDocsJa from './pages/UkDocsJa';
 import CompanyEn from './pages/CompanyEn';
 import CompanyJa from './pages/CompanyJa';
 import ContactEn from './pages/ContactEn';
@@ -115,8 +118,11 @@ export default function App() {
         <Route path="/en/k1-visa-documents" element={<K1VisaDocsEn />} />
         <Route path="/en/cr1-visa-documents" element={<Cr1VisaDocsEn />} />
         <Route path="/en/canada" element={<CanadaDocsEn />} />
+        <Route path="/ja/canada" element={<CanadaDocsJa />} />
         <Route path="/en/australia" element={<AustraliaDocsEn />} />
+        <Route path="/ja/australia" element={<AustraliaDocsJa />} />
         <Route path="/en/uk" element={<UkDocsEn />} />
+        <Route path="/ja/uk" element={<UkDocsJa />} />
         <Route path="/en/company" element={<CompanyEn />} />
         <Route path="/ja/company" element={<CompanyJa />} />
         <Route path="/en/contact" element={<ContactEn />} />

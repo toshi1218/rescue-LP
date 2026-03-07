@@ -69,6 +69,9 @@ PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していま
 - [外免切替](https://ph-document.com/ja/gaimen-kirikae-guide/) — LTO書類の代行取得
 - [帰化申請](https://ph-document.com/ja/kika-shinsei-guide/) — 帰化申請用フィリピン書類代行
 - [LTOドライバーズレコード](https://ph-document.com/ja/driver-record/) — LTOドライバーズレコード代行取得
+- [カナダ移民ビザ書類](https://ph-document.com/ja/canada/) — カナダ永住権・配偶者スポンサーシップ向けフィリピン書類代行
+- [オーストラリアビザ書類](https://ph-document.com/ja/australia/) — オーストラリアパートナービザ向けフィリピン書類代行
+- [UK移民ビザ書類](https://ph-document.com/ja/uk/) — UK配偶者ビザ向けフィリピン書類代行
 - [ガイド一覧](https://ph-document.com/ja/guides/) — サービスガイド一覧
 - [料金一覧](https://ph-document.com/ja/ryokin/) — 全サービスの料金表
 - [会社概要](https://ph-document.com/ja/company/) — 運営会社情報
