@@ -7,7 +7,7 @@ export default function PrivacyJa() {
       <div className="max-w-2xl">
         <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">プライバシーポリシー</h1>
         <div className="h-0.5 w-12 bg-primary mb-2" />
-        <p className="text-xs text-gray-400 mb-8">最終更新日：2025年4月1日</p>
+        <p className="text-xs text-gray-400 mb-8">最終更新日：2026年3月8日</p>
 
         <div className="space-y-8 text-sm text-gray-700 leading-relaxed">
 
@@ -89,7 +89,15 @@ export default function PrivacyJa() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">6. Cookieおよびアクセス解析</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">6. 越境データ移転</h2>
+            <p>
+              サービス提供のため、お客様の個人情報（お名前・生年月日等の申請情報）をフィリピン現地の提携スタッフに共有します。
+              共有する情報は業務に必要な最小限とし、提携先に対して適切な情報管理を求めます。
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold text-secondary mb-3">7. Cookieおよびアクセス解析</h2>
             <p>
               当サイトでは、サービス改善のためにGoogle Analytics等のアクセス解析ツールを使用しています。
               これらのツールはCookieを使用してアクセス情報を収集しますが、個人を特定する情報は含まれません。
@@ -98,7 +106,7 @@ export default function PrivacyJa() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">7. 個人情報の開示・訂正・削除</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">8. 個人情報の開示・訂正・削除</h2>
             <p>
               お客様は、当社が保有するご自身の個人情報について、開示・訂正・削除・利用停止を請求することができます。
               ご請求の際は、本人確認を行った上で、合理的な期間内に対応します。
@@ -107,7 +115,7 @@ export default function PrivacyJa() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">8. プライバシーポリシーの変更</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">9. プライバシーポリシーの変更</h2>
             <p>
               本ポリシーは、法令の改正やサービス内容の変更に応じて改定することがあります。
               重要な変更がある場合は、当サイト上でお知らせします。
@@ -116,7 +124,7 @@ export default function PrivacyJa() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">9. お問い合わせ先</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">10. お問い合わせ先</h2>
             <div className="bg-gray-50 rounded-xl p-5 space-y-1">
               <p className="font-bold text-secondary">IGRS Inc.</p>
               <p className="text-gray-600">和歌山県和歌山市</p>

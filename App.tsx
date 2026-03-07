@@ -56,6 +56,8 @@ import ContactEn from './pages/ContactEn';
 import ContactJa from './pages/ContactJa';
 import PrivacyEn from './pages/PrivacyEn';
 import PrivacyJa from './pages/PrivacyJa';
+import TermsEn from './pages/TermsEn';
+import TermsJa from './pages/TermsJa';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -129,6 +131,8 @@ export default function App() {
         <Route path="/ja/contact" element={<ContactJa />} />
         <Route path="/en/privacy" element={<PrivacyEn />} />
         <Route path="/ja/privacy" element={<PrivacyJa />} />
+        <Route path="/en/terms" element={<TermsEn />} />
+        <Route path="/ja/terms" element={<TermsJa />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar" replace />} />

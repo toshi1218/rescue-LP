@@ -643,6 +643,26 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/privacy/`,
     jaCanonical: `${BASE}/ja/privacy/`,
   },
+  {
+    path: '/en/terms',
+    outFile: path.join(projectRoot, 'dist', 'en', 'terms', 'index.html'),
+    title: 'Terms of Service | Philippine Document Service',
+    description: 'Terms of service for Philippine Document Service (IGRS Inc.). Covers service scope, ordering, processing times, cancellations, and governing law.',
+    canonical: `${BASE}/en/terms/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/terms/`,
+    jaCanonical: `${BASE}/ja/terms/`,
+  },
+  {
+    path: '/ja/terms',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'terms', 'index.html'),
+    title: '利用規約｜フィリピン書類取得代行センター（IGRS Inc.）',
+    description: 'フィリピン書類取得代行センター（IGRS Inc.）の利用規約。サービス内容・料金・キャンセルポリシー・免責事項・準拠法についてご説明します。',
+    canonical: `${BASE}/ja/terms/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/terms/`,
+    jaCanonical: `${BASE}/ja/terms/`,
+  },
 ];
 
 function updateHead(html: string, route: RouteConfig): string {

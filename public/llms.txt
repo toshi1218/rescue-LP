@@ -77,6 +77,7 @@ PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していま
 - [会社概要](https://ph-document.com/ja/company/) — 運営会社情報
 - [お問い合わせ](https://ph-document.com/ja/contact/) — 無料相談・お問い合わせフォーム
 - [プライバシーポリシー](https://ph-document.com/ja/privacy/) — 個人情報保護方針
+- [利用規約](https://ph-document.com/ja/terms/) — サービス利用規約
 
 ## Pages (English)
 
@@ -109,6 +110,7 @@ PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していま
 - [Company](https://ph-document.com/en/company/) — About IGRS Inc.
 - [Contact](https://ph-document.com/en/contact/) — Free consultation form
 - [Privacy Policy](https://ph-document.com/en/privacy/) — Privacy policy
+- [Terms of Service](https://ph-document.com/en/terms/) — Terms of service
 
 ## よくある質問（FAQ）
 

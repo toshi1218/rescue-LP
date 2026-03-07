@@ -83,6 +83,7 @@ const Navbar: React.FC = () => {
   const contactPath = isJa ? '/ja/contact/' : '/en/contact/';
   const companyPath = isJa ? '/ja/company/' : '/en/company/';
   const privacyPath = isJa ? '/ja/privacy/' : '/en/privacy/';
+  const termsPath = isJa ? '/ja/terms/' : '/en/terms/';
 
   useEffect(() => {
     setOpenMenu(null);
@@ -250,6 +251,7 @@ const Navbar: React.FC = () => {
             <Link to={contactPath} className={linkClass(contactPath)}>{t('navbar.contact')}</Link>
             <Link to={companyPath} className={linkClass(companyPath)}>{t('navbar.company')}</Link>
             <Link to={privacyPath} className={linkClass(privacyPath)}>{t('navbar.privacy')}</Link>
+            <Link to={termsPath} className={linkClass(termsPath)}>{t('navbar.terms')}</Link>
 
           </div>
         </div>
@@ -366,6 +368,7 @@ const Navbar: React.FC = () => {
               <Link to={contactPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.contact')}</Link>
               <Link to={companyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.company')}</Link>
               <Link to={privacyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.privacy')}</Link>
+              <Link to={termsPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.terms')}</Link>
             </div>
 
             <div className="pt-3">
