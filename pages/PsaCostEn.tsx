@@ -16,23 +16,23 @@ export default function PsaCostEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Birth Certificate Retrieval — All-Inclusive Pricing',
-        description: 'Full cost breakdown for PSA Birth Certificate retrieval: PSA fee + DFA Apostille + DHL shipping to USA. All-inclusive pricing with no hidden fees. Free quote available.',
+        description: 'Full cost breakdown for PSA Birth Certificate retrieval: PSA fee + DFA Apostille + DHL shipping worldwide. All-inclusive pricing with no hidden fees. Free quote available.',
         url: 'https://ph-document.com/en/psa-birth-certificate-cost',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '289',
+          price: '349',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '289',
+            price: '349',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+            description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
         },
         },
@@ -121,6 +121,7 @@ export default function PsaCostEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,7 +139,7 @@ export default function PsaCostEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
+            title: 'DHL shipping to your address worldwide',
             description: 'Tracked delivery directly to your door. No forwarding needed.',
           },
         ]}
@@ -150,6 +151,7 @@ export default function PsaCostEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
@@ -158,7 +160,7 @@ export default function PsaCostEn() {
           { title: 'Submit your inquiry', description: 'Tell us your use case and submission authority.' },
           { title: 'We provide all-inclusive pricing', description: 'PSA, Apostille, and DHL shipping quoted together upfront.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles retrieval and authentication.' },
-          { title: 'DHL delivery to the USA', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
         ]}
       />
 

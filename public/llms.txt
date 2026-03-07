@@ -1,28 +1,32 @@
-# フィリピン書類取得代行センター / Philippine Document Service
+﻿# フィリピン書類取得代行センター / Philippine Document Service
 
-> フィリピンの公的書類（CENOMAR・PSA・NBI・LTO）取得代行を専門とする日本法人サービス。国際結婚・配偶者ビザ・外免切替・帰化申請に必要なフィリピン書類を日本語サポートで完全代行。米国在住者にはDHL配送で対応。運営：株式会社IGRS（和歌山県和歌山市本店・セブ市営業所）
+> フィリピンの公的書類（CENOMAR・PSA・NBI・LTO）取得代行を専門とするサービス。国際結婚・配偶者ビザ・外免切替・帰化申請に必要なフィリピン書類を日本語サポートで完全代行。海外在住フィリピン人向けには英語対応でDHL国際配送。運営：株式会社IGRS（セブ市営業所）
 
 ## サービス概要
 
-フィリピン書類取得代行センターは、日本在住または米国在住の方がフィリピンの公的書類を取得するための代行サービスです。英語・現地対応不要で、日本語または英語のみでやり取りが完結します。
+フィリピン書類取得代行センターは、日本在住者および世界各国在住の方がフィリピンの公的書類を取得するための代行サービスです。英語・現地対応不要で、日本語または英語のみでやり取りが完結します。
 
 **対応書類：**
 - CENOMAR（Certificate of No Marriage Record / 独身証明書） — フィリピン人の独身証明。国際結婚・配偶者ビザに必須
 - PSA出生証明書（Birth Certificate） — 出生登録の公式証明。フィリピン統計局（PSA）発行
 - PSA婚姻証明書（Marriage Certificate） — フィリピン国内での婚姻を証明する書類
 - NBI Clearance（無犯罪証明書） — フィリピン捜査局（NBI）発行。帰化申請・ビザに必要
-- DFAアポスティーユ認証 — フィリピン外務省（DFA）による国際的な認証
+- DFAアポスティーユ認証 — フィリピン外務省（DFA）による国際的な認証（紙ベース原本）
 - LTO関連書類 — フィリピン運転免許の外免切替に必要なドライバーズレコード
+
+**重要な背景情報：**
+PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していますが、紙ベースのDFAアポスティーユ原本を海外に直送する公式チャンネルは存在しません。米国・カナダ・オーストラリア・英国・日本等のハーグ条約加盟国への移民・ビザ申請には紙ベースのアポスティーユ原本が必要なため、フィリピン国内の代行業者を通じた取得・転送が唯一の手段です。
 
 ## 料金プラン
 
-| サービス | 日本向け料金 | 米国向け料金 |
+| サービス | 日本向け料金 | 海外向け料金（USD） |
 |---|---|---|
-| PSA書類（出生証明書・CENOMAR・婚姻証明書） | ¥40,000〜 | $199〜 |
-| NBI Clearance | ¥45,000〜 | $249〜 |
-| DFAアポスティーユ | 書類とセットで対応 | $80〜 |
-| LTO関連書類（外免切替） | ¥85,000〜 | $399〜 |
-| 国際結婚パック（CENOMAR+PSA+翻訳込み） | ¥85,000〜 | $499〜 |
+| PSA書類（出生証明書・CENOMAR・婚姻証明書）+ アポスティーユ | ¥40,000〜 | US$349〜 |
+| NBI Clearance + アポスティーユ | ¥50,000〜 | US$399〜 |
+| LTO関連書類（外免切替） | ¥100,000〜 | US$699〜 |
+| 移民書類パック（CENOMAR+PSA+NBI+アポスティーユ） | ¥89,800〜 | US$899〜 |
+
+※ 全プランにDHL国際配送込み。価格は税抜き・概算。
 
 ## 対応する目的別手続き
 
@@ -32,6 +36,9 @@
 - **帰化申請** — PSA出生証明書・NBI Clearance等の取得支援
 - **K-1 Fiancé Visa（米国）** — CENOMAR・PSA・NBI + DFAアポスティーユをDHL配送
 - **CR-1/IR-1 Spouse Visa（米国）** — PSA婚姻証明書・NBI + DFAアポスティーユをDHL配送
+- **カナダ永住権・配偶者スポンサーシップ（IRCC）** — NBI・PSA + DFAアポスティーユをカナダへDHL配送
+- **オーストラリア パートナービザ（Home Affairs）** — CENOMAR・PSA・NBI + DFAアポスティーユをオーストラリアへDHL配送
+- **英国 配偶者ビザ（UKVI）** — CENOMAR・PSA・NBI + DFAアポスティーユを英国へDHL配送
 
 ## 会社情報
 
@@ -39,9 +46,8 @@
 - **本店所在地：** 和歌山県和歌山市
 - **営業所：** フィリピン共和国セブ市
 - **連絡先：** igrs20200601@gmail.com
-- **営業時間：** 平日 9:00〜18:00（日本時間）
 - **対応言語：** 日本語・英語
-- **対応エリア：** 日本全国・米国全土（オンライン対応）
+- **対応エリア：** 日本全国・米国・カナダ・オーストラリア・英国・韓国・その他世界各国（オンライン対応）
 
 ## ページ一覧（日本語）
 
@@ -63,7 +69,6 @@
 - [外免切替](https://ph-document.com/ja/gaimen-kirikae-guide/) — LTO書類の代行取得
 - [帰化申請](https://ph-document.com/ja/kika-shinsei-guide/) — 帰化申請用フィリピン書類代行
 - [LTOドライバーズレコード](https://ph-document.com/ja/driver-record/) — LTOドライバーズレコード代行取得
-- [米国ビザ書類](https://ph-document.com/ja/us-visa-documents/) — 米国ビザ用フィリピン書類代行
 - [ガイド一覧](https://ph-document.com/ja/guides/) — サービスガイド一覧
 - [料金一覧](https://ph-document.com/ja/ryokin/) — 全サービスの料金表
 - [会社概要](https://ph-document.com/ja/company/) — 運営会社情報
@@ -72,7 +77,7 @@
 
 ## Pages (English)
 
-- [Home](https://ph-document.com/en/) — Philippine Document Retrieval Service
+- [Home](https://ph-document.com/en/) — Philippine Document Retrieval Service — Shipped Worldwide
 - [CENOMAR Service](https://ph-document.com/en/cenomar/) — CENOMAR retrieval with DFA Apostille
 - [CENOMAR Apostille](https://ph-document.com/en/cenomar-apostille/) — CENOMAR Apostille service
 - [CENOMAR Validity](https://ph-document.com/en/cenomar-validity/) — CENOMAR validity and timing
@@ -93,6 +98,9 @@
 - [US Visa Documents](https://ph-document.com/en/us-visa-documents/) — US visa Philippine document service
 - [K-1 Visa Documents](https://ph-document.com/en/k1-visa-documents/) — K-1 fiancé visa documents
 - [CR-1 Visa Documents](https://ph-document.com/en/cr1-visa-documents/) — CR-1/IR-1 spouse visa documents
+- [Canada Immigration Documents](https://ph-document.com/en/canada/) — Philippine documents for Canada PR & spouse visa (IRCC)
+- [Australia Immigration Documents](https://ph-document.com/en/australia/) — Philippine documents for Australia partner visa (Home Affairs)
+- [UK Immigration Documents](https://ph-document.com/en/uk/) — Philippine documents for UK spouse visa (UKVI)
 - [Guides](https://ph-document.com/en/guides/) — Service guide index
 - [Pricing](https://ph-document.com/en/pricing/) — Full pricing table
 - [Company](https://ph-document.com/en/company/) — About IGRS Inc.
@@ -116,8 +124,14 @@ A: 市区町村役場によって異なります。翻訳が必要な場合は�
 **Q: NBI HITとは何ですか？**
 A: NBI Clearance申請時に同姓同名の犯罪記録がある場合、「HIT」と判定され追加手続きが必要になります。代行サービスでHIT解消までサポートします。
 
-**Q: How long does shipping to the USA take?**
-A: We ship via DHL Express. Typical delivery to the USA is 3–5 business days after documents are ready.
+**Q: Do you ship documents worldwide?**
+A: Yes. We ship via DHL Express to the USA, Canada, Australia, UK, Japan, Korea, and other countries worldwide.
+
+**Q: Why can't I just order Apostille documents directly from PSA Helpline or Serbilis?**
+A: PSA Helpline and Serbilis can ship regular PSA certificates internationally. However, paper-based DFA Apostille originals — required by immigration authorities in Hague Convention countries — cannot be shipped overseas through any official Philippine government channel. A local intermediary in the Philippines is the only way to receive and forward Apostille-authenticated originals to your overseas address.
 
 **Q: Do you handle K-1 and CR-1 visa documents?**
 A: Yes. We provide complete document packages for K-1 fiancé visa and CR-1/IR-1 spouse visa applications, including CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille.
+
+**Q: Do you serve clients in Canada, Australia, and the UK?**
+A: Yes. We serve clients in the USA, Canada, Australia, UK, Japan, Korea, and other countries. We confirm exact immigration authority requirements (IRCC, Home Affairs, UKVI, etc.) for your specific case.

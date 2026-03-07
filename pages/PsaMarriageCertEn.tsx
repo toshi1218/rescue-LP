@@ -16,23 +16,23 @@ export default function PsaMarriageCertEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Marriage Certificate Retrieval Service (+ DFA Apostille)',
-        description: 'We retrieve PSA Marriage Certificate from the Philippines with DFA Apostille and ship to your US address via DHL. Required for CR-1/IR-1 spouse visa and NVC submission.',
+        description: 'We retrieve PSA Marriage Certificate from the Philippines with DFA Apostille and ship worldwide via DHL. Required for spouse visa and immigration applications in the US, Canada, Australia, UK & more.',
         url: 'https://ph-document.com/en/psa-marriage-certificate',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '289',
+          price: '349',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '289',
+            price: '349',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+            description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
         },
         },
@@ -77,19 +77,19 @@ export default function PsaMarriageCertEn() {
       ]}
     >
       <HeroBanner
-        title="PSA Marriage Certificate — Retrieved and Shipped to the USA"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        title="PSA Marriage Certificate — Retrieved and Shipped Worldwide"
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="We retrieve your PSA Marriage Certificate with DFA Apostille and ship it to your US address."
+        conclusion="We retrieve your PSA Marriage Certificate with DFA Apostille and ship it to your address worldwide."
         points={[
-          'Required for CR-1/IR-1 spouse visa, NVC submission, and marriage registration',
+          'Required for spouse visa and immigration applications worldwide',
           'Annotated or standard format available based on your needs',
-          'DFA Apostille included for USCIS and NVC acceptance',
-          'All-inclusive pricing with DHL Express shipping to USA',
+          'DFA Apostille included for acceptance by USCIS, IRCC, Home Affairs, UKVI & more',
+          'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
         ctaText="Start Free Consultation"
       />
@@ -99,8 +99,8 @@ export default function PsaMarriageCertEn() {
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
-            title: 'Filing a CR-1 or IR-1 spouse visa petition',
-            description: 'NVC requires a PSA Marriage Certificate with DFA Apostille. We handle the full process from retrieval to delivery.',
+            title: 'Filing a spouse visa or immigration application',
+            description: 'Immigration authorities worldwide require a PSA Marriage Certificate with DFA Apostille. We handle the full process from retrieval to delivery.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -121,6 +121,7 @@ export default function PsaMarriageCertEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,8 +139,8 @@ export default function PsaMarriageCertEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'Tracked international delivery directly to your door. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'Tracked international delivery directly to your door anywhere in the world. No forwarding needed.',
           },
         ]}
       />
@@ -150,6 +151,7 @@ export default function PsaMarriageCertEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
@@ -158,7 +160,7 @@ export default function PsaMarriageCertEn() {
           { title: 'Submit your inquiry', description: 'Tell us your use case (CR-1, IR-1, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify whether Apostille or annotated version is required and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille authentication.' },
-          { title: 'DHL delivery to the USA', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 

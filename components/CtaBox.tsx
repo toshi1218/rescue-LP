@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 
 type CtaBoxProps = {
   title: string;
@@ -7,6 +7,8 @@ type CtaBoxProps = {
   buttonText: string;
   href: string;
   variant?: 'primary' | 'secondary';
+  /** 不安解消メッセージ（例：「着手前キャンセル無料・進捗を随時ご報告」） */
+  trustNote?: string;
 };
 
 export default function CtaBox({
@@ -15,6 +17,7 @@ export default function CtaBox({
   buttonText,
   href,
   variant = 'primary',
+  trustNote,
 }: CtaBoxProps) {
   if (variant === 'secondary') {
     return (
@@ -30,6 +33,12 @@ export default function CtaBox({
           <div>
             <h2 className="text-lg font-bold text-white mb-1 leading-snug">{title}</h2>
             <p className="text-sm text-gray-300 leading-relaxed">{description}</p>
+            {trustNote && (
+              <p className="mt-2 flex items-center gap-1.5 text-xs text-primary/80">
+                <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0" />
+                {trustNote}
+              </p>
+            )}
           </div>
           <a
             href={href}
@@ -55,6 +64,12 @@ export default function CtaBox({
         <div>
           <h2 className="text-lg font-bold text-secondary mb-1 leading-snug">{title}</h2>
           <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+          {trustNote && (
+            <p className="mt-2 flex items-center gap-1.5 text-xs text-secondary/60">
+              <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 text-primary" />
+              {trustNote}
+            </p>
+          )}
         </div>
         <a
           href={href}

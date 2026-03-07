@@ -12,7 +12,7 @@ const plansData = {
       featured: true,
       title: '国際結婚パック',
       subtitle: '婚姻済証明書申請に必要な書類一式',
-      price: '¥85,000',
+      price: '¥89,800',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
       highlights: [
@@ -47,7 +47,7 @@ const plansData = {
       featured: false,
       title: 'NBI取得代行',
       subtitle: '無犯罪証明書の取得サポート',
-      price: '¥45,000',
+      price: '¥50,000',
       priceNote: '〜（税・送料別）',
       period: '約3〜5週間',
       highlights: [
@@ -81,7 +81,7 @@ const plansData = {
       featured: false,
       title: '配偶者ビザ',
       subtitle: '在留資格「日本人の配偶者等」申請サポート',
-      price: '¥85,000',
+      price: '¥89,800',
       priceNote: '〜（税・送料別）',
       period: '要相談',
       highlights: [
@@ -98,7 +98,7 @@ const plansData = {
       featured: false,
       title: '帰化申請',
       subtitle: '日本国籍取得の申請サポート',
-      price: '¥85,000',
+      price: '¥89,800',
       priceNote: '〜（税・送料別）',
       period: '要相談',
       highlights: [
@@ -115,16 +115,16 @@ const plansData = {
       icon: Gem,
       tag: 'Most Popular',
       featured: true,
-      title: 'K-1 / CR-1 Visa Document Package',
-      subtitle: 'All PSA & NBI documents Apostille-ready for USCIS / NVC',
-      price: 'US$799',
+      title: 'Immigration Document Package',
+      subtitle: 'All PSA & NBI documents Apostille-ready for immigration worldwide (US Visa Applicants: K-1 & CR-1)',
+      price: 'US$899',
       priceNote: '〜 (Apostille + DHL incl.)',
       period: 'Approx. 4–6 weeks',
       highlights: [
         'PSA Birth Certificate + DFA Apostille',
         'CENOMAR + DFA Apostille',
         'Priority support',
-        'DHL Express to your US address',
+        'DHL Express Worldwide',
         'All-inclusive pricing',
       ],
     },
@@ -135,14 +135,14 @@ const plansData = {
       featured: false,
       title: 'PSA Document Retrieval',
       subtitle: 'Birth Certificate / Marriage Certificate / CENOMAR',
-      price: 'US$289',
+      price: 'US$349',
       priceNote: '〜 (Apostille + DHL incl.)',
       period: 'Approx. 4–5 weeks',
       highlights: [
         'PSA document retrieval (1 copy)',
         'DFA Apostille authentication',
         'Govt. application fee included',
-        'DHL Express to USA',
+        'DHL Express Worldwide',
       ],
     },
     {
@@ -151,15 +151,15 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'NBI Clearance Retrieval',
-      subtitle: 'Required for K-1 & CR-1 visa applications',
-      price: 'US$329',
+      subtitle: 'Required for immigration & visa applications worldwide',
+      price: 'US$399',
       priceNote: '〜 (Apostille + DHL incl.)',
       period: 'Approx. 4–5 weeks',
       highlights: [
         'NBI Clearance retrieval',
         'Fingerprint appointment support',
         'DFA Apostille included',
-        'DHL Express to USA',
+        'DHL Express Worldwide',
       ],
     },
     {
@@ -176,7 +176,7 @@ const plansData = {
         "LTO Driver's License Documents",
         'LTO Transaction History',
         'Govt. application fee included',
-        'DHL Express to USA',
+        'DHL Express Worldwide',
       ],
     },
     {
@@ -184,14 +184,14 @@ const plansData = {
       icon: Heart,
       tag: null,
       featured: false,
-      title: 'CR-1 / IR-1 Spouse Visa Support',
-      subtitle: 'Document support for CR-1, IR-1 & K-1 applicants',
-      price: 'US$799',
+      title: 'Spouse / Partner Visa Support',
+      subtitle: 'Document support for US (K-1/CR-1), Canada, Australia, UK & more',
+      price: 'US$899',
       priceNote: '〜 (Apostille + DHL incl.)',
       period: 'Contact for details',
       highlights: [
         'Document preparation support',
-        'Apostille Ready for USCIS/NVC',
+        'Apostille-ready for immigration authorities',
         'PSA & CENOMAR included',
         'Application document review',
       ],
@@ -201,14 +201,14 @@ const plansData = {
       icon: Award,
       tag: null,
       featured: false,
-      title: 'US Embassy Interview Prep',
-      subtitle: 'All Philippine documents ready before your interview',
-      price: 'US$799',
+      title: 'Citizenship & Naturalization Documents',
+      subtitle: 'Philippine documents for citizenship applications worldwide',
+      price: 'US$899',
       priceNote: '〜 (Apostille + DHL incl.)',
       period: 'Contact for details',
       highlights: [
         'Document preparation support',
-        'Apostille Ready for Embassy checklist',
+        'Apostille-ready for government checklist',
         'PSA & NBI included',
         'Ongoing follow-up',
       ],
@@ -363,7 +363,7 @@ const Pricing: React.FC = () => {
         <p className="text-xs text-gray-400 mt-5 leading-relaxed">
           {lang === 'ja'
             ? '※表示価格はすべて税抜きです。取得難易度により変動する場合があります。'
-            : '* All prices include Philippine tax and DHL international shipping to the USA. Final amount may vary by document condition.'}
+            : '* All prices include Philippine tax and DHL international shipping worldwide. Final amount may vary by document condition.'}
         </p>
       </div>
     </section>

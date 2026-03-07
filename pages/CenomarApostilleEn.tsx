@@ -16,23 +16,23 @@ export default function CenomarApostilleEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMAR DFA Apostille Authentication Service',
-        description: 'We handle DFA Apostille authentication for CENOMAR. Physical paper Apostille provided — required by USCIS for K-1 and CR-1 visa applications. Ships to your US address via DHL.',
+        description: 'We handle DFA Apostille authentication for CENOMAR. Physical paper Apostille provided — required for immigration applications worldwide. Ships via DHL to the US, Canada, Australia, UK & more.',
         url: 'https://ph-document.com/en/cenomar-apostille',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '289',
+          price: '349',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '289',
+            price: '349',
             priceCurrency: 'USD',
-            description: 'CENOMAR retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+            description: 'CENOMAR retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
         },
         },
@@ -77,18 +77,18 @@ export default function CenomarApostilleEn() {
       ]}
     >
       <HeroBanner
-        title="CENOMAR with DFA Apostille — Shipped to the USA"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        title="CENOMAR with DFA Apostille — Shipped Worldwide"
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="Need DFA Apostille on your CENOMAR? We handle the entire process from PSA to Apostille and ship to your door."
+        conclusion="Need DFA Apostille on your CENOMAR? We handle the entire process from PSA to Apostille and ship to your door worldwide."
         points={[
-          'DFA Apostille is required for CENOMAR to be accepted by USCIS, NVC, and US Embassy',
+          'DFA Apostille is required for CENOMAR to be accepted by immigration authorities worldwide',
           'We retrieve CENOMAR from PSA and authenticate at DFA in one seamless process',
-          'Paper Apostille original shipped via DHL Express to your US address',
+          'Paper Apostille original shipped via DHL Express worldwide',
           'No need to visit the Philippines or coordinate with multiple agencies',
         ]}
         ctaText="Get a Free Quote"
@@ -109,7 +109,7 @@ export default function CenomarApostilleEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Living in the US with no contacts in the Philippines',
+            title: 'Living abroad with no contacts in the Philippines',
             description: 'Our Cebu-based team handles everything locally — no need for you to arrange anything in the Philippines.',
           },
         ]}
@@ -121,6 +121,7 @@ export default function CenomarApostilleEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,8 +139,8 @@ export default function CenomarApostilleEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'Tracked international delivery directly to your door. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'Tracked international delivery directly to your door anywhere in the world. No forwarding needed.',
           },
         ]}
       />
@@ -150,6 +151,7 @@ export default function CenomarApostilleEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
@@ -158,7 +160,7 @@ export default function CenomarApostilleEn() {
           { title: 'Submit your inquiry', description: 'Tell us your use case (K-1, CR-1, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify whether Apostille is required and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille authentication.' },
-          { title: 'DHL delivery to the USA', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 
@@ -167,7 +169,7 @@ export default function CenomarApostilleEn() {
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
-          { q: 'Does USCIS accept e-Apostille?', a: 'Most USCIS and NVC submissions require a paper Apostille original. We confirm the required format for your specific case.' },
+          { q: 'Do immigration authorities accept e-Apostille?', a: 'Most immigration authorities (USCIS, IRCC, Home Affairs, UKVI) require a paper Apostille original. We confirm the required format for your specific case.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"

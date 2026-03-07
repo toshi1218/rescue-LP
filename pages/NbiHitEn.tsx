@@ -16,23 +16,23 @@ export default function NbiHitEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI MATCH FOUND (HIT) Resolution + NBI Clearance Retrieval Service',
-        description: 'NBI MATCH FOUND does not always mean a criminal record. We handle HIT resolution, NBI Clearance retrieval, and DFA Apostille. Ships to your US address via DHL. Visa deadlines met.',
+        description: 'NBI MATCH FOUND does not always mean a criminal record. We handle HIT resolution, NBI Clearance retrieval, and DFA Apostille. Ships worldwide via DHL. Visa deadlines met.',
         url: 'https://ph-document.com/en/nbi-hit',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '329',
+          price: '399',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '329',
+            price: '399',
             priceCurrency: 'USD',
-            description: 'NBI retrieval + HIT resolution support + DFA Apostille + DHL to USA (all-inclusive)',
+            description: 'NBI retrieval + HIT resolution support + DFA Apostille + DHL worldwide (all-inclusive)',
           },
         },
         },
@@ -88,8 +88,8 @@ export default function NbiHitEn() {
         points={[
           'HIT (MATCH FOUND) is common and usually caused by name similarities',
           'We handle the HIT verification and resolution process at NBI offices',
-          'NBI Clearance + DFA Apostille shipped to your US address after resolution',
-          'Many petitioners have met their visa deadlines with our help',
+          'NBI Clearance + DFA Apostille shipped worldwide after resolution',
+          'Many applicants have met their visa deadlines with our help',
         ]}
         ctaText="Get Help Now"
       />
@@ -121,6 +121,7 @@ export default function NbiHitEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,8 +139,8 @@ export default function NbiHitEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'Tracked international delivery directly to your door after the clearance is issued.',
+            title: 'DHL shipping worldwide',
+            description: 'Tracked international delivery directly to your door anywhere in the world after the clearance is issued.',
           },
         ]}
       />
@@ -150,6 +151,7 @@ export default function NbiHitEn() {
         buttonText="Check My Options"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
@@ -158,7 +160,7 @@ export default function NbiHitEn() {
           { title: 'Share your situation', description: 'Tell us what the HIT shows, your submission authority, and your deadline.' },
           { title: 'We advise on resolution path', description: 'We confirm the approach and provide pricing based on your specific case.' },
           { title: 'Local handling in the Philippines', description: 'Our Cebu team manages the NBI verification and clearance process.' },
-          { title: 'DHL delivery to the USA', description: 'Once cleared, documents are shipped with tracking to your address.' },
+          { title: 'DHL delivery worldwide', description: 'Once cleared, documents are shipped with tracking to your address.' },
         ]}
       />
 

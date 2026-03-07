@@ -16,23 +16,23 @@ export default function NbiGuideEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI Clearance Retrieval Service (+ DFA Apostille)',
-        description: 'We retrieve NBI Clearance from the Philippines with DFA Apostille and ship to your US address via DHL. Required for K-1, CR-1, and immigration applications. MATCH FOUND (HIT) cases handled.',
+        description: 'We retrieve NBI Clearance from the Philippines with DFA Apostille and ship worldwide via DHL. Required for immigration and visa applications in the US, Canada, Australia, UK & more. HIT cases handled.',
         url: 'https://ph-document.com/en/nbi-clearance',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '329',
+          price: '399',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '329',
+            price: '399',
             priceCurrency: 'USD',
-            description: 'NBI retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+            description: 'NBI retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
         },
         },
@@ -77,19 +77,19 @@ export default function NbiGuideEn() {
       ]}
     >
       <HeroBanner
-        title="NBI Clearance — Retrieved and Shipped to the USA"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        title="NBI Clearance — Retrieved and Shipped Worldwide"
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="We retrieve NBI Clearance with DFA Apostille and ship it to your US address. HIT cases handled."
+        conclusion="We retrieve NBI Clearance with DFA Apostille and ship it to your address worldwide. HIT cases handled."
         points={[
-          'NBI Clearance is required for K-1, CR-1/IR-1 visa, and immigration applications',
+          'NBI Clearance is required for visa and immigration applications in the US, Canada, Australia, UK & more',
           'Our Cebu team handles fingerprint appointment and NBI office processing',
           'If HIT (MATCH FOUND) occurs, we manage the resolution process',
-          'DFA Apostille + DHL Express shipping included in one price',
+          'DFA Apostille + DHL Express shipping worldwide included in one price',
         ]}
         ctaText="Start Free Consultation"
       />
@@ -99,8 +99,8 @@ export default function NbiGuideEn() {
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
-            title: 'Filing a K-1 or CR-1 visa petition',
-            description: 'USCIS and NVC require an NBI Clearance with DFA Apostille. We handle the full process from retrieval to delivery.',
+            title: 'Filing a visa or immigration application',
+            description: 'Immigration authorities worldwide (USCIS, IRCC, Home Affairs, UKVI) require NBI Clearance with DFA Apostille. We handle the full process.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -121,6 +121,7 @@ export default function NbiGuideEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,8 +139,8 @@ export default function NbiGuideEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'Tracked international delivery directly to your door. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'Tracked international delivery directly to your door anywhere in the world. No forwarding needed.',
           },
         ]}
       />
@@ -150,6 +151,7 @@ export default function NbiGuideEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
@@ -158,7 +160,7 @@ export default function NbiGuideEn() {
           { title: 'Submit your inquiry', description: 'Tell us your use case (K-1, CR-1, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify whether Apostille is required and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles NBI retrieval and DFA Apostille authentication.' },
-          { title: 'DHL delivery to the USA', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 

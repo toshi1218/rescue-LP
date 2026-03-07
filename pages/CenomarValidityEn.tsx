@@ -17,23 +17,23 @@ export default function CenomarValidityEn() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'CENOMAR Retrieval — Timed for Your Visa Deadline',
-          description: 'CENOMAR is typically valid for 6 months. We time the retrieval to match your USCIS or NVC submission deadline, so it does not expire before you can use it.',
+          description: 'CENOMAR is typically valid for 6 months. We time the retrieval to match your immigration submission deadline worldwide, so it does not expire before you can use it.',
           url: 'https://ph-document.com/en/cenomar-validity',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
             url: 'https://ph-document.com/en/',
           },
-          areaServed: { '@type': 'Country', name: 'US' },
+          areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
           offers: {
             '@type': 'Offer',
             priceCurrency: 'USD',
-            price: '289',
+            price: '349',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '289',
+              price: '349',
               priceCurrency: 'USD',
-              description: 'PSA CENOMAR retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+              description: 'PSA CENOMAR retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
             },
           },
         },
@@ -109,11 +109,12 @@ export default function CenomarValidityEn() {
       />
 
       <CtaBox
-        title="Tell us your K-1 interview or NVC submission date"
+        title="Tell us your visa interview or submission date"
         description="CENOMAR is typically required within 6 months of issuance. We calculate the optimal retrieval start date so it arrives valid — not expired."
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -131,8 +132,8 @@ export default function CenomarValidityEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to the USA',
-            description: 'Tracked delivery directly to your US address. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'Tracked delivery directly to your address. No forwarding needed.',
           },
         ]}
       />
@@ -143,15 +144,16 @@ export default function CenomarValidityEn() {
         buttonText="Check My Timeline"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Share your K-1 or NVC deadline', description: 'Tell us your interview date or NVC submission deadline. We calculate when CENOMAR retrieval must start so it arrives within the 6-month validity window.' },
+          { title: 'Share your visa deadline', description: 'Tell us your interview date or submission deadline. We calculate when CENOMAR retrieval must start so it arrives within the 6-month validity window.' },
           { title: 'We confirm the timeline and quote', description: 'We provide the optimal start date and all-inclusive pricing (PSA retrieval + DFA Apostille + DHL shipping).' },
           { title: 'PSA retrieval and DFA Apostille in the Philippines', description: 'Our Cebu team handles everything locally. We update you on progress.' },
-          { title: 'DHL delivery to your US address', description: 'Tracked shipment directly to your door. Estimated total: 4–6 weeks from start.' },
+          { title: 'DHL delivery to your address worldwide', description: 'Tracked shipment directly to your door. Estimated total: 4–6 weeks from start.' },
         ]}
       />
 

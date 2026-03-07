@@ -40,8 +40,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/',
     outFile: path.join(projectRoot, 'dist', 'en', 'index.html'),
-    title: `Philippine Document Service | CENOMAR, PSA & NBI for US Visa, K-1 & CR-1 [${SEO_YEAR_MONTH_EN}]`,
-    description: `Need Philippine documents for a US K-1 or CR-1 visa? We retrieve CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille for USCIS, NVC & US Embassy requirements. Ships to USA via DHL. Free consultation.`,
+    title: `Philippine Document Service | CENOMAR, PSA, NBI & Apostille — Shipped Worldwide [${SEO_YEAR_MONTH_EN}]`,
+    description: `Need Philippine documents for immigration or visa? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille for applicants in the USA, Canada, Australia, UK, Japan & more. Ships via DHL. Free consultation.`,
     canonical: `${BASE}/en/`,
     lang: 'en',
     enCanonical: `${BASE}/en/`,
@@ -171,8 +171,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/drivers-license-conversion',
     outFile: path.join(projectRoot, 'dist', 'en', 'drivers-license-conversion', 'index.html'),
-    title: `Philippine License Conversion to US: LTO Documents We Get for You [${SEO_YEAR_MONTH_EN}]`,
-    description: `Converting a Philippine driver's license to a US state license? We retrieve the LTO Driver's Record with DFA Apostille and ship it to your US address. Bulk orders for employers welcome. Free consultation.`,
+    title: `Philippine License Conversion: LTO Documents We Get for You [${SEO_YEAR_MONTH_EN}]`,
+    description: `Converting a Philippine driver's license? We retrieve the LTO Driver's Record with DFA Apostille and ship it to your address worldwide via DHL. Bulk orders for employers welcome. Free consultation.`,
     canonical: `${BASE}/en/drivers-license-conversion/`,
     lang: 'en',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
@@ -182,8 +182,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/naturalization-guide',
     outFile: path.join(projectRoot, 'dist', 'en', 'naturalization-guide', 'index.html'),
-    title: `Philippine Documents for US Naturalization [${SEO_YEAR_MONTH_EN}]: PSA & NBI — Shipped to Your Door`,
-    description: `Applying for US naturalization and need Philippine civil documents? We retrieve PSA Birth Certificate, NBI Clearance + DFA Apostille and ship to your US address. USCIS-ready. Free consultation.`,
+    title: `Philippine Documents for Citizenship & Naturalization [${SEO_YEAR_MONTH_EN}]: PSA & NBI — Shipped Worldwide`,
+    description: `Applying for citizenship or naturalization and need Philippine civil documents? We retrieve PSA Birth Certificate, NBI Clearance + DFA Apostille and ship to your address worldwide via DHL. Free consultation.`,
     canonical: `${BASE}/en/naturalization-guide/`,
     lang: 'en',
     enCanonical: `${BASE}/en/naturalization-guide/`,
@@ -278,10 +278,43 @@ const routes: RouteConfig[] = [
     ogType: 'article',
   },
   {
+    path: '/en/canada',
+    outFile: path.join(projectRoot, 'dist', 'en', 'canada', 'index.html'),
+    title: `Philippine Documents for Canada Immigration [${SEO_YEAR_MONTH_EN}] — IRCC-Ready, Ships via DHL`,
+    description: `Applying for Canada PR or spousal sponsorship? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille for IRCC. Ships to Canada via DHL. Free consultation.`,
+    canonical: `${BASE}/en/canada/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/canada/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+  },
+  {
+    path: '/en/australia',
+    outFile: path.join(projectRoot, 'dist', 'en', 'australia', 'index.html'),
+    title: `Philippine Documents for Australia Immigration [${SEO_YEAR_MONTH_EN}] — Home Affairs-Ready, Ships via DHL`,
+    description: `Applying for an Australian partner visa or PR? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille for Home Affairs. Ships to Australia via DHL. Free consultation.`,
+    canonical: `${BASE}/en/australia/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/australia/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+  },
+  {
+    path: '/en/uk',
+    outFile: path.join(projectRoot, 'dist', 'en', 'uk', 'index.html'),
+    title: `Philippine Documents for UK Immigration [${SEO_YEAR_MONTH_EN}] — UKVI-Ready, Ships via DHL`,
+    description: `Applying for a UK spouse visa or settlement? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille for UKVI. Ships to the UK via DHL. Free consultation.`,
+    canonical: `${BASE}/en/uk/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/uk/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+  },
+  {
     path: '/en/pricing',
     outFile: path.join(projectRoot, 'dist', 'en', 'pricing', 'index.html'),
-    title: `Pricing [${SEO_YEAR_MONTH_EN}]: CENOMAR, PSA & NBI Retrieval for US Visa | Philippine Document Service`,
-    description: `How much does Philippine document retrieval cost for a US visa? View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille. All plans include DHL shipping to USA. Free quote.`,
+    title: `Pricing [${SEO_YEAR_MONTH_EN}]: CENOMAR, PSA & NBI Retrieval for Immigration Worldwide | Philippine Document Service`,
+    description: `How much does Philippine document retrieval cost? View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille. All plans include DHL Express worldwide shipping. Free quote.`,
     canonical: `${BASE}/en/pricing/`,
     lang: 'en',
     enCanonical: `${BASE}/en/pricing/`,
@@ -640,7 +673,7 @@ function updateHead(html: string, route: RouteConfig): string {
 
   // meta keywords
   const keywords = route.lang === 'en'
-    ? 'Philippine document service, CENOMAR, PSA Birth Certificate, NBI Clearance, DFA Apostille, US Visa, K-1 Visa, CR-1 Visa, USCIS, NVC, US Embassy, DHL shipping, document retrieval'
+    ? 'Philippine document service, CENOMAR, PSA Birth Certificate, NBI Clearance, DFA Apostille, immigration documents, K-1 Visa, CR-1 Visa, Canada PR, Australia visa, UK spouse visa, DHL shipping worldwide, document retrieval'
     : 'フィリピン書類取得代行,CENOMAR取得代行,PSA出生証明書代行,LTO書類代行,DFAアポスティーユ代行,独身証明書取り寄せ,日本から依頼,外免切替,国際結婚,配偶者ビザ,安心代行';
   result = result.replace(
     /<meta name="keywords" content="[^"]*"/,

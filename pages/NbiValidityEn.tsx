@@ -17,23 +17,23 @@ export default function NbiValidityEn() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'NBI Clearance Retrieval — Timed for Your Visa Deadline',
-          description: 'NBI Clearance is valid for 1 year, but USCIS and NVC often require it within 6 months of submission. We time the retrieval to match your specific deadline.',
+          description: 'NBI Clearance is valid for 1 year, but immigration authorities worldwide often require it within 6 months of submission. We time the retrieval to match your specific deadline.',
           url: 'https://ph-document.com/en/nbi-validity',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
             url: 'https://ph-document.com/en/',
           },
-          areaServed: { '@type': 'Country', name: 'US' },
+          areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
           offers: {
             '@type': 'Offer',
             priceCurrency: 'USD',
-            price: '329',
+            price: '399',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '329',
+              price: '399',
               priceCurrency: 'USD',
-              description: 'NBI Clearance retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+              description: 'NBI Clearance retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
             },
           },
         },
@@ -109,11 +109,12 @@ export default function NbiValidityEn() {
       />
 
       <CtaBox
-        title="Tell us your K-1 interview or CR-1 submission date"
-        description="NBI Clearance is valid for 1 year, but USCIS and NVC often require it within 6 months. We calculate the optimal retrieval start date — and flag if a MATCH FOUND (HIT) could delay things."
+        title="Tell us your visa interview or submission date"
+        description="NBI Clearance is valid for 1 year, but immigration authorities worldwide often require it within 6 months. We calculate the optimal retrieval start date — and flag if a MATCH FOUND (HIT) could delay things."
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -131,8 +132,8 @@ export default function NbiValidityEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to the USA',
-            description: 'Tracked delivery directly to your US address. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'Tracked delivery directly to your address. No forwarding needed.',
           },
         ]}
       />
@@ -143,15 +144,16 @@ export default function NbiValidityEn() {
         buttonText="Check My Timeline"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Share your K-1 or CR-1 deadline', description: 'Tell us your interview date or NVC submission deadline. We factor in the 1-year validity and any MATCH FOUND risk to set a safe start date.' },
+          { title: 'Share your visa deadline', description: 'Tell us your interview date or submission deadline. We factor in the 1-year validity and any MATCH FOUND risk to set a safe start date.' },
           { title: 'We confirm the timeline and quote', description: 'We provide the optimal start date and all-inclusive pricing (NBI retrieval + DFA Apostille + DHL shipping).' },
           { title: 'NBI retrieval and DFA Apostille in the Philippines', description: 'Our Cebu team handles the NBI application and DFA Apostille. If a MATCH FOUND occurs, we manage the resolution process.' },
-          { title: 'DHL delivery to your US address', description: 'Tracked shipment directly to your door. Estimated total: 4–6 weeks (longer if MATCH FOUND resolution is needed).' },
+          { title: 'DHL delivery to your address worldwide', description: 'Tracked shipment directly to your door. Estimated total: 4–6 weeks (longer if MATCH FOUND resolution is needed).' },
         ]}
       />
 

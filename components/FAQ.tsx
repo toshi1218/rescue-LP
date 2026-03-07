@@ -12,11 +12,12 @@ const faqsData = {
     { q: 'キャンセルはできますか？', a: '着手前のキャンセルは無料です。申請開始後は実費と手数料を差し引いた金額をご返金いたします。' },
   ],
   en: [
-    { q: 'Do you ship documents to the United States?', a: 'Yes. We ship original documents and apostilled copies via DHL Express directly to your US address. Shipping is coordinated after procurement is complete.' },
+    { q: 'Do you ship documents internationally?', a: 'Yes. We ship original documents and apostilled copies via DHL Express directly to your address worldwide — USA, Canada, Australia, UK, and other countries. Shipping is coordinated after procurement is complete.' },
+    { q: 'Which countries do you serve?', a: 'We serve clients in the USA, Canada, Australia, UK, Japan, South Korea, and other Hague Convention countries. If your country requires DFA Apostille authentication, we handle it. Contact us to confirm for your specific country.' },
     { q: 'What documents are needed for a K-1 or CR-1 visa?', a: 'For USCIS and NVC: typically a PSA Birth Certificate, CENOMAR (if single), and NBI Clearance. A DFA Apostille is usually required for the US Embassy interview stage. We confirm exact requirements for your case.' },
-    { q: 'How long does the whole process take?', a: 'Typically about 1 month from order to delivery at your US address. Timelines can vary by document type and agency processing speed. Expedited options are available — please ask.' },
+    { q: 'How long does the whole process take?', a: 'Typically about 1 month from order to delivery at your address. Timelines can vary by document type and agency processing speed. Contact us to discuss your specific timeline.' },
     { q: 'Can I cancel if my visa situation changes?', a: 'Cancellations before we begin are free. After we start, we refund the amount minus actual expenses and fees already incurred.' },
-    { q: "I'm not sure which documents I need for my visa stage...", a: "No problem. Just tell us your visa type (K-1, CR-1, etc.) and your current stage (USCIS petition, NVC submission, or Embassy interview) and we'll identify the exact documents required." },
+    { q: "I'm not sure which documents I need for my visa stage...", a: "No problem. Just tell us your visa type, destination country, and your current stage and we'll identify the exact documents required." },
   ],
 };
 

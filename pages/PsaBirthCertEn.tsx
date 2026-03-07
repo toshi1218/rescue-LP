@@ -16,23 +16,23 @@ export default function PsaBirthCertEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Birth Certificate Retrieval Service (+ DFA Apostille)',
-        description: 'We retrieve PSA Birth Certificate from the Philippines with DFA Apostille and ship to your US address via DHL. Required for K-1, CR-1, naturalization, and immigration applications.',
+        description: 'We retrieve PSA Birth Certificate from the Philippines with DFA Apostille and ship worldwide via DHL. Required for visa and immigration applications in the US, Canada, Australia, UK & more.',
         url: 'https://ph-document.com/en/psa-birth-certificate',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '289',
+          price: '349',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '289',
+            price: '349',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+            description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
         },
         },
@@ -77,18 +77,18 @@ export default function PsaBirthCertEn() {
       ]}
     >
       <HeroBanner
-        title="PSA Birth Certificate — Retrieved and Shipped to the USA"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        title="PSA Birth Certificate — Retrieved and Shipped Worldwide"
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="We retrieve your PSA Birth Certificate with DFA Apostille and ship it to your US address. No trip to the Philippines."
+        conclusion="We retrieve your PSA Birth Certificate with DFA Apostille and ship it to your address worldwide. No trip to the Philippines."
         points={[
-          'PSA Birth Certificate is required for nearly every US visa and immigration case',
-          'DFA Apostille included so it is accepted by USCIS, NVC, and US Embassy',
-          'Shipped via DHL Express directly to your US address',
+          'PSA Birth Certificate is required for nearly every visa and immigration case worldwide',
+          'DFA Apostille included so it is accepted by USCIS, IRCC, Home Affairs, UKVI & more',
+          'Shipped via DHL Express directly to your address anywhere in the world',
           'All-inclusive pricing: no hidden fees for Apostille or shipping',
         ]}
         ctaText="Start Free Consultation"
@@ -99,8 +99,8 @@ export default function PsaBirthCertEn() {
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
-            title: 'Filing a K-1 or CR-1 visa petition',
-            description: 'USCIS and NVC require a PSA Birth Certificate with DFA Apostille. We handle the full process from retrieval to delivery.',
+            title: 'Filing a visa or immigration application',
+            description: 'Immigration authorities worldwide (USCIS, IRCC, Home Affairs, UKVI) require a PSA Birth Certificate with DFA Apostille. We handle the full process.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -121,6 +121,7 @@ export default function PsaBirthCertEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,8 +139,8 @@ export default function PsaBirthCertEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'Tracked international delivery directly to your door. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'Tracked international delivery directly to your door anywhere in the world. No forwarding needed.',
           },
         ]}
       />
@@ -150,6 +151,7 @@ export default function PsaBirthCertEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
@@ -158,7 +160,7 @@ export default function PsaBirthCertEn() {
           { title: 'Submit your inquiry', description: 'Tell us your use case (K-1, CR-1, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify whether Apostille is required and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille authentication.' },
-          { title: 'DHL delivery to the USA', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 

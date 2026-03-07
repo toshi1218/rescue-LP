@@ -17,23 +17,23 @@ export default function DfaProcessingTimeEn() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'DFA Apostille Service — Timed for Your Visa Deadline',
-          description: 'DFA Apostille takes 4 business days (Regular) or next business day (Express). We schedule processing to meet your USCIS or NVC submission deadline. Free consultation to check your timeline.',
+          description: 'DFA Apostille takes 4 business days (Regular) or next business day (Express). We schedule processing to meet your immigration submission deadline worldwide. Free consultation to check your timeline.',
           url: 'https://ph-document.com/en/apostille-processing-time',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
             url: 'https://ph-document.com/en/',
           },
-          areaServed: { '@type': 'Country', name: 'US' },
+          areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
           offers: {
             '@type': 'Offer',
             priceCurrency: 'USD',
-            price: '199',
+            price: '349',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '199',
+              price: '349',
               priceCurrency: 'USD',
-              description: 'DFA Apostille authentication + DHL shipping to USA (all-inclusive)',
+              description: 'DFA Apostille authentication + DHL shipping worldwide (all-inclusive)',
             },
           },
         },
@@ -114,6 +114,7 @@ export default function DfaProcessingTimeEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -131,7 +132,7 @@ export default function DfaProcessingTimeEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
+            title: 'DHL shipping to your address worldwide',
             description: 'Tracked delivery directly to your door. No forwarding needed.',
           },
         ]}
@@ -143,15 +144,16 @@ export default function DfaProcessingTimeEn() {
         buttonText="Check My Timeline"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Share your target date', description: 'Tell us your K-1 interview, NVC submission, or other deadline.' },
+          { title: 'Share your target date', description: 'Tell us your visa interview, immigration submission, or other deadline.' },
           { title: 'We plan the timeline and quote', description: 'We confirm whether Express is needed and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille (Regular or Express).' },
-          { title: 'DHL delivery to the USA', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
         ]}
       />
 

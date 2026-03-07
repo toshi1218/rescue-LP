@@ -27,10 +27,10 @@ export default function MarriageGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '85000',
+          price: '89800',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '85000',
+            price: '89800',
             priceCurrency: 'JPY',
             description: '国際結婚パック（CENOMAR・PSA・DFAアポスティーユ・国際郵送込み、税抜）',
           },
@@ -140,6 +140,7 @@ export default function MarriageGuideJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
+        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
       />
 
       <FeatureList
@@ -169,6 +170,7 @@ export default function MarriageGuideJa() {
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
+        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
 
       <StepList

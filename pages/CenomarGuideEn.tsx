@@ -16,23 +16,23 @@ export default function CenomarGuideEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMAR Retrieval Service (PSA + DFA Apostille)',
-        description: 'We retrieve CENOMAR from PSA with DFA Apostille and ship to your US address via DHL. Required for K-1 fiancé visa and CR-1/IR-1 spouse visa. No trip to the Philippines needed.',
+        description: 'We retrieve CENOMAR from PSA with DFA Apostille and ship worldwide via DHL. Required for immigration and visa applications in the US, Canada, Australia, UK, Japan and more.',
         url: 'https://ph-document.com/en/cenomar',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '289',
+          price: '349',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '289',
+            price: '349',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+            description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
         },
         },
@@ -45,7 +45,7 @@ export default function CenomarGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Our all-inclusive price covers PSA retrieval, DFA Apostille, and DHL shipping to the USA. Contact us for an exact quote based on your situation.',
+                text: 'Our all-inclusive price covers PSA retrieval, DFA Apostille, and DHL shipping worldwide. Contact us for an exact quote based on your situation.',
               },
             },
             {
@@ -53,7 +53,7 @@ export default function CenomarGuideEn() {
               name: 'How long does it take?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL shipping to the USA takes 3–5 business days.',
+                text: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL international shipping takes 3–5 business days.',
               },
             },
             {
@@ -77,17 +77,17 @@ export default function CenomarGuideEn() {
       ]}
     >
       <HeroBanner
-        title="CENOMAR from the Philippines — Delivered to Your Door in the USA"
-        badges={['Ships to USA via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
+        title="CENOMAR from the Philippines — Delivered to Your Door Worldwide"
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="We retrieve your CENOMAR from PSA, get DFA Apostille, and ship it to your US address. No trip to the Philippines needed."
+        conclusion="We retrieve your CENOMAR from PSA, get DFA Apostille, and ship it to your address worldwide. No trip to the Philippines needed."
         points={[
           'All-inclusive service: PSA retrieval + DFA Apostille + DHL Express shipping',
-          'Required for K-1 fiance visa and CR-1/IR-1 spouse visa applications',
+          'Required for visa and immigration applications in the US, Canada, Australia, UK & more',
           'You consult in English; our Cebu team handles all Philippine government offices',
           'Transparent pricing with no hidden fees or surprise add-ons',
         ]}
@@ -121,6 +121,7 @@ export default function CenomarGuideEn() {
         buttonText="Ask Us for Free"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,18 +139,19 @@ export default function CenomarGuideEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL International Shipping to USA',
-            description: 'Your documents are shipped directly to your US address with full tracking.',
+            title: 'DHL International Shipping Worldwide',
+            description: 'Your documents are shipped directly to your address worldwide with full tracking.',
           },
         ]}
       />
 
       <CtaBox
         title="All-Inclusive Pricing — No Hidden Fees"
-        description="PSA retrieval, DFA Apostille, and DHL shipping to the USA are all bundled into one flat price. No surprises after you pay."
+        description="PSA retrieval, DFA Apostille, and DHL shipping worldwide are all bundled into one flat price. No surprises after you pay."
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
@@ -158,14 +160,14 @@ export default function CenomarGuideEn() {
           { title: 'Submit the Consultation Form', description: 'Tell us your visa type and the name on the document. We confirm what you need.' },
           { title: 'Receive Your All-Inclusive Quote', description: 'We send you a fixed price covering everything — no add-ons later.' },
           { title: 'We Handle Everything in the Philippines', description: 'Our local team retrieves the PSA document and processes the DFA Apostille.' },
-          { title: 'Delivered to Your US Address', description: 'Shipped via DHL with tracking. Estimated delivery: 4–6 weeks from order.' },
+          { title: 'Delivered to Your Address Worldwide', description: 'Shipped via DHL with tracking. Estimated delivery: 4–6 weeks from order.' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'Our all-inclusive price covers PSA retrieval, DFA Apostille, and DHL shipping to the USA. Contact us for an exact quote based on your situation.' },
-          { q: 'How long does it take?', a: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL shipping to the USA takes 3–5 business days.' },
+          { q: 'How much does it cost?', a: 'Our all-inclusive price covers PSA retrieval, DFA Apostille, and DHL shipping worldwide. Contact us for an exact quote based on your situation.' },
+          { q: 'How long does it take?', a: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL international shipping takes 3–5 business days.' },
           { q: 'Can you handle rush orders?', a: 'Yes. Let us know your deadline and we will check if expedited processing is available.' },
           { q: 'Do I need a physical Apostille or is e-Apostille OK?', a: 'Most USCIS offices require a physical Apostille original. We will confirm the requirement for your specific case before processing.' },
         ]}

@@ -1,15 +1,15 @@
 import React from 'react';
-import { Globe, Clock, FileQuestion, Frown } from 'lucide-react';
+import { AlertCircle, FileX, HelpCircle, ShieldAlert } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 const PainPoints: React.FC = () => {
   const { t } = useLanguage();
 
   const cards = [
-    { icon: Globe, color: 'bg-red-50 text-red-500', titleKey: 'painpoints.1.title' as const, descKey: 'painpoints.1.desc' as const },
-    { icon: Clock, color: 'bg-orange-50 text-orange-500', titleKey: 'painpoints.2.title' as const, descKey: 'painpoints.2.desc' as const },
-    { icon: FileQuestion, color: 'bg-blue-50 text-blue-500', titleKey: 'painpoints.3.title' as const, descKey: 'painpoints.3.desc' as const },
-    { icon: Frown, color: 'bg-purple-50 text-purple-500', titleKey: 'painpoints.4.title' as const, descKey: 'painpoints.4.desc' as const },
+    { icon: AlertCircle, color: 'bg-red-50 text-red-400', titleKey: 'painpoints.1.title' as const, descKey: 'painpoints.1.desc' as const },
+    { icon: FileX, color: 'bg-orange-50 text-orange-400', titleKey: 'painpoints.2.title' as const, descKey: 'painpoints.2.desc' as const },
+    { icon: HelpCircle, color: 'bg-blue-50 text-blue-400', titleKey: 'painpoints.3.title' as const, descKey: 'painpoints.3.desc' as const },
+    { icon: ShieldAlert, color: 'bg-purple-50 text-purple-400', titleKey: 'painpoints.4.title' as const, descKey: 'painpoints.4.desc' as const },
   ];
 
   return (

@@ -16,23 +16,23 @@ export default function ApostilleGuideEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service',
-        description: 'We handle DFA Apostille authentication for PSA, NBI, CENOMAR, and LTO documents. Physical paper Apostille provided. Ships to your US address via DHL. No trip to the Philippines needed.',
+        description: 'We handle DFA Apostille authentication for PSA, NBI, CENOMAR, and LTO documents. Physical paper Apostille provided. Ships worldwide via DHL. No trip to the Philippines needed.',
         url: 'https://ph-document.com/en/apostille',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '199',
+          price: '349',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '199',
+            price: '349',
             priceCurrency: 'USD',
-            description: 'DFA Apostille + DHL shipping to USA (all-inclusive)',
+            description: 'DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
         },
         },
@@ -77,8 +77,8 @@ export default function ApostilleGuideEn() {
       ]}
     >
       <HeroBanner
-        title="DFA Apostille for Philippine Documents — Shipped to the USA"
-        badges={['Paper Apostille Original', 'Ships via DHL', 'All-Inclusive Pricing']}
+        title="DFA Apostille for Philippine Documents — Shipped Worldwide"
+        badges={['Paper Apostille Original', 'Ships Worldwide via DHL', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
       />
@@ -99,13 +99,13 @@ export default function ApostilleGuideEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'USCIS or NVC requires Apostille on your Philippine documents',
-            description: 'We arrange DFA Apostille for PSA documents (CENOMAR, Birth Certificate, Marriage Certificate, NBI Clearance) and ship to the USA.',
+            title: 'Your immigration authority requires Apostille on Philippine documents',
+            description: 'We arrange DFA Apostille for PSA documents (CENOMAR, Birth Certificate, Marriage Certificate, NBI Clearance) and ship worldwide.',
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
             title: 'e-Apostille was rejected by your submission authority',
-            description: 'Most US immigration authorities require a paper Apostille original. We provide paper originals, not digital versions.',
+            description: 'Most immigration authorities (USCIS, IRCC, Home Affairs, UKVI) require a paper Apostille original. We provide paper originals, not digital versions.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -121,6 +121,7 @@ export default function ApostilleGuideEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,8 +139,8 @@ export default function ApostilleGuideEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'Tracked international delivery directly to your door. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'Tracked international delivery directly to your door anywhere in the world. No forwarding needed.',
           },
         ]}
       />
@@ -150,6 +151,7 @@ export default function ApostilleGuideEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
@@ -158,14 +160,14 @@ export default function ApostilleGuideEn() {
           { title: 'Submit your inquiry', description: 'Tell us which documents need Apostille and your submission authority.' },
           { title: 'We confirm scope and quote', description: 'We verify requirements and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille authentication.' },
-          { title: 'DHL delivery to the USA', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 
       <FaqSection
         items={[
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included.' },
-          { q: 'What is the difference between e-Apostille and paper Apostille?', a: 'e-Apostille is a digital authentication issued online. Most US immigration authorities (USCIS, NVC) require a paper Apostille original. We provide paper originals.' },
+          { q: 'What is the difference between e-Apostille and paper Apostille?', a: 'e-Apostille is a digital authentication issued online. Most immigration authorities (USCIS, IRCC, Home Affairs, UKVI) require a paper Apostille original. We provide paper originals.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
         ]}

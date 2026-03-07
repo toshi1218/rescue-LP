@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Headset, Eye, Send } from 'lucide-react';
+import { Eye, MessageSquare, ShieldCheck, Send } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -7,9 +7,9 @@ const WhyUs: React.FC = () => {
   const { t } = useLanguage();
 
   const reasons = [
-    { icon: Building2, titleKey: 'whyus.1.title' as const, descKey: 'whyus.1.desc' as const },
-    { icon: Headset, titleKey: 'whyus.2.title' as const, descKey: 'whyus.2.desc' as const },
-    { icon: Eye, titleKey: 'whyus.3.title' as const, descKey: 'whyus.3.desc' as const },
+    { icon: Eye, titleKey: 'whyus.1.title' as const, descKey: 'whyus.1.desc' as const },
+    { icon: MessageSquare, titleKey: 'whyus.2.title' as const, descKey: 'whyus.2.desc' as const },
+    { icon: ShieldCheck, titleKey: 'whyus.3.title' as const, descKey: 'whyus.3.desc' as const },
   ];
 
   const stats = [

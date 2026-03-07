@@ -16,23 +16,23 @@ export default function SpouseVisaEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Spouse Visa Philippine Documents Retrieval Service',
-        description: 'We retrieve all Philippine documents required for a CR-1/IR-1 spouse visa — PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille. NVC-ready. Ships to USA via DHL.',
+        description: 'We retrieve all Philippine documents required for spouse visa applications worldwide — PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille. Ships via DHL.',
         url: 'https://ph-document.com/en/spouse-visa-documents',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '799',
+          price: '899',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '799',
+            price: '899',
             priceCurrency: 'USD',
-            description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+            description: 'Immigration Document Package — all documents + DFA Apostille + DHL worldwide (all-inclusive)',
           },
         },
         },
@@ -84,12 +84,12 @@ export default function SpouseVisaEn() {
       />
 
       <SummaryBlock
-        conclusion="We retrieve all Philippine documents needed for your spouse visa and ship them Apostille-ready."
+        conclusion="We retrieve all Philippine documents needed for your spouse visa and ship them Apostille-ready worldwide."
         points={[
           'PSA Marriage Certificate, Birth Certificate, NBI Clearance, and CENOMAR available',
-          'DFA Apostille included so documents are accepted by USCIS and NVC',
+          'DFA Apostille included so documents are accepted by immigration authorities worldwide',
           'We verify requirements for your specific visa type before starting',
-          'All-inclusive pricing with DHL Express shipping to your US address',
+          'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
         ctaText="Start Free Consultation"
       />
@@ -99,18 +99,18 @@ export default function SpouseVisaEn() {
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
-            title: 'US petitioner filing a CR-1 or IR-1 visa',
-            description: 'You are in the USA; your Filipino spouse needs Philippine documents with DFA Apostille. We handle everything from the Philippines.',
+            title: 'Petitioner filing a spouse or partner visa',
+            description: 'You are abroad; your Filipino spouse needs Philippine documents with DFA Apostille. We handle everything from the Philippines.',
           },
           {
             icon: <Users className="w-4 h-4" />,
-            title: 'Need multiple documents for NVC submission',
+            title: 'Need multiple documents for your submission',
             description: 'Marriage Certificate, Birth Certificate, CENOMAR — we retrieve all required documents in one coordinated flow.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'Not sure what format NVC requires',
-            description: 'We confirm requirements for your specific NVC case before starting — no guesswork, no wasted money.',
+            title: 'Not sure what format your authority requires',
+            description: 'We confirm requirements for your specific case before starting — no guesswork, no wasted money.',
           },
         ]}
       />
@@ -121,6 +121,7 @@ export default function SpouseVisaEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,8 +139,8 @@ export default function SpouseVisaEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'All documents shipped together with tracking. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'All documents shipped together with tracking to your address. No forwarding needed.',
           },
         ]}
       />
@@ -150,15 +151,16 @@ export default function SpouseVisaEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Submit your inquiry', description: 'Tell us your visa type (CR-1, IR-1) and your NVC submission deadline.' },
+          { title: 'Submit your inquiry', description: 'Tell us your visa type (CR-1, IR-1, partner visa, spousal sponsorship, etc.) and your submission deadline.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
-          { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 

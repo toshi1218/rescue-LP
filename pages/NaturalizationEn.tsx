@@ -15,24 +15,24 @@ export default function NaturalizationEn() {
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'Philippine Documents for US Naturalization (PSA + NBI + Apostille)',
-        description: 'We retrieve PSA Birth Certificate, NBI Clearance, and other Philippine civil documents with DFA Apostille for USCIS naturalization applications. Ships to your US address via DHL.',
+        name: 'Philippine Documents for Citizenship & Naturalization (PSA + NBI + Apostille)',
+        description: 'We retrieve PSA Birth Certificate, NBI Clearance, and other Philippine civil documents with DFA Apostille for citizenship and naturalization applications worldwide. Ships via DHL.',
         url: 'https://ph-document.com/en/naturalization-guide',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '289',
+          price: '899',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '289',
+            price: '899',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping to USA (all-inclusive, per document)',
+            description: 'Immigration Document Package — PSA + NBI + DFA Apostille + DHL worldwide (all-inclusive)',
           },
         },
         },
@@ -77,19 +77,19 @@ export default function NaturalizationEn() {
       ]}
     >
       <HeroBanner
-        title="Philippine Documents for US Naturalization — Retrieved and Shipped"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        title="Philippine Documents for Citizenship & Naturalization — Retrieved and Shipped Worldwide"
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="Applying for US naturalization? We retrieve all Philippine civil documents USCIS requires."
+        conclusion="Applying for citizenship or naturalization? We retrieve all Philippine civil documents your authority requires."
         points={[
           'PSA Birth Certificate, NBI Clearance, and other documents with DFA Apostille',
-          'USCIS-ready format so you can submit directly',
-          'We confirm exact requirements for your naturalization case',
-          'All-inclusive pricing with DHL Express shipping to USA',
+          'Ready for USCIS, IRCC, Home Affairs, UKVI and other authorities',
+          'We confirm exact requirements for your citizenship application',
+          'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
         ctaText="Start Free Consultation"
       />
@@ -99,8 +99,8 @@ export default function NaturalizationEn() {
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
-            title: 'Applying for US naturalization',
-            description: 'USCIS may require Philippine civil documents with DFA Apostille as part of your naturalization application. We handle retrieval and authentication.',
+            title: 'Applying for citizenship or naturalization',
+            description: 'Immigration authorities may require Philippine civil documents with DFA Apostille as part of your citizenship application. We handle retrieval and authentication.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -109,18 +109,19 @@ export default function NaturalizationEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'Not sure what USCIS requires',
-            description: 'Requirements vary by case. We confirm what your specific naturalization application needs before we start.',
+            title: 'Not sure what your authority requires',
+            description: 'Requirements vary by country and case. We confirm what your specific citizenship application needs before we start.',
           },
         ]}
       />
 
       <CtaBox
         title="We confirm USCIS requirements before we start"
-        description="Birth Certificate, Marriage Certificate, CENOMAR — we verify what your specific case needs and quote everything together."
+        description="Birth Certificate, Marriage Certificate, NBI Clearance — we verify what your specific citizenship case needs and quote everything together."
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,8 +139,8 @@ export default function NaturalizationEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'All documents shipped together with tracking. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'All documents shipped together with tracking to your address. No forwarding needed.',
           },
         ]}
       />
@@ -150,24 +151,25 @@ export default function NaturalizationEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Submit your inquiry', description: 'Tell us your naturalization case status and your USCIS submission deadline.' },
+          { title: 'Submit your inquiry', description: 'Tell us your citizenship application status and your submission deadline.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
-          { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: 'What Philippine documents does USCIS require for naturalization?', a: 'Requirements vary by case. Typically Birth Certificate and/or Marriage Certificate with DFA Apostille. We confirm for your specific application.' },
+          { q: 'What Philippine documents are required for citizenship or naturalization?', a: 'Requirements vary by country and case. Typically PSA Birth Certificate and/or NBI Clearance with DFA Apostille. We confirm for your specific application.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
-          { q: 'Can you handle urgent cases?', a: 'Yes. Share your USCIS deadline and we will confirm whether priority processing is feasible.' },
+          { q: 'Can you handle urgent cases?', a: 'Yes. Share your submission deadline and we will confirm whether priority processing is feasible.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"

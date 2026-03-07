@@ -121,6 +121,7 @@ export default function DriverRecordJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
+        trustNote="逹謇句燕繧ｭ繝｣繝ｳ繧ｻ繝ｫ辟｡譁吶・騾ｲ謐励ｒ髫乗凾縺泌ｱ蜻翫・譖ｸ鬘槫・縺礼｢ｺ隱榊ｾ後↓谿矩≡縺頑髪謇輔＞"
       />
 
       <FeatureList
@@ -150,6 +151,7 @@ export default function DriverRecordJa() {
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
+        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
 
       <StepList

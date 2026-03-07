@@ -35,9 +35,12 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.license'),       path: '/ja/gaimen-kirikae-guide/' },
     { label: t('navbar.purpose.naturalization'),path: '/ja/kika-shinsei-guide/' },
   ] : [
-    { label: 'K-1 Fiancé Visa',    path: '/en/k1-visa-documents/' },
-    { label: 'CR-1 / IR-1 Visa',   path: '/en/cr1-visa-documents/' },
-    { label: 'US Visa Documents',   path: '/en/us-visa-documents/' },
+    { label: 'K-1 Fiancé Visa',        path: '/en/k1-visa-documents/' },
+    { label: 'CR-1 / IR-1 Visa',       path: '/en/cr1-visa-documents/' },
+    { label: 'US Visa Documents',       path: '/en/us-visa-documents/' },
+    { label: 'Canada Immigration',      path: '/en/canada/' },
+    { label: 'Australia Immigration',   path: '/en/australia/' },
+    { label: 'UK Immigration',          path: '/en/uk/' },
   ];
 
   const guidesPath  = isJa ? '/ja/guides/'  : '/en/guides/';

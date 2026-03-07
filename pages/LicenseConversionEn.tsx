@@ -16,14 +16,14 @@ export default function LicenseConversionEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Philippine License Conversion — LTO Driver\'s Record Retrieval Service',
-        description: 'We retrieve the LTO Driver\'s Record with DFA Apostille for Philippine license conversion at US state DMVs. Bulk orders for employers welcome. Ships to your US address via DHL.',
+        description: 'We retrieve the LTO Driver\'s Record with DFA Apostille for Philippine license conversion worldwide. Bulk orders for employers welcome. Ships via DHL to the US, Canada, Australia, UK & more.',
         url: 'https://ph-document.com/en/drivers-license-conversion',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
@@ -32,7 +32,7 @@ export default function LicenseConversionEn() {
             '@type': 'UnitPriceSpecification',
             price: '699',
             priceCurrency: 'USD',
-            description: 'LTO retrieval + DFA Apostille + DHL shipping to USA (all-inclusive)',
+            description: 'LTO retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
         },
         },
@@ -69,19 +69,19 @@ export default function LicenseConversionEn() {
       ]}
     >
       <HeroBanner
-        title="LTO Driver's Record for Philippine License Conversion — Shipped to the USA"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        title="LTO Driver's Record for Philippine License Conversion — Shipped Worldwide"
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="Converting a Philippine license to a US state license? We retrieve the LTO documents you need."
+        conclusion="Converting a Philippine license in the US, Canada, Australia, UK or Japan? We retrieve the LTO documents you need."
         points={[
-          'LTO Driver Record with DFA Apostille for state DMV requirements',
-          'Requirements vary by state; we verify before starting',
+          'LTO Driver Record with DFA Apostille for license conversion requirements worldwide',
+          'Requirements vary by country; we verify before starting',
           'Bulk orders available for employers sponsoring multiple drivers',
-          'All-inclusive pricing with DHL Express shipping to USA',
+          'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
         ctaText="Start Free Consultation"
       />
@@ -91,8 +91,8 @@ export default function LicenseConversionEn() {
         items={[
           {
             icon: <Car className="w-4 h-4" />,
-            title: 'Converting a Philippine license to a US state license',
-            description: 'Most US states require an LTO Driver\'s Record with DFA Apostille. We handle retrieval and authentication from our Cebu office.',
+            title: 'Converting a Philippine license in the US, Canada, Australia, UK or Japan',
+            description: 'Most countries require an LTO Driver\'s Record with DFA Apostille for license conversion. We handle retrieval and authentication from our Cebu office.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -101,18 +101,19 @@ export default function LicenseConversionEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'Not sure what your state DMV requires',
-            description: 'Requirements vary by state. We confirm what your specific DMV needs before we start.',
+            title: 'Not sure what your local authority requires',
+            description: 'Requirements vary by country and region. We confirm what your specific licensing authority needs before we start.',
           },
         ]}
       />
 
       <CtaBox
         title="We confirm DMV requirements before we start"
-        description="LTO Driver's Record, Apostille, official receipt — requirements vary by state. We verify for your specific case."
+        description="LTO Driver's Record, Apostille, official receipt — requirements vary by country and region. We verify for your specific case."
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -130,8 +131,8 @@ export default function LicenseConversionEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'Tracked international delivery directly to your door. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'Tracked international delivery directly to your door anywhere in the world. No forwarding needed.',
           },
         ]}
       />
@@ -142,21 +143,22 @@ export default function LicenseConversionEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Submit your inquiry', description: 'Tell us your state DMV, number of applicants, and your target date.' },
+          { title: 'Submit your inquiry', description: 'Tell us your country and licensing authority, number of applicants, and your target date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles LTO retrieval and DFA Apostille authentication.' },
-          { title: 'DHL delivery to the USA', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: 'What documents are required for Philippine license conversion?', a: 'Typically an LTO Driver\'s Record with DFA Apostille. Some states also require an official LTO receipt. Requirements vary by state — we confirm for your specific DMV.' },
+          { q: 'What documents are required for Philippine license conversion?', a: 'Typically an LTO Driver\'s Record with DFA Apostille. Some countries also require an official LTO receipt. Requirements vary by country — we confirm for your specific authority.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. LTO retrieval, DFA Apostille, and DHL shipping are all included.' },
           { q: 'Can you handle multiple employees at once?', a: 'Yes. Share the number of applicants and we will coordinate bulk processing.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: LTO takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },

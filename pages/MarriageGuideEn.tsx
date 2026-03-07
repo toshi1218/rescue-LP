@@ -16,23 +16,23 @@ export default function MarriageGuideEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Philippine Marriage Documents Retrieval Service (CENOMAR + PSA + Apostille)',
-        description: 'We retrieve all Philippine documents needed to marry a Filipino/Filipina — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships to your US address via DHL.',
+        description: 'We retrieve all Philippine documents needed to marry a Filipino/Filipina — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships worldwide via DHL.',
         url: 'https://ph-document.com/en/international-marriage-guide',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: { '@type': 'Country', name: 'US' },
+        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '799',
+          price: '899',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '799',
+            price: '899',
             priceCurrency: 'USD',
-            description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+            description: 'Immigration Document Package — all documents + DFA Apostille + DHL worldwide (all-inclusive)',
           },
         },
         },
@@ -77,19 +77,19 @@ export default function MarriageGuideEn() {
       ]}
     >
       <HeroBanner
-        title="Philippine Marriage Documents for Your US Visa Petition"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        title="Philippine Marriage Documents for Your Visa Application Worldwide"
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="Marrying a Filipino? We get all the Philippine documents you need and ship them to your door."
+        conclusion="Marrying a Filipino? We get all the Philippine documents you need and ship them to your door worldwide."
         points={[
           'CENOMAR, PSA Birth Certificate, and NBI Clearance retrieved in one order',
           'DFA Apostille included for all documents',
-          'Works for both K-1 fiance visa and direct marriage registration',
-          'All-inclusive pricing with DHL Express shipping to USA',
+          'Works for K-1 visa, CR-1, partner visa, spousal sponsorship & more',
+          'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
         ctaText="Start Free Consultation"
       />
@@ -99,13 +99,13 @@ export default function MarriageGuideEn() {
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
-            title: 'Filing a CR-1 or IR-1 spouse visa petition',
-            description: 'NVC requires PSA Marriage Certificate and Birth Certificate with DFA Apostille. We handle all documents in one flow.',
+            title: 'Filing a spouse visa or partner visa petition',
+            description: 'Immigration authorities worldwide (NVC, IRCC, Home Affairs, UKVI) require PSA Marriage Certificate and Birth Certificate with DFA Apostille. We handle all documents in one flow.',
           },
           {
             icon: <Users className="w-4 h-4" />,
-            title: 'Petitioner based in the USA',
-            description: 'You fund the process; your Filipino spouse needs the documents. We coordinate everything from the Philippines and ship directly to you.',
+            title: 'Petitioner based outside the Philippines',
+            description: 'You fund the process; your Filipino partner needs the documents. We coordinate everything from the Philippines and ship directly to you.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -121,6 +121,7 @@ export default function MarriageGuideEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -138,8 +139,8 @@ export default function MarriageGuideEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your US address',
-            description: 'All documents shipped together with tracking. No forwarding needed.',
+            title: 'DHL shipping worldwide',
+            description: 'All documents shipped together with tracking to your address. No forwarding needed.',
           },
         ]}
       />
@@ -150,15 +151,16 @@ export default function MarriageGuideEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Submit your inquiry', description: 'Tell us your visa type (CR-1, IR-1) and your target NVC submission date.' },
+          { title: 'Submit your inquiry', description: 'Tell us your visa type (K-1, CR-1, partner visa, spousal sponsorship, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
-          { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'DHL delivery worldwide', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 

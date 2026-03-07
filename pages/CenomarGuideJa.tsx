@@ -148,6 +148,7 @@ export default function CenomarGuideJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
+        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
       />
 
       <FeatureList
@@ -177,6 +178,7 @@ export default function CenomarGuideJa() {
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
+        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
 
       <StepList

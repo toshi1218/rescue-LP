@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import GuideLinks from '../components/GuideLinks';
 import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
+import TrustTransparency from '../components/TrustTransparency';
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
 import CaseStudies from '../components/CaseStudies';
@@ -26,6 +27,7 @@ export default function HomeJa() {
         <GuideLinks />
         <QuickFacts />
         <PainPoints />
+        <TrustTransparency />
         <Services />
         <WhyUs />
         <CaseStudies />

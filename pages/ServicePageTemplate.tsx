@@ -64,6 +64,7 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
         buttonText={isJa ? '無料で相談する' : 'Talk to Us'}
         href="#contact"
         variant="primary"
+        trustNote={isJa ? '着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い' : 'Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies'}
       />
 
       <FeatureList
@@ -93,6 +94,7 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
         buttonText={isJa ? '納期を相談する' : 'Check Timeline'}
         href="#contact"
         variant="secondary"
+        trustNote={isJa ? '日本語のみでOK・匿名相談可・返信24時間以内' : 'English only · Anonymous inquiries welcome · Reply within 24 hours'}
       />
 
       <StepList

@@ -27,10 +27,10 @@ export default function Cr1VisaDocsEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '799',
+          price: '899',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '799',
+            price: '899',
             priceCurrency: 'USD',
             description: 'CR-1/IR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
           },
@@ -121,6 +121,7 @@ export default function Cr1VisaDocsEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
+        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -150,6 +151,7 @@ export default function Cr1VisaDocsEn() {
         buttonText="Get a Quote"
         href="#contact"
         variant="secondary"
+        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
       />
 
       <StepList

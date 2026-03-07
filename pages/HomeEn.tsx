@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import GuideLinks from '../components/GuideLinks';
 import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
+import WhyProxy from '../components/WhyProxy';
+import TrustTransparency from '../components/TrustTransparency';
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
 import CaseStudies from '../components/CaseStudies';
@@ -26,6 +28,8 @@ export default function HomeEn() {
         <GuideLinks />
         <QuickFacts />
         <PainPoints />
+        <WhyProxy />
+        <TrustTransparency />
         <Services />
         <WhyUs />
         <CaseStudies />
