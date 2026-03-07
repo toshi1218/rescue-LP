@@ -13,8 +13,15 @@ import Process from '../components/Process';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
+import { useMeta } from '../lib/useMeta';
 
 export default function HomeJa() {
+  useMeta(
+    'フィリピン書類取得代行｜CENOMAR・PSA・LTO 日本語だけで確実に取り寄せ',
+    'フィリピン書類の取得を日本語だけで安心おまかせ。CENOMAR（独身証明書）・PSA出生証明書・LTO・DFAアポスティーユを現地スタッフが完全代行。進捗は随時ご報告。国際結婚・外免切替・配偶者ビザに対応。無料相談受付中。',
+    'https://ph-document.com/ja/',
+  );
+
   useEffect(() => {
     trackLandingView();
   }, []);

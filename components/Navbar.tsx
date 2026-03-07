@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
+import { getLangSwitchUrl } from '../lib/urlMap';
 
 type MenuType = 'docs' | 'purpose' | 'guides' | null;
 
@@ -20,6 +21,7 @@ const Navbar: React.FC = () => {
 
   const isJa = lang === 'ja';
   const homePath = isJa ? '/ja/' : '/en/';
+  const switchUrl = getLangSwitchUrl(location.pathname);
 
   const documentTabs = [
     { label: t('navbar.doc.cenomar'),  path: isJa ? '/ja/cenomar/'              : '/en/cenomar/' },
@@ -164,6 +166,14 @@ const Navbar: React.FC = () => {
           </Link>
         )}
         <div className="flex items-center gap-2 ml-2">
+          {/* Language switcher */}
+          <Link
+            to={switchUrl}
+            aria-label={isJa ? 'Switch to English' : '日本語に切替'}
+            className="flex-shrink-0 text-[11px] font-semibold text-gray-500 hover:text-secondary border border-gray-200 hover:border-secondary rounded-full px-2.5 py-1 transition-colors leading-none"
+          >
+            {isJa ? 'EN' : '日本語'}
+          </Link>
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact', variant: ctaVariant })}
@@ -368,7 +378,7 @@ const Navbar: React.FC = () => {
               <Link to={privacyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.privacy')}</Link>
             </div>
 
-            <div className="pt-3">
+            <div className="pt-3 space-y-2">
               <a
                 href="#contact"
                 onClick={() => { trackEvent('cta_click', { location: 'mobile_menu', type: 'contact', variant: ctaVariant }); setMobileOpen(false); }}
@@ -376,6 +386,15 @@ const Navbar: React.FC = () => {
               >
                 {t('navbar.cta')}
               </a>
+              {/* Language switcher */}
+              <Link
+                to={switchUrl}
+                onClick={() => setMobileOpen(false)}
+                aria-label={isJa ? 'Switch to English' : '日本語に切替'}
+                className="block text-center text-sm font-semibold text-gray-500 border border-gray-200 px-6 py-2.5 rounded-xl hover:text-secondary hover:border-secondary transition-colors"
+              >
+                {isJa ? '🌐 English version' : '🌐 日本語版'}
+              </Link>
             </div>
           </div>
         </div>
