@@ -17,7 +17,7 @@ export default function DfaProcessingTimeJa() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'DFAアポスティーユ処理期間・提出期限に合わせた代行取得',
-          description: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請可能。提出予定日から逆算して最適なスケジュールで手配。ビザ申請の期限に間に合わせます。',
+          description: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請可能。提出予定日から逆算して最適なスケジュールで手配。ビザ申請の期限に間に合わせます。',
           url: 'https://ph-document.com/ja/apostille-shori-kikan',
           provider: {
             '@type': 'Organization',
@@ -46,7 +46,7 @@ export default function DfaProcessingTimeJa() {
               name: 'DFAアポスティーユにはどのくらいかかりますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請できます。PSA取得・郵送を含めた全体の目安は約1ヶ月〜です。',
+                text: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安は約1ヶ月〜です。',
               },
             },
             {
@@ -79,7 +79,7 @@ export default function DfaProcessingTimeJa() {
       <SummaryBlock
         conclusion="DFAアポスティーユの処理期間は通常4〜5営業日。提出期限に合わせて手配します。"
         points={[
-          'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請可能',
+          'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請可能',
           'PSA取得・アポスティーユ・郵送を含めた全体の目安は約1ヶ月〜',
           '提出予定日から逆算して、最適な申請開始時期をご案内',
           '期限に間に合うかどうかも、無料相談で確認できます',
@@ -93,7 +93,7 @@ export default function DfaProcessingTimeJa() {
           {
             icon: <Clock className="w-4 h-4" />,
             title: 'DFAアポスティーユにどのくらいかかるか知りたい',
-            description: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請できます。PSA取得・郵送を含めた全体の目安は約1ヶ月〜です。',
+            description: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安は約1ヶ月〜です。',
           },
           {
             icon: <Calendar className="w-4 h-4" />,
@@ -114,7 +114,7 @@ export default function DfaProcessingTimeJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -123,7 +123,7 @@ export default function DfaProcessingTimeJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFAアポスティーユ認証',
-            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。Regular/Expressを状況に応じて選択。',
+            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。DFA内部処理はRegular 5日程度・Express 3日程度。当社の代行手配込みで約2週間が目安です。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -159,7 +159,7 @@ export default function DfaProcessingTimeJa() {
 
       <FaqSection
         items={[
-          { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請できます。PSA取得・郵送を含めた全体の目安は約1ヶ月〜です。' },
+          { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安は約1ヶ月〜です。' },
           { q: '提出期限に合わせてExpressで申請できますか？', a: 'はい。提出予定日をお知らせいただければ、RegularとExpressどちらが適切かを含めてご案内します。確実に間に合うスケジュールで進めます。' },
           { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
           { q: '期限に間に合うかどうか不安です', a: '提出予定日をお知らせいただければ、間に合うかどうかを確認してご案内します。まずはご相談ください。' },

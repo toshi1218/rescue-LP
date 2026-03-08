@@ -140,7 +140,7 @@ export default function SpouseVisaJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -177,7 +177,7 @@ export default function SpouseVisaJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '申請の種類（新規・更新・変更）と必要書類をお知らせください。入管の要件を確認してご案内します。' },
-          { title: '必要書類・料金の確認', description: '料金をご提示します。納得いただいてからお支払い。' },
+          { title: '必要書類・料金の確認', description: '料金をご提示します。ご依頼時に着手金50%、書類写し確認後に残金50%をお支払いいただきます。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。進捗は随時ご報告します。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
