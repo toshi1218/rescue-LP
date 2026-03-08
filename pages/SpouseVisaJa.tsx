@@ -50,10 +50,10 @@ export default function SpouseVisaJa() {
             },
             {
               '@type': 'Question',
-              name: '入管は電子アポスティーユ（e-Apostille）を受け付けますか？',
+              name: 'フィリピン人の方が日本在住でも書類取得を依頼できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '入国管理局では紙のアポスティーユ原本が求められるケースがほとんどです。提出先を確認した上でご案内します。',
+                text: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。',
               },
             },
             {
@@ -101,7 +101,7 @@ export default function SpouseVisaJa() {
           <h2 className="text-base font-bold text-amber-900">配偶者ビザの書類準備、こんな落とし穴があります</h2>
         </div>
         <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>入国管理局は<strong>電子アポスティーユ（e-Apostille）を受け付けないケースが多い</strong>。紙の原本が必要</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>入国管理局への申請では<strong>紙のアポスティーユ原本が必要</strong>です</li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>書類の<strong>有効期限（発行から6ヶ月〜1年）</strong>を過ぎると再取得が必要</li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>PSA書類・CENOMAR・NBI——<strong>どれが必要かは申請の状況によって異なる</strong></li>
         </ul>
@@ -174,14 +174,14 @@ export default function SpouseVisaJa() {
           { title: 'フォームで相談（無料）', description: '申請の種類（新規・更新・変更）と必要書類をお知らせください。入管の要件を確認してご案内します。' },
           { title: '必要書類・料金の確認', description: '料金をご提示します。ご依頼時に着手金50%、書類取得・DHL配送準備完了後に残金50%をお支払いいただきます。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。進捗は随時ご報告します。' },
-          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />
 
       <FaqSection
         items={[
           { q: '配偶者ビザ申請に必要な書類は何ですか？', a: 'PSA婚姻証明書・PSA出生証明書・DFAアポスティーユが基本です。申請の状況によって異なるため、まずご相談ください。' },
-          { q: '入管は電子アポスティーユ（e-Apostille）を受け付けますか？', a: '入国管理局では紙のアポスティーユ原本が求められるケースがほとんどです。提出先を確認した上でご案内します。' },
+          { q: 'フィリピン人の方が日本在住でも書類取得を依頼できますか？', a: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。' },
           { q: '書類の有効期限はありますか？', a: 'PSA書類・CENOMARは発行から6ヶ月〜1年が有効期限の目安です。申請タイミングに合わせた取得時期をご案内します。' },
           { q: '更新・変更申請でも書類が必要ですか？', a: '更新・変更申請でも書類の再取得が必要なケースがあります。現在お持ちの書類の有効期限を確認した上でご案内します。' },
         ]}

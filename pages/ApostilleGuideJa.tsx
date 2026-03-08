@@ -50,10 +50,10 @@ export default function ApostilleGuideJa() {
             },
             {
               '@type': 'Question',
-              name: '電子アポスティーユ（e-Apostille）と紙のアポスティーユ、どちらが必要ですか？',
+              name: 'フィリピン人の方が日本在住でも依頼できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '日本の入管・役所・大使館では紙のアポスティーユ原本が求められるケースがほとんどです。提出先を確認した上でご案内します。',
+                text: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。',
               },
             },
             {
@@ -107,7 +107,7 @@ export default function ApostilleGuideJa() {
         <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>DFAアポスティーユは<strong>フィリピン外務省（DFA）への直接申請が必要</strong>。日本の大使館では取得不可</li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>通常処理は<strong>1〜2週間</strong>。書類の不備があると再申請でさらに遅延</li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>電子アポスティーユ（e-Apostille）は<strong>日本の提出先では受け付けないケースが多い</strong></li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>紙のアポスティーユ原本が必要です。日本の提出先では<strong>紙の原本が原則求められます</strong></li>
         </ul>
         <p className="mt-4 text-sm font-semibold text-amber-900">→ 書類の取得からDFAアポスティーユまで、一括で代行します。</p>
       </section>
@@ -185,7 +185,7 @@ export default function ApostilleGuideJa() {
       <FaqSection
         items={[
           { q: 'アポスティーユだけ依頼できますか？', a: 'はい。すでにPSA書類をお持ちの場合、DFAアポスティーユのみの代行が可能です。書類をフィリピンに送付していただく形で対応します。' },
-          { q: '電子アポスティーユ（e-Apostille）と紙のアポスティーユ、どちらが必要ですか？', a: '日本の入管・役所・大使館では紙のアポスティーユ原本が求められるケースがほとんどです。提出先を確認した上でご案内します。' },
+          { q: 'フィリピン人の方が日本在住でも依頼できますか？', a: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。' },
           { q: '処理期間はどのくらいですか？', a: 'DFAアポスティーユの処理期間はRegular 通常5日程度 / Express 3日程度です。書類取得から一括で依頼した場合、全体で約1ヶ月〜が目安です。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先処理の可否を確認してご案内します。' },
         ]}

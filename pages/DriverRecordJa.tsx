@@ -160,7 +160,7 @@ export default function DriverRecordJa() {
           { title: 'フォームで相談', description: '提出先の都道府県・対象者の人数・提出期限をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類をリストアップし、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'LTO取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />
 
