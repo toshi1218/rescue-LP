@@ -254,20 +254,12 @@ const Pricing: React.FC = () => {
   return (
     <section className="py-16 px-4" id="pricing">
       <div className="max-w-5xl mx-auto">
-        {/* ヘッダー */}
-        <div className="mb-12">
-          <span className="text-primary font-bold text-xs tracking-widest uppercase block mb-2">PRICE</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-secondary">{t('pricing.title')}</h2>
-          <div className="h-0.5 w-16 bg-primary mt-3" />
-          {lang === 'ja' ? (
-            <div className="text-xs text-gray-500 mt-3 space-y-0.5">
-              <p>※表示価格はすべて税抜きです</p>
-              <p>※取得難易度、記載内容の不一致、追加確認の有無により変動する場合があります</p>
-            </div>
-          ) : (
-            <p className="text-xs text-gray-500 mt-3">{t('pricing.note')}</p>
-          )}
-        </div>
+        {lang === 'ja' && (
+          <div className="text-xs text-gray-500 mb-6 space-y-0.5">
+            <p>※表示価格はすべて税抜きです</p>
+            <p>※取得難易度、記載内容の不一致、追加確認の有無により変動する場合があります</p>
+          </div>
+        )}
 
         {/* フィーチャードプラン（横幅フル） */}
         <div className="relative mb-8 rounded-2xl overflow-hidden border border-primary/30 shadow-soft bg-white">
