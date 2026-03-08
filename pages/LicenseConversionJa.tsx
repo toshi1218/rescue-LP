@@ -78,7 +78,7 @@ export default function LicenseConversionJa() {
     >
       <HeroBanner
         title="外免切替のLTO書類、日本語だけで取り寄せます"
-        badges={['日本語だけでOK', 'LTO正規書類', 'コミコミ料金']}
+        badges={['日本語だけでOK', 'LTO正規書類', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -144,7 +144,7 @@ export default function LicenseConversionJa() {
       />
 
       <FeatureList
-        heading="料金に含まれるもの（コミコミ）"
+        heading="料金に含まれるもの"
         items={[
           {
             icon: <Car className="w-4 h-4" />,
@@ -166,7 +166,7 @@ export default function LicenseConversionJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="LTO書類取得・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。"
+        description="LTO書類取得・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -177,7 +177,7 @@ export default function LicenseConversionJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '提出先の試験場と試験場の予約日（決まっている場合）をお知らせください。' },
-          { title: '必要書類・料金の確認', description: 'コミコミ料金をご提示します。納得いただいてからお支払い。' },
+          { title: '必要書類・料金の確認', description: '料金をご提示します。納得いただいてからお支払い。' },
           { title: 'フィリピン現地で手配', description: 'LTO書類を現地スタッフが取得します。書類の形式を確認してから発送します。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。試験場の予約日に間に合うよう進めます。' },
         ]}

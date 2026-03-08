@@ -45,7 +45,7 @@ export default function CenomarApostilleJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+                text: 'PSA取得・DFAアポスティーユ・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -78,7 +78,7 @@ export default function CenomarApostilleJa() {
     >
       <HeroBanner
         title="CENOMARのDFAアポスティーユ、まとめてお任せください"
-        badges={['日本語だけでOK', 'アポスティーユ込み', 'コミコミ料金']}
+        badges={['日本語だけでOK', 'アポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -147,7 +147,7 @@ export default function CenomarApostilleJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="PSA取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。"
+        description="PSA取得・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -158,7 +158,7 @@ export default function CenomarApostilleJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談', description: '用途（国際結婚・ビザ申請など）と提出先をお知らせください。' },
-          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、コミコミ料金をご提示します。' },
+          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得→DFAアポスティーユ認証を現地スタッフが進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
@@ -166,7 +166,7 @@ export default function CenomarApostilleJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユ・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
           { q: 'いつ届きますか？', a: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
           { q: '電子アポスティーユ（e-Apostille）でも大丈夫ですか？', a: '日本の提出先では紙のアポスティーユ原本が求められるケースが多いです。提出先を確認した上で適切な形式で手配します。' },
