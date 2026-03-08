@@ -83,6 +83,10 @@ export default function CenomarGuideEn() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        CENOMAR (Certificate of No Marriage Record) is an official PSA document proving single status in the Philippines. Required for K-1 visas, international marriage registration, and immigration applications worldwide.
+      </p>
+
       <SummaryBlock
         conclusion="We retrieve your CENOMAR from PSA, get DFA Apostille, and ship it to your address worldwide. No trip to the Philippines needed."
         points={[

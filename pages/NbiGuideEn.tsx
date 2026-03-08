@@ -83,6 +83,10 @@ export default function NbiGuideEn() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        NBI Clearance is a criminal background check issued by the Philippine National Bureau of Investigation. Required for most visa and immigration applications worldwide.
+      </p>
+
       <SummaryBlock
         conclusion="We retrieve NBI Clearance with DFA Apostille and ship it to your address worldwide. HIT cases handled."
         points={[

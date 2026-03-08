@@ -83,6 +83,10 @@ export default function PsaBirthCertEn() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        A PSA Birth Certificate is an official civil registry document issued by the Philippine Statistics Authority. It serves as primary proof of identity and citizenship for immigration, marriage, and naturalization applications.
+      </p>
+
       <SummaryBlock
         conclusion="We retrieve your PSA Birth Certificate with DFA Apostille and ship it to your address worldwide. No trip to the Philippines."
         points={[

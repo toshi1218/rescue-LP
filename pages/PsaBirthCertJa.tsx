@@ -83,6 +83,10 @@ export default function PsaBirthCertJa() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        PSA出生証明書は、フィリピン統計局（PSA）が発行する公的な出生記録です。国際結婚・配偶者ビザ・帰化申請などで、身元証明として提出が求められます。
+      </p>
+
       <SummaryBlock
         conclusion="PSA出生証明書（アポスティーユ付き）を、日本語だけで取り寄せできます。"
         points={[

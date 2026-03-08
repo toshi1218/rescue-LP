@@ -76,6 +76,10 @@ export default function PsaCostJa() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        PSA証明書の公式手数料は1通365ペソです。ただし海外で使用するにはDFAアポスティーユ認証と国際郵送が必要になります。以下がコミコミの費用内訳です。
+      </p>
+
       <SummaryBlock
         conclusion="PSA出生証明書の費用は、コミコミ料金で最初から明示します。後から追加請求はありません。"
         points={[

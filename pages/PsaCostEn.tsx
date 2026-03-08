@@ -83,6 +83,10 @@ export default function PsaCostEn() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        The official PSA certificate fee is ₱365 per copy. However, using it abroad requires DFA Apostille authentication and international shipping — here's the full cost breakdown.
+      </p>
+
       <SummaryBlock
         conclusion="The real cost of a PSA Birth Certificate is more than the PHP 365 government fee. We quote everything upfront."
         points={[

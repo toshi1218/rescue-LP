@@ -91,6 +91,10 @@ export default function CenomarGuideJa() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        CENOMAR（Certificate of No Marriage Record）は、フィリピンPSAが発行する「婚姻記録なし証明書」です。国際結婚の婚姻届・配偶者ビザ申請・帰化申請などで提出が求められます。
+      </p>
+
       <SummaryBlock
         conclusion="CENOMAR（独身証明書）は、日本語だけで取り寄せできます。フィリピンに行く必要はありません。"
         points={[

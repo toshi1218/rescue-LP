@@ -83,6 +83,10 @@ export default function ApostilleGuideJa() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        DFAアポスティーユは、フィリピン外務省（DFA）による認証で、フィリピンの公的書類をハーグ条約加盟124カ国以上で法的に有効にするものです。
+      </p>
+
       <SummaryBlock
         conclusion="DFAアポスティーユは、フィリピンに行かずに取得できます。書類取得からアポスティーユまで一括で代行します。"
         points={[

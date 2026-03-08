@@ -83,6 +83,10 @@ export default function ApostilleGuideEn() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        DFA Apostille is an authentication by the Philippine Department of Foreign Affairs that makes Philippine documents legally valid in 124+ Hague Convention countries.
+      </p>
+
       <SummaryBlock
         conclusion="We handle DFA Apostille for any Philippine document and ship the authenticated original to your door."
         points={[

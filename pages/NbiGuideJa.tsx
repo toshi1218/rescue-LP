@@ -83,6 +83,10 @@ export default function NbiGuideJa() {
         ctaHref="#contact"
       />
 
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
+        NBI Clearance（無犯罪証明書）は、フィリピン国家捜査局（NBI）が発行する犯罪経歴証明書です。配偶者ビザ・帰化申請・各国の移民手続きで提出が求められます。
+      </p>
+
       <SummaryBlock
         conclusion="NBI Clearance（無犯罪証明書）は、日本語だけで取り寄せできます。フィリピンに行く必要はありません。"
         points={[
