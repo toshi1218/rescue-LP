@@ -46,7 +46,7 @@ export default function DfaProcessingTimeJa() {
               name: 'DFAアポスティーユにはどのくらいかかりますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安は約1ヶ月〜です。',
+                text: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安はおおむね1ヶ月半です。',
               },
             },
             {
@@ -80,7 +80,7 @@ export default function DfaProcessingTimeJa() {
         conclusion="DFAアポスティーユの処理期間は通常4〜5営業日。提出期限に合わせて手配します。"
         points={[
           'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請可能',
-          'PSA取得・アポスティーユ・郵送を含めた全体の目安は約1ヶ月〜',
+          'PSA取得・アポスティーユ・郵送を含めた全体の目安はおおむね1ヶ月半',
           '提出予定日から逆算して、最適な申請開始時期をご案内',
           '期限に間に合うかどうかも、無料相談で確認できます',
         ]}
@@ -93,7 +93,7 @@ export default function DfaProcessingTimeJa() {
           {
             icon: <Clock className="w-4 h-4" />,
             title: 'DFAアポスティーユにどのくらいかかるか知りたい',
-            description: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安は約1ヶ月〜です。',
+            description: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安はおおむね1ヶ月半です。',
           },
           {
             icon: <Calendar className="w-4 h-4" />,
@@ -154,7 +154,7 @@ export default function DfaProcessingTimeJa() {
 
       <FaqSection
         items={[
-          { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安は約1ヶ月〜です。' },
+          { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安はおおむね1ヶ月半です。' },
           { q: '提出期限に合わせてExpressで申請できますか？', a: 'はい。提出予定日をお知らせいただければ、RegularとExpressどちらが適切かを含めてご案内します。確実に間に合うスケジュールで進めます。' },
           { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）をまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
           { q: '期限に間に合うかどうか不安です', a: '提出予定日をお知らせいただければ、間に合うかどうかを確認してご案内します。まずはご相談ください。' },
