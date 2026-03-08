@@ -11,6 +11,7 @@ import WhyUs from '../components/WhyUs';
 import CaseStudies from '../components/CaseStudies';
 import SocialProof from '../components/SocialProof';
 import Process from '../components/Process';
+import DiyRisks from '../components/DiyRisks';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
@@ -35,6 +36,7 @@ export default function HomeEn() {
         <CaseStudies />
         <SocialProof />
         <Process />
+        <DiyRisks />
         <FAQ />
         <Footer />
       </main>
