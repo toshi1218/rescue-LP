@@ -18,10 +18,11 @@ const plansData = {
       highlights: [
         'PSA出生証明書＋DFAアポスティーユ',
         'CENOMAR（独身証明書）＋DFAアポスティーユ',
-        '優先対応サポート',
+        '進捗報告',
+        '優先対応',
       ],
       notIncluded: [
-        '国際郵送費（実費別途・約¥6,000〜）',
+        '国際郵送費（DHL）¥6,000',
         '日本の役所・入管への提出代行',
         'ビザ申請の法的代理',
         '大使館面接の指導',
@@ -44,7 +45,7 @@ const plansData = {
         '役所申請手数料込み',
       ],
       notIncluded: [
-        '国際郵送費（実費別途・約¥6,000〜）',
+        '国際郵送費（DHL）¥6,000',
         '翻訳',
         '複数通の同時取得（別途見積り）',
         '日本側への提出代行',
@@ -67,7 +68,7 @@ const plansData = {
         'DFAアポスティーユ（オプション）',
       ],
       notIncluded: [
-        '国際郵送費（実費別途・約¥6,000〜）',
+        '国際郵送費（DHL）¥6,000',
         '翻訳',
         '指紋認証にかかる外部費用',
         '日本側への提出代行',
@@ -90,7 +91,7 @@ const plansData = {
         '役所申請手数料込み',
       ],
       notIncluded: [
-        '国際郵送費（実費別途・約¥6,000〜）',
+        '国際郵送費（DHL）¥6,000',
         '翻訳',
         '日本の免許センターへの提出代行',
         '運転免許試験の代理',
@@ -308,13 +309,7 @@ const Pricing: React.FC = () => {
         </div>
 
         {/* フィーチャードプラン（横幅フル） */}
-        <div className="relative mb-8 rounded-2xl overflow-hidden">
-          {/* 背景 */}
-          <div className="absolute inset-0 bg-secondary" />
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute -right-20 -top-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
-            <div className="absolute -left-10 bottom-0 w-48 h-48 rounded-full bg-white/5 blur-2xl" />
-          </div>
+        <div className="relative mb-8 rounded-2xl overflow-hidden border border-primary/30 shadow-soft bg-white">
           <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-primary via-primary/60 to-transparent" />
 
           <div className="relative p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-8">
@@ -324,23 +319,23 @@ const Pricing: React.FC = () => {
                 <featured.icon className="w-3.5 h-3.5" />
                 {featured.tag}
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">{featured.title}</h3>
-              <p className="text-sm text-white/60 mb-6">{featured.subtitle}</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-1">{featured.title}</h3>
+              <p className="text-sm text-gray-500 mb-6">{featured.subtitle}</p>
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-4xl font-bold text-primary">{featured.price}</span>
-                <span className="text-sm text-white/50">{featured.priceNote}</span>
+                <span className="text-sm text-gray-400">{featured.priceNote}</span>
               </div>
-              <p className="text-xs text-white/40">{lang === 'ja' ? `納期：${featured.period}` : `Delivery: ${featured.period}`}</p>
+              <p className="text-xs text-gray-400">{lang === 'ja' ? `納期：${featured.period}` : `Delivery: ${featured.period}`}</p>
             </div>
 
             {/* 右：含まれるもの＋Not Included＋CTA */}
             <div className="md:w-80 flex-shrink-0">
-              <p className="text-xs font-bold text-white/50 uppercase tracking-wider mb-3">
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
                 {lang === 'ja' ? '含まれるもの' : "What's Included"}
               </p>
               <ul className="space-y-2 mb-4">
                 {featured.highlights.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-white/80">
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-gray-700">
                     <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
@@ -348,13 +343,13 @@ const Pricing: React.FC = () => {
               </ul>
               {featured.notIncluded && (
                 <>
-                  <p className="text-xs font-bold text-white/40 uppercase tracking-wider mb-2">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
                     {lang === 'ja' ? '含まれないもの' : 'Not Included'}
                   </p>
                   <ul className="space-y-1.5 mb-4">
                     {featured.notIncluded.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-xs text-white/50">
-                        <XCircle className="w-3.5 h-3.5 text-white/30 flex-shrink-0 mt-0.5" />
+                      <li key={item} className="flex items-start gap-2 text-xs text-gray-500">
+                        <XCircle className="w-3.5 h-3.5 text-gray-300 flex-shrink-0 mt-0.5" />
                         {item}
                       </li>
                     ))}
