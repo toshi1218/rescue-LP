@@ -24,7 +24,6 @@ const plansData = {
         '国際郵送費（実費別途・約¥6,000〜）',
         '日本の役所・入管への提出代行',
         'ビザ申請の法的代理',
-        '大使館面接の指導',
       ],
       bestFor: '日本での婚姻手続き・配偶者ビザ申請で複数のフィリピン書類が必要な方向け',
     },
@@ -377,13 +376,12 @@ const Pricing: React.FC = () => {
         </div>
 
         {/* その他プラン（テーブル形式） */}
-        <div className="rounded-2xl border border-gray-100 overflow-hidden bg-white shadow-soft">
+        <div className="rounded-2xl border border-gray-200 overflow-hidden bg-white shadow-soft">
           {/* テーブルヘッダー（デスクトップのみ） */}
-          <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr_auto] gap-0 bg-gray-50 border-b border-gray-100 px-6 py-3">
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{lang === 'ja' ? 'サービス' : 'Service'}</span>
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{lang === 'ja' ? '納期' : 'Delivery'}</span>
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{lang === 'ja' ? '料金' : 'Price'}</span>
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider text-right"></span>
+          <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr] bg-gray-50 border-b border-gray-200 divide-x divide-gray-200">
+            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider px-6 py-3">{lang === 'ja' ? 'サービス' : 'Service'}</span>
+            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider px-6 py-3">{lang === 'ja' ? '納期' : 'Delivery'}</span>
+            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider px-6 py-3">{lang === 'ja' ? '料金' : 'Price'}</span>
           </div>
 
           {others.map((plan, i) => {
@@ -392,7 +390,7 @@ const Pricing: React.FC = () => {
               <div
                 key={plan.id}
                 className={`transition-colors hover:bg-primary/[0.02] ${
-                  i < others.length - 1 ? 'border-b border-gray-100' : ''
+                  i < others.length - 1 ? 'border-b border-gray-200' : ''
                 }`}
               >
                 {/* モバイル用カードレイアウト */}
@@ -419,20 +417,12 @@ const Pricing: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="#contact"
-                    onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
-                    className="group flex items-center justify-center gap-1.5 w-full bg-primary text-white text-xs font-bold py-2.5 px-4 rounded-lg hover:bg-primary-hover transition-all duration-200"
-                  >
-                    {lang === 'ja' ? '相談する' : 'Inquire'}
-                    <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </a>
                 </div>
 
                 {/* デスクトップ用テーブルレイアウト */}
-                <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr_auto] gap-0 items-center px-6 py-5">
+                <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr] items-stretch divide-x divide-gray-200">
                   {/* サービス名 */}
-                  <div className="flex items-start gap-3 pr-4">
+                  <div className="flex items-start gap-3 px-6 py-5">
                     <div className="w-9 h-9 rounded-lg bg-secondary/5 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Icon className="w-4 h-4 text-secondary" />
                     </div>
@@ -446,12 +436,12 @@ const Pricing: React.FC = () => {
                   </div>
 
                   {/* 納期 */}
-                  <div>
-                    <p className="text-xs text-gray-500">{plan.period}</p>
-                    <ul className="mt-1.5 space-y-1">
+                  <div className="px-6 py-5">
+                    <p className="text-xs font-medium text-gray-600">{plan.period}</p>
+                    <ul className="mt-2 space-y-1.5">
                       {plan.highlights.slice(0, 3).map((h) => (
-                        <li key={h} className="flex items-center gap-1.5 text-xs text-gray-400">
-                          <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
+                        <li key={h} className="flex items-start gap-1.5 text-xs text-gray-500">
+                          <CheckCircle className="w-3 h-3 text-primary flex-shrink-0 mt-0.5" />
                           {h}
                         </li>
                       ))}
@@ -459,26 +449,31 @@ const Pricing: React.FC = () => {
                   </div>
 
                   {/* 料金 */}
-                  <div>
-                    <span className="text-base font-bold text-primary">{plan.price}</span>
-                    <span className="text-xs text-gray-400 block">{plan.priceNote}</span>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex justify-end">
-                    <a
-                      href="#contact"
-                      onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
-                      className="group inline-flex items-center gap-1 bg-primary text-white text-xs font-bold py-2 px-4 rounded-lg hover:bg-primary-hover transition-all duration-200 whitespace-nowrap"
-                    >
-                      {lang === 'ja' ? '相談する' : 'Inquire'}
-                      <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
-                    </a>
+                  <div className="px-6 py-5 flex flex-col justify-center">
+                    <span className="text-xl font-bold text-primary">{plan.price}</span>
+                    <span className="text-xs text-gray-400 mt-0.5">{plan.priceNote}</span>
                   </div>
                 </div>
               </div>
             );
           })}
+
+          {/* テーブル下：共通CTAボタン */}
+          <div className="border-t border-gray-200 px-6 py-5 bg-gray-50/50 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-xs text-gray-500">
+              {lang === 'ja'
+                ? 'ご不明な点はお気軽にご相談ください。内容に応じてお見積りします。'
+                : 'Have questions? Contact us for a custom quote.'}
+            </p>
+            <a
+              href="#contact"
+              onClick={() => trackEvent('cta_click', { location: 'pricing', type: 'others', variant: ctaVariant })}
+              className="group inline-flex items-center gap-1.5 bg-primary text-white text-sm font-bold py-2.5 px-6 rounded-xl hover:bg-primary-hover transition-all duration-200 whitespace-nowrap flex-shrink-0"
+            >
+              {lang === 'ja' ? '相談する' : 'Inquire'}
+              <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+            </a>
+          </div>
         </div>
 
         <p className="text-xs text-gray-400 mt-5 leading-relaxed">

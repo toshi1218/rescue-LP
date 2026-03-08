@@ -140,7 +140,7 @@ export default function SpouseVisaJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -153,20 +153,15 @@ export default function SpouseVisaJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
           },
         ]}
       />
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="書類取得・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。"
+        description="書類取得・DFAアポスティーユをまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -177,7 +172,7 @@ export default function SpouseVisaJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '申請の種類（新規・更新・変更）と必要書類をお知らせください。入管の要件を確認してご案内します。' },
-          { title: '必要書類・料金の確認', description: '料金をご提示します。ご依頼時に着手金50%、書類写し確認後に残金50%をお支払いいただきます。' },
+          { title: '必要書類・料金の確認', description: '料金をご提示します。ご依頼時に着手金50%、書類取得・DHL配送準備完了後に残金50%をお支払いいただきます。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。進捗は随時ご報告します。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}

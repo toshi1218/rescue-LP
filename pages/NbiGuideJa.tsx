@@ -32,7 +32,7 @@ export default function NbiGuideJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'NBI取得・DFAアポスティーユ・国際郵送込み（税抜）',
+            description: 'NBI取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
         },
         },
@@ -45,7 +45,7 @@ export default function NbiGuideJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'NBI取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
+                text: 'NBI取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -144,7 +144,7 @@ export default function NbiGuideJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -157,20 +157,15 @@ export default function NbiGuideJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（必要な場合）',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
           },
         ]}
       />
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="NBI取得・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。"
+        description="NBI取得・DFAアポスティーユをまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -181,7 +176,7 @@ export default function NbiGuideJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '用途（ビザ申請・帰化申請など）と提出先をお知らせください。24時間以内に返信します。' },
-          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、料金をご提示します。' },
+          { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: '現地スタッフがNBIオフィスで指紋採取・申請・受け取りを進めます。HITが出た場合も対応します。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
@@ -189,7 +184,7 @@ export default function NbiGuideJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'NBI取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'NBI取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
           { q: 'HIT（同名者あり）が出た場合はどうなりますか？', a: 'HITが出ると追加審査が必要になり、通常より時間がかかります。HIT対応の経験があるスタッフが対応しますので、まずご相談ください。' },
           { q: 'フィリピン人本人が日本にいても取得できますか？', a: 'はい。本人がフィリピンにいなくても、現地スタッフが代理で指紋採取・申請を行います。委任状等の書類が必要な場合はご案内します。' },
           { q: '有効期限はいつから数えますか？', a: 'NBI Clearanceの有効期限は発行日から1年です。ビザ申請のタイミングに合わせて取得時期を調整することをお勧めします。' },
