@@ -16,7 +16,7 @@ export default function NbiHitJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI HIT（同名者あり）解消・NBI Clearance取得代行',
-        description: 'NBI ClearanceでHIT（同名者あり）が出た場合の解消手続きからNBI取得・DFAアポスティーユまで一括代行。配偶者ビザ・就労ビザの期限に間に合わせます。',
+        description: 'NBI ClearanceでHIT（同名者あり）が出た場合の解消手続きからNBI取得・DFAアポスティーユまで一括代行。配偶者ビザ・就労ビザの期限を考慮してスケジュールをご案内します。',
         url: 'https://ph-document.com/ja/nbi-hit',
         provider: {
           '@type': 'Organization',
@@ -32,7 +32,7 @@ export default function NbiHitJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'NBI取得・HIT対応・DFAアポスティーユ・国際郵送込み（税抜）',
+            description: 'NBI取得・HIT対応・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
         },
         },
@@ -121,7 +121,7 @@ export default function NbiHitJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -136,11 +136,6 @@ export default function NbiHitJa() {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'クリアランス取得後のアポスティーユ手配',
             description: 'HIT解消後のNBI Clearance取得・DFAアポスティーユまで一括で対応します。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
           },
         ]}
       />
