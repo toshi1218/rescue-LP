@@ -37,9 +37,9 @@ const plansData = {
       featured: false,
       title: 'PSA取得代行',
       subtitle: '出生証明書 / 婚姻証明書 / CENOMAR',
-      price: '¥40,000',
+      price: '¥50,000',
       priceNote: '〜（税・送料別）',
-      period: '約3〜5週間',
+      period: '約4〜6週間',
       highlights: [
         'PSA書類取得（1通）',
         'DFAアポスティーユ（オプション）',
@@ -60,9 +60,9 @@ const plansData = {
       featured: false,
       title: 'NBI取得代行',
       subtitle: '無犯罪証明書の取得サポート',
-      price: '¥50,000',
+      price: '¥55,000',
       priceNote: '〜（税・送料別）',
-      period: '約3〜5週間',
+      period: '約4〜6週間',
       highlights: [
         'NBI Clearance取得',
         '指紋採取サポート',
