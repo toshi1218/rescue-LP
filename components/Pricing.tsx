@@ -252,7 +252,7 @@ const Pricing: React.FC = () => {
   const others = plans.filter((p) => !p.featured);
 
   return (
-    <section className="py-16 px-4" id="pricing">
+    <section className="pb-16 px-4" id="pricing">
       <div className="max-w-5xl mx-auto">
         {lang === 'ja' && (
           <div className="text-xs text-gray-500 mb-6 space-y-0.5">
