@@ -53,7 +53,7 @@ export default function UsVisaDocsJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '必要書類・DFAアポスティーユ・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+                text: '必要書類・DFAアポスティーユ・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -78,7 +78,7 @@ export default function UsVisaDocsJa() {
     >
       <HeroBanner
         title="米国ビザ申請のフィリピン書類、まとめて手配します"
-        badges={['日本語だけでOK', 'アポスティーユ込み', 'コミコミ料金']}
+        badges={['日本語だけでOK', 'アポスティーユ込み', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -121,7 +121,7 @@ export default function UsVisaDocsJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -147,7 +147,7 @@ export default function UsVisaDocsJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="必要書類・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。"
+        description="必要書類・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -158,7 +158,7 @@ export default function UsVisaDocsJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談', description: 'ビザの種類・申請状況・提出期限をお知らせください。' },
-          { title: '必要書類・料金の確認', description: '必要書類をリストアップし、コミコミ料金をご提示します。' },
+          { title: '必要書類・料金の確認', description: '必要書類をリストアップし、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
@@ -167,7 +167,7 @@ export default function UsVisaDocsJa() {
       <FaqSection
         items={[
           { q: '米国ビザに必要な書類は何ですか？', a: 'ビザの種類によって異なります。K-1はCENOMAR・出生証明書・NBI Clearance、CR-1は婚姻証明書・出生証明書などが必要です。無料相談で確認します。' },
-          { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユ・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユ・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
           { q: 'いつ届きますか？', a: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
         ]}

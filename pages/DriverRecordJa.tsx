@@ -32,7 +32,7 @@ export default function DriverRecordJa() {
             '@type': 'UnitPriceSpecification',
             price: '100000',
             priceCurrency: 'JPY',
-            description: 'LTO書類取得・DFAアポスティーユ・国際郵送込み（税抜）',
+            description: 'LTO書類取得・DFAアポスティーユ込み（税抜・送料別）',
           },
         },
         },
@@ -53,7 +53,7 @@ export default function DriverRecordJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'LTO取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+                text: 'LTO取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -78,7 +78,7 @@ export default function DriverRecordJa() {
     >
       <HeroBanner
         title="LTOドライバーズレコード、日本語だけで取り寄せます"
-        badges={['日本語だけでOK', 'アポスティーユ込み対応', 'コミコミ料金']}
+        badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -121,7 +121,7 @@ export default function DriverRecordJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -134,20 +134,20 @@ export default function DriverRecordJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（必要な場合）',
-            description: '提出先の要件に応じてDFAアポスティーユ認証を手配します。',
+            title: 'DFAアポスティーユ認証',
+            description: '日本の免許センターへの提出に必須のDFAアポスティーユ認証を手配します。',
           },
           {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
+            icon: <FileCheck className="w-4 h-4" />,
+            title: 'オリジナルレシート（OR）',
+            description: '試験場提出に必要なLTOオリジナルレシート（OR）を取得します。',
           },
         ]}
       />
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="LTO取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。"
+        description="LTO取得・DFAアポスティーユ・ORをまとめた料金でご案内します。国際郵送費は実費別途です。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -158,7 +158,7 @@ export default function DriverRecordJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談', description: '提出先の都道府県・対象者の人数・提出期限をお知らせください。' },
-          { title: '必要書類・料金の確認', description: '必要書類をリストアップし、コミコミ料金をご提示します。' },
+          { title: '必要書類・料金の確認', description: '必要書類をリストアップし、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'LTO取得・DFAアポスティーユを現地スタッフが進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
@@ -167,7 +167,7 @@ export default function DriverRecordJa() {
       <FaqSection
         items={[
           { q: '外免切替に必要な書類は何ですか？', a: '一般的にLTOドライバーズレコード（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。' },
-          { q: '料金はいくらですか？', a: 'LTO取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'LTO取得・DFAアポスティーユ・ORをまとめた料金です。国際郵送費は実費別途です。無料相談後に正確な金額をご提示します。' },
           { q: '複数名分まとめて依頼できますか？', a: 'はい、可能です。人数と状況をお知らせいただければ、まとめて手配します。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
         ]}

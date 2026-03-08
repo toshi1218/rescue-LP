@@ -6,7 +6,7 @@ export default function PricingJa() {
   return (
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '料金' }]}>
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-4">料金プラン</h1>
-      <p className="text-sm text-gray-600 mb-3">PSA取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。</p>
+      <p className="text-sm text-gray-600 mb-3">PSA取得・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。</p>
       <div className="bg-secondary/[0.03] border border-secondary/10 rounded-xl p-4 mb-6">
         <p className="text-sm text-secondary font-semibold mb-1">IGRSは最安のサービスではありません。</p>
         <p className="text-xs text-gray-500 leading-relaxed">

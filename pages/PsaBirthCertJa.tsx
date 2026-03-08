@@ -45,7 +45,7 @@ export default function PsaBirthCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+                text: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -78,7 +78,7 @@ export default function PsaBirthCertJa() {
     >
       <HeroBanner
         title="PSA出生証明書、日本語だけで取り寄せます"
-        badges={['日本語だけでOK', 'アポスティーユ込み対応', 'コミコミ料金']}
+        badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -144,11 +144,11 @@ export default function PsaBirthCertJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
-        heading="料金に含まれるもの（コミコミ）"
+        heading="料金に含まれるもの"
         items={[
           {
             icon: <Baby className="w-4 h-4" />,
@@ -170,7 +170,7 @@ export default function PsaBirthCertJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="PSA取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。"
+        description="PSA取得・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -181,7 +181,7 @@ export default function PsaBirthCertJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '用途（国際結婚・ビザ申請など）と提出先をお知らせください。24時間以内に返信します。' },
-          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、コミコミ料金をご提示します。' },
+          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
@@ -189,7 +189,7 @@ export default function PsaBirthCertJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
           { q: 'PSAに記録がない場合はどうなりますか？', a: 'LCR（地方民事登録局）への申請が必要になります。対応経験がありますので、まずご相談ください。追加費用が発生する場合は事前にご説明します。' },
           { q: '出生証明書とアポスティーユ、両方必要ですか？', a: '日本の提出先では通常、PSA出生証明書＋DFAアポスティーユの両方が必要です。提出先を確認した上でご案内します。' },
           { q: 'いつ届きますか？', a: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。' },

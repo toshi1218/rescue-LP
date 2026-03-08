@@ -12,23 +12,21 @@ const plansData = {
       featured: true,
       title: '国際結婚パック',
       subtitle: '婚姻済証明書申請に必要な書類一式',
-      price: '¥89,800',
+      price: '¥99,800',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
       highlights: [
         'PSA出生証明書＋DFAアポスティーユ',
         'CENOMAR（独身証明書）＋DFAアポスティーユ',
-        'NBI Clearance取得サポート',
-        '日本語翻訳込み',
         '優先対応サポート',
-        '国際郵送（日本へ）',
       ],
       notIncluded: [
+        '国際郵送費（実費別途・約¥6,000〜）',
         '日本の役所・入管への提出代行',
         'ビザ申請の法的代理',
         '大使館面接の指導',
       ],
-      bestFor: '国際結婚・K-1/CR-1ビザ申請で複数のフィリピン書類が必要な方向け',
+      bestFor: '日本での婚姻手続き・配偶者ビザ申請で複数のフィリピン書類が必要な方向け',
     },
     {
       id: 'psa',
@@ -36,17 +34,17 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA取得代行',
-      subtitle: '出生証明書 / 婚姻証明書 / CENOMAR',
-      price: '¥40,000',
+      subtitle: '出生証明書 / 独身証明書（CENOMAR）/ 婚姻証明書 / 死亡証明書 など',
+      price: '¥50,000',
       priceNote: '〜（税・送料別）',
-      period: '約3〜5週間',
+      period: '約4〜6週間',
       highlights: [
         'PSA書類取得（1通）',
-        'DFAアポスティーユ（オプション）',
+        'DFAアポスティーユ込み',
         '役所申請手数料込み',
-        '国際郵送（日本へ）',
       ],
       notIncluded: [
+        '国際郵送費（実費別途・約¥6,000〜）',
         '翻訳',
         '複数通の同時取得（別途見積り）',
         '日本側への提出代行',
@@ -60,16 +58,16 @@ const plansData = {
       featured: false,
       title: 'NBI取得代行',
       subtitle: '無犯罪証明書の取得サポート',
-      price: '¥50,000',
+      price: '¥55,000',
       priceNote: '〜（税・送料別）',
-      period: '約3〜5週間',
+      period: '約4〜6週間',
       highlights: [
         'NBI Clearance取得',
         '指紋採取サポート',
         'DFAアポスティーユ（オプション）',
-        '国際郵送（日本へ）',
       ],
       notIncluded: [
+        '国際郵送費（実費別途・約¥6,000〜）',
         '翻訳',
         '指紋認証にかかる外部費用',
         '日本側への提出代行',
@@ -90,9 +88,9 @@ const plansData = {
         'LTO運転免許証関連書類',
         'LTOトランザクション履歴',
         '役所申請手数料込み',
-        '国際郵送（日本へ）',
       ],
       notIncluded: [
+        '国際郵送費（実費別途・約¥6,000〜）',
         '翻訳',
         '日本の免許センターへの提出代行',
         '運転免許試験の代理',
@@ -181,7 +179,7 @@ const plansData = {
       subtitle: 'Birth Certificate / Marriage Certificate / CENOMAR',
       price: 'US$349',
       priceNote: '〜 (Apostille + DHL incl.)',
-      period: 'Approx. 4–5 weeks',
+      period: 'Approx. 4–6 weeks',
       highlights: [
         'PSA document retrieval (1 copy)',
         'DFA Apostille authentication',
@@ -204,7 +202,7 @@ const plansData = {
       subtitle: 'Required for immigration & visa applications worldwide',
       price: 'US$399',
       priceNote: '〜 (Apostille + DHL incl.)',
-      period: 'Approx. 4–5 weeks',
+      period: 'Approx. 4–6 weeks',
       highlights: [
         'NBI Clearance retrieval',
         'Fingerprint appointment support',
@@ -380,10 +378,10 @@ const Pricing: React.FC = () => {
 
         {/* その他プラン（テーブル形式） */}
         <div className="rounded-2xl border border-gray-100 overflow-hidden bg-white shadow-soft">
-          {/* テーブルヘッダー */}
-          <div className="grid grid-cols-[1fr_auto_auto] md:grid-cols-[2fr_1fr_1fr_auto] gap-0 bg-gray-50 border-b border-gray-100 px-6 py-3">
+          {/* テーブルヘッダー（デスクトップのみ） */}
+          <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr_auto] gap-0 bg-gray-50 border-b border-gray-100 px-6 py-3">
             <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{lang === 'ja' ? 'サービス' : 'Service'}</span>
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider hidden md:block">{lang === 'ja' ? '納期' : 'Delivery'}</span>
+            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{lang === 'ja' ? '納期' : 'Delivery'}</span>
             <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{lang === 'ja' ? '料金' : 'Price'}</span>
             <span className="text-xs font-bold text-gray-400 uppercase tracking-wider text-right"></span>
           </div>
@@ -393,62 +391,90 @@ const Pricing: React.FC = () => {
             return (
               <div
                 key={plan.id}
-                className={`grid grid-cols-[1fr_auto_auto] md:grid-cols-[2fr_1fr_1fr_auto] gap-0 items-center px-6 py-5 transition-colors hover:bg-primary/[0.02] ${
-                  i < others.length - 1 ? 'border-b border-gray-50' : ''
+                className={`transition-colors hover:bg-primary/[0.02] ${
+                  i < others.length - 1 ? 'border-b border-gray-100' : ''
                 }`}
               >
-                {/* サービス名 */}
-                <div className="flex items-start gap-3 pr-4">
-                  <div className="w-9 h-9 rounded-lg bg-secondary/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Icon className="w-4 h-4 text-secondary" />
+                {/* モバイル用カードレイアウト */}
+                <div className="md:hidden px-5 py-5 flex flex-col gap-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-secondary/5 flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-4 h-4 text-secondary" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-bold text-secondary leading-snug">{plan.title}</p>
+                      <p className="text-xs text-gray-400 mt-0.5 leading-snug">{plan.subtitle}</p>
+                    </div>
+                    <div className="text-right flex-shrink-0">
+                      <span className="text-base font-bold text-primary">{plan.price}</span>
+                      <span className="text-xs text-gray-400 block">{plan.priceNote}</span>
+                      <span className="text-xs text-gray-400 block mt-0.5">{plan.period}</span>
+                    </div>
                   </div>
+                  <ul className="space-y-1.5">
+                    {plan.highlights.slice(0, 3).map((h) => (
+                      <li key={h} className="flex items-center gap-1.5 text-xs text-gray-500">
+                        <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="#contact"
+                    onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
+                    className="group flex items-center justify-center gap-1.5 w-full bg-primary text-white text-xs font-bold py-2.5 px-4 rounded-lg hover:bg-primary-hover transition-all duration-200"
+                  >
+                    {lang === 'ja' ? '相談する' : 'Inquire'}
+                    <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  </a>
+                </div>
+
+                {/* デスクトップ用テーブルレイアウト */}
+                <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr_auto] gap-0 items-center px-6 py-5">
+                  {/* サービス名 */}
+                  <div className="flex items-start gap-3 pr-4">
+                    <div className="w-9 h-9 rounded-lg bg-secondary/5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon className="w-4 h-4 text-secondary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-secondary leading-snug">{plan.title}</p>
+                      <p className="text-xs text-gray-400 mt-0.5 leading-snug">{plan.subtitle}</p>
+                      {plan.bestFor && (
+                        <p className="text-xs text-primary/70 mt-1 leading-snug italic">{plan.bestFor}</p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* 納期 */}
                   <div>
-                    <p className="text-sm font-bold text-secondary leading-snug">{plan.title}</p>
-                    <p className="text-xs text-gray-400 mt-0.5 leading-snug">{plan.subtitle}</p>
-                    {plan.bestFor && (
-                      <p className="text-xs text-primary/70 mt-1 leading-snug italic">{plan.bestFor}</p>
-                    )}
-                    {/* モバイル：含まれるもの */}
-                    <ul className="mt-2 space-y-1 md:hidden">
-                      {plan.highlights.slice(0, 2).map((h) => (
-                        <li key={h} className="flex items-center gap-1.5 text-xs text-gray-500">
+                    <p className="text-xs text-gray-500">{plan.period}</p>
+                    <ul className="mt-1.5 space-y-1">
+                      {plan.highlights.slice(0, 3).map((h) => (
+                        <li key={h} className="flex items-center gap-1.5 text-xs text-gray-400">
                           <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
                           {h}
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
 
-                {/* 納期（デスクトップのみ） */}
-                <div className="hidden md:block">
-                  <p className="text-xs text-gray-500">{plan.period}</p>
-                  <ul className="mt-1.5 space-y-1">
-                    {plan.highlights.slice(0, 3).map((h) => (
-                      <li key={h} className="flex items-center gap-1.5 text-xs text-gray-400">
-                        <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
-                        {h}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                  {/* 料金 */}
+                  <div>
+                    <span className="text-base font-bold text-primary">{plan.price}</span>
+                    <span className="text-xs text-gray-400 block">{plan.priceNote}</span>
+                  </div>
 
-                {/* 料金 */}
-                <div className="text-right md:text-left pr-4 md:pr-0">
-                  <span className="text-base font-bold text-primary">{plan.price}</span>
-                  <span className="text-xs text-gray-400 block">{plan.priceNote}</span>
-                </div>
-
-                {/* CTA */}
-                <div className="flex justify-end">
-                  <a
-                    href="#contact"
-                    onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
-                    className="group inline-flex items-center gap-1 bg-primary text-white text-xs font-bold py-2 px-4 rounded-lg hover:bg-primary-hover transition-all duration-200 whitespace-nowrap"
-                  >
-                    {lang === 'ja' ? '相談する' : 'Inquire'}
-                    <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </a>
+                  {/* CTA */}
+                  <div className="flex justify-end">
+                    <a
+                      href="#contact"
+                      onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
+                      className="group inline-flex items-center gap-1 bg-primary text-white text-xs font-bold py-2 px-4 rounded-lg hover:bg-primary-hover transition-all duration-200 whitespace-nowrap"
+                    >
+                      {lang === 'ja' ? '相談する' : 'Inquire'}
+                      <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+                    </a>
+                  </div>
                 </div>
               </div>
             );

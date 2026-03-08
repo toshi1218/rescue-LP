@@ -78,7 +78,7 @@ export default function NbiHitJa() {
     >
       <HeroBanner
         title="NBI HITが出た——次に何をすべきか、一緒に確認します"
-        badges={['日本語だけでOK', '状況確認から対応', 'コミコミ料金']}
+        badges={['日本語だけでOK', '状況確認から対応', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -121,7 +121,7 @@ export default function NbiHitJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList

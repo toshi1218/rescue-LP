@@ -17,7 +17,7 @@ export default function ApostilleFeeJa() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'DFAアポスティーユ取得代行（料金・費用）',
-          description: 'DFAアポスティーユの代行費用をコミコミ料金で公開。PSA・CENOMAR・NBI別の費用目安も確認可能。後から追加請求なし。無料見積もり受付中。',
+          description: 'DFAアポスティーユの代行費用を料金で公開。PSA・CENOMAR・NBI別の費用目安も確認可能。後から追加請求なし。無料見積もり受付中。',
           url: 'https://ph-document.com/ja/apostille-ryokin',
           provider: {
             '@type': 'Organization',
@@ -46,7 +46,7 @@ export default function ApostilleFeeJa() {
               name: 'DFAアポスティーユの料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+                text: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -54,7 +54,7 @@ export default function ApostilleFeeJa() {
               name: '他社より高くなりませんか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めたコミコミ料金なので、最終的な総額で比較してください。',
+                text: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めた料金なので、最終的な総額で比較してください。',
               },
             },
             {
@@ -71,17 +71,17 @@ export default function ApostilleFeeJa() {
     >
       <HeroBanner
         title="DFAアポスティーユの費用、総額でご案内します"
-        badges={['コミコミ料金', '追加費用なし', '日本語だけでOK']}
+        badges={['追加費用なし', '日本語だけでOK']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="DFAアポスティーユの費用は、コミコミ料金で最初から明示します。後から追加請求はありません。"
+        conclusion="DFAアポスティーユの費用は、料金で最初から明示します。後から追加請求はありません。"
         points={[
-          'DFAアポスティーユ・PSA取得・国際郵送をまとめたコミコミ料金',
+          'DFAアポスティーユ・PSA取得・国際郵送をまとめた料金',
           '他社の「1通○○円〜」は書類取得費用のみの場合が多い',
-          '提出先によってアポスティーユが不要な場合も。無料相談で確認',
+          '日本の手続きでは紙の原本にDFAアポスティーユがほぼ必須',
           '見積もり後の追加請求なし。総額で比較してください',
         ]}
         ctaText="無料で相談する（24時間以内に返信）"
@@ -98,7 +98,7 @@ export default function ApostilleFeeJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: '総額でいくらかかるか知りたい',
-            description: '当社はDFAアポスティーユ・PSA取得・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。',
+            description: '当社はDFAアポスティーユ・PSA取得・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -109,12 +109,12 @@ export default function ApostilleFeeJa() {
       />
 
       <CtaBox
-        title="「アポスティーユが必要かどうか」から確認できます"
-        description="提出先によってはアポスティーユが不要な場合もあります。まず用途をお知らせいただければ、必要な書類と総額をご案内します。"
+        title="必要書類と料金をまとめてご案内します"
+        description="日本での手続きでは、紙の原本にDFAアポスティーユがほぼ必須です。まず用途をお知らせいただければ、必要な書類と総額をご案内します。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -151,7 +151,7 @@ export default function ApostilleFeeJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: '書類の種類と提出先を共有', description: 'CENOMAR・PSA・NBI等の種類と、提出先（市役所・大使館・入管など）をお知らせください。アポスティーユが必要かどうかも確認します。' },
-          { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めたコミコミ料金をご案内します。' },
+          { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めた料金をご案内します。' },
           { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（4営業日）またはExpress（翌営業日）を状況に応じて選択します。' },
           { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安は約1ヶ月〜。' },
         ]}
@@ -159,8 +159,8 @@ export default function ApostilleFeeJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
-          { q: '他社より高くなりませんか？', a: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めたコミコミ料金なので、最終的な総額で比較してください。' },
+          { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '他社より高くなりませんか？', a: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めた料金なので、最終的な総額で比較してください。' },
           { q: 'アポスティーユが必要かどうかわかりません', a: '提出先によって異なります。無料相談で確認してからご案内します。' },
           { q: '提出期限に合わせて確実に手配できますか？', a: 'はい。提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。書類が確実に揃うよう、進捗を随時ご報告しながら進めます。' },
         ]}

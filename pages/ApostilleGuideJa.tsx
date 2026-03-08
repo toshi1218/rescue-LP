@@ -78,7 +78,7 @@ export default function ApostilleGuideJa() {
     >
       <HeroBanner
         title="DFAアポスティーユ、フィリピンに行かずに取得できます"
-        badges={['日本語だけでOK', '書類取得から一括代行', 'コミコミ料金']}
+        badges={['日本語だけでOK', '書類取得から一括代行', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -144,11 +144,11 @@ export default function ApostilleGuideJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
-        heading="料金に含まれるもの（コミコミ）"
+        heading="料金に含まれるもの"
         items={[
           {
             icon: <BadgeCheck className="w-4 h-4" />,
@@ -170,7 +170,7 @@ export default function ApostilleGuideJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。"
+        description="DFAアポスティーユ・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -181,7 +181,7 @@ export default function ApostilleGuideJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '対象書類と提出先をお知らせください。電子か紙か、要件を確認してご案内します。' },
-          { title: '必要書類・料金の確認', description: 'コミコミ料金をご提示します。書類取得との一括依頼も可能です。' },
+          { title: '必要書類・料金の確認', description: '料金をご提示します。書類取得との一括依頼も可能です。' },
           { title: 'DFA申請・認証', description: '現地スタッフがDFAに申請し、アポスティーユ認証を取得します。通常1〜2週間。' },
           { title: '日本へ郵送・完了', description: '認証済み書類を追跡付きでお届けします。' },
         ]}

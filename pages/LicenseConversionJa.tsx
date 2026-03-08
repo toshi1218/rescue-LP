@@ -32,7 +32,7 @@ export default function LicenseConversionJa() {
             '@type': 'UnitPriceSpecification',
             price: '100000',
             priceCurrency: 'JPY',
-            description: 'LTO書類取得・DFAアポスティーユ・国際郵送込み（税抜）',
+            description: 'LTO書類取得・DFAアポスティーユ込み（税抜・送料別）',
           },
         },
         },
@@ -78,7 +78,7 @@ export default function LicenseConversionJa() {
     >
       <HeroBanner
         title="外免切替のLTO書類、日本語だけで取り寄せます"
-        badges={['日本語だけでOK', 'LTO正規書類', 'コミコミ料金']}
+        badges={['日本語だけでOK', 'LTO正規書類', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -140,11 +140,11 @@ export default function LicenseConversionJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
-        heading="料金に含まれるもの（コミコミ）"
+        heading="料金に含まれるもの"
         items={[
           {
             icon: <Car className="w-4 h-4" />,
@@ -153,20 +153,20 @@ export default function LicenseConversionJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: '書類確認・形式チェック',
-            description: '取得した書類が試験場の要件を満たしているか確認します。不備があれば再取得します。',
+            title: 'DFAアポスティーユ認証',
+            description: '日本の運転免許試験場での受理に必須のDFAアポスティーユ認証を手配します。',
           },
           {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
+            icon: <FileCheck className="w-4 h-4" />,
+            title: 'オリジナルレシート（OR）',
+            description: '試験場提出に必要なLTOオリジナルレシート（OR）を取得します。',
           },
         ]}
       />
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="LTO書類取得・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。"
+        description="LTO書類取得・DFAアポスティーユ・ORをまとめた料金でご案内します。国際郵送費は実費別途です。見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -177,7 +177,7 @@ export default function LicenseConversionJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '提出先の試験場と試験場の予約日（決まっている場合）をお知らせください。' },
-          { title: '必要書類・料金の確認', description: 'コミコミ料金をご提示します。納得いただいてからお支払い。' },
+          { title: '必要書類・料金の確認', description: '料金をご提示します。ご依頼時に着手金50%、書類写し確認後に残金50%をお支払いいただきます。' },
           { title: 'フィリピン現地で手配', description: 'LTO書類を現地スタッフが取得します。書類の形式を確認してから発送します。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。試験場の予約日に間に合うよう進めます。' },
         ]}

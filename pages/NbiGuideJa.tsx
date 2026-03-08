@@ -45,7 +45,7 @@ export default function NbiGuideJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'NBI取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+                text: 'NBI取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -78,7 +78,7 @@ export default function NbiGuideJa() {
     >
       <HeroBanner
         title="NBI Clearance、日本語だけで取り寄せます"
-        badges={['日本語だけでOK', 'アポスティーユ込み対応', 'コミコミ料金']}
+        badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -144,11 +144,11 @@ export default function NbiGuideJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告・書類写し確認後に残金お支払い"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
-        heading="料金に含まれるもの（コミコミ）"
+        heading="料金に含まれるもの"
         items={[
           {
             icon: <Fingerprint className="w-4 h-4" />,
@@ -170,7 +170,7 @@ export default function NbiGuideJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="NBI取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。見積もり後の追加請求はありません。"
+        description="NBI取得・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -181,7 +181,7 @@ export default function NbiGuideJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '用途（ビザ申請・帰化申請など）と提出先をお知らせください。24時間以内に返信します。' },
-          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、コミコミ料金をご提示します。' },
+          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: '現地スタッフがNBIオフィスで指紋採取・申請・受け取りを進めます。HITが出た場合も対応します。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
@@ -189,7 +189,7 @@ export default function NbiGuideJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'NBI取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'NBI取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
           { q: 'HIT（同名者あり）が出た場合はどうなりますか？', a: 'HITが出ると追加審査が必要になり、通常より時間がかかります。HIT対応の経験があるスタッフが対応しますので、まずご相談ください。' },
           { q: 'フィリピン人本人が日本にいても取得できますか？', a: 'はい。本人がフィリピンにいなくても、現地スタッフが代理で指紋採取・申請を行います。委任状等の書類が必要な場合はご案内します。' },
           { q: '有効期限はいつから数えますか？', a: 'NBI Clearanceの有効期限は発行日から1年です。ビザ申請のタイミングに合わせて取得時期を調整することをお勧めします。' },
