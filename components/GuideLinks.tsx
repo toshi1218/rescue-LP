@@ -5,10 +5,10 @@ import { useLanguage } from '../lib/i18n';
 
 const guidesData = {
   ja: [
+    { to: '/ja/kokusai-kekkon-guide/', title: '国際結婚・配偶者ビザ 完全ガイド', desc: '婚姻届→ROM→PSA取得→ビザ申請まで全解説', tag: 'まずはここ' },
     { to: '/ja/cenomar/',              title: 'CENOMAR（独身証明書）',             desc: '取得方法・費用・期間を徹底解説',          tag: '人気No.1' },
     { to: '/ja/psa-shussei-shomeisho/',title: 'PSA出生証明書',                    desc: '国際結婚・ビザ申請に必要な理由',          tag: null },
     { to: '/ja/nbi-clearance/',        title: 'NBI無犯罪証明書',                  desc: 'NBI HIT問題の対処法も解説',              tag: null },
-    { to: '/ja/kokusai-kekkon-guide/', title: '国際結婚完全ガイド',               desc: '手続きの流れ・必要書類・費用',            tag: '完全版' },
     { to: '/ja/haigusha-visa/',        title: '配偶者ビザ書類チェックリスト',     desc: '申請に必要なフィリピン書類一覧',          tag: null },
     { to: '/ja/apostille/',            title: 'DFAアポスティーユ認証',            desc: '対象書類・取得方法・費用',                tag: null },
     { to: '/ja/gaimen-kirikae-guide/', title: '外免切替ガイド',                   desc: 'LTO書類で日本の免許に切替',               tag: null },
