@@ -61,7 +61,7 @@ export default function AustraliaDocsJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '必要書類・DFAアポスティーユ・オーストラリアへの国際郵送をまとめたコミコミ料金でご案内します。無料相談後に正確な金額をご提示します。',
+                text: '必要書類・DFAアポスティーユ・オーストラリアへの国際郵送をまとめた料金でご案内します。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -78,7 +78,7 @@ export default function AustraliaDocsJa() {
     >
       <HeroBanner
         title="オーストラリアビザのフィリピン書類、まとめて手配します"
-        badges={['Home Affairs対応', 'アポスティーユ込み', 'コミコミ料金']}
+        badges={['Home Affairs対応', 'アポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -147,7 +147,7 @@ export default function AustraliaDocsJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="必要書類・DFAアポスティーユ・オーストラリアへの国際郵送をまとめたコミコミ料金でご案内します。"
+        description="必要書類・DFAアポスティーユ・オーストラリアへの国際郵送をまとめた料金でご案内します。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -158,7 +158,7 @@ export default function AustraliaDocsJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談', description: 'ビザサブクラス（パートナービザ・永住権など）と提出目標日をお知らせください。' },
-          { title: '必要書類・料金の確認', description: 'Home Affairs要件をもとに必要書類をリストアップし、コミコミ料金をご提示します。' },
+          { title: '必要書類・料金の確認', description: 'Home Affairs要件をもとに必要書類をリストアップし、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
           { title: 'オーストラリアへ郵送', description: '書類が揃い次第、DHLで追跡付きお届け。目安は全体で約4〜6週間。' },
         ]}
@@ -168,7 +168,7 @@ export default function AustraliaDocsJa() {
         items={[
           { q: 'オーストラリアビザ申請にはDFAアポスティーユが必要ですか？', a: 'はい。オーストラリアはハーグ条約加盟国です。Department of Home Affairsへの提出には、PSA出生証明書・CENOMAR・NBI ClearanceにDFAアポスティーユ認証が必要です。' },
           { q: 'オーストラリアのパートナービザ（820/801）に必要な書類は？', a: 'CENOMAR・PSA出生証明書（DFAアポスティーユ付き）が基本です。NBI Clearanceが必要な場合もあります。ビザサブクラスによって異なるため、無料相談でご確認します。' },
-          { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユ・オーストラリアへの国際郵送をまとめたコミコミ料金でご案内します。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユ・オーストラリアへの国際郵送をまとめた料金でご案内します。無料相談後に正確な金額をご提示します。' },
           { q: 'オーストラリアへの郵送にどのくらいかかりますか？', a: '目安は全体で約4〜6週間です。書類準備後、DHLエクスプレスでオーストラリアへ3〜5営業日でお届けします。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"

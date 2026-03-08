@@ -551,8 +551,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-shussei-cost',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-cost', 'index.html'),
-    title: `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】コミコミ料金で後から追加請求なし`,
-    description: 'PSA取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金。他社の「1通○○円〜」はアポスティーユ・郵送が別途加算されることが多い。総額で比較してください。無料見積もり。',
+    title: `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】料金で後から追加請求なし`,
+    description: 'PSA取得・DFAアポスティーユ・国際郵送をまとめた料金。他社の「1通○○円〜」はアポスティーユ・郵送が別途加算されることが多い。総額で比較してください。無料見積もり。',
     canonical: `${BASE}/ja/psa-shussei-cost/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -562,8 +562,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-ryokin',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
-    title: `DFAアポスティーユの料金【${SEO_YEAR_MONTH_JA}】コミコミ料金で後から追加請求なし`,
-    description: 'DFAアポスティーユ・PSA取得・国際郵送をまとめたコミコミ料金。後から追加請求なし。CENOMAR・PSA・NBI別の費用目安も確認できます。無料見積もり受付中。',
+    title: `DFAアポスティーユの料金【${SEO_YEAR_MONTH_JA}】料金で後から追加請求なし`,
+    description: 'DFAアポスティーユ・PSA取得・国際郵送をまとめた料金。後から追加請求なし。CENOMAR・PSA・NBI別の費用目安も確認できます。無料見積もり受付中。',
     canonical: `${BASE}/ja/apostille-ryokin/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/apostille-fee/`,
@@ -606,8 +606,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/ryokin',
     outFile: path.join(projectRoot, 'dist', 'ja', 'ryokin', 'index.html'),
-    title: `料金一覧${SEO_TITLE_BADGE_JA}コミコミ料金・追加請求なし｜フィリピン書類取得代行`,
-    description: 'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユ・国際郵送をまとめたコミコミ料金。後から追加請求なし。無料見積もり受付中。',
+    title: `料金一覧${SEO_TITLE_BADGE_JA}料金・追加請求なし｜フィリピン書類取得代行`,
+    description: 'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユ・国際郵送をまとめた料金。後から追加請求なし。無料見積もり受付中。',
     canonical: `${BASE}/ja/ryokin/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/pricing/`,

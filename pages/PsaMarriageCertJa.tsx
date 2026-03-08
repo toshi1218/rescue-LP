@@ -45,7 +45,7 @@ export default function PsaMarriageCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。',
+                text: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -78,7 +78,7 @@ export default function PsaMarriageCertJa() {
     >
       <HeroBanner
         title="PSA婚姻証明書、日本語だけで取り寄せます"
-        badges={['日本語だけでOK', 'アポスティーユ込み対応', 'コミコミ料金']}
+        badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -147,7 +147,7 @@ export default function PsaMarriageCertJa() {
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="PSA取得・DFAアポスティーユ・国際郵送をまとめたコミコミ料金でご案内します。"
+        description="PSA取得・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -158,7 +158,7 @@ export default function PsaMarriageCertJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談', description: '用途（配偶者ビザ・帰化申請など）と提出先をお知らせください。' },
-          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、コミコミ料金をご提示します。' },
+          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
         ]}
@@ -166,7 +166,7 @@ export default function PsaMarriageCertJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめたコミコミ料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
           { q: 'いつ届きますか？', a: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。' },
           { q: '注釈付き（Annotated）の婚姻証明書は取れますか？', a: '対応可能です。アニュルメント後や外国離婚承認後の注釈付き書類も手配できます。まずは状況をお知らせください。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },

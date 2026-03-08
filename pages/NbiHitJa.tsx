@@ -78,7 +78,7 @@ export default function NbiHitJa() {
     >
       <HeroBanner
         title="NBI HITが出た——次に何をすべきか、一緒に確認します"
-        badges={['日本語だけでOK', '状況確認から対応', 'コミコミ料金']}
+        badges={['日本語だけでOK', '状況確認から対応', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
