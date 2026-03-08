@@ -33,7 +33,7 @@ export default function PsaCostJa() {
               '@type': 'UnitPriceSpecification',
               price: '40000',
               priceCurrency: 'JPY',
-              description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜）',
+              description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
             },
           },
         },
@@ -46,7 +46,7 @@ export default function PsaCostJa() {
               name: 'PSA出生証明書の取得代行料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
+                text: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -59,10 +59,10 @@ export default function PsaCostJa() {
             },
             {
               '@type': 'Question',
-              name: 'アポスティーユが必要かどうかわかりません',
+              name: '日本の提出先ではアポスティーユが原則必須です',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '提出先によって異なります。無料相談で確認してからご案内します。不要な認証に費用をかけないようにします。',
+                text: '日本の入管・役所・大使館への提出では、原則として紙の原本＋DFAアポスティーユが必要です。まずはご相談ください。',
               },
             },
           ],
@@ -102,7 +102,7 @@ export default function PsaCostJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: '総額でいくらかかるか知りたい',
-            description: '当社はPSA取得・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。',
+            description: '当社はPSA取得・DFAアポスティーユをまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）見積もり後の追加請求はありません。',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -118,7 +118,7 @@ export default function PsaCostJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -131,13 +131,8 @@ export default function PsaCostJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ（必要な場合）',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: '提出先の要件に応じてDFAアポスティーユ認証も手配します。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
           },
         ]}
       />
@@ -155,18 +150,18 @@ export default function PsaCostJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: '用途と提出先を共有', description: '国際結婚・配偶者ビザ・帰化申請など、PSA書類の用途と提出先をお知らせください。必要な書類の種類と形式を確認します。' },
-          { title: '料金をご提示', description: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送を含めた総額をご案内します。見積もり後の追加請求はありません。' },
+          { title: '料金をご提示', description: 'PSA取得・DFAアポスティーユ・国際郵送を含めた総額をご案内します。見積もり後の追加請求はありません。' },
           { title: 'PSA取得・DFAアポスティーユを代行', description: '現地スタッフがPSA申請・DFAアポスティーユを進めます。提出先に合った形式で取得します。' },
-          { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安は約1ヶ月〜。' },
+          { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安はおおむね1ヶ月半。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
           { q: '他社より高くなりませんか？', a: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めた料金なので、最終的な総額で比較してください。' },
           { q: 'アポスティーユは必須ですか？', a: '日本の役所・入管への提出では、紙の原本にDFAアポスティーユがほぼ必須です。無料相談でご状況を確認してからご案内します。' },
-          { q: '提出期限に合わせて確実に手配できますか？', a: 'はい。提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。書類が確実に揃うよう、進捗を随時ご報告しながら進めます。' },
+          { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"

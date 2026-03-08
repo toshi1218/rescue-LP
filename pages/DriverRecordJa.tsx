@@ -53,7 +53,7 @@ export default function DriverRecordJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'LTO取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
+                text: 'LTO取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -121,7 +121,7 @@ export default function DriverRecordJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -134,7 +134,7 @@ export default function DriverRecordJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: '日本の免許センターへの提出に必須のDFAアポスティーユ認証を手配します。',
           },
           {
@@ -160,7 +160,7 @@ export default function DriverRecordJa() {
           { title: 'フォームで相談', description: '提出先の都道府県・対象者の人数・提出期限をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類をリストアップし、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'LTO取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />
 
