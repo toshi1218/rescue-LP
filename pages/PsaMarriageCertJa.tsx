@@ -110,7 +110,7 @@ export default function PsaMarriageCertJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: '提出先に合った形式で揃えたい',
-            description: '電子版で足りるのか、紙の原本が必要か、アポスティーユは要るのか。提出先ごとに確認して手配します。',
+            description: 'アポスティーユが必要かどうか、提出先ごとに確認して手配します。日本の提出先では紙の原本が原則必要です。',
           },
         ]}
       />
