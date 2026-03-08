@@ -140,7 +140,7 @@ export default function MarriageGuideJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -153,13 +153,8 @@ export default function MarriageGuideJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
           },
         ]}
       />
@@ -177,7 +172,7 @@ export default function MarriageGuideJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '婚姻の方式（日本先行・フィリピン先行）と提出先をお知らせください。必要書類を整理してご案内します。' },
-          { title: '必要書類・料金の確認', description: '書類一式の料金をご提示します。ご依頼時に着手金50%、書類写し確認後に残金50%をお支払いいただきます。' },
+          { title: '必要書類・料金の確認', description: '書類一式の料金をご提示します。ご依頼時に着手金50%、書類取得・DHL配送準備完了後に残金50%をお支払いいただきます。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。進捗は随時ご報告します。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。受け取り後に不明点があればフォローします。' },
         ]}

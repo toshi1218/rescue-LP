@@ -33,7 +33,7 @@ export default function DfaProcessingTimeJa() {
               '@type': 'UnitPriceSpecification',
               price: '30000',
               priceCurrency: 'JPY',
-              description: 'DFAアポスティーユ認証・国際郵送込み（税抜）',
+              description: 'DFAアポスティーユ認証込み（税抜）。DHL国際郵送費は実費別途',
             },
           },
         },
@@ -114,7 +114,7 @@ export default function DfaProcessingTimeJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -122,18 +122,13 @@ export default function DfaProcessingTimeJa() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。DFA内部処理はRegular 5日程度・Express 3日程度。当社の代行手配込みで約2週間が目安です。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'PSA書類取得（必要な場合）',
             description: 'PSA書類の取得からまとめて依頼いただけます。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
           },
         ]}
       />
@@ -161,7 +156,7 @@ export default function DfaProcessingTimeJa() {
         items={[
           { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安は約1ヶ月〜です。' },
           { q: '提出期限に合わせてExpressで申請できますか？', a: 'はい。提出予定日をお知らせいただければ、RegularとExpressどちらが適切かを含めてご案内します。確実に間に合うスケジュールで進めます。' },
-          { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）をまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
           { q: '期限に間に合うかどうか不安です', a: '提出予定日をお知らせいただければ、間に合うかどうかを確認してご案内します。まずはご相談ください。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"

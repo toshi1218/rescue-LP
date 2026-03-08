@@ -64,7 +64,7 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
         buttonText={isJa ? '無料で相談する' : 'Talk to Us'}
         href="#contact"
         variant="primary"
-        trustNote={isJa ? '着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料' : '50% retainer on order · Pay balance after confirming document copies · Free cancellation before start'}
+        trustNote={isJa ? '着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料' : '50% retainer on order · Pay balance after confirming document copies · Free cancellation before start'}
       />
 
       <FeatureList

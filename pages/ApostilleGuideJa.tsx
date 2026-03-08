@@ -32,7 +32,7 @@ export default function ApostilleGuideJa() {
             '@type': 'UnitPriceSpecification',
             price: '30000',
             priceCurrency: 'JPY',
-            description: 'DFAアポスティーユ・国際郵送込み（税抜）',
+            description: 'DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
         },
         },
@@ -61,7 +61,7 @@ export default function ApostilleGuideJa() {
               name: '処理期間はどのくらいですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFAアポスティーユは通常1〜2週間です。書類取得から一括で依頼した場合、全体で約1ヶ月〜が目安です。',
+                text: 'DFAアポスティーユの処理期間はRegular 通常5日程度 / Express 3日程度です。書類取得から一括で依頼した場合、全体で約1ヶ月〜が目安です。',
               },
             },
             {
@@ -144,7 +144,7 @@ export default function ApostilleGuideJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -152,7 +152,7 @@ export default function ApostilleGuideJa() {
         items={[
           {
             icon: <BadgeCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: 'フィリピン外務省（DFA）への申請・受け取りを代行。紙の原本アポスティーユで対応します。',
           },
           {
@@ -160,17 +160,12 @@ export default function ApostilleGuideJa() {
             title: '書類取得との一括対応（オプション）',
             description: 'PSA・CENOMAR・NBI等の書類取得と同時に依頼可能。書類が揃ってからアポスティーユを申請するため、スムーズです。',
           },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
-          },
         ]}
       />
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="DFAアポスティーユ・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。"
+        description="DFAアポスティーユをまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）見積もり後の追加請求はありません。"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -182,7 +177,7 @@ export default function ApostilleGuideJa() {
         steps={[
           { title: 'フォームで相談（無料）', description: '対象書類と提出先をお知らせください。電子か紙か、要件を確認してご案内します。' },
           { title: '必要書類・料金の確認', description: '料金をご提示します。書類取得との一括依頼も可能です。' },
-          { title: 'DFA申請・認証', description: '現地スタッフがDFAに申請し、アポスティーユ認証を取得します。通常1〜2週間。' },
+          { title: 'DFA申請・認証', description: '現地スタッフがDFAに申請し、アポスティーユ認証を取得します。（DFA内部処理：通常5日程度 / Express 3日程度。当社の代行手配全体で約2週間）' },
           { title: '日本へ郵送・完了', description: '認証済み書類を追跡付きでお届けします。' },
         ]}
       />
@@ -191,7 +186,7 @@ export default function ApostilleGuideJa() {
         items={[
           { q: 'アポスティーユだけ依頼できますか？', a: 'はい。すでにPSA書類をお持ちの場合、DFAアポスティーユのみの代行が可能です。書類をフィリピンに送付していただく形で対応します。' },
           { q: '電子アポスティーユ（e-Apostille）と紙のアポスティーユ、どちらが必要ですか？', a: '日本の入管・役所・大使館では紙のアポスティーユ原本が求められるケースがほとんどです。提出先を確認した上でご案内します。' },
-          { q: '処理期間はどのくらいですか？', a: 'DFAアポスティーユは通常1〜2週間です。書類取得から一括で依頼した場合、全体で約1ヶ月〜が目安です。' },
+          { q: '処理期間はどのくらいですか？', a: 'DFAアポスティーユの処理期間はRegular 通常5日程度 / Express 3日程度です。書類取得から一括で依頼した場合、全体で約1ヶ月〜が目安です。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先処理の可否を確認してご案内します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
