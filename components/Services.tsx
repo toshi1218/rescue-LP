@@ -5,12 +5,12 @@ import { useLanguage } from '../lib/i18n';
 
 const servicesData = {
   ja: [
-    { icon: UserX, title: 'CENOMAR', subtitle: '独身証明書（セノマー）取得代行', desc: '国際結婚・配偶者ビザに必須。独身証明書を現地スタッフが代行取得', hasBadge: true },
-    { icon: Baby, title: 'PSA Birth', subtitle: 'PSA出生証明書 取得代行', desc: 'PSA出生証明書の代行取得。DFAアポスティーユも一括対応', hasBadge: false },
-    { icon: Heart, title: 'PSA Marriage', subtitle: 'PSA婚姻証明書 取得代行', desc: 'PSA婚姻証明書の代行取得。アポスティーユ込みも相談可', hasBadge: false },
-    { icon: Fingerprint, title: 'NBI Clearance', subtitle: 'NBI無犯罪証明書 取得代行', desc: '配偶者ビザ・帰化申請向けNBI証明書を代行取得。DFA認証も対応', hasBadge: false },
-    { icon: Car, title: 'LTO Documents', subtitle: 'LTO書類 取得代行（外免切替）', desc: '外免切替に必要なLTO書類を代行取得。OR/CRも対応', hasBadge: false },
-    { icon: BadgeCheck, title: 'DFA Apostille', subtitle: 'DFAアポスティーユ認証 代行', desc: 'DFAアポスティーユ認証（外務省認証）を書類と一括代行', hasBadge: false },
+    { icon: UserX, title: 'CENOMAR', subtitle: '独身証明書（セノマー）取得代行', desc: '国際結婚や配偶者ビザ準備で必要になることが多い書類です。現地スタッフが取得を進めます。', hasBadge: true },
+    { icon: Baby, title: 'PSA Birth', subtitle: 'PSA出生証明書 取得代行', desc: 'PSA書類の取得に対応しています。DFAアポスティーユとの組み合わせもご相談いただけます。', hasBadge: false },
+    { icon: Heart, title: 'PSA Marriage', subtitle: 'PSA婚姻証明書 取得代行', desc: 'PSA書類の取得に対応しています。DFAアポスティーユとの組み合わせもご相談いただけます。', hasBadge: false },
+    { icon: Fingerprint, title: 'NBI Clearance', subtitle: 'NBIクリアランス（無犯罪証明書）更新・転送サポート', desc: '配偶者ビザや帰化申請などで使うNBI書類についてご相談いただけます。2014年以降に取得歴があり、更新として進めやすい案件を中心に対応しています。初回取得や氏名変更がある場合などは、ご本人様による対応が必要になることがあります。', hasBadge: false },
+    { icon: Car, title: 'LTO Documents', subtitle: 'LTO書類 取得代行（外免切替向け）', desc: '外免切替で求められるLTO関連書類の取得をご相談いただけます。ただし、運転免許センターでの審査では、お客様ご自身による滞在歴の立証などが必要です。弊社は現地書類の取得を支援しますが、最終判断は提出先によります。', hasBadge: false },
+    { icon: BadgeCheck, title: 'DFA Apostille', subtitle: 'DFAアポスティーユ認証 代行', desc: 'DFAアポスティーユ認証について、書類取得とあわせてご相談いただけます。', hasBadge: false },
   ],
   en: [
     { icon: UserX, title: 'CENOMAR', subtitle: 'CENOMAR Procurement (Certificate of No Marriage)', desc: 'Required for international marriage & spouse visa. We handle the full procurement.', hasBadge: true },
