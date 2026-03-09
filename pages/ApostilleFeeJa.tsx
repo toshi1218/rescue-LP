@@ -33,7 +33,7 @@ export default function ApostilleFeeJa() {
               '@type': 'UnitPriceSpecification',
               price: '30000',
               priceCurrency: 'JPY',
-              description: 'DFAアポスティーユ・国際郵送込み（税抜）',
+              description: 'DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
             },
           },
         },
@@ -46,7 +46,7 @@ export default function ApostilleFeeJa() {
               name: 'DFAアポスティーユの料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
+                text: 'DFAアポスティーユ・PSA取得（必要な場合）をまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -59,7 +59,7 @@ export default function ApostilleFeeJa() {
             },
             {
               '@type': 'Question',
-              name: 'アポスティーユが必要かどうかわかりません',
+              name: '日本の提出先ではアポスティーユが原則必須です',
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: '提出先によって異なります。無料相談で確認してからご案内します。',
@@ -98,12 +98,12 @@ export default function ApostilleFeeJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: '総額でいくらかかるか知りたい',
-            description: '当社はDFAアポスティーユ・PSA取得・国際郵送をまとめた料金でご案内します。見積もり後の追加請求はありません。',
+            description: '当社はDFAアポスティーユ・PSA取得をまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）見積もり後の追加請求はありません。',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'アポスティーユが本当に必要かどうかわからない',
-            description: '提出先によって要件が異なります。不要な認証に費用をかけないよう、まず確認してからご案内します。',
+            title: '日本の提出先ではアポスティーユが原則必須',
+            description: '日本の入管・役所・大使館への提出では、原則として紙の原本＋DFAアポスティーユが必要です。',
           },
         ]}
       />
@@ -114,7 +114,7 @@ export default function ApostilleFeeJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -122,7 +122,7 @@ export default function ApostilleFeeJa() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。紙の原本で対応。',
           },
           {
@@ -130,17 +130,12 @@ export default function ApostilleFeeJa() {
             title: 'PSA書類取得（必要な場合）',
             description: 'PSA書類の取得からまとめて依頼いただけます。',
           },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
-          },
         ]}
       />
 
       <CtaBox
         title="DFAアポスティーユは「取ってから気づく」では遅い"
-        description="書類の種類・提出先・枚数によって費用が変わります。最初に確認することで、不要な認証に費用をかけずに済みます。"
+        description="書類の種類・提出先・枚数によって費用が変わります。日本の提出先では原則として紙の原本＋DFAアポスティーユが必要なため、最初から正確な費用をご案内します。"
         buttonText="今すぐ相談する"
         href="#contact"
         variant="secondary"
@@ -153,16 +148,16 @@ export default function ApostilleFeeJa() {
           { title: '書類の種類と提出先を共有', description: 'CENOMAR・PSA・NBI等の種類と、提出先（市役所・大使館・入管など）をお知らせください。アポスティーユが必要かどうかも確認します。' },
           { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めた料金をご案内します。' },
           { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（4営業日）またはExpress（翌営業日）を状況に応じて選択します。' },
-          { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安は約1ヶ月〜。' },
+          { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安はおおむね1ヶ月半。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）をまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
           { q: '他社より高くなりませんか？', a: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めた料金なので、最終的な総額で比較してください。' },
-          { q: 'アポスティーユが必要かどうかわかりません', a: '提出先によって異なります。無料相談で確認してからご案内します。' },
-          { q: '提出期限に合わせて確実に手配できますか？', a: 'はい。提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。書類が確実に揃うよう、進捗を随時ご報告しながら進めます。' },
+          { q: '日本の提出先ではアポスティーユが原則必須です', a: '提出先によって異なります。無料相談で確認してからご案内します。' },
+          { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
