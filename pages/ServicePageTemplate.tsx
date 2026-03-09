@@ -64,7 +64,7 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
         buttonText={isJa ? '無料で相談する' : 'Talk to Us'}
         href="#contact"
         variant="primary"
-        trustNote={isJa ? '着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料' : '50% retainer on order · Pay balance after confirming document copies · Free cancellation before start'}
+        trustNote={isJa ? '着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料' : '50% retainer on order · Pay balance after confirming document copies · Free cancellation before start'}
       />
 
       <FeatureList
@@ -119,7 +119,7 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
           ? [
               { q: '料金はいくらですか？', a: '案件ごとに必要書類が異なるため、無料相談後に料金を提示します。' },
               { q: 'いつ届きますか？', a: '通常は約1か月〜です。期限がある場合は先に可否を案内します。' },
-              { q: '提出期限に合わせて確実に手配できますか？', a: 'はい。提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。進捗は随時ご報告します。' },
+              { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告します。' },
             ]
           : [
               { q: 'How much does it cost?', a: 'Pricing depends on your case. We provide all-inclusive pricing after review.' },

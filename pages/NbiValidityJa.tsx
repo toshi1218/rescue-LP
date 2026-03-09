@@ -33,7 +33,7 @@ export default function NbiValidityJa() {
               '@type': 'UnitPriceSpecification',
               price: '50000',
               priceCurrency: 'JPY',
-              description: 'NBI Clearance取得・DFAアポスティーユ・国際郵送込み（税抜）',
+              description: 'NBI Clearance取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
             },
           },
         },
@@ -59,7 +59,7 @@ export default function NbiValidityJa() {
             },
             {
               '@type': 'Question',
-              name: '提出期限に合わせて確実に取得できますか？',
+              name: '提出予定日に合わせてスケジュールを組んでもらえますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。',
@@ -114,7 +114,7 @@ export default function NbiValidityJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -127,13 +127,8 @@ export default function NbiValidityJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ（必要な場合）',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: '提出先の要件に応じてDFAアポスティーユ認証も手配します。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
           },
         ]}
       />
@@ -161,8 +156,8 @@ export default function NbiValidityJa() {
         items={[
           { q: 'NBI Clearanceの有効期限はどのくらいですか？', a: '発行から1年間有効です。ただし提出先によっては6ヶ月以内のものを求める場合があります。提出スケジュールに合わせて取得時期を決めることが重要です。' },
           { q: '取得してから使うまでに時間がかかりそうです', a: '提出予定日をお知らせいただければ、逆算して最適な申請開始時期をご案内します。' },
-          { q: '提出期限に合わせて確実に取得できますか？', a: 'はい。提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。書類が確実に揃うよう、進捗を随時ご報告しながら進めます。' },
-          { q: '料金はいくらですか？', a: 'NBI取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
+          { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
+          { q: '料金はいくらですか？', a: 'NBI取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
