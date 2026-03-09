@@ -5,8 +5,13 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, CheckCircle, ClipboardList } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function LicenseConversionJa() {
+  useMeta(
+    'フィリピン免許の外免切替｜必要書類とLTO書類取得サポート｜IGRS',
+    'フィリピン免許から日本の免許への外免切替に必要な条件（免許取得後3か月以上の滞在）とLTO関連書類を解説。取得手配を日本語でサポートします。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '外免切替ガイド' }]}

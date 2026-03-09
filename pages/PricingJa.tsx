@@ -3,10 +3,30 @@ import PageLayout from '../components/PageLayout';
 import Pricing from '../components/Pricing';
 import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
+import { useMeta } from '../lib/useMeta';
 
 export default function PricingJa() {
+  useMeta(
+    '料金案内｜フィリピン書類取得代行の費用と2段階決済｜IGRS',
+    'PSA・NBI・LTO等のフィリピン書類取得代行の料金案内。着手金50%・書類写し確認後残金50%の2段階決済で安心して依頼できます。',
+  );
   return (
-    <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '料金案内' }]}>
+    <PageLayout
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '料金案内' }]}
+      jsonLd={[{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'フィリピン書類取得代行',
+        description: 'PSA・NBI・LTO等のフィリピン書類取得代行サービス。着手金50%・書類写し確認後残金50%の2段階決済。',
+        url: 'https://ph-document.com/ja/ryokin',
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+      }]}
+    >
       <article className="max-w-2xl mx-auto px-4">
         <h1 className="text-2xl font-bold text-gray-900 mb-4 leading-snug">
           【料金案内】進捗が見えるフィリピン書類取得サポート｜2段階決済で安心して依頼できる料金設計

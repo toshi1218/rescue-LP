@@ -3,8 +3,13 @@ import PageLayout from '../components/PageLayout';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import { useMeta } from '../lib/useMeta';
 
 export default function ApostilleGuideJa() {
+  useMeta(
+    'フィリピン書類のアポスティーユ（旧レッドリボン）完全解説｜IGRS',
+    'アポスティーユ（旧レッドリボン）とは何か、必要になるケース、よくある誤解と注意点を解説。PSA・CENOMAR・LTO書類の認証代行も日本語でサポートします。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'アポスティーユ（旧レッドリボン）完全解説' }]}
