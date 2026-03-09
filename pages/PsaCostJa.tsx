@@ -2,8 +2,13 @@ import React from 'react';
 import PageLayout from '../components/PageLayout';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
+import { useMeta } from '../lib/useMeta';
 
 export default function PsaCostJa() {
+  useMeta(
+    'PSA出生証明書の取得費用｜フィリピン現地料金と日本への発送総額｜IGRS',
+    'PSA出生証明書の現地料金は365ペソ。日本への取り寄せでは国際配送・本人確認・アポスティーユ等が加わります。費用の全体像を整理して解説します。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'PSA出生証明書の取得費用' }]}

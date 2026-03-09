@@ -2,8 +2,13 @@ import React from 'react';
 import PageLayout from '../components/PageLayout';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
+import { useMeta } from '../lib/useMeta';
 
 export default function CenomarGuideJa() {
+  useMeta(
+    'フィリピンCENOMAR（独身証明書）取得代行｜IGRS',
+    'CENOMAR（独身証明書）の取得を日本語で代行。発行から6か月の有効期限、DFAアポスティーユ対応など、提出先に合う形で手配します。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'CENOMAR（独身証明書）取得代行' }]}

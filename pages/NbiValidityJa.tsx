@@ -4,8 +4,13 @@ import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function NbiValidityJa() {
+  useMeta(
+    'NBIクリアランスの有効期限はいつまで？提出先別の基準と再取得サポート｜IGRS',
+    'NBIクリアランスの有効期限は提出先によって3か月〜6か月。手元の書類の発行日と提出先条件を確認し、更新または再取得を日本語でサポートします。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBIクリアランス有効期限ガイド' }]}
