@@ -7,11 +7,11 @@ const stepIcons = [Mail, FileText, CreditCard, CheckCircle, PackageCheck];
 
 const stepsData = {
   ja: [
-    { num: 1, title: 'お問い合わせ', desc: 'メールにて、必要な書類と現状をお知らせください。' },
-    { num: 2, title: 'お見積もり・ご提案', desc: '内容を確認し、詳細な費用と納期をご案内いたします。' },
-    { num: 3, title: '着手金のお支払い', desc: '費用の50%を着手金としてお支払いいただき、手続きを開始します。' },
-    { num: 4, title: 'DHL配送準備完了・残金お支払い', desc: '書類取得が完了し、DHLへの配送準備が整った段階で書類の写しをご確認いただき、残金（成功報酬）をお支払いいただきます。入金確認後、発送します。' },
-    { num: 5, title: '書類お届け', desc: 'ご指定の住所へ追跡可能な方法で書類をお届けします。到着後、内容をご確認ください。' },
+    { num: 1, title: 'お問い合わせ', desc: 'メールで、目的と現在の状況をお知らせください。' },
+    { num: 2, title: 'お見積もり・ご提案', desc: '内容を確認し、必要書類、費用、納期の目安をご案内します。' },
+    { num: 3, title: '着手金のお支払い・委任状へのご署名', desc: '費用の50%をお支払いいただき、必要に応じて弊社作成の委任状にご署名いただきます。' },
+    { num: 4, title: '取得後のご確認・残金のお支払い', desc: '取得した書類の写しをご確認いただいた後、残金をお支払いいただきます。' },
+    { num: 5, title: '発送・お届け', desc: '原本を追跡可能な方法で発送し、ご指定の住所へお届けします。' },
   ],
   en: [
     { num: 1, title: 'Contact Us', desc: 'Tell us via email which documents you need and your current situation.' },

@@ -5,190 +5,240 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users, ShieldCheck } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
-import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users, CheckCircle, Info } from 'lucide-react';
 
 export default function MarriageGuideJa() {
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'フィリピン人との国際結婚・配偶者ビザ 完全ガイド' }]}
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '国際結婚 書類代行' }]}
       jsonLd={[{
         '@context': 'https://schema.org',
-        '@type': 'Article',
-        name: 'フィリピン人との国際結婚・配偶者ビザ 完全ガイド',
-        description: '日本先行婚・フィリピン先行婚の手順、ROM提出からPSA婚姻証明書取得（約6〜9ヶ月）、配偶者ビザ申請まで、フィリピン人との国際結婚の全プロセスを解説。',
+        '@type': 'Service',
+        name: 'フィリピン人との国際結婚 必要書類取得代行',
+        description: 'フィリピン人との国際結婚に必要なCENOMAR・PSA出生証明書・DFAアポスティーユの取得を代行。必要書類は婚姻の方式や再婚歴等の状況によって変わります。日本語でご相談いただけます。',
         url: 'https://ph-document.com/ja/kokusai-kekkon-guide',
-        publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/ja/' },
-      },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: '日本先行婚とフィリピン先行婚、どちらがいいですか？',
-            acceptedAnswer: { '@type': 'Answer', text: 'どちらが適切かはご状況によります。日本在住のカップルは日本先行婚が一般的です。それぞれのメリット・デメリットを含めてご案内しますので、まずご相談ください。' },
-          },
-          {
-            '@type': 'Question',
-            name: 'ROM提出からPSA婚姻証明書が届くまでどのくらいかかりますか？',
-            acceptedAnswer: { '@type': 'Answer', text: 'ROM提出から約6〜9ヶ月が目安です。大使館のROM処理に約10営業日、その後PSA登録まで最低6ヶ月の待機期間があります。PSA証明書の郵送には注文後2〜4週間かかります。' },
-          },
-          {
-            '@type': 'Question',
-            name: '配偶者ビザ申請にPSA婚姻証明書は必須ですか？',
-            acceptedAnswer: { '@type': 'Answer', text: 'はい。出入国在留管理庁の審査では、フィリピンPSAが発行する婚姻証明書（紙の原本＋DFAアポスティーユ）が必須です。日本の戸籍謄本のみでは原則受理されません。' },
-          },
-          {
-            '@type': 'Question',
-            name: '大使館でPSA婚姻証明書を発行してもらえますか？',
-            acceptedAnswer: { '@type': 'Answer', text: 'いいえ。在日フィリピン大使館・総領事館はROMの受理・転送のみを行います。PSA婚姻証明書はフィリピン本国のPSAのみが発行します。ROM承認後、約6ヶ月の待機後にPSAへ注文する必要があります。' },
-          },
-          {
-            '@type': 'Question',
-            name: 'CENOMAR・PSA書類の取得を代行してもらえますか？',
-            acceptedAnswer: { '@type': 'Answer', text: 'はい。CENOMAR・PSA出生証明書・PSA婚姻証明書・DFAアポスティーユの取得を一括代行しています。日本語だけでご依頼いただけます。' },
-          },
-        ],
-      }]}
+        provider: {
+          '@type': 'Organization',
+          name: 'IGRS Inc.',
+          url: 'https://ph-document.com/ja/',
+        },
+        areaServed: { '@type': 'Country', name: 'JP' },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: '日本先行婚とフィリピン先行婚、どちらがいいですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'どちらが適切かはご状況によります。それぞれのメリット・デメリットを含めてご案内しますので、まずご相談ください。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'CENOMARとPSA出生証明書、両方必要ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '日本の市区町村役場への提出では、通常CENOMARとPSA出生証明書の両方が必要です。提出先によって異なる場合があるため、確認してからご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '書類の有効期限はありますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'CENOMARは、提出先や用途によっては発行後6か月以内のものが求められることがあります。提出タイミングに合わせた取得時期をご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'NBIクリアランスも代行できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '初回取得は、ご本人様による指紋対応が必要になることがあるため、弊社だけで完結する形ではお受けしにくい案件です。2014年以降に取得歴があり、更新として進めやすい案件を中心に対応しています。まずは状況をご相談ください。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '配偶者ビザ申請の書類も一緒に頼めますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '婚姻書類と配偶者ビザ申請書類をまとめてご相談いただけます。必要な流れを確認し、進め方をご提案します。',
+              },
+            },
+          ],
+        },
+      ]}
     >
       <HeroBanner
-        title="フィリピン人との国際結婚・配偶者ビザ 完全ガイド"
-        badges={['婚姻届から配偶者ビザまで', '日本先行婚・フィリピン先行婚対応', '書類代行あり']}
-        ctaText="書類の相談をする（無料）"
+        title="フィリピン人との国際結婚、必要書類を一括で手配します"
+        badges={['日本語でやり取りOK', '必要書類を整理してご案内', '進捗を随時ご報告']}
+        ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="フィリピン人との国際結婚は、婚姻届・ROM提出・PSA証明書取得・配偶者ビザ申請と段階があります。全体で約1〜2年かかることを見越して早めに動くことが重要です。"
+        conclusion="フィリピン人との国際結婚に必要な書類の整理から取得まで、日本語でご相談いただけます。"
         points={[
-          '日本先行婚：日本で婚姻届 → 大使館でROM申請（約10営業日）→ PSA登録まで6ヶ月待機 → 配偶者ビザ申請',
-          'PSA婚姻証明書はROM承認後6〜9ヶ月が目安。1年を超えることは稀',
-          '配偶者ビザ（在留資格認定証明書）にはPSA婚姻証明書＋DFAアポスティーユが必須',
-          '婚姻届に必要なCENOMAR・PSA出生証明書の代行取得も対応',
+          'CENOMAR・PSA出生証明書・DFAアポスティーユの取得を代行',
+          '必要書類は婚姻の方式・再婚歴等の状況によって変わります',
+          '申請・受理・発送などの節目で進行状況をご報告します',
+          'まずは目的と状況をお伝えください。必要な流れを整理してご案内します',
         ]}
         ctaText="無料で相談する（24時間以内に返信）"
       />
 
-      {/* 全体フロー */}
-      <section className="mb-10 rounded-2xl bg-blue-50 border border-blue-200 p-6">
-        <div className="flex items-start gap-3 mb-4">
-          <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-          <h2 className="text-base font-bold text-blue-900">国際結婚〜配偶者ビザ取得までの全体像</h2>
+      {/* Section 2: ケースに応じて必要になるフィリピン側の公的書類 */}
+      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+        <h2 className="text-base font-bold text-gray-900 mb-3">ケースに応じて必要になるフィリピン側の公的書類</h2>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          国際結婚では、婚姻をどちらの国で先に行うか、結婚後にどの手続きを進めるか、また再婚・死別・離婚歴があるかによって、必要書類が変わります。その中でも、フィリピン側書類として必要になることが多いのが次のような書類です。
+        </p>
+        <ol className="space-y-2 mb-4">
+          {[
+            'PSA発行の出生証明書（Birth Certificate）',
+            'PSA発行の独身証明書（CENOMAR）',
+            'DFAアポスティーユ認証',
+            'ケースに応じた追加書類（再婚・離婚歴・死別歴がある場合は、別の証明書や注記付き書類が必要になることがあります）',
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/15 text-primary font-bold text-xs flex items-center justify-center mt-0.5">{i + 1}</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ol>
+        <div className="space-y-1.5 text-xs text-gray-500 border-t border-gray-100 pt-3">
+          <p>※特にCENOMARは、提出先や用途によっては発行後6か月以内のものが求められることがあります。</p>
+          <p>※「どの書類が必要か」は、結婚する場所、現在の在留状況、今後のビザ手続きによって変わります。</p>
         </div>
-        <div className="space-y-2 text-sm text-blue-800 leading-relaxed">
-          <div className="flex items-start gap-2"><span className="font-bold text-blue-600 flex-shrink-0">①</span><span><strong>婚姻届（日本先行婚）</strong>：日本の市区町村役場に提出。フィリピン人配偶者のCENOMAR・PSA出生証明書・DFAアポスティーユが必要。</span></div>
-          <div className="flex items-start gap-2"><span className="font-bold text-blue-600 flex-shrink-0">②</span><span><strong>ROM（Report of Marriage）申請</strong>：在日フィリピン大使館・総領事館へ提出。処理に通常10営業日（特急5営業日）。DFAマニラへ転送。</span></div>
-          <div className="flex items-start gap-2"><span className="font-bold text-blue-600 flex-shrink-0">③</span><span><strong>PSA登録・待機</strong>：ROMがPSAに登録されるまで<strong>最低6ヶ月</strong>が目安。実際には6〜9ヶ月で取得できるケースが多い。</span></div>
-          <div className="flex items-start gap-2"><span className="font-bold text-blue-600 flex-shrink-0">④</span><span><strong>PSA婚姻証明書の取得・郵送</strong>：PSAへ注文後、日本には2〜4週間で届く（追跡付き国際郵送）。</span></div>
-          <div className="flex items-start gap-2"><span className="font-bold text-blue-600 flex-shrink-0">⑤</span><span><strong>配偶者ビザ（在留資格認定証明書）申請</strong>：出入国在留管理庁へ申請。PSA婚姻証明書＋DFAアポスティーユが必須。</span></div>
-        </div>
-        <p className="mt-4 text-xs text-blue-700 font-semibold">📅 ROM提出〜PSA婚姻証明書到着まで：約6〜9ヶ月。早めの準備が重要です。</p>
       </section>
 
-      {/* 落とし穴 */}
-      <section className="mb-10 rounded-2xl bg-amber-50 border border-amber-200 p-6">
-        <div className="flex items-start gap-3 mb-4">
+      {/* Section 3: よくある「書類集めの落とし穴」 */}
+      <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
+        <div className="flex items-start gap-3 mb-5">
           <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-          <h2 className="text-base font-bold text-amber-900">よくある誤解・落とし穴</h2>
+          <h2 className="text-base font-bold text-amber-900">よくある「書類集めの落とし穴」</h2>
         </div>
-        <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>在日フィリピン大使館・総領事館は<strong>PSA婚姻証明書を発行しない</strong>。ROMの受理・転送のみ。証明書はフィリピン本国PSAから取得する必要がある。</span></li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>ROM承認後すぐにPSA証明書を取れない。<strong>最低6ヶ月の待機</strong>が必要。配偶者ビザ申請はそれ以降。</span></li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>日本の戸籍謄本だけでは配偶者ビザ申請できない。<strong>PSA婚姻証明書＋DFAアポスティーユ</strong>（紙の原本）が必須。</span></li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>婚姻届のためのCENOMARは<strong>有効期限あり（提出先によって3〜6ヶ月）</strong>。取得タイミングを間違えると再取得に。</span></li>
-        </ul>
+        <div className="space-y-5">
+          <div>
+            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴①：現地の家族や知人に頼んだまま進まない</p>
+            <p className="text-sm text-amber-800 leading-relaxed">「あとで行く」「今週行く」と言われたまま、取得が進まず、予定だけが後ろにずれていくケースがあります。婚姻やビザの予定が決まっている場合、この遅れがそのまま全体スケジュールに響きます。</p>
+          </div>
+          <div>
+            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴②：書類が届いても、そのまま使えない</p>
+            <p className="text-sm text-amber-800 leading-relaxed">名前のスペル、生年月日、婚姻歴の注記などに不一致があると、日本側で確認や差し戻しになることがあります。書類は「取れたかどうか」だけでなく、「提出先で使える状態かどうか」まで確認が必要です。</p>
+          </div>
+          <div>
+            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴③：婚姻後すぐにPSA婚姻証明書が出るとは限らない</p>
+            <p className="text-sm text-amber-800 leading-relaxed">フィリピンで婚姻した場合、婚姻記録がPSAに反映され、婚姻証明書を取得できるようになるまで時間がかかることがあります。目安として、Metro Manilaで2〜4か月、地方では少なくとも6か月かかる案内もあります。「結婚したらすぐ次の手続きに進める」と思っていると、ここで予定がずれることがあります。</p>
+          </div>
+          <div>
+            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴④：NBIクリアランスは誰でも完全代行できるわけではない</p>
+            <p className="text-sm text-amber-800 leading-relaxed">NBIクリアランスは、目的によって必要になることがあります。ただし、初回取得や条件によっては、日本国内のフィリピン大使館・総領事館でご本人による指紋対応が必要です。そのため、第三者だけで完結できない案件があります。</p>
+          </div>
+        </div>
       </section>
 
-      {/* 日本先行婚のステップ */}
-      <StepList
-        heading="日本先行婚の手順（日本在住カップルの標準パターン）"
-        steps={[
+      <FeatureList
+        heading="こんな方に選ばれています"
+        items={[
           {
-            title: '書類の準備（CENOMAR・PSA出生証明書・DFAアポスティーユ）',
-            description: 'フィリピン人配偶者のCENOMAR・PSA出生証明書を取得し、DFAアポスティーユを取得します。取得〜郵送まで約1ヶ月半が目安。当社で一括代行可能です。',
+            icon: <Heart className="w-4 h-4" />,
+            title: '日本で先に婚姻届を出す方（日本先行婚）',
+            description: '日本の市区町村役場への提出には、フィリピン人配偶者のCENOMAR（独身証明書）とPSA出生証明書、DFAアポスティーユが必要です。必要書類を整理してご案内します。',
           },
           {
-            title: '日本の市区町村役場に婚姻届を提出',
-            description: 'フィリピン人配偶者のCENOMAR・PSA出生証明書（アポスティーユ付き原本）と日本語訳を添えて提出。受理されると日本法上の婚姻が成立します。',
+            icon: <Users className="w-4 h-4" />,
+            title: 'フィリピンで先に婚姻する方（フィリピン先行婚）',
+            description: 'フィリピンでの婚姻には、日本人側の婚姻要件具備証明書（LCCM）が必要です。その後の日本での届け出に必要な書類もまとめてご案内します。',
           },
           {
-            title: '在日フィリピン大使館・総領事館でROM（Report of Marriage）を申請',
-            description: '東京大使館の場合、通常10営業日（特急は5営業日）。書類完備で受理後、速やかにDFAマニラへ転送されます。',
+            icon: <Clock className="w-4 h-4" />,
+            title: '何から始めればいいかわからない方',
+            description: '婚姻の方式・提出先・必要書類の順番——用途と状況をお伝えいただければ、必要なものを整理してご案内します。',
           },
           {
-            title: 'PSA登録まで6ヶ月程度待機',
-            description: 'ROMがPSAに到着・登録されるまで最低6ヶ月が目安です（公式ガイドおよび実務上の標準）。実際には6〜9ヶ月で取得できるケースが多く、1年超は例外的な遅延ケースです。',
-          },
-          {
-            title: 'PSA婚姻証明書を注文・取得',
-            description: 'PSA登録後、PSAへ婚姻証明書を注文します。追跡付き国際郵送で日本へは2〜4週間程度で届きます。その後、DFAアポスティーユも取得します。',
-          },
-          {
-            title: '配偶者ビザ（在留資格認定証明書）を申請',
-            description: 'PSA婚姻証明書＋DFAアポスティーユ（紙の原本）を揃えて出入国在留管理庁へ申請。日本の戸籍謄本のみでは受理されないため、PSA証明書の到着を待ってから申請します。',
+            icon: <FileCheck className="w-4 h-4" />,
+            title: '配偶者ビザ申請まで見据えている方',
+            description: '婚姻後の配偶者ビザ申請に必要な書類もまとめてご相談いただけます。必要な流れを確認し、進め方をご提案します。',
           },
         ]}
       />
 
       <CtaBox
-        title="CENOMAR・PSA書類の代行取得はお任せください"
-        description="婚姻届に必要なCENOMAR・PSA出生証明書・DFAアポスティーユを一括代行。書類の種類・有効期限・提出タイミングもご案内します。"
+        title="「何が必要か」から一緒に整理します"
+        description="日本先行婚・フィリピン先行婚、どちらの方式でも対応します。まず目的と状況をお知らせください。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%・着手前キャンセル無料"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い"
       />
 
-      {/* フィリピン先行婚 */}
-      <section className="mb-10 rounded-2xl bg-gray-50 border border-gray-200 p-6">
-        <h2 className="text-base font-bold text-gray-800 mb-3">フィリピン先行婚の場合</h2>
-        <ul className="space-y-2 text-sm text-gray-700 leading-relaxed">
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span>フィリピンで先に婚姻する場合、日本人側は<strong>婚姻要件具備証明書（LCCM）</strong>が必要。在日フィリピン大使館ではなく、日本の市区町村役場または外務省で取得。</span></li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span>フィリピンでの婚姻後、日本の市区町村役場に<strong>婚姻届（報告的届出）</strong>を提出する必要があります。</span></li>
-          <li className="flex items-start gap-2"><CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" /><span>PSA婚姻証明書は<strong>フィリピン婚姻後すぐ</strong>に注文できる場合もありますが、登録まで数週間〜数ヶ月かかることがあります。</span></li>
-        </ul>
-        <p className="mt-3 text-xs text-gray-500">※ フィリピン先行婚の手順は状況により異なります。まずはご相談ください。</p>
+      {/* Section 4: 当社（株式会社IGRS）の取得サポート */}
+      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+        <h2 className="text-base font-bold text-gray-900 mb-3">当社（株式会社IGRS）の取得サポート</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-5">
+          「何が必要か分からない」「自分のケースでどこまで必要なのか判断できない」「依頼したあと、今どうなっているのか分からないのが不安」——そうした不安を減らすため、株式会社IGRSでは、PSA書類・CENOMAR・DFAアポスティーユ取得を中心に、日本語で進めやすい形でサポートしています。
+        </p>
+        <div className="flex items-start gap-3 p-4 rounded-xl bg-primary/5 border border-primary/15 mb-5">
+          <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+          <div>
+            <p className="text-sm font-bold text-gray-800 mb-1">当社の特徴：進捗が見える</p>
+            <p className="text-sm text-gray-600 leading-relaxed">申請、受理、発送など、節目ごとに進行状況をご報告します。「依頼したあと放置されるのでは」という不安を減らしながら進められるようにしています。</p>
+          </div>
+        </div>
+        <div className="rounded-xl bg-gray-50 border border-gray-200 p-4">
+          <p className="text-sm font-bold text-gray-800 mb-2">ご依頼時の重要事項</p>
+          <p className="text-xs text-gray-600 leading-relaxed mb-3">当社をご利用いただく場合でも、すべてを完全に丸投げできるわけではありません。適法に取得を進めるため、次のご協力をお願いしています。</p>
+          <ul className="space-y-1.5 mb-3">
+            {[
+              '英文委任状（Special Power of Attorney）へのご署名',
+              '身分証明書のコピーのご提出',
+              '案件によっては、ご本人様による追加対応',
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-2 text-xs text-gray-600">
+                <span className="text-primary font-bold flex-shrink-0">・</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="space-y-1 text-xs text-gray-500 border-t border-gray-200 pt-3">
+            <p>※渡航不要で進められるケースは多いですが、書類の種類やご本人の状況によっては、追加対応が必要になることがあります。</p>
+            <p>※当社は現地書類の取得を支援しますが、最終的な受理や審査の判断は提出先機関によります。</p>
+          </div>
+        </div>
       </section>
 
-      {/* 配偶者ビザに必要なフィリピン書類 */}
-      <FeatureList
-        heading="配偶者ビザ申請で必要なフィリピン書類"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA婚姻証明書（Annotated）＋DFAアポスティーユ',
-            description: '出入国在留管理庁への申請では紙の原本が必須。ROMから約6〜9ヶ月後に取得可能。当社でDFAアポスティーユの代行も対応。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA出生証明書＋DFAアポスティーユ',
-            description: 'フィリピン人配偶者の出生証明書も提出が求められるケースが多い。アポスティーユ付き紙の原本で対応。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'NBI無犯罪証明書（状況による）',
-            description: '在留資格申請の内容によっては提出が求められることがあります。当社でNBI代行取得も対応。',
-          },
-        ]}
-      />
-
       <CtaBox
-        title="PSA婚姻証明書・DFAアポスティーユの代行もお任せください"
-        description="配偶者ビザ申請に必要なPSA書類・DFAアポスティーユを一括代行。日本語だけでご依頼いただけます。"
-        buttonText="料金・詳細を確認する"
+        title="書類の整理から取得まで、日本語でご相談いただけます"
+        description="まずは目的と現在の状況をお知らせください。必要な流れを確認し、進め方をご提案します。"
+        buttonText="無料で相談する"
         href="#contact"
         variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
+        trustNote="匿名相談可・返信24時間以内"
+      />
+
+      {/* Section 5: 安心の決済フロー */}
+      <StepList
+        heading="安心の決済フロー"
+        steps={[
+          { title: 'ご契約・着手金のお支払い', description: '代金総額の50%をご入金いただいた後、取得手続きを開始します。' },
+          { title: '取得完了のご報告', description: '書類が揃った段階で、写し（写真またはPDF）をお送りします。' },
+          { title: '残金のお支払い', description: '内容をご確認いただいた後、残りの50%をお支払いいただきます。' },
+          { title: '原本の発送', description: '残金の着金確認後に、原本を追跡可能な方法で国際発送します。' },
+        ]}
       />
 
       <FaqSection
         items={[
-          { q: '日本先行婚とフィリピン先行婚、どちらがいいですか？', a: 'どちらが適切かはご状況によります。日本在住のカップルは日本先行婚が一般的です。それぞれのメリット・デメリットを含めてご案内しますので、まずご相談ください。' },
-          { q: 'ROM提出からPSA婚姻証明書が届くまでどのくらいかかりますか？', a: 'ROM提出から約6〜9ヶ月が目安です。大使館のROM処理に約10営業日（東京）、その後PSA登録まで最低6ヶ月の待機期間があります。PSA証明書の郵送には注文後2〜4週間かかります。1年を超えるのは例外的な遅延ケースです。' },
-          { q: '大使館でPSA婚姻証明書を発行してもらえますか？', a: 'いいえ。在日フィリピン大使館・総領事館はROMの受理・DFAへの転送のみを行います。PSA婚姻証明書はフィリピン本国のPSAのみが発行します。ROM承認後、6ヶ月以上の待機後にPSAへ注文する必要があります。' },
-          { q: '配偶者ビザ申請にPSA婚姻証明書は必須ですか？', a: 'はい。出入国在留管理庁の審査では、フィリピンPSAが発行する婚姻証明書（紙の原本＋DFAアポスティーユ）が必須です。日本の戸籍謄本のみでは原則受理されません。PSA婚姻証明書が届くまで申請を待つのが安全です。' },
-          { q: 'CENOMAR・PSA書類の取得を代行してもらえますか？', a: 'はい。CENOMAR・PSA出生証明書・PSA婚姻証明書・DFAアポスティーユの取得を一括代行しています。日本語だけでご依頼いただけます。' },
+          { q: '日本先行婚とフィリピン先行婚、どちらがいいですか？', a: 'どちらが適切かはご状況によります。それぞれのメリット・デメリットを含めてご案内しますので、まずご相談ください。' },
+          { q: 'CENOMARとPSA出生証明書、両方必要ですか？', a: '日本の市区町村役場への提出では、通常CENOMARとPSA出生証明書の両方が必要です。提出先によって異なる場合があるため、確認してからご案内します。' },
+          { q: '書類の有効期限はありますか？', a: 'CENOMARは、提出先や用途によっては発行後6か月以内のものが求められることがあります。提出タイミングに合わせた取得時期をご案内します。' },
+          { q: 'NBIクリアランスも代行できますか？', a: '初回取得は、ご本人様による指紋対応が必要になることがあるため、弊社だけで完結する形ではお受けしにくい案件です。2014年以降に取得歴があり、更新として進めやすい案件を中心に対応しています。まずは状況をご相談ください。' },
+          { q: '配偶者ビザ申請の書類も一緒に頼めますか？', a: '婚姻書類と配偶者ビザ申請書類をまとめてご相談いただけます。必要な流れを確認し、進め方をご提案します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"

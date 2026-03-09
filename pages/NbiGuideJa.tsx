@@ -1,22 +1,21 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Fingerprint, AlertTriangle, Clock, Users, FileCheck, Globe } from 'lucide-react';
-import SummaryBlock from '../components/SummaryBlock';
+import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle } from 'lucide-react';
 
 export default function NbiGuideJa() {
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI Clearance取得代行' }]}
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI Clearance 更新サポート' }]}
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'NBI Clearance（無犯罪証明書）取得代行',
-        description: 'フィリピンのNBI Clearanceを日本語だけで代行取得。DFAアポスティーユ付き対応、HIT案件も対応。配偶者ビザ・就労ビザ・帰化申請に。フィリピン渡航不要、約1ヶ月〜。',
+        name: 'フィリピンNBIクリアランス（無犯罪証明書）更新サポート',
+        description: '2014年以降に発行されたNBIクリアランスの取得歴があり、個人情報に変更がない更新案件を中心に対応。初回取得・氏名変更がある場合は在日フィリピン大使館等でのご本人対応が必要です。日本語でご相談いただけます。',
         url: 'https://ph-document.com/ja/nbi-clearance',
         provider: {
           '@type': 'Organization',
@@ -24,17 +23,6 @@ export default function NbiGuideJa() {
           url: 'https://ph-document.com/ja/',
         },
         areaServed: { '@type': 'Country', name: 'JP' },
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'JPY',
-            price: '50000',
-          priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            price: '50000',
-            priceCurrency: 'JPY',
-            description: 'NBI取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
-          },
-        },
         },
         {
           '@context': 'https://schema.org',
@@ -42,34 +30,34 @@ export default function NbiGuideJa() {
           mainEntity: [
             {
               '@type': 'Question',
-              name: '料金はいくらですか？',
+              name: '自分が更新対象か分かりません',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'NBI取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
+                text: 'まずは、最後にNBIクリアランスを取った年と、その後に氏名などの変更があったかをお知らせください。更新として進めやすいかどうかを確認してご案内します。',
               },
             },
             {
               '@type': 'Question',
-              name: 'HIT（同名者あり）が出た場合はどうなりますか？',
+              name: '初めてNBIクリアランスを取るのですが、依頼できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'HITが出ると追加審査が必要になり、通常より時間がかかります。HIT対応の経験があるスタッフが対応しますので、まずご相談ください。',
+                text: '初回取得は、在日フィリピン大使館・総領事館での本人による指紋対応が必要です。そのため、当社だけで完結する形ではお受けしていません。進め方の整理が必要な場合はご相談ください。',
               },
             },
             {
               '@type': 'Question',
-              name: 'フィリピン人の方が日本在住でも取得できますか？',
+              name: '結婚して姓が変わりました。更新できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で指紋採取・申請を行います。委任状等の書類が必要な場合は事前にご案内します。',
+                text: '個人情報に変更がある場合は、更新ではなく新規・初回側の手順が必要になることがあります。まず状況を確認してご案内します。',
               },
             },
             {
               '@type': 'Question',
-              name: '有効期限はいつから数えますか？',
+              name: 'どのくらいで届きますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'NBI Clearanceの有効期限は発行日から1年です。ビザ申請のタイミングに合わせて取得時期を調整することをお勧めします。',
+                text: '状況により変わります。在外申請はNBI Main Officeで処理され、公式案内では書類到着後の処理は最大5営業日とされていますが、実際の全体日数は書類準備、配送、受取方法によって前後します。まずは現在の状況をご相談ください。',
               },
             },
           ],
@@ -77,117 +65,188 @@ export default function NbiGuideJa() {
       ]}
     >
       <HeroBanner
-        title="NBI Clearance、日本語だけで取り寄せます"
-        badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
+        title="フィリピンNBIクリアランス（無犯罪証明書）更新サポート"
+        badges={['更新案件を中心に対応', '条件を先に確認', '進捗を随時ご報告']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
 
-      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
-        NBI Clearance（無犯罪証明書）は、フィリピン国家捜査局（NBI）が発行する犯罪経歴証明書です。配偶者ビザ・帰化申請・各国の移民手続きで提出が求められます。
-      </p>
-
-      <SummaryBlock
-        conclusion="NBI Clearance（無犯罪証明書）は、日本語だけで取り寄せできます。フィリピンに行く必要はありません。"
-        points={[
-          '現地スタッフが指紋採取・申請・受け取りをすべて代行',
-          'HIT（同名者あり）が出た場合も対応経験あり',
-          'DFAアポスティーユ付きで日本のご住所へ郵送。約1ヶ月〜',
-          '配偶者ビザ・帰化申請・就労ビザ、どの用途にも対応',
-        ]}
-        ctaText="無料で相談する（24時間以内に返信）"
-      />
-
-      {/* 訴求ブロック */}
-      <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
-        <div className="flex items-start gap-3 mb-4">
-          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-          <h2 className="text-base font-bold text-amber-900">NBI Clearanceは「指紋採取」が必要です</h2>
-        </div>
-        <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>オンライン申請しても、<strong>指紋採取のためにフィリピン現地のNBIオフィスへの来訪が必要</strong></li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>「HIT（同名者あり）」が出ると<strong>追加審査で数週間〜数ヶ月の遅延</strong>が発生することも</li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>有効期限は<strong>発行から1年</strong>。ビザ申請のタイミングに合わせた取得が必要</li>
-        </ul>
-        <p className="mt-4 text-sm font-semibold text-amber-900">→ 現地での指紋採取から書類受け取りまで、すべて代行します。</p>
-      </section>
-
-      <FeatureList
-        heading="こんな方に選ばれています"
-        items={[
-          {
-            icon: <Users className="w-4 h-4" />,
-            title: '配偶者ビザ・在留資格の申請中の方',
-            description: '入国管理局への配偶者ビザ申請では、NBI Clearanceが必要なケースがあります。DFAアポスティーユ付きで手配します。',
-          },
-          {
-            icon: <Fingerprint className="w-4 h-4" />,
-            title: '帰化申請を進めている方',
-            description: '法務局への帰化申請では、フィリピン人配偶者のNBI Clearanceが求められます。提出先の要件を確認した上で手配します。',
-          },
-          {
-            icon: <Clock className="w-4 h-4" />,
-            title: 'HIT（同名者あり）が出て困っている方',
-            description: 'NBI申請でHITが出ると通常より時間がかかります。HIT対応の経験があるスタッフが対応します。まずは状況をご相談ください。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: '何が必要かわからない方',
-            description: '提出先によってアポスティーユの要否が異なります。用途をお伝えいただければ、必要な形式で手配します。',
-          },
-        ]}
-      />
+      {/* イントロ */}
+      <div className="mb-8 space-y-2 text-sm text-gray-600 leading-relaxed">
+        <p>「できるだけ早く取りたい」「更新できるのか分からない」「依頼したあと、今どうなっているのか見えないのが不安」</p>
+        <p>
+          そんな方に向けて、株式会社IGRSでは、フィリピンNBIクリアランスの更新・転送を日本語で進めやすい形でご案内しています。
+          ご相談時に条件を確認し、進められる案件かどうかを先に整理したうえで、必要な流れをご案内します。
+        </p>
+      </div>
 
       <CtaBox
-        title="HIT対応・アポスティーユ込みで相談できます"
-        description="「HITが出た」「期限が迫っている」「何が必要かわからない」——どんな状況でもまずご相談ください。"
-        buttonText="無料で相談する"
+        title="まずは無料相談"
+        description="過去の取得年と氏名変更の有無をお知らせください。更新として進められるか確認します。"
+        buttonText="無料相談はこちら"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="条件確認から対応。返信24時間以内"
       />
 
+      {/* まず最初にご確認ください */}
+      <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-6">
+        <div className="flex items-start gap-3 mb-4">
+          <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-gray-900">まず最初にご確認ください</h2>
+        </div>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          当社が対応しやすいのは、<strong>2014年以降に発行されたNBIクリアランスの取得歴があり、前回証明書から個人情報に変更がない更新案件</strong>です。
+          在東京フィリピン大使館の案内でも、2014年以降発行の証明書で、個人情報に変更がなければ更新扱いとされています。
+        </p>
+        <div className="rounded-xl bg-red-50 border border-red-100 p-4">
+          <p className="text-sm font-bold text-red-800 mb-2">一方で、次のようなケースは、当社だけで完結する形では進めにくい案件です。</p>
+          <ul className="space-y-1.5">
+            {[
+              '過去に一度もNBIクリアランスを取得したことがない',
+              '最後のNBIクリアランスが2013年以前のもの',
+              '結婚などにより、姓やその他の個人情報に変更がある',
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-red-700">
+                <XCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-xs text-red-600 mt-3">
+            これらは新規扱いとなり、在日フィリピン大使館・総領事館での本人による指紋対応が必要になります。
+          </p>
+        </div>
+      </section>
+
+      {/* IGRSが大事にしていること */}
       <FeatureList
-        heading="料金に含まれるもの"
+        heading="IGRSが大事にしていること"
         items={[
           {
-            icon: <Fingerprint className="w-4 h-4" />,
-            title: 'NBI Clearance取得（指紋採取含む）',
-            description: '現地スタッフがNBIオフィスで指紋採取・申請・受け取りを代行します。フィリピン人の方がフィリピンにいなくても対応可能です。',
+            icon: <Eye className="w-4 h-4" />,
+            title: '進捗が見える',
+            description: '申請、受理、発送など、節目ごとに状況をご案内します。「依頼したのに、その後どうなっているのか分からない」という不安を減らしながら進めます。',
           },
           {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
+            icon: <ShieldCheck className="w-4 h-4" />,
+            title: '条件を先に確認する',
+            description: 'NBIクリアランスは、更新で進められる案件と、本人対応が必要な案件がはっきり分かれます。当社では、最初にそこを確認してから進めます。',
+          },
+          {
+            icon: <MessageSquare className="w-4 h-4" />,
+            title: '日本語で相談しやすい',
+            description: 'フィリピン側のやり取りや必要書類の整理を、日本語で進めやすい形でご案内します。「何を出せばいいのか分からない」状態でも、順番に確認していけます。',
           },
         ]}
       />
 
+      {/* 当社でご案内しやすいケース */}
+      <section className="mb-10 rounded-2xl bg-primary/5 border border-primary/15 p-6">
+        <h2 className="text-base font-bold text-gray-900 mb-4">当社でご案内しやすいケース</h2>
+        <ul className="space-y-2 mb-4">
+          {[
+            '2014年以降にNBIクリアランスを取得したことがある',
+            'その後、姓・名・生年月日などの個人情報に変更がない',
+            '更新として進められる可能性が高い',
+            '日本からできるだけ手間を減らして進めたい',
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="text-xs text-gray-500 border-t border-primary/10 pt-3">
+          在東京フィリピン大使館の案内でも、2014年以降の証明書で個人情報変更がなければ、新しいFingerprint Cardを作らずに更新手続きが可能とされています。
+        </p>
+      </section>
+
       <CtaBox
-        title="追加費用の後出しはありません"
-        description="NBI取得・DFAアポスティーユをまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）見積もり後の追加請求はありません。"
-        buttonText="料金を確認する"
+        title="更新対象かどうか、まずご確認します"
+        description="「自分は更新対象なのか」「今の状況で進められるのか」——その確認からで大丈夫です。"
+        buttonText="無料で相談する"
         href="#contact"
         variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
+        trustNote="匿名相談可・返信24時間以内"
       />
+
+      {/* ご注意ください */}
+      <section className="mb-10 space-y-4">
+        <h2 className="text-base font-bold text-gray-900">ご注意ください</h2>
+
+        <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
+          <p className="text-sm font-bold text-amber-900 mb-1">初回取得は、本人対応が必要です</p>
+          <p className="text-sm text-amber-800 leading-relaxed">
+            初めてNBIクリアランスを取る方は、在日フィリピン大使館・総領事館でFingerprint Card Form No. 5の作成と指紋対応が必要です。そのため、第三者だけで完結する形では進められません。
+          </p>
+        </div>
+
+        <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
+          <p className="text-sm font-bold text-amber-900 mb-1">氏名変更がある場合も、新規扱いになることがあります</p>
+          <p className="text-sm text-amber-800 leading-relaxed">
+            たとえば結婚後に姓が変わった場合など、個人情報に変更があると、2014年以降の取得歴があっても新規・初回申請側の手順が必要になります。
+          </p>
+        </div>
+
+        <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
+          <p className="text-sm font-bold text-amber-900 mb-1">海外からの申請は、NBI Main Officeで処理されます</p>
+          <p className="text-sm text-amber-800 leading-relaxed">
+            在外申請はNBI Main Officeで処理される案内です。そのため、全体の所要日数は、書類準備だけでなく、現地到着や発送状況にも左右されます。
+          </p>
+        </div>
+      </section>
+
+      {/* ご依頼時にお願いしていること */}
+      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+        <h2 className="text-base font-bold text-gray-900 mb-2">ご依頼時にお願いしていること</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          当社では、「完全に何もしなくてよい」といった表現はしていません。適法に進めるため、次のご協力をお願いしています。
+        </p>
+        <ol className="space-y-4">
+          {[
+            {
+              title: '英文委任状（Special Power of Attorney）へのご署名',
+              desc: '当社で作成した委任状データをお送りします。内容をご確認のうえ、ご署名をお願いします。',
+            },
+            {
+              title: '身分証明書のコピー提出',
+              desc: 'ご本人確認のため、有効な身分証明書のコピーをご提出いただきます。',
+            },
+            {
+              title: '案件によっては追加確認',
+              desc: '更新条件に合うかどうかを確認するため、過去のNBIクリアランス情報などをお伺いすることがあります。',
+            },
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-secondary text-white font-bold text-xs flex items-center justify-center mt-0.5">{i + 1}</span>
+              <div>
+                <p className="text-sm font-bold text-gray-800 mb-0.5">{item.title}</p>
+                <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
 
       <StepList
         heading="ご依頼の流れ"
         steps={[
-          { title: 'フォームで相談（無料）', description: '用途（ビザ申請・帰化申請など）と提出先をお知らせください。24時間以内に返信します。' },
-          { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: '現地スタッフがNBIオフィスで指紋採取・申請・受け取りを進めます。HITが出た場合も対応します。' },
-          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+          { title: '無料相談', description: 'まずは、過去の取得年と、氏名変更の有無をお知らせください。更新として進めやすい案件かどうかを確認します。' },
+          { title: 'お見積もり', description: '内容を確認し、費用と進め方をご案内します。' },
+          { title: '着手金のお支払い', description: '代金総額の50%をご入金いただいた後、手続きを開始します。' },
+          { title: '書類取得後のご確認', description: '取得できた段階で、書類の写しをお送りします。内容をご確認ください。' },
+          { title: '残金のお支払い', description: '写しをご確認いただいた後、残りの50%をお支払いいただきます。' },
+          { title: '原本の発送', description: '残金の着金確認後、原本を発送します。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'NBI取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
-          { q: 'HIT（同名者あり）が出た場合はどうなりますか？', a: 'HITが出ると追加審査が必要になり、通常より時間がかかります。HIT対応の経験があるスタッフが対応しますので、まずご相談ください。' },
-          { q: 'フィリピン人の方が日本在住でも取得できますか？', a: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で指紋採取・申請を行います。委任状等の書類が必要な場合は事前にご案内します。' },
-          { q: '有効期限はいつから数えますか？', a: 'NBI Clearanceの有効期限は発行日から1年です。ビザ申請のタイミングに合わせて取得時期を調整することをお勧めします。' },
+          { q: '自分が更新対象か分かりません', a: 'まずは、最後にNBIクリアランスを取った年と、その後に氏名などの変更があったかをお知らせください。更新として進めやすいかどうかを確認してご案内します。' },
+          { q: '初めてNBIクリアランスを取るのですが、依頼できますか？', a: '初回取得は、在日フィリピン大使館・総領事館での本人による指紋対応が必要です。そのため、当社だけで完結する形ではお受けしていません。進め方の整理が必要な場合はご相談ください。' },
+          { q: '結婚して姓が変わりました。更新できますか？', a: '個人情報に変更がある場合は、更新ではなく新規・初回側の手順が必要になることがあります。この場合も、まず状況を確認してご案内します。' },
+          { q: 'どのくらいで届きますか？', a: '状況により変わります。在外申請はNBI Main Officeで処理され、公式案内では書類到着後の処理は最大5営業日とされていますが、実際の全体日数は書類準備、配送、受取方法によって前後します。まずは現在の状況をご相談ください。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
