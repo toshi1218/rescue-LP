@@ -32,7 +32,7 @@ export default function PsaMarriageCertJa() {
             '@type': 'UnitPriceSpecification',
             price: '40000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜）',
+            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
         },
         },
@@ -45,7 +45,7 @@ export default function PsaMarriageCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。',
+                text: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -53,7 +53,7 @@ export default function PsaMarriageCertJa() {
               name: 'いつ届きますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。',
+                text: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。',
               },
             },
             {
@@ -110,7 +110,7 @@ export default function PsaMarriageCertJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: '提出先に合った形式で揃えたい',
-            description: '電子版で足りるのか、紙の原本が必要か、アポスティーユは要るのか。提出先ごとに確認して手配します。',
+            description: 'アポスティーユが必要かどうか、提出先ごとに確認して手配します。日本の提出先では紙の原本が原則必要です。',
           },
         ]}
       />
@@ -121,7 +121,7 @@ export default function PsaMarriageCertJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -134,20 +134,15 @@ export default function PsaMarriageCertJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ（必要な場合）',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: '提出先の要件に応じてDFAアポスティーユ認証も手配します。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '国際郵送（日本へ）',
-            description: '追跡番号付きの国際郵便で日本のご住所へお届けします。',
           },
         ]}
       />
 
       <CtaBox
         title="追加費用の後出しはありません"
-        description="PSA取得・DFAアポスティーユ・国際郵送をまとめた料金でご案内します。"
+        description="PSA取得・DFAアポスティーユをまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）"
         buttonText="料金を確認する"
         href="#contact"
         variant="secondary"
@@ -158,16 +153,16 @@ export default function PsaMarriageCertJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談', description: '用途（配偶者ビザ・帰化申請など）と提出先をお知らせください。' },
-          { title: '必要書類・料金の確認', description: 'アポスティーユが必要かどうかを含め、料金をご提示します。' },
+          { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安は約1ヶ月〜。' },
+          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユ（必要な場合）・国際郵送をまとめた料金です。無料相談後に正確な金額をご提示します。' },
-          { q: 'いつ届きますか？', a: '目安は約1ヶ月〜です。PSA発行に2〜3週間、DFAアポスティーユに1〜2週間、郵送に3〜5営業日かかります。' },
+          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },
           { q: '注釈付き（Annotated）の婚姻証明書は取れますか？', a: '対応可能です。アニュルメント後や外国離婚承認後の注釈付き書類も手配できます。まずは状況をお知らせください。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
         ]}
