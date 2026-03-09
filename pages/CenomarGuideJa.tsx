@@ -1,40 +1,25 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
-import HeroBanner from '../components/HeroBanner';
-import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
-import FaqSection from '../components/FaqSection';
-import { Heart, FileCheck, Globe, AlertTriangle, Clock, Users } from 'lucide-react';
-import SummaryBlock from '../components/SummaryBlock';
 
 export default function CenomarGuideJa() {
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'CENOMAR取得代行' }]}
-      jsonLd={[{
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: 'CENOMAR（独身証明書）取得代行',
-        description: 'フィリピンのCENOMAR（独身証明書）をDFAアポスティーユ付きで日本語だけで代行取得。国際結婚・配偶者ビザ・帰化申請に対応。フィリピン渡航不要、約1ヶ月〜。',
-        url: 'https://ph-document.com/ja/cenomar',
-        provider: {
-          '@type': 'Organization',
-          name: 'IGRS Inc.',
-          url: 'https://ph-document.com/ja/',
-        },
-        areaServed: { '@type': 'Country', name: 'JP' },
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'JPY',
-          price: '40000',
-          priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            price: '40000',
-            priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'CENOMAR（独身証明書）取得代行' }]}
+      jsonLd={[
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'CENOMAR（独身証明書）取得代行',
+          description: 'フィリピンのCENOMAR（独身証明書）を必要書類の確認から取得・発送までサポート。国際結婚・配偶者ビザ・帰化申請に対応。',
+          url: 'https://ph-document.com/ja/cenomar',
+          provider: {
+            '@type': 'Organization',
+            name: 'IGRS Inc.',
+            url: 'https://ph-document.com/ja/',
           },
-        },
+          areaServed: { '@type': 'Country', name: 'JP' },
         },
         {
           '@context': 'https://schema.org',
@@ -42,164 +27,157 @@ export default function CenomarGuideJa() {
           mainEntity: [
             {
               '@type': 'Question',
-              name: '料金はいくらですか？',
+              name: 'CENOMARの有効期限はありますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。追加請求はありません。',
+                text: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6か月有効と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
               },
             },
             {
               '@type': 'Question',
-              name: 'いつ届きますか？',
+              name: 'DFA Apostille（アポスティーユ）は必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。提出予定日が決まっている場合はご相談ください。',
+                text: '提出先によって必要かどうか変わります。必要書類の確認から進めるため、まずはご相談ください。',
               },
             },
             {
               '@type': 'Question',
-              name: '提出予定日に合わせてスケジュールを組んでもらえますか？',
+              name: '取得には何が必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。まずはご相談ください。',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'フィリピン人の方が日本在住でも取得できますか？',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'CENOMARの有効期限はどのくらいですか？',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: '提出先によって異なりますが、発行から3〜6ヶ月以内が求められるケースが多いです。提出予定日をお知らせいただければ、取得タイミングをご案内します。',
+                text: '案件に応じて本人確認資料や委任状等をお願いする場合があります。必要な書類はご相談内容を確認したうえでご案内します。',
               },
             },
           ],
         },
       ]}
     >
-      <HeroBanner
-        title="CENOMAR（独身証明書）、日本語だけで取り寄せます"
-        badges={['日本語だけでOK', 'アポスティーユ込み', '約1ヶ月〜']}
-        ctaText="無料相談はこちら"
-        ctaHref="#contact"
-      />
+      <article className="max-w-2xl mx-auto px-4">
+        <h1 className="text-2xl font-bold text-gray-900 mb-2 leading-snug">
+          フィリピンCENOMAR（独身証明書）の取得代行
+        </h1>
+        <p className="text-gray-500 mb-6">
+          婚姻手続きや各種届出に向けて、必要書類の確認から取得・発送までサポートします。
+        </p>
 
-      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
-        CENOMAR（Certificate of No Marriage Record）は、フィリピンPSAが発行する「婚姻記録なし証明書」です。国際結婚の婚姻届・配偶者ビザ申請・帰化申請などで提出が求められます。
-      </p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          CENOMARは、フィリピン統計局（Philippine Statistics Authority）が発行する Certificate of No Marriage Record です。国際結婚や婚姻関連手続きでは、「今の自分の婚姻記録がどうなっているか」を確認するために求められることがあります。PSAHelpline では、CENOMARのオンライン料金は <strong>1通420ペソ</strong> と案内されています。
+        </p>
 
-      <SummaryBlock
-        conclusion="CENOMAR（独身証明書）は、日本語だけで取り寄せできます。フィリピンに行く必要はありません。"
-        points={[
-          '日本語でご相談 → 現地スタッフがPSA取得・DFAアポスティーユを代行',
-          'アポスティーユ付き原本を日本のご住所へ郵送。約1ヶ月〜',
-          '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
-          '追加費用の後出しなし。料金で見積もりをご提示',
-        ]}
-        ctaText="無料で相談する（24時間以内に返信）"
-      />
+        <p className="text-gray-700 leading-relaxed mb-8">
+          ただし、実際に困るのは「書類そのもの」より、提出先に合う状態で、必要な時期に間に合わせることです。古い書類を出して受け付けられなかったり、必要な追加手続きの確認が後回しになったりすると、取り直しや再発送が発生しやすくなります。
+        </p>
 
-      {/* 訴求ブロック：なぜ自力取得が難しいか */}
-      <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
-        <div className="flex items-start gap-3 mb-4">
-          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-          <h2 className="text-base font-bold text-amber-900">「自分で取れる」と思っていませんか？</h2>
-        </div>
-        <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>PSAオンラインで注文しても、<strong>DFAアポスティーユは別途フィリピン現地での手続き</strong>が必要</li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>フィリピン大使館（東京）では<strong>アポスティーユの代理申請は受け付けていない</strong></li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>書類の不備で<strong>再申請になると、さらに1〜2ヶ月のロス</strong></li>
-        </ul>
-        <p className="mt-4 text-sm font-semibold text-amber-900">→ 結局「誰かにフィリピンで動いてもらう」必要があります。それが私たちのサービスです。</p>
-      </section>
+        <section className="mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            CENOMARで先に知っておきたいこと
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            CENOMARは「一度取ればずっと使える書類」ではありません。提出先によって、発行日の新しさを求められることがあります。たとえば、在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは<strong>発行から6か月有効</strong>と案内されています。つまり、手元にあるから安心ではなく、<strong>その書類が今回の提出先で通るか</strong>が大事です。
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            また、必要に応じて <strong>DFA Apostille（アポスティーユ）</strong> が関わることがあります。フィリピンでは、いわゆる昔の「red ribbon」ではなく、現在は Apostille の制度で案内されています。
+          </p>
+        </section>
 
-      <FeatureList
-        heading="こんな方に選ばれています"
-        items={[
-          {
-            icon: <Heart className="w-4 h-4" />,
-            title: '国際結婚の手続きを進めている方',
-            description: '日本の市区町村役場への提出、フィリピン大使館での婚姻要件具備証明書（LCCM）取得、どちらにもDFAアポスティーユ付きCENOMARが必要です。「何が必要かわからない」状態からでも相談できます。',
-          },
-          {
-            icon: <Users className="w-4 h-4" />,
-            title: '配偶者ビザ・在留資格の申請中の方',
-            description: '入国管理局への申請では、紙のアポスティーユ原本が求められます。提出先の要件を確認した上で、正しい形式で手配します。',
-          },
-          {
-            icon: <Clock className="w-4 h-4" />,
-            title: '提出期限が迫っている方',
-            description: 'ビザ更新・婚姻届の期限が近い場合でも、まず現状をお知らせください。優先対応の可否を確認してご案内します。「間に合わないかも」と思ったら早めのご相談を。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: '何が必要かわからない方',
-            description: '提出先（役所・大使館・入管）によって必要な書類の形式が異なります。用途をお伝えいただければ、必要書類を整理してご案内します。無駄な書類を取り寄せるリスクを減らします。',
-          },
-        ]}
-      />
+        <section className="mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            IGRSのCENOMAR取得サポート
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            当社では、単に「CENOMARを取る」だけではなく、どの書類が必要か、追加認証がいるか、どの順番で進めるかを整理したうえで手配します。
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            特に、海外手続きで不安になりやすい<strong>進捗の見えにくさ</strong>を減らすため、申請、取得、発送準備などの節目ごとに状況をご案内します。「今どこまで進んでいるのか分からない」という状態をできるだけ避け、婚姻手続きやその後の予定を立てやすくするためのサポートです。
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            ご依頼時にお願いしていること
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            当社は、「何もせず完全丸投げで終わります」といった誇大な案内はしていません。案件に応じて、<strong>本人確認資料や委任状等</strong>のご提出をお願いしています。
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            これは、実際の公式導線でも、代理受領の設定に先立って本人確認書類の提出や liveness check が案内されているためです。誰でも自由に受け取れるわけではなく、本人確認を前提に進めるのが基本です。
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            必要な資料は案件ごとに異なります。ご相談内容を確認したうえで、当社から必要書類をご案内します。
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            こんな方に向いています
+          </h2>
+          <ul className="space-y-2 text-gray-700 leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-gray-400 flex-shrink-0 mt-1">・</span>
+              家族や知人に頼むのが不安
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gray-400 flex-shrink-0 mt-1">・</span>
+              今の手元のCENOMARで通るのか分からない
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-gray-400 flex-shrink-0 mt-1">・</span>
+              婚姻手続きや次の申請に向けて、必要書類を整理したい
+            </li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mt-4">
+            そういう方は、先に全体像を整理してから動いた方が、結果として遠回りを減らしやすいです。
+          </p>
+        </section>
+      </article>
 
       <CtaBox
-        title="まず「何が必要か」を確認しましょう"
-        description="アポスティーユが必要かどうか、日本の提出先では基本的に紙の原本が必要です。無料相談で整理します。追加費用の後出しはありません。"
-        buttonText="無料で相談する"
+        title="まずは無料相談"
+        description="ご自身のケースでCENOMARだけで足りるのか、DFA Apostilleまで必要なのか、今ある書類が使える可能性があるのかを確認したい方は、まずはご相談ください。内容を確認したうえで、必要な書類と進め方をご案内します。"
+        buttonText="無料相談・お見積もりフォームへ"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
-      />
-
-      <FeatureList
-        heading="料金に含まれるもの"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA CENOMAR取得',
-            description: 'フィリピン統計局（PSA）へのCENOMAR申請・取得を代行。現地スタッフが直接手続きするため、オンライン申請より確実です。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。日本の提出先向けに紙の原本で対応します。',
-          },
-        ]}
-      />
-
-      <CtaBox
-        title="追加費用の後出しはありません"
-        description="PSA取得・DFAアポスティーユをまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）見積もり後の追加請求はありません。"
-        buttonText="料金を確認する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
+        trustNote="着手金50%・書類写し確認後に残金50%お支払い"
       />
 
       <StepList
-        heading="ご依頼の流れ"
+        heading="ご依頼から発送までの流れ"
         steps={[
-          { title: 'フォームで相談（無料）', description: '用途（国際結婚・ビザ申請など）と提出先をお知らせください。24時間以内に返信します。' },
-          { title: '必要書類・料金の確認', description: '料金をご提示します。ご依頼時に着手金50%、書類取得・DHL配送準備完了後に残金50%をお支払いいただきます。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。進捗は随時ご報告します。' },
-          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。受け取り後に不明点があればフォローします。' },
+          {
+            title: '無料相談・お見積もり',
+            description: '用途、希望部数、提出予定先、必要時期を確認し、お見積もりをご案内します。',
+          },
+          {
+            title: '着手金50%のお支払い',
+            description: '内容に問題がなければ、着手金をご入金いただき、手続きを開始します。',
+          },
+          {
+            title: '必要書類のご案内と取得手配',
+            description: '案件に応じて、本人確認資料や委任状等をご案内し、取得手配を進めます。',
+          },
+          {
+            title: '取得完了後、写しをご確認',
+            description: '書類が取得できた段階で、写し（写真またはPDF）をご確認いただきます。',
+          },
+          {
+            title: '残金50%のお支払い',
+            description: '内容に問題がなければ、残額をご入金いただきます。',
+          },
+          {
+            title: '原本発送',
+            description: '入金確認後、原本の発送手続きへ進みます。',
+          },
         ]}
       />
 
-      <FaqSection
-        items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。追加請求はありません。' },
-          { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。提出予定日が決まっている場合は、逆算してスケジュールをご案内します。' },
-          { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
-          { q: 'フィリピン人の方が日本在住でも取得できますか？', a: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。' },
-          { q: 'CENOMARの有効期限はどのくらいですか？', a: '提出先によって異なりますが、発行から3〜6ヶ月以内が求められるケースが多いです。提出予定日をお知らせいただければ、取得タイミングをご案内します。' },
-        ]}
-        ctaTitle="まずは状況をお聞かせください"
-        ctaButton="無料相談フォームへ"
+      <CtaBox
+        title="LINEで相談する"
+        description="お気軽にLINEでもご相談いただけます。"
+        buttonText="LINEで相談する"
+        href="#contact"
+        variant="secondary"
+        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
     </PageLayout>
   );
