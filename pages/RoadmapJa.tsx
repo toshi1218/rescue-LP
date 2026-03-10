@@ -82,8 +82,7 @@ export default function RoadmapJa() {
           ))}
         </ul>
         <p>
-          本当に知りたいのは、知識の量ではなく、
-          <strong className="text-secondary">あなたたちの場合は何をどう進めればいいのか</strong>、ということ。
+          これを本当に知りたいのは、<strong className="text-secondary">自分たちの場合は何をどう進めればいいか</strong>ということ。
         </p>
         <p>IGRSは、そのための個別ロードマップ作成をご提供しています。</p>
         <p>
