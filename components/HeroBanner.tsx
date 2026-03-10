@@ -6,9 +6,19 @@ type HeroBannerProps = {
   badges: string[];
   ctaText: string;
   ctaHref: string;
+  ctaService?: string;
 };
 
-export default function HeroBanner({ title, badges, ctaText, ctaHref }: HeroBannerProps) {
+export default function HeroBanner({ title, badges, ctaText, ctaHref, ctaService }: HeroBannerProps) {
+  const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (ctaService) {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('setContactService', { detail: ctaService }));
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
+  };
   return (
     <section className="relative mb-12 overflow-hidden rounded-2xl bg-secondary px-6 py-10 md:px-10 md:py-14">
       {/* 背景装飾 */}
@@ -43,6 +53,7 @@ export default function HeroBanner({ title, badges, ctaText, ctaHref }: HeroBann
         {/* CTAボタン */}
         <a
           href={ctaHref}
+          onClick={handleCtaClick}
           className="group inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-7 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:shadow-primary/50 hover:gap-3 transition-all duration-200"
         >
           {ctaText}

@@ -54,6 +54,7 @@ export default function RoadmapJa() {
         badges={['お二人の状況に合わせて整理', '専用ロードマップを納品', '納品後7日間メール対応']}
         ctaText="個別ロードマップを申し込む"
         ctaHref="#contact"
+        ctaService="個別ロードマップ作成"
       />
 
       {/* リード文 */}
@@ -103,6 +104,11 @@ export default function RoadmapJa() {
         <p className="text-xs text-gray-400 mb-6">税込 54,780円</p>
         <a
           href="#contact"
+          onClick={(e) => {
+            e.preventDefault();
+            window.dispatchEvent(new CustomEvent('setContactService', { detail: '個別ロードマップ作成' }));
+            setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 50);
+          }}
           className="inline-flex items-center gap-2 bg-primary text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200"
         >
           個別ロードマップを申し込む
@@ -312,6 +318,7 @@ export default function RoadmapJa() {
         href="#contact"
         variant="secondary"
         trustNote="返信は原則2営業日以内"
+        service="個別ロードマップ作成"
       />
 
       {/* 注意事項 */}

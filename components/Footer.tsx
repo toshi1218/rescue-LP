@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Send } from 'lucide-react';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
@@ -10,6 +10,13 @@ const Footer: React.FC = () => {
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
   const { lang, t } = useLanguage();
+  const [service, setService] = useState('');
+
+  useEffect(() => {
+    const handler = (e: Event) => setService((e as CustomEvent<string>).detail);
+    window.addEventListener('setContactService', handler);
+    return () => window.removeEventListener('setContactService', handler);
+  }, []);
   const isJa = lang === 'ja';
   const companyPath = isJa ? '/ja/company'  : '/en/company';
   const privacyPath = isJa ? '/ja/privacy'  : '/en/privacy';
@@ -61,6 +68,40 @@ const Footer: React.FC = () => {
               placeholder={t('footer.emailPlaceholder')}
               aria-required="true"
             />
+          </div>
+
+          <div>
+            <label htmlFor="service" className="block text-xs text-gray-600 mb-1">
+              {isJa ? 'ご相談の目的' : 'Purpose'} <span className="text-red-400">*</span>
+            </label>
+            <select
+              id="service"
+              name="service"
+              required
+              value={service}
+              onChange={e => setService(e.target.value)}
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white"
+              aria-required="true"
+            >
+              <option value="">{isJa ? '目的を選択してください' : 'Select purpose'}</option>
+              {isJa ? (
+                <>
+                  <option value="国際結婚">国際結婚</option>
+                  <option value="配偶者ビザ">配偶者ビザ</option>
+                  <option value="免許切り替え">免許切り替え</option>
+                  <option value="帰化申請">帰化申請</option>
+                  <option value="個別ロードマップ作成">個別ロードマップ作成</option>
+                </>
+              ) : (
+                <>
+                  <option value="International Marriage">International Marriage</option>
+                  <option value="Spouse Visa">Spouse Visa</option>
+                  <option value="License Transfer">License Transfer</option>
+                  <option value="Naturalization">Naturalization</option>
+                  <option value="Custom Roadmap">Custom Roadmap</option>
+                </>
+              )}
+            </select>
           </div>
 
           <div>
