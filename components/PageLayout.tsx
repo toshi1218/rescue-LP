@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { useLanguage } from '../lib/i18n';
+import { useMeta } from '../lib/useMeta';
 
 const BASE_URL = 'https://ph-document.com';
 
@@ -13,10 +15,31 @@ type Breadcrumb = {
 type PageLayoutProps = {
   breadcrumbs: Breadcrumb[];
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** Page-specific meta description. Falls back to a sensible per-language default. */
+  description?: string;
   children: React.ReactNode;
 };
 
-export default function PageLayout({ breadcrumbs, jsonLd, children }: PageLayoutProps) {
+const JA_SITE_SUFFIX = '｜フィリピン書類取得代行センター';
+const EN_SITE_SUFFIX = ' | Philippine Document Service';
+
+const JA_DEFAULT_DESC =
+  'フィリピン書類の取得を日本語だけで安心おまかせ。CENOMAR・PSA出生証明書・DFAアポスティーユを現地スタッフが完全代行。無料相談受付中。';
+const EN_DEFAULT_DESC =
+  'We retrieve PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille from the Philippines. Shipped worldwide via DHL for immigration and visa applications. Free consultation.';
+
+export default function PageLayout({ breadcrumbs, jsonLd, description, children }: PageLayoutProps) {
+  const { lang } = useLanguage();
+  const isJa = lang === 'ja';
+
+  // Derive unique page <title> from the last breadcrumb label + site name
+  const lastCrumb = breadcrumbs[breadcrumbs.length - 1];
+  const pageTitle = `${lastCrumb.label}${isJa ? JA_SITE_SUFFIX : EN_SITE_SUFFIX}`;
+  const metaDesc = description ?? (isJa ? JA_DEFAULT_DESC : EN_DEFAULT_DESC);
+
+  // Update <title>, meta description, canonical, OG tags, and hreflang for this page
+  useMeta(pageTitle, metaDesc);
+
   // BreadcrumbList JSON-LD を自動生成
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',

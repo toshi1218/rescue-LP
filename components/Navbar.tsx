@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
-
 type MenuType = 'docs' | 'purpose' | 'guides' | null;
 
 const Navbar: React.FC = () => {
