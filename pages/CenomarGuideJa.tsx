@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
 import { useMeta } from '../lib/useMeta';
+import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
 
 export default function CenomarGuideJa() {
   useMeta(
@@ -86,7 +90,7 @@ export default function CenomarGuideJa() {
           ただし、実際に困るのは「書類そのもの」より、提出先に合う状態で、必要な時期に間に合わせることです。古い書類を出して受け付けられなかったり、必要な追加手続きの確認が後回しになったりすると、取り直しや再発送が発生しやすくなります。
         </p>
 
-        <section className="mb-8">
+        <SectionDivider variant="beige">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
             CENOMARで先に知っておきたいこと
           </h2>
@@ -96,9 +100,9 @@ export default function CenomarGuideJa() {
           <p className="text-gray-700 leading-relaxed">
             また、必要に応じて <strong>DFA Apostille（アポスティーユ）</strong> が関わることがあります。フィリピンでは、いわゆる昔の「red ribbon」ではなく、現在は Apostille の制度で案内されています。
           </p>
-        </section>
+        </SectionDivider>
 
-        <section className="mb-8">
+        <SectionDivider variant="blue">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
             IGRSのCENOMAR取得サポート
           </h2>
@@ -108,7 +112,7 @@ export default function CenomarGuideJa() {
           <p className="text-gray-700 leading-relaxed">
             特に、海外手続きで不安になりやすい<strong>進捗の見えにくさ</strong>を減らすため、申請、取得、発送準備などの節目ごとに状況をご案内します。「今どこまで進んでいるのか分からない」という状態をできるだけ避け、婚姻手続きやその後の予定を立てやすくするためのサポートです。
           </p>
-        </section>
+        </SectionDivider>
 
         <section className="mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
@@ -125,28 +129,27 @@ export default function CenomarGuideJa() {
           </p>
         </section>
 
-        <section className="mb-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">
-            こんな方に向いています
-          </h2>
-          <ul className="space-y-2 text-gray-700 leading-relaxed">
-            <li className="flex items-start gap-2">
-              <span className="text-gray-400 flex-shrink-0 mt-1">・</span>
-              家族や知人に頼むのが不安
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gray-400 flex-shrink-0 mt-1">・</span>
-              今の手元のCENOMARで通るのか分からない
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-gray-400 flex-shrink-0 mt-1">・</span>
-              婚姻手続きや次の申請に向けて、必要書類を整理したい
-            </li>
-          </ul>
-          <p className="text-gray-700 leading-relaxed mt-4">
-            そういう方は、先に全体像を整理してから動いた方が、結果として遠回りを減らしやすいです。
-          </p>
-        </section>
+        <IconCardGrid
+          heading="こんな方に向いています"
+          columns={2}
+          cards={[
+            { icon: AlertTriangle, title: "手元のCENOMARが通るか不安", description: "有効期限と提出先の条件を先に確認します", accent: 'gold' },
+            { icon: Calendar, title: "婚姻手続きの期限が迫っている", description: "必要時期から逆算したスケジュールで手配", accent: 'blue' },
+            { icon: Globe, title: "現地に行かず代行してほしい", description: "フィリピンに行かずに日本から依頼できます", accent: 'teal' },
+            { icon: Users, title: "家族に頼みにくい事情がある", description: "専門スタッフが代わりに対応します", accent: 'purple' },
+          ]}
+        />
+
+        <ComparisonTable
+          heading="自分で手配 vs IGRS代行"
+          rows={[
+            { item: "日本語でのやりとり", self: "英語が必要", agency: true },
+            { item: "有効期限の事前確認", self: "自己調査が必要", agency: true },
+            { item: "DFAアポスティーユ手配", self: false, agency: true },
+            { item: "進捗レポート", self: "—", agency: true },
+            { item: "追加書類の調整", self: false, agency: true },
+          ]}
+        />
       </article>
 
       <CtaBox
@@ -159,6 +162,7 @@ export default function CenomarGuideJa() {
       />
 
       <StepList
+        variant="visual"
         heading="ご依頼から発送までの流れ"
         steps={[
           {

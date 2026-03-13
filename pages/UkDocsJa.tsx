@@ -6,7 +6,10 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
-import { FileCheck, Globe, Users, Shield } from 'lucide-react';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
+import { FileCheck, Globe, Users, Shield, FileText, Heart, CheckCircle, Clock, Stamp, ShieldCheck } from 'lucide-react';
 
 export default function UkDocsJa() {
   return (
@@ -124,26 +127,41 @@ export default function UkDocsJa() {
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
-      <FeatureList
-        heading="料金に含まれるもの"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA書類取得（出生証明書・婚姻証明書・CENOMAR・NBI Clearanceなど）',
-            description: '必要なPSA書類をまとめて取得します。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: 'UKVI要件に沿ったDFAアポスティーユ認証を手配します。原本での提出が必要です。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: 'UKへの国際郵送（DHL）',
-            description: '追跡番号付きでUKのご住所へ直送します。転送不要です。',
-          },
-        ]}
-      />
+      <SectionDivider variant="beige">
+        <FeatureList
+          heading="料金に含まれるもの"
+          items={[
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'PSA書類取得（出生証明書・婚姻証明書・CENOMAR・NBI Clearanceなど）',
+              description: '必要なPSA書類をまとめて取得します。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
+              description: 'UKVI要件に沿ったDFAアポスティーユ認証を手配します。原本での提出が必要です。',
+            },
+            {
+              icon: <Globe className="w-4 h-4" />,
+              title: 'UKへの国際郵送（DHL）',
+              description: '追跡番号付きでUKのご住所へ直送します。転送不要です。',
+            },
+          ]}
+        />
+
+        <IconCardGrid
+          heading="対応書類・ビザ種別"
+          columns={3}
+          cards={[
+            { icon: FileText, title: 'PSA出生証明書', description: '配偶者ビザ・ILR申請の基本書類。DFAアポスティーユ付きで手配', accent: 'gold' },
+            { icon: ShieldCheck, title: 'CENOMAR', description: '独身証明書。Spouse Visa申請でUKVI提出が必要', accent: 'blue' },
+            { icon: CheckCircle, title: 'NBI Clearance', description: '無犯罪証明書。ILR・市民権申請で必要になることが多い', accent: 'green' },
+            { icon: Stamp, title: 'DFAアポスティーユ', description: 'ハーグ条約加盟国への提出に必要な外務省認証', accent: 'teal' },
+            { icon: Heart, title: '配偶者ビザ（Spouse Visa）', description: 'CENOMAR・PSA婚姻証明書をDFAアポスティーユ付きで対応', accent: 'purple' },
+            { icon: Globe, title: '永住許可（ILR）', description: 'UKVI要件に合わせた書類一式をDFAアポスティーユ付きで対応', accent: 'gold' },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="追加費用の後出しはありません"
@@ -154,13 +172,27 @@ export default function UkDocsJa() {
         trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
 
-      <StepList
-        heading="ご依頼の流れ"
-        steps={[
-          { title: 'フォームで相談', description: 'ビザ種別（配偶者ビザ・永住許可など）と提出目標日をお知らせください。' },
-          { title: '必要書類・料金の確認', description: 'UKVI要件をもとに必要書類をリストアップし、料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: 'UKへ郵送', description: '書類が揃い次第、DHLで追跡付きお届け。目安は全体で約4〜6週間。' },
+      <SectionDivider variant="blue">
+        <StepList
+          heading="ご依頼の流れ"
+          variant="visual"
+          steps={[
+            { title: 'フォームで相談', description: 'ビザ種別（配偶者ビザ・永住許可など）と提出目標日をお知らせください。' },
+            { title: '必要書類・料金の確認', description: 'UKVI要件をもとに必要書類をリストアップし、料金をご提示します。' },
+            { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
+            { title: 'UKへ郵送', description: '書類が揃い次第、DHLで追跡付きお届け。目安は全体で約4〜6週間。' },
+          ]}
+        />
+      </SectionDivider>
+
+      <ComparisonTable
+        heading="フィリピン書類の手配"
+        rows={[
+          { item: 'PSA書類の申請', self: false, agency: true },
+          { item: 'DFAアポスティーユ', self: false, agency: true },
+          { item: 'UKVI/ILR要件確認', self: '要英語調査', agency: true },
+          { item: 'UKへ直送', self: '自己手配', agency: true },
+          { item: '日本語サポート', self: '英語が必要', agency: true },
         ]}
       />
 

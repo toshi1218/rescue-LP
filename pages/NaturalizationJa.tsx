@@ -6,7 +6,10 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { FileCheck, Globe, Users, Heart } from 'lucide-react';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
+import { FileCheck, Globe, Users, Heart, FileText, Scale, Building, CheckCircle, Clock } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 
 export default function NaturalizationJa() {
@@ -96,7 +99,7 @@ export default function NaturalizationJa() {
       />
 
       {/* 固有コンテンツ：帰化申請で必要なフィリピン書類 */}
-      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+      <SectionDivider variant="beige">
         <h2 className="text-base font-bold text-gray-900 mb-4">帰化申請で法務局が求めるフィリピン書類</h2>
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
           帰化申請では、法務局の担当官が必要書類を指定します。フィリピン国籍の方が日本に帰化する場合、以下のようなフィリピン側書類を求められることが多いです（状況によって異なります）。
@@ -142,28 +145,43 @@ export default function NaturalizationJa() {
             </li>
           ))}
         </ul>
-      </section>
 
-      <FeatureList
-        heading="こんな方へ"
-        items={[
-          {
-            icon: <Heart className="w-4 h-4" />,
-            title: '日本への帰化申請を進めている',
-            description: '法務局への帰化申請に必要なPSA書類（出生証明書・婚姻証明書・CENOMAR）をまとめて手配します。',
-          },
-          {
-            icon: <Users className="w-4 h-4" />,
-            title: '司法書士・行政書士の先生からの依頼',
-            description: '専門家の先生からのご依頼も対応しています。必要書類の確認から手配まで一括でサポートします。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: '何が必要かわからない',
-            description: '帰化申請の必要書類は状況によって異なります。まず相談いただければ、必要なものをリストアップしてご案内します。',
-          },
-        ]}
-      />
+        <IconCardGrid
+          heading="帰化申請に必要な書類の特徴"
+          columns={3}
+          cards={[
+            { icon: FileText, title: 'PSA出生証明書', description: '本人の出生・国籍を証明。アポスティーユ付き原本が法務局の要件。', accent: 'gold' },
+            { icon: Scale, title: 'NBI Clearance', description: '無犯罪証明書。フィリピン捜査局が発行。帰化申請で求められることが多い。', accent: 'blue' },
+            { icon: Building, title: '法務局への提出', description: '帰化申請は法務局が窓口。担当官の指定する形式・発行日が重要。', accent: 'green' },
+            { icon: CheckCircle, title: 'アポスティーユ必須', description: 'DFAアポスティーユなしの原本だけでは不受理になる場合あり。', accent: 'teal' },
+            { icon: Clock, title: '発行日の指定あり', description: '法務局から「○ヶ月以内に発行」と指定がある場合は発行日を指定して依頼。', accent: 'red' },
+            { icon: Globe, title: '書士からの依頼も対応', description: '行政書士・司法書士の先生からのご依頼も対応。事務所への直送可。', accent: 'purple' },
+          ]}
+        />
+      </SectionDivider>
+
+      <SectionDivider variant="blue">
+        <FeatureList
+          heading="こんな方へ"
+          items={[
+            {
+              icon: <Heart className="w-4 h-4" />,
+              title: '日本への帰化申請を進めている',
+              description: '法務局への帰化申請に必要なPSA書類（出生証明書・婚姻証明書・CENOMAR）をまとめて手配します。',
+            },
+            {
+              icon: <Users className="w-4 h-4" />,
+              title: '司法書士・行政書士の先生からの依頼',
+              description: '専門家の先生からのご依頼も対応しています。必要書類の確認から手配まで一括でサポートします。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: '何が必要かわからない',
+              description: '帰化申請の必要書類は状況によって異なります。まず相談いただければ、必要なものをリストアップしてご案内します。',
+            },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="まず「何が必要か」を確認しましょう"
@@ -200,12 +218,24 @@ export default function NaturalizationJa() {
       />
 
       <StepList
+        variant="visual"
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談', description: '帰化申請の状況・必要書類・提出期限をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類をリストアップし、料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+        ]}
+      />
+
+      <ComparisonTable
+        heading="帰化申請書類の準備"
+        rows={[
+          { item: 'PSA書類の手配', self: false, agency: true },
+          { item: 'NBIクリアランス取得', self: false, agency: true },
+          { item: 'アポスティーユ認証', self: false, agency: true },
+          { item: '法務局提出形式の確認', self: '要調査', agency: true },
+          { item: '日本語サポート', self: '英語が必要', agency: true },
         ]}
       />
 

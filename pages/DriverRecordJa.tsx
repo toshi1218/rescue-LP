@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
@@ -8,6 +8,10 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { FileCheck, Globe, Users, Car } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
+import { FileText, Stamp, CheckCircle, Clock, AlertTriangle, Building } from 'lucide-react';
 
 export default function DriverRecordJa() {
   return (
@@ -161,26 +165,43 @@ export default function DriverRecordJa() {
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
-      <FeatureList
-        heading="料金に含まれるもの"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'LTOドライバーズレコード取得',
-            description: 'フィリピン陸運局（LTO）へのドライバーズレコード申請・取得を代行します。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: '日本の免許センターへの提出に必須のDFAアポスティーユ認証を手配します。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'オリジナルレシート（OR）',
-            description: '試験場提出に必要なLTOオリジナルレシート（OR）を取得します。',
-          },
-        ]}
-      />
+      <SectionDivider variant="beige">
+        <FeatureList
+          heading="料金に含まれるもの"
+          items={[
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'LTOドライバーズレコード取得',
+              description: 'フィリピン陸運局（LTO）へのドライバーズレコード申請・取得を代行します。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
+              description: '日本の免許センターへの提出に必須のDFAアポスティーユ認証を手配します。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'オリジナルレシート（OR）',
+              description: '試験場提出に必要なLTOオリジナルレシート（OR）を取得します。',
+            },
+          ]}
+        />
+
+        <IconCardGrid
+          heading="外免切替の流れ・利用シーン"
+          columns={4}
+          cards={[
+            { icon: Car, title: '外免切替申請', description: 'フィリピン免許から日本の運転免許への切替に必要な書類を代行取得', accent: 'blue' },
+            { icon: FileText, title: 'LTOドライバーズレコード', description: '免許種別・取得日・更新歴・違反歴が記載された公式書類', accent: 'gold' },
+            { icon: Stamp, title: 'DFAアポスティーユ', description: '日本の公安委員会・試験場への提出に必要な外務省認証', accent: 'teal' },
+            { icon: CheckCircle, title: 'オリジナルレシート（OR）', description: 'LTO免許更新時の公式領収書。試験場提出で求められることがある', accent: 'green' },
+            { icon: Clock, title: '提出期限に合わせて手配', description: '免許取得・雇用開始など、期限から逆算してスケジュールをご案内', accent: 'purple' },
+            { icon: Globe, title: 'フィリピン渡航不要', description: '日本にいながら日本語だけで手配が完結します', accent: 'blue' },
+            { icon: AlertTriangle, title: '都道府県別の要件確認', description: '提出先の都道府県ごとに必要書類・書式が異なります。事前確認込み', accent: 'red' },
+            { icon: Building, title: '企業・複数名対応', description: 'フィリピン人スタッフの採用・就労に伴う書類まとめ依頼も可能', accent: 'gold' },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="追加費用の後出しはありません"
@@ -191,13 +212,27 @@ export default function DriverRecordJa() {
         trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
 
-      <StepList
-        heading="ご依頼の流れ"
-        steps={[
-          { title: 'フォームで相談', description: '提出先の都道府県・対象者の人数・提出期限をお知らせください。' },
-          { title: '必要書類・料金の確認', description: '必要書類をリストアップし、料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'LTO取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+      <SectionDivider variant="blue">
+        <StepList
+          heading="ご依頼の流れ"
+          variant="visual"
+          steps={[
+            { title: 'フォームで相談', description: '提出先の都道府県・対象者の人数・提出期限をお知らせください。' },
+            { title: '必要書類・料金の確認', description: '必要書類をリストアップし、料金をご提示します。' },
+            { title: 'フィリピン現地で手配', description: 'LTO取得・DFAアポスティーユを現地スタッフが進めます。' },
+            { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+          ]}
+        />
+      </SectionDivider>
+
+      <ComparisonTable
+        heading="LTOドライバーズレコード取得"
+        rows={[
+          { item: 'LTOへの申請手配', self: false, agency: true },
+          { item: 'DFAアポスティーユ', self: false, agency: true },
+          { item: '外免切替の要件確認', self: '要調査', agency: true },
+          { item: '日本語サポート', self: '英語が必要', agency: true },
+          { item: '公安委員会向け形式', self: '—', agency: true },
         ]}
       />
 

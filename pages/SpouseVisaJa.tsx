@@ -6,7 +6,10 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
+import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users, FileText, Stamp, ShieldCheck, CheckCircle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 
 export default function SpouseVisaJa() {
@@ -110,7 +113,7 @@ export default function SpouseVisaJa() {
       </section>
 
       {/* 固有コンテンツ：入管に提出するフィリピン書類 */}
-      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+      <SectionDivider variant="beige">
         <h2 className="text-base font-bold text-gray-900 mb-4">入国管理局（入管）に提出するフィリピン書類の一覧</h2>
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
           配偶者ビザ（在留資格「日本人の配偶者等」）の申請には、フィリピン人配偶者に関する書類を入管に提出する必要があります。申請の種類（新規・更新・変更）や個別の状況によって必要書類が異なりますが、一般的に求められる書類は以下の通りです。
@@ -141,10 +144,23 @@ export default function SpouseVisaJa() {
           </table>
         </div>
         <p className="text-xs text-gray-500">※ 上記は一般的な例です。申請の状況・担当官・提出窓口によって追加書類を求められる場合があります。</p>
-      </section>
+
+        <IconCardGrid
+          heading="必要書類の特徴"
+          columns={3}
+          cards={[
+            { icon: FileText, title: 'PSA婚姻証明書', description: '婚姻の事実を証明する公式書類。入管への提出に必須。', accent: 'gold' },
+            { icon: Stamp, title: 'DFAアポスティーユ', description: '外務省による認証。紙の原本に付与されるため電子版は不可。', accent: 'blue' },
+            { icon: ShieldCheck, title: 'CENOMAR', description: '独身証明書。初婚確認に使用。PSAが発行する公式書類。', accent: 'green' },
+            { icon: CheckCircle, title: 'PSA出生証明書', description: '本人の生年月日・国籍を証明。アポスティーユ付き原本が原則。', accent: 'teal' },
+            { icon: Clock, title: '有効期限あり', description: 'PSA書類・CENOMARは発行から6ヶ月〜1年が目安。タイミングが重要。', accent: 'red' },
+            { icon: Globe, title: '日本語訳が必要', description: '翻訳者の署名・住所・翻訳日の記載が必要。本人でも作成可能。', accent: 'purple' },
+          ]}
+        />
+      </SectionDivider>
 
       {/* 固有コンテンツ：申請種類別の違い */}
-      <section className="mb-10 rounded-2xl bg-gray-50 border border-gray-200 p-6">
+      <SectionDivider variant="blue">
         <h2 className="text-base font-bold text-gray-900 mb-4">新規・更新・変更で必要書類はどう違うか</h2>
         <div className="space-y-4">
           {[
@@ -171,7 +187,7 @@ export default function SpouseVisaJa() {
           <AlertTriangle className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
           <span>PSA書類・CENOMARは発行から6か月〜1年が有効期限の目安とされています。申請タイミングに合わせた取得時期が重要です。</span>
         </div>
-      </section>
+      </SectionDivider>
 
       <FeatureList
         heading="こんな方に選ばれています"
@@ -234,12 +250,24 @@ export default function SpouseVisaJa() {
       />
 
       <StepList
+        variant="visual"
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '申請の種類（新規・更新・変更）と必要書類をお知らせください。入管の要件を確認してご案内します。' },
           { title: '必要書類・料金の確認', description: '料金をご提示します。ご依頼時に着手金50%、書類取得・DHL配送準備完了後に残金50%をお支払いいただきます。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。進捗は随時ご報告します。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+        ]}
+      />
+
+      <ComparisonTable
+        heading="自分で手配 vs IGRS代行"
+        rows={[
+          { item: '必要書類の確認', self: '自己調査が必要', agency: true },
+          { item: 'DFAアポスティーユ手配', self: false, agency: true },
+          { item: '有効期限の管理', self: '自己管理', agency: true },
+          { item: '入管要件の確認', self: '要英語調査', agency: true },
+          { item: '日本語での進捗報告', self: '—', agency: true },
         ]}
       />
 

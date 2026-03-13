@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
@@ -6,8 +6,11 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { AlertTriangle, FileCheck, Globe, Clock } from 'lucide-react';
+import { AlertTriangle, FileCheck, Globe, Clock, CheckCircle, Fingerprint, ShieldCheck, Users, FileText } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
 
 export default function NbiHitJa() {
   return (
@@ -128,26 +131,41 @@ export default function NbiHitJa() {
         </div>
       </section>
 
-      <FeatureList
-        heading="こんな方へ"
-        items={[
-          {
-            icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'NBI結果に「HIT」と表示された',
-            description: 'HITはNBIのデータベースに何らかの記録が存在することを示します。必ずしも犯罪歴があるわけではありませんが、追加の確認手続きが必要です。',
-          },
-          {
-            icon: <Clock className="w-4 h-4" />,
-            title: 'ビザ申請の期限が迫っている',
-            description: 'HIT対応には時間がかかる場合があります。早めにご相談いただくことで、対応策を一緒に検討できます。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: '身に覚えのないHITが出た',
-            description: '同姓同名の別人の記録が引っかかるケースもあります。状況を確認してから対応策をご案内します。',
-          },
-        ]}
-      />
+      <SectionDivider variant="beige">
+        <FeatureList
+          heading="こんな方へ"
+          items={[
+            {
+              icon: <AlertTriangle className="w-4 h-4" />,
+              title: 'NBI結果に「HIT」と表示された',
+              description: 'HITはNBIのデータベースに何らかの記録が存在することを示します。必ずしも犯罪歴があるわけではありませんが、追加の確認手続きが必要です。',
+            },
+            {
+              icon: <Clock className="w-4 h-4" />,
+              title: 'ビザ申請の期限が迫っている',
+              description: 'HIT対応には時間がかかる場合があります。早めにご相談いただくことで、対応策を一緒に検討できます。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: '身に覚えのないHITが出た',
+              description: '同姓同名の別人の記録が引っかかるケースもあります。状況を確認してから対応策をご案内します。',
+            },
+          ]}
+        />
+
+        <IconCardGrid
+          heading="HIT解消でお困りの方へ"
+          columns={3}
+          cards={[
+            { icon: AlertTriangle, title: 'HITが突然出た', description: '身に覚えがなくても同姓同名の記録が引っかかるケースが多い。まず状況確認から', accent: 'red' },
+            { icon: Fingerprint, title: 'Identity Verification', description: '指紋照合・書類提出で同名者との区別を証明する手続きを代行', accent: 'gold' },
+            { icon: Clock, title: '期限が迫っている', description: 'ビザ申請の期限が近い場合も、まず相談ください。スケジュールをご案内します', accent: 'blue' },
+            { icon: ShieldCheck, title: 'HIT解消まで一括対応', description: 'NBI窓口との手続き・解消・Clearance取得・DFAアポスティーユまで代行', accent: 'green' },
+            { icon: Users, title: '日本語でサポート', description: 'フィリピン語・英語の手続きも当社が対応。日本語だけで完結', accent: 'gold' },
+            { icon: Globe, title: 'フィリピン渡航不要', description: '現地スタッフがNBI窓口に対応。日本にいながら手続きを進められます', accent: 'blue' },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="まず状況を確認しましょう"
@@ -158,21 +176,23 @@ export default function NbiHitJa() {
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
-      <FeatureList
-        heading="対応できること"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'HIT内容の確認サポート',
-            description: 'NBIへの照会・確認手続きのサポートを行います。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'クリアランス取得後のアポスティーユ手配',
-            description: 'HIT解消後のNBI Clearance取得・DFAアポスティーユまで一括で対応します。',
-          },
-        ]}
-      />
+      <SectionDivider variant="blue">
+        <FeatureList
+          heading="対応できること"
+          items={[
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'HIT内容の確認サポート',
+              description: 'NBIへの照会・確認手続きのサポートを行います。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'クリアランス取得後のアポスティーユ手配',
+              description: 'HIT解消後のNBI Clearance取得・DFAアポスティーユまで一括で対応します。',
+            },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="時間がかかるほど、選択肢が減ります"
@@ -185,11 +205,23 @@ export default function NbiHitJa() {
 
       <StepList
         heading="ご依頼の流れ"
+        variant="visual"
         steps={[
           { title: 'フォームで状況を共有', description: 'HITの内容・提出先・期限をお知らせください。' },
           { title: '対応策の確認', description: '状況に応じた対応策と料金をご案内します。' },
           { title: 'フィリピン現地で手配', description: 'HIT確認・解消手続き・NBI取得を現地スタッフが進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。' },
+        ]}
+      />
+
+      <ComparisonTable
+        heading="HIT解消 自分で vs 代行"
+        rows={[
+          { item: 'HIT解消の手続き', self: false, agency: true },
+          { item: 'NBI窓口との交渉', self: 'フィリピン語が必要', agency: true },
+          { item: '日本語サポート', self: '英語のみ', agency: true },
+          { item: 'アポスティーユまで一括', self: false, agency: true },
+          { item: '緊急対応の相談', self: '—', agency: true },
         ]}
       />
 

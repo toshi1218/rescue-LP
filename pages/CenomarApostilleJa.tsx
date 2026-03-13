@@ -6,8 +6,11 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Heart, FileCheck, Globe, Clock } from 'lucide-react';
+import { Heart, FileCheck, Globe, Clock, CheckCircle, AlertTriangle, Users, Stamp } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
 
 export default function CenomarApostilleJa() {
   return (
@@ -95,55 +98,46 @@ export default function CenomarApostilleJa() {
         ctaText="無料で相談する（24時間以内に返信）"
       />
 
-      {/* 固有コンテンツ：アポスティーユとは・DFAの手順 */}
-      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
-        <h2 className="text-base font-bold text-gray-900 mb-3">アポスティーユ条約とCENOMAR</h2>
-        <p className="text-sm text-gray-600 leading-relaxed mb-4">
-          アポスティーユ（Apostille）とは、1961年のハーグ条約（外国公文書の認証を不要とする条約）に基づく証明です。条約加盟国の公的機関が発行した書類に対して、その国の権限ある機関が付与する認証スタンプのことを指します。
-        </p>
-        <p className="text-sm text-gray-600 leading-relaxed mb-4">
-          フィリピン（条約加盟国）が発行したCENOMARを日本（同じく条約加盟国）で使用する場合、DFA（フィリピン外務省）によるアポスティーユが付いていれば、日本の入管・役所・裁判所などに公文書として提出できます。従来の「領事認証」に代わる簡便な認証方式です。
-        </p>
+      <SectionDivider variant="beige">
+        {/* 固有コンテンツ：アポスティーユとは・DFAの手順 */}
+        <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+          <h2 className="text-base font-bold text-gray-900 mb-3">アポスティーユ条約とCENOMAR</h2>
+          <p className="text-sm text-gray-600 leading-relaxed mb-4">
+            アポスティーユ（Apostille）とは、1961年のハーグ条約（外国公文書の認証を不要とする条約）に基づく証明です。条約加盟国の公的機関が発行した書類に対して、その国の権限ある機関が付与する認証スタンプのことを指します。
+          </p>
+          <p className="text-sm text-gray-600 leading-relaxed mb-4">
+            フィリピン（条約加盟国）が発行したCENOMARを日本（同じく条約加盟国）で使用する場合、DFA（フィリピン外務省）によるアポスティーユが付いていれば、日本の入管・役所・裁判所などに公文書として提出できます。従来の「領事認証」に代わる簡便な認証方式です。
+          </p>
 
-        <h3 className="text-sm font-bold text-gray-800 mb-3">DFAアポスティーユの取得手順</h3>
-        <div className="space-y-3 mb-4">
-          {[
-            { step: '1', title: 'PSAからCENOMARを取得', detail: 'フィリピン統計局（PSA）に申請し、SECPAセキュリティペーパーに印刷されたCENOMARを受け取ります。' },
-            { step: '2', title: 'DFAにアポスティーユを申請', detail: 'フィリピン外務省（DFA）のAuthentication Division にCENOMARを持参（または郵送）し、アポスティーユを申請します。DFAのオフィスはManilaとcebu等にあります。' },
-            { step: '3', title: 'アポスティーユ付きCENOMARを受け取り', detail: 'DFAがCENOMARの裏面または別紙にアポスティーユ証明を付与します。これで日本の公的機関に提出できる形式になります。' },
-          ].map(({ step, title, detail }) => (
-            <div key={step} className="flex gap-3">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/15 text-primary font-bold text-xs flex items-center justify-center mt-0.5">{step}</span>
-              <div>
-                <p className="text-sm font-bold text-gray-800 mb-0.5">{title}</p>
-                <p className="text-sm text-gray-600 leading-relaxed">{detail}</p>
+          <h3 className="text-sm font-bold text-gray-800 mb-3">DFAアポスティーユの取得手順</h3>
+          <div className="space-y-3 mb-4">
+            {[
+              { step: '1', title: 'PSAからCENOMARを取得', detail: 'フィリピン統計局（PSA）に申請し、SECPAセキュリティペーパーに印刷されたCENOMARを受け取ります。' },
+              { step: '2', title: 'DFAにアポスティーユを申請', detail: 'フィリピン外務省（DFA）のAuthentication Division にCENOMARを持参（または郵送）し、アポスティーユを申請します。DFAのオフィスはManilaとcebu等にあります。' },
+              { step: '3', title: 'アポスティーユ付きCENOMARを受け取り', detail: 'DFAがCENOMARの裏面または別紙にアポスティーユ証明を付与します。これで日本の公的機関に提出できる形式になります。' },
+            ].map(({ step, title, detail }) => (
+              <div key={step} className="flex gap-3">
+                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/15 text-primary font-bold text-xs flex items-center justify-center mt-0.5">{step}</span>
+                <div>
+                  <p className="text-sm font-bold text-gray-800 mb-0.5">{title}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{detail}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <p className="text-xs text-gray-500">※ DFAアポスティーユの処理期間は通常1〜2週間（Regular processing）です。Expedited処理（追加料金）を利用すると短縮できる場合があります。</p>
-      </section>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500">※ DFAアポスティーユの処理期間は通常1〜2週間（Regular processing）です。Expedited処理（追加料金）を利用すると短縮できる場合があります。</p>
+        </section>
 
-      <FeatureList
-        heading="こんな方へ"
-        items={[
-          {
-            icon: <Heart className="w-4 h-4" />,
-            title: '国際結婚の手続きを進めている',
-            description: '日本の市区町村役場やフィリピン大使館への提出に、DFAアポスティーユ付きCENOMARが必要です。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: '配偶者ビザ・在留資格の申請中',
-            description: '入国管理局が求める形式（紙のアポスティーユ原本）で手配します。',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: '日本の提出先ではアポスティーユが原則必須',
-            description: '日本の入管・役所・大使館への提出では、原則として紙の原本＋DFAアポスティーユが必要です。',
-          },
-        ]}
-      />
+        <IconCardGrid
+          heading="こんな方に選ばれています"
+          columns={3}
+          cards={[
+            { icon: Heart, title: '国際結婚の手続き中', description: '日本の市区町村役場やフィリピン大使館への提出に、DFAアポスティーユ付きCENOMARが必要です。', accent: 'gold' },
+            { icon: FileCheck, title: '配偶者ビザ・在留資格の申請中', description: '入国管理局が求める形式（紙のアポスティーユ原本）で手配します。', accent: 'blue' },
+            { icon: Globe, title: '日本の提出先への提出', description: '日本の入管・役所・大使館への提出では、原則として紙の原本＋DFAアポスティーユが必要です。', accent: 'green' },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="CENOMAR＋DFAアポスティーユを一括でご依頼いただけます"
@@ -154,21 +148,34 @@ export default function CenomarApostilleJa() {
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
-      <FeatureList
-        heading="料金に含まれるもの"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA CENOMAR取得',
-            description: 'フィリピン統計局（PSA）へのCENOMAR申請・取得を代行します。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。紙の原本で対応。',
-          },
-        ]}
-      />
+      <SectionDivider variant="blue">
+        <FeatureList
+          heading="料金に含まれるもの"
+          items={[
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'PSA CENOMAR取得',
+              description: 'フィリピン統計局（PSA）へのCENOMAR申請・取得を代行します。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
+              description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。紙の原本で対応。',
+            },
+          ]}
+        />
+
+        <ComparisonTable
+          heading="自分で手配 vs IGRS代行"
+          rows={[
+            { item: 'PSAへのCENOMAR申請', self: false, agency: true },
+            { item: 'DFAアポスティーユ手配', self: false, agency: true },
+            { item: '紙の原本形式での対応', self: '要現地渡航', agency: true },
+            { item: '日本語でのサポート', self: false, agency: true },
+            { item: '提出先に合う形式の確認', self: '要調査', agency: true },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="追加費用の後出しはありません"
@@ -181,6 +188,7 @@ export default function CenomarApostilleJa() {
 
       <StepList
         heading="ご依頼の流れ"
+        variant="visual"
         steps={[
           { title: 'フォームで相談', description: '用途（国際結婚・ビザ申請など）と提出先をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },

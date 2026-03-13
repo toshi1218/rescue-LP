@@ -158,6 +158,7 @@ export default function NbiValidityJa() {
 
       <StepList
         heading="6. お支払いの流れ"
+        variant="visual"
         steps={[
           { title: '現在の状況を確認', description: '現在のNBIクリアランスの発行時期と提出先の条件を確認し、代行可能かを判断します。' },
           { title: '着手金のお支払い（半額）', description: '代行可能と判断した後、代金総額の50%をお支払いいただきます。' },

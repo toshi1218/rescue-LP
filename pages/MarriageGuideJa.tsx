@@ -6,7 +6,9 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users, ShieldCheck } from 'lucide-react';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users, ShieldCheck, FileText, CheckCircle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 
 export default function MarriageGuideJa() {
@@ -104,32 +106,28 @@ export default function MarriageGuideJa() {
       />
 
       {/* Section 2: ケースに応じて必要になるフィリピン側の公的書類 */}
-      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+      <SectionDivider variant="beige">
         <h2 className="text-base font-bold text-gray-900 mb-3">ケースに応じて必要になるフィリピン側の公的書類</h2>
         <p className="text-sm text-gray-700 leading-relaxed mb-4">
           国際結婚では、婚姻をどちらの国で先に行うか、結婚後にどの手続きを進めるか、また再婚・死別・離婚歴があるかによって、必要書類が変わります。その中でも、フィリピン側書類として必要になることが多いのが次のような書類です。
         </p>
-        <ol className="space-y-2 mb-4">
-          {[
-            'PSA発行の出生証明書（Birth Certificate）',
-            'PSA発行の独身証明書（CENOMAR）',
-            'DFAアポスティーユ認証',
-            'ケースに応じた追加書類（再婚・離婚歴・死別歴がある場合は、別の証明書や注記付き書類が必要になることがあります）',
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/15 text-primary font-bold text-xs flex items-center justify-center mt-0.5">{i + 1}</span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ol>
-        <div className="space-y-1.5 text-xs text-gray-500 border-t border-gray-100 pt-3">
+        <IconCardGrid
+          columns={2}
+          cards={[
+            { icon: FileText, title: "PSA発行の出生証明書", description: "Birth Certificate（出生証明書）", accent: 'blue' },
+            { icon: CheckCircle, title: "PSA発行の独身証明書", description: "CENOMAR（独身証明書）", accent: 'gold' },
+            { icon: ShieldCheck, title: "DFAアポスティーユ認証", description: "書類の国際的な認証手続き", accent: 'green' },
+            { icon: AlertTriangle, title: "ケースに応じた追加書類", description: "再婚・離婚歴・死別歴がある場合は別の証明書が必要なことがあります", accent: 'red' },
+          ]}
+        />
+        <div className="space-y-1.5 text-xs text-gray-500 border-t border-gray-100 pt-3 mt-4">
           <p>※特にCENOMARは、提出先や用途によっては発行後6か月以内のものが求められることがあります。</p>
           <p>※「どの書類が必要か」は、結婚する場所、現在の在留状況、今後のビザ手続きによって変わります。</p>
         </div>
-      </section>
+      </SectionDivider>
 
       {/* Section 3: よくある「書類集めの落とし穴」 */}
-      <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
+      <SectionDivider variant="blue">
         <div className="flex items-start gap-3 mb-5">
           <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
           <h2 className="text-base font-bold text-amber-900">よくある「書類集めの落とし穴」</h2>
@@ -152,7 +150,7 @@ export default function MarriageGuideJa() {
             <p className="text-sm text-amber-800 leading-relaxed">NBIクリアランスは、目的によって必要になることがあります。ただし、初回取得や条件によっては、日本国内のフィリピン大使館・総領事館でご本人による指紋対応が必要です。そのため、第三者だけで完結できない案件があります。</p>
           </div>
         </div>
-      </section>
+      </SectionDivider>
 
       <FeatureList
         heading="こんな方に選ばれています"
@@ -235,6 +233,7 @@ export default function MarriageGuideJa() {
 
       {/* Section 5: 安心の決済フロー */}
       <StepList
+        variant="visual"
         heading="安心の決済フロー"
         steps={[
           { title: 'ご契約・着手金のお支払い', description: '代金総額の50%をご入金いただいた後、取得手続きを開始します。' },
