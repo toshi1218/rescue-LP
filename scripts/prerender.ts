@@ -707,6 +707,28 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/philippines-de-kekkon/`,
     ogType: 'article',
   },
+  {
+    path: '/ja/kekkaku-shomeisho',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'kekkaku-shomeisho', 'index.html'),
+    title: `結核非発病証明書（TB Non-Disease Certificate）ガイド【${SEO_YEAR_MONTH_JA}】フィリピン国籍者の在留資格認定証明書申請に必須`,
+    description: '2025年6月23日施行。フィリピン国籍者がCOE（在留資格認定証明書）を申請する際に必要な結核非発病証明書について、指定Panel Clinic・費用・有効期間・手続きの流れを解説します。',
+    canonical: `${BASE}/ja/kekkaku-shomeisho/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/spouse-visa-documents/`,
+    jaCanonical: `${BASE}/ja/kekkaku-shomeisho/`,
+    ogType: 'article',
+  },
+  {
+    path: '/ja/haigusha-visa-shorui',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa-shorui', 'index.html'),
+    title: `配偶者ビザに必要な書類チェックリスト【2026年3月版】フィリピン人配偶者の在留資格認定証明書申請`,
+    description: '2025年6月23日改正対応。フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。結核非発病証明書の追加要件・PSA書類・CENOMARをまとめてご案内。',
+    canonical: `${BASE}/ja/haigusha-visa-shorui/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/spouse-visa-documents/`,
+    jaCanonical: `${BASE}/ja/haigusha-visa-shorui/`,
+    ogType: 'article',
+  },
 ];
 
 function updateHead(html: string, route: RouteConfig): string {

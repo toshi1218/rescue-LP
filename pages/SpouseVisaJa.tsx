@@ -88,15 +88,28 @@ export default function SpouseVisaJa() {
       />
 
       <SummaryBlock
-        conclusion="「日本人の配偶者等」ビザ審査に対応したPSA婚姻証明書・NBIクリアランスをアポスティーユ付きで準備。入管提出に間に合うスケジュールで進めます。"
+        conclusion="「日本人の配偶者等」ビザ審査に対応したPSA婚姻証明書・PSA出生証明書・CENOMARをアポスティーユ付きで準備。2025年6月〜必須の結核非発病証明書についても案内します。"
         points={[
           '入管が求める「紙の原本＋DFAアポスティーユ」形式で手配',
           'PSA婚姻証明書・PSA出生証明書・CENOMARをまとめて代行',
+          '2025年6月23日〜：在留資格認定証明書交付申請に結核非発病証明書が必須',
           '有効期限に合わせた取得タイミングもアドバイス',
-          '新規申請・更新・変更、どの申請にも対応',
         ]}
         ctaText="無料で相談する（24時間以内に返信）"
       />
+
+      {/* 2025年6月23日〜 法改正アラート */}
+      <div className="mb-8 rounded-2xl border-2 border-amber-400 overflow-hidden">
+        <div className="bg-amber-500 px-4 py-3 flex items-start gap-2">
+          <AlertTriangle className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
+          <p className="text-sm font-bold text-white">【2025年6月23日〜 法改正】フィリピン国籍者は結核非発病証明書の提出が必要になりました</p>
+        </div>
+        <div className="bg-amber-50 px-4 py-3 text-sm text-amber-800 leading-relaxed space-y-1">
+          <p>在留資格認定証明書（COE）交付申請にあたり、フィリピン国籍の方は指定Panel Clinicが発行する<strong>結核非発病証明書（TB Non-Disease Certificate）</strong>の提出が必要となりました。</p>
+          <p>有効期間は胸部X線撮影日から<strong>180日</strong>。指定クリニック以外の書類は受理されません。</p>
+          <Link to="/ja/kekkaku-shomeisho/" className="inline-block mt-1 text-amber-700 font-semibold hover:underline">→ 結核非発病証明書ガイドを見る（指定クリニック・費用・有効期間）</Link>
+        </div>
+      </div>
 
       {/* 訴求ブロック */}
       <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
@@ -129,15 +142,16 @@ export default function SpouseVisaJa() {
             </thead>
             <tbody>
               {[
-                { doc: 'PSA婚姻証明書（Certificate of Marriage）', from: 'PSA（フィリピン統計局）', note: 'DFAアポスティーユ付きの紙の原本。電子証明書は入管では使用不可。' },
-                { doc: 'PSA出生証明書（Birth Certificate）', from: 'PSA', note: 'DFAアポスティーユ付きの紙の原本が原則。' },
-                { doc: 'CENOMAR（独身証明書）', from: 'PSA', note: '初婚の確認に使用。再婚の場合は代わりに別書類が必要な場合あり。' },
-                { doc: '各書類の日本語訳', from: '翻訳者（本人でも可）', note: '翻訳者の署名・住所・翻訳日の記載が必要。' },
+                { doc: 'PSA婚姻証明書（Certificate of Marriage）', from: 'PSA（フィリピン統計局）', note: 'DFAアポスティーユ付きの紙の原本。電子証明書は入管では使用不可。', highlight: false },
+                { doc: 'PSA出生証明書（Birth Certificate）', from: 'PSA', note: 'DFAアポスティーユ付きの紙の原本が原則。', highlight: false },
+                { doc: 'CENOMAR（独身証明書）', from: 'PSA', note: '初婚の確認に使用。再婚の場合は代わりに別書類が必要な場合あり。', highlight: false },
+                { doc: '結核非発病証明書（TB Non-Disease Certificate）★2025年6月〜必須', from: '指定Panel Clinic（IOM Manila / NHS等）', note: '胸部X線撮影日から180日有効。指定クリニック以外は不可。COE申請に必要。', highlight: true },
+                { doc: '各書類の日本語訳', from: '翻訳者（本人でも可）', note: '翻訳者の署名・住所・翻訳日の記載が必要。', highlight: false },
               ].map((row, i) => (
-                <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="p-2 border border-gray-200 text-gray-700 font-medium">{row.doc}</td>
-                  <td className="p-2 border border-gray-200 text-gray-600">{row.from}</td>
-                  <td className="p-2 border border-gray-200 text-gray-500">{row.note}</td>
+                <tr key={i} className={row.highlight ? 'bg-amber-50' : i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td className={`p-2 border border-gray-200 font-medium ${row.highlight ? 'text-amber-800' : 'text-gray-700'}`}>{row.doc}</td>
+                  <td className={`p-2 border border-gray-200 ${row.highlight ? 'text-amber-700' : 'text-gray-600'}`}>{row.from}</td>
+                  <td className={`p-2 border border-gray-200 ${row.highlight ? 'text-amber-600' : 'text-gray-500'}`}>{row.note}</td>
                 </tr>
               ))}
             </tbody>
@@ -153,7 +167,7 @@ export default function SpouseVisaJa() {
             { icon: Stamp, title: 'DFAアポスティーユ', description: '外務省による認証。紙の原本に付与されるため電子版は不可。', accent: 'blue' },
             { icon: ShieldCheck, title: 'CENOMAR', description: '独身証明書。初婚確認に使用。PSAが発行する公式書類。', accent: 'green' },
             { icon: CheckCircle, title: 'PSA出生証明書', description: '本人の生年月日・国籍を証明。アポスティーユ付き原本が原則。', accent: 'teal' },
-            { icon: Clock, title: '有効期限あり', description: 'PSA書類・CENOMARは発行から6ヶ月〜1年が目安。タイミングが重要。', accent: 'red' },
+            { icon: AlertTriangle, title: '結核非発病証明書（2025年6月〜）', description: 'COE申請に必須。指定Panel Clinic発行・有効期間180日。', accent: 'red' },
             { icon: Globe, title: '日本語訳が必要', description: '翻訳者の署名・住所・翻訳日の記載が必要。本人でも作成可能。', accent: 'purple' },
           ]}
         />
@@ -286,10 +300,11 @@ export default function SpouseVisaJa() {
       <nav className="mt-10 pt-8 border-t border-gray-100">
         <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
         <ul className="space-y-2 text-sm">
+          <li><Link to="/ja/haigusha-visa-shorui/" className="text-secondary hover:underline">→ 配偶者ビザに必要な書類チェックリスト【2026年3月版】</Link></li>
+          <li><Link to="/ja/kekkaku-shomeisho/" className="text-secondary hover:underline">→ 結核非発病証明書ガイド（2025年6月〜COE申請に必須）</Link></li>
           <li><Link to="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行（CENOMAR・PSA・NBI）</Link></li>
           <li><Link to="/ja/psa-kekkon-shomeisho/" className="text-secondary hover:underline">→ PSA婚姻証明書の取得代行</Link></li>
           <li><Link to="/ja/cenomar/" className="text-secondary hover:underline">→ CENOMAR（独身証明書）取得代行</Link></li>
-          <li><Link to="/ja/gyouseishoshi-to-shorui-shuttoku/" className="text-secondary hover:underline">→ 行政書士の仕事と書類取得サービスの違い</Link></li>
         </ul>
       </nav>
     </PageLayout>
