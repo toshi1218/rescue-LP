@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function CenomarGuideEn() {
+  useMeta(
+    'What is CENOMAR? Certificate of No Marriage from PSA | Philippine Document Service',
+    'CENOMAR (Certificate of No Marriage Record) is an official PSA document proving single status in the Philippines. We retrieve it with DFA Apostille and ship worldwide via DHL.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'CENOMAR Service' }]}

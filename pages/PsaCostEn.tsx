@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function PsaCostEn() {
+  useMeta(
+    'PSA Birth Certificate Cost 2026 — Official Fees & Total Pricing | Philippine Document Service',
+    'PSA Birth Certificate costs PHP 365 officially. Total cost with DHL worldwide shipping, DFA Apostille, and proxy service starts at USD 199. Full 2026 pricing breakdown.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'PSA Birth Certificate Cost' }]}
