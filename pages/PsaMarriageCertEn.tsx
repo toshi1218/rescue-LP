@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function PsaMarriageCertEn() {
+  useMeta(
+    'PSA Marriage Certificate + Apostille Service | Philippine Document Service',
+    'PSA Marriage Certificate is an official marriage record from the Philippine Statistics Authority. Required for spouse visas and immigration. We retrieve it with DFA Apostille and ship worldwide.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'PSA Marriage Certificate Retrieval' }]}

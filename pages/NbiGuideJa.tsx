@@ -10,7 +10,7 @@ import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircl
 export default function NbiGuideJa() {
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI Clearance 更新サポート' }]}
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI Clearance（無犯罪証明書）取得代行' }]}
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',

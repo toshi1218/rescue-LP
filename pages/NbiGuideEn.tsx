@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function NbiGuideEn() {
+  useMeta(
+    'What is NBI Clearance? Philippine Criminal Record Certificate | Philippine Document Service',
+    'NBI Clearance is a criminal record certificate from the Philippine National Bureau of Investigation. Required for visas, immigration, and employment. We handle retrieval and DFA Apostille.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'NBI Clearance Retrieval' }]}

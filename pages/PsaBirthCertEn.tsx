@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function PsaBirthCertEn() {
+  useMeta(
+    'PSA Birth Certificate — Official Philippine Birth Record | Philippine Document Service',
+    'A PSA Birth Certificate is an official civil registry document from the Philippine Statistics Authority. Required for visas, immigration, and legal processes. Retrieved with DFA Apostille.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'PSA Birth Certificate Retrieval' }]}
