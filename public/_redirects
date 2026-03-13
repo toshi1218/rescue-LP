@@ -77,5 +77,64 @@
 /kika-shinsei-guide         /ja/kika-shinsei-guide        301
 /kika-shinsei-guide/        /ja/kika-shinsei-guide/       301
 
+# ── trailing slash 正規化 (/ja/* → trailing slash付きへ) ────────
+/ja/cenomar                  /ja/cenomar/                 301
+/ja/cenomar-apostille        /ja/cenomar-apostille/       301
+/ja/cenomar-koyukigen        /ja/cenomar-koyukigen/       301
+/ja/psa-shussei-shomeisho    /ja/psa-shussei-shomeisho/   301
+/ja/nbi-clearance            /ja/nbi-clearance/           301
+/ja/nbi-hit                  /ja/nbi-hit/                 301
+/ja/nbi-koyukigen            /ja/nbi-koyukigen/           301
+/ja/apostille                /ja/apostille/               301
+/ja/apostille-shori-kikan    /ja/apostille-shori-kikan/   301
+/ja/apostille-ryokin         /ja/apostille-ryokin/        301
+/ja/kokusai-kekkon-guide     /ja/kokusai-kekkon-guide/    301
+/ja/kokusai-kekkon-roadmap   /ja/kokusai-kekkon-roadmap/  301
+/ja/nihon-senko-ph-senko     /ja/nihon-senko-ph-senko/    301
+/ja/gyouseishoshi-to-shorui-shuttoku /ja/gyouseishoshi-to-shorui-shuttoku/ 301
+/ja/philippines-de-kekkon    /ja/philippines-de-kekkon/   301
+/ja/haigusha-visa            /ja/haigusha-visa/           301
+/ja/psa-kekkon-shomeisho     /ja/psa-kekkon-shomeisho/    301
+/ja/gaimen-kirikae-guide     /ja/gaimen-kirikae-guide/    301
+/ja/kika-shinsei-guide       /ja/kika-shinsei-guide/      301
+/ja/psa-shussei-cost         /ja/psa-shussei-cost/        301
+/ja/driver-record            /ja/driver-record/           301
+/ja/us-visa-documents        /ja/us-visa-documents/       301
+/ja/canada                   /ja/canada/                  301
+/ja/australia                /ja/australia/               301
+/ja/uk                       /ja/uk/                      301
+/ja/ryokin                   /ja/ryokin/                  301
+/ja/guides                   /ja/guides/                  301
+/ja/company                  /ja/company/                 301
+/ja/contact                  /ja/contact/                 301
+/ja/privacy                  /ja/privacy/                 301
+/ja/terms                    /ja/terms/                   301
+
+# ── trailing slash 正規化 (/en/* → trailing slash付きへ) ────────
+/en/cenomar                  /en/cenomar/                 301
+/en/cenomar-apostille        /en/cenomar-apostille/       301
+/en/cenomar-validity         /en/cenomar-validity/        301
+/en/psa-birth-certificate    /en/psa-birth-certificate/   301
+/en/nbi-clearance            /en/nbi-clearance/           301
+/en/nbi-hit                  /en/nbi-hit/                 301
+/en/nbi-validity             /en/nbi-validity/            301
+/en/apostille                /en/apostille/               301
+/en/apostille-processing-time /en/apostille-processing-time/ 301
+/en/apostille-fee            /en/apostille-fee/           301
+/en/international-marriage-guide /en/international-marriage-guide/ 301
+/en/spouse-visa-documents    /en/spouse-visa-documents/   301
+/en/psa-marriage-certificate /en/psa-marriage-certificate/ 301
+/en/drivers-license-conversion /en/drivers-license-conversion/ 301
+/en/naturalization-guide     /en/naturalization-guide/    301
+/en/psa-birth-certificate-cost /en/psa-birth-certificate-cost/ 301
+/en/driver-record            /en/driver-record/           301
+/en/us-visa-documents        /en/us-visa-documents/       301
+/en/k1-visa-documents        /en/k1-visa-documents/       301
+/en/cr1-visa-documents       /en/cr1-visa-documents/      301
+/en/canada                   /en/canada/                  301
+/en/australia                /en/australia/               301
+/en/uk                       /en/uk/                      301
+/en/guides                   /en/guides/                  301
+
 # ── SPA フォールバック ────────────────────────────────────────────
 /*  /index.html  200

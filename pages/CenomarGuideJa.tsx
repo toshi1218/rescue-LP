@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
@@ -25,6 +26,17 @@ export default function CenomarGuideJa() {
             url: 'https://ph-document.com/ja/',
           },
           areaServed: { '@type': 'Country', name: 'JP' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'JPY',
+            price: '40000',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '40000',
+              priceCurrency: 'JPY',
+              description: 'PSA CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            },
+          },
         },
         {
           '@context': 'https://schema.org',
@@ -177,13 +189,24 @@ export default function CenomarGuideJa() {
       />
 
       <CtaBox
-        title="LINEで相談する"
-        description="お気軽にLINEでもご相談いただけます。"
-        buttonText="LINEで相談する"
-        href="#contact"
+        title="メールでのご相談"
+        description="お気軽にメールでご相談いただけます。"
+        buttonText="メールで相談する"
+        href="mailto:igrs20200601@gmail.com"
         variant="secondary"
         trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
+
+      {/* 関連ページへの内部リンク */}
+      <nav className="mt-10 pt-8 border-t border-gray-100">
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
+        <ul className="space-y-2 text-sm">
+          <li><Link to="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行（CENOMAR・PSA・NBI）</Link></li>
+          <li><Link to="/ja/cenomar-apostille/" className="text-secondary hover:underline">→ CENOMARのDFAアポスティーユ取得代行</Link></li>
+          <li><Link to="/ja/cenomar-koyukigen/" className="text-secondary hover:underline">→ CENOMARの有効期限と取得タイミング</Link></li>
+          <li><Link to="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行</Link></li>
+        </ul>
+      </nav>
     </PageLayout>
   );
 }
