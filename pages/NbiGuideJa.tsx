@@ -5,7 +5,10 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle } from 'lucide-react';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
+import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText } from 'lucide-react';
 
 export default function NbiGuideJa() {
   return (
@@ -153,25 +156,31 @@ export default function NbiGuideJa() {
       />
 
       {/* 当社でご案内しやすいケース */}
-      <section className="mb-10 rounded-2xl bg-primary/5 border border-primary/15 p-6">
+      <SectionDivider variant="beige">
         <h2 className="text-base font-bold text-gray-900 mb-4">当社でご案内しやすいケース</h2>
-        <ul className="space-y-2 mb-4">
-          {[
-            '2014年以降にNBIクリアランスを取得したことがある',
-            'その後、姓・名・生年月日などの個人情報に変更がない',
-            '更新として進められる可能性が高い',
-            '日本からできるだけ手間を減らして進めたい',
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="text-xs text-gray-500 border-t border-primary/10 pt-3">
+        <IconCardGrid
+          columns={2}
+          cards={[
+            { icon: CheckCircle, title: "2014年以降に取得歴がある", description: "2014年以降にNBIクリアランスを取得したことがある方", accent: 'green' },
+            { icon: ShieldCheck, title: "個人情報に変更がない", description: "姓・名・生年月日などの個人情報に変更がない方", accent: 'blue' },
+            { icon: Globe, title: "日本から手続きしたい", description: "日本からできるだけ手間を減らして進めたい方", accent: 'teal' },
+            { icon: FileText, title: "更新として進められる可能性", description: "更新として進められる可能性が高い案件", accent: 'gold' },
+          ]}
+        />
+        <p className="text-xs text-gray-500 border-t border-primary/10 pt-3 mt-4">
           在東京フィリピン大使館の案内でも、2014年以降の証明書で個人情報変更がなければ、新しいFingerprint Cardを作らずに更新手続きが可能とされています。
         </p>
-      </section>
+      </SectionDivider>
+
+      <ComparisonTable
+        heading="更新案件 vs 新規取得"
+        rows={[
+          { item: "IGRSで対応可能", self: "新規・氏名変更", agency: "更新案件（2014年以降）" },
+          { item: "本人の指紋登録", self: "大使館へ本人訪問", agency: "不要（更新の場合）" },
+          { item: "日本語サポート", self: "英語のみ", agency: true },
+          { item: "進捗報告", self: "—", agency: true },
+        ]}
+      />
 
       <CtaBox
         title="更新対象かどうか、まずご確認します"
@@ -183,30 +192,32 @@ export default function NbiGuideJa() {
       />
 
       {/* ご注意ください */}
-      <section className="mb-10 space-y-4">
-        <h2 className="text-base font-bold text-gray-900">ご注意ください</h2>
+      <SectionDivider variant="blue">
+        <h2 className="text-base font-bold text-gray-900 mb-4">ご注意ください</h2>
 
-        <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
-          <p className="text-sm font-bold text-amber-900 mb-1">初回取得は、本人対応が必要です</p>
-          <p className="text-sm text-amber-800 leading-relaxed">
-            初めてNBIクリアランスを取る方は、在日フィリピン大使館・総領事館でFingerprint Card Form No. 5の作成と指紋対応が必要です。そのため、第三者だけで完結する形では進められません。
-          </p>
-        </div>
+        <div className="space-y-4">
+          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
+            <p className="text-sm font-bold text-amber-900 mb-1">初回取得は、本人対応が必要です</p>
+            <p className="text-sm text-amber-800 leading-relaxed">
+              初めてNBIクリアランスを取る方は、在日フィリピン大使館・総領事館でFingerprint Card Form No. 5の作成と指紋対応が必要です。そのため、第三者だけで完結する形では進められません。
+            </p>
+          </div>
 
-        <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
-          <p className="text-sm font-bold text-amber-900 mb-1">氏名変更がある場合も、新規扱いになることがあります</p>
-          <p className="text-sm text-amber-800 leading-relaxed">
-            たとえば結婚後に姓が変わった場合など、個人情報に変更があると、2014年以降の取得歴があっても新規・初回申請側の手順が必要になります。
-          </p>
-        </div>
+          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
+            <p className="text-sm font-bold text-amber-900 mb-1">氏名変更がある場合も、新規扱いになることがあります</p>
+            <p className="text-sm text-amber-800 leading-relaxed">
+              たとえば結婚後に姓が変わった場合など、個人情報に変更があると、2014年以降の取得歴があっても新規・初回申請側の手順が必要になります。
+            </p>
+          </div>
 
-        <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
-          <p className="text-sm font-bold text-amber-900 mb-1">海外からの申請は、NBI Main Officeで処理されます</p>
-          <p className="text-sm text-amber-800 leading-relaxed">
-            在外申請はNBI Main Officeで処理される案内です。そのため、全体の所要日数は、書類準備だけでなく、現地到着や発送状況にも左右されます。
-          </p>
+          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
+            <p className="text-sm font-bold text-amber-900 mb-1">海外からの申請は、NBI Main Officeで処理されます</p>
+            <p className="text-sm text-amber-800 leading-relaxed">
+              在外申請はNBI Main Officeで処理される案内です。そのため、全体の所要日数は、書類準備だけでなく、現地到着や発送状況にも左右されます。
+            </p>
+          </div>
         </div>
-      </section>
+      </SectionDivider>
 
       {/* ご依頼時にお願いしていること */}
       <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
@@ -241,6 +252,7 @@ export default function NbiGuideJa() {
       </section>
 
       <StepList
+        variant="visual"
         heading="ご依頼の流れ"
         steps={[
           { title: '無料相談', description: 'まずは、過去の取得年と、氏名変更の有無をお知らせください。更新として進めやすい案件かどうかを確認します。' },

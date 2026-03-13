@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
@@ -6,8 +6,11 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { Heart, FileCheck, Globe, Users, FileText, Building, Scale, CheckCircle, Clock, Stamp } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
 
 export default function PsaMarriageCertJa() {
   return (
@@ -136,26 +139,41 @@ export default function PsaMarriageCertJa() {
         </p>
       </section>
 
-      <FeatureList
-        heading="こんな方へ"
-        items={[
-          {
-            icon: <Heart className="w-4 h-4" />,
-            title: '配偶者ビザ・在留資格の申請中',
-            description: '入国管理局への在留資格申請に、PSA婚姻証明書が必要です。DFAアポスティーユが必要かどうかも含めて確認します。',
-          },
-          {
-            icon: <Users className="w-4 h-4" />,
-            title: '再婚・アニュルメント後の手続き',
-            description: '注釈付きPSA婚姻証明書が必要なケースも対応します。まずは状況をお知らせください。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: '提出先に合った形式で揃えたい',
-            description: 'アポスティーユが必要かどうか、提出先ごとに確認して手配します。日本の提出先では紙の原本が原則必要です。',
-          },
-        ]}
-      />
+      <SectionDivider variant="beige">
+        <FeatureList
+          heading="こんな方へ"
+          items={[
+            {
+              icon: <Heart className="w-4 h-4" />,
+              title: '配偶者ビザ・在留資格の申請中',
+              description: '入国管理局への在留資格申請に、PSA婚姻証明書が必要です。DFAアポスティーユが必要かどうかも含めて確認します。',
+            },
+            {
+              icon: <Users className="w-4 h-4" />,
+              title: '再婚・アニュルメント後の手続き',
+              description: '注釈付きPSA婚姻証明書が必要なケースも対応します。まずは状況をお知らせください。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: '提出先に合った形式で揃えたい',
+              description: 'アポスティーユが必要かどうか、提出先ごとに確認して手配します。日本の提出先では紙の原本が原則必要です。',
+            },
+          ]}
+        />
+
+        <IconCardGrid
+          heading="PSA婚姻証明書の主な提出先・用途"
+          columns={3}
+          cards={[
+            { icon: Heart, title: '配偶者ビザ申請', description: '入国管理局への在留資格申請に必要。DFAアポスティーユ付き紙原本で対応', accent: 'gold' },
+            { icon: Building, title: '帰化申請', description: '法務局への帰化申請でフィリピン人配偶者の婚姻証明書が必要', accent: 'blue' },
+            { icon: Scale, title: '法務局・裁判所', description: '外国離婚承認手続き・アニュルメント後の手続きに必要', accent: 'green' },
+            { icon: Globe, title: '在フィリピン日本大使館', description: '報告的届出・各種手続きに婚姻証明書が必要', accent: 'gold' },
+            { icon: FileText, title: 'Annotated版対応', description: '再婚・アニュルメント後など注釈付き婚姻証明書が必要なケースも代行', accent: 'blue' },
+            { icon: Stamp, title: 'DFAアポスティーユ込み', description: '日本の提出先が要求するアポスティーユ認証まで一括で手配', accent: 'green' },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="まず「何が必要か」を確認しましょう"
@@ -166,21 +184,23 @@ export default function PsaMarriageCertJa() {
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
-      <FeatureList
-        heading="料金に含まれるもの"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA婚姻証明書取得',
-            description: 'フィリピン統計局（PSA）への申請・取得を代行します。SECPAセキュリティペーパー印刷の原本をお届けします。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: '提出先の要件に応じてDFAアポスティーユ認証も手配します。',
-          },
-        ]}
-      />
+      <SectionDivider variant="blue">
+        <FeatureList
+          heading="料金に含まれるもの"
+          items={[
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'PSA婚姻証明書取得',
+              description: 'フィリピン統計局（PSA）への申請・取得を代行します。SECPAセキュリティペーパー印刷の原本をお届けします。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
+              description: '提出先の要件に応じてDFAアポスティーユ認証も手配します。',
+            },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="追加費用の後出しはありません"
@@ -193,11 +213,23 @@ export default function PsaMarriageCertJa() {
 
       <StepList
         heading="ご依頼の流れ"
+        variant="visual"
         steps={[
           { title: 'フォームで相談', description: '用途（配偶者ビザ・帰化申請など）と提出先をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+        ]}
+      />
+
+      <ComparisonTable
+        heading="PSA婚姻証明書 取得の比較"
+        rows={[
+          { item: 'PSAへの申請', self: false, agency: true },
+          { item: 'DFAアポスティーユ', self: false, agency: true },
+          { item: '入管・法務局の要件確認', self: '要調査', agency: true },
+          { item: '有効期限の管理', self: '自己管理', agency: true },
+          { item: '日本語進捗報告', self: '—', agency: true },
         ]}
       />
 

@@ -140,6 +140,7 @@ export default function PsaCostJa() {
 
       <StepList
         heading="ご依頼時の決済フロー"
+        variant="visual"
         steps={[
           {
             title: '無料お見積もり',
