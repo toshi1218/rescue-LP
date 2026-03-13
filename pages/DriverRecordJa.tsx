@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -66,10 +67,10 @@ export default function DriverRecordJa() {
             },
             {
               '@type': 'Question',
-              name: '急ぎの場合は対応できますか？',
+              name: '都道府県ごとに必要書類が異なると聞きましたが、確認してもらえますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。',
+                text: 'はい。都道府県の運転免許センターによって求める書類や書式が異なります。無料相談で提出先の都道府県をお知らせいただければ、その要件に合わせた書類を手配します。',
               },
             },
           ],
@@ -78,7 +79,7 @@ export default function DriverRecordJa() {
     >
       <HeroBanner
         title="LTOドライバーズレコード、日本語だけで取り寄せます"
-        badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
+        badges={['複数名対応', 'OR・アポスティーユ込み', '外免切替専門対応']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -93,6 +94,42 @@ export default function DriverRecordJa() {
         ]}
         ctaText="無料で相談する（24時間以内に返信）"
       />
+
+      {/* 固有コンテンツ：LTOドライバーズレコードとは */}
+      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+        <h2 className="text-base font-bold text-gray-900 mb-3">LTOドライバーズレコード（Driver's Record）とは</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          LTOドライバーズレコードは、フィリピン陸運局（Land Transportation Office）が発行する運転免許の履歴証明書です。免許の種類・取得日・更新履歴・違反歴などが記載されており、外国免許を日本の免許に切り替える「外国免許切替（外免切替）」に必要な書類の一つです。
+        </p>
+
+        <h3 className="text-sm font-bold text-gray-800 mb-3">外免切替で試験場に提出する書類</h3>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-xs border-collapse">
+            <thead>
+              <tr className="bg-gray-50">
+                <th className="text-left p-2 border border-gray-200 font-bold text-gray-700">書類</th>
+                <th className="text-left p-2 border border-gray-200 font-bold text-gray-700">取得先</th>
+                <th className="text-left p-2 border border-gray-200 font-bold text-gray-700">注意点</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { doc: 'LTOドライバーズレコード', from: 'LTO（フィリピン陸運局）', note: 'DFAアポスティーユ付きが必要。都道府県によって要求が異なる場合あり。' },
+                { doc: 'オリジナルレシート（OR）', from: 'LTO', note: '免許更新時の支払い領収書。試験場によって求められる場合がある。' },
+                { doc: 'フィリピン免許証（現物）', from: '本人保有', note: '有効期限内のもの。切れている場合は要確認。' },
+                { doc: 'パスポート', from: '本人保有', note: '来日時のもの（フィリピン滞在歴の証明として）' },
+              ].map((row, i) => (
+                <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td className="p-2 border border-gray-200 text-gray-700 font-medium">{row.doc}</td>
+                  <td className="p-2 border border-gray-200 text-gray-600">{row.from}</td>
+                  <td className="p-2 border border-gray-200 text-gray-500">{row.note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500">※ 必要書類・手続きは各都道府県の運転免許センターによって異なります。事前に提出先に確認してください。</p>
+      </section>
 
       <FeatureList
         heading="こんな方へ"
@@ -169,11 +206,21 @@ export default function DriverRecordJa() {
           { q: '外免切替に必要な書類は何ですか？', a: '一般的にLTOドライバーズレコード（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。' },
           { q: '料金はいくらですか？', a: 'LTO取得・DFAアポスティーユ・ORをまとめた料金です。国際郵送費は実費別途です。無料相談後に正確な金額をご提示します。' },
           { q: '複数名分まとめて依頼できますか？', a: 'はい、可能です。人数と状況をお知らせいただければ、まとめて手配します。' },
-          { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
+          { q: '都道府県ごとに必要書類が異なると聞きましたが、確認してもらえますか？', a: 'はい。都道府県の運転免許センターによって求める書類や書式が異なります。無料相談で提出先の都道府県をお知らせいただければ、その要件に合わせた書類を手配します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
       />
+
+      {/* 関連ページ */}
+      <nav className="mt-10 pt-8 border-t border-gray-100">
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
+        <ul className="space-y-2 text-sm">
+          <li><Link to="/ja/gaimen-kirikae-guide/" className="text-secondary hover:underline">→ フィリピン免許の外免切替ガイド（必要書類と手続きの流れ）</Link></li>
+          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行</Link></li>
+          <li><Link to="/ja/ryokin/" className="text-secondary hover:underline">→ 料金一覧</Link></li>
+        </ul>
+      </nav>
     </PageLayout>
   );
 }

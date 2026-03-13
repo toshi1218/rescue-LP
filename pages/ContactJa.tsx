@@ -1,32 +1,125 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Send, Mail, ShieldCheck, Clock, X } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
+import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
 export default function ContactJa() {
+  const [service, setService] = useState('');
+  const ctaVariant = getCtaVariant();
+  const trafficSource = getTrafficSource();
+
+  useEffect(() => {
+    const handler = (e: Event) => setService((e as CustomEvent<string>).detail);
+    window.addEventListener('setContactService', handler);
+    return () => window.removeEventListener('setContactService', handler);
+  }, []);
+
   return (
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'お問い合わせ' }]}>
-      <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-4">お問い合わせ・無料相談</h1>
-      <p className="text-sm text-gray-600 mb-6">
+      <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">お問い合わせ・無料相談</h1>
+      <p className="text-sm text-gray-600 mb-4">
         必要書類・料金・期間など、まずはお気軽にご相談ください。日本語で対応します。
       </p>
-      <form action={FORMSPREE_ENDPOINT} method="POST" className="space-y-4 max-w-xl">
+
+      {/* 信頼バッジ */}
+      <div className="flex flex-wrap gap-3 mb-6">
+        <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+          <Clock className="w-3.5 h-3.5 text-primary" />
+          24時間以内に返信
+        </span>
+        <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+          <ShieldCheck className="w-3.5 h-3.5 text-primary" />
+          着手前キャンセル無料
+        </span>
+        <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+          <X className="w-3.5 h-3.5 text-primary" />
+          匿名相談OK
+        </span>
+      </div>
+
+      <form
+        action={FORMSPREE_ENDPOINT}
+        method="POST"
+        className="space-y-4 max-w-xl"
+        onSubmit={() => trackEvent('form_submit', { location: 'contact_page', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource })}
+      >
+        <input type="hidden" name="_subject" value="【LPお問い合わせ】フィリピン書類取得代行" />
+        <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+        <input type="hidden" name="cta_variant" value={ctaVariant} />
+        <input type="hidden" name="traffic_source" value={trafficSource} />
+        <input type="hidden" name="landing_page" value="https://ph-document.com/ja/contact/" />
+
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">お名前 <span className="text-red-500">*</span></label>
-          <input name="name" required placeholder="山田 太郎" className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-secondary" />
+          <input
+            name="name"
+            required
+            placeholder="山田 太郎"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+          />
         </div>
+
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">メールアドレス <span className="text-red-500">*</span></label>
-          <input name="email" type="email" required placeholder="example@email.com" className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-secondary" />
+          <input
+            name="email"
+            type="email"
+            required
+            placeholder="example@email.com"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+          />
         </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">
+            ご相談の目的 <span className="text-red-500">*</span>
+          </label>
+          <select
+            name="service"
+            required
+            value={service}
+            onChange={e => setService(e.target.value)}
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+          >
+            <option value="">目的を選択してください</option>
+            <option value="国際結婚">国際結婚</option>
+            <option value="配偶者ビザ">配偶者ビザ</option>
+            <option value="免許切り替え">免許切り替え</option>
+            <option value="帰化申請">帰化申請</option>
+            <option value="個別ロードマップ作成">個別ロードマップ作成</option>
+            <option value="その他">その他</option>
+          </select>
+        </div>
+
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">ご相談内容 <span className="text-red-500">*</span></label>
-          <textarea name="message" required rows={5} placeholder="例：国際結婚のためCENOMARとPSA出生証明書（アポスティーユ付き）が必要です。提出先は○○市役所で、提出予定は○月頃です。" className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-secondary" />
+          <textarea
+            name="message"
+            required
+            rows={5}
+            placeholder="例：国際結婚のためCENOMARとPSA出生証明書（アポスティーユ付き）が必要です。提出先は○○市役所で、提出予定は○月頃です。"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+          />
         </div>
-        <button type="submit" className="bg-primary text-white font-bold px-8 py-3 rounded-xl hover:bg-primary-hover transition-colors">
+
+        <button
+          type="submit"
+          className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3"
+        >
+          <Send className="w-5 h-5" />
           送信する
         </button>
       </form>
+
+      <a
+        href="mailto:igrs20200601@gmail.com"
+        className="mt-4 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors"
+      >
+        <Mail className="w-4 h-4" />
+        メールで直接連絡する（igrs20200601@gmail.com）
+      </a>
     </PageLayout>
   );
 }

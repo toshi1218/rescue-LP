@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -50,18 +51,18 @@ export default function CenomarApostilleJa() {
             },
             {
               '@type': 'Question',
-              name: 'いつ届きますか？',
+              name: 'CENOMARとDFAアポスティーユ、まとめて依頼できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。',
+                text: 'はい。PSA CENOMAR取得からDFAアポスティーユ認証まで一括で代行します。個別に依頼するより手間がかからず、発行から認証まで一貫したスケジュールで手配できます。全体の目安はおおむね1ヶ月半です。',
               },
             },
             {
               '@type': 'Question',
-              name: '急ぎの場合は対応できますか？',
+              name: '日本の入管・役所には紙の原本でないと提出できませんか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。',
+                text: '原則として紙の原本＋DFAアポスティーユが必要です。PSAのオンライン電子版（e-Apostille）は日本の入管や市区町村役場では原則として受け付けられません。当社は紙の原本形式で対応します。',
               },
             },
             {
@@ -78,7 +79,7 @@ export default function CenomarApostilleJa() {
     >
       <HeroBanner
         title="CENOMARのDFAアポスティーユ、まとめてお任せください"
-        badges={['日本語だけでOK', 'アポスティーユ込み', '追加費用なし']}
+        badges={['PSA取得からアポスティーユまで一括', '紙の原本形式で対応', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -93,6 +94,35 @@ export default function CenomarApostilleJa() {
         ]}
         ctaText="無料で相談する（24時間以内に返信）"
       />
+
+      {/* 固有コンテンツ：アポスティーユとは・DFAの手順 */}
+      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+        <h2 className="text-base font-bold text-gray-900 mb-3">アポスティーユ条約とCENOMAR</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          アポスティーユ（Apostille）とは、1961年のハーグ条約（外国公文書の認証を不要とする条約）に基づく証明です。条約加盟国の公的機関が発行した書類に対して、その国の権限ある機関が付与する認証スタンプのことを指します。
+        </p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          フィリピン（条約加盟国）が発行したCENOMARを日本（同じく条約加盟国）で使用する場合、DFA（フィリピン外務省）によるアポスティーユが付いていれば、日本の入管・役所・裁判所などに公文書として提出できます。従来の「領事認証」に代わる簡便な認証方式です。
+        </p>
+
+        <h3 className="text-sm font-bold text-gray-800 mb-3">DFAアポスティーユの取得手順</h3>
+        <div className="space-y-3 mb-4">
+          {[
+            { step: '1', title: 'PSAからCENOMARを取得', detail: 'フィリピン統計局（PSA）に申請し、SECPAセキュリティペーパーに印刷されたCENOMARを受け取ります。' },
+            { step: '2', title: 'DFAにアポスティーユを申請', detail: 'フィリピン外務省（DFA）のAuthentication Division にCENOMARを持参（または郵送）し、アポスティーユを申請します。DFAのオフィスはManilaとcebu等にあります。' },
+            { step: '3', title: 'アポスティーユ付きCENOMARを受け取り', detail: 'DFAがCENOMARの裏面または別紙にアポスティーユ証明を付与します。これで日本の公的機関に提出できる形式になります。' },
+          ].map(({ step, title, detail }) => (
+            <div key={step} className="flex gap-3">
+              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/15 text-primary font-bold text-xs flex items-center justify-center mt-0.5">{step}</span>
+              <div>
+                <p className="text-sm font-bold text-gray-800 mb-0.5">{title}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-gray-500">※ DFAアポスティーユの処理期間は通常1〜2週間（Regular processing）です。Expedited処理（追加料金）を利用すると短縮できる場合があります。</p>
+      </section>
 
       <FeatureList
         heading="こんな方へ"
@@ -162,13 +192,24 @@ export default function CenomarApostilleJa() {
       <FaqSection
         items={[
           { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
-          { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },
-          { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
+          { q: 'CENOMARとDFAアポスティーユ、まとめて依頼できますか？', a: 'はい。PSA CENOMAR取得からDFAアポスティーユ認証まで一括で代行します。個別に依頼するより手間がかからず、全体の目安はおおむね1ヶ月半です。' },
+          { q: '日本の入管・役所には紙の原本でないと提出できませんか？', a: '原則として紙の原本＋DFAアポスティーユが必要です。PSAのオンライン電子版（e-Apostille）は日本の入管や市区町村役場では原則として受け付けられません。当社は紙の原本形式で対応します。' },
           { q: 'フィリピン人の方が日本在住でも取得できますか？', a: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
       />
+
+      {/* 関連ページ */}
+      <nav className="mt-10 pt-8 border-t border-gray-100">
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
+        <ul className="space-y-2 text-sm">
+          <li><Link to="/ja/cenomar/" className="text-secondary hover:underline">→ CENOMAR（独身証明書）取得代行</Link></li>
+          <li><Link to="/ja/cenomar-koyukigen/" className="text-secondary hover:underline">→ CENOMARの有効期限と取得タイミング</Link></li>
+          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行（PSA全書類対応）</Link></li>
+          <li><Link to="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行</Link></li>
+        </ul>
+      </nav>
     </PageLayout>
   );
 }

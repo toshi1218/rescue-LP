@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -24,6 +25,17 @@ export default function MarriageGuideJa() {
           url: 'https://ph-document.com/ja/',
         },
         areaServed: { '@type': 'Country', name: 'JP' },
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'JPY',
+          price: '40000',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: '40000',
+            priceCurrency: 'JPY',
+            description: 'PSA書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+          },
+        },
         },
         {
           '@context': 'https://schema.org',
@@ -243,6 +255,18 @@ export default function MarriageGuideJa() {
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
       />
+
+      {/* 関連ページ */}
+      <nav className="mt-10 pt-8 border-t border-gray-100">
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
+        <ul className="space-y-2 text-sm">
+          <li><Link to="/ja/nihon-senko-ph-senko/" className="text-secondary hover:underline">→ 日本先行婚 vs フィリピン先行婚：どちらを選ぶべきか比較</Link></li>
+          <li><Link to="/ja/philippines-de-kekkon/" className="text-secondary hover:underline">→ フィリピンで結婚する全ガイド（手続き・必要書類・注意点）</Link></li>
+          <li><Link to="/ja/gyouseishoshi-to-shorui-shuttoku/" className="text-secondary hover:underline">→ 行政書士の仕事と書類取得サービスの違い</Link></li>
+          <li><Link to="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行</Link></li>
+          <li><Link to="/ja/cenomar/" className="text-secondary hover:underline">→ CENOMAR（独身証明書）取得代行</Link></li>
+        </ul>
+      </nav>
     </PageLayout>
   );
 }

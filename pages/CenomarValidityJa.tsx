@@ -71,7 +71,7 @@ export default function CenomarValidityJa() {
     >
       <HeroBanner
         title="CENOMARの取得タイミング、一緒に確認します"
-        badges={['日本語だけでOK', '提出期限に合わせて手配', '料金']}
+        badges={['有効期限の確認から対応', 'PSAアポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />

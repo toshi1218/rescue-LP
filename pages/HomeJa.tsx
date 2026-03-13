@@ -27,8 +27,39 @@ export default function HomeJa() {
     trackLandingView();
   }, []);
 
+  const orgSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'IGRS Inc.',
+    alternateName: 'ph-document.com',
+    url: 'https://ph-document.com/ja/',
+    logo: 'https://ph-document.com/logo.png',
+    description: 'フィリピンの公的書類（PSA出生証明書・CENOMAR・NBI Clearance・DFAアポスティーユ）を日本語だけで代行取得するサービスを提供。国際結婚・配偶者ビザ・帰化申請・外免切替に対応。',
+    areaServed: [
+      { '@type': 'Country', name: 'JP' },
+      { '@type': 'Country', name: 'PH' },
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      availableLanguage: 'Japanese',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'フィリピン書類取得代行サービス',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CENOMAR（独身証明書）取得代行' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PSA出生証明書取得代行' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NBI Clearance取得代行' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DFAアポスティーユ代行' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'LTOドライバーズレコード取得代行' } },
+      ],
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background-light text-gray-800 font-body">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <Navbar />
       <main>
         <Hero />

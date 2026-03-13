@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
@@ -179,6 +180,17 @@ export default function PsaCostJa() {
         variant="secondary"
         trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
+
+      {/* 関連ページへの内部リンク */}
+      <nav className="mt-10 pt-8 border-t border-gray-100">
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
+        <ul className="space-y-2 text-sm">
+          <li><Link to="/ja/psa-shussei-shomeisho/" className="text-secondary hover:underline">→ PSA出生証明書の取得代行（渡航不要・アポスティーユ付き）</Link></li>
+          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行</Link></li>
+          <li><Link to="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行</Link></li>
+          <li><Link to="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行</Link></li>
+        </ul>
+      </nav>
     </PageLayout>
   );
 }

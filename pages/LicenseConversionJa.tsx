@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
@@ -28,6 +29,17 @@ export default function LicenseConversionJa() {
             url: 'https://ph-document.com/ja/',
           },
           areaServed: { '@type': 'Country', name: 'JP' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'JPY',
+            price: '100000',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '100000',
+              priceCurrency: 'JPY',
+              description: 'LTO書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            },
+          },
         },
         {
           '@context': 'https://schema.org',
@@ -230,6 +242,16 @@ export default function LicenseConversionJa() {
         variant="primary"
         trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料"
       />
+
+      {/* 関連ページへの内部リンク */}
+      <nav className="mt-10 pt-8 border-t border-gray-100">
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
+        <ul className="space-y-2 text-sm">
+          <li><Link to="/ja/driver-record/" className="text-secondary hover:underline">→ LTOドライバーズレコード代行（外免切替・企業採用）</Link></li>
+          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行</Link></li>
+          <li><Link to="/ja/ryokin/" className="text-secondary hover:underline">→ 料金一覧</Link></li>
+        </ul>
+      </nav>
     </PageLayout>
   );
 }
