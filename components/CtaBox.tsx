@@ -9,6 +9,8 @@ type CtaBoxProps = {
   variant?: 'primary' | 'secondary';
   /** 不安解消メッセージ（例：「着手前キャンセル無料・進捗を随時ご報告」） */
   trustNote?: string;
+  /** お問い合わせフォームのプルダウンに事前選択するサービス種別 */
+  service?: string;
 };
 
 export default function CtaBox({
@@ -18,7 +20,17 @@ export default function CtaBox({
   href,
   variant = 'primary',
   trustNote,
+  service,
 }: CtaBoxProps) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (service) {
+      e.preventDefault();
+      window.dispatchEvent(new CustomEvent('setContactService', { detail: service }));
+      setTimeout(() => {
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
+  };
   if (variant === 'secondary') {
     return (
       <section className="relative mb-12 overflow-hidden rounded-2xl bg-secondary px-6 py-8 md:px-8">
@@ -42,6 +54,7 @@ export default function CtaBox({
           </div>
           <a
             href={href}
+            onClick={handleClick}
             className="group inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover whitespace-nowrap transition-all duration-200 hover:gap-3 flex-shrink-0"
           >
             {buttonText}
@@ -73,6 +86,7 @@ export default function CtaBox({
         </div>
         <a
           href={href}
+          onClick={handleClick}
           className="group inline-flex items-center gap-2 bg-secondary text-white font-bold py-3 px-6 rounded-xl shadow-md hover:bg-secondary-light whitespace-nowrap transition-all duration-200 hover:gap-3 flex-shrink-0"
         >
           {buttonText}

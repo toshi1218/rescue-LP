@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
-
 type MenuType = 'docs' | 'purpose' | 'guides' | null;
 
 const Navbar: React.FC = () => {
@@ -248,7 +247,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
             <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
-            <Link to={contactPath} className={linkClass(contactPath)}>{t('navbar.contact')}</Link>
+            <Link to={isJa ? '/ja/kokusai-kekkon-roadmap' : '/en/international-marriage-guide'} className={linkClass(isJa ? '/ja/kokusai-kekkon-roadmap' : '/en/international-marriage-guide')}>{isJa ? '個別ロードマップ作成' : 'Marriage Roadmap'}</Link>
             <Link to={companyPath} className={linkClass(companyPath)}>{t('navbar.company')}</Link>
             <Link to={privacyPath} className={linkClass(privacyPath)}>{t('navbar.privacy')}</Link>
             <Link to={termsPath} className={linkClass(termsPath)}>{t('navbar.terms')}</Link>
@@ -365,7 +364,7 @@ const Navbar: React.FC = () => {
 
             <div className="border-t border-gray-100 pt-2 mt-2 space-y-0.5">
               <Link to={pricingPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.pricing')}</Link>
-              <Link to={contactPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.contact')}</Link>
+              <Link to={isJa ? '/ja/kokusai-kekkon-roadmap' : '/en/international-marriage-guide'} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{isJa ? '個別ロードマップ作成' : 'Marriage Roadmap'}</Link>
               <Link to={companyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.company')}</Link>
               <Link to={privacyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.privacy')}</Link>
               <Link to={termsPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.terms')}</Link>

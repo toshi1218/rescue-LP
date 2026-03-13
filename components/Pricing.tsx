@@ -11,22 +11,23 @@ const plansData = {
       tag: '人気 No.1',
       featured: true,
       title: '国際結婚パック',
-      subtitle: '婚姻済証明書申請に必要な書類一式',
+      subtitle: '日本での国際結婚手続きに向けて、フィリピン側で必要になりやすい書類をまとめたプラン',
       price: '¥99,800',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
       highlights: [
         'PSA出生証明書＋DFAアポスティーユ',
         'CENOMAR（独身証明書）＋DFAアポスティーユ',
-        '優先対応サポート',
+        '進捗報告',
+        '優先対応',
       ],
       notIncluded: [
-        '国際郵送費（実費別途・約¥6,000〜）',
+        '国際郵送費（DHL）¥6,000',
         '日本の役所・入管への提出代行',
         'ビザ申請の法的代理',
         '大使館面接の指導',
       ],
-      bestFor: '日本での婚姻手続き・配偶者ビザ申請で複数のフィリピン書類が必要な方向け',
+      bestFor: '日本での婚姻手続きに向けて、複数のフィリピン書類が必要な方向け',
     },
     {
       id: 'psa',
@@ -34,22 +35,22 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA取得代行',
-      subtitle: '出生証明書 / 独身証明書（CENOMAR）/ 婚姻証明書 / 死亡証明書 など',
+      subtitle: '出生証明書、独身証明書（CENOMAR）、婚姻証明書、死亡証明書など',
       price: '¥50,000',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
       highlights: [
         'PSA書類取得（1通）',
-        'DFAアポスティーユ込み',
+        'DFA Apostille込み',
         '役所申請手数料込み',
       ],
       notIncluded: [
-        '国際郵送費（実費別途・約¥6,000〜）',
+        '国際郵送費（DHL）¥6,000',
         '翻訳',
         '複数通の同時取得（別途見積り）',
         '日本側への提出代行',
       ],
-      bestFor: '出生証明書・婚姻証明書・CENOMARを1通だけ取得したい方向け',
+      bestFor: '出生証明書、婚姻証明書、CENOMARを1通だけ取得したい方向け',
     },
     {
       id: 'nbi',
@@ -64,15 +65,15 @@ const plansData = {
       highlights: [
         'NBI Clearance取得',
         '指紋採取サポート',
-        'DFAアポスティーユ（オプション）',
+        'DFA Apostille（オプション）',
       ],
       notIncluded: [
-        '国際郵送費（実費別途・約¥6,000〜）',
+        '国際郵送費（DHL）¥6,000',
         '翻訳',
         '指紋認証にかかる外部費用',
         '日本側への提出代行',
       ],
-      bestFor: '帰化申請・配偶者ビザ・在留資格手続でNBIが必要な方向け',
+      bestFor: '帰化申請、在留資格手続、各種届出でNBI Clearanceが必要な方向け',
     },
     {
       id: 'lto',
@@ -80,7 +81,7 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'LTO関連書類取得代行',
-      subtitle: '運転免許関連書類（外免切替え用）',
+      subtitle: '運転免許関連書類（外免切替用）',
       price: '¥100,000',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
@@ -90,58 +91,12 @@ const plansData = {
         '役所申請手数料込み',
       ],
       notIncluded: [
-        '国際郵送費（実費別途・約¥6,000〜）',
+        '国際郵送費（DHL）¥6,000',
         '翻訳',
         '日本の免許センターへの提出代行',
         '運転免許試験の代理',
       ],
-      bestFor: 'フィリピン免許から日本の免許へ切替えたい方向け',
-    },
-    {
-      id: 'visa',
-      icon: Heart,
-      tag: null,
-      featured: false,
-      title: '配偶者ビザ',
-      subtitle: '在留資格「日本人の配偶者等」申請サポート',
-      price: '¥89,800',
-      priceNote: '〜（税・送料別）',
-      period: '約4〜8週間',
-      highlights: [
-        '必要書類の準備サポート',
-        '申請書類チェック',
-        'PSA・CENOMAR取得含む',
-        '継続的フォローアップ',
-      ],
-      notIncluded: [
-        '翻訳',
-        '入管への申請代理',
-        '行政書士・弁護士業務',
-      ],
-      bestFor: '在留資格「日本人の配偶者等」を申請する方向け',
-    },
-    {
-      id: 'naturalization',
-      icon: Award,
-      tag: null,
-      featured: false,
-      title: '帰化申請',
-      subtitle: '日本国籍取得の申請サポート',
-      price: '¥89,800',
-      priceNote: '〜（税・送料別）',
-      period: '約6〜12週間',
-      highlights: [
-        '必要書類の準備サポート',
-        '帰化許可申請書類一式',
-        '継続的フォローアップ',
-        '屋号・納税関連書類など',
-      ],
-      notIncluded: [
-        '翻訳',
-        '法務局への申請代理',
-        '行政書士・弁護士業務',
-      ],
-      bestFor: '日本国籍の取得を検討しているフィリピン国籍の方向け',
+      bestFor: 'フィリピン免許から日本の免許へ切り替えたい方向け',
     },
   ],
   en: [
@@ -297,24 +252,17 @@ const Pricing: React.FC = () => {
   const others = plans.filter((p) => !p.featured);
 
   return (
-    <section className="py-16 px-4" id="pricing">
+    <section className="pb-16 px-4" id="pricing">
       <div className="max-w-5xl mx-auto">
-        {/* ヘッダー */}
-        <div className="mb-12">
-          <span className="text-primary font-bold text-xs tracking-widest uppercase block mb-2">PRICE</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-secondary">{t('pricing.title')}</h2>
-          <div className="h-0.5 w-16 bg-primary mt-3" />
-          <p className="text-xs text-gray-500 mt-3">{t('pricing.note')}</p>
-        </div>
+        {lang === 'ja' && (
+          <div className="text-xs text-gray-500 mb-6 space-y-0.5">
+            <p>※表示価格はすべて税抜きです</p>
+            <p>※取得難易度、記載内容の不一致、追加確認の有無により変動する場合があります</p>
+          </div>
+        )}
 
         {/* フィーチャードプラン（横幅フル） */}
-        <div className="relative mb-8 rounded-2xl overflow-hidden">
-          {/* 背景 */}
-          <div className="absolute inset-0 bg-secondary" />
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute -right-20 -top-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
-            <div className="absolute -left-10 bottom-0 w-48 h-48 rounded-full bg-white/5 blur-2xl" />
-          </div>
+        <div className="relative mb-8 rounded-2xl overflow-hidden border border-primary/30 shadow-soft bg-white">
           <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-primary via-primary/60 to-transparent" />
 
           <div className="relative p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-8">
@@ -324,23 +272,23 @@ const Pricing: React.FC = () => {
                 <featured.icon className="w-3.5 h-3.5" />
                 {featured.tag}
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">{featured.title}</h3>
-              <p className="text-sm text-white/60 mb-6">{featured.subtitle}</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-1">{featured.title}</h3>
+              <p className="text-sm text-gray-500 mb-6">{featured.subtitle}</p>
               <div className="flex items-baseline gap-2 mb-2">
                 <span className="text-4xl font-bold text-primary">{featured.price}</span>
-                <span className="text-sm text-white/50">{featured.priceNote}</span>
+                <span className="text-sm text-gray-400">{featured.priceNote}</span>
               </div>
-              <p className="text-xs text-white/40">{lang === 'ja' ? `納期：${featured.period}` : `Delivery: ${featured.period}`}</p>
+              <p className="text-xs text-gray-400">{lang === 'ja' ? `納期：${featured.period}` : `Delivery: ${featured.period}`}</p>
             </div>
 
             {/* 右：含まれるもの＋Not Included＋CTA */}
             <div className="md:w-80 flex-shrink-0">
-              <p className="text-xs font-bold text-white/50 uppercase tracking-wider mb-3">
+              <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
                 {lang === 'ja' ? '含まれるもの' : "What's Included"}
               </p>
               <ul className="space-y-2 mb-4">
                 {featured.highlights.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-white/80">
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-gray-700">
                     <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                     {item}
                   </li>
@@ -348,13 +296,13 @@ const Pricing: React.FC = () => {
               </ul>
               {featured.notIncluded && (
                 <>
-                  <p className="text-xs font-bold text-white/40 uppercase tracking-wider mb-2">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
                     {lang === 'ja' ? '含まれないもの' : 'Not Included'}
                   </p>
                   <ul className="space-y-1.5 mb-4">
                     {featured.notIncluded.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-xs text-white/50">
-                        <XCircle className="w-3.5 h-3.5 text-white/30 flex-shrink-0 mt-0.5" />
+                      <li key={item} className="flex items-start gap-2 text-xs text-gray-500">
+                        <XCircle className="w-3.5 h-3.5 text-gray-300 flex-shrink-0 mt-0.5" />
                         {item}
                       </li>
                     ))}
@@ -481,11 +429,65 @@ const Pricing: React.FC = () => {
           })}
         </div>
 
-        <p className="text-xs text-gray-400 mt-5 leading-relaxed">
-          {lang === 'ja'
-            ? '※表示価格はすべて税抜きです。取得難易度により変動する場合があります。'
-            : '* All prices include Philippine tax and DHL international shipping worldwide. Final amount may vary by document condition.'}
-        </p>
+        {lang === 'en' && (
+          <p className="text-xs text-gray-400 mt-5 leading-relaxed">
+            * All prices include Philippine tax and DHL international shipping worldwide. Final amount may vary by document condition.
+          </p>
+        )}
+
+        {/* 目的別に必要書類を確認したい方へ */}
+        {lang === 'ja' && (
+          <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50/50 p-6">
+            <h3 className="text-sm font-bold text-secondary mb-2">目的別に必要書類を確認したい方へ</h3>
+            <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+              配偶者ビザ、帰化申請、国際結婚などの手続きでは、必要になるフィリピン書類がケースによって異なります。<br />
+              IGRSでは、申請そのものの代理は行っていませんが、手続きに必要なフィリピン書類の取得をサポートしています。
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div>
+                <p className="text-xs font-bold text-secondary mb-2">よくある対象手続き</p>
+                <ul className="space-y-1">
+                  {['日本での国際結婚', '在留資格「日本人の配偶者等」', '帰化申請', '外免切替', '相続や各種届出'].map((item) => (
+                    <li key={item} className="text-xs text-gray-500 flex items-center gap-1.5">
+                      <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-secondary mb-2">対応できる主な書類</p>
+                <ul className="space-y-1">
+                  {[
+                    'PSA Birth Certificate（出生証明書）',
+                    'PSA Marriage Certificate（婚姻証明書）',
+                    'CENOMAR（独身証明書）',
+                    'NBI Clearance（無犯罪証明書）',
+                    'LTO関連書類',
+                    'DFA Apostille',
+                  ].map((item) => (
+                    <li key={item} className="text-xs text-gray-500 flex items-center gap-1.5">
+                      <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+              必要書類が分からない場合は、用途に合わせてご案内します。<br />
+              まずは、結婚、ビザ、帰化、外免切替などの目的を添えてお問い合わせください。
+            </p>
+            <a
+              href="#contact"
+              onClick={() => trackEvent('cta_click', { location: 'pricing_purpose', type: 'general', variant: ctaVariant })}
+              className="group inline-flex items-center gap-1.5 bg-primary text-white text-xs font-bold py-2.5 px-5 rounded-lg hover:bg-primary-hover transition-all duration-200"
+            >
+              相談する
+              <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+            </a>
+          </div>
+        )}
 
         {/* 料金変動要因 */}
         <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50/50 p-6">
@@ -546,10 +548,10 @@ const Pricing: React.FC = () => {
             {(lang === 'ja'
               ? [
                   '翻訳（一部プランに含む場合を除く）',
-                  '日本の役所・入管への提出代行',
-                  '行政書士・弁護士業務',
+                  '日本の役所、出入国在留管理庁への提出代行',
+                  '行政書士、弁護士業務',
                   '法的代理やビザ申請代理',
-                  '審査結果・許可の保証',
+                  '審査結果や許可の保証',
                 ]
               : [
                   'Translation (unless stated in the plan)',

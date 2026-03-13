@@ -121,7 +121,7 @@ export default function UkDocsJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -134,7 +134,7 @@ export default function UkDocsJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証',
+            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
             description: 'UKVI要件に沿ったDFAアポスティーユ認証を手配します。原本での提出が必要です。',
           },
           {

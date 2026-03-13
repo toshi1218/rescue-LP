@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Car } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function LicenseConversionEn() {
+  useMeta(
+    "Philippine Driver's License Conversion — Required LTO Documents | Philippine Document Service",
+    "Convert your Philippine LTO driver's license to a local license in Japan or other countries. We retrieve all required LTO documents with DFA Apostille.",
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Philippine License Conversion Documents' }]}

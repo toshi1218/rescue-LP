@@ -7,10 +7,16 @@ import StepList from '../components/StepList';
 import { useMeta } from '../lib/useMeta';
 import { FileCheck, ListOrdered, Map, CheckCircle } from 'lucide-react';
 
+const ctaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+  window.dispatchEvent(new CustomEvent('setContactService', { detail: '個別ロードマップ作成' }));
+  setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 50);
+};
+
 export default function RoadmapJa() {
   useMeta(
-    '日本で結婚し、その先も日本で一緒に暮らしたい方へ｜個別ロードマップ作成',
-    'フィリピン人のパートナーと日本で結婚し、その先も日本で一緒に暮らしたい方へ。必要書類、手続きの順番、提出先、全体の流れを、お二人の状況に合わせて整理した専用ロードマップを作成します。',
+    'フィリピン国際結婚の手続きロードマップ作成｜IGRS',
+    'フィリピン人パートナーと日本で結婚・同居を目指す方向けの個別ロードマップ作成（49,800円・税込54,780円）。必要書類・手続きの順番・提出先を、お二人の状況に合わせて整理してお渡しします。',
   );
 
   return (
@@ -54,44 +60,27 @@ export default function RoadmapJa() {
         badges={['お二人の状況に合わせて整理', '専用ロードマップを納品', '納品後7日間メール対応']}
         ctaText="個別ロードマップを申し込む"
         ctaHref="#contact"
+        ctaService="個別ロードマップ作成"
       />
 
       {/* リード文 */}
       <section className="mb-12 space-y-4 text-sm md:text-base text-gray-700 leading-relaxed">
         <p>
-          本当は、ただそれだけのことのはずです。<br />
-          愛する人と結婚して、日本人同士の夫婦と同じように、ふつうに一緒に暮らしていきたい。
+          フィリピン人のパートナーと結婚し、日本で一緒に暮らしていきたい。<br />
+          このサービスは、そのために必要な書類、手続きの順番、提出先、全体の流れを整理する、<strong className="text-secondary">個別ロードマップ作成サービス</strong>です。
         </p>
         <p>
-          でも実際には、国籍が違うだけで、必要な書類、進める順番、提出先、考えないといけないことが一気に増えます。
-          いくつの手続きがあって、どれくらいの段階を踏めば、自分たちのゴールにたどり着けるのかも分からない。
+          国際結婚では、何の書類が必要なのか、どこに提出するのか、どの順番で進めればよいのかが分かりにくく、調べても自分たちのケースに当てはめると迷いやすいことがあります。
         </p>
         <p>
-          そこで初めて、「国籍が違うだけで、こんなにも壁が増えるのか」と感じる方も少なくありません。
+          書類を集める前に全体像が見えていないと、遠回りになったり、あとから不足や順番のズレに気づいたりしやすくなります。
         </p>
-        <ul className="space-y-2 pl-4 border-l-2 border-primary/30">
-          {[
-            '何から始めればいいのか分からない。',
-            '何の書類が必要なのか分からない。',
-            'どこに何の書類を出せばいいのか分からない。',
-            '必要な書類を、どうやって集めればいいのかも分からない。',
-            '行政書士などの専門家に相談した方がよさそうな気はするけれど、どの場面で必要なのかも分からない。',
-            '調べれば調べるほど、情報が増えて、かえって不安になる。',
-          ].map((item) => (
-            <li key={item} className="text-gray-600">{item}</li>
-          ))}
-        </ul>
         <p>
-          本当に知りたいのは、知識の量ではなく、
-          <strong className="text-secondary">あなたたちの場合は何をどう進めればいいのか</strong>、ということ。
-        </p>
-        <p>IGRSは、そのための個別ロードマップ作成をご提供しています。</p>
-        <p>
-          お二人の状況を事前に確認したうえで、必要書類、手続きの順番、提出先、全体の流れ、日本で一緒に暮らすまでの目安を整理し、あなたたち専用のロードマップとしてお渡しします。
+          そこでIGRSでは、お二人の状況を事前にヒアリングしたうえで、日本で結婚し、その先も一緒に暮らすための流れを、分かりやすく整理してお渡しします。
         </p>
         <p className="font-semibold text-secondary">
           ただ情報を並べるのではなく、<br />
-          「今どこにいて、次に何をすればいいのか」が見える状態を作るためのサービスです。
+          「今どこにいて、次に何をすればよいのか」が見える状態を作るためのサービスです。
         </p>
       </section>
 
@@ -104,6 +93,7 @@ export default function RoadmapJa() {
         <p className="text-xs text-gray-400 mb-6">税込 54,780円</p>
         <a
           href="#contact"
+          onClick={ctaClick}
           className="inline-flex items-center gap-2 bg-primary text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200"
         >
           個別ロードマップを申し込む
@@ -111,6 +101,34 @@ export default function RoadmapJa() {
         <p className="mt-3 text-xs text-gray-400">
           事前確認フォームにご回答いただいた後、あなたたち専用のロードマップを作成します。
         </p>
+      </section>
+
+      {/* この商品が生まれた背景 */}
+      <section className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
+          <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">この商品が生まれた背景</h2>
+        </div>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <p>実際のお問い合わせの中で多いのは、単なる書類取得の相談だけではありません。</p>
+          <p>本当に多いのは、</p>
+          <ul className="space-y-2 pl-4 border-l-2 border-primary/30">
+            {[
+              '「自分たちの場合、何から始めればいいのか分からない」',
+              '「どこに何を出せばいいのか分からない」',
+              '「必要書類をどう集めればいいのか分からない」',
+              '「行政書士などの専門家に相談した方がよさそうだけれど、どの段階で必要なのか分からない」',
+            ].map((item) => (
+              <li key={item} className="text-gray-600">{item}</li>
+            ))}
+          </ul>
+          <p>という、全体像の見えにくさに関する不安です。</p>
+          <p>このサービスは、そうした不安を整理するために作りました。</p>
+          <p className="font-semibold text-secondary">
+            まず全体像を見えるようにし、そのうえで必要な手続きや書類取得に進みやすくする。<br />
+            そのための入口商品です。
+          </p>
+        </div>
       </section>
 
       {/* こんな不安はありませんか */}
@@ -139,8 +157,8 @@ export default function RoadmapJa() {
         </div>
         <div className="rounded-xl bg-secondary/[0.04] border border-secondary/10 px-5 py-4">
           <p className="text-sm font-semibold text-secondary leading-relaxed">
-            もし、ひとつでも当てはまるなら、先に全体像を整理した方が早いです。<br />
-            書類を集め始める前に、まず地図を作る。それが、このサービスの役割です。
+            こうした不安があるなら、先に全体像を整理した方が早いです。<br />
+            書類を集める前に地図を作る。それが、このサービスの役割です。
           </p>
         </div>
       </section>
@@ -169,7 +187,8 @@ export default function RoadmapJa() {
       <div className="mb-12 -mt-6 rounded-xl bg-secondary/[0.03] border border-secondary/10 px-5 py-4">
         <p className="text-sm text-gray-600 leading-relaxed">
           さらに、どの段階で行政書士などの専門家への相談が必要になりやすいかの目安も分かるようにします。<br />
-          点ではなく流れで理解できる状態を作ります。
+          点ではなく、流れで理解できる状態を作ります。<br />
+          <strong className="text-secondary">「今はここ」「次はこれ」「この先にこう進む」</strong>　それが見えるようになります。
         </p>
       </div>
 
@@ -183,11 +202,11 @@ export default function RoadmapJa() {
           },
           {
             title: 'Step 2｜内容確認と個別整理',
-            description: 'ご回答内容をもとに、必要書類、手続きの順番、提出先、日本で一緒に暮らすまでの流れを整理します。',
+            description: 'ご回答内容をもとに、必要書類、手続きの順番、提出先、日本で一緒に暮らすまでの流れを整理します。必要に応じて追加で状況を確認します。',
           },
           {
             title: 'Step 3｜専用ロードマップの納品',
-            description: 'あなたたち専用の手続きの地図・スケジュール表としてお渡しします。',
+            description: '完成したロードマップは、手続きの地図・スケジュール表として納品します。',
           },
           {
             title: 'Step 4｜納品後7日以内のメール対応',
@@ -203,7 +222,7 @@ export default function RoadmapJa() {
           <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">納品するもの</h2>
         </div>
         <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-6 space-y-4 text-sm text-gray-700 leading-relaxed">
-          <p>納品するのは、お二人のケースに合わせて整理した手続きの地図・スケジュール表です。</p>
+          <p>納品するのは、お二人のケースに合わせて整理した<strong className="text-secondary">手続きの地図・スケジュール表</strong>です。</p>
           <p>
             必要書類の一覧だけではありません。手続きの順番、提出先、全体の流れ、日本で一緒に暮らすまでの目安期間を、できるだけ迷いにくい形でまとめてお渡しします。
           </p>
@@ -221,7 +240,7 @@ export default function RoadmapJa() {
           <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
           <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">このサービスが向いている方</h2>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-2 mb-4">
           {[
             '相手がフィリピン在住で、日本で結婚したいと考えている方。',
             '結婚だけでなく、その先の日本での同居まで見据えて動きたい方。',
@@ -234,6 +253,11 @@ export default function RoadmapJa() {
               <p className="text-sm text-gray-700 leading-relaxed">{item}</p>
             </div>
           ))}
+        </div>
+        <div className="rounded-xl bg-gray-50 border border-gray-100 px-5 py-4">
+          <p className="text-xs text-gray-500 leading-relaxed">
+            逆に、すでに全体像が明確で、必要書類も順番も固まっており、書類取得だけを依頼したい方は、書類取得サービスの方が合う場合があります。
+          </p>
         </div>
       </section>
 
@@ -255,8 +279,8 @@ export default function RoadmapJa() {
               返信は原則2営業日以内です。
             </p>
             <p>
-              なお、個別ロードマップ作成後に、当方の書類取得パックをご依頼いただく場合は、
-              ロードマップご利用者特典として20,000円を値引きします。
+              なお、個別ロードマップ作成後に、当方の<strong className="text-secondary">書類取得パック</strong>をご依頼いただく場合は、
+              ロードマップご利用者特典として<strong className="text-secondary">20,000円を値引き</strong>します。
             </p>
           </div>
           <div className="rounded-xl bg-primary/10 border border-primary/20 px-5 py-4">
@@ -265,6 +289,55 @@ export default function RoadmapJa() {
               書類取得パックへ進まれる場合は、書類取得パック料金から<strong>20,000円</strong>を値引きします。
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* ロードマップご利用者特典 */}
+      <section className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
+          <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">ロードマップご利用者特典</h2>
+        </div>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <p>
+            個別ロードマップ作成後、当方の書類取得パックへ進まれる場合は、書類取得パック料金から<strong className="text-secondary">20,000円を値引き</strong>します。
+          </p>
+          <p className="font-semibold text-secondary">
+            最初からすべてを一気に進めるのではなく、<br />
+            まず流れを整理し、必要になった段階で次に進める。<br />
+            その方が無駄が少なく、判断もしやすくなります。
+          </p>
+        </div>
+      </section>
+
+      {/* なぜ、最初にロードマップが必要なのか */}
+      <section className="mb-12">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
+          <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">なぜ、最初にロードマップが必要なのか</h2>
+        </div>
+        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <p>国際結婚や、その後の日本での同居は、必要書類だけ知っていても、うまく進まないことがあります。</p>
+          <p className="font-semibold text-secondary">本当に大事なのは、順番です。</p>
+          <ul className="space-y-2 pl-4 border-l-2 border-primary/30">
+            {[
+              '何を先にして、何を後にするのか。',
+              'どこで止まりやすいのか。',
+              '今の状況なら、どこから着手するのが現実的なのか。',
+            ].map((item) => (
+              <li key={item} className="text-gray-600">{item}</li>
+            ))}
+          </ul>
+          <p>
+            そこが曖昧なまま進めると、時間も手間も余計にかかりやすくなります。
+          </p>
+          <p>
+            だから最初に、お二人専用の流れを整理する意味があります。
+          </p>
+          <p className="font-semibold text-secondary">
+            結婚して終わりではなく、その先で一緒に暮らす未来につなげるために。<br />
+            まずは順番を間違えないことが大切です。
+          </p>
         </div>
       </section>
 
@@ -313,6 +386,7 @@ export default function RoadmapJa() {
         href="#contact"
         variant="secondary"
         trustNote="返信は原則2営業日以内"
+        service="個別ロードマップ作成"
       />
 
       {/* 注意事項 */}
