@@ -88,7 +88,7 @@ export default function PsaBirthCertJa() {
       </p>
 
       <SummaryBlock
-        conclusion="PSA出生証明書（アポスティーユ付き）を、日本語だけで取り寄せできます。"
+        conclusion="PSA出生証明書をアポスティーユ・日本語訳つきで取り寄せ。帰化申請・婚姻届・ビザ申請に合わせた認証形式でお届けします。"
         points={[
           '現地スタッフがPSA申請・DFAアポスティーユを代行',
           '日本の提出先が求める「紙の原本＋アポスティーユ」形式で対応',

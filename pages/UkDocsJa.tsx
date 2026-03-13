@@ -84,7 +84,7 @@ export default function UkDocsJa() {
       />
 
       <SummaryBlock
-        conclusion="UK配偶者ビザ・永住許可（ILR）に必要なフィリピン書類を、日本語だけで一括取り寄せできます。"
+        conclusion="Spouse Visa・ILR申請で求められるPSA婚姻証明書・NBIクリアランスをUKVI対応のDFAアポスティーユ付きで一括手配。UK移民審査に必要な認証形式で準備します。"
         points={[
           'UKはハーグ条約加盟国 — フィリピン書類にはDFAアポスティーユが必要',
           'CENOMAR・PSA出生証明書・NBI Clearance・婚姻証明書に対応',

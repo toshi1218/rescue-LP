@@ -85,7 +85,7 @@ export default function PsaMarriageCertJa() {
       />
 
       <SummaryBlock
-        conclusion="PSA婚姻証明書（アポスティーユ付き）を、日本語だけで取り寄せできます。"
+        conclusion="PSA婚姻証明書を提出先に合った認証形式で取り寄せ。在留資格変更・帰化申請の入管・法務局提出に対応したアポスティーユ付きでお届けします。"
         points={[
           '現地スタッフがPSA申請・DFAアポスティーユを代行',
           '配偶者ビザ・帰化申請に必要な「紙の原本」形式で対応',

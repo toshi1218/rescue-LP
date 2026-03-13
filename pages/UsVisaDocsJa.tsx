@@ -84,7 +84,7 @@ export default function UsVisaDocsJa() {
       />
 
       <SummaryBlock
-        conclusion="米国ビザ（K-1・CR-1・IR-1）に必要なフィリピン書類を、日本語だけで一括取り寄せできます。"
+        conclusion="K-1・CR-1・IR-1ビザ審査に必要なNVC提出書類をUSCIS・DOS基準の形式で一括手配。PSA婚姻証明書・NBIクリアランス・出生証明書をまとめて準備します。"
         points={[
           'CENOMAR・PSA出生証明書・婚姻証明書・NBI Clearanceをまとめて代行',
           'USCIS・NVC提出に必要なDFAアポスティーユ付きで対応',
