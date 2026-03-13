@@ -84,7 +84,7 @@ export default function CanadaDocsJa() {
       />
 
       <SummaryBlock
-        conclusion="カナダ永住権・配偶者スポンサーシップに必要なフィリピン書類を、日本語だけで一括取り寄せできます。"
+        conclusion="Spousal Sponsorship・永住権申請に必要なPSA証明書・NBIクリアランスをIRCC対応のDFAアポスティーユ付きで一括手配。カナダ移民申請の書類ブロッカーを取り除きます。"
         points={[
           'カナダはハーグ条約加盟国 — フィリピン書類にはDFAアポスティーユが必要',
           'CENOMAR・PSA出生証明書・NBI Clearance・婚姻証明書に対応',

@@ -84,7 +84,7 @@ export default function AustraliaDocsJa() {
       />
 
       <SummaryBlock
-        conclusion="オーストラリアパートナービザ・永住権に必要なフィリピン書類を、日本語だけで一括取り寄せできます。"
+        conclusion="Partner Visa・永住権申請に必要なPSA・NBIクリアランスをHome Affairs対応のDFAアポスティーユ付きで一括取り寄せ。ビザ申請のボトルネックを解消します。"
         points={[
           'オーストラリアはハーグ条約加盟国 — フィリピン書類にはDFAアポスティーユが必要',
           'CENOMAR・PSA出生証明書・NBI Clearance・婚姻証明書に対応',

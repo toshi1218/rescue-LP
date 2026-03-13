@@ -85,7 +85,7 @@ export default function NaturalizationJa() {
       />
 
       <SummaryBlock
-        conclusion="帰化申請に必要なフィリピン書類を、日本語だけで一括取り寄せできます。"
+        conclusion="帰化申請で法務局が求めるPSA証明書・NBIクリアランスをアポスティーユ付きで一括取り寄せ。申請期限に間に合うよう優先対応します。"
         points={[
           'PSA出生証明書・婚姻証明書・CENOMARをまとめて代行',
           'DFAアポスティーユ付きで法務局の要件に対応',

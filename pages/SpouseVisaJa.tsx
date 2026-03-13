@@ -85,7 +85,7 @@ export default function SpouseVisaJa() {
       />
 
       <SummaryBlock
-        conclusion="配偶者ビザ（在留資格「日本人の配偶者等」）に必要なフィリピン書類を、日本語だけで取り寄せできます。"
+        conclusion="「日本人の配偶者等」ビザ審査に対応したPSA婚姻証明書・NBIクリアランスをアポスティーユ付きで準備。入管提出に間に合うスケジュールで進めます。"
         points={[
           '入管が求める「紙の原本＋DFAアポスティーユ」形式で手配',
           'PSA婚姻証明書・PSA出生証明書・CENOMARをまとめて代行',

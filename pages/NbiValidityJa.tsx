@@ -75,7 +75,7 @@ export default function NbiValidityJa() {
 
       {/* Section 1 */}
       <section className="mb-10">
-        <h2 className="text-base font-bold text-gray-900 mb-4">1. まず確認すべきなのは「NBIの発行日」と「提出先の条件」です</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-4">1. NBIクリアランスの有効期限チェック：「発行日」と「提出先の基準期間」を確認する</h2>
         <div className="text-sm text-gray-700 leading-relaxed space-y-3">
           <p>NBIクリアランスの有効性を考えるときは、まず手元の書類に書かれている<strong>Date Issued（発行日）</strong>を確認してください。そのうえで、提出先が「発行から3か月以内」「6か月以内」など、どの基準で見ているかを確認する必要があります。</p>
           <p>ここで大事なのは、提出先によって基準が同じではないということです。たとえば、在フィリピン日本国大使館の案内では、フィリピンで発行された書類は原則として申請日から3か月以内、ただしBirth Certificate（出生証明書）とMarriage Certificate（婚姻証明書）は1年以内とされています。</p>
@@ -95,7 +95,7 @@ export default function NbiValidityJa() {
 
       {/* Section 2 */}
       <section className="mb-10">
-        <h2 className="text-base font-bold text-gray-900 mb-4">2. よくある失敗は「まだ使えると思っていたのに、提出先で古いと言われる」ことです</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-4">2. よくある失敗：期限内と思っていたNBIクリアランスが「古い」と却下されるケース</h2>
         <div className="rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm text-amber-800 leading-relaxed space-y-3">
           <div className="flex items-start gap-2">
             <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
@@ -107,7 +107,7 @@ export default function NbiValidityJa() {
 
       {/* Section 3 */}
       <section className="mb-10">
-        <h2 className="text-base font-bold text-gray-900 mb-4">3. NBIクリアランスを更新しやすい人、そうでない人</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-4">3. NBIクリアランスを更新できる人・新規取得が必要な人の判定基準</h2>
         <div className="text-sm text-gray-700 leading-relaxed space-y-4">
           <p>海外在住者向けの案内では、2014年以降に発行されたNBI Clearanceがあり、かつ氏名などの個人情報に変更がない場合は、新しいFingerprint Card（指紋カード）を作らずに更新手続きへ進めることができると案内されています。</p>
           <div className="grid gap-3">
@@ -139,7 +139,7 @@ export default function NbiValidityJa() {
 
       {/* Section 4 */}
       <section className="mb-10 rounded-2xl bg-amber-50 border border-amber-200 p-6">
-        <h2 className="text-base font-bold text-amber-900 mb-3">4. 期限が不安な場合は、自己判断より「提出先基準の確認」が先です</h2>
+        <h2 className="text-base font-bold text-amber-900 mb-3">4. NBIクリアランスの有効期限が不安なときの正しい確認手順</h2>
         <div className="text-sm text-amber-800 leading-relaxed space-y-3">
           <p>ここで一番危ないのは、「NBI自体はまだ使えそうだから大丈夫だろう」と自己判断してしまうことです。</p>
           <p>実務では、NBIそのものの見た目や保有期間より、提出先が何を求めているかが優先されます。提出先の案内が明確ならその条件に従い、はっきりしない場合は、提出先または関係機関に確認してから動くのが確実です。</p>
@@ -148,7 +148,7 @@ export default function NbiValidityJa() {
 
       {/* Section 5 */}
       <section className="mb-10 rounded-2xl bg-blue-50 border border-blue-200 p-6">
-        <h2 className="text-base font-bold text-blue-900 mb-3">5. NBIクリアランスの再取得・更新でお困りの方へ</h2>
+        <h2 className="text-base font-bold text-blue-900 mb-3">5. NBIクリアランス再取得・更新の代行サポート（日本から日本語で対応）</h2>
         <div className="text-sm text-blue-800 leading-relaxed space-y-3">
           <p>「急いでいるのに、どの条件で進めればいいか分からない」「更新でいけるのか、新規扱いなのか判断できない」「現地の家族や知人に頼みにくい」</p>
           <p>そうした場合は、状況整理から進めた方が早いです。当社では、まず現在お持ちのNBIクリアランスの発行時期、氏名変更の有無、提出先が求める期限を確認し、更新ルートで進められるかを整理したうえでご案内します。難しい案件は、必要に応じて関係先への確認も行いながら進めます。</p>
