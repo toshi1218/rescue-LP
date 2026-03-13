@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
     { label: t('navbar.doc.nbi'),      path: isJa ? '/ja/nbi-clearance/'        : '/en/nbi-clearance/' },
     { label: t('navbar.doc.apostille'),path: isJa ? '/ja/apostille/'            : '/en/apostille/' },
     { label: t('navbar.doc.marriage'), path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/en/psa-marriage-certificate/' },
+    ...(isJa ? [{ label: '結核非発病証明書', path: '/ja/kekkaku-shomeisho/' }] : []),
   ];
 
   const purposeTabs = isJa ? [
@@ -78,6 +79,13 @@ const Navbar: React.FC = () => {
         { label: isJa ? 'PSA婚姻証明書の取得方法' : 'PSA Marriage Certificate', path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/en/psa-marriage-certificate/' },
       ],
     },
+    ...(isJa ? [{
+      category: '配偶者ビザ',
+      items: [
+        { label: '配偶者ビザ必要書類【2026年3月版】', path: '/ja/haigusha-visa-shorui/' },
+        { label: '結核非発病証明書（2025年6月〜必須）', path: '/ja/kekkaku-shomeisho/' },
+      ],
+    }] : []),
   ];
   const contactPath = isJa ? '/ja/contact/' : '/en/contact/';
   const companyPath = isJa ? '/ja/company/' : '/en/company/';

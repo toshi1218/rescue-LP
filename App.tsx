@@ -62,6 +62,8 @@ import RoadmapJa from './pages/RoadmapJa';
 import MarriageOrderJa from './pages/MarriageOrderJa';
 import GyoseishoshiVsDocServiceJa from './pages/GyoseishoshiVsDocServiceJa';
 import PhilippinesWeddingGuideJa from './pages/PhilippinesWeddingGuideJa';
+import TbCertJa from './pages/TbCertJa';
+import SpouseVisaShoryuJa from './pages/SpouseVisaShoryuJa';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -141,6 +143,8 @@ export default function App() {
         <Route path="/ja/nihon-senko-ph-senko" element={<MarriageOrderJa />} />
         <Route path="/ja/gyouseishoshi-to-shorui-shuttoku" element={<GyoseishoshiVsDocServiceJa />} />
         <Route path="/ja/philippines-de-kekkon" element={<PhilippinesWeddingGuideJa />} />
+        <Route path="/ja/kekkaku-shomeisho" element={<TbCertJa />} />
+        <Route path="/ja/haigusha-visa-shorui" element={<SpouseVisaShoryuJa />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar" replace />} />
