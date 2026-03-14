@@ -65,9 +65,10 @@ export default function NbiGuideJa() {
       ]}
     >
       <HeroBanner
-        title="フィリピンNBIクリアランス（無犯罪証明書）更新サポート"
+        title="NBIクリアランスは、更新できる案件かどうかを先に確認します"
+        subtitle="取得歴、氏名変更の有無、現在地を確認し、進められる案件だけを整理してご案内します。"
         badges={['更新案件を中心に対応', '条件を先に確認', '進捗を随時ご報告']}
-        ctaText="無料相談はこちら"
+        ctaText="更新できるか確認する"
         ctaHref="#contact"
       />
 

@@ -70,9 +70,10 @@ export default function LicenseConversionJa() {
       ]}
     >
       <HeroBanner
-        title="フィリピンの免許を日本の免許に切り替える「外免切替」手続きと必要書類"
+        title="外免切替に必要なLTO書類を、日本語で取り寄せます"
+        subtitle="試験場で求められやすいフィリピン側書類を整理し、予約日に合わせて逆算してご案内します。"
         badges={['外免切替ガイド', 'フィリピン免許対応', '無料相談あり']}
-        ctaText="無料相談はこちら"
+        ctaText="必要なLTO書類を確認する"
         ctaHref="#contact"
       />
 

@@ -67,9 +67,13 @@ export default function ApostilleGuideJa() {
       ]}
     >
       <article className="max-w-2xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4 leading-snug">
-          【完全解説】フィリピン書類のアポスティーユ（旧レッドリボン）とは？ 必要になるケースと注意点
+        <h1 className="text-2xl font-bold text-gray-900 mb-2 leading-snug">
+          アポスティーユが必要かどうか、まずここで整理できます
         </h1>
+
+        <p className="text-gray-500 mb-6">
+          国際結婚、配偶者ビザ準備、外免切替、帰化申請など、どの場面で必要になりやすいかを分かりやすくまとめています。
+        </p>
 
         <p className="text-gray-700 leading-relaxed mb-8">
           日本の役所、入管、警察、免許センターなどから「フィリピンの書類にアポスティーユを付けてください」と言われて、何をすればいいのか分からず止まっていませんか。このページでは、アポスティーユの意味、旧レッドリボンとの違い、必要になりやすいケース、そして進めるときの注意点をまとめて整理します。
@@ -160,7 +164,7 @@ export default function ApostilleGuideJa() {
       <CtaBox
         title="まずは無料でご相談ください"
         description="何のために使う書類か、どの書類を持っているかをお知らせください。必要な流れと費用の目安をご案内します。"
-        buttonText="無料相談はこちら"
+        buttonText="自分のケースを確認する"
         href="#contact"
         variant="primary"
         trustNote="着手金50%・書類写し確認後に残金50%お支払い"
