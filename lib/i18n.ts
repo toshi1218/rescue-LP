@@ -32,7 +32,7 @@ const ja = {
   'hero.h1line2': '日本語で迷わず',
   'hero.h1line3': '進められます',
   'hero.description': '国際結婚、配偶者ビザ準備、外免切替、帰化申請。今の目的に合うルートからご案内します。',
-  'hero.disclaimer': '※お手続きにあたり、弊社で作成した英文委任状（Special Power of Attorney）へのご署名や、身分証明書のコピー提出をお願いする場合があります。やり取り自体は日本語で進めます。',
+  'hero.disclaimer': '※お手続きにあたり、弊社で作成したauthorization letterへのご署名や、身分証明書のコピー提出をお願いする場合があります。やり取り自体は日本語で進めます。',
   'hero.ctaA': '自分に合うルートを確認する',
   'hero.ctaB': '自分に合うルートを確認する',
   'hero.pricingCta': '料金を見る',
