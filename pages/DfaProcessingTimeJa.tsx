@@ -5,8 +5,11 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
+import { Clock, Calendar, FileCheck, Globe, CheckCircle, AlertTriangle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
 
 export default function DfaProcessingTimeJa() {
   return (
@@ -71,7 +74,7 @@ export default function DfaProcessingTimeJa() {
     >
       <HeroBanner
         title="DFAアポスティーユの処理期間、提出予定日を考慮してスケジュールをご案内します"
-        badges={['日本語だけでOK', '提出期限に合わせて手配', '料金']}
+        badges={['Regular/Expedited対応', '提出期限に合わせて手配', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -87,26 +90,17 @@ export default function DfaProcessingTimeJa() {
         ctaText="無料で相談する（24時間以内に返信）"
       />
 
-      <FeatureList
-        heading="こんな方へ"
-        items={[
-          {
-            icon: <Clock className="w-4 h-4" />,
-            title: 'DFAアポスティーユにどのくらいかかるか知りたい',
-            description: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安はおおむね1ヶ月半です。',
-          },
-          {
-            icon: <Calendar className="w-4 h-4" />,
-            title: '提出期限が決まっている',
-            description: '提出予定日から逆算して、最適なタイミングで申請を開始します。間に合うかどうかも事前にご確認します。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA書類の取得からまとめて頼みたい',
-            description: 'PSA書類の取得からDFAアポスティーユ・国際郵送まで一括で手配できます。',
-          },
-        ]}
-      />
+      <SectionDivider variant="beige">
+        <IconCardGrid
+          heading="こんな方に選ばれています"
+          columns={3}
+          cards={[
+            { icon: Clock, title: '処理期間を確認したい', description: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。全体の目安はおおむね1ヶ月半です。', accent: 'gold' },
+            { icon: Calendar, title: '提出期限が決まっている', description: '提出予定日から逆算して、最適なタイミングで申請を開始します。間に合うかどうかも事前にご確認します。', accent: 'blue' },
+            { icon: FileCheck, title: 'PSA書類からまとめて頼みたい', description: 'PSA書類の取得からDFAアポスティーユ・国際郵送まで一括で手配できます。', accent: 'green' },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="提出予定日を教えてください"
@@ -117,21 +111,34 @@ export default function DfaProcessingTimeJa() {
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
-      <FeatureList
-        heading="料金に含まれるもの"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。DFA内部処理はRegular 5日程度・Express 3日程度。当社の代行手配込みで約2週間が目安です。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA書類取得（必要な場合）',
-            description: 'PSA書類の取得からまとめて依頼いただけます。',
-          },
-        ]}
-      />
+      <SectionDivider variant="blue">
+        <FeatureList
+          heading="料金に含まれるもの"
+          items={[
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
+              description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。DFA内部処理はRegular 5日程度・Express 3日程度。当社の代行手配込みで約2週間が目安です。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'PSA書類取得（必要な場合）',
+              description: 'PSA書類の取得からまとめて依頼いただけます。',
+            },
+          ]}
+        />
+
+        <ComparisonTable
+          heading="自分で手配 vs IGRS代行"
+          rows={[
+            { item: 'DFA Regular / Express の選択', self: '要調査', agency: true },
+            { item: '提出期限に合わせたスケジュール管理', self: '要自己管理', agency: true },
+            { item: 'PSA書類からまとめて手配', self: false, agency: true },
+            { item: '日本語サポート', self: false, agency: true },
+            { item: '進捗報告', self: false, agency: true },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="余裕を持った早めのご相談をおすすめします"
@@ -144,6 +151,7 @@ export default function DfaProcessingTimeJa() {
 
       <StepList
         heading="ご依頼の流れ"
+        variant="visual"
         steps={[
           { title: '提出予定日を共有', description: '婚姻届・ビザ申請などの提出予定日をお知らせください。' },
           { title: '申請開始時期を確認', description: '逆算して最適な申請開始時期と料金の目安をご案内します。' },

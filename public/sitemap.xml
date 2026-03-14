@@ -242,6 +242,70 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- ── 国際結婚情報記事 ──────────────────────────────────── -->
+  <url>
+    <loc>https://ph-document.com/ja/nihon-senko-ph-senko/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ja/gyouseishoshi-to-shorui-shuttoku/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ja/philippines-de-kekkon/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ja/kokusai-kekkon-roadmap/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ── 海外ビザ（Canada/Australia/UK） ──────────────────────── -->
+  <url>
+    <loc>https://ph-document.com/en/canada/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ja/canada/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/australia/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ja/australia/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/uk/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ja/uk/</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- ── US Visa ────────────────────────────────────────────── -->
   <url>
     <loc>https://ph-document.com/en/us-visa-documents/</loc>

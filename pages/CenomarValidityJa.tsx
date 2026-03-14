@@ -5,8 +5,11 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
+import { Clock, Calendar, FileCheck, Globe, AlertTriangle, CheckCircle, Users } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
 
 export default function CenomarValidityJa() {
   return (
@@ -71,7 +74,7 @@ export default function CenomarValidityJa() {
     >
       <HeroBanner
         title="CENOMARの取得タイミング、一緒に確認します"
-        badges={['日本語だけでOK', '提出期限に合わせて手配', '料金']}
+        badges={['有効期限の確認から対応', 'PSAアポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -87,26 +90,17 @@ export default function CenomarValidityJa() {
         ctaText="無料で相談する（24時間以内に返信）"
       />
 
-      <FeatureList
-        heading="こんな方へ"
-        items={[
-          {
-            icon: <Clock className="w-4 h-4" />,
-            title: '有効期限が切れないか心配',
-            description: 'CENOMARは多くの提出先で発行から6ヶ月以内のものが求められます。提出スケジュールに合わせて取得時期を調整します。',
-          },
-          {
-            icon: <Calendar className="w-4 h-4" />,
-            title: '婚姻届・ビザ申請の期限が決まっている',
-            description: '提出予定日から逆算して、最適なタイミングで申請を開始します。早すぎても遅すぎても困ります。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: '取得後に有効期限が切れてしまった',
-            description: '再取得が必要な場合も、スムーズに対応します。まずは状況をお知らせください。',
-          },
-        ]}
-      />
+      <SectionDivider variant="beige">
+        <IconCardGrid
+          heading="こんな方に選ばれています"
+          columns={3}
+          cards={[
+            { icon: Clock, title: '有効期限が切れないか心配', description: 'CENOMARは多くの提出先で発行から6ヶ月以内のものが求められます。提出スケジュールに合わせて取得時期を調整します。', accent: 'gold' },
+            { icon: Calendar, title: '婚姻届・ビザ申請の期限が決まっている', description: '提出予定日から逆算して、最適なタイミングで申請を開始します。早すぎても遅すぎても困ります。', accent: 'blue' },
+            { icon: FileCheck, title: '取得後に有効期限が切れてしまった', description: '再取得が必要な場合も、スムーズに対応します。まずは状況をお知らせください。', accent: 'green' },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="婚姻届・ビザ申請の予定日を教えてください"
@@ -117,21 +111,34 @@ export default function CenomarValidityJa() {
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
-      <FeatureList
-        heading="料金に含まれるもの"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA CENOMAR取得',
-            description: 'フィリピン統計局（PSA）へのCENOMAR申請・取得を代行します。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: '提出先の要件に応じてDFAアポスティーユ認証も手配します。',
-          },
-        ]}
-      />
+      <SectionDivider variant="blue">
+        <FeatureList
+          heading="料金に含まれるもの"
+          items={[
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'PSA CENOMAR取得',
+              description: 'フィリピン統計局（PSA）へのCENOMAR申請・取得を代行します。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
+              description: '提出先の要件に応じてDFAアポスティーユ認証も手配します。',
+            },
+          ]}
+        />
+
+        <ComparisonTable
+          heading="自分でスケジュール管理 vs IGRS代行"
+          rows={[
+            { item: '有効期限の逆算・確認', self: '要自己管理', agency: true },
+            { item: '最適な申請開始時期の案内', self: false, agency: true },
+            { item: 'PSA・DFAアポスティーユ手配', self: false, agency: true },
+            { item: '期限切れ時の再取得対応', self: false, agency: true },
+            { item: '進捗報告', self: false, agency: true },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="「早すぎた」より「間に合わなかった」の方が困ります"
@@ -144,6 +151,7 @@ export default function CenomarValidityJa() {
 
       <StepList
         heading="ご依頼の流れ"
+        variant="visual"
         steps={[
           { title: '婚姻届・ビザ申請の予定日を共有', description: '「いつまでに提出が必要か」をお知らせください。逆算してCENOMARの申請開始時期を確認します。' },
           { title: '申請開始時期と料金をご提示', description: 'CENOMARの有効期限（6ヶ月）を考慮した最適なタイミングと、料金をご案内します。' },

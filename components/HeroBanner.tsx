@@ -27,46 +27,79 @@ export default function HeroBanner({ title, subtitle, badges, ctaText, ctaHref, 
         <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute -bottom-20 -left-10 h-56 w-56 rounded-full bg-white/5 blur-2xl" />
         <div className="absolute right-0 bottom-0 h-full w-1/2 bg-gradient-to-l from-white/[0.03] to-transparent" />
+        {/* ドットグリッドパターン */}
+        <div
+          className="absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: 'radial-gradient(circle, #d69e2e 1px, transparent 1px)',
+            backgroundSize: '24px 24px',
+          }}
+        />
       </div>
 
       {/* ゴールドの左アクセントライン */}
       <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-primary via-primary/60 to-transparent" />
 
-      <div className="relative">
-        {/* バッジ */}
-        <div className="flex flex-wrap gap-2 mb-5">
-          {badges.map((badge) => (
-            <span
-              key={badge}
-              className="inline-flex items-center gap-1 text-xs font-semibold bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full tracking-wide"
-            >
-              <span className="w-1 h-1 rounded-full bg-primary inline-block" />
-              {badge}
-            </span>
-          ))}
+      <div className="relative flex items-start justify-between gap-6">
+        {/* 左: テキスト */}
+        <div className="flex-1 min-w-0">
+          {/* バッジ */}
+          <div className="flex flex-wrap gap-2 mb-5">
+            {badges.map((badge) => (
+              <span
+                key={badge}
+                className="inline-flex items-center gap-1 text-xs font-semibold bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full tracking-wide"
+              >
+                <span className="w-1 h-1 rounded-full bg-primary inline-block" />
+                {badge}
+              </span>
+            ))}
+          </div>
+
+          {/* タイトル */}
+          <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug tracking-tight ${subtitle ? 'mb-3' : 'mb-6'}`}>
+            {title}
+          </h1>
+
+          {/* サブタイトル */}
+          {subtitle && (
+            <p className="text-sm md:text-base text-white/70 leading-relaxed mb-6">
+              {subtitle}
+            </p>
+          )}
+
+          {/* CTAボタン */}
+          <a
+            href={ctaHref}
+            onClick={handleCtaClick}
+            className="group inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-7 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:shadow-primary/50 hover:gap-3 transition-all duration-200"
+          >
+            {ctaText}
+            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+          </a>
         </div>
 
-        {/* タイトル */}
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug mb-3 tracking-tight">
-          {title}
-        </h1>
-
-        {/* サブタイトル */}
-        {subtitle && (
-          <p className="text-sm md:text-base text-white/70 leading-relaxed mb-6">
-            {subtitle}
-          </p>
-        )}
-
-        {/* CTAボタン */}
-        <a
-          href={ctaHref}
-          onClick={handleCtaClick}
-          className="group inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-7 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:shadow-primary/50 hover:gap-3 transition-all duration-200"
-        >
-          {ctaText}
-          <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-        </a>
+        {/* 右: 書類アイコンビジュアル（デスクトップのみ） */}
+        <div className="hidden md:flex flex-col items-end gap-2 flex-shrink-0 opacity-70">
+          {/* 書類スタックのCSS図 */}
+          <div className="relative w-28 h-32">
+            <div className="absolute bottom-0 right-0 w-20 h-26 rounded-lg bg-white/10 border border-white/20 rotate-6" />
+            <div className="absolute bottom-0 right-0 w-20 h-26 rounded-lg bg-white/10 border border-white/20 rotate-3" />
+            <div className="absolute bottom-0 right-0 w-20 h-26 rounded-lg bg-white/15 border border-primary/30 flex flex-col p-2 gap-1.5">
+              <div className="h-1.5 rounded bg-primary/60 w-12" />
+              <div className="h-1 rounded bg-white/40 w-10" />
+              <div className="h-1 rounded bg-white/40 w-8" />
+              <div className="h-1 rounded bg-white/30 w-11" />
+              <div className="h-1 rounded bg-white/30 w-7" />
+              <div className="mt-auto">
+                <div className="h-5 w-5 rounded bg-primary/50 flex items-center justify-center ml-auto">
+                  <div className="w-2 h-2 rounded-full bg-primary" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="text-[10px] text-primary/80 font-semibold tracking-wider uppercase">Official Document</div>
+        </div>
       </div>
     </section>
   );

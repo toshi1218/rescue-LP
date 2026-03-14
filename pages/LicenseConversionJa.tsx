@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { AlertTriangle, CheckCircle, ClipboardList } from 'lucide-react';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import ComparisonTable from '../components/ComparisonTable';
+import { AlertTriangle, CheckCircle, ClipboardList, Car, FileText, Stamp, Clock, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
 export default function LicenseConversionJa() {
@@ -28,6 +32,17 @@ export default function LicenseConversionJa() {
             url: 'https://ph-document.com/ja/',
           },
           areaServed: { '@type': 'Country', name: 'JP' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'JPY',
+            price: '100000',
+            priceSpecification: {
+              '@type': 'UnitPriceSpecification',
+              price: '100000',
+              priceCurrency: 'JPY',
+              description: 'LTO書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            },
+          },
         },
         {
           '@context': 'https://schema.org',
@@ -109,7 +124,7 @@ export default function LicenseConversionJa() {
       </section>
 
       {/* Section 2 */}
-      <section className="mb-10">
+      <SectionDivider variant="beige">
         <h2 className="text-base font-bold text-gray-900 mb-4">2. フィリピン側で求められやすい書類</h2>
         <div className="text-sm text-gray-700 leading-relaxed space-y-3">
           <p>フィリピン免許で外免切替を進める際、警視庁の国別必要書類一覧では、次の書類が案内されています。</p>
@@ -129,7 +144,20 @@ export default function LicenseConversionJa() {
           </ol>
           <p>加えて、一般の外免切替手続では、外国免許証の日本語翻訳文など、ほかの必要書類もあります。そのため、実際には「LTO書類だけ取れば終わり」ではなく、管轄の免許センターが何を求めているかを先に確認しておくのが安全です。大阪府警も、交付日が免許証で確認できない場合などには経歴証明書等が必要と案内しています。</p>
         </div>
-      </section>
+
+        <IconCardGrid
+          heading="必要書類の概要"
+          columns={3}
+          cards={[
+            { icon: Car, title: 'フィリピン運転免許証', description: '有効な免許証の原本。免許取得後3か月以上の滞在歴が確認できることが前提。', accent: 'gold' },
+            { icon: FileText, title: 'License History', description: '初回取得日や更新経歴を証明。免許証の表記だけでは読み取れない場合に必要。', accent: 'blue' },
+            { icon: Stamp, title: 'Certification with Apostille', description: 'LTOが発行する証明書にDFAアポスティーユ認証を付与したもの。', accent: 'green' },
+            { icon: CheckCircle, title: 'Official Receipt（OR）', description: '免許更新時のレシート。フィリピン案件では案内されている重要書類。', accent: 'teal' },
+            { icon: Clock, title: 'Immigration Record', description: 'パスポートだけで滞在歴が読み取れない場合、アポスティーユ付きで必要になることがある。', accent: 'red' },
+            { icon: Globe, title: '免許センターで確認を', description: '求める書類は免許センターごとに異なる。先に管轄センターへ確認することが重要。', accent: 'purple' },
+          ]}
+        />
+      </SectionDivider>
 
       {/* Section 3 */}
       <section className="mb-10">
@@ -167,7 +195,7 @@ export default function LicenseConversionJa() {
       </section>
 
       {/* Section 4 */}
-      <section className="mb-10 rounded-2xl bg-blue-50 border border-blue-200 p-6">
+      <SectionDivider variant="blue">
         <h2 className="text-base font-bold text-blue-900 mb-3">4. IGRSのLTO書類サポート</h2>
         <div className="text-sm text-blue-800 leading-relaxed space-y-3">
           <p>「どの書類が必要なのか分からない」「ORをなくしている」「License History や Certification with Apostille をどう揃えるのか分からない」</p>
@@ -175,7 +203,7 @@ export default function LicenseConversionJa() {
           <p>当社が大事にしているのは、進捗が見えることです。海外書類の手続きでよくある「依頼したあと状況が見えない」という不安を減らすため、確認、進行、発送の節目ごとに状況をご案内します。</p>
           <p className="font-semibold">ただし、当社ができるのはフィリピン側書類の準備を支援することです。日本の免許センターで外免切替が認められるかどうかの最終判断は、各センターの審査によります。そのため、3か月条件や提出書類の最終確認は、必ずご自身でも行ってください。</p>
         </div>
-      </section>
+      </SectionDivider>
 
       {/* Section 5 */}
       <section className="mb-10">
@@ -201,6 +229,7 @@ export default function LicenseConversionJa() {
       </section>
 
       <StepList
+        variant="visual"
         heading="6. ご依頼から発送までの流れ"
         steps={[
           { title: '無料相談', description: 'まずは、現在お持ちのフィリピン免許証、ORの有無、免許取得後の滞在歴の状況をお知らせください。' },
@@ -223,6 +252,16 @@ export default function LicenseConversionJa() {
         ctaButton="無料相談フォームへ"
       />
 
+      <ComparisonTable
+        heading="外免切替 書類準備"
+        rows={[
+          { item: 'LTOドライバーズレコード取得', self: false, agency: true },
+          { item: 'DFAアポスティーユ手配', self: false, agency: true },
+          { item: '日本語での手続き', self: '英語が必要', agency: true },
+          { item: '公安委員会要件の確認', self: '要調査', agency: true },
+        ]}
+      />
+
       <CtaBox
         title="まずは状況のご確認から"
         description="外免切替は、LTO書類を取る前の確認がとても大事です。「自分は条件を満たしているか」「どの書類が必要になりそうか」その確認からで大丈夫です。まずはご相談ください。"
@@ -231,6 +270,16 @@ export default function LicenseConversionJa() {
         variant="primary"
         trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料"
       />
+
+      {/* 関連ページへの内部リンク */}
+      <nav className="mt-10 pt-8 border-t border-gray-100">
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
+        <ul className="space-y-2 text-sm">
+          <li><Link to="/ja/driver-record/" className="text-secondary hover:underline">→ LTOドライバーズレコード代行（外免切替・企業採用）</Link></li>
+          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行</Link></li>
+          <li><Link to="/ja/ryokin/" className="text-secondary hover:underline">→ 料金一覧</Link></li>
+        </ul>
+      </nav>
     </PageLayout>
   );
 }

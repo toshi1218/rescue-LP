@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -7,6 +7,9 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import SectionDivider from '../components/SectionDivider';
+import IconCardGrid from '../components/IconCardGrid';
+import { FileText, Stamp, CheckCircle, Clock, MessageSquare, Package } from 'lucide-react';
 
 export default function ApostilleFeeJa() {
   return (
@@ -71,7 +74,7 @@ export default function ApostilleFeeJa() {
     >
       <HeroBanner
         title="DFAアポスティーユの費用、総額でご案内します"
-        badges={['追加費用なし', '日本語だけでOK']}
+        badges={['追加費用なし', '総額で事前ご提示', 'DFA公式料金込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
@@ -117,21 +120,36 @@ export default function ApostilleFeeJa() {
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
 
-      <FeatureList
-        heading="料金に含まれるもの"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。紙の原本で対応。',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA書類取得（必要な場合）',
-            description: 'PSA書類の取得からまとめて依頼いただけます。',
-          },
-        ]}
-      />
+      <SectionDivider variant="beige">
+        <FeatureList
+          heading="料金に含まれるもの"
+          items={[
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
+              description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。紙の原本で対応。',
+            },
+            {
+              icon: <FileCheck className="w-4 h-4" />,
+              title: 'PSA書類取得（必要な場合）',
+              description: 'PSA書類の取得からまとめて依頼いただけます。',
+            },
+          ]}
+        />
+
+        <IconCardGrid
+          heading="料金に含まれるもの"
+          columns={3}
+          cards={[
+            { icon: FileText, title: 'PSA発行手数料', description: 'フィリピン統計局への申請費用込み', accent: 'gold' },
+            { icon: Stamp, title: 'DFAアポスティーユ', description: '外務省認証費用込み', accent: 'blue' },
+            { icon: Package, title: 'DHL国際郵送', description: '原本を日本まで安全にお届け', accent: 'teal' },
+            { icon: MessageSquare, title: '日本語サポート', description: '全ての手続きを日本語でご案内', accent: 'green' },
+            { icon: CheckCircle, title: '進捗報告', description: '各段階で状況をご連絡', accent: 'purple' },
+            { icon: Clock, title: 'スケジュール調整', description: '提出期限に合わせて手配', accent: 'gold' },
+          ]}
+        />
+      </SectionDivider>
 
       <CtaBox
         title="DFAアポスティーユは「取ってから気づく」では遅い"
@@ -142,15 +160,18 @@ export default function ApostilleFeeJa() {
         trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
 
-      <StepList
-        heading="ご依頼の流れ"
-        steps={[
-          { title: '書類の種類と提出先を共有', description: 'CENOMAR・PSA・NBI等の種類と、提出先（市役所・大使館・入管など）をお知らせください。アポスティーユが必要かどうかも確認します。' },
-          { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めた料金をご案内します。' },
-          { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（4営業日）またはExpress（翌営業日）を状況に応じて選択します。' },
-          { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安はおおむね1ヶ月半。' },
-        ]}
-      />
+      <SectionDivider variant="blue">
+        <StepList
+          heading="ご依頼の流れ"
+          variant="visual"
+          steps={[
+            { title: '書類の種類と提出先を共有', description: 'CENOMAR・PSA・NBI等の種類と、提出先（市役所・大使館・入管など）をお知らせください。アポスティーユが必要かどうかも確認します。' },
+            { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めた料金をご案内します。' },
+            { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（4営業日）またはExpress（翌営業日）を状況に応じて選択します。' },
+            { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安はおおむね1ヶ月半。' },
+          ]}
+        />
+      </SectionDivider>
 
       <FaqSection
         items={[

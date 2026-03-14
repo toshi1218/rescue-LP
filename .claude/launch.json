@@ -1,0 +1,46 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\toshiyuki\\rescue-LP\\node_modules\\vite\\bin\\vite.js", "--port", "5173"],
+      "port": 5173
+    },
+    {
+      "name": "rescue-LP",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\toshiyuki\\rescue-LP\\node_modules\\vite\\bin\\vite.js", "--port", "5174"],
+      "port": 5174,
+      "cwd": "C:\\Users\\toshiyuki\\rescue-LP\\.claude\\worktrees\\lucid-bassi"
+    },
+    {
+      "name": "fervent-gagarin",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\toshiyuki\\rescue-LP\\node_modules\\vite\\bin\\vite.js", "--port", "5175"],
+      "port": 5175,
+      "cwd": "C:\\Users\\toshiyuki\\rescue-LP\\.claude\\worktrees\\fervent-gagarin"
+    },
+    {
+      "name": "wizardly-grothendieck",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\toshiyuki\\rescue-LP\\node_modules\\vite\\bin\\vite.js", "--port", "5178"],
+      "port": 5178,
+      "cwd": "C:\\Users\\toshiyuki\\rescue-LP\\.claude\\worktrees\\wizardly-grothendieck"
+    },
+    {
+      "name": "fervent-goldwasser",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\toshiyuki\\rescue-LP\\node_modules\\vite\\bin\\vite.js", "--port", "5179"],
+      "port": 5179,
+      "cwd": "C:\\Users\\toshiyuki\\rescue-LP\\.claude\\worktrees\\fervent-goldwasser"
+    },
+    {
+      "name": "quirky-banzai",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\toshiyuki\\rescue-LP\\node_modules\\vite\\bin\\vite.js", "--port", "5180"],
+      "port": 5180,
+      "cwd": "C:\\Users\\toshiyuki\\rescue-LP\\.claude\\worktrees\\quirky-banzai"
+    }
+  ]
+}

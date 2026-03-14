@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Car } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function DriverRecordEn() {
+  useMeta(
+    "LTO Driver's Record from the Philippines | Philippine Document Service",
+    "LTO Driver's Record from the Philippines — retrieved by our local staff with DFA Apostille. Required for foreign license conversion and background checks.",
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'LTO Driver Record Retrieval' }]}
