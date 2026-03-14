@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, ArrowDown } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -25,7 +25,6 @@ const Hero: React.FC = () => {
             decoding="async"
           />
         </picture>
-        {/* 上部を暗くしてテキストを読みやすく、下部は写真を見せるグラデーション */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/50"></div>
       </div>
 
@@ -39,34 +38,18 @@ const Hero: React.FC = () => {
           {t('hero.h1line2')}<br />{' '}
           <span className="text-primary">{t('hero.h1line3')}</span>
         </h1>
-        <p className="text-gray-200 mb-3 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+        <p className="text-gray-200 mb-8 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
           {t('hero.description')}
         </p>
-        <p className="text-white text-xs mb-8 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-          {t('hero.disclaimer')}
-        </p>
-
-        {/* Desktop/Tablet Buttons (Hidden on mobile usually handled by sticky nav, but good to have here too) */}
-        <div className="flex flex-col w-full gap-3 sm:flex-row sm:justify-center sm:w-auto">
-          <a
-            href="#contact"
-            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
-            className="w-full sm:w-auto bg-primary text-white font-bold py-3.5 px-8 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
-            aria-label={t('hero.ctaAriaLabel')}
-          >
-            <MessageCircle className="w-5 h-5" />
-            {primaryLabel}
-          </a>
-          <a
-            href="#pricing"
-            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
-            className="w-full sm:w-auto bg-transparent border border-white/30 text-white font-bold py-3.5 px-8 rounded-lg hover:bg-white/10 transition-colors flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-white/30"
-            aria-label={t('hero.pricingAriaLabel')}
-          >
-            {t('hero.pricingCta')}
-            <ArrowDown className="w-5 h-5" />
-          </a>
-        </div>
+        <a
+          href="#contact"
+          onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
+          className="bg-primary text-white font-bold py-3.5 px-8 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
+          aria-label={t('hero.ctaAriaLabel')}
+        >
+          <MessageCircle className="w-5 h-5" />
+          {primaryLabel}
+        </a>
       </div>
     </header>
   );

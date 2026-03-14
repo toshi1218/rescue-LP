@@ -1,16 +1,10 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import QuickFacts from '../components/QuickFacts';
-import PainPoints from '../components/PainPoints';
-import TrustTransparency from '../components/TrustTransparency';
-import Services from '../components/Services';
-import WhyUs from '../components/WhyUs';
-import CaseStudies from '../components/CaseStudies';
-import SocialProof from '../components/SocialProof';
-import Process from '../components/Process';
-import DiyRisks from '../components/DiyRisks';
-import FAQ from '../components/FAQ';
+import RouteCards from '../components/RouteCards';
+import TrustSimple from '../components/TrustSimple';
+import ServicePacks from '../components/ServicePacks';
+import FinalCta from '../components/FinalCta';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
 
@@ -24,19 +18,12 @@ export default function HomeJa() {
       <Navbar />
       <main>
         <Hero />
-        <Services />
-        <QuickFacts />
-        <PainPoints />
-        <TrustTransparency />
-        <WhyUs />
-        <CaseStudies />
-        <SocialProof />
-        <Process />
-        <DiyRisks />
-        <FAQ />
+        <RouteCards />
+        <TrustSimple />
+        <ServicePacks />
+        <FinalCta />
         <Footer />
       </main>
     </div>
   );
 }
-
