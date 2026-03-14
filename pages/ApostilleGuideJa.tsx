@@ -144,7 +144,7 @@ export default function ApostilleGuideJa() {
             当社が大事にしているのは、<strong>進捗が見えること</strong>です。海外書類の手続きでよくある「依頼したあと状況が見えない」という不安を減らすため、確認、進行、発送の節目ごとに状況をご案内します。
           </p>
           <p className="text-gray-700 leading-relaxed">
-            ただし、当社をご利用いただく場合でも、完全に何もしなくてよいわけではありません。案件によっては、英文委任状（Special Power of Attorney）へのご署名や、身分証明書のコピー提出などをお願いしています。
+            ただし、当社をご利用いただく場合でも、完全に何もしなくてよいわけではありません。案件によっては、authorization letterへのご署名や、身分証明書のコピー提出などをお願いしています。
           </p>
         </section>
 
@@ -223,23 +223,6 @@ export default function ApostilleGuideJa() {
         ctaButton="無料相談フォームへ"
       />
 
-      <article className="max-w-2xl mx-auto px-4 mb-8">
-        <p className="text-gray-700 leading-relaxed mb-3">
-          アポスティーユは、書類を取る前の整理が大事です。何のために使うのか、どの書類が必要なのか、元書類に不足がないか。そこを先に整理すると、後戻りが減ります。
-        </p>
-        <p className="text-gray-700 leading-relaxed">
-          「自分のケースで本当に必要なのか」「PSAだけで足りるのか」「NBIやLTOまで関係するのか」——その確認からで大丈夫です。まずはご相談ください。
-        </p>
-      </article>
-
-      <CtaBox
-        title="料金を確認する"
-        description="必要書類と費用の目安を無料でご案内します。"
-        buttonText="料金を見る"
-        href="/ja/apostille-cost/"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
     </PageLayout>
   );
 }

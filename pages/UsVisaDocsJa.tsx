@@ -80,7 +80,7 @@ export default function UsVisaDocsJa() {
       ]}
     >
       <HeroBanner
-        title="米国ビザ申請のフィリピン書類、まとめて手配します"
+        title="米国ビザ 書類取得代行"
         badges={['K-1・CR-1・IR-1対応', 'USCIS書類形式で手配', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

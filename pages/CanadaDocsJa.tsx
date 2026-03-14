@@ -80,7 +80,7 @@ export default function CanadaDocsJa() {
       ]}
     >
       <HeroBanner
-        title="カナダ移民ビザのフィリピン書類、まとめて手配します"
+        title="カナダ移民ビザ 書類取得代行"
         badges={['IRCC対応', 'アポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

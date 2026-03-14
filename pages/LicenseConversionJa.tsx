@@ -85,7 +85,7 @@ export default function LicenseConversionJa() {
       ]}
     >
       <HeroBanner
-        title="外免切替に必要なLTO書類を、日本語で取り寄せます"
+        title="外免切替 LTO書類取得代行"
         subtitle="試験場で求められやすいフィリピン側書類を整理し、予約日に合わせて逆算してご案内します。"
         badges={['外免切替ガイド', 'フィリピン免許対応', '無料相談あり']}
         ctaText="必要なLTO書類を確認する"
@@ -213,7 +213,7 @@ export default function LicenseConversionJa() {
           <ul className="space-y-2 mt-2">
             <li className="flex items-start gap-2">
               <ClipboardList className="w-4 h-4 text-gray-600 flex-shrink-0 mt-0.5" />
-              <span>英文委任状（Special Power of Attorney）へのご署名</span>
+              <span>authorization letterへのご署名</span>
             </li>
             <li className="flex items-start gap-2">
               <ClipboardList className="w-4 h-4 text-gray-600 flex-shrink-0 mt-0.5" />

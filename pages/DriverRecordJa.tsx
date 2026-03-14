@@ -82,7 +82,7 @@ export default function DriverRecordJa() {
       ]}
     >
       <HeroBanner
-        title="LTOドライバーズレコード、日本語だけで取り寄せます"
+        title="LTOドライバーズレコード 取得代行"
         badges={['複数名対応', 'OR・アポスティーユ込み', '外免切替専門対応']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

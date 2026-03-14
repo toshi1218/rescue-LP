@@ -73,7 +73,7 @@ export default function CenomarValidityJa() {
       ]}
     >
       <HeroBanner
-        title="CENOMARの取得タイミング、一緒に確認します"
+        title="CENOMARの有効期限"
         badges={['有効期限の確認から対応', 'PSAアポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

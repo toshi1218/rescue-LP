@@ -81,7 +81,7 @@ export default function NaturalizationJa() {
       ]}
     >
       <HeroBanner
-        title="帰化申請のフィリピン書類、まとめて手配します"
+        title="帰化申請 書類取得代行"
         badges={['法務局要件に対応', '書士への書類提供可', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

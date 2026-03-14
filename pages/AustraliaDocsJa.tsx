@@ -80,7 +80,7 @@ export default function AustraliaDocsJa() {
       ]}
     >
       <HeroBanner
-        title="オーストラリアビザのフィリピン書類、まとめて手配します"
+        title="オーストラリアビザ 書類取得代行"
         badges={['Home Affairs対応', 'アポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

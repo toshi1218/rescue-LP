@@ -81,7 +81,7 @@ export default function NbiHitJa() {
       ]}
     >
       <HeroBanner
-        title="NBI ClearanceのHIT（同名者あり）解消から取得まで代行します"
+        title="NBI HIT 解決サポート"
         badges={['HIT解消から一括対応', 'アポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
