@@ -25,6 +25,7 @@ const ja = {
   'navbar.purpose.visa': '配偶者ビザ',
   'navbar.purpose.license': '免許切替',
   'navbar.purpose.naturalization': '帰化申請',
+  'navbar.purpose.nbi': '海外ビザ用NBIクリアランス',
 
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': '日本法人・現地スタッフ対応',
@@ -173,6 +174,7 @@ const en: typeof ja = {
   'navbar.purpose.visa': 'Spouse Visa',
   'navbar.purpose.license': 'License Transfer',
   'navbar.purpose.naturalization': 'Naturalization',
+  'navbar.purpose.nbi': 'NBI Clearance (Overseas Visa)',
 
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': 'Trusted by Filipinos Worldwide',

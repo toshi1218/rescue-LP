@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import RouteCards from '../components/RouteCards';
 import TrustSimple from '../components/TrustSimple';
 import ServicePacks from '../components/ServicePacks';
 import FinalCta from '../components/FinalCta';
@@ -56,9 +55,8 @@ export default function HomeJa() {
       <Navbar />
       <main>
         <Hero />
-        <RouteCards />
-        <TrustSimple />
         <ServicePacks />
+        <TrustSimple />
         <FinalCta />
         <Footer />
       </main>
