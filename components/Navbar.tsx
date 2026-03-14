@@ -195,24 +195,6 @@ const Navbar: React.FC = () => {
 
             <Link to={homePath} className={linkClass(homePath)}>{t('navbar.home')}</Link>
 
-            {/* 書類から探す / By Document */}
-            <div
-              ref={docsRef}
-              className="flex-shrink-0"
-              onMouseEnter={() => handleMouseEnter('docs', docsRef)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                onClick={() => { if (docsRef.current) { const r = docsRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'docs' ? null : 'docs'); }}
-                className={tabBtnClass(isDocActive || openMenu === 'docs')}
-              >
-                {t('navbar.findByDoc')}
-                <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-            </div>
-
             {/* 目的から探す / By Purpose */}
             <div
               ref={purposeRef}
@@ -225,6 +207,24 @@ const Navbar: React.FC = () => {
                 className={tabBtnClass(isPurposeActive || openMenu === 'purpose')}
               >
                 {t('navbar.findByPurpose')}
+                <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* 書類から探す / By Document */}
+            <div
+              ref={docsRef}
+              className="flex-shrink-0"
+              onMouseEnter={() => handleMouseEnter('docs', docsRef)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                onClick={() => { if (docsRef.current) { const r = docsRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'docs' ? null : 'docs'); }}
+                className={tabBtnClass(isDocActive || openMenu === 'docs')}
+              >
+                {t('navbar.findByDoc')}
                 <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -290,28 +290,6 @@ const Navbar: React.FC = () => {
               {t('navbar.home')}
             </Link>
 
-            {/* 書類から探す */}
-            <div>
-              <button
-                onClick={() => setMobileSection(mobileSection === 'docs' ? null : 'docs')}
-                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                {t('navbar.findByDoc')}
-                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'docs' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {mobileSection === 'docs' && (
-                <div className="ml-4 mt-1 space-y-0.5">
-                  {documentTabs.map(tab => (
-                    <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
-                      {tab.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
             {/* 目的から探す */}
             <div>
               <button
@@ -326,6 +304,28 @@ const Navbar: React.FC = () => {
               {mobileSection === 'purpose' && (
                 <div className="ml-4 mt-1 space-y-0.5">
                   {purposeTabs.map(tab => (
+                    <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                      {tab.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* 書類から探す */}
+            <div>
+              <button
+                onClick={() => setMobileSection(mobileSection === 'docs' ? null : 'docs')}
+                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                {t('navbar.findByDoc')}
+                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'docs' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === 'docs' && (
+                <div className="ml-4 mt-1 space-y-0.5">
+                  {documentTabs.map(tab => (
                     <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
                       {tab.label}
                     </Link>
