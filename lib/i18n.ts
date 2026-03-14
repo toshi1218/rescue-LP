@@ -91,7 +91,7 @@ const ja = {
   'footer.copyright': '© 2026 株式会社IGRS',
 
   // ── PainPoints ───────────────────────────────────────────────────────
-  'painpoints.title': '書類名ではなく、目的から進められます',
+  'painpoints.title': 'あなたの目的から進められます',
   'painpoints.1.title': 'CENOMARだけ取ればよいのか分からない',
   'painpoints.1.desc': '書類名が先行して、目的別に何を揃えるかが整理できていないことが多い',
   'painpoints.2.title': '婚姻証明書の次に何が必要か分からない',
