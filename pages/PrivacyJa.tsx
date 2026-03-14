@@ -1,13 +1,19 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
+import HeroBanner from '../components/HeroBanner';
 
 export default function PrivacyJa() {
   return (
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'プライバシーポリシー' }]}>
+      <HeroBanner
+        title="プライバシーポリシー"
+        subtitle="最終更新日：2026年3月8日"
+        badges={['個人情報の取り扱い', 'IGRS Inc.']}
+        ctaText="お問い合わせはこちら"
+        ctaHref="/ja/contact"
+      />
+
       <div className="max-w-2xl">
-        <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">プライバシーポリシー</h1>
-        <div className="h-0.5 w-12 bg-primary mb-2" />
-        <p className="text-xs text-gray-400 mb-8">最終更新日：2026年3月8日</p>
 
         <div className="space-y-8 text-sm text-gray-700 leading-relaxed">
 
