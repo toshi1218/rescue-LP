@@ -70,7 +70,7 @@ export default function DfaProcessingTimeJa() {
       ]}
     >
       <HeroBanner
-        title="DFAアポスティーユの処理期間、提出予定日を考慮してスケジュールをご案内します"
+        title="DFAアポスティーユの処理期間"
         badges={['日本語だけでOK', '提出期限に合わせて手配', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

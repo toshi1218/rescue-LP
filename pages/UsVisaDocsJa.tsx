@@ -77,7 +77,7 @@ export default function UsVisaDocsJa() {
       ]}
     >
       <HeroBanner
-        title="米国ビザ申請のフィリピン書類、まとめて手配します"
+        title="米国ビザ 書類取得代行"
         badges={['日本語だけでOK', 'アポスティーユ込み', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

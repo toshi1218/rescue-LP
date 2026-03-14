@@ -61,7 +61,7 @@ export default function NbiValidityJa() {
       ]}
     >
       <HeroBanner
-        title="フィリピンNBIクリアランスの有効期限はいつまで？ 提出先で「古い」と言われないための確認ポイント"
+        title="NBIクリアランスの有効期限"
         badges={['NBIクリアランス', '有効期限確認', '無料相談あり']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

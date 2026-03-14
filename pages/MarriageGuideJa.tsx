@@ -3,9 +3,8 @@ import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
-import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users, ShieldCheck } from 'lucide-react';
+import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 
 export default function MarriageGuideJa() {
@@ -74,7 +73,7 @@ export default function MarriageGuideJa() {
       ]}
     >
       <HeroBanner
-        title="フィリピン人との国際結婚、何から始めるかを2ルートで整理します"
+        title="国際結婚 書類取得代行"
         subtitle="フィリピンで先に結婚する場合と、日本で先に結婚する場合の流れ・必要書類・その後の日本同居準備をまとめています。"
         badges={['日本語でやり取りOK', '必要書類を整理してご案内', '進捗を随時ご報告']}
         ctaText="自分に近いルートを見る"
@@ -178,60 +177,27 @@ export default function MarriageGuideJa() {
         trustNote="着手金50%・書類写し確認後に残金50%お支払い"
       />
 
-      {/* Section 4: 当社（株式会社IGRS）の取得サポート */}
-      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
-        <h2 className="text-base font-bold text-gray-900 mb-3">当社（株式会社IGRS）の取得サポート</h2>
-        <p className="text-sm text-gray-600 leading-relaxed mb-5">
-          「何が必要か分からない」「自分のケースでどこまで必要なのか判断できない」「依頼したあと、今どうなっているのか分からないのが不安」——そうした不安を減らすため、株式会社IGRSでは、PSA書類・CENOMAR・DFAアポスティーユ取得を中心に、日本語で進めやすい形でサポートしています。
-        </p>
-        <div className="flex items-start gap-3 p-4 rounded-xl bg-primary/5 border border-primary/15 mb-5">
-          <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-          <div>
-            <p className="text-sm font-bold text-gray-800 mb-1">当社の特徴：進捗が見える</p>
-            <p className="text-sm text-gray-600 leading-relaxed">申請、受理、発送など、節目ごとに進行状況をご報告します。「依頼したあと放置されるのでは」という不安を減らしながら進められるようにしています。</p>
-          </div>
-        </div>
-        <div className="rounded-xl bg-gray-50 border border-gray-200 p-4">
-          <p className="text-sm font-bold text-gray-800 mb-2">ご依頼時の重要事項</p>
-          <p className="text-xs text-gray-600 leading-relaxed mb-3">当社をご利用いただく場合でも、すべてを完全に丸投げできるわけではありません。適法に取得を進めるため、次のご協力をお願いしています。</p>
-          <ul className="space-y-1.5 mb-3">
-            {[
-              '英文委任状（Special Power of Attorney）へのご署名',
-              '身分証明書のコピーのご提出',
-              '案件によっては、ご本人様による追加対応',
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-2 text-xs text-gray-600">
-                <span className="text-primary font-bold flex-shrink-0">・</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="space-y-1 text-xs text-gray-500 border-t border-gray-200 pt-3">
-            <p>※渡航不要で進められるケースは多いですが、書類の種類やご本人の状況によっては、追加対応が必要になることがあります。</p>
-            <p>※当社は現地書類の取得を支援しますが、最終的な受理や審査の判断は提出先機関によります。</p>
-          </div>
+      {/* Section 4: ご依頼時の重要事項 */}
+      <section className="mb-10 rounded-2xl bg-gray-50 border border-gray-200 p-6">
+        <h2 className="text-base font-bold text-gray-900 mb-3">ご依頼前にご確認ください</h2>
+        <p className="text-xs text-gray-600 leading-relaxed mb-3">すべてを完全に丸投げできるわけではありません。適法に取得を進めるため、次のご協力をお願いしています。</p>
+        <ul className="space-y-1.5 mb-3">
+          {[
+            'authorization letterへのご署名',
+            '身分証明書のコピーのご提出',
+            '案件によっては、ご本人様による追加対応',
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2 text-xs text-gray-600">
+              <span className="text-primary font-bold flex-shrink-0">・</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <div className="space-y-1 text-xs text-gray-500 border-t border-gray-200 pt-3">
+          <p>※当社は現地書類の取得を支援しますが、最終的な受理や審査の判断は提出先機関によります。</p>
         </div>
       </section>
 
-      <CtaBox
-        title="書類の整理から取得まで、日本語でご相談いただけます"
-        description="まずは目的と現在の状況をお知らせください。必要な流れを確認し、進め方をご提案します。"
-        buttonText="無料で相談する"
-        href="#contact"
-        variant="secondary"
-        trustNote="匿名相談可・返信24時間以内"
-      />
-
-      {/* Section 5: 安心の決済フロー */}
-      <StepList
-        heading="安心の決済フロー"
-        steps={[
-          { title: 'ご契約・着手金のお支払い', description: '代金総額の50%をご入金いただいた後、取得手続きを開始します。' },
-          { title: '取得完了のご報告', description: '書類が揃った段階で、写し（写真またはPDF）をお送りします。' },
-          { title: '残金のお支払い', description: '内容をご確認いただいた後、残りの50%をお支払いいただきます。' },
-          { title: '原本の発送', description: '残金の着金確認後に、原本を追跡可能な方法で国際発送します。' },
-        ]}
-      />
 
       <FaqSection
         items={[

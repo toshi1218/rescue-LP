@@ -77,7 +77,7 @@ export default function CenomarApostilleJa() {
       ]}
     >
       <HeroBanner
-        title="CENOMARのDFAアポスティーユ、まとめてお任せください"
+        title="CENOMAR アポスティーユ取得代行"
         badges={['日本語だけでOK', 'アポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

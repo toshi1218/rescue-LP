@@ -70,7 +70,7 @@ export default function ApostilleFeeJa() {
       ]}
     >
       <HeroBanner
-        title="DFAアポスティーユの費用、総額でご案内します"
+        title="DFAアポスティーユの費用"
         badges={['追加費用なし', '日本語だけでOK']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

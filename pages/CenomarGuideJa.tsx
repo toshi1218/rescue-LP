@@ -176,14 +176,6 @@ export default function CenomarGuideJa() {
         ]}
       />
 
-      <CtaBox
-        title="LINEで相談する"
-        description="お気軽にLINEでもご相談いただけます。"
-        buttonText="LINEで相談する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
     </PageLayout>
   );
 }

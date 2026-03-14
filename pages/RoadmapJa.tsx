@@ -56,7 +56,7 @@ export default function RoadmapJa() {
       </p>
 
       <HeroBanner
-        title="日本で結婚し、その先も日本で一緒に暮らしたい方へ"
+        title="個別ロードマップ作成"
         badges={['お二人の状況に合わせて整理', '専用ロードマップを納品', '納品後7日間メール対応']}
         ctaText="個別ロードマップを申し込む"
         ctaHref="#contact"

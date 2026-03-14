@@ -70,7 +70,7 @@ export default function CenomarValidityJa() {
       ]}
     >
       <HeroBanner
-        title="CENOMARの取得タイミング、一緒に確認します"
+        title="CENOMARの有効期限"
         badges={['日本語だけでOK', '提出期限に合わせて手配', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

@@ -77,7 +77,7 @@ export default function SpouseVisaJa() {
       ]}
     >
       <HeroBanner
-        title="配偶者ビザ準備に必要なフィリピン書類をまとめて整えます"
+        title="配偶者ビザ 書類取得代行"
         subtitle="PSA婚姻証明書、PSA出生証明書など、日本での申請準備に使うフィリピン書類を、必要に応じて整理してご案内します。"
         badges={['日本語だけでOK', '入管要件に合わせて手配', 'アポスティーユ込み']}
         ctaText="必要書類を確認する"
@@ -94,6 +94,29 @@ export default function SpouseVisaJa() {
         ]}
         ctaText="無料で相談する（24時間以内に返信）"
       />
+
+      {/* できること / できないこと */}
+      <section className="mb-6 rounded-2xl bg-gray-50 border border-gray-200 p-5">
+        <h2 className="text-sm font-bold text-gray-800 mb-3">このページでできること・できないこと</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div>
+            <p className="font-bold text-green-700 mb-1.5">✓ できること</p>
+            <ul className="space-y-1 text-gray-600">
+              <li>・配偶者ビザ申請に必要なフィリピン書類の取得代行</li>
+              <li>・DFAアポスティーユ（紙の原本）の手配</li>
+              <li>・どの書類が必要かの整理・案内</li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-bold text-red-600 mb-1.5">✕ できないこと</p>
+            <ul className="space-y-1 text-gray-600">
+              <li>・配偶者ビザの申請手続き代行（行政書士業務）</li>
+              <li>・入国管理局への申請書類の作成</li>
+              <li>・ビザ取得の保証</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       {/* 訴求ブロック */}
       <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
@@ -158,15 +181,6 @@ export default function SpouseVisaJa() {
             description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
           },
         ]}
-      />
-
-      <CtaBox
-        title="追加費用の後出しはありません"
-        description="書類取得・DFAアポスティーユをまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）見積もり後の追加請求はありません。"
-        buttonText="料金を確認する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
 
       <StepList

@@ -77,7 +77,7 @@ export default function DriverRecordJa() {
       ]}
     >
       <HeroBanner
-        title="LTOドライバーズレコード、日本語だけで取り寄せます"
+        title="LTOドライバーズレコード 取得代行"
         badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"

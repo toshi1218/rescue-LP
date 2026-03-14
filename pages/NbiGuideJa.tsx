@@ -65,7 +65,7 @@ export default function NbiGuideJa() {
       ]}
     >
       <HeroBanner
-        title="NBIクリアランスは、更新できる案件かどうかを先に確認します"
+        title="NBIクリアランス申請代行"
         subtitle="取得歴、氏名変更の有無、現在地を確認し、進められる案件だけを整理してご案内します。"
         badges={['更新案件を中心に対応', '条件を先に確認', '進捗を随時ご報告']}
         ctaText="更新できるか確認する"
@@ -163,15 +163,6 @@ export default function NbiGuideJa() {
         </p>
       </section>
 
-      <CtaBox
-        title="更新対象かどうか、まずご確認します"
-        description="「自分は更新対象なのか」「今の状況で進められるのか」——その確認からで大丈夫です。"
-        buttonText="無料で相談する"
-        href="#contact"
-        variant="secondary"
-        trustNote="匿名相談可・返信24時間以内"
-      />
-
       {/* ご注意ください */}
       <section className="mb-10 space-y-4">
         <h2 className="text-base font-bold text-gray-900">ご注意ください</h2>
@@ -207,7 +198,7 @@ export default function NbiGuideJa() {
         <ol className="space-y-4">
           {[
             {
-              title: '英文委任状（Special Power of Attorney）へのご署名',
+              title: 'authorization letterへのご署名',
               desc: '当社で作成した委任状データをお送りします。内容をご確認のうえ、ご署名をお願いします。',
             },
             {
