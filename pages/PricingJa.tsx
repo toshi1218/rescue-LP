@@ -1,5 +1,6 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
+import HeroBanner from '../components/HeroBanner';
 import Pricing from '../components/Pricing';
 import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
@@ -27,30 +28,14 @@ export default function PricingJa() {
         areaServed: { '@type': 'Country', name: 'JP' },
       }]}
     >
-      <article className="max-w-2xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-gray-900 mb-2 leading-snug">
-          料金は、用途別に分かる形でご案内します
-        </h1>
-
-        <p className="text-gray-500 mb-6">
-          国際結婚準備、配偶者ビザ準備、外免切替など、目的に合わせた費用感を先にご確認いただけます。
-        </p>
-
-        <p className="text-gray-700 leading-relaxed mb-8">
-          株式会社IGRSの料金は、単に書類を取るための費用ではありません。必要書類の確認、現地申請、進捗確認、アポスティーユ対応、日本語でのご案内まで含めた、見通しを立てながら進めるための料金設計です。料金は書類の種類、部数、認証の有無、発送先などで変わるため、まずは無料でお見積もりをご案内します。
-        </p>
-
-        {/* この料金に含まれるもの */}
-        <section className="mb-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">この料金に含まれるもの</h2>
-          <p className="text-gray-700 leading-relaxed mb-3">
-            公的手数料だけでなく、必要書類の確認、現地申請、進捗確認、アポスティーユ対応、日本語でのご案内を含みます。
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            一方で、翻訳、日本の役所や入管への提出代行、行政書士・弁護士業務、審査結果の保証は含まれません。
-          </p>
-        </section>
-      </article>
+      <HeroBanner
+        title="料金案内"
+        subtitle="国際結婚準備、配偶者ビザ準備、外免切替など、用途ごとの費用感をご確認いただけます。"
+        badges={['用途別にご案内', '無料お見積もり', '追加費用の後出しなし']}
+        ctaText="無料でお見積もり"
+        ctaHref="#contact"
+        ctaService="料金のお見積もり"
+      />
 
       {/* 2段階決済 */}
       <StepList
