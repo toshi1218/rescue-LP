@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import GuideLinks from '../components/GuideLinks';
 import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
 import TrustTransparency from '../components/TrustTransparency';
@@ -25,11 +24,10 @@ export default function HomeJa() {
       <Navbar />
       <main>
         <Hero />
-        <GuideLinks />
+        <Services />
         <QuickFacts />
         <PainPoints />
         <TrustTransparency />
-        <Services />
         <WhyUs />
         <CaseStudies />
         <SocialProof />
