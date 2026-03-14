@@ -40,37 +40,6 @@ export default function PricingJa() {
           株式会社IGRSの料金は、単に書類を取るための費用ではありません。必要書類の確認、現地申請、進捗確認、アポスティーユ対応、日本語でのご案内まで含めた、見通しを立てながら進めるための料金設計です。料金は書類の種類、部数、認証の有無、発送先などで変わるため、まずは無料でお見積もりをご案内します。
         </p>
 
-        {/* 価格アンカー */}
-        <section className="mb-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">料金の目安</h2>
-          <div className="rounded-xl border border-gray-200 overflow-hidden">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="text-left px-4 py-3 font-bold text-gray-700">サービス</th>
-                  <th className="text-right px-4 py-3 font-bold text-gray-700">目安</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { label: 'PSA書類関連', price: '50,000円〜' },
-                  { label: 'NBI更新関連', price: '55,000円〜' },
-                  { label: 'LTO関連', price: '100,000円〜' },
-                  { label: '国際郵送費', price: '6,000円〜' },
-                ].map((row, i, arr) => (
-                  <tr key={row.label} className={i < arr.length - 1 ? 'border-b border-gray-100' : ''}>
-                    <td className="px-4 py-3 text-gray-700">{row.label}</td>
-                    <td className="px-4 py-3 text-right font-bold text-gray-900">{row.price}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-gray-400 mt-2">
-            ※いずれも税別。内容や追加確認の有無で変動します。
-          </p>
-        </section>
-
         {/* この料金に含まれるもの */}
         <section className="mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-3">この料金に含まれるもの</h2>

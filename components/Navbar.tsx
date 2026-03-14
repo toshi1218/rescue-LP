@@ -34,6 +34,7 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.visa'),          path: '/ja/haigusha-visa/' },
     { label: t('navbar.purpose.license'),       path: '/ja/gaimen-kirikae-guide/' },
     { label: t('navbar.purpose.naturalization'),path: '/ja/kika-shinsei-guide/' },
+    { label: t('navbar.purpose.nbi'),           path: '/ja/nbi-clearance/' },
   ] : [
     { label: 'K-1 Fiancé Visa',        path: '/en/k1-visa-documents/' },
     { label: 'CR-1 / IR-1 Visa',       path: '/en/cr1-visa-documents/' },
