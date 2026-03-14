@@ -5,7 +5,8 @@ export default function CompanyJa() {
   return (
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '会社概要' }]}>
       <div className="max-w-2xl">
-        <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">会社概要</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">日本法人として、フィリピン書類取得を日本語で支えています</h1>
+        <p className="text-gray-500 mb-4">運営会社、対応体制、返信目安、進捗報告の考え方など、ご依頼前に確認したい情報をまとめています。</p>
         <div className="h-0.5 w-12 bg-primary mb-8" />
 
         <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-soft">
@@ -44,6 +45,15 @@ export default function CompanyJa() {
             日本法人が窓口となり、フィリピン・セブ市の現地スタッフが PSA・NBI・LTO・DFA アポスティーユの手続きを代行します。
             国際結婚・配偶者ビザ・外免切替・帰化申請など、用途に合わせた書類を日本語だけでご依頼いただけます。
           </p>
+        </div>
+
+        <div className="mt-8">
+          <a
+            href="/ja/contact"
+            className="inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-7 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:shadow-primary/50 transition-all duration-200"
+          >
+            ご依頼前に確認する
+          </a>
         </div>
       </div>
     </PageLayout>

@@ -28,9 +28,13 @@ export default function PricingJa() {
       }]}
     >
       <article className="max-w-2xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4 leading-snug">
-          【料金案内】進捗が見えるフィリピン書類取得サポート｜2段階決済で安心して依頼できる料金設計
+        <h1 className="text-2xl font-bold text-gray-900 mb-2 leading-snug">
+          料金は、用途別に分かる形でご案内します
         </h1>
+
+        <p className="text-gray-500 mb-6">
+          国際結婚準備、配偶者ビザ準備、外免切替など、目的に合わせた費用感を先にご確認いただけます。
+        </p>
 
         <p className="text-gray-700 leading-relaxed mb-8">
           株式会社IGRSの料金は、単に書類を取るための費用ではありません。必要書類の確認、現地申請、進捗確認、アポスティーユ対応、日本語でのご案内まで含めた、見通しを立てながら進めるための料金設計です。料金は書類の種類、部数、認証の有無、発送先などで変わるため、まずは無料でお見積もりをご案内します。
@@ -105,7 +109,7 @@ export default function PricingJa() {
       <CtaBox
         title="まずは無料でお見積もり"
         description="書類の種類・部数・認証の有無・発送先をお知らせください。見通しのある料金をご案内します。"
-        buttonText="無料相談はこちら"
+        buttonText="用途別の料金を見る"
         href="#contact"
         variant="primary"
         trustNote="追加費用が出る場合は事前にご相談します"

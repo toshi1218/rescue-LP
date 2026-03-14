@@ -60,10 +60,10 @@ export default function CenomarGuideJa() {
     >
       <article className="max-w-2xl mx-auto px-4">
         <h1 className="text-2xl font-bold text-gray-900 mb-2 leading-snug">
-          フィリピンCENOMAR（独身証明書）の取得代行
+          CENOMARが必要か分からない方へ。まず用途から確認します
         </h1>
         <p className="text-gray-500 mb-6">
-          婚姻手続きや各種届出に向けて、必要書類の確認から取得・発送までサポートします。
+          国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。
         </p>
 
         <p className="text-gray-700 leading-relaxed mb-4">
@@ -140,7 +140,7 @@ export default function CenomarGuideJa() {
       <CtaBox
         title="まずは無料相談"
         description="ご自身のケースでCENOMARだけで足りるのか、DFA Apostilleまで必要なのか、今ある書類が使える可能性があるのかを確認したい方は、まずはご相談ください。内容を確認したうえで、必要な書類と進め方をご案内します。"
-        buttonText="無料相談・お見積もりフォームへ"
+        buttonText="自分の用途を相談する"
         href="#contact"
         variant="primary"
         trustNote="着手金50%・書類写し確認後に残金50%お支払い"

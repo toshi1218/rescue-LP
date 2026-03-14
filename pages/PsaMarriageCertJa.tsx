@@ -77,9 +77,10 @@ export default function PsaMarriageCertJa() {
       ]}
     >
       <HeroBanner
-        title="PSA婚姻証明書、日本語だけで取り寄せます"
+        title="PSA婚姻証明書を、日本の手続きに合わせて取り寄せます"
+        subtitle="配偶者ビザ準備、帰化申請、日本側への婚姻反映など、提出先に応じて必要な形式を確認してご案内します。"
         badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
-        ctaText="無料相談はこちら"
+        ctaText="必要な形式を確認する"
         ctaHref="#contact"
       />
 

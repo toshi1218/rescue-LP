@@ -1,16 +1,14 @@
 import React from 'react';
-import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Car, ExternalLink, MessageCircle } from 'lucide-react';
+import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Car, ExternalLink, MessageCircle, ArrowRight } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
 const servicesData = {
   ja: [
-    { icon: UserX, title: 'CENOMAR', subtitle: '独身証明書（セノマー）取得代行', desc: '国際結婚や配偶者ビザ準備で必要になることが多い書類です。現地スタッフが取得を進めます。', hasBadge: true },
-    { icon: Baby, title: 'PSA Birth', subtitle: 'PSA出生証明書 取得代行', desc: 'PSA書類の取得に対応しています。DFAアポスティーユとの組み合わせもご相談いただけます。', hasBadge: false },
-    { icon: Heart, title: 'PSA Marriage', subtitle: 'PSA婚姻証明書 取得代行', desc: 'PSA書類の取得に対応しています。DFAアポスティーユとの組み合わせもご相談いただけます。', hasBadge: false },
-    { icon: Fingerprint, title: 'NBI Clearance', subtitle: 'NBIクリアランス（無犯罪証明書）更新・転送サポート', desc: '配偶者ビザや帰化申請などで使うNBI書類についてご相談いただけます。2014年以降に取得歴があり、更新として進めやすい案件を中心に対応しています。初回取得や氏名変更がある場合などは、ご本人様による対応が必要になることがあります。', hasBadge: false },
-    { icon: Car, title: 'LTO Documents', subtitle: 'LTO書類 取得代行（外免切替向け）', desc: '外免切替で求められるLTO関連書類の取得をご相談いただけます。ただし、運転免許センターでの審査では、お客様ご自身による滞在歴の立証などが必要です。弊社は現地書類の取得を支援しますが、最終判断は提出先によります。', hasBadge: false },
-    { icon: BadgeCheck, title: 'DFA Apostille', subtitle: 'DFAアポスティーユ認証 代行', desc: 'DFAアポスティーユ認証について、書類取得とあわせてご相談いただけます。', hasBadge: false },
+    { icon: Heart, title: '国際結婚準備パック', subtitle: '国際結婚準備', desc: 'フィリピンでの婚姻や日本側への反映に向けて、必要になりやすい書類をまとめて確認したい方へ', hasBadge: false },
+    { icon: BadgeCheck, title: '配偶者ビザ準備書類パック', subtitle: '配偶者ビザ準備', desc: '日本で一緒に暮らすための準備として、必要になりやすいフィリピン書類を整理したい方へ', hasBadge: false },
+    { icon: Car, title: '外免切替サポート', subtitle: '外免切替', desc: 'LTO書類を日本語で整理して進めたい方へ', hasBadge: false },
+    { icon: Fingerprint, title: '帰化・無犯罪証明関連', subtitle: '帰化・その他', desc: '用途に応じて必要書類を確認したい方へ', hasBadge: false },
   ],
   en: [
     { icon: UserX, title: 'CENOMAR', subtitle: 'CENOMAR Procurement (Certificate of No Marriage)', desc: 'Required for international marriage & spouse visa. We handle the full procurement.', hasBadge: true },
@@ -44,18 +42,17 @@ const Services: React.FC = () => {
             <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {services.map((service, index) => (
               <div key={index} className="group relative p-5 border border-gray-100 rounded-2xl bg-gray-50 hover:border-primary/40 hover:bg-primary/5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-                {service.hasBadge && (
-                  <span className="absolute top-3 right-3 text-[10px] bg-primary text-white px-2 py-0.5 rounded-full font-bold shadow-sm">{t('services.badge')}</span>
-                )}
                 <div className="w-10 h-10 rounded-xl bg-secondary/8 border border-secondary/10 flex items-center justify-center mb-3 group-hover:bg-primary/10 group-hover:border-primary/20 transition-colors">
                   <service.icon className="w-5 h-5 text-secondary group-hover:text-primary transition-colors flex-shrink-0" />
                 </div>
                 <span className="font-display font-bold text-sm text-secondary block mb-1">{service.title}</span>
-                <p className="text-xs font-semibold text-gray-700 mb-1">{service.subtitle}</p>
-                <p className="text-xs text-gray-500 leading-relaxed">{service.desc}</p>
+                <p className="text-xs text-gray-500 leading-relaxed mb-3">{service.desc}</p>
+                <span className="inline-flex items-center gap-1 text-xs font-bold text-primary border border-primary/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all">
+                  詳しく見る <ArrowRight className="w-3 h-3" />
+                </span>
               </div>
             ))}
           </div>

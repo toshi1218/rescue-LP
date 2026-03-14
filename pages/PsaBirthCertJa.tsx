@@ -77,9 +77,10 @@ export default function PsaBirthCertJa() {
       ]}
     >
       <HeroBanner
-        title="PSA出生証明書、日本語だけで取り寄せます"
+        title="PSA出生証明書が必要な方へ。用途に合わせて取り寄せます"
+        subtitle="国際結婚、配偶者ビザ準備、帰化申請など、提出先に合わせて必要な形式を確認しながら進めます。"
         badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
-        ctaText="無料相談はこちら"
+        ctaText="自分の用途で相談する"
         ctaHref="#contact"
       />
 

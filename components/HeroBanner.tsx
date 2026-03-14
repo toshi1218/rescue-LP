@@ -3,13 +3,14 @@ import { ArrowRight } from 'lucide-react';
 
 type HeroBannerProps = {
   title: string;
+  subtitle?: string;
   badges: string[];
   ctaText: string;
   ctaHref: string;
   ctaService?: string;
 };
 
-export default function HeroBanner({ title, badges, ctaText, ctaHref, ctaService }: HeroBannerProps) {
+export default function HeroBanner({ title, subtitle, badges, ctaText, ctaHref, ctaService }: HeroBannerProps) {
   const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (ctaService) {
       e.preventDefault();
@@ -46,9 +47,16 @@ export default function HeroBanner({ title, badges, ctaText, ctaHref, ctaService
         </div>
 
         {/* タイトル */}
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug mb-6 tracking-tight">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug mb-3 tracking-tight">
           {title}
         </h1>
+
+        {/* サブタイトル */}
+        {subtitle && (
+          <p className="text-sm md:text-base text-white/70 leading-relaxed mb-6">
+            {subtitle}
+          </p>
+        )}
 
         {/* CTAボタン */}
         <a

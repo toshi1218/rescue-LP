@@ -7,11 +7,11 @@ const stepIcons = [Mail, FileText, CreditCard, CheckCircle, PackageCheck];
 
 const stepsData = {
   ja: [
-    { num: 1, title: 'お問い合わせ', desc: 'メールで、目的と現在の状況をお知らせください。' },
-    { num: 2, title: 'お見積もり・ご提案', desc: '内容を確認し、必要書類、費用、納期の目安をご案内します。' },
-    { num: 3, title: '着手金のお支払い・委任状へのご署名', desc: '費用の50%をお支払いいただき、必要に応じて弊社作成の委任状にご署名いただきます。' },
-    { num: 4, title: '取得後のご確認・残金のお支払い', desc: '取得した書類の写しをご確認いただいた後、残金をお支払いいただきます。' },
-    { num: 5, title: '発送・お届け', desc: '原本を追跡可能な方法で発送し、ご指定の住所へお届けします。' },
+    { num: 1, title: '目的を確認する', desc: '今の手続きが、国際結婚、配偶者ビザ準備、外免切替、帰化のどれに近いかを確認します。' },
+    { num: 2, title: '必要書類と流れを整理する', desc: '提出先や状況に応じて、必要になりやすい書類を整理します。' },
+    { num: 3, title: 'ご案内内容を確認する', desc: '対応範囲、費用、進め方をご確認いただきます。' },
+    { num: 4, title: '手続を進める', desc: '必要書類の取得や確認を進めます。' },
+    { num: 5, title: '受け取り・次の手続へ', desc: '受け取った書類を、次の手続につなげます。' },
   ],
   en: [
     { num: 1, title: 'Contact Us', desc: 'Tell us via email which documents you need and your current situation.' },
