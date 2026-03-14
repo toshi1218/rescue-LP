@@ -9,6 +9,7 @@ const guidesData = {
     { to: '/ja/haigusha-visa/',        title: '配偶者ビザ準備', desc: '日本で一緒に暮らすために必要なフィリピン書類を整理したい方へ', tag: '配偶者ビザ準備を見る' },
     { to: '/ja/gaimen-kirikae-guide/', title: '外免切替', desc: 'LTO書類や外免切替に必要な流れを確認したい方へ', tag: '外免切替を見る' },
     { to: '/ja/cenomar/',              title: '帰化・無犯罪証明など', desc: '用途に応じて必要書類を確認したい方へ', tag: '必要書類を確認する' },
+    { to: '/ja/nbi-clearance/',        title: '海外ビザ用NBIクリアランス', desc: '海外移住・就労ビザ・永住権申請などでNBIクリアランスが必要な方へ', tag: 'NBIクリアランスを確認する' },
   ],
   en: [
     { to: '/en/cenomar/',                   title: 'CENOMAR (Certificate of No Marriage)', desc: 'How to obtain, cost & timeline',                          tag: 'Most Popular' },
