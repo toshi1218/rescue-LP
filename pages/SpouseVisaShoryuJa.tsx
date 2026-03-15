@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import SectionDivider from '../components/SectionDivider';
 import { AlertTriangle, CheckCircle, Info, Calendar, FileText, Stamp, ShieldCheck, Heart } from 'lucide-react';
@@ -53,14 +54,12 @@ export default function SpouseVisaShoryuJa() {
         },
       ]}
     >
+      <HeroBanner
+        title="配偶者ビザに必要な書類チェックリスト【2026年3月版】"
+        subtitle="在留資格「日本人の配偶者等」COE申請に必要なフィリピン書類を最新情報でまとめています。2025年6月から結核非発病証明書が追加義務化。"
+        badges={['2026年3月最新', '結核証明書対応', '書類取得代行あり']}
+      />
       <article className="max-w-2xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-secondary mb-2 leading-snug">
-          配偶者ビザに必要な書類チェックリスト
-        </h1>
-        <p className="text-xs text-gray-500 mb-6 flex items-center gap-1.5">
-          <Calendar className="w-3.5 h-3.5" />
-          2026年3月版 ｜ フィリピン人配偶者対応
-        </p>
 
         {/* 2025年6月 重要変更 */}
         <section className="mb-8 rounded-2xl bg-amber-50 border border-amber-300 p-5">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import SectionDivider from '../components/SectionDivider';
@@ -74,13 +75,12 @@ export default function CenomarGuideJa() {
         },
       ]}
     >
+      <HeroBanner
+        title="CENOMAR（独身証明書）取得代行"
+        subtitle="国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。"
+        badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
+      />
       <article className="max-w-2xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-gray-900 mb-2 leading-snug">
-          CENOMARが必要か分からない方へ。まず用途から確認します
-        </h1>
-        <p className="text-gray-500 mb-6">
-          国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。
-        </p>
 
         <p className="text-gray-700 leading-relaxed mb-4">
           CENOMARは、フィリピン統計局（Philippine Statistics Authority）が発行する Certificate of No Marriage Record です。国際結婚や婚姻関連手続きでは、「今の自分の婚姻記録がどうなっているか」を確認するために求められることがあります。PSAHelpline では、CENOMARのオンライン料金は <strong>1通420ペソ</strong> と案内されています。

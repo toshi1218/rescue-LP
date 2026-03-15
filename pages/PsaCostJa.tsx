@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { useMeta } from '../lib/useMeta';
@@ -58,10 +59,12 @@ export default function PsaCostJa() {
         },
       ]}
     >
+      <HeroBanner
+        title="PSA出生証明書の取得費用"
+        subtitle="PSAの現地料金は365ペソ。日本へ届けるまでの費用の全体像を整理して解説します。"
+        badges={['現地料金を解説', 'アポスティーユ込み対応', '日本語でご相談OK']}
+      />
       <article className="max-w-2xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4 leading-snug">
-          フィリピンPSA出生証明書の取得費用はいくら？現地料金と日本へ届けるまでの総額を解説
-        </h1>
 
         <p className="text-gray-700 leading-relaxed mb-4">
           配偶者ビザ、国際結婚、相続、各種届出などで必要になることが多い、フィリピン統計局発行の PSA Birth Certificate（出生証明書）。よくある疑問が、「PSAの書類自体は安いと聞くのに、なぜ日本から頼むと高くなるのか？」というものです。

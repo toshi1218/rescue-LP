@@ -13,8 +13,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function LicenseConversionJa() {
   useMeta(
-    'フィリピン免許の外免切替｜必要書類とLTO書類取得サポート｜IGRS',
-    'フィリピン免許から日本の免許への外免切替に必要な条件（免許取得後3か月以上の滞在）とLTO関連書類を解説。取得手配を日本語でサポートします。',
+    'フィリピン運転免許 日本への切り替え（外免切替）条件・費用・LTO書類',
+    'フィリピン運転免許を日本免許に切り替える（外免切替）手順・条件・費用・必要書類を解説。LTO書類は渡航不要で日本語対応の代行取得も可能。試験場予約日に合わせて手配。無料相談受付中。',
   );
   return (
     <PageLayout
@@ -85,9 +85,9 @@ export default function LicenseConversionJa() {
       ]}
     >
       <HeroBanner
-        title="外免切替 LTO書類取得代行"
-        subtitle="試験場で求められやすいフィリピン側書類を整理し、予約日に合わせて逆算してご案内します。"
-        badges={['外免切替ガイド', 'フィリピン免許対応', '無料相談あり']}
+        title="外免切替ガイド"
+        subtitle="フィリピン運転免許を日本免許に切り替える（外免切替）に必要な条件・費用・LTO書類の流れをまとめています。書類の取り寄せは現地スタッフが代行します。"
+        badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり']}
         ctaText="必要なLTO書類を確認する"
         ctaHref="#contact"
       />

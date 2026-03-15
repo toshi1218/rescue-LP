@@ -486,8 +486,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/kokusai-kekkon-guide',
     outFile: path.join(projectRoot, 'dist', 'ja', 'kokusai-kekkon-guide', 'index.html'),
-    title: `国際結婚の書類一括代行【${SEO_YEAR_MONTH_JA}】CENOMAR・PSA・NBI`,
-    description: 'CENOMAR・PSA出生証明書・DFAアポスティーユを日本語だけで一括代行。日本先行婚・フィリピン先行婚どちらにも対応。婚姻届から配偶者ビザまで必要書類を一式ご案内。無料相談。',
+    title: `フィリピン人との国際結婚 手続きの流れ・費用・必要書類【${SEO_YEAR_MONTH_JA}】`,
+    description: 'フィリピン人との国際結婚の手続き・費用・必要書類を解説。CENOMAR・PSA出生証明書・DFAアポスティーユを日本語で一括代行。日本先行婚・フィリピン先行婚対応。無料相談。',
     canonical: `${BASE}/ja/kokusai-kekkon-guide/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/international-marriage-guide/`,
@@ -519,8 +519,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/gaimen-kirikae-guide',
     outFile: path.join(projectRoot, 'dist', 'ja', 'gaimen-kirikae-guide', 'index.html'),
-    title: `フィリピン免許の外免切替【${SEO_YEAR_MONTH_JA}】必要なLTO書類と取得方法｜渡航不要`,
-    description: 'フィリピン免許→日本免許の外免切替、LTO書類の取り方がわからず困っていませんか？渡航不要・日本語だけで書類が届きます。試験場予約日に間に合うよう手配。無料相談。',
+    title: `フィリピン運転免許 日本への切り替え（外免切替）【${SEO_YEAR_MONTH_JA}】条件・費用・LTO書類`,
+    description: 'フィリピン運転免許を日本免許に切り替える（外免切替）手順・条件・費用・必要書類を解説。LTO書類は渡航不要で日本語対応の代行取得も可能。試験場予約日に合わせて手配。無料相談受付中。',
     canonical: `${BASE}/ja/gaimen-kirikae-guide/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
