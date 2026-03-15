@@ -5,10 +5,11 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function NbiValidityJa() {
   useMeta(
-    'NBI Clearanceの有効期限【2026年3月】期限切れになる前に、最適タイミングで代行取得',
+    `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】期限切れになる前に、最適タイミングで代行取得`,
     'NBI Clearanceは発行から1年有効ですが、提出先によっては6ヶ月以内を求める場合も。提出予定日から逆算して最適なタイミングで取得。期限切れで再取得になるリスクをなくします。無料相談。',
   );
   return (

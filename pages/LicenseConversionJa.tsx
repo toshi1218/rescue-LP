@@ -10,10 +10,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { AlertTriangle, CheckCircle, ClipboardList, Car, FileText, Stamp, Clock, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function LicenseConversionJa() {
   useMeta(
-    'フィリピン運転免許 日本への切り替え（外免切替）【2026年3月】条件・費用・LTO書類',
+    `フィリピン運転免許 日本への切り替え（外免切替）【${SEO_YEAR_MONTH_JA}】条件・費用・LTO書類`,
     'フィリピン運転免許から日本免許への外免切替を解説。条件・費用・LTO必要書類の流れが分かります。書類は渡航不要で代行取得OK。無料相談受付中。',
   );
   return (

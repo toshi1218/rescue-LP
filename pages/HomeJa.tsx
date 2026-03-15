@@ -7,10 +7,11 @@ import FinalCta from '../components/FinalCta';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function HomeJa() {
   useMeta(
-    'フィリピン書類、日本語だけで確実に取り寄せできます｜CENOMAR・PSA・NBI代行【2026年3月】',
+    `フィリピン書類、日本語だけで確実に取り寄せできます｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}】`,
     'CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユを日本語だけで安心代行。フィリピン渡航不要。進捗は随時ご報告。国際結婚・配偶者ビザ・帰化申請に対応。無料相談受付中。',
     'https://ph-document.com/ja/',
   );

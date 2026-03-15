@@ -5,10 +5,11 @@ import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function PsaCostJa() {
   useMeta(
-    'PSA出生証明書の費用【2026年3月】総額いくら？現地365ペソだけでは届かない理由',
+    `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】総額いくら？現地365ペソだけでは届かない理由`,
     'PSA出生証明書の現地料金は365ペソ。でも日本に届けるにはアポスティーユ・国際郵送が必要です。追加請求なしの総額料金で代行。無料見積もり。',
   );
   return (
