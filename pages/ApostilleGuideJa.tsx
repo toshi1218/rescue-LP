@@ -1,5 +1,6 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
+import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
@@ -66,14 +67,12 @@ export default function ApostilleGuideJa() {
         },
       ]}
     >
+      <HeroBanner
+        title="フィリピン書類のアポスティーユ（旧レッドリボン）"
+        subtitle="国際結婚、配偶者ビザ準備、外免切替、帰化申請など、どの場面で必要になりやすいかを分かりやすくまとめています。"
+        badges={['PSA・CENOMAR・LTO対応', 'DFA認証代行', '日本語でご相談OK']}
+      />
       <article className="max-w-2xl mx-auto px-4">
-        <h1 className="text-2xl font-bold text-gray-900 mb-2 leading-snug">
-          アポスティーユが必要かどうか、まずここで整理できます
-        </h1>
-
-        <p className="text-gray-500 mb-6">
-          国際結婚、配偶者ビザ準備、外免切替、帰化申請など、どの場面で必要になりやすいかを分かりやすくまとめています。
-        </p>
 
         <p className="text-gray-700 leading-relaxed mb-8">
           日本の役所、入管、警察、免許センターなどから「フィリピンの書類にアポスティーユを付けてください」と言われて、何をすればいいのか分からず止まっていませんか。このページでは、アポスティーユの意味、旧レッドリボンとの違い、必要になりやすいケース、そして進めるときの注意点をまとめて整理します。

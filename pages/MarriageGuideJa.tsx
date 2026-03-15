@@ -18,8 +18,8 @@ export default function MarriageGuideJa() {
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'フィリピン人との国際結婚 必要書類取得代行',
-        description: 'フィリピン人との国際結婚に必要なCENOMAR・PSA出生証明書・DFAアポスティーユの取得を代行。必要書類は婚姻の方式や再婚歴等の状況によって変わります。日本語でご相談いただけます。',
+        name: 'フィリピン人との国際結婚 手続き・費用・必要書類ガイド',
+        description: 'フィリピン人との国際結婚の手続き・費用・必要書類を解説。CENOMAR・PSA出生証明書・DFAアポスティーユを日本語で一括代行。日本先行婚・フィリピン先行婚対応。',
         url: 'https://ph-document.com/ja/kokusai-kekkon-guide',
         provider: {
           '@type': 'Organization',
@@ -88,8 +88,8 @@ export default function MarriageGuideJa() {
       ]}
     >
       <HeroBanner
-        title="国際結婚 書類取得代行"
-        subtitle="フィリピンで先に結婚する場合と、日本で先に結婚する場合の流れ・必要書類・その後の日本同居準備をまとめています。"
+        title="国際結婚ガイド"
+        subtitle="フィリピン人との国際結婚の手続き・費用・必要書類をまとめています。日本先行婚・フィリピン先行婚どちらにも対応。"
         badges={['日本語でやり取りOK', '必要書類を整理してご案内', '進捗を随時ご報告']}
         ctaText="自分に近いルートを見る"
         ctaHref="#contact"
