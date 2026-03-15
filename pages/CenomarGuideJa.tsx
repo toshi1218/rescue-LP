@@ -8,6 +8,7 @@ import StepList from '../components/StepList';
 import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
+import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
 import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
 
@@ -80,6 +81,16 @@ export default function CenomarGuideJa() {
         title="CENOMAR（独身証明書）取得代行"
         subtitle="国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。"
         badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
+      />
+      <SummaryBlock
+        conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
+        points={[
+          'PSA発行のCENOMAR取得からDFAアポスティーユまで一括対応',
+          '有効期限（発行から6か月）に合わせたタイミングで手配',
+          '提出先の要件を確認し、そのまま使える状態でお届け',
+          'フィリピン渡航不要。まずは無料相談で必要書類を確認',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
       />
       <article className="max-w-2xl mx-auto px-4">
 
