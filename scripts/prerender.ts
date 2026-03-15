@@ -520,7 +520,7 @@ const routes: RouteConfig[] = [
     path: '/ja/gaimen-kirikae-guide',
     outFile: path.join(projectRoot, 'dist', 'ja', 'gaimen-kirikae-guide', 'index.html'),
     title: `フィリピン運転免許 日本への切り替え（外免切替）【${SEO_YEAR_MONTH_JA}】条件・費用・LTO書類`,
-    description: 'フィリピン運転免許を日本免許に切り替える（外免切替）手順・条件・費用・必要書類を解説。LTO書類は渡航不要で日本語対応の代行取得も可能。試験場予約日に合わせて手配。無料相談受付中。',
+    description: 'フィリピン運転免許から日本免許への外免切替を解説。条件・費用・LTO必要書類の流れが分かります。書類は渡航不要で代行取得OK。無料相談受付中。',
     canonical: `${BASE}/ja/gaimen-kirikae-guide/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
