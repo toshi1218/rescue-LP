@@ -10,11 +10,12 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
 
 export default function CenomarGuideJa() {
   useMeta(
-    'CENOMAR（独身証明書）取得代行【2026年3月】渡航不要・アポスティーユ付き',
+    `CENOMAR（独身証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・アポスティーユ付き`,
     'CENOMARが必要だけどフィリピンに行けない方へ。渡航不要・日本語だけで取得完了。国際結婚・配偶者ビザ・帰化申請に対応。24時間以内に返信。',
   );
   return (

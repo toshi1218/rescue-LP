@@ -7,16 +7,17 @@ import CtaBox from '../components/CtaBox';
 import SectionDivider from '../components/SectionDivider';
 import { AlertTriangle, CheckCircle, Info, Calendar, FileText, Stamp, ShieldCheck, Heart } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function SpouseVisaShoryuJa() {
   useMeta(
-    '配偶者ビザに必要な書類チェックリスト【2026年3月版】フィリピン人配偶者の在留資格認定証明書申請',
+    `配偶者ビザに必要な書類チェックリスト【${SEO_YEAR_MONTH_JA}版】フィリピン人配偶者の在留資格認定証明書申請`,
     '2025年6月23日改正対応。フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。結核非発病証明書の追加要件・PSA書類・CENOMARをまとめてご案内。',
   );
 
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '配偶者ビザ 書類チェックリスト【2026年3月版】' }]}
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: `配偶者ビザ 書類チェックリスト【${SEO_YEAR_MONTH_JA}版】` }]}
       jsonLd={[
         {
           '@context': 'https://schema.org',
