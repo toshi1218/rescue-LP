@@ -11,8 +11,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function PsaCostEn() {
   useMeta(
-    'PSA Birth Certificate Cost 2026 — Official Fees & Total Pricing | Philippine Document Service',
-    'PSA Birth Certificate costs PHP 365 officially. Total cost with DHL worldwide shipping, DFA Apostille, and proxy service starts at USD 199. Full 2026 pricing breakdown.',
+    'PSA Birth Certificate Price [March 2026] — Fee Breakdown (PHP 365+)',
+    'PSA Birth Certificate official fee: PHP 365. Total price with DFA Apostille + DHL worldwide shipping starts at $349. Full 2026 cost breakdown for visa & immigration applicants.',
   );
   return (
     <PageLayout
@@ -45,6 +45,22 @@ export default function PsaCostEn() {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
           mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'How much does a PSA Birth Certificate cost in 2026?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'The official PSA fee is PHP 365 per copy. With DFA Apostille and international DHL shipping, the total cost starts at USD $349.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What is the PSA Birth Certificate price with Apostille?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Our all-inclusive price covering PSA retrieval (PHP 365 official fee), DFA Apostille authentication, and DHL worldwide shipping starts at USD $349. No hidden fees.',
+              },
+            },
             {
               '@type': 'Question',
               name: 'How much does it cost?',

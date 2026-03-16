@@ -50,8 +50,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
-    title: `CENOMAR Retrieval Service — PSA + Apostille [${SEO_YEAR_MONTH_EN}]`,
-    description: `Need a CENOMAR for marriage or visa? Don't struggle alone — we retrieve it from PSA with DFA Apostille and ship it to you. Free consultation available.`,
+    title: `What Is CENOMAR? Certificate of No Marriage Explained [${SEO_YEAR_MONTH_EN}]`,
+    description: `CENOMAR (Certificate of No Marriage Record) is an official PSA document proving you are single. Required for K-1 visa, international marriage & immigration. We retrieve it with Apostille — ships worldwide via DHL.`,
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -203,8 +203,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Cost [${SEO_YEAR_MONTH_EN}] — Full Breakdown`,
-    description: `PSA birth certificate official fee is PHP 365, but you also need DFA Apostille to use it abroad. Compare total DIY cost vs. our all-in-one service from $199. Free quote.`,
+    title: `PSA Birth Certificate Price [${SEO_YEAR_MONTH_EN}] — Fee Breakdown (PHP 365+)`,
+    description: `PSA Birth Certificate official fee: PHP 365. Total price with DFA Apostille + DHL worldwide shipping starts at $349. Full 2026 cost breakdown for visa & immigration applicants.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -519,8 +519,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/gaimen-kirikae-guide',
     outFile: path.join(projectRoot, 'dist', 'ja', 'gaimen-kirikae-guide', 'index.html'),
-    title: `フィリピン運転免許 日本への切り替え（外免切替）【${SEO_YEAR_MONTH_JA}】条件・費用・LTO書類`,
-    description: 'フィリピン運転免許を日本免許に切り替える（外免切替）手順・条件・費用・必要書類を解説。LTO書類は渡航不要で日本語対応の代行取得も可能。試験場予約日に合わせて手配。無料相談受付中。',
+    title: `フィリピン免許→日本免許 切り替えガイド【${SEO_YEAR_MONTH_JA}】外免切替の条件・必要書類`,
+    description: 'フィリピン運転免許を日本の免許に切り替える「外免切替」の完全ガイド。滞在3か月以上の条件・LTO必要書類（Certification / Driver\'s Record）・費用の目安・試験場での流れをわかりやすく解説。',
     canonical: `${BASE}/ja/gaimen-kirikae-guide/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
