@@ -1,5 +1,6 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
@@ -414,16 +415,12 @@ export default function RoadmapJa() {
         </div>
       </section>
 
-      {/* 関連ページ */}
-      <nav className="mt-10 pt-8 border-t border-gray-100">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-        <ul className="space-y-2 text-sm">
-          <li><a href="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行</a></li>
-          <li><a href="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行</a></li>
-          <li><a href="/ja/nihon-senko-ph-senko/" className="text-secondary hover:underline">→ 日本先行婚 vs フィリピン先行婚の比較ガイド</a></li>
-          <li><a href="/ja/ryokin/" className="text-secondary hover:underline">→ 料金一覧</a></li>
-        </ul>
-      </nav>
+      <RelatedLinks links={[
+        { path: '/ja/kokusai-kekkon-guide/', label: '国際結婚の書類一括代行' },
+        { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
+        { path: '/ja/nihon-senko-ph-senko/', label: '日本先行婚 vs フィリピン先行婚の比較ガイド' },
+        { path: '/ja/ryokin/', label: '料金一覧' },
+      ]} />
     </PageLayout>
   );
 }

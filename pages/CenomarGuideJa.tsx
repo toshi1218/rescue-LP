@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
@@ -201,16 +202,12 @@ export default function CenomarGuideJa() {
         trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
 
-      {/* 関連ページへの内部リンク */}
-      <nav className="mt-10 pt-8 border-t border-gray-100">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-        <ul className="space-y-2 text-sm">
-          <li><Link to="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行（CENOMAR・PSA・NBI）</Link></li>
-          <li><Link to="/ja/cenomar-apostille/" className="text-secondary hover:underline">→ CENOMARのDFAアポスティーユ取得代行</Link></li>
-          <li><Link to="/ja/cenomar-koyukigen/" className="text-secondary hover:underline">→ CENOMARの有効期限と取得タイミング</Link></li>
-          <li><Link to="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行</Link></li>
-        </ul>
-      </nav>
+      <RelatedLinks links={[
+        { path: '/ja/kokusai-kekkon-guide/', label: '国際結婚の書類一括代行（CENOMAR・PSA・NBI）' },
+        { path: '/ja/cenomar-apostille/', label: 'CENOMARのDFAアポスティーユ取得代行' },
+        { path: '/ja/cenomar-koyukigen/', label: 'CENOMARの有効期限と取得タイミング' },
+        { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
+      ]} />
     </PageLayout>
   );
 }

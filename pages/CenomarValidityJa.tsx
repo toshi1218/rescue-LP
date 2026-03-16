@@ -87,7 +87,7 @@ export default function CenomarValidityJa() {
           '取得後に期限切れになった場合の再取得にも対応',
           '婚姻届・ビザ申請・帰化申請、どのスケジュールにも対応',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       <SectionDivider variant="beige">

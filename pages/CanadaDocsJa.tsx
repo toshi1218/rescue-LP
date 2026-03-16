@@ -94,7 +94,7 @@ export default function CanadaDocsJa() {
           'DFAアポスティーユ付きの原本をDHLでカナダへ直送',
           '申請種別ごとのIRCC要件を事前確認してから進めます',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       <FeatureList

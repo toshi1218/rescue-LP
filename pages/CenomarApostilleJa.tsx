@@ -1,6 +1,7 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
@@ -95,7 +96,7 @@ export default function CenomarApostilleJa() {
           '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
           '約1ヶ月〜で日本のご住所へ郵送',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       <SectionDivider variant="beige">
@@ -208,16 +209,12 @@ export default function CenomarApostilleJa() {
         ctaButton="無料相談フォームへ"
       />
 
-      {/* 関連ページ */}
-      <nav className="mt-10 pt-8 border-t border-gray-100">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-        <ul className="space-y-2 text-sm">
-          <li><Link to="/ja/cenomar/" className="text-secondary hover:underline">→ CENOMAR（独身証明書）取得代行</Link></li>
-          <li><Link to="/ja/cenomar-koyukigen/" className="text-secondary hover:underline">→ CENOMARの有効期限と取得タイミング</Link></li>
-          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行（PSA全書類対応）</Link></li>
-          <li><Link to="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行</Link></li>
-        </ul>
-      </nav>
+      <RelatedLinks links={[
+        { path: '/ja/cenomar/', label: 'CENOMAR（独身証明書）取得代行' },
+        { path: '/ja/cenomar-koyukigen/', label: 'CENOMARの有効期限と取得タイミング' },
+        { path: '/ja/apostille/', label: 'DFAアポスティーユ代行（PSA全書類対応）' },
+        { path: '/ja/kokusai-kekkon-guide/', label: '国際結婚の書類一括代行' },
+      ]} />
     </PageLayout>
   );
 }

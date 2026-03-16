@@ -87,7 +87,7 @@ export default function ApostilleFeeJa() {
           '日本の手続きでは紙の原本にDFAアポスティーユがほぼ必須',
           '見積もり後の追加請求なし。総額で比較してください',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       <FeatureList

@@ -94,7 +94,7 @@ export default function AustraliaDocsJa() {
           'DFAアポスティーユ付きの原本をDHLでオーストラリアへ直送',
           'ビザサブクラスごとのHome Affairs要件を事前確認してから進めます',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       <FeatureList
