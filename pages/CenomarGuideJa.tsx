@@ -13,8 +13,8 @@ import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } f
 
 export default function CenomarGuideJa() {
   useMeta(
-    'フィリピンCENOMAR（独身証明書）取得代行｜IGRS',
-    'CENOMAR（独身証明書）の取得を日本語で代行。発行から6か月の有効期限、DFAアポスティーユ対応など、提出先に合う形で手配します。',
+    'CENOMAR（独身証明書）取得代行【2026年3月】渡航不要・アポスティーユ付き',
+    'CENOMARが必要だけどフィリピンに行けない方へ。渡航不要・日本語だけで取得完了。国際結婚・配偶者ビザ・帰化申請に対応。24時間以内に返信。',
   );
   return (
     <PageLayout

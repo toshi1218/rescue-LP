@@ -8,8 +8,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function NbiValidityJa() {
   useMeta(
-    'NBIクリアランスの有効期限はいつまで？提出先別の基準と再取得サポート｜IGRS',
-    'NBIクリアランスの有効期限は提出先によって3か月〜6か月。手元の書類の発行日と提出先条件を確認し、更新または再取得を日本語でサポートします。',
+    'NBI Clearanceの有効期限【2026年3月】発行から1年｜提出先別の注意点',
+    'NBI Clearanceの有効期限は発行から1年。ただし入管や大使館では6ヶ月以内を求められる場合も。提出先別の基準・期限切れを防ぐ取得タイミング・アポスティーユとの関係を解説。',
   );
   return (
     <PageLayout

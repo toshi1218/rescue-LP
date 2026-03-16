@@ -420,8 +420,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar-koyukigen',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-koyukigen', 'index.html'),
-    title: `CENOMARの有効期限【${SEO_YEAR_MONTH_JA}】期限切れになる前に、最適タイミングで代行取得`,
-    description: 'CENOMARは多くの提出先で発行から6ヶ月以内が求められます。提出予定日から逆算して最適なタイミングで取得。期限切れで再取得になるリスクをなくします。無料相談で日程確認。',
+    title: `CENOMARの有効期限【${SEO_YEAR_MONTH_JA}】発行から6ヶ月が目安｜提出先別の基準まとめ`,
+    description: 'CENOMARの有効期限は多くの提出先で発行から6ヶ月以内。入管・市区町村役場・大使館など提出先別の基準と、期限切れを防ぐ最適な取得タイミングを解説します。',
     canonical: `${BASE}/ja/cenomar-koyukigen/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/cenomar-validity/`,
@@ -475,8 +475,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-shori-kikan',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-shori-kikan', 'index.html'),
-    title: `DFAアポスティーユの処理期間【${SEO_YEAR_MONTH_JA}】提出期限に合わせて代行手配します`,
-    description: 'DFAアポスティーユはRegular（4営業日）またはExpress（翌営業日）で申請可能。提出予定日から逆算して最適なスケジュールをご案内。期限に間に合うか無料相談で確認できます。',
+    title: `DFAアポスティーユの処理期間【${SEO_YEAR_MONTH_JA}】Regular 4営業日・Express 翌営業日`,
+    description: 'DFAアポスティーユの処理期間はRegular（4営業日）またはExpress（翌営業日）。申請から受け取りまでの流れ・費用の違い・提出期限から逆算したスケジュールの立て方を解説。',
     canonical: `${BASE}/ja/apostille-shori-kikan/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/apostille-processing-time/`,
@@ -562,8 +562,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-ryokin',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
-    title: `DFAアポスティーユの料金【${SEO_YEAR_MONTH_JA}】料金で後から追加請求なし`,
-    description: 'DFAアポスティーユ・PSA取得・国際郵送をまとめた料金。後から追加請求なし。CENOMAR・PSA・NBI別の費用目安も確認できます。無料見積もり受付中。',
+    title: `DFAアポスティーユの料金【${SEO_YEAR_MONTH_JA}】Regular・Express別の費用と総額の目安`,
+    description: 'DFAアポスティーユの料金はRegular約1,000ペソ・Express約2,000ペソ。PSA取得費・国際郵送費を含めた総額の目安と、CENOMAR・PSA・NBI別の費用内訳を解説。',
     canonical: `${BASE}/ja/apostille-ryokin/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/apostille-fee/`,
@@ -573,8 +573,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-koyukigen',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-koyukigen', 'index.html'),
-    title: `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】期限切れになる前に、最適タイミングで代行取得`,
-    description: 'NBI Clearanceは発行から1年有効ですが、提出先によっては6ヶ月以内を求める場合も。提出予定日から逆算して最適なタイミングで取得。期限切れで再取得になるリスクをなくします。無料相談。',
+    title: `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】発行から1年｜提出先別の注意点`,
+    description: 'NBI Clearanceの有効期限は発行から1年。ただし入管や大使館では6ヶ月以内を求められる場合も。提出先別の基準・期限切れを防ぐ取得タイミング・アポスティーユとの関係を解説。',
     canonical: `${BASE}/ja/nbi-koyukigen/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/nbi-validity/`,

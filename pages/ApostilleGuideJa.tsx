@@ -8,8 +8,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function ApostilleGuideJa() {
   useMeta(
-    'フィリピン書類のアポスティーユ（旧レッドリボン）完全解説｜IGRS',
-    'アポスティーユ（旧レッドリボン）とは何か、必要になるケース、よくある誤解と注意点を解説。PSA・CENOMAR・LTO書類の認証代行も日本語でサポートします。',
+    'DFAアポスティーユ代行【2026年3月】書類取得から一括対応',
+    'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
   );
   return (
     <PageLayout

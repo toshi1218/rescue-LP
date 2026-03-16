@@ -8,8 +8,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function PricingJa() {
   useMeta(
-    '料金案内｜フィリピン書類取得代行の費用と2段階決済｜IGRS',
-    'PSA・NBI・LTO等のフィリピン書類取得代行の料金案内。着手金50%・書類写し確認後残金50%の2段階決済で安心して依頼できます。',
+    '料金一覧【2026年3月】料金・追加請求なし｜フィリピン書類取得代行',
+    'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユ・国際郵送をまとめた料金。後から追加請求なし。無料見積もり受付中。',
   );
   return (
     <PageLayout

@@ -10,8 +10,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function HomeJa() {
   useMeta(
-    'フィリピン書類取得代行｜CENOMAR・PSA・LTO 日本語だけで確実に取り寄せ',
-    'フィリピン書類の取得を日本語だけで安心おまかせ。CENOMAR（独身証明書）・PSA出生証明書・LTO・DFAアポスティーユを現地スタッフが完全代行。進捗は随時ご報告。国際結婚・外免切替・配偶者ビザに対応。無料相談受付中。',
+    'フィリピン書類、日本語だけで確実に取り寄せできます｜CENOMAR・PSA・NBI代行【2026年3月】',
+    'CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユを日本語だけで安心代行。フィリピン渡航不要。進捗は随時ご報告。国際結婚・配偶者ビザ・帰化申請に対応。無料相談受付中。',
     'https://ph-document.com/ja/',
   );
 
