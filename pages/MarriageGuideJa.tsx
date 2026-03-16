@@ -206,7 +206,7 @@ export default function MarriageGuideJa() {
           <p className="text-xs text-gray-600 leading-relaxed mb-3">当社をご利用いただく場合でも、すべてを完全に丸投げできるわけではありません。適法に取得を進めるため、次のご協力をお願いしています。</p>
           <ul className="space-y-1.5 mb-3">
             {[
-              '英文委任状（Special Power of Attorney）へのご署名',
+              'Authentication Letterへのご署名',
               '身分証明書のコピーのご提出',
               '案件によっては、ご本人様による追加対応',
             ].map((item, i) => (
