@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
@@ -88,7 +89,7 @@ export default function LicenseConversionJa() {
         title="外免切替ガイド"
         subtitle="フィリピン運転免許を日本免許に切り替える（外免切替）に必要な条件・費用・LTO書類の流れをまとめています。書類の取り寄せは現地スタッフが代行します。"
         badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり']}
-        ctaText="必要なLTO書類を確認する"
+        ctaText="書類を確認する"
         ctaHref="#contact"
       />
 
@@ -271,15 +272,11 @@ export default function LicenseConversionJa() {
         trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料"
       />
 
-      {/* 関連ページへの内部リンク */}
-      <nav className="mt-10 pt-8 border-t border-gray-100">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-        <ul className="space-y-2 text-sm">
-          <li><Link to="/ja/driver-record/" className="text-secondary hover:underline">→ LTOドライバーズレコード代行（外免切替・企業採用）</Link></li>
-          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行</Link></li>
-          <li><Link to="/ja/ryokin/" className="text-secondary hover:underline">→ 料金一覧</Link></li>
-        </ul>
-      </nav>
+      <RelatedLinks links={[
+        { path: '/ja/driver-record/', label: 'LTOドライバーズレコード代行（外免切替・企業採用）' },
+        { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
+        { path: '/ja/ryokin/', label: '料金一覧' },
+      ]} />
     </PageLayout>
   );
 }

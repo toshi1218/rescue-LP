@@ -80,7 +80,7 @@ export default function PsaBirthCertJa() {
         title="PSA出生証明書 取得代行"
         subtitle="国際結婚、配偶者ビザ準備、帰化申請など、提出先に合わせて必要な形式を確認しながら進めます。"
         badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
-        ctaText="自分の用途で相談する"
+        ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
 
@@ -96,7 +96,7 @@ export default function PsaBirthCertJa() {
           '「PSAに記録がない」複雑なケースも相談可能',
           '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       {/* 訴求ブロック */}

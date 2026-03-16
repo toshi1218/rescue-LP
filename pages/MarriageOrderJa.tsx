@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
@@ -54,7 +55,7 @@ export default function MarriageOrderJa() {
       <HeroBanner
         title="日本先行婚とフィリピン先行婚、どちらを選ぶべき？"
         badges={['手続きの流れを比較', '必要書類を整理', '状況に合わせて判断']}
-        ctaText="どちらが合うか相談する"
+        ctaText="無料相談はこちら"
         ctaHref="#contact"
       />
 
@@ -271,16 +272,12 @@ export default function MarriageOrderJa() {
           ctaButton="無料相談フォームへ"
         />
 
-        {/* 関連ページ */}
-        <nav className="mt-10 pt-8 border-t border-gray-100">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行（CENOMAR・PSA・NBI）</Link></li>
-            <li><Link to="/ja/philippines-de-kekkon/" className="text-secondary hover:underline">→ フィリピンで結婚する全ガイド（手続きと必要書類）</Link></li>
-            <li><Link to="/ja/cenomar/" className="text-secondary hover:underline">→ CENOMAR（独身証明書）取得代行</Link></li>
-            <li><Link to="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行</Link></li>
-          </ul>
-        </nav>
+        <RelatedLinks links={[
+          { path: '/ja/kokusai-kekkon-guide/', label: '国際結婚の書類一括代行（CENOMAR・PSA・NBI）' },
+          { path: '/ja/philippines-de-kekkon/', label: 'フィリピンで結婚する全ガイド（手続きと必要書類）' },
+          { path: '/ja/cenomar/', label: 'CENOMAR（独身証明書）取得代行' },
+          { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
+        ]} />
       </article>
     </PageLayout>
   );

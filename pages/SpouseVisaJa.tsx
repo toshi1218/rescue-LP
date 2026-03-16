@@ -92,7 +92,7 @@ export default function SpouseVisaJa() {
           '有効期限に合わせた取得タイミングもアドバイス',
           '新規申請・更新・変更、どの申請にも対応',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       {/* できること / できないこと */}
@@ -125,9 +125,9 @@ export default function SpouseVisaJa() {
           <h2 className="text-base font-bold text-amber-900">配偶者ビザの書類準備、こんな落とし穴があります</h2>
         </div>
         <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>入国管理局への申請では<strong>紙のアポスティーユ原本が必要</strong>です</li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>書類の<strong>有効期限（発行から6ヶ月〜1年）</strong>を過ぎると再取得が必要</li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>PSA書類・CENOMAR・NBI——<strong>どれが必要かは申請の状況によって異なる</strong></li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>入国管理局への申請では<strong>紙のアポスティーユ原本が必要</strong>です</span></li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>書類の<strong>有効期限（発行から6ヶ月〜1年）</strong>を過ぎると再取得が必要</span></li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>PSA書類・CENOMAR・NBI——<strong>どれが必要かは申請の状況によって異なる</strong></span></li>
         </ul>
         <p className="mt-4 text-sm font-semibold text-amber-900">→ 入管の要件に合わせた形式で、必要書類を一括手配します。</p>
       </section>
@@ -160,7 +160,7 @@ export default function SpouseVisaJa() {
 
       <CtaBox
         title="入管要件に合わせた書類を手配します"
-        description="「電子か紙か」「何が必要か」——入管の要件を確認した上で、正しい形式で手配します。まずご相談ください。"
+        description="入管の要件を確認した上で、正しい形式で書類を手配します。まずご相談ください。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"

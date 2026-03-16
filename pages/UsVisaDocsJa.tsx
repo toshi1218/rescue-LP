@@ -94,7 +94,7 @@ export default function UsVisaDocsJa() {
           '英語の書類も当社が確認・手配。日本語だけで完結',
           '必要書類が不明な場合も、無料相談で整理します',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       <SectionDivider variant="beige">

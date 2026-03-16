@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import SectionDivider from '../components/SectionDivider';
@@ -318,18 +319,14 @@ export default function SpouseVisaShoryuJa() {
       />
 
       <article className="max-w-2xl mx-auto px-4 mt-8">
-        {/* 関連ページ */}
-        <nav className="pt-8 border-t border-gray-100">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="/ja/kekkaku-shomeisho/" className="text-secondary hover:underline">→ 結核非発病証明書ガイド（Panel Clinic・費用・手順）</Link></li>
-            <li><Link to="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行（PSA・CENOMAR・アポスティーユ）</Link></li>
-            <li><Link to="/ja/psa-kekkon-shomeisho/" className="text-secondary hover:underline">→ PSA婚姻証明書の取得代行</Link></li>
-            <li><Link to="/ja/cenomar/" className="text-secondary hover:underline">→ CENOMAR（独身証明書）取得代行</Link></li>
-            <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行</Link></li>
-            <li><Link to="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行</Link></li>
-          </ul>
-        </nav>
+        <RelatedLinks links={[
+          { path: '/ja/kekkaku-shomeisho/', label: '結核非発病証明書ガイド（Panel Clinic・費用・手順）' },
+          { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行（PSA・CENOMAR・アポスティーユ）' },
+          { path: '/ja/psa-kekkon-shomeisho/', label: 'PSA婚姻証明書の取得代行' },
+          { path: '/ja/cenomar/', label: 'CENOMAR（独身証明書）取得代行' },
+          { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
+          { path: '/ja/kokusai-kekkon-guide/', label: '国際結婚の書類一括代行' },
+        ]} />
       </article>
     </PageLayout>
   );
