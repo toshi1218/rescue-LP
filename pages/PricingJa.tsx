@@ -5,10 +5,11 @@ import Pricing from '../components/Pricing';
 import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function PricingJa() {
   useMeta(
-    '料金一覧【2026年3月】料金・追加請求なし｜フィリピン書類取得代行',
+    `料金一覧【${SEO_YEAR_MONTH_JA}】料金・追加請求なし｜フィリピン書類取得代行`,
     'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユ・国際郵送をまとめた料金。後から追加請求なし。無料見積もり受付中。',
   );
   return (

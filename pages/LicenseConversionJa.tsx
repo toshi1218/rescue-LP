@@ -11,10 +11,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { AlertTriangle, CheckCircle, ClipboardList, Car, FileText, Stamp, Clock, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function LicenseConversionJa() {
   useMeta(
-    'フィリピン免許→日本免許 切り替えガイド【2026年3月】外免切替の条件・必要書類',
+    `フィリピン免許→日本免許 切り替えガイド【${SEO_YEAR_MONTH_JA}】外免切替の条件・必要書類`,
     'フィリピン運転免許を日本の免許に切り替える「外免切替」の完全ガイド。滞在3か月以上の条件・LTO必要書類（Certification / Driver\'s Record）・費用の目安・試験場での流れをわかりやすく解説。',
   );
   return (
