@@ -78,6 +78,7 @@
 /kika-shinsei-guide/        /ja/kika-shinsei-guide/       301
 
 # ── trailing slash 正規化 (/ja/* → trailing slash付きへ) ────────
+/ja                          /ja/                         301
 /ja/cenomar                  /ja/cenomar/                 301
 /ja/cenomar-apostille        /ja/cenomar-apostille/       301
 /ja/cenomar-koyukigen        /ja/cenomar-koyukigen/       301
