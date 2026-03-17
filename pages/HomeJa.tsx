@@ -5,10 +5,8 @@ import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
 import WhyUs from '../components/WhyUs';
 import CaseStudies from '../components/CaseStudies';
-import TrustSimple from '../components/TrustSimple';
 import ServicePacks from '../components/ServicePacks';
 import FAQ from '../components/FAQ';
-import FinalCta from '../components/FinalCta';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
@@ -67,8 +65,6 @@ export default function HomeJa() {
         <WhyUs />
         <CaseStudies />
         <FAQ />
-        <TrustSimple />
-        <FinalCta />
         <Footer />
       </main>
     </div>
