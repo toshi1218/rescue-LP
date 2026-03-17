@@ -52,10 +52,26 @@ export default function LicenseConversionJa() {
           mainEntity: [
             {
               '@type': 'Question',
+              name: 'フィリピン免許を日本の免許に切り替えるには何が必要ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'フィリピン免許を日本の免許に切り替える「外免切替」には、①有効なフィリピン運転免許証、②免許取得後にフィリピンで通算3か月以上滞在していた証明、③LTO書類（Certification with Apostille、License Historyなど）が必要です。免許センターごとに細かい要件が異なるため、管轄センターへの事前確認が重要です。',
+              },
+            },
+            {
+              '@type': 'Question',
               name: 'フィリピン免許があれば、誰でも外免切替できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: 'いいえ。免許が有効であることに加え、免許取得後にフィリピンで通算3か月以上滞在していたことを証明できることが重要です。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '外免切替に必要なLTO書類はどれですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '警視庁の案内では、①フィリピン運転免許証（原本）、②Official Receipt（OR）、③License History、④Certification with Apostille、⑤Immigration Record with Apostille（パスポートで滞在歴が確認できない場合）が案内されています。免許センターによって異なるため、管轄センターへの事前確認が必要です。',
               },
             },
             {
@@ -72,6 +88,14 @@ export default function LicenseConversionJa() {
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: '必ずではありません。警視庁の一覧では、運転免許の有効期間中の滞在がすべて確認できない場合に Immigration Record with Apostille が案内されています。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '外免切替の書類を取得するのにどのくらいかかりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'LTO書類の取得には通常2〜4週間、DFAアポスティーユには1〜2週間かかります。合計で約1か月〜6週間が目安です。繁忙期や書類の状況によって前後することがあります。',
               },
             },
             {
@@ -245,9 +269,12 @@ export default function LicenseConversionJa() {
 
       <FaqSection
         items={[
+          { q: 'フィリピン免許を日本の免許に切り替えるには何が必要ですか？', a: 'フィリピン免許を日本の免許に切り替える「外免切替」には、①有効なフィリピン運転免許証、②免許取得後にフィリピンで通算3か月以上滞在していた証明、③LTO書類（Certification with Apostille、License Historyなど）が必要です。免許センターごとに細かい要件が異なるため、管轄センターへの事前確認が重要です。' },
           { q: 'フィリピン免許があれば、誰でも外免切替できますか？', a: 'いいえ。免許が有効であることに加え、免許取得後にフィリピンで通算3か月以上滞在していたことを証明できることが重要です。' },
+          { q: '外免切替に必要なLTO書類はどれですか？', a: '警視庁の案内では、①フィリピン運転免許証（原本）、②Official Receipt（OR）、③License History、④Certification with Apostille、⑤Immigration Record with Apostille（パスポートで滞在歴が確認できない場合）が案内されています。' },
           { q: 'ORをなくしていても進められますか？', a: 'ケースによります。フィリピン案件では Official Receipt が案内されているため、まずは現在の状況を確認する必要があります。' },
           { q: 'Immigration Record は必ず必要ですか？', a: '必ずではありません。警視庁の一覧では、運転免許の有効期間中の滞在がすべて確認できない場合に Immigration Record with Apostille が案内されています。' },
+          { q: '外免切替の書類を取得するのにどのくらいかかりますか？', a: 'LTO書類の取得には通常2〜4週間、DFAアポスティーユには1〜2週間かかります。合計で約1か月〜6週間が目安です。繁忙期や書類の状況によって前後することがあります。' },
           { q: '日本の免許センターで通るかどうかを判断してもらえますか？', a: '最終判断はできません。当社はフィリピン側書類の準備を支援しますが、受理や審査の判断は各免許センターによります。' },
         ]}
         ctaTitle="まずは無料相談"

@@ -1,8 +1,13 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import QuickFacts from '../components/QuickFacts';
+import PainPoints from '../components/PainPoints';
+import WhyUs from '../components/WhyUs';
+import CaseStudies from '../components/CaseStudies';
 import TrustSimple from '../components/TrustSimple';
 import ServicePacks from '../components/ServicePacks';
+import FAQ from '../components/FAQ';
 import FinalCta from '../components/FinalCta';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
@@ -56,7 +61,12 @@ export default function HomeJa() {
       <Navbar />
       <main>
         <Hero />
+        <QuickFacts />
         <ServicePacks />
+        <PainPoints />
+        <WhyUs />
+        <CaseStudies />
+        <FAQ />
         <TrustSimple />
         <FinalCta />
         <Footer />
