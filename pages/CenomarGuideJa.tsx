@@ -158,7 +158,7 @@ export default function CenomarGuideJa() {
           </dl>
         </SectionDivider>
 
-        <SectionDivider variant="default">
+        <SectionDivider variant="white">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
             CENOMARが必要になる主な場面
           </h2>
