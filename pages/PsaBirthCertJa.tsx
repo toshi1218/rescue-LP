@@ -5,10 +5,18 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import { Baby, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
+import SectionDivider from '../components/SectionDivider';
+import { Baby, AlertTriangle, Clock, FileCheck, Globe, Users, CheckCircle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function PsaBirthCertJa() {
+  useMeta(
+    `PSA出生証明書 取得代行【${SEO_YEAR_MONTH_JA}】料金・期間・アポスティーユ込み対応`,
+    'PSA出生証明書をDFAアポスティーユ付きで代行取得。料金は税抜40,000円〜（DHL郵送費別）。国際結婚・配偶者ビザ・帰化申請に対応。日本語のみでOK、渡航不要。',
+    'https://ph-document.com/ja/psa-shussei-shomeisho',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'PSA出生証明書取得代行' }]}
@@ -42,10 +50,18 @@ export default function PsaBirthCertJa() {
           mainEntity: [
             {
               '@type': 'Question',
+              name: 'PSA出生証明書とは何ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（Philippine Statistics Authority）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚・配偶者ビザ申請・帰化申請などの手続きで身元証明として提出を求められます。',
+              },
+            },
+            {
+              '@type': 'Question',
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
+                text: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜40,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -72,6 +88,22 @@ export default function PsaBirthCertJa() {
                 text: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。',
               },
             },
+            {
+              '@type': 'Question',
+              name: 'PSA出生証明書とCENOMAR（独身証明書）は違うものですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '異なる書類です。PSA出生証明書は生年月日・出生地・両親の情報を証明するもので、CENOMARは婚姻記録がないこと（独身）を証明するものです。手続きによっては両方必要になる場合があります。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'フィリピンに行かなくても取得できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'はい、フィリピン渡航不要で対応しています。日本からメールやフォームでご依頼いただければ、現地スタッフが申請・取得・DFAアポスティーユ・発送まで代行します。',
+              },
+            },
           ],
         },
       ]}
@@ -84,9 +116,37 @@ export default function PsaBirthCertJa() {
         ctaHref="#contact"
       />
 
-      <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
-        PSA出生証明書は、フィリピン統計局（PSA）が発行する公的な出生記録です。国際結婚・配偶者ビザ・帰化申請などで、身元証明として提出が求められます。
-      </p>
+      <div className="max-w-2xl mx-auto px-4">
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            PSA出生証明書とは何か
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（Philippine Statistics Authority, PSA）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚の手続きや配偶者ビザ申請、帰化申請など、身元証明が必要な場面で提出を求められます。
+          </p>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-sm">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">正式名称</dt>
+              <dd className="font-medium text-gray-800">PSA Birth Certificate</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">発行機関</dt>
+              <dd className="font-medium text-gray-800">Philippine Statistics Authority（PSA）</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">40,000円〜（DFAアポスティーユ込み）</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜1か月半</dd>
+            </div>
+          </dl>
+          <p className="text-gray-700 leading-relaxed mt-4 text-sm">
+            PSA出生証明書は<strong>電子認証版（PSAHelplineオンライン）</strong>と<strong>紙の原本</strong>があります。日本の市区町村役場・入管・法務局への提出では、紙の原本＋DFAアポスティーユが求められるケースがほとんどです。
+          </p>
+        </SectionDivider>
+      </div>
 
       <SummaryBlock
         conclusion="PSA出生証明書（アポスティーユ付き）を、日本語だけで取り寄せできます。"
@@ -176,10 +236,13 @@ export default function PsaBirthCertJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: 'PSA出生証明書とは何ですか？', a: 'PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（PSA）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚・配偶者ビザ申請・帰化申請などで身元証明として提出を求められます。' },
+          { q: '料金はいくらですか？', a: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜40,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。' },
           { q: 'PSAに記録がない場合はどうなりますか？', a: 'LCR（地方民事登録局）への申請が必要になります。対応経験がありますので、まずご相談ください。追加費用が発生する場合は事前にご説明します。' },
           { q: '出生証明書とアポスティーユ、両方必要ですか？', a: '日本の提出先では通常、PSA出生証明書＋DFAアポスティーユの両方が必要です。提出先を確認した上でご案内します。' },
           { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },
+          { q: 'PSA出生証明書とCENOMARは違いますか？', a: '異なる書類です。PSA出生証明書は生年月日・出生地・両親の情報を証明するもので、CENOMARは婚姻記録がないこと（独身）を証明するものです。手続きによっては両方必要になる場合があります。' },
+          { q: 'フィリピンに行かなくても取得できますか？', a: 'はい、フィリピン渡航不要で対応しています。日本からメールやフォームでご依頼いただければ、現地スタッフが申請・取得・DFAアポスティーユ・発送まで代行します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"

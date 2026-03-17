@@ -11,6 +11,7 @@ import ComparisonTable from '../components/ComparisonTable';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import FaqSection from '../components/FaqSection';
 import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
 
 export default function CenomarGuideJa() {
@@ -52,6 +53,22 @@ export default function CenomarGuideJa() {
           mainEntity: [
             {
               '@type': 'Question',
+              name: 'CENOMARとは何ですか？独身証明書と同じですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'CENOMARはCertificate of No Marriage Recordの略で、フィリピン統計局（PSA）が発行する公的書類です。日本語では「独身証明書」に相当し、現在フィリピンに婚姻記録がないことを証明します。国際結婚の手続き、配偶者ビザ申請、帰化申請などで提出を求められることがあります。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'CENOMARはどこで発行してもらえますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'CENOMARはフィリピン統計局（PSA）が発行します。フィリピン国内では、PSAのオフィスまたはPSAHelplineのオンラインサービスから申請できます。日本国内にいる場合は、代理人や代行サービスを利用して取得するのが一般的です。',
+              },
+            },
+            {
+              '@type': 'Question',
               name: 'CENOMARの有効期限はありますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
@@ -63,7 +80,15 @@ export default function CenomarGuideJa() {
               name: 'DFA Apostille（アポスティーユ）は必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '提出先によって必要かどうか変わります。必要書類の確認から進めるため、まずはご相談ください。',
+                text: '提出先によって必要かどうか変わります。日本の市区町村役場への提出では不要なことが多いですが、入管（出入国在留管理局）や外国の機関への提出では必要な場合があります。提出先の要件を確認したうえで判断することをおすすめします。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'CENOMARの取得にはどのくらいかかりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'PSAからの取得には通常1〜3週間かかります。DFAアポスティーユが必要な場合はさらに1〜2週間追加となり、合計で1か月〜6週間が目安です。繁忙期や現地機関の状況によって前後することがあります。',
               },
             },
             {
@@ -72,6 +97,14 @@ export default function CenomarGuideJa() {
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: '案件に応じて本人確認資料や委任状等をお願いする場合があります。必要な書類はご相談内容を確認したうえでご案内します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'CENOMARと出生証明書（PSA Birth Certificate）は何が違いますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'CENOMARは婚姻記録がないことを証明する書類です。出生証明書（PSA Birth Certificate）は生年月日・出生地・両親の情報を証明する書類です。手続きによっては両方必要になる場合があります。',
               },
             },
           ],
@@ -95,9 +128,59 @@ export default function CenomarGuideJa() {
       />
       <article className="max-w-2xl mx-auto px-4">
 
-        <p className="text-gray-700 leading-relaxed mb-4">
-          CENOMARは、フィリピン統計局（Philippine Statistics Authority）が発行する Certificate of No Marriage Record です。国際結婚や婚姻関連手続きでは、「今の自分の婚姻記録がどうなっているか」を確認するために求められることがあります。PSAHelpline では、CENOMARのオンライン料金は <strong>1通420ペソ</strong> と案内されています。
-        </p>
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            CENOMARとは何か（独身証明書）
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            CENOMARは <strong>Certificate of No Marriage Record</strong> の略称で、フィリピン統計局（Philippine Statistics Authority, PSA）が発行する公的書類です。日本語では<strong>「独身証明書」</strong>に相当し、現在フィリピンに婚姻記録がないことを証明します。
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            国際結婚の手続き・配偶者ビザ申請・帰化申請・フィリピンでの婚姻手続きなど、フィリピン人の婚姻状況を確認する必要がある場面で提出を求められることがあります。
+          </p>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-sm">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">正式名称</dt>
+              <dd className="font-medium text-gray-800">Certificate of No Marriage Record</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">発行機関</dt>
+              <dd className="font-medium text-gray-800">Philippine Statistics Authority（PSA）</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">有効期限の目安</dt>
+              <dd className="font-medium text-gray-800">発行から6か月（提出先による）</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">PSA発行料金</dt>
+              <dd className="font-medium text-gray-800">1通420ペソ（PSAHelpline参考）</dd>
+            </div>
+          </dl>
+        </SectionDivider>
+
+        <SectionDivider variant="default">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            CENOMARが必要になる主な場面
+          </h2>
+          <ul className="space-y-2 text-gray-700 text-sm">
+            <li className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+              <span><strong>国際結婚の手続き</strong>：日本の市区町村役場への婚姻届提出時、またはフィリピン大使館の手続き時</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+              <span><strong>配偶者ビザ（日本・米国・カナダ等）の申請</strong>：入管やビザ機関への提出書類として</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+              <span><strong>帰化申請</strong>：法務省への申請書類として</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+              <span><strong>フィリピンでの婚姻手続き</strong>：現地自治体（LCR）への提出</span>
+            </li>
+          </ul>
+        </SectionDivider>
 
         <p className="text-gray-700 leading-relaxed mb-8">
           ただし、実際に困るのは「書類そのもの」より、提出先に合う状態で、必要な時期に間に合わせることです。古い書類を出して受け付けられなかったり、必要な追加手続きの確認が後回しになったりすると、取り直しや再発送が発生しやすくなります。
@@ -213,6 +296,43 @@ export default function CenomarGuideJa() {
         variant="secondary"
         trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
       />
+
+      <div className="max-w-2xl mx-auto px-4 mt-8">
+        <FaqSection
+          items={[
+            {
+              q: 'CENOMARとは何ですか？独身証明書と同じですか？',
+              a: 'CENOMARはCertificate of No Marriage Recordの略で、フィリピン統計局（PSA）が発行する公的書類です。日本語では「独身証明書」に相当し、現在フィリピンに婚姻記録がないことを証明します。国際結婚の手続き、配偶者ビザ申請、帰化申請などで提出を求められることがあります。',
+            },
+            {
+              q: 'CENOMARはどこで発行してもらえますか？',
+              a: 'CENOMARはフィリピン統計局（PSA）が発行します。フィリピン国内では、PSAのオフィスまたはPSAHelplineのオンラインサービスから申請できます。日本国内にいる場合は、代理人や代行サービスを利用して取得するのが一般的です。',
+            },
+            {
+              q: 'CENOMARの有効期限はありますか？',
+              a: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6か月有効と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
+            },
+            {
+              q: 'DFA Apostille（アポスティーユ）は必要ですか？',
+              a: '提出先によって必要かどうか変わります。日本の市区町村役場への提出では不要なことが多いですが、入管（出入国在留管理局）や外国の機関への提出では必要な場合があります。まずはご相談ください。',
+            },
+            {
+              q: 'CENOMARの取得にはどのくらいかかりますか？',
+              a: 'PSAからの取得には通常1〜3週間かかります。DFAアポスティーユが必要な場合はさらに1〜2週間追加となり、合計で1か月〜6週間が目安です。繁忙期や現地機関の状況によって前後することがあります。',
+            },
+            {
+              q: 'CENOMARだけあれば手続きが進められますか？',
+              a: '提出先によって異なります。CENOMARだけで足りる場合もありますが、出生証明書（PSA Birth Certificate）や婚姻証明書、DFAアポスティーユなどが追加で必要になる場合もあります。手続きの種類と提出先をお知らせいただければ、必要な書類を整理してご案内します。',
+            },
+            {
+              q: 'CENOMARと出生証明書（PSA Birth Certificate）は何が違いますか？',
+              a: 'CENOMARは婚姻記録がないことを証明する書類です。出生証明書（PSA Birth Certificate）は生年月日・出生地・両親の情報を証明する書類です。手続きによっては両方必要になる場合があります。',
+            },
+          ]}
+          ctaTitle="CENOMARについてご不明な点はお気軽にご相談ください"
+          ctaButton="無料で相談する"
+        />
+      </div>
 
       <RelatedLinks links={[
         { path: '/ja/kokusai-kekkon-guide/', label: '国際結婚の書類一括代行（CENOMAR・PSA・NBI）' },

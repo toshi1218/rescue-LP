@@ -66,10 +66,10 @@ const ja = {
   // ── FAQ ──────────────────────────────────────────────────────────────
   'faq.title': 'よくあるご質問',
   'faq.ctaTitle': 'まずはお気軽にご相談ください',
-  'faq.ctaDesc': '「自分はどのルートか分からない」「何の書類が必要か分からない」という段階でも大丈夫です。今の状況に近い進め方からご案内します。',
+  'faq.ctaDesc': '書類名や手続きの順序が分からなくても問題ありません。用途をお伝えいただければ、必要なものを整理してお見積もりします。',
   'faq.ctaBtn': '自分のケースを相談する',
   'faq.ctaAriaLabel': '自分のケースを相談する',
-  'faq.ctaNote': '平均返信時間：24時間以内 / 匿名OK',
+  'faq.ctaNote': '匿名OK・書類名が分からなくてもご相談いただけます',
 
   // ── Footer ───────────────────────────────────────────────────────────
   'footer.title': 'まずはお気軽にご相談ください',
@@ -99,8 +99,8 @@ const ja = {
   'painpoints.2.desc': '手続き全体の流れが見えないと、書類不備やタイミングのズレが起きやすい',
   'painpoints.3.title': '配偶者ビザ準備でどこまでフィリピン書類が必要か分からない',
   'painpoints.3.desc': '申請先によって必要書類が変わるため、何を揃えれば足りるかが分かりにくい',
-  'painpoints.4.title': 'そのような方に向けて、目的から整理します',
-  'painpoints.4.desc': '書類名ではなく、目的と提出先に応じて、必要になりやすいものを整理してご案内します。',
+  'painpoints.4.title': '代行業者が信頼できるか分からない',
+  'painpoints.4.desc': '海外の書類代行は実態が見えにくく、支払い後に連絡が取れなくなるケースも耳にする',
 
   // ── Process ──────────────────────────────────────────────────────────
   'process.title': 'ご利用の流れ',
@@ -116,12 +116,12 @@ const ja = {
   'whyus.2.desc': 'いまどの段階か、次に何をするかが分かるように進めます。',
   'whyus.3.title': 'できることと、できないことを分けてご説明します',
   'whyus.3.desc': '書類取得のご案内と、専門資格者への確認が必要な部分を分けてお伝えします。',
-  'whyus.stat1.label': '目安納期',
-  'whyus.stat1.value': '約1ヶ月〜',
+  'whyus.stat1.label': '依頼方法',
+  'whyus.stat1.value': '渡航ゼロで完結',
   'whyus.stat2.label': '着手前キャンセル',
   'whyus.stat2.value': '無料',
-  'whyus.stat3.label': '対応言語',
-  'whyus.stat3.value': '日本語でやり取りOK',
+  'whyus.stat3.label': '返信スピード',
+  'whyus.stat3.value': '平均24時間以内',
   'whyus.cta': 'フィリピン書類の代行を今すぐ依頼する',
   'whyus.ctaAriaLabel': 'フィリピン書類取得代行を今すぐ依頼する',
 
@@ -215,10 +215,10 @@ const en: typeof ja = {
   // ── FAQ ──────────────────────────────────────────────────────────────
   'faq.title': 'FAQ: Cost, Timeline & How to Order',
   'faq.ctaTitle': 'Want to know more about our procurement service?',
-  'faq.ctaDesc': 'Our specialists will answer any question about cost, document types, or delivery time. Feel free to reach out.',
+  'faq.ctaDesc': 'Tell us your purpose and destination — we will identify the documents, estimate the cost, and outline next steps.',
   'faq.ctaBtn': 'Get a Free Consultation Now',
   'faq.ctaAriaLabel': 'Get a free procurement consultation now',
-  'faq.ctaNote': 'Average reply time: within 24 hours / Anonymous OK',
+  'faq.ctaNote': 'Anonymous OK — not sure which docs you need? Just ask.',
 
   // ── Footer ───────────────────────────────────────────────────────────
   'footer.title': 'Start Your Procurement — Free Consultation',
@@ -265,12 +265,12 @@ const en: typeof ja = {
   'whyus.2.desc': 'We deal with PSA, NBI, DFA, and LTO on your behalf. You only communicate with us in English. No Filipino needed.',
   'whyus.3.title': 'Pay the Balance Only After Confirmation',
   'whyus.3.desc': 'Final payment is due only after you confirm document copies. Cancellation before we start is free. Zero financial risk.',
-  'whyus.stat1.label': 'Typical Delivery',
-  'whyus.stat1.value': 'Approx. 1 Month+',
+  'whyus.stat1.label': 'How to Order',
+  'whyus.stat1.value': 'No Travel Required',
   'whyus.stat2.label': 'Cancellation',
   'whyus.stat2.value': 'Free Before Start',
-  'whyus.stat3.label': 'Languages',
-  'whyus.stat3.value': 'English Only OK',
+  'whyus.stat3.label': 'Reply Speed',
+  'whyus.stat3.value': 'Within 24 Hours',
   'whyus.cta': 'Order your Philippine documents now',
   'whyus.ctaAriaLabel': 'Order Philippine document procurement now',
 

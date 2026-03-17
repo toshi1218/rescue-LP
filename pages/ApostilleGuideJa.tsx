@@ -34,6 +34,14 @@ export default function ApostilleGuideJa() {
           mainEntity: [
             {
               '@type': 'Question',
+              name: 'アポスティーユとは何ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'アポスティーユとは、その書類がフィリピンで正式に発行された公文書であることを権限ある機関（フィリピンの場合はDFA＝外務省）が証明する認証です。ハーグ条約（Apostille Convention）に基づく国際的な認証制度で、フィリピンでは2019年5月14日に発効しました。',
+              },
+            },
+            {
+              '@type': 'Question',
               name: 'レッドリボンとアポスティーユは違いますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
@@ -50,6 +58,14 @@ export default function ApostilleGuideJa() {
             },
             {
               '@type': 'Question',
+              name: 'アポスティーユはどこで取得できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'フィリピンのDFA（外務省）で取得します。DFAオフィスでの窓口申請のほか、PSA書類については一部オンライン申請も可能な場合があります。運用は変わることがあるため、最新の手続きを確認することが重要です。',
+              },
+            },
+            {
+              '@type': 'Question',
               name: 'アポスティーユは必ず予約が必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
@@ -62,6 +78,14 @@ export default function ApostilleGuideJa() {
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: 'はい、関係することがあります。警視庁のフィリピン向け外免切替必要書類一覧では、Certification with Apostille、必要に応じてImmigration Record with Apostilleが案内されています。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'アポスティーユの取得にはどのくらいかかりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'DFAアポスティーユの取得には通常1〜2週間かかります。PSA書類の取得（2〜3週間）と合わせると、合計で1か月〜6週間が目安です。繁忙期や書類の種類によって前後することがあります。',
               },
             },
           ],
@@ -203,12 +227,20 @@ export default function ApostilleGuideJa() {
       <FaqSection
         items={[
           {
+            q: 'アポスティーユとは何ですか？',
+            a: 'アポスティーユとは、その書類がフィリピンで正式に発行された公文書であることを権限ある機関（フィリピンの場合はDFA＝外務省）が証明する認証です。ハーグ条約（Apostille Convention）に基づく国際的な認証制度で、フィリピンでは2019年5月14日に発効しました。',
+          },
+          {
             q: 'レッドリボンとアポスティーユは違いますか？',
             a: '現在の正式な表現はアポスティーユです。フィリピンでは2019年5月14日にApostille Conventionが発効しており、現在は "Apostille (Formerly Authentication)" という扱いです。',
           },
           {
             q: 'PSAの書類には必ずアポスティーユが必要ですか？',
             a: '必ずとは限りません。提出先によって異なりますが、婚姻関係手続などではDFA Apostilleが案内されている例があります。まずは提出先の要求確認が大切です。',
+          },
+          {
+            q: 'アポスティーユはどこで取得できますか？',
+            a: 'フィリピンのDFA（外務省）で取得します。DFAオフィスでの窓口申請のほか、PSA書類については一部オンライン申請も可能な場合があります。運用は変わることがあるため、最新の手続きを確認することが重要です。',
           },
           {
             q: 'アポスティーユは必ず予約が必要ですか？',
@@ -218,8 +250,12 @@ export default function ApostilleGuideJa() {
             q: 'LTO書類にもアポスティーユが関係しますか？',
             a: 'はい、関係することがあります。警視庁のフィリピン向け外免切替必要書類一覧では、Certification with Apostille、必要に応じてImmigration Record with Apostilleが案内されています。',
           },
+          {
+            q: 'アポスティーユの取得にはどのくらいかかりますか？',
+            a: 'DFAアポスティーユの取得には通常1〜2週間かかります。PSA書類の取得（2〜3週間）と合わせると、合計で1か月〜6週間が目安です。繁忙期や書類の種類によって前後することがあります。',
+          },
         ]}
-        ctaTitle="9. まずは無料相談"
+        ctaTitle="まずは無料相談"
         ctaButton="無料相談フォームへ"
       />
 
