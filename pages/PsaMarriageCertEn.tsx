@@ -8,6 +8,7 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function PsaMarriageCertEn() {
   useMeta(
@@ -178,6 +179,15 @@ export default function PsaMarriageCertEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. Marriage Certificate', description: 'CR-1 needs the Marriage Certificate — not CENOMAR. Find out why.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'Need CENOMAR instead? PSA CENOMAR + DFA Apostille + DHL worldwide.' },
+          { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Full checklist for CR-1, K-1, and all other visa types.' },
+          { href: '/en/psa-birth-certificate/', title: 'PSA Birth Certificate Service', description: 'Order Marriage Certificate and Birth Certificate together.' },
+        ]}
       />
     </PageLayout>
   );

@@ -8,6 +8,7 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function CenomarGuideEn() {
   useMeta(
@@ -173,15 +174,47 @@ export default function CenomarGuideEn() {
         ]}
       />
 
+      <FeatureList
+        heading="CENOMAR Requirements by Country"
+        items={[
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'USA (K-1 & CR-1 visa) — Physical Apostille required',
+            description: 'USCIS and NVC require a CENOMAR issued within 6 months with a physical DFA Apostille. e-Apostille is not always accepted. We confirm the specific requirement before processing.',
+          },
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'Japan (Spouse visa / 配偶者ビザ) — Apostille + Japanese translation',
+            description: 'Japanese Immigration Bureau requires CENOMAR with DFA Apostille plus a certified Japanese translation. Required at the civil registration stage before the marriage is recorded.',
+          },
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'Canada, Australia, UK — Apostille or authentication required',
+            description: 'IRCC (Canada), Home Affairs (Australia), and UKVI (UK) each have specific authentication requirements. We verify the correct format for your destination country before starting.',
+          },
+        ]}
+      />
+
       <FaqSection
         items={[
           { q: 'How much does it cost?', a: 'Our all-inclusive price covers PSA retrieval, DFA Apostille, and DHL shipping worldwide. Contact us for an exact quote based on your situation.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL international shipping takes 3–5 business days.' },
           { q: 'Can you handle rush orders?', a: 'Yes. Let us know your deadline and we will check if expedited processing is available.' },
           { q: 'Do I need a physical Apostille or is e-Apostille OK?', a: 'Most USCIS offices require a physical Apostille original. We will confirm the requirement for your specific case before processing.' },
+          { q: 'I was previously married. Do I still need a CENOMAR?', a: 'If your previous marriage was annulled or dissolved, CENOMAR may still be required but will reflect your current civil status. For previously married applicants, additional documents proving dissolution of prior marriage may also be needed. Consult us for your specific case.' },
+          { q: 'I am a dual citizen (Filipino and another nationality). Can I get CENOMAR?', a: 'Yes. CENOMAR is based on your records in the PSA database, tied to your Philippine civil registration. Dual citizenship status does not prevent you from obtaining CENOMAR. We will confirm the correct name to use based on your PSA records.' },
         ]}
         ctaTitle="Ready to Get Started?"
         ctaButton="Start Free Consultation"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. PSA Marriage Certificate', description: 'K-1 or CR-1? Find out which document your visa actually requires.' },
+          { href: '/en/cenomar-validity/', title: 'CENOMAR Validity & Timing', description: 'CENOMAR is valid for 6 months. We time retrieval to meet your deadline.' },
+          { href: '/en/cenomar-apostille/', title: 'Does CENOMAR Need Apostille?', description: 'When DFA Apostille is required and when it is not.' },
+          { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Full checklist of Philippine documents needed per visa type.' },
+        ]}
       />
     </PageLayout>
   );

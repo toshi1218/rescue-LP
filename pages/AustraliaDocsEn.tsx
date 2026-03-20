@@ -7,6 +7,7 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function AustraliaDocsEn() {
   return (
@@ -173,6 +174,14 @@ export default function AustraliaDocsEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Complete checklist for Australia partner visa and all other visa types.' },
+          { href: '/en/nbi-clearance/', title: 'NBI Clearance Service', description: 'NBI Clearance + DFA Apostille + DHL to Australia.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'CENOMAR + DFA Apostille + DHL to Australia.' },
+        ]}
       />
     </PageLayout>
   );

@@ -8,6 +8,7 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function CenomarValidityEn() {
   useMeta(
@@ -171,6 +172,14 @@ export default function CenomarValidityEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/cenomar/', title: 'CENOMAR Complete Guide', description: 'Everything about CENOMAR: what it is, how to get it, what is included.' },
+          { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. Marriage Certificate', description: 'Which document does your visa actually require?' },
+          { href: '/en/cenomar-apostille/', title: 'Does CENOMAR Need Apostille?', description: 'When DFA Apostille is required and when it is not.' },
+        ]}
       />
     </PageLayout>
   );

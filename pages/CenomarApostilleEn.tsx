@@ -7,6 +7,7 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe } from 'lucide-react';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function CenomarApostilleEn() {
   return (
@@ -173,6 +174,15 @@ export default function CenomarApostilleEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'PSA CENOMAR + DFA Apostille + DHL worldwide.' },
+          { href: '/en/cenomar-validity/', title: 'How Long Is CENOMAR Valid?', description: 'CENOMAR validity for K-1, CR-1, and other visa types.' },
+          { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. Marriage Certificate', description: 'Which one does your visa actually require?' },
+          { href: '/en/apostille/', title: 'DFA Apostille Guide', description: 'What DFA Apostille is, why it is required, and how we obtain it.' },
+        ]}
       />
     </PageLayout>
   );

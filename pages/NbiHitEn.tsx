@@ -7,6 +7,7 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { AlertTriangle, FileCheck, Globe, Clock } from 'lucide-react';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function NbiHitEn() {
   return (
@@ -173,6 +174,14 @@ export default function NbiHitEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/nbi-clearance/', title: 'NBI Clearance Complete Guide', description: 'Everything about NBI Clearance retrieval, cost, and timeline.' },
+          { href: '/en/nbi-clearance-overseas/', title: 'NBI Clearance from Overseas', description: 'Get NBI Clearance without returning to the Philippines.' },
+          { href: '/en/nbi-validity/', title: 'NBI Validity & Timing', description: 'How long is NBI Clearance valid for immigration purposes?' },
+        ]}
       />
     </PageLayout>
   );

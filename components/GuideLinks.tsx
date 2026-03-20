@@ -20,6 +20,10 @@ const guidesData = {
     { to: '/en/apostille/',                 title: 'DFA Apostille Authentication',        desc: 'Eligible documents, process & cost',                      tag: null },
     { to: '/en/drivers-license-conversion/',title: 'License Transfer Guide',              desc: 'LTO documents to transfer to Japan license',              tag: null },
     { to: '/en/psa-marriage-certificate/',  title: 'PSA Marriage Certificate',            desc: 'Required for international marriage & spouse visa',       tag: null },
+    { to: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. Marriage Certificate', desc: 'Which document do you actually need? Find out here.', tag: 'New' },
+    { to: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type',  desc: 'K-1, CR-1, Canada, Australia, UK, Japan — complete checklist', tag: null },
+    { to: '/en/nbi-clearance-overseas/',    title: 'NBI Clearance from Overseas',        desc: 'OFWs & Filipinos abroad: get NBI without returning to PH',  tag: null },
+    { to: '/en/psa-late-registration/',     title: 'PSA Record Missing or Has Errors',   desc: 'No record found or name error? Here is what to do.',       tag: null },
   ],
 };
 

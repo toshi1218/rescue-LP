@@ -6,8 +6,9 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
-import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { Heart, FileCheck, Globe, Users, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function NbiGuideEn() {
   useMeta(
@@ -173,15 +174,53 @@ export default function NbiGuideEn() {
         ]}
       />
 
+      <FeatureList
+        heading="Common Issues We Help Resolve"
+        items={[
+          {
+            icon: <AlertTriangle className="w-4 h-4" />,
+            title: 'NBI HIT (MATCH FOUND)',
+            description: 'A HIT does not always mean a criminal record — it often means someone with the same name has a record. We handle HIT verification and resolution so your clearance can be issued.',
+          },
+          {
+            icon: <FileCheck className="w-4 h-4" />,
+            title: 'NBI expired before your visa deadline',
+            description: 'NBI Clearance is valid for 1 year, but many immigration authorities require it within 6 months. If your NBI is expiring, we handle re-retrieval and time it for your submission date.',
+          },
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'Getting NBI while living overseas',
+            description: 'OFWs and Filipinos abroad can get NBI Clearance without returning to the Philippines. Our Cebu team acts as your authorized representative at the NBI office.',
+          },
+          {
+            icon: <Users className="w-4 h-4" />,
+            title: 'Name discrepancy between NBI and passport',
+            description: 'A name mismatch between your NBI document and passport can cause immigration problems. We advise on how to address discrepancies before they become issues at the interview.',
+          },
+        ]}
+      />
+
       <FaqSection
         items={[
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. NBI retrieval, DFA Apostille, and DHL shipping are all included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: NBI takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'What if the NBI result shows a HIT?', a: 'A HIT means a record was found in the NBI database. This requires separate handling. Share your situation and we will advise on next steps.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
+          { q: 'Can I get NBI Clearance without going back to the Philippines?', a: 'Yes. With an authorized representative in the Philippines, NBI Clearance can be obtained remotely. Our Cebu team handles enrollment and retrieval on your behalf. No trip needed.' },
+          { q: 'What if my name on the NBI does not match my passport?', a: 'Name discrepancies can cause problems at immigration interviews. The NBI document must match your passport exactly. Share the discrepancy details and we will advise on the appropriate correction step.' },
+          { q: 'Is NBI Clearance the same as a police clearance?', a: 'No. NBI Clearance is a national-level criminal background check from the National Bureau of Investigation. Police clearance is a local-level document from your local police station. Immigration authorities typically require NBI Clearance, not local police clearance.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/nbi-clearance-overseas/', title: 'NBI Clearance from Overseas', description: 'OFWs and Filipinos abroad: get NBI without returning to the Philippines.' },
+          { href: '/en/nbi-hit/', title: 'NBI HIT Resolution', description: 'MATCH FOUND result? We handle verification and resolution.' },
+          { href: '/en/nbi-validity/', title: 'NBI Validity & Timing', description: 'How long is NBI Clearance valid and when to request it.' },
+          { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Which documents you need for K-1, CR-1, spouse visa, and more.' },
+        ]}
       />
     </PageLayout>
   );

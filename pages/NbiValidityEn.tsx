@@ -8,6 +8,7 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function NbiValidityEn() {
   useMeta(
@@ -171,6 +172,14 @@ export default function NbiValidityEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/nbi-clearance/', title: 'NBI Clearance Complete Guide', description: 'Everything about NBI Clearance retrieval, cost, and timeline.' },
+          { href: '/en/nbi-clearance-overseas/', title: 'NBI Clearance from Overseas', description: 'Get NBI Clearance without returning to the Philippines.' },
+          { href: '/en/nbi-hit/', title: 'NBI HIT Resolution', description: 'MATCH FOUND result? We handle verification and resolution.' },
+        ]}
       />
     </PageLayout>
   );
