@@ -72,6 +72,10 @@ import CenomarVsMarriageCertJa from './pages/CenomarVsMarriageCertJa';
 import DocumentChecklistByVisaJa from './pages/DocumentChecklistByVisaJa';
 import NbiClearanceOverseasJa from './pages/NbiClearanceOverseasJa';
 import PsaLateRegistrationJa from './pages/PsaLateRegistrationJa';
+import BusinessHomeJa from './pages/BusinessHomeJa';
+import BusinessTourokushienJa from './pages/BusinessTourokushienJa';
+import BusinessGyoseishoshiJa from './pages/BusinessGyoseishoshiJa';
+import BusinessKigyouJa from './pages/BusinessKigyouJa';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -161,6 +165,10 @@ export default function App() {
         <Route path="/ja/document-checklist-by-visa" element={<DocumentChecklistByVisaJa />} />
         <Route path="/ja/nbi-clearance-overseas" element={<NbiClearanceOverseasJa />} />
         <Route path="/ja/psa-late-registration" element={<PsaLateRegistrationJa />} />
+        <Route path="/ja/business" element={<BusinessHomeJa />} />
+        <Route path="/ja/business/touroku-shien-kikan" element={<BusinessTourokushienJa />} />
+        <Route path="/ja/business/gyoseishoshi" element={<BusinessGyoseishoshiJa />} />
+        <Route path="/ja/business/kigyou" element={<BusinessKigyouJa />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar" replace />} />

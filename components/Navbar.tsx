@@ -265,6 +265,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
             <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
+            {isJa && <Link to="/ja/business/" className={linkClass('/ja/business/')}>{t('navbar.business') || '法人の方へ'}</Link>}
             <Link to={isJa ? '/ja/kokusai-kekkon-roadmap' : '/en/international-marriage-guide'} className={linkClass(isJa ? '/ja/kokusai-kekkon-roadmap' : '/en/international-marriage-guide')}>{isJa ? '個別ロードマップ作成' : 'Marriage Roadmap'}</Link>
             <Link to={companyPath} className={linkClass(companyPath)}>{t('navbar.company')}</Link>
             <Link to={privacyPath} className={linkClass(privacyPath)}>{t('navbar.privacy')}</Link>
@@ -382,6 +383,7 @@ const Navbar: React.FC = () => {
 
             <div className="border-t border-gray-100 pt-2 mt-2 space-y-0.5">
               <Link to={pricingPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.pricing')}</Link>
+              {isJa && <Link to="/ja/business/" className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">法人の方へ</Link>}
               <Link to={isJa ? '/ja/kokusai-kekkon-roadmap' : '/en/international-marriage-guide'} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{isJa ? '個別ロードマップ作成' : 'Marriage Roadmap'}</Link>
               <Link to={companyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.company')}</Link>
               <Link to={privacyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.privacy')}</Link>
