@@ -79,27 +79,6 @@ export default function HeroBanner({ title, subtitle, badges, ctaText, ctaHref, 
           </a>
         </div>
 
-        {/* 右: 書類アイコンビジュアル（デスクトップのみ） */}
-        <div className="hidden md:flex flex-col items-end gap-2 flex-shrink-0 opacity-70">
-          {/* 書類スタックのCSS図 */}
-          <div className="relative w-28 h-32">
-            <div className="absolute bottom-0 right-0 w-20 h-26 rounded-lg bg-white/10 border border-white/20 rotate-6" />
-            <div className="absolute bottom-0 right-0 w-20 h-26 rounded-lg bg-white/10 border border-white/20 rotate-3" />
-            <div className="absolute bottom-0 right-0 w-20 h-26 rounded-lg bg-white/15 border border-primary/30 flex flex-col p-2 gap-1.5">
-              <div className="h-1.5 rounded bg-primary/60 w-12" />
-              <div className="h-1 rounded bg-white/40 w-10" />
-              <div className="h-1 rounded bg-white/40 w-8" />
-              <div className="h-1 rounded bg-white/30 w-11" />
-              <div className="h-1 rounded bg-white/30 w-7" />
-              <div className="mt-auto">
-                <div className="h-5 w-5 rounded bg-primary/50 flex items-center justify-center ml-auto">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="text-[10px] text-primary/80 font-semibold tracking-wider uppercase">Official Document</div>
-        </div>
       </div>
     </section>
   );
