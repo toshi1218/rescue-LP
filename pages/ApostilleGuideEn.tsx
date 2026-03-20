@@ -7,6 +7,7 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function ApostilleGuideEn() {
   return (
@@ -168,6 +169,42 @@ export default function ApostilleGuideEn() {
         ]}
       />
 
+      {/* Which documents need Apostille reference table */}
+      <div className="my-8">
+        <h2 className="text-base font-bold text-secondary mb-3">Which Documents Need DFA Apostille?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs border-collapse rounded-xl overflow-hidden shadow-sm">
+            <thead>
+              <tr className="bg-secondary text-white">
+                <th className="px-3 py-2.5 text-left font-semibold">Document</th>
+                <th className="px-3 py-2.5 text-center font-semibold">USA</th>
+                <th className="px-3 py-2.5 text-center font-semibold">Canada</th>
+                <th className="px-3 py-2.5 text-center font-semibold">Australia</th>
+                <th className="px-3 py-2.5 text-center font-semibold">UK</th>
+                <th className="px-3 py-2.5 text-center font-semibold">Japan</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ['CENOMAR', '✓', '✓', '✓', '✓', '✓'],
+                ['PSA Birth Certificate', '✓', '✓', '✓', '✓', '✓'],
+                ['PSA Marriage Certificate', '✓', '✓', '✓', '✓', '✓'],
+                ['NBI Clearance', '✓', '✓', '✓', '✓', '✓'],
+                ['LTO Driver\'s Record', '✓', '✓', '✓', '✓', '✓'],
+              ].map(([doc, ...checks], i) => (
+                <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td className="px-3 py-2.5 font-medium text-gray-700 border-t border-gray-100">{doc}</td>
+                  {checks.map((c, j) => (
+                    <td key={j} className="px-3 py-2.5 text-center text-green-600 font-medium border-t border-gray-100">{c}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-400 mt-2">✓ = DFA Apostille required for immigration use. We verify the exact format requirement for your specific authority before starting.</p>
+      </div>
+
       <FaqSection
         items={[
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included.' },
@@ -177,6 +214,15 @@ export default function ApostilleGuideEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/apostille-processing-time/', title: 'DFA Apostille Processing Time', description: 'Regular vs Express: how long does DFA Apostille take in 2026?' },
+          { href: '/en/apostille-fee/', title: 'DFA Apostille Fee Breakdown', description: 'Full cost breakdown including PSA retrieval and DHL shipping.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'CENOMAR retrieval with DFA Apostille included.' },
+          { href: '/en/nbi-clearance/', title: 'NBI Clearance Service', description: 'NBI Clearance retrieval with DFA Apostille included.' },
+        ]}
       />
     </PageLayout>
   );

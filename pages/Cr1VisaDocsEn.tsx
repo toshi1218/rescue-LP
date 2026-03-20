@@ -7,6 +7,7 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Clock } from 'lucide-react';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function Cr1VisaDocsEn() {
   return (
@@ -173,6 +174,15 @@ export default function Cr1VisaDocsEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Complete checklist for CR-1, K-1, and all other visa types.' },
+          { href: '/en/psa-marriage-certificate/', title: 'PSA Marriage Certificate Service', description: 'PSA Marriage Certificate + DFA Apostille + DHL worldwide.' },
+          { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. Marriage Certificate', description: 'CR-1 needs the Marriage Certificate — not CENOMAR. Find out why.' },
+          { href: '/en/nbi-clearance/', title: 'NBI Clearance Service', description: 'NBI Clearance + DFA Apostille + DHL worldwide. HIT cases handled.' },
+        ]}
       />
     </PageLayout>
   );

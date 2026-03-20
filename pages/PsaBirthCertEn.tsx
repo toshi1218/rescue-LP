@@ -8,6 +8,7 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import RelatedArticles from '../components/RelatedArticles';
 
 export default function PsaBirthCertEn() {
   useMeta(
@@ -182,6 +183,15 @@ export default function PsaBirthCertEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/psa-late-registration/', title: 'PSA Record Missing or Error?', description: 'Late registration and correction — what to do when your PSA record has problems.' },
+          { href: '/en/psa-birth-certificate-cost/', title: 'How Much Does a PSA Birth Certificate Cost?', description: 'Full cost breakdown including DFA Apostille and international shipping.' },
+          { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Which documents you need for K-1, CR-1, Canada, Australia, UK, and Japan.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'Order Birth Certificate and CENOMAR together for K-1 applications.' },
+        ]}
       />
     </PageLayout>
   );

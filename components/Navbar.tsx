@@ -54,6 +54,7 @@ const Navbar: React.FC = () => {
         { label: isJa ? 'CENOMARガイド 完全版' : 'CENOMAR Complete Guide', path: isJa ? '/ja/cenomar/' : '/en/cenomar/' },
         { label: isJa ? 'CENOMARの有効期限は？' : 'CENOMAR Validity', path: isJa ? '/ja/cenomar-koyukigen/' : '/en/cenomar-validity/' },
         { label: isJa ? 'DFAアポスティーユは必要？' : 'Need Apostille?', path: isJa ? '/ja/cenomar-apostille/' : '/en/cenomar-apostille/' },
+        ...(!isJa ? [{ label: 'CENOMAR vs. Marriage Certificate', path: '/en/cenomar-vs-marriage-certificate/' }] : []),
       ],
     },
     {
@@ -62,6 +63,7 @@ const Navbar: React.FC = () => {
         { label: isJa ? 'NBI Clearanceガイド 完全版' : 'NBI Clearance Complete Guide', path: isJa ? '/ja/nbi-clearance/' : '/en/nbi-clearance/' },
         { label: isJa ? 'NBI HITとは？' : 'What is NBI HIT?', path: isJa ? '/ja/nbi-hit/' : '/en/nbi-hit/' },
         { label: isJa ? 'NBI Clearanceの有効期限' : 'NBI Validity & Apostille', path: isJa ? '/ja/nbi-koyukigen/' : '/en/nbi-validity/' },
+        ...(!isJa ? [{ label: 'NBI Clearance from Overseas', path: '/en/nbi-clearance-overseas/' }] : []),
       ],
     },
     {
@@ -78,8 +80,15 @@ const Navbar: React.FC = () => {
         { label: isJa ? 'PSA出生証明書の取得方法' : 'PSA Birth Certificate Guide', path: isJa ? '/ja/psa-shussei-shomeisho/' : '/en/psa-birth-certificate/' },
         { label: isJa ? 'PSA出生証明書の費用' : 'PSA Birth Certificate Cost', path: isJa ? '/ja/psa-shussei-cost/' : '/en/psa-birth-certificate-cost/' },
         { label: isJa ? 'PSA婚姻証明書の取得方法' : 'PSA Marriage Certificate', path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/en/psa-marriage-certificate/' },
+        ...(!isJa ? [{ label: 'PSA Record Missing or Error?', path: '/en/psa-late-registration/' }] : []),
       ],
     },
+    ...(!isJa ? [{
+      category: 'Visa Checklists',
+      items: [
+        { label: 'Document Checklist by Visa Type', path: '/en/document-checklist-by-visa/' },
+      ],
+    }] : []),
     ...(isJa ? [{
       category: '配偶者ビザ',
       items: [
