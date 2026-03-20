@@ -150,6 +150,11 @@ export default function BusinessHomeJa() {
                   <td className="py-3 text-right font-semibold text-secondary">¥50,000〜</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
+                <tr>
+                  <td className="py-3 text-gray-700">LTOドライバーズレコード + DFAアポスティーユ</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥100,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
+                </tr>
               </tbody>
             </table>
             <div className="mt-4 space-y-1">
