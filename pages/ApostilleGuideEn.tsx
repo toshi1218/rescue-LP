@@ -8,8 +8,13 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
+import { useMeta } from '../lib/useMeta';
 
 export default function ApostilleGuideEn() {
+  useMeta(
+    'DFA Apostille Service [March 2026] — No Trip Needed',
+    'Need a DFA Apostille but can\'t go to the Philippines? We handle PSA, NBI, CENOMAR authentication — and ship to you. Free consultation available.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'DFA Apostille Service' }]}

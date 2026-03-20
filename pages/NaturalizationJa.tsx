@@ -11,8 +11,13 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { FileCheck, Globe, Users, Heart, FileText, Scale, Building, CheckCircle, Clock } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import { useMeta } from '../lib/useMeta';
 
 export default function NaturalizationJa() {
+  useMeta(
+    '帰化申請に必要なフィリピン書類【2026年3月】PSA・NBI代行取得',
+    '日本帰化申請に必要なPSA出生証明書・NBI Clearanceを代行取得。DFAアポスティーユ付きで日本へ郵送。書類取得から申請準備まで日本語でサポート。無料相談。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '帰化申請 フィリピン書類代行' }]}

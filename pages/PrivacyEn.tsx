@@ -1,7 +1,12 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
+import { useMeta } from '../lib/useMeta';
 
 export default function PrivacyEn() {
+  useMeta(
+    'Privacy Policy | Philippine Document Service',
+    'Privacy policy of Philippine Document Service (IGRS Inc.). Explains how we collect, use, and manage your personal information.',
+  );
   return (
     <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Privacy Policy' }]}>
       <div className="max-w-2xl">

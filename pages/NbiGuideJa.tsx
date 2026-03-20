@@ -10,8 +10,13 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import RelatedArticles from '../components/RelatedArticles';
 import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function NbiGuideJa() {
+  useMeta(
+    'NBI Clearance（無犯罪証明書）取得代行【2026年3月】渡航不要・HIT対応',
+    'NBI ClearanceをフィリピンなしのNBI取得。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。まず無料相談。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI Clearance（無犯罪証明書）取得代行' }]}

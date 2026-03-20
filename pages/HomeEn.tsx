@@ -19,8 +19,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function HomeEn() {
   useMeta(
-    'Philippine Document Service — CENOMAR, PSA, NBI & Apostille Shipped Worldwide',
-    'We retrieve PSA Birth Certificates, CENOMAR (Certificate of No Marriage), NBI Clearance, and DFA Apostille from the Philippines. Shipped worldwide via DHL for US, Canada, Australia, UK immigration and visa applications. Free consultation.',
+    'Philippine Document Service | PSA, NBI & CENOMAR [Mar 2026]',
+    'Need Philippine documents for immigration? We retrieve PSA, CENOMAR, NBI Clearance + DFA Apostille. Ships via DHL worldwide. Free consultation.',
     'https://ph-document.com/en/',
   );
 

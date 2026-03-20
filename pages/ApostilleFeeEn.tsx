@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function ApostilleFeeEn() {
+  useMeta(
+    'DFA Apostille Fee [March 2026] — Full Price Breakdown',
+    'Full cost breakdown for DFA Apostille: official fees + proxy service + international shipping. Compare CENOMAR, PSA, and NBI pricing. Free quote available.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'DFA Apostille Fee & Pricing' }]}

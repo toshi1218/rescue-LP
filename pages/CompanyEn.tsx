@@ -1,7 +1,12 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
+import { useMeta } from '../lib/useMeta';
 
 export default function CompanyEn() {
+  useMeta(
+    'About Us | IGRS Inc. — Philippine Document Retrieval Service',
+    'IGRS Inc. is a document retrieval agency with an operations office in Cebu, Philippines. We retrieve PSA, NBI, LTO, and DFA Apostille documents for US visa and immigration applicants. English support.',
+  );
   return (
     <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'About Us' }]}>
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-6">About Us</h1>

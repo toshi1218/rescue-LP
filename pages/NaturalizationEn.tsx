@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Heart } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function NaturalizationEn() {
+  useMeta(
+    'Naturalization Document Service [March 2026] | PSA & NBI',
+    'Applying for citizenship or naturalization and need Philippine civil documents? We retrieve PSA Birth Certificate, NBI Clearance + DFA Apostille and ship to your address worldwide via DHL. Free consultation.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Naturalization Documents Service' }]}

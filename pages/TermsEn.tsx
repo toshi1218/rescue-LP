@@ -1,7 +1,12 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
+import { useMeta } from '../lib/useMeta';
 
 export default function TermsEn() {
+  useMeta(
+    'Terms of Service | Philippine Document Service',
+    'Terms of service for Philippine Document Service (IGRS Inc.). Read before placing an order for document retrieval.',
+  );
   return (
     <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Terms of Service' }]}>
       <div className="max-w-2xl">

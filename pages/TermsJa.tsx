@@ -1,8 +1,13 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
+import { useMeta } from '../lib/useMeta';
 
 export default function TermsJa() {
+  useMeta(
+    '利用規約 | フィリピン書類取得代行センター',
+    'フィリピン書類取得代行センター（株式会社IGRS）の利用規約。ご依頼前にお読みください。',
+  );
   return (
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '利用規約' }]}>
       <HeroBanner

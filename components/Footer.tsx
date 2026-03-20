@@ -18,11 +18,11 @@ const Footer: React.FC = () => {
     return () => window.removeEventListener('setContactService', handler);
   }, []);
   const isJa = lang === 'ja';
-  const companyPath = isJa ? '/ja/company'  : '/en/company';
-  const privacyPath = isJa ? '/ja/privacy'  : '/en/privacy';
-  const termsPath   = isJa ? '/ja/terms'    : '/en/terms';
-  const pricingPath = isJa ? '/ja/ryokin'   : '/en/pricing';
-  const contactPath = isJa ? '/ja/contact'  : '/en/contact';
+  const companyPath = isJa ? '/ja/company/'  : '/en/company/';
+  const privacyPath = isJa ? '/ja/privacy/'  : '/en/privacy/';
+  const termsPath   = isJa ? '/ja/terms/'    : '/en/terms/';
+  const pricingPath = isJa ? '/ja/ryokin/'   : '/en/pricing/';
+  const contactPath = isJa ? '/ja/contact/'  : '/en/contact/';
 
   return (
     <footer className="bg-white border-t border-gray-100" id="contact">

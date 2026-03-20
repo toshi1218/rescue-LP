@@ -2,10 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
 export default function ContactJa() {
+  useMeta(
+    '無料相談・お問い合わせ｜フィリピン書類取得代行センター',
+    'フィリピン書類取得代行・国際結婚・配偶者ビザ・帰化申請・外免切替に関するご相談はこちら。24時間以内に返信します。まずはお気軽にご相談ください。',
+  );
   const [service, setService] = useState('');
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();

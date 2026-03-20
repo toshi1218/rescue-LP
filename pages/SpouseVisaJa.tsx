@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import { useMeta } from '../lib/useMeta';
 
 export default function SpouseVisaJa() {
+  useMeta(
+    '配偶者ビザ必要書類【2026年3月版】フィリピン書類の代行取得',
+    '配偶者ビザ申請に必要なフィリピン書類（CENOMAR・PSA出生証明書・NBI Clearance）をDFAアポスティーユ付きで代行取得。渡航不要・日本語だけでOK。無料相談。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '配偶者ビザ 書類代行' }]}

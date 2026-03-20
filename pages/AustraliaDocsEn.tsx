@@ -8,8 +8,13 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
+import { useMeta } from '../lib/useMeta';
 
 export default function AustraliaDocsEn() {
+  useMeta(
+    'PH Documents for Australia Immigration [March 2026]',
+    'Applying for Australian partner visa or PR? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille. Ships to Australia via DHL. Free consultation.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Australia Immigration Documents' }]}

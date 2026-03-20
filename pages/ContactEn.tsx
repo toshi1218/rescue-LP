@@ -2,10 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
+import { useMeta } from '../lib/useMeta';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 
 export default function ContactEn() {
+  useMeta(
+    'Contact Us | Philippine Document Service',
+    'Contact us for Philippine document procurement, international marriage, and spouse visa inquiries. Free consultation. We reply within 1 business day.',
+  );
   const [service, setService] = useState('');
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
