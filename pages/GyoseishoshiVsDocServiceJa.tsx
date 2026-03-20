@@ -237,6 +237,7 @@ export default function GyoseishoshiVsDocServiceJa() {
         />
 
         <RelatedLinks links={[
+          { path: '/ja/business/gyoseishoshi/', label: '行政書士の方へ：法人向けフィリピン書類代行' },
           { path: '/ja/kokusai-kekkon-guide/', label: '国際結婚の書類一括代行（CENOMAR・PSA・NBI）' },
           { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
           { path: '/ja/kika-shinsei-guide/', label: '帰化申請のフィリピン書類代行' },

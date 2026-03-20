@@ -149,6 +149,10 @@
 /ja/haigusha-visa-shorui     /ja/haigusha-visa-shorui/    301
 /ja/kekkaku-shomeisho        /ja/kekkaku-shomeisho/       301
 /ja/terms                    /ja/terms/                   301
+/ja/business                 /ja/business/                301
+/ja/business/touroku-shien-kikan /ja/business/touroku-shien-kikan/ 301
+/ja/business/gyoseishoshi    /ja/business/gyoseishoshi/   301
+/ja/business/kigyou          /ja/business/kigyou/         301
 
 # ── SPA フォールバック ────────────────────────────────────────────
 /*  /index.html  200
