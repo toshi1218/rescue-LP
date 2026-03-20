@@ -71,7 +71,7 @@ export default function CompanyJa() {
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">お支払い方法</p>
-              <p>日本からのご依頼は銀行振込、米国からのご依頼はクレジットカードまたはPayPalです。</p>
+              <p>銀行振込にて承っています。</p>
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">キャンセル・返金</p>
