@@ -82,7 +82,7 @@ export default function SpouseVisaJa() {
       ]}
     >
       <HeroBanner
-        title="配偶者ビザ 書類取得代行"
+        title="配偶者ビザ"
         subtitle="PSA婚姻証明書、PSA出生証明書など、日本での申請準備に使うフィリピン書類を、必要に応じて整理してご案内します。"
         badges={['日本語だけでOK', '入管要件に合わせて手配', 'アポスティーユ込み']}
         ctaText="必要書類を確認する"
