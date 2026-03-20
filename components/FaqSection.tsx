@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Minus, ArrowRight } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 
 type FaqItem = {
   q: string;
@@ -8,21 +8,23 @@ type FaqItem = {
 
 type FaqSectionProps = {
   items: FaqItem[];
-  ctaTitle: string;
-  ctaButton: string;
+  /** @deprecated 使用されなくなりました */
+  ctaTitle?: string;
+  /** @deprecated 使用されなくなりました */
+  ctaButton?: string;
 };
 
-export default function FaqSection({ items, ctaTitle, ctaButton }: FaqSectionProps) {
+export default function FaqSection({ items }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="mb-2">
+    <section className="mb-10">
       <div className="flex items-center gap-3 mb-6">
         <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
         <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">FAQ</h2>
       </div>
 
-      <div className="space-y-2 mb-8">
+      <div className="space-y-2">
         {items.map((item, index) => {
           const isOpen = openIndex === index;
           return (
@@ -65,25 +67,6 @@ export default function FaqSection({ items, ctaTitle, ctaButton }: FaqSectionPro
             </div>
           );
         })}
-      </div>
-
-      {/* CTA */}
-      <div className="relative overflow-hidden rounded-2xl bg-secondary px-6 py-8 text-center">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/10 blur-2xl" />
-          <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-white/5 blur-2xl" />
-        </div>
-        <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-primary via-primary/50 to-transparent rounded-l-2xl" />
-        <div className="relative">
-          <h3 className="text-lg font-bold text-white mb-4">{ctaTitle}</h3>
-          <a
-            href="#contact"
-            className="group inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-7 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200 hover:gap-3"
-          >
-            {ctaButton}
-            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-          </a>
-        </div>
       </div>
     </section>
   );
