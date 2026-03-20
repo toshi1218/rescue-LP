@@ -1,25 +1,15 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 
 type HeroBannerProps = {
   title: string;
   subtitle?: string;
   badges: string[];
-  ctaText: string;
-  ctaHref: string;
+  ctaText?: string;
+  ctaHref?: string;
   ctaService?: string;
 };
 
-export default function HeroBanner({ title, subtitle, badges, ctaText, ctaHref, ctaService }: HeroBannerProps) {
-  const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (ctaService) {
-      e.preventDefault();
-      window.dispatchEvent(new CustomEvent('setContactService', { detail: ctaService }));
-      setTimeout(() => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-      }, 50);
-    }
-  };
+export default function HeroBanner({ title, subtitle, badges }: HeroBannerProps) {
   return (
     <section className="relative mb-12 overflow-hidden rounded-2xl bg-secondary px-6 py-10 md:px-10 md:py-14">
       {/* 背景装飾 */}
@@ -57,26 +47,16 @@ export default function HeroBanner({ title, subtitle, badges, ctaText, ctaHref, 
           </div>
 
           {/* タイトル */}
-          <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug tracking-tight ${subtitle ? 'mb-3' : 'mb-6'}`}>
+          <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug tracking-tight ${subtitle ? 'mb-3' : 'mb-0'}`}>
             {title}
           </h1>
 
           {/* サブタイトル */}
           {subtitle && (
-            <p className="text-sm md:text-base text-white/70 leading-relaxed mb-6">
+            <p className="text-sm md:text-base text-white/70 leading-relaxed mt-3">
               {subtitle}
             </p>
           )}
-
-          {/* CTAボタン */}
-          <a
-            href={ctaHref}
-            onClick={handleCtaClick}
-            className="group inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-7 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:shadow-primary/50 hover:gap-3 transition-all duration-200"
-          >
-            {ctaText}
-            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-          </a>
         </div>
 
       </div>
