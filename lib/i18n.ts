@@ -23,7 +23,7 @@ const ja = {
   'navbar.doc.marriage': '婚姻証明書',
   'navbar.purpose.marriage': '国際結婚',
   'navbar.purpose.visa': '配偶者ビザ',
-  'navbar.purpose.license': '免許切替',
+  'navbar.purpose.license': '外免切替',
   'navbar.purpose.naturalization': '帰化申請',
   'navbar.purpose.nbi': '海外ビザ用NBIクリアランス',
 

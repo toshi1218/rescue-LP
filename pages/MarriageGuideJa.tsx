@@ -94,7 +94,7 @@ export default function MarriageGuideJa() {
       ]}
     >
       <HeroBanner
-        title="国際結婚ガイド"
+        title="国際結婚"
         subtitle="フィリピン人との国際結婚の手続き・費用・必要書類をまとめています。日本先行婚・フィリピン先行婚どちらにも対応。"
         badges={['日本語でやり取りOK', '必要書類を整理してご案内', '進捗を随時ご報告']}
         ctaText="無料で相談する"
