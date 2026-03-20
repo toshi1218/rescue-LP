@@ -1,6 +1,6 @@
 ﻿import React from 'react';
-import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
@@ -95,7 +95,7 @@ export default function NaturalizationJa() {
           '司法書士・行政書士の先生からのご依頼も対応',
           '必要書類が不明な場合も、無料相談で整理します',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       {/* 固有コンテンツ：帰化申請で必要なフィリピン書類 */}
@@ -250,16 +250,12 @@ export default function NaturalizationJa() {
         ctaButton="無料相談フォームへ"
       />
 
-      {/* 関連ページ */}
-      <nav className="mt-10 pt-8 border-t border-gray-100">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-        <ul className="space-y-2 text-sm">
-          <li><Link to="/ja/cenomar/" className="text-secondary hover:underline">→ CENOMAR（独身証明書）取得代行</Link></li>
-          <li><Link to="/ja/psa-shussei-shomeisho/" className="text-secondary hover:underline">→ PSA出生証明書の取得代行</Link></li>
-          <li><Link to="/ja/nbi-clearance/" className="text-secondary hover:underline">→ NBI Clearance（無犯罪証明書）取得代行</Link></li>
-          <li><Link to="/ja/gyouseishoshi-to-shorui-shuttoku/" className="text-secondary hover:underline">→ 行政書士の仕事と書類取得サービスの違い</Link></li>
-        </ul>
-      </nav>
+      <RelatedLinks links={[
+        { path: '/ja/cenomar/', label: 'CENOMAR（独身証明書）取得代行' },
+        { path: '/ja/psa-shussei-shomeisho/', label: 'PSA出生証明書の取得代行' },
+        { path: '/ja/nbi-clearance/', label: 'NBI Clearance（無犯罪証明書）取得代行' },
+        { path: '/ja/gyouseishoshi-to-shorui-shuttoku/', label: '行政書士の仕事と書類取得サービスの違い' },
+      ]} />
     </PageLayout>
   );
 }

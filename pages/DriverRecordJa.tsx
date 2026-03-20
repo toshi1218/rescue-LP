@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
@@ -96,7 +97,7 @@ export default function DriverRecordJa() {
           'DFAアポスティーユが必要な場合も一括対応',
           '複数名分のまとめ依頼にも対応',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       {/* 固有コンテンツ：LTOドライバーズレコードとは */}
@@ -247,15 +248,11 @@ export default function DriverRecordJa() {
         ctaButton="無料相談フォームへ"
       />
 
-      {/* 関連ページ */}
-      <nav className="mt-10 pt-8 border-t border-gray-100">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-        <ul className="space-y-2 text-sm">
-          <li><Link to="/ja/gaimen-kirikae-guide/" className="text-secondary hover:underline">→ フィリピン免許の外免切替ガイド（必要書類と手続きの流れ）</Link></li>
-          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行</Link></li>
-          <li><Link to="/ja/ryokin/" className="text-secondary hover:underline">→ 料金一覧</Link></li>
-        </ul>
-      </nav>
+      <RelatedLinks links={[
+        { path: '/ja/gaimen-kirikae-guide/', label: 'フィリピン免許の外免切替ガイド（必要書類と手続きの流れ）' },
+        { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
+        { path: '/ja/ryokin/', label: '料金一覧' },
+      ]} />
     </PageLayout>
   );
 }

@@ -87,7 +87,7 @@ export default function DfaProcessingTimeJa() {
           '提出予定日から逆算して、最適な申請開始時期をご案内',
           '期限に間に合うかどうかも、無料相談で確認できます',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       <SectionDivider variant="beige">

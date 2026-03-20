@@ -12,8 +12,8 @@ import RelatedArticles from '../components/RelatedArticles';
 
 export default function CenomarGuideEn() {
   useMeta(
-    'What is CENOMAR? Certificate of No Marriage from PSA | Philippine Document Service',
-    'CENOMAR (Certificate of No Marriage Record) is an official PSA document proving single status in the Philippines. We retrieve it with DFA Apostille and ship worldwide via DHL.',
+    'What Is CENOMAR? Certificate of No Marriage Explained [March 2026]',
+    'CENOMAR (Certificate of No Marriage Record) is an official PSA document proving you are single. Required for K-1 visa, international marriage & immigration. We retrieve it with Apostille — ships worldwide via DHL.',
   );
   return (
     <PageLayout
@@ -46,6 +46,22 @@ export default function CenomarGuideEn() {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
           mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'What does CENOMAR mean?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'CENOMAR stands for Certificate of No Marriage Record. It is an official document issued by the Philippine Statistics Authority (PSA) that certifies a person has no record of marriage in the Philippines.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'What is CENOMAR used for?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'CENOMAR is required for international marriage registration, K-1 fiancé visa applications, CR-1/IR-1 spouse visas, immigration to Canada, Australia, the UK, and Japan, and naturalization applications. It proves you are legally single in the Philippines.',
+              },
+            },
             {
               '@type': 'Question',
               name: 'How much does it cost?',

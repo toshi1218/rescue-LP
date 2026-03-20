@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
@@ -276,17 +277,13 @@ export default function PhilippinesWeddingGuideJa() {
           ctaButton="無料相談フォームへ"
         />
 
-        {/* 関連ページ */}
-        <nav className="mt-10 pt-8 border-t border-gray-100">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="/ja/nihon-senko-ph-senko/" className="text-secondary hover:underline">→ 日本先行婚 vs フィリピン先行婚：どちらを選ぶべきか比較</Link></li>
-            <li><Link to="/ja/kokusai-kekkon-guide/" className="text-secondary hover:underline">→ 国際結婚の書類一括代行（CENOMAR・PSA・NBI）</Link></li>
-            <li><Link to="/ja/psa-kekkon-shomeisho/" className="text-secondary hover:underline">→ PSA婚姻証明書の取得代行</Link></li>
-            <li><Link to="/ja/cenomar/" className="text-secondary hover:underline">→ CENOMAR（独身証明書）取得代行</Link></li>
-            <li><Link to="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行</Link></li>
-          </ul>
-        </nav>
+        <RelatedLinks links={[
+          { path: '/ja/nihon-senko-ph-senko/', label: '日本先行婚 vs フィリピン先行婚：どちらを選ぶべきか比較' },
+          { path: '/ja/kokusai-kekkon-guide/', label: '国際結婚の書類一括代行（CENOMAR・PSA・NBI）' },
+          { path: '/ja/psa-kekkon-shomeisho/', label: 'PSA婚姻証明書の取得代行' },
+          { path: '/ja/cenomar/', label: 'CENOMAR（独身証明書）取得代行' },
+          { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
+        ]} />
       </article>
     </PageLayout>
   );

@@ -92,7 +92,7 @@ export default function PsaMarriageCertJa() {
           '注釈付き（Annotated）婚姻証明書にも対応',
           '約1ヶ月〜で日本のご住所へ郵送',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       <FeatureList

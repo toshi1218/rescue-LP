@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
@@ -95,7 +96,7 @@ export default function NbiHitJa() {
           'ビザ申請の期限が迫っている場合も、まず状況をご相談ください',
           '日本語だけで対応可能。フィリピンに行く必要なし',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       {/* 固有コンテンツ：HITとは何か */}
@@ -236,15 +237,11 @@ export default function NbiHitJa() {
         ctaButton="無料相談フォームへ"
       />
 
-      {/* 関連ページ */}
-      <nav className="mt-10 pt-8 border-t border-gray-100">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-        <ul className="space-y-2 text-sm">
-          <li><Link to="/ja/nbi-clearance/" className="text-secondary hover:underline">→ NBI Clearance（無犯罪証明書）取得代行</Link></li>
-          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行</Link></li>
-          <li><Link to="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行</Link></li>
-        </ul>
-      </nav>
+      <RelatedLinks links={[
+        { path: '/ja/nbi-clearance/', label: 'NBI Clearance（無犯罪証明書）取得代行' },
+        { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
+        { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
+      ]} />
     </PageLayout>
   );
 }

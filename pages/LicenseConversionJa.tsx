@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
@@ -14,8 +15,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function LicenseConversionJa() {
   useMeta(
-    `フィリピン運転免許 日本への切り替え（外免切替）【${SEO_YEAR_MONTH_JA}】条件・費用・LTO書類`,
-    'フィリピン運転免許から日本免許への外免切替を解説。条件・費用・LTO必要書類の流れが分かります。書類は渡航不要で代行取得OK。無料相談受付中。',
+    `外免切替に必要なLTO書類、フィリピンに行かずに取れます【${SEO_YEAR_MONTH_JA}】`,
+    'フィリピン運転免許から日本免許への外免切替に必要なLTOドライバーズレコード＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
   );
   return (
     <PageLayout
@@ -51,10 +52,26 @@ export default function LicenseConversionJa() {
           mainEntity: [
             {
               '@type': 'Question',
+              name: 'フィリピン免許を日本の免許に切り替えるには何が必要ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'フィリピン免許を日本の免許に切り替える「外免切替」には、①有効なフィリピン運転免許証、②免許取得後にフィリピンで通算3か月以上滞在していた証明、③LTO書類（Certification with Apostille、License Historyなど）が必要です。免許センターごとに細かい要件が異なるため、管轄センターへの事前確認が重要です。',
+              },
+            },
+            {
+              '@type': 'Question',
               name: 'フィリピン免許があれば、誰でも外免切替できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: 'いいえ。免許が有効であることに加え、免許取得後にフィリピンで通算3か月以上滞在していたことを証明できることが重要です。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '外免切替に必要なLTO書類はどれですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '警視庁の案内では、①フィリピン運転免許証（原本）、②Official Receipt（OR）、③License History、④Certification with Apostille、⑤Immigration Record with Apostille（パスポートで滞在歴が確認できない場合）が案内されています。免許センターによって異なるため、管轄センターへの事前確認が必要です。',
               },
             },
             {
@@ -75,6 +92,14 @@ export default function LicenseConversionJa() {
             },
             {
               '@type': 'Question',
+              name: '外免切替の書類を取得するのにどのくらいかかりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'LTO書類の取得には通常2〜4週間、DFAアポスティーユには1〜2週間かかります。合計で約1か月〜6週間が目安です。繁忙期や書類の状況によって前後することがあります。',
+              },
+            },
+            {
+              '@type': 'Question',
               name: '日本の免許センターで通るかどうかを判断してもらえますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
@@ -89,7 +114,7 @@ export default function LicenseConversionJa() {
         title="外免切替ガイド"
         subtitle="フィリピン運転免許を日本免許に切り替える（外免切替）に必要な条件・費用・LTO書類の流れをまとめています。書類の取り寄せは現地スタッフが代行します。"
         badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり']}
-        ctaText="必要なLTO書類を確認する"
+        ctaText="書類を確認する"
         ctaHref="#contact"
       />
 
@@ -244,9 +269,12 @@ export default function LicenseConversionJa() {
 
       <FaqSection
         items={[
+          { q: 'フィリピン免許を日本の免許に切り替えるには何が必要ですか？', a: 'フィリピン免許を日本の免許に切り替える「外免切替」には、①有効なフィリピン運転免許証、②免許取得後にフィリピンで通算3か月以上滞在していた証明、③LTO書類（Certification with Apostille、License Historyなど）が必要です。免許センターごとに細かい要件が異なるため、管轄センターへの事前確認が重要です。' },
           { q: 'フィリピン免許があれば、誰でも外免切替できますか？', a: 'いいえ。免許が有効であることに加え、免許取得後にフィリピンで通算3か月以上滞在していたことを証明できることが重要です。' },
+          { q: '外免切替に必要なLTO書類はどれですか？', a: '警視庁の案内では、①フィリピン運転免許証（原本）、②Official Receipt（OR）、③License History、④Certification with Apostille、⑤Immigration Record with Apostille（パスポートで滞在歴が確認できない場合）が案内されています。' },
           { q: 'ORをなくしていても進められますか？', a: 'ケースによります。フィリピン案件では Official Receipt が案内されているため、まずは現在の状況を確認する必要があります。' },
           { q: 'Immigration Record は必ず必要ですか？', a: '必ずではありません。警視庁の一覧では、運転免許の有効期間中の滞在がすべて確認できない場合に Immigration Record with Apostille が案内されています。' },
+          { q: '外免切替の書類を取得するのにどのくらいかかりますか？', a: 'LTO書類の取得には通常2〜4週間、DFAアポスティーユには1〜2週間かかります。合計で約1か月〜6週間が目安です。繁忙期や書類の状況によって前後することがあります。' },
           { q: '日本の免許センターで通るかどうかを判断してもらえますか？', a: '最終判断はできません。当社はフィリピン側書類の準備を支援しますが、受理や審査の判断は各免許センターによります。' },
         ]}
         ctaTitle="まずは無料相談"
@@ -272,15 +300,11 @@ export default function LicenseConversionJa() {
         trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料"
       />
 
-      {/* 関連ページへの内部リンク */}
-      <nav className="mt-10 pt-8 border-t border-gray-100">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-        <ul className="space-y-2 text-sm">
-          <li><Link to="/ja/driver-record/" className="text-secondary hover:underline">→ LTOドライバーズレコード代行（外免切替・企業採用）</Link></li>
-          <li><Link to="/ja/apostille/" className="text-secondary hover:underline">→ DFAアポスティーユ代行</Link></li>
-          <li><Link to="/ja/ryokin/" className="text-secondary hover:underline">→ 料金一覧</Link></li>
-        </ul>
-      </nav>
+      <RelatedLinks links={[
+        { path: '/ja/driver-record/', label: 'LTOドライバーズレコード代行（外免切替・企業採用）' },
+        { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
+        { path: '/ja/ryokin/', label: '料金一覧' },
+      ]} />
     </PageLayout>
   );
 }

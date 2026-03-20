@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
@@ -91,7 +92,7 @@ export default function MarriageGuideJa() {
         title="国際結婚ガイド"
         subtitle="フィリピン人との国際結婚の手続き・費用・必要書類をまとめています。日本先行婚・フィリピン先行婚どちらにも対応。"
         badges={['日本語でやり取りOK', '必要書類を整理してご案内', '進捗を随時ご報告']}
-        ctaText="自分に近いルートを見る"
+        ctaText="無料で相談する"
         ctaHref="#contact"
       />
 
@@ -103,7 +104,7 @@ export default function MarriageGuideJa() {
           '申請・受理・発送などの節目で進行状況をご報告します',
           'まずは目的と状況をお伝えください。必要な流れを整理してご案内します',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
 
       {/* Section 2: ケースに応じて必要になるフィリピン側の公的書類 */}
@@ -206,7 +207,7 @@ export default function MarriageGuideJa() {
           <p className="text-xs text-gray-600 leading-relaxed mb-3">当社をご利用いただく場合でも、すべてを完全に丸投げできるわけではありません。適法に取得を進めるため、次のご協力をお願いしています。</p>
           <ul className="space-y-1.5 mb-3">
             {[
-              '英文委任状（Special Power of Attorney）へのご署名',
+              'Authentication Letterへのご署名',
               '身分証明書のコピーのご提出',
               '案件によっては、ご本人様による追加対応',
             ].map((item, i) => (
@@ -256,17 +257,13 @@ export default function MarriageGuideJa() {
         ctaButton="無料相談フォームへ"
       />
 
-      {/* 関連ページ */}
-      <nav className="mt-10 pt-8 border-t border-gray-100">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">関連ページ</p>
-        <ul className="space-y-2 text-sm">
-          <li><Link to="/ja/nihon-senko-ph-senko/" className="text-secondary hover:underline">→ 日本先行婚 vs フィリピン先行婚：どちらを選ぶべきか比較</Link></li>
-          <li><Link to="/ja/philippines-de-kekkon/" className="text-secondary hover:underline">→ フィリピンで結婚する全ガイド（手続き・必要書類・注意点）</Link></li>
-          <li><Link to="/ja/gyouseishoshi-to-shorui-shuttoku/" className="text-secondary hover:underline">→ 行政書士の仕事と書類取得サービスの違い</Link></li>
-          <li><Link to="/ja/haigusha-visa/" className="text-secondary hover:underline">→ 配偶者ビザの書類代行</Link></li>
-          <li><Link to="/ja/cenomar/" className="text-secondary hover:underline">→ CENOMAR（独身証明書）取得代行</Link></li>
-        </ul>
-      </nav>
+      <RelatedLinks links={[
+        { path: '/ja/nihon-senko-ph-senko/', label: '日本先行婚 vs フィリピン先行婚：どちらを選ぶべきか比較' },
+        { path: '/ja/philippines-de-kekkon/', label: 'フィリピンで結婚する全ガイド（手続き・必要書類・注意点）' },
+        { path: '/ja/gyouseishoshi-to-shorui-shuttoku/', label: '行政書士の仕事と書類取得サービスの違い' },
+        { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
+        { path: '/ja/cenomar/', label: 'CENOMAR（独身証明書）取得代行' },
+      ]} />
     </PageLayout>
   );
 }
