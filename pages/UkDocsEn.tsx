@@ -8,8 +8,13 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
+import { useMeta } from '../lib/useMeta';
 
 export default function UkDocsEn() {
+  useMeta(
+    'PH Documents for UK Immigration [March 2026]',
+    'Applying for a UK spouse visa or settlement? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille for UKVI. Ships to the UK via DHL. Free consultation.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'UK Immigration Documents' }]}

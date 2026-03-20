@@ -8,8 +8,13 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
+import { useMeta } from '../lib/useMeta';
 
 export default function CenomarApostilleEn() {
+  useMeta(
+    'CENOMAR Apostille Service [March 2026] | We Handle It',
+    'Not sure if your CENOMAR needs DFA Apostille? We advise and handle retrieval with or without Apostille. Free consultation for marriage and visa applicants.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'CENOMAR Apostille Service' }]}

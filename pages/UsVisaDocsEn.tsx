@@ -7,8 +7,13 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Heart } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function UsVisaDocsEn() {
+  useMeta(
+    'K-1 / CR-1 Visa Documents Service [March 2026]',
+    'US petitioner for a K-1 or CR-1/IR-1 visa? We retrieve all Philippine documents — PSA, CENOMAR, NBI + DFA Apostille — and ship to your door. Free consultation for American petitioners.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'US Visa Documents Service' }]}

@@ -12,8 +12,13 @@ import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
+import { useMeta } from '../lib/useMeta';
 
 export default function CenomarApostilleJa() {
+  useMeta(
+    'CENOMARのDFAアポスティーユ、代行取得できます【2026年3月】日本語だけでOK',
+    'CENOMARのDFAアポスティーユはフィリピン現地での手続きが必要です。当センターが代行取得し、紙の原本アポスティーユで日本へ郵送。国際結婚・配偶者ビザ・帰化申請に対応。無料相談。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'CENOMARアポスティーユ代行' }]}

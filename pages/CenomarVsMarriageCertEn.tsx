@@ -11,8 +11,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function CenomarVsMarriageCertEn() {
   useMeta(
-    'CENOMAR vs. PSA Marriage Certificate — Which Do You Need? | Philippine Document Service',
-    'CENOMAR proves you are single. PSA Marriage Certificate proves you are married. Confused about which one to order? We explain the difference and help you get the right document.',
+    'CENOMAR vs. PSA Marriage Certificate [Mar 2026]',
+    "CENOMAR proves you're single. PSA Marriage Certificate proves you're married. Not sure which to order? We explain the difference and retrieve it.",
   );
   return (
     <PageLayout

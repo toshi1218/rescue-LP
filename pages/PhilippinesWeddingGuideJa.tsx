@@ -7,8 +7,13 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, CheckCircle, Clock } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function PhilippinesWeddingGuideJa() {
+  useMeta(
+    'フィリピンで先に婚姻届を出す方法【2026年3月】',
+    'フィリピン先行婚の手続きと必要書類を解説。PSA婚姻証明書・DFAアポスティーユの取得から日本への届出まで、当センターが代行します。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '国際結婚ガイド', href: '/ja/kokusai-kekkon-guide/' }, { label: 'フィリピンで結婚する全ガイド' }]}

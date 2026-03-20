@@ -10,8 +10,13 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import SummaryBlock from '../components/SummaryBlock';
 import { AlertTriangle, Calendar, Clock, MapPin, FileCheck, Users, Info, ShieldCheck, Heart } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function TbCertJa() {
+  useMeta(
+    '結核非発病証明書（結核証明書）の取得【2026年3月】配偶者ビザに必須',
+    '配偶者ビザ申請に必要な結核非発病証明書（TB証明書）の取得方法を解説。2025年6月以降は日本人配偶者ビザでも必須。取得場所・費用・期限を整理します。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '結核非発病証明書ガイド【2026年3月版】' }]}

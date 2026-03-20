@@ -12,8 +12,8 @@ import RelatedArticles from '../components/RelatedArticles';
 
 export default function CenomarGuideEn() {
   useMeta(
-    'What Is CENOMAR? Certificate of No Marriage Explained [March 2026]',
-    'CENOMAR (Certificate of No Marriage Record) is an official PSA document proving you are single. Required for K-1 visa, international marriage & immigration. We retrieve it with Apostille — ships worldwide via DHL.',
+    'What Is CENOMAR? Certificate of No Marriage [Mar 2026]',
+    'CENOMAR is the PSA document proving you are single. Required for K-1, marriage & immigration. We retrieve it with Apostille. Ships worldwide via DHL.',
   );
   return (
     <PageLayout

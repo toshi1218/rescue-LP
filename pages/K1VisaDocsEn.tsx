@@ -8,8 +8,13 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Clock } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
+import { useMeta } from '../lib/useMeta';
 
 export default function K1VisaDocsEn() {
+  useMeta(
+    'K-1 Visa Documents: CENOMAR, PSA & NBI [March 2026]',
+    'American petitioner for a K-1 visa? We retrieve CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille for your Filipino fiancé(e). Ships to your US address. Free consultation.',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'K-1 Fiancé Visa Documents Service' }]}

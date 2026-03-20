@@ -13,8 +13,13 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { FileText, Stamp, CheckCircle, Clock, AlertTriangle, Building } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function DriverRecordJa() {
+  useMeta(
+    'LTOドライバーズレコード代行【2026年3月】外免切替・企業採用',
+    'フィリピン免許の外免切替に必要なLTOドライバーズレコードを代行取得。DFAアポスティーユ・オリジナルレシート込みで都道府県の免許センターへの提出形式に対応。複数名まとめ依頼可。無料相談。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'LTOドライバーズレコード取得代行' }]}

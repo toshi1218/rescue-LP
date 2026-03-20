@@ -10,8 +10,13 @@ import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import { FileText, Stamp, CheckCircle, Clock, MessageSquare, Package } from 'lucide-react';
+import { useMeta } from '../lib/useMeta';
 
 export default function ApostilleFeeJa() {
+  useMeta(
+    'DFAアポスティーユの料金【2026年3月】Regular・Express別の費用と総額の目安',
+    'DFAアポスティーユの料金はRegular約1,000ペソ・Express約2,000ペソ。PSA取得費・国際郵送費を含めた総額の目安と、CENOMAR・PSA・NBI別の費用内訳を解説。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'DFAアポスティーユの料金と代行費用' }]}

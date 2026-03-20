@@ -12,8 +12,13 @@ import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
+import { useMeta } from '../lib/useMeta';
 
 export default function NbiHitJa() {
+  useMeta(
+    'NBI HITが出た——あきらめないでください【2026年3月】HIT解消から代行取得まで対応',
+    'NBI HITは必ずしも犯罪歴ではありません。同姓同名の別人の記録の場合も多い。当センターがHIT確認・解消・NBI取得・DFAアポスティーユまで一括代行。まず状況をご相談ください。',
+  );
   return (
     <PageLayout
       breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI HIT対応代行' }]}

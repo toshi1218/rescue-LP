@@ -1,8 +1,13 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
 import Pricing from '../components/Pricing';
+import { useMeta } from '../lib/useMeta';
 
 export default function PricingEn() {
+  useMeta(
+    'Pricing [March 2026] | CENOMAR, PSA & NBI Service',
+    'How much does Philippine document retrieval cost? View 2026 pricing for CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille. All plans include DHL Express worldwide shipping. Free quote.',
+  );
   return (
     <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Pricing' }]}>
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-4">Pricing</h1>
