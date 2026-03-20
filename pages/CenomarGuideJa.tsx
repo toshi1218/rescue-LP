@@ -113,7 +113,7 @@ export default function CenomarGuideJa() {
       ]}
     >
       <HeroBanner
-        title="CENOMAR（独身証明書）取得代行"
+        title="独身証明書"
         subtitle="国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。"
         badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
       />

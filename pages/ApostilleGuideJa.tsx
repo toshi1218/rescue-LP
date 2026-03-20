@@ -93,7 +93,7 @@ export default function ApostilleGuideJa() {
       ]}
     >
       <HeroBanner
-        title="フィリピン書類のアポスティーユ（旧レッドリボン）"
+        title="アポスティーユ"
         subtitle="国際結婚、配偶者ビザ準備、外免切替、帰化申請など、どの場面で必要になりやすいかを分かりやすくまとめています。"
         badges={['PSA・CENOMAR・LTO対応', 'DFA認証代行', '日本語でご相談OK']}
       />
