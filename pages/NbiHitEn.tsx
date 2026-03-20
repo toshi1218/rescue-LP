@@ -151,15 +151,6 @@ export default function NbiHitEn() {
         ]}
       />
 
-      <CtaBox
-        title="The longer you wait, the fewer options you have"
-        description="HIT resolution takes time. Starting early gives you the best chance of meeting your visa timeline."
-        buttonText="Check My Options"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
-      />
-
       <StepList
         heading="How It Works"
         steps={[

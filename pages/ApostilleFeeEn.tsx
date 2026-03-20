@@ -150,15 +150,6 @@ export default function ApostilleFeeEn() {
         ]}
       />
 
-      <CtaBox
-        title="Knowing the total upfront is the best cost control"
-        description="Starting with a clear quote prevents re-procurement costs and wasted time. Consult us first."
-        buttonText="Get a Quote"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
-      />
-
       <StepList
         heading="How It Works"
         steps={[

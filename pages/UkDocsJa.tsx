@@ -168,15 +168,6 @@ export default function UkDocsJa() {
         />
       </SectionDivider>
 
-      <CtaBox
-        title="追加費用の後出しはありません"
-        description="必要書類・DFAアポスティーユ・UKへの国際郵送をまとめた料金でご案内します。"
-        buttonText="料金を確認する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
-
       <SectionDivider variant="blue">
         <StepList
           heading="ご依頼の流れ"

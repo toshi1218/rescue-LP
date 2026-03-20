@@ -144,15 +144,6 @@ export default function NbiValidityEn() {
         ]}
       />
 
-      <CtaBox
-        title="NBI Clearance has one hidden risk: MATCH FOUND"
-        description="If a MATCH FOUND (HIT) appears during NBI processing, resolution can add 2–4 extra weeks. Starting early is the only way to protect your visa timeline."
-        buttonText="Check My Timeline"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
-      />
-
       <StepList
         heading="How It Works"
         steps={[

@@ -150,15 +150,6 @@ export default function PsaLateRegistrationEn() {
         ]}
       />
 
-      <CtaBox
-        title="Do not wait until your visa interview to discover a record problem"
-        description="PSA record issues discovered at the interview stage cause long visa delays. Check your PSA documents early — especially if you know there may be a registration gap or name inconsistency."
-        buttonText="Check My PSA Records"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only · Anonymous inquiries welcome · Reply within 24 hours"
-      />
-
       <FaqSection
         items={[
           { q: 'What happens if PSA says there is no birth certificate on record?', a: 'A "No Record" result means either the birth was never registered or the information provided does not match the record. Late registration may be needed — a process at the Local Civil Registry where the birth occurred.' },

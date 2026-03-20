@@ -168,15 +168,6 @@ export default function UsVisaDocsJa() {
         />
       </SectionDivider>
 
-      <CtaBox
-        title="追加費用の後出しはありません"
-        description="必要書類・DFAアポスティーユをまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）"
-        buttonText="料金を確認する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
-
       <StepList
         heading="ご依頼の流れ"
         variant="visual"

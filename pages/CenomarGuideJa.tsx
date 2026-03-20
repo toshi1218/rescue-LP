@@ -289,15 +289,6 @@ export default function CenomarGuideJa() {
         ]}
       />
 
-      <CtaBox
-        title="メールでのご相談"
-        description="お気軽にメールでご相談いただけます。"
-        buttonText="メールで相談する"
-        href="mailto:igrs20200601@gmail.com"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
-
       <div className="max-w-2xl mx-auto px-4 mt-8">
         <FaqSection
           items={[

@@ -209,15 +209,6 @@ export default function DriverRecordJa() {
         />
       </SectionDivider>
 
-      <CtaBox
-        title="追加費用の後出しはありません"
-        description="LTO取得・DFAアポスティーユ・ORをまとめた料金でご案内します。国際郵送費は実費別途です。"
-        buttonText="料金を確認する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
-
       <SectionDivider variant="blue">
         <StepList
           heading="ご依頼の流れ"

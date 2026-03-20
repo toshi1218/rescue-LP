@@ -142,15 +142,6 @@ export default function DriverRecordEn() {
         ]}
       />
 
-      <CtaBox
-        title="All-inclusive pricing — no surprise add-ons"
-        description="LTO retrieval, DFA Apostille, and DHL shipping are all included in one quoted price."
-        buttonText="Get a Quote"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
-      />
-
       <StepList
         heading="How It Works"
         steps={[

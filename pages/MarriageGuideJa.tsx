@@ -229,15 +229,6 @@ export default function MarriageGuideJa() {
         </div>
       </section>
 
-      <CtaBox
-        title="書類の整理から取得まで、日本語でご相談いただけます"
-        description="まずは目的と現在の状況をお知らせください。必要な流れを確認し、進め方をご提案します。"
-        buttonText="無料で相談する"
-        href="#contact"
-        variant="secondary"
-        trustNote="匿名相談可・返信24時間以内"
-      />
-
       {/* Section 5: 安心の決済フロー */}
       <StepList
         variant="visual"

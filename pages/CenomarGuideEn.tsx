@@ -171,15 +171,6 @@ export default function CenomarGuideEn() {
         ]}
       />
 
-      <CtaBox
-        title="All-Inclusive Pricing — No Hidden Fees"
-        description="PSA retrieval, DFA Apostille, and DHL shipping worldwide are all bundled into one flat price. No surprises after you pay."
-        buttonText="Get a Quote"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
-      />
-
       <StepList
         heading="How It Works"
         steps={[

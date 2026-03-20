@@ -189,15 +189,6 @@ export default function CenomarVsMarriageCertEn() {
         ]}
       />
 
-      <CtaBox
-        title="We retrieve whichever document you need"
-        description="CENOMAR, PSA Marriage Certificate, or both — we handle PSA retrieval, DFA Apostille, and DHL shipping worldwide in one service."
-        buttonText="Get a Quote"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only · Anonymous inquiries welcome · Reply within 24 hours"
-      />
-
       <FaqSection
         items={[
           { q: 'What is the difference between CENOMAR and PSA Marriage Certificate?', a: 'CENOMAR proves that a Filipino has no record of marriage in the PSA database — i.e., they are legally single. PSA Marriage Certificate proves that a specific marriage was registered with PSA. They serve opposite purposes.' },

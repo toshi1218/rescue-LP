@@ -178,15 +178,6 @@ export default function PsaCostJa() {
         </section>
       </article>
 
-      <CtaBox
-        title="全体像を確認してから動きたい方へ"
-        description="PSA出生証明書の取得から日本での使用まで、まず無料相談でご確認ください。"
-        buttonText="無料相談フォームへ"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
-
       <RelatedLinks links={[
         { path: '/ja/psa-shussei-shomeisho/', label: 'PSA出生証明書の取得代行（渡航不要・アポスティーユ付き）' },
         { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },

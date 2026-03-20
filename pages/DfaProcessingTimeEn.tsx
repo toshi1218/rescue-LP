@@ -143,15 +143,6 @@ export default function DfaProcessingTimeEn() {
         ]}
       />
 
-      <CtaBox
-        title="The earlier you start, the more options you have"
-        description="The full process takes approximately 4–6 weeks. Starting early gives you buffer time and avoids the need for Express processing."
-        buttonText="Check My Timeline"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
-      />
-
       <StepList
         heading="How It Works"
         steps={[

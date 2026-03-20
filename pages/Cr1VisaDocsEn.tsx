@@ -151,15 +151,6 @@ export default function Cr1VisaDocsEn() {
         ]}
       />
 
-      <CtaBox
-        title="All-inclusive pricing — no surprise add-ons"
-        description="All CR-1/IR-1 documents, DFA Apostille, and DHL shipping are quoted together in one price."
-        buttonText="Get a Quote"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
-      />
-
       <StepList
         heading="How It Works"
         steps={[

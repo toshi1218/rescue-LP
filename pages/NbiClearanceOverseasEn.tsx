@@ -162,15 +162,6 @@ export default function NbiClearanceOverseasEn() {
         ]}
       />
 
-      <CtaBox
-        title="HIT result while you are abroad? We handle it."
-        description="If the NBI result shows a HIT (MATCH FOUND), our local team manages the verification and resolution process without you needing to return to the Philippines. Share your situation and we will advise on options."
-        buttonText="Ask About HIT Resolution"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only · Anonymous inquiries welcome · Reply within 24 hours"
-      />
-
       <FaqSection
         items={[
           { q: 'Can I get NBI Clearance without going back to the Philippines?', a: 'Yes. With an authorized representative in the Philippines, NBI Clearance can be obtained without the applicant being physically present. We act as your authorized representative through our Cebu office.' },

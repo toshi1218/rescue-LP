@@ -381,16 +381,6 @@ export default function RoadmapJa() {
         </p>
       </section>
 
-      <CtaBox
-        title="個別ロードマップを申し込む"
-        description="事前確認フォームにご回答いただいた後、あなたたち専用のロードマップを作成します。"
-        buttonText="申し込みフォームへ"
-        href="#contact"
-        variant="secondary"
-        trustNote="返信は原則2営業日以内"
-        service="個別ロードマップ作成"
-      />
-
       {/* 注意事項 */}
       <section className="mb-8">
         <div className="flex items-center gap-3 mb-4">

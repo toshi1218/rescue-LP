@@ -145,15 +145,6 @@ export default function DfaProcessingTimeJa() {
         />
       </SectionDivider>
 
-      <CtaBox
-        title="余裕を持った早めのご相談をおすすめします"
-        description="手続き全体に約1ヶ月〜かかります。余裕を持って動き始めることが、一番のリスク回避です。"
-        buttonText="今すぐ相談する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
-
       <StepList
         heading="ご依頼の流れ"
         variant="visual"

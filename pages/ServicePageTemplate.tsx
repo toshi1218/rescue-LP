@@ -88,15 +88,6 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
         ]}
       />
 
-      <CtaBox
-        title={isJa ? '提出期限がある案件も対応' : 'Deadline-sensitive cases are supported'}
-        description={isJa ? '開始前に可否を確認して案内します。' : 'We confirm feasibility before start when a deadline exists.'}
-        buttonText={isJa ? '納期を相談する' : 'Check Timeline'}
-        href="#contact"
-        variant="secondary"
-        trustNote={isJa ? '日本語のみでOK・匿名相談可・返信24時間以内' : 'English only · Anonymous inquiries welcome · Reply within 24 hours'}
-      />
-
       <StepList
         heading={stepsHeading}
         steps={isJa

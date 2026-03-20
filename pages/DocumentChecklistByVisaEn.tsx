@@ -200,15 +200,6 @@ export default function DocumentChecklistByVisaEn() {
         ]}
       />
 
-      <CtaBox
-        title="Starting early saves you from visa delays"
-        description="Each Philippine document takes 4–6 weeks. If you need three documents, start at least 2 months before your visa interview. We help you plan the timeline."
-        buttonText="Plan My Document Timeline"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only · Anonymous inquiries welcome · Reply within 24 hours"
-      />
-
       <FeatureList
         heading="Common Mistakes to Avoid"
         items={[

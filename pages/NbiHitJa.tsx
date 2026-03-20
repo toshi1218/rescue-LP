@@ -200,15 +200,6 @@ export default function NbiHitJa() {
         />
       </SectionDivider>
 
-      <CtaBox
-        title="時間がかかるほど、選択肢が減ります"
-        description="HIT対応は早めに動き始めることが重要です。まずは状況をお知らせください。"
-        buttonText="今すぐ相談する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
-
       <StepList
         heading="ご依頼の流れ"
         variant="visual"

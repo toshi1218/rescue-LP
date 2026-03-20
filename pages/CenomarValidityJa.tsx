@@ -145,15 +145,6 @@ export default function CenomarValidityJa() {
         />
       </SectionDivider>
 
-      <CtaBox
-        title="「早すぎた」より「間に合わなかった」の方が困ります"
-        description="CENOMARの取得から婚姻届・ビザ申請まで、全体で約1〜2ヶ月かかります。余裕を持って動き始めることが、再取得リスクをゼロにする最善策です。"
-        buttonText="今すぐ相談する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
-
       <StepList
         heading="ご依頼の流れ"
         variant="visual"

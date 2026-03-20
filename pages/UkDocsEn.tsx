@@ -151,15 +151,6 @@ export default function UkDocsEn() {
         ]}
       />
 
-      <CtaBox
-        title="All-inclusive pricing — no surprise add-ons"
-        description="All documents, DFA Apostille, and DHL shipping to the UK are quoted together in one price."
-        buttonText="Get a Quote"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
-      />
-
       <StepList
         heading="How It Works"
         steps={[

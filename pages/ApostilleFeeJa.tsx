@@ -156,15 +156,6 @@ export default function ApostilleFeeJa() {
         />
       </SectionDivider>
 
-      <CtaBox
-        title="DFAアポスティーユは「取ってから気づく」では遅い"
-        description="書類の種類・提出先・枚数によって費用が変わります。日本の提出先では原則として紙の原本＋DFAアポスティーユが必要なため、最初から正確な費用をご案内します。"
-        buttonText="今すぐ相談する"
-        href="#contact"
-        variant="secondary"
-        trustNote="日本語のみでOK・匿名相談可・返信24時間以内"
-      />
-
       <SectionDivider variant="blue">
         <StepList
           heading="ご依頼の流れ"

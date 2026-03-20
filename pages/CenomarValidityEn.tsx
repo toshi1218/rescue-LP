@@ -144,15 +144,6 @@ export default function CenomarValidityEn() {
         ]}
       />
 
-      <CtaBox
-        title="Getting CENOMAR 'just in time' is a risk you don't need"
-        description="PSA retrieval + DFA Apostille + DHL shipping takes approximately 4–6 weeks. If you start too late and the document expires before your interview, you will need to start over."
-        buttonText="Check My Timeline"
-        href="#contact"
-        variant="secondary"
-        trustNote="English only ﾂｷ Anonymous inquiries welcome ﾂｷ Reply within 24 hours"
-      />
-
       <StepList
         heading="How It Works"
         steps={[
