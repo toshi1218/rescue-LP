@@ -83,7 +83,7 @@ export default function TbCertJa() {
       ]}
     >
       <HeroBanner
-        title="結核非発病証明書（JPETS）"
+        title="結核非発病証明書"
         badges={['2025年6月23日〜義務化', 'フィリピン国籍対象', '有効期間180日']}
         ctaText="配偶者ビザ書類を相談する"
         ctaHref="#contact"

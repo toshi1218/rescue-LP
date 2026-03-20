@@ -30,7 +30,7 @@ export default function PricingJa() {
       }]}
     >
       <HeroBanner
-        title="料金案内"
+        title="料金"
         subtitle="国際結婚準備、配偶者ビザ準備、外免切替など、用途ごとの費用感をご確認いただけます。"
         badges={['用途別にご案内', '無料お見積もり', '追加費用の後出しなし']}
         ctaText="無料でお見積もり"

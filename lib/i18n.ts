@@ -18,7 +18,7 @@ const ja = {
   'navbar.terms': '利用規約',
   'navbar.doc.cenomar': '独身証明書',
   'navbar.doc.birth': '出生証明書',
-  'navbar.doc.nbi': '無犯罪証明書',
+  'navbar.doc.nbi': 'NBIクリアランス',
   'navbar.doc.apostille': 'アポスティーユ',
   'navbar.doc.marriage': '婚姻証明書',
   'navbar.purpose.marriage': '国際結婚',

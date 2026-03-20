@@ -54,7 +54,7 @@ export default function BusinessHomeJa() {
       }}
     >
       <HeroBanner
-        title="法人・業務利用の方へ"
+        title="法人の方へ"
         subtitle="登録支援機関・行政書士・企業の皆さまへ。フィリピン書類の取得代行を、案件単位でも継続的にもご利用いただけます。"
         badges={['請求書払い対応', '複数案件の同時進行可', '進捗レポート']}
       />
