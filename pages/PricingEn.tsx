@@ -13,6 +13,16 @@ export default function PricingEn() {
           Government fees only cover the document itself. Our service includes request handling, local coordination, follow-up, document checking, and international shipment support. We are built for clients who want Philippine documents handled correctly, with less delay, less confusion, and less back-and-forth.
         </p>
       </div>
+      <div className="grid gap-4 md:grid-cols-2 mb-6">
+        <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+          <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">Payment methods</p>
+          <p className="text-sm text-gray-600">Japan: bank transfer. United States: credit card or PayPal.</p>
+        </div>
+        <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+          <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">Cancellation & refund</p>
+          <p className="text-sm text-gray-600">Free before we start. After we begin, actual expenses and work already performed are non-refundable. Final payment is due after document copies are confirmed and before shipping.</p>
+        </div>
+      </div>
       <Pricing />
     </PageLayout>
   );

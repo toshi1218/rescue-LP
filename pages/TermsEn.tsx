@@ -42,9 +42,10 @@ export default function TermsEn() {
             <h2 className="text-base font-bold text-secondary mb-3">3. Ordering &amp; Payment</h2>
             <ul className="space-y-1.5 pl-4">
               {[
-                'Services begin after we confirm your requirements and you complete payment',
+                'Services begin after we confirm your requirements and you pay the 50% retainer',
                 'All prices are quoted in JPY or USD, depending on your location and preference',
-                'Payment methods are communicated during consultation',
+                'Japan orders are paid by bank transfer; U.S. orders are paid by credit card or PayPal',
+                'The remaining balance is due after document copies are confirmed and before shipping',
                 'Quoted prices include only the items explicitly listed. Additional requests may incur additional fees',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-gray-600">
@@ -69,8 +70,8 @@ export default function TermsEn() {
             <ul className="space-y-1.5 pl-4">
               {[
                 'Cancellation is free of charge before we begin processing your request',
-                'Once applications have been submitted to Philippine government agencies, government fees are non-refundable',
-                'Partial refunds may apply depending on the stage of processing at the time of cancellation',
+                'After we begin, actual expenses and work already performed are non-refundable',
+                'We ship only after document copies are confirmed and the final balance has been paid',
                 'To cancel or discuss refund eligibility, please contact us as soon as possible',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-gray-600">
@@ -141,7 +142,7 @@ export default function TermsEn() {
               <p className="font-bold text-secondary">IGRS Inc.</p>
               <p className="text-gray-600">Wakayama City, Wakayama Prefecture, Japan</p>
               <p className="text-gray-600">
-                Email: <a href="/en/contact" className="text-primary hover:underline">Please use our contact form</a>
+                Email: <a href="mailto:igrs20200601@gmail.com" className="text-primary hover:underline">igrs20200601@gmail.com</a>
               </p>
             </div>
           </section>

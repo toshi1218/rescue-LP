@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
+import RelatedArticles from '../components/RelatedArticles';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
@@ -340,6 +341,14 @@ export default function CenomarGuideJa() {
         { path: '/ja/cenomar-koyukigen/', label: 'CENOMARの有効期限と取得タイミング' },
         { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
       ]} />
+      <RelatedArticles
+        items={[
+          { href: '/ja/cenomar-vs-marriage-certificate', title: 'CENOMARと婚姻証明書の違い', description: 'K-1やCR-1で迷いやすい書類の違いを整理します。' },
+          { href: '/ja/document-checklist-by-visa', title: 'ビザ別書類チェックリスト', description: 'K-1、CR-1、日本向けに必要な書類をまとめて確認できます。' },
+          { href: '/ja/psa-shussei-shomeisho', title: 'PSA出生証明書取得代行', description: '婚姻関連以外の基本書類もあわせて確認できます。' },
+          { href: '/ja/cenomar-apostille', title: 'CENOMARのアポスティーユ', description: '提出先に合わせてアポスティーユが必要か確認できます。' },
+        ]}
+      />
     </PageLayout>
   );
 }

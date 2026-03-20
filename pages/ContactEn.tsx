@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Send, Mail, ShieldCheck, Clock, X } from 'lucide-react';
+import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 
@@ -22,6 +22,9 @@ export default function ContactEn() {
       <p className="text-sm text-gray-600 mb-4">
         Tell us your case and we will confirm what documents you need, how long it takes, and the all-inclusive price.
       </p>
+      <p className="text-xs text-gray-500 mb-4">
+        We handle inquiries by email only. The form below sends your message to our inbox.
+      </p>
 
       {/* Trust badges */}
       <div className="flex flex-wrap gap-3 mb-6">
@@ -34,8 +37,12 @@ export default function ContactEn() {
           Free cancellation before we start
         </span>
         <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
-          <X className="w-3.5 h-3.5 text-primary" />
-          Anonymous inquiries welcome
+          <Mail className="w-3.5 h-3.5 text-primary" />
+          Email only
+        </span>
+        <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+          <Clock className="w-3.5 h-3.5 text-primary" />
+          Mon-Fri, 9:00-17:00 PHT
         </span>
       </div>
 

@@ -9,7 +9,7 @@ import FaqSection from '../components/FaqSection';
 import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
-import { AlertTriangle, CheckCircle, ClipboardList, Car, FileText, Stamp, Clock, Globe } from 'lucide-react';
+import { AlertTriangle, CheckCircle, ClipboardList, Car, FileText, Stamp, Clock, Globe, Users, Receipt, BarChart3, Building2, Headphones } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
@@ -113,7 +113,7 @@ export default function LicenseConversionJa() {
       <HeroBanner
         title="外免切替ガイド"
         subtitle="フィリピン運転免許を日本免許に切り替える（外免切替）に必要な条件・費用・LTO書類の流れをまとめています。書類の取り寄せは現地スタッフが代行します。"
-        badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり']}
+        badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり', '法人・複数名対応可']}
         ctaText="書類を確認する"
         ctaHref="#contact"
       />
@@ -267,6 +267,24 @@ export default function LicenseConversionJa() {
         ]}
       />
 
+      {/* Section 7: B2B */}
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-3">7. 企業・法人のご担当者様へ</h2>
+        <p className="text-sm text-gray-700 leading-relaxed mb-6">運送・物流・建設・製造・介護など、フィリピン人材を採用される企業の人事担当者様からのご依頼も増えています。複数名まとめての依頼・請求書払い・進捗一括報告など、法人向けサポートをご用意しています。</p>
+        <IconCardGrid
+          heading="法人対応サポート"
+          columns={3}
+          cards={[
+            { icon: Users, title: '複数名まとめて依頼', description: '1〜数十名規模の同時進行に対応。採用人数に合わせてご相談ください。', accent: 'blue' },
+            { icon: Receipt, title: '請求書払い対応', description: '法人の経費処理に対応。銀行振込・一括請求書の発行が可能です。', accent: 'green' },
+            { icon: BarChart3, title: '進捗報告レポート', description: '複数名分の状況をまとめてご報告。担当者様が一目で把握できます。', accent: 'teal' },
+            { icon: Headphones, title: '担当窓口の一本化', description: '人事担当者様専用の窓口を設置。問い合わせ先を分散させません。', accent: 'gold' },
+            { icon: ClipboardList, title: '採用前の事前確認', description: '内定前・入社前に必要書類を確認。採用計画をスムーズに進められます。', accent: 'purple' },
+            { icon: Building2, title: '業種別サポート', description: '運送・建設・製造・介護など業種ごとの要件に合わせてご案内します。', accent: 'red' },
+          ]}
+        />
+      </section>
+
       <FaqSection
         items={[
           { q: 'フィリピン免許を日本の免許に切り替えるには何が必要ですか？', a: 'フィリピン免許を日本の免許に切り替える「外免切替」には、①有効なフィリピン運転免許証、②免許取得後にフィリピンで通算3か月以上滞在していた証明、③LTO書類（Certification with Apostille、License Historyなど）が必要です。免許センターごとに細かい要件が異なるため、管轄センターへの事前確認が重要です。' },
@@ -276,6 +294,9 @@ export default function LicenseConversionJa() {
           { q: 'Immigration Record は必ず必要ですか？', a: '必ずではありません。警視庁の一覧では、運転免許の有効期間中の滞在がすべて確認できない場合に Immigration Record with Apostille が案内されています。' },
           { q: '外免切替の書類を取得するのにどのくらいかかりますか？', a: 'LTO書類の取得には通常2〜4週間、DFAアポスティーユには1〜2週間かかります。合計で約1か月〜6週間が目安です。繁忙期や書類の状況によって前後することがあります。' },
           { q: '日本の免許センターで通るかどうかを判断してもらえますか？', a: '最終判断はできません。当社はフィリピン側書類の準備を支援しますが、受理や審査の判断は各免許センターによります。' },
+          { q: '複数の従業員分をまとめて依頼できますか？', a: 'はい、対応可能です。1〜数十名規模の一括依頼も承っています。人数と時期の目安をご共有いただければ、担当者様との窓口を一本化して進捗をご報告します。まずはご人数と希望時期をご相談ください。' },
+          { q: '請求書払いや銀行振込には対応していますか？', a: '法人のお客様には銀行振込・請求書払いに対応しています。個人のお客様とは異なるお支払い条件も柔軟にご相談いただけますので、ご依頼時にお伝えください。' },
+          { q: '採用前に候補者の書類を確認してもらうことは可能ですか？', a: '可能です。内定前・入社前の段階でも、候補者のフィリピン免許情報をもとに必要書類の確認や取得可否の事前調査を承っています。採用計画を立てるうえでの参考にご活用ください。' },
         ]}
         ctaTitle="まずは無料相談"
         ctaButton="無料相談フォームへ"
@@ -297,7 +318,7 @@ export default function LicenseConversionJa() {
         buttonText="無料相談はこちら"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料"
+        trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料 ｜ 法人のお客様：請求書払い・複数名一括依頼対応可"
       />
 
       <RelatedLinks links={[

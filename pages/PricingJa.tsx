@@ -61,6 +61,17 @@ export default function PricingJa() {
         ]}
       />
 
+      <div className="grid gap-4 md:grid-cols-2 mb-6">
+        <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+          <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">お支払い方法</p>
+          <p className="text-sm text-gray-600">日本からのご依頼は銀行振込、米国からのご依頼はクレジットカードまたはPayPalです。</p>
+        </div>
+        <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+          <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">キャンセル・返金</p>
+          <p className="text-sm text-gray-600">着手前は無料です。着手後は実費と進行済みの作業分を差し引いた対応になります。書類写し確認後、残金をご入金いただいてから発送します。</p>
+        </div>
+      </div>
+
       <CtaBox
         title="まずは無料でお見積もり"
         description="書類の種類・部数・認証の有無・発送先をお知らせください。見通しのある料金をご案内します。"

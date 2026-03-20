@@ -68,6 +68,10 @@ import CenomarVsMarriageCertEn from './pages/CenomarVsMarriageCertEn';
 import DocumentChecklistByVisaEn from './pages/DocumentChecklistByVisaEn';
 import NbiClearanceOverseasEn from './pages/NbiClearanceOverseasEn';
 import PsaLateRegistrationEn from './pages/PsaLateRegistrationEn';
+import CenomarVsMarriageCertJa from './pages/CenomarVsMarriageCertJa';
+import DocumentChecklistByVisaJa from './pages/DocumentChecklistByVisaJa';
+import NbiClearanceOverseasJa from './pages/NbiClearanceOverseasJa';
+import PsaLateRegistrationJa from './pages/PsaLateRegistrationJa';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -153,6 +157,10 @@ export default function App() {
         <Route path="/en/document-checklist-by-visa" element={<DocumentChecklistByVisaEn />} />
         <Route path="/en/nbi-clearance-overseas" element={<NbiClearanceOverseasEn />} />
         <Route path="/en/psa-late-registration" element={<PsaLateRegistrationEn />} />
+        <Route path="/ja/cenomar-vs-marriage-certificate" element={<CenomarVsMarriageCertJa />} />
+        <Route path="/ja/document-checklist-by-visa" element={<DocumentChecklistByVisaJa />} />
+        <Route path="/ja/nbi-clearance-overseas" element={<NbiClearanceOverseasJa />} />
+        <Route path="/ja/psa-late-registration" element={<PsaLateRegistrationJa />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar" replace />} />
@@ -184,6 +192,10 @@ export default function App() {
         <Route path="/document-checklist-by-visa" element={<Navigate to="/en/document-checklist-by-visa" replace />} />
         <Route path="/nbi-clearance-overseas" element={<Navigate to="/en/nbi-clearance-overseas" replace />} />
         <Route path="/psa-late-registration" element={<Navigate to="/en/psa-late-registration" replace />} />
+        <Route path="/cenomar-vs-marriage-certificate/" element={<Navigate to="/ja/cenomar-vs-marriage-certificate" replace />} />
+        <Route path="/document-checklist-by-visa/" element={<Navigate to="/ja/document-checklist-by-visa" replace />} />
+        <Route path="/nbi-clearance-overseas/" element={<Navigate to="/ja/nbi-clearance-overseas" replace />} />
+        <Route path="/psa-late-registration/" element={<Navigate to="/ja/psa-late-registration" replace />} />
 
         <Route path="/jp" element={<Navigate to="/ja/" replace />} />
         <Route path="/cenomar-guide" element={<Navigate to="/ja/cenomar" replace />} />

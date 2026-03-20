@@ -146,7 +146,22 @@ export default function TermsJa() {
               <p className="font-bold text-secondary">IGRS Inc.</p>
               <p className="text-gray-600">和歌山県和歌山市</p>
               <p className="text-gray-600">
-                メール：<a href="/ja/contact" className="text-primary hover:underline">お問い合わせフォームよりご連絡ください</a>
+                メール：<a href="mailto:igrs20200601@gmail.com" className="text-primary hover:underline">igrs20200601@gmail.com</a>
+              </p>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold text-secondary mb-3">11. お支払い・返金の要約</h2>
+            <div className="bg-gray-50 rounded-xl p-5 space-y-2">
+              <p className="text-gray-600">
+                ご依頼時に着手金として総額の50%をご入金いただき、書類写しの確認後に残金をお支払いいただきます。
+              </p>
+              <p className="text-gray-600">
+                日本からのご依頼は銀行振込、米国からのご依頼はクレジットカードまたはPayPalでお支払いください。
+              </p>
+              <p className="text-gray-600">
+                着手前のキャンセルは無料です。着手後は、実費および進行済みの作業分を差し引いた対応になります。
               </p>
             </div>
           </section>

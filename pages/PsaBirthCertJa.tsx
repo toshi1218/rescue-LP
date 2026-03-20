@@ -8,6 +8,7 @@ import FaqSection from '../components/FaqSection';
 import SectionDivider from '../components/SectionDivider';
 import { Baby, AlertTriangle, Clock, FileCheck, Globe, Users, CheckCircle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
@@ -246,6 +247,14 @@ export default function PsaBirthCertJa() {
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
+      />
+      <RelatedArticles
+        items={[
+          { href: '/ja/psa-late-registration', title: 'PSA記録エラー対応', description: '記録がない・名前が違うときの整理に役立ちます。' },
+          { href: '/ja/psa-shussei-cost', title: 'PSA出生証明書の料金', description: '費用の目安と内訳を確認できます。' },
+          { href: '/ja/cenomar-vs-marriage-certificate', title: 'CENOMARと婚姻証明書の違い', description: '婚姻関連の書類を取り違えないための確認ページです。' },
+          { href: '/ja/document-checklist-by-visa', title: 'ビザ別チェックリスト', description: 'どのビザで何が必要かをまとめて確認できます。' },
+        ]}
       />
     </PageLayout>
   );

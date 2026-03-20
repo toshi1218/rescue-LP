@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Send, Mail, ShieldCheck, Clock, X } from 'lucide-react';
+import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 
@@ -22,6 +22,9 @@ export default function ContactJa() {
       <p className="text-sm text-gray-600 mb-4">
         必要書類・料金・期間など、まずはお気軽にご相談ください。日本語で対応します。
       </p>
+      <p className="text-xs text-gray-500 mb-4">
+        お問い合わせはEメールのみで承ります。下のフォームから送信された内容もメールで届きます。
+      </p>
 
       {/* 信頼バッジ */}
       <div className="flex flex-wrap gap-3 mb-6">
@@ -34,8 +37,12 @@ export default function ContactJa() {
           着手前キャンセル無料
         </span>
         <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
-          <X className="w-3.5 h-3.5 text-primary" />
-          匿名相談OK
+          <Mail className="w-3.5 h-3.5 text-primary" />
+          Eメールのみ
+        </span>
+        <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
+          <Clock className="w-3.5 h-3.5 text-primary" />
+          月〜金 9:00〜17:00（PHT）
         </span>
       </div>
 

@@ -16,7 +16,7 @@ const faqsData = {
     { q: 'Which countries do you serve?', a: 'We serve clients in the USA, Canada, Australia, UK, Japan, South Korea, and other Hague Convention countries. If your country requires DFA Apostille authentication, we handle it. Contact us to confirm for your specific country.' },
     { q: 'What documents are needed for a K-1 or CR-1 visa?', a: 'For USCIS and NVC: typically a PSA Birth Certificate, CENOMAR (if single), and NBI Clearance. A DFA Apostille is usually required for the US Embassy interview stage. We confirm exact requirements for your case.' },
     { q: 'How long does the whole process take?', a: 'Typically about 1 month from order to delivery at your address. Timelines can vary by document type and agency processing speed. Contact us to discuss your specific timeline.' },
-    { q: 'Can I cancel if my visa situation changes?', a: 'Cancellations before we begin are free. After we start, we refund the amount minus actual expenses and fees already incurred.' },
+    { q: 'Can I cancel if my visa situation changes?', a: 'Cancellations before we begin are free. After we start, actual expenses and work already performed are non-refundable. We ship only after you confirm the copies and pay the remaining balance.' },
     { q: "I'm not sure which documents I need for my visa stage...", a: "No problem. Just tell us your visa type, destination country, and your current stage and we'll identify the exact documents required." },
   ],
 };

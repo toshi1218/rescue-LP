@@ -8,6 +8,7 @@ import FaqSection from '../components/FaqSection';
 import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
+import RelatedArticles from '../components/RelatedArticles';
 import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText } from 'lucide-react';
 
 export default function NbiGuideJa() {
@@ -265,6 +266,14 @@ export default function NbiGuideJa() {
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
+      />
+      <RelatedArticles
+        items={[
+          { href: '/ja/nbi-clearance-overseas', title: '海外在住のNBI取得', description: 'フィリピンに戻らずに取得したい方はこちら。' },
+          { href: '/ja/nbi-hit', title: 'NBI HIT対応', description: '照会が入ったときの考え方を整理します。' },
+          { href: '/ja/nbi-koyukigen', title: 'NBIの有効期限', description: '提出期限に合わせた取り方の目安が分かります。' },
+          { href: '/ja/document-checklist-by-visa', title: 'ビザ別書類チェックリスト', description: 'K-1や配偶者ビザで他に何が必要かを確認できます。' },
+        ]}
       />
     </PageLayout>
   );

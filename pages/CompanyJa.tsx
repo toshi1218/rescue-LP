@@ -35,8 +35,8 @@ export default function CompanyJa() {
               </span>
               <span className="text-sm text-gray-700 leading-relaxed">
                 {value ?? (
-                  <a href="/ja/contact" className="text-primary hover:underline font-medium">
-                    お問い合わせフォームへ →
+                  <a href="mailto:igrs20200601@gmail.com" className="text-primary hover:underline font-medium">
+                    igrs20200601@gmail.com
                   </a>
                 )}
               </span>
@@ -51,6 +51,28 @@ export default function CompanyJa() {
             日本法人が窓口となり、フィリピン・セブ市の現地スタッフが PSA・NBI・LTO・DFA アポスティーユの手続きを代行します。
             国際結婚・配偶者ビザ・外免切替・帰化申請など、用途に合わせた書類を日本語だけでご依頼いただけます。
           </p>
+        </div>
+
+        <div className="mt-6 rounded-2xl bg-secondary/[0.03] border border-secondary/10 p-6">
+          <h2 className="text-sm font-bold text-secondary mb-4">営業時間・お支払い・返金</h2>
+          <div className="grid gap-4 md:grid-cols-2 text-sm text-gray-600">
+            <div>
+              <p className="font-semibold text-secondary mb-1">営業時間</p>
+              <p>月曜日〜金曜日 9:00〜17:00（フィリピン時間）</p>
+            </div>
+            <div>
+              <p className="font-semibold text-secondary mb-1">連絡手段</p>
+              <p>Eメールのみで承っています。</p>
+            </div>
+            <div>
+              <p className="font-semibold text-secondary mb-1">お支払い方法</p>
+              <p>日本からのご依頼は銀行振込、米国からのご依頼はクレジットカードまたはPayPalです。</p>
+            </div>
+            <div>
+              <p className="font-semibold text-secondary mb-1">キャンセル・返金</p>
+              <p>着手前は無料です。着手後は実費と進行済み作業分を差し引いた対応になります。書類写し確認後、残金のご入金をいただいてから発送します。</p>
+            </div>
+          </div>
         </div>
 
       </div>

@@ -7,11 +7,11 @@ const stepIcons = [Mail, FileText, CreditCard, CheckCircle, PackageCheck];
 
 const stepsData = {
   ja: [
-    { num: 1, title: '目的を確認する', desc: '今の手続きが、国際結婚、配偶者ビザ準備、外免切替、帰化のどれに近いかを確認します。' },
-    { num: 2, title: '必要書類と流れを整理する', desc: '提出先や状況に応じて、必要になりやすい書類を整理します。' },
-    { num: 3, title: 'ご案内内容を確認する', desc: '対応範囲、費用、進め方をご確認いただきます。' },
-    { num: 4, title: '手続を進める', desc: '必要書類の取得や確認を進めます。' },
-    { num: 5, title: '受け取り・次の手続へ', desc: '受け取った書類を、次の手続につなげます。' },
+    { num: 1, title: 'Eメールでご相談', desc: '必要書類と目的、提出予定日をEメールでお知らせください。' },
+    { num: 2, title: '必要書類と見積もりを確認', desc: '提出先や状況に応じて、必要になりやすい書類と費用を整理します。' },
+    { num: 3, title: '着手金50%をご入金', desc: '内容に問題がなければ、総額の50%をご入金いただきます。' },
+    { num: 4, title: '書類取得・確認', desc: '現地で取得し、書類写しをご確認いただきます。' },
+    { num: 5, title: '残金のお支払い・発送', desc: '残金をご入金後、原本を発送します。' },
   ],
   en: [
     { num: 1, title: 'Contact Us', desc: 'Tell us via email which documents you need and your current situation.' },

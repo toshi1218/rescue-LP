@@ -22,6 +22,7 @@ const projectRoot = path.resolve(__dirname, '..');
 const distIndexPath = path.join(projectRoot, 'dist', 'index.html');
 
 const BASE = 'https://ph-document.com';
+type JsonLd = Record<string, unknown>;
 
 interface RouteConfig {
   path: string;
@@ -33,6 +34,218 @@ interface RouteConfig {
   enCanonical: string;
   jaCanonical: string;
   ogType?: string;
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function formatJsonLd(json: JsonLd): string {
+  return JSON.stringify(json, null, 2)
+    .split('\n')
+    .map((line) => `    ${line}`)
+    .join('\n');
+}
+
+function replaceJsonLdBlock(html: string, label: string, json: JsonLd): string {
+  const pattern = new RegExp(
+    String.raw`\s*<!-- JSON-LD: ${escapeRegExp(label)} -->\s*<script type="application\/ld\+json">[\s\S]*?<\/script>`
+  );
+
+  return html.replace(
+    pattern,
+    `\n    <!-- JSON-LD: ${label} -->\n    <script type="application/ld+json">\n${formatJsonLd(json)}\n    </script>`
+  );
+}
+
+function removeJsonLdBlock(html: string, label: string): string {
+  const pattern = new RegExp(
+    String.raw`\s*<!-- JSON-LD: ${escapeRegExp(label)} -->\s*<script type="application\/ld\+json">[\s\S]*?<\/script>`
+  );
+
+  return html.replace(pattern, '');
+}
+
+function buildWebPageJsonLd(route: RouteConfig): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: route.title,
+    url: route.canonical,
+    inLanguage: route.lang,
+    about:
+      route.lang === 'ja'
+        ? [
+            'CENOMAR（独身証明書）',
+            'PSA出生証明書',
+            'NBI Clearance',
+            'DFAアポスティーユ',
+            'フィリピン書類取得代行',
+          ]
+        : [
+            'CENOMAR (Certificate of No Marriage Record)',
+            'PSA Birth Certificate',
+            'NBI Clearance',
+            'DFA Apostille',
+            'Philippine document retrieval for immigration worldwide',
+          ],
+  };
+}
+
+function buildLocalBusinessJsonLd(route: RouteConfig): JsonLd {
+  const isJa = route.lang === 'ja';
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: isJa ? 'フィリピン書類取得代行センター' : 'Philippine Document Service',
+    alternateName: isJa ? 'Philippine Document Service' : 'フィリピン書類取得代行センター',
+    description: isJa
+      ? 'フィリピン公的書類の取得代行サービス。会社本店は和歌山県和歌山市、現地拠点はセブ市です。PSA出生証明書、CENOMAR、NBI Clearance、DFAアポスティーユを日本語だけで代行します。'
+      : 'Philippine document retrieval service for immigration and visa applicants worldwide. Our head office is in Wakayama City, Japan and our operations office is in Cebu City, Philippines. We obtain PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille. Ships via DHL.',
+    url: `${BASE}/`,
+    email: 'igrs20200601@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'PH',
+      addressLocality: 'Cebu City',
+      addressRegion: 'Cebu',
+    },
+    areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
+    availableLanguage: ['English', 'Japanese'],
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '17:00',
+      },
+    ],
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'IGRS Inc.',
+      legalName: '株式会社IGRS',
+      url: `${BASE}/`,
+      email: 'igrs20200601@gmail.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'JP',
+        addressLocality: isJa ? '和歌山県和歌山市' : 'Wakayama City',
+        addressRegion: isJa ? '和歌山県' : 'Wakayama Prefecture',
+      },
+    },
+  };
+}
+
+function buildHomeBreadcrumbJsonLd(route: RouteConfig): JsonLd {
+  const isJa = route.lang === 'ja';
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: isJa ? 'ホーム' : 'Home',
+        item: route.canonical,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: isJa ? 'ガイド一覧' : 'Guides',
+        item: `${BASE}/${route.lang}/guides/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: isJa ? '料金' : 'Pricing',
+        item: isJa ? `${BASE}/ja/ryokin/` : `${BASE}/en/pricing/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: isJa ? 'お問い合わせ' : 'Contact',
+        item: isJa ? `${BASE}/ja/contact/` : `${BASE}/en/contact/`,
+      },
+    ],
+  };
+}
+
+function buildHomeHowToJsonLd(route: RouteConfig): JsonLd {
+  const isJa = route.lang === 'ja';
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: isJa ? 'フィリピン書類の取り寄せ手順' : 'How to Get Philippine Documents',
+    description: isJa
+      ? 'フィリピン書類を日本語だけで依頼し、原本を受け取るまでの流れ。'
+      : 'How to request Philippine document retrieval and receive originals at your address.',
+    totalTime: 'P30D',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: isJa ? '無料相談' : 'Free consultation',
+        text: isJa
+          ? '必要な書類や用途、希望納期をお知らせください。'
+          : 'Tell us which documents you need, what they are for, and your target date.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: isJa ? 'お見積もり確定' : 'Quote confirmation',
+        text: isJa
+          ? '必要書類と費用、進め方を確認してご案内します。'
+          : 'We confirm the required documents, costs, and next steps.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: isJa ? '着手金のお支払い' : 'Pay the deposit',
+        text: isJa
+          ? '内容に問題がなければ着手金をお支払いいただきます。'
+          : 'Once the plan is confirmed, pay the initial deposit to start.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: isJa ? 'フィリピンで取得' : 'Document retrieval in the Philippines',
+        text: isJa
+          ? '現地スタッフがPSA・NBI・DFA・LTOの手続きを代行します。'
+          : 'Our local team handles PSA, NBI, DFA, and LTO procedures on your behalf.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: isJa ? 'DHLで発送' : 'Ship via DHL',
+        text: isJa
+          ? '取得完了後、追跡付きで日本または海外へ発送します。'
+          : 'Once documents are ready, we ship them to your address with tracking.',
+      },
+    ],
+  };
+}
+
+function buildHomeServiceJsonLd(route: RouteConfig): JsonLd {
+  const isJa = route.lang === 'ja';
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: isJa ? 'フィリピン書類取得代行' : 'Philippine Document Retrieval',
+    name: isJa ? 'フィリピン書類取得代行サービス' : 'Philippine Document Retrieval Service',
+    provider: {
+      '@type': 'Organization',
+      name: isJa ? 'フィリピン書類取得代行センター' : 'Philippine Document Service (IGRS Inc.)',
+      url: `${BASE}/`,
+    },
+    areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
+    description: isJa
+      ? 'PSA出生証明書、CENOMAR、NBI Clearance、DFAアポスティーユを日本語だけで代行し、DHLでお届けします。'
+      : 'We retrieve PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille from the Philippines, with DHL delivery worldwide.',
+  };
 }
 
 const routes: RouteConfig[] = [
@@ -392,7 +605,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/cenomar-vs-marriage-certificate/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar-vs-marriage-certificate/`,
-    jaCanonical: `${BASE}/ja/guides/`,
+    jaCanonical: `${BASE}/ja/cenomar-vs-marriage-certificate/`,
     ogType: 'article',
   },
   {
@@ -403,7 +616,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/document-checklist-by-visa/`,
     lang: 'en',
     enCanonical: `${BASE}/en/document-checklist-by-visa/`,
-    jaCanonical: `${BASE}/ja/guides/`,
+    jaCanonical: `${BASE}/ja/document-checklist-by-visa/`,
     ogType: 'article',
   },
   {
@@ -414,7 +627,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/nbi-clearance-overseas/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-clearance-overseas/`,
-    jaCanonical: `${BASE}/ja/guides/`,
+    jaCanonical: `${BASE}/ja/nbi-clearance-overseas/`,
     ogType: 'article',
   },
   {
@@ -425,7 +638,52 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/psa-late-registration/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-late-registration/`,
-    jaCanonical: `${BASE}/ja/guides/`,
+    jaCanonical: `${BASE}/ja/psa-late-registration/`,
+    ogType: 'article',
+  },
+
+  {
+    path: '/ja/cenomar-vs-marriage-certificate',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-vs-marriage-certificate', 'index.html'),
+    title: `CENOMARとPSA婚姻証明書の違い【${SEO_YEAR_MONTH_JA}】`,
+    description: 'CENOMARは独身を証明し、PSA婚姻証明書は婚姻を証明します。K-1、CR-1/IR-1、国際結婚でどちらが必要かを日本語で整理します。',
+    canonical: `${BASE}/ja/cenomar-vs-marriage-certificate/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/cenomar-vs-marriage-certificate/`,
+    jaCanonical: `${BASE}/ja/cenomar-vs-marriage-certificate/`,
+    ogType: 'article',
+  },
+  {
+    path: '/ja/document-checklist-by-visa',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'document-checklist-by-visa', 'index.html'),
+    title: `ビザ別フィリピン書類チェックリスト【${SEO_YEAR_MONTH_JA}】`,
+    description: 'K-1、CR-1/IR-1、カナダ、オーストラリア、UK、日本向けに、フィリピン書類の必要書類を整理した日本語チェックリストです。',
+    canonical: `${BASE}/ja/document-checklist-by-visa/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/document-checklist-by-visa/`,
+    jaCanonical: `${BASE}/ja/document-checklist-by-visa/`,
+    ogType: 'article',
+  },
+  {
+    path: '/ja/nbi-clearance-overseas',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-clearance-overseas', 'index.html'),
+    title: `海外在住でも取れるNBIクリアランス【${SEO_YEAR_MONTH_JA}】`,
+    description: 'フィリピンに戻らずにNBIクリアランスを取りたい方へ。代理申請、HIT対応、海外発送までを日本語で案内します。',
+    canonical: `${BASE}/ja/nbi-clearance-overseas/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/nbi-clearance-overseas/`,
+    jaCanonical: `${BASE}/ja/nbi-clearance-overseas/`,
+    ogType: 'article',
+  },
+  {
+    path: '/ja/psa-late-registration',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'psa-late-registration', 'index.html'),
+    title: `PSAに記録がない・氏名誤りのときの対応【${SEO_YEAR_MONTH_JA}】`,
+    description: 'PSA出生証明書が見つからない、氏名や生年月日に誤りがある場合の遅延登録・訂正を整理します。',
+    canonical: `${BASE}/ja/psa-late-registration/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/psa-late-registration/`,
+    jaCanonical: `${BASE}/ja/psa-late-registration/`,
     ogType: 'article',
   },
 
@@ -878,31 +1136,21 @@ function updateHead(html: string, route: RouteConfig): string {
     );
   }
 
-  // For non-home pages, remove the generic BreadcrumbList and HowTo JSON-LD
-  // that are embedded in index.html (they are only relevant for the homepage).
-  // The page-specific BreadcrumbList is generated by PageLayout component.
+  // Keep structured data aligned with the current locale and route.
+  result = replaceJsonLdBlock(result, 'WebPage', buildWebPageJsonLd(route));
+  result = replaceJsonLdBlock(result, 'LocalBusiness', buildLocalBusinessJsonLd(route));
+
+  // The home page keeps a localized generic schema from index.html.
+  // Deeper routes use page-specific JSON-LD from the page components.
   const isHomePage = route.path === '/en/' || route.path === '/ja/';
-  if (!isHomePage) {
-    // Remove the static BreadcrumbList JSON-LD block from index.html
-    result = result.replace(
-      /\s*<!-- JSON-LD: BreadcrumbList -->\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-      ''
-    );
-    // Remove the static HowTo JSON-LD block from index.html
-    result = result.replace(
-      /\s*<!-- JSON-LD: HowTo -->\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-      ''
-    );
-    // Remove the static Service JSON-LD block (page-specific ones are in components)
-    result = result.replace(
-      /\s*<!-- JSON-LD: Service -->\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-      ''
-    );
-    // Update WebPage URL to match the current page
-    result = result.replace(
-      /"url":\s*"https:\/\/ph-document\.com\/en\/"/,
-      `"url": "${route.canonical}"`
-    );
+  if (isHomePage) {
+    result = replaceJsonLdBlock(result, 'BreadcrumbList', buildHomeBreadcrumbJsonLd(route));
+    result = replaceJsonLdBlock(result, 'HowTo', buildHomeHowToJsonLd(route));
+    result = replaceJsonLdBlock(result, 'Service', buildHomeServiceJsonLd(route));
+  } else {
+    result = removeJsonLdBlock(result, 'BreadcrumbList');
+    result = removeJsonLdBlock(result, 'HowTo');
+    result = removeJsonLdBlock(result, 'Service');
   }
 
   return result;
