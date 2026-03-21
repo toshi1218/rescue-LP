@@ -152,7 +152,7 @@ export default function BusinessHomeJa() {
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">LTOドライバーズレコード + DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥100,000〜</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥120,000〜</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
               </tbody>

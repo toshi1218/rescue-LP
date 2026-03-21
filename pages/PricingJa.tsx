@@ -64,7 +64,7 @@ export default function PricingJa() {
       <div className="grid gap-4 md:grid-cols-2 mb-6">
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">お支払い方法</p>
-          <p className="text-sm text-gray-600">日本からのご依頼は銀行振込、米国からのご依頼はクレジットカードまたはPayPalです。</p>
+          <p className="text-sm text-gray-600">銀行振込にて承っています。</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">キャンセル・返金</p>
