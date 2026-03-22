@@ -82,6 +82,7 @@ export default function ApostilleFeeJa() {
         badges={['追加費用なし', '総額で事前ご提示', 'DFA公式料金込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

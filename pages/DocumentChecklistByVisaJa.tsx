@@ -79,6 +79,7 @@ export default function DocumentChecklistByVisaJa() {
         badges={['K-1 / CR-1 / 配偶者ビザ', 'カナダ・豪州・UK・日本', '無料相談']}
         ctaText="必要書類を確認する"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

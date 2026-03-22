@@ -8,6 +8,7 @@ import App from '../App';
 import { LanguageProvider } from '../lib/i18n';
 import {
   SEO_YEAR,
+  SEO_DATE_ISO,
   SEO_YEAR_MONTH_JA,
   SEO_YEAR_MONTH_EN,
   SEO_TITLE_BADGE_JA,
@@ -34,6 +35,9 @@ interface RouteConfig {
   enCanonical: string;
   jaCanonical: string;
   ogType?: string;
+  datePublished?: string;
+  isAboutPage?: boolean;
+  noindex?: boolean;
 }
 
 function escapeRegExp(value: string): string {
@@ -64,6 +68,74 @@ function removeJsonLdBlock(html: string, label: string): string {
   );
 
   return html.replace(pattern, '');
+}
+
+function insertJsonLdBlock(html: string, label: string, json: JsonLd): string {
+  const block = `\n    <!-- JSON-LD: ${label} -->\n    <script type="application/ld+json">\n${formatJsonLd(json)}\n    </script>`;
+  return html.replace('</head>', `${block}\n  </head>`);
+}
+
+function buildArticleJsonLd(route: RouteConfig): JsonLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: route.title,
+    description: route.description,
+    url: route.canonical,
+    datePublished: route.datePublished ?? SEO_DATE_ISO,
+    dateModified: SEO_DATE_ISO,
+    author: {
+      '@type': 'Organization',
+      name: 'IGRS Inc. Editorial Team',
+      url: `${BASE}/en/company/`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'IGRS Inc.',
+      url: BASE,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE}/favicon.svg`,
+      },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': route.canonical },
+    inLanguage: route.lang === 'ja' ? 'ja-JP' : 'en-US',
+  };
+}
+
+function buildAboutPageJsonLd(route: RouteConfig): JsonLd {
+  const isJa = route.lang === 'ja';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: isJa ? '会社概要｜IGRS Inc.（フィリピン書類取得代行センター）' : 'About IGRS Inc. — Philippine Document Retrieval Service',
+    url: route.canonical,
+    description: route.description,
+    inLanguage: isJa ? 'ja-JP' : 'en-US',
+    about: {
+      '@type': 'Organization',
+      name: 'IGRS Inc.',
+      legalName: '株式会社IGRS',
+      url: BASE,
+      foundingDate: '2020',
+      address: [
+        {
+          '@type': 'PostalAddress',
+          addressCountry: 'JP',
+          addressLocality: isJa ? '和歌山市' : 'Wakayama City',
+          addressRegion: isJa ? '和歌山県' : 'Wakayama Prefecture',
+        },
+        {
+          '@type': 'PostalAddress',
+          addressCountry: 'PH',
+          addressLocality: 'Cebu City',
+          addressRegion: 'Cebu',
+        },
+      ],
+      email: 'igrs20200601@gmail.com',
+      areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
+    },
+  };
 }
 
 function buildWebPageJsonLd(route: RouteConfig): JsonLd {
@@ -575,6 +647,7 @@ const routes: RouteConfig[] = [
     lang: 'en',
     enCanonical: `${BASE}/en/company/`,
     jaCanonical: `${BASE}/ja/company/`,
+    isAboutPage: true,
   },
   {
     path: '/en/contact',
@@ -925,6 +998,7 @@ const routes: RouteConfig[] = [
     lang: 'ja',
     enCanonical: `${BASE}/en/company/`,
     jaCanonical: `${BASE}/ja/company/`,
+    isAboutPage: true,
   },
   {
     path: '/ja/contact',
@@ -1142,19 +1216,13 @@ function updateHead(html: string, route: RouteConfig): string {
     `<meta name="keywords" content="${keywords}"`
   );
 
-  // Replace all three hreflang tags at once to ensure correct bidirectional linking
-  const otherLang = route.lang === 'en' ? 'ja' : 'en';
-  const otherCanonical = route.lang === 'en' ? route.jaCanonical : route.enCanonical;
-  const hreflangBlock = [
-    `<link rel="alternate" hreflang="${route.lang}" href="${route.canonical}" />`,
-    `<link rel="alternate" hreflang="${otherLang}" href="${otherCanonical}" />`,
-    `<link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`,
-  ].join('\n    ');
-
-  result = result.replace(
-    /<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/>\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/>\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/>/,
-    hreflangBlock
-  );
+  // noindex for pages that should not be indexed (e.g. low-value JA pages)
+  if (route.noindex) {
+    result = result.replace(
+      /<meta name="robots" content="[^"]*"/,
+      `<meta name="robots" content="noindex, follow"`
+    );
+  }
 
   // twitter:title
   result = result.replace(
@@ -1191,6 +1259,16 @@ function updateHead(html: string, route: RouteConfig): string {
     result = removeJsonLdBlock(result, 'BreadcrumbList');
     result = removeJsonLdBlock(result, 'HowTo');
     result = removeJsonLdBlock(result, 'Service');
+  }
+
+  // Article schema for guide pages
+  if (route.ogType === 'article') {
+    result = insertJsonLdBlock(result, 'Article', buildArticleJsonLd(route));
+  }
+
+  // AboutPage schema for company pages
+  if (route.isAboutPage) {
+    result = insertJsonLdBlock(result, 'AboutPage', buildAboutPageJsonLd(route));
   }
 
   return result;

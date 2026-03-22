@@ -90,6 +90,7 @@ export default function NaturalizationJa() {
         badges={['法務局要件に対応', '書士への書類提供可', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

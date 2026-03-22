@@ -87,6 +87,7 @@ export default function SpouseVisaJa() {
         badges={['日本語だけでOK', '入管要件に合わせて手配', 'アポスティーユ込み']}
         ctaText="必要書類を確認する"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

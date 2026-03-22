@@ -96,6 +96,7 @@ export default function ApostilleGuideJa() {
         title="アポスティーユ"
         subtitle="国際結婚、配偶者ビザ準備、外免切替、帰化申請など、どの場面で必要になりやすいかを分かりやすくまとめています。"
         badges={['PSA・CENOMAR・LTO対応', 'DFA認証代行', '日本語でご相談OK']}
+        lastUpdated="2026年3月1日"
       />
       <article className="max-w-2xl mx-auto px-4">
 
@@ -108,7 +109,7 @@ export default function ApostilleGuideJa() {
             1. アポスティーユ（旧レッドリボン）とは何か
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            アポスティーユとは、その書類がフィリピンで正式に発行された公文書であることを、権限のある機関が証明するための認証です。フィリピンの公館案内でも、Apostille は "Formerly Authentication" と説明されています。
+            アポスティーユとは、その書類がフィリピンで正式に発行された公文書であることを、<a href="https://dfa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン外務省（DFA公式サイト）</a>が証明するための認証です。フィリピンの公館案内でも、Apostille は "Formerly Authentication" と説明されています。
           </p>
           <p className="text-gray-700 leading-relaxed mb-3">
             フィリピンでは、<strong>2019年5月14日に Apostille Convention が発効しました</strong>。これにより、以前の「authentication」や通称「レッドリボン」と呼ばれていた運用から、現在の Apostille が正式な表現になっています。

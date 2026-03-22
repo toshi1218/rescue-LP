@@ -89,6 +89,7 @@ export default function UkDocsJa() {
         badges={['UKVI対応', 'アポスティーユ込み', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

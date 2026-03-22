@@ -1,4 +1,5 @@
 import React from 'react';
+import { Clock } from 'lucide-react';
 
 type HeroBannerProps = {
   title: string;
@@ -7,9 +8,10 @@ type HeroBannerProps = {
   ctaText?: string;
   ctaHref?: string;
   ctaService?: string;
+  lastUpdated?: string;
 };
 
-export default function HeroBanner({ title, subtitle, badges }: HeroBannerProps) {
+export default function HeroBanner({ title, subtitle, badges, lastUpdated }: HeroBannerProps) {
   return (
     <section className="relative mb-12 overflow-hidden rounded-2xl bg-secondary px-6 py-10 md:px-10 md:py-14">
       {/* 背景装飾 */}
@@ -45,6 +47,14 @@ export default function HeroBanner({ title, subtitle, badges }: HeroBannerProps)
               </span>
             ))}
           </div>
+
+          {/* 最終更新日 */}
+          {lastUpdated && (
+            <p className="flex items-center gap-1 text-xs text-white/50 mb-3">
+              <Clock className="w-3 h-3 shrink-0" />
+              <span>Updated: {lastUpdated}</span>
+            </p>
+          )}
 
           {/* タイトル */}
           <h1 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug tracking-tight ${subtitle ? 'mb-3' : 'mb-0'}`}>

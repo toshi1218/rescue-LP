@@ -79,6 +79,7 @@ export default function PsaLateRegistrationJa() {
         badges={['No Record 対応', '氏名・生年月日エラー', 'ビザ遅延を防ぐ']}
         ctaText="状況を相談する"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">

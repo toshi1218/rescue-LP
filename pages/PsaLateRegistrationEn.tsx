@@ -76,6 +76,7 @@ export default function PsaLateRegistrationEn() {
         badges={['No Record Scenarios', 'Name & Date Errors', 'Visa Timeline Impact']}
         ctaText="Ask About Your Situation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <SummaryBlock

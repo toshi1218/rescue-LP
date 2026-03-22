@@ -51,7 +51,7 @@ export default function NbiGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. NBI retrieval, DFA Apostille, and DHL shipping are all included.',
+                text: 'All-inclusive from US$399 (NBI retrieval + DFA Apostille + DHL shipping). HIT resolution is included at no extra charge. See our Pricing page for the full breakdown.',
               },
             },
             {
@@ -87,10 +87,13 @@ export default function NbiGuideEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
-        NBI Clearance is a criminal background check issued by the Philippine National Bureau of Investigation. Required for most visa and immigration applications worldwide.
+        NBI Clearance is a criminal background check issued by the{' '}
+        <a href="https://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Philippine National Bureau of Investigation (NBI)</a>.
+        {' '}Required for most visa and immigration applications in the US, Canada, Australia, UK, and Japan.
       </p>
 
       <SummaryBlock
@@ -158,10 +161,10 @@ export default function NbiGuideEn() {
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Submit your inquiry', description: 'Tell us your use case (K-1, CR-1, etc.) and your target submission date.' },
-          { title: 'We confirm scope and quote', description: 'We verify whether Apostille is required and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles NBI retrieval and DFA Apostille authentication.' },
-          { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'Submit your inquiry with NBI status', description: 'Tell us your use case (K-1, CR-1, Canada PR, etc.), whether you have a prior NBI Clearance, and any known HIT issues.' },
+          { title: 'We confirm eligibility and provide a fixed quote', description: 'We check whether your case qualifies for proxy renewal (or flag HIT resolution requirements) and send all-inclusive pricing upfront.' },
+          { title: 'We register your NBI account, coordinate biometrics, and resolve any HIT', description: 'Our team handles the NBI proxy process in Manila — including HIT flag resolution if present — then adds DFA Apostille.' },
+          { title: 'NBI Clearance (Apostilled) shipped to you via DHL', description: 'The original authenticated NBI Clearance is shipped with tracking. Estimated total: 4–6 weeks from start.' },
         ]}
       />
 
@@ -193,7 +196,7 @@ export default function NbiGuideEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. NBI retrieval, DFA Apostille, and DHL shipping are all included.' },
+          { q: 'How much does it cost?', a: 'All-inclusive from US$399 (NBI retrieval + DFA Apostille + DHL shipping). HIT resolution is included at no extra charge. See our Pricing page for the full breakdown.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: NBI takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'What if the NBI result shows a HIT?', a: 'A HIT means a record was found in the NBI database. This requires separate handling. Share your situation and we will advise on next steps.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },

@@ -65,6 +65,7 @@ export default function PsaCostJa() {
         title="PSA出生証明書の取得費用"
         subtitle="PSAの現地料金は365ペソ。日本へ届けるまでの費用の全体像を整理して解説します。"
         badges={['現地料金を解説', 'アポスティーユ込み対応', '日本語でご相談OK']}
+        lastUpdated="2026年3月1日"
       />
       <article className="max-w-2xl mx-auto px-4">
 

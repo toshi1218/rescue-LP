@@ -87,6 +87,7 @@ export default function CanadaDocsEn() {
         badges={['IRCC-Ready', 'DFA Apostille Included', 'Ships to Canada via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <SummaryBlock

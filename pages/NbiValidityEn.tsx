@@ -80,6 +80,7 @@ export default function NbiValidityEn() {
         badges={['Ships via DHL', 'Deadline-Aware Scheduling', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <SummaryBlock

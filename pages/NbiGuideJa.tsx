@@ -90,6 +90,7 @@ export default function NbiGuideJa() {
         badges={['更新案件を中心に対応', '条件を先に確認', '進捗を随時ご報告']}
         ctaText="更新できるか確認する"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       {/* イントロ */}
@@ -98,6 +99,7 @@ export default function NbiGuideJa() {
         <p>
           そんな方に向けて、株式会社IGRSでは、フィリピンNBIクリアランスの更新・転送を日本語で進めやすい形でご案内しています。
           ご相談時に条件を確認し、進められる案件かどうかを先に整理したうえで、必要な流れをご案内します。
+          NBI Clearanceは<a href="https://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン国家捜査局（NBI公式サイト）</a>が発行する公的書類です。
         </p>
       </div>
 

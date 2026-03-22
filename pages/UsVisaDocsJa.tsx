@@ -89,6 +89,7 @@ export default function UsVisaDocsJa() {
         badges={['K-1・CR-1・IR-1対応', 'USCIS書類形式で手配', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

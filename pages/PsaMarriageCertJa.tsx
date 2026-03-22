@@ -87,6 +87,7 @@ export default function PsaMarriageCertJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
         ctaText="必要な形式を確認する"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock
