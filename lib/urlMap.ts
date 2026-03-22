@@ -30,10 +30,10 @@ export const enToJa: Record<string, string> = {
   '/en/company': '/ja/company',
   '/en/contact': '/ja/contact',
   '/en/privacy': '/ja/privacy',
-  '/en/cenomar-vs-marriage-certificate': '/ja/guides',
-  '/en/document-checklist-by-visa': '/ja/guides',
-  '/en/nbi-clearance-overseas': '/ja/guides',
-  '/en/psa-late-registration': '/ja/guides',
+  '/en/cenomar-vs-marriage-certificate': '/ja/cenomar-vs-marriage-certificate',
+  '/en/document-checklist-by-visa': '/ja/document-checklist-by-visa',
+  '/en/nbi-clearance-overseas': '/ja/nbi-clearance-overseas',
+  '/en/psa-late-registration': '/ja/psa-late-registration',
 };
 
 // Build reverse map: JA path → EN path
