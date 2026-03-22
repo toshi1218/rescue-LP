@@ -87,6 +87,7 @@ export default function CenomarApostilleEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <SummaryBlock

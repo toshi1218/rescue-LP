@@ -87,6 +87,7 @@ export default function NbiHitEn() {
         badges={['English Support', 'Case-by-Case Handling', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <SummaryBlock

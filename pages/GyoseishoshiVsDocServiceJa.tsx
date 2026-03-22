@@ -62,6 +62,7 @@ export default function GyoseishoshiVsDocServiceJa() {
         badges={['役割の切り分けを解説', '管轄を正確に理解する', '費用の二重払いを防ぐ']}
         ctaText="フィリピン書類の相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <article className="space-y-10">

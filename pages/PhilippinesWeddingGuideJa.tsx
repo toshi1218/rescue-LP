@@ -63,6 +63,7 @@ export default function PhilippinesWeddingGuideJa() {
         badges={['手続きの流れをステップ解説', '必要書類を整理', 'つまずきポイントも解説']}
         ctaText="書類の相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <article className="space-y-10">

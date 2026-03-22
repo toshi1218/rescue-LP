@@ -62,6 +62,7 @@ export default function MarriageOrderJa() {
         badges={['手続きの流れを比較', '必要書類を整理', '状況に合わせて判断']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <article className="space-y-10">

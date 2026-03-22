@@ -82,6 +82,7 @@ export default function CenomarValidityJa() {
         badges={['有効期限の確認から対応', 'PSAアポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

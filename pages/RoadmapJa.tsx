@@ -63,6 +63,7 @@ export default function RoadmapJa() {
         ctaText="個別ロードマップを申し込む"
         ctaHref="#contact"
         ctaService="個別ロードマップ作成"
+        lastUpdated="2026年3月1日"
       />
 
       {/* リード文 */}

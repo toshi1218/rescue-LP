@@ -86,6 +86,7 @@ export default function ApostilleFeeEn() {
         badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <SummaryBlock

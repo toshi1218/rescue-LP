@@ -91,6 +91,7 @@ export default function NbiHitJa() {
         badges={['HIT解消から一括対応', 'アポスティーユ込み', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

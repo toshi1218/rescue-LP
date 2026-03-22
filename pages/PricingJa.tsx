@@ -36,6 +36,7 @@ export default function PricingJa() {
         ctaText="無料でお見積もり"
         ctaHref="#contact"
         ctaService="料金のお見積もり"
+        lastUpdated="2026年3月1日"
       />
 
       {/* 2段階決済 */}

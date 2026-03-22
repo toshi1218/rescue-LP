@@ -87,10 +87,13 @@ export default function PsaBirthCertEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
-        A PSA Birth Certificate is an official civil registry document issued by the Philippine Statistics Authority. It serves as primary proof of identity and citizenship for immigration, marriage, and naturalization applications.
+        A PSA Birth Certificate is an official civil registry document issued by the{' '}
+        <a href="https://psaserbilis.com.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Philippine Statistics Authority (PSA Serbilis)</a>.
+        {' '}It serves as primary proof of identity and citizenship for immigration, marriage, and naturalization applications.
       </p>
 
       <SummaryBlock

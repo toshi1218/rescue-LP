@@ -78,6 +78,7 @@ export default function DriverRecordEn() {
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <SummaryBlock

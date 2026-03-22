@@ -79,6 +79,7 @@ export default function NbiClearanceOverseasJa() {
         badges={['OFW・海外在住者向け', 'HIT対応', '海外発送OK']}
         ctaText="無料で相談する"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">

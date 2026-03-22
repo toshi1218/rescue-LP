@@ -115,6 +115,7 @@ export default function PsaBirthCertJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <div className="max-w-2xl mx-auto px-4">

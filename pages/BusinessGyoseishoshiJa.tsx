@@ -36,6 +36,7 @@ export default function BusinessGyoseishoshiJa() {
         title="行政書士の方へ"
         subtitle="国際結婚・配偶者ビザ・帰化申請に必要なフィリピン書類を、先生の案件に合わせて一括代行します。"
         badges={['案件ごとの進捗報告', '継続割引あり', '紙の原本アポスティーユ対応']}
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

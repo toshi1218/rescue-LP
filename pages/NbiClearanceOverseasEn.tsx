@@ -88,6 +88,7 @@ export default function NbiClearanceOverseasEn() {
         badges={['OFW & Overseas Filipinos', 'HIT Cases Handled', 'Ships Worldwide via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <SummaryBlock

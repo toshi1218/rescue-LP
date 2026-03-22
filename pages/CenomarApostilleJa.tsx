@@ -91,6 +91,7 @@ export default function CenomarApostilleJa() {
         badges={['PSA取得からアポスティーユまで一括', '紙の原本形式で対応', '追加費用なし']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

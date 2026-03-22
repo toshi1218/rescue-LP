@@ -116,6 +116,7 @@ export default function CenomarGuideJa() {
         title="独身証明書"
         subtitle="国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。"
         badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
+        lastUpdated="2026年3月1日"
       />
       <SummaryBlock
         conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
@@ -134,7 +135,7 @@ export default function CenomarGuideJa() {
             CENOMARとは何か（独身証明書）
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            CENOMARは <strong>Certificate of No Marriage Record</strong> の略称で、フィリピン統計局（Philippine Statistics Authority, PSA）が発行する公的書類です。日本語では<strong>「独身証明書」</strong>に相当し、現在フィリピンに婚姻記録がないことを証明します。
+            CENOMARは <strong>Certificate of No Marriage Record</strong> の略称で、<a href="https://psa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン統計局（PSA公式サイト）</a>が発行する公的書類です。日本語では<strong>「独身証明書」</strong>に相当し、現在フィリピンに婚姻記録がないことを証明します。
           </p>
           <p className="text-gray-700 leading-relaxed mb-3">
             国際結婚の手続き・配偶者ビザ申請・帰化申請・フィリピンでの婚姻手続きなど、フィリピン人の婚姻状況を確認する必要がある場面で提出を求められることがあります。

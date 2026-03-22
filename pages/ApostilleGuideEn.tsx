@@ -51,7 +51,7 @@ export default function ApostilleGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included.',
+                text: 'DFA Apostille is included in all service packages starting at US$349. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.',
               },
             },
             {
@@ -87,10 +87,13 @@ export default function ApostilleGuideEn() {
         badges={['Paper Apostille Original', 'Ships Worldwide via DHL', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
+        lastUpdated="March 1, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
-        DFA Apostille is an authentication by the Philippine Department of Foreign Affairs that makes Philippine documents legally valid in 124+ Hague Convention countries.
+        DFA Apostille is an official authentication issued by the{' '}
+        <a href="https://dfa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Philippine Department of Foreign Affairs (DFA)</a>{' '}
+        that makes Philippine documents legally recognized in 124+ Hague Convention countries.
       </p>
 
       <SummaryBlock
@@ -158,10 +161,10 @@ export default function ApostilleGuideEn() {
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Submit your inquiry', description: 'Tell us which documents need Apostille and your submission authority.' },
-          { title: 'We confirm scope and quote', description: 'We verify requirements and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille authentication.' },
-          { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'Tell us which documents need Apostille and your deadline', description: 'Share the document type (CENOMAR, NBI, PSA Birth Certificate, etc.), the destination country, and your submission deadline.' },
+          { title: 'We confirm Apostille requirements per destination authority', description: 'Requirements differ by country — we verify whether a paper Apostille or e-Apostille is required and confirm the scope before quoting.' },
+          { title: 'We retrieve the document and submit to the DFA Apostille queue', description: 'Our team requests the source document from PSA or NBI, then submits it to DFA for official Apostille authentication in the Philippines.' },
+          { title: 'Apostilled original shipped via DHL — accepted in 124+ countries', description: 'The physical Apostilled document is shipped to your address with DHL tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 
@@ -203,7 +206,7 @@ export default function ApostilleGuideEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included.' },
+          { q: 'How much does it cost?', a: 'DFA Apostille is included in all service packages starting at US$349. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.' },
           { q: 'What is the difference between e-Apostille and paper Apostille?', a: 'e-Apostille is a digital authentication issued online. Most immigration authorities (USCIS, IRCC, Home Affairs, UKVI) require a paper Apostille original. We provide paper originals.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },

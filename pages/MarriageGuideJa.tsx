@@ -99,6 +99,7 @@ export default function MarriageGuideJa() {
         badges={['日本語でやり取りOK', '必要書類を整理してご案内', '進捗を随時ご報告']}
         ctaText="無料で相談する"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <SummaryBlock

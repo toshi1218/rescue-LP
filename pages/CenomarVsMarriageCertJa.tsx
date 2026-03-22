@@ -79,6 +79,7 @@ export default function CenomarVsMarriageCertJa() {
         badges={['K-1 / CR-1で迷いやすい', '違いを3分で確認', '無料相談']}
         ctaText="必要書類を確認する"
         ctaHref="#contact"
+        lastUpdated="2026年3月1日"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
