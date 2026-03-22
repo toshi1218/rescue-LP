@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { getLangSwitchUrl } from './urlMap';
 
 const BASE = 'https://ph-document.com';
 const DEFAULT_TITLE = 'フィリピン書類取得代行｜CENOMAR・PSA・LTO 日本語だけで確実に取り寄せ';
@@ -17,11 +16,6 @@ function setCanonical(href: string) {
   if (el) el.setAttribute('href', href);
 }
 
-function setHreflang(hreflang: string, href: string) {
-  const el = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${hreflang}"]`);
-  if (el) el.setAttribute('href', href);
-}
-
 function toAbsUrl(path: string): string {
   return `${BASE}${path.replace(/\/?$/, '/')}`;
 }
@@ -33,10 +27,6 @@ export function useMeta(title: string, description: string, canonical?: string) 
     const isJa = /\/ja(\/|$)/.test(pathname);
     const locale = isJa ? 'ja_JP' : 'en_US';
 
-    // Compute the equivalent page URL in the other language
-    const altPath = getLangSwitchUrl(pathname);
-    const altHref = toAbsUrl(altPath);
-
     document.title = title;
     setMeta('description', description);
     setMeta('og:title', title, 'property');
@@ -46,17 +36,6 @@ export function useMeta(title: string, description: string, canonical?: string) 
     setMeta('twitter:title', title);
     setMeta('twitter:description', description);
     setCanonical(canonicalHref);
-
-    // Update hreflang alternate links to reflect the current page
-    if (isJa) {
-      setHreflang('ja', canonicalHref);
-      setHreflang('en', altHref);
-      setHreflang('x-default', altHref);
-    } else {
-      setHreflang('en', canonicalHref);
-      setHreflang('ja', altHref);
-      setHreflang('x-default', canonicalHref);
-    }
 
     return () => {
       document.title = DEFAULT_TITLE;
@@ -68,10 +47,6 @@ export function useMeta(title: string, description: string, canonical?: string) 
       setMeta('twitter:title', DEFAULT_TITLE);
       setMeta('twitter:description', DEFAULT_DESCRIPTION);
       setCanonical(DEFAULT_CANONICAL);
-      // Reset hreflang to home-page defaults
-      setHreflang('en', `${BASE}/en/`);
-      setHreflang('ja', `${BASE}/ja/`);
-      setHreflang('x-default', `${BASE}/en/`);
     };
   }, [title, description, canonical]);
 }
