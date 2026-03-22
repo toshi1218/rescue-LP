@@ -978,7 +978,6 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/us-visa-documents/`,
     jaCanonical: `${BASE}/ja/us-visa-documents/`,
     ogType: 'article',
-    noindex: true,
   },
   {
     path: '/ja/ryokin',
