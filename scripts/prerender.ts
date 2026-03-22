@@ -37,6 +37,7 @@ interface RouteConfig {
   ogType?: string;
   datePublished?: string;
   isAboutPage?: boolean;
+  noindex?: boolean;
 }
 
 function escapeRegExp(value: string): string {
@@ -977,6 +978,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/us-visa-documents/`,
     jaCanonical: `${BASE}/ja/us-visa-documents/`,
     ogType: 'article',
+    noindex: true,
   },
   {
     path: '/ja/ryokin',
@@ -1215,19 +1217,13 @@ function updateHead(html: string, route: RouteConfig): string {
     `<meta name="keywords" content="${keywords}"`
   );
 
-  // Replace all three hreflang tags at once to ensure correct bidirectional linking
-  const otherLang = route.lang === 'en' ? 'ja' : 'en';
-  const otherCanonical = route.lang === 'en' ? route.jaCanonical : route.enCanonical;
-  const hreflangBlock = [
-    `<link rel="alternate" hreflang="${route.lang}" href="${route.canonical}" />`,
-    `<link rel="alternate" hreflang="${otherLang}" href="${otherCanonical}" />`,
-    `<link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`,
-  ].join('\n    ');
-
-  result = result.replace(
-    /<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/>\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/>\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/>/,
-    hreflangBlock
-  );
+  // noindex for pages that should not be indexed (e.g. low-value JA pages)
+  if (route.noindex) {
+    result = result.replace(
+      /<meta name="robots" content="[^"]*"/,
+      `<meta name="robots" content="noindex, follow"`
+    );
+  }
 
   // twitter:title
   result = result.replace(
