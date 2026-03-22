@@ -29,7 +29,7 @@ export default function DfaGalleriaCebuJa() {
           name: 'DFA Consular Office Cebu',
           description:
             'フィリピン外務省の領事館。パスポート申請・更新およびアポスティーユ認証を行う公的機関。ロビンソンズガレリアセブのモール内に位置する。',
-          url: 'https://ph-document.com/ja/dfa-galleria-cebu',
+          url: 'https://ph-document.com/ja/dfa-apostille-genchi-report',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Robinsons Galleria Cebu, General Maxilom Ave',

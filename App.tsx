@@ -244,7 +244,7 @@ export default function App() {
         <Route path="/ja/business/gyoseishoshi/" element={<BusinessGyoseishoshiJa />} />
         <Route path="/ja/business/kigyou" element={<BusinessKigyouJa />} />
         <Route path="/ja/business/kigyou/" element={<BusinessKigyouJa />} />
-        <Route path="/ja/dfa-galleria-cebu" element={<DfaGalleriaCebuJa />} />
+        <Route path="/ja/dfa-apostille-genchi-report" element={<DfaGalleriaCebuJa />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
