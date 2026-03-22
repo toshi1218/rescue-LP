@@ -34,6 +34,7 @@ export const enToJa: Record<string, string> = {
   '/en/document-checklist-by-visa': '/ja/document-checklist-by-visa',
   '/en/nbi-clearance-overseas': '/ja/nbi-clearance-overseas',
   '/en/psa-late-registration': '/ja/psa-late-registration',
+  '/en/dfa-galleria-cebu': '/ja/dfa-galleria-cebu',
 };
 
 // Build reverse map: JA path → EN path
