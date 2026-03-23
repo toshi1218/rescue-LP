@@ -19,7 +19,7 @@ const items = [
   },
 ];
 
-const TrustSimple: React.FC = () => (
+const TrustSimple: React.FC = React.memo(() => (
   <section className="py-12 bg-secondary">
     <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -35,6 +35,7 @@ const TrustSimple: React.FC = () => (
       </div>
     </div>
   </section>
-);
+));
 
+TrustSimple.displayName = 'TrustSimple';
 export default TrustSimple;

@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useLanguage } from '../lib/i18n';
 
-const QuickFacts: React.FC = () => {
+const QuickFacts: React.FC = React.memo(() => {
   const { t } = useLanguage();
 
-  const facts = [
+  const facts = useMemo(() => [
     { labelKey: 'quickfacts.docs.label' as const, valueKey: 'quickfacts.docs.value' as const },
     { labelKey: 'quickfacts.period.label' as const, valueKey: 'quickfacts.period.value' as const },
     { labelKey: 'quickfacts.lang.label' as const, valueKey: 'quickfacts.lang.value' as const },
     { labelKey: 'quickfacts.company.label' as const, valueKey: 'quickfacts.company.value' as const },
-  ];
+  ], []);
 
   return (
     <section className="py-8 px-4 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto" aria-labelledby="quick-facts-title">
@@ -29,6 +29,7 @@ const QuickFacts: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
+QuickFacts.displayName = 'QuickFacts';
 export default QuickFacts;

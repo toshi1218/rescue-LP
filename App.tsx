@@ -1,5 +1,6 @@
-import React, { lazy, Suspense, useEffect } from 'react';
+import React, { lazy, Suspense, useEffect, useRef } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { getLangSwitchUrl } from './lib/urlMap';
 
 const HomeEn = lazy(() => import('./pages/HomeEn'));
 const HomeJa = lazy(() => import('./pages/HomeJa'));
@@ -84,7 +85,19 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+  const prevPathname = useRef<string | null>(null);
+
   useEffect(() => {
+    const prev = prevPathname.current;
+    prevPathname.current = pathname;
+
+    // If navigating to the language-equivalent of the current page, preserve scroll
+    if (prev !== null) {
+      const langEquivalent = getLangSwitchUrl(prev);
+      const normalize = (p: string) => p.replace(/\/$/, '') || '/';
+      if (normalize(langEquivalent) === normalize(pathname)) return;
+    }
+
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;

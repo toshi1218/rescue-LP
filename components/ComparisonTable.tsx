@@ -41,7 +41,7 @@ function Cell({ val, isAgency }: { val: boolean | string; isAgency: boolean }) {
   return <span className="text-xs text-gray-700 leading-snug">{val}</span>;
 }
 
-export default function ComparisonTable({
+function ComparisonTableBase({
   heading,
   rows,
   selfLabel = '自分で手配',
@@ -84,3 +84,7 @@ export default function ComparisonTable({
     </section>
   );
 }
+
+const ComparisonTable = React.memo(ComparisonTableBase);
+ComparisonTable.displayName = 'ComparisonTable';
+export default ComparisonTable;
