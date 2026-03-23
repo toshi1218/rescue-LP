@@ -1148,6 +1148,17 @@ const routes: RouteConfig[] = [
   },
 ];
 
+// EN routes の jaCanonical から「双方向確認済みペア」を導出
+const _enPairedJaSet = new Set(
+  routes.filter(r => r.lang === 'en').map(r => r.jaCanonical)
+);
+
+/** JA専用ページ（対応ENページなし）の場合は false */
+function isHreflangBidirectional(route: RouteConfig): boolean {
+  if (route.lang === 'en') return true;
+  return _enPairedJaSet.has(route.canonical);
+}
+
 function updateHead(html: string, route: RouteConfig): string {
   let result = html;
 
@@ -1174,6 +1185,22 @@ function updateHead(html: string, route: RouteConfig): string {
     /<link rel="canonical" href="[^"]*"/,
     `<link rel="canonical" href="${route.canonical}"`
   );
+
+  // hreflang alternate links (inserted after canonical)
+  // 双方向ペアが確認できるページのみ en/ja/x-default を3点セットで注入。
+  // JA専用ページ（対応ENページなし）は hreflang="ja" のみ注入して
+  // 関係のないENページへの誤ったシグナルを送らないようにする。
+  if (isHreflangBidirectional(route)) {
+    result = result.replace(
+      /(<link rel="canonical" href="[^"]*" \/>)/,
+      `$1\n    <link rel="alternate" hreflang="en" href="${route.enCanonical}" />\n    <link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />\n    <link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`
+    );
+  } else {
+    result = result.replace(
+      /(<link rel="canonical" href="[^"]*" \/>)/,
+      `$1\n    <link rel="alternate" hreflang="ja" href="${route.canonical}" />`
+    );
+  }
 
   // og:url
   result = result.replace(
@@ -1308,7 +1335,60 @@ async function prerender() {
   console.log(`\nPrerendered ${routes.length} pages.`);
 }
 
-prerender().catch((error) => {
-  console.error('prerender failed:', error);
-  process.exit(1);
-});
+function getSitemapPriority(routePath: string): string {
+  if (routePath === '/en/' || routePath === '/ja/') return '1.0';
+  if (/\/(guides|cenomar|psa-birth-certificate|nbi-clearance)\/$/.test(routePath)) return '0.9';
+  if (/\/(privacy|terms)\/$/.test(routePath)) return '0.3';
+  if (/\/company\/$/.test(routePath)) return '0.5';
+  if (/\/contact\/$/.test(routePath)) return '0.6';
+  if (/\/business\/[^/]+\/$/.test(routePath)) return '0.7';
+  return '0.8';
+}
+
+function getSitemapChangefreq(routePath: string): string {
+  if (routePath === '/en/' || routePath === '/ja/' || /\/guides\/$/.test(routePath)) return 'weekly';
+  if (/\/(privacy|terms|company|contact)\/$/.test(routePath)) return 'yearly';
+  return 'monthly';
+}
+
+async function generateSitemap() {
+  const seen = new Set<string>();
+  const entries: string[] = [];
+
+  for (const route of routes) {
+    if (route.noindex) continue;
+    if (seen.has(route.canonical)) continue;
+    seen.add(route.canonical);
+
+    const priority = getSitemapPriority(route.path);
+    const changefreq = getSitemapChangefreq(route.path);
+
+    const xhtmlLinks = isHreflangBidirectional(route)
+      ? `\n    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>`
+      : `\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.canonical}"/>`;
+
+    entries.push(`  <url>
+    <loc>${route.canonical}</loc>${xhtmlLinks}
+    <lastmod>${SEO_DATE_ISO}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`);
+  }
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${entries.join('\n')}
+</urlset>`;
+
+  const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
+  await writeFile(sitemapPath, xml, 'utf8');
+  console.log(`\nGenerated sitemap.xml with ${entries.length} URLs (hreflang included).`);
+}
+
+prerender()
+  .then(() => generateSitemap())
+  .catch((error) => {
+    console.error('prerender failed:', error);
+    process.exit(1);
+  });
