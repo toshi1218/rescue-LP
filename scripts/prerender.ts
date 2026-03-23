@@ -1175,6 +1175,12 @@ function updateHead(html: string, route: RouteConfig): string {
     `<link rel="canonical" href="${route.canonical}"`
   );
 
+  // hreflang alternate links (inserted after canonical)
+  result = result.replace(
+    /(<link rel="canonical" href="[^"]*" \/>)/,
+    `$1\n    <link rel="alternate" hreflang="en" href="${route.enCanonical}" />\n    <link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />\n    <link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`
+  );
+
   // og:url
   result = result.replace(
     /<meta property="og:url" content="[^"]*"/,
@@ -1308,7 +1314,59 @@ async function prerender() {
   console.log(`\nPrerendered ${routes.length} pages.`);
 }
 
-prerender().catch((error) => {
-  console.error('prerender failed:', error);
-  process.exit(1);
-});
+function getSitemapPriority(routePath: string): string {
+  if (routePath === '/en/' || routePath === '/ja/') return '1.0';
+  if (/\/(guides|cenomar|psa-birth-certificate|nbi-clearance)\/$/.test(routePath)) return '0.9';
+  if (/\/(privacy|terms)\/$/.test(routePath)) return '0.3';
+  if (/\/company\/$/.test(routePath)) return '0.5';
+  if (/\/contact\/$/.test(routePath)) return '0.6';
+  if (/\/business\/[^/]+\/$/.test(routePath)) return '0.7';
+  return '0.8';
+}
+
+function getSitemapChangefreq(routePath: string): string {
+  if (routePath === '/en/' || routePath === '/ja/' || /\/guides\/$/.test(routePath)) return 'weekly';
+  if (/\/(privacy|terms|company|contact)\/$/.test(routePath)) return 'yearly';
+  return 'monthly';
+}
+
+async function generateSitemap() {
+  const seen = new Set<string>();
+  const entries: string[] = [];
+
+  for (const route of routes) {
+    if (route.noindex) continue;
+    if (seen.has(route.canonical)) continue;
+    seen.add(route.canonical);
+
+    const priority = getSitemapPriority(route.path);
+    const changefreq = getSitemapChangefreq(route.path);
+
+    entries.push(`  <url>
+    <loc>${route.canonical}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>
+    <lastmod>${SEO_DATE_ISO}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`);
+  }
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${entries.join('\n')}
+</urlset>`;
+
+  const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
+  await writeFile(sitemapPath, xml, 'utf8');
+  console.log(`\nGenerated sitemap.xml with ${entries.length} URLs (hreflang included).`);
+}
+
+prerender()
+  .then(() => generateSitemap())
+  .catch((error) => {
+    console.error('prerender failed:', error);
+    process.exit(1);
+  });
