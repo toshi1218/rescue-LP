@@ -283,10 +283,10 @@ export default function App() {
         <Route path="/document-checklist-by-visa" element={<Navigate to="/en/document-checklist-by-visa/" replace />} />
         <Route path="/nbi-clearance-overseas" element={<Navigate to="/en/nbi-clearance-overseas/" replace />} />
         <Route path="/psa-late-registration" element={<Navigate to="/en/psa-late-registration/" replace />} />
-        <Route path="/cenomar-vs-marriage-certificate/" element={<Navigate to="/ja/cenomar-vs-marriage-certificate/" replace />} />
-        <Route path="/document-checklist-by-visa/" element={<Navigate to="/ja/document-checklist-by-visa/" replace />} />
-        <Route path="/nbi-clearance-overseas/" element={<Navigate to="/ja/nbi-clearance-overseas/" replace />} />
-        <Route path="/psa-late-registration/" element={<Navigate to="/ja/psa-late-registration/" replace />} />
+        <Route path="/cenomar-vs-marriage-certificate/" element={<Navigate to="/en/cenomar-vs-marriage-certificate/" replace />} />
+        <Route path="/document-checklist-by-visa/" element={<Navigate to="/en/document-checklist-by-visa/" replace />} />
+        <Route path="/nbi-clearance-overseas/" element={<Navigate to="/en/nbi-clearance-overseas/" replace />} />
+        <Route path="/psa-late-registration/" element={<Navigate to="/en/psa-late-registration/" replace />} />
 
         <Route path="/jp" element={<Navigate to="/ja/" replace />} />
         <Route path="/cenomar-guide" element={<Navigate to="/ja/cenomar/" replace />} />

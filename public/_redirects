@@ -55,6 +55,14 @@
 /contact/                   /en/contact/                  301
 /privacy                    /en/privacy/                  301
 /privacy/                   /en/privacy/                  301
+/cenomar-vs-marriage-certificate    /en/cenomar-vs-marriage-certificate/  301
+/cenomar-vs-marriage-certificate/   /en/cenomar-vs-marriage-certificate/  301
+/document-checklist-by-visa         /en/document-checklist-by-visa/       301
+/document-checklist-by-visa/        /en/document-checklist-by-visa/       301
+/nbi-clearance-overseas             /en/nbi-clearance-overseas/           301
+/nbi-clearance-overseas/            /en/nbi-clearance-overseas/           301
+/psa-late-registration              /en/psa-late-registration/            301
+/psa-late-registration/             /en/psa-late-registration/            301
 
 # ── 旧 JA 短縮 URL → /ja/*/ へ 301（1ホップで最終URLへ） ──────────
 /jp                         /ja/                          301
@@ -112,6 +120,7 @@
 /ja/terms                    /ja/terms/                   301
 
 # ── trailing slash 正規化 (/en/* → trailing slash付きへ) ────────
+/en                          /en/                         301
 /en/cenomar                  /en/cenomar/                 301
 /en/cenomar-apostille        /en/cenomar-apostille/       301
 /en/cenomar-validity         /en/cenomar-validity/        301
@@ -149,6 +158,13 @@
 /ja/haigusha-visa-shorui     /ja/haigusha-visa-shorui/    301
 /ja/kekkaku-shomeisho        /ja/kekkaku-shomeisho/       301
 /ja/terms                    /ja/terms/                   301
+/ja/cenomar-vs-marriage-certificate  /ja/cenomar-vs-marriage-certificate/  301
+/ja/document-checklist-by-visa       /ja/document-checklist-by-visa/       301
+/ja/nbi-clearance-overseas           /ja/nbi-clearance-overseas/           301
+/ja/psa-late-registration            /ja/psa-late-registration/            301
+/ja/dfa-apostille-genchi-report      /ja/dfa-apostille-genchi-report/      301
+/ja/psa-crs-cebu-genchi-report       /ja/psa-crs-cebu-genchi-report/       301
+/ja/lto-sm-seaside-genchi-report     /ja/lto-sm-seaside-genchi-report/     301
 /ja/business                 /ja/business/                301
 /ja/business/touroku-shien-kikan /ja/business/touroku-shien-kikan/ 301
 /ja/business/gyoseishoshi    /ja/business/gyoseishoshi/   301
