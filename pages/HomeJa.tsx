@@ -49,7 +49,7 @@ export default function HomeJa() {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PSA出生証明書取得代行' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NBI Clearance取得代行' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DFAアポスティーユ代行' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'LTOドライバーズレコード取得代行' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'LTO運転経歴証明書取得代行' } },
       ],
     },
   };

@@ -17,17 +17,17 @@ import { useMeta } from '../lib/useMeta';
 
 export default function DriverRecordJa() {
   useMeta(
-    'LTOドライバーズレコード代行【2026年3月】外免切替・企業採用',
-    'フィリピン免許の外免切替に必要なLTOドライバーズレコードを代行取得。DFAアポスティーユ・オリジナルレシート込みで都道府県の免許センターへの提出形式に対応。複数名まとめ依頼可。無料相談。',
+    'LTO運転経歴証明書代行【2026年3月】外免切替・企業採用',
+    'フィリピン免許の外免切替に必要なLTO運転経歴証明書を代行取得。DFAアポスティーユ・オリジナルレシート込みで都道府県の免許センターへの提出形式に対応。複数名まとめ依頼可。無料相談。',
   );
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'LTOドライバーズレコード取得代行' }]}
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'LTO運転経歴証明書取得代行' }]}
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'LTOドライバーズレコード取得代行',
-        description: 'フィリピンのLTOドライバーズレコードをDFAアポスティーユ付きで代行取得。外免切替・フィリピン人採用に対応。複数名まとめ依頼も可能。フィリピン渡航不要。',
+        name: 'LTO運転経歴証明書取得代行',
+        description: 'フィリピンのLTO運転経歴証明書をDFAアポスティーユ付きで代行取得。外免切替・フィリピン人採用に対応。複数名まとめ依頼も可能。フィリピン渡航不要。',
         url: 'https://ph-document.com/ja/driver-record',
         provider: {
           '@type': 'Organization',
@@ -56,7 +56,7 @@ export default function DriverRecordJa() {
               name: '外免切替に必要な書類は何ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '一般的にLTOドライバーズレコード（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。',
+                text: '一般的にLTO運転経歴証明書（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。',
               },
             },
             {
@@ -88,7 +88,7 @@ export default function DriverRecordJa() {
       ]}
     >
       <HeroBanner
-        title="LTOドライバーズレコード 取得代行"
+        title="LTO運転経歴証明書 取得代行"
         badges={['複数名対応', 'OR・アポスティーユ込み', '外免切替専門対応']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
@@ -96,7 +96,7 @@ export default function DriverRecordJa() {
       />
 
       <SummaryBlock
-        conclusion="LTOドライバーズレコードを、日本語だけで取り寄せできます。外免切替の書類準備を一括代行します。"
+        conclusion="LTO運転経歴証明書を、日本語だけで取り寄せできます。外免切替の書類準備を一括代行します。"
         points={[
           '現地スタッフがフィリピン陸運局（LTO）に直接申請・取得',
           '提出先の都道府県に合わせた正規書類で手配',
@@ -106,11 +106,11 @@ export default function DriverRecordJa() {
         ctaText="無料で相談する"
       />
 
-      {/* 固有コンテンツ：LTOドライバーズレコードとは */}
+      {/* 固有コンテンツ：LTO運転経歴証明書とは */}
       <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
-        <h2 className="text-base font-bold text-gray-900 mb-3">LTOドライバーズレコード（Driver's Record）とは</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">LTO運転経歴証明書（Driver's Record）とは</h2>
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
-          LTOドライバーズレコードは、フィリピン陸運局（Land Transportation Office）が発行する運転免許の履歴証明書です。免許の種類・取得日・更新履歴・違反歴などが記載されており、外国免許を日本の免許に切り替える「外国免許切替（外免切替）」に必要な書類の一つです。
+          LTO運転経歴証明書は、フィリピン陸運局（Land Transportation Office）が発行する運転免許の履歴証明書です。免許の種類・取得日・更新履歴・違反歴などが記載されており、外国免許を日本の免許に切り替える「外国免許切替（外免切替）」に必要な書類の一つです。
         </p>
 
         <h3 className="text-sm font-bold text-gray-800 mb-3">外免切替で試験場に提出する書類</h3>
@@ -125,7 +125,7 @@ export default function DriverRecordJa() {
             </thead>
             <tbody>
               {[
-                { doc: 'LTOドライバーズレコード', from: 'LTO（フィリピン陸運局）', note: 'DFAアポスティーユ付きが必要。都道府県によって要求が異なる場合あり。' },
+                { doc: 'LTO運転経歴証明書', from: 'LTO（フィリピン陸運局）', note: 'DFAアポスティーユ付きが必要。都道府県によって要求が異なる場合あり。' },
                 { doc: 'オリジナルレシート（OR）', from: 'LTO', note: '免許更新時の支払い領収書。試験場によって求められる場合がある。' },
                 { doc: 'フィリピン免許証（現物）', from: '本人保有', note: '有効期限内のもの。切れている場合は要確認。' },
                 { doc: 'パスポート', from: '本人保有', note: '来日時のもの（フィリピン滞在歴の証明として）' },
@@ -148,7 +148,7 @@ export default function DriverRecordJa() {
           {
             icon: <Car className="w-4 h-4" />,
             title: '外免切替のためにLTO書類が必要',
-            description: '日本の都道府県運転免許センターへの外免切替申請に必要なLTOドライバーズレコードを代行取得します。',
+            description: '日本の都道府県運転免許センターへの外免切替申請に必要なLTO運転経歴証明書を代行取得します。',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -178,8 +178,8 @@ export default function DriverRecordJa() {
           items={[
             {
               icon: <FileCheck className="w-4 h-4" />,
-              title: 'LTOドライバーズレコード取得',
-              description: 'フィリピン陸運局（LTO）へのドライバーズレコード申請・取得を代行します。',
+              title: 'LTO運転経歴証明書取得',
+              description: 'フィリピン陸運局（LTO）への運転経歴証明書申請・取得を代行します。',
             },
             {
               icon: <FileCheck className="w-4 h-4" />,
@@ -199,7 +199,7 @@ export default function DriverRecordJa() {
           columns={4}
           cards={[
             { icon: Car, title: '外免切替申請', description: 'フィリピン免許から日本の運転免許への切替に必要な書類を代行取得', accent: 'blue' },
-            { icon: FileText, title: 'LTOドライバーズレコード', description: '免許種別・取得日・更新歴・違反歴が記載された公式書類', accent: 'gold' },
+            { icon: FileText, title: 'LTO運転経歴証明書', description: '免許種別・取得日・更新歴・違反歴が記載された公式書類', accent: 'gold' },
             { icon: Stamp, title: 'DFAアポスティーユ', description: '日本の公安委員会・試験場への提出に必要な外務省認証', accent: 'teal' },
             { icon: CheckCircle, title: 'オリジナルレシート（OR）', description: 'LTO免許更新時の公式領収書。試験場提出で求められることがある', accent: 'green' },
             { icon: Clock, title: '提出期限に合わせて手配', description: '免許取得・雇用開始など、期限から逆算してスケジュールをご案内', accent: 'purple' },
@@ -224,7 +224,7 @@ export default function DriverRecordJa() {
       </SectionDivider>
 
       <ComparisonTable
-        heading="LTOドライバーズレコード取得"
+        heading="LTO運転経歴証明書取得"
         rows={[
           { item: 'LTOへの申請手配', self: false, agency: true },
           { item: 'DFAアポスティーユ', self: false, agency: true },
@@ -236,7 +236,7 @@ export default function DriverRecordJa() {
 
       <FaqSection
         items={[
-          { q: '外免切替に必要な書類は何ですか？', a: '一般的にLTOドライバーズレコード（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。' },
+          { q: '外免切替に必要な書類は何ですか？', a: '一般的にLTO運転経歴証明書（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。' },
           { q: '料金はいくらですか？', a: 'LTO取得・DFAアポスティーユ・ORをまとめた料金です。国際郵送費は実費別途です。無料相談後に正確な金額をご提示します。' },
           { q: '複数名分まとめて依頼できますか？', a: 'はい、可能です。人数と状況をお知らせいただければ、まとめて手配します。' },
           { q: '都道府県ごとに必要書類が異なると聞きましたが、確認してもらえますか？', a: 'はい。都道府県の運転免許センターによって求める書類や書式が異なります。無料相談で提出先の都道府県をお知らせいただければ、その要件に合わせた書類を手配します。' },

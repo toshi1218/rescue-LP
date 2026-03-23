@@ -134,7 +134,7 @@ export default function GyoseishoshiVsDocServiceJa() {
               { title: 'PSA書類の取得代行', detail: 'CENOMAR（独身証明書）・PSA出生証明書・PSA婚姻証明書などをフィリピン統計局（PSA）から取得します。' },
               { title: 'DFAアポスティーユの取得代行', detail: 'PSA書類・CENOMAR・NBI ClearanceなどへのDFAアポスティーユ認証をフィリピン外務省（DFA）に申請します。' },
               { title: 'NBI Clearanceの取得代行', detail: '過去にNBI取得歴がある場合（更新）を中心に対応。HIT（同名者あり）の対応も可能です。' },
-              { title: 'LTOドライバーズレコードの取得代行', detail: '外免切替・企業採用に必要なLTOドライバーズレコードをフィリピン陸運局から取得します。' },
+              { title: 'LTO運転経歴証明書の取得代行', detail: '外免切替・企業採用に必要なLTO運転経歴証明書をフィリピン陸運局から取得します。' },
               { title: '日本への国際郵送', detail: 'DHL追跡付きで書類を日本のご住所へ郵送します。' },
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3">

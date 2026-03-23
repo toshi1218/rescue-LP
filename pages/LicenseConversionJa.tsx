@@ -16,7 +16,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function LicenseConversionJa() {
   useMeta(
     `外免切替に必要なLTO書類、フィリピンに行かずに取れます【${SEO_YEAR_MONTH_JA}】`,
-    'フィリピン運転免許から日本免許への外免切替に必要なLTOドライバーズレコード＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
+    'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
   );
   return (
     <PageLayout
@@ -306,7 +306,7 @@ export default function LicenseConversionJa() {
       <ComparisonTable
         heading="外免切替 書類準備"
         rows={[
-          { item: 'LTOドライバーズレコード取得', self: false, agency: true },
+          { item: 'LTO運転経歴証明書取得', self: false, agency: true },
           { item: 'DFAアポスティーユ手配', self: false, agency: true },
           { item: '日本語での手続き', self: '英語が必要', agency: true },
           { item: '公安委員会要件の確認', self: '要調査', agency: true },
@@ -323,7 +323,7 @@ export default function LicenseConversionJa() {
       />
 
       <RelatedLinks links={[
-        { path: '/ja/driver-record/', label: 'LTOドライバーズレコード代行（外免切替・企業採用）' },
+        { path: '/ja/driver-record/', label: 'LTO運転経歴証明書代行（外免切替・企業採用）' },
         { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
         { path: '/ja/ryokin/', label: '料金一覧' },
       ]} />

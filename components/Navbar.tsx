@@ -104,7 +104,7 @@ const Navbar: React.FC = () => {
       items: [
         { label: 'アポスティーユ認証の取得手順【DFAセブ窓口】', path: '/ja/dfa-apostille-genchi-report/' },
         { label: 'PSA証明書の取得手順【セブ窓口】', path: '/ja/psa-crs-cebu-genchi-report/' },
-        { label: 'ドライバーズレコードの取得手順【LTO SMシーサイド】', path: '/ja/lto-sm-seaside-genchi-report/' },
+        { label: '運転経歴証明書の取得手順【LTO SMシーサイド】', path: '/ja/lto-sm-seaside-genchi-report/' },
       ],
     }] : []),
   ];
