@@ -2,20 +2,21 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
-type MenuType = 'docs' | 'purpose' | 'guides' | null;
+type MenuType = 'docs' | 'purpose' | 'guides' | 'about' | null;
 
 const Navbar: React.FC = () => {
   const ctaVariant = getCtaVariant();
   const location = useLocation();
   const [openMenu, setOpenMenu] = useState<MenuType>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSection, setMobileSection] = useState<MenuType>(null);
+  const [mobileSection, setMobileSection] = useState<MenuType | 'about'>(null);
   const [dropdownPos, setDropdownPos] = useState<{ left: number; top: number }>({ left: 0, top: 0 });
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const docsRef = useRef<HTMLDivElement>(null);
   const purposeRef = useRef<HTMLDivElement>(null);
   const guidesRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
   const { lang, t } = useLanguage();
@@ -38,6 +39,7 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.license'),       path: '/ja/gaimen-kirikae-guide/' },
     { label: t('navbar.purpose.naturalization'),path: '/ja/kika-shinsei-guide/' },
     { label: t('navbar.purpose.nbi'),           path: '/ja/nbi-clearance/' },
+    { label: '個別ロードマップ作成',              path: '/ja/kokusai-kekkon-roadmap/' },
   ] : [
     { label: 'K-1 Fiancé Visa',        path: '/en/k1-visa-documents/' },
     { label: 'CR-1 / IR-1 Visa',       path: '/en/cr1-visa-documents/' },
@@ -113,6 +115,17 @@ const Navbar: React.FC = () => {
   const privacyPath = isJa ? '/ja/privacy/' : '/en/privacy/';
   const termsPath = isJa ? '/ja/terms/' : '/en/terms/';
 
+  const aboutTabs = isJa ? [
+    { label: '会社概要',           path: '/ja/company/' },
+    { label: 'プライバシーポリシー', path: '/ja/privacy/' },
+    { label: '個人情報保護方針',    path: '/ja/kojin-joho-hogo/' },
+    { label: '利用規約',           path: '/ja/terms/' },
+  ] : [
+    { label: 'About Us',            path: '/en/company/' },
+    { label: 'Privacy Policy',      path: '/en/privacy/' },
+    { label: 'Terms of Service',    path: '/en/terms/' },
+  ];
+
   useEffect(() => {
     setOpenMenu(null);
     setMobileOpen(false);
@@ -151,6 +164,7 @@ const Navbar: React.FC = () => {
           if (openMenu === 'docs') docsRef.current?.querySelector<HTMLElement>('button')?.focus();
           else if (openMenu === 'purpose') purposeRef.current?.querySelector<HTMLElement>('button')?.focus();
           else if (openMenu === 'guides') guidesRef.current?.querySelector<HTMLElement>('button')?.focus();
+          else if (openMenu === 'about') aboutRef.current?.querySelector<HTMLElement>('button')?.focus();
         }
         if (mobileOpen) {
           setMobileOpen(false);
@@ -236,8 +250,9 @@ const Navbar: React.FC = () => {
   const isDocActive = documentTabs.some(tab => matchesPath(tab.path));
   const isPurposeActive = purposeTabs.some(tab => matchesPath(tab.path));
   const isGuidesActive = guidesSections.some(sec => sec.items.some(item => matchesPath(item.path)));
+  const isAboutActive = aboutTabs.some(tab => matchesPath(tab.path));
 
-  const currentTabs = openMenu === 'docs' ? documentTabs : openMenu === 'purpose' ? purposeTabs : [];
+  const currentTabs = openMenu === 'docs' ? documentTabs : openMenu === 'purpose' ? purposeTabs : openMenu === 'about' ? aboutTabs : [];
 
   const tabBtnClass = (active: boolean) =>
     `flex items-center px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
@@ -378,15 +393,34 @@ const Navbar: React.FC = () => {
               </button>
             </div>
             <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
-            <Link to={isJa ? '/ja/kokusai-kekkon-roadmap' : '/en/international-marriage-guide'} className={linkClass(isJa ? '/ja/kokusai-kekkon-roadmap' : '/en/international-marriage-guide')}>{isJa ? '個別ロードマップ作成' : 'Marriage Roadmap'}</Link>
-            <Link to={companyPath} className={linkClass(companyPath)}>{t('navbar.company')}</Link>
+
+            {/* 当社について ドロップダウン */}
+            <div
+              ref={aboutRef}
+              className="flex-shrink-0"
+              onMouseEnter={() => handleMouseEnter('about', aboutRef)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                onClick={() => { if (aboutRef.current) { const r = aboutRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'about' ? null : 'about'); }}
+                onKeyDown={handleTriggerKeyDown('about', aboutRef)}
+                aria-expanded={openMenu === 'about'}
+                aria-haspopup="true"
+                className={tabBtnClass(isAboutActive || openMenu === 'about')}
+              >
+                {isJa ? '当社について' : 'About'}
+                <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
 
           </div>
         </div>
       </div>
 
       {/* ドロップダウン：docs / purpose（flat list） */}
-      {openMenu && (openMenu === 'docs' || openMenu === 'purpose') && currentTabs.length > 0 && (
+      {openMenu && (openMenu === 'docs' || openMenu === 'purpose' || openMenu === 'about') && currentTabs.length > 0 && (
         <div
           ref={dropdownRef}
           role="menu"
@@ -500,10 +534,29 @@ const Navbar: React.FC = () => {
             <div className="border-t border-gray-100 pt-2 mt-2 space-y-0.5">
               <Link to={pricingPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.pricing')}</Link>
               {isJa && <Link to="/ja/business/" className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">法人の方へ</Link>}
-              <Link to={isJa ? '/ja/kokusai-kekkon-roadmap' : '/en/international-marriage-guide'} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{isJa ? '個別ロードマップ作成' : 'Marriage Roadmap'}</Link>
-              <Link to={companyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.company')}</Link>
-              <Link to={privacyPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.privacy')}</Link>
-              <Link to={termsPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.terms')}</Link>
+            </div>
+
+            {/* 当社について（モバイルアコーディオン） */}
+            <div className="border-t border-gray-100 pt-2 mt-2">
+              <button
+                aria-expanded={mobileSection === 'about'}
+                onClick={() => setMobileSection(mobileSection === 'about' ? null : 'about')}
+                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                {isJa ? '当社について' : 'About'}
+                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'about' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === 'about' && (
+                <div className="ml-4 mt-1 space-y-0.5">
+                  {aboutTabs.map(tab => (
+                    <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                      {tab.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="pt-3">
