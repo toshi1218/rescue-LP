@@ -319,7 +319,7 @@ const Navbar: React.FC = () => {
       {/* ナビゲーションタブ行 */}
       <div className="border-t border-gray-100 bg-white/95">
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-2 py-1.5 flex items-center">
-          <div className="flex overflow-x-auto scrollbar-hide gap-1 flex-1 min-w-0">
+          <div className="flex overflow-x-auto scrollbar-hide gap-1 min-w-0">
 
             <Link to={homePath} className={linkClass(homePath)}>{t('navbar.home')}</Link>
 
@@ -411,7 +411,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* タブバー右端: 法人の方へ + お問い合わせ */}
-          <div className="hidden md:flex items-center gap-2 ml-2 flex-shrink-0">
+          <div className="hidden md:flex items-center gap-2 ml-3 flex-shrink-0">
             {isJa && (
               <Link
                 to="/ja/business/"
