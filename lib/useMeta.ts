@@ -39,12 +39,15 @@ export function useMeta(title: string, description: string, canonical?: string) 
     setCanonical(canonicalHref);
 
     return () => {
+      const currentPath = window.location.pathname;
+      const isCurrentJa = /\/ja(\/|$)/.test(currentPath);
+      const currentLocale = isCurrentJa ? 'ja_JP' : 'en_US';
       document.title = DEFAULT_TITLE;
       setMeta('description', DEFAULT_DESCRIPTION);
       setMeta('og:title', DEFAULT_TITLE, 'property');
       setMeta('og:description', DEFAULT_DESCRIPTION, 'property');
       setMeta('og:url', DEFAULT_CANONICAL, 'property');
-      setMeta('og:locale', 'ja_JP', 'property');
+      setMeta('og:locale', currentLocale, 'property');
       setMeta('twitter:title', DEFAULT_TITLE);
       setMeta('twitter:description', DEFAULT_DESCRIPTION);
       setCanonical(DEFAULT_CANONICAL);

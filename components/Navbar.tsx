@@ -291,18 +291,11 @@ const Navbar: React.FC = () => {
           </Link>
         )}
         <div className="flex items-center gap-2 ml-2">
-          {isJa && (
-            <Link
-              to="/ja/business/"
-              className="hidden md:inline-flex text-xs font-bold text-secondary border border-secondary/30 bg-secondary/5 px-4 py-2 rounded-full hover:bg-secondary/10 transition-colors whitespace-nowrap"
-            >
-              法人の方へ
-            </Link>
-          )}
+          {/* モバイル用お問い合わせボタン */}
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact', variant: ctaVariant })}
-            className="text-xs font-bold text-white bg-primary px-4 py-2 rounded-full hover:bg-primary-hover transition-colors shadow-md whitespace-nowrap"
+            className="md:hidden text-xs font-bold text-white bg-primary px-4 py-2 rounded-full hover:bg-primary-hover transition-colors shadow-md whitespace-nowrap"
           >
             {t('navbar.cta')}
           </a>
@@ -325,8 +318,8 @@ const Navbar: React.FC = () => {
 
       {/* ナビゲーションタブ行 */}
       <div className="border-t border-gray-100 bg-white/95">
-        <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto">
-          <div className="flex overflow-x-auto scrollbar-hide px-2 gap-1 py-1.5">
+        <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-2 py-1.5 flex items-center">
+          <div className="flex overflow-x-auto scrollbar-hide gap-1 flex-1 min-w-0">
 
             <Link to={homePath} className={linkClass(homePath)}>{t('navbar.home')}</Link>
 
@@ -415,6 +408,25 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
+          </div>
+
+          {/* タブバー右端: 法人の方へ + お問い合わせ */}
+          <div className="hidden md:flex items-center gap-2 ml-2 flex-shrink-0">
+            {isJa && (
+              <Link
+                to="/ja/business/"
+                className="text-xs font-bold text-secondary border border-secondary/30 bg-secondary/5 px-4 py-1.5 rounded-full hover:bg-secondary/10 transition-colors whitespace-nowrap"
+              >
+                法人の方へ
+              </Link>
+            )}
+            <a
+              href="#contact"
+              onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact', variant: ctaVariant })}
+              className="text-xs font-bold text-white bg-primary px-4 py-1.5 rounded-full hover:bg-primary-hover transition-colors shadow-md whitespace-nowrap"
+            >
+              {t('navbar.cta')}
+            </a>
           </div>
         </div>
       </div>
