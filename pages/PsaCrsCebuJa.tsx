@@ -444,7 +444,7 @@ export default function PsaCrsCebuJa() {
               icon: FileText,
               title: 'ちゃんとした場所で処理されるの？',
               description:
-                'フィリピン統計局（PSA）が運営する正式な政府機関です。番号付き窓口・番号表示システム・Citizen's Charterが整備されており、透明性の高い運営体制です。',
+                'フィリピン統計局（PSA）が運営する正式な政府機関です。番号付き窓口・番号表示システム・Citizen\'s Charterが整備されており、透明性の高い運営体制です。',
               accent: 'blue',
             },
             {
