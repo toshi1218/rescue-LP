@@ -99,8 +99,8 @@ const Navbar: React.FC = () => {
     ...(isJa ? [{
       category: '現地情報',
       items: [
-        { label: 'DFAアポスティーユ現地レポート（セブ）', path: '/ja/dfa-apostille-genchi-report/' },
-        { label: 'PSA CRS現地レポート（セブ）', path: '/ja/psa-crs-cebu-genchi-report/' },
+        { label: 'DFAアポスティーユ現地レポート', path: '/ja/dfa-apostille-genchi-report/' },
+        { label: 'PSA CRS現地レポート', path: '/ja/psa-crs-cebu-genchi-report/' },
       ],
     }] : []),
   ];
