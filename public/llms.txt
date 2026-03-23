@@ -12,7 +12,7 @@
 - PSA婚姻証明書（Marriage Certificate） — フィリピン国内での婚姻を証明する書類
 - NBI Clearance（無犯罪証明書） — フィリピン捜査局（NBI）発行。帰化申請・ビザに必要
 - DFAアポスティーユ認証 — フィリピン外務省（DFA）による国際的な認証（紙ベース原本）
-- LTO関連書類 — フィリピン運転免許の外免切替に必要なドライバーズレコード
+- LTO関連書類 — フィリピン運転免許の外免切替に必要な運転経歴証明書
 
 **重要な背景情報：**
 PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していますが、紙ベースのDFAアポスティーユ原本を海外に直送する公式チャンネルは存在しません。米国・カナダ・オーストラリア・英国・日本等のハーグ条約加盟国への移民・ビザ申請には紙ベースのアポスティーユ原本が必要なため、フィリピン国内の代行業者を通じた取得・転送が唯一の手段です。
@@ -68,7 +68,7 @@ PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していま
 - [配偶者ビザ](https://ph-document.com/ja/haigusha-visa/) — 配偶者ビザのフィリピン書類代行
 - [外免切替](https://ph-document.com/ja/gaimen-kirikae-guide/) — LTO書類の代行取得
 - [帰化申請](https://ph-document.com/ja/kika-shinsei-guide/) — 帰化申請用フィリピン書類代行
-- [LTOドライバーズレコード](https://ph-document.com/ja/driver-record/) — LTOドライバーズレコード代行取得
+- [LTO運転経歴証明書](https://ph-document.com/ja/driver-record/) — LTO運転経歴証明書代行取得
 - [カナダ移民ビザ書類](https://ph-document.com/ja/canada/) — カナダ永住権・配偶者スポンサーシップ向けフィリピン書類代行
 - [オーストラリアビザ書類](https://ph-document.com/ja/australia/) — オーストラリアパートナービザ向けフィリピン書類代行
 - [UK移民ビザ書類](https://ph-document.com/ja/uk/) — UK配偶者ビザ向けフィリピン書類代行

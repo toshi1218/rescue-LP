@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
+import HeroEn from '../components/HeroEn';
 import GuideLinks from '../components/GuideLinks';
 import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
@@ -32,7 +32,7 @@ export default function HomeEn() {
     <div className="min-h-screen bg-background-light text-gray-800 font-body">
       <Navbar />
       <main>
-        <Hero />
+        <HeroEn />
         <GuideLinks />
         <QuickFacts />
         <PainPoints />

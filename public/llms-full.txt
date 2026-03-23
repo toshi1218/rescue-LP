@@ -60,7 +60,7 @@
 - 重要：DFAアポスティーユ原本を海外に直送する公式チャンネルは存在しない。フィリピン国内の代行業者を経由する必要がある
 - 取得目安：通常1〜3週間（Rush対応あり）
 
-### LTO関連書類（ドライバーズレコード等）
+### LTO関連書類（運転経歴証明書等）
 - 発行機関：LTO（Land Transportation Office / 陸運局）
 - 用途：外国免許切替（外免切替）
 - LTO SM Seaside Cebu等でも取得代行対応
@@ -99,7 +99,7 @@
 
 ### 外国免許切替（外免切替）
 日本の運転免許センターに提出するフィリピン書類：
-- LTOドライバーズレコード
+- LTO運転経歴証明書
 - DFAアポスティーユ認証
 
 ### 帰化申請（日本への帰化）
@@ -203,7 +203,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 - [配偶者ビザ書類（詳細）](https://ph-document.com/ja/haigusha-visa-shorui/) — 配偶者ビザに必要なフィリピン書類一覧
 - [外免切替](https://ph-document.com/ja/gaimen-kirikae-guide/) — LTO書類の代行取得
 - [帰化申請](https://ph-document.com/ja/kika-shinsei-guide/) — 帰化申請用フィリピン書類代行
-- [LTOドライバーズレコード](https://ph-document.com/ja/driver-record/) — LTOドライバーズレコード代行取得
+- [LTO運転経歴証明書](https://ph-document.com/ja/driver-record/) — LTO運転経歴証明書代行取得
 - [US Visaフィリピン書類](https://ph-document.com/ja/us-visa-documents/) — 米国ビザ向けフィリピン書類代行
 - [カナダ移民ビザ書類](https://ph-document.com/ja/canada/) — カナダ永住権・配偶者スポンサーシップ向けフィリピン書類代行
 - [オーストラリアビザ書類](https://ph-document.com/ja/australia/) — オーストラリアパートナービザ向けフィリピン書類代行
@@ -221,6 +221,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 - [ガイド一覧](https://ph-document.com/ja/guides/) — サービスガイド一覧
 - [料金一覧](https://ph-document.com/ja/ryokin/) — 全サービスの料金表
 - [会社概要](https://ph-document.com/ja/company/) — 運営会社情報
+- [個人情報保護方針](https://ph-document.com/ja/kojin-joho-hogo/) — 個人情報保護法に基づく基本方針
 - [お問い合わせ](https://ph-document.com/ja/contact/) — 無料相談・お問い合わせフォーム
 - [プライバシーポリシー](https://ph-document.com/ja/privacy/) — 個人情報保護方針
 - [利用規約](https://ph-document.com/ja/terms/) — サービス利用規約

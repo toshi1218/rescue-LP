@@ -1,0 +1,167 @@
+import React from 'react';
+import { MessageCircle, ArrowRight, CheckCircle2, Star } from 'lucide-react';
+import { getCtaVariant, trackEvent } from '../lib/analytics';
+
+const badges = [
+  { icon: '🏢', label: 'Japanese Corporation' },
+  { icon: '✈️', label: 'No travel to Philippines' },
+  { icon: '🛡️', label: 'Cancel before start = free' },
+];
+
+const docItems = [
+  { label: 'PSA Birth Certificate', sub: '+ DFA Apostille' },
+  { label: 'CENOMAR', sub: '+ DFA Apostille' },
+  { label: 'NBI Clearance', sub: '+ Apostille available' },
+  { label: 'DHL Express Worldwide', sub: '→ Your address' },
+];
+
+const HeroEn: React.FC = () => {
+  const ctaVariant = getCtaVariant();
+
+  return (
+    <header className="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 overflow-hidden min-h-[560px] md:min-h-[620px]">
+      {/* Decorative background shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full bg-secondary/5" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-primary/5 blur-3xl" />
+        {/* Subtle grid */}
+        <div
+          className="absolute inset-0 opacity-[0.025]"
+          style={{ backgroundImage: 'radial-gradient(circle, #1a365d 1px, transparent 1px)', backgroundSize: '32px 32px' }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-md md:max-w-2xl lg:max-w-5xl mx-auto px-6 py-14 md:py-20 flex flex-col md:flex-row md:items-center gap-12">
+
+        {/* ── Left: Text ── */}
+        <div className="flex-1 min-w-0">
+
+          {/* Trust badges */}
+          <div className="flex flex-wrap gap-2 mb-5">
+            {badges.map((b) => (
+              <span
+                key={b.label}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-200 text-gray-600 text-xs font-medium shadow-sm"
+              >
+                <span aria-hidden="true">{b.icon}</span>
+                {b.label}
+              </span>
+            ))}
+          </div>
+
+          {/* Eyebrow */}
+          <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary-dark text-xs font-bold mb-4 tracking-wider border border-primary/20">
+            Philippine Document Retrieval Service
+          </span>
+
+          {/* H1 */}
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-secondary mb-5">
+            Philippine Documents,<br />
+            <span className="text-primary">Delivered Worldwide.</span>
+          </h1>
+
+          <p className="text-gray-600 mb-8 text-sm md:text-base leading-relaxed max-w-lg">
+            PSA certificates, CENOMAR, NBI Clearance & DFA Apostille — retrieved by our Cebu-based team and shipped via DHL Express to your address in the US, Canada, Japan, Australia, UK and beyond.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            <a
+              href="#contact"
+              onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'contact', variant: ctaVariant })}
+              className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-3.5 px-7 rounded-xl shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+            >
+              <MessageCircle className="w-5 h-5" />
+              Free Consultation
+            </a>
+            <a
+              href="#pricing"
+              className="inline-flex items-center justify-center gap-2 text-secondary font-bold py-3.5 px-7 rounded-xl border border-secondary/20 hover:bg-secondary/5 transition-all"
+            >
+              See Packages
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+
+          {/* Rating + urgency */}
+          <div className="flex flex-col gap-1">
+            <div className="flex items-center gap-1.5" aria-label="Average rating 4.8 out of 5">
+              <span className="flex" aria-hidden="true">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </span>
+              <span className="text-gray-500 text-xs font-medium">4.8 / 5.0 (client reviews)</span>
+            </div>
+            <p className="text-primary-dark text-xs font-semibold">
+              Now accepting inquiries · Reply within 24 hours
+            </p>
+            <p className="text-gray-400 text-xs">
+              International Marriage Package from US$899 (Apostille + DHL incl.)
+            </p>
+          </div>
+        </div>
+
+        {/* ── Right: Document card visual ── */}
+        <div className="hidden md:block w-80 flex-shrink-0">
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+            {/* Card header */}
+            <div className="bg-secondary px-5 py-4">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary font-bold text-sm">PH</span>
+                </div>
+                <div>
+                  <p className="text-white font-bold text-sm leading-tight">Philippine Document Service</p>
+                  <p className="text-white/50 text-[10px]">Cebu-based · DHL Worldwide</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Document list */}
+            <div className="px-5 py-4 space-y-3">
+              {docItems.map((item) => (
+                <div key={item.label} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-semibold text-gray-800 leading-tight">{item.label}</p>
+                    <p className="text-xs text-gray-400">{item.sub}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* DFA Apostille stamp */}
+            <div className="mx-5 mb-4 bg-amber-50 border border-amber-100 rounded-xl px-4 py-3 flex items-center justify-between">
+              <div>
+                <p className="text-xs font-bold text-amber-800">DFA Apostille</p>
+                <p className="text-[10px] text-amber-600">Authenticated for immigration</p>
+              </div>
+              <div className="w-11 h-11 rounded-full border-2 border-amber-400 flex items-center justify-center">
+                <span className="text-[8px] text-amber-600 font-bold text-center leading-tight">HAGUE<br/>CONV.</span>
+              </div>
+            </div>
+
+            {/* Stats bar */}
+            <div className="border-t border-gray-100 grid grid-cols-3 divide-x divide-gray-100">
+              {[
+                { num: '500+', label: 'Cases' },
+                { num: '4.8★', label: 'Rating' },
+                { num: '24h', label: 'Reply' },
+              ].map((s) => (
+                <div key={s.label} className="py-3 text-center">
+                  <p className="text-sm font-bold text-secondary">{s.num}</p>
+                  <p className="text-[10px] text-gray-400">{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+  );
+};
+
+export default HeroEn;

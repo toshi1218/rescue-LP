@@ -11,8 +11,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function LtoSmSeasideJa() {
   useMeta(
-    'LTO SMシーサイド現地レポート【ドライバーズレコード・免許更新の取得場所】',
-    'フィリピンのLTO（陸運局）書類はセブのSMシーサイドシティ内のLTO窓口で取得します。ドライバーズレコード・免許更新の手続きをセブ在住スタッフによる現地写真でレポート。',
+    'LTO SMシーサイド現地レポート【運転経歴証明書・免許更新の取得場所】',
+    'フィリピンのLTO（陸運局）書類はセブのSMシーサイドシティ内のLTO窓口で取得します。運転経歴証明書・免許更新の手続きをセブ在住スタッフによる現地写真でレポート。',
   );
 
   return (
@@ -28,7 +28,7 @@ export default function LtoSmSeasideJa() {
           '@type': 'GovernmentOffice',
           name: 'LTO (Land Transportation Office) - SM Seaside City Cebu',
           description:
-            'フィリピン陸運局（LTO）の書類発行・免許手続き窓口。ドライバーズレコード・運転免許証の発行を行う公的機関。セブ市SMシーサイドシティ内に位置する。',
+            'フィリピン陸運局（LTO）の書類発行・免許手続き窓口。運転経歴証明書・運転免許証の発行を行う公的機関。セブ市SMシーサイドシティ内に位置する。',
           url: 'https://ph-document.com/ja/lto-sm-seaside-genchi-report',
           address: {
             '@type': 'PostalAddress',
@@ -45,9 +45,9 @@ export default function LtoSmSeasideJa() {
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'LTO SMシーサイド現地レポート【ドライバーズレコード・免許更新の取得場所】',
+          headline: 'LTO SMシーサイド現地レポート【運転経歴証明書・免許更新の取得場所】',
           description:
-            'フィリピンのLTO書類（ドライバーズレコード・運転免許証更新）はセブ市SMシーサイドシティ内のLTO窓口で取得します。現地写真と詳細解説。',
+            'フィリピンのLTO書類（運転経歴証明書・運転免許証更新）はセブ市SMシーサイドシティ内のLTO窓口で取得します。現地写真と詳細解説。',
           url: 'https://ph-document.com/ja/lto-sm-seaside-genchi-report',
           datePublished: '2026-03-23',
           dateModified: '2026-03-23',
@@ -68,7 +68,7 @@ export default function LtoSmSeasideJa() {
           mainEntity: [
             {
               '@type': 'Question',
-              name: 'LTOドライバーズレコードはセブのどこで取得できますか？',
+              name: 'LTO運転経歴証明書はセブのどこで取得できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: 'セブ市SMシーサイドシティ（SM Seaside City Cebu）内にあるLTO（陸運局）窓口で取得できます。ショッピングモール内の政府機関です。',
@@ -84,10 +84,10 @@ export default function LtoSmSeasideJa() {
             },
             {
               '@type': 'Question',
-              name: 'LTOドライバーズレコードはどのような書類ですか？',
+              name: 'LTO運転経歴証明書はどのような書類ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'ドライバーズレコードはフィリピンLTOが発行する運転履歴証明書です。日本での外国免許切替（外免切替）に必要な書類で、DFAアポスティーユを取得したうえで日本の免許センターへ提出します。',
+                text: '運転経歴証明書はフィリピンLTOが発行する運転履歴証明書です。日本での外国免許切替（外免切替）に必要な書類で、DFAアポスティーユを取得したうえで日本の免許センターへ提出します。',
               },
             },
           ],
@@ -105,7 +105,7 @@ export default function LtoSmSeasideJa() {
       <SummaryBlock
         conclusion="日本のお客さまからご依頼いただいたLTO書類は、セブ市SMシーサイドシティ内にあるフィリピン陸運局（LTO）の公式窓口で取得しています。"
         points={[
-          'ドライバーズレコード（運転履歴証明書）・運転免許証更新など、LTOが発行するすべての書類をここで取得',
+          '運転経歴証明書（運転履歴証明書）・運転免許証更新など、LTOが発行するすべての書類をここで取得',
           'セブ市南部のサウスロードプロパティーズに位置するSMシーサイドシティ内の正規政府窓口',
           '番号発券制で窓口手続きが整備されており、透明性の高い運営体制',
           '営業時間：月〜金 8:00〜17:00、土日祝休み',
@@ -184,7 +184,7 @@ export default function LtoSmSeasideJa() {
           </h2>
           <p className="text-sm text-gray-600 mb-4">
             LTO窓口の入口付近には、手続きの種類・必要書類・流れが掲示されています。
-            ドライバーズレコードをはじめ、運転免許証の更新・再発行など各手続きの案内が整備されています。
+            運転経歴証明書をはじめ、運転免許証の更新・再発行など各手続きの案内が整備されています。
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
@@ -201,7 +201,7 @@ export default function LtoSmSeasideJa() {
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165357.jpg"
-                alt="LTO SMシーサイドの案内掲示。ドライバーズレコードを含む各種申請の手順が掲載"
+                alt="LTO SMシーサイドの案内掲示。運転経歴証明書を含む各種申請の手順が掲載"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
               />
@@ -272,13 +272,13 @@ export default function LtoSmSeasideJa() {
           </div>
         </div>
 
-        {/* 4. ドライバーズレコードの申請 */}
+        {/* 4. 運転経歴証明書の申請 */}
         <div>
           <h2 className="text-xl font-bold text-secondary mb-2">
-            ドライバーズレコードの申請 ― 外免切替に必要な書類
+            運転経歴証明書の申請 ― 外免切替に必要な書類
           </h2>
           <p className="text-sm text-gray-600 mb-4">
-            日本での外国免許切替（外免切替）に必要な「<strong>ドライバーズレコード（Driver's Record）</strong>」は、
+            日本での外国免許切替（外免切替）に必要な「<strong>運転経歴証明書（Driver's Record）</strong>」は、
             LTOが発行する公式の運転履歴証明書です。
             取得後はDFAでアポスティーユ認証を受けたうえで、日本の都道府県免許センターへ提出します。
             LTO SMシーサイドでは、この書類申請の窓口受付が行われています。
@@ -287,23 +287,23 @@ export default function LtoSmSeasideJa() {
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165420.jpg"
-                alt="LTO SMシーサイドのドライバーズレコード申請窓口。申請書類と担当者の様子"
+                alt="LTO SMシーサイドの運転経歴証明書申請窓口。申請書類と担当者の様子"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm text-gray-500">
-                ドライバーズレコード申請窓口。申請書類の確認と受付が行われます。
+                運転経歴証明書申請窓口。申請書類の確認と受付が行われます。
               </figcaption>
             </figure>
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165448.jpg"
-                alt="LTOが発行したドライバーズレコード（Driver's Record）。運転履歴が記載された公式書類"
+                alt="LTOが発行した運転経歴証明書（Driver's Record）。運転履歴が記載された公式書類"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm text-gray-500">
-                LTOが発行するドライバーズレコード。外免切替の申請に必要な公式書類です。
+                LTOが発行する運転経歴証明書。外免切替の申請に必要な公式書類です。
               </figcaption>
             </figure>
           </div>
@@ -311,18 +311,18 @@ export default function LtoSmSeasideJa() {
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165455.jpg"
-                alt="ドライバーズレコードの記載内容。免許番号・有効期限・違反履歴などが記載されている"
+                alt="運転経歴証明書の記載内容。免許番号・有効期限・違反履歴などが記載されている"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
               />
               <figcaption className="mt-2 text-sm text-gray-500">
-                ドライバーズレコードの記載内容。免許番号・有効期限・運転履歴が公式に記載されます。
+                運転経歴証明書の記載内容。免許番号・有効期限・運転履歴が公式に記載されます。
               </figcaption>
             </figure>
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165503.jpg"
-                alt="LTOドライバーズレコードに押されたLTOの公式スタンプと署名"
+                alt="LTO運転経歴証明書に押されたLTOの公式スタンプと署名"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
               />
@@ -420,7 +420,7 @@ export default function LtoSmSeasideJa() {
             },
             {
               icon: FileText,
-              title: 'ドライバーズレコードって何？',
+              title: '運転経歴証明書って何？',
               description:
                 'フィリピンLTOが発行する公式の運転履歴証明書です。日本での外国免許切替（外免切替）に必要な書類で、LTO取得後にDFAアポスティーユを取得して日本の免許センターへ提出します。',
               accent: 'blue',
@@ -437,8 +437,8 @@ export default function LtoSmSeasideJa() {
       </SectionDivider>
 
       <CtaBox
-        title="LTOドライバーズレコードの取得代行はこちら"
-        description="外免切替に必要なLTOドライバーズレコードの取得からDFAアポスティーユまで、セブ在住スタッフが日本語でサポートします。申請・窓口対応・DHL発送まで一括対応。"
+        title="LTO運転経歴証明書の取得代行はこちら"
+        description="外免切替に必要なLTO運転経歴証明書の取得からDFAアポスティーユまで、セブ在住スタッフが日本語でサポートします。申請・窓口対応・DHL発送まで一括対応。"
         buttonText="無料でご相談する"
         href="#contact"
         variant="primary"
@@ -448,7 +448,7 @@ export default function LtoSmSeasideJa() {
       <FaqSection
         items={[
           {
-            q: 'LTOドライバーズレコードはセブのどこで取得できますか？',
+            q: 'LTO運転経歴証明書はセブのどこで取得できますか？',
             a: 'セブ市のSMシーサイドシティ（SM Seaside City Cebu）内にある「LTO（Land Transportation Office）」窓口で取得できます。モール内の政府機関です。',
           },
           {
@@ -456,12 +456,12 @@ export default function LtoSmSeasideJa() {
             a: '月曜〜金曜の8:00〜17:00です。土曜・日曜・祝日は休業です。',
           },
           {
-            q: 'ドライバーズレコードは外免切替に必要ですか？',
-            a: 'はい。日本での外国免許切替（外免切替）にはLTOが発行するドライバーズレコード（運転履歴証明書）が必要です。さらにDFA（フィリピン外務省）でアポスティーユ認証を受けたうえで、日本の都道府県免許センターへ提出します。',
+            q: '運転経歴証明書は外免切替に必要ですか？',
+            a: 'はい。日本での外国免許切替（外免切替）にはLTOが発行する運転経歴証明書（Driver\'s Record）が必要です。さらにDFA（フィリピン外務省）でアポスティーユ認証を受けたうえで、日本の都道府県免許センターへ提出します。',
           },
           {
             q: 'SMシーサイドのLTOでどのような書類を取得できますか？',
-            a: 'ドライバーズレコード（Driver\'s Record / 運転履歴証明書）、運転免許証の更新・再発行など、LTOが提供するドライバー関連書類の手続きを行っています。',
+            a: '運転経歴証明書（Driver\'s Record）・運転免許証の更新・再発行など、LTOが提供する各種書類・手続きに対応しています。',
           },
           {
             q: '代行を依頼した場合、書類はどのように届きますか？',

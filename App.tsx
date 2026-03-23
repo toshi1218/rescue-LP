@@ -81,6 +81,7 @@ const BusinessKigyouJa = lazy(() => import('./pages/BusinessKigyouJa'));
 const DfaGalleriaCebuJa = lazy(() => import('./pages/DfaGalleriaCebuJa'));
 const PsaCrsCebuJa = lazy(() => import('./pages/PsaCrsCebuJa'));
 const LtoSmSeasideJa = lazy(() => import('./pages/LtoSmSeasideJa'));
+const KojinJohoHogoJa = lazy(() => import('./pages/KojinJohoHogoJa'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function NavigationProgress() {
@@ -285,6 +286,8 @@ export default function App() {
         <Route path="/ja/psa-crs-cebu-genchi-report/" element={<PsaCrsCebuJa />} />
         <Route path="/ja/lto-sm-seaside-genchi-report" element={<LtoSmSeasideJa />} />
         <Route path="/ja/lto-sm-seaside-genchi-report/" element={<LtoSmSeasideJa />} />
+        <Route path="/ja/kojin-joho-hogo" element={<KojinJohoHogoJa />} />
+        <Route path="/ja/kojin-joho-hogo/" element={<KojinJohoHogoJa />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar/" replace />} />

@@ -80,8 +80,8 @@ const Hero: React.FC = () => {
         {/* Pricing hint (#22) */}
         <p className="text-white/60 text-xs mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
           {lang === 'ja'
-            ? 'PSA書類 ¥50,000〜 · 移民パック ¥89,800〜（DHL込み）'
-            : 'PSA documents from US$349 · Immigration pack from US$899 (DHL incl.)'}
+            ? '国際結婚準備パック ¥99,800〜 · 配偶者ビザパック ¥50,000〜（税・送料別）'
+            : 'International Marriage Package from US$899 (Apostille + DHL incl.)'}
         </p>
       </div>
     </header>
