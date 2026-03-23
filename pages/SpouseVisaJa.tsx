@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -136,6 +137,41 @@ export default function SpouseVisaJa() {
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>PSA書類・CENOMAR・NBI——<strong>どれが必要かは申請の状況によって異なる</strong></span></li>
         </ul>
         <p className="mt-4 text-sm font-semibold text-amber-900">→ 入管の要件に合わせた形式で、必要書類を一括手配します。</p>
+      </section>
+
+      {/* 2025年6月新要件：結核非発病証明書 */}
+      <section className="mb-8 rounded-2xl bg-red-50 border-2 border-red-200 p-6">
+        <div className="flex items-start gap-3 mb-3">
+          <AlertTriangle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-red-900">
+            ⚠ 2025年6月から、配偶者ビザに「もう1つ」書類が必要になりました
+          </h2>
+        </div>
+        <p className="text-sm text-red-800 mb-3 leading-relaxed">
+          <strong>2025年6月23日から</strong>、フィリピン国籍の方がCOE（在留資格認定証明書）を申請する際、
+          PSA書類・CENOMARに加えて <strong>結核非発病証明書（JPETS）</strong> の提出が義務化されました。
+          配偶者ビザも対象です。
+        </p>
+        <ul className="space-y-2 text-sm text-red-800 mb-4 leading-relaxed">
+          <li className="flex items-start gap-2">
+            <span className="font-bold flex-shrink-0">▶</span>
+            <span>PSA書類・CENOMARだけでは<strong>不十分</strong>です。結核非発病証明書も必ず準備してください。</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="font-bold flex-shrink-0">▶</span>
+            <span>取得できるのは<strong>日本政府指定のPanel Clinic</strong>（フィリピン現地）のみ。一般病院では発行不可。</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="font-bold flex-shrink-0">▶</span>
+            <span>有効期間は<strong>検査日から原則180日以内</strong>。申請タイミングに合わせて取得する必要があります。</span>
+          </li>
+        </ul>
+        <Link
+          to="/ja/kekkaku-shomeisho/"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-red-700 underline underline-offset-2 hover:text-red-900"
+        >
+          結核非発病証明書の詳細・取得方法を確認する →
+        </Link>
       </section>
 
       <FeatureList
