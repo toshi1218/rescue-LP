@@ -12,6 +12,9 @@ export default function ContactEn() {
     'Contact us for Philippine document procurement, international marriage, and spouse visa inquiries. Free consultation. We reply within 1 business day.',
   );
   const [service, setService] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
 
@@ -51,11 +54,38 @@ export default function ContactEn() {
         </span>
       </div>
 
+      {submitted ? (
+        <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
+          <p className="text-3xl mb-3">✅</p>
+          <p className="font-bold text-green-700 mb-2">Your message has been received!</p>
+          <p className="text-sm text-gray-500">We will get back to you within 24 hours.</p>
+        </div>
+      ) : (
       <form
-        action={FORMSPREE_ENDPOINT}
-        method="POST"
         className="space-y-4 max-w-xl"
-        onSubmit={() => trackEvent('form_submit', { location: 'contact_page', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource })}
+        noValidate
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setSubmitting(true);
+          setSubmitError('');
+          trackEvent('form_submit', { location: 'contact_page', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource });
+          try {
+            const res = await fetch(FORMSPREE_ENDPOINT, {
+              method: 'POST',
+              body: new FormData(e.currentTarget),
+              headers: { Accept: 'application/json' },
+            });
+            if (res.ok) {
+              setSubmitted(true);
+            } else {
+              setSubmitError('Submission failed. Please try again later.');
+            }
+          } catch {
+            setSubmitError('Submission failed. Please try again later.');
+          } finally {
+            setSubmitting(false);
+          }
+        }}
       >
         <input type="hidden" name="_subject" value="[Philippine Document Service Inquiry - EN]" />
         <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -116,14 +146,20 @@ export default function ContactEn() {
           />
         </div>
 
+        {submitError && (
+          <p role="alert" className="text-xs text-red-500">{submitError}</p>
+        )}
+
         <button
           type="submit"
-          className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3"
+          disabled={submitting}
+          className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          <Send className="w-5 h-5" />
-          Send Message
+          <Send className="w-5 h-5" aria-hidden="true" />
+          {submitting ? 'Sending…' : 'Send Message'}
         </button>
       </form>
+      )}
 
       <a
         href="mailto:igrs20200601@gmail.com"

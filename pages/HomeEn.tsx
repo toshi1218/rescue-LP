@@ -45,8 +45,8 @@ export default function HomeEn() {
         <Process />
         <DiyRisks />
         <FAQ />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }
