@@ -182,6 +182,12 @@
 
   <!-- ── DFAアポスティーユ ──────────────────────────────────── -->
   <url>
+    <loc>https://ph-document.com/ja/dfa-apostille-genchi-report/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/en/apostille-fee/</loc>
     <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
