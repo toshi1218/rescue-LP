@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
           <input type="hidden" name="landing_page" value="https://ph-document.com/" />
 
           <div>
-            <label htmlFor="footer-name" className="block text-xs text-gray-600 mb-1">{t('footer.nameLabel')}</label>
+            <label htmlFor="footer-name" className="block text-sm text-gray-600 mb-1">{t('footer.nameLabel')}</label>
             <input
               id="footer-name"
               name="name"
@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="footer-email" className="block text-xs text-gray-600 mb-1">{t('footer.emailLabel')}</label>
+            <label htmlFor="footer-email" className="block text-sm text-gray-600 mb-1">{t('footer.emailLabel')}</label>
             <input
               id="footer-email"
               type="email"
@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="footer-service" className="block text-xs text-gray-600 mb-1">
+            <label htmlFor="footer-service" className="block text-sm text-gray-600 mb-1">
               {isJa ? 'ご相談の目的' : 'Purpose'} <span className="text-red-400" aria-hidden="true">*</span>
             </label>
             <select
@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="footer-message" className="block text-xs text-gray-600 mb-1">{t('footer.messageLabel')}</label>
+            <label htmlFor="footer-message" className="block text-sm text-gray-600 mb-1">{t('footer.messageLabel')}</label>
             <textarea
               id="footer-message"
               name="message"

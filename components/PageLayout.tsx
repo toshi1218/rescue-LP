@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import BackToTop from './BackToTop';
 import { useLanguage } from '../lib/i18n';
 import { useMeta } from '../lib/useMeta';
 
@@ -86,7 +87,26 @@ export default function PageLayout({ breadcrumbs, jsonLd, description, children 
           ))}
         </nav>
         {children}
+
+        {/* Mid-page CTA (#19) */}
+        <aside className="mt-12 bg-secondary/[0.04] border border-secondary/10 rounded-2xl p-6 text-center">
+          <p className="font-bold text-secondary text-base mb-1">
+            {isJa ? 'ご相談・お見積もりは無料です' : 'Free consultation & quote'}
+          </p>
+          <p className="text-xs text-gray-500 mb-4">
+            {isJa
+              ? '必要書類が分からない段階でも大丈夫。24時間以内に返信します。'
+              : "Don't know which documents you need? That's fine — we'll figure it out. Reply within 24 hours."}
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-primary-hover transition-all focus:outline-none focus:ring-4 focus:ring-primary/40 text-sm"
+          >
+            {isJa ? '自分のケースを相談する' : 'Get a free quote'}
+          </a>
+        </aside>
       </main>
+      <BackToTop />
       <Footer />
     </div>
   );
