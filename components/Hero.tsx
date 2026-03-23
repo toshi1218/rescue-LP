@@ -50,6 +50,19 @@ const Hero: React.FC = () => {
           <MessageCircle className="w-5 h-5" />
           {primaryLabel}
         </a>
+
+        {/* Trust: Rating badge */}
+        <div className="flex items-center justify-center gap-1.5 mt-3" aria-label={lang === 'ja' ? '平均評価 4.8 / 5.0' : 'Average rating 4.8 out of 5'}>
+          <span className="text-yellow-400 text-base leading-none" aria-hidden="true">★★★★★</span>
+          <span className="text-white/80 text-xs font-medium">
+            {lang === 'ja' ? '4.8 / 5.0（お客様の声）' : '4.8 / 5.0 (client reviews)'}
+          </span>
+        </div>
+
+        {/* Urgency message */}
+        <p className="text-primary text-xs font-semibold mt-1 tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+          {lang === 'ja' ? 'ただいまお問い合わせ受付中 · 24時間以内に返信' : 'Now accepting inquiries · Reply within 24 hours'}
+        </p>
       </div>
     </header>
   );

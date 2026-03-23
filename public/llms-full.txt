@@ -1,0 +1,263 @@
+# フィリピン書類取得代行センター — 完全ガイド
+# Philippine Document Service — Full Reference
+
+> フィリピンの公的書類（CENOMAR・PSA・NBI・LTO）取得代行を専門とするサービス。国際結婚・配偶者ビザ・外免切替・帰化申請に必要なフィリピン書類を日本語サポートで完全代行。海外在住フィリピン人向けには英語対応でDHL国際配送。運営：株式会社IGRS（セブ市営業所）
+
+---
+
+## 運営会社
+
+- **会社名：** 株式会社IGRS（IGRS Inc.）
+- **本店所在地：** 和歌山県和歌山市
+- **営業所：** フィリピン共和国 セブ市（現地スタッフが実務を担当）
+- **連絡先：** igrs20200601@gmail.com
+- **対応言語：** 日本語・英語
+- **営業時間：** 月〜金 9:00〜17:00（フィリピン時間 / PHT）
+- **返信目安：** 24時間以内
+- **キャンセルポリシー：** 着手前は無料。着手後は実費・進行分を差し引き対応
+- **お支払い：** 銀行振込（着手時50%・発送前に残金）
+- **sameAs：** https://ph-document.com/ja/company/
+
+---
+
+## サービス概要
+
+フィリピン書類取得代行センターは、日本在住者および世界各国在住の方がフィリピンの公的書類を取得するための代行サービスです。英語・現地対応不要で、日本語または英語のみでやり取りが完結します。
+
+**対応書類：**
+
+### CENOMAR（Certificate of No Marriage Record / 独身証明書）
+- 発行機関：PSA（Philippine Statistics Authority / フィリピン統計局）
+- 旧称：NSO独身証明書（2014年よりPSAに統合）
+- 用途：国際結婚（日本の市区町村役場への婚姻届）、配偶者ビザ申請
+- 有効期間：提出先によるが概ね6か月以内が推奨
+- 取得目安：約1〜4週間
+- DFAアポスティーユ対応：可
+
+### PSA出生証明書（Birth Certificate）
+- 発行機関：PSA
+- 用途：帰化申請、外免切替、婚姻届、ビザ申請
+- 取得目安：約1〜4週間
+- DFAアポスティーユ対応：可
+
+### PSA婚姻証明書（Marriage Certificate）
+- 発行機関：PSA
+- 用途：配偶者ビザ申請、帰化申請、日本国内の各種手続き
+- 取得目安：約1〜4週間
+- DFAアポスティーユ対応：可
+
+### NBI Clearance（無犯罪証明書）
+- 発行機関：NBI（National Bureau of Investigation / 国家捜査局）
+- 用途：帰化申請、配偶者ビザ申請、海外就労ビザ
+- 特記事項：NBI HIT（同姓同名の犯罪記録）が発生した場合の解消手続きも代行可
+- 有効期間：1年間
+- 取得目安：約2〜5週間
+- DFAアポスティーユ対応：可
+
+### DFAアポスティーユ認証（Apostille Authentication）
+- 発行機関：DFA（Department of Foreign Affairs / フィリピン外務省）
+- 用途：ハーグ条約加盟国（日本・米国・カナダ・オーストラリア・英国等）への書類提出
+- 重要：DFAアポスティーユ原本を海外に直送する公式チャンネルは存在しない。フィリピン国内の代行業者を経由する必要がある
+- 取得目安：通常1〜3週間（Rush対応あり）
+
+### LTO関連書類（ドライバーズレコード等）
+- 発行機関：LTO（Land Transportation Office / 陸運局）
+- 用途：外国免許切替（外免切替）
+- LTO SM Seaside Cebu等でも取得代行対応
+
+---
+
+## 料金プラン
+
+| サービス | 日本向け料金 | 海外向け料金（USD） |
+|---|---|---|
+| PSA書類（出生証明書・CENOMAR・婚姻証明書）+ アポスティーユ | ¥50,000〜 | US$349〜 |
+| NBI Clearance + アポスティーユ | ¥55,000〜 | US$399〜 |
+| LTO関連書類（外免切替） | ¥100,000〜 | US$699〜 |
+| 移民書類パック（CENOMAR+PSA+NBI+アポスティーユ） | ¥89,800〜 | US$899〜 |
+
+※ 全プランにDHL国際配送込み。価格は税抜き・概算。取得難易度により変動する場合があります。
+
+---
+
+## 対応する目的別手続き
+
+### 国際結婚（日本先行）
+日本の市区町村役場への婚姻届に必要な書類：
+- CENOMAR（DFAアポスティーユ付き）
+- PSA出生証明書（DFAアポスティーユ付き）
+- 場合によりPSA婚姻証明書も必要
+
+### 国際結婚（フィリピン先行）
+フィリピンで先に婚姻手続きを行う場合に必要な書類（婚姻要件具備証明書等の事前取得）
+
+### 配偶者ビザ（在留資格・日本入管）
+出入国在留管理庁に提出するフィリピン書類：
+- NBI Clearance（DFAアポスティーユ付き）
+- CENOMAR（DFAアポスティーユ付き）
+- PSA婚姻証明書（DFAアポスティーユ付き）
+
+### 外国免許切替（外免切替）
+日本の運転免許センターに提出するフィリピン書類：
+- LTOドライバーズレコード
+- DFAアポスティーユ認証
+
+### 帰化申請（日本への帰化）
+法務局に提出するフィリピン書類：
+- PSA出生証明書（DFAアポスティーユ付き）
+- NBI Clearance（DFAアポスティーユ付き）
+
+### K-1 Fiancé Visa（米国）
+NVCおよび在日米国大使館面接向け：
+- CENOMAR（DFAアポスティーユ付き）
+- PSA出生証明書（DFAアポスティーユ付き）
+- NBI Clearance（DFAアポスティーユ付き）
+- DHL米国向け配送
+
+### CR-1/IR-1 Spouse Visa（米国）
+- PSA婚姻証明書（DFAアポスティーユ付き）
+- NBI Clearance（DFAアポスティーユ付き）
+- DHL米国向け配送
+
+### カナダ永住権・配偶者スポンサーシップ（IRCC）
+- NBI Clearance（DFAアポスティーユ付き）
+- PSA書類（DFAアポスティーユ付き）
+- DHL カナダ向け配送
+
+### オーストラリア パートナービザ（Home Affairs）
+- CENOMAR（DFAアポスティーユ付き）
+- PSA書類（DFAアポスティーユ付き）
+- NBI Clearance（DFAアポスティーユ付き）
+- DHL オーストラリア向け配送
+
+### 英国 配偶者ビザ（UKVI）
+- CENOMAR（DFAアポスティーユ付き）
+- PSA書類（DFAアポスティーユ付き）
+- NBI Clearance（DFAアポスティーユ付き）
+- DHL 英国向け配送
+
+---
+
+## 依頼の流れ
+
+1. **無料相談（メールまたはフォーム）** — 目的・必要書類・納期を確認
+2. **お見積もり・内容確認** — 国・ビザ種別に応じた必要書類と金額を提示
+3. **着手金のお支払い（50%）** — 銀行振込
+4. **現地での書類取得** — セブ市スタッフがPSA・NBI・DFA・LTOに直接申請
+5. **書類写しの確認・残金お支払い** — お客様に書類の写しをご確認いただいてから発送
+6. **DHL発送・お届け** — 追跡番号付きでお届け
+
+---
+
+## よくある質問（FAQ）
+
+**Q: CENOMARとNSO独身証明書は同じですか？**
+A: はい、同じ書類です。NSOは2014年にPSAに統合されたため、現在は「PSA CENOMAR」が正式名称です。
+
+**Q: 日本から依頼できますか？フィリピンに行く必要はありますか？**
+A: 多くの案件は日本からご依頼いただけます。フィリピン現地への渡航なしで進められるケースも多いです。ただし、委任状（Authorization Letter）へのご署名や、一部の手続きではご本人対応が必要になる場合があります。
+
+**Q: 取得にはどのくらいかかりますか？**
+A: 一般的に約1か月から6週間が目安です。書類の種類、予約状況、現地機関の処理状況により前後します。提出予定日がある場合は、できるだけ早めにご相談ください。
+
+**Q: NBI HITとは何ですか？**
+A: NBI Clearance申請時に同姓同名の犯罪記録がある場合、「HIT」と判定され追加手続きが必要になります。当センターではHIT解消手続きも含めて代行します。
+
+**Q: DFAアポスティーユ原本を直接取り寄せることはできませんか？**
+A: PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していますが、紙ベースのDFAアポスティーユ原本を海外に直送する公式チャンネルは存在しません。米国・カナダ・オーストラリア・英国・日本等のハーグ条約加盟国への移民・ビザ申請には紙ベースのアポスティーユ原本が必要なため、フィリピン国内の代行業者を通じた取得・転送が唯一の手段です。
+
+**Q: Do you ship documents worldwide?**
+A: Yes. We ship via DHL Express to the USA, Canada, Australia, UK, Japan, Korea, and other countries worldwide.
+
+**Q: What documents are needed for a K-1 or CR-1 visa?**
+A: For USCIS and NVC: typically a PSA Birth Certificate, CENOMAR (if single), and NBI Clearance. A DFA Apostille is usually required for the US Embassy interview stage. We confirm exact requirements for your case.
+
+**Q: Do you serve clients in Canada, Australia, and the UK?**
+A: Yes. We serve clients in the USA, Canada, Australia, UK, Japan, Korea, and other countries. We confirm exact immigration authority requirements (IRCC, Home Affairs, UKVI, etc.) for your specific case.
+
+**Q: Can I cancel if my visa situation changes?**
+A: Cancellations before we begin are free. After we start, actual expenses and work already performed are non-refundable. We ship only after you confirm the copies and pay the remaining balance.
+
+---
+
+## ページ一覧（日本語）
+
+- [ホーム](https://ph-document.com/ja/) — フィリピン書類取得代行の総合案内
+- [CENOMAR取得代行](https://ph-document.com/ja/cenomar/) — 独身証明書の代行取得サービス
+- [CENOMARアポスティーユ](https://ph-document.com/ja/cenomar-apostille/) — CENOMARのDFAアポスティーユ代行
+- [CENOMARの有効期限](https://ph-document.com/ja/cenomar-koyukigen/) — 有効期限と最適な取得タイミング
+- [CENOMARと婚姻証明書の違い](https://ph-document.com/ja/cenomar-vs-marriage-certificate/) — 書類の違いと使い分け
+- [PSA出生証明書](https://ph-document.com/ja/psa-shussei-shomeisho/) — PSA出生証明書の代行取得
+- [PSA出生証明書の費用](https://ph-document.com/ja/psa-shussei-cost/) — 費用・料金の詳細
+- [PSA婚姻証明書](https://ph-document.com/ja/psa-kekkon-shomeisho/) — PSA婚姻証明書の代行取得
+- [PSA遅延登録](https://ph-document.com/ja/psa-late-registration/) — 出生・婚姻の遅延登録手続き
+- [NBI Clearance](https://ph-document.com/ja/nbi-clearance/) — NBI無犯罪証明書の代行取得
+- [NBI HIT対応](https://ph-document.com/ja/nbi-hit/) — NBI HIT（同名者あり）の解消代行
+- [NBI有効期限](https://ph-document.com/ja/nbi-koyukigen/) — NBI Clearanceの有効期限と取得タイミング
+- [海外在住者のNBI Clearance](https://ph-document.com/ja/nbi-clearance-overseas/) — 海外在住フィリピン人向けNBI取得
+- [DFAアポスティーユ](https://ph-document.com/ja/apostille/) — DFAアポスティーユ認証の代行
+- [アポスティーユ料金](https://ph-document.com/ja/apostille-ryokin/) — DFAアポスティーユの費用
+- [アポスティーユ処理期間](https://ph-document.com/ja/apostille-shori-kikan/) — DFAアポスティーユの処理期間
+- [国際結婚ガイド](https://ph-document.com/ja/kokusai-kekkon-guide/) — フィリピン人との国際結婚書類代行
+- [配偶者ビザ](https://ph-document.com/ja/haigusha-visa/) — 配偶者ビザのフィリピン書類代行
+- [配偶者ビザ書類（詳細）](https://ph-document.com/ja/haigusha-visa-shorui/) — 配偶者ビザに必要なフィリピン書類一覧
+- [外免切替](https://ph-document.com/ja/gaimen-kirikae-guide/) — LTO書類の代行取得
+- [帰化申請](https://ph-document.com/ja/kika-shinsei-guide/) — 帰化申請用フィリピン書類代行
+- [LTOドライバーズレコード](https://ph-document.com/ja/driver-record/) — LTOドライバーズレコード代行取得
+- [US Visaフィリピン書類](https://ph-document.com/ja/us-visa-documents/) — 米国ビザ向けフィリピン書類代行
+- [カナダ移民ビザ書類](https://ph-document.com/ja/canada/) — カナダ永住権・配偶者スポンサーシップ向けフィリピン書類代行
+- [オーストラリアビザ書類](https://ph-document.com/ja/australia/) — オーストラリアパートナービザ向けフィリピン書類代行
+- [UK移民ビザ書類](https://ph-document.com/ja/uk/) — UK配偶者ビザ向けフィリピン書類代行
+- [国際結婚ロードマップ](https://ph-document.com/ja/kokusai-kekkon-roadmap/) — 国際結婚全体の流れ
+- [日本先行かフィリピン先行か](https://ph-document.com/ja/nihon-senko-ph-senko/) — 婚姻順序の比較
+- [行政書士と書類取得代行の違い](https://ph-document.com/ja/gyouseishoshi-to-shorui-shuttoku/) — 役割と使い分け
+- [フィリピンでの結婚ガイド](https://ph-document.com/ja/philippines-de-kekkon/) — フィリピン先行婚姻の手順
+- [結核証明書（TB cert）](https://ph-document.com/ja/kekkaku-shomeisho/) — 配偶者ビザに必要な結核検査証明書
+- [ビザ種別書類チェックリスト](https://ph-document.com/ja/document-checklist-by-visa/) — ビザ別フィリピン書類一覧
+- [DFAアポスティーユ現地レポート](https://ph-document.com/ja/dfa-apostille-genchi-report/) — DFA Galleria Cebu 現地訪問レポート
+- [PSA CRS Cebu現地レポート](https://ph-document.com/ja/psa-crs-cebu-genchi-report/) — PSA CRS Cebu 現地訪問レポート
+- [LTO SM Seaside現地レポート](https://ph-document.com/ja/lto-sm-seaside-genchi-report/) — LTO SM Seaside Cebu 現地訪問レポート
+- [法人・行政書士向けサービス](https://ph-document.com/ja/business/) — 法人・士業向け代行サービス
+- [ガイド一覧](https://ph-document.com/ja/guides/) — サービスガイド一覧
+- [料金一覧](https://ph-document.com/ja/ryokin/) — 全サービスの料金表
+- [会社概要](https://ph-document.com/ja/company/) — 運営会社情報
+- [お問い合わせ](https://ph-document.com/ja/contact/) — 無料相談・お問い合わせフォーム
+- [プライバシーポリシー](https://ph-document.com/ja/privacy/) — 個人情報保護方針
+- [利用規約](https://ph-document.com/ja/terms/) — サービス利用規約
+
+## Pages (English)
+
+- [Home](https://ph-document.com/en/) — Philippine Document Retrieval Service — Shipped Worldwide
+- [CENOMAR Service](https://ph-document.com/en/cenomar/) — CENOMAR retrieval with DFA Apostille
+- [CENOMAR Apostille](https://ph-document.com/en/cenomar-apostille/) — CENOMAR Apostille service
+- [CENOMAR Validity](https://ph-document.com/en/cenomar-validity/) — CENOMAR validity and timing
+- [CENOMAR vs Marriage Certificate](https://ph-document.com/en/cenomar-vs-marriage-certificate/) — Difference between CENOMAR and PSA Marriage Certificate
+- [PSA Birth Certificate](https://ph-document.com/en/psa-birth-certificate/) — PSA Birth Certificate retrieval
+- [PSA Birth Certificate Cost](https://ph-document.com/en/psa-birth-certificate-cost/) — Cost breakdown
+- [PSA Marriage Certificate](https://ph-document.com/en/psa-marriage-certificate/) — PSA Marriage Certificate retrieval
+- [PSA Late Registration](https://ph-document.com/en/psa-late-registration/) — Late registration of birth or marriage
+- [NBI Clearance](https://ph-document.com/en/nbi-clearance/) — NBI Clearance retrieval with Apostille
+- [NBI HIT Resolution](https://ph-document.com/en/nbi-hit/) — NBI HIT resolution service
+- [NBI Validity](https://ph-document.com/en/nbi-validity/) — NBI Clearance validity and timing
+- [NBI Clearance Overseas](https://ph-document.com/en/nbi-clearance-overseas/) — NBI Clearance for overseas Filipinos
+- [DFA Apostille](https://ph-document.com/en/apostille/) — DFA Apostille authentication service
+- [Apostille Fee](https://ph-document.com/en/apostille-fee/) — DFA Apostille cost and pricing
+- [Apostille Processing Time](https://ph-document.com/en/apostille-processing-time/) — DFA Apostille processing time
+- [International Marriage](https://ph-document.com/en/international-marriage-guide/) — Marriage document service
+- [Spouse Visa Documents](https://ph-document.com/en/spouse-visa-documents/) — Spouse visa document service
+- [License Conversion](https://ph-document.com/en/drivers-license-conversion/) — Philippine license conversion documents
+- [Naturalization](https://ph-document.com/en/naturalization-guide/) — Naturalization document service
+- [LTO Driver Record](https://ph-document.com/en/driver-record/) — LTO Driver's Record retrieval
+- [Document Checklist by Visa](https://ph-document.com/en/document-checklist-by-visa/) — Philippine documents by visa type
+- [US Visa Documents](https://ph-document.com/en/us-visa-documents/) — US visa Philippine document service
+- [K-1 Visa Documents](https://ph-document.com/en/k1-visa-documents/) — K-1 fiancé visa documents
+- [CR-1 Visa Documents](https://ph-document.com/en/cr1-visa-documents/) — CR-1/IR-1 spouse visa documents
+- [Canada Immigration Documents](https://ph-document.com/en/canada/) — Philippine documents for Canada PR & spouse visa (IRCC)
+- [Australia Immigration Documents](https://ph-document.com/en/australia/) — Philippine documents for Australia partner visa (Home Affairs)
+- [UK Immigration Documents](https://ph-document.com/en/uk/) — Philippine documents for UK spouse visa (UKVI)
+- [Guides](https://ph-document.com/en/guides/) — Service guide index
+- [Pricing](https://ph-document.com/en/pricing/) — Full pricing table
+- [Company](https://ph-document.com/en/company/) — About IGRS Inc.
+- [Contact](https://ph-document.com/en/contact/) — Free consultation form
+- [Privacy Policy](https://ph-document.com/en/privacy/) — Privacy policy
+- [Terms of Service](https://ph-document.com/en/terms/) — Terms of service
