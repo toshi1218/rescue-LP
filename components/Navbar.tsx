@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
     {
       category: isJa ? 'CENOMAR（独身証明書）' : 'CENOMAR',
       items: [
-        { label: isJa ? 'CENOMARガイド 完全版' : 'CENOMAR Complete Guide', path: isJa ? '/ja/cenomar/' : '/en/cenomar/' },
+        { label: isJa ? 'CENOMARガイド 完全版【2026年版】' : 'CENOMAR Complete Guide', path: isJa ? '/ja/cenomar/' : '/en/cenomar/' },
         { label: isJa ? 'CENOMARの有効期限は？' : 'CENOMAR Validity', path: isJa ? '/ja/cenomar-koyukigen/' : '/en/cenomar-validity/' },
         { label: isJa ? 'DFAアポスティーユは必要？' : 'Need Apostille?', path: isJa ? '/ja/cenomar-apostille/' : '/en/cenomar-apostille/' },
         ...(!isJa ? [{ label: 'CENOMAR vs. Marriage Certificate', path: '/en/cenomar-vs-marriage-certificate/' }] : []),
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
     {
       category: isJa ? 'NBI Clearance（無犯罪証明書）' : 'NBI Clearance',
       items: [
-        { label: isJa ? 'NBI Clearanceガイド 完全版' : 'NBI Clearance Complete Guide', path: isJa ? '/ja/nbi-clearance/' : '/en/nbi-clearance/' },
+        { label: isJa ? 'NBI Clearanceガイド 完全版【2026年版】' : 'NBI Clearance Complete Guide', path: isJa ? '/ja/nbi-clearance/' : '/en/nbi-clearance/' },
         { label: isJa ? 'NBI HITとは？' : 'What is NBI HIT?', path: isJa ? '/ja/nbi-hit/' : '/en/nbi-hit/' },
         { label: isJa ? 'NBI Clearanceの有効期限' : 'NBI Validity & Apostille', path: isJa ? '/ja/nbi-koyukigen/' : '/en/nbi-validity/' },
         ...(!isJa ? [{ label: 'NBI Clearance from Overseas', path: '/en/nbi-clearance-overseas/' }] : []),
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
     {
       category: isJa ? 'DFAアポスティーユ認証' : 'DFA Apostille',
       items: [
-        { label: isJa ? 'アポスティーユガイド 完全版' : 'Apostille Complete Guide', path: isJa ? '/ja/apostille/' : '/en/apostille/' },
+        { label: isJa ? 'アポスティーユガイド 完全版【2026年版】' : 'Apostille Complete Guide', path: isJa ? '/ja/apostille/' : '/en/apostille/' },
         { label: isJa ? '処理期間【2026年】' : 'Processing Time 2026', path: isJa ? '/ja/apostille-shori-kikan/' : '/en/apostille-processing-time/' },
         { label: isJa ? '費用・料金【2026年】' : 'Fees 2026', path: isJa ? '/ja/apostille-ryokin/' : '/en/apostille-fee/' },
       ],
@@ -99,9 +99,9 @@ const Navbar: React.FC = () => {
     ...(isJa ? [{
       category: '現地情報',
       items: [
-        { label: 'DFAアポスティーユ現地レポート', path: '/ja/dfa-apostille-genchi-report/' },
-        { label: 'PSA CRS現地レポート', path: '/ja/psa-crs-cebu-genchi-report/' },
-        { label: 'LTO SMシーサイド現地レポート', path: '/ja/lto-sm-seaside-genchi-report/' },
+        { label: 'アポスティーユ認証の取得手順【DFAセブ窓口】', path: '/ja/dfa-apostille-genchi-report/' },
+        { label: 'PSA証明書の取得手順【セブ窓口】', path: '/ja/psa-crs-cebu-genchi-report/' },
+        { label: 'ドライバーズレコードの取得手順【LTO SMシーサイド】', path: '/ja/lto-sm-seaside-genchi-report/' },
       ],
     }] : []),
   ];
