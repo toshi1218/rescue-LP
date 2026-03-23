@@ -485,7 +485,7 @@ const Navbar: React.FC = () => {
                       ))}
                     </div>
                   ))}
-                  <Link to={guidesPath} className="block px-3 py-2 text-sm text-primary font-medium hover:underline">
+                  <Link to={guidesPath} className="block px-3 py-2 text-sm text-primary-dark font-medium hover:underline">
                     {isJa ? 'すべてのガイドを見る →' : 'See all guides →'}
                   </Link>
                 </div>
@@ -550,7 +550,7 @@ const Navbar: React.FC = () => {
           <div className="border-t border-gray-100 mt-1 pt-1">
             <Link
               to={guidesPath}
-              className="flex items-center justify-end gap-1 px-2 py-1 text-xs text-primary font-medium hover:underline"
+              className="flex items-center justify-end gap-1 px-2 py-1 text-xs text-primary-dark font-medium hover:underline"
             >
               {isJa ? 'すべてのガイドを見る' : 'See all guides'}
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

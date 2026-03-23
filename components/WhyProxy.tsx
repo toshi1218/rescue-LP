@@ -10,14 +10,14 @@ import { AlertTriangle, Globe, ShieldCheck } from 'lucide-react';
  * Philippines is the only way to get Apostille-authenticated originals
  * delivered to your door worldwide.
  */
-const WhyProxy: React.FC = () => {
+const WhyProxy: React.FC = React.memo(() => {
   return (
     <section className="py-14 bg-gray-50" aria-labelledby="why-proxy-heading">
       <div className="max-w-2xl lg:max-w-4xl mx-auto px-4">
 
         {/* Heading */}
         <div className="text-center mb-10">
-          <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">Why a Proxy Service?</p>
+          <p className="text-xs font-bold text-primary-dark uppercase tracking-widest mb-2">Why a Proxy Service?</p>
           <h2 id="why-proxy-heading" className="text-2xl md:text-3xl font-bold text-secondary leading-snug">
             Official Channels Cannot Ship<br className="hidden md:block" /> Paper Apostille Overseas
           </h2>
@@ -93,6 +93,6 @@ const WhyProxy: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
 export default WhyProxy;
