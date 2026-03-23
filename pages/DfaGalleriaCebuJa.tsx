@@ -49,7 +49,7 @@ export default function DfaGalleriaCebuJa() {
           description:
             'フィリピンのDFAアポスティーユはセブのロビンソンズガレリア内で取得できます。現地写真で場所・専用窓口・最新ルールを解説。',
           url: 'https://ph-document.com/ja/dfa-apostille-genchi-report',
-          datePublished: '2025-02-01',
+          datePublished: '2026-02-01',
           dateModified: '2026-03-01',
           publisher: {
             '@type': 'Organization',
