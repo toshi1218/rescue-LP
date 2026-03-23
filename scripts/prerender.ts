@@ -936,6 +936,18 @@ const routes: RouteConfig[] = [
     ogType: 'article',
   },
   {
+    path: '/ja/psa-crs-cebu-genchi-report',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'psa-crs-cebu-genchi-report', 'index.html'),
+    title: `PSA CRSセブ現地レポート【出生証明書・結婚証明書・CENOMAR取得場所】`,
+    description: 'フィリピンのPSA書類（出生証明書・結婚証明書・CENOMAR・死亡証明書）はセブ市コロン通りのCRSアウトレットで取得します。セブ在住スタッフによる現地写真レポート。',
+    canonical: `${BASE}/ja/psa-crs-cebu-genchi-report/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/ja/psa-crs-cebu-genchi-report/`,
+    jaCanonical: `${BASE}/ja/psa-crs-cebu-genchi-report/`,
+    ogType: 'article',
+    datePublished: '2026-03-01',
+  },
+  {
     path: '/ja/apostille-ryokin',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
     title: `DFAアポスティーユの料金【${SEO_YEAR_MONTH_JA}】Regular・Express別の費用と総額の目安`,
