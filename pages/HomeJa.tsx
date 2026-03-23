@@ -67,8 +67,8 @@ export default function HomeJa() {
         <WhyUs />
         <CaseStudies />
         <FAQ />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

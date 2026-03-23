@@ -55,7 +55,7 @@ const reviewsData = {
   ],
 };
 
-const SocialProof: React.FC = () => {
+const SocialProof: React.FC = React.memo(() => {
   const { lang, t } = useLanguage();
   const statValues = statsValues[lang];
   const reviews = reviewsData[lang];
@@ -71,7 +71,7 @@ const SocialProof: React.FC = () => {
 
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 relative z-10">
         <div className="text-center mb-10">
-          <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-2 block">Proof</span>
+          <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Proof</span>
           <h2 id="social-proof-title" className="text-xl font-bold text-secondary">{t('social.title')}</h2>
           <p className="text-xs text-gray-500 mt-2">{t('social.note')}</p>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
@@ -93,23 +93,24 @@ const SocialProof: React.FC = () => {
           {reviews.map((item) => (
             <article key={item.title} className="bg-white border border-gray-100 rounded-2xl p-5 shadow-card border-l-4 border-l-primary hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between mb-3">
-                <p className="text-primary text-base" aria-label={`Rating: ${item.rating} out of 5`} role="img">
+                <p className="text-yellow-500 text-base" aria-label={`Rating: ${item.rating} out of 5 stars`} role="img">
                   {'★'.repeat(item.rating)}{'☆'.repeat(5 - item.rating)}
                 </p>
-                <span className="text-[10px] text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">{item.date}</span>
+                <time className="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">{item.date}</time>
               </div>
               <h3 className="text-sm font-bold text-secondary mb-1">{item.title}</h3>
-              <p className="text-[11px] text-gray-400 mb-3 flex items-center gap-1">
+              <p className="text-xs text-gray-400 mb-3 flex items-center gap-1">
                 <span className="inline-block w-4 h-4 rounded-full bg-secondary/10 text-secondary text-[8px] flex items-center justify-center font-bold">✓</span>
                 {item.author}
               </p>
-              <p className="text-xs text-gray-600 leading-relaxed italic">"{item.body}"</p>
+              <blockquote className="text-xs text-gray-600 leading-relaxed italic">"{item.body}"</blockquote>
             </article>
           ))}
         </div>
       </div>
     </section>
   );
-};
+});
 
+SocialProof.displayName = 'SocialProof';
 export default SocialProof;

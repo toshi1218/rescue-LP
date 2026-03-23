@@ -11,12 +11,40 @@ const Footer: React.FC = () => {
   const trafficSource = getTrafficSource();
   const { lang, t } = useLanguage();
   const [service, setService] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     const handler = (e: Event) => setService((e as CustomEvent<string>).detail);
     window.addEventListener('setContactService', handler);
     return () => window.removeEventListener('setContactService', handler);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setSubmitError('');
+    trackEvent('form_submit', { location: 'contact', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource });
+    try {
+      const form = e.currentTarget;
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setSubmitError(lang === 'ja' ? '送信に失敗しました。しばらく経ってから再度お試しください。' : 'Submission failed. Please try again later.');
+      }
+    } catch {
+      setSubmitError(lang === 'ja' ? '送信に失敗しました。しばらく経ってから再度お試しください。' : 'Submission failed. Please try again later.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
   const isJa = lang === 'ja';
   const companyPath = isJa ? '/ja/company/'  : '/en/company/';
   const privacyPath = isJa ? '/ja/privacy/'  : '/en/privacy/';
@@ -32,12 +60,22 @@ const Footer: React.FC = () => {
           {t('footer.subtitle')}
         </p>
 
+        {submitted ? (
+          <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
+            <p className="text-2xl mb-2">✅</p>
+            <p className="font-bold text-green-700 text-sm mb-1">
+              {lang === 'ja' ? 'お問い合わせを受け付けました' : 'Your message has been received!'}
+            </p>
+            <p className="text-xs text-gray-500">
+              {lang === 'ja' ? '24時間以内にご連絡します。' : 'We will get back to you within 24 hours.'}
+            </p>
+          </div>
+        ) : (
         <form
-          action={FORMSPREE_ENDPOINT}
-          method="POST"
           className="space-y-3 text-left"
-          onSubmit={() => trackEvent('form_submit', { location: 'contact', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource })}
+          onSubmit={handleSubmit}
           aria-label={t('footer.formAriaLabel')}
+          noValidate
         >
           <input type="hidden" name="_subject" value={isJa ? '【LPお問い合わせ】フィリピン書類取得代行' : '[Philippine Document Service Inquiry - EN]'} />
           <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -46,9 +84,9 @@ const Footer: React.FC = () => {
           <input type="hidden" name="landing_page" value="https://ph-document.com/" />
 
           <div>
-            <label htmlFor="name" className="block text-xs text-gray-600 mb-1">{t('footer.nameLabel')}</label>
+            <label htmlFor="footer-name" className="block text-sm text-gray-600 mb-1">{t('footer.nameLabel')}</label>
             <input
-              id="name"
+              id="footer-name"
               name="name"
               required
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
@@ -58,9 +96,9 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-xs text-gray-600 mb-1">{t('footer.emailLabel')}</label>
+            <label htmlFor="footer-email" className="block text-sm text-gray-600 mb-1">{t('footer.emailLabel')}</label>
             <input
-              id="email"
+              id="footer-email"
               type="email"
               name="email"
               required
@@ -71,11 +109,11 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="service" className="block text-xs text-gray-600 mb-1">
-              {isJa ? 'ご相談の目的' : 'Purpose'} <span className="text-red-400">*</span>
+            <label htmlFor="footer-service" className="block text-sm text-gray-600 mb-1">
+              {isJa ? 'ご相談の目的' : 'Purpose'} <span className="text-red-400" aria-hidden="true">*</span>
             </label>
             <select
-              id="service"
+              id="footer-service"
               name="service"
               required
               value={service}
@@ -105,9 +143,9 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-xs text-gray-600 mb-1">{t('footer.messageLabel')}</label>
+            <label htmlFor="footer-message" className="block text-sm text-gray-600 mb-1">{t('footer.messageLabel')}</label>
             <textarea
-              id="message"
+              id="footer-message"
               name="message"
               required
               rows={5}
@@ -117,15 +155,21 @@ const Footer: React.FC = () => {
             />
           </div>
 
+          {submitError && (
+            <p role="alert" className="text-xs text-red-500">{submitError}</p>
+          )}
+
           <button
             type="submit"
-            className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 focus:outline-none focus:ring-4 focus:ring-primary/30"
+            disabled={submitting}
+            className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 focus:outline-none focus:ring-4 focus:ring-primary/30 disabled:opacity-60 disabled:cursor-not-allowed"
             aria-label={t('footer.submitAriaLabel')}
           >
-            <Send className="w-5 h-5" />
-            {t('footer.submit')}
+            <Send className="w-5 h-5" aria-hidden="true" />
+            {submitting ? (lang === 'ja' ? '送信中…' : 'Sending…') : t('footer.submit')}
           </button>
         </form>
+        )}
 
         <a
           href="mailto:igrs20200601@gmail.com"
@@ -143,7 +187,9 @@ const Footer: React.FC = () => {
           <Link to={pricingPath} className="hover:text-secondary transition-colors">{t('footer.pricingLink')}</Link>
           <Link to={contactPath} className="hover:text-secondary transition-colors">{t('footer.contactLink')}</Link>
         </div>
-        <p className="text-[10px] text-gray-300 mt-4">{t('footer.copyright')}</p>
+        <p className="text-[10px] text-gray-300 mt-4">
+          {isJa ? `© ${currentYear} 株式会社IGRS` : `© ${currentYear} IGRS Inc.`}
+        </p>
       </div>
     </footer>
   );

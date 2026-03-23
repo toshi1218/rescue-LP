@@ -3,13 +3,35 @@ import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import { useMeta } from '../lib/useMeta';
 
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'IGRS Inc.',
+  alternateName: '株式会社IGRS',
+  url: 'https://ph-document.com/',
+  email: 'igrs20200601@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'JP',
+    addressRegion: '和歌山県',
+    addressLocality: '和歌山市',
+  },
+  sameAs: [
+    'https://ph-document.com/ja/company/',
+    'https://ph-document.com/en/company/',
+  ],
+};
+
 export default function CompanyJa() {
   useMeta(
     '会社概要｜IGRS Inc.（フィリピン書類取得代行センター）',
     'フィリピン書類取得代行センターを運営するIGRS Inc.の会社概要。代表・設立年・所在地（和歌山県和歌山市 / フィリピン共和国セブ市）・事業内容を掲載。PSA・CENOMAR・NBI・DFAアポスティーユ取得を日本語でサポート。',
   );
   return (
-    <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '会社概要' }]}>
+    <PageLayout
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '会社概要' }]}
+      jsonLd={orgJsonLd}
+    >
       <HeroBanner
         title="会社概要"
         subtitle="運営会社、対応体制、返信目安、進捗報告の考え方など、ご依頼前に確認したい情報をまとめています。"

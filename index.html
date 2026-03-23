@@ -40,6 +40,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ph_document" />
+    <meta name="twitter:creator" content="@ph_document" />
     <meta name="twitter:title" content="Philippine Document Service | CENOMAR, PSA, NBI &amp; Apostille — Shipped Worldwide" />
     <meta name="twitter:description" content="We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille from the Philippines and ship worldwide via DHL. Free consultation." />
     <meta name="twitter:image" content="https://ph-document.com/og-image.png" />
@@ -261,6 +263,59 @@
     }
     </script>
 
+    <!-- JSON-LD: Speakable (#33) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "url": "https://ph-document.com/en/",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".speakable"]
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: DefinedTermSet (key Philippine document terms) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTermSet",
+      "name": "Philippine Document Terminology",
+      "description": "Key terms related to Philippine public documents for immigration and visa applications.",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "CENOMAR",
+          "alternateName": "Certificate of No Marriage Record",
+          "description": "A Philippine government document issued by the PSA (Philippine Statistics Authority) certifying that the holder has no record of marriage. Required for international marriage, K-1 visa, CR-1 visa, and other immigration applications.",
+          "inDefinedTermSet": "https://ph-document.com/"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "PSA Birth Certificate",
+          "alternateName": "NSO Birth Certificate",
+          "description": "An official birth certificate issued by the Philippine Statistics Authority (PSA), formerly NSO. Required for naturalization, spouse visa, and immigration applications.",
+          "inDefinedTermSet": "https://ph-document.com/"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "NBI Clearance",
+          "alternateName": "NBI Certificate",
+          "description": "A Philippine police clearance certificate issued by the National Bureau of Investigation (NBI). Required for naturalization, spouse visa, and overseas employment applications.",
+          "inDefinedTermSet": "https://ph-document.com/"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "DFA Apostille",
+          "alternateName": "Philippine Apostille",
+          "description": "An authentication of Philippine public documents by the Department of Foreign Affairs (DFA) under the Hague Apostille Convention. Required for documents submitted to immigration authorities in the USA, Canada, Australia, UK, Japan, and other Hague Convention countries.",
+          "inDefinedTermSet": "https://ph-document.com/"
+        }
+      ]
+    }
+    </script>
+
     <!-- Critical CSS -->
     <style>
       *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
@@ -293,9 +348,16 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <link rel="preload" as="image" href="/hero-photo.webp" type="image/webp" />
+
+    <!-- Prefetch key pages (#34) -->
+    <link rel="prefetch" href="/ja/" />
+    <link rel="prefetch" href="/en/" />
+    <link rel="prefetch" href="/ja/cenomar/" />
+    <link rel="prefetch" href="/ja/contact/" />
+    <link rel="prefetch" href="/en/contact/" />
 </head>
 <body class="antialiased text-gray-800">
     <div id="root"></div>

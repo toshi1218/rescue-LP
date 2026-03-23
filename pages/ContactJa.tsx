@@ -12,6 +12,9 @@ export default function ContactJa() {
     'フィリピン書類取得代行・国際結婚・配偶者ビザ・帰化申請・外免切替に関するご相談はこちら。24時間以内に返信します。まずはお気軽にご相談ください。',
   );
   const [service, setService] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
 
@@ -51,11 +54,38 @@ export default function ContactJa() {
         </span>
       </div>
 
+      {submitted ? (
+        <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
+          <p className="text-3xl mb-3">✅</p>
+          <p className="font-bold text-green-700 mb-2">お問い合わせを受け付けました</p>
+          <p className="text-sm text-gray-500">24時間以内にご連絡します。</p>
+        </div>
+      ) : (
       <form
-        action={FORMSPREE_ENDPOINT}
-        method="POST"
         className="space-y-4 max-w-xl"
-        onSubmit={() => trackEvent('form_submit', { location: 'contact_page', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource })}
+        noValidate
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setSubmitting(true);
+          setSubmitError('');
+          trackEvent('form_submit', { location: 'contact_page', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource });
+          try {
+            const res = await fetch(FORMSPREE_ENDPOINT, {
+              method: 'POST',
+              body: new FormData(e.currentTarget),
+              headers: { Accept: 'application/json' },
+            });
+            if (res.ok) {
+              setSubmitted(true);
+            } else {
+              setSubmitError('送信に失敗しました。しばらく経ってから再度お試しください。');
+            }
+          } catch {
+            setSubmitError('送信に失敗しました。しばらく経ってから再度お試しください。');
+          } finally {
+            setSubmitting(false);
+          }
+        }}
       >
         <input type="hidden" name="_subject" value="【LPお問い合わせ】フィリピン書類取得代行" />
         <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -125,14 +155,20 @@ export default function ContactJa() {
           />
         </div>
 
+        {submitError && (
+          <p role="alert" className="text-xs text-red-500">{submitError}</p>
+        )}
+
         <button
           type="submit"
-          className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3"
+          disabled={submitting}
+          className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          <Send className="w-5 h-5" />
-          送信する
+          <Send className="w-5 h-5" aria-hidden="true" />
+          {submitting ? '送信中…' : '送信する'}
         </button>
       </form>
+      )}
 
       <a
         href="mailto:igrs20200601@gmail.com"

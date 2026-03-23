@@ -36,31 +36,44 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50" aria-labelledby="faq-heading">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
         <div className="text-center mb-10">
-          <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">FAQ</span>
-          <h2 className="text-xl font-bold text-secondary">{t('faq.title')}</h2>
+          <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-1 block">FAQ</span>
+          <h2 id="faq-heading" className="text-xl font-bold text-secondary">{t('faq.title')}</h2>
         </div>
 
         <div className="space-y-3">
-          {faqs.map((faq, index) => (
+          {faqs.map((faq, index) => {
+            const panelId = `faq-panel-${lang}-${index}`;
+            const summaryId = `faq-summary-${lang}-${index}`;
+            return (
             <details key={index} className="group bg-white rounded-lg shadow-sm overflow-hidden">
-              <summary className="flex justify-between items-center cursor-pointer list-none p-4 select-none">
+              <summary
+                id={summaryId}
+                aria-controls={panelId}
+                className="flex justify-between items-center cursor-pointer list-none p-4 select-none"
+              >
                 <span className="font-bold text-sm text-gray-800 group-open:text-secondary transition-colors">{faq.q}</span>
-                <span className="transition-transform duration-300 group-open:rotate-180">
+                <span className="transition-transform duration-300 group-open:rotate-180" aria-hidden="true">
                   <ChevronDown className="w-5 h-5 text-gray-400 group-open:text-primary" />
                 </span>
               </summary>
-              <div className="text-gray-600 text-sm px-4 pb-4 leading-relaxed border-t border-gray-50 pt-3">
+              <div
+                id={panelId}
+                role="region"
+                aria-labelledby={summaryId}
+                className="text-gray-600 text-sm px-4 pb-4 leading-relaxed border-t border-gray-50 pt-3"
+              >
                 {faq.a}
               </div>
             </details>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA Button */}

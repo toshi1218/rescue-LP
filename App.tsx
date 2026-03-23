@@ -1,89 +1,103 @@
-import React, { useEffect } from 'react';
+import React, { lazy, Suspense, useEffect, useRef } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import HomeEn from './pages/HomeEn';
-import HomeJa from './pages/HomeJa';
-import CenomarGuideEn from './pages/CenomarGuideEn';
-import CenomarGuideJa from './pages/CenomarGuideJa';
-import CenomarApostilleEn from './pages/CenomarApostilleEn';
-import CenomarApostilleJa from './pages/CenomarApostilleJa';
-import CenomarValidityEn from './pages/CenomarValidityEn';
-import CenomarValidityJa from './pages/CenomarValidityJa';
-import PsaBirthCertEn from './pages/PsaBirthCertEn';
-import PsaBirthCertJa from './pages/PsaBirthCertJa';
-import NbiGuideEn from './pages/NbiGuideEn';
-import NbiGuideJa from './pages/NbiGuideJa';
-import NbiHitEn from './pages/NbiHitEn';
-import NbiHitJa from './pages/NbiHitJa';
-import ApostilleGuideEn from './pages/ApostilleGuideEn';
-import ApostilleGuideJa from './pages/ApostilleGuideJa';
-import DfaProcessingTimeEn from './pages/DfaProcessingTimeEn';
-import DfaProcessingTimeJa from './pages/DfaProcessingTimeJa';
-import MarriageGuideEn from './pages/MarriageGuideEn';
-import MarriageGuideJa from './pages/MarriageGuideJa';
-import SpouseVisaEn from './pages/SpouseVisaEn';
-import SpouseVisaJa from './pages/SpouseVisaJa';
-import PsaMarriageCertEn from './pages/PsaMarriageCertEn';
-import PsaMarriageCertJa from './pages/PsaMarriageCertJa';
-import LicenseConversionEn from './pages/LicenseConversionEn';
-import LicenseConversionJa from './pages/LicenseConversionJa';
-import NaturalizationEn from './pages/NaturalizationEn';
-import NaturalizationJa from './pages/NaturalizationJa';
-import GuidesEn from './pages/GuidesEn';
-import GuidesJa from './pages/GuidesJa';
-import PsaCostEn from './pages/PsaCostEn';
-import PsaCostJa from './pages/PsaCostJa';
-import ApostilleFeeEn from './pages/ApostilleFeeEn';
-import ApostilleFeeJa from './pages/ApostilleFeeJa';
-import NbiValidityEn from './pages/NbiValidityEn';
-import NbiValidityJa from './pages/NbiValidityJa';
-import DriverRecordEn from './pages/DriverRecordEn';
-import DriverRecordJa from './pages/DriverRecordJa';
-import PricingEn from './pages/PricingEn';
-import PricingJa from './pages/PricingJa';
-import UsVisaDocsEn from './pages/UsVisaDocsEn';
-import UsVisaDocsJa from './pages/UsVisaDocsJa';
-import K1VisaDocsEn from './pages/K1VisaDocsEn';
-import Cr1VisaDocsEn from './pages/Cr1VisaDocsEn';
-import CanadaDocsEn from './pages/CanadaDocsEn';
-import CanadaDocsJa from './pages/CanadaDocsJa';
-import AustraliaDocsEn from './pages/AustraliaDocsEn';
-import AustraliaDocsJa from './pages/AustraliaDocsJa';
-import UkDocsEn from './pages/UkDocsEn';
-import UkDocsJa from './pages/UkDocsJa';
-import CompanyEn from './pages/CompanyEn';
-import CompanyJa from './pages/CompanyJa';
-import ContactEn from './pages/ContactEn';
-import ContactJa from './pages/ContactJa';
-import PrivacyEn from './pages/PrivacyEn';
-import PrivacyJa from './pages/PrivacyJa';
-import TermsEn from './pages/TermsEn';
-import TermsJa from './pages/TermsJa';
-import RoadmapJa from './pages/RoadmapJa';
-import MarriageOrderJa from './pages/MarriageOrderJa';
-import GyoseishoshiVsDocServiceJa from './pages/GyoseishoshiVsDocServiceJa';
-import PhilippinesWeddingGuideJa from './pages/PhilippinesWeddingGuideJa';
-import TbCertJa from './pages/TbCertJa';
-import SpouseVisaShoryuJa from './pages/SpouseVisaShoryuJa';
-import CenomarVsMarriageCertEn from './pages/CenomarVsMarriageCertEn';
-import DocumentChecklistByVisaEn from './pages/DocumentChecklistByVisaEn';
-import NbiClearanceOverseasEn from './pages/NbiClearanceOverseasEn';
-import PsaLateRegistrationEn from './pages/PsaLateRegistrationEn';
-import CenomarVsMarriageCertJa from './pages/CenomarVsMarriageCertJa';
-import DocumentChecklistByVisaJa from './pages/DocumentChecklistByVisaJa';
-import NbiClearanceOverseasJa from './pages/NbiClearanceOverseasJa';
-import PsaLateRegistrationJa from './pages/PsaLateRegistrationJa';
-import BusinessHomeJa from './pages/BusinessHomeJa';
-import BusinessTourokushienJa from './pages/BusinessTourokushienJa';
-import BusinessGyoseishoshiJa from './pages/BusinessGyoseishoshiJa';
-import BusinessKigyouJa from './pages/BusinessKigyouJa';
-import DfaGalleriaCebuJa from './pages/DfaGalleriaCebuJa';
-import PsaCrsCebuJa from './pages/PsaCrsCebuJa';
-import LtoSmSeasideJa from './pages/LtoSmSeasideJa';
-import NotFound from './pages/NotFound';
+import { getLangSwitchUrl } from './lib/urlMap';
+
+const HomeEn = lazy(() => import('./pages/HomeEn'));
+const HomeJa = lazy(() => import('./pages/HomeJa'));
+const CenomarGuideEn = lazy(() => import('./pages/CenomarGuideEn'));
+const CenomarGuideJa = lazy(() => import('./pages/CenomarGuideJa'));
+const CenomarApostilleEn = lazy(() => import('./pages/CenomarApostilleEn'));
+const CenomarApostilleJa = lazy(() => import('./pages/CenomarApostilleJa'));
+const CenomarValidityEn = lazy(() => import('./pages/CenomarValidityEn'));
+const CenomarValidityJa = lazy(() => import('./pages/CenomarValidityJa'));
+const PsaBirthCertEn = lazy(() => import('./pages/PsaBirthCertEn'));
+const PsaBirthCertJa = lazy(() => import('./pages/PsaBirthCertJa'));
+const NbiGuideEn = lazy(() => import('./pages/NbiGuideEn'));
+const NbiGuideJa = lazy(() => import('./pages/NbiGuideJa'));
+const NbiHitEn = lazy(() => import('./pages/NbiHitEn'));
+const NbiHitJa = lazy(() => import('./pages/NbiHitJa'));
+const ApostilleGuideEn = lazy(() => import('./pages/ApostilleGuideEn'));
+const ApostilleGuideJa = lazy(() => import('./pages/ApostilleGuideJa'));
+const DfaProcessingTimeEn = lazy(() => import('./pages/DfaProcessingTimeEn'));
+const DfaProcessingTimeJa = lazy(() => import('./pages/DfaProcessingTimeJa'));
+const MarriageGuideEn = lazy(() => import('./pages/MarriageGuideEn'));
+const MarriageGuideJa = lazy(() => import('./pages/MarriageGuideJa'));
+const SpouseVisaEn = lazy(() => import('./pages/SpouseVisaEn'));
+const SpouseVisaJa = lazy(() => import('./pages/SpouseVisaJa'));
+const PsaMarriageCertEn = lazy(() => import('./pages/PsaMarriageCertEn'));
+const PsaMarriageCertJa = lazy(() => import('./pages/PsaMarriageCertJa'));
+const LicenseConversionEn = lazy(() => import('./pages/LicenseConversionEn'));
+const LicenseConversionJa = lazy(() => import('./pages/LicenseConversionJa'));
+const NaturalizationEn = lazy(() => import('./pages/NaturalizationEn'));
+const NaturalizationJa = lazy(() => import('./pages/NaturalizationJa'));
+const GuidesEn = lazy(() => import('./pages/GuidesEn'));
+const GuidesJa = lazy(() => import('./pages/GuidesJa'));
+const PsaCostEn = lazy(() => import('./pages/PsaCostEn'));
+const PsaCostJa = lazy(() => import('./pages/PsaCostJa'));
+const ApostilleFeeEn = lazy(() => import('./pages/ApostilleFeeEn'));
+const ApostilleFeeJa = lazy(() => import('./pages/ApostilleFeeJa'));
+const NbiValidityEn = lazy(() => import('./pages/NbiValidityEn'));
+const NbiValidityJa = lazy(() => import('./pages/NbiValidityJa'));
+const DriverRecordEn = lazy(() => import('./pages/DriverRecordEn'));
+const DriverRecordJa = lazy(() => import('./pages/DriverRecordJa'));
+const PricingEn = lazy(() => import('./pages/PricingEn'));
+const PricingJa = lazy(() => import('./pages/PricingJa'));
+const UsVisaDocsEn = lazy(() => import('./pages/UsVisaDocsEn'));
+const UsVisaDocsJa = lazy(() => import('./pages/UsVisaDocsJa'));
+const K1VisaDocsEn = lazy(() => import('./pages/K1VisaDocsEn'));
+const Cr1VisaDocsEn = lazy(() => import('./pages/Cr1VisaDocsEn'));
+const CanadaDocsEn = lazy(() => import('./pages/CanadaDocsEn'));
+const CanadaDocsJa = lazy(() => import('./pages/CanadaDocsJa'));
+const AustraliaDocsEn = lazy(() => import('./pages/AustraliaDocsEn'));
+const AustraliaDocsJa = lazy(() => import('./pages/AustraliaDocsJa'));
+const UkDocsEn = lazy(() => import('./pages/UkDocsEn'));
+const UkDocsJa = lazy(() => import('./pages/UkDocsJa'));
+const CompanyEn = lazy(() => import('./pages/CompanyEn'));
+const CompanyJa = lazy(() => import('./pages/CompanyJa'));
+const ContactEn = lazy(() => import('./pages/ContactEn'));
+const ContactJa = lazy(() => import('./pages/ContactJa'));
+const PrivacyEn = lazy(() => import('./pages/PrivacyEn'));
+const PrivacyJa = lazy(() => import('./pages/PrivacyJa'));
+const TermsEn = lazy(() => import('./pages/TermsEn'));
+const TermsJa = lazy(() => import('./pages/TermsJa'));
+const RoadmapJa = lazy(() => import('./pages/RoadmapJa'));
+const MarriageOrderJa = lazy(() => import('./pages/MarriageOrderJa'));
+const GyoseishoshiVsDocServiceJa = lazy(() => import('./pages/GyoseishoshiVsDocServiceJa'));
+const PhilippinesWeddingGuideJa = lazy(() => import('./pages/PhilippinesWeddingGuideJa'));
+const TbCertJa = lazy(() => import('./pages/TbCertJa'));
+const SpouseVisaShoryuJa = lazy(() => import('./pages/SpouseVisaShoryuJa'));
+const CenomarVsMarriageCertEn = lazy(() => import('./pages/CenomarVsMarriageCertEn'));
+const DocumentChecklistByVisaEn = lazy(() => import('./pages/DocumentChecklistByVisaEn'));
+const NbiClearanceOverseasEn = lazy(() => import('./pages/NbiClearanceOverseasEn'));
+const PsaLateRegistrationEn = lazy(() => import('./pages/PsaLateRegistrationEn'));
+const CenomarVsMarriageCertJa = lazy(() => import('./pages/CenomarVsMarriageCertJa'));
+const DocumentChecklistByVisaJa = lazy(() => import('./pages/DocumentChecklistByVisaJa'));
+const NbiClearanceOverseasJa = lazy(() => import('./pages/NbiClearanceOverseasJa'));
+const PsaLateRegistrationJa = lazy(() => import('./pages/PsaLateRegistrationJa'));
+const BusinessHomeJa = lazy(() => import('./pages/BusinessHomeJa'));
+const BusinessTourokushienJa = lazy(() => import('./pages/BusinessTourokushienJa'));
+const BusinessGyoseishoshiJa = lazy(() => import('./pages/BusinessGyoseishoshiJa'));
+const BusinessKigyouJa = lazy(() => import('./pages/BusinessKigyouJa'));
+const DfaGalleriaCebuJa = lazy(() => import('./pages/DfaGalleriaCebuJa'));
+const PsaCrsCebuJa = lazy(() => import('./pages/PsaCrsCebuJa'));
+const LtoSmSeasideJa = lazy(() => import('./pages/LtoSmSeasideJa'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+  const prevPathname = useRef<string | null>(null);
+
   useEffect(() => {
+    const prev = prevPathname.current;
+    prevPathname.current = pathname;
+
+    // If navigating to the language-equivalent of the current page, preserve scroll
+    if (prev !== null) {
+      const langEquivalent = getLangSwitchUrl(prev);
+      const normalize = (p: string) => p.replace(/\/$/, '') || '/';
+      if (normalize(langEquivalent) === normalize(pathname)) return;
+    }
+
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;
@@ -93,6 +107,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-primary border-b-transparent animate-spin" aria-label="Loading" /></div>}>
       <Routes>
         <Route path="/en" element={<Navigate to="/en/" replace />} />
         <Route path="/en/" element={<HomeEn />} />
@@ -311,6 +326,7 @@ export default function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
     </>
   );
 }

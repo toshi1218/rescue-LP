@@ -28,7 +28,7 @@ const WhyUs: React.FC = () => {
 
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-2 block">Why Us</span>
+          <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Why Us</span>
           <h2 className="text-xl font-bold text-secondary">{t('whyus.title')}</h2>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
         </div>

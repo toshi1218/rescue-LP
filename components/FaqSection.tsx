@@ -17,16 +17,31 @@ type FaqSectionProps = {
 export default function FaqSection({ items }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  };
+
   return (
-    <section className="mb-10">
+    <section className="mb-10" aria-labelledby="faqsection-heading">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="flex items-center gap-3 mb-6">
         <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-        <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">FAQ</h2>
+        <h2 id="faqsection-heading" className="text-xl md:text-2xl font-bold text-secondary tracking-tight">FAQ</h2>
       </div>
 
       <div className="space-y-2">
         {items.map((item, index) => {
           const isOpen = openIndex === index;
+          const panelId = `faqsec-panel-${index}`;
           return (
             <div
               key={item.q}
@@ -37,8 +52,10 @@ export default function FaqSection({ items }: FaqSectionProps) {
               } bg-white`}
             >
               <button
+                id={`faqsec-btn-${index}`}
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 aria-expanded={isOpen}
+                aria-controls={panelId}
                 className="w-full text-left px-5 py-4 flex items-center justify-between gap-3"
               >
                 <div className="flex items-start gap-3">
@@ -53,6 +70,9 @@ export default function FaqSection({ items }: FaqSectionProps) {
               </button>
 
               <div
+                id={panelId}
+                role="region"
+                aria-labelledby={`faqsec-btn-${index}`}
                 className={`transition-all duration-300 ease-in-out overflow-hidden ${
                   isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
