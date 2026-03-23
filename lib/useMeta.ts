@@ -28,6 +28,7 @@ export function useMeta(title: string, description: string, canonical?: string) 
     const locale = isJa ? 'ja_JP' : 'en_US';
 
     document.title = title;
+    document.documentElement.lang = isJa ? 'ja' : 'en';
     setMeta('description', description);
     setMeta('og:title', title, 'property');
     setMeta('og:description', description, 'property');

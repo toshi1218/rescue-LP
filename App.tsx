@@ -79,6 +79,7 @@ import BusinessKigyouJa from './pages/BusinessKigyouJa';
 import DfaGalleriaCebuJa from './pages/DfaGalleriaCebuJa';
 import PsaCrsCebuJa from './pages/PsaCrsCebuJa';
 import LtoSmSeasideJa from './pages/LtoSmSeasideJa';
+import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -307,6 +308,8 @@ export default function App() {
         <Route path="/gaimen-kirikae-guide/" element={<Navigate to="/ja/gaimen-kirikae-guide/" replace />} />
         <Route path="/kika-shinsei-guide" element={<Navigate to="/ja/kika-shinsei-guide/" replace />} />
         <Route path="/kika-shinsei-guide/" element={<Navigate to="/ja/kika-shinsei-guide/" replace />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
