@@ -315,6 +315,10 @@ export default function App() {
         <Route path="/company" element={<Navigate to="/en/company/" replace />} />
         <Route path="/contact" element={<Navigate to="/en/contact/" replace />} />
         <Route path="/privacy" element={<Navigate to="/en/privacy/" replace />} />
+        <Route path="/terms" element={<Navigate to="/en/terms/" replace />} />
+        <Route path="/canada" element={<Navigate to="/en/canada/" replace />} />
+        <Route path="/australia" element={<Navigate to="/en/australia/" replace />} />
+        <Route path="/uk" element={<Navigate to="/en/uk/" replace />} />
         <Route path="/cenomar-vs-marriage-certificate" element={<Navigate to="/en/cenomar-vs-marriage-certificate/" replace />} />
         <Route path="/document-checklist-by-visa" element={<Navigate to="/en/document-checklist-by-visa/" replace />} />
         <Route path="/nbi-clearance-overseas" element={<Navigate to="/en/nbi-clearance-overseas/" replace />} />

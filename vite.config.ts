@@ -12,8 +12,6 @@ export default defineConfig({
           icons: ['lucide-react'],
         },
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name?.split('.')
-          const ext = info?.[info.length - 1]
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico|webp)$/i.test(assetInfo.name ?? '')) {
             return `assets/images/[name]-[hash][extname]`
           } else if (/\.css$/.test(assetInfo.name ?? '')) {
