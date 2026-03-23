@@ -666,6 +666,13 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/ja/psa-crs-cebu-genchi-report/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-crs-cebu-genchi-report/"/>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/ja/dfa-apostille-genchi-report/</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/dfa-apostille-genchi-report/"/>
     <lastmod>2026-03-23</lastmod>
