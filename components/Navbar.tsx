@@ -441,6 +441,7 @@ const Navbar: React.FC = () => {
             {/* 書類から探す */}
             <div>
               <button
+                aria-expanded={mobileSection === 'docs'}
                 onClick={() => setMobileSection(mobileSection === 'docs' ? null : 'docs')}
                 className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
               >
@@ -463,6 +464,7 @@ const Navbar: React.FC = () => {
             {/* ガイド */}
             <div>
               <button
+                aria-expanded={mobileSection === 'guides'}
                 onClick={() => setMobileSection(mobileSection === 'guides' ? null : 'guides')}
                 className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
               >
