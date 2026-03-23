@@ -142,12 +142,20 @@ const Navbar: React.FC = () => {
     closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
   };
 
-  // Keyboard: Escape closes dropdown / mobile menu
+  // Keyboard: Escape closes dropdown / mobile menu and returns focus to trigger
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        if (openMenu) setOpenMenu(null);
-        if (mobileOpen) setMobileOpen(false);
+        if (openMenu) {
+          setOpenMenu(null);
+          if (openMenu === 'docs') docsRef.current?.querySelector<HTMLElement>('button')?.focus();
+          else if (openMenu === 'purpose') purposeRef.current?.querySelector<HTMLElement>('button')?.focus();
+          else if (openMenu === 'guides') guidesRef.current?.querySelector<HTMLElement>('button')?.focus();
+        }
+        if (mobileOpen) {
+          setMobileOpen(false);
+          hamburgerRef.current?.focus();
+        }
       }
     };
     document.addEventListener('keydown', handleKeyDown);
@@ -175,7 +183,7 @@ const Navbar: React.FC = () => {
     return () => menu.removeEventListener('keydown', trap);
   }, [mobileOpen]);
 
-  // Arrow key navigation within dropdown
+  // Arrow key navigation within dropdown; Tab closes it; Escape closes and returns focus
   const handleDropdownKeyDown = useCallback((e: React.KeyboardEvent) => {
     if (!dropdownRef.current) return;
     const items = dropdownRef.current.querySelectorAll<HTMLElement>('a');
@@ -187,9 +195,11 @@ const Navbar: React.FC = () => {
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
       items[current > 0 ? current - 1 : items.length - 1].focus();
-    } else if (e.key === 'Escape') {
+    } else if (e.key === 'Tab') {
+      // Close dropdown and let the browser handle natural tab order
       setOpenMenu(null);
     }
+    // Escape is handled by the global listener above
   }, []);
 
   // Enter/Space toggle for dropdown trigger buttons
@@ -275,9 +285,11 @@ const Navbar: React.FC = () => {
           </a>
           {/* Hamburger button — mobile only */}
           <button
+            ref={hamburgerRef}
             type="button"
             aria-label={mobileOpen ? (isJa ? 'メニューを閉じる' : 'Close menu') : (isJa ? 'メニューを開く' : 'Open menu')}
             aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
             onClick={() => setMobileOpen(prev => !prev)}
             className="md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-lg hover:bg-gray-100 transition-colors"
           >
@@ -397,7 +409,7 @@ const Navbar: React.FC = () => {
 
       {/* モバイルメニュー */}
       {mobileOpen && (
-        <div ref={mobileMenuRef} className="md:hidden fixed inset-0 top-[104px] z-[200] bg-white overflow-y-auto">
+        <div id="mobile-menu" ref={mobileMenuRef} className="md:hidden fixed inset-0 top-[104px] z-[200] bg-white overflow-y-auto">
           <div className="px-4 py-4 space-y-1">
             <Link to={homePath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-secondary hover:bg-gray-50">
               {t('navbar.home')}
@@ -406,6 +418,7 @@ const Navbar: React.FC = () => {
             {/* 目的から探す */}
             <div>
               <button
+                aria-expanded={mobileSection === 'purpose'}
                 onClick={() => setMobileSection(mobileSection === 'purpose' ? null : 'purpose')}
                 className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
               >
