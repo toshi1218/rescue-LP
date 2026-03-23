@@ -60,7 +60,7 @@ export default function HomeJa() {
       <Navbar />
       <main>
         <Hero />
-        <GuideLinks />
+        <GuideLinks maxItems={6} />
         <QuickFacts />
         <ServicePacks />
         <PainPoints />

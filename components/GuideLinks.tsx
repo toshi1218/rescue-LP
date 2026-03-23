@@ -10,14 +10,18 @@ type GuideItem = {
   tag: string | null;
 };
 
+// 最初の6件がホームページに表示される主要項目
 const guidesData: Record<'ja' | 'en', GuideItem[]> = {
   ja: [
     { to: '/ja/kokusai-kekkon-guide/', title: '国際結婚の進め方', desc: 'フィリピン人との婚姻手続きの全体像を確認したい方へ', tag: '国際結婚を確認する' },
     { to: '/ja/haigusha-visa/', title: '配偶者ビザの書類', desc: '日本での配偶者ビザ申請に必要な書類を整理したい方へ', tag: '配偶者ビザを確認する' },
     { to: '/ja/gaimen-kirikae-guide/', title: '外免切替', desc: 'LTO書類や外免切替に必要な流れを確認したい方へ', tag: '外免切替を見る' },
+    { to: '/ja/kika-shinsei-guide/', title: '帰化申請', desc: '日本国籍取得に必要なフィリピン書類を確認したい方へ', tag: '帰化申請を確認する' },
+    { to: '/ja/nbi-clearance/', title: '海外ビザ用NBIクリアランス', desc: '海外ビザ・就労・永住で必要なNBI書類を確認したい方へ', tag: 'NBIクリアランスを確認する' },
+    { to: '/ja/kokusai-kekkon-roadmap/', title: '個別ロードマップ作成', desc: '自分のケースに合った手続き順序・必要書類を整理したい方へ', tag: 'ロードマップを作成する' },
+    // 以下はお役立ちガイドページにのみ表示
     { to: '/ja/psa-shussei-shomeisho/', title: 'PSA出生証明書', desc: '国際結婚・配偶者ビザ・帰化申請の基本書類を確認したい方へ', tag: '出生証明書を見る' },
     { to: '/ja/cenomar/', title: 'CENOMAR取得代行', desc: '独身証明書の取得手順と必要書類を確認したい方へ', tag: 'CENOMARを確認する' },
-    { to: '/ja/nbi-clearance/', title: 'NBIクリアランス', desc: '海外ビザ・就労・永住で必要なNBI書類を確認したい方へ', tag: 'NBIクリアランスを確認する' },
     { to: '/ja/cenomar-vs-marriage-certificate/', title: 'CENOMARと婚姻証明書の違い', desc: 'どちらを取るべきか迷うときの確認ページです', tag: 'まずここを確認' },
     { to: '/ja/document-checklist-by-visa/', title: 'ビザ別書類チェックリスト', desc: 'K-1、CR-1、日本向けの必要書類をまとめて確認したい方へ', tag: '提出前に確認' },
     { to: '/ja/nbi-clearance-overseas/', title: '海外在住のNBI取得', desc: 'フィリピンに戻らずNBIを取りたい方へ', tag: '海外在住者向け' },
@@ -39,9 +43,11 @@ const guidesData: Record<'ja' | 'en', GuideItem[]> = {
   ],
 };
 
-const GuideLinks: React.FC = React.memo(() => {
+type GuideLinksProps = { maxItems?: number };
+
+const GuideLinks: React.FC<GuideLinksProps> = React.memo(({ maxItems }) => {
   const { lang, t } = useLanguage();
-  const guides = guidesData[lang];
+  const guides = maxItems ? guidesData[lang].slice(0, maxItems) : guidesData[lang];
 
   return (
     <section className="py-12 bg-gray-50 border-t border-gray-100">
