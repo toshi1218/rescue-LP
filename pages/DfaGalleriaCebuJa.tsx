@@ -44,6 +44,21 @@ export default function DfaGalleriaCebuJa() {
         },
         {
           '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'DFAアポスティーユ現地レポート【セブ・ロビンソンズガレリア2026年】',
+          description:
+            'フィリピンのDFAアポスティーユはセブのロビンソンズガレリア内で取得できます。現地写真で場所・専用窓口・最新ルールを解説。',
+          url: 'https://ph-document.com/ja/dfa-apostille-genchi-report',
+          datePublished: '2025-02-01',
+          dateModified: '2026-03-01',
+          publisher: {
+            '@type': 'Organization',
+            name: 'フィリピン書類取得代行センター',
+            url: 'https://ph-document.com',
+          },
+        },
+        {
+          '@context': 'https://schema.org',
           '@type': 'FAQPage',
           mainEntity: [
             {
@@ -77,6 +92,7 @@ export default function DfaGalleriaCebuJa() {
       <HeroBanner
         title="DFAアポスティーユ現地レポート"
         badges={['現地写真あり', 'セブ在住スタッフが撮影', '日本語解説']}
+        lastUpdated="2026年3月1日"
         ctaText="ご相談・お問い合わせ"
         ctaHref="#contact"
       />
