@@ -96,6 +96,13 @@ const Navbar: React.FC = () => {
         { label: '結核非発病証明書（2025年6月〜必須）', path: '/ja/kekkaku-shomeisho/' },
       ],
     }] : []),
+    ...(isJa ? [{
+      category: '現地情報',
+      items: [
+        { label: 'DFAアポスティーユ現地レポート（セブ）', path: '/ja/dfa-apostille-genchi-report/' },
+        { label: 'PSA CRS現地レポート（セブ）', path: '/ja/psa-crs-cebu-genchi-report/' },
+      ],
+    }] : []),
   ];
   const contactPath = isJa ? '/ja/contact/' : '/en/contact/';
   const companyPath = isJa ? '/ja/company/' : '/en/company/';
