@@ -1148,6 +1148,17 @@ const routes: RouteConfig[] = [
   },
 ];
 
+// EN routes の jaCanonical から「双方向確認済みペア」を導出
+const _enPairedJaSet = new Set(
+  routes.filter(r => r.lang === 'en').map(r => r.jaCanonical)
+);
+
+/** JA専用ページ（対応ENページなし）の場合は false */
+function isHreflangBidirectional(route: RouteConfig): boolean {
+  if (route.lang === 'en') return true;
+  return _enPairedJaSet.has(route.canonical);
+}
+
 function updateHead(html: string, route: RouteConfig): string {
   let result = html;
 
@@ -1176,10 +1187,20 @@ function updateHead(html: string, route: RouteConfig): string {
   );
 
   // hreflang alternate links (inserted after canonical)
-  result = result.replace(
-    /(<link rel="canonical" href="[^"]*" \/>)/,
-    `$1\n    <link rel="alternate" hreflang="en" href="${route.enCanonical}" />\n    <link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />\n    <link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`
-  );
+  // 双方向ペアが確認できるページのみ en/ja/x-default を3点セットで注入。
+  // JA専用ページ（対応ENページなし）は hreflang="ja" のみ注入して
+  // 関係のないENページへの誤ったシグナルを送らないようにする。
+  if (isHreflangBidirectional(route)) {
+    result = result.replace(
+      /(<link rel="canonical" href="[^"]*" \/>)/,
+      `$1\n    <link rel="alternate" hreflang="en" href="${route.enCanonical}" />\n    <link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />\n    <link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`
+    );
+  } else {
+    result = result.replace(
+      /(<link rel="canonical" href="[^"]*" \/>)/,
+      `$1\n    <link rel="alternate" hreflang="ja" href="${route.canonical}" />`
+    );
+  }
 
   // og:url
   result = result.replace(
@@ -1342,11 +1363,12 @@ async function generateSitemap() {
     const priority = getSitemapPriority(route.path);
     const changefreq = getSitemapChangefreq(route.path);
 
+    const xhtmlLinks = isHreflangBidirectional(route)
+      ? `\n    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>`
+      : `\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.canonical}"/>`;
+
     entries.push(`  <url>
-    <loc>${route.canonical}</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>
+    <loc>${route.canonical}</loc>${xhtmlLinks}
     <lastmod>${SEO_DATE_ISO}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
