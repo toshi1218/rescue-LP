@@ -36,7 +36,7 @@ const Services: React.FC = () => {
       <div className="py-12 pb-16">
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
           <div className="text-center mb-10">
-            <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-1 block">Services</span>
+            <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-1 block">Services</span>
             <h2 className="text-xl font-bold text-secondary">{t('services.title')}</h2>
             <p className="text-xs text-gray-500 mt-2">{t('services.subtitle')}</p>
             <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
@@ -50,7 +50,7 @@ const Services: React.FC = () => {
                 </div>
                 <span className="font-display font-bold text-sm text-secondary block mb-1">{service.title}</span>
                 <p className="text-xs text-gray-500 leading-relaxed mb-3">{service.desc}</p>
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-primary border border-primary/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all">
+                <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark border border-primary/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all">
                   詳しく見る <ArrowRight className="w-3 h-3" />
                 </span>
               </div>
