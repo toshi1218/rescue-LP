@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
@@ -15,6 +15,9 @@ const Navbar: React.FC = () => {
   const docsRef = useRef<HTMLDivElement>(null);
   const purposeRef = useRef<HTMLDivElement>(null);
   const guidesRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
   const { lang, t } = useLanguage();
 
   const isJa = lang === 'ja';
@@ -139,6 +142,89 @@ const Navbar: React.FC = () => {
     closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
   };
 
+  // Keyboard: Escape closes dropdown / mobile menu and returns focus to trigger
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (openMenu) {
+          setOpenMenu(null);
+          if (openMenu === 'docs') docsRef.current?.querySelector<HTMLElement>('button')?.focus();
+          else if (openMenu === 'purpose') purposeRef.current?.querySelector<HTMLElement>('button')?.focus();
+          else if (openMenu === 'guides') guidesRef.current?.querySelector<HTMLElement>('button')?.focus();
+        }
+        if (mobileOpen) {
+          setMobileOpen(false);
+          hamburgerRef.current?.focus();
+        }
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [openMenu, mobileOpen]);
+
+  // Focus trap for mobile menu
+  useEffect(() => {
+    if (!mobileOpen || !mobileMenuRef.current) return;
+    const menu = mobileMenuRef.current;
+    const focusable = menu.querySelectorAll<HTMLElement>('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const trap = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    };
+    menu.addEventListener('keydown', trap);
+    first.focus();
+    return () => menu.removeEventListener('keydown', trap);
+  }, [mobileOpen]);
+
+  // Arrow key navigation within dropdown; Tab closes it; Escape closes and returns focus
+  const handleDropdownKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (!dropdownRef.current) return;
+    const items = dropdownRef.current.querySelectorAll<HTMLElement>('a');
+    if (items.length === 0) return;
+    const current = Array.from(items).indexOf(document.activeElement as HTMLElement);
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      items[current < items.length - 1 ? current + 1 : 0].focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      items[current > 0 ? current - 1 : items.length - 1].focus();
+    } else if (e.key === 'Tab') {
+      // Close dropdown and let the browser handle natural tab order
+      setOpenMenu(null);
+    }
+    // Escape is handled by the global listener above
+  }, []);
+
+  // Enter/Space toggle for dropdown trigger buttons
+  const handleTriggerKeyDown = (menu: MenuType, ref: React.RefObject<HTMLDivElement | null>) => (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      if (ref.current) {
+        const r = ref.current.getBoundingClientRect();
+        setDropdownPos({ left: r.left, top: r.bottom + 4 });
+      }
+      setOpenMenu(openMenu === menu ? null : menu);
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (ref.current) {
+        const r = ref.current.getBoundingClientRect();
+        setDropdownPos({ left: r.left, top: r.bottom + 4 });
+      }
+      setOpenMenu(menu);
+      // Focus first dropdown item on next tick
+      setTimeout(() => {
+        dropdownRef.current?.querySelector<HTMLElement>('a')?.focus();
+      }, 0);
+    }
+  };
+
   // Normalize current path for active-link comparison (strip trailing slash, keep root as-is)
   const currentPath = location.pathname;
   const matchesPath = (path: string) =>
@@ -199,9 +285,11 @@ const Navbar: React.FC = () => {
           </a>
           {/* Hamburger button — mobile only */}
           <button
+            ref={hamburgerRef}
             type="button"
             aria-label={mobileOpen ? (isJa ? 'メニューを閉じる' : 'Close menu') : (isJa ? 'メニューを開く' : 'Open menu')}
             aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
             onClick={() => setMobileOpen(prev => !prev)}
             className="md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-lg hover:bg-gray-100 transition-colors"
           >
@@ -228,6 +316,9 @@ const Navbar: React.FC = () => {
             >
               <button
                 onClick={() => { if (purposeRef.current) { const r = purposeRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'purpose' ? null : 'purpose'); }}
+                onKeyDown={handleTriggerKeyDown('purpose', purposeRef)}
+                aria-expanded={openMenu === 'purpose'}
+                aria-haspopup="true"
                 className={tabBtnClass(isPurposeActive || openMenu === 'purpose')}
               >
                 {t('navbar.findByPurpose')}
@@ -246,6 +337,9 @@ const Navbar: React.FC = () => {
             >
               <button
                 onClick={() => { if (docsRef.current) { const r = docsRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'docs' ? null : 'docs'); }}
+                onKeyDown={handleTriggerKeyDown('docs', docsRef)}
+                aria-expanded={openMenu === 'docs'}
+                aria-haspopup="true"
                 className={tabBtnClass(isDocActive || openMenu === 'docs')}
               >
                 {t('navbar.findByDoc')}
@@ -264,6 +358,9 @@ const Navbar: React.FC = () => {
             >
               <button
                 onClick={() => { if (guidesRef.current) { const r = guidesRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'guides' ? null : 'guides'); }}
+                onKeyDown={handleTriggerKeyDown('guides', guidesRef)}
+                aria-expanded={openMenu === 'guides'}
+                aria-haspopup="true"
                 className={tabBtnClass(isGuidesActive || openMenu === 'guides' || matchesPath(guidesPath))}
               >
                 {isJa ? 'お役立ち' : 'Guides'}
@@ -286,10 +383,13 @@ const Navbar: React.FC = () => {
       {/* ドロップダウン：docs / purpose（flat list） */}
       {openMenu && (openMenu === 'docs' || openMenu === 'purpose') && currentTabs.length > 0 && (
         <div
+          ref={dropdownRef}
+          role="menu"
           className="fixed bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-[100] min-w-max"
           style={{ left: dropdownPos.left, top: dropdownPos.top }}
           onMouseEnter={() => { if (closeTimer.current) clearTimeout(closeTimer.current); }}
           onMouseLeave={handleMouseLeave}
+          onKeyDown={handleDropdownKeyDown}
         >
           {currentTabs.map(tab => (
             <Link
@@ -309,7 +409,7 @@ const Navbar: React.FC = () => {
 
       {/* モバイルメニュー */}
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 top-[104px] z-[200] bg-white overflow-y-auto">
+        <div id="mobile-menu" ref={mobileMenuRef} className="md:hidden fixed inset-0 top-[104px] z-[200] bg-white overflow-y-auto">
           <div className="px-4 py-4 space-y-1">
             <Link to={homePath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-secondary hover:bg-gray-50">
               {t('navbar.home')}
@@ -318,6 +418,7 @@ const Navbar: React.FC = () => {
             {/* 目的から探す */}
             <div>
               <button
+                aria-expanded={mobileSection === 'purpose'}
                 onClick={() => setMobileSection(mobileSection === 'purpose' ? null : 'purpose')}
                 className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
               >
@@ -340,6 +441,7 @@ const Navbar: React.FC = () => {
             {/* 書類から探す */}
             <div>
               <button
+                aria-expanded={mobileSection === 'docs'}
                 onClick={() => setMobileSection(mobileSection === 'docs' ? null : 'docs')}
                 className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
               >
@@ -362,6 +464,7 @@ const Navbar: React.FC = () => {
             {/* ガイド */}
             <div>
               <button
+                aria-expanded={mobileSection === 'guides'}
                 onClick={() => setMobileSection(mobileSection === 'guides' ? null : 'guides')}
                 className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
               >
@@ -414,10 +517,13 @@ const Navbar: React.FC = () => {
       {/* ドロップダウン：guides（グループ2カラム） */}
       {openMenu === 'guides' && (
         <div
+          ref={dropdownRef}
+          role="menu"
           className="fixed bg-white rounded-xl shadow-lg border border-gray-100 z-[100] p-3"
           style={{ left: dropdownPos.left, top: dropdownPos.top, width: '480px', maxWidth: 'calc(100vw - 16px)' }}
           onMouseEnter={() => { if (closeTimer.current) clearTimeout(closeTimer.current); }}
           onMouseLeave={handleMouseLeave}
+          onKeyDown={handleDropdownKeyDown}
         >
           <div className="grid grid-cols-2 gap-x-2">
             {guidesSections.map((section) => (
