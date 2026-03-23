@@ -101,6 +101,7 @@ const Navbar: React.FC = () => {
       items: [
         { label: 'DFAアポスティーユ現地レポート', path: '/ja/dfa-apostille-genchi-report/' },
         { label: 'PSA CRS現地レポート', path: '/ja/psa-crs-cebu-genchi-report/' },
+        { label: 'LTO SMシーサイド現地レポート', path: '/ja/lto-sm-seaside-genchi-report/' },
       ],
     }] : []),
   ];
