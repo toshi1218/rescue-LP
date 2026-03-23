@@ -125,7 +125,7 @@ const contentData = {
   },
 };
 
-const TrustTransparency: React.FC = () => {
+const TrustTransparency: React.FC = React.memo(() => {
   const { lang } = useLanguage();
   const c = contentData[lang];
 
@@ -141,7 +141,7 @@ const TrustTransparency: React.FC = () => {
 
         {/* ヘッダー */}
         <div className="text-center mb-12">
-          <span className="inline-block text-xs font-bold text-primary uppercase tracking-widest mb-3 bg-primary/8 px-3 py-1 rounded-full">
+          <span className="inline-block text-xs font-bold text-primary-dark uppercase tracking-widest mb-3 bg-primary/8 px-3 py-1 rounded-full">
             {c.badge}
           </span>
           <h2 id="trust-heading" className="text-xl md:text-2xl font-bold text-secondary leading-snug whitespace-pre-line mb-3">
@@ -214,6 +214,6 @@ const TrustTransparency: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
 export default TrustTransparency;

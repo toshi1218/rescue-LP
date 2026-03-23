@@ -271,7 +271,7 @@ const Pricing: React.FC = () => {
           <div className="relative p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-8">
             {/* 左：タイトル・価格 */}
             <div className="flex-1">
-              <div className="inline-flex items-center gap-1.5 bg-primary/20 border border-primary/30 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4">
+              <div className="inline-flex items-center gap-1.5 bg-primary/20 border border-primary/30 text-primary-dark text-xs font-bold px-3 py-1 rounded-full mb-4">
                 <featured.icon className="w-3.5 h-3.5" />
                 {featured.tag}
               </div>
@@ -313,7 +313,7 @@ const Pricing: React.FC = () => {
                 </>
               )}
               {featured.bestFor && (
-                <p className="text-xs text-primary/80 italic mb-5">{featured.bestFor}</p>
+                <p className="text-xs text-primary-dark/80 italic mb-5">{featured.bestFor}</p>
               )}
               <a
                 href="#contact"
@@ -391,7 +391,7 @@ const Pricing: React.FC = () => {
                       <p className="text-sm font-bold text-secondary leading-snug">{plan.title}</p>
                       <p className="text-xs text-gray-400 mt-0.5 leading-snug">{plan.subtitle}</p>
                       {plan.bestFor && (
-                        <p className="text-xs text-primary/70 mt-1 leading-snug italic">{plan.bestFor}</p>
+                        <p className="text-xs text-primary-dark/70 mt-1 leading-snug italic">{plan.bestFor}</p>
                       )}
                     </div>
                   </div>

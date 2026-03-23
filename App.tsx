@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useRef } from 'react';
+import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { getLangSwitchUrl } from './lib/urlMap';
 
@@ -83,6 +83,22 @@ const PsaCrsCebuJa = lazy(() => import('./pages/PsaCrsCebuJa'));
 const LtoSmSeasideJa = lazy(() => import('./pages/LtoSmSeasideJa'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
+function NavigationProgress() {
+  const { pathname } = useLocation();
+  const [key, setKey] = useState(0);
+  const prevPathname = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (prevPathname.current !== null && prevPathname.current !== pathname) {
+      setKey((k) => k + 1);
+    }
+    prevPathname.current = pathname;
+  }, [pathname]);
+
+  if (key === 0) return null;
+  return <div key={key} className="nav-progress-bar" aria-hidden="true" />;
+}
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   const prevPathname = useRef<string | null>(null);
@@ -107,6 +123,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <NavigationProgress />
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-primary border-b-transparent animate-spin" aria-label="Loading" /></div>}>
       <Routes>
         <Route path="/en" element={<Navigate to="/en/" replace />} />

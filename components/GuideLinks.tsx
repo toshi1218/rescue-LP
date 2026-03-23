@@ -39,7 +39,7 @@ const guidesData: Record<'ja' | 'en', GuideItem[]> = {
   ],
 };
 
-const GuideLinks: React.FC = () => {
+const GuideLinks: React.FC = React.memo(() => {
   const { lang, t } = useLanguage();
   const guides = guidesData[lang];
 
@@ -62,7 +62,7 @@ const GuideLinks: React.FC = () => {
               </span>
               <p className="text-xs text-gray-500 leading-relaxed">{g.desc}</p>
               {g.tag && (
-                <span className="inline-flex items-center gap-1 self-start text-xs font-bold text-primary border border-primary/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all mt-1">
+                <span className="inline-flex items-center gap-1 self-start text-xs font-bold text-primary-dark border border-primary-dark/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all mt-1">
                   {g.tag}
                   <ArrowRight className="w-3 h-3" />
                 </span>
@@ -73,6 +73,6 @@ const GuideLinks: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
 export default GuideLinks;

@@ -29,7 +29,7 @@ const packs = [
   },
 ];
 
-const ServicePacks: React.FC = () => (
+const ServicePacks: React.FC = React.memo(() => (
   <section className="py-12 bg-white">
     <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
       <div className="text-center mb-6">
@@ -48,12 +48,12 @@ const ServicePacks: React.FC = () => (
             </div>
             <span className="font-bold text-sm text-secondary group-hover:text-primary transition-colors leading-snug">{pack.title}</span>
             <p className="text-xs text-gray-500 leading-relaxed">{pack.desc}</p>
-            <span className="text-xs font-bold text-primary mt-auto">詳しく見る →</span>
+            <span className="text-xs font-bold text-primary-dark mt-auto">詳しく見る →</span>
           </Link>
         ))}
       </div>
     </div>
   </section>
-);
+));
 
 export default ServicePacks;
