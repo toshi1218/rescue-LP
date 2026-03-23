@@ -78,6 +78,7 @@ import BusinessGyoseishoshiJa from './pages/BusinessGyoseishoshiJa';
 import BusinessKigyouJa from './pages/BusinessKigyouJa';
 import DfaGalleriaCebuJa from './pages/DfaGalleriaCebuJa';
 import PsaCrsCebuJa from './pages/PsaCrsCebuJa';
+import LtoSmSeasideJa from './pages/LtoSmSeasideJa';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -249,6 +250,8 @@ export default function App() {
         <Route path="/ja/dfa-apostille-genchi-report/" element={<DfaGalleriaCebuJa />} />
         <Route path="/ja/psa-crs-cebu-genchi-report" element={<PsaCrsCebuJa />} />
         <Route path="/ja/psa-crs-cebu-genchi-report/" element={<PsaCrsCebuJa />} />
+        <Route path="/ja/lto-sm-seaside-genchi-report" element={<LtoSmSeasideJa />} />
+        <Route path="/ja/lto-sm-seaside-genchi-report/" element={<LtoSmSeasideJa />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
