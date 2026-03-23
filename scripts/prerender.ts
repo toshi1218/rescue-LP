@@ -1064,6 +1064,15 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/terms/`,
   },
   {
+    path: '/ja/kojin-joho-hogo',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'kojin-joho-hogo', 'index.html'),
+    title: '個人情報保護方針｜フィリピン書類取得代行センター（IGRS Inc.）',
+    description: '株式会社IGRSの個人情報保護方針。個人情報保護法に基づく個人情報の取得・利用目的・第三者提供・安全管理措置・開示請求への対応を説明します。',
+    canonical: `${BASE}/ja/kojin-joho-hogo/`,
+    lang: 'ja',
+    jaCanonical: `${BASE}/ja/kojin-joho-hogo/`,
+  },
+  {
     path: '/ja/nihon-senko-ph-senko',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nihon-senko-ph-senko', 'index.html'),
     title: `日本先行婚とフィリピン先行婚【${SEO_YEAR_MONTH_JA}】どちらを選ぶべき？手続きと必要書類を比較`,
