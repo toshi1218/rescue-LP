@@ -76,17 +76,17 @@ export default function HomeEn() {
       <Navbar />
       <main>
         <Hero />
-        <GuideLinks />
-        <QuickFacts />
+        <Services />
         <PainPoints />
         <WhyProxy />
         <TrustTransparency />
-        <Services />
         <WhyUs />
         <CaseStudies />
         <SocialProof />
         <Process />
         <DiyRisks />
+        <GuideLinks />
+        <QuickFacts />
         <FAQ />
       </main>
       <Footer />
