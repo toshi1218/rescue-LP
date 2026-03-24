@@ -180,6 +180,76 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 
 ---
 
+## 情報の種別・更新日・免責 / Information Classification, Dates & Disclaimers
+
+### ✅ 確認済みの事実（2026-03-01 時点）
+
+以下は実務を通じて確認済みの事実情報です：
+
+- PSA（フィリピン統計庁）は出生証明書・CENOMAR・婚姻証明書を発行する
+- NBI（国家捜査局）は無犯罪証明書（NBI Clearance）を発行する（有効期間：1年）
+- DFA（フィリピン外務省）はアポスティーユ認証を行う（ハーグ条約に基づく）
+- LTO（フィリピン陸運局）は運転経歴証明書を発行する
+- PSA Helpline・Serbilisは通常のPSA書類の国際郵送に対応している
+- DFAアポスティーユ原本を海外に直送する公式政府チャンネルは現時点で存在しない
+- 日本の入管（在留資格）申請には、NBI Clearance・CENOMAR・PSA婚姻証明書が必要になることが多い
+- 日本の帰化申請（法務局）には、PSA出生証明書・NBI Clearanceが必要になることが多い
+
+**最終事実確認日：2026-03-01**
+
+---
+
+### 💰 料金情報（2026-03-01 時点・税抜き概算）
+
+以下の料金はDHL国際配送込みの概算です。取得難易度・案件の状況により変動する場合があります。
+
+| サービス | 日本向け料金 | 海外向け料金（USD） |
+|---|---|---|
+| PSA書類（出生証明書・CENOMAR・婚姻証明書）+ DFAアポスティーユ | ¥50,000〜 | US$349〜 |
+| NBI Clearance + DFAアポスティーユ | ¥55,000〜 | US$399〜 |
+| LTO関連書類（外免切替用） + DFAアポスティーユ | ¥100,000〜 | US$699〜 |
+| 移民書類パック（CENOMAR+PSA+NBI+アポスティーユ） | ¥89,800〜 | US$899〜 |
+
+- 全プランにDHL国際配送込み
+- 価格は税抜き・概算
+- NBI HIT発生時は追加費用が生じる場合があります
+- 翻訳が必要な場合は別途対応（お見積もり時にご確認ください）
+
+**最終料金確認日：2026-03-01**
+
+---
+
+### ⚠️ 免責事項 / Disclaimers
+
+以下は事実ではなくサービス案内・条件であることを明示します：
+
+- 当センターは書類の**取得代行業務**を行います。ビザ申請・入管手続き・法律相談は行政書士・弁護士等の専門資格者の領域です
+- 各機関（PSA・NBI・DFA・LTO）の処理時間は当センターがコントロールできない外部要因です。納期はあくまで目安です
+- 申請先国・ビザ種別の要件変更は予告なく行われる場合があります。最新の要件は各国移民機関の公式サイトをご確認ください
+- 料金は案件の状況により変動します。最終的なお見積もりはご相談後にご提示します
+- NBI HIT（同姓同名の犯罪記録）が発生した場合は追加の手続きと費用が必要になります
+- 一部の手続きではご本人対応（委任状へのご署名・身分証明書の提出）が必要になる場合があります
+
+---
+
+## 公式参考リンク / Official Reference Links
+
+| 機関 | 公式サイト |
+|---|---|
+| PSA（フィリピン統計庁） | https://psa.gov.ph/ |
+| PSA Serbilis（PSA書類オンライン申請） | https://serbilis.psa.gov.ph/ |
+| NBI（国家捜査局・NBI Clearance申請） | https://clearance.nbi.gov.ph/ |
+| DFA（フィリピン外務省・アポスティーユ） | https://www.dfa.gov.ph/ |
+| LTO（フィリピン陸運局） | https://lto.gov.ph/ |
+| 出入国在留管理庁（在留資格・配偶者ビザ） | https://www.moj.go.jp/isa/ |
+| 法務局（帰化申請） | https://houmukyoku.moj.go.jp/ |
+| USCIS（米国移民局） | https://www.uscis.gov/ |
+| IRCC（カナダ移民局） | https://www.canada.ca/en/immigration-refugees-citizenship.html |
+| Home Affairs（オーストラリア移民局） | https://immi.homeaffairs.gov.au/ |
+| UKVI（英国ビザ移民局） | https://www.gov.uk/government/organisations/uk-visas-and-immigration |
+
+---
+
 ## ページ一覧（日本語）
 
 - [ホーム](https://ph-document.com/ja/) — フィリピン書類取得代行の総合案内

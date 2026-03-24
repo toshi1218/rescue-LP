@@ -140,3 +140,21 @@ A: Yes. We provide complete document packages for K-1 fiancé visa and CR-1/IR-1
 
 **Q: Do you serve clients in Canada, Australia, and the UK?**
 A: Yes. We serve clients in the USA, Canada, Australia, UK, Japan, Korea, and other countries. We confirm exact immigration authority requirements (IRCC, Home Affairs, UKVI, etc.) for your specific case.
+
+## 公式参考リンク / Official Reference Links
+
+以下は各書類の発行機関・申請先の公式ウェブサイトです。手続きの最新情報は各公式サイトでご確認ください。
+
+| 機関 | 公式サイト |
+|---|---|
+| PSA（フィリピン統計庁） | https://psa.gov.ph/ |
+| PSA Serbilis（PSA書類オンライン申請） | https://serbilis.psa.gov.ph/ |
+| NBI（国家捜査局・NBI Clearance申請） | https://clearance.nbi.gov.ph/ |
+| DFA（フィリピン外務省・アポスティーユ） | https://www.dfa.gov.ph/ |
+| LTO（フィリピン陸運局） | https://lto.gov.ph/ |
+| 出入国在留管理庁（在留資格・配偶者ビザ） | https://www.moj.go.jp/isa/ |
+| 法務局（帰化申請） | https://houmukyoku.moj.go.jp/ |
+| USCIS（米国移民局・K-1/CR-1ビザ） | https://www.uscis.gov/ |
+| IRCC（カナダ移民局） | https://www.canada.ca/en/immigration-refugees-citizenship.html |
+| Home Affairs（オーストラリア移民局） | https://immi.homeaffairs.gov.au/ |
+| UKVI（英国ビザ移民局） | https://www.gov.uk/government/organisations/uk-visas-and-immigration |
