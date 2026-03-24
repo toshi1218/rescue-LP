@@ -137,27 +137,23 @@ export default function MarriageGuideJa() {
 
       {/* Section 3: よくある「書類集めの落とし穴」 */}
       <SectionDivider variant="blue">
-        <div className="flex items-start gap-3 mb-5">
+        <div className="flex items-start gap-3 mb-4">
           <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
           <h2 className="text-base font-bold text-amber-900">よくある「書類集めの落とし穴」</h2>
         </div>
-        <div className="space-y-5">
-          <div>
-            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴①：現地の家族や知人に頼んだまま進まない</p>
-            <p className="text-sm text-amber-800 leading-relaxed">「あとで行く」「今週行く」と言われたまま、取得が進まず、予定だけが後ろにずれていくケースがあります。婚姻やビザの予定が決まっている場合、この遅れがそのまま全体スケジュールに響きます。</p>
-          </div>
-          <div>
-            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴②：書類が届いても、そのまま使えない</p>
-            <p className="text-sm text-amber-800 leading-relaxed">名前のスペル、生年月日、婚姻歴の注記などに不一致があると、日本側で確認や差し戻しになることがあります。書類は「取れたかどうか」だけでなく、「提出先で使える状態かどうか」まで確認が必要です。</p>
-          </div>
-          <div>
-            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴③：婚姻後すぐにPSA婚姻証明書が出るとは限らない</p>
-            <p className="text-sm text-amber-800 leading-relaxed">フィリピンで婚姻した場合、婚姻記録がPSAに反映され、婚姻証明書を取得できるようになるまで時間がかかることがあります。目安として、Metro Manilaで2〜4か月、地方では少なくとも6か月かかる案内もあります。「結婚したらすぐ次の手続きに進める」と思っていると、ここで予定がずれることがあります。</p>
-          </div>
-          <div>
-            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴④：NBIクリアランスは誰でも完全代行できるわけではない</p>
-            <p className="text-sm text-amber-800 leading-relaxed">NBIクリアランスは、目的によって必要になることがあります。ただし、初回取得や条件によっては、日本国内のフィリピン大使館・総領事館でご本人による指紋対応が必要です。そのため、第三者だけで完結できない案件があります。</p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            { num: '①', title: '現地の家族に頼んだまま進まない', note: '予定だけ後ろにずれ、全体スケジュールに影響します。' },
+            { num: '②', title: '届いた書類がそのまま使えない', note: '名前・生年月日の不一致があると日本側で差し戻しになります。' },
+            { num: '③', title: 'PSA婚姻証明書はすぐ出ない', note: 'フィリピン婚の場合、PSAへの反映に2〜6か月かかることがあります。' },
+            { num: '④', title: 'NBI代行には条件がある', note: '初回取得は大使館での本人指紋対応が必要で、第三者だけでは完結しません。' },
+          ].map((item) => (
+            <div key={item.num} className="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <p className="text-xs font-bold text-amber-500 mb-1">落とし穴{item.num}</p>
+              <p className="text-sm font-bold text-amber-900 mb-1">{item.title}</p>
+              <p className="text-xs text-amber-800 leading-relaxed">{item.note}</p>
+            </div>
+          ))}
         </div>
       </SectionDivider>
 

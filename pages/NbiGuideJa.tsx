@@ -113,35 +113,22 @@ export default function NbiGuideJa() {
         trustNote="条件確認から対応。返信24時間以内"
       />
 
-      {/* まず最初にご確認ください */}
-      <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-6">
-        <div className="flex items-start gap-3 mb-4">
-          <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-          <h2 className="text-base font-bold text-gray-900">まず最初にご確認ください</h2>
-        </div>
-        <p className="text-sm text-gray-700 leading-relaxed mb-4">
-          当社が対応しやすいのは、<strong>2014年以降に発行されたNBIクリアランスの取得歴があり、前回証明書から個人情報に変更がない更新案件</strong>です。
-          在東京フィリピン大使館の案内でも、2014年以降発行の証明書で、個人情報に変更がなければ更新扱いとされています。
+      {/* 当社でご案内しやすいケース（先出し） */}
+      <SectionDivider variant="beige">
+        <h2 className="text-base font-bold text-gray-900 mb-4">当社でご案内しやすいケース</h2>
+        <IconCardGrid
+          columns={2}
+          cards={[
+            { icon: CheckCircle, title: "2014年以降に取得歴がある", description: "2014年以降にNBIクリアランスを取得したことがある方", accent: 'green' },
+            { icon: ShieldCheck, title: "個人情報に変更がない", description: "姓・名・生年月日などに変更がない方", accent: 'blue' },
+            { icon: Globe, title: "日本から手続きしたい", description: "渡航せずに進めたい方", accent: 'teal' },
+            { icon: FileText, title: "更新として進められる案件", description: "新しいFingerprint Card不要で進められる可能性が高い案件", accent: 'gold' },
+          ]}
+        />
+        <p className="text-xs text-gray-500 border-t border-primary/10 pt-3 mt-4">
+          在東京フィリピン大使館の案内でも、2014年以降の証明書で個人情報変更がなければ更新手続きが可能とされています。
         </p>
-        <div className="rounded-xl bg-red-50 border border-red-100 p-4">
-          <p className="text-sm font-bold text-red-800 mb-2">一方で、次のようなケースは、当社だけで完結する形では進めにくい案件です。</p>
-          <ul className="space-y-1.5">
-            {[
-              '過去に一度もNBIクリアランスを取得したことがない',
-              '最後のNBIクリアランスが2013年以前のもの',
-              '結婚などにより、姓やその他の個人情報に変更がある',
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-red-700">
-                <XCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="text-xs text-red-600 mt-3">
-            これらは新規扱いとなり、在日フィリピン大使館・総領事館での本人による指紋対応が必要になります。
-          </p>
-        </div>
-      </section>
+      </SectionDivider>
 
       {/* IGRSが大事にしていること */}
       <FeatureList
@@ -150,37 +137,41 @@ export default function NbiGuideJa() {
           {
             icon: <Eye className="w-4 h-4" />,
             title: '進捗が見える',
-            description: '申請、受理、発送など、節目ごとに状況をご案内します。「依頼したのに、その後どうなっているのか分からない」という不安を減らしながら進めます。',
+            description: '申請、受理、発送など、節目ごとに状況をご案内します。',
           },
           {
             icon: <ShieldCheck className="w-4 h-4" />,
             title: '条件を先に確認する',
-            description: 'NBIクリアランスは、更新で進められる案件と、本人対応が必要な案件がはっきり分かれます。当社では、最初にそこを確認してから進めます。',
+            description: '更新で進められる案件か、本人対応が必要か、最初に確認してから進めます。',
           },
           {
             icon: <MessageSquare className="w-4 h-4" />,
             title: '日本語で相談しやすい',
-            description: 'フィリピン側のやり取りや必要書類の整理を、日本語で進めやすい形でご案内します。「何を出せばいいのか分からない」状態でも、順番に確認していけます。',
+            description: '「何を出せばいいか分からない」状態でも、順番に確認していけます。',
           },
         ]}
       />
 
-      {/* 当社でご案内しやすいケース */}
-      <SectionDivider variant="beige">
-        <h2 className="text-base font-bold text-gray-900 mb-4">当社でご案内しやすいケース</h2>
-        <IconCardGrid
-          columns={2}
-          cards={[
-            { icon: CheckCircle, title: "2014年以降に取得歴がある", description: "2014年以降にNBIクリアランスを取得したことがある方", accent: 'green' },
-            { icon: ShieldCheck, title: "個人情報に変更がない", description: "姓・名・生年月日などの個人情報に変更がない方", accent: 'blue' },
-            { icon: Globe, title: "日本から手続きしたい", description: "日本からできるだけ手間を減らして進めたい方", accent: 'teal' },
-            { icon: FileText, title: "更新として進められる可能性", description: "更新として進められる可能性が高い案件", accent: 'gold' },
-          ]}
-        />
-        <p className="text-xs text-gray-500 border-t border-primary/10 pt-3 mt-4">
-          在東京フィリピン大使館の案内でも、2014年以降の証明書で個人情報変更がなければ、新しいFingerprint Cardを作らずに更新手続きが可能とされています。
-        </p>
-      </SectionDivider>
+      {/* 対応できないケース（後半に配置） */}
+      <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-6">
+        <div className="flex items-start gap-3 mb-3">
+          <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-gray-900">ご相談前にご確認ください</h2>
+        </div>
+        <p className="text-sm text-gray-600 mb-4">以下のケースは、在日フィリピン大使館・総領事館でのご本人対応が必要です。当社だけでの完結が難しい場合がありますので、まずはご相談ください。</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {[
+            '過去に一度もNBIクリアランスを取得したことがない',
+            '最後の取得が2013年以前',
+            '結婚等により姓・個人情報に変更がある',
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl bg-gray-50 border border-gray-200 p-3 flex items-start gap-2">
+              <XCircle className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-gray-700">{item}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <ComparisonTable
         heading="更新案件 vs 新規取得"
@@ -195,28 +186,17 @@ export default function NbiGuideJa() {
       {/* ご注意ください */}
       <SectionDivider variant="blue">
         <h2 className="text-base font-bold text-gray-900 mb-4">ご注意ください</h2>
-
-        <div className="space-y-4">
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
-            <p className="text-sm font-bold text-amber-900 mb-1">初回取得は、本人対応が必要です</p>
-            <p className="text-sm text-amber-800 leading-relaxed">
-              初めてNBIクリアランスを取る方は、在日フィリピン大使館・総領事館でFingerprint Card Form No. 5の作成と指紋対応が必要です。そのため、第三者だけで完結する形では進められません。
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
-            <p className="text-sm font-bold text-amber-900 mb-1">氏名変更がある場合も、新規扱いになることがあります</p>
-            <p className="text-sm text-amber-800 leading-relaxed">
-              たとえば結婚後に姓が変わった場合など、個人情報に変更があると、2014年以降の取得歴があっても新規・初回申請側の手順が必要になります。
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
-            <p className="text-sm font-bold text-amber-900 mb-1">海外からの申請は、NBI Main Officeで処理されます</p>
-            <p className="text-sm text-amber-800 leading-relaxed">
-              在外申請はNBI Main Officeで処理される案内です。そのため、全体の所要日数は、書類準備だけでなく、現地到着や発送状況にも左右されます。
-            </p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {[
+            { title: '初回取得は本人対応が必要', note: '大使館でFingerprint Card Form No. 5の作成と指紋対応が必要です。' },
+            { title: '氏名変更は新規扱いに', note: '2014年以降の取得歴があっても、個人情報変更があると新規手順が必要になります。' },
+            { title: '所要日数は前後する', note: '海外からの申請はNBI Main Office処理のため、現地到着・発送状況にも左右されます。' },
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <p className="text-sm font-bold text-amber-900 mb-1">{item.title}</p>
+              <p className="text-xs text-amber-800 leading-relaxed">{item.note}</p>
+            </div>
+          ))}
         </div>
       </SectionDivider>
 

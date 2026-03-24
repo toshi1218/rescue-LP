@@ -105,21 +105,21 @@ export default function SpouseVisaJa() {
       {/* できること / できないこと */}
       <section className="mb-6 rounded-2xl bg-gray-50 border border-gray-200 p-5">
         <h2 className="text-sm font-bold text-gray-800 mb-3">このページでできること・できないこと</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <p className="font-bold text-green-700 mb-1.5">✓ できること</p>
-            <ul className="space-y-1 text-gray-600">
-              <li>・配偶者ビザ申請に必要なフィリピン書類の取得代行</li>
-              <li>・DFAアポスティーユ（紙の原本）の手配</li>
-              <li>・どの書類が必要かの整理・案内</li>
+            <p className="text-sm font-bold text-green-700 mb-2">✓ できること</p>
+            <ul className="space-y-1.5">
+              <li className="text-sm text-gray-700">フィリピン書類（PSA・CENOMAR）の取得代行</li>
+              <li className="text-sm text-gray-700">DFAアポスティーユ（紙の原本）の手配</li>
+              <li className="text-sm text-gray-700">必要書類の整理・案内</li>
             </ul>
           </div>
           <div>
-            <p className="font-bold text-red-600 mb-1.5">✕ できないこと</p>
-            <ul className="space-y-1 text-gray-600">
-              <li>・配偶者ビザの申請手続き代行（行政書士業務）</li>
-              <li>・入国管理局への申請書類の作成</li>
-              <li>・ビザ取得の保証</li>
+            <p className="text-sm font-bold text-red-600 mb-2">✕ できないこと</p>
+            <ul className="space-y-1.5">
+              <li className="text-sm text-gray-500">配偶者ビザの申請代行（行政書士業務）</li>
+              <li className="text-sm text-gray-500">入管への申請書類の作成</li>
+              <li className="text-sm text-gray-500">ビザ取得の保証</li>
             </ul>
           </div>
         </div>

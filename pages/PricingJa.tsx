@@ -39,6 +39,18 @@ export default function PricingJa() {
         lastUpdated="2026年3月1日"
       />
 
+      <CtaBox
+        title="まずは無料でお見積もり"
+        description="書類の種類・部数・認証の有無・発送先をお知らせください。見通しのある料金をご案内します。"
+        buttonText="用途別の料金を見る"
+        href="#contact"
+        variant="primary"
+        trustNote="追加費用が出る場合は事前にご相談します"
+      />
+
+      {/* 料金カード */}
+      <Pricing />
+
       {/* 2段階決済 */}
       <StepList
         heading="2段階決済の流れ"
@@ -49,7 +61,7 @@ export default function PricingJa() {
           },
           {
             title: '着手金50%のご入金',
-            description: '内容に問題がなければ、着手金として総額の50%をご入金いただきます。着金確認後に手続きを開始します。',
+            description: '着手金として総額の50%をご入金いただきます。着金確認後に手続きを開始します。',
           },
           {
             title: '書類写しのご確認',
@@ -57,7 +69,7 @@ export default function PricingJa() {
           },
           {
             title: '残金50%のご入金・発送',
-            description: '内容に問題がなければ、残額50%をご入金いただきます。残金確認後に原本を発送します。',
+            description: '残額50%をご入金いただきます。残金確認後に原本を発送します。',
           },
         ]}
       />
@@ -65,25 +77,17 @@ export default function PricingJa() {
       <div className="grid gap-4 md:grid-cols-2 mb-6">
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">お支払い方法</p>
-          <p className="text-sm text-gray-600">銀行振込にて承っています。</p>
+          <p className="text-sm text-gray-600">銀行振込</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">キャンセル・返金</p>
-          <p className="text-sm text-gray-600">着手前は無料です。着手後は実費と進行済みの作業分を差し引いた対応になります。書類写し確認後、残金をご入金いただいてから発送します。</p>
+          <ul className="space-y-1">
+            <li className="text-sm text-gray-600">・着手前：無料キャンセル可</li>
+            <li className="text-sm text-gray-600">・着手後：実費＋進行済み作業分を差し引いた対応</li>
+            <li className="text-sm text-gray-600">・書類写し確認後に残金ご入金→発送</li>
+          </ul>
         </div>
       </div>
-
-      <CtaBox
-        title="まずは無料でお見積もり"
-        description="書類の種類・部数・認証の有無・発送先をお知らせください。見通しのある料金をご案内します。"
-        buttonText="用途別の料金を見る"
-        href="#contact"
-        variant="primary"
-        trustNote="追加費用が出る場合は事前にご相談します"
-      />
-
-      {/* 既存の詳細価格テーブル */}
-      <Pricing />
     </PageLayout>
   );
 }
