@@ -9,7 +9,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function ApostilleGuideJa() {
   useMeta(
-    `DFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応`,
+    `フィリピン レッドリボン（DFAアポスティーユ）代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応`,
     'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
   );
   return (
