@@ -120,10 +120,9 @@ export default function LicenseConversionJa() {
       />
 
       {/* リード文 */}
-      <section className="mb-10 text-sm text-gray-700 leading-relaxed space-y-3">
-        <p>フィリピンで取得した運転免許証をお持ちの方は、日本の運転免許センターで手続きを行うことで、日本の運転免許証に切り替えられる場合があります。</p>
-        <p>ただし、外免切替は「外国の免許を持っていれば誰でもできる」手続きではありません。特にフィリピン免許では、免許取得後の滞在歴の確認と、フィリピン側書類の準備が重要になります。</p>
-        <p>このページでは、外免切替で先に確認すべき条件と、フィリピン側で求められやすい書類、そして書類準備を進める際の注意点をわかりやすく整理します。</p>
+      <section className="mb-10 text-sm text-gray-700 leading-relaxed space-y-2">
+        <p>フィリピン免許を日本の免許に切り替えるには、「免許取得後にフィリピンへ通算3か月以上滞在した」証明が必要です。免許を持っているだけでは切替できません。</p>
+        <p>このページでは確認すべき条件・必要書類・よくあるつまずきを整理しています。</p>
       </section>
 
       {/* Section 1 */}
@@ -189,35 +188,21 @@ export default function LicenseConversionJa() {
       {/* Section 3 */}
       <section className="mb-10">
         <h2 className="text-base font-bold text-gray-900 mb-4">3. よくあるつまずきポイント</h2>
-        <div className="space-y-4">
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-2 mb-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-              <h3 className="text-sm font-bold text-amber-900">3か月の滞在歴を説明できない</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            { title: '3か月の滞在歴を説明できない', note: '免許を持っているだけでは不十分。滞在証明がなければ手続き全体が止まります。' },
+            { title: '免許証だけでは経歴が読めない', note: '初回取得日や更新歴が不明な場合、License History などの追加書類が必要になります。' },
+            { title: 'パスポートだけで滞在歴が足りない', note: 'スタンプがない・旧パスポートがない場合、Immigration Record with Apostille が必要になることがあります。' },
+            { title: '免許センターごとに要件が違う', note: '先に管轄センターへ確認してから動くと、後戻りが少なくなります。' },
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <div className="flex items-start gap-2 mb-1">
+                <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+                <p className="text-sm font-bold text-amber-900">{item.title}</p>
+              </div>
+              <p className="text-xs text-amber-800 leading-relaxed pl-6">{item.note}</p>
             </div>
-            <p className="text-sm text-amber-800 leading-relaxed">外免切替では、単にフィリピン免許を持っているだけでは足りません。免許取得後にその国へ通算3か月以上滞在していたことを、日本側に説明できる必要があります。ここが足りないと、手続き全体が止まります。</p>
-          </div>
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-2 mb-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-              <h3 className="text-sm font-bold text-amber-900">免許証だけでは初回取得日や経歴が分からない</h3>
-            </div>
-            <p className="text-sm text-amber-800 leading-relaxed">フィリピン免許の表記だけでは、初回取得日や更新経歴が十分に読めない場合があります。その場合、License History など追加書類が必要になることがあります。</p>
-          </div>
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-2 mb-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-              <h3 className="text-sm font-bold text-amber-900">パスポートだけで滞在歴が足りない</h3>
-            </div>
-            <p className="text-sm text-amber-800 leading-relaxed">パスポートに出入国スタンプがない、旧パスポートが手元にない、または期間が連続して読めない場合は、Immigration Record with Apostille などが必要になることがあります。</p>
-          </div>
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-2 mb-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-              <h3 className="text-sm font-bold text-amber-900">免許センターごとに求められる内容が少し違う</h3>
-            </div>
-            <p className="text-sm text-amber-800 leading-relaxed">外免切替は全国共通の大枠はありますが、実務上は免許センターごとに確認の細かさが異なります。そのため、先に管轄センターへ確認してから動く方が、後戻りが少なくなります。</p>
-          </div>
+          ))}
         </div>
       </section>
 
