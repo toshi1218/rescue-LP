@@ -260,9 +260,6 @@ const Pricing: React.FC = () => {
   const { lang, t } = useLanguage();
   const plans = plansData[lang];
 
-  const featured = plans.find((p) => p.featured)!;
-  const others = plans.filter((p) => !p.featured);
-
   return (
     <section className="pb-16 px-4" id="pricing">
       <div className="max-w-5xl mx-auto">
@@ -273,196 +270,102 @@ const Pricing: React.FC = () => {
           </div>
         )}
 
-        {/* フィーチャードプラン（横幅フル） */}
-        <div className="relative mb-8 rounded-2xl overflow-hidden border border-primary/30 shadow-soft bg-white">
-          <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-primary via-primary/60 to-transparent" />
-
-          <div className="relative p-8 md:p-10 flex flex-col md:flex-row md:items-center gap-8">
-            {/* 左：タイトル・価格 */}
-            <div className="flex-1">
-              <div className="inline-flex items-center gap-1.5 bg-primary/20 border border-primary/30 text-primary-dark text-xs font-bold px-3 py-1 rounded-full mb-4">
-                <featured.icon className="w-3.5 h-3.5" />
-                {featured.tag}
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-1">{featured.title}</h3>
-              <p className="text-sm text-gray-500 mb-3">{featured.subtitle}</p>
-              {(featured as any).why && (
-                <div className="space-y-1.5 mb-5">
-                  <p className="text-xs text-gray-500 leading-relaxed">
-                    <span className="font-bold text-secondary">なぜ必要か：</span>{(featured as any).why}
-                  </p>
-                  <p className="text-xs text-primary-dark leading-relaxed">
-                    <span className="font-bold">揃えばできること：</span>{(featured as any).outcome}
-                  </p>
-                </div>
-              )}
-              <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-4xl font-bold text-primary">{featured.price}</span>
-                <span className="text-sm text-gray-400">{featured.priceNote}</span>
-              </div>
-              <p className="text-xs text-gray-400">{lang === 'ja' ? `納期：${featured.period}` : `Delivery: ${featured.period}`}</p>
-            </div>
-
-            {/* 右：含まれるもの＋Not Included＋CTA */}
-            <div className="md:w-80 flex-shrink-0">
-              <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
-                {lang === 'ja' ? '含まれるもの' : "What's Included"}
-              </p>
-              <ul className="space-y-2 mb-4">
-                {featured.highlights.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              {featured.notIncluded && (
-                <>
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
-                    {lang === 'ja' ? '含まれないもの' : 'Not Included'}
-                  </p>
-                  <ul className="space-y-1.5 mb-4">
-                    {featured.notIncluded.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-xs text-gray-500">
-                        <XCircle className="w-3.5 h-3.5 text-gray-300 flex-shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-              {featured.bestFor && (
-                <p className="text-xs text-primary-dark/80 italic mb-5">{featured.bestFor}</p>
-              )}
-              <a
-                href="#contact"
-                onClick={() => trackEvent('cta_click', { location: 'pricing', type: featured.id, variant: ctaVariant })}
-                className="group flex items-center justify-center gap-2 w-full bg-primary text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200"
-              >
-                {t('pricing.ctaBtn')}
-                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* その他プラン（テーブル形式） */}
-        <div className="rounded-2xl border border-gray-100 overflow-hidden bg-white shadow-soft">
-          {/* テーブルヘッダー（デスクトップのみ） */}
-          <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr_auto] gap-0 bg-gray-50 border-b border-gray-100 px-6 py-3">
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{lang === 'ja' ? 'サービス' : 'Service'}</span>
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{lang === 'ja' ? '納期' : 'Delivery'}</span>
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{lang === 'ja' ? '料金' : 'Price'}</span>
-            <span className="text-xs font-bold text-gray-400 uppercase tracking-wider text-right"></span>
-          </div>
-
-          {others.map((plan, i) => {
+        {/* 全プランをカードグリッドで表示 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {plans.map((plan) => {
             const Icon = plan.icon;
             return (
               <div
                 key={plan.id}
-                className={`transition-colors hover:bg-primary/[0.02] ${
-                  i < others.length - 1 ? 'border-b border-gray-100' : ''
+                className={`relative rounded-2xl overflow-hidden border bg-white flex flex-col ${
+                  plan.featured
+                    ? 'border-primary/30 shadow-lg'
+                    : 'border-gray-200 shadow-soft'
                 }`}
               >
-                {/* モバイル用カードレイアウト */}
-                <div className="md:hidden px-5 py-5 flex flex-col gap-3">
-                  <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-secondary/5 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-4 h-4 text-secondary" />
+                {plan.featured && (
+                  <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-primary via-primary/60 to-transparent" />
+                )}
+                <div className="relative p-6 flex flex-col flex-1">
+                  {/* ヘッダー */}
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${plan.featured ? 'bg-primary/10' : 'bg-secondary/5'}`}>
+                      <Icon className={`w-5 h-5 ${plan.featured ? 'text-primary' : 'text-secondary'}`} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-bold text-secondary leading-snug">{plan.title}</p>
+                      {plan.tag && (
+                        <div className="inline-flex items-center gap-1 bg-primary/20 border border-primary/30 text-primary-dark text-[10px] font-bold px-2 py-0.5 rounded-full mb-1">
+                          {plan.tag}
+                        </div>
+                      )}
+                      <h3 className="text-base font-bold text-secondary leading-snug">{plan.title}</h3>
                       <p className="text-xs text-gray-600 mt-0.5 leading-snug">{plan.subtitle}</p>
-                      {(plan as any).why && (
-                        <p className="text-xs text-gray-700 mt-1 leading-snug">
-                          <span className="font-semibold">なぜ必要：</span>{(plan as any).why}
-                        </p>
-                      )}
-                      {(plan as any).outcome && (
-                        <p className="text-xs text-primary-dark/80 mt-0.5 leading-snug">
-                          <span className="font-semibold">揃えばできること：</span>{(plan as any).outcome}
-                        </p>
-                      )}
-                    </div>
-                    <div className="text-right flex-shrink-0">
-                      <span className="text-base font-bold text-primary">{plan.price}</span>
-                      <span className="text-xs text-gray-500 block">{plan.priceNote}</span>
-                      <span className="text-xs text-gray-500 block mt-0.5">{plan.period}</span>
                     </div>
                   </div>
-                  <ul className="space-y-1.5">
-                    {plan.highlights.slice(0, 3).map((h) => (
-                      <li key={h} className="flex items-center gap-1.5 text-xs text-gray-600">
-                        <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
-                        {h}
+
+                  {/* なぜ必要か・揃えばできること */}
+                  {(plan as any).why && (
+                    <div className="space-y-1.5 mb-4 text-xs leading-relaxed">
+                      <p className="text-gray-700">
+                        <span className="font-bold text-secondary">なぜ必要か：</span>{(plan as any).why}
+                      </p>
+                      <p className="text-primary-dark">
+                        <span className="font-bold">揃えばできること：</span>{(plan as any).outcome}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* 含まれるもの */}
+                  <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-2">
+                    {lang === 'ja' ? '含まれるもの' : "What's Included"}
+                  </p>
+                  <ul className="space-y-1.5 mb-4">
+                    {plan.highlights.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-xs text-gray-700">
+                        <CheckCircle className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
+                        {item}
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="#contact"
-                    onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
-                    className="group flex items-center justify-center gap-1.5 w-full bg-primary text-white text-xs font-bold py-2.5 px-4 rounded-lg hover:bg-primary-hover transition-all duration-200"
-                  >
-                    {lang === 'ja' ? '相談する' : 'Inquire'}
-                    <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
-                  </a>
-                </div>
 
-                {/* デスクトップ用テーブルレイアウト */}
-                <div className="hidden md:grid md:grid-cols-[2fr_1fr_1fr_auto] gap-0 items-center px-6 py-5">
-                  {/* サービス名 */}
-                  <div className="flex items-start gap-3 pr-4">
-                    <div className="w-9 h-9 rounded-lg bg-secondary/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Icon className="w-4 h-4 text-secondary" />
+                  {/* 含まれないもの */}
+                  {plan.notIncluded && plan.notIncluded.length > 0 && (
+                    <>
+                      <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-2">
+                        {lang === 'ja' ? '含まれないもの' : 'Not Included'}
+                      </p>
+                      <ul className="space-y-1 mb-4">
+                        {plan.notIncluded.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-xs text-gray-500">
+                            <XCircle className="w-3 h-3 text-gray-300 flex-shrink-0 mt-0.5" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+
+                  {/* bestFor */}
+                  {plan.bestFor && (
+                    <p className="text-xs text-primary-dark/80 italic mb-4">{plan.bestFor}</p>
+                  )}
+
+                  {/* 価格＋CTA（下部に固定） */}
+                  <div className="mt-auto pt-4 border-t border-gray-100">
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="text-2xl font-bold text-primary">{plan.price}</span>
+                      <span className="text-xs text-gray-500">{plan.priceNote}</span>
                     </div>
-                    <div>
-                      <p className="text-sm font-bold text-secondary leading-snug">{plan.title}</p>
-                      <p className="text-xs text-gray-600 mt-0.5 leading-snug">{plan.subtitle}</p>
-                      {(plan as any).why && (
-                        <p className="text-xs text-gray-700 mt-1 leading-snug">
-                          <span className="font-semibold">なぜ必要：</span>{(plan as any).why}
-                        </p>
-                      )}
-                      {(plan as any).outcome && (
-                        <p className="text-xs text-primary-dark/80 mt-0.5 leading-snug">
-                          <span className="font-semibold">揃えばできること：</span>{(plan as any).outcome}
-                        </p>
-                      )}
-                      {plan.bestFor && (
-                        <p className="text-xs text-primary-dark/70 mt-1 leading-snug italic">{plan.bestFor}</p>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* 納期 */}
-                  <div>
-                    <p className="text-xs text-gray-600">{plan.period}</p>
-                    <ul className="mt-1.5 space-y-1">
-                      {plan.highlights.slice(0, 3).map((h) => (
-                        <li key={h} className="flex items-center gap-1.5 text-xs text-gray-600">
-                          <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
-                          {h}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* 料金 */}
-                  <div>
-                    <span className="text-base font-bold text-primary">{plan.price}</span>
-                    <span className="text-xs text-gray-500 block">{plan.priceNote}</span>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex justify-end">
+                    <p className="text-xs text-gray-500 mb-4">
+                      {lang === 'ja' ? `納期：${plan.period}` : `Delivery: ${plan.period}`}
+                    </p>
                     <a
                       href="#contact"
                       onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
-                      className="group inline-flex items-center gap-1 bg-primary text-white text-xs font-bold py-2 px-4 rounded-lg hover:bg-primary-hover transition-all duration-200 whitespace-nowrap"
+                      className="group flex items-center justify-center gap-2 w-full bg-primary text-white font-bold py-3 px-6 rounded-xl shadow-md shadow-primary/20 hover:bg-primary-hover transition-all duration-200"
                     >
-                      {lang === 'ja' ? '相談する' : 'Inquire'}
-                      <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+                      {t('pricing.ctaBtn')}
+                      <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
                     </a>
                   </div>
                 </div>
