@@ -470,66 +470,6 @@ const Pricing: React.FC = () => {
           </div>
         )}
 
-        {/* Document guide by purpose — English */}
-        {lang === 'en' && (
-          <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50/50 p-6">
-            <h3 className="text-sm font-bold text-secondary mb-2">Not sure which documents you need?</h3>
-            <p className="text-xs text-gray-500 mb-4 leading-relaxed">
-              Required Philippine documents vary depending on your purpose — international marriage, spouse visa, naturalization, or license conversion.<br />
-              We do not file applications on your behalf, but we retrieve all the Philippine documents your case requires.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-              <div>
-                <p className="text-xs font-bold text-secondary mb-2">Common purposes</p>
-                <ul className="space-y-1">
-                  {[
-                    'International marriage (Japan or abroad)',
-                    'Spouse / partner visa application',
-                    'Naturalization (citizenship) application',
-                    'Driver\'s license conversion',
-                    'Overseas work visa (NBI required)',
-                  ].map((item) => (
-                    <li key={item} className="text-xs text-gray-500 flex items-center gap-1.5">
-                      <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-secondary mb-2">Documents we retrieve</p>
-                <ul className="space-y-1">
-                  {[
-                    'PSA Birth Certificate',
-                    'PSA Marriage Certificate',
-                    'CENOMAR (Certificate of No Marriage)',
-                    'NBI Clearance',
-                    'LTO Driver Record',
-                    'DFA Apostille Authentication',
-                  ].map((item) => (
-                    <li key={item} className="text-xs text-gray-500 flex items-center gap-1.5">
-                      <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <p className="text-xs text-gray-500 mb-4 leading-relaxed">
-              If you are unsure which documents apply to your situation, just let us know your purpose and we will guide you.<br />
-              Contact us with your goal (marriage, visa, naturalization, etc.) and we will respond within 24 hours.
-            </p>
-            <a
-              href="#contact"
-              onClick={() => trackEvent('cta_click', { location: 'pricing_purpose_en', type: 'general', variant: ctaVariant })}
-              className="group inline-flex items-center gap-1.5 bg-primary text-white text-xs font-bold py-2.5 px-5 rounded-lg hover:bg-primary-hover transition-all duration-200"
-            >
-              Free Consultation
-              <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
-            </a>
-          </div>
-        )}
-
         {/* 料金変動要因 */}
         <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50/50 p-6">
           <div className="flex items-center gap-2 mb-3">
