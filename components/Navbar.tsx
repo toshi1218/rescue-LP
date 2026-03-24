@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
+import { getLangSwitchUrl } from '../lib/urlMap';
 type MenuType = 'docs' | 'purpose' | 'guides' | 'about' | null;
 
 const Navbar: React.FC = () => {
@@ -410,7 +411,7 @@ const Navbar: React.FC = () => {
 
           </div>
 
-          {/* タブバー右端: 法人の方へ + お問い合わせ */}
+          {/* タブバー右端: 法人の方へ + 言語切り替え + お問い合わせ */}
           <div className="hidden md:flex items-center gap-2 ml-3 flex-shrink-0">
             {isJa && (
               <Link
@@ -420,6 +421,13 @@ const Navbar: React.FC = () => {
                 法人の方へ
               </Link>
             )}
+            <Link
+              to={getLangSwitchUrl(location.pathname)}
+              aria-label={isJa ? 'Switch to English' : '日本語に切り替え'}
+              className="text-xs font-semibold text-gray-500 border border-gray-200 px-3 py-1.5 rounded-full hover:bg-gray-50 hover:text-secondary transition-colors whitespace-nowrap"
+            >
+              {isJa ? 'EN' : 'JA'}
+            </Link>
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact', variant: ctaVariant })}
@@ -571,7 +579,14 @@ const Navbar: React.FC = () => {
               )}
             </div>
 
-            <div className="pt-3">
+            <div className="pt-3 space-y-2">
+              <Link
+                to={getLangSwitchUrl(location.pathname)}
+                aria-label={isJa ? 'Switch to English' : '日本語に切り替え'}
+                className="block text-center text-sm font-semibold text-gray-600 border border-gray-200 px-6 py-2.5 rounded-xl hover:bg-gray-50 transition-colors"
+              >
+                {isJa ? '🌐 Switch to English' : '🌐 日本語に切り替え'}
+              </Link>
               <a
                 href="#contact"
                 onClick={() => { trackEvent('cta_click', { location: 'mobile_menu', type: 'contact', variant: ctaVariant }); setMobileOpen(false); }}
