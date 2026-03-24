@@ -39,8 +39,8 @@ const ServicePacks: React.FC = React.memo(() => (
   <section className="py-12 bg-white">
     <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
       <div className="text-center mb-6">
-        <h2 className="text-xl font-bold text-secondary mb-2">まず、お手続きの目的をお選びください</h2>
-        <p className="text-sm text-gray-500">選んだページで必要書類・費用の目安・ご依頼の流れをご確認いただけます</p>
+        <h2 className="text-xl font-bold text-secondary mb-2">目的が決まっている方はこちら</h2>
+        <p className="text-sm text-gray-500">必要書類・費用の目安・ご依頼の流れを目的別にまとめています</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {packs.map((pack) => (
