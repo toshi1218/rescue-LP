@@ -310,7 +310,8 @@ const Navbar: React.FC = () => {
     }`;
 
   return (
-    <nav ref={navRef} className="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
+    <>
+    <nav ref={navRef} className="bg-white shadow-sm border-b border-gray-100">
       {/* メインヘッダー行 */}
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
         {isHome ? (
@@ -524,163 +525,6 @@ const Navbar: React.FC = () => {
         </div>
       )}
 
-      {/* モバイルメニュー */}
-      {mobileOpen && (
-        <div id="mobile-menu" ref={mobileMenuRef} className="md:hidden fixed inset-x-0 bottom-0 z-[200] bg-white overflow-y-auto" style={{ top: navHeight }}>
-          <div className="px-4 py-4 space-y-1">
-            <Link to={homePath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-secondary hover:bg-gray-50">
-              {t('navbar.home')}
-            </Link>
-
-            {/* 目的から探す */}
-            <div>
-              <button
-                aria-expanded={mobileSection === 'purpose'}
-                onClick={() => setMobileSection(mobileSection === 'purpose' ? null : 'purpose')}
-                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                {t('navbar.findByPurpose')}
-                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'purpose' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {mobileSection === 'purpose' && (
-                <div className="ml-4 mt-1 space-y-0.5">
-                  {purposeTabs.map(tab => (
-                    <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
-                      {tab.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* 書類から探す */}
-            <div>
-              <button
-                aria-expanded={mobileSection === 'docs'}
-                onClick={() => setMobileSection(mobileSection === 'docs' ? null : 'docs')}
-                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                {t('navbar.findByDoc')}
-                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'docs' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {mobileSection === 'docs' && (
-                <div className="ml-4 mt-1 space-y-0.5">
-                  {documentTabs.map(tab => (
-                    <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
-                      {tab.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* ガイド */}
-            <div>
-              <button
-                aria-expanded={mobileSection === 'guides'}
-                onClick={() => setMobileSection(mobileSection === 'guides' ? null : 'guides')}
-                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                {isJa ? 'お役立ちガイド' : 'Guides'}
-                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'guides' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {mobileSection === 'guides' && (
-                <div className="ml-4 mt-1 space-y-3">
-                  {guidesSections.map(section => (
-                    <div key={section.category}>
-                      <p className="px-3 pt-2 pb-1 text-[10px] font-bold text-gray-400 uppercase tracking-wide">{section.category}</p>
-                      {section.items.map(item => (
-                        <Link key={item.path} to={item.path} className="block px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  ))}
-                  <Link to={guidesPath} className="block px-3 py-2 text-sm text-primary-dark font-medium hover:underline">
-                    {isJa ? 'すべてのガイドを見る →' : 'See all guides →'}
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            <div className="border-t border-gray-100 pt-2 mt-2 space-y-0.5">
-              <Link to={pricingPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.pricing')}</Link>
-            </div>
-
-            {/* お知らせ（モバイル） */}
-            {isJa && (
-              <div className="border-t border-gray-100 pt-2 mt-2">
-                <Link to="/ja/news/" className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">お知らせ</Link>
-              </div>
-            )}
-
-            {/* 法人向け（モバイルアコーディオン） */}
-            {isJa && (
-              <div className="border-t border-gray-100 pt-2 mt-2">
-                <button
-                  aria-expanded={mobileSection === 'business'}
-                  onClick={() => setMobileSection(mobileSection === 'business' ? null : 'business')}
-                  className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
-                >
-                  法人向けサービス
-                  <svg className={`w-4 h-4 transition-transform ${mobileSection === 'business' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {mobileSection === 'business' && (
-                  <div className="ml-4 mt-1 space-y-0.5">
-                    {businessTabs.map(tab => (
-                      <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
-                        {tab.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* 当社について（モバイルアコーディオン） */}
-            <div className="border-t border-gray-100 pt-2 mt-2">
-              <button
-                aria-expanded={mobileSection === 'about'}
-                onClick={() => setMobileSection(mobileSection === 'about' ? null : 'about')}
-                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                {isJa ? '当社について' : 'About'}
-                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'about' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {mobileSection === 'about' && (
-                <div className="ml-4 mt-1 space-y-0.5">
-                  {aboutTabs.map(tab => (
-                    <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
-                      {tab.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div className="pt-3">
-              <a
-                href="#contact"
-                onClick={() => { trackEvent('cta_click', { location: 'mobile_menu', type: 'contact', variant: ctaVariant }); setMobileOpen(false); }}
-                className="block text-center text-sm font-bold text-white bg-primary px-6 py-3 rounded-xl hover:bg-primary-hover transition-colors shadow-md"
-              >
-                {t('navbar.cta')}
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* ドロップダウン：guides（グループ2カラム） */}
       {openMenu === 'guides' && (
         <div
@@ -728,6 +572,161 @@ const Navbar: React.FC = () => {
         </div>
       )}
     </nav>
+
+      {/* モバイルメニュー — nav外に配置（backdrop-filterのfixed基点バグ回避） */}
+      {mobileOpen && (
+        <div id="mobile-menu" ref={mobileMenuRef} className="md:hidden fixed inset-x-0 bottom-0 z-[200] bg-white overflow-y-auto" style={{ top: navHeight }}>
+          <div className="px-4 py-4 space-y-1">
+            <Link to={homePath} onClick={() => setMobileOpen(false)} className="block px-3 py-3 rounded-lg text-sm font-semibold text-secondary hover:bg-gray-50">
+              {t('navbar.home')}
+            </Link>
+
+            {/* 目的から探す */}
+            <div>
+              <button
+                aria-expanded={mobileSection === 'purpose'}
+                onClick={() => setMobileSection(mobileSection === 'purpose' ? null : 'purpose')}
+                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                {t('navbar.findByPurpose')}
+                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'purpose' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === 'purpose' && (
+                <div className="ml-4 mt-1 space-y-0.5">
+                  {purposeTabs.map(tab => (
+                    <Link key={tab.path} to={tab.path} onClick={() => setMobileOpen(false)} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                      {tab.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* 書類から探す */}
+            <div>
+              <button
+                aria-expanded={mobileSection === 'docs'}
+                onClick={() => setMobileSection(mobileSection === 'docs' ? null : 'docs')}
+                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                {t('navbar.findByDoc')}
+                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'docs' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === 'docs' && (
+                <div className="ml-4 mt-1 space-y-0.5">
+                  {documentTabs.map(tab => (
+                    <Link key={tab.path} to={tab.path} onClick={() => setMobileOpen(false)} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                      {tab.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* ガイド */}
+            <div>
+              <button
+                aria-expanded={mobileSection === 'guides'}
+                onClick={() => setMobileSection(mobileSection === 'guides' ? null : 'guides')}
+                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                {isJa ? 'お役立ちガイド' : 'Guides'}
+                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'guides' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === 'guides' && (
+                <div className="ml-4 mt-1 space-y-3">
+                  {guidesSections.map(section => (
+                    <div key={section.category}>
+                      <p className="px-3 pt-2 pb-1 text-[10px] font-bold text-gray-400 uppercase tracking-wide">{section.category}</p>
+                      {section.items.map(item => (
+                        <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)} className="block px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                  <Link to={guidesPath} onClick={() => setMobileOpen(false)} className="block px-3 py-2 text-sm text-primary-dark font-medium hover:underline">
+                    {isJa ? 'すべてのガイドを見る →' : 'See all guides →'}
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <div className="border-t border-gray-100 pt-2 mt-2 space-y-0.5">
+              <Link to={pricingPath} onClick={() => setMobileOpen(false)} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.pricing')}</Link>
+            </div>
+
+            {isJa && (
+              <div className="border-t border-gray-100 pt-2 mt-2">
+                <Link to="/ja/news/" onClick={() => setMobileOpen(false)} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">お知らせ</Link>
+              </div>
+            )}
+
+            {isJa && (
+              <div className="border-t border-gray-100 pt-2 mt-2">
+                <button
+                  aria-expanded={mobileSection === 'business'}
+                  onClick={() => setMobileSection(mobileSection === 'business' ? null : 'business')}
+                  className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+                >
+                  法人向けサービス
+                  <svg className={`w-4 h-4 transition-transform ${mobileSection === 'business' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {mobileSection === 'business' && (
+                  <div className="ml-4 mt-1 space-y-0.5">
+                    {businessTabs.map(tab => (
+                      <Link key={tab.path} to={tab.path} onClick={() => setMobileOpen(false)} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                        {tab.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div className="border-t border-gray-100 pt-2 mt-2">
+              <button
+                aria-expanded={mobileSection === 'about'}
+                onClick={() => setMobileSection(mobileSection === 'about' ? null : 'about')}
+                className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+              >
+                {isJa ? '当社について' : 'About'}
+                <svg className={`w-4 h-4 transition-transform ${mobileSection === 'about' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileSection === 'about' && (
+                <div className="ml-4 mt-1 space-y-0.5">
+                  {aboutTabs.map(tab => (
+                    <Link key={tab.path} to={tab.path} onClick={() => setMobileOpen(false)} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                      {tab.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="pt-3">
+              <a
+                href="#contact"
+                onClick={() => { trackEvent('cta_click', { location: 'mobile_menu', type: 'contact', variant: ctaVariant }); setMobileOpen(false); }}
+                className="block text-center text-sm font-bold text-white bg-primary px-6 py-3 rounded-xl hover:bg-primary-hover transition-colors shadow-md"
+              >
+                {t('navbar.cta')}
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
