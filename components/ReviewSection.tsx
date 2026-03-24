@@ -5,6 +5,7 @@ const reviews = [
     stars: 5,
     purpose: '国際結婚準備',
     body: '日本語で全てのやり取りが完結し、フィリピンに渡航せずにCENOMARとPSA出生証明書を取得できました。進捗報告も丁寧で、何が起きているか常に分かる状態で進められました。',
+    initial: 'M.K.',
     author: '30代 女性',
     context: '国際結婚・日本先行婚',
   },
@@ -12,6 +13,7 @@ const reviews = [
     stars: 5,
     purpose: '配偶者ビザ申請',
     body: 'NBI ClearanceのDFAアポスティーユも含めてまとめて依頼できました。入管の提出期限に余裕を持って書類が届き、配偶者ビザ申請が無事完了しました。',
+    initial: 'T.S.',
     author: '40代 男性',
     context: '配偶者ビザ・入管提出',
   },
@@ -19,6 +21,7 @@ const reviews = [
     stars: 5,
     purpose: '外免切替',
     body: 'LTO書類の取り方が全く分からない状態で相談しました。必要な書類を整理してもらい、試験場の予約日から逆算して手配いただけました。渡航ゼロで完結できました。',
+    initial: 'K.Y.',
     author: '40代 男性',
     context: '外免切替・運転免許センター提出',
   },
@@ -49,8 +52,8 @@ const ReviewSection: React.FC = () => (
             <p className="text-gray-700 text-xs leading-relaxed flex-1 mb-3">
               &ldquo;{r.body}&rdquo;
             </p>
-            <div className="text-[10px] text-gray-400 border-t border-gray-200 pt-2">
-              <span className="font-medium text-gray-500">{r.author}</span>
+            <div className="text-[10px] text-gray-600 border-t border-gray-200 pt-2">
+              <span className="font-medium text-gray-700">{r.initial}（{r.author}）</span>
               <span className="mx-1">·</span>
               <span>{r.context}</span>
             </div>
