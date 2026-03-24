@@ -358,8 +358,8 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* ナビゲーションタブ行 */}
-      <div className="border-t border-gray-100 bg-white/95">
+      {/* ナビゲーションタブ行 — desktop only */}
+      <div className="hidden md:block border-t border-gray-100 bg-white/95">
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-2 py-1.5 flex items-center">
           <div className="flex overflow-x-auto scrollbar-hide gap-1 min-w-0">
 
