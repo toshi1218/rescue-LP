@@ -10,6 +10,7 @@ import ReviewSection from '../components/ReviewSection';
 import ServicePacks from '../components/ServicePacks';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
+import BackToTop from '../components/BackToTop';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
@@ -143,6 +144,7 @@ export default function HomeJa() {
         <FAQ />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

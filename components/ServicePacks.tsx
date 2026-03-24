@@ -42,12 +42,12 @@ const ServicePacks: React.FC = React.memo(() => (
         <h2 className="text-xl font-bold text-secondary mb-2">目的が決まっている方はこちら</h2>
         <p className="text-sm text-gray-500">必要書類・費用の目安・ご依頼の流れを目的別にまとめています</p>
       </div>
-      <div className="flex flex-col divide-y divide-gray-100 border border-gray-100 rounded-2xl overflow-hidden">
+      <div className="flex flex-col gap-4 sm:gap-0 sm:divide-y sm:divide-gray-100 sm:border sm:border-gray-100 sm:rounded-2xl sm:overflow-hidden">
         {packs.map((pack) => (
           <Link
             key={pack.to}
             to={pack.to}
-            className="group flex items-center gap-4 px-5 py-4 bg-gray-50 hover:bg-primary/5 hover:border-l-4 hover:border-l-primary transition-all"
+            className="group flex flex-col gap-3 p-5 border border-gray-100 rounded-2xl bg-gray-50 sm:flex-row sm:items-center sm:gap-4 sm:px-5 sm:py-4 sm:border-0 sm:rounded-none hover:bg-primary/5 sm:hover:border-l-4 sm:hover:border-l-primary hover:shadow-sm sm:hover:shadow-none hover:-translate-y-0.5 sm:hover:translate-y-0 transition-all"
           >
             <div className="w-10 h-10 rounded-xl bg-secondary/8 border border-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/10 group-hover:border-primary/20 transition-colors">
               <pack.icon className="w-5 h-5 text-secondary group-hover:text-primary transition-colors" />
@@ -56,7 +56,7 @@ const ServicePacks: React.FC = React.memo(() => (
               <span className="font-bold text-sm text-secondary group-hover:text-primary transition-colors leading-snug block">{pack.title}</span>
               <p className="text-xs text-gray-500 leading-relaxed mt-0.5">{pack.desc}</p>
             </div>
-            <span className="text-xs font-bold text-primary-dark shrink-0">詳しく見る →</span>
+            <span className="text-xs font-bold text-primary-dark mt-auto sm:mt-0 shrink-0">詳しく見る →</span>
           </Link>
         ))}
       </div>
