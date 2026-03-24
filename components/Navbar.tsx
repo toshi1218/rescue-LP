@@ -11,7 +11,9 @@ const Navbar: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<MenuType>(null);
   const [dropdownPos, setDropdownPos] = useState<{ left: number; top: number }>({ left: 0, top: 0 });
+  const [navHeight, setNavHeight] = useState(112);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navRef = useRef<HTMLElement>(null);
   const docsRef = useRef<HTMLDivElement>(null);
   const purposeRef = useRef<HTMLDivElement>(null);
   const guidesRef = useRef<HTMLDivElement>(null);
@@ -182,6 +184,16 @@ const Navbar: React.FC = () => {
     closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
   };
 
+  // Measure actual nav height for mobile menu positioning
+  useEffect(() => {
+    const measure = () => {
+      if (navRef.current) setNavHeight(navRef.current.getBoundingClientRect().height);
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, []);
+
   // Keyboard: Escape closes dropdown / mobile menu and returns focus to trigger
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -298,7 +310,7 @@ const Navbar: React.FC = () => {
     }`;
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
+    <nav ref={navRef} className="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
       {/* メインヘッダー行 */}
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
         {isHome ? (
@@ -397,10 +409,10 @@ const Navbar: React.FC = () => {
             {/* 料金 */}
             <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
 
-            {/* お役立ち / Guides dropdown */}
+            {/* お役立ち / Guides dropdown — hidden on mobile (accessible via hamburger) */}
             <div
               ref={guidesRef}
-              className="flex-shrink-0"
+              className="hidden sm:flex-shrink-0 sm:block"
               onMouseEnter={() => handleMouseEnter('guides', guidesRef)}
               onMouseLeave={handleMouseLeave}
             >
@@ -418,10 +430,10 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            {/* 当社について ドロップダウン */}
+            {/* 当社について ドロップダウン — hidden on mobile */}
             <div
               ref={aboutRef}
-              className="flex-shrink-0"
+              className="hidden sm:flex-shrink-0 sm:block"
               onMouseEnter={() => handleMouseEnter('about', aboutRef)}
               onMouseLeave={handleMouseLeave}
             >
@@ -439,9 +451,9 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            {/* お知らせ */}
+            {/* お知らせ — hidden on mobile */}
             {isJa && (
-              <Link to="/ja/news/" className={linkClass('/ja/news/')}>お知らせ</Link>
+              <Link to="/ja/news/" className={`hidden sm:inline-flex ${linkClass('/ja/news/')}`}>お知らせ</Link>
             )}
 
           </div>
@@ -514,7 +526,7 @@ const Navbar: React.FC = () => {
 
       {/* モバイルメニュー */}
       {mobileOpen && (
-        <div id="mobile-menu" ref={mobileMenuRef} className="md:hidden fixed inset-0 top-[104px] z-[200] bg-white overflow-y-auto">
+        <div id="mobile-menu" ref={mobileMenuRef} className="md:hidden fixed inset-x-0 bottom-0 z-[200] bg-white overflow-y-auto" style={{ top: navHeight }}>
           <div className="px-4 py-4 space-y-1">
             <Link to={homePath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-secondary hover:bg-gray-50">
               {t('navbar.home')}
