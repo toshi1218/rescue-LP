@@ -15,7 +15,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function PsaBirthCertJa() {
   useMeta(
     `PSA出生証明書 取得代行【${SEO_YEAR_MONTH_JA}】料金・期間・アポスティーユ込み対応`,
-    'PSA出生証明書をDFAアポスティーユ付きで代行取得。料金は税抜40,000円〜（DHL郵送費別）。国際結婚・配偶者ビザ・帰化申請に対応。日本語のみでOK、渡航不要。',
+    'PSA出生証明書をDFAアポスティーユ付きで代行取得。料金は税抜50,000円〜（DHL郵送費別）。国際結婚・配偶者ビザ・帰化申請に対応。日本語のみでOK、渡航不要。',
     'https://ph-document.com/ja/psa-shussei-shomeisho',
   );
   return (
@@ -36,10 +36,10 @@ export default function PsaBirthCertJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
@@ -62,7 +62,7 @@ export default function PsaBirthCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜40,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。',
+                text: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜50,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -239,7 +239,7 @@ export default function PsaBirthCertJa() {
       <FaqSection
         items={[
           { q: 'PSA出生証明書とは何ですか？', a: 'PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（PSA）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚・配偶者ビザ申請・帰化申請などで身元証明として提出を求められます。' },
-          { q: '料金はいくらですか？', a: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜40,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜50,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。' },
           { q: 'PSAに記録がない場合はどうなりますか？', a: 'LCR（地方民事登録局）への申請が必要になります。対応経験がありますので、まずご相談ください。追加費用が発生する場合は事前にご説明します。' },
           { q: '出生証明書とアポスティーユ、両方必要ですか？', a: '日本の提出先では通常、PSA出生証明書＋DFAアポスティーユの両方が必要です。提出先を確認した上でご案内します。' },
           { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },

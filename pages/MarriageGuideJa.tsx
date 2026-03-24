@@ -36,10 +36,10 @@ export default function MarriageGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'PSA書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },

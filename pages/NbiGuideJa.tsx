@@ -35,10 +35,10 @@ export default function NbiGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '55000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '55000',
             priceCurrency: 'JPY',
             description: 'NBI Clearance取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
