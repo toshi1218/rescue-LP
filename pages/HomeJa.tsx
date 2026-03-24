@@ -113,8 +113,8 @@ export default function HomeJa() {
         },
         {
           '@type': 'Offer',
-          priceSpecification: { '@type': 'PriceSpecification', minPrice: '89800', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: '移民書類パック（CENOMAR＋PSA＋NBI＋アポスティーユ）', description: '国際結婚・配偶者ビザ・移民申請に必要なフィリピン書類を一括代行。DHL配送込み。' },
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: '99800', priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: '国際結婚準備パック（PSA出生証明書＋CENOMAR＋DFAアポスティーユ）', description: '日本での国際結婚手続きに必要なフィリピン側書類をまとめて代行取得。' },
         },
         {
           '@type': 'Offer',

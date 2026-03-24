@@ -928,7 +928,7 @@ const routes: RouteConfig[] = [
     path: '/ja/psa-shussei-cost',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-cost', 'index.html'),
     title: `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】総額いくら？現地365ペソだけでは届かない理由`,
-    description: 'PSA出生証明書の現地料金は365ペソですが、日本に届けるにはDFAアポスティーユ代・国際郵送費が別途必要。追加請求なし・総額明示で代行。¥40,000（税別）。無料見積もり。',
+    description: 'PSA出生証明書の現地料金は365ペソですが、日本に届けるにはDFAアポスティーユ代・国際郵送費が別途必要。追加請求なし・総額明示で代行。¥50,000（税別）。無料見積もり。',
     canonical: `${BASE}/ja/psa-shussei-cost/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,

@@ -37,10 +37,10 @@ export default function NbiHitJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '50000',
+          price: '55000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '50000',
+            price: '55000',
             priceCurrency: 'JPY',
             description: 'NBI取得・HIT対応・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
