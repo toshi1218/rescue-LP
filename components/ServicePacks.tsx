@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, BadgeCheck, Car, ShieldCheck } from 'lucide-react';
+import { Heart, BadgeCheck, Car, ShieldCheck, Award } from 'lucide-react';
 
 const packs = [
   {
@@ -27,6 +27,12 @@ const packs = [
     title: '海外ビザ用NBIクリアランス',
     desc: '海外ビザ申請に必要な無犯罪証明書の取得サポートと費用を確認できます',
   },
+  {
+    to: '/ja/kikka-shinsei/',
+    icon: Award,
+    title: '帰化申請書類パック',
+    desc: '法務局への帰化申請に必要なフィリピン書類（出生・婚姻・NBI）の取得サポートと費用を確認できます',
+  },
 ];
 
 const ServicePacks: React.FC = React.memo(() => (
@@ -36,7 +42,7 @@ const ServicePacks: React.FC = React.memo(() => (
         <h2 className="text-xl font-bold text-secondary mb-2">まず、お手続きの目的をお選びください</h2>
         <p className="text-sm text-gray-500">選んだページで必要書類・費用の目安・ご依頼の流れをご確認いただけます</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {packs.map((pack) => (
           <Link
             key={pack.to}
