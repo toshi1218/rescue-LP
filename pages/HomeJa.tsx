@@ -6,6 +6,7 @@ import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
 import WhyUs from '../components/WhyUs';
 import CaseStudies from '../components/CaseStudies';
+import ReviewSection from '../components/ReviewSection';
 import ServicePacks from '../components/ServicePacks';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
@@ -132,6 +133,7 @@ export default function HomeJa() {
       <Navbar />
       <main>
         <Hero />
+        <ReviewSection />
         <GuideLinks maxItems={6} />
         <QuickFacts />
         <ServicePacks />

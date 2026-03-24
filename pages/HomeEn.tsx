@@ -60,6 +60,13 @@ export default function HomeEn() {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'LTO Driver Record Retrieval' } },
       ],
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '47',
+    },
     dateModified: SEO_DATE_ISO,
   };
 
