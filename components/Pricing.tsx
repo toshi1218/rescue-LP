@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CheckCircle, XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
@@ -467,6 +468,80 @@ const Pricing: React.FC = () => {
               相談する
               <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
             </a>
+          </div>
+        )}
+
+        {/* Document checklist by visa / immigration purpose — English */}
+        {lang === 'en' && (
+          <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50/50 p-6">
+            <h3 className="text-sm font-bold text-secondary mb-2">Not sure which documents you need?</h3>
+            <p className="text-xs text-gray-500 mb-5 leading-relaxed">
+              Required Philippine documents vary by visa type and destination country. Select your situation below to see the exact checklist.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+              {[
+                {
+                  to: '/en/k1-visa-documents/',
+                  flag: '🇺🇸',
+                  label: 'K-1 Fiancé Visa (USA)',
+                  docs: ['CENOMAR + Apostille', 'PSA Birth Certificate + Apostille', 'NBI Clearance + Apostille'],
+                },
+                {
+                  to: '/en/cr1-visa-documents/',
+                  flag: '🇺🇸',
+                  label: 'CR-1 / IR-1 Spouse Visa (USA)',
+                  docs: ['PSA Marriage Certificate + Apostille', 'PSA Birth Certificate + Apostille', 'NBI Clearance + Apostille'],
+                },
+                {
+                  to: '/en/canada/',
+                  flag: '🇨🇦',
+                  label: 'Canada Immigration',
+                  docs: ['CENOMAR + Apostille', 'PSA Birth Certificate + Apostille', 'NBI Clearance + Apostille'],
+                },
+                {
+                  to: '/en/australia/',
+                  flag: '🇦🇺',
+                  label: 'Australia Immigration',
+                  docs: ['CENOMAR + Apostille', 'PSA Birth Certificate + Apostille', 'NBI Clearance + Apostille'],
+                },
+                {
+                  to: '/en/uk/',
+                  flag: '🇬🇧',
+                  label: 'UK Immigration',
+                  docs: ['CENOMAR + Apostille', 'PSA Birth Certificate + Apostille', 'NBI Clearance + Apostille'],
+                },
+                {
+                  to: '/en/spouse-visa-documents/',
+                  flag: '🇯🇵',
+                  label: 'Spouse Visa (Japan)',
+                  docs: ['PSA Marriage Certificate + Apostille', 'PSA Birth Certificate', 'NBI Clearance'],
+                },
+              ].map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="flex flex-col gap-2 bg-white rounded-xl border border-gray-200 px-4 py-3.5 hover:border-primary/50 hover:shadow-md transition-all group"
+                >
+                  <span className="text-xs font-bold text-gray-800 group-hover:text-secondary transition-colors">
+                    {item.flag} {item.label}
+                  </span>
+                  <ul className="space-y-0.5">
+                    {item.docs.map((doc) => (
+                      <li key={doc} className="text-[11px] text-gray-500 flex items-center gap-1.5">
+                        <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
+                        {doc}
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="inline-flex items-center gap-1 self-start text-[11px] font-semibold text-primary-dark mt-0.5 group-hover:underline">
+                    See full checklist <ArrowRight className="w-3 h-3" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <p className="text-xs text-gray-400 leading-relaxed">
+              Don't see your country? <a href="#contact" className="text-primary-dark underline hover:text-primary">Contact us</a> — we ship to 50+ countries via DHL Express.
+            </p>
           </div>
         )}
 
