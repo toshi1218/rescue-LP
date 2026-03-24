@@ -181,7 +181,7 @@ export default function SpouseVisaShoryuJa() {
               <div className="bg-amber-500 px-4 py-2.5 flex items-center gap-2">
                 <AlertTriangle className="w-4 h-4 text-white" />
                 <span className="text-sm font-bold text-white">④ 結核非発病証明書（TB Non-Disease Certificate）</span>
-                <span className="ml-auto text-[10px] font-bold bg-white text-amber-700 px-2 py-0.5 rounded-full">2025年6月〜必須</span>
+                <span className="ml-auto text-xs font-bold bg-white text-amber-700 px-2 py-0.5 rounded-full">2025年6月〜必須</span>
               </div>
               <div className="p-4 text-sm text-gray-700 space-y-2 bg-amber-50/50">
                 <div className="grid grid-cols-[auto,1fr] gap-x-3 gap-y-1 text-xs">

@@ -218,7 +218,7 @@ const Footer: React.FC = () => {
           <Link to={pricingPath} className="hover:text-secondary transition-colors">{t('footer.pricingLink')}</Link>
           <Link to={contactPath} className="hover:text-secondary transition-colors">{t('footer.contactLink')}</Link>
         </div>
-        <p className="text-[10px] text-gray-300 mt-4">
+        <p className="text-xs text-gray-300 mt-4">
           {isJa ? `© ${currentYear} 株式会社IGRS` : `© ${currentYear} IGRS Inc.`}
         </p>
       </div>
