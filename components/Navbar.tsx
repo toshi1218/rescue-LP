@@ -394,6 +394,9 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
+            {/* 料金 */}
+            <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
+
             {/* お役立ち / Guides dropdown */}
             <div
               ref={guidesRef}
@@ -414,30 +417,6 @@ const Navbar: React.FC = () => {
                 </svg>
               </button>
             </div>
-            <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
-
-            {/* 法人向け ドロップダウン */}
-            {isJa && (
-              <div
-                ref={businessRef}
-                className="flex-shrink-0"
-                onMouseEnter={() => handleMouseEnter('business', businessRef)}
-                onMouseLeave={handleMouseLeave}
-              >
-                <button
-                  onClick={() => { if (businessRef.current) { const r = businessRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'business' ? null : 'business'); }}
-                  onKeyDown={handleTriggerKeyDown('business', businessRef)}
-                  aria-expanded={openMenu === 'business'}
-                  aria-haspopup="true"
-                  className={tabBtnClass(isBusinessActive || openMenu === 'business')}
-                >
-                  法人向け
-                  <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-            )}
 
             {/* 当社について ドロップダウン */}
             <div
@@ -460,10 +439,41 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
+            {/* お知らせ */}
+            {isJa && (
+              <Link to="/ja/news/" className={linkClass('/ja/news/')}>お知らせ</Link>
+            )}
+
           </div>
 
-          {/* タブバー右端: お問い合わせ */}
+          {/* タブバー右端: 法人向け + お問い合わせ */}
           <div className="hidden md:flex items-center gap-2 ml-3 flex-shrink-0">
+            {/* 法人向け ドロップダウン */}
+            {isJa && (
+              <div
+                ref={businessRef}
+                className="flex-shrink-0"
+                onMouseEnter={() => handleMouseEnter('business', businessRef)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <button
+                  onClick={() => { if (businessRef.current) { const r = businessRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'business' ? null : 'business'); }}
+                  onKeyDown={handleTriggerKeyDown('business', businessRef)}
+                  aria-expanded={openMenu === 'business'}
+                  aria-haspopup="true"
+                  className={`flex items-center px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors border ${
+                    isBusinessActive || openMenu === 'business'
+                      ? 'bg-secondary text-white border-secondary'
+                      : 'border-secondary text-secondary hover:bg-secondary hover:text-white'
+                  }`}
+                >
+                  法人向け
+                  <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+            )}
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact', variant: ctaVariant })}
@@ -590,6 +600,13 @@ const Navbar: React.FC = () => {
             <div className="border-t border-gray-100 pt-2 mt-2 space-y-0.5">
               <Link to={pricingPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.pricing')}</Link>
             </div>
+
+            {/* お知らせ（モバイル） */}
+            {isJa && (
+              <div className="border-t border-gray-100 pt-2 mt-2">
+                <Link to="/ja/news/" className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">お知らせ</Link>
+              </div>
+            )}
 
             {/* 法人向け（モバイルアコーディオン） */}
             {isJa && (

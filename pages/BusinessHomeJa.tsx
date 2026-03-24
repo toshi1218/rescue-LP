@@ -64,7 +64,7 @@ export default function BusinessHomeJa() {
         points={[
           'CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユに対応',
           '案件ごとの進捗報告・連絡窓口の一本化',
-          '継続案件にはボリュームディスカウントを適用',
+          '複数件・継続案件は料金についてご相談いただけます',
           '請求書払い（月末締め翌月払い等）に対応可能',
         ]}
       />
@@ -131,19 +131,19 @@ export default function BusinessHomeJa() {
                 <tr className="border-b border-gray-200">
                   <th className="text-left py-2 text-secondary font-bold">書類</th>
                   <th className="text-right py-2 text-secondary font-bold">単発</th>
-                  <th className="text-right py-2 text-secondary font-bold">月3件〜</th>
+                  <th className="text-right py-2 text-secondary font-bold">複数・継続案件</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr>
                   <td className="py-3 text-gray-700">CENOMAR + DFAアポスティーユ</td>
                   <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">¥48,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">PSA出生証明書 + DFAアポスティーユ</td>
                   <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">¥48,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">NBI Clearance（更新案件）</td>
@@ -160,7 +160,7 @@ export default function BusinessHomeJa() {
             <div className="mt-4 space-y-1">
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                月10件以上の継続案件は別途お見積り
+                複数件・継続案件の料金はお問い合わせください
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
@@ -203,7 +203,7 @@ export default function BusinessHomeJa() {
           },
           {
             q: '継続案件の割引はありますか？',
-            a: 'はい。月3件以上の継続案件にはボリュームディスカウントを適用します。件数や頻度に応じたお見積りをご提示しますので、まずはご相談ください。',
+            a: 'はい。複数件・継続案件の場合は件数や頻度に応じてご相談いただけます。まずはお問い合わせください。',
           },
           {
             q: '請求書払いは可能ですか？',

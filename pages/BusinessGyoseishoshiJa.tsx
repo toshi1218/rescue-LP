@@ -109,30 +109,30 @@ export default function BusinessGyoseishoshiJa() {
                 <tr className="border-b border-gray-200">
                   <th className="text-left py-2 text-secondary font-bold">書類</th>
                   <th className="text-right py-2 text-secondary font-bold">単発</th>
-                  <th className="text-right py-2 text-secondary font-bold">月3件〜</th>
+                  <th className="text-right py-2 text-secondary font-bold">複数・継続案件</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr>
                   <td className="py-3 text-gray-700">CENOMAR + DFAアポスティーユ</td>
                   <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">¥48,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">PSA出生証明書 + DFAアポスティーユ</td>
                   <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">¥48,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">PSA婚姻証明書 + DFAアポスティーユ</td>
                   <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">¥48,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
               </tbody>
             </table>
             <p className="mt-4 text-xs text-gray-500 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-              継続案件は別途お見積り・DHL国際郵送費は実費別途
+              複数件・継続案件の料金はお問い合わせください・DHL国際郵送費は実費別途
             </p>
           </div>
         </div>
