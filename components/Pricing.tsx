@@ -90,7 +90,7 @@ const plansData = {
       icon: Fingerprint,
       tag: null,
       featured: false,
-      title: '海外ビザ用NBIクリアランスサポート',
+      title: '海外ビザ用NBIクリアランス取得サポート',
       subtitle: '海外ビザ申請・帰化申請・在留資格手続きに必要な無犯罪証明書の取得プラン',
       why: '入管・帰化・海外ビザ申請では、フィリピン側の無犯罪証明書（NBI Clearance）の提出が求められます',
       outcome: '書類が揃えば、ビザや在留資格・帰化申請の書類セットが完成します',
@@ -378,9 +378,9 @@ const Pricing: React.FC = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-bold text-secondary leading-snug">{plan.title}</p>
-                      <p className="text-xs text-gray-400 mt-0.5 leading-snug">{plan.subtitle}</p>
+                      <p className="text-xs text-gray-600 mt-0.5 leading-snug">{plan.subtitle}</p>
                       {(plan as any).why && (
-                        <p className="text-xs text-gray-500 mt-1 leading-snug">
+                        <p className="text-xs text-gray-700 mt-1 leading-snug">
                           <span className="font-semibold">なぜ必要：</span>{(plan as any).why}
                         </p>
                       )}
@@ -392,13 +392,13 @@ const Pricing: React.FC = () => {
                     </div>
                     <div className="text-right flex-shrink-0">
                       <span className="text-base font-bold text-primary">{plan.price}</span>
-                      <span className="text-xs text-gray-400 block">{plan.priceNote}</span>
-                      <span className="text-xs text-gray-400 block mt-0.5">{plan.period}</span>
+                      <span className="text-xs text-gray-500 block">{plan.priceNote}</span>
+                      <span className="text-xs text-gray-500 block mt-0.5">{plan.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-1.5">
                     {plan.highlights.slice(0, 3).map((h) => (
-                      <li key={h} className="flex items-center gap-1.5 text-xs text-gray-500">
+                      <li key={h} className="flex items-center gap-1.5 text-xs text-gray-600">
                         <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
                         {h}
                       </li>
@@ -423,9 +423,9 @@ const Pricing: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-sm font-bold text-secondary leading-snug">{plan.title}</p>
-                      <p className="text-xs text-gray-400 mt-0.5 leading-snug">{plan.subtitle}</p>
+                      <p className="text-xs text-gray-600 mt-0.5 leading-snug">{plan.subtitle}</p>
                       {(plan as any).why && (
-                        <p className="text-xs text-gray-500 mt-1 leading-snug">
+                        <p className="text-xs text-gray-700 mt-1 leading-snug">
                           <span className="font-semibold">なぜ必要：</span>{(plan as any).why}
                         </p>
                       )}
@@ -442,10 +442,10 @@ const Pricing: React.FC = () => {
 
                   {/* 納期 */}
                   <div>
-                    <p className="text-xs text-gray-500">{plan.period}</p>
+                    <p className="text-xs text-gray-600">{plan.period}</p>
                     <ul className="mt-1.5 space-y-1">
                       {plan.highlights.slice(0, 3).map((h) => (
-                        <li key={h} className="flex items-center gap-1.5 text-xs text-gray-400">
+                        <li key={h} className="flex items-center gap-1.5 text-xs text-gray-600">
                           <CheckCircle className="w-3 h-3 text-primary flex-shrink-0" />
                           {h}
                         </li>
@@ -456,7 +456,7 @@ const Pricing: React.FC = () => {
                   {/* 料金 */}
                   <div>
                     <span className="text-base font-bold text-primary">{plan.price}</span>
-                    <span className="text-xs text-gray-400 block">{plan.priceNote}</span>
+                    <span className="text-xs text-gray-500 block">{plan.priceNote}</span>
                   </div>
 
                   {/* CTA */}
@@ -624,7 +624,6 @@ const Pricing: React.FC = () => {
                   '必要書類の数',
                   'アポスティーユの有無',
                   '特急対応の有無',
-                  '発送先（国内 / 海外）',
                   '記載内容の不一致や補足確認の有無',
                   '定型案件か個別案件か',
                 ]

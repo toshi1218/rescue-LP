@@ -196,7 +196,7 @@ const Hero: React.FC = () => {
             <p className="text-primary-dark text-xs font-semibold">
               Now accepting inquiries · Reply within 24 hours
             </p>
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-600 text-xs">
               International Marriage Package from US$899 (Apostille + DHL incl.)
             </p>
           </div>
@@ -225,7 +225,7 @@ const Hero: React.FC = () => {
                   <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm font-semibold text-gray-800 leading-tight">{item.label}</p>
-                    <p className="text-xs text-gray-400">{item.sub}</p>
+                    <p className="text-xs text-gray-600">{item.sub}</p>
                   </div>
                 </div>
               ))}
@@ -251,7 +251,7 @@ const Hero: React.FC = () => {
               ].map((s) => (
                 <div key={s.label} className="py-3 text-center">
                   <p className="text-sm font-bold text-secondary">{s.num}</p>
-                  <p className="text-[10px] text-gray-400">{s.label}</p>
+                  <p className="text-[10px] text-gray-600">{s.label}</p>
                 </div>
               ))}
             </div>

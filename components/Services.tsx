@@ -77,7 +77,7 @@ const Services: React.FC = () => {
                 {t('services.agencies.lto')}
               </a>
             </div>
-            <p className="text-[10px] text-gray-400 mt-2 text-center">{t('services.agencies.note')}</p>
+            <p className="text-[10px] text-gray-600 mt-2 text-center">{t('services.agencies.note')}</p>
           </div>
 
           {/* CTA Button */}
