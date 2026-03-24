@@ -539,7 +539,7 @@ const Navbar: React.FC = () => {
           <div className="grid grid-cols-2 gap-x-2">
             {guidesSections.map((section) => (
               <div key={section.category} className="mb-2">
-                <p className="px-2 pt-1 pb-1 text-[10px] font-bold text-primary uppercase tracking-wide border-b border-primary/20 mb-1">
+                <p className="px-2 pt-1 pb-1 text-xs font-bold text-primary uppercase tracking-wide border-b border-primary/20 mb-1">
                   {section.category}
                 </p>
                 {section.items.map(item => (
@@ -643,7 +643,7 @@ const Navbar: React.FC = () => {
                 <div className="ml-4 mt-1 space-y-3">
                   {guidesSections.map(section => (
                     <div key={section.category}>
-                      <p className="px-3 pt-2 pb-1 text-[10px] font-bold text-gray-400 uppercase tracking-wide">{section.category}</p>
+                      <p className="px-3 pt-2 pb-1 text-xs font-bold text-gray-400 uppercase tracking-wide">{section.category}</p>
                       {section.items.map(item => (
                         <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)} className="block px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
                           {item.label}

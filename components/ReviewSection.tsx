@@ -42,7 +42,7 @@ const ReviewSection: React.FC = () => (
         {reviews.map((r, i) => (
           <article key={i} className="bg-gray-50 rounded-xl p-5 border border-gray-100 flex flex-col">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-[10px] font-bold text-primary uppercase tracking-wide bg-primary/10 px-2 py-0.5 rounded-full">
+              <span className="text-xs font-bold text-primary uppercase tracking-wide bg-primary/10 px-2 py-0.5 rounded-full">
                 {r.purpose}
               </span>
               <span className="text-yellow-400 text-xs" aria-label={`${r.stars}点満点`}>
@@ -52,7 +52,7 @@ const ReviewSection: React.FC = () => (
             <p className="text-gray-700 text-xs leading-relaxed flex-1 mb-3">
               &ldquo;{r.body}&rdquo;
             </p>
-            <div className="text-[10px] text-gray-600 border-t border-gray-200 pt-2">
+            <div className="text-xs text-gray-600 border-t border-gray-200 pt-2">
               <span className="font-medium text-gray-700">{r.initial}（{r.author}）</span>
               <span className="mx-1">·</span>
               <span>{r.context}</span>

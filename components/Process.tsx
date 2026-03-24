@@ -54,7 +54,7 @@ const Process: React.FC = () => {
                     <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-primary text-secondary text-[9px] font-bold flex items-center justify-center shadow-md">{step.num}</span>
                   </div>
                   <h3 className="text-xs font-bold mb-1.5 leading-snug text-white">{step.title}</h3>
-                  <p className="text-[10px] text-white/50 leading-relaxed">{step.desc}</p>
+                  <p className="text-xs text-white/50 leading-relaxed">{step.desc}</p>
                 </div>
                 {idx < steps.length - 1 && (
                   <div className="flex-shrink-0 mt-6 text-primary/40">
@@ -77,7 +77,7 @@ const Process: React.FC = () => {
                 </div>
                 <div className="bg-white/8 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:bg-white/12 transition-colors">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded-full">STEP {step.num}</span>
+                    <span className="text-xs font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded-full">STEP {step.num}</span>
                     <h3 className="font-bold text-sm text-white">{step.title}</h3>
                   </div>
                   <p className="text-xs text-white/50 leading-relaxed">{step.desc}</p>

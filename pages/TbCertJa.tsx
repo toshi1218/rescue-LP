@@ -164,13 +164,13 @@ export default function TbCertJa() {
                 <span>月〜金 7:30〜17:00（祝日除く）</span>
               </div>
               <div className="mt-2 rounded-lg bg-primary/8 border border-primary/15 p-2">
-                <p className="font-semibold text-gray-700 mb-1 text-[11px]">IOM 検査費用</p>
+                <p className="font-semibold text-gray-700 mb-1 text-xs">IOM 検査費用</p>
                 <div className="space-y-0.5">
                   <p>・0〜4歳（TST）：₱4,500 ／ IGRA：₱9,200</p>
                   <p>・5歳以上：₱6,500</p>
                 </div>
               </div>
-              <p className="text-[10px] text-gray-500">予約：MyMedical オンラインシステムより。費用はクリニックで当日払い（事前振込不可）。</p>
+              <p className="text-xs text-gray-500">予約：MyMedical オンラインシステムより。費用はクリニックで当日払い（事前振込不可）。</p>
             </div>
           </div>
 
@@ -188,27 +188,27 @@ export default function TbCertJa() {
             <div className="ml-11 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-600">
               <div className="rounded-lg bg-gray-50 border border-gray-100 p-3">
                 <p className="font-semibold text-gray-700 mb-1">② Makati（マカティ）</p>
-                <p className="text-[11px] leading-relaxed">2/F Zeta II Annex Bldg., 191 Salcedo St., Legaspi Village, Makati City 1229</p>
-                <p className="text-[11px] mt-1">📞 +632-8810-0785</p>
-                <p className="text-[11px]">月〜金 8:00〜16:00 / 土 8:00〜15:00</p>
+                <p className="text-xs leading-relaxed">2/F Zeta II Annex Bldg., 191 Salcedo St., Legaspi Village, Makati City 1229</p>
+                <p className="text-xs mt-1">📞 +632-8810-0785</p>
+                <p className="text-xs">月〜金 8:00〜16:00 / 土 8:00〜15:00</p>
               </div>
               <div className="rounded-lg bg-gray-50 border border-gray-100 p-3">
                 <p className="font-semibold text-gray-700 mb-1">③ Baguio（バギオ）</p>
-                <p className="text-[11px] leading-relaxed">Unit 10–12, 2/F City Hub Bldg., 92 Upper Gen. Luna Rd., Baguio City</p>
-                <p className="text-[11px] mt-1">📞 +63 917-714-8963</p>
-                <p className="text-[11px]">月〜金 6:00〜16:00 / 土 6:00〜10:00</p>
+                <p className="text-xs leading-relaxed">Unit 10–12, 2/F City Hub Bldg., 92 Upper Gen. Luna Rd., Baguio City</p>
+                <p className="text-xs mt-1">📞 +63 917-714-8963</p>
+                <p className="text-xs">月〜金 6:00〜16:00 / 土 6:00〜10:00</p>
               </div>
               <div className="rounded-lg bg-gray-50 border border-gray-100 p-3">
                 <p className="font-semibold text-gray-700 mb-1">④ Cebu（セブ）</p>
-                <p className="text-[11px] leading-relaxed">Tango Plaza Bldg., Queens Rd., Brgy. Kamputhaw, Cebu City 6000</p>
-                <p className="text-[11px] mt-1">📞 +63 32-238-6053</p>
-                <p className="text-[11px]">月〜金 7:00（9:00 / 11:00 / 13:00） / 土 7:00のみ</p>
+                <p className="text-xs leading-relaxed">Tango Plaza Bldg., Queens Rd., Brgy. Kamputhaw, Cebu City 6000</p>
+                <p className="text-xs mt-1">📞 +63 32-238-6053</p>
+                <p className="text-xs">月〜金 7:00（9:00 / 11:00 / 13:00） / 土 7:00のみ</p>
               </div>
               <div className="rounded-lg bg-gray-50 border border-gray-100 p-3">
                 <p className="font-semibold text-gray-700 mb-1">⑤ Davao（ダバオ）</p>
-                <p className="text-[11px] leading-relaxed">2/F Central Lab Tower, Elpidio Quirino Ave., Brgy. 10-A, Davao City 8000</p>
-                <p className="text-[11px] mt-1">📞 +63 82-296-5136</p>
-                <p className="text-[11px]">月〜金 8:00〜15:00 / 土 8:00〜14:00</p>
+                <p className="text-xs leading-relaxed">2/F Central Lab Tower, Elpidio Quirino Ave., Brgy. 10-A, Davao City 8000</p>
+                <p className="text-xs mt-1">📞 +63 82-296-5136</p>
+                <p className="text-xs">月〜金 8:00〜15:00 / 土 8:00〜14:00</p>
               </div>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function TbCertJa() {
                 <span className="text-gray-400 flex-shrink-0">✉</span>
                 <span>inquiry@slec.ph</span>
               </div>
-              <p className="text-[10px] text-gray-500 mt-1">予約：slec.ph よりオンライン登録。特急・優先対応は行っていません。費用は直接確認要。</p>
+              <p className="text-xs text-gray-500 mt-1">予約：slec.ph よりオンライン登録。特急・優先対応は行っていません。費用は直接確認要。</p>
             </div>
           </div>
         </div>
@@ -292,7 +292,7 @@ export default function TbCertJa() {
                   </table>
                 </div>
               </div>
-              <p className="text-[10px] text-gray-500">St. Luke'sは費用を公表していないため要問い合わせ。痰検査等が追加される場合は別途費用。</p>
+              <p className="text-xs text-gray-500">St. Luke'sは費用を公表していないため要問い合わせ。痰検査等が追加される場合は別途費用。</p>
             </div>
           </div>
 
@@ -359,7 +359,7 @@ export default function TbCertJa() {
             <span>再入国許可所持者（すでに日本に在留している方）</span>
           </li>
         </ul>
-        <p className="text-[10px] text-gray-500 mt-3">※ 免除の適否は入管庁・大使館の判断によります。免除要件が変更になる場合もあるため、申請前に必ず確認してください。</p>
+        <p className="text-xs text-gray-500 mt-3">※ 免除の適否は入管庁・大使館の判断によります。免除要件が変更になる場合もあるため、申請前に必ず確認してください。</p>
       </section>
 
       <StepList

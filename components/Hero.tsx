@@ -213,7 +213,7 @@ const Hero: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm leading-tight">Philippine Document Service</p>
-                  <p className="text-white/50 text-[10px]">Cebu-based · DHL Worldwide</p>
+                  <p className="text-white/50 text-xs">Cebu-based · DHL Worldwide</p>
                 </div>
               </div>
             </div>
@@ -235,7 +235,7 @@ const Hero: React.FC = () => {
             <div className="mx-5 mb-4 bg-amber-50 border border-amber-100 rounded-xl px-4 py-3 flex items-center justify-between">
               <div>
                 <p className="text-xs font-bold text-amber-800">DFA Apostille</p>
-                <p className="text-[10px] text-amber-600">Authenticated for immigration</p>
+                <p className="text-xs text-amber-600">Authenticated for immigration</p>
               </div>
               <div className="w-11 h-11 rounded-full border-2 border-amber-400 flex items-center justify-center">
                 <span className="text-[8px] text-amber-600 font-bold text-center leading-tight">HAGUE<br/>CONV.</span>
@@ -251,7 +251,7 @@ const Hero: React.FC = () => {
               ].map((s) => (
                 <div key={s.label} className="py-3 text-center">
                   <p className="text-sm font-bold text-secondary">{s.num}</p>
-                  <p className="text-[10px] text-gray-600">{s.label}</p>
+                  <p className="text-xs text-gray-600">{s.label}</p>
                 </div>
               ))}
             </div>

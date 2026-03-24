@@ -165,7 +165,7 @@ const Pricing: React.FC = () => {
                 <div className="relative p-6 flex flex-col flex-1">
                   {/* タグ */}
                   {plan.tag && (
-                    <div className="inline-flex items-center gap-1 bg-primary/20 border border-primary/30 text-primary-dark text-[10px] font-bold px-2 py-0.5 rounded-full mb-3 self-start">
+                    <div className="inline-flex items-center gap-1 bg-primary/20 border border-primary/30 text-primary-dark text-xs font-bold px-2 py-0.5 rounded-full mb-3 self-start">
                       {plan.tag}
                     </div>
                   )}
@@ -332,13 +332,13 @@ const Pricing: React.FC = () => {
                   </span>
                   <ul className="space-y-0.5">
                     {item.docs.map((doc) => (
-                      <li key={doc} className="text-[11px] text-gray-500 flex items-center gap-1.5">
+                      <li key={doc} className="text-xs text-gray-500 flex items-center gap-1.5">
                         <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
                         {doc}
                       </li>
                     ))}
                   </ul>
-                  <span className="inline-flex items-center gap-1 self-start text-[11px] font-semibold text-primary-dark mt-0.5 group-hover:underline">
+                  <span className="inline-flex items-center gap-1 self-start text-xs font-semibold text-primary-dark mt-0.5 group-hover:underline">
                     See full checklist <ArrowRight className="w-3 h-3" />
                   </span>
                 </Link>
