@@ -28,7 +28,6 @@ const plansData = {
         '国際郵送費（DHL）¥6,000',
         '日本の役所・入管への提出代行',
         'ビザ申請の法的代理',
-        '翻訳',
       ],
       bestFor: '日本での婚姻手続きに向けて、複数のフィリピン書類が必要な方向け',
     },
@@ -53,7 +52,6 @@ const plansData = {
       ],
       notIncluded: [
         '国際郵送費（DHL）¥6,000',
-        '翻訳',
         '入管への在留資格申請代行（行政書士業務）',
         'ビザ申請の保証',
       ],
@@ -79,7 +77,6 @@ const plansData = {
       ],
       notIncluded: [
         '国際郵送費（DHL）¥6,000',
-        '翻訳',
         '日本の免許センターへの提出代行',
         '運転免許試験の代理',
       ],
@@ -105,7 +102,6 @@ const plansData = {
       ],
       notIncluded: [
         '国際郵送費（DHL）¥6,000',
-        '翻訳',
         '指紋認証にかかる外部費用',
         '日本側への提出代行',
       ],
@@ -132,7 +128,6 @@ const plansData = {
       ],
       notIncluded: [
         '国際郵送費（DHL）¥6,000',
-        '翻訳',
         '法務局への帰化申請代行（行政書士業務）',
         '帰化許可の保証',
       ],
@@ -667,14 +662,12 @@ const Pricing: React.FC = () => {
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5">
             {(lang === 'ja'
               ? [
-                  '翻訳（一部プランに含む場合を除く）',
                   '日本の役所、出入国在留管理庁への提出代行',
                   '行政書士、弁護士業務',
                   '法的代理やビザ申請代理',
                   '審査結果や許可の保証',
                 ]
               : [
-                  'Translation (unless stated in the plan)',
                   'Filing with local or immigration authorities',
                   'Attorney or legal consultant services',
                   'Legal representation or visa filing',
