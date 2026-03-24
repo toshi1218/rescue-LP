@@ -74,6 +74,7 @@ const Hero: React.FC = () => {
           <p className="text-gray-200 mb-8 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
             {t('hero.description')}
           </p>
+          {/* Primary CTA */}
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
@@ -84,10 +85,21 @@ const Hero: React.FC = () => {
             {primaryLabel}
           </a>
 
+          {/* Secondary CTA */}
+          <a
+            href="/ja/ryokin/"
+            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
+            className="mt-2 inline-flex items-center justify-center gap-2 text-white/80 font-medium py-2 px-6 rounded-lg border border-white/30 hover:bg-white/10 transition-all text-sm focus:outline-none focus:ring-2 focus:ring-white/40"
+            aria-label={t('hero.pricingAriaLabel')}
+          >
+            {t('hero.pricingCta')}
+            <ArrowRight className="w-4 h-4" />
+          </a>
+
           {/* Trust: Rating badge */}
           <div className="flex items-center justify-center gap-1.5 mt-3" aria-label="平均評価 4.8 / 5.0">
             <span className="text-yellow-400 text-base leading-none" aria-hidden="true">★★★★★</span>
-            <span className="text-white/80 text-xs font-medium">4.8 / 5.0（お客様の声）</span>
+            <span className="text-white/80 text-xs font-medium">4.8 / 5.0（公開レビュー47件）</span>
           </div>
 
           {/* Urgency message */}
@@ -95,9 +107,9 @@ const Hero: React.FC = () => {
             ただいまお問い合わせ受付中 · 24時間以内に返信
           </p>
 
-          {/* Pricing hint */}
+          {/* Pricing hint – aligned with actual pricing table */}
           <p className="text-white/60 text-xs mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            国際結婚準備パック ¥99,800〜 · 配偶者ビザパック ¥100,000〜（税・送料別）
+            PSA＋アポスティーユ ¥50,000〜 · NBI＋アポスティーユ ¥55,000〜 · 移民書類パック ¥89,800〜（税・DHL送料込み）
           </p>
         </div>
       </header>

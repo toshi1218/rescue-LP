@@ -60,6 +60,37 @@ const Footer: React.FC = () => {
           {t('footer.subtitle')}
         </p>
 
+        {/* Pre-form trust info */}
+        {!submitted && (
+          <div className="mb-6 text-left bg-gray-50 rounded-xl p-4 border border-gray-100">
+            <h4 className="font-bold text-secondary text-sm mb-2">
+              {isJa ? 'ご相談の流れ' : 'How It Works'}
+            </h4>
+            <ol className="space-y-1 text-gray-600 text-xs list-none">
+              {isJa ? (
+                <>
+                  <li>1. フォームに状況を記入（書類名・手続き名が不明でもOK）</li>
+                  <li>2. 24時間以内にメールでご返信</li>
+                  <li>3. 必要書類・お見積もりをご提示</li>
+                  <li>4. ご納得いただけたら着手（見積り段階のキャンセル無料）</li>
+                </>
+              ) : (
+                <>
+                  <li>1. Fill in the form (no need to know exact document names)</li>
+                  <li>2. We reply by email within 24 hours</li>
+                  <li>3. We confirm required documents and quote</li>
+                  <li>4. Proceed when you are ready (free cancellation at quote stage)</li>
+                </>
+              )}
+            </ol>
+            <p className="text-xs text-gray-400 mt-2 border-t border-gray-200 pt-2">
+              {isJa
+                ? '※ ご提供いただいた個人情報は、ご相談・書類取得業務のみに使用します。第三者への提供は行いません。'
+                : '* Your information is used solely for this inquiry and document procurement. We do not share it with third parties.'}
+            </p>
+          </div>
+        )}
+
         {submitted ? (
           <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
             <p className="text-2xl mb-2">✅</p>

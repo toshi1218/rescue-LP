@@ -26,32 +26,104 @@ export default function HomeJa() {
 
   const orgSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'IGRS Inc.',
-    alternateName: 'ph-document.com',
+    '@type': ['LocalBusiness', 'ProfessionalService'],
+    name: 'フィリピン書類取得代行センター',
+    legalName: '株式会社IGRS',
+    alternateName: ['ph-document.com', 'IGRS Inc.'],
     url: 'https://ph-document.com/ja/',
     logo: 'https://ph-document.com/logo.png',
-    description: 'フィリピンの公的書類（PSA出生証明書・CENOMAR・NBI Clearance・DFAアポスティーユ）を日本語だけで代行取得するサービスを提供。国際結婚・配偶者ビザ・帰化申請・外免切替に対応。',
+    image: 'https://ph-document.com/og-image.png',
+    description: 'フィリピンの公的書類（PSA出生証明書・CENOMAR・NBI Clearance・DFAアポスティーユ）を日本語だけで代行取得するサービスを提供。国際結婚・配偶者ビザ・帰化申請・外免切替に対応。渡航不要。',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'JP',
+      addressRegion: '和歌山県',
+      addressLocality: '和歌山市',
+    },
+    location: {
+      '@type': 'Place',
+      name: 'セブ市営業所（フィリピン共和国）',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'PH',
+        addressLocality: 'Cebu City',
+      },
+    },
+    email: 'igrs20200601@gmail.com',
+    sameAs: [
+      'https://ph-document.com/ja/company/',
+      'https://ph-document.com/en/company/',
+    ],
     areaServed: [
       { '@type': 'Country', name: 'JP' },
       { '@type': 'Country', name: 'PH' },
+      { '@type': 'Country', name: 'US' },
+      { '@type': 'Country', name: 'CA' },
+      { '@type': 'Country', name: 'AU' },
+      { '@type': 'Country', name: 'GB' },
     ],
     contactPoint: {
       '@type': 'ContactPoint',
+      email: 'igrs20200601@gmail.com',
       contactType: 'customer service',
-      availableLanguage: 'Japanese',
+      availableLanguage: ['Japanese', 'English'],
     },
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
+    priceRange: '¥50,000〜¥100,000',
+    currenciesAccepted: 'JPY',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '47',
+    },
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        author: { '@type': 'Person', name: '30代 女性（国際結婚）' },
+        reviewBody: '日本語で全て対応してもらえ、フィリピンに渡航せずにCENOMARとPSA出生証明書を取得できました。進捗報告も丁寧で安心でした。',
+      },
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        author: { '@type': 'Person', name: '40代 男性（配偶者ビザ申請）' },
+        reviewBody: 'NBI ClearanceのDFAアポスティーユも含めてまとめて依頼できました。入管提出に間に合い、配偶者ビザ申請が無事完了しました。',
+      },
+    ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'フィリピン書類取得代行サービス',
       itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CENOMAR（独身証明書）取得代行' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PSA出生証明書取得代行' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NBI Clearance取得代行' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DFAアポスティーユ代行' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'LTO運転経歴証明書取得代行' } },
+        {
+          '@type': 'Offer',
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: '50000', priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: 'CENOMAR・PSA出生証明書取得代行＋DFAアポスティーユ', description: 'フィリピン統計局（PSA）発行の独身証明書・出生証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
+        },
+        {
+          '@type': 'Offer',
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: '55000', priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: 'NBI Clearance取得代行＋DFAアポスティーユ', description: 'フィリピン国家捜査局（NBI）発行の無犯罪証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
+        },
+        {
+          '@type': 'Offer',
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: '89800', priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: '移民書類パック（CENOMAR＋PSA＋NBI＋アポスティーユ）', description: '国際結婚・配偶者ビザ・移民申請に必要なフィリピン書類を一括代行。DHL配送込み。' },
+        },
+        {
+          '@type': 'Offer',
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: '100000', priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: 'LTO運転経歴証明書取得代行（外免切替用）', description: 'フィリピン陸運局（LTO）発行の運転経歴証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
+        },
       ],
     },
+    dateModified: '2026-03-01',
   };
 
   return (
