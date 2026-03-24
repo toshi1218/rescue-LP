@@ -133,11 +133,11 @@ export default function HomeJa() {
       <Navbar />
       <main>
         <Hero />
-        <ReviewSection />
         <ServicePacks />
         <PainPoints />
         <WhyUs />
         <CaseStudies />
+        <ReviewSection />
         <GuideLinks maxItems={6} />
         <QuickFacts />
         <FAQ />
