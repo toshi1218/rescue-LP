@@ -2,14 +2,14 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
-type MenuType = 'docs' | 'purpose' | 'guides' | 'about' | null;
+type MenuType = 'docs' | 'purpose' | 'guides' | 'about' | 'business' | null;
 
 const Navbar: React.FC = () => {
   const ctaVariant = getCtaVariant();
   const location = useLocation();
   const [openMenu, setOpenMenu] = useState<MenuType>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileSection, setMobileSection] = useState<MenuType | 'about'>(null);
+  const [mobileSection, setMobileSection] = useState<MenuType>(null);
   const [dropdownPos, setDropdownPos] = useState<{ left: number; top: number }>({ left: 0, top: 0 });
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const docsRef = useRef<HTMLDivElement>(null);
@@ -17,6 +17,7 @@ const Navbar: React.FC = () => {
   const guidesRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const businessRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
   const { lang, t } = useLanguage();
@@ -59,7 +60,7 @@ const Navbar: React.FC = () => {
         { label: isJa ? 'CENOMARガイド 完全版【2026年版】' : 'CENOMAR Complete Guide', path: isJa ? '/ja/cenomar/' : '/en/cenomar/' },
         { label: isJa ? 'CENOMARの有効期限は？' : 'CENOMAR Validity', path: isJa ? '/ja/cenomar-koyukigen/' : '/en/cenomar-validity/' },
         { label: isJa ? 'DFAアポスティーユは必要？' : 'Need Apostille?', path: isJa ? '/ja/cenomar-apostille/' : '/en/cenomar-apostille/' },
-        ...(!isJa ? [{ label: 'CENOMAR vs. Marriage Certificate', path: '/en/cenomar-vs-marriage-certificate/' }] : []),
+        { label: isJa ? 'CENOMARと婚姻証明書の違い' : 'CENOMAR vs. Marriage Certificate', path: isJa ? '/ja/cenomar-vs-marriage-certificate/' : '/en/cenomar-vs-marriage-certificate/' },
       ],
     },
     {
@@ -68,7 +69,7 @@ const Navbar: React.FC = () => {
         { label: isJa ? 'NBI Clearanceガイド 完全版【2026年版】' : 'NBI Clearance Complete Guide', path: isJa ? '/ja/nbi-clearance/' : '/en/nbi-clearance/' },
         { label: isJa ? 'NBI HITとは？' : 'What is NBI HIT?', path: isJa ? '/ja/nbi-hit/' : '/en/nbi-hit/' },
         { label: isJa ? 'NBI Clearanceの有効期限' : 'NBI Validity & Apostille', path: isJa ? '/ja/nbi-koyukigen/' : '/en/nbi-validity/' },
-        ...(!isJa ? [{ label: 'NBI Clearance from Overseas', path: '/en/nbi-clearance-overseas/' }] : []),
+        { label: isJa ? '海外在住でのNBI申請' : 'NBI Clearance from Overseas', path: isJa ? '/ja/nbi-clearance-overseas/' : '/en/nbi-clearance-overseas/' },
       ],
     },
     {
@@ -85,7 +86,7 @@ const Navbar: React.FC = () => {
         { label: isJa ? 'PSA出生証明書の取得方法' : 'PSA Birth Certificate Guide', path: isJa ? '/ja/psa-shussei-shomeisho/' : '/en/psa-birth-certificate/' },
         { label: isJa ? 'PSA出生証明書の費用' : 'PSA Birth Certificate Cost', path: isJa ? '/ja/psa-shussei-cost/' : '/en/psa-birth-certificate-cost/' },
         { label: isJa ? 'PSA婚姻証明書の取得方法' : 'PSA Marriage Certificate', path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/en/psa-marriage-certificate/' },
-        ...(!isJa ? [{ label: 'PSA Record Missing or Error?', path: '/en/psa-late-registration/' }] : []),
+        { label: isJa ? 'PSA出生届の遅延登録' : 'PSA Record Missing or Error?', path: isJa ? '/ja/psa-late-registration/' : '/en/psa-late-registration/' },
       ],
     },
     ...(!isJa ? [{
@@ -99,6 +100,7 @@ const Navbar: React.FC = () => {
       items: [
         { label: '配偶者ビザ必要書類【2026年3月版】', path: '/ja/haigusha-visa-shorui/' },
         { label: '結核非発病証明書（2025年6月〜必須）', path: '/ja/kekkaku-shomeisho/' },
+        { label: 'ビザ別書類チェックリスト', path: '/ja/document-checklist-by-visa/' },
       ],
     }] : []),
     ...(isJa ? [{
@@ -107,6 +109,24 @@ const Navbar: React.FC = () => {
         { label: 'アポスティーユ認証の取得手順【DFAセブ窓口】', path: '/ja/dfa-apostille-genchi-report/' },
         { label: 'PSA証明書の取得手順【セブ窓口】', path: '/ja/psa-crs-cebu-genchi-report/' },
         { label: '運転経歴証明書の取得手順【LTO SMシーサイド】', path: '/ja/lto-sm-seaside-genchi-report/' },
+        { label: 'LTO運転経歴証明書とは？', path: '/ja/driver-record/' },
+      ],
+    }] : []),
+    ...(isJa ? [{
+      category: '国際結婚コラム',
+      items: [
+        { label: '日本先行婚 vs フィリピン先行婚', path: '/ja/nihon-senko-ph-senko/' },
+        { label: 'フィリピンでの婚姻手続き', path: '/ja/philippines-de-kekkon/' },
+        { label: '行政書士との書類取得の違い', path: '/ja/gyouseishoshi-to-shorui-shuttoku/' },
+      ],
+    }] : []),
+    ...(isJa ? [{
+      category: '海外移住別の書類',
+      items: [
+        { label: '米国ビザ（配偶者・就労）の必要書類', path: '/ja/us-visa-documents/' },
+        { label: 'カナダ移住の必要書類', path: '/ja/canada/' },
+        { label: 'オーストラリア移住の必要書類', path: '/ja/australia/' },
+        { label: '英国移住の必要書類', path: '/ja/uk/' },
       ],
     }] : []),
   ];
@@ -125,6 +145,13 @@ const Navbar: React.FC = () => {
     { label: 'Privacy Policy',      path: '/en/privacy/' },
     { label: 'Terms of Service',    path: '/en/terms/' },
   ];
+
+  const businessTabs = isJa ? [
+    { label: '法人サービス TOP',      path: '/ja/business/' },
+    { label: '登録支援機関の方',        path: '/ja/business/touroku-shien-kikan/' },
+    { label: '行政書士・士業の方',      path: '/ja/business/gyoseishoshi/' },
+    { label: '企業の方',              path: '/ja/business/kigyou/' },
+  ] : [];
 
   useEffect(() => {
     setOpenMenu(null);
@@ -165,6 +192,7 @@ const Navbar: React.FC = () => {
           else if (openMenu === 'purpose') purposeRef.current?.querySelector<HTMLElement>('button')?.focus();
           else if (openMenu === 'guides') guidesRef.current?.querySelector<HTMLElement>('button')?.focus();
           else if (openMenu === 'about') aboutRef.current?.querySelector<HTMLElement>('button')?.focus();
+          else if (openMenu === 'business') businessRef.current?.querySelector<HTMLElement>('button')?.focus();
         }
         if (mobileOpen) {
           setMobileOpen(false);
@@ -251,8 +279,9 @@ const Navbar: React.FC = () => {
   const isPurposeActive = purposeTabs.some(tab => matchesPath(tab.path));
   const isGuidesActive = guidesSections.some(sec => sec.items.some(item => matchesPath(item.path)));
   const isAboutActive = aboutTabs.some(tab => matchesPath(tab.path));
+  const isBusinessActive = businessTabs.some(tab => matchesPath(tab.path));
 
-  const currentTabs = openMenu === 'docs' ? documentTabs : openMenu === 'purpose' ? purposeTabs : openMenu === 'about' ? aboutTabs : [];
+  const currentTabs = openMenu === 'docs' ? documentTabs : openMenu === 'purpose' ? purposeTabs : openMenu === 'about' ? aboutTabs : openMenu === 'business' ? businessTabs : [];
 
   const tabBtnClass = (active: boolean) =>
     `flex items-center px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
@@ -387,6 +416,29 @@ const Navbar: React.FC = () => {
             </div>
             <Link to={pricingPath} className={linkClass(pricingPath)}>{t('navbar.pricing')}</Link>
 
+            {/* 法人向け ドロップダウン */}
+            {isJa && (
+              <div
+                ref={businessRef}
+                className="flex-shrink-0"
+                onMouseEnter={() => handleMouseEnter('business', businessRef)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <button
+                  onClick={() => { if (businessRef.current) { const r = businessRef.current.getBoundingClientRect(); setDropdownPos({ left: r.left, top: r.bottom + 4 }); } setOpenMenu(openMenu === 'business' ? null : 'business'); }}
+                  onKeyDown={handleTriggerKeyDown('business', businessRef)}
+                  aria-expanded={openMenu === 'business'}
+                  aria-haspopup="true"
+                  className={tabBtnClass(isBusinessActive || openMenu === 'business')}
+                >
+                  法人向け
+                  <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+            )}
+
             {/* 当社について ドロップダウン */}
             <div
               ref={aboutRef}
@@ -410,16 +462,8 @@ const Navbar: React.FC = () => {
 
           </div>
 
-          {/* タブバー右端: 法人の方へ + お問い合わせ */}
+          {/* タブバー右端: お問い合わせ */}
           <div className="hidden md:flex items-center gap-2 ml-3 flex-shrink-0">
-            {isJa && (
-              <Link
-                to="/ja/business/"
-                className="text-xs font-bold text-secondary border border-secondary/30 bg-secondary/5 px-4 py-1.5 rounded-full hover:bg-secondary/10 transition-colors whitespace-nowrap"
-              >
-                法人の方へ
-              </Link>
-            )}
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'navbar', type: 'contact', variant: ctaVariant })}
@@ -431,8 +475,8 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* ドロップダウン：docs / purpose（flat list） */}
-      {openMenu && (openMenu === 'docs' || openMenu === 'purpose' || openMenu === 'about') && currentTabs.length > 0 && (
+      {/* ドロップダウン：docs / purpose / business（flat list） */}
+      {openMenu && (openMenu === 'docs' || openMenu === 'purpose' || openMenu === 'about' || openMenu === 'business') && currentTabs.length > 0 && (
         <div
           ref={dropdownRef}
           role="menu"
@@ -545,8 +589,32 @@ const Navbar: React.FC = () => {
 
             <div className="border-t border-gray-100 pt-2 mt-2 space-y-0.5">
               <Link to={pricingPath} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.pricing')}</Link>
-              {isJa && <Link to="/ja/business/" className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">法人の方へ</Link>}
             </div>
+
+            {/* 法人向け（モバイルアコーディオン） */}
+            {isJa && (
+              <div className="border-t border-gray-100 pt-2 mt-2">
+                <button
+                  aria-expanded={mobileSection === 'business'}
+                  onClick={() => setMobileSection(mobileSection === 'business' ? null : 'business')}
+                  className="w-full flex justify-between items-center px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50"
+                >
+                  法人向けサービス
+                  <svg className={`w-4 h-4 transition-transform ${mobileSection === 'business' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {mobileSection === 'business' && (
+                  <div className="ml-4 mt-1 space-y-0.5">
+                    {businessTabs.map(tab => (
+                      <Link key={tab.path} to={tab.path} className="block px-3 py-2.5 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-secondary">
+                        {tab.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* 当社について（モバイルアコーディオン） */}
             <div className="border-t border-gray-100 pt-2 mt-2">
