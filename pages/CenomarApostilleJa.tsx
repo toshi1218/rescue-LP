@@ -37,10 +37,10 @@ export default function CenomarApostilleJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
@@ -88,7 +88,7 @@ export default function CenomarApostilleJa() {
     >
       <HeroBanner
         title="CENOMAR アポスティーユ取得代行"
-        badges={['PSA取得からアポスティーユまで一括', '紙の原本形式で対応', '追加費用なし']}
+        badges={['PSA取得からアポスティーユまで一括', '紙の原本形式で対応', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"

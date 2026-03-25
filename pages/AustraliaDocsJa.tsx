@@ -35,12 +35,12 @@ export default function AustraliaDocsJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '58000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '58000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
+            description: 'PSA取得・DFAアポスティーユ・DHLオーストラリア送料込み総額目安（税抜、書類1通あたり）',
           },
         },
         },
@@ -86,7 +86,7 @@ export default function AustraliaDocsJa() {
     >
       <HeroBanner
         title="オーストラリアビザ 書類取得代行"
-        badges={['Home Affairs対応', 'アポスティーユ込み', '追加費用なし']}
+        badges={['Home Affairs対応', 'アポスティーユ込み', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"

@@ -79,7 +79,7 @@ export default function DfaProcessingTimeJa() {
     >
       <HeroBanner
         title="DFAアポスティーユの処理期間"
-        badges={['Regular/Expedited対応', '提出期限に合わせて手配', '追加費用なし']}
+        badges={['Regular/Expedited対応', '提出期限に合わせて手配', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
@@ -124,7 +124,7 @@ export default function DfaProcessingTimeJa() {
             {
               icon: <FileCheck className="w-4 h-4" />,
               title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-              description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。DFA内部処理はRegular 5日程度・Express 3日程度。当社の代行手配込みで約2週間が目安です。',
+              description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。DFA内部処理はRegular 5日程度・Express 3日程度。当社の代行手配込みで約2週間が目安です（DFAの処理のみの期間）。',
             },
             {
               icon: <FileCheck className="w-4 h-4" />,

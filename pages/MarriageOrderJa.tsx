@@ -116,7 +116,7 @@ export default function MarriageOrderJa() {
               </thead>
               <tbody>
                 {[
-                  { doc: 'CENOMAR（独身証明書）', issuer: 'PSA（フィリピン統計局）', apo: '原則必要', note: '提出先によっては発行後6か月以内のものを求められる場合あり' },
+                  { doc: 'CENOMAR（独身証明書）', issuer: 'PSA（フィリピン統計局）', apo: '原則必要', note: '提出先によっては発行から6ヶ月以内のものを求められる場合あり' },
                   { doc: 'PSA出生証明書', issuer: 'PSA', apo: '原則必要', note: 'Certificate of Live Birth' },
                   { doc: 'パスポートのコピー', issuer: 'フィリピン人本人', apo: '不要', note: '有効期限内のもの' },
                 ].map((row, i) => (

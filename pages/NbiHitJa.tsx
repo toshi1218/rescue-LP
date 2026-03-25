@@ -25,7 +25,7 @@ export default function NbiHitJa() {
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'NBI HIT（同名者あり）解消・NBI Clearance取得代行',
+        name: 'NBI HIT（同名者あり）解消・NBI Clearance申請サポート',
         description: 'NBI ClearanceでHIT（同名者あり）が出た場合の解消手続きからNBI取得・DFAアポスティーユまで一括代行。配偶者ビザ・就労ビザの期限を考慮してスケジュールをご案内します。',
         url: 'https://ph-document.com/ja/nbi-hit',
         provider: {
@@ -88,7 +88,7 @@ export default function NbiHitJa() {
     >
       <HeroBanner
         title="NBI HIT 解決サポート"
-        badges={['HIT解消から一括対応', 'アポスティーユ込み', '追加費用なし']}
+        badges={['HIT解消から一括対応', 'アポスティーユ込み', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
@@ -235,7 +235,7 @@ export default function NbiHitJa() {
       />
 
       <RelatedLinks links={[
-        { path: '/ja/nbi-clearance/', label: 'NBI Clearance（無犯罪証明書）取得代行' },
+        { path: '/ja/nbi-clearance/', label: 'NBI Clearance（無犯罪証明書）申請サポート' },
         { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
         { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
       ]} />

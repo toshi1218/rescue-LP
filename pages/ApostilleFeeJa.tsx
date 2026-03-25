@@ -36,10 +36,10 @@ export default function ApostilleFeeJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '30000',
+            price: '50000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '30000',
+              price: '50000',
               priceCurrency: 'JPY',
               description: 'DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
             },
@@ -79,7 +79,7 @@ export default function ApostilleFeeJa() {
     >
       <HeroBanner
         title="DFAアポスティーユの費用"
-        badges={['追加費用なし', '総額で事前ご提示', 'DFA公式料金込み']}
+        badges={['費用は事前にご案内', '総額で事前ご提示', 'DFA公式料金込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
