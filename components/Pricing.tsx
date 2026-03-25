@@ -393,7 +393,7 @@ const Pricing: React.FC = () => {
             </p>
             <p className="text-xs text-gray-500 mt-1">
               {lang === 'ja'
-                ? '案件によっては特急対応が可能です。追加費用が発生する場合がありますので、まずはお問い合わせください。'
+                ? '緊急・急ぎの場合は追加料金を頂くことがあります。対応可否はケースにより異なりますので、まずはお問い合わせください。'
                 : 'Priority handling is available for some cases. Additional fees may apply. Contact us for details.'}
             </p>
           </div>
