@@ -42,7 +42,7 @@ export default function PricingJa() {
       <CtaBox
         title="まずは無料でお見積もり"
         description="書類の種類・部数・認証の有無・発送先をお知らせください。見通しのある料金をご案内します。"
-        buttonText="用途別の料金を見る"
+        buttonText="無料でお見積もりを依頼する"
         href="#contact"
         variant="primary"
         trustNote="追加費用が出る場合は事前にご相談します"
