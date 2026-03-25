@@ -151,7 +151,7 @@ export default function MarriageGuideJa() {
             <div key={item.num} className="rounded-xl bg-amber-50 border border-amber-200 p-4">
               <p className="text-xs font-bold text-amber-500 mb-1">落とし穴{item.num}</p>
               <p className="text-sm font-bold text-amber-900 mb-1">{item.title}</p>
-              <p className="text-xs text-amber-800 leading-relaxed">{item.note}</p>
+              <p className="text-sm text-amber-800 leading-relaxed">{item.note}</p>
             </div>
           ))}
         </div>
@@ -207,14 +207,14 @@ export default function MarriageGuideJa() {
         </div>
         <div className="rounded-xl bg-gray-50 border border-gray-200 p-4">
           <p className="text-sm font-bold text-gray-800 mb-2">ご依頼時の重要事項</p>
-          <p className="text-xs text-gray-600 leading-relaxed mb-3">当社をご利用いただく場合でも、すべてを完全に丸投げできるわけではありません。適法に取得を進めるため、次のご協力をお願いしています。</p>
+          <p className="text-sm text-gray-600 leading-relaxed mb-3">当社をご利用いただく場合でも、すべてを完全に丸投げできるわけではありません。適法に取得を進めるため、次のご協力をお願いしています。</p>
           <ul className="space-y-1.5 mb-3">
             {[
               'Authentication Letterへのご署名',
               '身分証明書のコピーのご提出',
               '案件によっては、ご本人様による追加対応',
             ].map((item, i) => (
-              <li key={i} className="flex items-start gap-2 text-xs text-gray-600">
+              <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
                 <span className="text-primary font-bold flex-shrink-0">・</span>
                 <span>{item}</span>
               </li>

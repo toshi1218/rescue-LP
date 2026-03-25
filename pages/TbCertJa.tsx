@@ -146,7 +146,7 @@ export default function TbCertJa() {
                 <p className="text-xs text-gray-500 mt-0.5">国際移住機関（IOM）マニラ</p>
               </div>
             </div>
-            <div className="ml-11 space-y-1.5 text-xs text-gray-600">
+            <div className="ml-11 space-y-1.5 text-sm text-gray-600">
               <div className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-gray-400" />
                 <span>15/F Trafalgar Plaza Building, 105 H.V. Dela Costa St., Brgy. Bel-Air, Makati City 1227, Metro Manila</span>
@@ -164,13 +164,13 @@ export default function TbCertJa() {
                 <span>月〜金 7:30〜17:00（祝日除く）</span>
               </div>
               <div className="mt-2 rounded-lg bg-primary/8 border border-primary/15 p-2">
-                <p className="font-semibold text-gray-700 mb-1 text-xs">IOM 検査費用</p>
+                <p className="font-semibold text-gray-700 mb-1 text-sm">IOM 検査費用</p>
                 <div className="space-y-0.5">
                   <p>・0〜4歳（TST）：₱4,500 ／ IGRA：₱9,200</p>
                   <p>・5歳以上：₱6,500</p>
                 </div>
               </div>
-              <p className="text-xs text-gray-500">予約：MyMedical オンラインシステムより。費用はクリニックで当日払い（事前振込不可）。</p>
+              <p className="text-sm text-gray-500">予約：MyMedical オンラインシステムより。費用はクリニックで当日払い（事前振込不可）。</p>
             </div>
           </div>
 
@@ -182,33 +182,33 @@ export default function TbCertJa() {
               </div>
               <div>
                 <p className="text-sm font-bold text-gray-900">Nationwide Health Systems AUX, Inc.（NHS）</p>
-                <p className="text-xs text-gray-500 mt-0.5">全国4拠点 ／ 費用共通：0〜4歳 ₱7,445 / 5歳以上 ₱8,755（現金払い）</p>
+                <p className="text-sm text-gray-500 mt-0.5">全国4拠点 ／ 費用共通：0〜4歳 ₱7,445 / 5歳以上 ₱8,755（現金払い）</p>
               </div>
             </div>
-            <div className="ml-11 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-600">
+            <div className="ml-11 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600">
               <div className="rounded-lg bg-gray-50 border border-gray-100 p-3">
                 <p className="font-semibold text-gray-700 mb-1">② Makati（マカティ）</p>
-                <p className="text-xs leading-relaxed">2/F Zeta II Annex Bldg., 191 Salcedo St., Legaspi Village, Makati City 1229</p>
-                <p className="text-xs mt-1">📞 +632-8810-0785</p>
-                <p className="text-xs">月〜金 8:00〜16:00 / 土 8:00〜15:00</p>
+                <p className="text-sm leading-relaxed">2/F Zeta II Annex Bldg., 191 Salcedo St., Legaspi Village, Makati City 1229</p>
+                <p className="text-sm mt-1">📞 +632-8810-0785</p>
+                <p className="text-sm">月〜金 8:00〜16:00 / 土 8:00〜15:00</p>
               </div>
               <div className="rounded-lg bg-gray-50 border border-gray-100 p-3">
                 <p className="font-semibold text-gray-700 mb-1">③ Baguio（バギオ）</p>
-                <p className="text-xs leading-relaxed">Unit 10–12, 2/F City Hub Bldg., 92 Upper Gen. Luna Rd., Baguio City</p>
-                <p className="text-xs mt-1">📞 +63 917-714-8963</p>
-                <p className="text-xs">月〜金 6:00〜16:00 / 土 6:00〜10:00</p>
+                <p className="text-sm leading-relaxed">Unit 10–12, 2/F City Hub Bldg., 92 Upper Gen. Luna Rd., Baguio City</p>
+                <p className="text-sm mt-1">📞 +63 917-714-8963</p>
+                <p className="text-sm">月〜金 6:00〜16:00 / 土 6:00〜10:00</p>
               </div>
               <div className="rounded-lg bg-gray-50 border border-gray-100 p-3">
                 <p className="font-semibold text-gray-700 mb-1">④ Cebu（セブ）</p>
-                <p className="text-xs leading-relaxed">Tango Plaza Bldg., Queens Rd., Brgy. Kamputhaw, Cebu City 6000</p>
-                <p className="text-xs mt-1">📞 +63 32-238-6053</p>
-                <p className="text-xs">月〜金 7:00（9:00 / 11:00 / 13:00） / 土 7:00のみ</p>
+                <p className="text-sm leading-relaxed">Tango Plaza Bldg., Queens Rd., Brgy. Kamputhaw, Cebu City 6000</p>
+                <p className="text-sm mt-1">📞 +63 32-238-6053</p>
+                <p className="text-sm">月〜金 7:00（9:00 / 11:00 / 13:00） / 土 7:00のみ</p>
               </div>
               <div className="rounded-lg bg-gray-50 border border-gray-100 p-3">
                 <p className="font-semibold text-gray-700 mb-1">⑤ Davao（ダバオ）</p>
-                <p className="text-xs leading-relaxed">2/F Central Lab Tower, Elpidio Quirino Ave., Brgy. 10-A, Davao City 8000</p>
-                <p className="text-xs mt-1">📞 +63 82-296-5136</p>
-                <p className="text-xs">月〜金 8:00〜15:00 / 土 8:00〜14:00</p>
+                <p className="text-sm leading-relaxed">2/F Central Lab Tower, Elpidio Quirino Ave., Brgy. 10-A, Davao City 8000</p>
+                <p className="text-sm mt-1">📞 +63 82-296-5136</p>
+                <p className="text-sm">月〜金 8:00〜15:00 / 土 8:00〜14:00</p>
               </div>
             </div>
           </div>
@@ -221,10 +221,10 @@ export default function TbCertJa() {
               </div>
               <div>
                 <p className="text-sm font-bold text-gray-900">St. Luke's Medical Center Extension Clinic（SLEC）</p>
-                <p className="text-xs text-gray-500 mt-0.5">セントルークス・メディカルセンター拡張クリニック</p>
+                <p className="text-sm text-gray-500 mt-0.5">セントルークス・メディカルセンター拡張クリニック</p>
               </div>
             </div>
-            <div className="ml-11 space-y-1.5 text-xs text-gray-600">
+            <div className="ml-11 space-y-1.5 text-sm text-gray-600">
               <div className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-gray-400" />
                 <span>1177 Jorge Bocobo Street, Ermita, Manila 1000</span>
@@ -237,14 +237,14 @@ export default function TbCertJa() {
                 <span className="text-gray-400 flex-shrink-0">✉</span>
                 <span>inquiry@slec.ph</span>
               </div>
-              <p className="text-xs text-gray-500 mt-1">予約：slec.ph よりオンライン登録。特急・優先対応は行っていません。費用は直接確認要。</p>
+              <p className="text-sm text-gray-500 mt-1">予約：slec.ph よりオンライン登録。特急・優先対応は行っていません。費用は直接確認要。</p>
             </div>
           </div>
         </div>
 
         <div className="rounded-lg bg-blue-50 border border-blue-200 p-3 flex items-start gap-2">
           <Info className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
-          <p className="text-xs text-blue-800">指定Panel Clinicは追加される場合があります。最新の一覧は厚生労働省JPETSサイト（jpets.mhlw.go.jp）でご確認ください。</p>
+          <p className="text-sm text-blue-800">指定Panel Clinicは追加される場合があります。最新の一覧は厚生労働省JPETSサイト（jpets.mhlw.go.jp）でご確認ください。</p>
         </div>
       </SectionDivider>
 
@@ -304,13 +304,13 @@ export default function TbCertJa() {
             <div className="space-y-3 text-sm text-gray-700">
               <div className="rounded-lg bg-primary/10 border border-primary/20 p-3">
                 <p className="font-bold text-primary mb-1">有効期間：胸部X線日から 原則180日以内</p>
-                <p className="text-xs text-gray-600">COE申請書の受理日ではなく、<strong>検査日から180日以内</strong>に提出が完了している必要があります。</p>
+                <p className="text-sm text-gray-600">COE申請書の受理日ではなく、<strong>検査日から180日以内</strong>に提出が完了している必要があります。</p>
               </div>
               <div className="rounded-lg bg-amber-50 border border-amber-200 p-3">
-                <p className="text-xs font-bold text-amber-800 mb-1">⚠ 90日に短縮される場合</p>
-                <p className="text-xs text-amber-700">検査前2ヶ月以内に、同居家族が活動性結核と診断された場合や、長時間密閉空間を共にした活動性結核患者がいた場合は、有効期間が90日に短縮されます。</p>
+                <p className="text-sm font-bold text-amber-800 mb-1">⚠ 90日に短縮される場合</p>
+                <p className="text-sm text-amber-700">検査前2ヶ月以内に、同居家族が活動性結核と診断された場合や、長時間密閉空間を共にした活動性結核患者がいた場合は、有効期間が90日に短縮されます。</p>
               </div>
-              <div className="space-y-2 text-xs text-gray-600">
+              <div className="space-y-2 text-sm text-gray-600">
                 <p>✔ COE申請予定日から逆算して、<strong>少なくとも1ヶ月前まで</strong>に受診</p>
                 <p>✔ 申請が遅れた場合は再受診・再取得が必要</p>
                 <p>✔ 活動性結核が疑われる場合は痰検査が追加（結果まで6〜8週間かかる場合あり）</p>

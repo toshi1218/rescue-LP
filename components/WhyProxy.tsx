@@ -39,7 +39,7 @@ const WhyProxy: React.FC = React.memo(() => {
               </span>
               <h3 className="text-sm font-bold text-gray-800">The Official Limitation</h3>
             </div>
-            <p className="text-xs text-gray-600 leading-relaxed">
+            <p className="text-sm text-gray-600 leading-relaxed">
               DFA Apostille is issued as a <strong>physical paper document</strong> attached to the original certificate.
               PSA Helpline and Serbilis offer e-Apostille for digital use, but <strong>paper Apostille originals — required by USCIS, IRCC, Home Affairs, and UKVI — cannot be shipped overseas through official channels.</strong>
             </p>
@@ -53,7 +53,7 @@ const WhyProxy: React.FC = React.memo(() => {
               </span>
               <h3 className="text-sm font-bold text-gray-800">What This Means for You</h3>
             </div>
-            <p className="text-xs text-gray-600 leading-relaxed">
+            <p className="text-sm text-gray-600 leading-relaxed">
               If you're applying for a US K-1 visa, Canada PR, Australian partner visa, or UK spouse visa —
               you <strong>cannot order Apostille-authenticated originals online and have them mailed to your address abroad.</strong>
               You need someone physically present in the Philippines to receive and forward the documents.
@@ -68,7 +68,7 @@ const WhyProxy: React.FC = React.memo(() => {
               </span>
               <h3 className="text-sm font-bold text-gray-800">How We Solve It</h3>
             </div>
-            <p className="text-xs text-gray-600 leading-relaxed">
+            <p className="text-sm text-gray-600 leading-relaxed">
               Our Cebu-based team handles the entire process locally — PSA retrieval, DFA Apostille authentication,
               and <strong>DHL Express international shipping directly to your address</strong> in the USA, Canada, Australia, UK, Japan, or anywhere else.
               No trip to the Philippines. No local contacts needed.

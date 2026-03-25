@@ -49,7 +49,7 @@ const ReviewSection: React.FC = () => (
                 {'★'.repeat(r.stars)}
               </span>
             </div>
-            <p className="text-gray-700 text-xs leading-relaxed flex-1 mb-3">
+            <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-3">
               &ldquo;{r.body}&rdquo;
             </p>
             <div className="text-xs text-gray-600 border-t border-gray-200 pt-2">

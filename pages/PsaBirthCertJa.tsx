@@ -137,7 +137,8 @@ export default function PsaBirthCertJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">40,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※緊急の場合は追加料金を頂くことがあります</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
