@@ -39,10 +39,10 @@ export default function CenomarGuideJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '40000',
+            price: '50000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '40000',
+              price: '50000',
               priceCurrency: 'JPY',
               description: 'PSA CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
             },
@@ -73,7 +73,7 @@ export default function CenomarGuideJa() {
               name: 'CENOMARの有効期限はありますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6か月有効と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
+                text: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6ヶ月以内と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
               },
             },
             {
@@ -122,7 +122,7 @@ export default function CenomarGuideJa() {
         conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
         points={[
           'PSA発行のCENOMAR取得からDFAアポスティーユまで一括対応',
-          '有効期限（発行から6か月）に合わせたタイミングで手配',
+          '有効期限（発行から6ヶ月以内）に合わせたタイミングで手配',
           '提出先の要件を確認し、そのまま使える状態でお届け',
           'フィリピン渡航不要。まずは無料相談で必要書類を確認',
         ]}
@@ -151,7 +151,7 @@ export default function CenomarGuideJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">有効期限の目安</dt>
-              <dd className="font-medium text-gray-800">発行から6か月（提出先による）</dd>
+              <dd className="font-medium text-gray-800">発行から6ヶ月以内（提出先による）</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">PSA発行料金</dt>
@@ -193,7 +193,7 @@ export default function CenomarGuideJa() {
             CENOMARで先に知っておきたいこと
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            CENOMARは「一度取ればずっと使える書類」ではありません。提出先によって、発行日の新しさを求められることがあります。たとえば、在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは<strong>発行から6か月有効</strong>と案内されています。つまり、手元にあるから安心ではなく、<strong>その書類が今回の提出先で通るか</strong>が大事です。
+            CENOMARは「一度取ればずっと使える書類」ではありません。提出先によって、発行日の新しさを求められることがあります。たとえば、在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは<strong>発行から6ヶ月以内</strong>と案内されています。つまり、手元にあるから安心ではなく、<strong>その書類が今回の提出先で通るか</strong>が大事です。
           </p>
           <p className="text-gray-700 leading-relaxed">
             また、必要に応じて <strong>DFA Apostille（アポスティーユ）</strong> が関わることがあります。フィリピンでは、いわゆる昔の「red ribbon」ではなく、現在は Apostille の制度で案内されています。
@@ -303,7 +303,7 @@ export default function CenomarGuideJa() {
             },
             {
               q: 'CENOMARの有効期限はありますか？',
-              a: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6か月有効と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
+              a: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6ヶ月以内と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
             },
             {
               q: 'DFA Apostille（アポスティーユ）は必要ですか？',
