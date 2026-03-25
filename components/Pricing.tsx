@@ -225,26 +225,26 @@ const Pricing: React.FC = () => {
         {/* 目的別に必要書類を確認したい方へ */}
         {lang === 'ja' && (
           <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50/50 p-6">
-            <h3 className="text-sm font-bold text-secondary mb-2">目的別に必要書類を確認したい方へ</h3>
-            <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+            <h3 className="text-base font-bold text-secondary mb-2">目的別に必要書類を確認したい方へ</h3>
+            <p className="text-sm text-gray-500 mb-4 leading-relaxed">
               配偶者ビザ、帰化申請、国際結婚などの手続きでは、必要になるフィリピン書類がケースによって異なります。<br />
               IGRSでは、申請そのものの代理は行っていませんが、手続きに必要なフィリピン書類の取得をサポートしています。
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
               <div>
-                <p className="text-xs font-bold text-secondary mb-2">よくある対象手続き</p>
-                <ul className="space-y-1">
+                <p className="text-sm font-bold text-secondary mb-2">よくある対象手続き</p>
+                <ul className="space-y-1.5">
                   {['日本での国際結婚', '在留資格「日本人の配偶者等」', '帰化申請', '外免切替', '相続や各種届出'].map((item) => (
-                    <li key={item} className="text-xs text-gray-500 flex items-center gap-1.5">
-                      <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
+                    <li key={item} className="text-sm text-gray-500 flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-300 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <p className="text-xs font-bold text-secondary mb-2">対応できる主な書類</p>
-                <ul className="space-y-1">
+                <p className="text-sm font-bold text-secondary mb-2">対応できる主な書類</p>
+                <ul className="space-y-1.5">
                   {[
                     'PSA Birth Certificate（出生証明書）',
                     'PSA Marriage Certificate（婚姻証明書）',
@@ -253,15 +253,15 @@ const Pricing: React.FC = () => {
                     'LTO関連書類',
                     'DFA Apostille',
                   ].map((item) => (
-                    <li key={item} className="text-xs text-gray-500 flex items-center gap-1.5">
-                      <span className="w-1 h-1 rounded-full bg-gray-300 flex-shrink-0" />
+                    <li key={item} className="text-sm text-gray-500 flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-300 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+            <p className="text-sm text-gray-500 mb-4 leading-relaxed">
               必要書類が分からない場合は、用途に合わせてご案内します。<br />
               まずは、結婚、ビザ、帰化、外免切替などの目的を添えてお問い合わせください。
             </p>
