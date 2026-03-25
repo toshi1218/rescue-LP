@@ -258,7 +258,7 @@ export default function RoadmapJa() {
           ))}
         </div>
         <div className="rounded-xl bg-gray-50 border border-gray-100 px-5 py-4">
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             逆に、すでに全体像が明確で、必要書類も順番も固まっており、書類取得だけを依頼したい方は、書類取得サービスの方が合う場合があります。
           </p>
         </div>
@@ -373,11 +373,11 @@ export default function RoadmapJa() {
           <p className="text-xs text-gray-400">税込 54,780円</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-gray-50 px-4 py-3 mb-4">
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             本サービスは、個別の法律相談や申請代行ではなく、お二人の状況に応じて手続きの全体像を整理する案内サービスです。内容をご確認のうえ、お申し込みください。
           </p>
         </div>
-        <p className="text-xs text-gray-500 leading-relaxed mb-6">
+        <p className="text-sm text-gray-500 leading-relaxed mb-6">
           お申し込み後、事前確認フォームをもとに状況を確認し、あなたたち専用のロードマップを作成します。できるだけ正確にご記入ください。
         </p>
       </section>

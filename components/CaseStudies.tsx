@@ -66,7 +66,7 @@ const CaseStudies: React.FC = React.memo(() => {
               {/* 不安 */}
               <div className="flex items-start gap-2">
                 <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
-                <p className="text-xs text-gray-600 italic leading-relaxed">{item.fear}</p>
+                <p className="text-sm text-gray-600 italic leading-relaxed">{item.fear}</p>
               </div>
 
               {/* 対応 */}
@@ -74,13 +74,13 @@ const CaseStudies: React.FC = React.memo(() => {
                 <span className="flex-shrink-0 w-4 h-4 rounded-full bg-primary/10 flex items-center justify-center mt-0.5">
                   <span className="text-primary text-[9px] font-bold">→</span>
                 </span>
-                <p className="text-xs text-gray-500 leading-relaxed">{item.action}</p>
+                <p className="text-sm text-gray-500 leading-relaxed">{item.action}</p>
               </div>
 
               {/* 結果 */}
               <div className="flex items-start gap-2 pt-1 border-t border-gray-100">
                 <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
-                <p className="text-xs text-gray-700 font-medium leading-relaxed">{item.result}</p>
+                <p className="text-sm text-gray-700 font-medium leading-relaxed">{item.result}</p>
               </div>
             </article>
           ))}

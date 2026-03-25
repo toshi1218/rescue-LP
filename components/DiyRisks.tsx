@@ -114,7 +114,7 @@ const DiyRisks: React.FC = () => {
                 </span>
                 <p className="text-sm font-bold text-gray-800 leading-snug">{risk.title}</p>
               </div>
-              <p className="text-xs text-gray-600 leading-relaxed pl-10">{risk.body}</p>
+              <p className="text-sm text-gray-600 leading-relaxed pl-10">{risk.body}</p>
             </div>
           ))}
         </div>

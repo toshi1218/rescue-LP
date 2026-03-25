@@ -174,7 +174,7 @@ const TrustTransparency: React.FC = React.memo(() => {
                   <span className="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                     <ShieldCheck className="w-2.5 h-2.5 text-green-600" />
                   </span>
-                  <p className="text-xs text-gray-600 leading-relaxed">{item.answer}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.answer}</p>
                 </div>
               </div>
             );
@@ -193,7 +193,7 @@ const TrustTransparency: React.FC = React.memo(() => {
                   <span className="text-primary font-bold text-sm">{i + 1}</span>
                 </div>
                 <p className="text-white font-bold text-sm mb-1">{item.label}</p>
-                <p className="text-white/60 text-xs leading-relaxed">{item.desc}</p>
+                <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
