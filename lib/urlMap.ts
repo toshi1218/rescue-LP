@@ -35,6 +35,16 @@ export const enToJa: Record<string, string> = {
   '/en/nbi-clearance-overseas': '/ja/nbi-clearance-overseas',
   '/en/psa-late-registration': '/ja/psa-late-registration',
   '/en/dfa-apostille-genchi-report': '/ja/dfa-apostille-genchi-report',
+  '/en/tb-certificate': '/ja/kekkaku-shomeisho',
+  '/en/spouse-visa-document-checklist': '/ja/haigusha-visa-shorui',
+  '/en/japan-first-vs-philippines-first-marriage': '/ja/nihon-senko-ph-senko',
+  '/en/getting-married-in-philippines': '/ja/philippines-de-kekkon',
+  '/en/dfa-apostille-cebu-report': '/ja/dfa-apostille-genchi-report',
+  '/en/psa-crs-cebu-report': '/ja/psa-crs-cebu-genchi-report',
+  '/en/lto-sm-seaside-cebu-report': '/ja/lto-sm-seaside-genchi-report',
+  '/en/personalized-roadmap': '/ja/kokusai-kekkon-roadmap',
+  '/en/immigration-lawyer-vs-document-service': '/ja/gyouseishoshi-to-shorui-shuttoku',
+  '/en/personal-information-protection': '/ja/kojin-joho-hogo',
 };
 
 // Build reverse map: JA path → EN path
@@ -51,6 +61,20 @@ for (const [enPath, jaPath] of Object.entries(enToJa)) {
     if (!jaToEnMap[stripped]) {
       jaToEnMap[stripped] = enPath;
     }
+  }
+}
+
+/**
+ * Returns true if the current page has an equivalent in the other language.
+ * Use this to decide whether to show the language toggle button.
+ */
+export function hasEquivalentPage(pathname: string): boolean {
+  if (pathname.startsWith('/ja')) {
+    return !!(jaToEnMap[pathname] ?? jaToEnMap[pathname.replace(/\/$/, '')]);
+  } else {
+    const key = pathname.replace(/\/$/, '') || '/en/';
+    const lookupKey = pathname === '/en/' ? '/en/' : key;
+    return !!enToJa[lookupKey];
   }
 }
 
