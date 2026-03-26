@@ -82,6 +82,16 @@ const DfaGalleriaCebuJa = lazy(() => import('./pages/DfaGalleriaCebuJa'));
 const PsaCrsCebuJa = lazy(() => import('./pages/PsaCrsCebuJa'));
 const LtoSmSeasideJa = lazy(() => import('./pages/LtoSmSeasideJa'));
 const KojinJohoHogoJa = lazy(() => import('./pages/KojinJohoHogoJa'));
+const TbCertEn = lazy(() => import('./pages/TbCertEn'));
+const SpouseVisaDocChecklistEn = lazy(() => import('./pages/SpouseVisaDocChecklistEn'));
+const MarriageOrderEn = lazy(() => import('./pages/MarriageOrderEn'));
+const PhilippinesWeddingGuideEn = lazy(() => import('./pages/PhilippinesWeddingGuideEn'));
+const DfaGalleriaCebuEn = lazy(() => import('./pages/DfaGalleriaCebuEn'));
+const PsaCrsCebuEn = lazy(() => import('./pages/PsaCrsCebuEn'));
+const LtoSmSeasideEn = lazy(() => import('./pages/LtoSmSeasideEn'));
+const RoadmapEn = lazy(() => import('./pages/RoadmapEn'));
+const GyoseishoshiVsDocServiceEn = lazy(() => import('./pages/GyoseishoshiVsDocServiceEn'));
+const KojinJohoHogoEn = lazy(() => import('./pages/KojinJohoHogoEn'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function NavigationProgress() {
@@ -288,6 +298,26 @@ export default function App() {
         <Route path="/ja/lto-sm-seaside-genchi-report/" element={<LtoSmSeasideJa />} />
         <Route path="/ja/kojin-joho-hogo" element={<KojinJohoHogoJa />} />
         <Route path="/ja/kojin-joho-hogo/" element={<KojinJohoHogoJa />} />
+        <Route path="/en/tb-certificate" element={<TbCertEn />} />
+        <Route path="/en/tb-certificate/" element={<TbCertEn />} />
+        <Route path="/en/spouse-visa-document-checklist" element={<SpouseVisaDocChecklistEn />} />
+        <Route path="/en/spouse-visa-document-checklist/" element={<SpouseVisaDocChecklistEn />} />
+        <Route path="/en/japan-first-vs-philippines-first-marriage" element={<MarriageOrderEn />} />
+        <Route path="/en/japan-first-vs-philippines-first-marriage/" element={<MarriageOrderEn />} />
+        <Route path="/en/getting-married-in-philippines" element={<PhilippinesWeddingGuideEn />} />
+        <Route path="/en/getting-married-in-philippines/" element={<PhilippinesWeddingGuideEn />} />
+        <Route path="/en/dfa-apostille-cebu-report" element={<DfaGalleriaCebuEn />} />
+        <Route path="/en/dfa-apostille-cebu-report/" element={<DfaGalleriaCebuEn />} />
+        <Route path="/en/psa-crs-cebu-report" element={<PsaCrsCebuEn />} />
+        <Route path="/en/psa-crs-cebu-report/" element={<PsaCrsCebuEn />} />
+        <Route path="/en/lto-sm-seaside-cebu-report" element={<LtoSmSeasideEn />} />
+        <Route path="/en/lto-sm-seaside-cebu-report/" element={<LtoSmSeasideEn />} />
+        <Route path="/en/personalized-roadmap" element={<RoadmapEn />} />
+        <Route path="/en/personalized-roadmap/" element={<RoadmapEn />} />
+        <Route path="/en/immigration-lawyer-vs-document-service" element={<GyoseishoshiVsDocServiceEn />} />
+        <Route path="/en/immigration-lawyer-vs-document-service/" element={<GyoseishoshiVsDocServiceEn />} />
+        <Route path="/en/personal-information-protection" element={<KojinJohoHogoEn />} />
+        <Route path="/en/personal-information-protection/" element={<KojinJohoHogoEn />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
