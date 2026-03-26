@@ -55,6 +55,20 @@ for (const [enPath, jaPath] of Object.entries(enToJa)) {
 }
 
 /**
+ * Returns true if the current page has an equivalent in the other language.
+ * Use this to decide whether to show the language toggle button.
+ */
+export function hasEquivalentPage(pathname: string): boolean {
+  if (pathname.startsWith('/ja')) {
+    return !!(jaToEnMap[pathname] ?? jaToEnMap[pathname.replace(/\/$/, '')]);
+  } else {
+    const key = pathname.replace(/\/$/, '') || '/en/';
+    const lookupKey = pathname === '/en/' ? '/en/' : key;
+    return !!enToJa[lookupKey];
+  }
+}
+
+/**
  * Given the current pathname, returns the URL for the other language.
  * EN page (/en/*) → JA equivalent (/ja/*); JA page → EN equivalent.
  * Falls back to the respective home page if no mapping is found.
