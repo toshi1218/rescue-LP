@@ -72,8 +72,8 @@ export default function PricingKo() {
             },
             {
               name: 'F-6 준비 패키지',
-              price: '₩1,490,000',
-              sub: '약 15.8만엔',
+              price: '₩1,590,000',
+              sub: '약 16.9만엔',
               items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance', 'DFA 아포스티유 인증（3통）', '서류 정리 안내', '국제 특송（DHL）'],
               featured: false,
             },
@@ -117,7 +117,6 @@ export default function PricingKo() {
             <tbody>
               {[
                 { name: 'Express 우선 처리', price: '+₩180,000', yen: '약 +1.9만엔' },
-                { name: '한국어 번역・공증 수배', price: '+₩250,000〜₩450,000', yen: '약 +2.7〜4.8만엔' },
                 { name: 'LCCM 주변 개별 안내・예약 동선 정리', price: '+₩390,000〜', yen: '약 +4.1만엔〜' },
               ].map((opt, i) => (
                 <tr key={opt.name} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
