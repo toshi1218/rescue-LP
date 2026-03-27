@@ -25,10 +25,11 @@ export function useMeta(title: string, description: string, canonical?: string) 
     const pathname = window.location.pathname;
     const canonicalHref = canonical ?? toAbsUrl(pathname);
     const isJa = /\/ja(\/|$)/.test(pathname);
-    const locale = isJa ? 'ja_JP' : 'en_US';
+    const isKo = /\/ko(\/|$)/.test(pathname);
+    const locale = isJa ? 'ja_JP' : isKo ? 'ko_KR' : 'en_US';
 
     document.title = title;
-    document.documentElement.lang = isJa ? 'ja' : 'en';
+    document.documentElement.lang = isJa ? 'ja' : isKo ? 'ko' : 'en';
     setMeta('description', description);
     setMeta('og:title', title, 'property');
     setMeta('og:description', description, 'property');
