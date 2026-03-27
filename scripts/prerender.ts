@@ -31,7 +31,7 @@ interface RouteConfig {
   title: string;
   description: string;
   canonical: string;
-  lang: 'en' | 'ja';
+  lang: 'en' | 'ja' | 'ko';
   enCanonical: string;
   jaCanonical: string;
   ogType?: string;
@@ -99,7 +99,7 @@ function buildArticleJsonLd(route: RouteConfig): JsonLd {
       },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': route.canonical },
-    inLanguage: route.lang === 'ja' ? 'ja-JP' : 'en-US',
+    inLanguage: route.lang === 'ja' ? 'ja-JP' : route.lang === 'ko' ? 'ko-KR' : 'en-US',
   };
 }
 
@@ -1167,6 +1167,60 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/business/kigyou/`,
   },
+
+  /* ── KO canonical routes (/ko/*) ─────────────────────── */
+  {
+    path: '/ko/',
+    outFile: path.join(projectRoot, 'dist', 'ko', 'index.html'),
+    title: '필리핀 서류 취득 대행 | PSA · 아포스티유 · NBI 원스톱 지원',
+    description: 'CENOMAR(미혼증명서), PSA 출생증명서, NBI Clearance, 아포스티유 취득을 대행합니다. F-6 결혼이민비자 준비, 한국 제출용 필리핀 서류를 처음부터 끝까지 지원합니다.',
+    canonical: `${BASE}/ko/`,
+    lang: 'ko',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/`,
+  },
+  {
+    path: '/ko/pricing',
+    outFile: path.join(projectRoot, 'dist', 'ko', 'pricing', 'index.html'),
+    title: '요금 안내 | 필리핀 PSA · 아포스티유 · NBI 대행',
+    description: 'CENOMAR, PSA 출생증명서, NBI Clearance, DFA 아포스티유 대행 요금 안내. 아포스티유 인증 + 국제 배송 포함. 추가 비용 사전 고지. 무료 견적 신청 가능.',
+    canonical: `${BASE}/ko/pricing/`,
+    lang: 'ko',
+    enCanonical: `${BASE}/en/pricing/`,
+    jaCanonical: `${BASE}/ja/ryokin/`,
+  },
+  {
+    path: '/ko/f-6-philippines-documents',
+    outFile: path.join(projectRoot, 'dist', 'ko', 'f-6-philippines-documents', 'index.html'),
+    title: 'F-6 결혼비자용 필리핀 서류 준비 | PSA · CENOMAR · NBI',
+    description: 'F-6 결혼이민비자에 필요한 필리핀 측 서류（CENOMAR, PSA 출생증명서, NBI Clearance, 아포스티유）를 대행합니다. LCCM 안내도 가능. 서류 이름을 모르셔도 괜찮습니다.',
+    canonical: `${BASE}/ko/f-6-philippines-documents/`,
+    lang: 'ko',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+  },
+  {
+    path: '/ko/nbi-clearance',
+    outFile: path.join(projectRoot, 'dist', 'ko', 'nbi-clearance', 'index.html'),
+    title: 'NBI Clearance 신청 지원 | 필리핀 범죄경력증명서 취득 서포트',
+    description: '필리핀 NBI Clearance（범죄경력증명서） 신청 절차를 안내합니다. 주한 필리핀 대사관 지문 등록 예약 방법, 온라인 신청 안내, DFA 아포스티유 수배, DHL 발송까지 서포트. F-6 비자, 귀화 신청에 대응.',
+    canonical: `${BASE}/ko/nbi-clearance/`,
+    lang: 'ko',
+    enCanonical: `${BASE}/en/nbi-clearance/`,
+    jaCanonical: `${BASE}/ja/nbi-clearance/`,
+    ogType: 'article',
+  },
+  {
+    path: '/ko/contact',
+    outFile: path.join(projectRoot, 'dist', 'ko', 'contact', 'index.html'),
+    title: '문의하기 | 필리핀 서류 취득 상담',
+    description: '필리핀 서류 취득 대행에 관한 상담은 이메일로 접수합니다. F-6 비자, NBI Clearance, CENOMAR, 아포스티유 등 서류 이름을 모르셔도 괜찮습니다. 24시간 이내 답변.',
+    canonical: `${BASE}/ko/contact/`,
+    lang: 'ko',
+    enCanonical: `${BASE}/en/contact/`,
+    jaCanonical: `${BASE}/ja/contact/`,
+  },
 ];
 
 // EN routes の jaCanonical から「双方向確認済みペア」を導出
@@ -1211,7 +1265,12 @@ function updateHead(html: string, route: RouteConfig): string {
   // 双方向ペアが確認できるページのみ en/ja/x-default を3点セットで注入。
   // JA専用ページ（対応ENページなし）は hreflang="ja" のみ注入して
   // 関係のないENページへの誤ったシグナルを送らないようにする。
-  if (isHreflangBidirectional(route)) {
+  if (route.lang === 'ko') {
+    result = result.replace(
+      /(<link rel="canonical" href="[^"]*" \/>)/,
+      `$1\n    <link rel="alternate" hreflang="ko" href="${route.canonical}" />`
+    );
+  } else if (isHreflangBidirectional(route)) {
     result = result.replace(
       /(<link rel="canonical" href="[^"]*" \/>)/,
       `$1\n    <link rel="alternate" hreflang="en" href="${route.enCanonical}" />\n    <link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />\n    <link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`
@@ -1242,14 +1301,14 @@ function updateHead(html: string, route: RouteConfig): string {
   );
 
   // og:locale
-  const ogLocale = route.lang === 'en' ? 'en_US' : 'ja_JP';
+  const ogLocale = route.lang === 'en' ? 'en_US' : route.lang === 'ko' ? 'ko_KR' : 'ja_JP';
   result = result.replace(
     /<meta property="og:locale" content="[^"]*"/,
     `<meta property="og:locale" content="${ogLocale}"`
   );
 
   // og:site_name
-  const ogSiteName = route.lang === 'en' ? 'Philippine Document Service' : 'フィリピン書類取得代行センター';
+  const ogSiteName = route.lang === 'en' ? 'Philippine Document Service' : route.lang === 'ko' ? '필리핀 서류 취득 대행 센터' : 'フィリピン書類取得代行センター';
   result = result.replace(
     /<meta property="og:site_name" content="[^"]*"/,
     `<meta property="og:site_name" content="${ogSiteName}"`
@@ -1258,6 +1317,8 @@ function updateHead(html: string, route: RouteConfig): string {
   // meta keywords
   const keywords = route.lang === 'en'
     ? 'Philippine document service, CENOMAR, PSA Birth Certificate, NBI Clearance, DFA Apostille, immigration documents, K-1 Visa, CR-1 Visa, Canada PR, Australia visa, UK spouse visa, DHL shipping worldwide, document retrieval'
+    : route.lang === 'ko'
+    ? '필리핀 서류 대행, CENOMAR 취득, PSA 출생증명서, NBI Clearance, DFA 아포스티유, F-6 비자, 결혼이민비자, 한국 제출용 필리핀 서류'
     : 'フィリピン書類取得代行,CENOMAR取得代行,PSA出生証明書代行,LTO書類代行,DFAアポスティーユ代行,独身証明書取り寄せ,日本から依頼,外免切替,国際結婚,配偶者ビザ,安心代行';
   result = result.replace(
     /<meta name="keywords" content="[^"]*"/,
@@ -1298,7 +1359,7 @@ function updateHead(html: string, route: RouteConfig): string {
 
   // The home page keeps a localized generic schema from index.html.
   // Deeper routes use page-specific JSON-LD from the page components.
-  const isHomePage = route.path === '/en/' || route.path === '/ja/';
+  const isHomePage = route.path === '/en/' || route.path === '/ja/' || route.path === '/ko/';
   if (isHomePage) {
     result = replaceJsonLdBlock(result, 'BreadcrumbList', buildHomeBreadcrumbJsonLd(route));
     result = replaceJsonLdBlock(result, 'HowTo', buildHomeHowToJsonLd(route));
@@ -1384,7 +1445,9 @@ async function generateSitemap() {
     const priority = getSitemapPriority(route.path);
     const changefreq = getSitemapChangefreq(route.path);
 
-    const xhtmlLinks = isHreflangBidirectional(route)
+    const xhtmlLinks = route.lang === 'ko'
+      ? `\n    <xhtml:link rel="alternate" hreflang="ko" href="${route.canonical}"/>`
+      : isHreflangBidirectional(route)
       ? `\n    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>`
       : `\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.canonical}"/>`;
 
