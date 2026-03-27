@@ -15,7 +15,7 @@ export default function F6DocsKo() {
     },
     {
       q: 'NBI Clearance도 꼭 필요한가요?',
-      a: '주한 한국 출입국에서 요구하는 경우가 많습니다. F-6 신청 시 일반적으로 NBI Clearance（범죄경력증명서）와 아포스티유가 필요합니다. F-6 준비 패키지에는 포함되어 있습니다.',
+      a: '한국 출입국에서 요구하는 경우가 많습니다. 해외 거주자의 경우, 마닐라 NBI 본국에 우편으로 직접 신청하는 방식이 됩니다. 저희는 그 절차와 필요 서류를 안내하며, 발급 후 DFA 아포스티유 인증은 대행합니다.',
     },
     {
       q: '아포스티유는 모든 서류에 필요한가요?',
@@ -30,15 +30,15 @@ export default function F6DocsKo() {
   return (
     <PageLayoutKo
       title="F-6 결혼비자용 필리핀 서류 준비 | PSA · CENOMAR · NBI"
-      description="F-6 결혼이민비자에 필요한 필리핀 측 서류（CENOMAR, PSA 출생증명서, NBI Clearance, 아포스티유）를 대행합니다. LCCM 안내도 가능. 서류 이름을 모르셔도 괜찮습니다."
+      description="F-6 결혼이민비자에 필요한 필리핀 측 서류를 정리해 드립니다. PSA 출생증명서・CENOMAR・아포스티유는 대행 취득. NBI Clearance는 신청 절차를 안내. LCCM 안내도 가능."
       canonical="https://ph-document.com/ko/f-6-philippines-documents/"
       breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: 'F-6 결혼비자 필리핀 서류' }]}
       jsonLd={[
         {
           '@context': 'https://schema.org',
           '@type': 'Service',
-          name: 'F-6 결혼이민비자용 필리핀 서류 취득 대행',
-          description: 'F-6 결혼이민비자 준비에 필요한 CENOMAR, PSA 출생증명서, NBI Clearance, DFA 아포스티유를 필리핀에서 대행 취득합니다.',
+          name: 'F-6 결혼이민비자용 필리핀 서류 준비 지원',
+          description: 'PSA 출생증명서・CENOMAR・DFA 아포스티유를 필리핀에서 대행 취득합니다. NBI Clearance는 해외 신청 절차를 안내합니다.',
           url: 'https://ph-document.com/ko/f-6-philippines-documents/',
           provider: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/ko/' },
           areaServed: { '@type': 'Country', name: 'KR' },
@@ -77,8 +77,8 @@ export default function F6DocsKo() {
             F-6 결혼비자 준비,<br />필리핀 측 서류부터 정리해드립니다
           </h1>
           <p className="text-sm md:text-base text-white/70 leading-relaxed">
-            PSA 출생증명서, CENOMAR, NBI Clearance, DFA 아포스티유를 필리핀 방문 없이 대행합니다.
-            어떤 서류가 필요한지 모르는 단계부터 상담 가능합니다.
+            PSA 출생증명서, CENOMAR, DFA 아포스티유는 필리핀 현지에서 대행 취득합니다.
+            NBI Clearance는 해외 신청 절차를 안내합니다. 어떤 서류가 필요한지 모르는 단계부터 상담 가능합니다.
           </p>
         </div>
       </section>
@@ -139,8 +139,8 @@ export default function F6DocsKo() {
             title: 'NBI Clearance（범죄경력증명서）',
             en: 'NBI Clearance',
             org: 'NBI（필리핀 국가수사국）',
-            desc: '필리핀에서의 범죄 이력이 없음을 증명하는 서류입니다. F-6 신청 시 일반적으로 필요하며, 유효기간 6개월 이내의 것이 요구됩니다. DFA 아포스티유 인증 필요.',
-            note: null,
+            desc: '필리핀에서의 범죄 이력이 없음을 증명하는 서류입니다. F-6 신청 시 일반적으로 필요하며, 유효기간 6개월 이내의 것이 요구됩니다.',
+            note: '해외 거주자의 NBI 신청은 마닐라 NBI 본국에 우편으로 직접 신청하는 방식입니다. 저희는 신청 절차와 서류 구성을 안내하며, 발급 후 DFA 아포스티유 인증은 대행합니다.',
           },
           {
             title: '아포스티유（DFA 인증）',
@@ -174,7 +174,7 @@ export default function F6DocsKo() {
             { n: '1', title: '무료 상담', desc: '필요한 서류와 목적을 확인합니다. 서류 이름을 모르셔도 괜찮습니다.' },
             { n: '2', title: '견적 확인', desc: '서류 구성, 비용, 예상 기간을 명확히 안내합니다.' },
             { n: '3', title: '착수금 50% 입금', desc: '입금 확인 후 필리핀 현지 절차를 시작합니다.' },
-            { n: '4', title: 'PSA・NBI・DFA 아포스티유 취득', desc: '현지 스태프가 각 기관에서 서류를 취득하고 아포스티유까지 진행합니다. 진행 상황을 수시로 보고합니다.' },
+            { n: '4', title: 'PSA・DFA 아포스티유 취득 / NBI 안내', desc: 'PSA 출생증명서・CENOMAR는 현지 스태프가 대행 취득합니다. NBI Clearance는 우편 신청 절차를 안내합니다. 아포스티유까지 진행하며, 진행 상황을 수시로 보고합니다.' },
             { n: '5', title: '사본 확인 후 잔금 입금・DHL 발송', desc: '서류 사본을 확인하신 후 잔금을 입금하시면 한국으로 발송합니다.' },
           ].map((step) => (
             <li key={step.n} className="flex gap-4 p-4 rounded-xl border border-gray-100 bg-white shadow-sm">

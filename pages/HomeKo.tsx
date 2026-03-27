@@ -310,7 +310,7 @@ export default function HomeKo() {
                   price: '₩1,590,000',
                   sub: '약 16.9만엔',
                   desc: 'PSA 출생증명서 + CENOMAR + NBI Clearance + 아포스티유 + 서류 정리 안내 + 진행 보고',
-                  items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance', 'DFA 아포스티유 인증（3통）', '서류 정리 안내', '국제 특송 (DHL)'],
+                  items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance 신청 안내', 'DFA 아포스티유 인증（2통＋NBI분）', '서류 정리 안내', '국제 특송 (DHL)'],
                   featured: false,
                 },
               ].map((plan) => (

@@ -11,7 +11,7 @@ export default function NbiKo() {
     },
     {
       q: '해외에 살고 있어도 신청할 수 있나요?',
-      a: '네. 해외 거주자는 NBI 온라인 시스템을 통해 신청 후, 지정 채널을 통해 처리하는 방법이 있습니다. 상황에 따른 진행 방법을 개별로 안내드립니다.',
+      a: '네. 해외 거주자의 경우, NBI 온라인에서 사전 등록 후 마닐라 NBI 본국에 필요 서류를 우편으로 발송하는 방법이 있습니다. 저희는 이 절차를 정리해 안내해 드립니다. 실제 신청 및 발송은 본인이 직접 진행하시게 됩니다.',
     },
     {
       q: '아포스티유가 필요한 경우는 어떤 때인가요?',
@@ -29,16 +29,16 @@ export default function NbiKo() {
 
   return (
     <PageLayoutKo
-      title="NBI Clearance 대행 | 필리핀 범죄경력증명서 신청 지원"
-      description="필리핀 NBI Clearance（범죄경력증명서） 신청을 대행합니다. 해외 거주자 대응, DFA 아포스티유 인증, 국제 특송까지 원스톱 지원. F-6 비자, 귀화 신청에 대응."
+      title="NBI Clearance 신청 안내 | 필리핀 범죄경력증명서 절차 지원"
+      description="필리핀 NBI Clearance（범죄경력증명서）신청 절차를 안내합니다. 해외 거주자가 마닐라 본국에 우편으로 신청하는 방법, DFA 아포스티유 인증까지 단계별로 지원합니다."
       canonical="https://ph-document.com/ko/nbi-clearance/"
       breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: 'NBI Clearance 신청 지원' }]}
       jsonLd={[
         {
           '@context': 'https://schema.org',
           '@type': 'Service',
-          name: '필리핀 NBI Clearance（범죄경력증명서）취득 대행',
-          description: '필리핀 국가수사국（NBI）발행의 범죄경력증명서 취득을 대행합니다. DFA 아포스티유 인증, 국제 특송까지 포함.',
+          name: '필리핀 NBI Clearance（범죄경력증명서）신청 절차 안내',
+          description: '해외 거주자를 위한 NBI Clearance 신청 절차를 안내합니다. 마닐라 본국 우편 신청 방법, DFA 아포스티유 인증까지 단계별로 지원합니다.',
           url: 'https://ph-document.com/ko/nbi-clearance/',
           provider: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/ko/' },
           areaServed: { '@type': 'Country', name: 'KR' },
@@ -71,7 +71,7 @@ export default function NbiKo() {
         <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-primary via-primary/60 to-transparent" />
         <div className="relative">
           <div className="flex flex-wrap gap-2 mb-4">
-            {['해외 거주자 대응', '아포스티유 포함', 'HIT 케이스 상담 가능'].map((b) => (
+            {['해외 신청 절차 안내', '아포스티유 대응', 'HIT 케이스 상담 가능'].map((b) => (
               <span key={b} className="inline-flex items-center gap-1 text-xs font-semibold bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full">
                 <span className="w-1 h-1 rounded-full bg-primary inline-block" />
                 {b}
@@ -82,8 +82,8 @@ export default function NbiKo() {
             NBI Clearance 신청을<br />도와드립니다
           </h1>
           <p className="text-sm md:text-base text-white/70 leading-relaxed">
-            필리핀 국가수사국（NBI）의 범죄경력증명서 취득을 대행합니다.
-            DFA 아포스티유 인증 + 한국 특송 배송까지 원스톱으로 지원합니다.
+            해외 거주자가 NBI Clearance를 신청하는 절차를 단계별로 안내합니다.
+            마닐라 본국 우편 신청 방법부터 DFA 아포스티유 인증까지 정리해 드립니다.
           </p>
         </div>
       </section>
@@ -143,13 +143,18 @@ export default function NbiKo() {
         <h2 className="text-lg font-bold text-secondary mb-4">해외 거주자의 신청 절차</h2>
         <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            해외 거주 중인 필리핀 국민의 경우, NBI 온라인 시스템에서 신청 후 지정 채널을 통한 처리 방법이 있습니다.
-            상황에 따른 최적 방법을 개별로 안내드립니다.
+            해외 거주자가 NBI Clearance를 취득하는 방법은 현재 <strong>마닐라 NBI 본국에 우편으로 신청</strong>하는 방식이 유일합니다.
+            NBI 온라인에서 사전 등록 후, 필요 서류를 준비해 필리핀으로 직접 발송하는 형태입니다.
           </p>
-          <div className="bg-amber-50 rounded-lg px-4 py-3">
-            <p className="text-xs text-amber-700">
-              ⚠ 초회 NBI 신청（과거 발행 이력이 없는 경우）은 재외 필리핀 대사관・영사관에서의 본인 직접 지문 등록이 필요한 경우가 있습니다.
-              먼저 상담을 통해 상황을 확인해 주세요.
+          <ol className="space-y-2 mb-4 text-sm text-gray-600">
+            <li className="flex gap-2"><span className="font-bold text-primary shrink-0">1.</span>NBI 온라인 시스템에서 사전 등록</li>
+            <li className="flex gap-2"><span className="font-bold text-primary shrink-0">2.</span>필요 서류（여권 사본, 사진 등）를 마닐라 NBI 본국에 우편 발송</li>
+            <li className="flex gap-2"><span className="font-bold text-primary shrink-0">3.</span>NBI Clearance 발행 후 지정 주소로 반송</li>
+            <li className="flex gap-2"><span className="font-bold text-primary shrink-0">4.</span>수령한 NBI Clearance를 DFA 아포스티유 인증（저희가 대행 가능）</li>
+          </ol>
+          <div className="bg-blue-50 rounded-lg px-4 py-3">
+            <p className="text-xs text-blue-700">
+              저희는 이 절차の準備와 서류 구성을 정리해 안내해 드립니다. 실제 신청 및 우편 발송은 본인이 직접 진행하시며, NBI로부터 발급된 서류의 DFA 아포스티유 인증은 저희가 맡습니다.
             </p>
           </div>
         </div>
