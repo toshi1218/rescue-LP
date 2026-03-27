@@ -6,6 +6,8 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SectionDivider from '../components/SectionDivider';
+import ComparisonTable from '../components/ComparisonTable';
+import IconCardGrid from '../components/IconCardGrid';
 import { Baby, AlertTriangle, Clock, FileCheck, Globe, Users, CheckCircle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
@@ -110,9 +112,9 @@ export default function PsaBirthCertJa() {
       ]}
     >
       <HeroBanner
-        title="出生証明書"
+        title="PSA出生証明書（フィリピン）"
         subtitle="国際結婚、配偶者ビザ準備、帰化申請など、提出先に合わせて必要な形式を確認しながら進めます。"
-        badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
+        badges={['日本語だけでOK', 'DFAアポスティーユ込み対応', '渡航不要']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
@@ -148,6 +150,28 @@ export default function PsaBirthCertJa() {
           <p className="text-gray-700 leading-relaxed mt-4 text-sm">
             PSA出生証明書は<strong>電子認証版（PSAHelplineオンライン）</strong>と<strong>紙の原本</strong>があります。日本の市区町村役場・入管・法務局への提出では、紙の原本＋DFAアポスティーユが求められるケースがほとんどです。
           </p>
+        </SectionDivider>
+
+        <SectionDivider variant="white">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">代行料金の内訳</h2>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">内容</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+            </div>
+            {[
+              { label: 'PSA出生証明書取得', price: '込み' },
+              { label: 'DFAアポスティーユ認証', price: '込み' },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">※緊急対応の場合は追加料金が発生することがあります。正確な金額は無料相談後にご提示します。</p>
         </SectionDivider>
       </div>
 
@@ -236,6 +260,31 @@ export default function PsaBirthCertJa() {
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />
+
+      <IconCardGrid
+        heading="こんな方に向いています"
+        columns={2}
+        cards={[
+          { icon: Users, title: "国際結婚・配偶者ビザの手続き中", description: "市区町村役場や入管への提出に、DFAアポスティーユ付きで対応します", accent: 'teal' },
+          { icon: Baby, title: "帰化申請を進めている", description: "法務局への帰化申請で必要な書類をまとめて手配します", accent: 'blue' },
+          { icon: Clock, title: "提出期限が近い", description: "現状をお知らせください。優先対応の可否を確認してご案内します", accent: 'gold' },
+          { icon: FileCheck, title: "「PSAに記録がない」と言われた", description: "LCR申請など複雑なケースにも対応経験があります", accent: 'purple' },
+        ]}
+      />
+
+      <div className="max-w-2xl mx-auto px-4">
+        <ComparisonTable
+          heading="自分で手配 vs IGRS代行"
+          rows={[
+            { item: "日本語でのやりとり", self: "英語が必要", agency: true },
+            { item: "PSA申請・取得", self: "現地窓口または代理人が必要", agency: true },
+            { item: "DFAアポスティーユ手配", self: false, agency: true },
+            { item: "「PSAに記録がない」ケース対応", self: "自己調査が必要", agency: true },
+            { item: "進捗レポート", self: "—", agency: true },
+            { item: "DHL国際発送手配", self: false, agency: true },
+          ]}
+        />
+      </div>
 
       <FaqSection
         items={[

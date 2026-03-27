@@ -113,9 +113,11 @@ export default function CenomarGuideJa() {
       ]}
     >
       <HeroBanner
-        title="独身証明書"
+        title="CENOMAR（独身証明書）"
         subtitle="国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。"
         badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
+        ctaText="無料で相談する"
+        ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
       <SummaryBlock
@@ -248,6 +250,35 @@ export default function CenomarGuideJa() {
             { item: "追加書類の調整", self: false, agency: true },
           ]}
         />
+
+        <SectionDivider variant="white">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">
+            提出先別のCENOMAR要件
+          </h2>
+          <ul className="space-y-4 text-sm text-gray-700">
+            <li className="flex items-start gap-3">
+              <Globe className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-gray-800 mb-1">日本（婚姻届・配偶者ビザ）— DFAアポスティーユ＋日本語翻訳が必要なことが多い</p>
+                <p className="text-gray-600 leading-relaxed">市区町村役場への婚姻届ではCENOMAR原本のみで受け付けてくれる場合もありますが、入管（出入国在留管理局）への配偶者ビザ申請ではDFAアポスティーユ付きが求められるケースがほとんどです。翻訳も必要かどうかは提出先に確認が必要です。</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <Globe className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-gray-800 mb-1">米国（K-1・CR-1ビザ）— 物理アポスティーユ付き原本が必要</p>
+                <p className="text-gray-600 leading-relaxed">USCISおよびNVCでは、DFAアポスティーユ付きの紙の原本が求められます。発行から6ヶ月以内の書類が必要です。電子版（e-Apostille）は受け付けられないことがあります。</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <Globe className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-gray-800 mb-1">カナダ・オーストラリア・英国 — 認証の形式を要確認</p>
+                <p className="text-gray-600 leading-relaxed">IRCC（カナダ）、Home Affairs（オーストラリア）、UKVI（英国）それぞれで要件が異なります。申請先の最新要件を確認したうえで、必要な認証形式をご案内します。</p>
+              </div>
+            </li>
+          </ul>
+        </SectionDivider>
       </article>
 
       <CtaBox
