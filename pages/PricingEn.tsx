@@ -21,7 +21,7 @@ export default function PricingEn() {
       <div className="grid gap-4 md:grid-cols-2 mb-6">
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">Payment methods</p>
-          <p className="text-sm text-gray-600">Japan: bank transfer. United States: credit card or PayPal.</p>
+          <p className="text-sm text-gray-600">Credit card or PayPal.</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">Cancellation & refund</p>
