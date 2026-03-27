@@ -92,6 +92,7 @@ const LtoSmSeasideEn = lazy(() => import('./pages/LtoSmSeasideEn'));
 const RoadmapEn = lazy(() => import('./pages/RoadmapEn'));
 const GyoseishoshiVsDocServiceEn = lazy(() => import('./pages/GyoseishoshiVsDocServiceEn'));
 const KojinJohoHogoEn = lazy(() => import('./pages/KojinJohoHogoEn'));
+const F6DocsEn = lazy(() => import('./pages/F6DocsEn'));
 const HomeKo = lazy(() => import('./pages/HomeKo'));
 const PricingKo = lazy(() => import('./pages/PricingKo'));
 const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
@@ -323,6 +324,8 @@ export default function App() {
         <Route path="/en/immigration-lawyer-vs-document-service/" element={<GyoseishoshiVsDocServiceEn />} />
         <Route path="/en/personal-information-protection" element={<KojinJohoHogoEn />} />
         <Route path="/en/personal-information-protection/" element={<KojinJohoHogoEn />} />
+        <Route path="/en/f-6-philippines-documents" element={<F6DocsEn />} />
+        <Route path="/en/f-6-philippines-documents/" element={<F6DocsEn />} />
 
         {/* Korean routes */}
         <Route path="/ko" element={<Navigate to="/ko/" replace />} />
