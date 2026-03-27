@@ -92,6 +92,11 @@ const LtoSmSeasideEn = lazy(() => import('./pages/LtoSmSeasideEn'));
 const RoadmapEn = lazy(() => import('./pages/RoadmapEn'));
 const GyoseishoshiVsDocServiceEn = lazy(() => import('./pages/GyoseishoshiVsDocServiceEn'));
 const KojinJohoHogoEn = lazy(() => import('./pages/KojinJohoHogoEn'));
+const HomeKo = lazy(() => import('./pages/HomeKo'));
+const PricingKo = lazy(() => import('./pages/PricingKo'));
+const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
+const NbiKo = lazy(() => import('./pages/NbiKo'));
+const ContactKo = lazy(() => import('./pages/ContactKo'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function NavigationProgress() {
@@ -318,6 +323,18 @@ export default function App() {
         <Route path="/en/immigration-lawyer-vs-document-service/" element={<GyoseishoshiVsDocServiceEn />} />
         <Route path="/en/personal-information-protection" element={<KojinJohoHogoEn />} />
         <Route path="/en/personal-information-protection/" element={<KojinJohoHogoEn />} />
+
+        {/* Korean routes */}
+        <Route path="/ko" element={<Navigate to="/ko/" replace />} />
+        <Route path="/ko/" element={<HomeKo />} />
+        <Route path="/ko/pricing" element={<PricingKo />} />
+        <Route path="/ko/pricing/" element={<PricingKo />} />
+        <Route path="/ko/f-6-philippines-documents" element={<F6DocsKo />} />
+        <Route path="/ko/f-6-philippines-documents/" element={<F6DocsKo />} />
+        <Route path="/ko/nbi-clearance" element={<NbiKo />} />
+        <Route path="/ko/nbi-clearance/" element={<NbiKo />} />
+        <Route path="/ko/contact" element={<ContactKo />} />
+        <Route path="/ko/contact/" element={<ContactKo />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
