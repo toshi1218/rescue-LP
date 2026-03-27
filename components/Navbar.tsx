@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
-import { hasEquivalentPage, getLangSwitchUrl } from '../lib/urlMap';
 type MenuType = 'docs' | 'purpose' | 'guides' | 'about' | 'business' | null;
 
 const Navbar: React.FC = () => {
@@ -27,10 +26,6 @@ const Navbar: React.FC = () => {
 
   const isJa = lang === 'ja';
   const homePath = isJa ? '/ja/' : '/en/';
-  const showLangToggle = hasEquivalentPage(location.pathname);
-  const switchUrl = getLangSwitchUrl(location.pathname);
-  const toggleLabel = isJa ? 'EN' : 'JA';
-
   const documentTabs = [
     { label: t('navbar.doc.cenomar'),  path: isJa ? '/ja/cenomar/'              : '/en/cenomar/' },
     { label: t('navbar.doc.birth'),    path: isJa ? '/ja/psa-shussei-shomeisho/': '/en/psa-birth-certificate/' },
@@ -337,15 +332,6 @@ const Navbar: React.FC = () => {
           </Link>
         )}
         <div className="flex items-center gap-2 ml-2">
-          {/* 言語切替ボタン — モバイルのみ */}
-          {showLangToggle && (
-            <Link
-              to={switchUrl}
-              className="md:hidden px-2.5 py-1 text-xs font-medium rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 transition-colors whitespace-nowrap"
-            >
-              {toggleLabel}
-            </Link>
-          )}
           {/* モバイル用お問い合わせボタン */}
           <a
             href="#contact"
@@ -472,16 +458,8 @@ const Navbar: React.FC = () => {
 
           </div>
 
-          {/* タブバー右端: 言語切替 + 法人向け + お問い合わせ */}
+          {/* タブバー右端: 法人向け + お問い合わせ */}
           <div className="hidden md:flex items-center gap-2 ml-3 flex-shrink-0">
-            {showLangToggle && (
-              <Link
-                to={switchUrl}
-                className="px-2.5 py-1 text-xs font-medium rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100 transition-colors whitespace-nowrap"
-              >
-                {toggleLabel}
-              </Link>
-            )}
             {/* 法人向け ドロップダウン */}
             {isJa && (
               <div
