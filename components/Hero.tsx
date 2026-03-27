@@ -156,12 +156,12 @@ const Hero: React.FC = () => {
 
           {/* H1 */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-secondary mb-5">
-            Philippine Documents,<br />
-            <span className="text-primary">Delivered Worldwide.</span>
+            Philippine Documents —<br />
+            <span className="text-primary">Organized for Your Application.</span>
           </h1>
 
           <p className="text-gray-600 mb-8 text-sm md:text-base leading-relaxed max-w-lg">
-            PSA certificates, CENOMAR, NBI Clearance & DFA Apostille — retrieved by our Cebu-based team and shipped via DHL Express to your address in the US, Canada, Japan, Australia, UK and beyond.
+            We identify, retrieve, and arrange the Philippine documents required for your marriage, visa, or immigration case — including paper Apostille where needed — and ship worldwide via DHL Express.
           </p>
 
           {/* CTAs */}
@@ -235,7 +235,7 @@ const Hero: React.FC = () => {
             <div className="mx-5 mb-4 bg-amber-50 border border-amber-100 rounded-xl px-4 py-3 flex items-center justify-between">
               <div>
                 <p className="text-xs font-bold text-amber-800">DFA Apostille</p>
-                <p className="text-xs text-amber-600">Authenticated for immigration</p>
+                <p className="text-xs text-amber-600">Required by many consulates</p>
               </div>
               <div className="w-11 h-11 rounded-full border-2 border-amber-400 flex items-center justify-center">
                 <span className="text-[8px] text-amber-600 font-bold text-center leading-tight">HAGUE<br/>CONV.</span>
