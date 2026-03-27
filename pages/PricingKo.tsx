@@ -117,7 +117,6 @@ export default function PricingKo() {
             <tbody>
               {[
                 { name: 'Express 우선 처리', price: '+₩180,000', yen: '약 +1.9만엔' },
-                { name: '한국어 번역・공증 수배', price: '+₩250,000〜₩450,000', yen: '약 +2.7〜4.8만엔' },
                 { name: 'LCCM 주변 개별 안내・예약 동선 정리', price: '+₩390,000〜', yen: '약 +4.1만엔〜' },
               ].map((opt, i) => (
                 <tr key={opt.name} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
