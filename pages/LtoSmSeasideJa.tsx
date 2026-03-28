@@ -29,7 +29,7 @@ export default function LtoSmSeasideJa() {
           name: 'LTO (Land Transportation Office) - SM Seaside City Cebu',
           description:
             'フィリピン陸運局（LTO）の書類発行・免許手続き窓口。運転経歴証明書・運転免許証の発行を行う公的機関。セブ市SMシーサイドシティ内に位置する。',
-          url: 'https://ph-document.com/ja/lto-sm-seaside-genchi-report',
+          url: 'https://ph-document.com/ja/lto-sm-seaside-genchi-report/',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'SM Seaside City Cebu, South Road Properties',
@@ -48,7 +48,7 @@ export default function LtoSmSeasideJa() {
           headline: 'LTO SMシーサイド現地レポート【運転経歴証明書・免許更新の取得場所】',
           description:
             'フィリピンのLTO書類（運転経歴証明書・運転免許証更新）はセブ市SMシーサイドシティ内のLTO窓口で取得します。現地写真と詳細解説。',
-          url: 'https://ph-document.com/ja/lto-sm-seaside-genchi-report',
+          url: 'https://ph-document.com/ja/lto-sm-seaside-genchi-report/',
           datePublished: '2026-03-23',
           dateModified: '2026-03-23',
           author: {

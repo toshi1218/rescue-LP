@@ -22,7 +22,7 @@ export default function PsaCostEn() {
         '@type': 'Service',
         name: 'PSA Birth Certificate Retrieval — All-Inclusive Pricing',
         description: 'Full cost breakdown for PSA Birth Certificate retrieval: PSA fee + DFA Apostille + DHL shipping worldwide. All-inclusive pricing with no hidden fees. Free quote available.',
-        url: 'https://ph-document.com/en/psa-birth-certificate-cost',
+        url: 'https://ph-document.com/en/psa-birth-certificate-cost/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -147,7 +147,7 @@ export default function PsaCostEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

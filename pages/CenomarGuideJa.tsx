@@ -29,7 +29,7 @@ export default function CenomarGuideJa() {
           '@type': 'Service',
           name: 'CENOMAR（独身証明書）取得代行',
           description: 'フィリピンのCENOMAR（独身証明書）を必要書類の確認から取得・発送までサポート。国際結婚・配偶者ビザ・帰化申請に対応。',
-          url: 'https://ph-document.com/ja/cenomar',
+          url: 'https://ph-document.com/ja/cenomar/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

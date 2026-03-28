@@ -22,7 +22,7 @@ export default function PsaMarriageCertJa() {
         '@type': 'Service',
         name: 'PSA婚姻証明書取得代行',
         description: 'フィリピンのPSA婚姻証明書をDFAアポスティーユ付きで日本語だけで代行取得。配偶者ビザ・国際結婚・帰化申請に対応。注釈付き（Annotated）にも対応。約1ヶ月〜。',
-        url: 'https://ph-document.com/ja/psa-kekkon-shomeisho',
+        url: 'https://ph-document.com/ja/psa-kekkon-shomeisho/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

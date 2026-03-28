@@ -27,7 +27,7 @@ export default function PsaLateRegistrationJa() {
           '@type': 'Article',
           headline: 'PSAに記録がない・氏名誤りのときの対応',
           description: 'PSA出生証明書が見つからない、氏名や生年月日に誤りがある場合の遅延登録・訂正を整理します。',
-          url: 'https://ph-document.com/ja/psa-late-registration',
+          url: 'https://ph-document.com/ja/psa-late-registration/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

@@ -27,7 +27,7 @@ export default function NbiClearanceOverseasJa() {
           '@type': 'Article',
           headline: '海外在住でも取れるNBIクリアランス',
           description: 'フィリピンに戻らずにNBIクリアランスを取得したい方へ。OFWや海外在住の方向けに、代理申請やHIT対応を案内します。',
-          url: 'https://ph-document.com/ja/nbi-clearance-overseas',
+          url: 'https://ph-document.com/ja/nbi-clearance-overseas/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

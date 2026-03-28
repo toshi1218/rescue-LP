@@ -23,7 +23,7 @@ export default function SpouseVisaJa() {
         '@type': 'Service',
         name: '配偶者ビザ申請 フィリピン書類取得代行',
         description: '配偶者ビザ（在留資格「日本人の配偶者等」）申請に必要なPSA婚姻証明書・出生証明書・CENOMAR・DFAアポスティーユを一括代行。入管要件に合わせた形式で手配。',
-        url: 'https://ph-document.com/ja/haigusha-visa',
+        url: 'https://ph-document.com/ja/haigusha-visa/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

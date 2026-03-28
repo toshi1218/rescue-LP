@@ -23,7 +23,7 @@ export default function ApostilleGuideEn() {
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service',
         description: 'We handle DFA Apostille authentication for PSA, NBI, CENOMAR, and LTO documents. Physical paper Apostille provided. Ships worldwide via DHL. No trip to the Philippines needed.',
-        url: 'https://ph-document.com/en/apostille',
+        url: 'https://ph-document.com/en/apostille/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -134,7 +134,7 @@ export default function ApostilleGuideEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

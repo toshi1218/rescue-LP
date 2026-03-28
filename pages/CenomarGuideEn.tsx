@@ -23,7 +23,7 @@ export default function CenomarGuideEn() {
         '@type': 'Service',
         name: 'CENOMAR Retrieval Service (PSA + DFA Apostille)',
         description: 'We retrieve CENOMAR from PSA with DFA Apostille and ship worldwide via DHL. Required for immigration and visa applications in the US, Canada, Australia, UK, Japan and more.',
-        url: 'https://ph-document.com/en/cenomar',
+        url: 'https://ph-document.com/en/cenomar/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -150,7 +150,7 @@ export default function CenomarGuideEn() {
         buttonText="Ask Us for Free"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

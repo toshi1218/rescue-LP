@@ -29,7 +29,7 @@ export default function PsaCrsCebuJa() {
           name: 'PSA Civil Registration System (CRS) - Cebu City Outlet',
           description:
             'フィリピン統計局（PSA）の書類発行窓口。出生証明書・結婚証明書・CENOMAR・死亡証明書の発行を行う公的機関。セブ市コロン通りに位置する。',
-          url: 'https://ph-document.com/ja/psa-crs-cebu-genchi-report',
+          url: 'https://ph-document.com/ja/psa-crs-cebu-genchi-report/',
           telephone: '256-0592',
           openingHours: 'Mo-Fr 07:00-17:00',
           address: {
@@ -46,7 +46,7 @@ export default function PsaCrsCebuJa() {
           headline: 'PSA CRSセブ現地レポート【出生証明書・結婚証明書・CENOMAR取得場所】',
           description:
             'フィリピンのPSA書類（出生証明書・結婚証明書・CENOMAR・死亡証明書）はセブ市コロン通りのCRSアウトレットで取得します。現地写真と詳細解説。',
-          url: 'https://ph-document.com/ja/psa-crs-cebu-genchi-report',
+          url: 'https://ph-document.com/ja/psa-crs-cebu-genchi-report/',
           datePublished: '2026-03-01',
           dateModified: '2026-03-23',
           author: {

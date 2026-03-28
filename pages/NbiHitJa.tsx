@@ -27,7 +27,7 @@ export default function NbiHitJa() {
         '@type': 'Service',
         name: 'NBI HIT（同名者あり）解消・NBI Clearance申請サポート',
         description: 'NBI ClearanceでHIT（同名者あり）が出た場合の解消手続きからNBI取得・DFAアポスティーユまで一括代行。配偶者ビザ・就労ビザの期限を考慮してスケジュールをご案内します。',
-        url: 'https://ph-document.com/ja/nbi-hit',
+        url: 'https://ph-document.com/ja/nbi-hit/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

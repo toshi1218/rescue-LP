@@ -22,7 +22,7 @@ export default function DriverRecordEn() {
         '@type': 'Service',
         name: 'LTO Driver\'s Record Retrieval Service (+ DFA Apostille)',
         description: 'We retrieve the LTO Driver\'s Record from the Philippines with DFA Apostille and ship to your address worldwide via DHL. Required for Philippine license conversion in the US, Canada, Australia, UK, and Japan.',
-        url: 'https://ph-document.com/en/driver-record',
+        url: 'https://ph-document.com/en/driver-record/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -119,7 +119,7 @@ export default function DriverRecordEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

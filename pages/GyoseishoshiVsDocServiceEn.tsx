@@ -21,7 +21,7 @@ export default function GyoseishoshiVsDocServiceEn() {
           '@type': 'Article',
           headline: 'Administrative Scrivener vs Document Acquisition Service — What\'s the Difference?',
           description: 'A guide explaining the different roles of Japanese administrative scriveners (gyoseishoshi) and Philippine document acquisition services for Filipino-Japanese international marriage and spouse visa.',
-          url: 'https://ph-document.com/en/immigration-lawyer-vs-document-service',
+          url: 'https://ph-document.com/en/immigration-lawyer-vs-document-service/',
           dateModified: '2026-03-01',
           publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/en/' },
         },

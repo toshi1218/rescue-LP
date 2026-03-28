@@ -23,7 +23,7 @@ export default function NbiGuideEn() {
         '@type': 'Service',
         name: 'NBI Clearance Application Support (+ DFA Apostille)',
         description: 'Renewal-case NBI Clearance handled remotely via our Cebu team. First-time applicants receive embassy fingerprint guidance. DFA Apostille + DHL shipping included. HIT cases supported.',
-        url: 'https://ph-document.com/en/nbi-clearance',
+        url: 'https://ph-document.com/en/nbi-clearance/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -134,7 +134,7 @@ export default function NbiGuideEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

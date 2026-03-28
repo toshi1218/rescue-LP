@@ -24,7 +24,7 @@ export default function NbiValidityEn() {
           '@type': 'Service',
           name: 'NBI Clearance Retrieval — Timed for Your Visa Deadline',
           description: 'NBI Clearance is valid for 1 year, but immigration authorities worldwide often require it within 6 months of submission. We time the retrieval to match your specific deadline.',
-          url: 'https://ph-document.com/en/nbi-validity',
+          url: 'https://ph-document.com/en/nbi-validity/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -121,7 +121,7 @@ export default function NbiValidityEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

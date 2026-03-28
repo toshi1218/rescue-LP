@@ -26,7 +26,7 @@ export default function NaturalizationJa() {
         '@type': 'Service',
         name: '帰化申請 フィリピン書類取得代行',
         description: '帰化申請に必要なPSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。法務局の要件に合わせた形式で手配。司法書士・行政書士からの依頼も対応。',
-        url: 'https://ph-document.com/ja/kika-shinsei-guide',
+        url: 'https://ph-document.com/ja/kika-shinsei-guide/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

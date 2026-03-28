@@ -21,7 +21,7 @@ export default function NbiValidityJa() {
           '@type': 'Service',
           name: 'NBIクリアランス再取得・更新サポート',
           description: 'フィリピンNBIクリアランスの有効期限確認と再取得・更新手続きを日本語でサポート。提出先の条件確認から書類取得まで対応。',
-          url: 'https://ph-document.com/ja/nbi-koyukigen',
+          url: 'https://ph-document.com/ja/nbi-koyukigen/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

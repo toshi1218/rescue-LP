@@ -23,7 +23,7 @@ export default function K1VisaDocsEn() {
         '@type': 'Service',
         name: 'K-1 Fiancé Visa Philippine Documents Retrieval Service',
         description: 'We retrieve all Philippine documents required for a K-1 fiancé visa — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. USCIS-ready. Ships to your US address via DHL.',
-        url: 'https://ph-document.com/en/k1-visa-documents',
+        url: 'https://ph-document.com/en/k1-visa-documents/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -128,7 +128,7 @@ export default function K1VisaDocsEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

@@ -26,7 +26,7 @@ export default function CenomarValidityJa() {
           '@type': 'Service',
           name: 'CENOMAR有効期限・最適タイミングでの代行取得',
           description: 'CENOMARの有効期限（多くの提出先で6ヶ月以内）を踏まえ、提出予定日から逆算して最適なタイミングで代行取得。期限切れによる再取得リスクをなくします。',
-          url: 'https://ph-document.com/ja/cenomar-koyukigen',
+          url: 'https://ph-document.com/ja/cenomar-koyukigen/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

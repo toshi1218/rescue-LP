@@ -27,7 +27,7 @@ export default function CenomarApostilleJa() {
         '@type': 'Service',
         name: 'CENOMARのDFAアポスティーユ取得代行',
         description: 'CENOMARのDFAアポスティーユをフィリピンに行かずに代行取得。国際結婚・配偶者ビザ・帰化申請に必要な紙の原本アポスティーユで対応。日本語だけで完結。',
-        url: 'https://ph-document.com/ja/cenomar-apostille',
+        url: 'https://ph-document.com/ja/cenomar-apostille/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

@@ -24,7 +24,7 @@ export default function SpouseVisaShoryuJa() {
           '@type': 'Article',
           headline: '配偶者ビザに必要な書類チェックリスト【2026年3月版】フィリピン人配偶者',
           description: '2025年6月から結核非発病証明書が追加義務化。在留資格「日本人の配偶者等」COE申請に必要なPSA書類・CENOMAR・アポスティーユ・結核証明書を最新情報で解説。',
-          url: 'https://ph-document.com/ja/haigusha-visa-shorui',
+          url: 'https://ph-document.com/ja/haigusha-visa-shorui/',
           dateModified: '2026-03-14',
           publisher: {
             '@type': 'Organization',

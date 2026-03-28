@@ -23,7 +23,7 @@ export default function CenomarVsMarriageCertEn() {
           '@type': 'Article',
           headline: 'CENOMAR vs. PSA Marriage Certificate — Which Do You Need?',
           description: 'CENOMAR and PSA Marriage Certificate are two different Philippine documents. CENOMAR proves single status; Marriage Certificate proves marriage. Learn when each is required for visa and immigration.',
-          url: 'https://ph-document.com/en/cenomar-vs-marriage-certificate',
+          url: 'https://ph-document.com/en/cenomar-vs-marriage-certificate/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

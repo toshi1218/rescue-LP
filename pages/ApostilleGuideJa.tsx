@@ -21,7 +21,7 @@ export default function ApostilleGuideJa() {
           '@type': 'Article',
           headline: '【完全解説】フィリピン書類のアポスティーユ（旧レッドリボン）とは？ 必要になるケースと注意点',
           description: 'フィリピン書類のアポスティーユとは何か、旧レッドリボンとの違い、必要になるケース、IGRSのサポート内容を解説します。',
-          url: 'https://ph-document.com/ja/apostille',
+          url: 'https://ph-document.com/ja/apostille/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

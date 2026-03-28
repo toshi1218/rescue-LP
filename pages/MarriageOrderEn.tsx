@@ -21,7 +21,7 @@ export default function MarriageOrderEn() {
           '@type': 'Article',
           headline: 'Japan-First vs Philippines-First Marriage — Steps and Documents Compared [2026]',
           description: 'Which country should you register your marriage in first? Compare procedures, documents, timelines, and pros/cons for Filipino-Japanese couples.',
-          url: 'https://ph-document.com/en/japan-first-vs-philippines-first-marriage',
+          url: 'https://ph-document.com/en/japan-first-vs-philippines-first-marriage/',
           publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/en/' },
         },
         {
