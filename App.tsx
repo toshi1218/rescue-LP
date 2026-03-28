@@ -1,6 +1,32 @@
-import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useRef, useState, Component, ErrorInfo, ReactNode } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { getLangSwitchUrl } from './lib/urlMap';
+
+interface ErrorBoundaryState { hasError: boolean; }
+class ErrorBoundary extends Component<{ children: ReactNode }, ErrorBoundaryState> {
+  state: ErrorBoundaryState = { hasError: false };
+  static getDerivedStateFromError(): ErrorBoundaryState { return { hasError: true }; }
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    console.error('[ErrorBoundary]', error, info.componentStack);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex flex-col items-center justify-center gap-4 p-8 text-center">
+          <p className="text-lg font-bold text-secondary">ページの読み込みに失敗しました</p>
+          <p className="text-sm text-gray-500">Something went wrong. Please reload the page.</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="mt-2 px-6 py-2 bg-primary text-secondary font-bold rounded-lg shadow hover:bg-primary-hover transition-all"
+          >
+            Reload
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 const HomeEn = lazy(() => import('./pages/HomeEn'));
 const HomeJa = lazy(() => import('./pages/HomeJa'));
@@ -141,6 +167,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <NavigationProgress />
+      <ErrorBoundary>
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-primary border-b-transparent animate-spin" role="status" aria-label="Loading" /></div>}>
       <Routes>
         <Route path="/en" element={<Navigate to="/en/" replace />} />
@@ -401,6 +428,7 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       </Suspense>
+      </ErrorBoundary>
     </>
   );
 }

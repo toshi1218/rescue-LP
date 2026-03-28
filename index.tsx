@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { LanguageProvider } from './lib/i18n';
+import { reportWebVitals } from './lib/analytics';
 import './styles.css';
 
 const rootElement = document.getElementById('root');
@@ -20,3 +21,5 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+reportWebVitals();

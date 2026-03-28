@@ -2,6 +2,7 @@
 /robots.txt /robots.txt 200
 /sitemap.xml /sitemap.xml 200
 /favicon.ico /favicon.svg 301
+/.well-known/llms.txt /llms.txt 200
 
 # ── 旧 EN canonical (/ 系) → /en/*/ へ 301（1ホップで最終URLへ） ──
 /                           /en/                          301

@@ -128,7 +128,7 @@ export default function PsaCrsCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_143535.jpg"
+                src="/PSA/IMG_20260120_143535.webp"
                 alt="PSA Regional Statistical Services Office VIIとCivil Registration System Cebu City Outletが並ぶ外観。コロン通り沿いの政府機関"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -139,7 +139,7 @@ export default function PsaCrsCebuJa() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20260120_143604.jpg"
+                src="/PSA/IMG_20260120_143604.webp"
                 alt="Civil Registration System (CRS) Cebu City Outletの看板。出生証明書・結婚証明書・CENOMAR・死亡証明書の発行と記載"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -163,7 +163,7 @@ export default function PsaCrsCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_143930.jpg"
+                src="/PSA/IMG_20260120_143930.webp"
                 alt="ガイサノキャピタルサウスの外観。セブ市内の繁華街にある大型商業施設"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -174,7 +174,7 @@ export default function PsaCrsCebuJa() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20260120_143612.jpg"
+                src="/PSA/IMG_20260120_143612.webp"
                 alt="コロン通り沿いのPSA CRS Cebu City Outlet入口。利用者が入口前に列を作っている"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -200,7 +200,7 @@ export default function PsaCrsCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_142533.jpg"
+                src="/PSA/IMG_20260120_142533.webp"
                 alt="入口ガラス扉に貼られた掲示。NO APPOINTMENT NO TRANSACTION / ONLINE APPOINTMENT IS FREE / BUSINESS HOURS月〜金7:00-17:00と記載"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -211,7 +211,7 @@ export default function PsaCrsCebuJa() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20251222_155841.jpg"
+                src="/PSA/IMG_20251222_155841.webp"
                 alt="PSA Cebu City CRS OutletのパブリックアドバイザリーポスターにCRSオンライン予約システム実施（2025年10月1日〜）と記載"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -236,7 +236,7 @@ export default function PsaCrsCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_142346.jpg"
+                src="/PSA/IMG_20260120_142346.webp"
                 alt="PSA CRS Cebu City Outletの入口で制服を着た女性警備員が利用者の予約確認をしている様子"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -247,7 +247,7 @@ export default function PsaCrsCebuJa() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20260120_142355.jpg"
+                src="/PSA/IMG_20260120_142355.webp"
                 alt="PSA CRS Cebu City Outlet入口のEXITドア。複数の掲示物と「NO APPOINTMENT NO TRANSACTION」の張り紙が見える"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -273,7 +273,7 @@ export default function PsaCrsCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_142017.jpg"
+                src="/PSA/IMG_20260120_142017.webp"
                 alt="PSA CRS Cebu City Outletの待合室。多数の青い椅子に利用者が座って番号を待っている。窓口1〜9番が並ぶ"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -284,7 +284,7 @@ export default function PsaCrsCebuJa() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20260120_142456.jpg"
+                src="/PSA/IMG_20260120_142456.webp"
                 alt="PSA CRS Cebu City Outletの広い待合室。白い椅子に多数の利用者が座っており、奥に支払い窓口（PAYMENT）が見える"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -296,7 +296,7 @@ export default function PsaCrsCebuJa() {
           </div>
           <figure>
             <img
-              src="/PSA/IMG_20260120_142515.jpg"
+              src="/PSA/IMG_20260120_142515.webp"
               alt="PSA CRS番号表示ディスプレイ。NOW SERVINGとSCHEDULED RELEASEの番号が表示されている。RELEASINGとPAYMENTの各窓口が見える"
               className="w-full rounded-xl object-cover max-h-72 shadow-card"
               loading="lazy"
@@ -319,7 +319,7 @@ export default function PsaCrsCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_142106.jpg"
+                src="/PSA/IMG_20260120_142106.webp"
                 alt="PSA CRSのセルフサービスキオスク。白いタッチパネル端末で申請情報を入力している利用者"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -330,7 +330,7 @@ export default function PsaCrsCebuJa() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20260120_142323.jpg"
+                src="/PSA/IMG_20260120_142323.webp"
                 alt="セルフサービスキオスクからバーコード付きの申請番号票が印刷されて出てくる様子"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -355,7 +355,7 @@ export default function PsaCrsCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_142305.jpg"
+                src="/PSA/IMG_20260120_142305.webp"
                 alt="PSA出生証明書（Birth Certificate）申請書の記入方法説明。6つの記入ステップが番号付きで掲示されている"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -366,7 +366,7 @@ export default function PsaCrsCebuJa() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20260120_142141.jpg"
+                src="/PSA/IMG_20260120_142141.webp"
                 alt="CENOMAR（Certificate of No Marriage）申請書。PSA Philippine Statistics Authorityの公式フォーム"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -379,7 +379,7 @@ export default function PsaCrsCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_142221.jpg"
+                src="/PSA/IMG_20260120_142221.webp"
                 alt="PSA結婚証明書（Marriage Certificate）申請書。夫・妻の氏名・婚姻日・婚姻場所などの記入欄がある"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -390,7 +390,7 @@ export default function PsaCrsCebuJa() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20260120_142257.jpg"
+                src="/PSA/IMG_20260120_142257.webp"
                 alt="CENODEATH（死亡証明書）の申請書記入方法説明。死亡者の氏名・生年月日・出生地などの記入ステップが掲示"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -415,7 +415,7 @@ export default function PsaCrsCebuJa() {
           </p>
           <figure>
             <img
-              src="/PSA/IMG_20260120_142338.jpg"
+              src="/PSA/IMG_20260120_142338.webp"
               alt="PSA Regional Statistical Services Office VIIのCitizen's Charter。民事登録書類のコピー発行手順・担当者・処理時間が一覧で掲示"
               className="w-full rounded-xl object-cover max-h-72 shadow-card"
               loading="lazy"
