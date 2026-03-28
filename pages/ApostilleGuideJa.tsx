@@ -96,6 +96,8 @@ export default function ApostilleGuideJa() {
         title="アポスティーユ"
         subtitle="国際結婚、配偶者ビザ準備、外免切替、帰化申請など、どの場面で必要になりやすいかを分かりやすくまとめています。"
         badges={['PSA・CENOMAR・LTO対応', 'DFA認証代行', '日本語でご相談OK']}
+        ctaText="無料で相談する"
+        ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
       <article className="max-w-2xl mx-auto px-4">

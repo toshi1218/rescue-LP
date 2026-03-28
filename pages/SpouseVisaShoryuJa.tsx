@@ -60,6 +60,8 @@ export default function SpouseVisaShoryuJa() {
         title="配偶者ビザに必要な書類チェックリスト【2026年3月版】"
         subtitle="在留資格「日本人の配偶者等」COE申請に必要なフィリピン書類を最新情報でまとめています。2025年6月から結核非発病証明書が追加義務化。"
         badges={['2026年3月最新', '結核証明書対応', '書類取得代行あり']}
+        ctaText="無料で相談する"
+        ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
       <article className="max-w-2xl mx-auto px-4">
