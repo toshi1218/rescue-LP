@@ -13,6 +13,8 @@ const plansData = {
       featured: true,
       title: '国際結婚準備パック',
       subtitle: '日本の役所への婚姻届に必要なフィリピン書類をまとめて取得',
+      why: '日本の役所で婚姻届を出すには、フィリピン側の書類（出生証明・独身証明など）をアポスティーユ付きで用意する必要があります',
+      outcome: '書類が揃えば、日本の市区町村への婚姻届の提出が可能になります',
       price: '¥99,800',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
@@ -25,6 +27,8 @@ const plansData = {
       featured: false,
       title: '配偶者ビザ準備書類パック',
       subtitle: '入管への在留資格申請に必要なフィリピン書類を取得',
+      why: '入管への配偶者ビザ申請では、フィリピン側の婚姻・出生証明書をアポスティーユ付きで提出する必要があります',
+      outcome: '書類が揃えば、入管への在留資格認定証明書交付申請（または変更申請）が前に進みます',
       price: '¥100,000',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
@@ -37,6 +41,8 @@ const plansData = {
       featured: false,
       title: '外免切替サポート',
       subtitle: 'フィリピン免許から日本免許への切替に必要なLTO書類を取得',
+      why: '外国免許を日本の免許に切り替えるには、フィリピンLTO発行の書類（運転歴証明など）の原本提出が必要です',
+      outcome: '書類が揃えば、運転免許センターでの外免切替手続きを開始できます',
       price: '¥100,000',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
@@ -49,6 +55,8 @@ const plansData = {
       featured: false,
       title: 'NBIクリアランス取得サポート',
       subtitle: 'ビザ申請・帰化・在留資格手続きに必要な無犯罪証明書を取得',
+      why: '入管・帰化・海外ビザ申請では、フィリピン側の無犯罪証明書（NBI Clearance）の提出が求められます',
+      outcome: '書類が揃えば、ビザや在留資格・帰化申請の書類セットが完成します',
       price: '¥55,000',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
@@ -61,6 +69,8 @@ const plansData = {
       featured: false,
       title: '帰化申請書類パック',
       subtitle: '法務局への帰化申請に必要なフィリピン書類をまとめて取得',
+      why: '帰化申請では法務局からフィリピンの出生・婚姻・無犯罪証明書などの原本提出が求められます',
+      outcome: '必要書類が揃えば、法務局への帰化申請の書類準備が整います',
       price: '¥110,000',
       priceNote: '〜（税・送料別）',
       period: '約6〜10週間',
@@ -189,6 +199,16 @@ const Pricing: React.FC = () => {
                     <div className="flex-1 min-w-0">
                       <h3 className="text-sm font-bold text-secondary leading-snug">{plan.title}</h3>
                       <p className="text-xs text-gray-500 mt-0.5 leading-snug">{plan.subtitle}</p>
+                      {(plan as any).why && (
+                        <p className="text-xs text-gray-500 mt-1 leading-snug">
+                          <span className="font-semibold">なぜ必要：</span>{(plan as any).why}
+                        </p>
+                      )}
+                      {(plan as any).outcome && (
+                        <p className="text-xs text-primary-dark/80 mt-0.5 leading-snug">
+                          <span className="font-semibold">揃えばできること：</span>{(plan as any).outcome}
+                        </p>
+                      )}
                     </div>
                   </div>
 
