@@ -71,7 +71,7 @@ export default function PageLayout({ breadcrumbs, jsonLd, description, children 
       {/* ページ上部のゴールドアクセントバー */}
       <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-primary to-transparent" />
       <Navbar />
-      <main className="max-w-2xl lg:max-w-3xl mx-auto px-4 py-10">
+      <main id="main-content" className="max-w-2xl lg:max-w-3xl mx-auto px-4 py-10">
         <nav className="text-sm text-gray-400 mb-6" aria-label="Breadcrumb">
           {breadcrumbs.map((item, index) => (
             <span key={`${item.label}-${index}`}>

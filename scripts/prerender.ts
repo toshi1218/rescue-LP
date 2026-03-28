@@ -1390,6 +1390,23 @@ function isHreflangBidirectional(route: RouteConfig): boolean {
   return _enPairedJaSet.has(route.canonical);
 }
 
+/**
+ * KOページが実際のEN/JA対応ページを持つ場合 true。
+ * enCanonical がホームページへのフォールバック（/en/）であり、
+ * かつ自身がKOホームでない場合は false（KO専用ページ扱い）。
+ */
+function hasRealEnJaEquivalent(route: RouteConfig): boolean {
+  if (route.path === '/ko/') return true;
+  return route.enCanonical !== `${BASE}/en/`;
+}
+
+// EN canonical → KO canonical のマップ（実対応ページのみ）
+const _koByEnCanonical = new Map<string, string>(
+  routes
+    .filter(r => r.lang === 'ko' && hasRealEnJaEquivalent(r))
+    .map(r => [r.enCanonical, r.canonical])
+);
+
 function updateHead(html: string, route: RouteConfig): string {
   let result = html;
 
@@ -1422,14 +1439,27 @@ function updateHead(html: string, route: RouteConfig): string {
   // JA専用ページ（対応ENページなし）は hreflang="ja" のみ注入して
   // 関係のないENページへの誤ったシグナルを送らないようにする。
   if (route.lang === 'ko') {
-    result = result.replace(
-      /(<link rel="canonical" href="[^"]*" \/>)/,
-      `$1\n    <link rel="alternate" hreflang="ko" href="${route.canonical}" />`
-    );
+    if (hasRealEnJaEquivalent(route)) {
+      // EN/JA/KO 3言語ページ: 4点セット注入
+      result = result.replace(
+        /(<link rel="canonical" href="[^"]*" \/>)/,
+        `$1\n    <link rel="alternate" hreflang="en" href="${route.enCanonical}" />\n    <link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />\n    <link rel="alternate" hreflang="ko" href="${route.canonical}" />\n    <link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`
+      );
+    } else {
+      // KO専用ページ: ko のみ
+      result = result.replace(
+        /(<link rel="canonical" href="[^"]*" \/>)/,
+        `$1\n    <link rel="alternate" hreflang="ko" href="${route.canonical}" />`
+      );
+    }
   } else if (isHreflangBidirectional(route)) {
+    // EN or bidirectional JA: EN/JA/x-default ± KO
+    const enCanonical = route.lang === 'en' ? route.canonical : route.enCanonical;
+    const koCanonical = _koByEnCanonical.get(enCanonical);
+    const koLink = koCanonical ? `\n    <link rel="alternate" hreflang="ko" href="${koCanonical}" />` : '';
     result = result.replace(
       /(<link rel="canonical" href="[^"]*" \/>)/,
-      `$1\n    <link rel="alternate" hreflang="en" href="${route.enCanonical}" />\n    <link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />\n    <link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`
+      `$1\n    <link rel="alternate" hreflang="en" href="${route.enCanonical}" />\n    <link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />${koLink}\n    <link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`
     );
   } else {
     result = result.replace(
@@ -1601,11 +1631,21 @@ async function generateSitemap() {
     const priority = getSitemapPriority(route.path);
     const changefreq = getSitemapChangefreq(route.path);
 
-    const xhtmlLinks = route.lang === 'ko'
-      ? `\n    <xhtml:link rel="alternate" hreflang="ko" href="${route.canonical}"/>`
-      : isHreflangBidirectional(route)
-      ? `\n    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>`
-      : `\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.canonical}"/>`;
+    let xhtmlLinks: string;
+    if (route.lang === 'ko') {
+      if (hasRealEnJaEquivalent(route)) {
+        xhtmlLinks = `\n    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="ko" href="${route.canonical}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>`;
+      } else {
+        xhtmlLinks = `\n    <xhtml:link rel="alternate" hreflang="ko" href="${route.canonical}"/>`;
+      }
+    } else if (isHreflangBidirectional(route)) {
+      const enCanonical = route.lang === 'en' ? route.canonical : route.enCanonical;
+      const koCanonical = _koByEnCanonical.get(enCanonical);
+      const koXhtml = koCanonical ? `\n    <xhtml:link rel="alternate" hreflang="ko" href="${koCanonical}"/>` : '';
+      xhtmlLinks = `\n    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>${koXhtml}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>`;
+    } else {
+      xhtmlLinks = `\n    <xhtml:link rel="alternate" hreflang="ja" href="${route.canonical}"/>`;
+    }
 
     entries.push(`  <url>
     <loc>${route.canonical}</loc>${xhtmlLinks}

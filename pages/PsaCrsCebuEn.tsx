@@ -151,7 +151,7 @@ export default function PsaCrsCebuEn() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_142533.jpg"
+                src="/PSA/IMG_20260120_142533.webp"
                 alt="Entrance door notice: NO APPOINTMENT NO TRANSACTION / ONLINE APPOINTMENT IS FREE / Business Hours Mon–Fri 7:00–17:00"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -162,7 +162,7 @@ export default function PsaCrsCebuEn() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20251222_155841.jpg"
+                src="/PSA/IMG_20251222_155841.webp"
                 alt="Official PSA public advisory poster announcing mandatory CRS online appointment system effective October 1, 2025"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -182,7 +182,7 @@ export default function PsaCrsCebuEn() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_142017.jpg"
+                src="/PSA/IMG_20260120_142017.webp"
                 alt="PSA CRS Cebu City Outlet waiting area with blue chairs and numbered counters 1–9"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -193,7 +193,7 @@ export default function PsaCrsCebuEn() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20260120_142456.jpg"
+                src="/PSA/IMG_20260120_142456.webp"
                 alt="Large waiting area with white chairs and PAYMENT counters visible at the back"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -213,7 +213,7 @@ export default function PsaCrsCebuEn() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/PSA/IMG_20260120_142106.jpg"
+                src="/PSA/IMG_20260120_142106.webp"
                 alt="White touch-screen self-service kiosk terminal at PSA CRS"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -224,7 +224,7 @@ export default function PsaCrsCebuEn() {
             </figure>
             <figure>
               <img
-                src="/PSA/IMG_20260120_142323.jpg"
+                src="/PSA/IMG_20260120_142323.webp"
                 alt="Barcode-printed queue number ticket being issued from the kiosk"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"

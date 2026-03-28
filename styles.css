@@ -56,3 +56,29 @@ body {
   z-index: 9999;
   pointer-events: none;
 }
+
+/* Skip to main content link (accessibility) */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+.skip-to-content:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: #1a365d;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  z-index: 10000;
+  text-decoration: none;
+  overflow: visible;
+}
