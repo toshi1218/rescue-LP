@@ -42,7 +42,7 @@ export default function NotFound() {
         </p>
         <Link
           to={homeHref}
-          className="inline-block bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+          className="inline-block bg-primary text-secondary font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
         >
           {isJa ? 'トップページへ戻る' : 'Back to Home'}
         </Link>

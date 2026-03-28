@@ -225,7 +225,7 @@ const Pricing: React.FC = () => {
                     <a
                       href="#contact"
                       onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
-                      className="flex-1 flex items-center justify-center gap-1.5 bg-primary text-white font-bold text-sm py-2.5 px-4 rounded-xl shadow-md shadow-primary/20 hover:bg-primary-hover transition-all duration-200"
+                      className="flex-1 flex items-center justify-center gap-1.5 bg-primary text-secondary font-bold text-sm py-2.5 px-4 rounded-xl shadow-md shadow-primary/20 hover:bg-primary-hover transition-all duration-200"
                     >
                       {lang === 'ja' ? '相談する' : 'Get a Quote'}
                     </a>
@@ -288,7 +288,7 @@ const Pricing: React.FC = () => {
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'pricing_purpose', type: 'general', variant: ctaVariant })}
-              className="group inline-flex items-center gap-1.5 bg-primary text-white text-xs font-bold py-2.5 px-5 rounded-lg hover:bg-primary-hover transition-all duration-200"
+              className="group inline-flex items-center gap-1.5 bg-primary text-secondary text-xs font-bold py-2.5 px-5 rounded-lg hover:bg-primary-hover transition-all duration-200"
             >
               相談する
               <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />

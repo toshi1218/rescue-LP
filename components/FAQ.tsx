@@ -84,7 +84,7 @@ const FAQ: React.FC = () => {
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'faq', type: 'contact' })}
-            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
             aria-label={t('faq.ctaAriaLabel')}
           >
             <span>{t('faq.ctaBtn')}</span>

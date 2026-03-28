@@ -55,7 +55,7 @@ export default function CtaBox({
           <a
             href={href}
             onClick={handleClick}
-            className="group inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover whitespace-nowrap transition-all duration-200 hover:gap-3 flex-shrink-0"
+            className="group inline-flex items-center gap-2 bg-primary text-secondary font-bold py-3 px-6 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover whitespace-nowrap transition-all duration-200 hover:gap-3 flex-shrink-0"
           >
             {buttonText}
             <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />

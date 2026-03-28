@@ -153,7 +153,7 @@ export default function ContactEn() {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full bg-primary text-secondary font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           <Send className="w-5 h-5" aria-hidden="true" />
           {submitting ? 'Sending…' : 'Send Message'}

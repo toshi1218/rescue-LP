@@ -44,7 +44,7 @@ export default function PricingKo() {
         <p className="text-xs text-gray-500 mb-4">필요한 서류와 수량, 아포스티유 유무를 알려주시면 정확한 견적을 드립니다.</p>
         <a
           href="#contact"
-          className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-2.5 px-6 rounded-lg shadow hover:bg-primary-hover transition-all text-sm"
+          className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-2.5 px-6 rounded-lg shadow hover:bg-primary-hover transition-all text-sm"
         >
           무료 견적 신청
           <ArrowRight className="w-4 h-4" />
@@ -192,7 +192,7 @@ export default function PricingKo() {
         </p>
         <Link
           to="/ko/contact/"
-          className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-primary-hover transition-all text-sm"
+          className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3 px-8 rounded-xl shadow-lg hover:bg-primary-hover transition-all text-sm"
         >
           문의하기
           <ArrowRight className="w-4 h-4" />

@@ -100,7 +100,7 @@ export default function PageLayout({ breadcrumbs, jsonLd, description, children 
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 px-6 rounded-lg shadow hover:bg-primary-hover transition-all focus:outline-none focus:ring-4 focus:ring-primary/40 text-sm"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3 px-6 rounded-lg shadow hover:bg-primary-hover transition-all focus:outline-none focus:ring-4 focus:ring-primary/40 text-sm"
           >
             {isJa ? '自分のケースを相談する' : 'Get a free quote'}
           </a>
