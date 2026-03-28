@@ -78,7 +78,7 @@ const Hero: React.FC = () => {
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
-            className="bg-primary text-white font-bold py-3.5 px-8 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
+            className="bg-primary text-secondary font-bold py-3.5 px-8 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
             aria-label={t('hero.ctaAriaLabel')}
           >
             <MessageCircle className="w-5 h-5" />
@@ -169,7 +169,7 @@ const Hero: React.FC = () => {
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'contact', variant: ctaVariant })}
-              className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-3.5 px-7 rounded-xl shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3.5 px-7 rounded-xl shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
             >
               <MessageCircle className="w-5 h-5" />
               Free Consultation

@@ -97,7 +97,7 @@ export default function RoadmapJa() {
         <a
           href="#contact"
           onClick={ctaClick}
-          className="inline-flex items-center gap-2 bg-primary text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200"
+          className="inline-flex items-center gap-2 bg-primary text-secondary font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200"
         >
           個別ロードマップを申し込む
         </a>

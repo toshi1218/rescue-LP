@@ -129,7 +129,7 @@ const DiyRisks: React.FC = () => {
             onClick={() =>
               trackEvent('cta_click', { location: 'diy_risks', type: 'contact' })
             }
-            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
           >
             {c.cta}
             <ArrowRight className="w-4 h-4" />

@@ -97,9 +97,16 @@ const Footer: React.FC = () => {
             <p className="font-bold text-green-700 text-sm mb-1">
               {lang === 'ja' ? 'お問い合わせを受け付けました' : 'Your message has been received!'}
             </p>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 mb-3">
               {lang === 'ja' ? '24時間以内にご連絡します。' : 'We will get back to you within 24 hours.'}
             </p>
+            <button
+              type="button"
+              onClick={() => setSubmitted(false)}
+              className="text-xs text-primary hover:text-secondary font-medium transition-colors"
+            >
+              {lang === 'ja' ? '別の内容で再度お問い合わせ' : 'Send another inquiry'}
+            </button>
           </div>
         ) : (
         <form
@@ -193,7 +200,7 @@ const Footer: React.FC = () => {
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 focus:outline-none focus:ring-4 focus:ring-primary/30 disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full bg-primary text-secondary font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 focus:outline-none focus:ring-4 focus:ring-primary/30 disabled:opacity-60 disabled:cursor-not-allowed"
             aria-label={t('footer.submitAriaLabel')}
           >
             <Send className="w-5 h-5" aria-hidden="true" />

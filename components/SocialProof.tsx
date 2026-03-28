@@ -93,9 +93,9 @@ const SocialProof: React.FC = React.memo(() => {
           {reviews.map((item) => (
             <article key={item.title} className="bg-white border border-gray-100 rounded-2xl p-5 shadow-card border-l-4 border-l-primary hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between mb-3">
-                <p className="text-yellow-500 text-base" aria-label={`Rating: ${item.rating} out of 5 stars`} role="img">
+                <span className="text-yellow-500 text-base" aria-label={`Rating: ${item.rating} out of 5 stars`} role="img">
                   {'★'.repeat(item.rating)}{'☆'.repeat(5 - item.rating)}
-                </p>
+                </span>
                 <time className="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">{item.date}</time>
               </div>
               <h3 className="text-sm font-bold text-secondary mb-1">{item.title}</h3>

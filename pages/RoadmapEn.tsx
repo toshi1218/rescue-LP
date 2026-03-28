@@ -79,7 +79,7 @@ export default function RoadmapEn() {
         <p className="text-xs text-gray-400 mb-6">¥54,780 including tax</p>
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 bg-primary text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200"
+          className="inline-flex items-center gap-2 bg-primary text-secondary font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200"
         >
           Order Your Roadmap
         </a>

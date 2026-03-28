@@ -141,7 +141,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <NavigationProgress />
-      <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-primary border-b-transparent animate-spin" aria-label="Loading" /></div>}>
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-primary border-b-transparent animate-spin" role="status" aria-label="Loading" /></div>}>
       <Routes>
         <Route path="/en" element={<Navigate to="/en/" replace />} />
         <Route path="/en/" element={<HomeEn />} />
