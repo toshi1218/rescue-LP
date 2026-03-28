@@ -74,7 +74,7 @@ export default function PricingKo() {
               name: 'F-6 준비 패키지',
               price: '₩1,590,000',
               sub: '약 16.9만엔',
-              items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance', 'DFA 아포스티유 인증（3통）', '서류 정리 안내', '국제 특송（DHL）'],
+              items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance（대사관 지문 등록 후 대행）', 'DFA 아포스티유 인증（3통）', '서류 정리 안내', '국제 특송（DHL）'],
               featured: false,
             },
           ].map((plan) => (
@@ -172,7 +172,7 @@ export default function PricingKo() {
         <div className="grid md:grid-cols-2 gap-4">
           <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
             <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">결제 방법</p>
-            <p className="text-sm text-gray-600">신용카드 / PayPal（착수금 50% → 잔금 50%）</p>
+            <p className="text-sm text-gray-600">은행 송금（착수금 50% → 잔금 50%）</p>
           </div>
           <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
             <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">취소・환불</p>

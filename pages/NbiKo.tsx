@@ -10,12 +10,12 @@ export default function NbiKo() {
       a: '필리핀 국가수사국（NBI）이 발행하는 범죄경력증명서입니다. 필리핀 내에서의 범죄 이력이 없음을 증명합니다. 한국 비자 신청, 해외 취업, 이민 수속 등에 활용됩니다.',
     },
     {
-      q: '해외에 살고 있어도 신청할 수 있나요?',
-      a: '네. 해외 거주자는 NBI 온라인 시스템으로 신청 등록이 가능합니다. 다만, NBI Clearance 본체는 마닐라 NBI에서 발행되며, 초회 신청이나 갱신 조건 미해당 시에는 주한 필리핀 대사관에서 본인이 직접 지문 등록을 해야 합니다. 저희는 신청 절차 안내, 예약 방법 안내, 아포스티유 수배를 서포트합니다.',
+      q: '한국에 살고 있어도 신청할 수 있나요?',
+      a: '네. 주한 필리핀 대사관（서울）에서 지문 등록（NBI Fingerprint Card Form No. 5）을 받은 후, 지문 카드와 위임장을 필리핀 현지 대리인에게 발송하면 NBI에 신청할 수 있습니다. 저희가 필리핀 측 신청부터 DFA 아포스티유 인증・DHL 배송까지 대행합니다.',
     },
     {
       q: '아포스티유가 필요한 경우는 어떤 때인가요?',
-      a: '한국 제출용（F-6 비자, F-5 영주권, 귀화 신청 등）의 경우 원칙적으로 DFA 아포스티유 인증이 필요합니다. NBI Clearance 발행 후, 저희가 아포스티유 수배와 국내 배송을 지원합니다.',
+      a: '한국 제출용（F-6 비자, F-5 영주권, 귀화 신청 등）의 경우 원칙적으로 DFA 아포스티유 인증이 필요합니다. 저희 서비스에는 아포스티유 인증이 포함되어 있습니다.',
     },
     {
       q: 'HIT（동명이인 해당）이 뜨면 어떻게 되나요?',
@@ -23,26 +23,22 @@ export default function NbiKo() {
     },
     {
       q: '얼마나 걸리나요?',
-      a: '신청 조건에 따라 달라집니다. NBI Clearance 발행에 1〜3주, 아포스티유 인증에 추가 1〜2주, DHL 배송에 3〜5 영업일이 소요됩니다. 대사관 지문 등록이 필요한 경우 예약 상황에 따라 추가 시간이 필요합니다.',
-    },
-    {
-      q: '저희는 어디까지 지원해 주시나요?',
-      a: '저희는 NBI Clearance를 직접 대행 발급하는 서비스가 아닙니다. 온라인 신청 방법 안내, 주한 필리핀 대사관 예약 방법 안내, 발행된 클리어런스의 아포스티유 수배, DHL 국제 특송을 서포트합니다. 대사관 지문 등록 및 NBI Clearance 원본의 저희 측 송부는 본인 부담이 됩니다.',
+      a: '일반적으로 NBI Clearance 취득에 1〜3주, 아포스티유 인증에 추가 1〜2주, DHL 배송에 3〜5 영업일이 소요됩니다. 합산하면 4〜6주를 예상하시면 됩니다.',
     },
   ];
 
   return (
     <PageLayoutKo
-      title="NBI Clearance 신청 지원 | 필리핀 범죄경력증명서 취득 서포트"
-      description="필리핀 NBI Clearance（범죄경력증명서） 신청 절차를 안내합니다. 주한 필리핀 대사관 지문 등록 예약 방법, 온라인 신청 안내, DFA 아포스티유 수배, DHL 발송까지 서포트. F-6 비자, 귀화 신청에 대응."
+      title="NBI Clearance 대행 | 필리핀 범죄경력증명서 취득 지원"
+      description="한국 거주 필리핀 국민의 NBI Clearance 취득을 지원합니다. 주한 필리핀 대사관에서 지문 등록 후 필리핀 현지 취득・DFA 아포스티유 인증・국제 특송까지 대행합니다."
       canonical="https://ph-document.com/ko/nbi-clearance/"
-      breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: 'NBI Clearance 취득 서포트' }]}
+      breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: 'NBI Clearance 신청 지원' }]}
       jsonLd={[
         {
           '@context': 'https://schema.org',
           '@type': 'Service',
-          name: '필리핀 NBI Clearance（범죄경력증명서）신청 지원',
-          description: '필리핀 국가수사국（NBI）발행의 범죄경력증명서 신청 절차 안내 및 아포스티유 수배를 지원합니다. NBI Clearance 본체는 마닐라 NBI에서 발행됩니다.',
+          name: '필리핀 NBI Clearance（범죄경력증명서）취득 대행',
+          description: '주한 필리핀 대사관에서 지문 등록 후, 필리핀 현지 NBI 신청・DFA 아포스티유 인증・국제 특송까지 대행합니다.',
           url: 'https://ph-document.com/ko/nbi-clearance/',
           provider: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/ko/' },
           areaServed: { '@type': 'Country', name: 'KR' },
@@ -75,7 +71,7 @@ export default function NbiKo() {
         <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-primary via-primary/60 to-transparent" />
         <div className="relative">
           <div className="flex flex-wrap gap-2 mb-4">
-            {['신청 절차 안내', '대사관 예약 방법 안내', 'HIT 케이스 상담 가능'].map((b) => (
+            {['서울 대사관 지문 등록 후 대행', '아포스티유 포함', 'HIT 케이스 상담 가능'].map((b) => (
               <span key={b} className="inline-flex items-center gap-1 text-xs font-semibold bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full">
                 <span className="w-1 h-1 rounded-full bg-primary inline-block" />
                 {b}
@@ -83,11 +79,11 @@ export default function NbiKo() {
             ))}
           </div>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug mb-3">
-            NBI Clearance 신청,<br />단계별로 안내합니다
+            NBI Clearance 신청을<br />도와드립니다
           </h1>
           <p className="text-sm md:text-base text-white/70 leading-relaxed">
-            필리핀 국가수사국（NBI）의 범죄경력증명서 신청 방법을 안내합니다.
-            온라인 신청 방법, 주한 필리핀 대사관 지문 등록 예약, 아포스티유 수배, DHL 발송까지 서포트합니다.
+            주한 필리핀 대사관（서울）에서 지문 등록 후, 필리핀 현지 NBI 신청부터
+            DFA 아포스티유 인증・한국 특송 배송까지 대행합니다.
           </p>
         </div>
       </section>
@@ -142,56 +138,36 @@ export default function NbiKo() {
         </ul>
       </section>
 
-      {/* 서비스 범위 안내 */}
+      {/* 해외 거주자의 신청 절차 */}
       <section className="mb-10">
-        <h2 className="text-lg font-bold text-secondary mb-4">저희 서비스 범위</h2>
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm space-y-4">
-          <div>
-            <p className="text-xs font-bold text-green-700 mb-2">✅ 저희가 지원하는 것</p>
-            <ul className="space-y-1.5 text-sm text-gray-600">
-              <li className="flex items-start gap-2"><span className="text-green-500 shrink-0">·</span>NBI 온라인 신청 방법 안내</li>
-              <li className="flex items-start gap-2"><span className="text-green-500 shrink-0">·</span>주한 필리핀 대사관 지문 등록（Form No. 5） 예약 방법 안내</li>
-              <li className="flex items-start gap-2"><span className="text-green-500 shrink-0">·</span>DFA 아포스티유 수배（NBI Clearance 원본 수령 후）</li>
-              <li className="flex items-start gap-2"><span className="text-green-500 shrink-0">·</span>DHL 국제 특송（한국 자택 배송）</li>
-              <li className="flex items-start gap-2"><span className="text-green-500 shrink-0">·</span>진행 상황 수시 보고</li>
-            </ul>
-          </div>
-          <div className="border-t border-gray-100 pt-4">
-            <p className="text-xs font-bold text-amber-700 mb-2">⚠ 본인이 직접 해야 하는 것</p>
-            <ul className="space-y-1.5 text-sm text-gray-600">
-              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0">·</span>주한 필리핀 대사관 방문 및 지문 등록（초회 신청 또는 갱신 조건 미해당 시 필수）</li>
-              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0">·</span>NBI Clearance 원본 발행 후, 아포스티유 수배를 위해 저희 측에 송부</li>
-            </ul>
-          </div>
-          <div className="bg-amber-50 rounded-lg px-4 py-3">
-            <p className="text-xs text-amber-700">
-              NBI Clearance 본체는 마닐라 NBI에서 발행됩니다. 저희는 발행 과정 자체를 대행하는 것이 아니라, 신청 방법 안내와 발행 후의 아포스티유・배송을 서포트하는 서비스입니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 한국에서 신청하는 절차 */}
-      <section className="mb-10">
-        <h2 className="text-lg font-bold text-secondary mb-4">한국에서 신청하는 절차</h2>
+        <h2 className="text-lg font-bold text-secondary mb-4">한국 거주자의 신청 절차</h2>
         <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
-          <ol className="space-y-3">
+          <p className="text-sm text-gray-600 leading-relaxed mb-4">
+            한국에 거주하는 필리핀 국민은 <strong>주한 필리핀 대사관（서울）에서 지문 등록</strong>을 받은 후,
+            필리핀 현지 대리인을 통해 NBI에 신청할 수 있습니다. 저희가 필리핀 측 절차를 대행합니다.
+          </p>
+          <ol className="space-y-3 mb-4">
             {[
-              { n: '1', title: 'NBI 온라인 신청 등록', desc: 'NBI 공식 사이트에서 신청 등록을 합니다. 방법을 안내드립니다.' },
-              { n: '2', title: '주한 필리핀 대사관 방문 · 지문 등록', desc: '서울 필리핀 대사관（Setmore 예약 필요）에서 본인이 직접 지문 등록（Form No. 5）을 합니다. 예약 방법을 안내드립니다.' },
-              { n: '3', title: 'NBI Clearance 발행（마닐라）', desc: '마닐라 NBI에서 클리어런스가 발행됩니다. 발행된 원본을 저희 측으로 보내 주세요.' },
-              { n: '4', title: 'DFA 아포스티유 수배', desc: '저희가 아포스티유 인증을 수배합니다（한국 제출용 필수）.' },
-              { n: '5', title: 'DHL로 한국 발송', desc: '아포스티유 완료 후 DHL 국제 특송으로 자택에 배송합니다.' },
+              { n: '1', who: '본인', text: '주한 필리핀 대사관（서울）에서 지문 등록（NBI Fingerprint Card Form No. 5）을 받습니다。예약제로 운영됩니다.' },
+              { n: '2', who: '본인', text: '지문 카드와 저희가 준비한 위임장을 필리핀으로 발송합니다.' },
+              { n: '3', who: '저희 대행', text: '필리핀 현지에서 NBI에 신청・NBI Clearance를 취득합니다.' },
+              { n: '4', who: '저희 대행', text: 'DFA 아포스티유 인증 후, DHL로 한국에 발송합니다.' },
             ].map((step) => (
-              <li key={step.n} className="flex gap-3">
-                <span className="w-6 h-6 rounded-full bg-primary/10 border border-primary flex items-center justify-center shrink-0 text-xs font-bold text-primary mt-0.5">{step.n}</span>
+              <li key={step.n} className="flex gap-3 text-sm">
+                <span className="w-6 h-6 rounded-full bg-primary/10 border border-primary flex items-center justify-center shrink-0 text-xs font-bold text-primary">{step.n}</span>
                 <div>
-                  <p className="text-sm font-bold text-secondary mb-0.5">{step.title}</p>
-                  <p className="text-xs text-gray-500 leading-relaxed">{step.desc}</p>
+                  <span className={`text-xs font-bold px-1.5 py-0.5 rounded mr-1.5 ${step.who === '본인' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700'}`}>{step.who}</span>
+                  <span className="text-gray-600">{step.text}</span>
                 </div>
               </li>
             ))}
           </ol>
+          <div className="bg-amber-50 rounded-lg px-4 py-3">
+            <p className="text-xs text-amber-700">
+              ⚠ 지문 등록（STEP 1・2）은 본인이 직접 진행하셔야 합니다. 대사관 예약 방법 등은 상담 시 안내해 드립니다.
+              최신 정보는 <a href="https://www.philembassy-seoul.com/consular-services/notarial" target="_blank" rel="noopener noreferrer" className="underline">주한 필리핀 대사관 공식 사이트</a>에서 확인해 주세요.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -222,7 +198,7 @@ export default function NbiKo() {
         <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-600 leading-relaxed">
             한국 법무부나 관공서에 제출하는 NBI Clearance에는 원칙적으로 DFA（필리핀 외무부）의 아포스티유 인증이 필요합니다.
-            NBI Clearance 원본을 저희 측에 보내 주시면, 아포스티유 수배부터 한국 배송까지 저희가 진행합니다.
+            저희 서비스에서는 NBI Clearance 취득 후 아포스티유 인증까지 일괄 대행합니다.
           </p>
         </div>
       </section>
