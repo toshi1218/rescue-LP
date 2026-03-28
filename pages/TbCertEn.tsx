@@ -26,7 +26,7 @@ export default function TbCertEn() {
           '@type': 'Article',
           headline: 'TB Non-Disease Certificate (JPETS) for Japan Visa — Guide for Philippine Nationals [2026]',
           description: 'Since June 23, 2025, Philippine nationals applying for a Certificate of Eligibility (COE) for Japan must submit a TB Non-Disease Certificate from a designated Panel Clinic. Covers clinics, costs, validity, and steps.',
-          url: 'https://ph-document.com/en/tb-certificate',
+          url: 'https://ph-document.com/en/tb-certificate/',
           dateModified: '2026-03-14',
           publisher: {
             '@type': 'Organization',

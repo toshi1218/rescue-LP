@@ -27,7 +27,7 @@ export default function MarriageGuideJa() {
         '@type': 'Service',
         name: 'フィリピン人との国際結婚 手続き・費用・必要書類ガイド',
         description: 'フィリピン人との国際結婚の手続き・費用・必要書類を解説。CENOMAR・PSA出生証明書・DFAアポスティーユを日本語で一括代行。日本先行婚・フィリピン先行婚対応。',
-        url: 'https://ph-document.com/ja/kokusai-kekkon-guide',
+        url: 'https://ph-document.com/ja/kokusai-kekkon-guide/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

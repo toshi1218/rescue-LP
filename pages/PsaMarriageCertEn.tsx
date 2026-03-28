@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -23,7 +23,7 @@ export default function PsaMarriageCertEn() {
         '@type': 'Service',
         name: 'PSA Marriage Certificate Retrieval Service (+ DFA Apostille)',
         description: 'We retrieve PSA Marriage Certificate from the Philippines with DFA Apostille and ship worldwide via DHL. Required for spouse visa and immigration applications in the US, Canada, Australia, UK & more.',
-        url: 'https://ph-document.com/en/psa-marriage-certificate',
+        url: 'https://ph-document.com/en/psa-marriage-certificate/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -128,7 +128,7 @@ export default function PsaMarriageCertEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

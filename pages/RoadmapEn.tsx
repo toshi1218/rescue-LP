@@ -21,7 +21,7 @@ export default function RoadmapEn() {
         '@type': 'Service',
         name: 'Personalized Document Roadmap',
         description: 'Custom roadmap for Filipino-Japanese couples who need to clarify the required documents, order of procedures, and full process for international marriage and Japan spouse visa.',
-        url: 'https://ph-document.com/en/personalized-roadmap',
+        url: 'https://ph-document.com/en/personalized-roadmap/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

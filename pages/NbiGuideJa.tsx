@@ -26,7 +26,7 @@ export default function NbiGuideJa() {
         '@type': 'Service',
         name: 'フィリピンNBIクリアランス（無犯罪証明書）更新サポート',
         description: '2014年以降に発行されたNBIクリアランスの取得歴があり、個人情報に変更がない更新案件を中心に対応。初回取得・氏名変更がある場合は在日フィリピン大使館等でのご本人対応が必要です。日本語でご相談いただけます。',
-        url: 'https://ph-document.com/ja/nbi-clearance',
+        url: 'https://ph-document.com/ja/nbi-clearance/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

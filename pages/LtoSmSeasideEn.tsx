@@ -24,7 +24,7 @@ export default function LtoSmSeasideEn() {
           '@type': 'GovernmentOffice',
           name: 'LTO (Land Transportation Office) — SM Seaside City Cebu',
           description: "Philippine Land Transportation Office window inside SM Seaside City Cebu. Issues Driver's Records and handles license renewals.",
-          url: 'https://ph-document.com/en/lto-sm-seaside-cebu-report',
+          url: 'https://ph-document.com/en/lto-sm-seaside-cebu-report/',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'SM Seaside City Cebu, South Road Properties',
@@ -42,7 +42,7 @@ export default function LtoSmSeasideEn() {
           '@type': 'Article',
           headline: "LTO SM Seaside Cebu — Driver's Record & License Renewal [2026 Report]",
           description: "On-site report for the LTO window inside SM Seaside City Cebu. Covers the Driver's Record for Japan license conversion, operating hours, and facility photos.",
-          url: 'https://ph-document.com/en/lto-sm-seaside-cebu-report',
+          url: 'https://ph-document.com/en/lto-sm-seaside-cebu-report/',
           dateModified: '2026-03-23',
           publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/en/' },
         },

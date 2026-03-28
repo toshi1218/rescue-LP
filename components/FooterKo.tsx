@@ -128,7 +128,7 @@ const FooterKo: React.FC = () => {
 
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-1">
-                필요한 서류가 무엇인가요? <span className="text-xs font-normal text-gray-400">（모르셔도 괜찮습니다）</span>
+                필요한 서류가 무엇인가요? <span className="text-xs font-normal text-gray-400">(모르셔도 괜찮습니다)</span>
               </label>
               <input
                 name="documents_needed"
@@ -139,7 +139,7 @@ const FooterKo: React.FC = () => {
 
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-1">
-                급한 일정이 있나요? <span className="text-xs font-normal text-gray-400">（선택）</span>
+                급한 일정이 있나요? <span className="text-xs font-normal text-gray-400">(선택)</span>
               </label>
               <input
                 name="deadline"
@@ -183,7 +183,7 @@ const FooterKo: React.FC = () => {
           className="mt-6 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors"
         >
           <Mail className="w-4 h-4" />
-          이메일로 직접 문의하기（igrs20200601@gmail.com）
+          이메일로 직접 문의하기(igrs20200601@gmail.com)
         </a>
       </div>
 

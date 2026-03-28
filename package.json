@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsx scripts/prerender.ts",
+    "lint:seo": "bash scripts/lint-seo.sh",
+    "build": "bash scripts/lint-seo.sh && vite build && tsx scripts/prerender.ts",
     "preview": "vite preview"
   },
   "dependencies": {

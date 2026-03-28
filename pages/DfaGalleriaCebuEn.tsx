@@ -22,7 +22,7 @@ export default function DfaGalleriaCebuEn() {
           '@type': 'Article',
           headline: 'DFA Apostille Office at Robinsons Galleria Cebu — On-Site Report [2026]',
           description: 'On-site report for the DFA consular office at Robinsons Galleria, Cebu City. Covers location, apostille authentication procedures, appointment system (required since Dec 2024), and photos of the facility.',
-          url: 'https://ph-document.com/en/dfa-apostille-cebu-report',
+          url: 'https://ph-document.com/en/dfa-apostille-cebu-report/',
           dateModified: '2026-03-01',
           publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/en/' },
         },

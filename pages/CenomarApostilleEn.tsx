@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -23,7 +23,7 @@ export default function CenomarApostilleEn() {
         '@type': 'Service',
         name: 'CENOMAR DFA Apostille Authentication Service',
         description: 'We handle DFA Apostille authentication for CENOMAR. Physical paper Apostille provided — required for immigration applications worldwide. Ships via DHL to the US, Canada, Australia, UK & more.',
-        url: 'https://ph-document.com/en/cenomar-apostille',
+        url: 'https://ph-document.com/en/cenomar-apostille/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -128,7 +128,7 @@ export default function CenomarApostilleEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

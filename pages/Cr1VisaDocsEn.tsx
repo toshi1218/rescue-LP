@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -23,7 +23,7 @@ export default function Cr1VisaDocsEn() {
         '@type': 'Service',
         name: 'CR-1/IR-1 Spouse Visa Philippine Documents Retrieval Service',
         description: 'We retrieve all Philippine documents required for a CR-1/IR-1 spouse visa — PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille. NVC-ready. Ships to USA via DHL.',
-        url: 'https://ph-document.com/en/cr1-visa-documents',
+        url: 'https://ph-document.com/en/cr1-visa-documents/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -128,7 +128,7 @@ export default function Cr1VisaDocsEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

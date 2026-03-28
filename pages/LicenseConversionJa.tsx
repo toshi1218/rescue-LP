@@ -27,7 +27,7 @@ export default function LicenseConversionJa() {
           '@type': 'Service',
           name: '外免切替 LTO書類取得サポート',
           description: 'フィリピン免許から日本免許への外免切替に必要なLTO関連書類の整理と取得手続きを日本語でサポート。',
-          url: 'https://ph-document.com/ja/gaimen-kirikae-guide',
+          url: 'https://ph-document.com/ja/gaimen-kirikae-guide/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

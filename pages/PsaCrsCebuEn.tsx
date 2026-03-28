@@ -24,7 +24,7 @@ export default function PsaCrsCebuEn() {
           '@type': 'GovernmentOffice',
           name: 'PSA Civil Registration System (CRS) — Cebu City Outlet',
           description: 'Philippine Statistics Authority document issuance office. Issues birth certificates, marriage certificates, CENOMAR, and death certificates. Located on Colon Street, Cebu City.',
-          url: 'https://ph-document.com/en/psa-crs-cebu-report',
+          url: 'https://ph-document.com/en/psa-crs-cebu-report/',
           telephone: '256-0592',
           openingHours: 'Mo-Fr 07:00-17:00',
           address: {
@@ -40,7 +40,7 @@ export default function PsaCrsCebuEn() {
           '@type': 'Article',
           headline: 'PSA CRS Cebu — On-Site Report [2026]',
           description: 'On-site report for the PSA Civil Registration System outlet in Cebu City. Covers location, appointment requirements (mandatory since Oct 2025), available documents, and photos of the facility.',
-          url: 'https://ph-document.com/en/psa-crs-cebu-report',
+          url: 'https://ph-document.com/en/psa-crs-cebu-report/',
           dateModified: '2026-03-23',
           publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/en/' },
         },

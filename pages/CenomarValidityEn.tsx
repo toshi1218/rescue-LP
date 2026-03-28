@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -24,7 +24,7 @@ export default function CenomarValidityEn() {
           '@type': 'Service',
           name: 'CENOMAR Retrieval — Timed for Your Visa Deadline',
           description: 'CENOMAR is typically valid for 6 months. We time the retrieval to match your immigration submission deadline worldwide, so it does not expire before you can use it.',
-          url: 'https://ph-document.com/en/cenomar-validity',
+          url: 'https://ph-document.com/en/cenomar-validity/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -121,7 +121,7 @@ export default function CenomarValidityEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

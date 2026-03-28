@@ -23,7 +23,7 @@ export default function DocumentChecklistByVisaEn() {
           '@type': 'Article',
           headline: 'Philippine Document Checklist by Visa Type',
           description: 'Complete checklist of Philippine documents required for K-1, CR-1/IR-1, Canada, Australia, UK, and Japan visa and immigration applications.',
-          url: 'https://ph-document.com/en/document-checklist-by-visa',
+          url: 'https://ph-document.com/en/document-checklist-by-visa/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

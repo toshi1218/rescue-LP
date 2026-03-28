@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -23,7 +23,7 @@ export default function NbiHitEn() {
         '@type': 'Service',
         name: 'NBI MATCH FOUND (HIT) Resolution + NBI Clearance Retrieval Service',
         description: 'NBI MATCH FOUND does not always mean a criminal record. We handle HIT resolution, NBI Clearance retrieval, and DFA Apostille. Ships worldwide via DHL. Visa deadlines met.',
-        url: 'https://ph-document.com/en/nbi-hit',
+        url: 'https://ph-document.com/en/nbi-hit/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -128,7 +128,7 @@ export default function NbiHitEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

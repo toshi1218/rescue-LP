@@ -26,7 +26,7 @@ export default function ApostilleFeeJa() {
           '@type': 'Service',
           name: 'DFAアポスティーユ取得代行（料金・費用）',
           description: 'DFAアポスティーユの代行費用を料金で公開。PSA・CENOMAR・NBI別の費用目安も確認可能。後から追加請求なし。無料見積もり受付中。',
-          url: 'https://ph-document.com/ja/apostille-ryokin',
+          url: 'https://ph-document.com/ja/apostille-ryokin/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

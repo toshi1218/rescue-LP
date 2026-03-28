@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -23,7 +23,7 @@ export default function DfaProcessingTimeEn() {
           '@type': 'Service',
           name: 'DFA Apostille Service — Timed for Your Visa Deadline',
           description: 'DFA Apostille takes 4 business days (Regular) or next business day (Express). We schedule processing to meet your immigration submission deadline worldwide. Free consultation to check your timeline.',
-          url: 'https://ph-document.com/en/apostille-processing-time',
+          url: 'https://ph-document.com/en/apostille-processing-time/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -120,7 +120,7 @@ export default function DfaProcessingTimeEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

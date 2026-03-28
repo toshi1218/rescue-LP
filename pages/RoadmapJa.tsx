@@ -32,7 +32,7 @@ export default function RoadmapJa() {
         '@type': 'Service',
         name: '個別ロードマップ作成',
         description: 'フィリピン人のパートナーと日本で結婚し、その先も日本で一緒に暮らしたい方へ。必要書類、手続きの順番、提出先、全体の流れを、お二人の状況に合わせて整理した専用ロードマップを作成します。',
-        url: 'https://ph-document.com/ja/kokusai-kekkon-roadmap',
+        url: 'https://ph-document.com/ja/kokusai-kekkon-roadmap/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

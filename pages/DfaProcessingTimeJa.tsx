@@ -26,7 +26,7 @@ export default function DfaProcessingTimeJa() {
           '@type': 'Service',
           name: 'DFAアポスティーユ処理期間・提出期限に合わせた代行取得',
           description: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請可能。提出予定日から逆算して最適なスケジュールで手配。ビザ申請の期限に合わせてスケジュールをご案内します。',
-          url: 'https://ph-document.com/ja/apostille-shori-kikan',
+          url: 'https://ph-document.com/ja/apostille-shori-kikan/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

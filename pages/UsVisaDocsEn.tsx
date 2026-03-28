@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -22,7 +22,7 @@ export default function UsVisaDocsEn() {
         '@type': 'Service',
         name: 'US Visa Philippine Documents Retrieval Service (K-1 / CR-1 / IR-1)',
         description: 'We retrieve all Philippine documents for K-1, CR-1, and IR-1 visa applications — CENOMAR, PSA Birth Certificate, Marriage Certificate, NBI Clearance with DFA Apostille. Ships to USA via DHL.',
-        url: 'https://ph-document.com/en/us-visa-documents',
+        url: 'https://ph-document.com/en/us-visa-documents/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -127,7 +127,7 @@ export default function UsVisaDocsEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -22,7 +22,7 @@ export default function NaturalizationEn() {
         '@type': 'Service',
         name: 'Philippine Documents for Citizenship & Naturalization (PSA + NBI + Apostille)',
         description: 'We retrieve PSA Birth Certificate, NBI Clearance, and other Philippine civil documents with DFA Apostille for citizenship and naturalization applications worldwide. Ships via DHL.',
-        url: 'https://ph-document.com/en/naturalization-guide',
+        url: 'https://ph-document.com/en/naturalization-guide/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -127,7 +127,7 @@ export default function NaturalizationEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

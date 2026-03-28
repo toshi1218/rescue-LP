@@ -28,7 +28,7 @@ export default function DriverRecordJa() {
         '@type': 'Service',
         name: 'LTO運転経歴証明書取得代行',
         description: 'フィリピンのLTO運転経歴証明書をDFAアポスティーユ付きで代行取得。外免切替・フィリピン人採用に対応。複数名まとめ依頼も可能。フィリピン渡航不要。',
-        url: 'https://ph-document.com/ja/driver-record',
+        url: 'https://ph-document.com/ja/driver-record/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

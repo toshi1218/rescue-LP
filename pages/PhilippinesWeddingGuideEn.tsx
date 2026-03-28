@@ -23,7 +23,7 @@ export default function PhilippinesWeddingGuideEn() {
           '@type': 'Article',
           headline: 'Getting Married in the Philippines — Complete Guide [2026]',
           description: 'Full procedure for Philippines-first marriage between a Filipino and Japanese national. LCCM, Marriage License, ceremony, PSA marriage certificate, and Japan reportive registration — step by step.',
-          url: 'https://ph-document.com/en/getting-married-in-philippines',
+          url: 'https://ph-document.com/en/getting-married-in-philippines/',
           publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/en/' },
         },
         {

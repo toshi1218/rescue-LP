@@ -20,7 +20,7 @@ export default function PricingJa() {
         '@type': 'Service',
         name: 'フィリピン書類取得代行',
         description: 'PSA・NBI・LTO等のフィリピン書類取得代行サービス。着手金50%・書類写し確認後残金50%の2段階決済。',
-        url: 'https://ph-document.com/ja/ryokin',
+        url: 'https://ph-document.com/ja/ryokin/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',

@@ -26,7 +26,7 @@ export default function TbCertJa() {
           '@type': 'Article',
           headline: '結核非発病証明書（JPETS）ガイド【2026年3月版】フィリピン国籍の方のCOE申請に必要',
           description: '2025年6月23日から、フィリピン国籍の方が在留資格認定証明書（COE）を申請する際に結核非発病証明書の提出が必要になりました。指定Panel Clinic・費用・有効期間・手順を解説します。',
-          url: 'https://ph-document.com/ja/kekkaku-shomeisho',
+          url: 'https://ph-document.com/ja/kekkaku-shomeisho/',
           dateModified: '2026-03-14',
           publisher: {
             '@type': 'Organization',

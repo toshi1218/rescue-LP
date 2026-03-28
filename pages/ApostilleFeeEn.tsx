@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -22,7 +22,7 @@ export default function ApostilleFeeEn() {
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service — All-Inclusive Pricing',
         description: 'Full cost breakdown for DFA Apostille: official fees + proxy service + DHL shipping worldwide. All-inclusive pricing with no hidden fees. Free quote available for CENOMAR, PSA, and NBI.',
-        url: 'https://ph-document.com/en/apostille-fee',
+        url: 'https://ph-document.com/en/apostille-fee/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -127,7 +127,7 @@ export default function ApostilleFeeEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

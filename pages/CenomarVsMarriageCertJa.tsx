@@ -27,7 +27,7 @@ export default function CenomarVsMarriageCertJa() {
           '@type': 'Article',
           headline: 'CENOMARとPSA婚姻証明書の違い',
           description: 'CENOMARは独身を証明し、PSA婚姻証明書は婚姻を証明します。K-1、CR-1/IR-1、国際結婚でどちらが必要かを整理します。',
-          url: 'https://ph-document.com/ja/cenomar-vs-marriage-certificate',
+          url: 'https://ph-document.com/ja/cenomar-vs-marriage-certificate/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -28,7 +28,7 @@ export default function PsaBirthCertJa() {
         '@type': 'Service',
         name: 'PSA出生証明書取得代行',
         description: 'フィリピンのPSA出生証明書をDFAアポスティーユ付きで日本語だけで代行取得。国際結婚・配偶者ビザ・帰化申請に対応。フィリピン渡航不要、約1ヶ月〜。',
-        url: 'https://ph-document.com/ja/psa-shussei-shomeisho',
+        url: 'https://ph-document.com/ja/psa-shussei-shomeisho/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
