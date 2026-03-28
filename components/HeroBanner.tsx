@@ -1,5 +1,6 @@
 import React from 'react';
-import { Clock } from 'lucide-react';
+import { Clock, ArrowRight } from 'lucide-react';
+import { trackEvent } from '../lib/analytics';
 
 type HeroBannerProps = {
   title: string;
@@ -11,7 +12,7 @@ type HeroBannerProps = {
   lastUpdated?: string;
 };
 
-export default function HeroBanner({ title, subtitle, badges, lastUpdated }: HeroBannerProps) {
+export default function HeroBanner({ title, subtitle, badges, ctaText, ctaHref, ctaService, lastUpdated }: HeroBannerProps) {
   return (
     <section className="relative mb-12 overflow-hidden rounded-2xl bg-secondary px-6 py-10 md:px-10 md:py-14">
       {/* 背景装飾 */}
@@ -66,6 +67,25 @@ export default function HeroBanner({ title, subtitle, badges, lastUpdated }: Her
             <p className="text-sm md:text-base text-white/70 leading-relaxed mt-3">
               {subtitle}
             </p>
+          )}
+
+          {/* CTAボタン */}
+          {ctaText && ctaHref && (
+            <div className="mt-6">
+              <a
+                href={ctaHref}
+                onClick={() => {
+                  if (ctaService) {
+                    window.dispatchEvent(new CustomEvent('setContactService', { detail: ctaService }));
+                  }
+                  trackEvent('cta_click', { location: 'hero_banner', type: 'consultation' });
+                }}
+                className="inline-flex items-center gap-2 bg-primary text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+              >
+                {ctaText}
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
           )}
         </div>
 

@@ -148,195 +148,195 @@ export default function App() {
         <Route path="/ja" element={<Navigate to="/ja/" replace />} />
         <Route path="/ja/" element={<HomeJa />} />
 
-        <Route path="/en/cenomar" element={<CenomarGuideEn />} />
+        <Route path="/en/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
         <Route path="/en/cenomar/" element={<CenomarGuideEn />} />
-        <Route path="/ja/cenomar" element={<CenomarGuideJa />} />
+        <Route path="/ja/cenomar" element={<Navigate to="/ja/cenomar/" replace />} />
         <Route path="/ja/cenomar/" element={<CenomarGuideJa />} />
-        <Route path="/en/cenomar-apostille" element={<CenomarApostilleEn />} />
+        <Route path="/en/cenomar-apostille" element={<Navigate to="/en/cenomar-apostille/" replace />} />
         <Route path="/en/cenomar-apostille/" element={<CenomarApostilleEn />} />
-        <Route path="/ja/cenomar-apostille" element={<CenomarApostilleJa />} />
+        <Route path="/ja/cenomar-apostille" element={<Navigate to="/ja/cenomar-apostille/" replace />} />
         <Route path="/ja/cenomar-apostille/" element={<CenomarApostilleJa />} />
-        <Route path="/en/cenomar-validity" element={<CenomarValidityEn />} />
+        <Route path="/en/cenomar-validity" element={<Navigate to="/en/cenomar-validity/" replace />} />
         <Route path="/en/cenomar-validity/" element={<CenomarValidityEn />} />
-        <Route path="/ja/cenomar-koyukigen" element={<CenomarValidityJa />} />
+        <Route path="/ja/cenomar-koyukigen" element={<Navigate to="/ja/cenomar-koyukigen/" replace />} />
         <Route path="/ja/cenomar-koyukigen/" element={<CenomarValidityJa />} />
-        <Route path="/en/psa-birth-certificate" element={<PsaBirthCertEn />} />
+        <Route path="/en/psa-birth-certificate" element={<Navigate to="/en/psa-birth-certificate/" replace />} />
         <Route path="/en/psa-birth-certificate/" element={<PsaBirthCertEn />} />
-        <Route path="/ja/psa-shussei-shomeisho" element={<PsaBirthCertJa />} />
+        <Route path="/ja/psa-shussei-shomeisho" element={<Navigate to="/ja/psa-shussei-shomeisho/" replace />} />
         <Route path="/ja/psa-shussei-shomeisho/" element={<PsaBirthCertJa />} />
-        <Route path="/en/nbi-clearance" element={<NbiGuideEn />} />
+        <Route path="/en/nbi-clearance" element={<Navigate to="/en/nbi-clearance/" replace />} />
         <Route path="/en/nbi-clearance/" element={<NbiGuideEn />} />
-        <Route path="/ja/nbi-clearance" element={<NbiGuideJa />} />
+        <Route path="/ja/nbi-clearance" element={<Navigate to="/ja/nbi-clearance/" replace />} />
         <Route path="/ja/nbi-clearance/" element={<NbiGuideJa />} />
-        <Route path="/en/nbi-hit" element={<NbiHitEn />} />
+        <Route path="/en/nbi-hit" element={<Navigate to="/en/nbi-hit/" replace />} />
         <Route path="/en/nbi-hit/" element={<NbiHitEn />} />
-        <Route path="/ja/nbi-hit" element={<NbiHitJa />} />
+        <Route path="/ja/nbi-hit" element={<Navigate to="/ja/nbi-hit/" replace />} />
         <Route path="/ja/nbi-hit/" element={<NbiHitJa />} />
-        <Route path="/en/apostille" element={<ApostilleGuideEn />} />
+        <Route path="/en/apostille" element={<Navigate to="/en/apostille/" replace />} />
         <Route path="/en/apostille/" element={<ApostilleGuideEn />} />
-        <Route path="/ja/apostille" element={<ApostilleGuideJa />} />
+        <Route path="/ja/apostille" element={<Navigate to="/ja/apostille/" replace />} />
         <Route path="/ja/apostille/" element={<ApostilleGuideJa />} />
-        <Route path="/en/apostille-processing-time" element={<DfaProcessingTimeEn />} />
+        <Route path="/en/apostille-processing-time" element={<Navigate to="/en/apostille-processing-time/" replace />} />
         <Route path="/en/apostille-processing-time/" element={<DfaProcessingTimeEn />} />
-        <Route path="/ja/apostille-shori-kikan" element={<DfaProcessingTimeJa />} />
+        <Route path="/ja/apostille-shori-kikan" element={<Navigate to="/ja/apostille-shori-kikan/" replace />} />
         <Route path="/ja/apostille-shori-kikan/" element={<DfaProcessingTimeJa />} />
-        <Route path="/en/international-marriage-guide" element={<MarriageGuideEn />} />
+        <Route path="/en/international-marriage-guide" element={<Navigate to="/en/international-marriage-guide/" replace />} />
         <Route path="/en/international-marriage-guide/" element={<MarriageGuideEn />} />
-        <Route path="/ja/kokusai-kekkon-guide" element={<MarriageGuideJa />} />
+        <Route path="/ja/kokusai-kekkon-guide" element={<Navigate to="/ja/kokusai-kekkon-guide/" replace />} />
         <Route path="/ja/kokusai-kekkon-guide/" element={<MarriageGuideJa />} />
-        <Route path="/en/spouse-visa-documents" element={<SpouseVisaEn />} />
+        <Route path="/en/spouse-visa-documents" element={<Navigate to="/en/spouse-visa-documents/" replace />} />
         <Route path="/en/spouse-visa-documents/" element={<SpouseVisaEn />} />
-        <Route path="/ja/haigusha-visa" element={<SpouseVisaJa />} />
+        <Route path="/ja/haigusha-visa" element={<Navigate to="/ja/haigusha-visa/" replace />} />
         <Route path="/ja/haigusha-visa/" element={<SpouseVisaJa />} />
-        <Route path="/en/psa-marriage-certificate" element={<PsaMarriageCertEn />} />
+        <Route path="/en/psa-marriage-certificate" element={<Navigate to="/en/psa-marriage-certificate/" replace />} />
         <Route path="/en/psa-marriage-certificate/" element={<PsaMarriageCertEn />} />
-        <Route path="/ja/psa-kekkon-shomeisho" element={<PsaMarriageCertJa />} />
+        <Route path="/ja/psa-kekkon-shomeisho" element={<Navigate to="/ja/psa-kekkon-shomeisho/" replace />} />
         <Route path="/ja/psa-kekkon-shomeisho/" element={<PsaMarriageCertJa />} />
-        <Route path="/en/drivers-license-conversion" element={<LicenseConversionEn />} />
+        <Route path="/en/drivers-license-conversion" element={<Navigate to="/en/drivers-license-conversion/" replace />} />
         <Route path="/en/drivers-license-conversion/" element={<LicenseConversionEn />} />
-        <Route path="/ja/gaimen-kirikae-guide" element={<LicenseConversionJa />} />
+        <Route path="/ja/gaimen-kirikae-guide" element={<Navigate to="/ja/gaimen-kirikae-guide/" replace />} />
         <Route path="/ja/gaimen-kirikae-guide/" element={<LicenseConversionJa />} />
-        <Route path="/en/naturalization-guide" element={<NaturalizationEn />} />
+        <Route path="/en/naturalization-guide" element={<Navigate to="/en/naturalization-guide/" replace />} />
         <Route path="/en/naturalization-guide/" element={<NaturalizationEn />} />
-        <Route path="/ja/kika-shinsei-guide" element={<NaturalizationJa />} />
+        <Route path="/ja/kika-shinsei-guide" element={<Navigate to="/ja/kika-shinsei-guide/" replace />} />
         <Route path="/ja/kika-shinsei-guide/" element={<NaturalizationJa />} />
-        <Route path="/en/guides" element={<GuidesEn />} />
+        <Route path="/en/guides" element={<Navigate to="/en/guides/" replace />} />
         <Route path="/en/guides/" element={<GuidesEn />} />
-        <Route path="/ja/guides" element={<GuidesJa />} />
+        <Route path="/ja/guides" element={<Navigate to="/ja/guides/" replace />} />
         <Route path="/ja/guides/" element={<GuidesJa />} />
-        <Route path="/en/psa-birth-certificate-cost" element={<PsaCostEn />} />
+        <Route path="/en/psa-birth-certificate-cost" element={<Navigate to="/en/psa-birth-certificate-cost/" replace />} />
         <Route path="/en/psa-birth-certificate-cost/" element={<PsaCostEn />} />
-        <Route path="/ja/psa-shussei-cost" element={<PsaCostJa />} />
+        <Route path="/ja/psa-shussei-cost" element={<Navigate to="/ja/psa-shussei-cost/" replace />} />
         <Route path="/ja/psa-shussei-cost/" element={<PsaCostJa />} />
-        <Route path="/en/apostille-fee" element={<ApostilleFeeEn />} />
+        <Route path="/en/apostille-fee" element={<Navigate to="/en/apostille-fee/" replace />} />
         <Route path="/en/apostille-fee/" element={<ApostilleFeeEn />} />
-        <Route path="/ja/apostille-ryokin" element={<ApostilleFeeJa />} />
+        <Route path="/ja/apostille-ryokin" element={<Navigate to="/ja/apostille-ryokin/" replace />} />
         <Route path="/ja/apostille-ryokin/" element={<ApostilleFeeJa />} />
-        <Route path="/en/nbi-validity" element={<NbiValidityEn />} />
+        <Route path="/en/nbi-validity" element={<Navigate to="/en/nbi-validity/" replace />} />
         <Route path="/en/nbi-validity/" element={<NbiValidityEn />} />
-        <Route path="/ja/nbi-koyukigen" element={<NbiValidityJa />} />
+        <Route path="/ja/nbi-koyukigen" element={<Navigate to="/ja/nbi-koyukigen/" replace />} />
         <Route path="/ja/nbi-koyukigen/" element={<NbiValidityJa />} />
-        <Route path="/en/driver-record" element={<DriverRecordEn />} />
+        <Route path="/en/driver-record" element={<Navigate to="/en/driver-record/" replace />} />
         <Route path="/en/driver-record/" element={<DriverRecordEn />} />
-        <Route path="/ja/driver-record" element={<DriverRecordJa />} />
+        <Route path="/ja/driver-record" element={<Navigate to="/ja/driver-record/" replace />} />
         <Route path="/ja/driver-record/" element={<DriverRecordJa />} />
-        <Route path="/en/pricing" element={<PricingEn />} />
+        <Route path="/en/pricing" element={<Navigate to="/en/pricing/" replace />} />
         <Route path="/en/pricing/" element={<PricingEn />} />
-        <Route path="/ja/ryokin" element={<PricingJa />} />
+        <Route path="/ja/ryokin" element={<Navigate to="/ja/ryokin/" replace />} />
         <Route path="/ja/ryokin/" element={<PricingJa />} />
-        <Route path="/en/us-visa-documents" element={<UsVisaDocsEn />} />
+        <Route path="/en/us-visa-documents" element={<Navigate to="/en/us-visa-documents/" replace />} />
         <Route path="/en/us-visa-documents/" element={<UsVisaDocsEn />} />
-        <Route path="/ja/us-visa-documents" element={<UsVisaDocsJa />} />
+        <Route path="/ja/us-visa-documents" element={<Navigate to="/ja/us-visa-documents/" replace />} />
         <Route path="/ja/us-visa-documents/" element={<UsVisaDocsJa />} />
-        <Route path="/en/k1-visa-documents" element={<K1VisaDocsEn />} />
+        <Route path="/en/k1-visa-documents" element={<Navigate to="/en/k1-visa-documents/" replace />} />
         <Route path="/en/k1-visa-documents/" element={<K1VisaDocsEn />} />
-        <Route path="/en/cr1-visa-documents" element={<Cr1VisaDocsEn />} />
+        <Route path="/en/cr1-visa-documents" element={<Navigate to="/en/cr1-visa-documents/" replace />} />
         <Route path="/en/cr1-visa-documents/" element={<Cr1VisaDocsEn />} />
-        <Route path="/en/canada" element={<CanadaDocsEn />} />
+        <Route path="/en/canada" element={<Navigate to="/en/canada/" replace />} />
         <Route path="/en/canada/" element={<CanadaDocsEn />} />
-        <Route path="/ja/canada" element={<CanadaDocsJa />} />
+        <Route path="/ja/canada" element={<Navigate to="/ja/canada/" replace />} />
         <Route path="/ja/canada/" element={<CanadaDocsJa />} />
-        <Route path="/en/australia" element={<AustraliaDocsEn />} />
+        <Route path="/en/australia" element={<Navigate to="/en/australia/" replace />} />
         <Route path="/en/australia/" element={<AustraliaDocsEn />} />
-        <Route path="/ja/australia" element={<AustraliaDocsJa />} />
+        <Route path="/ja/australia" element={<Navigate to="/ja/australia/" replace />} />
         <Route path="/ja/australia/" element={<AustraliaDocsJa />} />
-        <Route path="/en/uk" element={<UkDocsEn />} />
+        <Route path="/en/uk" element={<Navigate to="/en/uk/" replace />} />
         <Route path="/en/uk/" element={<UkDocsEn />} />
-        <Route path="/ja/uk" element={<UkDocsJa />} />
+        <Route path="/ja/uk" element={<Navigate to="/ja/uk/" replace />} />
         <Route path="/ja/uk/" element={<UkDocsJa />} />
-        <Route path="/en/company" element={<CompanyEn />} />
+        <Route path="/en/company" element={<Navigate to="/en/company/" replace />} />
         <Route path="/en/company/" element={<CompanyEn />} />
-        <Route path="/ja/company" element={<CompanyJa />} />
+        <Route path="/ja/company" element={<Navigate to="/ja/company/" replace />} />
         <Route path="/ja/company/" element={<CompanyJa />} />
-        <Route path="/en/contact" element={<ContactEn />} />
+        <Route path="/en/contact" element={<Navigate to="/en/contact/" replace />} />
         <Route path="/en/contact/" element={<ContactEn />} />
-        <Route path="/ja/contact" element={<ContactJa />} />
+        <Route path="/ja/contact" element={<Navigate to="/ja/contact/" replace />} />
         <Route path="/ja/contact/" element={<ContactJa />} />
-        <Route path="/en/privacy" element={<PrivacyEn />} />
+        <Route path="/en/privacy" element={<Navigate to="/en/privacy/" replace />} />
         <Route path="/en/privacy/" element={<PrivacyEn />} />
-        <Route path="/ja/privacy" element={<PrivacyJa />} />
+        <Route path="/ja/privacy" element={<Navigate to="/ja/privacy/" replace />} />
         <Route path="/ja/privacy/" element={<PrivacyJa />} />
-        <Route path="/en/terms" element={<TermsEn />} />
+        <Route path="/en/terms" element={<Navigate to="/en/terms/" replace />} />
         <Route path="/en/terms/" element={<TermsEn />} />
-        <Route path="/ja/terms" element={<TermsJa />} />
+        <Route path="/ja/terms" element={<Navigate to="/ja/terms/" replace />} />
         <Route path="/ja/terms/" element={<TermsJa />} />
-        <Route path="/ja/kokusai-kekkon-roadmap" element={<RoadmapJa />} />
+        <Route path="/ja/kokusai-kekkon-roadmap" element={<Navigate to="/ja/kokusai-kekkon-roadmap/" replace />} />
         <Route path="/ja/kokusai-kekkon-roadmap/" element={<RoadmapJa />} />
-        <Route path="/ja/nihon-senko-ph-senko" element={<MarriageOrderJa />} />
+        <Route path="/ja/nihon-senko-ph-senko" element={<Navigate to="/ja/nihon-senko-ph-senko/" replace />} />
         <Route path="/ja/nihon-senko-ph-senko/" element={<MarriageOrderJa />} />
-        <Route path="/ja/gyouseishoshi-to-shorui-shuttoku" element={<GyoseishoshiVsDocServiceJa />} />
+        <Route path="/ja/gyouseishoshi-to-shorui-shuttoku" element={<Navigate to="/ja/gyouseishoshi-to-shorui-shuttoku/" replace />} />
         <Route path="/ja/gyouseishoshi-to-shorui-shuttoku/" element={<GyoseishoshiVsDocServiceJa />} />
-        <Route path="/ja/philippines-de-kekkon" element={<PhilippinesWeddingGuideJa />} />
+        <Route path="/ja/philippines-de-kekkon" element={<Navigate to="/ja/philippines-de-kekkon/" replace />} />
         <Route path="/ja/philippines-de-kekkon/" element={<PhilippinesWeddingGuideJa />} />
-        <Route path="/ja/kekkaku-shomeisho" element={<TbCertJa />} />
+        <Route path="/ja/kekkaku-shomeisho" element={<Navigate to="/ja/kekkaku-shomeisho/" replace />} />
         <Route path="/ja/kekkaku-shomeisho/" element={<TbCertJa />} />
-        <Route path="/ja/haigusha-visa-shorui" element={<SpouseVisaShoryuJa />} />
+        <Route path="/ja/haigusha-visa-shorui" element={<Navigate to="/ja/haigusha-visa-shorui/" replace />} />
         <Route path="/ja/haigusha-visa-shorui/" element={<SpouseVisaShoryuJa />} />
-        <Route path="/en/cenomar-vs-marriage-certificate" element={<CenomarVsMarriageCertEn />} />
+        <Route path="/en/cenomar-vs-marriage-certificate" element={<Navigate to="/en/cenomar-vs-marriage-certificate/" replace />} />
         <Route path="/en/cenomar-vs-marriage-certificate/" element={<CenomarVsMarriageCertEn />} />
-        <Route path="/en/document-checklist-by-visa" element={<DocumentChecklistByVisaEn />} />
+        <Route path="/en/document-checklist-by-visa" element={<Navigate to="/en/document-checklist-by-visa/" replace />} />
         <Route path="/en/document-checklist-by-visa/" element={<DocumentChecklistByVisaEn />} />
-        <Route path="/en/nbi-clearance-overseas" element={<NbiClearanceOverseasEn />} />
+        <Route path="/en/nbi-clearance-overseas" element={<Navigate to="/en/nbi-clearance-overseas/" replace />} />
         <Route path="/en/nbi-clearance-overseas/" element={<NbiClearanceOverseasEn />} />
-        <Route path="/en/psa-late-registration" element={<PsaLateRegistrationEn />} />
+        <Route path="/en/psa-late-registration" element={<Navigate to="/en/psa-late-registration/" replace />} />
         <Route path="/en/psa-late-registration/" element={<PsaLateRegistrationEn />} />
-        <Route path="/ja/cenomar-vs-marriage-certificate" element={<CenomarVsMarriageCertJa />} />
+        <Route path="/ja/cenomar-vs-marriage-certificate" element={<Navigate to="/ja/cenomar-vs-marriage-certificate/" replace />} />
         <Route path="/ja/cenomar-vs-marriage-certificate/" element={<CenomarVsMarriageCertJa />} />
-        <Route path="/ja/document-checklist-by-visa" element={<DocumentChecklistByVisaJa />} />
+        <Route path="/ja/document-checklist-by-visa" element={<Navigate to="/ja/document-checklist-by-visa/" replace />} />
         <Route path="/ja/document-checklist-by-visa/" element={<DocumentChecklistByVisaJa />} />
-        <Route path="/ja/nbi-clearance-overseas" element={<NbiClearanceOverseasJa />} />
+        <Route path="/ja/nbi-clearance-overseas" element={<Navigate to="/ja/nbi-clearance-overseas/" replace />} />
         <Route path="/ja/nbi-clearance-overseas/" element={<NbiClearanceOverseasJa />} />
-        <Route path="/ja/psa-late-registration" element={<PsaLateRegistrationJa />} />
+        <Route path="/ja/psa-late-registration" element={<Navigate to="/ja/psa-late-registration/" replace />} />
         <Route path="/ja/psa-late-registration/" element={<PsaLateRegistrationJa />} />
-        <Route path="/ja/business" element={<BusinessHomeJa />} />
+        <Route path="/ja/business" element={<Navigate to="/ja/business/" replace />} />
         <Route path="/ja/business/" element={<BusinessHomeJa />} />
-        <Route path="/ja/business/touroku-shien-kikan" element={<BusinessTourokushienJa />} />
+        <Route path="/ja/business/touroku-shien-kikan" element={<Navigate to="/ja/business/touroku-shien-kikan/" replace />} />
         <Route path="/ja/business/touroku-shien-kikan/" element={<BusinessTourokushienJa />} />
-        <Route path="/ja/business/gyoseishoshi" element={<BusinessGyoseishoshiJa />} />
+        <Route path="/ja/business/gyoseishoshi" element={<Navigate to="/ja/business/gyoseishoshi/" replace />} />
         <Route path="/ja/business/gyoseishoshi/" element={<BusinessGyoseishoshiJa />} />
-        <Route path="/ja/business/kigyou" element={<BusinessKigyouJa />} />
+        <Route path="/ja/business/kigyou" element={<Navigate to="/ja/business/kigyou/" replace />} />
         <Route path="/ja/business/kigyou/" element={<BusinessKigyouJa />} />
-        <Route path="/ja/dfa-apostille-genchi-report" element={<DfaGalleriaCebuJa />} />
+        <Route path="/ja/dfa-apostille-genchi-report" element={<Navigate to="/ja/dfa-apostille-genchi-report/" replace />} />
         <Route path="/ja/dfa-apostille-genchi-report/" element={<DfaGalleriaCebuJa />} />
-        <Route path="/ja/psa-crs-cebu-genchi-report" element={<PsaCrsCebuJa />} />
+        <Route path="/ja/psa-crs-cebu-genchi-report" element={<Navigate to="/ja/psa-crs-cebu-genchi-report/" replace />} />
         <Route path="/ja/psa-crs-cebu-genchi-report/" element={<PsaCrsCebuJa />} />
-        <Route path="/ja/lto-sm-seaside-genchi-report" element={<LtoSmSeasideJa />} />
+        <Route path="/ja/lto-sm-seaside-genchi-report" element={<Navigate to="/ja/lto-sm-seaside-genchi-report/" replace />} />
         <Route path="/ja/lto-sm-seaside-genchi-report/" element={<LtoSmSeasideJa />} />
-        <Route path="/ja/kojin-joho-hogo" element={<KojinJohoHogoJa />} />
+        <Route path="/ja/kojin-joho-hogo" element={<Navigate to="/ja/kojin-joho-hogo/" replace />} />
         <Route path="/ja/kojin-joho-hogo/" element={<KojinJohoHogoJa />} />
-        <Route path="/en/tb-certificate" element={<TbCertEn />} />
+        <Route path="/en/tb-certificate" element={<Navigate to="/en/tb-certificate/" replace />} />
         <Route path="/en/tb-certificate/" element={<TbCertEn />} />
-        <Route path="/en/spouse-visa-document-checklist" element={<SpouseVisaDocChecklistEn />} />
+        <Route path="/en/spouse-visa-document-checklist" element={<Navigate to="/en/spouse-visa-document-checklist/" replace />} />
         <Route path="/en/spouse-visa-document-checklist/" element={<SpouseVisaDocChecklistEn />} />
-        <Route path="/en/japan-first-vs-philippines-first-marriage" element={<MarriageOrderEn />} />
+        <Route path="/en/japan-first-vs-philippines-first-marriage" element={<Navigate to="/en/japan-first-vs-philippines-first-marriage/" replace />} />
         <Route path="/en/japan-first-vs-philippines-first-marriage/" element={<MarriageOrderEn />} />
-        <Route path="/en/getting-married-in-philippines" element={<PhilippinesWeddingGuideEn />} />
+        <Route path="/en/getting-married-in-philippines" element={<Navigate to="/en/getting-married-in-philippines/" replace />} />
         <Route path="/en/getting-married-in-philippines/" element={<PhilippinesWeddingGuideEn />} />
-        <Route path="/en/dfa-apostille-cebu-report" element={<DfaGalleriaCebuEn />} />
+        <Route path="/en/dfa-apostille-cebu-report" element={<Navigate to="/en/dfa-apostille-cebu-report/" replace />} />
         <Route path="/en/dfa-apostille-cebu-report/" element={<DfaGalleriaCebuEn />} />
-        <Route path="/en/psa-crs-cebu-report" element={<PsaCrsCebuEn />} />
+        <Route path="/en/psa-crs-cebu-report" element={<Navigate to="/en/psa-crs-cebu-report/" replace />} />
         <Route path="/en/psa-crs-cebu-report/" element={<PsaCrsCebuEn />} />
-        <Route path="/en/lto-sm-seaside-cebu-report" element={<LtoSmSeasideEn />} />
+        <Route path="/en/lto-sm-seaside-cebu-report" element={<Navigate to="/en/lto-sm-seaside-cebu-report/" replace />} />
         <Route path="/en/lto-sm-seaside-cebu-report/" element={<LtoSmSeasideEn />} />
-        <Route path="/en/personalized-roadmap" element={<RoadmapEn />} />
+        <Route path="/en/personalized-roadmap" element={<Navigate to="/en/personalized-roadmap/" replace />} />
         <Route path="/en/personalized-roadmap/" element={<RoadmapEn />} />
-        <Route path="/en/immigration-lawyer-vs-document-service" element={<GyoseishoshiVsDocServiceEn />} />
+        <Route path="/en/immigration-lawyer-vs-document-service" element={<Navigate to="/en/immigration-lawyer-vs-document-service/" replace />} />
         <Route path="/en/immigration-lawyer-vs-document-service/" element={<GyoseishoshiVsDocServiceEn />} />
-        <Route path="/en/personal-information-protection" element={<KojinJohoHogoEn />} />
+        <Route path="/en/personal-information-protection" element={<Navigate to="/en/personal-information-protection/" replace />} />
         <Route path="/en/personal-information-protection/" element={<KojinJohoHogoEn />} />
-        <Route path="/en/f-6-philippines-documents" element={<F6DocsEn />} />
+        <Route path="/en/f-6-philippines-documents" element={<Navigate to="/en/f-6-philippines-documents/" replace />} />
         <Route path="/en/f-6-philippines-documents/" element={<F6DocsEn />} />
 
         {/* Korean routes */}
         <Route path="/ko" element={<Navigate to="/ko/" replace />} />
         <Route path="/ko/" element={<HomeKo />} />
-        <Route path="/ko/pricing" element={<PricingKo />} />
+        <Route path="/ko/pricing" element={<Navigate to="/ko/pricing/" replace />} />
         <Route path="/ko/pricing/" element={<PricingKo />} />
-        <Route path="/ko/f-6-philippines-documents" element={<F6DocsKo />} />
+        <Route path="/ko/f-6-philippines-documents" element={<Navigate to="/ko/f-6-philippines-documents/" replace />} />
         <Route path="/ko/f-6-philippines-documents/" element={<F6DocsKo />} />
-        <Route path="/ko/nbi-clearance" element={<NbiKo />} />
+        <Route path="/ko/nbi-clearance" element={<Navigate to="/ko/nbi-clearance/" replace />} />
         <Route path="/ko/nbi-clearance/" element={<NbiKo />} />
-        <Route path="/ko/contact" element={<ContactKo />} />
+        <Route path="/ko/contact" element={<Navigate to="/ko/contact/" replace />} />
         <Route path="/ko/contact/" element={<ContactKo />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />

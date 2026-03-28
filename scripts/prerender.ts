@@ -335,8 +335,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
-    title: `What Is CENOMAR? Certificate of No Marriage [Mar ${SEO_YEAR}]`,
-    description: `CENOMAR is the PSA document proving you are single. Required for K-1, marriage & immigration. We retrieve it with Apostille. Ships worldwide via DHL.`,
+    title: `CENOMAR Meaning & How to Get It — Certificate of No Marriage [Mar ${SEO_YEAR}]`,
+    description: `CENOMAR means Certificate of No Marriage Record — issued by PSA Philippines. Required for K-1 visa, international marriage & immigration. We retrieve it with Apostille & ship worldwide.`,
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -488,8 +488,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Price [${SEO_YEAR_MONTH_EN}] — Fee Breakdown (PHP 365+)`,
-    description: `PSA Birth Certificate official fee: PHP 365. Total price with DFA Apostille + DHL worldwide shipping starts at $349. Full 2026 cost breakdown for visa & immigration applicants.`,
+    title: `PSA Birth Certificate Fee Philippines ${SEO_YEAR} — PHP 365 + Apostille & Shipping`,
+    description: `PSA Birth Certificate fee in the Philippines: PHP 365 per copy (${SEO_YEAR}). Total cost with DFA Apostille + DHL international shipping starts at USD $349. No hidden fees.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,

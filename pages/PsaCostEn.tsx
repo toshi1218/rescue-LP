@@ -11,8 +11,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function PsaCostEn() {
   useMeta(
-    'PSA Birth Certificate Price [March 2026] — Fee Breakdown (PHP 365+)',
-    'PSA Birth Certificate official fee: PHP 365. Total price with DFA Apostille + DHL worldwide shipping starts at $349. Full 2026 cost breakdown for visa & immigration applicants.',
+    'PSA Birth Certificate Fee Philippines 2026 — PHP 365 + Apostille & Shipping',
+    'PSA Birth Certificate fee in the Philippines: PHP 365 per copy (2026). Total cost with DFA Apostille + DHL international shipping starts at USD $349. No hidden fees.',
   );
   return (
     <PageLayout
