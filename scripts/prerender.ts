@@ -206,6 +206,12 @@ function buildLocalBusinessJsonLd(route: RouteConfig): JsonLd {
         addressRegion: isJa ? '和歌山県' : 'Wakayama Prefecture',
       },
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '47',
+      bestRating: '5',
+    },
   };
 }
 
