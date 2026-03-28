@@ -54,7 +54,7 @@ export default function DfaGalleriaCebuJa() {
           publisher: {
             '@type': 'Organization',
             name: 'フィリピン書類取得代行センター',
-            url: 'https://ph-document.com',
+            url: 'https://ph-document.com/',
           },
         },
         {

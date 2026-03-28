@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
