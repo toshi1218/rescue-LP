@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './*.tsx', './components/**/*.tsx', './pages/**/*.tsx', './lib/**/*.ts'],
+  safelist: [
+    'focus:not-sr-only', 'focus:fixed', 'focus:top-2', 'focus:left-2',
+    'focus:z-[10000]', 'focus:bg-primary', 'focus:text-secondary',
+    'focus:font-bold', 'focus:px-4', 'focus:py-2', 'focus:rounded-lg', 'focus:shadow-lg',
+  ],
   theme: {
     extend: {
       colors: {

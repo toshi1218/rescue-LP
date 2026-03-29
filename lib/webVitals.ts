@@ -5,9 +5,11 @@ function sendToGA4(metricName: string, metricValue: number, metricId: string) {
 
   const gtag = (window as Window & { gtag?: GtagFn }).gtag;
   if (typeof gtag === 'function') {
+    // CLS is a unitless decimal (e.g. 0.12); other metrics are in ms and can be rounded
+    const value = metricName === 'CLS' ? parseFloat(metricValue.toFixed(4)) : Math.round(metricValue);
     gtag('event', 'web_vitals', {
       metric_name: metricName,
-      metric_value: Math.round(metricValue),
+      metric_value: value,
       metric_id: metricId,
     });
   }
@@ -62,7 +64,7 @@ export function reportWebVitals(): void {
     clsObserver.observe({ type: 'layout-shift', buffered: true });
 
     const reportCls = () => {
-      sendToGA4('CLS', clsValue * 1000, clsId); // scale to integer-friendly range
+      sendToGA4('CLS', clsValue, clsId);
       clsObserver.disconnect();
     };
     addEventListener('visibilitychange', () => {
