@@ -42,6 +42,12 @@ const caseStudiesData = {
       action: 'We verified the Department of Home Affairs checklist, obtained CENOMAR and PSA Birth Certificate with DFA Apostille, and shipped within the client\'s deadline.',
       result: 'All Apostille-authenticated originals delivered to Sydney via DHL. Partner visa application submitted successfully.',
     },
+    {
+      title: 'Netherlands Partner Visa (IND)',
+      fear: '"I\'m in the Netherlands and wasn\'t sure if a Philippine document service would even ship to Europe. The IND has specific requirements I couldn\'t find clear guidance on."',
+      action: 'We confirmed the IND requirements for Philippine documents, obtained CENOMAR and PSA Birth Certificate with DFA Apostille, and shipped via DHL to the Netherlands.',
+      result: 'All Apostille-authenticated originals delivered to the Netherlands via DHL. Partner visa application submitted to the IND on schedule.',
+    },
   ],
 };
 
@@ -58,7 +64,7 @@ const CaseStudies: React.FC = React.memo(() => {
           <p className="text-xs text-gray-500 mt-2">{t('cases.note')}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {caseStudies.map((item) => (
             <article key={item.title} className="border border-gray-100 bg-gray-50 rounded-xl p-5 shadow-card flex flex-col gap-3">
               <h3 className="font-bold text-sm text-secondary">{item.title}</h3>
