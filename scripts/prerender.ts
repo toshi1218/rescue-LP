@@ -133,7 +133,7 @@ function buildAboutPageJsonLd(route: RouteConfig): JsonLd {
         },
       ],
       email: 'igrs20200601@gmail.com',
-      areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
+      areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR', 'NL', 'DE', 'SG', 'HK', 'NZ', 'AE'],
     },
   };
 }
@@ -183,7 +183,7 @@ function buildLocalBusinessJsonLd(route: RouteConfig): JsonLd {
       addressLocality: 'Cebu City',
       addressRegion: 'Cebu',
     },
-    areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
+    areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR', 'NL', 'DE', 'SG', 'HK', 'NZ', 'AE'],
     availableLanguage: route.lang === 'ja' ? ['Japanese'] : route.lang === 'ko' ? ['Korean'] : ['English'],
     openingHoursSpecification: [
       {
@@ -319,7 +319,7 @@ function buildHomeServiceJsonLd(route: RouteConfig): JsonLd {
       name: isJa ? 'フィリピン書類取得代行センター' : 'Philippine Document Service (IGRS Inc.)',
       url: `${BASE}/`,
     },
-    areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
+    areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR', 'NL', 'DE', 'SG', 'HK', 'NZ', 'AE'],
     description: isJa
       ? 'PSA出生証明書、CENOMAR、NBI Clearance、DFAアポスティーユを日本語だけで代行し、DHLでお届けします。'
       : 'We retrieve PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille from the Philippines, with DHL delivery worldwide.',

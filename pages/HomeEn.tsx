@@ -43,6 +43,13 @@ export default function HomeEn() {
       { '@type': 'Country', name: 'AU' },
       { '@type': 'Country', name: 'GB' },
       { '@type': 'Country', name: 'JP' },
+      { '@type': 'Country', name: 'KR' },
+      { '@type': 'Country', name: 'NL' },
+      { '@type': 'Country', name: 'DE' },
+      { '@type': 'Country', name: 'SG' },
+      { '@type': 'Country', name: 'HK' },
+      { '@type': 'Country', name: 'NZ' },
+      { '@type': 'Country', name: 'AE' },
     ],
     contactPoint: {
       '@type': 'ContactPoint',

@@ -54,7 +54,7 @@ const WhyProxy: React.FC = React.memo(() => {
               <h3 className="text-sm font-bold text-gray-800">What This Means for You</h3>
             </div>
             <p className="text-sm text-gray-600 leading-relaxed">
-              If you're applying for a US K-1 visa, Canada PR, Australian partner visa, or UK spouse visa —
+              Whether you're applying for a US K-1 visa, Canada PR, Australian partner visa, European residence permit, or any other immigration case —
               you <strong>cannot order Apostille-authenticated originals online and have them mailed to your address abroad.</strong>
               You need someone physically present in the Philippines to receive and forward the documents.
             </p>
@@ -70,7 +70,7 @@ const WhyProxy: React.FC = React.memo(() => {
             </div>
             <p className="text-sm text-gray-600 leading-relaxed">
               Our Cebu-based team handles the entire process locally — PSA retrieval, DFA Apostille authentication,
-              and <strong>DHL Express international shipping directly to your address</strong> in the USA, Canada, Australia, UK, Japan, or anywhere else.
+              and <strong>DHL Express international shipping directly to your address</strong> — wherever you are in the world.
               No trip to the Philippines. No local contacts needed.
             </p>
           </div>
