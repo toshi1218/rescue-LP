@@ -120,7 +120,7 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'Spouse / Partner Visa Support',
-      subtitle: 'Philippine documents for US, Canada, Australia, UK & Japan spouse visas',
+      subtitle: 'Philippine documents for spouse & partner visas worldwide',
       price: 'US$899',
       priceNote: '〜 (Apostille + DHL incl.)',
       period: 'Approx. 4–8 weeks',
@@ -341,6 +341,18 @@ const Pricing: React.FC = () => {
                   label: 'Spouse Visa (Japan)',
                   docs: ['PSA Marriage Certificate + Apostille', 'PSA Birth Certificate', 'NBI Clearance'],
                 },
+                {
+                  to: '/en/spouse-visa-documents/',
+                  flag: '🇪🇺',
+                  label: 'Europe (NL, DE, and more)',
+                  docs: ['CENOMAR + Apostille', 'PSA Birth Certificate + Apostille', 'NBI Clearance + Apostille'],
+                },
+                {
+                  to: '/en/spouse-visa-documents/',
+                  flag: '🌏',
+                  label: 'Other Countries',
+                  docs: ['CENOMAR + Apostille', 'PSA Birth Certificate + Apostille', 'NBI Clearance + Apostille'],
+                },
               ].map((item) => (
                 <Link
                   key={item.to}
@@ -365,7 +377,7 @@ const Pricing: React.FC = () => {
               ))}
             </div>
             <p className="text-xs text-gray-400 leading-relaxed">
-              Don't see your country? <a href="#contact" className="text-primary-dark underline hover:text-primary">Contact us</a> — we ship to 50+ countries via DHL Express.
+              Don't see your country listed above? No problem — we serve clients in 50+ countries worldwide. <a href="#contact" className="text-primary-dark underline hover:text-primary">Contact us</a> and we'll confirm the requirements for your destination.
             </p>
           </div>
         )}

@@ -12,8 +12,8 @@ const faqsData = {
     { q: '日本から依頼できますか？フィリピンに行く必要はありますか？', a: '多くの案件は日本からご依頼いただけます。フィリピン現地への渡航なしで進められるケースも多いです。ただし、委任状へのご署名や、一部の手続きではご本人様対応が必要になる場合があります。' },
   ],
   en: [
-    { q: 'Do you ship documents internationally?', a: 'Yes. We ship original documents and apostilled copies via DHL Express directly to your address worldwide — USA, Canada, Australia, UK, and other countries. Shipping is coordinated after procurement is complete.' },
-    { q: 'Which countries do you serve?', a: 'We serve clients in the USA, Canada, Australia, UK, Japan, South Korea, and other Hague Convention countries. If your country requires DFA Apostille authentication, we handle it. Contact us to confirm for your specific country.' },
+    { q: 'Do you ship documents internationally?', a: 'Yes. We ship original documents and apostilled copies via DHL Express directly to your address worldwide — whether you\'re in the USA, Canada, Europe, Asia, or anywhere else. Shipping is coordinated after procurement is complete.' },
+    { q: 'Which countries do you serve?', a: 'We serve clients worldwide — including the USA, Canada, Australia, UK, Europe, Asia, the Middle East, and all other Hague Convention countries. If your country requires DFA Apostille authentication, we handle it. Contact us to confirm for your specific country.' },
     { q: 'What documents are needed for a K-1 or CR-1 visa?', a: 'For USCIS and NVC: typically a PSA Birth Certificate, CENOMAR (if single), and NBI Clearance. A DFA Apostille is usually required for the US Embassy interview stage. We confirm exact requirements for your case.' },
     { q: 'How long does the whole process take?', a: 'Typically about 1 month from order to delivery at your address. Timelines can vary by document type and agency processing speed. Contact us to discuss your specific timeline.' },
     { q: 'Can I cancel if my visa situation changes?', a: 'Cancellations before we begin are free. After we start, actual expenses and work already performed are non-refundable. We ship only after you confirm the copies and pay the remaining balance.' },
