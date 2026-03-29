@@ -136,6 +136,42 @@ export default function ContactEn() {
         </div>
 
         <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">Destination Country</label>
+          <select
+            name="destination_country"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+          >
+            <option value="">Select country (optional)</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            <option value="UK">UK</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Germany">Germany</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Hong Kong">Hong Kong</option>
+            <option value="Japan">Japan</option>
+            <option value="South Korea">South Korea</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="UAE">UAE</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">Timeline</label>
+          <select
+            name="timeline"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+          >
+            <option value="">Select timeline (optional)</option>
+            <option value="Urgent (within 4 weeks)">Urgent (within 4 weeks)</option>
+            <option value="Standard (4–8 weeks)">Standard (4–8 weeks)</option>
+            <option value="Just Planning">Just Planning</option>
+          </select>
+        </div>
+
+        <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">Message <span className="text-red-500">*</span></label>
           <textarea
             name="message"

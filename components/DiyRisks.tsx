@@ -124,6 +124,9 @@ const DiyRisks: React.FC = () => {
           <p className="text-sm text-white/80 leading-relaxed mb-6 max-w-xl mx-auto">
             {c.closing}
           </p>
+          {lang === 'en' && (
+            <p className="text-amber-300 text-xs font-semibold mb-4">Don't wait until your deadline is too close — start your consultation today.</p>
+          )}
           <a
             href="#contact"
             onClick={() =>

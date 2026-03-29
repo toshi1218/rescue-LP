@@ -9,6 +9,7 @@ const enBadges = [
   { icon: '🏢', label: 'Japanese Corporation' },
   { icon: '✈️', label: 'No travel to Philippines' },
   { icon: '🛡️', label: 'Free cancellation at consultation stage' },
+  { icon: '📦', label: '500+ cases completed' },
 ];
 
 const enDocItems = [

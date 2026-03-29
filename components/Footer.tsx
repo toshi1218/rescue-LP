@@ -180,6 +180,48 @@ const Footer: React.FC = () => {
             </select>
           </div>
 
+          {!isJa && (
+            <div>
+              <label htmlFor="footer-destination-country" className="block text-sm text-gray-600 mb-1">Destination Country</label>
+              <select
+                id="footer-destination-country"
+                name="destination_country"
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white"
+              >
+                <option value="">Select country (optional)</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="UK">UK</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="Germany">Germany</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="Japan">Japan</option>
+                <option value="South Korea">South Korea</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="UAE">UAE</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          )}
+
+          {!isJa && (
+            <div>
+              <label htmlFor="footer-timeline" className="block text-sm text-gray-600 mb-1">Timeline</label>
+              <select
+                id="footer-timeline"
+                name="timeline"
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white"
+              >
+                <option value="">Select timeline (optional)</option>
+                <option value="Urgent (within 4 weeks)">Urgent (within 4 weeks)</option>
+                <option value="Standard (4–8 weeks)">Standard (4–8 weeks)</option>
+                <option value="Just Planning">Just Planning</option>
+              </select>
+            </div>
+          )}
+
           <div>
             <label htmlFor="footer-message" className="block text-sm text-gray-600 mb-1">{t('footer.messageLabel')}</label>
             <textarea

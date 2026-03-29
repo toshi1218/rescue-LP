@@ -99,6 +99,9 @@ const Process: React.FC = () => {
             <ArrowRight className="w-5 h-5" />
           </a>
           <p className="text-xs text-white/50 mt-3">{t('process.ctaNote')}</p>
+          {lang === 'en' && (
+            <p className="text-xs text-white/50 mt-2">Document retrieval typically takes 4–6 weeks. Start early to meet your deadline.</p>
+          )}
         </div>
       </div>
     </section>
