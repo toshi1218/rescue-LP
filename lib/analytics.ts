@@ -53,4 +53,7 @@ export function trackLandingView() {
     traffic_source: getTrafficSource(),
     path: window.location.pathname,
   });
+
+  // Report Web Vitals once on first page load
+  import('./webVitals').then((m) => m.reportWebVitals()).catch(() => {});
 }

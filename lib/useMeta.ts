@@ -10,6 +10,9 @@ const EN_DEFAULT_DESCRIPTION =
 const KO_DEFAULT_TITLE = '필리핀 서류 대행 서비스 — PSA, CENOMAR, NBI & 아포스티유';
 const KO_DEFAULT_DESCRIPTION =
   'PSA 출생증명서, CENOMAR, NBI 클리어런스, DFA 아포스티유를 필리핀에서 대행 취득하여 전 세계로 DHL 배송. 무료 상담 가능.';
+const JA_OG_IMAGE = `${BASE}/og-image-ja.png`;
+const KO_OG_IMAGE = `${BASE}/og-image-ko.png`;
+const EN_OG_IMAGE = `${BASE}/og-image.png`;
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
   const el = document.querySelector<HTMLMetaElement>(`meta[${attr}="${name}"]`);
@@ -32,6 +35,7 @@ export function useMeta(title: string, description: string, canonical?: string) 
     const isJa = /\/ja(\/|$)/.test(pathname);
     const isKo = /\/ko(\/|$)/.test(pathname);
     const locale = isJa ? 'ja_JP' : isKo ? 'ko_KR' : 'en_US';
+    const ogImage = isJa ? JA_OG_IMAGE : isKo ? KO_OG_IMAGE : EN_OG_IMAGE;
 
     document.title = title;
     document.documentElement.lang = isJa ? 'ja' : isKo ? 'ko' : 'en';
@@ -40,8 +44,10 @@ export function useMeta(title: string, description: string, canonical?: string) 
     setMeta('og:description', description, 'property');
     setMeta('og:url', canonicalHref, 'property');
     setMeta('og:locale', locale, 'property');
+    setMeta('og:image', ogImage, 'property');
     setMeta('twitter:title', title);
     setMeta('twitter:description', description);
+    setMeta('twitter:image', ogImage);
     setCanonical(canonicalHref);
 
     return () => {
@@ -52,14 +58,17 @@ export function useMeta(title: string, description: string, canonical?: string) 
       const defaultDesc = isCurrentJa ? JA_DEFAULT_DESCRIPTION : isCurrentKo ? KO_DEFAULT_DESCRIPTION : EN_DEFAULT_DESCRIPTION;
       const defaultCanonical = isCurrentJa ? `${BASE}/ja/` : isCurrentKo ? `${BASE}/ko/` : `${BASE}/en/`;
       const currentLocale = isCurrentJa ? 'ja_JP' : isCurrentKo ? 'ko_KR' : 'en_US';
+      const defaultOgImage = isCurrentJa ? JA_OG_IMAGE : isCurrentKo ? KO_OG_IMAGE : EN_OG_IMAGE;
       document.title = defaultTitle;
       setMeta('description', defaultDesc);
       setMeta('og:title', defaultTitle, 'property');
       setMeta('og:description', defaultDesc, 'property');
       setMeta('og:url', defaultCanonical, 'property');
       setMeta('og:locale', currentLocale, 'property');
+      setMeta('og:image', defaultOgImage, 'property');
       setMeta('twitter:title', defaultTitle);
       setMeta('twitter:description', defaultDesc);
+      setMeta('twitter:image', defaultOgImage);
       setCanonical(defaultCanonical);
     };
   }, [title, description, canonical]);

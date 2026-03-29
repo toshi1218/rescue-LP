@@ -1417,6 +1417,9 @@ function updateHead(html: string, route: RouteConfig): string {
     `<link rel="canonical" href="${route.canonical}"`
   );
 
+  // Remove template hreflang links (they point to home pages only)
+  result = result.replace(/\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*" \/>/g, '');
+
   // hreflang alternate links (inserted after canonical)
   // 双方向ペアが確認できるページのみ en/ja/x-default を3点セットで注入。
   // JA専用ページ（対応ENページなし）は hreflang="ja" のみ注入して

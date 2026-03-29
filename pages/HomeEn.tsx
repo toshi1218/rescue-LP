@@ -74,7 +74,7 @@ export default function HomeEn() {
     <div className="min-h-screen bg-background-light text-gray-800 font-body">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <Services />
         <PainPoints />

@@ -69,7 +69,7 @@ export default function HomeKo() {
       <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-primary to-transparent" />
       <NavbarKo />
 
-      <main>
+      <main id="main-content">
         {/* Hero */}
         <section className="bg-secondary text-white py-14 px-4">
           <div className="max-w-3xl mx-auto">
