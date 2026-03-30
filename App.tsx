@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect, useRef, useState, Component, ErrorInfo, ReactNode } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { getLangSwitchUrl } from './lib/urlMap';
+import { COUNTRY_CONFIGS } from './lib/countryConfig';
 
 interface ErrorBoundaryState { hasError: boolean; }
 class ErrorBoundary extends Component<{ children: ReactNode }, ErrorBoundaryState> {
@@ -119,6 +120,7 @@ const RoadmapEn = lazy(() => import('./pages/RoadmapEn'));
 const GyoseishoshiVsDocServiceEn = lazy(() => import('./pages/GyoseishoshiVsDocServiceEn'));
 const KojinJohoHogoEn = lazy(() => import('./pages/KojinJohoHogoEn'));
 const F6DocsEn = lazy(() => import('./pages/F6DocsEn'));
+const CountryDocsEnTemplate = lazy(() => import('./pages/CountryDocsEnTemplate'));
 const HomeKo = lazy(() => import('./pages/HomeKo'));
 const PricingKo = lazy(() => import('./pages/PricingKo'));
 const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
@@ -393,6 +395,13 @@ export default function App() {
         <Route path="/contact" element={<Navigate to="/en/contact/" replace />} />
         <Route path="/privacy" element={<Navigate to="/en/privacy/" replace />} />
         <Route path="/terms" element={<Navigate to="/en/terms/" replace />} />
+        {COUNTRY_CONFIGS.map(config => (
+          <React.Fragment key={config.slug}>
+            <Route path={`/en/${config.slug}`} element={<Navigate to={`/en/${config.slug}/`} replace />} />
+            <Route path={`/en/${config.slug}/`} element={<CountryDocsEnTemplate config={config} />} />
+          </React.Fragment>
+        ))}
+
         <Route path="/canada" element={<Navigate to="/en/canada/" replace />} />
         <Route path="/australia" element={<Navigate to="/en/australia/" replace />} />
         <Route path="/uk" element={<Navigate to="/en/uk/" replace />} />
