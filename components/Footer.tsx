@@ -175,6 +175,7 @@ const Footer: React.FC = () => {
                   <option value="License Transfer">License Transfer</option>
                   <option value="Naturalization">Naturalization</option>
                   <option value="Custom Roadmap">Custom Roadmap</option>
+                  <option value="Other">Other</option>
                 </>
               )}
             </select>
