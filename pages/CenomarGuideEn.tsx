@@ -12,8 +12,8 @@ import RelatedArticles from '../components/RelatedArticles';
 
 export default function CenomarGuideEn() {
   useMeta(
-    'CENOMAR Meaning & How to Get It — Certificate of No Marriage [Mar 2026]',
-    'CENOMAR means Certificate of No Marriage Record — issued by PSA Philippines. Required for K-1 visa, international marriage & immigration. We retrieve it with Apostille & ship worldwide.',
+    'What Is CENOMAR? Meaning, Definition & How to Get It [2026]',
+    'What is CENOMAR? It stands for Certificate of No Marriage Record — issued by PSA Philippines. Required for K-1 visa & international marriage. We retrieve, apostille & ship worldwide.',
   );
   return (
     <PageLayout
@@ -99,7 +99,7 @@ export default function CenomarGuideEn() {
       ]}
     >
       <HeroBanner
-        title="CENOMAR from the Philippines — Delivered to Your Door Worldwide"
+        title="What Is CENOMAR? — Certificate of No Marriage Record Explained"
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"

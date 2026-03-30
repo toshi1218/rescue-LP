@@ -16,12 +16,12 @@ import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
-import { SEO_TITLE_BADGE_EN, SEO_DATE_ISO } from '../lib/seoDate';
+import { SEO_DATE_ISO } from '../lib/seoDate';
 
 export default function HomeEn() {
   useMeta(
-    `Philippine Document Service | PSA, NBI & CENOMAR ${SEO_TITLE_BADGE_EN}`,
-    'Need Philippine documents for immigration? We retrieve PSA, CENOMAR, NBI Clearance + DFA Apostille. Ships via DHL worldwide. Free consultation.',
+    'Philippine Document Service | CENOMAR, PSA & NBI — Shipped Worldwide',
+    'Need Philippine documents? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille, then ship via DHL worldwide. Free consultation.',
     'https://ph-document.com/en/',
   );
 
