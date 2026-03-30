@@ -1292,7 +1292,6 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/dfa-apostille-genchi-report/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
-    noindex: true,
   },
   {
     path: '/en/psa-crs-cebu-report/',
@@ -1317,7 +1316,6 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/lto-sm-seaside-genchi-report/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
-    noindex: true,
   },
   {
     path: '/en/personalized-roadmap/',
