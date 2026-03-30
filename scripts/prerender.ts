@@ -1240,6 +1240,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/kekkaku-shomeisho/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/spouse-visa-document-checklist/',
@@ -1252,6 +1253,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/haigusha-visa-shorui/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/japan-first-vs-philippines-first-marriage/',
@@ -1264,6 +1266,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/nihon-senko-ph-senko/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/getting-married-in-philippines/',
@@ -1276,6 +1279,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/philippines-de-kekkon/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/dfa-apostille-cebu-report/',
@@ -1322,6 +1326,7 @@ const routes: RouteConfig[] = [
     lang: 'en' as const,
     enCanonical: `${BASE}/en/personalized-roadmap/`,
     jaCanonical: `${BASE}/ja/kokusai-kekkon-roadmap/`,
+    noindex: true,
   },
   {
     path: '/en/immigration-lawyer-vs-document-service/',
@@ -1334,6 +1339,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/gyouseishoshi-to-shorui-shuttoku/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/personal-information-protection/',
@@ -1355,6 +1361,7 @@ const routes: RouteConfig[] = [
     lang: 'en' as const,
     enCanonical: `${BASE}/en/f-6-philippines-documents/`,
     jaCanonical: `${BASE}/ja/`,
+    noindex: true,
   },
 
   /* ── JA pages added to prerender (previously missing) ──────────── */
@@ -1410,12 +1417,6 @@ function updateHead(html: string, route: RouteConfig): string {
   result = result.replace(
     /<link rel="canonical" href="[^"]*"/,
     `<link rel="canonical" href="${route.canonical}"`
-  );
-
-  // hreflang alternate links (self-referential only — each language site is independent)
-  result = result.replace(
-    /(<link rel="canonical" href="[^"]*" \/>)/,
-    `$1\n    <link rel="alternate" hreflang="${route.lang}" href="${route.canonical}" />`
   );
 
   // og:url
@@ -1581,11 +1582,8 @@ async function generateSitemap() {
     const priority = getSitemapPriority(route.path);
     const changefreq = getSitemapChangefreq(route.path);
 
-    // Self-referential only — each language site is independent
-    const xhtmlLinks = `\n    <xhtml:link rel="alternate" hreflang="${route.lang}" href="${route.canonical}"/>`;
-
     entries.push(`  <url>
-    <loc>${route.canonical}</loc>${xhtmlLinks}
+    <loc>${route.canonical}</loc>
     <lastmod>${SEO_DATE_ISO}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -1593,14 +1591,13 @@ async function generateSitemap() {
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${entries.join('\n')}
 </urlset>`;
 
   const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
   await writeFile(sitemapPath, xml, 'utf8');
-  console.log(`\nGenerated sitemap.xml with ${entries.length} URLs (hreflang included).`);
+  console.log(`\nGenerated sitemap.xml with ${entries.length} URLs.`);
 }
 
 prerender()
