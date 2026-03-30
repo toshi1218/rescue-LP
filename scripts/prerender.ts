@@ -1412,12 +1412,6 @@ function updateHead(html: string, route: RouteConfig): string {
     `<link rel="canonical" href="${route.canonical}"`
   );
 
-  // hreflang alternate links (self-referential only — each language site is independent)
-  result = result.replace(
-    /(<link rel="canonical" href="[^"]*" \/>)/,
-    `$1\n    <link rel="alternate" hreflang="${route.lang}" href="${route.canonical}" />`
-  );
-
   // og:url
   result = result.replace(
     /<meta property="og:url" content="[^"]*"/,
