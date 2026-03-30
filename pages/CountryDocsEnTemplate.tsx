@@ -9,7 +9,7 @@ import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_TITLE_BADGE_EN, SEO_LAST_UPDATED_EN, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_LAST_UPDATED_EN, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 import type { CountryConfig } from '../lib/countryConfig';
 
 const BASE = 'https://ph-document.com';

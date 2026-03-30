@@ -1404,6 +1404,7 @@ const countryRoutes: RouteConfig[] = COUNTRY_CONFIGS.map(config => ({
   enCanonical: `${BASE}/en/${config.slug}/`,
   jaCanonical: `${BASE}/ja/`,
   ogType: 'article',
+  datePublished: SEO_DATE_ISO,
 }));
 
 routes.push(...countryRoutes);
