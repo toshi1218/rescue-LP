@@ -17,6 +17,7 @@ import {
   SEO_TITLE_BADGE_YEAR_EN,
   SEO_TITLE_BADGE_YEAR_SHORT_JA,
 } from '../lib/seoDate';
+import { COUNTRY_CONFIGS } from '../lib/countryConfig';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
@@ -1391,6 +1392,22 @@ const routes: RouteConfig[] = [
   },
 
 ];
+
+// Dynamic country pages generated from countryConfig
+const countryRoutes: RouteConfig[] = COUNTRY_CONFIGS.map(config => ({
+  path: `/en/${config.slug}/`,
+  outFile: path.join(projectRoot, 'dist', 'en', config.slug, 'index.html'),
+  title: `PH Documents for ${config.name} Immigration [${SEO_YEAR_MONTH_EN}]`,
+  description: `Applying for ${config.name} ${config.visaType}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
+  canonical: `${BASE}/en/${config.slug}/`,
+  lang: 'en' as const,
+  enCanonical: `${BASE}/en/${config.slug}/`,
+  jaCanonical: `${BASE}/ja/`,
+  ogType: 'article',
+  datePublished: SEO_DATE_ISO,
+}));
+
+routes.push(...countryRoutes);
 
 function updateHead(html: string, route: RouteConfig): string {
   let result = html;
