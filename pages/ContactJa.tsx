@@ -68,7 +68,6 @@ export default function ContactJa() {
           e.preventDefault();
           setSubmitting(true);
           setSubmitError('');
-          trackEvent('form_submit', { location: 'contact_page', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource });
           try {
             const res = await fetch(FORMSPREE_ENDPOINT, {
               method: 'POST',
@@ -76,6 +75,7 @@ export default function ContactJa() {
               headers: { Accept: 'application/json' },
             });
             if (res.ok) {
+              trackEvent('form_submit', { location: 'contact_page', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource });
               setSubmitted(true);
             } else {
               setSubmitError('送信に失敗しました。しばらく経ってから再度お試しください。');

@@ -15,7 +15,6 @@ export default function ContactKo() {
     e.preventDefault();
     setSubmitting(true);
     setSubmitError('');
-    trackEvent('form_submit', { location: 'contact_page_ko', type: 'formspree' });
     try {
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
@@ -23,6 +22,7 @@ export default function ContactKo() {
         headers: { Accept: 'application/json' },
       });
       if (res.ok) {
+        trackEvent('form_submit', { location: 'contact_page_ko', type: 'formspree' });
         setSubmitted(true);
       } else {
         setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
