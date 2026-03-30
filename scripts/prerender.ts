@@ -1581,11 +1581,8 @@ async function generateSitemap() {
     const priority = getSitemapPriority(route.path);
     const changefreq = getSitemapChangefreq(route.path);
 
-    // Self-referential only — each language site is independent
-    const xhtmlLinks = `\n    <xhtml:link rel="alternate" hreflang="${route.lang}" href="${route.canonical}"/>`;
-
     entries.push(`  <url>
-    <loc>${route.canonical}</loc>${xhtmlLinks}
+    <loc>${route.canonical}</loc>
     <lastmod>${SEO_DATE_ISO}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -1593,14 +1590,13 @@ async function generateSitemap() {
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${entries.join('\n')}
 </urlset>`;
 
   const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
   await writeFile(sitemapPath, xml, 'utf8');
-  console.log(`\nGenerated sitemap.xml with ${entries.length} URLs (hreflang included).`);
+  console.log(`\nGenerated sitemap.xml with ${entries.length} URLs.`);
 }
 
 prerender()
