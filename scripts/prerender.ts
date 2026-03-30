@@ -1240,6 +1240,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/kekkaku-shomeisho/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/spouse-visa-document-checklist/',
@@ -1252,6 +1253,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/haigusha-visa-shorui/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/japan-first-vs-philippines-first-marriage/',
@@ -1264,6 +1266,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/nihon-senko-ph-senko/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/getting-married-in-philippines/',
@@ -1276,6 +1279,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/philippines-de-kekkon/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/dfa-apostille-cebu-report/',
@@ -1288,6 +1292,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/dfa-apostille-genchi-report/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/psa-crs-cebu-report/',
@@ -1312,6 +1317,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/lto-sm-seaside-genchi-report/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/personalized-roadmap/',
@@ -1322,6 +1328,7 @@ const routes: RouteConfig[] = [
     lang: 'en' as const,
     enCanonical: `${BASE}/en/personalized-roadmap/`,
     jaCanonical: `${BASE}/ja/kokusai-kekkon-roadmap/`,
+    noindex: true,
   },
   {
     path: '/en/immigration-lawyer-vs-document-service/',
@@ -1334,6 +1341,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/gyouseishoshi-to-shorui-shuttoku/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
+    noindex: true,
   },
   {
     path: '/en/personal-information-protection/',
@@ -1355,6 +1363,7 @@ const routes: RouteConfig[] = [
     lang: 'en' as const,
     enCanonical: `${BASE}/en/f-6-philippines-documents/`,
     jaCanonical: `${BASE}/ja/`,
+    noindex: true,
   },
 
   /* ── JA pages added to prerender (previously missing) ──────────── */
