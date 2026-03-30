@@ -342,7 +342,7 @@ const Pricing: React.FC = () => {
                   docs: ['PSA Marriage Certificate + Apostille', 'PSA Birth Certificate', 'NBI Clearance'],
                 },
                 {
-                  to: '/en/spouse-visa-documents/',
+                  to: '/en/netherlands/',
                   flag: '🇪🇺',
                   label: 'Europe (NL, DE, and more)',
                   docs: ['CENOMAR + Apostille', 'PSA Birth Certificate + Apostille', 'NBI Clearance + Apostille'],

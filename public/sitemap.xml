@@ -198,6 +198,34 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/en/netherlands/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/netherlands/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/germany/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/germany/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/singapore/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/singapore/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/hong-kong/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/hong-kong/"/>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/en/pricing/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/pricing/"/>
     <lastmod>2026-03-01</lastmod>

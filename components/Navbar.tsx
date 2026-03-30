@@ -49,6 +49,10 @@ const Navbar: React.FC = () => {
     { label: 'Canada Immigration',      path: '/en/canada/' },
     { label: 'Australia Immigration',   path: '/en/australia/' },
     { label: 'UK Immigration',          path: '/en/uk/' },
+    { label: 'Netherlands Immigration', path: '/en/netherlands/' },
+    { label: 'Germany Immigration',     path: '/en/germany/' },
+    { label: 'Singapore Immigration',   path: '/en/singapore/' },
+    { label: 'Hong Kong Immigration',   path: '/en/hong-kong/' },
   ];
 
   const guidesPath  = isJa ? '/ja/guides/'  : '/en/guides/';
