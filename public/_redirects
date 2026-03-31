@@ -75,6 +75,8 @@
 
 # ── 旧 JA 短縮 URL → /ja/*/ へ 301（1ホップで最終URLへ） ──────────
 /jp                         /ja/                          301
+/jp/                        /ja/                          301
+/jp/*                       /ja/:splat                    301
 /cenomar-guide              /ja/cenomar/                  301
 /cenomar-guide/             /ja/cenomar/                  301
 /psa-shussei-shomeisho      /ja/psa-shussei-shomeisho/    301
