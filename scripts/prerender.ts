@@ -35,11 +35,24 @@ interface RouteConfig {
   lang: 'en' | 'ja' | 'ko';
   enCanonical: string;
   jaCanonical: string;
+  koCanonical?: string;
   ogType?: string;
   datePublished?: string;
   isAboutPage?: boolean;
   noindex?: boolean;
 }
+
+function shouldGenerateHreflang(route: RouteConfig): boolean {
+  const enHome = `${BASE}/en/`;
+  const jaHome = `${BASE}/ja/`;
+  const koHome = `${BASE}/ko/`;
+  if ([enHome, jaHome, koHome].includes(route.canonical)) return true;
+  // Skip if either EN or JA alternate is just a home-page fallback (not a genuine equivalent)
+  const enIsFallback = route.enCanonical === enHome;
+  const jaIsFallback = route.jaCanonical === jaHome;
+  return !enIsFallback && !jaIsFallback;
+}
+
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -338,6 +351,7 @@ const routes: RouteConfig[] = [
     lang: 'en',
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/`,
+    koCanonical: `${BASE}/ko/`,
   },
   {
     path: '/en/cenomar/',
@@ -392,6 +406,7 @@ const routes: RouteConfig[] = [
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-clearance/`,
     jaCanonical: `${BASE}/ja/nbi-clearance/`,
+    koCanonical: `${BASE}/ko/nbi-clearance/`,
     ogType: 'article',
   },
   {
@@ -555,7 +570,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/k1-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/k1-visa-documents/`,
-    jaCanonical: `${BASE}/ja/us-visa-documents/`,
+    jaCanonical: `${BASE}/ja/`,
     ogType: 'article',
   },
   {
@@ -566,7 +581,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/cr1-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cr1-visa-documents/`,
-    jaCanonical: `${BASE}/ja/us-visa-documents/`,
+    jaCanonical: `${BASE}/ja/`,
     ogType: 'article',
   },
   {
@@ -644,6 +659,7 @@ const routes: RouteConfig[] = [
     lang: 'en',
     enCanonical: `${BASE}/en/pricing/`,
     jaCanonical: `${BASE}/ja/ryokin/`,
+    koCanonical: `${BASE}/ko/pricing/`,
   },
   {
     path: '/en/company/',
@@ -665,6 +681,7 @@ const routes: RouteConfig[] = [
     lang: 'en',
     enCanonical: `${BASE}/en/contact/`,
     jaCanonical: `${BASE}/ja/contact/`,
+    koCanonical: `${BASE}/ko/contact/`,
   },
   {
     path: '/en/privacy/',
@@ -777,6 +794,7 @@ const routes: RouteConfig[] = [
     lang: 'ja',
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/`,
+    koCanonical: `${BASE}/ko/`,
   },
   {
     path: '/ja/cenomar/',
@@ -831,6 +849,7 @@ const routes: RouteConfig[] = [
     lang: 'ja',
     enCanonical: `${BASE}/en/nbi-clearance/`,
     jaCanonical: `${BASE}/ja/nbi-clearance/`,
+    koCanonical: `${BASE}/ko/nbi-clearance/`,
     ogType: 'article',
   },
   {
@@ -1007,6 +1026,7 @@ const routes: RouteConfig[] = [
     lang: 'ja',
     enCanonical: `${BASE}/en/pricing/`,
     jaCanonical: `${BASE}/ja/ryokin/`,
+    koCanonical: `${BASE}/ko/pricing/`,
   },
   {
     path: '/ja/company/',
@@ -1028,6 +1048,7 @@ const routes: RouteConfig[] = [
     lang: 'ja',
     enCanonical: `${BASE}/en/contact/`,
     jaCanonical: `${BASE}/ja/contact/`,
+    koCanonical: `${BASE}/ko/contact/`,
   },
   {
     path: '/ja/privacy/',
@@ -1186,6 +1207,7 @@ const routes: RouteConfig[] = [
     lang: 'ko',
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/`,
+    koCanonical: `${BASE}/ko/`,
   },
   {
     path: '/ko/pricing/',
@@ -1196,6 +1218,7 @@ const routes: RouteConfig[] = [
     lang: 'ko',
     enCanonical: `${BASE}/en/pricing/`,
     jaCanonical: `${BASE}/ja/ryokin/`,
+    koCanonical: `${BASE}/ko/pricing/`,
   },
   {
     path: '/ko/f-6-philippines-documents/',
@@ -1217,6 +1240,7 @@ const routes: RouteConfig[] = [
     lang: 'ko',
     enCanonical: `${BASE}/en/nbi-clearance/`,
     jaCanonical: `${BASE}/ja/nbi-clearance/`,
+    koCanonical: `${BASE}/ko/nbi-clearance/`,
     ogType: 'article',
   },
   {
@@ -1228,6 +1252,7 @@ const routes: RouteConfig[] = [
     lang: 'ko',
     enCanonical: `${BASE}/en/contact/`,
     jaCanonical: `${BASE}/ja/contact/`,
+    koCanonical: `${BASE}/ko/contact/`,
   },
   /* ── EN pages added to prerender (previously missing) ──────────── */
   {
@@ -1487,6 +1512,23 @@ function updateHead(html: string, route: RouteConfig): string {
     );
   }
 
+  // hreflang tags for multi-language pages
+  if (shouldGenerateHreflang(route)) {
+    const hreflangTags: string[] = [];
+    hreflangTags.push(`<link rel="alternate" hreflang="en" href="${route.enCanonical}" />`);
+    hreflangTags.push(`<link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />`);
+    if (route.koCanonical) {
+      const currentIsHome = [`${BASE}/en/`, `${BASE}/ja/`, `${BASE}/ko/`].includes(route.canonical);
+      const koIsHomeFallback = route.koCanonical === `${BASE}/ko/`;
+      if (!koIsHomeFallback || currentIsHome) {
+        hreflangTags.push(`<link rel="alternate" hreflang="ko" href="${route.koCanonical}" />`);
+      }
+    }
+    hreflangTags.push(`<link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`);
+    const block = hreflangTags.map((t) => `    ${t}`).join('\n');
+    result = result.replace('</head>', `${block}\n  </head>`);
+  }
+
   // twitter:title
   result = result.replace(
     /<meta name="twitter:title" content="[^"]*"/,
@@ -1599,8 +1641,23 @@ async function generateSitemap() {
     const priority = getSitemapPriority(route.path);
     const changefreq = getSitemapChangefreq(route.path);
 
+    const hreflangLines: string[] = [];
+    if (shouldGenerateHreflang(route)) {
+      hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>`);
+      hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>`);
+      if (route.koCanonical) {
+        const currentIsHome = [`${BASE}/en/`, `${BASE}/ja/`, `${BASE}/ko/`].includes(route.canonical);
+        const koIsHomeFallback = route.koCanonical === `${BASE}/ko/`;
+        if (!koIsHomeFallback || currentIsHome) {
+          hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${route.koCanonical}"/>`);
+        }
+      }
+      hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>`);
+    }
+    const hreflangBlock = hreflangLines.length > 0 ? `\n${hreflangLines.join('\n')}` : '';
+
     entries.push(`  <url>
-    <loc>${route.canonical}</loc>
+    <loc>${route.canonical}</loc>${hreflangBlock}
     <lastmod>${SEO_DATE_ISO}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -1608,7 +1665,8 @@ async function generateSitemap() {
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${entries.join('\n')}
 </urlset>`;
 

@@ -24,11 +24,25 @@ function setCanonical(href: string) {
   if (el) el.setAttribute('href', href);
 }
 
+type HreflangAlternate = { hreflang: string; href: string };
+
+function setHreflangTags(alternates: HreflangAlternate[]) {
+  // Remove any existing hreflang tags
+  document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+  alternates.forEach(({ hreflang, href }) => {
+    const el = document.createElement('link');
+    el.rel = 'alternate';
+    el.hreflang = hreflang;
+    el.href = href;
+    document.head.appendChild(el);
+  });
+}
+
 function toAbsUrl(path: string): string {
   return `${BASE}${path.replace(/\/?$/, '/')}`;
 }
 
-export function useMeta(title: string, description: string, canonical?: string) {
+export function useMeta(title: string, description: string, canonical?: string, alternates?: HreflangAlternate[]) {
   useEffect(() => {
     const pathname = window.location.pathname;
     const canonicalHref = canonical ?? toAbsUrl(pathname);
@@ -49,6 +63,9 @@ export function useMeta(title: string, description: string, canonical?: string) 
     setMeta('twitter:description', description);
     setMeta('twitter:image', ogImage);
     setCanonical(canonicalHref);
+    if (alternates && alternates.length > 0) {
+      setHreflangTags(alternates);
+    }
 
     return () => {
       const currentPath = window.location.pathname;
@@ -70,6 +87,7 @@ export function useMeta(title: string, description: string, canonical?: string) 
       setMeta('twitter:description', defaultDesc);
       setMeta('twitter:image', defaultOgImage);
       setCanonical(defaultCanonical);
+      setHreflangTags([]);
     };
-  }, [title, description, canonical]);
+  }, [title, description, canonical, alternates]);
 }
