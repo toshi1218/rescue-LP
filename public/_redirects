@@ -72,6 +72,28 @@
 /australia/                         /en/australia/                        301
 /uk                                 /en/uk/                               301
 /uk/                                /en/uk/                               301
+/dfa-apostille-cebu-report          /en/dfa-apostille-cebu-report/        301
+/dfa-apostille-cebu-report/         /en/dfa-apostille-cebu-report/        301
+/f-6-philippines-documents          /en/f-6-philippines-documents/        301
+/f-6-philippines-documents/         /en/f-6-philippines-documents/        301
+/getting-married-in-philippines     /en/getting-married-in-philippines/   301
+/getting-married-in-philippines/    /en/getting-married-in-philippines/   301
+/immigration-lawyer-vs-document-service  /en/immigration-lawyer-vs-document-service/  301
+/immigration-lawyer-vs-document-service/ /en/immigration-lawyer-vs-document-service/  301
+/japan-first-vs-philippines-first-marriage  /en/japan-first-vs-philippines-first-marriage/  301
+/japan-first-vs-philippines-first-marriage/ /en/japan-first-vs-philippines-first-marriage/  301
+/lto-sm-seaside-cebu-report         /en/lto-sm-seaside-cebu-report/       301
+/lto-sm-seaside-cebu-report/        /en/lto-sm-seaside-cebu-report/       301
+/personal-information-protection    /en/personal-information-protection/  301
+/personal-information-protection/   /en/personal-information-protection/  301
+/personalized-roadmap               /en/personalized-roadmap/             301
+/personalized-roadmap/              /en/personalized-roadmap/             301
+/psa-crs-cebu-report                /en/psa-crs-cebu-report/              301
+/psa-crs-cebu-report/               /en/psa-crs-cebu-report/              301
+/spouse-visa-document-checklist     /en/spouse-visa-document-checklist/   301
+/spouse-visa-document-checklist/    /en/spouse-visa-document-checklist/   301
+/tb-certificate                     /en/tb-certificate/                   301
+/tb-certificate/                    /en/tb-certificate/                   301
 
 # ── 旧 JA 短縮 URL → /ja/*/ へ 301（1ホップで最終URLへ） ──────────
 /jp                         /ja/                          301
@@ -180,5 +202,7 @@
 /ja/business/gyoseishoshi    /ja/business/gyoseishoshi/   301
 /ja/business/kigyou          /ja/business/kigyou/         301
 
-# ── SPA フォールバック ────────────────────────────────────────────
-/*  /index.html  200
+# ── SPA フォールバック（言語別 index を返すことで lang 属性を正しく維持） ──
+/ja/*  /ja/index.html  200
+/ko/*  /ko/index.html  200
+/*     /en/index.html  200
