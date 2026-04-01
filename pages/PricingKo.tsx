@@ -172,7 +172,8 @@ export default function PricingKo() {
         <div className="grid md:grid-cols-2 gap-4">
           <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
             <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">결제 방법</p>
-            <p className="text-sm text-gray-600">은행 송금（착수금 50% → 잔금 50%）</p>
+            <p className="text-sm text-gray-600 mb-1">신용카드（Stripe）</p>
+            <p className="text-xs text-gray-500 leading-relaxed">Visa / Mastercard / Amex / Apple Pay 대응. 착수금 청구서（약 50%）결제 후 착수, 서류 확인 후 잔금 청구서（약 50%）발송.</p>
           </div>
           <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
             <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">취소・환불</p>
