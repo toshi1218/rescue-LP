@@ -89,5 +89,5 @@ export function useMeta(title: string, description: string, canonical?: string, 
       setCanonical(defaultCanonical);
       setHreflangTags([]);
     };
-  }, [title, description, canonical]);
+  }, [title, description, canonical, alternates]);
 }

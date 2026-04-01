@@ -47,11 +47,12 @@ function shouldGenerateHreflang(route: RouteConfig): boolean {
   const jaHome = `${BASE}/ja/`;
   const koHome = `${BASE}/ko/`;
   if ([enHome, jaHome, koHome].includes(route.canonical)) return true;
-  // Skip if either alternate is just a home-page fallback (not a genuine equivalent)
+  // Skip if either EN or JA alternate is just a home-page fallback (not a genuine equivalent)
   const enIsFallback = route.enCanonical === enHome;
   const jaIsFallback = route.jaCanonical === jaHome;
   return !enIsFallback && !jaIsFallback;
 }
+
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -569,7 +570,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/k1-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/k1-visa-documents/`,
-    jaCanonical: `${BASE}/ja/us-visa-documents/`,
+    jaCanonical: `${BASE}/ja/`,
     ogType: 'article',
   },
   {
@@ -580,7 +581,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/cr1-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cr1-visa-documents/`,
-    jaCanonical: `${BASE}/ja/us-visa-documents/`,
+    jaCanonical: `${BASE}/ja/`,
     ogType: 'article',
   },
   {
@@ -1517,7 +1518,11 @@ function updateHead(html: string, route: RouteConfig): string {
     hreflangTags.push(`<link rel="alternate" hreflang="en" href="${route.enCanonical}" />`);
     hreflangTags.push(`<link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />`);
     if (route.koCanonical) {
-      hreflangTags.push(`<link rel="alternate" hreflang="ko" href="${route.koCanonical}" />`);
+      const currentIsHome = [`${BASE}/en/`, `${BASE}/ja/`, `${BASE}/ko/`].includes(route.canonical);
+      const koIsHomeFallback = route.koCanonical === `${BASE}/ko/`;
+      if (!koIsHomeFallback || currentIsHome) {
+        hreflangTags.push(`<link rel="alternate" hreflang="ko" href="${route.koCanonical}" />`);
+      }
     }
     hreflangTags.push(`<link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`);
     const block = hreflangTags.map((t) => `    ${t}`).join('\n');
@@ -1641,7 +1646,11 @@ async function generateSitemap() {
       hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>`);
       hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>`);
       if (route.koCanonical) {
-        hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${route.koCanonical}"/>`);
+        const currentIsHome = [`${BASE}/en/`, `${BASE}/ja/`, `${BASE}/ko/`].includes(route.canonical);
+        const koIsHomeFallback = route.koCanonical === `${BASE}/ko/`;
+        if (!koIsHomeFallback || currentIsHome) {
+          hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${route.koCanonical}"/>`);
+        }
       }
       hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${route.enCanonical}"/>`);
     }
