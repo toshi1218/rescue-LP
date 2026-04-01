@@ -17,22 +17,8 @@ type FaqSectionProps = {
 export default function FaqSection({ items }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: items.map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: { '@type': 'Answer', text: item.a },
-    })),
-  };
-
   return (
     <section className="mb-10" aria-labelledby="faqsection-heading">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
       <div className="flex items-center gap-3 mb-6">
         <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
         <h2 id="faqsection-heading" className="text-xl md:text-2xl font-bold text-secondary tracking-tight">FAQ</h2>
