@@ -58,7 +58,8 @@ export default function ContactJa() {
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
           <p className="text-3xl mb-3">✅</p>
           <p className="font-bold text-green-700 mb-2">お問い合わせを受け付けました</p>
-          <p className="text-sm text-gray-500">24時間以内にご連絡します。</p>
+          <p className="text-sm text-gray-500">内容を確認し、24時間以内にご連絡します。</p>
+          <p className="text-xs text-gray-400 mt-1">ご依頼確定後、着手金（総額の約50%）のStripe請求書リンクをメールでお送りします。書類確認後に残金をご請求します。</p>
         </div>
       ) : (
       <form

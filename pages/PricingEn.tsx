@@ -21,7 +21,8 @@ export default function PricingEn() {
       <div className="grid gap-4 md:grid-cols-2 mb-6">
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">Payment methods</p>
-          <p className="text-sm text-gray-600">Credit card.</p>
+          <p className="text-sm text-gray-600 mb-1">Credit card via Stripe (Visa, Mastercard, Amex, Apple Pay, Google Pay).</p>
+          <p className="text-xs text-gray-500 leading-relaxed">Payment is split in two stages: a deposit invoice (~50%) when we start, and a balance invoice (~50%) after your documents are confirmed.</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">Cancellation & refund</p>

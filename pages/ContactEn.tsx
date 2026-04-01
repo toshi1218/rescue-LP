@@ -58,7 +58,8 @@ export default function ContactEn() {
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
           <p className="text-3xl mb-3">✅</p>
           <p className="font-bold text-green-700 mb-2">Your message has been received!</p>
-          <p className="text-sm text-gray-500">We will get back to you within 24 hours.</p>
+          <p className="text-sm text-gray-500">We will review your request and reply within 24 hours.</p>
+          <p className="text-xs text-gray-400 mt-1">Once confirmed, we will send a Stripe payment link to your email for the deposit (~50%). The balance is invoiced after your documents are retrieved.</p>
         </div>
       ) : (
       <form

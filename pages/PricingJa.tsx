@@ -19,7 +19,7 @@ export default function PricingJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'フィリピン書類取得代行',
-        description: 'PSA・NBI・LTO等のフィリピン書類取得代行サービス。着手金50%・書類写し確認後残金50%の2段階決済。',
+        description: 'PSA・NBI・LTO等のフィリピン書類取得代行サービス。着手金50%・書類写し確認後残金50%の2段階クレジットカード決済（Stripe）。',
         url: 'https://ph-document.com/ja/ryokin/',
         provider: {
           '@type': 'Organization',
@@ -60,16 +60,16 @@ export default function PricingJa() {
             description: '必要書類とご希望内容を確認し、無料でお見積もりをお出しします。',
           },
           {
-            title: '着手金50%のご入金',
-            description: '着手金として総額の50%をご入金いただきます。着金確認後に手続きを開始します。',
+            title: '着手金50%のお支払い',
+            description: 'メールでお送りするStripeの請求書リンクから、クレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）でお支払いください。決済確認後に手続きを開始します。',
           },
           {
             title: '書類写しのご確認',
             description: '書類取得が完了した段階で、写し（写真またはPDF）をご確認いただきます。',
           },
           {
-            title: '残金50%のご入金・発送',
-            description: '残額50%をご入金いただきます。残金確認後に原本を発送します。',
+            title: '残金50%のお支払い・発送',
+            description: '書類写しご確認後、残額50%の請求書リンクをメールでお送りします。お支払い確認後に原本を発送します。',
           },
         ]}
       />
@@ -77,7 +77,8 @@ export default function PricingJa() {
       <div className="grid gap-4 md:grid-cols-2 mb-6">
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">お支払い方法</p>
-          <p className="text-sm text-gray-600">銀行振込</p>
+          <p className="text-sm text-gray-600">クレジットカード（Stripe）</p>
+          <p className="text-xs text-gray-400 mt-1">Visa・Mastercard・American Express・Apple Pay・Google Pay 対応</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">キャンセル・返金</p>

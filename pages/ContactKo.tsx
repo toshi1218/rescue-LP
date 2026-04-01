@@ -101,7 +101,8 @@ export default function ContactKo() {
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
           <p className="text-3xl mb-3">✅</p>
           <p className="font-bold text-green-700 mb-2">문의가 접수되었습니다</p>
-          <p className="text-sm text-gray-500">24시간 이내에 연락드리겠습니다.</p>
+          <p className="text-sm text-gray-500">내용을 확인 후 24시간 이내에 연락드립니다.</p>
+          <p className="text-xs text-gray-400 mt-1">진행 확정 후 착수금（약 50%）Stripe 결제 링크를 이메일로 보내드립니다. 서류 확인 후 잔금을 청구합니다.</p>
         </div>
       ) : (
         <form className="space-y-5 max-w-xl" noValidate onSubmit={handleSubmit}>
