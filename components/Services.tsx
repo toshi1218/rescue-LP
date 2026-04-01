@@ -62,19 +62,19 @@ const Services: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-3 text-xs">
               <a href="https://psa.gov.ph/" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
                 <ExternalLink className="w-3 h-3" />
-                https://psa.gov.ph/
+                {t('services.agencies.psa')}
               </a>
               <a href="https://www.nbi.gov.ph/" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
                 <ExternalLink className="w-3 h-3" />
-                https://www.nbi.gov.ph/
+                {t('services.agencies.nbi')}
               </a>
               <a href="https://dfa.gov.ph/" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
                 <ExternalLink className="w-3 h-3" />
-                https://dfa.gov.ph/
+                {t('services.agencies.dfa')}
               </a>
               <a href="https://lto.gov.ph/" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
                 <ExternalLink className="w-3 h-3" />
-                https://lto.gov.ph/
+                {t('services.agencies.lto')}
               </a>
             </div>
             <p className="text-xs text-gray-600 mt-2 text-center">{t('services.agencies.note')}</p>
