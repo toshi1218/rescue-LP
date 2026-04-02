@@ -1,121 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ph-document.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/cenomar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/cenomar-apostille/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar-apostille/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar-apostille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar-apostille/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/cenomar-validity/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar-validity/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar-koyukigen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar-validity/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/psa-birth-certificate/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-birth-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-shussei-shomeisho/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-birth-certificate/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/nbi-clearance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/nbi-clearance/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nbi-clearance/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/nbi-clearance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/nbi-clearance/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/nbi-hit/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/nbi-hit/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nbi-hit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/nbi-hit/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/apostille/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/apostille/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/apostille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/apostille/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/apostille-processing-time/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/apostille-processing-time/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/apostille-shori-kikan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/apostille-processing-time/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/international-marriage-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/international-marriage-guide/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kokusai-kekkon-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/international-marriage-guide/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/spouse-visa-documents/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/spouse-visa-documents/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/haigusha-visa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/spouse-visa-documents/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/psa-marriage-certificate/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-marriage-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-kekkon-shomeisho/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-marriage-certificate/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/drivers-license-conversion/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/drivers-license-conversion/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/gaimen-kirikae-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/drivers-license-conversion/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/naturalization-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/naturalization-guide/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kika-shinsei-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/naturalization-guide/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/guides/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/guides/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/guides/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/psa-birth-certificate-cost/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-birth-certificate-cost/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-shussei-cost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-birth-certificate-cost/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/apostille-fee/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/apostille-fee/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/apostille-ryokin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/apostille-fee/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/nbi-validity/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/nbi-validity/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nbi-koyukigen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/nbi-validity/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/driver-record/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/driver-record/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/driver-record/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/driver-record/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/us-visa-documents/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/us-visa-documents/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/us-visa-documents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/us-visa-documents/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -134,312 +197,474 @@
   </url>
   <url>
     <loc>https://ph-document.com/en/canada/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/canada/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/canada/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/canada/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/canada/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/canada/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/canada/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/canada/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/australia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/australia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/australia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/australia/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/australia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/australia/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/australia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/australia/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/uk/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/uk/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/uk/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/pricing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/ryokin/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/pricing/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/company/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/company/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/company/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/company/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/contact/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/privacy/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/cenomar-vs-marriage-certificate/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar-vs-marriage-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar-vs-marriage-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar-vs-marriage-certificate/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/document-checklist-by-visa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/document-checklist-by-visa/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/document-checklist-by-visa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/document-checklist-by-visa/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/nbi-clearance-overseas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/nbi-clearance-overseas/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nbi-clearance-overseas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/nbi-clearance-overseas/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/psa-late-registration/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-late-registration/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-late-registration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-late-registration/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/cenomar-vs-marriage-certificate/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar-vs-marriage-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar-vs-marriage-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar-vs-marriage-certificate/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/document-checklist-by-visa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/document-checklist-by-visa/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/document-checklist-by-visa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/document-checklist-by-visa/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/nbi-clearance-overseas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/nbi-clearance-overseas/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nbi-clearance-overseas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/nbi-clearance-overseas/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/psa-late-registration/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-late-registration/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-late-registration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-late-registration/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/cenomar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/cenomar-apostille/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar-apostille/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar-apostille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar-apostille/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/cenomar-koyukigen/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar-validity/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar-koyukigen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar-validity/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/psa-shussei-shomeisho/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-birth-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-shussei-shomeisho/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-birth-certificate/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/nbi-clearance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/nbi-clearance/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nbi-clearance/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/nbi-clearance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/nbi-clearance/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/nbi-hit/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/nbi-hit/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nbi-hit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/nbi-hit/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/apostille/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/apostille/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/apostille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/apostille/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/apostille-shori-kikan/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/apostille-processing-time/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/apostille-shori-kikan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/apostille-processing-time/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/kokusai-kekkon-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/international-marriage-guide/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kokusai-kekkon-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/international-marriage-guide/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/haigusha-visa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/spouse-visa-documents/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/haigusha-visa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/spouse-visa-documents/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/psa-kekkon-shomeisho/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-marriage-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-kekkon-shomeisho/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-marriage-certificate/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/gaimen-kirikae-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/drivers-license-conversion/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/gaimen-kirikae-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/drivers-license-conversion/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/kika-shinsei-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/naturalization-guide/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kika-shinsei-guide/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/naturalization-guide/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/guides/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/guides/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/guides/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/psa-shussei-cost/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-birth-certificate-cost/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-shussei-cost/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-birth-certificate-cost/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/psa-crs-cebu-genchi-report/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-crs-cebu-report/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-crs-cebu-genchi-report/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-crs-cebu-report/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/apostille-ryokin/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/apostille-fee/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/apostille-ryokin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/apostille-fee/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/nbi-koyukigen/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/nbi-validity/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nbi-koyukigen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/nbi-validity/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/driver-record/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/driver-record/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/driver-record/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/driver-record/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/us-visa-documents/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/us-visa-documents/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/us-visa-documents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/us-visa-documents/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/ryokin/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/ryokin/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/pricing/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/company/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/company/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/company/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/company/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/contact/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/privacy/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/terms/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/kokusai-kekkon-roadmap/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/personalized-roadmap/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kokusai-kekkon-roadmap/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/personalized-roadmap/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/terms/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/kojin-joho-hogo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/personal-information-protection/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kojin-joho-hogo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/personal-information-protection/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/nihon-senko-ph-senko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/japan-first-vs-philippines-first-marriage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nihon-senko-ph-senko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/japan-first-vs-philippines-first-marriage/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/gyouseishoshi-to-shorui-shuttoku/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/immigration-lawyer-vs-document-service/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/gyouseishoshi-to-shorui-shuttoku/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/immigration-lawyer-vs-document-service/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/philippines-de-kekkon/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/getting-married-in-philippines/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/philippines-de-kekkon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/getting-married-in-philippines/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/kekkaku-shomeisho/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/tb-certificate/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kekkaku-shomeisho/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/tb-certificate/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/haigusha-visa-shorui/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/spouse-visa-document-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/haigusha-visa-shorui/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/spouse-visa-document-checklist/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -470,12 +695,20 @@
   </url>
   <url>
     <loc>https://ph-document.com/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ko/pricing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/ryokin/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/pricing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/pricing/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -488,42 +721,131 @@
   </url>
   <url>
     <loc>https://ph-document.com/ko/nbi-clearance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/nbi-clearance/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nbi-clearance/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/nbi-clearance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/nbi-clearance/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ko/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/contact/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/contact/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/dfa-apostille-cebu-report/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/dfa-apostille-cebu-report/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/dfa-apostille-genchi-report/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/dfa-apostille-cebu-report/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/psa-crs-cebu-report/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-crs-cebu-report/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-crs-cebu-genchi-report/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-crs-cebu-report/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/lto-sm-seaside-cebu-report/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/lto-sm-seaside-cebu-report/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/lto-sm-seaside-genchi-report/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/lto-sm-seaside-cebu-report/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/dfa-apostille-genchi-report/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/dfa-apostille-cebu-report/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/dfa-apostille-genchi-report/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/dfa-apostille-cebu-report/"/>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/lto-sm-seaside-genchi-report/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/lto-sm-seaside-cebu-report/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/lto-sm-seaside-genchi-report/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/lto-sm-seaside-cebu-report/"/>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/new-zealand/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/germany/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/netherlands/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/uae/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/singapore/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/hong-kong/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/qatar/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/italy/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/norway/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/sweden/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/switzerland/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
