@@ -356,8 +356,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
-    title: `CENOMAR Meaning & How to Get It — Certificate of No Marriage [Mar ${SEO_YEAR}]`,
-    description: `CENOMAR means Certificate of No Marriage Record — issued by PSA Philippines. Required for K-1 visa, international marriage & immigration. We retrieve it with Apostille & ship worldwide.`,
+    title: `What Is CENOMAR? Meaning, How to Get It & Costs [${SEO_YEAR}]`,
+    description: `CENOMAR (Certificate of No Marriage Record) proves you've never been married — issued by PSA Philippines. Required for K-1 visa, Japan spouse visa & international marriage. We retrieve it without you flying to the Philippines. Free quote.`,
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -832,8 +832,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-shussei-shomeisho/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-shomeisho', 'index.html'),
-    title: `PSA出生証明書の取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・アポスティーユ付きで日本へ郵送`,
-    description: 'PSA出生証明書を日本から取り寄せる方法。現地スタッフがPSA申請〜DFAアポスティーユまで代行し紙の原本を郵送。国際結婚・ビザ・帰化に。通常4〜6週間。24時間以内に返信します。',
+    title: `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR_MONTH_JA}】PSA・アポスティーユ込み`,
+    description: 'フィリピン出生証明書（PSA）を日本から取り寄せる方法。現地スタッフがPSA申請〜DFAアポスティーユまで代行し紙の原本を郵送。国際結婚・ビザ・帰化に。通常4〜6週間。無料相談受付中。',
     canonical: `${BASE}/ja/psa-shussei-shomeisho/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/psa-birth-certificate/`,
@@ -921,7 +921,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/gaimen-kirikae-guide/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'gaimen-kirikae-guide', 'index.html'),
-    title: `外免切替に必要なLTO書類、フィリピンに行かずに取れます【${SEO_YEAR_MONTH_JA}】`,
+    title: `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】渡航不要`,
     description: 'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
     canonical: `${BASE}/ja/gaimen-kirikae-guide/`,
     lang: 'ja',
@@ -1292,7 +1292,6 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/nihon-senko-ph-senko/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
-    noindex: true,
   },
   {
     path: '/en/getting-married-in-philippines/',
@@ -1305,7 +1304,6 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/philippines-de-kekkon/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
-    noindex: true,
   },
   {
     path: '/en/dfa-apostille-cebu-report/',
@@ -1365,7 +1363,6 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/gyouseishoshi-to-shorui-shuttoku/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
-    noindex: true,
   },
   {
     path: '/en/personal-information-protection/',
