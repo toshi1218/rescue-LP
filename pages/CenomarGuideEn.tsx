@@ -13,7 +13,7 @@ import RelatedArticles from '../components/RelatedArticles';
 export default function CenomarGuideEn() {
   useMeta(
     'What Is CENOMAR? Meaning, How to Get It & Costs [2026]',
-    "CENOMAR (Certificate of No Marriage Record) proves you've never been married — issued by PSA Philippines. Required for K-1 visa, Japan spouse visa & international marriage. We retrieve it without you flying to the Philippines. Free quote.",
+    'CENOMAR = Certificate of No Marriage Record, issued by PSA Philippines. Required for K-1, spouse visa & marriage abroad. We retrieve it — no trip needed.',
   );
   return (
     <PageLayout
