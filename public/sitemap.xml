@@ -740,6 +740,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/en/japan-first-vs-philippines-first-marriage/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/japan-first-vs-philippines-first-marriage/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/nihon-senko-ph-senko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/japan-first-vs-philippines-first-marriage/"/>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/getting-married-in-philippines/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/getting-married-in-philippines/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/philippines-de-kekkon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/getting-married-in-philippines/"/>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/en/dfa-apostille-cebu-report/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/dfa-apostille-cebu-report/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/dfa-apostille-genchi-report/"/>
@@ -762,6 +780,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/lto-sm-seaside-cebu-report/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/lto-sm-seaside-genchi-report/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/lto-sm-seaside-cebu-report/"/>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/immigration-lawyer-vs-document-service/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/immigration-lawyer-vs-document-service/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/gyouseishoshi-to-shorui-shuttoku/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/immigration-lawyer-vs-document-service/"/>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
