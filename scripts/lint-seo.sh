@@ -82,6 +82,41 @@ if git diff --cached -- public/sitemap.xml 2>/dev/null | grep -q '^-.*<loc>' 2>/
   fi
 fi
 
+# 8. SEO/LLMO 破壊的変更の検知（ステージング済みの diff を確認）
+if ! git diff --cached --quiet 2>/dev/null; then
+  seo_files_changed=$(git diff --cached --name-only 2>/dev/null | grep -E '(prerender\.ts|sitemap\.xml|robots\.txt|_redirects|urlMap\.ts|useMeta\.ts|seoDate\.ts|countryConfig\.ts)' || true)
+  if [ -n "$seo_files_changed" ]; then
+    echo ""
+    echo "=== SEO/LLMO Impact Review Required ==="
+    echo "The following SEO-critical files are being modified:"
+    echo "$seo_files_changed" | sed 's/^/  - /'
+    echo ""
+    echo "Before committing, verify:"
+    echo "  1. SEO: How does this affect Google crawling/indexing/ranking?"
+    echo "  2. LLMO: How does this affect LLM understanding (JSON-LD, speakable, AI crawler rules)?"
+    echo "  3. Is anything being REMOVED? Removals are far more dangerous than additions."
+    echo ""
+  fi
+
+  # Detect JSON-LD schema removal
+  jsonld_removed=$(git diff --cached -U0 2>/dev/null | grep -c '^-.*"@type"' || true)
+  jsonld_added=$(git diff --cached -U0 2>/dev/null | grep -c '^+.*"@type"' || true)
+  if [ "$jsonld_removed" -gt 0 ] && [ "$jsonld_added" -eq 0 ]; then
+    echo "WARNING: JSON-LD structured data is being REMOVED!"
+    echo "  Removed @type declarations: $jsonld_removed"
+    echo "  This affects both Google rich results AND LLM understanding of the site."
+    errors=$((errors + 1))
+  fi
+
+  # Detect AI crawler rule changes in robots.txt
+  ai_crawler_removed=$(git diff --cached -U0 -- public/robots.txt 2>/dev/null | grep -c '^-.*\(GPTBot\|Claude\|Perplexity\|Cohere\|Copilot\|Amazonbot\|Google-Extended\)' || true)
+  if [ "$ai_crawler_removed" -gt 0 ]; then
+    echo "WARNING: AI crawler rules are being REMOVED from robots.txt!"
+    echo "  This may block LLMs from accessing the site content."
+    errors=$((errors + 1))
+  fi
+fi
+
 if [ "$errors" -eq 0 ]; then
   echo "All checks passed."
 fi
