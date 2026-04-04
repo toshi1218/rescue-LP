@@ -42,15 +42,24 @@ interface RouteConfig {
   noindex?: boolean;
 }
 
-function shouldGenerateHreflang(route: RouteConfig): boolean {
+type HreflangMode = 'none' | 'multi' | 'ko-only';
+
+function getHreflangMode(route: RouteConfig): HreflangMode {
   const enHome = `${BASE}/en/`;
   const jaHome = `${BASE}/ja/`;
   const koHome = `${BASE}/ko/`;
-  if ([enHome, jaHome, koHome].includes(route.canonical)) return true;
-  // Skip if either EN or JA alternate is just a home-page fallback (not a genuine equivalent)
+  // Home pages always get full multi-language hreflang
+  if ([enHome, jaHome, koHome].includes(route.canonical)) return 'multi';
   const enIsFallback = route.enCanonical === enHome;
   const jaIsFallback = route.jaCanonical === jaHome;
-  return !enIsFallback && !jaIsFallback;
+  // KO-only standalone page: canonical is /ko/* and EN/JA equivalents don't exist
+  // (e.g. /ko/f-6-philippines-documents/ — F-6 is Korean-specific, no EN/JA counterpart).
+  // Emit self-referential hreflang="ko" + x-default→self so Google can identify
+  // the page as Korean-only instead of receiving no language signal at all.
+  if (route.lang === 'ko' && enIsFallback && jaIsFallback) return 'ko-only';
+  // Skip if either EN or JA alternate is just a home-page fallback (not a genuine equivalent)
+  if (enIsFallback || jaIsFallback) return 'none';
+  return 'multi';
 }
 
 
@@ -1510,18 +1519,24 @@ function updateHead(html: string, route: RouteConfig): string {
   }
 
   // hreflang tags for multi-language pages
-  if (shouldGenerateHreflang(route)) {
+  const hreflangMode = getHreflangMode(route);
+  if (hreflangMode !== 'none') {
     const hreflangTags: string[] = [];
-    hreflangTags.push(`<link rel="alternate" hreflang="en" href="${route.enCanonical}" />`);
-    hreflangTags.push(`<link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />`);
-    if (route.koCanonical) {
-      const currentIsHome = [`${BASE}/en/`, `${BASE}/ja/`, `${BASE}/ko/`].includes(route.canonical);
-      const koIsHomeFallback = route.koCanonical === `${BASE}/ko/`;
-      if (!koIsHomeFallback || currentIsHome) {
-        hreflangTags.push(`<link rel="alternate" hreflang="ko" href="${route.koCanonical}" />`);
+    if (hreflangMode === 'ko-only') {
+      hreflangTags.push(`<link rel="alternate" hreflang="ko" href="${route.canonical}" />`);
+      hreflangTags.push(`<link rel="alternate" hreflang="x-default" href="${route.canonical}" />`);
+    } else {
+      hreflangTags.push(`<link rel="alternate" hreflang="en" href="${route.enCanonical}" />`);
+      hreflangTags.push(`<link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />`);
+      if (route.koCanonical) {
+        const currentIsHome = [`${BASE}/en/`, `${BASE}/ja/`, `${BASE}/ko/`].includes(route.canonical);
+        const koIsHomeFallback = route.koCanonical === `${BASE}/ko/`;
+        if (!koIsHomeFallback || currentIsHome) {
+          hreflangTags.push(`<link rel="alternate" hreflang="ko" href="${route.koCanonical}" />`);
+        }
       }
+      hreflangTags.push(`<link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`);
     }
-    hreflangTags.push(`<link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`);
     const block = hreflangTags.map((t) => `    ${t}`).join('\n');
     result = result.replace('</head>', `${block}\n  </head>`);
   }
@@ -1639,7 +1654,11 @@ async function generateSitemap() {
     const changefreq = getSitemapChangefreq(route.path);
 
     const hreflangLines: string[] = [];
-    if (shouldGenerateHreflang(route)) {
+    const sitemapHreflangMode = getHreflangMode(route);
+    if (sitemapHreflangMode === 'ko-only') {
+      hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${route.canonical}"/>`);
+      hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${route.canonical}"/>`);
+    } else if (sitemapHreflangMode === 'multi') {
       hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>`);
       hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>`);
       if (route.koCanonical) {
