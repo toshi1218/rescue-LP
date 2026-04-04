@@ -40,6 +40,83 @@ if [ -n "$no_domain_slash" ]; then
   errors=$((errors + 1))
 fi
 
+# 5. hreflang 削除検知（ステージング済みの diff を確認）
+if git diff --cached --quiet 2>/dev/null; then
+  : # no staged changes
+else
+  hreflang_removed=$(git diff --cached -U0 2>/dev/null | grep -c '^-.*hreflang' || true)
+  hreflang_added=$(git diff --cached -U0 2>/dev/null | grep -c '^+.*hreflang' || true)
+  if [ "$hreflang_removed" -gt 0 ] && [ "$hreflang_added" -eq 0 ]; then
+    echo "WARNING: hreflang tags are being REMOVED without replacement!"
+    echo "  Removed lines: $hreflang_removed"
+    echo "  This will break Google's multi-language page associations."
+    echo "  Recovery takes 2-4 weeks. Are you sure?"
+    errors=$((errors + 1))
+  fi
+fi
+
+# 6. noindex 追加検知（ステージング済みの diff を確認）
+if git diff --cached --quiet 2>/dev/null; then
+  : # no staged changes
+else
+  noindex_added=$(git diff --cached -U0 2>/dev/null | grep -c '^+.*noindex' || true)
+  if [ "$noindex_added" -gt 0 ]; then
+    echo "WARNING: noindex is being ADDED to pages!"
+    echo "  Added lines: $noindex_added"
+    echo "  This will remove pages from Google's index. Re-indexing takes 1-2 weeks."
+    git diff --cached -U0 2>/dev/null | grep '^+.*noindex' | head -10
+    errors=$((errors + 1))
+  fi
+fi
+
+# 7. sitemap.xml URL 数減少検知
+if git diff --cached -- public/sitemap.xml 2>/dev/null | grep -q '^-.*<loc>' 2>/dev/null; then
+  urls_removed=$(git diff --cached -U0 -- public/sitemap.xml 2>/dev/null | grep -c '^-.*<loc>' || true)
+  urls_added=$(git diff --cached -U0 -- public/sitemap.xml 2>/dev/null | grep -c '^+.*<loc>' || true)
+  if [ "$urls_removed" -gt "$urls_added" ]; then
+    net_loss=$((urls_removed - urls_added))
+    echo "WARNING: sitemap.xml is losing $net_loss URL(s)!"
+    echo "  Removed: $urls_removed, Added: $urls_added"
+    echo "  Removing URLs from sitemap reduces crawl coverage."
+    errors=$((errors + 1))
+  fi
+fi
+
+# 8. SEO/LLMO 破壊的変更の検知（ステージング済みの diff を確認）
+if ! git diff --cached --quiet 2>/dev/null; then
+  seo_files_changed=$(git diff --cached --name-only 2>/dev/null | grep -E '(prerender\.ts|sitemap\.xml|robots\.txt|_redirects|urlMap\.ts|useMeta\.ts|seoDate\.ts|countryConfig\.ts)' || true)
+  if [ -n "$seo_files_changed" ]; then
+    echo ""
+    echo "=== SEO/LLMO Impact Review Required ==="
+    echo "The following SEO-critical files are being modified:"
+    echo "$seo_files_changed" | sed 's/^/  - /'
+    echo ""
+    echo "Before committing, verify:"
+    echo "  1. SEO: How does this affect Google crawling/indexing/ranking?"
+    echo "  2. LLMO: How does this affect LLM understanding (JSON-LD, speakable, AI crawler rules)?"
+    echo "  3. Is anything being REMOVED? Removals are far more dangerous than additions."
+    echo ""
+  fi
+
+  # Detect JSON-LD schema removal
+  jsonld_removed=$(git diff --cached -U0 2>/dev/null | grep -c '^-.*"@type"' || true)
+  jsonld_added=$(git diff --cached -U0 2>/dev/null | grep -c '^+.*"@type"' || true)
+  if [ "$jsonld_removed" -gt 0 ] && [ "$jsonld_added" -eq 0 ]; then
+    echo "WARNING: JSON-LD structured data is being REMOVED!"
+    echo "  Removed @type declarations: $jsonld_removed"
+    echo "  This affects both Google rich results AND LLM understanding of the site."
+    errors=$((errors + 1))
+  fi
+
+  # Detect AI crawler rule changes in robots.txt
+  ai_crawler_removed=$(git diff --cached -U0 -- public/robots.txt 2>/dev/null | grep -c '^-.*\(GPTBot\|Claude\|Perplexity\|Cohere\|Copilot\|Amazonbot\|Google-Extended\)' || true)
+  if [ "$ai_crawler_removed" -gt 0 ]; then
+    echo "WARNING: AI crawler rules are being REMOVED from robots.txt!"
+    echo "  This may block LLMs from accessing the site content."
+    errors=$((errors + 1))
+  fi
+fi
+
 if [ "$errors" -eq 0 ]; then
   echo "All checks passed."
 fi
