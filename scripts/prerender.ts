@@ -42,15 +42,24 @@ interface RouteConfig {
   noindex?: boolean;
 }
 
-function shouldGenerateHreflang(route: RouteConfig): boolean {
+type HreflangMode = 'none' | 'multi' | 'ko-only';
+
+function getHreflangMode(route: RouteConfig): HreflangMode {
   const enHome = `${BASE}/en/`;
   const jaHome = `${BASE}/ja/`;
   const koHome = `${BASE}/ko/`;
-  if ([enHome, jaHome, koHome].includes(route.canonical)) return true;
-  // Skip if either EN or JA alternate is just a home-page fallback (not a genuine equivalent)
+  // Home pages always get full multi-language hreflang
+  if ([enHome, jaHome, koHome].includes(route.canonical)) return 'multi';
   const enIsFallback = route.enCanonical === enHome;
   const jaIsFallback = route.jaCanonical === jaHome;
-  return !enIsFallback && !jaIsFallback;
+  // KO-only standalone page: canonical is /ko/* and EN/JA equivalents don't exist
+  // (e.g. /ko/f-6-philippines-documents/ — F-6 is Korean-specific, no EN/JA counterpart).
+  // Emit self-referential hreflang="ko" + x-default→self so Google can identify
+  // the page as Korean-only instead of receiving no language signal at all.
+  if (route.lang === 'ko' && enIsFallback && jaIsFallback) return 'ko-only';
+  // Skip if either EN or JA alternate is just a home-page fallback (not a genuine equivalent)
+  if (enIsFallback || jaIsFallback) return 'none';
+  return 'multi';
 }
 
 
@@ -345,7 +354,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/',
     outFile: path.join(projectRoot, 'dist', 'en', 'index.html'),
-    title: `Philippine Document Service | PSA, NBI & CENOMAR [Mar ${SEO_YEAR}]`,
+    title: `Philippine Document Service | PSA, NBI & CENOMAR [${SEO_YEAR_MONTH_EN}]`,
     description: `Need Philippine documents for immigration? We retrieve PSA, CENOMAR, NBI Clearance + DFA Apostille. Ships via DHL worldwide. Free consultation.`,
     canonical: `${BASE}/en/`,
     lang: 'en',
@@ -357,7 +366,7 @@ const routes: RouteConfig[] = [
     path: '/en/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
     title: `What Is CENOMAR? Meaning, How to Get It & Costs [${SEO_YEAR}]`,
-    description: `CENOMAR (Certificate of No Marriage Record) proves you've never been married — issued by PSA Philippines. Required for K-1 visa, Japan spouse visa & international marriage. We retrieve it without you flying to the Philippines. Free quote.`,
+    description: `CENOMAR = Certificate of No Marriage Record, issued by PSA Philippines. Required for K-1, spouse visa & marriage abroad. We retrieve it — no trip needed.`,
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -390,7 +399,7 @@ const routes: RouteConfig[] = [
     path: '/en/psa-birth-certificate/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate', 'index.html'),
     title: `PSA Birth Certificate + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
-    description: `Need a PSA Birth Certificate from the Philippines? We handle retrieval + DFA Apostille + shipping to your door. No trip to the Philippines needed. Free consultation.`,
+    description: `Get a PSA Birth Certificate from the Philippines without flying there. We handle retrieval + DFA Apostille + DHL delivery to your door. Free quote.`,
     canonical: `${BASE}/en/psa-birth-certificate/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate/`,
@@ -401,7 +410,7 @@ const routes: RouteConfig[] = [
     path: '/en/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance', 'index.html'),
     title: `NBI Clearance + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
-    description: `Need NBI Clearance for a spouse visa or immigration? We retrieve it with DFA Apostille and ship it to you. HIT cases handled. Free consultation for petitioners and employers.`,
+    description: `Need NBI Clearance for a spouse visa or work permit? We retrieve it with DFA Apostille and ship worldwide. HIT cases handled. Free quote.`,
     canonical: `${BASE}/en/nbi-clearance/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-clearance/`,
@@ -413,7 +422,7 @@ const routes: RouteConfig[] = [
     path: '/en/nbi-hit/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-hit', 'index.html'),
     title: `NBI HIT Resolution Service [${SEO_YEAR_MONTH_EN}] — We Fix It`,
-    description: `NBI HIT (MATCH FOUND) delaying your spouse visa or immigration? We handle HIT resolution + NBI Clearance + DFA Apostille. We've helped many petitioners meet their deadlines. Free consultation.`,
+    description: `NBI HIT (MATCH FOUND) delaying your visa? We resolve HIT + retrieve NBI Clearance + DFA Apostille so you meet your deadline. Free consultation.`,
     canonical: `${BASE}/en/nbi-hit/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-hit/`,
@@ -446,7 +455,7 @@ const routes: RouteConfig[] = [
     path: '/en/international-marriage-guide/',
     outFile: path.join(projectRoot, 'dist', 'en', 'international-marriage-guide', 'index.html'),
     title: `Marrying a Filipino? Documents We Get for You [${SEO_YEAR_MONTH_EN}]`,
-    description: `Planning to marry a Filipino/Filipina? We handle all Philippine documents — CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille. Shipped to your door. Free consultation for US and JP petitioners.`,
+    description: `Marrying a Filipino? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille — shipped worldwide. Free quote for petitioners.`,
     canonical: `${BASE}/en/international-marriage-guide/`,
     lang: 'en',
     enCanonical: `${BASE}/en/international-marriage-guide/`,
@@ -457,7 +466,7 @@ const routes: RouteConfig[] = [
     path: '/en/spouse-visa-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'spouse-visa-documents', 'index.html'),
     title: `Spouse Visa Document Service [${SEO_YEAR_MONTH_EN}] | PSA & NBI`,
-    description: `Overwhelmed by Philippine document requirements for a spouse visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship everything to you. Free consultation for petitioners.`,
+    description: `Need Philippine documents for a spouse visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship everything to your door. Free quote.`,
     canonical: `${BASE}/en/spouse-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/spouse-visa-documents/`,
@@ -468,7 +477,7 @@ const routes: RouteConfig[] = [
     path: '/en/psa-marriage-certificate/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-marriage-certificate', 'index.html'),
     title: `PSA Marriage Certificate + Apostille [${SEO_YEAR_MONTH_EN}]`,
-    description: `Need a PSA Marriage Certificate for your visa or marriage registration? We retrieve it with DFA Apostille and ship it to you. No trip to the Philippines. Free consultation.`,
+    description: `Get a PSA Marriage Certificate without flying to the Philippines. We retrieve + DFA Apostille + DHL ship to your door. Free quote.`,
     canonical: `${BASE}/en/psa-marriage-certificate/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-marriage-certificate/`,
@@ -479,7 +488,7 @@ const routes: RouteConfig[] = [
     path: '/en/drivers-license-conversion/',
     outFile: path.join(projectRoot, 'dist', 'en', 'drivers-license-conversion', 'index.html'),
     title: `PH License Conversion: LTO Documents [${SEO_YEAR_MONTH_EN}]`,
-    description: `Converting a Philippine driver's license? We retrieve the LTO Driver's Record with DFA Apostille and ship it to your address worldwide via DHL. Bulk orders for employers welcome. Free consultation.`,
+    description: `Converting a Philippine driver's license? We retrieve the LTO Driver's Record with DFA Apostille and ship worldwide via DHL. Free quote.`,
     canonical: `${BASE}/en/drivers-license-conversion/`,
     lang: 'en',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
@@ -490,7 +499,7 @@ const routes: RouteConfig[] = [
     path: '/en/naturalization-guide/',
     outFile: path.join(projectRoot, 'dist', 'en', 'naturalization-guide', 'index.html'),
     title: `Naturalization Document Service [${SEO_YEAR_MONTH_EN}] | PSA & NBI`,
-    description: `Applying for citizenship or naturalization and need Philippine civil documents? We retrieve PSA Birth Certificate, NBI Clearance + DFA Apostille and ship to your address worldwide via DHL. Free consultation.`,
+    description: `Need Philippine civil documents for citizenship? We retrieve PSA Birth Certificate, NBI + DFA Apostille shipped worldwide via DHL. Free quote.`,
     canonical: `${BASE}/en/naturalization-guide/`,
     lang: 'en',
     enCanonical: `${BASE}/en/naturalization-guide/`,
@@ -511,7 +520,7 @@ const routes: RouteConfig[] = [
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
     title: `PSA Birth Certificate Fee Philippines ${SEO_YEAR} — PHP 365 + Apostille & Shipping`,
-    description: `PSA Birth Certificate fee in the Philippines: PHP 365 per copy (${SEO_YEAR}). Total cost with DFA Apostille + DHL international shipping starts at USD $349. No hidden fees.`,
+    description: `PSA Birth Certificate fee: PHP 365 per copy (${SEO_YEAR}). Total with DFA Apostille + DHL international shipping from USD $349. No hidden fees.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -799,7 +808,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar', 'index.html'),
-    title: `CENOMAR（独身証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・アポスティーユ付き`,
+    title: `CENOMARとは｜フィリピン独身証明書の取得方法【${SEO_YEAR_MONTH_JA}】代行可・渡航不要`,
     description: 'CENOMARはフィリピンに行かずに取得できます。PSA申請からDFAアポスティーユ・DHL郵送まで一括代行。国際結婚・配偶者ビザ・帰化申請に対応。通常4〜6週間。まず無料相談を。',
     canonical: `${BASE}/ja/cenomar/`,
     lang: 'ja',
@@ -833,7 +842,7 @@ const routes: RouteConfig[] = [
     path: '/ja/psa-shussei-shomeisho/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-shomeisho', 'index.html'),
     title: `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR_MONTH_JA}】PSA・アポスティーユ込み`,
-    description: 'フィリピン出生証明書（PSA）を日本から取り寄せる方法。現地スタッフがPSA申請〜DFAアポスティーユまで代行し紙の原本を郵送。国際結婚・ビザ・帰化に。通常4〜6週間。無料相談受付中。',
+    description: 'フィリピン出生証明書（PSA）を日本から取り寄せ代行。セブ在住スタッフが直接PSA申請→DFAアポスティーユ→国際郵送まで一括対応。紙の原本を4〜6週間で自宅へ。追加請求なし。無料相談。',
     canonical: `${BASE}/ja/psa-shussei-shomeisho/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/psa-birth-certificate/`,
@@ -843,8 +852,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-clearance', 'index.html'),
-    title: `NBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
-    description: 'NBI ClearanceをフィリピンなしのNBI取得。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。まず無料相談。',
+    title: `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
+    description: 'フィリピンNBI Clearance（無犯罪証明書）を渡航なしで取得代行。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。無料相談。',
     canonical: `${BASE}/ja/nbi-clearance/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/nbi-clearance/`,
@@ -866,7 +875,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille', 'index.html'),
-    title: `DFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応`,
+    title: `フィリピンDFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応・渡航不要`,
     description: 'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
     canonical: `${BASE}/ja/apostille/`,
     lang: 'ja',
@@ -1201,7 +1210,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ko/',
     outFile: path.join(projectRoot, 'dist', 'ko', 'index.html'),
-    title: '필리핀 서류 취득 대행 | PSA · 아포스티유 · NBI 원스톱 지원',
+    title: 'F-6 결혼비자 필리핀 서류 취득 대행 | PSA · CENOMAR · NBI · 아포스티유',
     description: 'CENOMAR(미혼증명서), PSA 출생증명서, NBI Clearance, 아포스티유 취득을 대행합니다. F-6 결혼이민비자 준비, 한국 제출용 필리핀 서류를 처음부터 끝까지 지원합니다.',
     canonical: `${BASE}/ko/`,
     lang: 'ko',
@@ -1212,7 +1221,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ko/pricing/',
     outFile: path.join(projectRoot, 'dist', 'ko', 'pricing', 'index.html'),
-    title: '요금 안내 | 필리핀 PSA · 아포스티유 · NBI 대행',
+    title: '필리핀 서류 대행 요금 | PSA · CENOMAR · NBI · 아포스티유 비용 안내',
     description: 'CENOMAR, PSA 출생증명서, NBI Clearance, DFA 아포스티유 대행 요금 안내. 아포스티유 인증 + 국제 배송 포함. 추가 비용 사전 고지. 무료 견적 신청 가능.',
     canonical: `${BASE}/ko/pricing/`,
     lang: 'ko',
@@ -1235,7 +1244,7 @@ const routes: RouteConfig[] = [
     path: '/ko/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'ko', 'nbi-clearance', 'index.html'),
     title: 'NBI Clearance 신청 지원 | 필리핀 범죄경력증명서 취득 서포트',
-    description: '필리핀 NBI Clearance（범죄경력증명서） 신청 절차를 안내합니다. 주한 필리핀 대사관 지문 등록 예약 방법, 온라인 신청 안내, DFA 아포스티유 수배, DHL 발송까지 서포트. F-6 비자, 귀화 신청에 대응.',
+    description: 'F-6 결혼비자용 필리핀 NBI Clearance（범죄경력증명서） 취득을 서포트. 주한 필리핀 대사관 지문 등록 예약 안내, 온라인 신청, DFA 아포스티유 수배, DHL 발송까지 원스톱. 귀화 신청에도 대응.',
     canonical: `${BASE}/ko/nbi-clearance/`,
     lang: 'ko',
     enCanonical: `${BASE}/en/nbi-clearance/`,
@@ -1510,18 +1519,24 @@ function updateHead(html: string, route: RouteConfig): string {
   }
 
   // hreflang tags for multi-language pages
-  if (shouldGenerateHreflang(route)) {
+  const hreflangMode = getHreflangMode(route);
+  if (hreflangMode !== 'none') {
     const hreflangTags: string[] = [];
-    hreflangTags.push(`<link rel="alternate" hreflang="en" href="${route.enCanonical}" />`);
-    hreflangTags.push(`<link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />`);
-    if (route.koCanonical) {
-      const currentIsHome = [`${BASE}/en/`, `${BASE}/ja/`, `${BASE}/ko/`].includes(route.canonical);
-      const koIsHomeFallback = route.koCanonical === `${BASE}/ko/`;
-      if (!koIsHomeFallback || currentIsHome) {
-        hreflangTags.push(`<link rel="alternate" hreflang="ko" href="${route.koCanonical}" />`);
+    if (hreflangMode === 'ko-only') {
+      hreflangTags.push(`<link rel="alternate" hreflang="ko" href="${route.canonical}" />`);
+      hreflangTags.push(`<link rel="alternate" hreflang="x-default" href="${route.canonical}" />`);
+    } else {
+      hreflangTags.push(`<link rel="alternate" hreflang="en" href="${route.enCanonical}" />`);
+      hreflangTags.push(`<link rel="alternate" hreflang="ja" href="${route.jaCanonical}" />`);
+      if (route.koCanonical) {
+        const currentIsHome = [`${BASE}/en/`, `${BASE}/ja/`, `${BASE}/ko/`].includes(route.canonical);
+        const koIsHomeFallback = route.koCanonical === `${BASE}/ko/`;
+        if (!koIsHomeFallback || currentIsHome) {
+          hreflangTags.push(`<link rel="alternate" hreflang="ko" href="${route.koCanonical}" />`);
+        }
       }
+      hreflangTags.push(`<link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`);
     }
-    hreflangTags.push(`<link rel="alternate" hreflang="x-default" href="${route.enCanonical}" />`);
     const block = hreflangTags.map((t) => `    ${t}`).join('\n');
     result = result.replace('</head>', `${block}\n  </head>`);
   }
@@ -1639,7 +1654,11 @@ async function generateSitemap() {
     const changefreq = getSitemapChangefreq(route.path);
 
     const hreflangLines: string[] = [];
-    if (shouldGenerateHreflang(route)) {
+    const sitemapHreflangMode = getHreflangMode(route);
+    if (sitemapHreflangMode === 'ko-only') {
+      hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="ko" href="${route.canonical}"/>`);
+      hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="x-default" href="${route.canonical}"/>`);
+    } else if (sitemapHreflangMode === 'multi') {
       hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="en" href="${route.enCanonical}"/>`);
       hreflangLines.push(`    <xhtml:link rel="alternate" hreflang="ja" href="${route.jaCanonical}"/>`);
       if (route.koCanonical) {
