@@ -257,10 +257,11 @@ export default function NbiGuideJa() {
       />
       <RelatedArticles
         items={[
-          { href: '/ja/nbi-clearance-overseas', title: '海外在住のNBI取得', description: 'フィリピンに戻らずに取得したい方はこちら。' },
-          { href: '/ja/nbi-hit', title: 'NBI HIT対応', description: '照会が入ったときの考え方を整理します。' },
-          { href: '/ja/nbi-koyukigen', title: 'NBIの有効期限', description: '提出期限に合わせた取り方の目安が分かります。' },
-          { href: '/ja/document-checklist-by-visa', title: 'ビザ別書類チェックリスト', description: 'K-1や配偶者ビザで他に何が必要かを確認できます。' },
+          { href: '/ja/nbi-clearance-overseas/', title: '海外在住のNBI取得', description: 'フィリピンに戻らずに取得したい方はこちら。' },
+          { href: '/ja/nbi-hit/', title: 'NBI HIT対応', description: '照会が入ったときの考え方を整理します。' },
+          { href: '/ja/nbi-koyukigen/', title: 'NBIの有効期限', description: '提出期限に合わせた取り方の目安が分かります。' },
+          { href: '/ja/psa-crs-cebu-genchi-report/', title: 'PSA証明書の取得手順【セブ窓口】', description: 'セブ窓口での実際の取得フローをレポートしています。' },
+          { href: '/ja/document-checklist-by-visa/', title: 'ビザ別書類チェックリスト', description: 'K-1や配偶者ビザで他に何が必要かを確認できます。' },
         ]}
       />
     </PageLayout>

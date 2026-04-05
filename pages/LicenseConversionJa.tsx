@@ -309,6 +309,8 @@ export default function LicenseConversionJa() {
 
       <RelatedLinks links={[
         { path: '/ja/driver-record/', label: 'LTO運転経歴証明書代行（外免切替・企業採用）' },
+        { path: '/ja/lto-koyo-kakunin/', label: 'フィリピン人採用のLTO書類3種（雇用確認向け）' },
+        { path: '/ja/lto-sm-seaside-genchi-report/', label: '運転経歴証明書の取得手順【LTO SMシーサイド】' },
         { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
         { path: '/ja/ryokin/', label: '料金一覧' },
       ]} />

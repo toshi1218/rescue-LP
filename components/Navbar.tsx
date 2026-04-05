@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     { label: t('navbar.doc.nbi'),      path: isJa ? '/ja/nbi-clearance/'        : '/en/nbi-clearance/' },
     { label: t('navbar.doc.apostille'),path: isJa ? '/ja/apostille/'            : '/en/apostille/' },
     { label: t('navbar.doc.marriage'), path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/en/psa-marriage-certificate/' },
-    ...(isJa ? [{ label: '結核非発病証明書', path: '/ja/kekkaku-shomeisho/' }] : []),
+    ...(isJa ? [{ label: '結核非発病証明書', path: '/ja/kekkaku-shomeisho/' }] : [{ label: 'TB Certificate', path: '/en/tb-certificate/' }]),
   ];
 
   const purposeTabs = isJa ? [
@@ -43,9 +43,13 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.nbi'),           path: '/ja/nbi-clearance/' },
     { label: '個別ロードマップ作成',              path: '/ja/kokusai-kekkon-roadmap/' },
   ] : [
+    { label: 'International Marriage',  path: '/en/international-marriage-guide/' },
+    { label: 'Spouse Visa',             path: '/en/spouse-visa-documents/' },
     { label: 'K-1 Fiancé Visa',        path: '/en/k1-visa-documents/' },
     { label: 'CR-1 / IR-1 Visa',       path: '/en/cr1-visa-documents/' },
     { label: 'US Visa Documents',       path: '/en/us-visa-documents/' },
+    { label: 'License Conversion',      path: '/en/drivers-license-conversion/' },
+    { label: 'Naturalization Guide',    path: '/en/naturalization-guide/' },
     { label: 'Canada Immigration',      path: '/en/canada/' },
     { label: 'Australia Immigration',   path: '/en/australia/' },
     { label: 'UK Immigration',          path: '/en/uk/' },
@@ -96,6 +100,22 @@ const Navbar: React.FC = () => {
         { label: 'Document Checklist by Visa Type', path: '/en/document-checklist-by-visa/' },
       ],
     }] : []),
+    ...(!isJa ? [{
+      category: 'Local Information',
+      items: [
+        { label: 'DFA Apostille at Cebu Window', path: '/en/dfa-apostille-cebu-report/' },
+        { label: 'PSA Birth Certificate at Cebu', path: '/en/psa-crs-cebu-report/' },
+        { label: 'LTO Driver Record at SM Seaside', path: '/en/lto-sm-seaside-cebu-report/' },
+      ],
+    }] : []),
+    ...(!isJa ? [{
+      category: 'International Marriage',
+      items: [
+        { label: 'Japan-First vs Philippines-First Marriage', path: '/en/japan-first-vs-philippines-first-marriage/' },
+        { label: 'Getting Married in the Philippines', path: '/en/getting-married-in-philippines/' },
+        { label: 'Document Service vs Immigration Lawyer', path: '/en/immigration-lawyer-vs-document-service/' },
+      ],
+    }] : []),
     ...(isJa ? [{
       category: '配偶者ビザ',
       items: [
@@ -129,7 +149,25 @@ const Navbar: React.FC = () => {
         { label: 'オーストラリア移住の必要書類', path: '/ja/australia/' },
         { label: '英国移住の必要書類', path: '/ja/uk/' },
       ],
-    }] : []),
+    }] : [{
+      category: 'Immigration by Country',
+      items: [
+        { label: 'Canada Immigration', path: '/en/canada/' },
+        { label: 'Australia Immigration', path: '/en/australia/' },
+        { label: 'UK Immigration', path: '/en/uk/' },
+        { label: 'New Zealand', path: '/en/new-zealand/' },
+        { label: 'Germany', path: '/en/germany/' },
+        { label: 'Netherlands', path: '/en/netherlands/' },
+        { label: 'UAE', path: '/en/uae/' },
+        { label: 'Singapore', path: '/en/singapore/' },
+        { label: 'Hong Kong', path: '/en/hong-kong/' },
+        { label: 'Qatar', path: '/en/qatar/' },
+        { label: 'Italy', path: '/en/italy/' },
+        { label: 'Norway', path: '/en/norway/' },
+        { label: 'Sweden', path: '/en/sweden/' },
+        { label: 'Switzerland', path: '/en/switzerland/' },
+      ],
+    }]),
   ];
   const contactPath = isJa ? '/ja/contact/' : '/en/contact/';
   const companyPath = isJa ? '/ja/company/' : '/en/company/';
