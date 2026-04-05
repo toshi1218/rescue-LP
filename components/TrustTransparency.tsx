@@ -147,7 +147,7 @@ const TrustTransparency: React.FC = React.memo(() => {
           <h2 id="trust-heading" className="text-xl md:text-2xl font-bold text-secondary leading-snug whitespace-pre-line mb-3">
             {c.heading}
           </h2>
-          <p className="text-sm text-gray-500 leading-relaxed max-w-xl mx-auto whitespace-pre-line">
+          <p className="text-base text-gray-500 leading-relaxed max-w-xl mx-auto whitespace-pre-line">
             {c.subheading}
           </p>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-4"></div>
@@ -167,14 +167,14 @@ const TrustTransparency: React.FC = React.memo(() => {
                   <span className="flex-shrink-0 w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center">
                     <Icon className="w-4 h-4 text-red-400" />
                   </span>
-                  <p className="text-sm font-bold text-gray-700 leading-snug">{item.fear}</p>
+                  <p className="text-base font-bold text-gray-700 leading-snug">{item.fear}</p>
                 </div>
                 {/* 回答 */}
                 <div className="flex items-start gap-2 pl-11">
                   <span className="flex-shrink-0 w-4 h-4 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                     <ShieldCheck className="w-2.5 h-2.5 text-green-600" />
                   </span>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.answer}</p>
+                  <p className="text-base text-gray-600 leading-relaxed">{item.answer}</p>
                 </div>
               </div>
             );
@@ -192,8 +192,8 @@ const TrustTransparency: React.FC = React.memo(() => {
                 <div className="w-10 h-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center mx-auto mb-3">
                   <span className="text-primary font-bold text-sm">{i + 1}</span>
                 </div>
-                <p className="text-white font-bold text-sm mb-1">{item.label}</p>
-                <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-white font-bold text-base mb-1">{item.label}</p>
+                <p className="text-white/60 text-base leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
