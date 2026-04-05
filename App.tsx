@@ -105,6 +105,8 @@ const BusinessHomeJa = lazy(() => import('./pages/BusinessHomeJa'));
 const BusinessTourokushienJa = lazy(() => import('./pages/BusinessTourokushienJa'));
 const BusinessGyoseishoshiJa = lazy(() => import('./pages/BusinessGyoseishoshiJa'));
 const BusinessKigyouJa = lazy(() => import('./pages/BusinessKigyouJa'));
+const BusinessMenkyoKirikaeJa = lazy(() => import('./pages/BusinessMenkyoKirikaeJa'));
+const LtoKoyoKakuninJa = lazy(() => import('./pages/LtoKoyoKakuninJa'));
 const DfaGalleriaCebuJa = lazy(() => import('./pages/DfaGalleriaCebuJa'));
 const PsaCrsCebuJa = lazy(() => import('./pages/PsaCrsCebuJa'));
 const LtoSmSeasideJa = lazy(() => import('./pages/LtoSmSeasideJa'));
@@ -325,6 +327,10 @@ export default function App() {
         <Route path="/ja/business/gyoseishoshi/" element={<BusinessGyoseishoshiJa />} />
         <Route path="/ja/business/kigyou" element={<Navigate to="/ja/business/kigyou/" replace />} />
         <Route path="/ja/business/kigyou/" element={<BusinessKigyouJa />} />
+        <Route path="/ja/business/menkyo-kirikae" element={<Navigate to="/ja/business/menkyo-kirikae/" replace />} />
+        <Route path="/ja/business/menkyo-kirikae/" element={<BusinessMenkyoKirikaeJa />} />
+        <Route path="/ja/lto-koyo-kakunin" element={<Navigate to="/ja/lto-koyo-kakunin/" replace />} />
+        <Route path="/ja/lto-koyo-kakunin/" element={<LtoKoyoKakuninJa />} />
         <Route path="/ja/dfa-apostille-genchi-report" element={<Navigate to="/ja/dfa-apostille-genchi-report/" replace />} />
         <Route path="/ja/dfa-apostille-genchi-report/" element={<DfaGalleriaCebuJa />} />
         <Route path="/ja/psa-crs-cebu-genchi-report" element={<Navigate to="/ja/psa-crs-cebu-genchi-report/" replace />} />
