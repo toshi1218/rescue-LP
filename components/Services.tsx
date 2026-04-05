@@ -38,7 +38,7 @@ const Services: React.FC = () => {
           <div className="text-center mb-10">
             <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-1 block">Services</span>
             <h2 className="text-xl font-bold text-secondary">{t('services.title')}</h2>
-            <p className="text-sm text-gray-500 mt-2">{t('services.subtitle')}</p>
+            <p className="text-base text-gray-500 mt-2">{t('services.subtitle')}</p>
             <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
           </div>
 
@@ -48,8 +48,8 @@ const Services: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-secondary/8 border border-secondary/10 flex items-center justify-center mb-3 group-hover:bg-primary/10 group-hover:border-primary/20 transition-colors">
                   <service.icon className="w-5 h-5 text-secondary group-hover:text-primary transition-colors flex-shrink-0" />
                 </div>
-                <span className="font-display font-bold text-sm text-secondary block mb-1">{service.title}</span>
-                <p className="text-sm text-gray-500 leading-relaxed mb-3">{service.desc}</p>
+                <span className="font-display font-bold text-base text-secondary block mb-1.5">{service.title}</span>
+                <p className="text-base text-gray-500 leading-relaxed mb-3">{service.desc}</p>
                 <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark border border-primary/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all">
                   詳しく見る <ArrowRight className="w-3 h-3" />
                 </span>
