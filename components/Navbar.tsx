@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     { label: t('navbar.doc.nbi'),      path: isJa ? '/ja/nbi-clearance/'        : '/en/nbi-clearance/' },
     { label: t('navbar.doc.apostille'),path: isJa ? '/ja/apostille/'            : '/en/apostille/' },
     { label: t('navbar.doc.marriage'), path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/en/psa-marriage-certificate/' },
-    ...(isJa ? [{ label: '結核非発病証明書', path: '/ja/kekkaku-shomeisho/' }] : [{ label: 'TB Certificate', path: '/en/tb-certificate/' }]),
+    ...(isJa ? [{ label: '結核非発病証明書', path: '/ja/kekkaku-shomeisho/' }] : []),
   ];
 
   const purposeTabs = isJa ? [
