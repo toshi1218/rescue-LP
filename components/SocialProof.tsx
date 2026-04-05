@@ -91,19 +91,19 @@ const SocialProof: React.FC = React.memo(() => {
         {/* レビューカード */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {reviews.map((item) => (
-            <article key={item.title} className="bg-white border border-gray-100 rounded-2xl p-5 shadow-card border-l-4 border-l-primary hover:shadow-md transition-shadow">
+            <article key={item.title} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-card border-l-4 border-l-primary hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-yellow-500 text-base" aria-label={`Rating: ${item.rating} out of 5 stars`} role="img">
                   {'★'.repeat(item.rating)}{'☆'.repeat(5 - item.rating)}
                 </span>
                 <time className="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">{item.date}</time>
               </div>
-              <h3 className="text-sm font-bold text-secondary mb-1">{item.title}</h3>
+              <h3 className="text-base font-bold text-secondary mb-1.5">{item.title}</h3>
               <p className="text-xs text-gray-400 mb-3 flex items-center gap-1">
                 <span className="inline-block w-4 h-4 rounded-full bg-secondary/10 text-secondary text-[8px] flex items-center justify-center font-bold">✓</span>
                 {item.author}
               </p>
-              <blockquote className="text-xs text-gray-600 leading-relaxed italic">"{item.body}"</blockquote>
+              <blockquote className="text-sm text-gray-600 leading-relaxed italic">"{item.body}"</blockquote>
             </article>
           ))}
         </div>
