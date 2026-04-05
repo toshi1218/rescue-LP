@@ -6,7 +6,7 @@ import SummaryBlock from '../components/SummaryBlock';
 import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
 import StepList from '../components/StepList';
-import { Building2, Scale, Briefcase, ArrowRight, CheckCircle, ShieldCheck } from 'lucide-react';
+import { Building2, Scale, Briefcase, Car, ArrowRight, CheckCircle, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
 const segments = [
@@ -27,6 +27,12 @@ const segments = [
     title: 'フィリピン人材を雇用する企業の方',
     description: '技能実習生・特定技能人材の在留資格手続きに必要なフィリピン書類の取得を代行します。',
     href: '/ja/business/kigyou/',
+  },
+  {
+    icon: Car,
+    title: '免許切替サポート（登録支援機関・監理団体）',
+    description: 'フィリピン人従業員の外免切替に必要なLTO書類＋DFAアポスティーユを代行。複数名一括・進捗報告・請求書払い対応。',
+    href: '/ja/business/menkyo-kirikae/',
   },
 ];
 

@@ -1205,6 +1205,28 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/business/kigyou/`,
   },
+  {
+    path: '/ja/business/menkyo-kirikae/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'menkyo-kirikae', 'index.html'),
+    title: `フィリピン人従業員の日本免許切替サポート｜登録支援機関・監理団体向け【${SEO_YEAR_MONTH_JA}】`,
+    description: '登録支援機関・監理団体向け。フィリピン人従業員の外免切替に必要なLTO書類（Certification・License History）＋DFAアポスティーユを代行取得。複数名一括対応・進捗報告・請求書払い。',
+    canonical: `${BASE}/ja/business/menkyo-kirikae/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/business/menkyo-kirikae/`,
+  },
+  {
+    path: '/ja/lto-koyo-kakunin/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'lto-koyo-kakunin', 'index.html'),
+    title: `フィリピン人採用のLTO書類3種｜License Certification・License History・No Apprehension【${SEO_YEAR_MONTH_JA}】`,
+    description: 'フィリピン人ドライバーを採用する会社向け。雇用時に押さえるLTO書類（License Certification・License History・No Apprehension Certificate）の違いと取得方法を解説。採用チェックリスト付き。',
+    canonical: `${BASE}/ja/lto-koyo-kakunin/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/lto-koyo-kakunin/`,
+    ogType: 'article',
+    datePublished: SEO_DATE_ISO,
+  },
 
   /* ── KO canonical routes (/ko/*) ─────────────────────── */
   {
