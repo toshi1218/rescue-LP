@@ -24,11 +24,11 @@ export default function SummaryBlock({ conclusion, points }: SummaryBlockProps) 
         </p>
 
         {/* 根拠リスト */}
-        <ul className="space-y-2.5">
+        <ul className="space-y-3">
           {points.map((point) => (
             <li key={point} className="flex items-start gap-3">
-              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-              <span className="text-sm text-gray-700 leading-relaxed">{point}</span>
+              <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <span className="text-base text-gray-700 leading-relaxed">{point}</span>
             </li>
           ))}
         </ul>

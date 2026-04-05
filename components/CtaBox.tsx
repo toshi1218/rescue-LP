@@ -44,9 +44,9 @@ export default function CtaBox({
         <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-5">
           <div>
             <h2 className="text-lg font-bold text-white mb-1 leading-snug">{title}</h2>
-            <p className="text-sm text-gray-300 leading-relaxed">{description}</p>
+            <p className="text-base text-gray-300 leading-relaxed">{description}</p>
             {trustNote && (
-              <p className="mt-2 flex items-center gap-1.5 text-xs text-primary/80">
+              <p className="mt-2 flex items-center gap-1.5 text-sm text-primary/80">
                 <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0" />
                 {trustNote}
               </p>
@@ -76,9 +76,9 @@ export default function CtaBox({
       <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-5">
         <div>
           <h2 className="text-lg font-bold text-secondary mb-1 leading-snug">{title}</h2>
-          <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+          <p className="text-base text-gray-600 leading-relaxed">{description}</p>
           {trustNote && (
-            <p className="mt-2 flex items-center gap-1.5 text-xs text-secondary/60">
+            <p className="mt-2 flex items-center gap-1.5 text-sm text-secondary/60">
               <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 text-primary" />
               {trustNote}
             </p>
