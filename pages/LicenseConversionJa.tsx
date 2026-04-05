@@ -15,8 +15,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function LicenseConversionJa() {
   useMeta(
-    `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】渡航不要`,
-    'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
+    `フィリピン免許→日本免許 外免切替の必要書類・期間【${SEO_YEAR_MONTH_JA}】渡航不要`,
+    'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。取得期間の目安も解説。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
   );
   return (
     <PageLayout
