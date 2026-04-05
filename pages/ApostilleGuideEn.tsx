@@ -219,6 +219,7 @@ export default function ApostilleGuideEn() {
         items={[
           { href: '/en/apostille-processing-time/', title: 'DFA Apostille Processing Time', description: 'Regular vs Express: how long does DFA Apostille take in 2026?' },
           { href: '/en/apostille-fee/', title: 'DFA Apostille Fee Breakdown', description: 'Full cost breakdown including PSA retrieval and DHL shipping.' },
+          { href: '/en/dfa-apostille-cebu-report/', title: 'DFA Apostille at Cebu Window — Field Report', description: 'Step-by-step guide for obtaining DFA Apostille at the Cebu office.' },
           { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'CENOMAR retrieval with DFA Apostille included.' },
           { href: '/en/nbi-clearance/', title: 'NBI Clearance Service', description: 'NBI Clearance retrieval with DFA Apostille included.' },
         ]}

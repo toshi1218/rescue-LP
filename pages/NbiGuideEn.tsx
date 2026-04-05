@@ -213,6 +213,7 @@ export default function NbiGuideEn() {
           { href: '/en/nbi-clearance-overseas/', title: 'NBI Clearance from Overseas', description: 'OFWs and Filipinos abroad: get NBI without returning to the Philippines.' },
           { href: '/en/nbi-hit/', title: 'NBI HIT Resolution', description: 'MATCH FOUND result? We handle verification and resolution.' },
           { href: '/en/nbi-validity/', title: 'NBI Validity & Timing', description: 'How long is NBI Clearance valid and when to request it.' },
+          { href: '/en/psa-crs-cebu-report/', title: 'PSA Birth Certificate at Cebu — Field Report', description: 'Step-by-step guide for obtaining PSA documents at the Cebu office.' },
           { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Which documents you need for K-1, CR-1, spouse visa, and more.' },
         ]}
       />

@@ -4,6 +4,7 @@ import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
@@ -260,6 +261,15 @@ export default function ApostilleGuideJa() {
         ]}
         ctaTitle="まずは無料相談"
         ctaButton="無料相談フォームへ"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: '通常・速達それぞれの目安期間を解説します。' },
+          { href: '/ja/apostille-ryokin/', title: 'アポスティーユの費用', description: 'PSA書類取得・DHL送料込みの料金体系を確認できます。' },
+          { href: '/ja/dfa-apostille-genchi-report/', title: 'アポスティーユ取得手順【DFAセブ窓口】', description: 'セブ窓口での実際の取得手順をレポートしています。' },
+          { href: '/ja/cenomar/', title: 'CENOMAR（独身証明書）', description: 'CENOMAR取得とDFAアポスティーユをまとめて代行。' },
+        ]}
       />
 
     </PageLayout>
