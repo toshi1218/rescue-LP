@@ -93,7 +93,7 @@ export default function PageLayout({ breadcrumbs, jsonLd, description, children 
           <p className="font-bold text-secondary text-base mb-1">
             {isJa ? 'ご相談・お見積もりは無料です' : 'Free consultation & quote'}
           </p>
-          <p className="text-xs text-gray-500 mb-4">
+          <p className="text-sm text-gray-500 mb-4">
             {isJa
               ? '必要書類が分からない段階でも大丈夫。24時間以内に返信します。'
               : "Don't know which documents you need? That's fine — we'll figure it out. Reply within 24 hours."}
