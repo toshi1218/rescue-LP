@@ -18,14 +18,14 @@ function Cell({ val, isAgency }: { val: boolean | string; isAgency: boolean }) {
   if (typeof val === 'boolean') {
     if (val) {
       return (
-        <span className={`flex items-center justify-center gap-1.5 font-medium text-xs ${isAgency ? 'text-emerald-600' : 'text-gray-400'}`}>
+        <span className={`flex items-center justify-center gap-1.5 font-medium text-sm ${isAgency ? 'text-emerald-600' : 'text-gray-400'}`}>
           <CheckCircle className="w-4 h-4 flex-shrink-0" />
           {isAgency ? '対応' : '可能'}
         </span>
       );
     }
     return (
-      <span className="flex items-center justify-center gap-1.5 text-xs text-red-400 font-medium">
+      <span className="flex items-center justify-center gap-1.5 text-sm text-red-400 font-medium">
         <XCircle className="w-4 h-4 flex-shrink-0" />
         要本人対応
       </span>
@@ -38,7 +38,7 @@ function Cell({ val, isAgency }: { val: boolean | string; isAgency: boolean }) {
       </span>
     );
   }
-  return <span className="text-xs text-gray-700 leading-snug">{val}</span>;
+  return <span className="text-sm text-gray-700 leading-snug">{val}</span>;
 }
 
 function ComparisonTableBase({
@@ -69,7 +69,7 @@ function ComparisonTableBase({
             role="row"
             className={`grid grid-cols-[1fr_1fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}
           >
-            <div className="px-4 py-3 text-xs font-medium text-gray-700 border-r border-gray-100 flex items-center leading-snug" role="rowheader" scope="row">
+            <div className="px-4 py-3 text-sm font-medium text-gray-700 border-r border-gray-100 flex items-center leading-snug" role="rowheader" scope="row">
               {row.item}
             </div>
             <div className="px-4 py-3 flex items-center justify-center border-r border-gray-100" role="cell">

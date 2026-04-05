@@ -64,7 +64,7 @@ export default function HeroBanner({ title, subtitle, badges, ctaText, ctaHref, 
 
           {/* サブタイトル */}
           {subtitle && (
-            <p className="text-sm md:text-base text-white/70 leading-relaxed mt-3">
+            <p className="text-base text-white/70 leading-relaxed mt-3">
               {subtitle}
             </p>
           )}
