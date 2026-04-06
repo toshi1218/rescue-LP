@@ -51,7 +51,7 @@ const Services: React.FC = () => {
                 <span className="font-display font-bold text-base text-secondary block mb-1.5">{service.title}</span>
                 <p className="text-base text-gray-500 leading-relaxed mb-3">{service.desc}</p>
                 <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark border border-primary/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all">
-                  詳しく見る <ArrowRight className="w-3 h-3" />
+                  {lang === 'ja' ? '詳しく見る' : 'Learn more'} <ArrowRight className="w-3 h-3" />
                 </span>
               </div>
             ))}

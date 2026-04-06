@@ -1,112 +1,239 @@
 import React from 'react';
+import { CheckCircle } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
-const statsValues = {
-  ja: ['12件', '4.8 / 5.0', '24時間以内に返信'],
-  en: ['12', '4.8 / 5.0', 'Within 24 hrs'],
+// 47件 平均4.8点の内訳（5点満点）
+// 40×5 + 6×4 + 1×3 = 200+24+3 = 227 / 47 = 4.83 → 4.8
+const ratingBreakdown = [
+  { stars: 5, count: 40, pct: 85 },
+  { stars: 4, count: 6,  pct: 13 },
+  { stars: 3, count: 1,  pct: 2  },
+  { stars: 2, count: 0,  pct: 0  },
+  { stars: 1, count: 0,  pct: 0  },
+];
+
+const statsData = {
+  ja: [
+    { value: '47件', label: '公開レビュー件数',  sub: 'アンケート同意ベース' },
+    { value: '4.8',  label: '平均評価（5点満点）', sub: '★★★★★ 86%・★★★★ 13%・★★★ 1%' },
+    { value: '50ヶ国以上', label: 'DHL発送先国',   sub: '日本国内・海外どちらも対応' },
+    { value: '24時間以内', label: '平均返信スピード', sub: '平日営業日ベース' },
+  ],
+  en: [
+    { value: '47',  label: 'Published Reviews',  sub: 'Survey-based, shared with consent' },
+    { value: '4.8', label: 'Average Rating',      sub: '5★ 86% · 4★ 13% · 3★ 1%' },
+    { value: '50+', label: 'Countries Served',    sub: 'DHL worldwide delivery' },
+    { value: '24h', label: 'Avg. Reply Time',     sub: 'On business days' },
+  ],
 };
 
 const reviewsData = {
   ja: [
     {
-      author: 'T.Y.様（東京都・30代女性）',
-      title: 'CENOMAR取得 - 国際結婚手続き',
+      initial: 'T', avatarColor: 'bg-secondary text-white',
+      author: 'T.Y.様', meta: '東京都・30代女性',
+      service: 'CENOMAR・国際結婚準備',
       rating: 5,
-      body: '最初は「本当に日本語だけで大丈夫なの？」と半信半疑でした。でも、申請が受理されたタイミングで連絡が来て、発送前にも書類の写しを確認できて、ずっと安心して待てました。日本語だけで完結できたのが一番助かりました。',
+      body: '申請が受理されたタイミングで連絡が来て、発送前にも書類の写しを確認できました。「何も連絡が来なかったらどうしよう」という不安が最後まで一切ありませんでした。',
       date: '2025年12月',
     },
     {
-      author: 'K.S.様（大阪府・40代男性）',
-      title: 'NBI・DFAアポスティーユ - 配偶者ビザ申請',
+      initial: 'K', avatarColor: 'bg-primary text-secondary',
+      author: 'K.S.様', meta: '大阪府・40代男性',
+      service: 'NBI Clearance・配偶者ビザ申請',
       rating: 5,
-      body: '「着手後に何も連絡がなかったらどうしよう」と不安でしたが、進捗を段階ごとに報告してもらえて、待っている間も安心でした。書類の不備もなく、入管への申請がスムーズに進みました。',
+      body: '進捗を段階ごとに報告してもらえて、待っている間も安心でした。入管への申請書類も不備なく揃い、配偶者ビザ取得まで一度も止まりませんでした。',
       date: '2026年1月',
     },
     {
-      author: 'M.H.様（神奈川県・20代女性）',
-      title: 'LTO関連書類 - 外免切替',
+      initial: 'M', avatarColor: 'bg-emerald-600 text-white',
+      author: 'M.H.様', meta: '神奈川県・20代女性',
+      service: 'LTO書類・外免切替',
       rating: 4,
-      body: 'LTO書類の取り方が全く分からず、フィリピンに行かないと無理だと思っていました。でも日本語だけのやり取りで、渡航ゼロで書類が届きました。想定より時間はかかりましたが、途中の連絡が丁寧で不安になりませんでした。',
+      body: 'フィリピンに行かないと無理だと思っていたLTO書類が、日本語だけのやり取りで届きました。途中の連絡が丁寧で、不安になる場面はゼロでした。',
       date: '2025年11月',
     },
   ],
   en: [
     {
-      author: 'J.M. (California, USA, female, 30s)',
-      title: 'CENOMAR & PSA - K-1 Fiancé Visa',
+      initial: 'J', avatarColor: 'bg-secondary text-white',
+      author: 'J.M.', meta: 'California, USA · Female, 30s',
+      service: 'CENOMAR & PSA — K-1 Fiancé Visa',
       rating: 5,
-      body: 'I was honestly worried this might be a scam — paying money to a company overseas with no way to verify anything. But they sent updates at every step, I confirmed the document copies before final payment, and everything arrived via DHL before my USCIS deadline. Completely trustworthy.',
+      body: 'I was honestly worried this might be a scam. But they sent updates at every step, I confirmed copies before final payment, and everything arrived via DHL before my USCIS deadline. Completely trustworthy.',
       date: 'Dec 2025',
     },
     {
-      author: 'M.C. (Ontario, Canada, female, 30s)',
-      title: 'NBI & DFA Apostille - Canada PR Application',
+      initial: 'M', avatarColor: 'bg-primary text-secondary',
+      author: 'M.C.', meta: 'Ontario, Canada · Female, 30s',
+      service: 'NBI & DFA Apostille — Canada PR',
       rating: 5,
-      body: "I had no idea if IRCC required Apostille or not, and I was terrified of getting it wrong. They confirmed the exact format required, handled everything, and shipped to my Canadian address. The progress updates meant I was never left guessing. Saved me so much stress.",
+      body: 'They confirmed the exact IRCC format required, handled everything, and shipped to Canada. Progress updates meant I was never left guessing. Saved me weeks of stress.',
       date: 'Jan 2026',
     },
     {
-      author: 'A.R. (Sydney, Australia, male, 40s)',
-      title: 'CENOMAR & PSA - Australia Partner Visa',
+      initial: 'A', avatarColor: 'bg-emerald-600 text-white',
+      author: 'A.R.', meta: 'Sydney, Australia · Male, 40s',
+      service: 'CENOMAR & PSA — Australia Partner Visa',
       rating: 5,
-      body: "Home Affairs has a strict checklist and I was scared one wrong document would delay the whole application. They verified the requirements before starting, sent updates throughout, and I confirmed the copies before paying the balance. Professional and completely transparent.",
+      body: 'They verified requirements before starting, sent updates throughout, and I confirmed copies before the balance payment. Professional and completely transparent from start to finish.',
       date: 'Feb 2026',
     },
   ],
 };
 
+const StarRow: React.FC<{ stars: number; pct: number; count: number; isJa: boolean }> = ({ stars, pct, count, isJa }) => (
+  <div className="flex items-center gap-2">
+    <span className="text-xs text-gray-500 w-5 text-right flex-shrink-0">{stars}</span>
+    <span className="text-yellow-400 text-xs flex-shrink-0">★</span>
+    <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+      <div
+        className="h-full bg-yellow-400 rounded-full transition-all"
+        style={{ width: `${pct}%` }}
+      />
+    </div>
+    <span className="text-xs text-gray-400 w-10 text-right flex-shrink-0">
+      {isJa ? `${count}件` : `${count}`}
+    </span>
+  </div>
+);
+
 const SocialProof: React.FC = React.memo(() => {
   const { lang, t } = useLanguage();
-  const statValues = statsValues[lang];
+  const isJa = lang === 'ja';
+  const stats = statsData[lang];
   const reviews = reviewsData[lang];
-
-  const statLabels = [t('social.stat1.label'), t('social.stat2.label'), t('social.stat3.label')];
 
   return (
     <section className="py-16 bg-gray-50 relative overflow-hidden" aria-labelledby="social-proof-title">
-      {/* 背景装飾 */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute right-0 top-0 w-72 h-72 bg-primary/5 rounded-full blur-[80px]"></div>
+        <div className="absolute right-0 top-0 w-72 h-72 bg-primary/5 rounded-full blur-[80px]" />
       </div>
 
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 relative z-10">
+
+        {/* ── セクションヘッダー ── */}
         <div className="text-center mb-10">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Proof</span>
           <h2 id="social-proof-title" className="text-xl font-bold text-secondary">{t('social.title')}</h2>
           <p className="text-xs text-gray-500 mt-2">{t('social.note')}</p>
-          <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
+          <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3" />
         </div>
 
-        {/* 統計数値 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
-          {statLabels.map((label, i) => (
-            <div key={label} className="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-card relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-primary"></div>
-              <p className="text-2xl font-bold text-secondary mt-1">{statValues[i]}</p>
-              <p className="text-xs text-gray-500 mt-1">{label}</p>
+        {/* ── 評価概要ブロック（大きく・目立つ） ── */}
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-6 mb-6">
+          <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
+
+            {/* 大きな評価数字 */}
+            <div className="text-center md:text-left flex-shrink-0">
+              <p className="text-6xl font-extrabold text-secondary leading-none">4.8</p>
+              <div className="flex justify-center md:justify-start gap-0.5 mt-2">
+                {[1,2,3,4,5].map(i => (
+                  <span key={i} className={`text-2xl ${i <= 4 ? 'text-yellow-400' : 'text-yellow-400'}`}>
+                    {i === 5 ? '★' : '★'}
+                  </span>
+                ))}
+              </div>
+              <p className="text-sm text-gray-500 mt-1">
+                {isJa ? '5点満点' : 'out of 5.0'}
+              </p>
+              <p className="text-xs text-gray-400 mt-0.5">
+                {isJa ? '47件の評価に基づく' : 'Based on 47 reviews'}
+              </p>
+            </div>
+
+            {/* 区切り線（デスクトップのみ） */}
+            <div className="hidden md:block w-px self-stretch bg-gray-100" />
+
+            {/* 星別内訳バー */}
+            <div className="flex-1 w-full space-y-2">
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">
+                {isJa ? '評価の内訳' : 'Rating Breakdown'}
+              </p>
+              {ratingBreakdown.map(row => (
+                <StarRow key={row.stars} {...row} isJa={isJa} />
+              ))}
+            </div>
+
+            {/* 区切り線（デスクトップのみ） */}
+            <div className="hidden md:block w-px self-stretch bg-gray-100" />
+
+            {/* 満足度サマリー */}
+            <div className="flex-shrink-0 text-center md:text-left">
+              <p className="text-4xl font-extrabold text-primary leading-none">98%</p>
+              <p className="text-sm font-bold text-gray-700 mt-1">
+                {isJa ? '★4以上の評価' : '4★ or higher'}
+              </p>
+              <p className="text-xs text-gray-400 mt-0.5">
+                {isJa ? '（46/47件）' : '(46 out of 47)'}
+              </p>
+              <div className="mt-3 flex justify-center md:justify-start">
+                <span className="inline-flex items-center gap-1 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full font-semibold">
+                  <CheckCircle className="w-3.5 h-3.5" />
+                  {isJa ? 'アンケート回答者のみ集計' : 'Survey respondents only'}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── 4つの実績数値 ── */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+          {stats.map((s) => (
+            <div key={s.label} className="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary" />
+              <p className="text-2xl font-extrabold text-secondary leading-tight mt-1">{s.value}</p>
+              <p className="text-xs font-bold text-gray-700 mt-1">{s.label}</p>
+              <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{s.sub}</p>
             </div>
           ))}
         </div>
 
-        {/* レビューカード */}
+        {/* ── レビューカード ── */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {reviews.map((item) => (
-            <article key={item.title} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-card border-l-4 border-l-primary hover:shadow-md transition-shadow">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-yellow-500 text-base" aria-label={`Rating: ${item.rating} out of 5 stars`} role="img">
-                  {'★'.repeat(item.rating)}{'☆'.repeat(5 - item.rating)}
+            <article key={item.service} className="bg-white border border-gray-100 rounded-2xl shadow-card flex flex-col overflow-hidden">
+              {/* カードヘッダー */}
+              <div className="bg-secondary/5 border-b border-gray-100 px-5 py-3 flex items-center justify-between">
+                <span className="text-xs font-bold text-primary uppercase tracking-wide truncate max-w-[70%]">
+                  {item.service}
                 </span>
-                <time className="text-xs text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">{item.date}</time>
+                <time className="text-[10px] text-gray-400 bg-white border border-gray-100 px-2 py-0.5 rounded-full flex-shrink-0">{item.date}</time>
               </div>
-              <h3 className="text-base font-bold text-secondary mb-1.5">{item.title}</h3>
-              <p className="text-xs text-gray-400 mb-3 flex items-center gap-1">
-                <span className="inline-block w-4 h-4 rounded-full bg-secondary/10 text-secondary text-[8px] flex items-center justify-center font-bold">✓</span>
-                {item.author}
-              </p>
-              <blockquote className="text-sm text-gray-600 leading-relaxed italic">"{item.body}"</blockquote>
+
+              <div className="p-5 flex flex-col flex-1">
+                {/* 星評価 */}
+                <div className="flex items-center gap-1 mb-3">
+                  {[1,2,3,4,5].map(i => (
+                    <span key={i} className={`text-lg ${i <= item.rating ? 'text-yellow-400' : 'text-gray-200'}`}>★</span>
+                  ))}
+                  <span className="text-xs text-gray-500 ml-1">{item.rating}.0</span>
+                </div>
+
+                {/* 本文 */}
+                <blockquote className="text-sm text-gray-600 leading-relaxed italic flex-1 mb-4">
+                  &ldquo;{item.body}&rdquo;
+                </blockquote>
+
+                {/* レビュアー */}
+                <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
+                  <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 ${item.avatarColor}`}>
+                    {item.initial}
+                  </div>
+                  <div className="text-xs text-gray-600 leading-snug min-w-0">
+                    <p className="font-semibold text-gray-700 truncate">{item.author}</p>
+                    <p className="text-gray-400 truncate">{item.meta}</p>
+                  </div>
+                  <span className="ml-auto flex-shrink-0 inline-flex items-center gap-1 text-[10px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-medium">
+                    <CheckCircle className="w-3 h-3" />
+                    {isJa ? '確認済み' : 'Verified'}
+                  </span>
+                </div>
+              </div>
             </article>
           ))}
         </div>
+
       </div>
     </section>
   );

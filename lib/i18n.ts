@@ -57,7 +57,7 @@ const ja = {
 
   // ── Pricing ───────────────────────────────────────────────────────────
   'pricing.title': '料金プラン',
-  'pricing.note': '※取得難易度により変動する場合があります',
+  'pricing.note': '※取得難易度・記載内容の確認・追加手続きにより変動します',
   'pricing.featured': '人気 No.1',
   'pricing.detailsBtn': '詳細を見る',
   'pricing.docsTitle': '取得できる書類',
@@ -66,14 +66,14 @@ const ja = {
 
   // ── FAQ ──────────────────────────────────────────────────────────────
   'faq.title': 'よくあるご質問',
-  'faq.ctaTitle': 'まずはお気軽にご相談ください',
+  'faq.ctaTitle': 'まずはご相談ください',
   'faq.ctaDesc': '書類名や手続きの順序が分からなくても問題ありません。用途をお伝えいただければ、必要なものを整理してお見積もりします。',
   'faq.ctaBtn': '自分のケースを相談する',
   'faq.ctaAriaLabel': '自分のケースを相談する',
-  'faq.ctaNote': '匿名OK・書類名が分からなくてもご相談いただけます',
+  'faq.ctaNote': '匿名OK・書類名が分からなくても対応します',
 
   // ── Footer ───────────────────────────────────────────────────────────
-  'footer.title': 'まずはお気軽にご相談ください',
+  'footer.title': 'まずはご相談ください',
   'footer.subtitle': '「自分はどのルートか分からない」「何の書類が必要か分からない」という段階でも大丈夫です。\n今の状況に近い進め方からご案内します。\n\nフィリピン書類のことを、日本語で、迷わず、前に進めるために。',
   'footer.nameLabel': 'お名前',
   'footer.namePlaceholder': '山田 太郎',
@@ -111,10 +111,10 @@ const ja = {
 
   // ── WhyUs ────────────────────────────────────────────────────────────
   'whyus.title': '書類を取るだけでなく、手続きが通りやすい形に整えます',
-  'whyus.1.title': '提出先が求めやすい要件を見越して書類を整理します',
-  'whyus.1.desc': '提出先・手続き段階によって、紙のアポスティーユの要否や必要部数が変わります。用途と提出先を確認し、日本側で止まりにくい形に整理します。',
+  'whyus.1.title': '提出先の要件を確認し、書類を正確に整えます',
+  'whyus.1.desc': '提出先・手続き段階によって、紙のアポスティーユの要否や必要部数が変わります。用途と提出先を確認し、日本側で止まらない形に整えます。',
   'whyus.2.title': '順番と全体像を最初に共有します',
-  'whyus.2.desc': 'どの書類をどの順番で取るか、後の手続きで再取得が必要になりやすいポイントを最初にご案内します。',
+  'whyus.2.desc': 'どの書類をどの順番で取るか、後の手続きで再取得が必要になるポイントを最初にご案内します。',
   'whyus.3.title': 'できることと、できないことを分けてご説明します',
   'whyus.3.desc': '書類取得のご案内と、専門資格者への確認が必要な部分を分けてお伝えします。',
   'whyus.stat1.label': '依頼方法',
@@ -183,7 +183,7 @@ const en: typeof ja = {
   'hero.h1line2': 'DFA Apostille — Shipped Worldwide',
   'hero.h1line3': 'USA · Canada · Australia · UK & More',
   'hero.description': 'We retrieve PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille from the Philippines for marriage, immigration, and visa applications worldwide. Shipped via DHL to your door — no trip to the Philippines needed.',
-  'hero.disclaimer': '* Also handling LTO driver records, PSA Marriage Certificates, and other Philippine documents not listed above. Feel free to ask.',
+  'hero.disclaimer': '* Also handling LTO driver records, PSA Marriage Certificates, and other Philippine documents not listed above. Contact us to confirm.',
   'hero.ctaA': 'Free Consultation',
   'hero.ctaB': 'Consult in 30 Sec',
   'hero.ctaConsult': 'Get a Quote',

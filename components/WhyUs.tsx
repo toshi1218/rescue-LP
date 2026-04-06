@@ -59,6 +59,35 @@ const WhyUs: React.FC = () => {
           ))}
         </div>
 
+        {/* Office photo strip — real Philippine document processing */}
+        <div className="mt-8">
+          <p className="text-xs text-gray-400 text-center mb-3 uppercase tracking-widest font-bold">
+            {t('whyus.stat1.label') === '依頼方法' ? '現地での書類取得の様子' : 'Our Philippine office operations'}
+          </p>
+          <div className="grid grid-cols-3 gap-2 rounded-xl overflow-hidden">
+            {[
+              { src: '/dfa-galleria-cebu-01.webp', alt: 'DFA Apostille office — Cebu' },
+              { src: '/dfa-galleria-cebu-02.webp', alt: 'Document processing at DFA Cebu' },
+              { src: '/dfa-galleria-cebu-03.webp', alt: 'DFA Galleria Cebu window' },
+            ].map((img) => (
+              <div key={img.src} className="relative aspect-video overflow-hidden rounded-lg">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-400 text-center mt-2">
+            {t('whyus.stat1.label') === '依頼方法'
+              ? '※ セブ現地スタッフが各機関で直接手続きを行います'
+              : '※ Our Cebu-based staff handles every step in person at PSA, DFA, and NBI.'}
+          </p>
+        </div>
+
         {/* CTA Button */}
         <div className="mt-10 text-center">
           <a

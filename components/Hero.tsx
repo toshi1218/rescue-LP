@@ -118,16 +118,23 @@ const Hero: React.FC = () => {
 
   // ── English hero ───────────────────────────────────────────────────────────
   return (
-    <header className="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 overflow-hidden min-h-[560px] md:min-h-[620px]">
-      {/* Decorative background shapes */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full bg-secondary/5" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-primary/5 blur-3xl" />
-        {/* Subtle grid */}
-        <div
-          className="absolute inset-0 opacity-[0.025]"
-          style={{ backgroundImage: 'radial-gradient(circle, #1a365d 1px, transparent 1px)', backgroundSize: '32px 32px' }}
-        />
+    <header className="relative bg-secondary text-white overflow-hidden min-h-[520px] md:min-h-[600px]">
+      {/* Background photo */}
+      <div className="absolute inset-0 z-0">
+        <picture>
+          <source srcSet="/hero-photo.webp" type="image/webp" />
+          <img
+            alt="Philippine document procurement — IGRS office operations"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: '60% 50%' }}
+            src="/hero-photo.png"
+            width={1600}
+            height={900}
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
       {/* Content */}
@@ -141,7 +148,7 @@ const Hero: React.FC = () => {
             {enBadges.map((b) => (
               <span
                 key={b.label}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-gray-200 text-gray-600 text-xs font-medium shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm"
               >
                 <span aria-hidden="true">{b.icon}</span>
                 {b.label}
@@ -150,17 +157,17 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Eyebrow */}
-          <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary-dark text-xs font-bold mb-4 tracking-wider border border-primary/20">
+          <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
             Philippine Document Retrieval Service
           </span>
 
           {/* H1 */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-secondary mb-5">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-5 drop-shadow-sm">
             Philippine Documents —<br />
             <span className="text-primary">Organized for Your Application.</span>
           </h1>
 
-          <p className="text-gray-600 mb-8 text-sm md:text-base leading-relaxed max-w-lg">
+          <p className="text-gray-200 mb-8 text-sm md:text-base leading-relaxed max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
             We identify, retrieve, and arrange the Philippine documents required for your marriage, visa, or immigration case — including paper Apostille where needed — and ship worldwide via DHL Express.
           </p>
 
@@ -176,7 +183,7 @@ const Hero: React.FC = () => {
             </a>
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center gap-2 text-secondary font-bold py-3.5 px-7 rounded-xl border border-secondary/20 hover:bg-secondary/5 transition-all"
+              className="inline-flex items-center justify-center gap-2 text-white font-bold py-3.5 px-7 rounded-xl border border-white/30 hover:bg-white/10 transition-all"
             >
               See Packages
               <ArrowRight className="w-4 h-4" />
@@ -191,12 +198,12 @@ const Hero: React.FC = () => {
                   <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </span>
-              <span className="text-gray-500 text-xs font-medium">4.8 / 5.0 (client reviews)</span>
+              <span className="text-white/70 text-xs font-medium">4.8 / 5.0 (client reviews)</span>
             </div>
-            <p className="text-primary-dark text-xs font-semibold">
+            <p className="text-primary text-xs font-semibold">
               Now accepting inquiries · Reply within 24 hours
             </p>
-            <p className="text-gray-600 text-xs">
+            <p className="text-white/60 text-xs">
               International Marriage Package from US$899 (Apostille + DHL incl.)
             </p>
           </div>

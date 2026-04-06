@@ -9,7 +9,7 @@ const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 export default function ContactJa() {
   useMeta(
     '無料相談・お問い合わせ｜フィリピン書類取得代行センター',
-    'フィリピン書類取得代行・国際結婚・配偶者ビザ・帰化申請・外免切替に関するご相談はこちら。24時間以内に返信します。まずはお気軽にご相談ください。',
+    'フィリピン書類取得代行・国際結婚・配偶者ビザ・帰化申請・外免切替のご相談はこちら。24時間以内に返信します。書類名が分からない段階でも対応します。',
   );
   const [service, setService] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -28,7 +28,7 @@ export default function ContactJa() {
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'お問い合わせ' }]}>
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">お問い合わせ・無料相談</h1>
       <p className="text-sm text-gray-600 mb-4">
-        必要書類・料金・期間など、まずはお気軽にご相談ください。日本語で対応します。
+        必要書類・料金・期間など、まずはご相談ください。日本語で対応します。
       </p>
       <p className="text-xs text-gray-500 mb-4">
         お問い合わせはEメールのみで承ります。下のフォームから送信された内容もメールで届きます。
@@ -59,7 +59,7 @@ export default function ContactJa() {
           <p className="text-3xl mb-3">✅</p>
           <p className="font-bold text-green-700 mb-2">お問い合わせを受け付けました</p>
           <p className="text-sm text-gray-500">内容を確認し、24時間以内にご連絡します。</p>
-          <p className="text-xs text-gray-400 mt-1">ご依頼確定後、着手金（総額の約50%）のStripe請求書リンクをメールでお送りします。書類確認後に残金をご請求します。</p>
+          <p className="text-xs text-gray-400 mt-1">ご依頼確定後、着手金（総額の約50%）の振込先口座をメールでお送りします。書類確認後に残金をご請求します。</p>
         </div>
       ) : (
       <form
