@@ -542,7 +542,7 @@ const routes: RouteConfig[] = [
     path: '/en/nbi-validity/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-validity', 'index.html'),
     title: `NBI Clearance Validity [${SEO_YEAR_MONTH_EN}] — Timing Guide`,
-    description: `NBI Clearance is valid for 1 year, but spouse visa applications require it within 6 months. Timing matters. We help you get it at the right time. Free consultation.`,
+    description: `NBI Clearance is valid for 1 year, but spouse visas often require it within 6 months. Timing matters. We help you get it at the right time. Free consultation.`,
     canonical: `${BASE}/en/nbi-validity/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-validity/`,
