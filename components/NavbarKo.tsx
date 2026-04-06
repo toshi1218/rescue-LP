@@ -52,7 +52,7 @@ const NavbarKo: React.FC = () => {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-white p-1.5 rounded"
+          className="md:hidden text-white p-1.5 rounded focus:outline-none focus:ring-2 focus:ring-primary"
           aria-label={mobileOpen ? '메뉴 닫기' : '메뉴 열기'}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}

@@ -30,8 +30,8 @@ export default {
         smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
       fontSize: {
-        /* Slightly larger xs (13px) for better mobile readability (#4) */
-        xs: ['0.8125rem', { lineHeight: '1.25rem' }],
+        /* 14px xs for WCAG AA mobile readability */
+        xs: ['0.875rem', { lineHeight: '1.25rem' }],
       },
     },
   },

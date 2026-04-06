@@ -55,7 +55,8 @@ function ComparisonTableBase({
           <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">{heading}</h2>
         </div>
       )}
-      <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-card" role="table" aria-label={heading ?? '比較表'}>
+      <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-card">
+      <div className="min-w-[480px]" role="table" aria-label={heading ?? '比較表'}>
         {/* ヘッダー */}
         <div className="grid grid-cols-[1fr_1fr_1fr] bg-secondary" role="row">
           <div className="px-4 py-3 text-sm font-bold text-white border-r border-white/10" role="columnheader" scope="col">比較項目</div>
@@ -80,6 +81,7 @@ function ComparisonTableBase({
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
