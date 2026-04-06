@@ -5,25 +5,31 @@ const reviews = [
     stars: 5,
     purpose: '国際結婚準備',
     body: '日本語で全てのやり取りが完結し、フィリピンに渡航せずにCENOMARとPSA出生証明書を取得できました。進捗報告も丁寧で、何が起きているか常に分かる状態で進められました。',
-    initial: 'M.K.',
+    initial: 'M',
+    name: 'M.K.',
     author: '30代 女性',
     context: '国際結婚・日本先行婚',
+    avatarColor: 'bg-secondary text-white',
   },
   {
     stars: 5,
     purpose: '配偶者ビザ申請',
     body: 'NBI ClearanceのDFAアポスティーユも含めてまとめて依頼できました。入管の提出期限に余裕を持って書類が届き、配偶者ビザ申請が無事完了しました。',
-    initial: 'T.S.',
+    initial: 'T',
+    name: 'T.S.',
     author: '40代 男性',
     context: '配偶者ビザ・入管提出',
+    avatarColor: 'bg-primary text-secondary',
   },
   {
     stars: 5,
     purpose: '外免切替',
     body: 'LTO書類の取り方が全く分からない状態で相談しました。必要な書類を整理してもらい、試験場の予約日から逆算して手配いただけました。渡航ゼロで完結できました。',
-    initial: 'K.Y.',
+    initial: 'K',
+    name: 'K.Y.',
     author: '40代 男性',
     context: '外免切替・運転免許センター提出',
+    avatarColor: 'bg-emerald-600 text-white',
   },
 ];
 
@@ -40,22 +46,32 @@ const ReviewSection: React.FC = () => (
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {reviews.map((r, i) => (
-          <article key={i} className="bg-gray-50 rounded-xl p-5 border border-gray-100 flex flex-col">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-primary uppercase tracking-wide bg-primary/10 px-2 py-0.5 rounded-full">
+          <article key={i} className="bg-gray-50 rounded-xl border border-gray-100 flex flex-col overflow-hidden">
+            {/* Card header with purpose badge */}
+            <div className="bg-secondary/5 border-b border-gray-100 px-5 py-3 flex items-center justify-between">
+              <span className="text-xs font-bold text-primary uppercase tracking-wide">
                 {r.purpose}
               </span>
-              <span className="text-yellow-400 text-xs" aria-label={`${r.stars}点満点`}>
+              <span className="text-yellow-400 text-sm" aria-label={`${r.stars}点満点`}>
                 {'★'.repeat(r.stars)}
               </span>
             </div>
-            <p className="text-gray-700 text-base leading-relaxed flex-1 mb-3">
-              &ldquo;{r.body}&rdquo;
-            </p>
-            <div className="text-xs text-gray-600 border-t border-gray-200 pt-2">
-              <span className="font-medium text-gray-700">{r.initial}（{r.author}）</span>
-              <span className="mx-1">·</span>
-              <span>{r.context}</span>
+
+            <div className="p-5 flex flex-col flex-1">
+              <p className="text-gray-700 text-base leading-relaxed flex-1 mb-4">
+                &ldquo;{r.body}&rdquo;
+              </p>
+
+              {/* Reviewer row */}
+              <div className="flex items-center gap-3 pt-3 border-t border-gray-200">
+                <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 ${r.avatarColor}`}>
+                  {r.initial}
+                </div>
+                <div className="text-xs text-gray-600 leading-snug">
+                  <p className="font-semibold text-gray-700">{r.name}（{r.author}）</p>
+                  <p className="text-gray-500">{r.context}</p>
+                </div>
+              </div>
             </div>
           </article>
         ))}
