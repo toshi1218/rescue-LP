@@ -201,12 +201,7 @@ const Pricing: React.FC = () => {
                       <p className="text-xs text-gray-500 mt-0.5 leading-snug">{plan.subtitle}</p>
                       {(plan as any).why && (
                         <p className="text-xs text-gray-500 mt-1 leading-snug">
-                          <span className="font-semibold">なぜ必要：</span>{(plan as any).why}
-                        </p>
-                      )}
-                      {(plan as any).outcome && (
-                        <p className="text-xs text-primary-dark/80 mt-0.5 leading-snug">
-                          <span className="font-semibold">揃えばできること：</span>{(plan as any).outcome}
+                          <span className="font-semibold">必要理由：</span>{(plan as any).why}
                         </p>
                       )}
                     </div>
