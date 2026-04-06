@@ -28,7 +28,7 @@ export default function ContactJa() {
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'お問い合わせ' }]}>
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">お問い合わせ・無料相談</h1>
       <p className="text-sm text-gray-600 mb-4">
-        必要書類・料金・期間など、まずはお気軽にご相談ください。日本語で対応します。
+        必要書類・料金・期間など、まずはご相談ください。日本語で対応します。
       </p>
       <p className="text-xs text-gray-500 mb-4">
         お問い合わせはEメールのみで承ります。下のフォームから送信された内容もメールで届きます。

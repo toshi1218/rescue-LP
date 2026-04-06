@@ -152,7 +152,7 @@ const Pricing: React.FC = () => {
         {lang === 'ja' && (
           <div className="text-xs text-gray-500 mb-6 space-y-0.5">
             <p>※表示価格はすべて税抜きです</p>
-            <p>※取得難易度、記載内容の不一致、追加確認の有無により変動する場合があります</p>
+            <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
           </div>
         )}
 
@@ -233,7 +233,7 @@ const Pricing: React.FC = () => {
 
         {lang === 'en' && (
           <p className="text-xs text-gray-400 mt-5 leading-relaxed">
-            * All prices include Philippine tax and DHL international shipping worldwide. Final amount may vary by document condition.
+            * All prices include Philippine tax and DHL international shipping worldwide. Final amount varies based on document condition, urgency, and destination.
           </p>
         )}
 
@@ -421,7 +421,7 @@ const Pricing: React.FC = () => {
             <p className="text-xs text-gray-500 mt-1">
               {lang === 'ja'
                 ? '緊急・急ぎの場合は追加料金を頂くことがあります。対応可否はケースにより異なりますので、まずはお問い合わせください。'
-                : 'Priority handling is available for some cases. Additional fees may apply. Contact us for details.'}
+                : 'Priority handling is available for some cases. Additional fees apply. Contact us for details.'}
             </p>
           </div>
         </div>
