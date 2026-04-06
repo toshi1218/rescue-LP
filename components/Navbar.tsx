@@ -481,10 +481,7 @@ const Navbar: React.FC = () => {
               </button>
             </div>
 
-            {/* お知らせ — hidden on mobile */}
-            {isJa && (
-              <Link to="/ja/news/" className={`hidden sm:inline-flex ${linkClass('/ja/news/')}`}>お知らせ</Link>
-            )}
+            {/* お知らせ — reserved for future implementation */}
 
           </div>
 
@@ -691,11 +688,6 @@ const Navbar: React.FC = () => {
               <Link to={pricingPath} onClick={() => setMobileOpen(false)} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">{t('navbar.pricing')}</Link>
             </div>
 
-            {isJa && (
-              <div className="border-t border-gray-100 pt-2 mt-2">
-                <Link to="/ja/news/" onClick={() => setMobileOpen(false)} className="block px-3 py-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50">お知らせ</Link>
-              </div>
-            )}
 
             {isJa && (
               <div className="border-t border-gray-100 pt-2 mt-2">
