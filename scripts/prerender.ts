@@ -519,7 +519,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Fee ${SEO_YEAR} — PHP 365 + Apostille`,
+    title: `PSA Birth Certificate Fee Philippines ${SEO_YEAR} — PHP 365 + Apostille`,
     description: `PSA Birth Certificate fee: PHP 365 per copy (${SEO_YEAR}). Total with DFA Apostille + DHL international shipping from USD $349. No hidden fees.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
