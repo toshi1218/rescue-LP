@@ -92,7 +92,7 @@ export default function HomeEn() {
         <SocialProof />
         <Process />
         <DiyRisks />
-        <GuideLinks />
+        <GuideLinks maxItems={6} />
         <QuickFacts />
         <FAQ />
       </main>

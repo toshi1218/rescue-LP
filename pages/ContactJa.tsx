@@ -9,7 +9,7 @@ const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
 export default function ContactJa() {
   useMeta(
     '無料相談・お問い合わせ｜フィリピン書類取得代行センター',
-    'フィリピン書類取得代行・国際結婚・配偶者ビザ・帰化申請・外免切替に関するご相談はこちら。24時間以内に返信します。まずはお気軽にご相談ください。',
+    'フィリピン書類取得代行・国際結婚・配偶者ビザ・帰化申請・外免切替のご相談はこちら。24時間以内に返信します。書類名が分からない段階でも対応します。',
   );
   const [service, setService] = useState('');
   const [submitted, setSubmitted] = useState(false);

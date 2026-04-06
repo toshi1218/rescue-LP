@@ -6,7 +6,8 @@ import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
 import WhyUs from '../components/WhyUs';
 import CaseStudies from '../components/CaseStudies';
-import ReviewSection from '../components/ReviewSection';
+import SocialProof from '../components/SocialProof';
+import DiyRisks from '../components/DiyRisks';
 import ServicePacks from '../components/ServicePacks';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
@@ -138,7 +139,8 @@ export default function HomeJa() {
         <PainPoints />
         <WhyUs />
         <CaseStudies />
-        <ReviewSection />
+        <DiyRisks />
+        <SocialProof />
         <GuideLinks maxItems={6} />
         <QuickFacts />
         <FAQ />

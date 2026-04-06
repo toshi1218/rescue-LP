@@ -116,6 +116,17 @@ export default function ContactEn() {
         </div>
 
         <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">
+            Company / Organization <span className="text-xs font-normal text-gray-400">(Optional — for law firms, employers, etc.)</span>
+          </label>
+          <input
+            name="company"
+            placeholder="e.g. Smith & Associates Law Firm"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+          />
+        </div>
+
+        <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">Country of Residence <span className="text-red-500">*</span></label>
           <input
             name="country"

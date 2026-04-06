@@ -20,20 +20,20 @@ const contentData = {
     heading: 'What Can Go Wrong\nIf You Handle It Yourself',
     risks: [
       {
-        title: 'You may not know exactly which documents you need',
-        body: 'The documents required for a K-1, CR-1, spouse visa, or naturalization case vary by situation. Relying on online information alone often leads to missing or incorrect documents — and you only find out after submission.',
+        title: 'Most people don\'t know exactly which documents they need',
+        body: 'The documents required for a K-1, CR-1, spouse visa, or naturalization case vary by situation. Online information is often incomplete or outdated — and you find out about missing documents only after submission.',
       },
       {
-        title: 'You may not order enough copies for every stage',
-        body: "The same document is often required at multiple steps — petition, NVC, embassy interview. Without knowing the full count upfront, you may need to re-order the same document mid-process, adding weeks to your timeline.",
+        title: 'Ordering the wrong number of copies sets your case back weeks',
+        body: 'The same document is often required at multiple steps — petition, NVC, embassy interview. Without knowing the full count upfront, you will need to re-order the same document mid-process and wait again from scratch.',
       },
       {
-        title: "You don't see the full roadmap",
-        body: 'Filing a petition → NVC processing → embassy interview — the same document may be required at multiple stages. Without knowing the full picture upfront, your case can stall halfway through.',
+        title: 'Without a full roadmap, the case stalls halfway through',
+        body: 'Filing a petition → NVC processing → embassy interview — the same document is often required at multiple stages. Starting without the full picture guarantees delays you could have avoided.',
       },
       {
-        title: 'Paper Apostille is required by some destinations — but not others',
-        body: "Whether a paper-based DFA Apostille is required depends on the specific consulate or office you're submitting to. Documents obtained without it may be unusable, requiring the entire retrieval to be repeated.",
+        title: 'Paper Apostille is required by some destinations — and if you miss it, you restart',
+        body: "Whether a paper-based DFA Apostille is required depends on the specific consulate or office you're submitting to. Documents obtained without it are rejected — and the entire retrieval must be repeated from the beginning.",
       },
       {
         title: 'You risk dealing with unverified providers',
