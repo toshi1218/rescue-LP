@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                 </>
               )}
             </ol>
-            <p className="text-xs text-gray-400 mt-2 border-t border-gray-200 pt-2">
+            <p className="text-xs text-gray-500 mt-2 border-t border-gray-200 pt-2">
               {isJa
                 ? '※ ご提供いただいた個人情報は、ご相談・書類取得業務のみに使用します。第三者への提供は行いません。'
                 : '* Your information is used solely for this inquiry and document procurement. We do not share it with third parties.'}
