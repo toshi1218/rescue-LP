@@ -14,7 +14,7 @@ export default function PricingEn() {
       <p className="text-sm text-gray-600 mb-3">All-inclusive pricing: PSA retrieval, DFA Apostille, and DHL shipping — quoted together with no hidden fees.</p>
       <div className="bg-secondary/[0.03] border border-secondary/10 rounded-xl p-4 mb-6">
         <p className="text-sm text-secondary font-semibold mb-1">What you're paying for</p>
-        <p className="text-xs text-gray-500 leading-relaxed">
+        <p className="text-sm text-gray-500 leading-relaxed">
           Government fees only cover the document itself. Our service includes request handling, local coordination, follow-up, document checking, and international shipment support. We are built for clients who want Philippine documents handled correctly — with less delay, less confusion, and less back-and-forth. That's why our pricing is higher than DIY options.
         </p>
       </div>
@@ -22,7 +22,7 @@ export default function PricingEn() {
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">Payment methods</p>
           <p className="text-sm text-gray-600 mb-1">Credit card via Stripe (Visa, Mastercard, Amex, Apple Pay, Google Pay).</p>
-          <p className="text-xs text-gray-500 leading-relaxed">Payment is split in two stages: a deposit invoice (~50%) when we start, and a balance invoice (~50%) after your documents are confirmed.</p>
+          <p className="text-sm text-gray-500 leading-relaxed">Payment is split in two stages: a deposit invoice (~50%) when we start, and a balance invoice (~50%) after your documents are confirmed.</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">Cancellation & refund</p>

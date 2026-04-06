@@ -141,15 +141,7 @@ const Navbar: React.FC = () => {
         { label: '行政書士との書類取得の違い', path: '/ja/gyouseishoshi-to-shorui-shuttoku/' },
       ],
     }] : []),
-    ...(isJa ? [{
-      category: '海外移住別の書類',
-      items: [
-        { label: '米国ビザ（配偶者・就労）の必要書類', path: '/ja/us-visa-documents/' },
-        { label: 'カナダ移住の必要書類', path: '/ja/canada/' },
-        { label: 'オーストラリア移住の必要書類', path: '/ja/australia/' },
-        { label: '英国移住の必要書類', path: '/ja/uk/' },
-      ],
-    }] : [{
+    ...(!isJa ? [{
       category: 'Immigration by Country',
       items: [
         { label: 'Canada Immigration', path: '/en/canada/' },
