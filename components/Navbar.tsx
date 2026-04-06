@@ -159,7 +159,7 @@ const Navbar: React.FC = () => {
         { label: 'Sweden', path: '/en/sweden/' },
         { label: 'Switzerland', path: '/en/switzerland/' },
       ],
-    }]),
+    }] : []),
   ];
   const contactPath = isJa ? '/ja/contact/' : '/en/contact/';
   const companyPath = isJa ? '/ja/company/' : '/en/company/';
