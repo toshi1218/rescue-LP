@@ -120,10 +120,53 @@ export default function LicenseConversionJa() {
       />
 
       {/* リード文 */}
-      <section className="mb-10 text-sm text-gray-700 leading-relaxed space-y-2">
+      <section className="mb-6 text-sm text-gray-700 leading-relaxed space-y-2">
         <p>フィリピン免許を日本の免許に切り替えるには、「免許取得後にフィリピンへ通算3か月以上滞在した」証明が必要です。免許を持っているだけでは切替できません。</p>
         <p>このページでは確認すべき条件・必要書類・よくあるつまずきを整理しています。</p>
       </section>
+
+      <div className="max-w-2xl mx-auto px-4">
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">LTO書類代行 料金・期間の目安</h2>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">対象書類</dt>
+              <dd className="font-medium text-gray-800">LTO Certification with Apostille・License History 等</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">100,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※DHL国際配送は実費別途</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜1か月半</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">法人・複数名</dt>
+              <dd className="font-medium text-gray-800">一括依頼・請求書払い対応可</dd>
+            </div>
+          </dl>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">内容</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+            </div>
+            {[
+              { label: 'LTO書類取得（Certification・License History 等）', price: '込み' },
+              { label: 'DFAアポスティーユ認証', price: '込み' },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '100,000円〜', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">※必要書類の種類・案件の状況によって料金は変わります。正確な金額は無料相談後にご提示します。</p>
+        </SectionDivider>
+      </div>
 
       {/* Section 1 */}
       <section className="mb-10">
@@ -205,6 +248,15 @@ export default function LicenseConversionJa() {
           ))}
         </div>
       </section>
+
+      <CtaBox
+        title="LTO書類の取り寄せ、まず確認します"
+        description="どの書類が必要か、ORの有無、現在の状況をお知らせください。必要書類と費用の目安をご案内します。"
+        buttonText="無料相談はこちら"
+        href="#contact"
+        variant="primary"
+        trustNote="着手前キャンセル無料・返信24時間以内 ｜ 法人・複数名一括対応可"
+      />
 
       {/* Section 4 */}
       <SectionDivider variant="blue">
