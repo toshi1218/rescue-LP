@@ -167,6 +167,8 @@ const Footer: React.FC = () => {
                   <option value="免許切り替え">免許切り替え</option>
                   <option value="帰化申請">帰化申請</option>
                   <option value="個別ロードマップ作成">個別ロードマップ作成</option>
+                  <option value="書類取得のみ（PSA・CENOMAR・NBI・LTO等）">書類取得のみ（PSA・CENOMAR・NBI・LTO等）</option>
+                  <option value="その他・不明">その他・わからない</option>
                 </>
               ) : (
                 <>

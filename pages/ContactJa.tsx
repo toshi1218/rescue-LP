@@ -127,10 +127,9 @@ export default function ContactJa() {
         </div>
 
         <div>
-          <label className="block text-sm font-bold text-gray-700 mb-1">居住国 <span className="text-red-500">*</span></label>
+          <label className="block text-sm font-bold text-gray-700 mb-1">居住国（任意）</label>
           <input
             name="country"
-            required
             placeholder="例：日本、アメリカ、オーストラリア"
             className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
@@ -153,7 +152,8 @@ export default function ContactJa() {
             <option value="免許切り替え">免許切り替え</option>
             <option value="帰化申請">帰化申請</option>
             <option value="個別ロードマップ作成">個別ロードマップ作成</option>
-            <option value="その他">その他</option>
+            <option value="書類取得のみ（PSA・CENOMAR・NBI・LTO等）">書類取得のみ（PSA・CENOMAR・NBI・LTO等）</option>
+            <option value="その他・不明">その他・わからない</option>
           </select>
         </div>
 
@@ -163,7 +163,7 @@ export default function ContactJa() {
             name="message"
             required
             rows={5}
-            placeholder="例：国際結婚のためCENOMARとPSA出生証明書（アポスティーユ付き）が必要です。提出先は○○市役所で、提出予定は○月頃です。"
+            placeholder="例：「フィリピン人と結婚予定でどんな書類が必要か知りたい」「免許切り替えに必要な書類を代行してほしい」など、状況を自由にお書きください。書類名がわからなくても大丈夫です。"
             className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
