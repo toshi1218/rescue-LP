@@ -114,6 +114,32 @@ export default function MarriageGuideJa() {
         ctaText="無料で相談する"
       />
 
+      <div className="max-w-2xl mx-auto px-4">
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">50,000円〜（書類1種・アポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※必要書類の種類・組み合わせによって変わります</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜1か月半</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">主な対応書類</dt>
+              <dd className="font-medium text-gray-800">CENOMAR・PSA出生証明書・DFAアポスティーユ</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">DHL国際配送</dt>
+              <dd className="font-medium text-gray-800">実費別途</dd>
+            </div>
+          </dl>
+          <p className="text-xs text-gray-500 mt-3">※必要書類の種類・組み合わせによって料金は変わります。無料相談後に正確な金額をご提示します。</p>
+        </SectionDivider>
+      </div>
+
       {/* Section 2: ケースに応じて必要になるフィリピン側の公的書類 */}
       <SectionDivider variant="beige">
         <h2 className="text-base font-bold text-gray-900 mb-3">ケースに応じて必要になるフィリピン側の公的書類</h2>

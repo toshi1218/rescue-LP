@@ -139,6 +139,15 @@ export default function NbiValidityJa() {
         </div>
       </section>
 
+      <CtaBox
+        title="更新できるか、まず確認します"
+        description="お手元のNBIクリアランスの発行年と、氏名変更の有無をお知らせください。更新ルートで進められるかを整理してご案内します。"
+        buttonText="無料相談はこちら"
+        href="#contact"
+        variant="primary"
+        trustNote="返信24時間以内・着手前キャンセル無料"
+      />
+
       {/* Section 4 */}
       <section className="mb-10 rounded-2xl bg-amber-50 border border-amber-200 p-6">
         <h2 className="text-base font-bold text-amber-900 mb-3">4. NBIクリアランスの有効期限が不安なときの正しい確認手順</h2>

@@ -152,14 +152,33 @@ export default function CenomarGuideJa() {
               <dd className="font-medium text-gray-800">Philippine Statistics Authority（PSA）</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">有効期限の目安</dt>
-              <dd className="font-medium text-gray-800">発行から6ヶ月以内（提出先による）</dd>
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※PSA発行料金（1通420ペソ）込み・DHL国際配送は実費別途</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">PSA発行料金</dt>
-              <dd className="font-medium text-gray-800">1通420ペソ（PSAHelpline参考）</dd>
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜6週間</dd>
             </div>
           </dl>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">内容</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+            </div>
+            {[
+              { label: 'CENOMAR（PSA）取得', price: '込み' },
+              { label: 'DFAアポスティーユ認証', price: '込み' },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
         </SectionDivider>
 
         <SectionDivider variant="white">

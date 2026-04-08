@@ -43,6 +43,15 @@ When verifying any change (code review, PR review, pre-deploy check), do NOT onl
 - After a major SEO fix, observe a **4-week change freeze** before making further SEO modifications
 - Never make multiple SEO-destructive changes in the same day
 
+### SEO変更の実装手順（Claude Code向け）:
+
+SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JSON-LD・sitemap・robots.txt等）を変更する実装タスクを受けた場合：
+
+1. **スコープを確認する**: ユーザーが対象ページを明示していない場合は、実装前に「どのページに適用しますか？」と必ず確認すること
+2. **デフォルトは1〜2ページ**: 明示的に「全ページ」「すべて」と指示されない限り、テスト対象の1〜2ページのみに適用すること
+3. **完了後に案内する**: 実装後、「残りのページへの適用は2週間後にSearch Consoleで効果を確認してから別タスクとして依頼してください」と必ず伝えること
+4. **非SEO変更は対象外**: フォーム・UI・コンテンツ文言のみの変更はこのルール対象外（制限なく全ページ適用してよい）
+
 ## Build & Deploy
 
 ```bash

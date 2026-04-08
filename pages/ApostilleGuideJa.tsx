@@ -149,6 +149,15 @@ export default function ApostilleGuideJa() {
           </p>
         </section>
 
+        <CtaBox
+          title="どの書類にアポスティーユが必要か、まず確認します"
+          description="何のために使う書類か、どの書類を持っているかをお知らせください。必要な流れと費用の目安をご案内します。"
+          buttonText="無料相談はこちら"
+          href="#contact"
+          variant="primary"
+          trustNote="着手前キャンセル無料・返信24時間以内"
+        />
+
         <section className="mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
             4. なぜここで止まりやすいのか
