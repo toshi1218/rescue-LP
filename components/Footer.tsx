@@ -184,15 +184,16 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="footer-message" className="block text-sm text-gray-600 mb-1">{t('footer.messageLabel')}</label>
+            <label htmlFor="footer-message" className="block text-sm text-gray-600 mb-1">
+              {t('footer.messageLabel')}
+              <span className="text-gray-400 text-xs ml-1">{isJa ? '（任意）' : '(optional)'}</span>
+            </label>
             <textarea
               id="footer-message"
               name="message"
-              required
-              rows={5}
+              rows={3}
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               placeholder={t('footer.messagePlaceholder')}
-              aria-required="true"
             />
           </div>
 

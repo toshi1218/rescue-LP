@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
+import SectionDivider from '../components/SectionDivider';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import RelatedArticles from '../components/RelatedArticles';
@@ -95,6 +96,49 @@ export default function PsaBirthCertEn() {
         <a href="https://psaserbilis.com.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Philippine Statistics Authority (PSA Serbilis)</a>.
         {' '}It serves as primary proof of identity and citizenship for immigration, marriage, and naturalization applications.
       </p>
+
+      <div className="max-w-2xl mx-auto px-4">
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Pricing &amp; Timeline</h2>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">Document</dt>
+              <dd className="font-medium text-gray-800">PSA Birth Certificate</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">Issued By</dt>
+              <dd className="font-medium text-gray-800">Philippine Statistics Authority (PSA)</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">All-Inclusive Price</dt>
+              <dd className="font-medium text-gray-800">USD $349</dd>
+              <dd className="text-gray-400 text-xs mt-1">PSA + DFA Apostille + DHL shipping</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">Estimated Timeline</dt>
+              <dd className="font-medium text-gray-800">4–6 weeks total</dd>
+            </div>
+          </dl>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">What's Included</div>
+              <div className="px-4 py-3 font-bold text-center">Price</div>
+            </div>
+            {[
+              { label: 'PSA Birth Certificate retrieval', price: 'included' },
+              { label: 'DFA Apostille authentication', price: 'included' },
+              { label: 'DHL international shipping (tracked)', price: 'included' },
+              { label: 'Total (all-inclusive)', price: 'USD $349', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">Urgent cases may incur an additional fee. Exact quote confirmed during free consultation.</p>
+        </SectionDivider>
+      </div>
 
       <SummaryBlock
         conclusion="We retrieve your PSA Birth Certificate with DFA Apostille and ship it to your address worldwide. No trip to the Philippines."
