@@ -160,6 +160,14 @@ export default function CenomarGuideJa() {
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
               <dd className="font-medium text-gray-800">約1か月〜6週間</dd>
             </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">有効期限の目安</dt>
+              <dd className="font-medium text-gray-800">発行から6ヶ月以内（提出先による）</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">PSA発行料金（参考）</dt>
+              <dd className="font-medium text-gray-800">1通420ペソ（PSAHelpline参考）</dd>
+            </div>
           </dl>
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
             <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">

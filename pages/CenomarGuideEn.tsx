@@ -67,7 +67,7 @@ export default function CenomarGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'All-inclusive from US$349 (PSA retrieval + DHL shipping). DFA Apostille is an additional ~US$100. See our Pricing page for the full breakdown.',
+                text: 'Our all-inclusive price starts at USD $349, covering PSA retrieval, DFA Apostille authentication, and DHL international shipping. Urgent cases may incur an additional fee. See our Pricing page for the full breakdown.',
               },
             },
             {
@@ -215,7 +215,7 @@ export default function CenomarGuideEn() {
         items={[
           { q: 'What does CENOMAR mean?', a: 'CENOMAR stands for Certificate of No Marriage Record. It is issued by the Philippine Statistics Authority (PSA) and certifies that a Filipino citizen has no marriage record on file in the Philippines — essentially proof of single status.' },
           { q: 'What is a CENOMAR used for?', a: 'CENOMAR is required for international marriage registration, K-1 fiancé visa applications, Japan spouse visa, Australia partner visa, US CR-1/IR-1 spouse visa, and most other immigration applications involving a Filipino national.' },
-          { q: 'How much does it cost?', a: 'All-inclusive from US$349 (PSA retrieval + DHL shipping). DFA Apostille is an additional ~US$100. See our Pricing page for the full breakdown.' },
+          { q: 'How much does it cost?', a: 'Our all-inclusive price starts at USD $349, covering PSA retrieval, DFA Apostille authentication, and DHL international shipping. Urgent cases may incur an additional fee. See our Pricing page for the full breakdown.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL international shipping takes 3–5 business days.' },
           { q: 'Can you handle rush orders?', a: 'Yes. Let us know your deadline and we will check if expedited processing is available.' },
           { q: 'Do I need a physical Apostille or is e-Apostille OK?', a: 'Most USCIS offices require a physical Apostille original. We will confirm the requirement for your specific case before processing.' },

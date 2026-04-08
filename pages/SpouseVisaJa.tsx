@@ -109,8 +109,8 @@ export default function SpouseVisaJa() {
           <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※必要書類の種類によって変わります</dd>
+              <dd className="font-medium text-gray-800">100,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※PSA婚姻証明書・出生証明書・CENOMARなど複数書類のパック価格</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -134,7 +134,7 @@ export default function SpouseVisaJa() {
               { label: 'PSA書類・CENOMAR取得', price: '込み' },
               { label: 'DFAアポスティーユ認証（入管提出用・紙原本）', price: '込み' },
               { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+              { label: '合計（DFAアポスティーユ込み）', price: '100,000円〜', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
