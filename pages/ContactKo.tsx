@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PageLayoutKo from '../components/PageLayoutKo';
 import { trackEvent } from '../lib/analytics';
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
 export default function ContactKo() {
   const [submitted, setSubmitted] = useState(false);
@@ -23,13 +23,13 @@ export default function ContactKo() {
     setSubmitting(true);
     setSubmitError('');
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
         body: new FormData(e.currentTarget),
         headers: { Accept: 'application/json' },
       });
       if (res.ok) {
-        trackEvent('form_submit', { location: 'contact_page_ko', type: 'formspree' });
+        trackEvent('form_submit', { location: 'contact_page_ko', type: 'web3forms' });
         setSubmitted(true);
       } else {
         setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
@@ -113,8 +113,9 @@ export default function ContactKo() {
         </div>
       ) : (
         <form className="space-y-5 max-w-xl" noValidate onSubmit={handleSubmit}>
-          <input type="hidden" name="_subject" value="【한국어 LP 문의】필리핀 서류 취득 대행" />
-          <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+          <input type="hidden" name="access_key" value="c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0" />
+          <input type="hidden" name="subject" value="【한국어 LP 문의】필리핀 서류 취득 대행" />
+          <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
           <input type="hidden" name="landing_page" value="https://ph-document.com/ko/contact/" />
 
           <div>

@@ -4,7 +4,7 @@ import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
 export default function ContactJa() {
   useMeta(
@@ -77,13 +77,13 @@ export default function ContactJa() {
           setSubmitting(true);
           setSubmitError('');
           try {
-            const res = await fetch(FORMSPREE_ENDPOINT, {
+            const res = await fetch(WEB3FORMS_ENDPOINT, {
               method: 'POST',
               body: new FormData(e.currentTarget),
               headers: { Accept: 'application/json' },
             });
             if (res.ok) {
-              trackEvent('form_submit', { location: 'contact_page', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource });
+              trackEvent('form_submit', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
               setSubmitted(true);
             } else {
               setSubmitError('送信に失敗しました。しばらく経ってから再度お試しください。');
@@ -95,8 +95,9 @@ export default function ContactJa() {
           }
         }}
       >
-        <input type="hidden" name="_subject" value="【LPお問い合わせ】フィリピン書類取得代行" />
-        <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+        <input type="hidden" name="access_key" value="c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0" />
+        <input type="hidden" name="subject" value="【LPお問い合わせ】フィリピン書類取得代行" />
+        <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
         <input type="hidden" name="cta_variant" value={ctaVariant} />
         <input type="hidden" name="traffic_source" value={trafficSource} />
         <input type="hidden" name="landing_page" value="https://ph-document.com/ja/contact/" />
