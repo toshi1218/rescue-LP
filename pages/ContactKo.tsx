@@ -10,9 +10,16 @@ export default function ContactKo() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [emailError, setEmailError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const emailInput = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value.trim();
+    if (!emailInput) {
+      setEmailError('이메일 주소는 필수입니다.');
+      return;
+    }
+    setEmailError('');
     setSubmitting(true);
     setSubmitError('');
     try {
@@ -131,8 +138,10 @@ export default function ContactKo() {
               type="email"
               required
               placeholder="example@email.com"
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              onChange={() => setEmailError('')}
+              className={`w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${emailError ? 'border-red-400' : 'border-gray-200'}`}
             />
+            {emailError && <p className="mt-1 text-xs text-red-500">{emailError}</p>}
           </div>
 
           <div>
