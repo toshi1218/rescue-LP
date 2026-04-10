@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [emailError, setEmailError] = useState('');
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -24,6 +25,12 @@ const Footer: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const emailInput = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value.trim();
+    if (!emailInput) {
+      setEmailError(lang === 'ja' ? 'メールアドレスは必須です。' : 'Email address is required.');
+      return;
+    }
+    setEmailError('');
     setSubmitting(true);
     setSubmitError('');
     trackEvent('form_submit', { location: 'contact', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource });
@@ -134,16 +141,20 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="footer-email" className="block text-sm text-gray-600 mb-1">{t('footer.emailLabel')}</label>
+            <label htmlFor="footer-email" className="block text-sm text-gray-600 mb-1">
+              {t('footer.emailLabel')} <span className="text-red-500">*</span>
+            </label>
             <input
               id="footer-email"
               type="email"
               name="email"
               required
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+              onChange={() => setEmailError('')}
+              className={`w-full rounded-lg border px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 ${emailError ? 'border-red-400' : 'border-gray-200'}`}
               placeholder={t('footer.emailPlaceholder')}
               aria-required="true"
             />
+            {emailError && <p className="mt-1 text-xs text-red-500">{emailError}</p>}
           </div>
 
           <div>
