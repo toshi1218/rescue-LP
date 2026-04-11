@@ -66,9 +66,9 @@ const WhyUs: React.FC = () => {
           </p>
           <div className="grid grid-cols-3 gap-2 rounded-xl overflow-hidden">
             {[
-              { src: '/dfa-galleria-cebu-01.webp', alt: 'DFA Apostille office — Cebu' },
-              { src: '/dfa-galleria-cebu-02.webp', alt: 'Document processing at DFA Cebu' },
-              { src: '/dfa-galleria-cebu-03.webp', alt: 'DFA Galleria Cebu window' },
+              { src: '/dfa-galleria-cebu-02.webp', alt: 'DFA Apostille office — Cebu' },
+              { src: '/dfa-galleria-cebu-03.webp', alt: 'Document processing at DFA Cebu' },
+              { src: '/dfa-galleria-cebu-04.webp', alt: 'DFA Galleria Cebu window' },
             ].map((img) => (
               <div key={img.src} className="relative aspect-video overflow-hidden rounded-lg">
                 <img
