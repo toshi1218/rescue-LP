@@ -28,7 +28,8 @@ export default function ContactKo() {
         body: new FormData(e.currentTarget),
         headers: { Accept: 'application/json' },
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (res.ok && data.success) {
         trackEvent('form_submit', { location: 'contact_page_ko', type: 'web3forms' });
         setSubmitted(true);
       } else {

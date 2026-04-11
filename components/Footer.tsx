@@ -41,7 +41,8 @@ const Footer: React.FC = () => {
         body: new FormData(form),
         headers: { Accept: 'application/json' },
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (res.ok && data.success) {
         setSubmitted(true);
       } else {
         setSubmitError(lang === 'ja' ? '送信に失敗しました。しばらく経ってから再度お試しください。' : 'Submission failed. Please try again later.');

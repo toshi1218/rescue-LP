@@ -29,7 +29,8 @@ const FooterKo: React.FC = () => {
         body: new FormData(e.currentTarget),
         headers: { Accept: 'application/json' },
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (res.ok && data.success) {
         setSubmitted(true);
       } else {
         setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');

@@ -86,7 +86,8 @@ export default function ContactJa() {
               body: new FormData(e.currentTarget),
               headers: { Accept: 'application/json' },
             });
-            if (res.ok) {
+            const data = await res.json();
+            if (res.ok && data.success) {
               trackEvent('form_submit', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
               setSubmitted(true);
             } else {
