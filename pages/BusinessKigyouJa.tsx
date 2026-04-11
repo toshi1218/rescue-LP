@@ -122,18 +122,17 @@ export default function BusinessKigyouJa() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr>
+                  <td className="py-3 text-gray-700">
+                    LTO書類（Certification + License History）
+                    <br />
+                    <span className="text-xs text-gray-400">＋DFAアポスティーユ込み</span>
+                  </td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥100,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
+                </tr>
+                <tr>
                   <td className="py-3 text-gray-700">PSA出生証明書 + DFAアポスティーユ</td>
                   <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
-                </tr>
-                <tr>
-                  <td className="py-3 text-gray-700">CENOMAR + DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
-                </tr>
-                <tr>
-                  <td className="py-3 text-gray-700">NBI Clearance（更新案件）</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥50,000〜</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
               </tbody>
