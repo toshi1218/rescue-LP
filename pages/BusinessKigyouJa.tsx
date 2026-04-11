@@ -42,7 +42,7 @@ export default function BusinessKigyouJa() {
       <SummaryBlock
         conclusion="フィリピン人材の在留資格手続きに必要な書類を、現地に行かずに取得できます。"
         points={[
-          'PSA出生証明書・CENOMAR・NBI Clearance・DFAアポスティーユに対応',
+          'LTO書類・PSA出生証明書・DFAアポスティーユに対応',
           '複数名分の書類を並行して手配可能',
           '倫理審査・社内稟議に使える料金表・見積書を発行',
           '案件ごとの進捗をメールでご報告',
