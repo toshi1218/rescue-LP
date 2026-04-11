@@ -59,8 +59,12 @@ export default function ContactEn() {
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
           <p className="text-3xl mb-3">✅</p>
           <p className="font-bold text-green-700 mb-2">Your message has been received!</p>
-          <p className="text-sm text-gray-500">We will review your request and reply within 24 hours.</p>
-          <p className="text-xs text-gray-400 mt-1">Once confirmed, we will send a Stripe payment link to your email for the deposit (~50%). The balance is invoiced after your documents are retrieved.</p>
+          <p className="text-sm text-gray-600 mb-3">We will review your request and reply within 24 hours.</p>
+          <div className="text-xs text-gray-500 bg-white border border-gray-100 rounded-lg p-3 text-left space-y-1">
+            <p>• Please also check your <span className="font-semibold">spam / junk folder</span>.</p>
+            <p>• If you have not heard from us within 24 hours, please email us directly:</p>
+            <a href="mailto:igrs20200601@gmail.com" className="font-semibold text-primary hover:underline">igrs20200601@gmail.com</a>
+          </div>
         </div>
       ) : (
       <form

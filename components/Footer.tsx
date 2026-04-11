@@ -104,9 +104,22 @@ const Footer: React.FC = () => {
             <p className="font-bold text-green-700 text-sm mb-1">
               {lang === 'ja' ? 'お問い合わせを受け付けました' : 'Your message has been received!'}
             </p>
-            <p className="text-xs text-gray-500 mb-3">
-              {lang === 'ja' ? '24時間以内にご連絡します。' : 'We will get back to you within 24 hours.'}
+            <p className="text-xs text-gray-600 mb-3">
+              {lang === 'ja' ? '24時間以内にメールでご連絡します。' : 'We will reply by email within 24 hours.'}
             </p>
+            <div className="text-xs text-gray-500 bg-white border border-gray-100 rounded-lg p-3 text-left space-y-1 mb-3">
+              {lang === 'ja' ? (
+                <>
+                  <p>• 返信が届かない場合は<span className="font-semibold">迷惑メール・スパムフォルダ</span>をご確認ください。</p>
+                  <p>• 24時間以内に返信がない場合は直接ご連絡ください：<a href="mailto:igrs20200601@gmail.com" className="font-semibold text-primary hover:underline">igrs20200601@gmail.com</a></p>
+                </>
+              ) : (
+                <>
+                  <p>• Please also check your <span className="font-semibold">spam / junk folder</span>.</p>
+                  <p>• No reply within 24 hours? Email us directly: <a href="mailto:igrs20200601@gmail.com" className="font-semibold text-primary hover:underline">igrs20200601@gmail.com</a></p>
+                </>
+              )}
+            </div>
             <button
               type="button"
               onClick={() => setSubmitted(false)}

@@ -60,7 +60,11 @@ const FooterKo: React.FC = () => {
           >
             <p className="text-3xl mb-3">✅</p>
             <p className="font-bold text-green-700 mb-2">문의가 접수되었습니다</p>
-            <p className="text-sm text-gray-500">24시간 이내에 연락드리겠습니다.</p>
+            <p className="text-sm text-gray-600 mb-3">24시간 이내에 이메일로 연락드리겠습니다.</p>
+            <div className="text-xs text-gray-500 bg-white border border-gray-100 rounded-lg p-3 text-left space-y-1">
+              <p>• 답변 메일이 오지 않을 경우 <span className="font-semibold">스팸 메일함</span>도 확인해 주세요.</p>
+              <p>• 24시간 이내에 답변이 없으면 직접 이메일로 문의해 주세요: <a href="mailto:igrs20200601@gmail.com" className="font-semibold text-primary hover:underline">igrs20200601@gmail.com</a></p>
+            </div>
           </div>
         ) : (
           <form
