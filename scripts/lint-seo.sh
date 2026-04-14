@@ -5,6 +5,15 @@ set -euo pipefail
 
 errors=0
 
+# Auto-detect diff mode: pre-commit (staged changes) vs build (latest commit)
+if ! git diff --cached --quiet 2>/dev/null; then
+  DIFF_CMD="git diff --cached"
+elif git rev-parse HEAD~1 >/dev/null 2>&1; then
+  DIFF_CMD="git diff HEAD~1..HEAD"
+else
+  DIFF_CMD=""
+fi
+
 echo "=== SEO / Encoding Lint ==="
 
 # 1. UTF-8 BOM チェック
@@ -40,12 +49,13 @@ if [ -n "$no_domain_slash" ]; then
   errors=$((errors + 1))
 fi
 
-# 5. hreflang 削除検知（ステージング済みの diff を確認）
-if git diff --cached --quiet 2>/dev/null; then
-  : # no staged changes
-else
-  hreflang_removed=$(git diff --cached -U0 2>/dev/null | grep -c '^-.*hreflang' || true)
-  hreflang_added=$(git diff --cached -U0 2>/dev/null | grep -c '^+.*hreflang' || true)
+# SEO-critical paths to scope diff checks (exclude docs/, README, etc.)
+SEO_PATHS="scripts/ pages/ components/ lib/ public/"
+
+# 5. hreflang 削除検知
+if [ -n "$DIFF_CMD" ]; then
+  hreflang_removed=$($DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep -c '^-.*hreflang' || true)
+  hreflang_added=$($DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep -c '^+.*hreflang' || true)
   if [ "$hreflang_removed" -gt 0 ] && [ "$hreflang_added" -eq 0 ]; then
     echo "WARNING: hreflang tags are being REMOVED without replacement!"
     echo "  Removed lines: $hreflang_removed"
@@ -55,24 +65,22 @@ else
   fi
 fi
 
-# 6. noindex 追加検知（ステージング済みの diff を確認）
-if git diff --cached --quiet 2>/dev/null; then
-  : # no staged changes
-else
-  noindex_added=$(git diff --cached -U0 2>/dev/null | grep -c '^+.*noindex' || true)
+# 6. noindex 追加検知
+if [ -n "$DIFF_CMD" ]; then
+  noindex_added=$($DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep -c '^+.*noindex' || true)
   if [ "$noindex_added" -gt 0 ]; then
     echo "WARNING: noindex is being ADDED to pages!"
     echo "  Added lines: $noindex_added"
     echo "  This will remove pages from Google's index. Re-indexing takes 1-2 weeks."
-    git diff --cached -U0 2>/dev/null | grep '^+.*noindex' | head -10
+    $DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep '^+.*noindex' | head -10
     errors=$((errors + 1))
   fi
 fi
 
 # 7. sitemap.xml URL 数減少検知
-if git diff --cached -- public/sitemap.xml 2>/dev/null | grep -q '^-.*<loc>' 2>/dev/null; then
-  urls_removed=$(git diff --cached -U0 -- public/sitemap.xml 2>/dev/null | grep -c '^-.*<loc>' || true)
-  urls_added=$(git diff --cached -U0 -- public/sitemap.xml 2>/dev/null | grep -c '^+.*<loc>' || true)
+if [ -n "$DIFF_CMD" ] && $DIFF_CMD -- public/sitemap.xml 2>/dev/null | grep -q '^-.*<loc>' 2>/dev/null; then
+  urls_removed=$($DIFF_CMD -U0 -- public/sitemap.xml 2>/dev/null | grep -c '^-.*<loc>' || true)
+  urls_added=$($DIFF_CMD -U0 -- public/sitemap.xml 2>/dev/null | grep -c '^+.*<loc>' || true)
   if [ "$urls_removed" -gt "$urls_added" ]; then
     net_loss=$((urls_removed - urls_added))
     echo "WARNING: sitemap.xml is losing $net_loss URL(s)!"
@@ -82,9 +90,9 @@ if git diff --cached -- public/sitemap.xml 2>/dev/null | grep -q '^-.*<loc>' 2>/
   fi
 fi
 
-# 8. SEO/LLMO 破壊的変更の検知（ステージング済みの diff を確認）
-if ! git diff --cached --quiet 2>/dev/null; then
-  seo_files_changed=$(git diff --cached --name-only 2>/dev/null | grep -E '(prerender\.ts|sitemap\.xml|robots\.txt|_redirects|urlMap\.ts|useMeta\.ts|seoDate\.ts|countryConfig\.ts)' || true)
+# 8. SEO/LLMO 破壊的変更の検知
+if [ -n "$DIFF_CMD" ]; then
+  seo_files_changed=$($DIFF_CMD --name-only 2>/dev/null | grep -E '(prerender\.ts|sitemap\.xml|robots\.txt|_redirects|urlMap\.ts|useMeta\.ts|seoDate\.ts|countryConfig\.ts)' || true)
   if [ -n "$seo_files_changed" ]; then
     echo ""
     echo "=== SEO/LLMO Impact Review Required ==="
@@ -99,8 +107,8 @@ if ! git diff --cached --quiet 2>/dev/null; then
   fi
 
   # Detect JSON-LD schema removal
-  jsonld_removed=$(git diff --cached -U0 2>/dev/null | grep -c '^-.*"@type"' || true)
-  jsonld_added=$(git diff --cached -U0 2>/dev/null | grep -c '^+.*"@type"' || true)
+  jsonld_removed=$($DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep -c '^-.*"@type"' || true)
+  jsonld_added=$($DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep -c '^+.*"@type"' || true)
   if [ "$jsonld_removed" -gt 0 ] && [ "$jsonld_added" -eq 0 ]; then
     echo "WARNING: JSON-LD structured data is being REMOVED!"
     echo "  Removed @type declarations: $jsonld_removed"
@@ -109,7 +117,7 @@ if ! git diff --cached --quiet 2>/dev/null; then
   fi
 
   # Detect AI crawler rule changes in robots.txt
-  ai_crawler_removed=$(git diff --cached -U0 -- public/robots.txt 2>/dev/null | grep -c '^-.*\(GPTBot\|Claude\|Perplexity\|Cohere\|Copilot\|Amazonbot\|Google-Extended\)' || true)
+  ai_crawler_removed=$($DIFF_CMD -U0 -- public/robots.txt 2>/dev/null | grep -c '^-.*\(GPTBot\|Claude\|Perplexity\|Cohere\|Copilot\|Amazonbot\|Google-Extended\)' || true)
   if [ "$ai_crawler_removed" -gt 0 ]; then
     echo "WARNING: AI crawler rules are being REMOVED from robots.txt!"
     echo "  This may block LLMs from accessing the site content."

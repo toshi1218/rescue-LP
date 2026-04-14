@@ -1,5 +1,6 @@
 import React from 'react';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderToString } from 'react-dom/server';
@@ -1615,36 +1616,52 @@ function updateHead(html: string, route: RouteConfig): string {
 
 async function prerender() {
   const baseHtml = await readFile(distIndexPath, 'utf8');
+  const failedRoutes: string[] = [];
 
   for (const route of routes) {
-    console.log(`Prerendering ${route.path}...`);
+    try {
+      console.log(`Prerendering ${route.path}...`);
 
-    const appHtml = renderToString(
-      React.createElement(
-        StaticRouter,
-        { location: route.path },
+      const appHtml = renderToString(
         React.createElement(
-          LanguageProvider,
-          null,
-          React.createElement(App)
+          StaticRouter,
+          { location: route.path },
+          React.createElement(
+            LanguageProvider,
+            null,
+            React.createElement(App)
+          )
         )
-      )
-    );
+      );
 
-    let html = baseHtml.replace(
-      '<div id="root"></div>',
-      `<div id="root">${appHtml}</div>`
-    );
+      let html = baseHtml.replace(
+        '<div id="root"></div>',
+        `<div id="root">${appHtml}</div>`
+      );
 
-    html = updateHead(html, route);
+      html = updateHead(html, route);
 
-    const outDir = path.dirname(route.outFile);
-    await mkdir(outDir, { recursive: true });
-    await writeFile(route.outFile, html, 'utf8');
-    console.log(`  → Written: ${route.outFile}`);
+      const outDir = path.dirname(route.outFile);
+      await mkdir(outDir, { recursive: true });
+      await writeFile(route.outFile, html, 'utf8');
+      console.log(`  → Written: ${route.outFile}`);
+    } catch (error) {
+      console.error(`  ✗ FAILED: ${route.path} — ${error instanceof Error ? error.message : error}`);
+      failedRoutes.push(route.path);
+    }
   }
 
-  console.log(`\nPrerendered ${routes.length} pages.`);
+  const successCount = routes.length - failedRoutes.length;
+  console.log(`\nPrerendered ${successCount}/${routes.length} pages.`);
+
+  if (failedRoutes.length > 0) {
+    console.error(`\nFailed pages (${failedRoutes.length}):`);
+    failedRoutes.forEach(p => console.error(`  - ${p}`));
+  }
+
+  if (failedRoutes.length >= 5) {
+    throw new Error(`Too many pages failed to prerender (${failedRoutes.length}/${routes.length}). Aborting build.`);
+  }
 }
 
 function getSitemapPriority(routePath: string): string {
@@ -1663,6 +1680,28 @@ function getSitemapChangefreq(routePath: string): string {
   return 'monthly';
 }
 
+async function validateBuild() {
+  const missingFiles: string[] = [];
+  const indexableRoutes = routes.filter(r => !r.noindex);
+
+  for (const route of indexableRoutes) {
+    if (!existsSync(route.outFile)) {
+      missingFiles.push(route.path);
+    }
+  }
+
+  console.log(`\nBuild validation: ${indexableRoutes.length - missingFiles.length}/${indexableRoutes.length} indexable pages have HTML files.`);
+
+  if (missingFiles.length > 0) {
+    console.error(`Missing HTML files for ${missingFiles.length} indexable routes:`);
+    missingFiles.forEach(p => console.error(`  - ${p}`));
+  }
+
+  if (missingFiles.length >= 5) {
+    throw new Error(`Too many indexable pages missing from dist/ (${missingFiles.length}). Aborting to prevent partial deployment.`);
+  }
+}
+
 async function generateSitemap() {
   const seen = new Set<string>();
   const entries: string[] = [];
@@ -1671,6 +1710,11 @@ async function generateSitemap() {
     if (route.noindex) continue;
     if (seen.has(route.canonical)) continue;
     seen.add(route.canonical);
+
+    if (!existsSync(route.outFile)) {
+      console.warn(`  ⚠ Skipping sitemap entry for ${route.path} — HTML file missing`);
+      continue;
+    }
 
     const priority = getSitemapPriority(route.path);
     const changefreq = getSitemapChangefreq(route.path);
@@ -1714,6 +1758,7 @@ ${entries.join('\n')}
 }
 
 prerender()
+  .then(() => validateBuild())
   .then(() => generateSitemap())
   .catch((error) => {
     console.error('prerender failed:', error);
