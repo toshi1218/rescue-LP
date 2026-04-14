@@ -5,9 +5,15 @@ set -euo pipefail
 
 errors=0
 
-# Auto-detect diff mode: pre-commit (staged changes) vs build (latest commit)
+# Auto-detect diff mode:
+#   1. Pre-commit hook → staged changes
+#   2. Build on branch → ALL changes since main (catches multi-commit SEO breaks)
+#   3. Build on main   → last commit only
 if ! git diff --cached --quiet 2>/dev/null; then
   DIFF_CMD="git diff --cached"
+elif git rev-parse --verify origin/main >/dev/null 2>&1 && \
+     [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+  DIFF_CMD="git diff origin/main..HEAD"
 elif git rev-parse HEAD~1 >/dev/null 2>&1; then
   DIFF_CMD="git diff HEAD~1..HEAD"
 else
@@ -49,8 +55,8 @@ if [ -n "$no_domain_slash" ]; then
   errors=$((errors + 1))
 fi
 
-# SEO-critical paths to scope diff checks (exclude docs/, README, etc.)
-SEO_PATHS="scripts/ pages/ components/ lib/ public/"
+# SEO-critical paths to scope diff checks (exclude docs/, README, lint-seo.sh itself)
+SEO_PATHS="scripts/prerender.ts pages/ components/ lib/ public/"
 
 # 5. hreflang 削除検知
 if [ -n "$DIFF_CMD" ]; then
@@ -65,14 +71,14 @@ if [ -n "$DIFF_CMD" ]; then
   fi
 fi
 
-# 6. noindex 追加検知
+# 6. noindex 追加検知 (route config の "noindex: true" のみ検出)
 if [ -n "$DIFF_CMD" ]; then
-  noindex_added=$($DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep -c '^+.*noindex' || true)
+  noindex_added=$($DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep -c '^+.*noindex:\s*true' || true)
   if [ "$noindex_added" -gt 0 ]; then
     echo "WARNING: noindex is being ADDED to pages!"
     echo "  Added lines: $noindex_added"
     echo "  This will remove pages from Google's index. Re-indexing takes 1-2 weeks."
-    $DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep '^+.*noindex' | head -10
+    $DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep '^+.*noindex:\s*true' | head -10
     errors=$((errors + 1))
   fi
 fi
@@ -125,8 +131,27 @@ if [ -n "$DIFF_CMD" ]; then
   fi
 fi
 
+# 9. Absolute hreflang floor check (catches deletions regardless of diff history)
+sitemap_hreflang_count=$(grep -c 'hreflang' public/sitemap.xml 2>/dev/null || echo "0")
+if [ "$sitemap_hreflang_count" -lt 50 ]; then
+  echo "CRITICAL: sitemap.xml has only $sitemap_hreflang_count hreflang entries!"
+  echo "  Expected 200+ for a multi-language site. Hreflang may have been deleted."
+  errors=$((errors + 1))
+fi
+
+# 10. Absolute sitemap URL floor check
+sitemap_url_count=$(grep -c '<loc>' public/sitemap.xml 2>/dev/null || echo "0")
+if [ "$sitemap_url_count" -lt 80 ]; then
+  echo "CRITICAL: sitemap.xml has only $sitemap_url_count URLs!"
+  echo "  Expected 90+. Significant URL loss detected."
+  errors=$((errors + 1))
+fi
+
 if [ "$errors" -eq 0 ]; then
   echo "All checks passed."
+else
+  echo ""
+  echo "=== $errors issue(s) found. Review above before proceeding. ==="
 fi
 
 exit "$errors"
