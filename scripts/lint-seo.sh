@@ -132,7 +132,7 @@ if [ -n "$DIFF_CMD" ]; then
 fi
 
 # 9. Absolute hreflang floor check (catches deletions regardless of diff history)
-sitemap_hreflang_count=$(grep -c 'hreflang' public/sitemap.xml 2>/dev/null || echo "0")
+sitemap_hreflang_count=$(grep -c 'hreflang' public/sitemap.xml 2>/dev/null) || sitemap_hreflang_count=0
 if [ "$sitemap_hreflang_count" -lt 50 ]; then
   echo "CRITICAL: sitemap.xml has only $sitemap_hreflang_count hreflang entries!"
   echo "  Expected 200+ for a multi-language site. Hreflang may have been deleted."
@@ -140,7 +140,7 @@ if [ "$sitemap_hreflang_count" -lt 50 ]; then
 fi
 
 # 10. Absolute sitemap URL floor check
-sitemap_url_count=$(grep -c '<loc>' public/sitemap.xml 2>/dev/null || echo "0")
+sitemap_url_count=$(grep -c '<loc>' public/sitemap.xml 2>/dev/null) || sitemap_url_count=0
 if [ "$sitemap_url_count" -lt 80 ]; then
   echo "CRITICAL: sitemap.xml has only $sitemap_url_count URLs!"
   echo "  Expected 90+. Significant URL loss detected."
