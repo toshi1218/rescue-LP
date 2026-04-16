@@ -3,6 +3,9 @@
 # ビルド前に実行して、文字化け・BOM・URL不備を検出する
 set -euo pipefail
 
+# Configurable thresholds
+MAX_NOINDEX=10   # Maximum allowed "noindex: true" occurrences in prerender.ts
+
 errors=0
 
 # Auto-detect diff mode:
@@ -144,6 +147,15 @@ sitemap_url_count=$(grep -c '<loc>' public/sitemap.xml 2>/dev/null) || sitemap_u
 if [ "$sitemap_url_count" -lt 80 ]; then
   echo "CRITICAL: sitemap.xml has only $sitemap_url_count URLs!"
   echo "  Expected 90+. Significant URL loss detected."
+  errors=$((errors + 1))
+fi
+
+# 11. Absolute noindex ceiling check (catches accidental noindex proliferation)
+noindex_count=$(grep -c 'noindex: true' scripts/prerender.ts 2>/dev/null) || noindex_count=0
+if [ "$noindex_count" -gt "$MAX_NOINDEX" ]; then
+  echo "CRITICAL: scripts/prerender.ts has $noindex_count 'noindex: true' entries!"
+  echo "  Maximum allowed: $MAX_NOINDEX. Possible accidental noindex proliferation."
+  echo "  Run: grep -n 'noindex: true' scripts/prerender.ts"
   errors=$((errors + 1))
 fi
 

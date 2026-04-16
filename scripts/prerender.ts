@@ -19,6 +19,7 @@ import {
   SEO_TITLE_BADGE_YEAR_SHORT_JA,
 } from '../lib/seoDate';
 import { COUNTRY_CONFIGS } from '../lib/countryConfig';
+import { enToJa } from '../lib/urlMap';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
@@ -1462,6 +1463,45 @@ const countryRoutes: RouteConfig[] = COUNTRY_CONFIGS.map(config => ({
 }));
 
 routes.push(...countryRoutes);
+
+/**
+ * A6: urlMap.ts と routes[] の整合性バリデーション
+ *
+ * enToJa の全 EN キーおよび全 JA 値が routes[] の path に存在するか検証する。
+ * 「新ページを urlMap に追加したが routes[] に追加忘れ」を build 時に検出し、
+ * SPA フォールバックへのサイレントフォールスルーを防ぐ。
+ * 不一致がある場合は console.error で報告し process.exit(1) で build を停止する。
+ */
+function validateUrlMapRoutesSync(): void {
+  // Normalize path: ensure trailing slash (routes always use trailing slash format)
+  const normalize = (p: string): string => (p.endsWith('/') ? p : `${p}/`);
+
+  const routePaths = new Set(routes.map(r => r.path));
+  const missing: string[] = [];
+
+  for (const [enPath, jaPath] of Object.entries(enToJa)) {
+    const normalizedEn = normalize(enPath);
+    const normalizedJa = normalize(jaPath);
+
+    if (!routePaths.has(normalizedEn)) {
+      missing.push(`EN path in urlMap not found in routes[]: "${normalizedEn}" (from enToJa key "${enPath}")`);
+    }
+    if (!routePaths.has(normalizedJa)) {
+      missing.push(`JA path in urlMap not found in routes[]: "${normalizedJa}" (from enToJa value "${jaPath}")`);
+    }
+  }
+
+  if (missing.length > 0) {
+    console.error('\n[A6] urlMap.ts ↔ routes[] 整合性エラー:');
+    missing.forEach(msg => console.error(`  ✗ ${msg}`));
+    console.error(`\n  ${missing.length} mismatch(es) found. Add missing entries to routes[] or remove them from urlMap.ts.\n`);
+    process.exit(1);
+  }
+
+  console.log(`[A6] urlMap ↔ routes[] sync OK (${Object.keys(enToJa).length} EN+JA pairs checked).`);
+}
+
+validateUrlMapRoutesSync();
 
 function updateHead(html: string, route: RouteConfig): string {
   let result = html;
