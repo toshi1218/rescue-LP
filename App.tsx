@@ -129,6 +129,7 @@ const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
 const NbiKo = lazy(() => import('./pages/NbiKo'));
 const ContactKo = lazy(() => import('./pages/ContactKo'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const FloatingChatWidget = lazy(() => import('./components/FloatingChatWidget'));
 
 function NavigationProgress() {
   const { pathname } = useLocation();
@@ -442,6 +443,9 @@ export default function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
+      <Suspense fallback={null}>
+        <FloatingChatWidget />
       </Suspense>
       </ErrorBoundary>
     </>

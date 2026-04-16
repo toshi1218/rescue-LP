@@ -16,7 +16,7 @@ const BackToTop: React.FC = () => {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="ページトップへ戻る"
-      className="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-secondary text-white shadow-lg hover:bg-secondary/80 transition-all flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-secondary/40"
+      className="fixed bottom-24 right-6 z-50 w-11 h-11 rounded-full bg-secondary text-white shadow-lg hover:bg-secondary/80 transition-all flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-secondary/40"
     >
       <ChevronUp className="w-5 h-5" aria-hidden="true" />
     </button>
