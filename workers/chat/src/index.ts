@@ -90,8 +90,8 @@ app.post('/api/chat', async (c) => {
         }
         controller.enqueue(encoder.encode('data: [DONE]\n\n'));
       } catch (err) {
-        const message = err instanceof Error ? err.message : 'stream_error';
-        send({ error: message });
+        console.error('[chat] stream error', err);
+        send({ error: 'stream_error' });
       } finally {
         controller.close();
       }

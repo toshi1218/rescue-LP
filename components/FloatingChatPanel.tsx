@@ -44,6 +44,14 @@ export default function FloatingChatPanel({ onClose }: Props) {
   }, [messages, streaming]);
 
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
+  useEffect(() => {
     return () => {
       abortRef.current?.abort();
     };
@@ -115,7 +123,7 @@ export default function FloatingChatPanel({ onClose }: Props) {
     <div
       role="dialog"
       aria-label={t('chat.dialogAriaLabel')}
-      className="fixed z-40 bg-white shadow-2xl flex flex-col inset-0 sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[380px] sm:h-[560px] sm:rounded-2xl overflow-hidden border border-gray-200"
+      className="fixed z-[60] bg-white shadow-2xl flex flex-col inset-0 sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[380px] sm:h-[560px] sm:rounded-2xl overflow-hidden border border-gray-200"
     >
       <header className="flex items-center justify-between px-4 py-3 bg-secondary text-white">
         <div>
