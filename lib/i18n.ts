@@ -153,6 +153,28 @@ const ja = {
   // ── CaseStudies ──────────────────────────────────────────────────────
   'cases.title': '代行依頼事例（匿名）',
   'cases.note': '公開可能な範囲で、実際の代行依頼パターンを要約して掲載しています。',
+
+  // ── FloatingChatWidget ───────────────────────────────────────────────
+  'chat.buttonLabel': 'AIに相談',
+  'chat.openAriaLabel': 'AIチャットを開く',
+  'chat.closeAriaLabel': 'チャットを閉じる',
+  'chat.dialogAriaLabel': 'AIチャットウィンドウ',
+  'chat.inputAriaLabel': 'メッセージを入力',
+  'chat.headerTitle': 'AI一次受付',
+  'chat.headerSubtitle': 'CENOMAR・PSA・NBI・DFAの疑問に即答します',
+  'chat.greeting': 'こんにちは。フィリピン書類（CENOMAR・PSA出生証明書・NBI・DFAアポスティーユ等）についてお気軽にどうぞ。正式な見積もりは人間スタッフが最終確認します。',
+  'chat.placeholder': '例: CENOMARの料金は？',
+  'chat.send': '送信',
+  'chat.sending': '送信中…',
+  'chat.error': '一時的に応答できません。時間をおいて再度お試しください。',
+  'chat.disclaimer': '※AIの回答は参考情報です。正式な料金・納期はフォーム送信後にスタッフが確定します。',
+  'chat.quickPrompt.psa': 'PSA出生証明書の取得方法',
+  'chat.quickPrompt.cenomar': 'CENOMARとは？',
+  'chat.quickPrompt.nbi': 'NBIクリアランスの有効期限',
+  'chat.quickPrompt.apostille': 'DFAアポスティーユの所要時間',
+  'chat.quickPrompt.pricing': '料金の目安を教えて',
+  'chat.handoff.message': 'ご依頼内容が具体的なようです。正式なお見積もりは下記フォームからどうぞ。',
+  'chat.handoff.cta': 'お問い合わせフォームへ進む',
 };
 
 const en: typeof ja = {
@@ -305,6 +327,28 @@ const en: typeof ja = {
   // ── CaseStudies ──────────────────────────────────────────────────────
   'cases.title': 'Procurement Case Examples (Anonymous)',
   'cases.note': 'Actual procurement cases summarized and shared with client consent.',
+
+  // ── FloatingChatWidget ───────────────────────────────────────────────
+  'chat.buttonLabel': 'Ask AI',
+  'chat.openAriaLabel': 'Open AI chat',
+  'chat.closeAriaLabel': 'Close chat',
+  'chat.dialogAriaLabel': 'AI chat window',
+  'chat.inputAriaLabel': 'Type a message',
+  'chat.headerTitle': 'AI Front Desk',
+  'chat.headerSubtitle': 'Quick answers on CENOMAR, PSA, NBI & DFA',
+  'chat.greeting': 'Hi! Ask me anything about Philippine documents — CENOMAR, PSA Birth Certificate, NBI Clearance, DFA Apostille, and more. Our human staff will confirm your final quote.',
+  'chat.placeholder': 'e.g. How much does CENOMAR cost?',
+  'chat.send': 'Send',
+  'chat.sending': 'Sending…',
+  'chat.error': 'Temporarily unavailable. Please try again in a moment.',
+  'chat.disclaimer': 'AI replies are for reference only. A human staff member will confirm the final price and timeline after you submit the form.',
+  'chat.quickPrompt.psa': 'How to get a PSA Birth Certificate',
+  'chat.quickPrompt.cenomar': 'What is CENOMAR?',
+  'chat.quickPrompt.nbi': 'NBI Clearance validity',
+  'chat.quickPrompt.apostille': 'DFA Apostille turnaround',
+  'chat.quickPrompt.pricing': 'Rough pricing guide',
+  'chat.handoff.message': 'Sounds like a real request — let us give you a formal quote via the contact form.',
+  'chat.handoff.cta': 'Go to contact form',
 };
 
 const dict: Record<Lang, typeof ja> = { ja, en };
