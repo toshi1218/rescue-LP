@@ -7,13 +7,13 @@ errors=0
 
 # Auto-detect diff mode:
 #   1. Pre-commit hook → staged changes
-#   2. Build on branch → ALL changes since main (catches multi-commit SEO breaks)
+#   2. Build on branch → compare via explicit merge-base with main (stable against main branch drift)
 #   3. Build on main   → last commit only
 if ! git diff --cached --quiet 2>/dev/null; then
   DIFF_CMD="git diff --cached"
 elif git rev-parse --verify origin/main >/dev/null 2>&1 && \
      [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
-  DIFF_CMD="git diff origin/main..HEAD"
+  DIFF_CMD="git diff --merge-base origin/main HEAD"
 elif git rev-parse HEAD~1 >/dev/null 2>&1; then
   DIFF_CMD="git diff HEAD~1..HEAD"
 else
