@@ -2,21 +2,31 @@ const WINDOW_SECONDS = 600;
 const MAX_REQUESTS = 20;
 
 export async function checkRateLimit(
-  kv: KVNamespace,
+  kv: KVNamespace | undefined,
   ip: string,
 ): Promise<{ allowed: boolean; remaining: number }> {
+  if (!kv) {
+    console.warn('[rateLimit] KV binding missing; failing open');
+    return { allowed: true, remaining: MAX_REQUESTS };
+  }
+
   const bucketKey = `rl:${ip}`;
-  const raw = await kv.get(bucketKey);
   const now = Math.floor(Date.now() / 1000);
   const windowStart = now - WINDOW_SECONDS;
 
   let timestamps: number[] = [];
-  if (raw) {
-    try {
-      timestamps = (JSON.parse(raw) as number[]).filter((t) => t >= windowStart);
-    } catch {
-      timestamps = [];
+  try {
+    const raw = await kv.get(bucketKey);
+    if (raw) {
+      try {
+        timestamps = (JSON.parse(raw) as number[]).filter((t) => t >= windowStart);
+      } catch {
+        timestamps = [];
+      }
     }
+  } catch (err) {
+    console.warn('[rateLimit] KV read failed; failing open', err);
+    return { allowed: true, remaining: MAX_REQUESTS };
   }
 
   if (timestamps.length >= MAX_REQUESTS) {
@@ -24,7 +34,11 @@ export async function checkRateLimit(
   }
 
   timestamps.push(now);
-  await kv.put(bucketKey, JSON.stringify(timestamps), { expirationTtl: WINDOW_SECONDS });
+  try {
+    await kv.put(bucketKey, JSON.stringify(timestamps), { expirationTtl: WINDOW_SECONDS });
+  } catch (err) {
+    console.warn('[rateLimit] KV write failed; allowing request', err);
+  }
 
   return { allowed: true, remaining: MAX_REQUESTS - timestamps.length };
 }
