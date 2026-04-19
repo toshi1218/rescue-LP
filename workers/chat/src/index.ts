@@ -5,10 +5,10 @@ import { buildSystemPrompt, type PromptLang } from './prompt';
 import { checkRateLimit } from './rateLimit';
 
 type Bindings = {
-  ANTHROPIC_API_KEY: string;
+  ANTHROPIC_API_KEY?: string;
   ALLOWED_ORIGIN: string;
   MODEL: string;
-  RATE_LIMIT: KVNamespace;
+  RATE_LIMIT?: KVNamespace;
 };
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
@@ -32,7 +32,8 @@ app.get('/', (c) => c.text('ph-document chat worker: OK', 200));
 
 app.post('/api/chat', async (c) => {
   try {
-    if (!c.env.ANTHROPIC_API_KEY) {
+    const apiKey = c.env.ANTHROPIC_API_KEY;
+    if (!apiKey) {
       console.error('[chat] ANTHROPIC_API_KEY is not set');
       return c.json({ error: 'missing_api_key' }, 500);
     }
@@ -67,7 +68,7 @@ app.post('/api/chat', async (c) => {
       }
     }
 
-    const client = new Anthropic({ apiKey: c.env.ANTHROPIC_API_KEY });
+    const client = new Anthropic({ apiKey });
     const system = buildSystemPrompt(lang);
 
     const stream = await client.messages.stream({
