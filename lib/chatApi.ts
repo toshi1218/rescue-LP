@@ -31,7 +31,15 @@ export async function* streamChat(
   });
 
   if (!response.ok || !response.body) {
-    throw new Error(`Chat API error: ${response.status}`);
+    let detail = '';
+    try {
+      const data = (await response.clone().json()) as { error?: string };
+      if (data?.error) detail = ` (${data.error})`;
+    } catch {
+      // Response was not JSON
+    }
+    console.error(`[chat] API error ${response.status}${detail}`);
+    throw new Error(`Chat API error: ${response.status}${detail}`);
   }
 
   const reader = response.body.getReader();
