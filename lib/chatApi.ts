@@ -85,14 +85,17 @@ export async function* streamChat(
         const data = line.slice(5).trim();
         if (!data || data === '[DONE]') continue;
 
-        let parsed: { text?: string; error?: string };
+        let parsed: { text?: string; error?: string; detail?: string };
         try {
-          parsed = JSON.parse(data) as { text?: string; error?: string };
+          parsed = JSON.parse(data) as { text?: string; error?: string; detail?: string };
         } catch {
           // Ignore malformed event lines
           continue;
         }
-        if (parsed.error) throw new Error(`stream_error: ${parsed.error}`);
+        if (parsed.error) {
+          console.error('[chat] server error event:', parsed.error, parsed.detail ?? '');
+          throw new Error(`stream_error: ${parsed.error}`);
+        }
         if (typeof parsed.text !== 'string') continue;
         pending += parsed.text;
         const emit = flushPending(false);

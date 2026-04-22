@@ -71,13 +71,25 @@ app.post('/api/chat', async (c) => {
     const client = new Anthropic({ apiKey });
     const system = buildSystemPrompt(lang);
 
-    const stream = client.messages.stream({
-      model: c.env.MODEL,
-      max_tokens: 800,
-      temperature: 0.3,
-      system,
-      messages: messages.map((m) => ({ role: m.role, content: m.content })),
-    });
+    // client.messages.create({ stream: true }) resolves once headers are received.
+    // Auth/model errors throw here (before SSE response starts) → caught by outer
+    // try-catch → 502 JSON. Mid-stream errors are handled inside ReadableStream.start.
+    // (Avoids MessageStream thenable issues with client.messages.stream().)
+    let apiStream: Awaited<ReturnType<typeof client.messages.create>>;
+    try {
+      apiStream = await client.messages.create({
+        model: c.env.MODEL,
+        max_tokens: 800,
+        temperature: 0.3,
+        system,
+        messages: messages.map((m) => ({ role: m.role, content: m.content })),
+        stream: true,
+      });
+    } catch (err) {
+      const detail = err instanceof Error ? err.message : String(err);
+      console.error('[chat] Anthropic API error:', detail);
+      return c.json({ error: 'api_error', detail }, 502);
+    }
 
     const encoder = new TextEncoder();
     const sseStream = new ReadableStream({
@@ -86,7 +98,7 @@ app.post('/api/chat', async (c) => {
           controller.enqueue(encoder.encode(`data: ${JSON.stringify(data)}\n\n`));
         };
         try {
-          for await (const event of stream) {
+          for await (const event of apiStream) {
             if (
               event.type === 'content_block_delta' &&
               event.delta.type === 'text_delta' &&
@@ -97,8 +109,9 @@ app.post('/api/chat', async (c) => {
           }
           controller.enqueue(encoder.encode('data: [DONE]\n\n'));
         } catch (err) {
-          console.error('[chat] stream error', err);
-          send({ error: 'stream_error' });
+          const detail = err instanceof Error ? err.message : String(err);
+          console.error('[chat] stream error:', detail);
+          send({ error: 'stream_error', detail });
         } finally {
           controller.close();
         }
