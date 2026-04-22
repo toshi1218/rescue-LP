@@ -260,7 +260,7 @@ const Footer: React.FC = () => {
             className="w-full flex items-center justify-center gap-3 bg-gray-100 hover:bg-gray-200 text-secondary font-bold py-4 rounded-xl shadow transition-all"
           >
             <Mail className="w-5 h-5" />
-            {t('footer.mailto')}
+            {isJa ? 'メールで直接連絡する' : 'Email us directly'}
           </a>
           {isJa && (
             <a
