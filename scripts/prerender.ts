@@ -1445,6 +1445,30 @@ const routes: RouteConfig[] = [
     datePublished: SEO_DATE_ISO,
   },
 
+  /* ── Stripe payment result pages (noindex) ──────────────────────── */
+  {
+    path: '/ja/payment-success/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'payment-success', 'index.html'),
+    title: 'お支払い完了 | フィリピン書類取得代行',
+    description: 'クレジットカードでのお支払いが完了しました。担当者よりご連絡いたします。',
+    canonical: `${BASE}/ja/payment-success/`,
+    lang: 'ja' as const,
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/payment-success/`,
+    noindex: true,
+  },
+  {
+    path: '/ja/payment-cancel/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'payment-cancel', 'index.html'),
+    title: 'お支払いキャンセル | フィリピン書類取得代行',
+    description: 'お支払いがキャンセルされました。ご不明な点はお問い合わせください。',
+    canonical: `${BASE}/ja/payment-cancel/`,
+    lang: 'ja' as const,
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/payment-cancel/`,
+    noindex: true,
+  },
+
 ];
 
 // Dynamic country pages generated from countryConfig

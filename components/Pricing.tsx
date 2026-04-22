@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
+import StripeCheckoutButton from './StripeCheckoutButton';
 
 const plansData = {
   ja: [
@@ -207,23 +208,28 @@ const Pricing: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* CTAボタン2つ */}
-                  <div className="mt-auto flex gap-2">
-                    <Link
-                      to={(plan as any).detailPath}
-                      onClick={() => trackEvent('cta_click', { location: 'pricing_detail', type: plan.id, variant: ctaVariant })}
-                      className="flex-1 flex items-center justify-center gap-1.5 border border-primary text-primary font-bold text-sm py-2.5 px-4 rounded-xl hover:bg-primary/5 transition-all duration-200"
-                    >
-                      {lang === 'ja' ? '詳細はこちら' : 'Learn More'}
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                    <a
-                      href="#contact"
-                      onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
-                      className="flex-1 flex items-center justify-center gap-1.5 bg-primary text-secondary font-bold text-sm py-2.5 px-4 rounded-xl shadow-md shadow-primary/20 hover:bg-primary-hover transition-all duration-200"
-                    >
-                      {lang === 'ja' ? '相談する' : 'Get a Quote'}
-                    </a>
+                  {/* CTAボタン */}
+                  <div className="mt-auto flex flex-col gap-2">
+                    <div className="flex gap-2">
+                      <Link
+                        to={(plan as any).detailPath}
+                        onClick={() => trackEvent('cta_click', { location: 'pricing_detail', type: plan.id, variant: ctaVariant })}
+                        className="flex-1 flex items-center justify-center gap-1.5 border border-primary text-primary font-bold text-sm py-2.5 px-4 rounded-xl hover:bg-primary/5 transition-all duration-200"
+                      >
+                        {lang === 'ja' ? '詳細はこちら' : 'Learn More'}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                      <a
+                        href="#contact"
+                        onClick={() => trackEvent('cta_click', { location: 'pricing', type: plan.id, variant: ctaVariant })}
+                        className="flex-1 flex items-center justify-center gap-1.5 bg-primary text-secondary font-bold text-sm py-2.5 px-4 rounded-xl shadow-md shadow-primary/20 hover:bg-primary-hover transition-all duration-200"
+                      >
+                        {lang === 'ja' ? '相談する' : 'Get a Quote'}
+                      </a>
+                    </div>
+                    {lang === 'ja' && (
+                      <StripeCheckoutButton serviceId={plan.id} />
+                    )}
                   </div>
                 </div>
               </div>

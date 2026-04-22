@@ -69,6 +69,8 @@ const DriverRecordEn = lazy(() => import('./pages/DriverRecordEn'));
 const DriverRecordJa = lazy(() => import('./pages/DriverRecordJa'));
 const PricingEn = lazy(() => import('./pages/PricingEn'));
 const PricingJa = lazy(() => import('./pages/PricingJa'));
+const PaymentSuccessJa = lazy(() => import('./pages/PaymentSuccessJa'));
+const PaymentCancelJa = lazy(() => import('./pages/PaymentCancelJa'));
 const UsVisaDocsEn = lazy(() => import('./pages/UsVisaDocsEn'));
 const UsVisaDocsJa = lazy(() => import('./pages/UsVisaDocsJa'));
 const K1VisaDocsEn = lazy(() => import('./pages/K1VisaDocsEn'));
@@ -256,6 +258,8 @@ export default function App() {
         <Route path="/en/pricing/" element={<PricingEn />} />
         <Route path="/ja/ryokin" element={<Navigate to="/ja/ryokin/" replace />} />
         <Route path="/ja/ryokin/" element={<PricingJa />} />
+        <Route path="/ja/payment-success/" element={<PaymentSuccessJa />} />
+        <Route path="/ja/payment-cancel/" element={<PaymentCancelJa />} />
         <Route path="/en/us-visa-documents" element={<Navigate to="/en/us-visa-documents/" replace />} />
         <Route path="/en/us-visa-documents/" element={<UsVisaDocsEn />} />
         <Route path="/ja/us-visa-documents" element={<Navigate to="/ja/us-visa-documents/" replace />} />

@@ -77,8 +77,11 @@ export default function PricingJa() {
       <div className="grid gap-4 md:grid-cols-2 mb-6">
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">お支払い方法</p>
-          <p className="text-sm text-gray-600">銀行振込</p>
-          <p className="text-xs text-gray-400 mt-1">振込先口座はご依頼確定後にメールでお送りします</p>
+          <ul className="space-y-1">
+            <li className="text-sm text-gray-600">・銀行振込（ご依頼確定後にメールでご案内）</li>
+            <li className="text-sm text-gray-600">・クレジットカード（Visa / Mastercard / AMEX ほか）</li>
+          </ul>
+          <p className="text-xs text-gray-400 mt-2">カード払いは各サービスの「カードで着手金を支払う」ボタンからお手続きいただけます</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">キャンセル・返金</p>

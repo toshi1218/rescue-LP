@@ -1,0 +1,14 @@
+name = "ph-document-stripe"
+main = "src/index.ts"
+compatibility_date = "2026-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Custom domain is configured via Cloudflare dashboard:
+#   stripe.ph-document.com → this Worker
+
+# Secrets (set via `wrangler secret put`):
+#   STRIPE_SECRET_KEY
+#   STRIPE_WEBHOOK_SECRET
+
+[vars]
+ALLOWED_ORIGIN = "https://ph-document.com"
