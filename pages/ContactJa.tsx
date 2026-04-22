@@ -199,10 +199,10 @@ export default function ContactJa() {
       </form>
       )}
 
-      <div className="mt-4 flex flex-col items-start gap-2">
+      <div className="mt-4 flex flex-col gap-2 max-w-xl">
         <a
           href="mailto:igrs20200601@gmail.com"
-          className="w-full max-w-xl flex items-center justify-center gap-3 bg-gray-100 hover:bg-gray-200 text-secondary font-bold py-4 rounded-xl shadow transition-all"
+          className="w-full flex items-center justify-center gap-3 bg-gray-100 hover:bg-gray-200 text-secondary font-bold py-4 rounded-xl shadow transition-all"
         >
           <Mail className="w-5 h-5" />
           メールで直接連絡する
@@ -213,7 +213,7 @@ export default function ContactJa() {
           rel="noopener noreferrer"
           onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'line' })}
           aria-label="LINEで相談する（新しいタブで開く）"
-          className="w-full max-w-xl flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34d] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
+          className="w-full flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34d] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
         >
           <LineIcon />
           LINEで相談する
