@@ -4,6 +4,7 @@ import { Mail, Send } from 'lucide-react';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 import LineIcon from './icons/LineIcon';
+import WhatsAppIcon from './icons/WhatsAppIcon';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -263,7 +264,7 @@ const Footer: React.FC = () => {
             <Mail className="w-5 h-5" />
             {isJa ? 'メールで直接連絡する' : 'Email us directly'}
           </a>
-          {isJa && (
+          {isJa ? (
             <a
               href="https://lin.ee/wALag1U"
               target="_blank"
@@ -274,6 +275,18 @@ const Footer: React.FC = () => {
             >
               <LineIcon />
               LINEで相談する
+            </a>
+          ) : (
+            <a
+              href="https://wa.me/639452833727"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent('cta_click', { location: 'footer', type: 'whatsapp' })}
+              className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
+              aria-label="Contact us on WhatsApp (opens in new tab)"
+            >
+              <WhatsAppIcon />
+              WhatsApp us
             </a>
           )}
         </div>

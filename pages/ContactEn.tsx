@@ -3,6 +3,7 @@ import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
+import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -198,13 +199,26 @@ export default function ContactEn() {
       </form>
       )}
 
-      <a
-        href="mailto:igrs20200601@gmail.com"
-        className="mt-4 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors"
-      >
-        <Mail className="w-4 h-4" />
-        Email us directly (igrs20200601@gmail.com)
-      </a>
+      <div className="mt-4 flex flex-col gap-2 max-w-xl">
+        <a
+          href="mailto:igrs20200601@gmail.com"
+          className="w-full flex items-center justify-center gap-3 bg-gray-100 hover:bg-gray-200 text-secondary font-bold py-4 rounded-xl shadow transition-all"
+        >
+          <Mail className="w-5 h-5" />
+          Email us directly
+        </a>
+        <a
+          href="https://wa.me/639452833727"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'whatsapp' })}
+          aria-label="Contact us on WhatsApp (opens in new tab)"
+          className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
+        >
+          <WhatsAppIcon />
+          WhatsApp us
+        </a>
+      </div>
     </PageLayout>
   );
 }
