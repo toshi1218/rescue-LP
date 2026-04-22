@@ -86,7 +86,8 @@ export async function* streamChat(
         if (!data || data === '[DONE]') continue;
 
         try {
-          const parsed = JSON.parse(data) as { text?: string };
+          const parsed = JSON.parse(data) as { text?: string; error?: string };
+          if (parsed.error) throw new Error(`stream_error: ${parsed.error}`);
           if (typeof parsed.text !== 'string') continue;
           pending += parsed.text;
           const emit = flushPending(false);
