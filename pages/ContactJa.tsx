@@ -201,10 +201,10 @@ export default function ContactJa() {
       <div className="mt-4 flex flex-col items-start gap-2">
         <a
           href="mailto:igrs20200601@gmail.com"
-          className="inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors"
+          className="w-full max-w-xl flex items-center justify-center gap-3 bg-gray-100 hover:bg-gray-200 text-secondary font-bold py-4 rounded-xl shadow transition-all"
         >
-          <Mail className="w-4 h-4" />
-          メールで直接連絡する（igrs20200601@gmail.com）
+          <Mail className="w-5 h-5" />
+          メールで直接連絡する
         </a>
         <a
           href="https://lin.ee/wALag1U"
