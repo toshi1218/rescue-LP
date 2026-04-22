@@ -85,15 +85,18 @@ export async function* streamChat(
         const data = line.slice(5).trim();
         if (!data || data === '[DONE]') continue;
 
+        let parsed: { text?: string; error?: string };
         try {
-          const parsed = JSON.parse(data) as { text?: string };
-          if (typeof parsed.text !== 'string') continue;
-          pending += parsed.text;
-          const emit = flushPending(false);
-          if (emit) yield { type: 'text', value: emit };
+          parsed = JSON.parse(data) as { text?: string; error?: string };
         } catch {
           // Ignore malformed event lines
+          continue;
         }
+        if (parsed.error) throw new Error(`stream_error: ${parsed.error}`);
+        if (typeof parsed.text !== 'string') continue;
+        pending += parsed.text;
+        const emit = flushPending(false);
+        if (emit) yield { type: 'text', value: emit };
       }
     }
     const tail = flushPending(true);

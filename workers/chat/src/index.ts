@@ -71,7 +71,7 @@ app.post('/api/chat', async (c) => {
     const client = new Anthropic({ apiKey });
     const system = buildSystemPrompt(lang);
 
-    const stream = await client.messages.stream({
+    const stream = client.messages.stream({
       model: c.env.MODEL,
       max_tokens: 800,
       temperature: 0.3,
