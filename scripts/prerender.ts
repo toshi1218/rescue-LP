@@ -19,6 +19,7 @@ import {
   SEO_TITLE_BADGE_YEAR_SHORT_JA,
 } from '../lib/seoDate';
 import { COUNTRY_CONFIGS } from '../lib/countryConfig';
+import { enToJa } from '../lib/urlMap';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
@@ -1702,6 +1703,38 @@ async function validateBuild() {
   }
 }
 
+async function validateUrlMap() {
+  const normalize = (p: string): string => (p.endsWith('/') ? p : `${p}/`);
+
+  const enRoutePaths = new Set<string>();
+  const jaRoutePaths = new Set<string>();
+  for (const route of routes) {
+    if (route.path.startsWith('/en/')) enRoutePaths.add(normalize(route.path));
+    if (route.path.startsWith('/ja/')) jaRoutePaths.add(normalize(route.path));
+  }
+
+  const missing: string[] = [];
+  for (const [enPath, jaPath] of Object.entries(enToJa)) {
+    if (!enRoutePaths.has(normalize(enPath))) {
+      missing.push(`  EN  ${enPath}  → not found in routes[]`);
+    }
+    if (!jaRoutePaths.has(normalize(jaPath))) {
+      missing.push(`  JA  ${jaPath}  → not found in routes[]`);
+    }
+  }
+
+  console.log(`\nurlMap validation: ${Object.keys(enToJa).length} mappings checked, ${missing.length} missing from routes[].`);
+
+  if (missing.length > 0) {
+    console.error(`urlMap/routes mismatch — hreflang may point to non-existent pages:`);
+    missing.forEach(m => console.error(m));
+  }
+
+  if (missing.length >= 3) {
+    throw new Error(`urlMap has ${missing.length} entries without matching routes. Fix urlMap.ts or add missing routes to prevent broken hreflang/lang-switch links.`);
+  }
+}
+
 async function generateSitemap() {
   const seen = new Set<string>();
   const entries: string[] = [];
@@ -1759,6 +1792,7 @@ ${entries.join('\n')}
 
 prerender()
   .then(() => validateBuild())
+  .then(() => validateUrlMap())
   .then(() => generateSitemap())
   .catch((error) => {
     console.error('prerender failed:', error);

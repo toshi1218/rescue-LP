@@ -1,0 +1,27 @@
+#!/bin/bash
+# .githooks/pre-commit — SEO 破壊的変更を commit 前に検知
+#
+# Installation (one-time per clone):
+#   git config core.hooksPath .githooks
+#
+# This hook runs lint-seo.sh which auto-detects staged diff mode and checks for:
+#   - hreflang removal
+#   - noindex addition
+#   - sitemap URL reduction
+#   - JSON-LD deletion
+#   - AI crawler rule removal
+#   - Absolute floor violations (hreflang < 50, URLs < 80, noindex > 7)
+#
+# To bypass in emergencies (NOT recommended): git commit --no-verify
+
+set -e
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+if [ ! -f scripts/lint-seo.sh ]; then
+  echo "pre-commit: scripts/lint-seo.sh not found, skipping SEO lint."
+  exit 0
+fi
+
+bash scripts/lint-seo.sh

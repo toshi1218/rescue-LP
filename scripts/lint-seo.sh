@@ -147,6 +147,19 @@ if [ "$sitemap_url_count" -lt 80 ]; then
   errors=$((errors + 1))
 fi
 
+# 11. Absolute noindex count ceiling (baseline 5 as of 2026-04-23, tolerance +2)
+# Catches accidental noindex propagation that diff-based rule #6 may miss
+# (e.g. after rebase/force-push where diff history is rewritten).
+NOINDEX_WARN_THRESHOLD=7
+noindex_count=$(grep -c "noindex: true" scripts/prerender.ts 2>/dev/null) || noindex_count=0
+if [ "$noindex_count" -gt "$NOINDEX_WARN_THRESHOLD" ]; then
+  echo "WARNING: prerender.ts has $noindex_count noindex routes (baseline: 5, threshold: $NOINDEX_WARN_THRESHOLD)."
+  echo "  Unusual increase detected. Adding noindex removes pages from Google's index."
+  echo "  Re-indexing takes 1-2 weeks. Verify each route with 'noindex: true' is intentional:"
+  grep -n "noindex: true" scripts/prerender.ts
+  errors=$((errors + 1))
+fi
+
 if [ "$errors" -eq 0 ]; then
   echo "All checks passed."
 else
