@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useEffect, useRef, useState, Component, ErrorInf
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { getLangSwitchUrl } from './lib/urlMap';
 import { COUNTRY_CONFIGS } from './lib/countryConfig';
+import NoticeBanner from './components/NoticeBanner';
 
 interface ErrorBoundaryState { hasError: boolean; }
 class ErrorBoundary extends Component<{ children: ReactNode }, ErrorBoundaryState> {
@@ -111,6 +112,7 @@ const DfaGalleriaCebuJa = lazy(() => import('./pages/DfaGalleriaCebuJa'));
 const PsaCrsCebuJa = lazy(() => import('./pages/PsaCrsCebuJa'));
 const LtoSmSeasideJa = lazy(() => import('./pages/LtoSmSeasideJa'));
 const KojinJohoHogoJa = lazy(() => import('./pages/KojinJohoHogoJa'));
+const PsaNotice2026Ja = lazy(() => import('./pages/PsaNotice2026Ja'));
 const TbCertEn = lazy(() => import('./pages/TbCertEn'));
 const SpouseVisaDocChecklistEn = lazy(() => import('./pages/SpouseVisaDocChecklistEn'));
 const MarriageOrderEn = lazy(() => import('./pages/MarriageOrderEn'));
@@ -172,6 +174,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <NavigationProgress />
+      <NoticeBanner />
       <ErrorBoundary>
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-primary border-b-transparent animate-spin" role="status" aria-label="Loading" /></div>}>
       <Routes>
@@ -340,6 +343,8 @@ export default function App() {
         <Route path="/ja/lto-sm-seaside-genchi-report/" element={<LtoSmSeasideJa />} />
         <Route path="/ja/kojin-joho-hogo" element={<Navigate to="/ja/kojin-joho-hogo/" replace />} />
         <Route path="/ja/kojin-joho-hogo/" element={<KojinJohoHogoJa />} />
+        <Route path="/ja/psa-ecertificate-2026" element={<Navigate to="/ja/psa-ecertificate-2026/" replace />} />
+        <Route path="/ja/psa-ecertificate-2026/" element={<PsaNotice2026Ja />} />
         <Route path="/en/tb-certificate" element={<Navigate to="/en/tb-certificate/" replace />} />
         <Route path="/en/tb-certificate/" element={<TbCertEn />} />
         <Route path="/en/spouse-visa-document-checklist" element={<Navigate to="/en/spouse-visa-document-checklist/" replace />} />

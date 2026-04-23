@@ -1229,6 +1229,18 @@ const routes: RouteConfig[] = [
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
   },
+  {
+    path: '/ja/psa-ecertificate-2026/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'psa-ecertificate-2026', 'index.html'),
+    title: `【重要】2026年3月以降のフィリピンPSA書類（電子・紙）取得のお知らせ【${SEO_YEAR_MONTH_JA}】`,
+    description: '2026年2月25日のPSA E-Certificate導入・3月16日のDFA eApostille完全デジタル化により、フィリピン公文書の取得形式が電子と紙に分かれました。日本の市区町村・法務局・入管等では対応が未統一のため要件確認が必須。フィリピン現地営業所を持つ弊社が電子・紙両形式で対応します。',
+    canonical: `${BASE}/ja/psa-ecertificate-2026/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/psa-ecertificate-2026/`,
+    ogType: 'article',
+    datePublished: SEO_DATE_ISO,
+  },
 
   /* ── KO canonical routes (/ko/*) ─────────────────────── */
   {
