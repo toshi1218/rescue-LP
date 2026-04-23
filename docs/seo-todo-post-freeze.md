@@ -100,14 +100,22 @@ ph-document.com は過去に 2 度「サイト全死」を経験:
 
 ### Phase A: 防御インフラ（SEO コンテンツ無変更、凍結明け直後に実施可能）
 
-| # | タスク | リスク対応 | ファイル |
-|---|--------|-----------|---------|
-| A1 | prerender.ts に per-page try-catch 追加 | 1-A | `scripts/prerender.ts` |
-| A2 | prerender 後のファイル数検証スクリプト追加 | 1-B, 1-C | `scripts/prerender.ts` |
-| A3 | sitemap 生成前に実ファイル存在チェック追加 | 1-C | `scripts/prerender.ts` |
-| A4 | lint-seo.sh を pre-commit hook 化 + `--cached` → `HEAD~1..HEAD` 対応 | 1-D | `scripts/lint-seo.sh`, `.husky/pre-commit` |
-| A5 | noindex ページ数カウント検証を lint-seo.sh に追加 | 2-C | `scripts/lint-seo.sh` |
-| A6 | urlMap.ts と routes[] の整合性バリデーション追加 | 2-B | `scripts/prerender.ts` |
+| # | タスク | リスク対応 | ファイル | 状態 |
+|---|--------|-----------|---------|------|
+| A1 | prerender.ts に per-page try-catch 追加 | 1-A | `scripts/prerender.ts` | ✅ 完了 (PR #200) |
+| A2 | prerender 後のファイル数検証スクリプト追加 | 1-B, 1-C | `scripts/prerender.ts` | ✅ 完了 (PR #200, `validateBuild()`) |
+| A3 | sitemap 生成前に実ファイル存在チェック追加 | 1-C | `scripts/prerender.ts` | ✅ 完了 (PR #200) |
+| A4 | lint-seo.sh を pre-commit hook 化 + diff auto-detect | 1-D | `scripts/lint-seo.sh`, `.githooks/pre-commit` | ✅ 完了 (2026-04-23) |
+| A5 | noindex ページ数カウント検証を lint-seo.sh に追加 | 2-C | `scripts/lint-seo.sh` | ✅ 完了 (2026-04-23, ベースライン 5 / 閾値 7) |
+| A6 | urlMap.ts と routes[] の整合性バリデーション追加 | 2-B | `scripts/prerender.ts` | ✅ 完了 (2026-04-23, `validateUrlMap()`) |
+
+**pre-commit hook のインストール手順（clone 後 1 回だけ）**:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+これで `git commit` 時に自動で `scripts/lint-seo.sh` が実行され、hreflang 削除・noindex 追加・sitemap URL 減少などを検知してブロックする。緊急時のみ `git commit --no-verify` で bypass 可能（非推奨）。
 
 ### Phase B: SEO コンテンツ変更（Search Console 回復確認後、段階的に）
 
