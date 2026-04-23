@@ -55,6 +55,9 @@ export default function NoticeBanner() {
           <span className="hidden md:inline text-gray-700">
             {' '}日本の市区町村・法務局・入管等では対応が未統一のため、提出先ごとの要件確認が必要です。電子・紙の両形式に対応可能な弊社が、要件切り分けから一貫サポートします。
           </span>
+          <span className="font-bold text-red-700">
+            {' '}※ご依頼殺到中・納期約2ヶ月（お急ぎの方はご連絡ください）
+          </span>
           <Link
             to={NOTICE_PATH}
             onClick={handleClick}

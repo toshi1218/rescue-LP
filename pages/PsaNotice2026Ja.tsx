@@ -14,6 +14,7 @@ import {
   FileText,
   MapPin,
   ShieldCheck,
+  Clock,
 } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
@@ -52,6 +53,14 @@ export default function PsaNotice2026Ja() {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
           mainEntity: [
+            {
+              '@type': 'Question',
+              name: '現在の納期はどのくらいかかりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '基本的に約2ヶ月が目安です。2026年3月以降の制度変更の影響で弊社へのご依頼が急増しており、加えてフィリピン現地のPSA・DFA窓口でも予約枠が逼迫しているためです。お急ぎの方は早めにご連絡ください。提出期限から逆算した優先スケジュールのご相談も承ります。',
+              },
+            },
             {
               '@type': 'Question',
               name: '2026年3月以降、フィリピンの紙のPSA書類は取得できなくなったのですか？',
@@ -104,6 +113,33 @@ export default function PsaNotice2026Ja() {
         ctaHref="#contact"
         lastUpdated={SEO_LAST_UPDATED_JA}
       />
+
+      <section
+        aria-label="現在の納期のお知らせ"
+        className="mb-10 relative overflow-hidden rounded-2xl border-2 border-red-400/70 bg-gradient-to-br from-red-50 via-orange-50 to-amber-50 p-6 md:p-7"
+      >
+        <div className="absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-red-500 via-red-400 to-transparent" />
+        <div className="flex items-start gap-3 mb-3">
+          <Clock className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
+          <h2 className="text-lg md:text-xl font-bold text-red-900 leading-snug">
+            【現在の納期のお知らせ】基本的に約2ヶ月かかります
+          </h2>
+        </div>
+        <p className="text-base text-gray-800 leading-relaxed mb-3">
+          2026年3月以降の制度変更の影響で、弊社へのご依頼が急増しており、加えてフィリピン現地の発行機関（PSA・DFA窓口）でも予約枠が逼迫しています。そのため、<strong className="font-bold text-red-900">現在の納期の目安は約2ヶ月</strong>となります（書類の種類・提出先要件により変動）。
+        </p>
+        <p className="text-base text-gray-800 leading-relaxed">
+          <strong className="font-bold text-secondary">お急ぎの方は早めにご連絡ください。</strong>提出期限から逆算した優先スケジュールのご相談も承ります。
+        </p>
+        <div className="mt-4">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 bg-red-600 text-white font-bold py-2.5 px-5 rounded-lg shadow hover:bg-red-700 transition-colors text-sm"
+          >
+            今すぐ相談する →
+          </a>
+        </div>
+      </section>
 
       <SummaryBlock
         conclusion="2026年3月以降、フィリピン公文書の取得形式が電子と紙に分かれました。提出先ごとの要件確認が、再取得リスクを回避する鍵になります。"
@@ -238,6 +274,10 @@ export default function PsaNotice2026Ja() {
 
       <FaqSection
         items={[
+          {
+            q: '現在の納期はどのくらいかかりますか？',
+            a: '基本的に約2ヶ月が目安です。2026年3月以降の制度変更の影響で弊社へのご依頼が急増しており、加えてフィリピン現地のPSA・DFA窓口でも予約枠が逼迫しているためです。お急ぎの方は早めにご連絡ください。提出期限から逆算した優先スケジュールのご相談も承ります。',
+          },
           {
             q: '2026年3月以降、フィリピンの紙のPSA書類は取得できなくなったのですか？',
             a: 'いいえ。PSA の紙原本（SECPA）はフィリピン現地の窓口や PSA 認可のチャネルを通じて引き続き取得可能です。変わったのは、PSA が2026年2月25日に E-Certificate（電子証明書）を正式導入したこと、および2026年3月16日から DFA（外務省）が PSA E-Certificate に対するアポスティーユを電子版（eApostille）のみで発行する方針となったことです。',
