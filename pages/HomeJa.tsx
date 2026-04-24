@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import SummaryBlock from '../components/SummaryBlock';
 import GuideLinks from '../components/GuideLinks';
 import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
@@ -135,6 +136,16 @@ export default function HomeJa() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <div className="container mx-auto max-w-5xl px-4 pt-8">
+          <SummaryBlock
+            conclusion="2026年3月以降、フィリピンPSA書類は電子と紙に分かれました。弊社は知る限り、従来の紙原本＋紙アポスティーユで継続対応できる数少ない代行業者です。"
+            points={[
+              'PSA E-Certificate（電子）とSECPA（紙原本）のどちらの形式にも対応。日本の提出先の要件に合わせてお選びいただけます。',
+              'フィリピン現地の自社営業所からPSA窓口・DFA窓口ルートで紙原本を直接取得できるため、オンライン業者が紙の納品を縮小する中でも継続対応可能です。',
+              '現在ご依頼が急増しており、納期は約2ヶ月が目安です。提出期限がある方は早めにご相談ください（お急ぎの方は個別にご相談承ります）。',
+            ]}
+          />
+        </div>
         <ServicePacks />
         <PainPoints />
         <WhyUs />
