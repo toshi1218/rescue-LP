@@ -208,7 +208,7 @@ export default function ContactEn() {
           Email us directly
         </a>
         <a
-          href="https://wa.me/639452833727"
+          href="https://wa.me/639452833727?text=Hi%2C+I%27d+like+to+ask+about+your+document+service.%0ADocument+needed%3A+%0ACountry+of+submission%3A+%0ADeadline%3A+"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'whatsapp', page_path: window.location.pathname })}
