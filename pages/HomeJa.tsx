@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
+import { CheckCircle } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import SummaryBlock from '../components/SummaryBlock';
 import GuideLinks from '../components/GuideLinks';
 import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
@@ -137,14 +137,31 @@ export default function HomeJa() {
       <main id="main-content">
         <Hero />
         <div className="container mx-auto max-w-5xl px-4 pt-8">
-          <SummaryBlock
-            conclusion="2026年3月以降、フィリピンPSA書類は電子（E-Certificate）と紙（SECPA）に分かれました。当社の知る限り、電子・紙のどちらの形式にも対応できる数少ない代行業者です。特に紙原本が必要な方は、まず当社にご相談ください。"
-            points={[
-              'E-Certificate（電子）対応：日本の提出先がオンライン認証を受け付ける場合にご利用いただけます。',
-              'SECPA（紙原本）＋紙アポスティーユ対応：フィリピン現地の自社営業所からPSA窓口・DFA窓口ルートで紙原本を直接取得できます。オンライン業者が紙の納品を縮小する中でも、紙が必要な方は当社が継続対応します。',
-              '納期の目安：現在ご依頼が急増しており、納期は約2ヶ月が目安です。提出期限がある方は早めにご相談ください（お急ぎの方は個別にご相談承ります）。',
-            ]}
-          />
+          <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
+            <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />
+            <div className="p-6 md:p-8">
+              <div className="inline-block mb-4 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">
+                紙原本対応
+              </div>
+              <p className="text-lg md:text-xl font-bold text-secondary leading-snug mb-5">
+                2026年3月のPSAデジタル化以降、日本の多くの代行業者・行政書士事務所は電子化（E-Certificate／電子アポスティーユ）にシフトしており、紙原本（SECPA）＋紙アポスティーユを取得できる業者が急速に減っています。当社はフィリピンに<span className="text-red-700">自社営業所</span>を構え、自社スタッフがPSA・DFA窓口で直接紙原本を取得しています。当社の知る限り、<span className="text-red-700">紙原本で継続対応できる数少ない代行会社</span>です。日本の役所・入管・総領事館など紙原本を求められる提出先のご依頼は、まず当社にご相談ください。
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                  <span className="text-base text-gray-700 leading-relaxed">
+                    <strong className="text-gray-900">日本の役所・入管・総領事館に対応</strong>：紙原本＋紙アポスティーユを求められる提出先向け。<strong className="text-red-700">他社で紙原本を断られた方もご相談可能です。</strong>
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                  <span className="text-base text-gray-700 leading-relaxed">
+                    <strong className="text-gray-900">納期の目安</strong>：現在、紙原本のご依頼が集中しており、目安は約2ヶ月です。提出期限がある方はお早めにご相談ください（お急ぎの方は個別にご相談承ります）。
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
         <ServicePacks />
         <PainPoints />
