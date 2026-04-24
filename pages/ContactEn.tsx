@@ -211,7 +211,7 @@ export default function ContactEn() {
           href="https://wa.me/639452833727"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'whatsapp' })}
+          onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'whatsapp', page_path: window.location.pathname })}
           aria-label="Contact us on WhatsApp (opens in new tab)"
           className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
         >

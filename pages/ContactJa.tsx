@@ -211,7 +211,7 @@ export default function ContactJa() {
           href="https://lin.ee/wALag1U"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'line' })}
+          onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'line', page_path: window.location.pathname })}
           aria-label="LINEで相談する（新しいタブで開く）"
           className="w-full flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34d] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
         >

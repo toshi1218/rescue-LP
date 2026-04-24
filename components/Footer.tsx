@@ -258,7 +258,7 @@ const Footer: React.FC = () => {
         <div className="mt-3 flex flex-col items-center gap-2">
           <a
             href="mailto:igrs20200601@gmail.com"
-            onClick={() => trackEvent('cta_click', { location: 'contact', type: 'mailto_fallback' })}
+            onClick={() => trackEvent('cta_click', { location: 'contact', type: 'mailto_fallback', page_path: window.location.pathname })}
             className="w-full flex items-center justify-center gap-3 bg-gray-100 hover:bg-gray-200 text-secondary font-bold py-4 rounded-xl shadow transition-all"
           >
             <Mail className="w-5 h-5" />
@@ -269,7 +269,7 @@ const Footer: React.FC = () => {
               href="https://lin.ee/wALag1U"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackEvent('cta_click', { location: 'footer', type: 'line' })}
+              onClick={() => trackEvent('cta_click', { location: 'footer', type: 'line', page_path: window.location.pathname })}
               className="w-full flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34d] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
               aria-label="LINEで相談する（新しいタブで開く）"
             >
@@ -281,7 +281,7 @@ const Footer: React.FC = () => {
               href="https://wa.me/639452833727"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => trackEvent('cta_click', { location: 'footer', type: 'whatsapp' })}
+              onClick={() => trackEvent('cta_click', { location: 'footer', type: 'whatsapp', page_path: window.location.pathname })}
               className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
               aria-label="Contact us on WhatsApp (opens in new tab)"
             >
