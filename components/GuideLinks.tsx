@@ -26,6 +26,7 @@ const guidesData: Record<'ja' | 'en', GuideItem[]> = {
     { to: '/ja/document-checklist-by-visa/', title: 'ビザ別書類チェックリスト', desc: 'K-1、CR-1、日本向けの必要書類をまとめて確認したい方へ', tag: '提出前に確認' },
     { to: '/ja/nbi-clearance-overseas/', title: '海外在住のNBI取得', desc: 'フィリピンに戻らずNBIを取りたい方へ', tag: '海外在住者向け' },
     { to: '/ja/psa-late-registration/', title: 'PSA記録エラー対応', desc: '記録がない・名前が違うときの整理に', tag: 'No Record 対応' },
+    { to: '/ja/psa-ecertificate-nihon/', title: '電子文書・eApostilleは日本で使える？', desc: '入管・市区町村・総領事館の受領状況と対応方法', tag: '2026年4月版' },
   ],
   en: [
     { to: '/en/cenomar/', title: 'CENOMAR (Certificate of No Marriage)', desc: 'How to obtain, cost & timeline', tag: 'Most Popular' },
