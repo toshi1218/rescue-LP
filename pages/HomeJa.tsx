@@ -144,19 +144,25 @@ export default function HomeJa() {
                 紙原本対応
               </div>
               <p className="text-lg md:text-xl font-bold text-secondary leading-snug mb-5">
-                2026年3月のPSAデジタル化以降、日本の多くの代行業者・行政書士事務所は電子化（E-Certificate／電子アポスティーユ）にシフトしており、紙原本（SECPA）＋紙アポスティーユを取得できる業者が急速に減っています。当社は<span className="text-red-700">フィリピンの現地スタッフが直接</span>、PSA・DFAの窓口で紙原本を取得しています。当社は、<span className="text-red-700">紙原本で継続対応できる数少ない代行会社</span>です。日本の役所・入管・総領事館など紙原本を求められる提出先のご依頼は、まず当社にご相談ください。
+                2026年3月のPSAデジタル化以降、PSAHelplineでオンライン申請して取得した電子文書を提出しても、<span className="text-red-700">受理されずに紙原本を要求されるケース</span>が多数報告されています。3月中旬以降は日本の多くの代行業者・行政書士事務所も電子化（E-Certificate／電子アポスティーユ）にシフトしており、「紙原本を依頼したのに電子文書で納品された」と当社にご相談される方が後を絶ちません。<span className="text-red-700">当社はフィリピンの現地スタッフがPSA・DFA窓口で直接紙原本を取得しており、今も従来通り対応可能です。</span>
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-relaxed">
-                    <strong className="text-gray-900">日本の役所・入管・総領事館に対応</strong>：紙原本＋紙アポスティーユを求められる提出先向け。<strong className="text-red-700">他社で紙原本を断られた方もご相談可能です。</strong>
+                    <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：フィリピン側の運用が電子化しても、日本の提出先は当面の間、紙原本を求められることが想定されます。
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
                   <span className="text-base text-gray-700 leading-relaxed">
-                    <strong className="text-gray-900">納期の目安</strong>：現在、紙原本のご依頼が集中しており、目安は約2ヶ月です。提出期限がある方はお早めにご相談ください（お急ぎの方は個別にご相談承ります）。
+                    <strong className="text-gray-900">まずは提出先にご確認ください</strong>：電子文書で受理されるかを提出先にご確認いただき、<strong className="text-red-700">紙原本を求められた場合は当社にご相談ください。</strong>
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                  <span className="text-base text-gray-700 leading-relaxed">
+                    <strong className="text-gray-900">納期の目安</strong>：現在、紙原本のご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
                   </span>
                 </li>
               </ul>
