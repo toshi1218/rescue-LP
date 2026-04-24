@@ -127,6 +127,9 @@ git config core.hooksPath .githooks
 | B4 | lastUpdated 個別日付化 (1-2 ページテスト) | 3-A, 3-B | cenomar, psa-birth-cert から |
 | B5 | 旧 URL インデックス残存対応 | 3-D | Search Console URL 削除 |
 | B6 | useMeta.ts hreflang 再設計 (差分更新) | 2-A | SPA 遷移の品質向上 |
+| B7 | **PSA 単品プラン（birth cert / CENOMAR / NBI 単品）を料金ページに追加** | 新規 | 受注データ40%が PSA系なのに料金表示なし。`components/Pricing.tsx:7-141` + JA/KO 版。**SEO 影響大**: 料金構造変更 → JSON-LD `Service`/`Product` schema 変更 → Google の価格認識再評価 (2-4週)。EN `/en/pricing/` で先行 → 2週間 Search Console 観測 → JA/KO 展開。出典: 受注/問い合わせ分析 (4-24-1-birth-certificate-optimized-mitten.md) |
+| B8 | **クレカ決済バッジを CTA 近くに追加（Stripe 既存実装の可視性向上）** | 新規 | 現状 Stripe 表記は Pricing ページのみ (`pages/PricingEn.tsx:64`, `pages/PricingKo.tsx:175`)。Footer/Hero CTA 付近に「Pay by credit card · Visa/MC/AMEX」バッジ追加で受注ハードル低下狙い。**SEO 影響小〜中**: 商業シグナル（"credit card", "Visa" 等）が複数ページに広がるため、ページ意図 (informational vs transactional) の Google 認識が変動する可能性。EN Footer 1箇所で先行テスト → 2週間観測 → 展開。出典: 受注分析 + ユーザー判断 (4-24) |
+
 
 ### Phase C: CI/CD 強化（Phase A 完了後）
 
