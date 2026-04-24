@@ -92,6 +92,7 @@ const Navbar: React.FC = () => {
         { label: isJa ? 'PSA出生証明書の費用' : 'PSA Birth Certificate Cost', path: isJa ? '/ja/psa-shussei-cost/' : '/en/psa-birth-certificate-cost/' },
         { label: isJa ? 'PSA婚姻証明書の取得方法' : 'PSA Marriage Certificate', path: isJa ? '/ja/psa-kekkon-shomeisho/' : '/en/psa-marriage-certificate/' },
         { label: isJa ? 'PSA出生届の遅延登録' : 'PSA Record Missing or Error?', path: isJa ? '/ja/psa-late-registration/' : '/en/psa-late-registration/' },
+        ...(isJa ? [{ label: '電子文書・eApostilleは日本で使える？', path: '/ja/psa-ecertificate-nihon/' }] : []),
       ],
     },
     ...(!isJa ? [{

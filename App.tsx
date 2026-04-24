@@ -101,6 +101,7 @@ const CenomarVsMarriageCertJa = lazy(() => import('./pages/CenomarVsMarriageCert
 const DocumentChecklistByVisaJa = lazy(() => import('./pages/DocumentChecklistByVisaJa'));
 const NbiClearanceOverseasJa = lazy(() => import('./pages/NbiClearanceOverseasJa'));
 const PsaLateRegistrationJa = lazy(() => import('./pages/PsaLateRegistrationJa'));
+const PsaEcertificateNihonJa = lazy(() => import('./pages/PsaEcertificateNihonJa'));
 const BusinessHomeJa = lazy(() => import('./pages/BusinessHomeJa'));
 const BusinessTourokushienJa = lazy(() => import('./pages/BusinessTourokushienJa'));
 const BusinessGyoseishoshiJa = lazy(() => import('./pages/BusinessGyoseishoshiJa'));
@@ -320,6 +321,8 @@ export default function App() {
         <Route path="/ja/nbi-clearance-overseas/" element={<NbiClearanceOverseasJa />} />
         <Route path="/ja/psa-late-registration" element={<Navigate to="/ja/psa-late-registration/" replace />} />
         <Route path="/ja/psa-late-registration/" element={<PsaLateRegistrationJa />} />
+        <Route path="/ja/psa-ecertificate-nihon" element={<Navigate to="/ja/psa-ecertificate-nihon/" replace />} />
+        <Route path="/ja/psa-ecertificate-nihon/" element={<PsaEcertificateNihonJa />} />
         <Route path="/ja/business" element={<Navigate to="/ja/business/" replace />} />
         <Route path="/ja/business/" element={<BusinessHomeJa />} />
         <Route path="/ja/business/touroku-shien-kikan" element={<Navigate to="/ja/business/touroku-shien-kikan/" replace />} />

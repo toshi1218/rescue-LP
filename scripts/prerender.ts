@@ -794,6 +794,18 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/psa-late-registration/`,
     ogType: 'article',
   },
+  {
+    path: '/ja/psa-ecertificate-nihon/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'psa-ecertificate-nihon', 'index.html'),
+    title: 'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
+    description: 'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
+    canonical: `${BASE}/ja/psa-ecertificate-nihon/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/psa-ecertificate-nihon/`,
+    ogType: 'article',
+    datePublished: '2026-04-24',
+  },
 
   /* ── JA canonical routes (/ja/*) ─────────────────────── */
   {
