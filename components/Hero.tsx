@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
           <img
             alt="Philippine document procurement — IGRS office operations"
             className="w-full h-full object-cover"
-            style={{ objectPosition: '60% 50%' }}
+            style={{ objectPosition: '92% 50%' }}
             src="/hero-photo.png"
             width={1600}
             height={900}
