@@ -121,6 +121,7 @@ export default function DfaProcessingTimeEn() {
         href="#contact"
         variant="primary"
         trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
+        whatsappHref="https://wa.me/639452833727"
       />
 
       <FeatureList

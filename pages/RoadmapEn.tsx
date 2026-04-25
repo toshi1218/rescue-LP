@@ -278,6 +278,7 @@ export default function RoadmapEn() {
         href="#contact"
         variant="primary"
         trustNote="Service begins after payment. No refunds after work starts. Not legal advice — see important notes below."
+        whatsappHref="https://wa.me/639452833727"
       />
 
       {/* Important notes */}

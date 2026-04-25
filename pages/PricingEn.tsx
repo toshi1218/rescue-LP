@@ -30,6 +30,7 @@ export default function PricingEn() {
         href="#contact"
         variant="primary"
         trustNote="No commitment required — free cancellation at quote stage"
+        whatsappHref="https://wa.me/639452833727"
       />
 
       {/* Pricing cards */}

@@ -91,6 +91,18 @@ const plansData = {
       detailPath: '/en/international-marriage-guide/',
     },
     {
+      id: 'cenomar',
+      icon: FileText,
+      tag: null,
+      featured: false,
+      title: 'CENOMAR with DFA Apostille',
+      subtitle: 'Includes CENOMAR retrieval, DFA Apostille, and DHL international shipping. For physical paper documents. Processing time varies depending on PSA/DFA availability.',
+      price: 'US$449',
+      priceNote: '(Apostille + DHL incl.)',
+      period: 'Approx. 4–6 weeks',
+      detailPath: '/en/cenomar/',
+    },
+    {
       id: 'nbi',
       icon: Fingerprint,
       tag: null,

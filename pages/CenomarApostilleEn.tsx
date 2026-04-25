@@ -33,10 +33,10 @@ export default function CenomarApostilleEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '449',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '449',
             priceCurrency: 'USD',
             description: 'CENOMAR retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
@@ -129,6 +129,7 @@ export default function CenomarApostilleEn() {
         href="#contact"
         variant="primary"
         trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
+        whatsappHref="https://wa.me/639452833727"
       />
 
       <FeatureList

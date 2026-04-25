@@ -50,7 +50,7 @@ export default function GuidesEn() {
           href="#contact"
           variant="primary"
           trustNote="Free cancellation before start · Reply within 24 hours · Pay by Visa / Mastercard / Amex"
-          whatsappHref="https://wa.me/639452833727"
+            whatsappHref="https://wa.me/639452833727"
         />
       </div>
     </PageLayout>

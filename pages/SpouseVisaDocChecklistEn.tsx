@@ -313,6 +313,7 @@ export default function SpouseVisaDocChecklistEn() {
         href="#contact"
         variant="primary"
         trustNote="50% on start / 50% after documents ready for DHL — cancel before start at no charge"
+        whatsappHref="https://wa.me/639452833727"
       />
 
       <article className="max-w-2xl mx-auto px-4 mt-8">

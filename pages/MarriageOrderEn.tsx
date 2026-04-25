@@ -265,6 +265,7 @@ export default function MarriageOrderEn() {
           href="#contact"
           variant="primary"
           trustNote="Reply within 24 hours · Anonymous consultation OK · Cancel before start at no charge"
+          whatsappHref="https://wa.me/639452833727"
         />
 
         <FaqSection

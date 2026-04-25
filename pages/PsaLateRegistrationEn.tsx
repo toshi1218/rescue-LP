@@ -118,6 +118,7 @@ export default function PsaLateRegistrationEn() {
         href="#contact"
         variant="primary"
         trustNote="Free cancellation before start · Progress updates at every stage · Reply within 24 hours"
+        whatsappHref="https://wa.me/639452833727"
       />
 
       <FeatureList

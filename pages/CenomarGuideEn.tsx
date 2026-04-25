@@ -33,12 +33,12 @@ export default function CenomarGuideEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '449',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '449',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
+            description: 'CENOMAR retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
         },
         },
@@ -67,7 +67,7 @@ export default function CenomarGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'All-inclusive from US$349 (PSA retrieval + DHL shipping). DFA Apostille is an additional ~US$100. See our Pricing page for the full breakdown.',
+                text: 'All-inclusive from US$449 (CENOMAR retrieval + DFA Apostille + DHL shipping). See our Pricing page for the full breakdown.',
               },
             },
             {
@@ -152,12 +152,12 @@ export default function CenomarGuideEn() {
 
       <CtaBox
         title="Not Sure If You Need an Apostille?"
-        description="Some USCIS offices accept e-Apostille; others require a physical original. We will confirm for your specific case before you pay. All-inclusive from US$349."
+        description="Some USCIS offices accept e-Apostille; others require a physical original. We will confirm for your specific case before you pay. All-inclusive from US$449."
         buttonText="Ask Us for Free"
         href="#contact"
         variant="primary"
         trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
-        whatsappHref="https://wa.me/639452833727"
+          whatsappHref="https://wa.me/639452833727"
       />
 
       <FeatureList
@@ -221,7 +221,7 @@ export default function CenomarGuideEn() {
         items={[
           { q: 'What does CENOMAR mean?', a: 'CENOMAR stands for Certificate of No Marriage Record. It is issued by the Philippine Statistics Authority (PSA) and certifies that a Filipino citizen has no marriage record on file in the Philippines — essentially proof of single status.' },
           { q: 'What is a CENOMAR used for?', a: 'CENOMAR is required for K-1 fiancé visa applications, CR-1/IR-1 spouse visas, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and most other immigration applications involving a Filipino national.' },
-          { q: 'How much does it cost?', a: 'All-inclusive from US$349 (PSA retrieval + DHL shipping). DFA Apostille is an additional ~US$100. See our Pricing page for the full breakdown.' },
+          { q: 'How much does it cost?', a: 'All-inclusive from US$449 (CENOMAR retrieval + DFA Apostille + DHL shipping). See our Pricing page for the full breakdown.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL international shipping takes 3–5 business days.' },
           { q: 'Can you handle rush orders?', a: 'Yes. Let us know your deadline and we will check if expedited processing is available.' },
           { q: 'Do I need a physical Apostille or is e-Apostille OK?', a: 'Most USCIS offices require a physical Apostille original. We will confirm the requirement for your specific case before processing.' },
