@@ -6,7 +6,7 @@ import { useLanguage } from '../lib/i18n';
 // ── English variant data ──────────────────────────────────────────────────────
 
 const enBadges = [
-  { icon: '🏢', label: 'Japanese Corporation' },
+  { icon: '📦', label: 'DHL Express Worldwide' },
   { icon: '✈️', label: 'No travel to Philippines' },
   { icon: '🛡️', label: 'Free cancellation at consultation stage' },
 ];
