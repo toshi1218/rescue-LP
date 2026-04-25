@@ -157,7 +157,7 @@ SEO 構造（hreflang/canonical/sitemap）には触れないコンテンツ文�
 - Japan セクションは残すが、優先度を下げ日本語テキストを除去
 - `useMeta()` title/description・JSON-LD・hreflang は変更しない
 
-**着手順**: E1（`/en/cenomar/`）→ Search Console で2週間確認 → E2 → E3
+**着手順**: E1 → E2 → E3 を連続実施してよい（コンテンツ文言のみの変更のため2週間待ち不要）
 
 ---
 
