@@ -52,6 +52,38 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 3. **完了後に案内する**: 実装後、「残りのページへの適用は2週間後にSearch Consoleで効果を確認してから別タスクとして依頼してください」と必ず伝えること
 4. **非SEO変更は対象外**: フォーム・UI・コンテンツ文言のみの変更はこのルール対象外（制限なく全ページ適用してよい）
 
+## KO ページ強化タスク
+
+### 完了済み
+- [x] `lib/i18n.ts` に `'ko'` を追加（Lang 型・翻訳辞書・LanguageProvider URL検出）
+- [x] `BackToTop` の aria-label を言語対応に修正
+
+### 凍結明け（2026-04-30以降）に実施すること
+
+#### 1. 言語切替対応（urlMap.ts への KO 追加）
+
+`lib/urlMap.ts` は現在 EN-JA のみ。KO のマッピングを追加することでナビゲーションの言語トグルが KO ページに対応する。
+
+**注意**: `urlMap.ts` は hreflang 生成にも使われている可能性があるため、実装前に `prerender.ts` との依存関係を確認すること。
+
+追加が必要なマッピング例:
+- `/en/` ↔ `/ko/`
+- `/en/pricing/` ↔ `/ko/pricing/`
+- `/en/nbi-clearance/` ↔ `/ko/nbi-clearance/`
+- `/en/contact/` ↔ `/ko/contact/`
+- `/ko/f-6-philippines-documents/` は KO 専用ページのためマッピング不要
+
+#### 2. コンテンツ拡充（KO ページ追加）
+
+現状 KO は 5 ページのみ（JA: 49 / EN: 45 と比較して約 10%）。  
+新規ページ追加は `prerender.ts` のルート追加 + sitemap 自動生成が伴うため SEO-destructive。
+
+**実施ルール**:
+- 1〜2 ページずつ追加し、Search Console で 2 週間観察してから次へ
+- 追加候補（優先順）: KO ガイドインデックスページ → CENOMAR KO → PSA 出生証明書 KO
+
+---
+
 ## Future Content Tasks (凍結明け以降)
 
 ### EN ページのコンテンツ日本語バイアス修正
