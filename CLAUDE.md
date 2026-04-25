@@ -72,7 +72,8 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 - これはコンテンツ文言の変更であり、SEO構造（hreflang・canonical等）には触れない
 - 1ページずつ実施し、2週間Search Consoleで効果を確認してから次のページへ
 - 着手順: `/en/cenomar/` → `/en/psa-birth-certificate-cost/` → 他ENページ
-- **開始可能時期: 2026-05-21（SEO凍結明け）以降**
+- **開始可能時期: 即時可能**（コンテンツ文言のみの変更のため、SEO凍結対象外）
+- SEO構造（Phase B: hreflang reciprocity修正・lastmod個別化等）は 2026-04-30（凍結明け）以降
 
 ## Build & Deploy
 
