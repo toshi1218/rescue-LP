@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export type Lang = 'ja' | 'en';
+export type Lang = 'ja' | 'en' | 'ko';
 
 const ja = {
   // ── Navbar ──────────────────────────────────────────────────────────
@@ -175,6 +175,9 @@ const ja = {
   'chat.quickPrompt.pricing': '料金の目安を教えて',
   'chat.handoff.message': 'ご依頼内容が具体的なようです。正式なお見積もりは下記フォームからどうぞ。',
   'chat.handoff.cta': 'お問い合わせフォームへ進む',
+
+  // ── BackToTop ─────────────────────────────────────────────────────────
+  'backtotop.ariaLabel': 'ページトップへ戻る',
 };
 
 const en: typeof ja = {
@@ -349,9 +352,189 @@ const en: typeof ja = {
   'chat.quickPrompt.pricing': 'Rough pricing guide',
   'chat.handoff.message': 'Sounds like a real request — let us give you a formal quote via the contact form.',
   'chat.handoff.cta': 'Go to contact form',
+
+  // ── BackToTop ─────────────────────────────────────────────────────────
+  'backtotop.ariaLabel': 'Back to top',
 };
 
-const dict: Record<Lang, typeof ja> = { ja, en };
+const ko: typeof ja = {
+  // ── Navbar ──────────────────────────────────────────────────────────
+  'navbar.logo': '필리핀 서류 취득 대행 센터',
+  'navbar.logoAriaLabel': '홈으로',
+  'navbar.cta': '문의하기',
+  'navbar.home': '홈',
+  'navbar.findByDoc': '서류로 찾기',
+  'navbar.findByPurpose': '목적으로 찾기',
+  'navbar.pricing': '요금',
+  'navbar.contact': '문의하기',
+  'navbar.company': '회사 소개',
+  'navbar.privacy': '개인정보 처리방침',
+  'navbar.terms': '이용약관',
+  'navbar.doc.cenomar': 'CENOMAR（미혼증명서）',
+  'navbar.doc.birth': '출생증명서',
+  'navbar.doc.nbi': 'NBI Clearance',
+  'navbar.doc.apostille': '아포스티유',
+  'navbar.doc.marriage': '혼인증명서',
+  'navbar.purpose.marriage': '국제결혼',
+  'navbar.purpose.visa': '배우자 비자',
+  'navbar.purpose.license': '면허 전환',
+  'navbar.purpose.naturalization': '귀화 신청',
+  'navbar.purpose.nbi': '해외 비자용 NBI Clearance',
+
+  // ── Hero ─────────────────────────────────────────────────────────────
+  'hero.badge': '필리핀 현지 스태프 대응',
+  'hero.h1line1': '필리핀 서류 취득,',
+  'hero.h1line2': '처음부터 끝까지 도와드립니다',
+  'hero.h1line3': 'CENOMAR · PSA · NBI · 아포스티유 원스톱 대행',
+  'hero.description': 'CENOMAR（미혼증명서）, PSA 출생증명서, NBI Clearance, DFA 아포스티유를 필리핀 방문 없이 대행합니다. F-6 결혼이민비자 준비부터 한국 혼인신고까지 필리핀 측 서류를 정리해 드립니다.',
+  'hero.disclaimer': '※ 카카오톡 또는 이메일로 상담 가능합니다. 필요한 서류가 아직 정확하지 않아도 괜찮습니다.',
+  'hero.ctaA': '무료로 상담하기',
+  'hero.ctaB': '지금 바로 상담하기',
+  'hero.ctaConsult': '견적 받기',
+  'hero.pricingCta': '요금 보기',
+  'hero.ctaAriaLabel': '무료 상담 폼으로 이동',
+  'hero.pricingAriaLabel': '요금 안내로 이동',
+
+  // ── Services ─────────────────────────────────────────────────────────
+  'services.title': 'CENOMAR, PSA, NBI, 아포스티유 취득 대행',
+  'services.subtitle': '필리핀 서류 취득 전 과정을 대행합니다. 방문 불필요, 이메일만으로 완결.',
+  'services.badge': '인기 No.1',
+  'services.agencies.title': '발급 기관',
+  'services.agencies.psa': 'PSA（필리핀 통계청）',
+  'services.agencies.nbi': 'NBI（국가수사국）',
+  'services.agencies.dfa': 'DFA（필리핀 외무부）',
+  'services.agencies.lto': 'LTO（육운국）',
+  'services.agencies.note': '※ 각 기관의 공식 웹사이트입니다. 참고 정보로 이용해 주세요.',
+  'services.cta': '무료로 상담하기',
+  'services.ctaAriaLabel': '무료 서류 취득 상담 신청',
+  'services.ctaNote': '필요한 서류를 모르셔도 괜찮습니다. 24시간 이내에 답변드립니다.',
+
+  // ── Pricing ───────────────────────────────────────────────────────────
+  'pricing.title': '요금 안내',
+  'pricing.note': '※ 취득 난이도・서류 내용・추가 절차에 따라 변동될 수 있습니다.',
+  'pricing.featured': '인기 No.1',
+  'pricing.detailsBtn': '상세 보기',
+  'pricing.docsTitle': '취득 가능 서류',
+  'pricing.deliveryLabel': '납기',
+  'pricing.ctaBtn': '무료로 견적 받기',
+
+  // ── FAQ ──────────────────────────────────────────────────────────────
+  'faq.title': '자주 묻는 질문',
+  'faq.ctaTitle': '먼저 무료로 상담해 보세요',
+  'faq.ctaDesc': '서류 이름이나 필요 수량을 모르셔도 괜찮습니다. 목적을 알려주시면 필요한 서류를 정리해 드립니다.',
+  'faq.ctaBtn': '무료 상담 신청하기',
+  'faq.ctaAriaLabel': '무료 상담 신청하기',
+  'faq.ctaNote': '익명 OK · 서류 이름을 몰라도 상담 가능',
+
+  // ── Footer ───────────────────────────────────────────────────────────
+  'footer.title': '문의하기',
+  'footer.subtitle': '카카오톡 또는 이메일로 상담 가능합니다.\n필요한 서류가 아직 정확하지 않아도 괜찮습니다.',
+  'footer.nameLabel': '이름',
+  'footer.namePlaceholder': '홍길동',
+  'footer.emailLabel': '이메일 주소',
+  'footer.emailPlaceholder': 'example@email.com',
+  'footer.countryLabel': '거주 국가',
+  'footer.countryPlaceholder': '예: 한국, 미국, 호주',
+  'footer.messageLabel': '문의 내용',
+  'footer.messagePlaceholder': '필요한 서류, 목적（결혼・비자・면허 전환 등）, 희망 납기를 적어주세요.',
+  'footer.submit': '전송',
+  'footer.submitAriaLabel': '문의 폼 전송',
+  'footer.formAriaLabel': '문의 폼',
+  'footer.mailto': '이메일로 직접 문의하기: igrs20200601@gmail.com',
+  'footer.company': '회사 소개',
+  'footer.privacy': '개인정보 처리방침',
+  'footer.terms': '이용약관',
+  'footer.pricingLink': '요금',
+  'footer.contactLink': '문의하기',
+  'footer.copyright': '© 2026 IGRS Inc.',
+
+  // ── PainPoints ───────────────────────────────────────────────────────
+  'painpoints.title': '서류 준비가 막막한 이유',
+  'painpoints.1.title': '어떤 서류가 필요한지 모른다',
+  'painpoints.1.desc': 'F-6 비자, 혼인신고, F-5 등 목적에 따라 필요한 서류가 다릅니다. 무엇부터 준비해야 하는지 파악하기 어렵습니다.',
+  'painpoints.2.title': '필리핀 기관 대응이 어렵다',
+  'painpoints.2.desc': 'PSA, NBI, DFA는 필리핀에서만 발급됩니다. 영어와 타갈로그어로만 운영되는 기관과의 소통이 부담스럽습니다.',
+  'painpoints.3.title': '아포스티유가 필요한지 모른다',
+  'painpoints.3.desc': '한국 제출용 서류에는 DFA 아포스티유 인증이 필요한 경우가 대부분입니다. 어떤 서류에 필요한지 파악하기 쉽지 않습니다.',
+  'painpoints.4.title': '대행업자를 믿을 수 있을지 모른다',
+  'painpoints.4.desc': '해외 서류 대행은 실태가 보이지 않아 불안합니다. 비용을 지불한 후 연락이 끊기는 사례도 존재합니다.',
+
+  // ── Process ──────────────────────────────────────────────────────────
+  'process.title': '진행 절차',
+  'process.ctaBtn': '지금 바로 상담하기',
+  'process.ctaAriaLabel': '무료 서류 취득 상담 신청',
+  'process.ctaNote': '이메일로 완결. 익명 상담도 OK.',
+
+  // ── WhyUs ────────────────────────────────────────────────────────────
+  'whyus.title': '안심하고 맡길 수 있는 3가지 이유',
+  'whyus.1.title': '필요한 서류와 순서를 처음에 정리합니다',
+  'whyus.1.desc': '취득할 서류와 비용, 예상 기간을 명확하게 안내합니다. 추가 비용은 사전에 고지합니다.',
+  'whyus.2.title': '진행 상황을 수시로 보고합니다',
+  'whyus.2.desc': '신청 완료, 서류 취득, 아포스티유 완료, 발송 등 각 단계에서 상황을 보고합니다.',
+  'whyus.3.title': '서류 확인 후 잔금 결제 방식',
+  'whyus.3.desc': '서류 사본을 확인하신 후 잔금을 결제하고 원본을 발송합니다. 착수 전 취소는 무료입니다.',
+  'whyus.stat1.label': '의뢰 방법',
+  'whyus.stat1.value': '필리핀 방문 불필요',
+  'whyus.stat2.label': '착수 전 취소',
+  'whyus.stat2.value': '무료',
+  'whyus.stat3.label': '답변 속도',
+  'whyus.stat3.value': '24시간 이내',
+  'whyus.cta': '필리핀 서류 취득 상담 신청하기',
+  'whyus.ctaAriaLabel': '필리핀 서류 취득 상담 신청하기',
+
+  // ── SocialProof ──────────────────────────────────────────────────────
+  'social.title': '대행 실적 및 고객 후기',
+  'social.note': '공개 동의를 받은 상담자 설문을 요약해서 게재하고 있습니다.',
+  'social.stat1.label': '공개 리뷰',
+  'social.stat2.label': '평균 평점',
+  'social.stat3.label': '상담부터 착수까지',
+
+  // ── QuickFacts ───────────────────────────────────────────────────────
+  'quickfacts.title': '대행 비용・납기・의뢰 방법',
+  'quickfacts.docs.label': '대행 가능 서류',
+  'quickfacts.docs.value': 'CENOMAR（미혼증명서）・PSA・NBI・DFA 아포스티유・LTO 관련',
+  'quickfacts.period.label': '납기 목표',
+  'quickfacts.period.value': '약 4〜8주（서류 종류・상황에 따라 변동）',
+  'quickfacts.lang.label': '의뢰 방법',
+  'quickfacts.lang.value': '이메일로 완결. 필리핀 방문 불필요.',
+  'quickfacts.company.label': '운영',
+  'quickfacts.company.value': 'IGRS Inc.（필리핀 세부）',
+  'quickfacts.updated': '최종 업데이트: 2026-03-01',
+
+  // ── GuideLinks ───────────────────────────────────────────────────────
+  'guides.title': '절차별 가이드',
+
+  // ── CaseStudies ──────────────────────────────────────────────────────
+  'cases.title': '대행 의뢰 사례（익명）',
+  'cases.note': '공개 가능한 범위에서 실제 대행 의뢰 패턴을 요약해서 게재하고 있습니다.',
+
+  // ── FloatingChatWidget ───────────────────────────────────────────────
+  'chat.buttonLabel': 'AI 상담',
+  'chat.openAriaLabel': 'AI 채팅 열기',
+  'chat.closeAriaLabel': '채팅 닫기',
+  'chat.dialogAriaLabel': 'AI 채팅 창',
+  'chat.inputAriaLabel': '메시지 입력',
+  'chat.headerTitle': 'AI 1차 접수',
+  'chat.headerSubtitle': 'CENOMAR・PSA・NBI・DFA 관련 질문에 즉시 답변합니다',
+  'chat.greeting': '안녕하세요. 필리핀 서류（CENOMAR・PSA 출생증명서・NBI Clearance・DFA 아포스티유 등）에 대해 자유롭게 질문해 주세요. 정식 견적은 담당자가 최종 확인합니다.',
+  'chat.placeholder': '예: CENOMAR 비용은?',
+  'chat.send': '전송',
+  'chat.sending': '전송 중…',
+  'chat.error': '일시적으로 응답할 수 없습니다. 잠시 후 다시 시도해 주세요.',
+  'chat.disclaimer': '※ AI 답변은 참고 정보입니다. 정식 요금・납기는 폼 전송 후 담당자가 확정합니다.',
+  'chat.quickPrompt.psa': 'PSA 출생증명서 취득 방법',
+  'chat.quickPrompt.cenomar': 'CENOMAR이란?',
+  'chat.quickPrompt.nbi': 'NBI Clearance 유효기간',
+  'chat.quickPrompt.apostille': 'DFA 아포스티유 소요시간',
+  'chat.quickPrompt.pricing': '요금 목안을 알려주세요',
+  'chat.handoff.message': '구체적인 의뢰 내용인 것 같습니다. 정식 견적은 아래 폼에서 신청해 주세요.',
+  'chat.handoff.cta': '문의 폼으로 이동',
+
+  // ── BackToTop ─────────────────────────────────────────────────────────
+  'backtotop.ariaLabel': '맨 위로 이동',
+};
+
+const dict: Record<Lang, typeof ja> = { ja, en, ko };
 
 export type TranslationKey = keyof typeof ja;
 
@@ -373,7 +556,7 @@ interface LanguageProviderProps {
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
   const { pathname } = useLocation();
-  const lang: Lang = pathname.startsWith('/ja') ? 'ja' : 'en';
+  const lang: Lang = pathname.startsWith('/ja') ? 'ja' : pathname.startsWith('/ko') ? 'ko' : 'en';
   // Note: /en/* paths are now the EN canonical routes.
   // Any path not starting with /ja is treated as English (including /en/* and legacy / routes).
 
