@@ -106,13 +106,17 @@ const DiyRisks: React.FC = () => {
           {c.risks.map((risk, i) => (
             <div
               key={i}
-              className="bg-white border border-amber-100 rounded-2xl p-5 hover:border-amber-200 hover:shadow-sm transition-all"
+              className="bg-white border border-amber-100 rounded-2xl p-5 hover:border-amber-200 hover:shadow-sm transition-all relative overflow-hidden"
             >
+              {/* Large number watermark */}
+              <span className="absolute top-3 right-4 font-bold text-3xl leading-none text-amber-200 font-display select-none">
+                {String(i + 1).padStart(2, '0')}
+              </span>
               <div className="flex items-start gap-3 mb-2">
-                <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center mt-0.5">
+                <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center mt-0.5 shrink-0">
                   <AlertTriangle className="w-3.5 h-3.5 text-amber-500" />
                 </span>
-                <p className="text-sm font-bold text-gray-800 leading-snug">{risk.title}</p>
+                <p className="text-sm font-bold text-gray-800 leading-snug pr-8">{risk.title}</p>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed pl-10">{risk.body}</p>
             </div>
