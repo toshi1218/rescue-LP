@@ -75,6 +75,34 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 - **開始可能時期: 即時可能**（コンテンツ文言のみの変更のため、SEO凍結対象外）
 - SEO構造（Phase B: hreflang reciprocity修正・lastmod個別化等）は 2026-04-30（凍結明け）以降
 
+### ENサービスページのtitle・meta CTR改善
+
+**背景**: 現状のCTRはグローバル1.6%（業界平均3〜5%を下回る）。主因はサービスページのtitleが情報記事型になっており、Googleの検索結果でサービスとして認識されにくい。
+
+**問題の構造**:
+- 情報ページ（「What is CENOMAR?」）は必要。認知獲得・信頼構築・E-E-A-T向上に機能する
+- 問題はサービスページのtitleまで情報型になっていること
+- 「What Is CENOMAR? Meaning...」というtitleでは購買意図ユーザーに刺さらない
+
+**やること（4/30凍結明け以降）**:
+- サービスページのtitleを「情報提供型」→「サービス訴求型」に変更
+- metaも定義説明から始めるのをやめ「解決できる」訴求に変更
+
+**変更例**:
+```
+現状（情報型）: "What Is CENOMAR? Meaning, How to Get It & Costs [2026]"
+改善（サービス型）: "CENOMAR Retrieval Service — PSA + Apostille Shipped Worldwide [2026]"
+
+現状meta: "CENOMAR = Certificate of No Marriage Record, issued by PSA..."
+改善meta: "We retrieve your CENOMAR from PSA, get DFA Apostille, and ship worldwide via DHL. From $349, no trip needed."
+```
+
+**実装ルール**:
+- title・meta descriptionの変更はSEO構造変更のため、1〜2ページずつ実施
+- 変更後2週間Search ConsoleでCTRを観測してから次のページへ
+- 着手順: `/en/cenomar/` → `/en/psa-birth-certificate-cost/` → 他ENサービスページ
+- **開始可能時期: 2026-04-30（凍結明け）以降**
+
 ## Build & Deploy
 
 ```bash
