@@ -25,7 +25,7 @@ const Services: React.FC = () => {
   const services = servicesData[lang];
 
   return (
-    <section className="bg-white relative">
+    <section className="bg-white relative" id="pricing">
       {/* 上部波形（PainPointsセクションとの境界） */}
       <div className="w-full overflow-hidden leading-none">
         <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" className="block w-full" style={{marginBottom: '-2px'}}>
