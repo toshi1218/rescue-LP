@@ -32,10 +32,10 @@ export default function ApostilleFeeEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '449',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '449',
             priceCurrency: 'USD',
             description: 'DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },

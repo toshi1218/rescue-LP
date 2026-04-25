@@ -33,10 +33,10 @@ export default function ApostilleGuideEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '449',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '449',
             priceCurrency: 'USD',
             description: 'DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
@@ -51,7 +51,7 @@ export default function ApostilleGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFA Apostille is included in all service packages starting at US$349. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.',
+                text: 'DFA Apostille is included in all service packages starting at US$449. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.',
               },
             },
             {
@@ -207,7 +207,7 @@ export default function ApostilleGuideEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'DFA Apostille is included in all service packages starting at US$349. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.' },
+          { q: 'How much does it cost?', a: 'DFA Apostille is included in all service packages starting at US$449. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.' },
           { q: 'What is the difference between e-Apostille and paper Apostille?', a: 'e-Apostille is a digital authentication issued online. Most immigration authorities (USCIS, IRCC, Home Affairs, UKVI) require a paper Apostille original. We provide paper originals.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },

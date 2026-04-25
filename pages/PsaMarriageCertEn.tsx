@@ -33,10 +33,10 @@ export default function PsaMarriageCertEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '449',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '449',
             priceCurrency: 'USD',
             description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },

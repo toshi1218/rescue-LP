@@ -148,7 +148,7 @@ export default function CenomarVsMarriageCertEn() {
               ['When needed', 'Before marriage / K-1 visa stage', 'After marriage / CR-1, spouse visa stage'],
               ['Validity', '6 months from issue (most authorities)', 'No expiry — permanent record'],
               ['Apostille required?', 'Yes, for most countries', 'Yes, for most countries'],
-              ['Price (our service)', 'From $349 (incl. Apostille + DHL)', 'From $349 (incl. Apostille + DHL)'],
+              ['Price (our service)', 'From $449 (incl. Apostille + DHL)', 'From $449 (incl. Apostille + DHL)'],
             ].map(([label, cenomar, marriage], i) => (
               <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                 <td className="px-4 py-3 font-medium text-gray-700 border-t border-gray-100">{label}</td>

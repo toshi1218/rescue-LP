@@ -34,10 +34,10 @@ export default function PsaBirthCertEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '449',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '449',
             priceCurrency: 'USD',
             description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
@@ -111,7 +111,7 @@ export default function PsaBirthCertEn() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">All-Inclusive Price</dt>
-              <dd className="font-medium text-gray-800">USD $349</dd>
+              <dd className="font-medium text-gray-800">USD $449</dd>
               <dd className="text-gray-400 text-xs mt-1">PSA + DFA Apostille + DHL shipping</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
@@ -128,7 +128,7 @@ export default function PsaBirthCertEn() {
               { label: 'PSA Birth Certificate retrieval', price: 'included' },
               { label: 'DFA Apostille authentication', price: 'included' },
               { label: 'DHL international shipping (tracked)', price: 'included' },
-              { label: 'Total (all-inclusive)', price: 'USD $349', bold: true },
+              { label: 'Total (all-inclusive)', price: 'USD $449', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>

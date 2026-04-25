@@ -13,7 +13,7 @@ import { useMeta } from '../lib/useMeta';
 export default function PsaCostEn() {
   useMeta(
     'PSA Birth Certificate Cost Philippines 2026: PHP 365 + Apostille',
-    'PSA Birth Certificate official fee: PHP 365 per copy (2026). All-in from US$349 incl. DFA Apostille + DHL Express worldwide. No hidden fees. Free quote.',
+    'PSA Birth Certificate official fee: PHP 365 per copy (2026). All-in from US$449 incl. DFA Apostille + DHL Express worldwide. No hidden fees. Free quote.',
   );
   return (
     <PageLayout
@@ -33,10 +33,10 @@ export default function PsaCostEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '449',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '449',
             priceCurrency: 'USD',
             description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
@@ -51,7 +51,7 @@ export default function PsaCostEn() {
               name: 'How much does a PSA Birth Certificate cost in 2026?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'The official PSA fee is PHP 365 per copy. With DFA Apostille and international DHL shipping, the total cost starts at USD $349.',
+                text: 'The official PSA fee is PHP 365 per copy. With DFA Apostille and international DHL shipping, the total cost starts at USD $449.',
               },
             },
             {
@@ -59,7 +59,7 @@ export default function PsaCostEn() {
               name: 'What is the PSA Birth Certificate price with Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Our all-inclusive price covering PSA retrieval (PHP 365 official fee), DFA Apostille authentication, and DHL worldwide shipping starts at USD $349. No hidden fees.',
+                text: 'Our all-inclusive price covering PSA retrieval (PHP 365 official fee), DFA Apostille authentication, and DHL worldwide shipping starts at USD $449. No hidden fees.',
               },
             },
             {
@@ -122,7 +122,7 @@ export default function PsaCostEn() {
               { label: 'Official PSA fee (government)', price: '₱365 / copy' },
               { label: 'DFA Apostille authentication', price: 'included' },
               { label: 'DHL international shipping (tracked)', price: 'included' },
-              { label: 'Our all-inclusive service price', price: 'USD $349', bold: true },
+              { label: 'Our all-inclusive service price', price: 'USD $449', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -209,7 +209,7 @@ export default function PsaCostEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'Our all-inclusive price starts at USD $349, covering PSA retrieval, DFA Apostille, and DHL shipping worldwide. Urgent cases may incur an additional fee.' },
+          { q: 'How much does it cost?', a: 'Our all-inclusive price starts at USD $449, covering PSA retrieval, DFA Apostille, and DHL shipping worldwide. Urgent cases may incur an additional fee.' },
           { q: 'Why is your price higher than some agencies?', a: 'Some agencies quote only the PSA retrieval fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.' },
           { q: 'Is Apostille always required?', a: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
