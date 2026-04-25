@@ -63,12 +63,26 @@ const Footer: React.FC = () => {
   const contactPath = isJa ? '/ja/contact/'  : '/en/contact/';
 
   return (
-    <footer className="bg-white border-t border-gray-100" id="contact">
-      <div className="py-16 max-w-md md:max-w-xl mx-auto px-6 text-center">
-        <h3 className="text-2xl font-bold text-secondary mb-2">{t('footer.title')}</h3>
-        <p className="text-sm text-gray-500 mb-8 whitespace-pre-line">
-          {t('footer.subtitle')}
-        </p>
+    <footer className="bg-white" id="contact">
+      {/* Gradient hero header */}
+      <div className="relative bg-secondary overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -right-24 -top-24 w-80 h-80 bg-primary rounded-full blur-[120px] opacity-15" />
+          <div className="absolute -left-24 -bottom-24 w-80 h-80 bg-primary rounded-full blur-[120px] opacity-10" />
+          <div className="absolute inset-0 opacity-[0.025]" style={{backgroundImage: 'radial-gradient(circle, #d69e2e 1px, transparent 1px)', backgroundSize: '28px 28px'}} />
+        </div>
+        <div className="relative max-w-md md:max-w-xl mx-auto px-6 py-12 text-center">
+          <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30">
+            Contact
+          </span>
+          <h3 className="text-2xl font-bold text-white mb-2">{t('footer.title')}</h3>
+          <p className="text-sm text-white/70 whitespace-pre-line">
+            {t('footer.subtitle')}
+          </p>
+        </div>
+      </div>
+
+      <div className="py-10 max-w-md md:max-w-xl mx-auto px-6 text-center">
 
         {/* Pre-form trust info */}
         {!submitted && (
@@ -310,6 +324,7 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
+
 };
 
 export default Footer;
