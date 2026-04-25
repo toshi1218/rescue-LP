@@ -2,24 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import GuideLinks from '../components/GuideLinks';
+import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
 
 const COUNTRY_LINKS = [
+  { label: 'United States (K-1 / CR-1)', path: '/en/us-visa-documents/' },
   { label: 'Canada', path: '/en/canada/' },
   { label: 'Australia', path: '/en/australia/' },
   { label: 'UK', path: '/en/uk/' },
-  { label: 'United States', path: '/en/us-visa-documents/' },
-  { label: 'New Zealand', path: '/en/new-zealand/' },
-  { label: 'Germany', path: '/en/germany/' },
-  { label: 'Netherlands', path: '/en/netherlands/' },
-  { label: 'UAE', path: '/en/uae/' },
-  { label: 'Singapore', path: '/en/singapore/' },
-  { label: 'Hong Kong', path: '/en/hong-kong/' },
-  { label: 'Qatar', path: '/en/qatar/' },
-  { label: 'Italy', path: '/en/italy/' },
-  { label: 'Norway', path: '/en/norway/' },
-  { label: 'Sweden', path: '/en/sweden/' },
-  { label: 'Switzerland', path: '/en/switzerland/' },
 ];
 
 export default function GuidesEn() {
@@ -30,7 +20,10 @@ export default function GuidesEn() {
   return (
     <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Guides' }]}>
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-4">Philippine Document Services — Guide Index</h1>
-      <p className="text-sm text-gray-600 mb-6">All-inclusive retrieval services for K-1, CR-1, spouse visa, and license conversion documents.</p>
+      <p className="text-sm text-gray-600 mb-6">
+        We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille for Filipino nationals living abroad.
+        All-inclusive service starting from US$349 — shipped worldwide via DHL. No trip to the Philippines needed.
+      </p>
       <GuideLinks />
 
       <section className="mt-10">
@@ -48,6 +41,18 @@ export default function GuidesEn() {
           ))}
         </div>
       </section>
+
+      <div className="mt-10">
+        <CtaBox
+          title="Not sure which documents you need?"
+          description="Tell us your visa type and destination country. We confirm exactly what to order — CENOMAR, PSA, NBI, Apostille — and give you a fixed all-inclusive quote."
+          buttonText="Start Free Consultation"
+          href="#contact"
+          variant="primary"
+          trustNote="Free cancellation before start · Reply within 24 hours · Pay by Visa / Mastercard / Amex"
+          whatsappHref="https://wa.me/639452833727"
+        />
+      </div>
     </PageLayout>
   );
 }

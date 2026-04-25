@@ -99,8 +99,8 @@ export default function CenomarVsMarriageCertEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'Before the wedding ceremony in Japan or abroad',
-            description: 'Most civil registry offices require CENOMAR before they register a marriage involving a Filipino national.',
+            title: 'Before an overseas wedding ceremony or civil registration abroad',
+            description: 'Most civil registry offices worldwide require CENOMAR before they register a marriage involving a Filipino national.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -120,8 +120,8 @@ export default function CenomarVsMarriageCertEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'Japan spouse visa (配偶者ビザ) and other immigration',
-            description: 'Japanese Immigration Bureau and most other immigration authorities require the PSA Marriage Certificate as proof of valid marriage.',
+            title: 'Canada, Australia, UK, Japan and other immigration',
+            description: 'Immigration authorities worldwide — IRCC (Canada), Home Affairs (Australia), UKVI (UK), Japanese Immigration Bureau, and others — require the PSA Marriage Certificate as proof of valid marriage.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -179,13 +179,13 @@ export default function CenomarVsMarriageCertEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Japan (Spouse visa → PSA Marriage Certificate required)',
-            description: 'Japanese Immigration Bureau requires PSA Marriage Certificate with DFA Apostille + certified Japanese translation. CENOMAR is needed at the pre-marriage stage only.',
+            title: 'Canada, Australia, UK (both may be required)',
+            description: 'Spousal sponsorship and partner visa applications often require both CENOMAR (proof of single status at time of application) and PSA Marriage Certificate. We advise per case.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Canada, Australia, UK (both may be required)',
-            description: 'Spousal sponsorship and partner visa applications often require both CENOMAR (proof of single status at time of application) and PSA Marriage Certificate. We advise per case.',
+            title: 'Japan (spouse visa → PSA Marriage Certificate required)',
+            description: 'Japanese Immigration Bureau requires PSA Marriage Certificate with DFA Apostille + certified Japanese translation. CENOMAR is needed at the pre-marriage stage only.',
           },
         ]}
       />

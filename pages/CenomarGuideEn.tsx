@@ -59,7 +59,7 @@ export default function CenomarGuideEn() {
               name: 'What is CENOMAR used for?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'CENOMAR is required for international marriage registration, K-1 fiancé visa applications, Japan spouse visa, Australia partner visa, US CR-1/IR-1 spouse visas, and most immigration applications involving a Filipino national. It proves you are legally single in the Philippines.',
+                text: 'CENOMAR is required for K-1 fiancé visa applications, CR-1/IR-1 spouse visas, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and most immigration applications involving a Filipino national. It proves you are legally single in the Philippines.',
               },
             },
             {
@@ -114,7 +114,7 @@ export default function CenomarGuideEn() {
           that certifies a Filipino citizen has no marriage record on file — in other words, proof that the person has never been married in the Philippines.
         </p>
         <p className="text-sm text-gray-600 leading-relaxed">
-          CENOMAR is required for K-1 fiancé visas, Japan spouse visas, international marriage registration, and most immigration applications involving a Filipino national. It must typically be issued within 6 months of submission and may require a DFA Apostille depending on the destination country.
+          CENOMAR is required for K-1 fiancé visa applications, CR-1/IR-1 spouse visas, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and most immigration applications involving a Filipino national. It must typically be issued within 6 months of submission and may require a DFA Apostille depending on the destination country.
         </p>
       </div>
 
@@ -152,11 +152,12 @@ export default function CenomarGuideEn() {
 
       <CtaBox
         title="Not Sure If You Need an Apostille?"
-        description="Some USCIS offices accept e-Apostille; others require a physical original. We will confirm for your specific case before you pay."
+        description="Some USCIS offices accept e-Apostille; others require a physical original. We will confirm for your specific case before you pay. All-inclusive from US$349."
         buttonText="Ask Us for Free"
         href="#contact"
         variant="primary"
         trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
+        whatsappHref="https://wa.me/639452833727"
       />
 
       <FeatureList
@@ -200,13 +201,18 @@ export default function CenomarGuideEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Japan (Spouse visa / 配偶者ビザ) — Apostille + Japanese translation',
-            description: 'Japanese Immigration Bureau requires CENOMAR with DFA Apostille plus a certified Japanese translation. Required at the civil registration stage before the marriage is recorded.',
+            title: 'Canada, Australia, UK — Apostille or authentication required',
+            description: 'IRCC (Canada), Home Affairs (Australia), and UKVI (UK) each have specific authentication requirements. We verify the correct format for your destination country before starting.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Canada, Australia, UK — Apostille or authentication required',
-            description: 'IRCC (Canada), Home Affairs (Australia), and UKVI (UK) each have specific authentication requirements. We verify the correct format for your destination country before starting.',
+            title: 'UAE, Qatar, Bahrain and Gulf countries — Apostille accepted',
+            description: 'Philippine nationals residing or working in the Gulf region may need CENOMAR for marriage registration at Philippine embassies or local civil authorities. Requirements vary by emirate or country — we confirm before starting.',
+          },
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'Japan — Apostille + certified Japanese translation',
+            description: 'Japanese Immigration Bureau requires CENOMAR with DFA Apostille plus a certified Japanese translation. Required at the civil registration stage before the marriage is recorded.',
           },
         ]}
       />
@@ -214,7 +220,7 @@ export default function CenomarGuideEn() {
       <FaqSection
         items={[
           { q: 'What does CENOMAR mean?', a: 'CENOMAR stands for Certificate of No Marriage Record. It is issued by the Philippine Statistics Authority (PSA) and certifies that a Filipino citizen has no marriage record on file in the Philippines — essentially proof of single status.' },
-          { q: 'What is a CENOMAR used for?', a: 'CENOMAR is required for international marriage registration, K-1 fiancé visa applications, Japan spouse visa, Australia partner visa, US CR-1/IR-1 spouse visa, and most other immigration applications involving a Filipino national.' },
+          { q: 'What is a CENOMAR used for?', a: 'CENOMAR is required for K-1 fiancé visa applications, CR-1/IR-1 spouse visas, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and most other immigration applications involving a Filipino national.' },
           { q: 'How much does it cost?', a: 'All-inclusive from US$349 (PSA retrieval + DHL shipping). DFA Apostille is an additional ~US$100. See our Pricing page for the full breakdown.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL international shipping takes 3–5 business days.' },
           { q: 'Can you handle rush orders?', a: 'Yes. Let us know your deadline and we will check if expedited processing is available.' },

@@ -291,7 +291,13 @@ const Footer: React.FC = () => {
           )}
         </div>
 
-        <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
+        <p className="mt-6 text-xs text-gray-400">
+          {isJa
+            ? 'お支払い: クレジットカード（Visa · Mastercard · Amex · Apple Pay · Google Pay）'
+            : 'Payment: Credit card · Visa · Mastercard · Amex · Apple Pay · Google Pay'}
+        </p>
+
+        <div className="mt-4 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
           <Link to={companyPath} className="hover:text-secondary transition-colors">{t('footer.company')}</Link>
           <Link to={privacyPath} className="hover:text-secondary transition-colors">{t('footer.privacy')}</Link>
           <Link to={termsPath} className="hover:text-secondary transition-colors">{t('footer.terms')}</Link>
