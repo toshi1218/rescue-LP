@@ -73,7 +73,7 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 - 1ページずつ実施し、2週間Search Consoleで効果を確認してから次のページへ
 - 着手順: `/en/cenomar/` → `/en/psa-birth-certificate-cost/` → 他ENページ
 - **開始可能時期: 即時可能**（コンテンツ文言のみの変更のため、SEO凍結対象外）
-- SEO構造（Phase B: hreflang reciprocity修正・lastmod個別化等）は 2026-04-30（凍結明け）以降
+- SEO構造（Phase B: hreflang reciprocity修正・lastmod個別化等）は 2026-05-01以降（下記参照）
 
 ### ENサービスページのtitle・meta CTR改善
 
@@ -101,7 +101,22 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 - title・meta descriptionの変更はSEO構造変更のため、1〜2ページずつ実施
 - 変更後2週間Search ConsoleでCTRを観測してから次のページへ
 - 着手順: `/en/cenomar/` → `/en/psa-birth-certificate-cost/` → 他ENサービスページ
-- **開始可能時期: 2026-04-30（凍結明け）以降**
+- **開始可能時期: 2026-04-30 OK**（title/metaはhreflang構造と独立しており、コンテンツ変更として実施可能）
+
+## SEO凍結解除スケジュール（改訂版）
+
+**背景**: 2026-04-22にSearch Consoleのimpressionsが急騰（~75/day）。Googlebotの再クロール・hreflang再認識の可能性あり。ただし1日データのため確定には至らない。
+
+| タスク種別 | 解除条件 | 目安日 |
+|-----------|---------|-------|
+| コンテンツ文言のみ（UI・フォーム等） | 制限なし | 即時 |
+| title・meta description変更 | 4/22スパイクを待たず実施可 | **2026-04-30〜** |
+| Phase B構造変更（hreflang・lastmod等） | 4/22スパイクが5/1〜5/3のデータでも持続していることを確認 | **2026-05-01以降（SC確認後）** |
+
+**Phase B着手前チェックリスト**:
+1. Search Console > パフォーマンス > 7日間のimpressionsが150以上を維持していること
+2. Search Console > 国際ターゲット > hreflangエラーが0件であること
+3. 上記2点を5/1〜5/3のデータで確認してから着手
 
 ## Build & Deploy
 
