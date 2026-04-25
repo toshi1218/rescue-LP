@@ -195,7 +195,7 @@ export default function DocumentChecklistByVisaEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Japan (Immigration Bureau spouse visa / 配偶者ビザ)',
+            title: 'Japan (spouse visa)',
             description: 'Requires PSA Marriage Certificate and PSA Birth Certificate with DFA Apostille plus certified Japanese translation. CENOMAR is needed for the pre-marriage registration stage.',
           },
         ]}
