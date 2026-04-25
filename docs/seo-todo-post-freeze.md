@@ -140,7 +140,28 @@ git config core.hooksPath .githooks
 
 ---
 
-## 5. 検証方法
+## 5. Phase E: EN ページ コンテンツ日本語バイアス修正（凍結対象外・即時可能）
+
+**背景**: EN ページは JA ページをベースに作られたため、英語圏OFW向けではない内容が混入している。
+SEO 構造（hreflang/canonical/sitemap）には触れないコンテンツ文言の修正のため、凍結ルール対象外。
+
+| # | ページ | 問題 | 状態 |
+|---|--------|------|------|
+| E1 | `/en/cenomar/` (`pages/CenomarGuideEn.tsx`) | 本文・FAQに「Japan spouse visa」が筆頭、「配偶者ビザ」日本語混入（L203） | ⬜ 未着手 |
+| E2 | `/en/psa-birth-certificate-cost/` | Japan向け説明が主軸になっている可能性 | ⬜ 未着手（E1確認後） |
+| E3 | その他ENページ | 同様のバイアスを順次確認・修正 | ⬜ 未着手（E2確認後） |
+
+**修正方針**:
+- 国別セクションの順序を USA・Canada・Australia・UK・UAE 中心に組み替える
+- 日本語テキスト（配偶者ビザ等）を除去
+- Japan セクションは残すが、優先度を下げ日本語テキストを除去
+- `useMeta()` title/description・JSON-LD・hreflang は変更しない
+
+**着手順**: E1（`/en/cenomar/`）→ Search Console で2週間確認 → E2 → E3
+
+---
+
+## 6. 検証方法
 
 ### Phase A の検証
 1. `npm run build` を実行し、prerender が全ページ正常に完了することを確認
