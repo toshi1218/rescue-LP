@@ -177,7 +177,7 @@ export default function UsVisaDocsEn() {
         items={[
           { href: '/en/k1-visa-documents/', title: 'K-1 Fiancé Visa Documents', description: 'Specific document checklist for K-1 visa petitions filed with USCIS.' },
           { href: '/en/cr1-visa-documents/', title: 'CR-1 / IR-1 Visa Documents', description: 'Specific document checklist for CR-1 and IR-1 spousal immigrant visas.' },
-          { href: '/en/spouse-visa-documents/', title: 'Spouse Visa Documents', description: 'Documents for Japan spouse visa applicants from the Philippines.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'Certificate of No Marriage required for K-1 fiancé visa and most US immigration cases involving a Filipino national.' },
           { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'Authentication required by US immigration for Philippine documents.' },
         ]}
       />
