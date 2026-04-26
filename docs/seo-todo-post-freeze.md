@@ -161,7 +161,98 @@ SEO 構造（hreflang/canonical/sitemap）には触れないコンテンツ文�
 
 ---
 
-## 6. 検証方法
+## 6. Phase F: GSC データに基づく CTR 改善（凍結明け 4/30 から即実施可能）
+
+**調査日**: 2026-04-26
+**データソース**: GSC Pages タブ（28日間）
+
+### インフラ確認結果（2026-04-26 curl 検証）
+
+| URL | HTTP ステータス | 結果 |
+|-----|--------------|------|
+| `/kika-shinsei-guide/` → `/ja/kika-shinsei-guide/` | 301 ✅ | 正常 |
+| `/nbi-clearance/` → `/en/nbi-clearance/` | 301 ✅ | 正常 |
+| `/company/` → `/en/company/` | 301 ✅ | 正常 |
+| `/cenomar-guide/` → `/ja/cenomar/` | 301 ✅ | 正常 |
+| `/nbi-clearance-guide/` → `/ja/nbi-clearance/` | 301 ✅ | 正常 |
+| `/jp/` → `/ja/` | 301 ✅ | 正常 |
+| `/ja/psa-shussei-cost`（スラッシュなし）→ `/ja/psa-shussei-cost/` | 301 ✅ | 正常 |
+
+→ **全リダイレクト正常**。GSC に残る旧 URL のインプレッション（`/kika-shinsei-guide/` 51、`/nbi-clearance/` 24 等）はインデックスキャッシュのラグ。現時点で対処不要。
+
+**`/ja/psa-shussei-cost`（スラッシュなし）問題**: GSC で 71 impr / pos 3.5 と正規 URL より高い位置に表示。301 は正常稼働中なので、Google が 301 を処理すれば自動解消する見込み。
+
+---
+
+### title / description 改善案（4/30 から適用）
+
+**優先度: 最高** — `/en/psa-birth-certificate-cost/` (578 impr / 0.2% CTR / pos 9.1)
+
+```
+現在: PSA Birth Certificate Fee Philippines 2026 — PHP 365 + Apostille
+改善: PSA Birth Certificate Cost [2026]: PHP 365 — Retrieve & Ship Worldwide
+```
+
+```
+現在: PSA Birth Certificate fee: PHP 365 per copy (2026). Total with DFA Apostille + DHL international shipping from USD $349. No hidden fees.
+改善: PSA Birth Certificate costs PHP 365/copy. We retrieve, apostille, and ship to your door from US$349 all-in. No return trip needed. Free quote.
+```
+
+変更理由: "fee" (情報収集意図) → "Cost" + "Retrieve & Ship Worldwide" (サービス意図)。"No return trip needed" はOFWの主要ペインポイントを直接突く。
+
+---
+
+**優先度: 高** — `/en/cenomar/`（高インプレッション・低 CTR）
+
+```
+現在: What Is CENOMAR? Meaning, How to Get It & Costs [2026]
+改善: CENOMAR Philippines [2026] — Get It Without Going Back Home
+```
+
+```
+現在: CENOMAR = Certificate of No Marriage Record, issued by PSA Philippines. Required for K-1, spouse visa & marriage abroad. We retrieve it — no trip needed.
+改善: CENOMAR (Certificate of No Marriage Record) from PSA Philippines. Required for K-1 fiancé visa, CR-1, and marriage abroad. We retrieve + apostille + ship. Free consult.
+```
+
+変更理由: "What Is CENOMAR?" は informational 意図のタイトル。サービスページとして "Get It Without Going Back Home" で transactional 意図を明示。"Free consult" 追加で CTA。
+
+---
+
+**優先度: 中** — `/en/document-checklist-by-visa/`（低 CTR）
+
+descriptionの "Japan spouse visa" を除去し、グローバル OFW 向けに整理：
+
+```
+現在: Which Philippine documents do you need? Complete checklist by visa type: K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa, Japan spouse visa. CENOMAR, PSA, NBI — all explained.
+改善: Which Philippine documents do you need? Complete checklist: K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa, Japan. CENOMAR, PSA, NBI Clearance — all explained.
+```
+
+---
+
+**優先度: 中** — `/ja/haigusha-visa-shorui/`（date が古い・低 CTR）
+
+```
+現在タイトル: 配偶者ビザに必要な書類チェックリスト【2026年3月版】フィリピン人配偶者の在留資格認定証明書申請
+改善: 配偶者ビザに必要な書類チェックリスト【${SEO_YEAR_MONTH_JA}】フィリピン人配偶者の在留資格認定証明書申請
+```
+
+`SEO_YEAR_MONTH_JA` 変数化済みの場合は既に自動更新。`prerender.ts` の title が文字列リテラルなら変数に変える。
+
+---
+
+### 実装方法（4/30 に実施）
+
+変更対象: `scripts/prerender.ts` の各 route の `title` / `description` フィールド
+
+1. `/en/psa-birth-certificate-cost/` を先行適用（L524–525）
+2. 2週間 Search Console で CTR 変化を観測
+3. 回復確認後に `/en/cenomar/` を適用
+
+**SEO リスク**: 低〜中。title/description 変更は Google のインデックス済み情報の更新を促すが、コンテンツ本体は変わらないため順位への悪影響は限定的。ただし一時的な fluctuation は想定内（1-2週）。
+
+---
+
+## 7. 検証方法
 
 ### Phase A の検証
 1. `npm run build` を実行し、prerender が全ページ正常に完了することを確認
