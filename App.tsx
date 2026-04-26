@@ -129,6 +129,8 @@ const PricingKo = lazy(() => import('./pages/PricingKo'));
 const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
 const NbiKo = lazy(() => import('./pages/NbiKo'));
 const ContactKo = lazy(() => import('./pages/ContactKo'));
+const PsaEcertificateGuideEn = lazy(() => import('./pages/PsaEcertificateGuideEn'));
+const PsaEcertificateGuideKo = lazy(() => import('./pages/PsaEcertificateGuideKo'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const FloatingChatWidget = lazy(() => import('./components/FloatingChatWidget'));
 
@@ -313,6 +315,8 @@ export default function App() {
         <Route path="/en/nbi-clearance-overseas/" element={<NbiClearanceOverseasEn />} />
         <Route path="/en/psa-late-registration" element={<Navigate to="/en/psa-late-registration/" replace />} />
         <Route path="/en/psa-late-registration/" element={<PsaLateRegistrationEn />} />
+        <Route path="/en/psa-ecertificate" element={<Navigate to="/en/psa-ecertificate/" replace />} />
+        <Route path="/en/psa-ecertificate/" element={<PsaEcertificateGuideEn />} />
         <Route path="/ja/cenomar-vs-marriage-certificate" element={<Navigate to="/ja/cenomar-vs-marriage-certificate/" replace />} />
         <Route path="/ja/cenomar-vs-marriage-certificate/" element={<CenomarVsMarriageCertJa />} />
         <Route path="/ja/document-checklist-by-visa" element={<Navigate to="/ja/document-checklist-by-visa/" replace />} />
@@ -377,6 +381,8 @@ export default function App() {
         <Route path="/ko/nbi-clearance/" element={<NbiKo />} />
         <Route path="/ko/contact" element={<Navigate to="/ko/contact/" replace />} />
         <Route path="/ko/contact/" element={<ContactKo />} />
+        <Route path="/ko/psa-ecertificate" element={<Navigate to="/ko/psa-ecertificate/" replace />} />
+        <Route path="/ko/psa-ecertificate/" element={<PsaEcertificateGuideKo />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
