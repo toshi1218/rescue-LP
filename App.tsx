@@ -8,7 +8,9 @@ class ErrorBoundary extends Component<{ children: ReactNode }, ErrorBoundaryStat
   state: ErrorBoundaryState = { hasError: false };
   static getDerivedStateFromError(): ErrorBoundaryState { return { hasError: true }; }
   componentDidCatch(error: Error, info: ErrorInfo) {
-    console.error('[ErrorBoundary]', error, info.componentStack);
+    if (import.meta.env.DEV) {
+      console.error('[ErrorBoundary]', error, info.componentStack);
+    }
   }
   render() {
     if (this.state.hasError) {
