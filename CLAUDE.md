@@ -112,6 +112,16 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
    - `npm run build` で自動再生成される（`prerender.ts` が sitemap を再構築）
    - 同時に `urlMap.ts` の整合性確認
 
+3. **PSA eCertificate EN/KO ページの prerender.ts 登録（hreflang接続）**
+   - 凍結中にページファイルとクライアントルートのみ作成済み（コミット `3893247`）
+   - 対象ファイル: `pages/PsaEcertificateGuideEn.tsx`、`pages/PsaEcertificateGuideKo.tsx`
+   - 現在は `/en/psa-ecertificate/`・`/ko/psa-ecertificate/` にクライアント側ルートのみ存在
+   - やること（3つセットで実施）:
+     1. `scripts/prerender.ts` に `/en/psa-ecertificate/` と `/ko/psa-ecertificate/` のルートを追加（hreflang: EN↔JA↔KO 三角接続）
+     2. `scripts/prerender.ts` の `/ja/psa-ecertificate-nihon/` の `enCanonical` を `${BASE}/en/` → `${BASE}/en/psa-ecertificate/` に修正し、`koCanonical` も追加
+     3. `lib/urlMap.ts` に `'/en/psa-ecertificate': '/ja/psa-ecertificate-nihon'` を追加
+   - **同日に他のhreflang変更と重ねないこと**（CLAUDE.md ルール）
+
 **凍結明け以降の段階展開（Phase F の残り、各 2 週間観察期間）**:
 
 3. `/en/cenomar/` の title を informational から transactional 表現に変更
