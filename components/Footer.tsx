@@ -17,6 +17,9 @@ const Footer: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [countryError, setCountryError] = useState('');
+  const [serviceError, setServiceError] = useState('');
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -27,12 +30,33 @@ const Footer: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const emailInput = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value.trim();
+    const els = e.currentTarget.elements;
+    const nameInput = (els.namedItem('name') as HTMLInputElement).value.trim();
+    const emailInput = (els.namedItem('email') as HTMLInputElement).value.trim();
+    const countryInput = (els.namedItem('country') as HTMLInputElement).value.trim();
+    const serviceInput = (els.namedItem('service') as HTMLSelectElement).value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let hasError = false;
+    if (!nameInput) {
+      setNameError(lang === 'ja' ? '名前は必須です。' : 'Name is required.');
+      hasError = true;
+    } else { setNameError(''); }
     if (!emailInput) {
       setEmailError(lang === 'ja' ? 'メールアドレスは必須です。' : 'Email address is required.');
-      return;
-    }
-    setEmailError('');
+      hasError = true;
+    } else if (!emailRegex.test(emailInput)) {
+      setEmailError(lang === 'ja' ? '有効なメールアドレスを入力してください。' : 'Please enter a valid email address.');
+      hasError = true;
+    } else { setEmailError(''); }
+    if (!countryInput) {
+      setCountryError(lang === 'ja' ? '国・地域は必須です。' : 'Country is required.');
+      hasError = true;
+    } else { setCountryError(''); }
+    if (!serviceInput) {
+      setServiceError(lang === 'ja' ? '目的を選択してください。' : 'Please select a purpose.');
+      hasError = true;
+    } else { setServiceError(''); }
+    if (hasError) return;
     setSubmitting(true);
     setSubmitError('');
     trackEvent('form_submit', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
@@ -165,10 +189,12 @@ const Footer: React.FC = () => {
               id="footer-name"
               name="name"
               required
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+              onChange={() => setNameError('')}
+              className={`w-full rounded-lg border px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 ${nameError ? 'border-red-400' : 'border-gray-200'}`}
               placeholder={t('footer.namePlaceholder')}
               aria-required="true"
             />
+            {nameError && <p className="mt-1 text-xs text-red-500">{nameError}</p>}
           </div>
 
           <div>
@@ -196,10 +222,12 @@ const Footer: React.FC = () => {
               id="footer-country"
               name="country"
               required
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+              onChange={() => setCountryError('')}
+              className={`w-full rounded-lg border px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 ${countryError ? 'border-red-400' : 'border-gray-200'}`}
               placeholder={t('footer.countryPlaceholder')}
               aria-required="true"
             />
+            {countryError && <p className="mt-1 text-xs text-red-500">{countryError}</p>}
           </div>
 
           <div>
@@ -211,8 +239,8 @@ const Footer: React.FC = () => {
               name="service"
               required
               value={service}
-              onChange={e => setService(e.target.value)}
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white"
+              onChange={e => { setService(e.target.value); setServiceError(''); }}
+              className={`w-full rounded-lg border px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white ${serviceError ? 'border-red-400' : 'border-gray-200'}`}
               aria-required="true"
             >
               <option value="">{isJa ? '目的を選択してください' : 'Select purpose'}</option>
@@ -237,6 +265,7 @@ const Footer: React.FC = () => {
                 </>
               )}
             </select>
+            {serviceError && <p className="mt-1 text-xs text-red-500">{serviceError}</p>}
           </div>
 
           <div>
