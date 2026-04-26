@@ -12,7 +12,7 @@ import RelatedArticles from '../components/RelatedArticles';
 import SectionDivider from '../components/SectionDivider';
 import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function NbiGuideJa() {
   useMeta(
@@ -92,7 +92,7 @@ export default function NbiGuideJa() {
         badges={['更新案件を中心に対応', '条件を先に確認', '進捗を随時ご報告']}
         ctaText="更新できるか確認する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <div className="max-w-2xl mx-auto px-4">

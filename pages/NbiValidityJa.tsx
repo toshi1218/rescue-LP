@@ -5,7 +5,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function NbiValidityJa() {
   useMeta(
@@ -66,7 +66,7 @@ export default function NbiValidityJa() {
         badges={['NBIクリアランス', '有効期限確認', '無料相談あり']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       {/* リード文 */}

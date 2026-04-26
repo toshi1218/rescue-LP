@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
@@ -91,7 +92,7 @@ export default function CenomarApostilleJa() {
         badges={['PSA取得からアポスティーユまで一括', '紙の原本形式で対応', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

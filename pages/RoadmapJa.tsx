@@ -6,7 +6,7 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import { FileCheck, ListOrdered, Map, CheckCircle } from 'lucide-react';
 
 const ctaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -63,7 +63,7 @@ export default function RoadmapJa() {
         ctaText="個別ロードマップを申し込む"
         ctaHref="#contact"
         ctaService="個別ロードマップ作成"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       {/* リード文 */}

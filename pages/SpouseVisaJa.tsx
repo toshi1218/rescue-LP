@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
@@ -89,7 +90,7 @@ export default function SpouseVisaJa() {
         badges={['日本語だけでOK', '入管要件に合わせて手配', 'アポスティーユ込み']}
         ctaText="必要書類を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

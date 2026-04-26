@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_EN } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
@@ -61,7 +62,7 @@ export default function MarriageOrderEn() {
         badges={['Compare Both Approaches', 'Required Documents Listed', 'Decide by Your Situation']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated={SEO_LAST_UPDATED_EN}
       />
 
       <article className="space-y-10">

@@ -12,7 +12,7 @@ import IconCardGrid from '../components/IconCardGrid';
 import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users, ShieldCheck, FileText, CheckCircle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function MarriageGuideJa() {
   useMeta(
@@ -100,7 +100,7 @@ export default function MarriageGuideJa() {
         badges={['日本語でやり取りOK', '必要書類を整理してご案内', '進捗を随時ご報告']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

@@ -9,7 +9,7 @@ import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe, Heart, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function DocumentChecklistByVisaJa() {
   useMeta(
@@ -79,7 +79,7 @@ export default function DocumentChecklistByVisaJa() {
         badges={['K-1 / CR-1 / 配偶者ビザ', 'カナダ・豪州・UK・日本', '無料相談']}
         ctaText="必要書類を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

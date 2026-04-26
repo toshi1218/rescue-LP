@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
@@ -62,7 +63,7 @@ export default function MarriageOrderJa() {
         badges={['手続きの流れを比較', '必要書類を整理', '状況に合わせて判断']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <article className="space-y-10">

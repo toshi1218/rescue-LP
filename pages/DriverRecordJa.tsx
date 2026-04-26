@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
@@ -92,7 +93,7 @@ export default function DriverRecordJa() {
         badges={['複数名対応', 'OR・アポスティーユ込み', '外免切替専門対応']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

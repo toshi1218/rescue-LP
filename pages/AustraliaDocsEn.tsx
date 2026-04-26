@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_EN } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -87,7 +88,7 @@ export default function AustraliaDocsEn() {
         badges={['Home Affairs-Ready', 'DFA Apostille Included', 'Ships to Australia via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated={SEO_LAST_UPDATED_EN}
       />
 
       <SummaryBlock

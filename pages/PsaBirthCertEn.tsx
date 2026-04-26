@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_EN } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -88,7 +89,7 @@ export default function PsaBirthCertEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated={SEO_LAST_UPDATED_EN}
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">

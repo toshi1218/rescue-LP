@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -87,7 +88,7 @@ export default function PsaMarriageCertJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
         ctaText="必要な形式を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

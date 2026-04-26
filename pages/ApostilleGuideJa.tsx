@@ -6,7 +6,7 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function ApostilleGuideJa() {
   useMeta(
@@ -99,7 +99,7 @@ export default function ApostilleGuideJa() {
         badges={['PSA・CENOMAR・LTO対応', 'DFA認証代行', '日本語でご相談OK']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
       <article className="max-w-2xl mx-auto px-4">
 

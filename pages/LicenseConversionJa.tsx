@@ -11,7 +11,7 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { AlertTriangle, CheckCircle, ClipboardList, Car, FileText, Stamp, Clock, Globe, Users, Receipt, BarChart3, Building2, Headphones } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function LicenseConversionJa() {
   useMeta(
@@ -116,7 +116,7 @@ export default function LicenseConversionJa() {
         badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり', '法人・複数名対応可']}
         ctaText="書類を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       {/* リード文 */}

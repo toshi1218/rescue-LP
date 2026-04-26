@@ -9,7 +9,7 @@ import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { Globe, AlertTriangle, FileCheck, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function NbiClearanceOverseasJa() {
   useMeta(
@@ -79,7 +79,7 @@ export default function NbiClearanceOverseasJa() {
         badges={['OFW・海外在住者向け', 'HIT対応', '海外発送OK']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">

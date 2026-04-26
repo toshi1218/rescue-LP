@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_EN } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -75,7 +76,7 @@ export default function CenomarVsMarriageCertEn() {
         badges={['Common Confusion Explained', 'Visa-Specific Guidance', 'Free Consultation']}
         ctaText="Ask Which One You Need"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated={SEO_LAST_UPDATED_EN}
       />
 
       <SummaryBlock

@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_EN } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -103,7 +104,7 @@ export default function CenomarGuideEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated={SEO_LAST_UPDATED_EN}
       />
 
       <div className="max-w-2xl mx-auto px-4 mb-6">

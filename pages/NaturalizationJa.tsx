@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
@@ -90,7 +91,7 @@ export default function NaturalizationJa() {
         badges={['法務局要件に対応', '書士への書類提供可', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_EN } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -76,7 +77,7 @@ export default function PsaLateRegistrationEn() {
         badges={['No Record Scenarios', 'Name & Date Errors', 'Visa Timeline Impact']}
         ctaText="Ask About Your Situation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated={SEO_LAST_UPDATED_EN}
       />
 
       <SummaryBlock

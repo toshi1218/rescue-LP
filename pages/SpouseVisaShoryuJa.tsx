@@ -7,7 +7,7 @@ import CtaBox from '../components/CtaBox';
 import SectionDivider from '../components/SectionDivider';
 import { AlertTriangle, CheckCircle, Info, Calendar, FileText, Stamp, ShieldCheck, Heart } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function SpouseVisaShoryuJa() {
   useMeta(
@@ -62,7 +62,7 @@ export default function SpouseVisaShoryuJa() {
         badges={['2026年3月最新', '結核証明書対応', '書類取得代行あり']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
       <article className="max-w-2xl mx-auto px-4">
 

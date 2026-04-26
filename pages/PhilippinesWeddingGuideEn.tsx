@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_EN } from '../lib/seoDate';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
@@ -63,7 +64,7 @@ export default function PhilippinesWeddingGuideEn() {
         badges={['Step-by-Step Procedures', 'Required Documents Listed', 'Common Pitfalls Covered']}
         ctaText="Ask About Documents"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated={SEO_LAST_UPDATED_EN}
       />
 
       <article className="space-y-10">

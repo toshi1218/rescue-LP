@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_EN } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import Pricing from '../components/Pricing';
@@ -20,7 +21,7 @@ export default function PricingEn() {
         ctaText="Get a Free Quote"
         ctaHref="#contact"
         ctaService="Pricing inquiry"
-        lastUpdated="March 1, 2026"
+        lastUpdated={SEO_LAST_UPDATED_EN}
       />
 
       <CtaBox

@@ -5,7 +5,7 @@ import Pricing from '../components/Pricing';
 import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function PricingJa() {
   useMeta(
@@ -36,7 +36,7 @@ export default function PricingJa() {
         ctaText="無料でお見積もり"
         ctaHref="#contact"
         ctaService="料金のお見積もり"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <CtaBox

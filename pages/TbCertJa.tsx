@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
@@ -87,7 +88,7 @@ export default function TbCertJa() {
         badges={['2025年6月23日〜義務化', 'フィリピン国籍対象', '有効期間180日']}
         ctaText="配偶者ビザ書類を相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

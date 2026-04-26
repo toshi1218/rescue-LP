@@ -9,7 +9,7 @@ import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { AlertTriangle, FileCheck, Clock, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function PsaLateRegistrationJa() {
   useMeta(
@@ -79,7 +79,7 @@ export default function PsaLateRegistrationJa() {
         badges={['No Record 対応', '氏名・生年月日エラー', 'ビザ遅延を防ぐ']}
         ctaText="状況を相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">

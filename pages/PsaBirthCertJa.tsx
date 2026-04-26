@@ -12,7 +12,7 @@ import { Baby, AlertTriangle, Clock, FileCheck, Globe, Users, CheckCircle } from
 import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function PsaBirthCertJa() {
   useMeta(
@@ -117,7 +117,7 @@ export default function PsaBirthCertJa() {
         badges={['日本語だけでOK', 'DFAアポスティーユ込み対応', '渡航不要']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <div className="max-w-2xl mx-auto px-4">

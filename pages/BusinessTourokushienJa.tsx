@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import SummaryBlock from '../components/SummaryBlock';
@@ -36,7 +37,7 @@ export default function BusinessTourokushienJa() {
         title="登録支援機関の方へ"
         subtitle="特定技能外国人の在留資格申請に必要なフィリピン書類を、日本語だけで一括手配できます。"
         badges={['複数案件の同時進行', '進捗レポート付き', '請求書払い対応']}
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

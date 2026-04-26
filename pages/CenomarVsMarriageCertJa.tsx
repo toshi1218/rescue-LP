@@ -9,7 +9,7 @@ import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Heart, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function CenomarVsMarriageCertJa() {
   useMeta(
@@ -79,7 +79,7 @@ export default function CenomarVsMarriageCertJa() {
         badges={['K-1 / CR-1で迷いやすい', '違いを3分で確認', '無料相談']}
         ctaText="必要書類を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">

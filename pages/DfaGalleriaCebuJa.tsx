@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import SummaryBlock from '../components/SummaryBlock';
@@ -92,7 +93,7 @@ export default function DfaGalleriaCebuJa() {
       <HeroBanner
         title="DFAアポスティーユ現地レポート"
         badges={['現地写真あり', 'セブ在住スタッフが撮影', '日本語解説']}
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
         ctaText="ご相談・お問い合わせ"
         ctaHref="#contact"
       />

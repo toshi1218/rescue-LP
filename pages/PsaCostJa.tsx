@@ -6,7 +6,7 @@ import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function PsaCostJa() {
   useMeta(
@@ -67,7 +67,7 @@ export default function PsaCostJa() {
         badges={['現地料金を解説', 'アポスティーユ込み対応', '日本語でご相談OK']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
       <article className="max-w-2xl mx-auto px-4">
 

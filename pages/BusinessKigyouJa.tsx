@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import SummaryBlock from '../components/SummaryBlock';
@@ -36,7 +37,7 @@ export default function BusinessKigyouJa() {
         title="フィリピン人材を雇用する企業の方へ"
         subtitle="技能実習生・特定技能人材の在留資格申請に必要なフィリピン書類を、日本語だけで一括手配します。"
         badges={['倫理審査用の料金資料あり', '複数名分の一括対応', '請求書払い対応']}
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <SummaryBlock

@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import { useMeta } from '../lib/useMeta';
@@ -38,7 +39,7 @@ export default function CompanyJa() {
         badges={['日本法人', 'フィリピン現地スタッフ', '日本語対応']}
         ctaText="ご依頼前に確認する"
         ctaHref="/ja/contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <div className="max-w-2xl">

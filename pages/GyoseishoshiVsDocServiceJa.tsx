@@ -1,4 +1,5 @@
 import React from 'react';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
@@ -62,7 +63,7 @@ export default function GyoseishoshiVsDocServiceJa() {
         badges={['役割の切り分けを解説', '管轄を正確に理解する', '費用の二重払いを防ぐ']}
         ctaText="フィリピン書類の相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <article className="space-y-10">
