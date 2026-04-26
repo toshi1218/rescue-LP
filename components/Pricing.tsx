@@ -4,7 +4,22 @@ import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, Ale
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
-const plansData = {
+interface Plan {
+  id: string;
+  icon: React.ComponentType<{ className?: string }>;
+  tag: string | null;
+  featured: boolean;
+  title: string;
+  subtitle: string;
+  price: string;
+  priceNote: string;
+  period: string;
+  detailPath: string;
+  why?: string;
+  outcome?: string;
+}
+
+const plansData: { ja: Plan[]; en: Plan[] } = {
   ja: [
     {
       id: 'pack',
@@ -199,9 +214,9 @@ const Pricing: React.FC = () => {
                     <div className="flex-1 min-w-0">
                       <h3 className="text-sm font-bold text-secondary leading-snug">{plan.title}</h3>
                       <p className="text-xs text-gray-500 mt-0.5 leading-snug">{plan.subtitle}</p>
-                      {(plan as any).why && (
+                      {plan.why && (
                         <p className="text-xs text-gray-500 mt-1 leading-snug">
-                          <span className="font-semibold">必要理由：</span>{(plan as any).why}
+                          <span className="font-semibold">必要理由：</span>{plan.why}
                         </p>
                       )}
                     </div>
@@ -210,7 +225,7 @@ const Pricing: React.FC = () => {
                   {/* CTAボタン2つ */}
                   <div className="mt-auto flex gap-2">
                     <Link
-                      to={(plan as any).detailPath}
+                      to={plan.detailPath}
                       onClick={() => trackEvent('cta_click', { location: 'pricing_detail', type: plan.id, variant: ctaVariant })}
                       className="flex-1 flex items-center justify-center gap-1.5 border border-primary text-primary font-bold text-sm py-2.5 px-4 rounded-xl hover:bg-primary/5 transition-all duration-200"
                     >
