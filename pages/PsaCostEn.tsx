@@ -110,9 +110,36 @@ export default function PsaCostEn() {
         The official PSA certificate fee is ₱365 per copy. However, using it abroad requires DFA Apostille authentication and international shipping — here's the full cost breakdown.
       </p>
 
+      <div className="max-w-2xl mx-auto px-4 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">PSA Birth Certificate Official Fee in 2026</h2>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          The <strong>Philippine Statistics Authority (PSA)</strong> charges a fixed government fee of <strong>₱365 per copy</strong> as of 2026. This applies whether you walk in at a PSA Serbilis outlet or order online through PSA's official portal. The fee is set by the Philippine government and does not vary by destination country.
+        </p>
+        <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mb-4">
+          <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+            <div className="px-4 py-3 font-bold">Cost Item</div>
+            <div className="px-4 py-3 font-bold text-center">Fee (2026)</div>
+          </div>
+          {[
+            { label: 'PSA government fee (per copy)', price: '₱365' },
+            { label: 'DFA Apostille authentication (if required)', price: 'additional fee' },
+            { label: 'International shipping (DHL Express)', price: 'varies by country' },
+            { label: 'Agency handling fee (if applying from abroad)', price: 'varies by agency' },
+          ].map((row, i) => (
+            <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+              <div className="px-4 py-3 text-gray-700">{row.label}</div>
+              <div className="px-4 py-3 text-center text-gray-600">{row.price}</div>
+            </div>
+          ))}
+        </div>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          For Filipinos living abroad who need the certificate for immigration or visa purposes, the total cost is significantly higher than ₱365 alone — because DFA Apostille and international delivery are required on top of the PSA fee. See the all-inclusive breakdown below.
+        </p>
+      </div>
+
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Full Cost Breakdown</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Total Cost If You Are Applying from Abroad</h2>
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
             <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
               <div className="px-4 py-3 font-bold">Item</div>
@@ -208,7 +235,11 @@ export default function PsaCostEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'Our all-inclusive price starts at USD $349, covering PSA retrieval, DFA Apostille, and DHL shipping worldwide. Urgent cases may incur an additional fee.' },
+          { q: 'How much is a PSA birth certificate in the Philippines in 2026?', a: 'The official PSA government fee is ₱365 per copy as of 2026. This is the fixed rate set by the Philippine Statistics Authority and applies at all PSA Serbilis outlets and through the PSA online delivery service.' },
+          { q: 'What is the total cost of a PSA birth certificate if I am applying from abroad?', a: 'For Filipinos living overseas, the total cost is significantly more than ₱365. You typically need DFA Apostille authentication plus international shipping. Our all-inclusive service starts at USD $349, covering PSA retrieval, DFA Apostille, and DHL tracked delivery to your address — no hidden fees.' },
+          { q: 'Has the PSA birth certificate price changed in 2026?', a: 'The PSA government fee remains ₱365 per copy in 2026. If you have seen different figures quoted online, they likely include agency fees, Apostille costs, or shipping — not the base PSA fee alone.' },
+          { q: 'Is the PSA fee the same for birth certificate, marriage certificate, and CENOMAR?', a: 'Yes. PSA charges ₱365 per copy regardless of document type (birth certificate, marriage certificate, death certificate, or CENOMAR) as of 2026.' },
+          { q: 'How much does it cost with your service?', a: 'Our all-inclusive price starts at USD $349, covering PSA retrieval, DFA Apostille, and DHL shipping worldwide. Urgent cases may incur an additional fee.' },
           { q: 'Why is your price higher than some agencies?', a: 'Some agencies quote only the PSA retrieval fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.' },
           { q: 'Is Apostille always required?', a: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
