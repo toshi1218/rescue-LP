@@ -54,6 +54,36 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 
 ## Future Content Tasks (凍結明け以降)
 
+### CTR改善タスク（2026-04-30以降・優先度順）
+
+**背景**: Search ConsoleのPSA Birth Certificate Costページで、price/cost/fee関連クエリが合計35インプレッション（7日間）・クリック0件（CTR 0%）と判明。原因調査の結果、以下3点が要因として特定された。
+
+**原因と対策:**
+
+#### 1. AggregateRatingスキーマの追加（優先度：高）
+- **問題**: `PsaCostEn.tsx` と `CenomarGuideEn.tsx` にAggregateRatingスキーマがなく、SERPでスター評価が表示されない。HomeEn/HomeJaにはあるがサービス個別ページに欠如。
+- **対策**: 両ページのjsonLdにAggregateRatingを追加してSERP上でスター（★4.8など）を表示させる
+- **実装ファイル**: `pages/PsaCostEn.tsx`、`pages/CenomarGuideEn.tsx`
+- **注意**: JSON-LD変更なので1〜2ページずつ実施し、2週間Search Consoleで効果確認してから次へ
+
+#### 2. sitemapのlastmod個別化（優先度：中）
+- **問題**: `public/sitemap.xml` の全URLが `<lastmod>2026-04-01</lastmod>` と同一日付。Googleがどのページが最新か判断できずクロール優先度が下がる
+- **対策**: `scripts/prerender.ts` でページごとに実際の更新日を反映したlastmodを生成する
+- **実装ファイル**: `scripts/prerender.ts`、`lib/seoDate.ts`
+- **注意**: sitemap変更はSEO構造変更のため、Phase Bとして実施
+
+#### 3. meta description改善（優先度：高）
+- **問題**: 現在のdescriptionがサービス販売文句から始まるため、情報収集型クエリ（「cost 2026」「price 2026」）でクリックされにくい
+- **対策**: 「₱365 is the official PSA government fee in 2026.」など情報提供から始まる文言に変更し、その後サービス説明へ誘導する構成にする
+- **対象ページ**: `pages/PsaCostEn.tsx`（useMeta第2引数）を最初に変更し2週間観察
+- **注意**: title・meta変更なのでSEO変更手順に従い1ページずつ
+
+**補足（ゼロクリック検索について）:**
+- 「psa birth certificate cost 2026」などの価格クエリはGoogleのAI OverviewやFeatured Snippetが検索結果内で直接PHP 365と回答するため、クリック不要で完結するケースがある（外部要因のため根本的な回避は困難）
+- Search Consoleを「7 days」→「28 days」表示に切り替えて確認するとより正確なCTRが把握できる（7日・35インプレッションは統計的に不十分）
+
+---
+
 ### EN ページのコンテンツ日本語バイアス修正
 
 **背景**: ENページは元々JAページをベースに作られたため、英語圏向けではない内容が混入している。
