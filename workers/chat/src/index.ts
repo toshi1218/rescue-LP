@@ -1,6 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
+import { fetchChatConfig } from './config';
 import { buildSystemPrompt, type PromptLang } from './prompt';
 import { checkRateLimit } from './rateLimit';
 
@@ -9,6 +10,8 @@ type Bindings = {
   ALLOWED_ORIGIN: string;
   MODEL: string;
   RATE_LIMIT?: KVNamespace;
+  SUPABASE_URL?: string;
+  SUPABASE_ANON_KEY?: string;
 };
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
@@ -69,7 +72,11 @@ app.post('/api/chat', async (c) => {
     }
 
     const client = new Anthropic({ apiKey });
-    const system = buildSystemPrompt(lang);
+    const config =
+      c.env.SUPABASE_URL && c.env.SUPABASE_ANON_KEY
+        ? await fetchChatConfig(c.env.SUPABASE_URL, c.env.SUPABASE_ANON_KEY)
+        : null;
+    const system = buildSystemPrompt(lang, config);
 
     const stream = client.messages.stream({
       model: c.env.MODEL,

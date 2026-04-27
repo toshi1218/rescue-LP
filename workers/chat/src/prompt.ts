@@ -1,6 +1,30 @@
+import type { ChatConfig } from './config';
+
 export type PromptLang = 'ja' | 'en';
 
-const SHARED_FACTS = `
+const FALLBACK_PRICING = `Package prices (tax-included, standard international courier shipping included):
+- PSA document (1 item) + Apostille: JPY 69,800 / KRW 690,000 / USD 499
+- Marriage PSA Pack — Birth Certificate + CENOMAR, each with Apostille (2 docs): JPY 129,800 / KRW 1,090,000 / USD 799  ← most popular
+- LTO Driver Record + Apostille: JPY 149,800 / KRW 1,290,000 / USD 899
+- NBI Clearance: quoted per case
+Note: Remote area surcharge, urgent handling, additional documents, or re-issuance may require a separate quote.`;
+
+const FALLBACK_TURNAROUND = `Turnaround (DHL international shipping included, guideline):
+- PSA document + Apostille (Birth Certificate / CENOMAR / Marriage Certificate): approx. 4-6 weeks
+- Marriage PSA Pack (Birth Certificate + CENOMAR, both with Apostille): approx. 4-6 weeks
+- LTO Driver Record + Apostille: approx. 4 weeks
+- NBI Clearance: varies by case — please inquire for an estimate`;
+
+const FALLBACK_NOTES = `- All coordination is handled in the client's language (JA, EN, or KO).
+- Client may need to sign an authorization letter and submit ID copies.
+- No travel to the Philippines is required for clients.`;
+
+function buildSharedFacts(config: ChatConfig | null): string {
+  const pricing = config?.pricing || FALLBACK_PRICING;
+  const turnaround = config?.turnaround || FALLBACK_TURNAROUND;
+  const notes = config?.operational_notes || FALLBACK_NOTES;
+
+  return `
 Service scope (ph-document.com, operated by IGRS Inc.):
 - PSA Birth Certificate, PSA Marriage Certificate
 - CENOMAR (Certificate of No Marriage Record)
@@ -9,23 +33,12 @@ Service scope (ph-document.com, operated by IGRS Inc.):
 - LTO Driver Record / license-related documents
 
 Pricing reference (guideline only, subject to case-by-case confirmation):
-Package prices (tax-included, standard international courier shipping included):
-- PSA document (1 item) + Apostille: JPY 69,800 / KRW 690,000 / USD 499
-- Marriage PSA Pack — Birth Certificate + CENOMAR, each with Apostille (2 docs): JPY 129,800 / KRW 1,090,000 / USD 799  ← most popular
-- LTO Driver Record + Apostille: JPY 149,800 / KRW 1,290,000 / USD 899
-- NBI Clearance: quoted per case
-Note: Remote area surcharge, urgent handling, additional documents, or re-issuance may require a separate quote.
+${pricing}
 
-Turnaround (DHL international shipping included, guideline):
-- PSA document + Apostille (Birth Certificate / CENOMAR / Marriage Certificate): approx. 4-6 weeks
-- Marriage PSA Pack (Birth Certificate + CENOMAR, both with Apostille): approx. 4-6 weeks
-- LTO Driver Record + Apostille: approx. 4 weeks
-- NBI Clearance: varies by case — please inquire for an estimate
+${turnaround}
 
 Operational notes:
-- All coordination is handled in the client's language (JA or EN).
-- Client may need to sign an authorization letter and submit ID copies.
-- No travel to the Philippines is required for clients.
+${notes}
 
 Strict guardrails:
 - NEVER give immigration/legal advice. If asked, say that it requires a licensed professional.
@@ -34,6 +47,7 @@ Strict guardrails:
 - If the user shares personal documents, names, or IDs, advise them to send those via the secure contact form, not the chat.
 - If the user expresses clear intent to request a service (e.g., "I want to order", "please get this for me", "how do I request"), append the exact token [LEAD_CAPTURE] at the very end of your reply so the frontend can show a handoff CTA. Do not mention this token to the user.
 `.trim();
+}
 
 const JA_PERSONA = `
 あなたは ph-document.com（運営: IGRS株式会社）のAI一次受付です。
@@ -59,7 +73,7 @@ Response style:
 - When the user shows clear intent to request a service (e.g., "I want to order", "how do I request", "please arrange"), append the literal token [LEAD_CAPTURE] at the very end of your reply. Do not mention this token to the user.
 `.trim();
 
-export function buildSystemPrompt(lang: PromptLang): string {
+export function buildSystemPrompt(lang: PromptLang, config: ChatConfig | null = null): string {
   const persona = lang === 'ja' ? JA_PERSONA : EN_PERSONA;
-  return `${persona}\n\n---\n${SHARED_FACTS}`;
+  return `${persona}\n\n---\n${buildSharedFacts(config)}`;
 }
