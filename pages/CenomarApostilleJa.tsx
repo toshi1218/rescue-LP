@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
@@ -27,7 +27,7 @@ export default function CenomarApostilleJa() {
         '@type': 'Service',
         name: 'CENOMARのDFAアポスティーユ取得代行',
         description: 'CENOMARのDFAアポスティーユをフィリピンに行かずに代行取得。国際結婚・配偶者ビザ・帰化申請に必要な紙の原本アポスティーユで対応。日本語だけで完結。',
-        url: 'https://ph-document.com/ja/cenomar-apostille',
+        url: 'https://ph-document.com/ja/cenomar-apostille/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -37,10 +37,10 @@ export default function CenomarApostilleJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
@@ -88,7 +88,7 @@ export default function CenomarApostilleJa() {
     >
       <HeroBanner
         title="CENOMAR アポスティーユ取得代行"
-        badges={['PSA取得からアポスティーユまで一括', '紙の原本形式で対応', '追加費用なし']}
+        badges={['PSA取得からアポスティーユまで一括', '紙の原本形式で対応', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"

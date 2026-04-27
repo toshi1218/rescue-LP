@@ -10,7 +10,7 @@ const FinalCta: React.FC = () => (
       <a
         href="#contact"
         onClick={() => trackEvent('cta_click', { location: 'final_cta', type: 'contact' })}
-        className="inline-flex items-center gap-2 bg-primary text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+        className="inline-flex items-center gap-2 bg-primary text-secondary font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
       >
         <MessageCircle className="w-5 h-5" />
         相談する

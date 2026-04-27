@@ -24,7 +24,7 @@ export default function PsaLateRegistrationEn() {
           '@type': 'Article',
           headline: 'PSA No Record Found or Name Error — Late Registration & Correction Guide',
           description: 'What to do when PSA returns no record, or your birth certificate has a name or date error. These issues block visa applications. We explain the options and help you navigate them.',
-          url: 'https://ph-document.com/en/psa-late-registration',
+          url: 'https://ph-document.com/en/psa-late-registration/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -76,7 +76,7 @@ export default function PsaLateRegistrationEn() {
         badges={['No Record Scenarios', 'Name & Date Errors', 'Visa Timeline Impact']}
         ctaText="Ask About Your Situation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

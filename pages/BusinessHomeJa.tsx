@@ -6,7 +6,7 @@ import SummaryBlock from '../components/SummaryBlock';
 import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
 import StepList from '../components/StepList';
-import { Building2, Scale, Briefcase, ArrowRight, CheckCircle, ShieldCheck } from 'lucide-react';
+import { Building2, Scale, Briefcase, Car, ArrowRight, CheckCircle, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
 const segments = [
@@ -27,6 +27,12 @@ const segments = [
     title: 'フィリピン人材を雇用する企業の方',
     description: '技能実習生・特定技能人材の在留資格手続きに必要なフィリピン書類の取得を代行します。',
     href: '/ja/business/kigyou/',
+  },
+  {
+    icon: Car,
+    title: '免許切替サポート（登録支援機関・監理団体）',
+    description: 'フィリピン人従業員の外免切替に必要なLTO書類＋DFAアポスティーユを代行。複数名一括・進捗報告・請求書払い対応。',
+    href: '/ja/business/menkyo-kirikae/',
   },
 ];
 
@@ -55,17 +61,19 @@ export default function BusinessHomeJa() {
     >
       <HeroBanner
         title="法人の方へ"
-        subtitle="登録支援機関・行政書士・企業の皆さまへ。フィリピン書類の取得代行を、案件単位でも継続的にもご利用いただけます。"
+        subtitle="登録支援機関・行政書士・企業の皆さまへ。フィリピン書類の取得代行を、案件単位でも継続的にも対応します。"
         badges={['請求書払い対応', '複数案件の同時進行可', '進捗レポート']}
+        ctaText="無料で相談する"
+        ctaHref="#contact"
       />
 
       <SummaryBlock
-        conclusion="フィリピン現地の書類取得を、日本語だけで完結できます。"
+        conclusion="フィリピン現地の書類取得を、日本語だけで完結させます。"
         points={[
           'CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユに対応',
           '案件ごとの進捗報告・連絡窓口の一本化',
-          '継続案件にはボリュームディスカウントを適用',
-          '請求書払い（月末締め翌月払い等）に対応可能',
+          '複数件・継続案件の料金は案件内容に応じてご提示します',
+          '請求書払い（月末締め翌月払い等）に対応',
         ]}
       />
 
@@ -101,7 +109,7 @@ export default function BusinessHomeJa() {
         </div>
         <div className="grid gap-3 md:grid-cols-2">
           {[
-            { title: '案件ごとの進捗レポート', desc: '受理・取得・発送の各段階でご報告。クライアントへの説明にもお使いいただけます。' },
+            { title: '案件ごとの進捗レポート', desc: '受理・取得・発送の各段階でご報告。クライアントへの説明にそのままご活用ください。' },
             { title: '請求書払い対応', desc: '月末締め翌月払い等、貴社の経理フローに合わせた請求に対応します。' },
             { title: '複数案件の同時進行', desc: '複数名分の書類を並行して手配。案件ごとの管理番号で進捗を整理します。' },
             { title: '倫理審査・稟議用の料金資料', desc: '社内審査やコンプライアンス確認に必要な料金表・見積書を発行します。' },
@@ -131,19 +139,19 @@ export default function BusinessHomeJa() {
                 <tr className="border-b border-gray-200">
                   <th className="text-left py-2 text-secondary font-bold">書類</th>
                   <th className="text-right py-2 text-secondary font-bold">単発</th>
-                  <th className="text-right py-2 text-secondary font-bold">月3件〜</th>
+                  <th className="text-right py-2 text-secondary font-bold">複数・継続案件</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr>
                   <td className="py-3 text-gray-700">CENOMAR + DFAアポスティーユ</td>
                   <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">¥48,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">PSA出生証明書 + DFAアポスティーユ</td>
                   <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">¥48,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">NBI Clearance（更新案件）</td>
@@ -151,7 +159,7 @@ export default function BusinessHomeJa() {
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
-                  <td className="py-3 text-gray-700">LTOドライバーズレコード + DFAアポスティーユ</td>
+                  <td className="py-3 text-gray-700">LTO運転経歴証明書 + DFAアポスティーユ<br /><span className="text-xs text-gray-400">※取得難易度が高く優先手配対応のため</span></td>
                   <td className="py-3 text-right font-semibold text-secondary">¥120,000〜</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
@@ -160,7 +168,7 @@ export default function BusinessHomeJa() {
             <div className="mt-4 space-y-1">
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                月10件以上の継続案件は別途お見積り
+                複数件・継続案件の料金はお問い合わせください
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
@@ -187,8 +195,8 @@ export default function BusinessHomeJa() {
       />
 
       <CtaBox
-        title="まずはお気軽にご相談ください"
-        description="必要な書類・件数・納期をお知らせいただければ、お見積りをご提示します。倫理審査・社内稟議用の料金資料もご用意できます。"
+        title="ご相談・お見積りはこちら"
+        description="必要な書類・件数・納期をお知らせください。お見積りをご提示します。倫理審査・社内稟議用の料金資料も発行します。"
         buttonText="法人のお問い合わせ"
         href="#contact"
         variant="primary"
@@ -203,15 +211,15 @@ export default function BusinessHomeJa() {
           },
           {
             q: '継続案件の割引はありますか？',
-            a: 'はい。月3件以上の継続案件にはボリュームディスカウントを適用します。件数や頻度に応じたお見積りをご提示しますので、まずはご相談ください。',
+            a: '件数・頻度に応じた料金をお見積りします。お問い合わせください。',
           },
           {
             q: '請求書払いは可能ですか？',
-            a: '法人のお客さまには請求書払いに対応しています。月末締め翌月払い等、貴社の経理フローに合わせてご相談いただけます。',
+            a: '法人のお客さまには請求書払いに対応しています。月末締め翌月払い等、貴社の経理フローに合わせて設定します。',
           },
           {
             q: '倫理審査や社内稟議に使える資料はありますか？',
-            a: 'ご依頼内容に応じた見積書・料金表を発行します。倫理審査やコンプライアンス確認にお使いいただけます。',
+            a: 'ご依頼内容に応じた見積書・料金表を発行します。倫理審査・コンプライアンス確認にそのままご活用ください。',
           },
           {
             q: '対応エリアはどこですか？',

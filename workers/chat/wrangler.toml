@@ -1,0 +1,21 @@
+name = "ph-document-chat"
+main = "src/index.ts"
+compatibility_date = "2026-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Custom domain is configured via Cloudflare dashboard:
+#   chat.ph-document.com → this Worker
+# routes = [
+#   { pattern = "chat.ph-document.com/*", custom_domain = true }
+# ]
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "REPLACE_WITH_KV_ID_AFTER_CREATE"
+
+# Secrets (set via `wrangler secret put`):
+#   ANTHROPIC_API_KEY
+
+[vars]
+ALLOWED_ORIGIN = "https://ph-document.com"
+MODEL = "claude-haiku-4-5-20251001"

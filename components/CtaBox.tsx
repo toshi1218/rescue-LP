@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
+import WhatsAppIcon from './icons/WhatsAppIcon';
 
 type CtaBoxProps = {
   title: string;
@@ -7,10 +8,9 @@ type CtaBoxProps = {
   buttonText: string;
   href: string;
   variant?: 'primary' | 'secondary';
-  /** 不安解消メッセージ（例：「着手前キャンセル無料・進捗を随時ご報告」） */
   trustNote?: string;
-  /** お問い合わせフォームのプルダウンに事前選択するサービス種別 */
   service?: string;
+  whatsappHref?: string;
 };
 
 export default function CtaBox({
@@ -21,6 +21,7 @@ export default function CtaBox({
   variant = 'primary',
   trustNote,
   service,
+  whatsappHref,
 }: CtaBoxProps) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (service) {
@@ -44,22 +45,35 @@ export default function CtaBox({
         <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-5">
           <div>
             <h2 className="text-lg font-bold text-white mb-1 leading-snug">{title}</h2>
-            <p className="text-sm text-gray-300 leading-relaxed">{description}</p>
+            <p className="text-base text-gray-300 leading-relaxed">{description}</p>
             {trustNote && (
-              <p className="mt-2 flex items-center gap-1.5 text-xs text-primary/80">
+              <p className="mt-2 flex items-center gap-1.5 text-sm text-primary/80">
                 <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0" />
                 {trustNote}
               </p>
             )}
           </div>
-          <a
-            href={href}
-            onClick={handleClick}
-            className="group inline-flex items-center gap-2 bg-primary text-white font-bold py-3 px-6 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover whitespace-nowrap transition-all duration-200 hover:gap-3 flex-shrink-0"
-          >
-            {buttonText}
-            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-          </a>
+          <div className="flex flex-col gap-2 flex-shrink-0">
+            <a
+              href={href}
+              onClick={handleClick}
+              className="group inline-flex items-center gap-2 bg-primary text-secondary font-bold py-3 px-6 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover whitespace-nowrap transition-all duration-200 hover:gap-3"
+            >
+              {buttonText}
+              <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+            </a>
+            {whatsappHref && (
+              <a
+                href={whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-3 px-6 rounded-xl whitespace-nowrap transition-all duration-200"
+              >
+                <WhatsAppIcon />
+                WhatsApp us
+              </a>
+            )}
+          </div>
         </div>
       </section>
     );
@@ -76,22 +90,35 @@ export default function CtaBox({
       <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-5">
         <div>
           <h2 className="text-lg font-bold text-secondary mb-1 leading-snug">{title}</h2>
-          <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+          <p className="text-base text-gray-600 leading-relaxed">{description}</p>
           {trustNote && (
-            <p className="mt-2 flex items-center gap-1.5 text-xs text-secondary/60">
+            <p className="mt-2 flex items-center gap-1.5 text-sm text-secondary/60">
               <ShieldCheck className="w-3.5 h-3.5 flex-shrink-0 text-primary" />
               {trustNote}
             </p>
           )}
         </div>
-        <a
-          href={href}
-          onClick={handleClick}
-          className="group inline-flex items-center gap-2 bg-secondary text-white font-bold py-3 px-6 rounded-xl shadow-md hover:bg-secondary-light whitespace-nowrap transition-all duration-200 hover:gap-3 flex-shrink-0"
-        >
-          {buttonText}
-          <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-        </a>
+        <div className="flex flex-col gap-2 flex-shrink-0">
+          <a
+            href={href}
+            onClick={handleClick}
+            className="group inline-flex items-center gap-2 bg-secondary text-white font-bold py-3 px-6 rounded-xl shadow-md hover:bg-secondary-light whitespace-nowrap transition-all duration-200 hover:gap-3"
+          >
+            {buttonText}
+            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+          </a>
+          {whatsappHref && (
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-3 px-6 rounded-xl whitespace-nowrap transition-all duration-200"
+            >
+              <WhatsAppIcon />
+              WhatsApp us
+            </a>
+          )}
+        </div>
       </div>
     </section>
   );

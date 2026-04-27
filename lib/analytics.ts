@@ -1,3 +1,20 @@
+export function reportWebVitals() {
+  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
+    const send = ({ name, value, id }: { name: string; value: number; id: string }) => {
+      trackEvent(name, {
+        metric_id: id,
+        metric_value: String(Math.round(name === 'CLS' ? value * 1000 : value)),
+        metric_delta: String(Math.round(value)),
+      });
+    };
+    onCLS(send);
+    onFCP(send);
+    onLCP(send);
+    onTTFB(send);
+    onINP(send);
+  }).catch(() => { /* web-vitals not available in SSR */ });
+}
+
 export function trackEvent(name: string, params: Record<string, string> = {}) {
   if (typeof window === 'undefined') return;
 

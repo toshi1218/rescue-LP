@@ -25,7 +25,7 @@ export default function UsVisaDocsJa() {
         '@type': 'Service',
         name: '米国ビザ（K-1・CR-1・IR-1）フィリピン書類取得代行',
         description: 'K-1・CR-1・IR-1ビザに必要なCENOMAR・PSA出生証明書・婚姻証明書・NBI ClearanceをDFAアポスティーユ付きで一括代行。USCIS・NVC提出に対応。',
-        url: 'https://ph-document.com/ja/us-visa-documents',
+        url: 'https://ph-document.com/ja/us-visa-documents/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -35,10 +35,10 @@ export default function UsVisaDocsJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
           },

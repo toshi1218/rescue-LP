@@ -42,7 +42,7 @@ export default function BusinessKigyouJa() {
       <SummaryBlock
         conclusion="フィリピン人材の在留資格手続きに必要な書類を、現地に行かずに取得できます。"
         points={[
-          'PSA出生証明書・CENOMAR・NBI Clearance・DFAアポスティーユに対応',
+          'LTO書類・PSA出生証明書・DFAアポスティーユに対応',
           '複数名分の書類を並行して手配可能',
           '倫理審査・社内稟議に使える料金表・見積書を発行',
           '案件ごとの進捗をメールでご報告',
@@ -117,23 +117,22 @@ export default function BusinessKigyouJa() {
                 <tr className="border-b border-gray-200">
                   <th className="text-left py-2 text-secondary font-bold">書類</th>
                   <th className="text-right py-2 text-secondary font-bold">単発</th>
-                  <th className="text-right py-2 text-secondary font-bold">月3件〜</th>
+                  <th className="text-right py-2 text-secondary font-bold">複数・継続案件</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr>
+                  <td className="py-3 text-gray-700">
+                    LTO書類（Certification + License History）
+                    <br />
+                    <span className="text-xs text-gray-400">＋DFAアポスティーユ込み</span>
+                  </td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥100,000〜</td>
+                  <td className="py-3 text-right font-semibold text-primary">要相談</td>
+                </tr>
+                <tr>
                   <td className="py-3 text-gray-700">PSA出生証明書 + DFAアポスティーユ</td>
                   <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">¥48,000〜</td>
-                </tr>
-                <tr>
-                  <td className="py-3 text-gray-700">CENOMAR + DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
-                  <td className="py-3 text-right font-semibold text-primary">¥48,000〜</td>
-                </tr>
-                <tr>
-                  <td className="py-3 text-gray-700">NBI Clearance（更新案件）</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥50,000〜</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
               </tbody>
@@ -141,7 +140,7 @@ export default function BusinessKigyouJa() {
             <div className="mt-4 space-y-1">
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                月10件以上の継続案件は別途お見積り
+                複数件・継続案件の料金はお問い合わせください
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />

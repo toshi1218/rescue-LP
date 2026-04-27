@@ -12,7 +12,7 @@
 - PSA婚姻証明書（Marriage Certificate） — フィリピン国内での婚姻を証明する書類
 - NBI Clearance（無犯罪証明書） — フィリピン捜査局（NBI）発行。帰化申請・ビザに必要
 - DFAアポスティーユ認証 — フィリピン外務省（DFA）による国際的な認証（紙ベース原本）
-- LTO関連書類 — フィリピン運転免許の外免切替に必要なドライバーズレコード
+- LTO関連書類 — フィリピン運転免許の外免切替に必要な運転経歴証明書
 
 **重要な背景情報：**
 PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していますが、紙ベースのDFAアポスティーユ原本を海外に直送する公式チャンネルは存在しません。米国・カナダ・オーストラリア・英国・日本等のハーグ条約加盟国への移民・ビザ申請には紙ベースのアポスティーユ原本が必要なため、フィリピン国内の代行業者を通じた取得・転送が唯一の手段です。
@@ -24,7 +24,7 @@ PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していま
 | PSA書類（出生証明書・CENOMAR・婚姻証明書）+ アポスティーユ | ¥50,000〜 | US$349〜 |
 | NBI Clearance + アポスティーユ | ¥55,000〜 | US$399〜 |
 | LTO関連書類（外免切替） | ¥100,000〜 | US$699〜 |
-| 移民書類パック（CENOMAR+PSA+NBI+アポスティーユ） | ¥89,800〜 | US$899〜 |
+| 国際結婚準備パック（PSA出生証明書+CENOMAR+DFAアポスティーユ） | ¥99,800〜 | US$899〜 |
 
 ※ 全プランにDHL国際配送込み。価格は税抜き・概算。
 
@@ -68,7 +68,7 @@ PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していま
 - [配偶者ビザ](https://ph-document.com/ja/haigusha-visa/) — 配偶者ビザのフィリピン書類代行
 - [外免切替](https://ph-document.com/ja/gaimen-kirikae-guide/) — LTO書類の代行取得
 - [帰化申請](https://ph-document.com/ja/kika-shinsei-guide/) — 帰化申請用フィリピン書類代行
-- [LTOドライバーズレコード](https://ph-document.com/ja/driver-record/) — LTOドライバーズレコード代行取得
+- [LTO運転経歴証明書](https://ph-document.com/ja/driver-record/) — LTO運転経歴証明書代行取得
 - [カナダ移民ビザ書類](https://ph-document.com/ja/canada/) — カナダ永住権・配偶者スポンサーシップ向けフィリピン書類代行
 - [オーストラリアビザ書類](https://ph-document.com/ja/australia/) — オーストラリアパートナービザ向けフィリピン書類代行
 - [UK移民ビザ書類](https://ph-document.com/ja/uk/) — UK配偶者ビザ向けフィリピン書類代行
@@ -140,3 +140,21 @@ A: Yes. We provide complete document packages for K-1 fiancé visa and CR-1/IR-1
 
 **Q: Do you serve clients in Canada, Australia, and the UK?**
 A: Yes. We serve clients in the USA, Canada, Australia, UK, Japan, Korea, and other countries. We confirm exact immigration authority requirements (IRCC, Home Affairs, UKVI, etc.) for your specific case.
+
+## 公式参考リンク / Official Reference Links
+
+以下は各書類の発行機関・申請先の公式ウェブサイトです。手続きの最新情報は各公式サイトでご確認ください。
+
+| 機関 | 公式サイト |
+|---|---|
+| PSA（フィリピン統計庁） | https://psa.gov.ph/ |
+| PSA Serbilis（PSA書類オンライン申請） | https://serbilis.psa.gov.ph/ |
+| NBI（国家捜査局・NBI Clearance申請） | https://clearance.nbi.gov.ph/ |
+| DFA（フィリピン外務省・アポスティーユ） | https://www.dfa.gov.ph/ |
+| LTO（フィリピン陸運局） | https://lto.gov.ph/ |
+| 出入国在留管理庁（在留資格・配偶者ビザ） | https://www.moj.go.jp/isa/ |
+| 法務局（帰化申請） | https://houmukyoku.moj.go.jp/ |
+| USCIS（米国移民局・K-1/CR-1ビザ） | https://www.uscis.gov/ |
+| IRCC（カナダ移民局） | https://www.canada.ca/en/immigration-refugees-citizenship.html |
+| Home Affairs（オーストラリア移民局） | https://immi.homeaffairs.gov.au/ |
+| UKVI（英国ビザ移民局） | https://www.gov.uk/government/organisations/uk-visas-and-immigration |

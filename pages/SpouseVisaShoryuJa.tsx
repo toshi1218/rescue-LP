@@ -24,7 +24,7 @@ export default function SpouseVisaShoryuJa() {
           '@type': 'Article',
           headline: '配偶者ビザに必要な書類チェックリスト【2026年3月版】フィリピン人配偶者',
           description: '2025年6月から結核非発病証明書が追加義務化。在留資格「日本人の配偶者等」COE申請に必要なPSA書類・CENOMAR・アポスティーユ・結核証明書を最新情報で解説。',
-          url: 'https://ph-document.com/ja/haigusha-visa-shorui',
+          url: 'https://ph-document.com/ja/haigusha-visa-shorui/',
           dateModified: '2026-03-14',
           publisher: {
             '@type': 'Organization',
@@ -60,6 +60,8 @@ export default function SpouseVisaShoryuJa() {
         title="配偶者ビザに必要な書類チェックリスト【2026年3月版】"
         subtitle="在留資格「日本人の配偶者等」COE申請に必要なフィリピン書類を最新情報でまとめています。2025年6月から結核非発病証明書が追加義務化。"
         badges={['2026年3月最新', '結核証明書対応', '書類取得代行あり']}
+        ctaText="無料で相談する"
+        ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
       <article className="max-w-2xl mx-auto px-4">
@@ -181,7 +183,7 @@ export default function SpouseVisaShoryuJa() {
               <div className="bg-amber-500 px-4 py-2.5 flex items-center gap-2">
                 <AlertTriangle className="w-4 h-4 text-white" />
                 <span className="text-sm font-bold text-white">④ 結核非発病証明書（TB Non-Disease Certificate）</span>
-                <span className="ml-auto text-[10px] font-bold bg-white text-amber-700 px-2 py-0.5 rounded-full">2025年6月〜必須</span>
+                <span className="ml-auto text-xs font-bold bg-white text-amber-700 px-2 py-0.5 rounded-full">2025年6月〜必須</span>
               </div>
               <div className="p-4 text-sm text-gray-700 space-y-2 bg-amber-50/50">
                 <div className="grid grid-cols-[auto,1fr] gap-x-3 gap-y-1 text-xs">
@@ -252,7 +254,7 @@ export default function SpouseVisaShoryuJa() {
 
             <div className="rounded-xl bg-blue-50 border border-blue-200 p-3 flex items-start gap-2">
               <Info className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
-              <p className="text-xs text-blue-800">
+              <p className="text-sm text-blue-800">
                 PSA書類の取得からDFAアポスティーユ・DHL郵送まで、全体で<strong>約1〜2ヶ月</strong>かかります。結核証明書の取得スケジュールと合わせて、余裕を持って準備を始めることをおすすめします。
               </p>
             </div>
@@ -282,7 +284,7 @@ export default function SpouseVisaShoryuJa() {
             ].map((item, i) => (
               <div key={i} className={`rounded-xl border p-4 ${item.highlight ? 'border-amber-300 bg-amber-50' : 'border-gray-200 bg-white'}`}>
                 <p className={`text-sm font-bold mb-1 ${item.highlight ? 'text-amber-900' : 'text-gray-800'}`}>{item.type}</p>
-                <p className={`text-xs leading-relaxed ${item.highlight ? 'text-amber-800' : 'text-gray-600'}`}>{item.desc}</p>
+                <p className={`text-sm leading-relaxed ${item.highlight ? 'text-amber-800' : 'text-gray-600'}`}>{item.desc}</p>
               </div>
             ))}
           </div>

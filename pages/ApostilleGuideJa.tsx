@@ -4,12 +4,13 @@ import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
+import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function ApostilleGuideJa() {
   useMeta(
-    `DFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応`,
+    `フィリピン レッドリボン（DFAアポスティーユ）代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応`,
     'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
   );
   return (
@@ -21,7 +22,7 @@ export default function ApostilleGuideJa() {
           '@type': 'Article',
           headline: '【完全解説】フィリピン書類のアポスティーユ（旧レッドリボン）とは？ 必要になるケースと注意点',
           description: 'フィリピン書類のアポスティーユとは何か、旧レッドリボンとの違い、必要になるケース、IGRSのサポート内容を解説します。',
-          url: 'https://ph-document.com/ja/apostille',
+          url: 'https://ph-document.com/ja/apostille/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -96,6 +97,8 @@ export default function ApostilleGuideJa() {
         title="アポスティーユ"
         subtitle="国際結婚、配偶者ビザ準備、外免切替、帰化申請など、どの場面で必要になりやすいかを分かりやすくまとめています。"
         badges={['PSA・CENOMAR・LTO対応', 'DFA認証代行', '日本語でご相談OK']}
+        ctaText="無料で相談する"
+        ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
       <article className="max-w-2xl mx-auto px-4">
@@ -145,6 +148,15 @@ export default function ApostilleGuideJa() {
             次に多いのが、「アポスティーユはいつでも同じ方法で取れる」と思ってしまうことです。DFA の運用は固定ではなく、2025年には PSA Documents の Fully Online Apostille の案内や、Apostille Services の予約プロセス変更も出ています。つまり、「予約が必須」「必ず窓口へ行く」などと決めつけず、その時点の運用確認が必要です。
           </p>
         </section>
+
+        <CtaBox
+          title="どの書類にアポスティーユが必要か、まず確認します"
+          description="何のために使う書類か、どの書類を持っているかをお知らせください。必要な流れと費用の目安をご案内します。"
+          buttonText="無料相談はこちら"
+          href="#contact"
+          variant="primary"
+          trustNote="着手前キャンセル無料・返信24時間以内"
+        />
 
         <section className="mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
@@ -258,6 +270,15 @@ export default function ApostilleGuideJa() {
         ]}
         ctaTitle="まずは無料相談"
         ctaButton="無料相談フォームへ"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: '通常・速達それぞれの目安期間を解説します。' },
+          { href: '/ja/apostille-ryokin/', title: 'アポスティーユの費用', description: 'PSA書類取得・DHL送料込みの料金体系を確認できます。' },
+          { href: '/ja/dfa-apostille-genchi-report/', title: 'アポスティーユ取得手順【DFAセブ窓口】', description: 'セブ窓口での実際の取得手順をレポートしています。' },
+          { href: '/ja/cenomar/', title: 'CENOMAR（独身証明書）', description: 'CENOMAR取得とDFAアポスティーユをまとめて代行。' },
+        ]}
       />
 
     </PageLayout>

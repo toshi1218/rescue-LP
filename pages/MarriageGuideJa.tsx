@@ -12,10 +12,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users, ShieldCheck, FileText, CheckCircle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function MarriageGuideJa() {
   useMeta(
-    'フィリピン人との国際結婚 手続きの流れ・費用・必要書類【2026年3月】',
+    `フィリピン人との国際結婚 手続きの流れ・費用・必要書類【${SEO_YEAR_MONTH_JA}】`,
     'フィリピン人との国際結婚の手続き・費用・必要書類を解説。CENOMAR・PSA出生証明書・DFAアポスティーユを日本語で一括代行。日本先行婚・フィリピン先行婚対応。無料相談。',
   );
   return (
@@ -26,7 +27,7 @@ export default function MarriageGuideJa() {
         '@type': 'Service',
         name: 'フィリピン人との国際結婚 手続き・費用・必要書類ガイド',
         description: 'フィリピン人との国際結婚の手続き・費用・必要書類を解説。CENOMAR・PSA出生証明書・DFAアポスティーユを日本語で一括代行。日本先行婚・フィリピン先行婚対応。',
-        url: 'https://ph-document.com/ja/kokusai-kekkon-guide',
+        url: 'https://ph-document.com/ja/kokusai-kekkon-guide/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -36,10 +37,10 @@ export default function MarriageGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'PSA書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
@@ -70,7 +71,7 @@ export default function MarriageGuideJa() {
               name: '書類の有効期限はありますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'CENOMARは、提出先や用途によっては発行後6か月以内のものが求められることがあります。提出タイミングに合わせた取得時期をご案内します。',
+                text: 'CENOMARは、提出先や用途によっては発行から6ヶ月以内のものが求められることがあります。提出タイミングに合わせた取得時期をご案内します。',
               },
             },
             {
@@ -113,6 +114,32 @@ export default function MarriageGuideJa() {
         ctaText="無料で相談する"
       />
 
+      <div className="max-w-2xl mx-auto px-4">
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">50,000円〜（書類1種・アポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※必要書類の種類・組み合わせによって変わります</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜1か月半</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">主な対応書類</dt>
+              <dd className="font-medium text-gray-800">CENOMAR・PSA出生証明書・DFAアポスティーユ</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">DHL国際配送</dt>
+              <dd className="font-medium text-gray-800">実費別途</dd>
+            </div>
+          </dl>
+          <p className="text-xs text-gray-500 mt-3">※必要書類の種類・組み合わせによって料金は変わります。無料相談後に正確な金額をご提示します。</p>
+        </SectionDivider>
+      </div>
+
       {/* Section 2: ケースに応じて必要になるフィリピン側の公的書類 */}
       <SectionDivider variant="beige">
         <h2 className="text-base font-bold text-gray-900 mb-3">ケースに応じて必要になるフィリピン側の公的書類</h2>
@@ -129,34 +156,30 @@ export default function MarriageGuideJa() {
           ]}
         />
         <div className="space-y-1.5 text-xs text-gray-500 border-t border-gray-100 pt-3 mt-4">
-          <p>※特にCENOMARは、提出先や用途によっては発行後6か月以内のものが求められることがあります。</p>
+          <p>※特にCENOMARは、提出先や用途によっては発行から6ヶ月以内のものが求められることがあります。</p>
           <p>※「どの書類が必要か」は、結婚する場所、現在の在留状況、今後のビザ手続きによって変わります。</p>
         </div>
       </SectionDivider>
 
       {/* Section 3: よくある「書類集めの落とし穴」 */}
       <SectionDivider variant="blue">
-        <div className="flex items-start gap-3 mb-5">
+        <div className="flex items-start gap-3 mb-4">
           <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
           <h2 className="text-base font-bold text-amber-900">よくある「書類集めの落とし穴」</h2>
         </div>
-        <div className="space-y-5">
-          <div>
-            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴①：現地の家族や知人に頼んだまま進まない</p>
-            <p className="text-sm text-amber-800 leading-relaxed">「あとで行く」「今週行く」と言われたまま、取得が進まず、予定だけが後ろにずれていくケースがあります。婚姻やビザの予定が決まっている場合、この遅れがそのまま全体スケジュールに響きます。</p>
-          </div>
-          <div>
-            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴②：書類が届いても、そのまま使えない</p>
-            <p className="text-sm text-amber-800 leading-relaxed">名前のスペル、生年月日、婚姻歴の注記などに不一致があると、日本側で確認や差し戻しになることがあります。書類は「取れたかどうか」だけでなく、「提出先で使える状態かどうか」まで確認が必要です。</p>
-          </div>
-          <div>
-            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴③：婚姻後すぐにPSA婚姻証明書が出るとは限らない</p>
-            <p className="text-sm text-amber-800 leading-relaxed">フィリピンで婚姻した場合、婚姻記録がPSAに反映され、婚姻証明書を取得できるようになるまで時間がかかることがあります。目安として、Metro Manilaで2〜4か月、地方では少なくとも6か月かかる案内もあります。「結婚したらすぐ次の手続きに進める」と思っていると、ここで予定がずれることがあります。</p>
-          </div>
-          <div>
-            <p className="text-sm font-bold text-amber-800 mb-1">落とし穴④：NBIクリアランスは誰でも完全代行できるわけではない</p>
-            <p className="text-sm text-amber-800 leading-relaxed">NBIクリアランスは、目的によって必要になることがあります。ただし、初回取得や条件によっては、日本国内のフィリピン大使館・総領事館でご本人による指紋対応が必要です。そのため、第三者だけで完結できない案件があります。</p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            { num: '①', title: '現地の家族に頼んだまま進まない', note: '予定だけ後ろにずれ、全体スケジュールに影響します。' },
+            { num: '②', title: '届いた書類がそのまま使えない', note: '名前・生年月日の不一致があると日本側で差し戻しになります。' },
+            { num: '③', title: 'PSA婚姻証明書はすぐ出ない', note: 'フィリピン婚の場合、PSAへの反映に2〜6か月かかることがあります。' },
+            { num: '④', title: 'NBI代行には条件がある', note: '初回取得は大使館での本人指紋対応が必要で、第三者だけでは完結しません。' },
+          ].map((item) => (
+            <div key={item.num} className="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <p className="text-xs font-bold text-amber-500 mb-1">落とし穴{item.num}</p>
+              <p className="text-sm font-bold text-amber-900 mb-1">{item.title}</p>
+              <p className="text-sm text-amber-800 leading-relaxed">{item.note}</p>
+            </div>
+          ))}
         </div>
       </SectionDivider>
 
@@ -210,14 +233,14 @@ export default function MarriageGuideJa() {
         </div>
         <div className="rounded-xl bg-gray-50 border border-gray-200 p-4">
           <p className="text-sm font-bold text-gray-800 mb-2">ご依頼時の重要事項</p>
-          <p className="text-xs text-gray-600 leading-relaxed mb-3">当社をご利用いただく場合でも、すべてを完全に丸投げできるわけではありません。適法に取得を進めるため、次のご協力をお願いしています。</p>
+          <p className="text-sm text-gray-600 leading-relaxed mb-3">当社をご利用いただく場合でも、すべてを完全に丸投げできるわけではありません。適法に取得を進めるため、次のご協力をお願いしています。</p>
           <ul className="space-y-1.5 mb-3">
             {[
               'Authentication Letterへのご署名',
               '身分証明書のコピーのご提出',
               '案件によっては、ご本人様による追加対応',
             ].map((item, i) => (
-              <li key={i} className="flex items-start gap-2 text-xs text-gray-600">
+              <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
                 <span className="text-primary font-bold flex-shrink-0">・</span>
                 <span>{item}</span>
               </li>
@@ -246,7 +269,7 @@ export default function MarriageGuideJa() {
         items={[
           { q: '日本先行婚とフィリピン先行婚、どちらがいいですか？', a: 'どちらが適切かはご状況によります。それぞれのメリット・デメリットを含めてご案内しますので、まずご相談ください。' },
           { q: 'CENOMARとPSA出生証明書、両方必要ですか？', a: '日本の市区町村役場への提出では、通常CENOMARとPSA出生証明書の両方が必要です。提出先によって異なる場合があるため、確認してからご案内します。' },
-          { q: '書類の有効期限はありますか？', a: 'CENOMARは、提出先や用途によっては発行後6か月以内のものが求められることがあります。提出タイミングに合わせた取得時期をご案内します。' },
+          { q: '書類の有効期限はありますか？', a: 'CENOMARは、提出先や用途によっては発行から6ヶ月以内のものが求められることがあります。提出タイミングに合わせた取得時期をご案内します。' },
           { q: 'NBIクリアランスも代行できますか？', a: '初回取得は、ご本人様による指紋対応が必要になることがあるため、弊社だけで完結する形ではお受けしにくい案件です。2014年以降に取得歴があり、更新として進めやすい案件を中心に対応しています。まずは状況をご相談ください。' },
           { q: '配偶者ビザ申請の書類も一緒に頼めますか？', a: '婚姻書類と配偶者ビザ申請書類をまとめてご相談いただけます。必要な流れを確認し、進め方をご提案します。' },
         ]}

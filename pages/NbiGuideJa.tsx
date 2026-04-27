@@ -9,23 +9,25 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import RelatedArticles from '../components/RelatedArticles';
+import SectionDivider from '../components/SectionDivider';
 import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function NbiGuideJa() {
   useMeta(
-    'NBI Clearance（無犯罪証明書）取得代行【2026年3月】渡航不要・HIT対応',
-    'NBI ClearanceをフィリピンなしのNBI取得。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。まず無料相談。',
+    `NBI Clearance（無犯罪証明書）申請サポート【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
+    'フィリピンのNBI Clearance（無犯罪証明書）取得を渡航不要で申請サポート。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。まず無料相談。',
   );
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI Clearance（無犯罪証明書）取得代行' }]}
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'NBI Clearance（無犯罪証明書）申請サポート' }]}
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'フィリピンNBIクリアランス（無犯罪証明書）更新サポート',
         description: '2014年以降に発行されたNBIクリアランスの取得歴があり、個人情報に変更がない更新案件を中心に対応。初回取得・氏名変更がある場合は在日フィリピン大使館等でのご本人対応が必要です。日本語でご相談いただけます。',
-        url: 'https://ph-document.com/ja/nbi-clearance',
+        url: 'https://ph-document.com/ja/nbi-clearance/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -35,10 +37,10 @@ export default function NbiGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '55000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '55000',
             priceCurrency: 'JPY',
             description: 'NBI Clearance取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
@@ -93,6 +95,49 @@ export default function NbiGuideJa() {
         lastUpdated="2026年3月1日"
       />
 
+      <div className="max-w-2xl mx-auto px-4">
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">正式名称</dt>
+              <dd className="font-medium text-gray-800">NBI Clearance（無犯罪証明書）</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">発行機関</dt>
+              <dd className="font-medium text-gray-800">フィリピン国家捜査局（NBI）</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">55,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※HIT対応・緊急処理は追加料金が発生することがあります</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜1か月半</dd>
+            </div>
+          </dl>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">内容</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+            </div>
+            {[
+              { label: 'NBI Clearance取得', price: '込み' },
+              { label: 'DFAアポスティーユ認証', price: '込み' },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '55,000円〜', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
+        </SectionDivider>
+      </div>
+
       {/* イントロ */}
       <div className="mb-8 space-y-2 text-sm text-gray-600 leading-relaxed">
         <p>「できるだけ早く取りたい」「更新できるのか分からない」「依頼したあと、今どうなっているのか見えないのが不安」</p>
@@ -112,35 +157,22 @@ export default function NbiGuideJa() {
         trustNote="条件確認から対応。返信24時間以内"
       />
 
-      {/* まず最初にご確認ください */}
-      <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-6">
-        <div className="flex items-start gap-3 mb-4">
-          <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-          <h2 className="text-base font-bold text-gray-900">まず最初にご確認ください</h2>
-        </div>
-        <p className="text-sm text-gray-700 leading-relaxed mb-4">
-          当社が対応しやすいのは、<strong>2014年以降に発行されたNBIクリアランスの取得歴があり、前回証明書から個人情報に変更がない更新案件</strong>です。
-          在東京フィリピン大使館の案内でも、2014年以降発行の証明書で、個人情報に変更がなければ更新扱いとされています。
+      {/* 当社でご案内しやすいケース（先出し） */}
+      <SectionDivider variant="beige">
+        <h2 className="text-base font-bold text-gray-900 mb-4">当社でご案内しやすいケース</h2>
+        <IconCardGrid
+          columns={2}
+          cards={[
+            { icon: CheckCircle, title: "2014年以降に取得歴がある", description: "2014年以降にNBIクリアランスを取得したことがある方", accent: 'green' },
+            { icon: ShieldCheck, title: "個人情報に変更がない", description: "姓・名・生年月日などに変更がない方", accent: 'blue' },
+            { icon: Globe, title: "日本から手続きしたい", description: "渡航せずに進めたい方", accent: 'teal' },
+            { icon: FileText, title: "更新として進められる案件", description: "新しいFingerprint Card不要で進められる可能性が高い案件", accent: 'gold' },
+          ]}
+        />
+        <p className="text-xs text-gray-500 border-t border-primary/10 pt-3 mt-4">
+          在東京フィリピン大使館の案内でも、2014年以降の証明書で個人情報変更がなければ更新手続きが可能とされています。
         </p>
-        <div className="rounded-xl bg-red-50 border border-red-100 p-4">
-          <p className="text-sm font-bold text-red-800 mb-2">一方で、次のようなケースは、当社だけで完結する形では進めにくい案件です。</p>
-          <ul className="space-y-1.5">
-            {[
-              '過去に一度もNBIクリアランスを取得したことがない',
-              '最後のNBIクリアランスが2013年以前のもの',
-              '結婚などにより、姓やその他の個人情報に変更がある',
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-red-700">
-                <XCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="text-xs text-red-600 mt-3">
-            これらは新規扱いとなり、在日フィリピン大使館・総領事館での本人による指紋対応が必要になります。
-          </p>
-        </div>
-      </section>
+      </SectionDivider>
 
       {/* IGRSが大事にしていること */}
       <FeatureList
@@ -149,37 +181,41 @@ export default function NbiGuideJa() {
           {
             icon: <Eye className="w-4 h-4" />,
             title: '進捗が見える',
-            description: '申請、受理、発送など、節目ごとに状況をご案内します。「依頼したのに、その後どうなっているのか分からない」という不安を減らしながら進めます。',
+            description: '申請、受理、発送など、節目ごとに状況をご案内します。',
           },
           {
             icon: <ShieldCheck className="w-4 h-4" />,
             title: '条件を先に確認する',
-            description: 'NBIクリアランスは、更新で進められる案件と、本人対応が必要な案件がはっきり分かれます。当社では、最初にそこを確認してから進めます。',
+            description: '更新で進められる案件か、本人対応が必要か、最初に確認してから進めます。',
           },
           {
             icon: <MessageSquare className="w-4 h-4" />,
             title: '日本語で相談しやすい',
-            description: 'フィリピン側のやり取りや必要書類の整理を、日本語で進めやすい形でご案内します。「何を出せばいいのか分からない」状態でも、順番に確認していけます。',
+            description: '「何を出せばいいか分からない」状態でも、順番に確認していけます。',
           },
         ]}
       />
 
-      {/* 当社でご案内しやすいケース */}
-      <SectionDivider variant="beige">
-        <h2 className="text-base font-bold text-gray-900 mb-4">当社でご案内しやすいケース</h2>
-        <IconCardGrid
-          columns={2}
-          cards={[
-            { icon: CheckCircle, title: "2014年以降に取得歴がある", description: "2014年以降にNBIクリアランスを取得したことがある方", accent: 'green' },
-            { icon: ShieldCheck, title: "個人情報に変更がない", description: "姓・名・生年月日などの個人情報に変更がない方", accent: 'blue' },
-            { icon: Globe, title: "日本から手続きしたい", description: "日本からできるだけ手間を減らして進めたい方", accent: 'teal' },
-            { icon: FileText, title: "更新として進められる可能性", description: "更新として進められる可能性が高い案件", accent: 'gold' },
-          ]}
-        />
-        <p className="text-xs text-gray-500 border-t border-primary/10 pt-3 mt-4">
-          在東京フィリピン大使館の案内でも、2014年以降の証明書で個人情報変更がなければ、新しいFingerprint Cardを作らずに更新手続きが可能とされています。
-        </p>
-      </SectionDivider>
+      {/* 対応できないケース（後半に配置） */}
+      <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-6">
+        <div className="flex items-start gap-3 mb-3">
+          <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-gray-900">ご相談前にご確認ください</h2>
+        </div>
+        <p className="text-sm text-gray-600 mb-4">以下のケースは、在日フィリピン大使館・総領事館でのご本人対応が必要です。当社だけでの完結が難しい場合がありますので、まずはご相談ください。</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {[
+            '過去に一度もNBIクリアランスを取得したことがない',
+            '最後の取得が2013年以前',
+            '結婚等により姓・個人情報に変更がある',
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl bg-gray-50 border border-gray-200 p-3 flex items-start gap-2">
+              <XCircle className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-gray-700">{item}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <ComparisonTable
         heading="更新案件 vs 新規取得"
@@ -194,28 +230,17 @@ export default function NbiGuideJa() {
       {/* ご注意ください */}
       <SectionDivider variant="blue">
         <h2 className="text-base font-bold text-gray-900 mb-4">ご注意ください</h2>
-
-        <div className="space-y-4">
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
-            <p className="text-sm font-bold text-amber-900 mb-1">初回取得は、本人対応が必要です</p>
-            <p className="text-sm text-amber-800 leading-relaxed">
-              初めてNBIクリアランスを取る方は、在日フィリピン大使館・総領事館でFingerprint Card Form No. 5の作成と指紋対応が必要です。そのため、第三者だけで完結する形では進められません。
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
-            <p className="text-sm font-bold text-amber-900 mb-1">氏名変更がある場合も、新規扱いになることがあります</p>
-            <p className="text-sm text-amber-800 leading-relaxed">
-              たとえば結婚後に姓が変わった場合など、個人情報に変更があると、2014年以降の取得歴があっても新規・初回申請側の手順が必要になります。
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5">
-            <p className="text-sm font-bold text-amber-900 mb-1">海外からの申請は、NBI Main Officeで処理されます</p>
-            <p className="text-sm text-amber-800 leading-relaxed">
-              在外申請はNBI Main Officeで処理される案内です。そのため、全体の所要日数は、書類準備だけでなく、現地到着や発送状況にも左右されます。
-            </p>
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {[
+            { title: '初回取得は本人対応が必要', note: '大使館でFingerprint Card Form No. 5の作成と指紋対応が必要です。' },
+            { title: '氏名変更は新規扱いに', note: '2014年以降の取得歴があっても、個人情報変更があると新規手順が必要になります。' },
+            { title: '所要日数は前後する', note: '海外からの申請はNBI Main Office処理のため、現地到着・発送状況にも左右されます。' },
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <p className="text-sm font-bold text-amber-900 mb-1">{item.title}</p>
+              <p className="text-xs text-amber-800 leading-relaxed">{item.note}</p>
+            </div>
+          ))}
         </div>
       </SectionDivider>
 
@@ -276,10 +301,11 @@ export default function NbiGuideJa() {
       />
       <RelatedArticles
         items={[
-          { href: '/ja/nbi-clearance-overseas', title: '海外在住のNBI取得', description: 'フィリピンに戻らずに取得したい方はこちら。' },
-          { href: '/ja/nbi-hit', title: 'NBI HIT対応', description: '照会が入ったときの考え方を整理します。' },
-          { href: '/ja/nbi-koyukigen', title: 'NBIの有効期限', description: '提出期限に合わせた取り方の目安が分かります。' },
-          { href: '/ja/document-checklist-by-visa', title: 'ビザ別書類チェックリスト', description: 'K-1や配偶者ビザで他に何が必要かを確認できます。' },
+          { href: '/ja/nbi-clearance-overseas/', title: '海外在住のNBI取得', description: 'フィリピンに戻らずに取得したい方はこちら。' },
+          { href: '/ja/nbi-hit/', title: 'NBI HIT対応', description: '照会が入ったときの考え方を整理します。' },
+          { href: '/ja/nbi-koyukigen/', title: 'NBIの有効期限', description: '提出期限に合わせた取り方の目安が分かります。' },
+          { href: '/ja/psa-crs-cebu-genchi-report/', title: 'PSA証明書の取得手順【セブ窓口】', description: 'セブ窓口での実際の取得フローをレポートしています。' },
+          { href: '/ja/document-checklist-by-visa/', title: 'ビザ別書類チェックリスト', description: 'K-1や配偶者ビザで他に何が必要かを確認できます。' },
         ]}
       />
     </PageLayout>

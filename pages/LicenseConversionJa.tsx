@@ -15,8 +15,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function LicenseConversionJa() {
   useMeta(
-    `外免切替に必要なLTO書類、フィリピンに行かずに取れます【${SEO_YEAR_MONTH_JA}】`,
-    'フィリピン運転免許から日本免許への外免切替に必要なLTOドライバーズレコード＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
+    `フィリピン免許→日本免許 外免切替の必要書類・期間【${SEO_YEAR_MONTH_JA}】渡航不要`,
+    'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。取得期間の目安も解説。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
   );
   return (
     <PageLayout
@@ -27,7 +27,7 @@ export default function LicenseConversionJa() {
           '@type': 'Service',
           name: '外免切替 LTO書類取得サポート',
           description: 'フィリピン免許から日本免許への外免切替に必要なLTO関連書類の整理と取得手続きを日本語でサポート。',
-          url: 'https://ph-document.com/ja/gaimen-kirikae-guide',
+          url: 'https://ph-document.com/ja/gaimen-kirikae-guide/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -120,11 +120,53 @@ export default function LicenseConversionJa() {
       />
 
       {/* リード文 */}
-      <section className="mb-10 text-sm text-gray-700 leading-relaxed space-y-3">
-        <p>フィリピンで取得した運転免許証をお持ちの方は、日本の運転免許センターで手続きを行うことで、日本の運転免許証に切り替えられる場合があります。</p>
-        <p>ただし、外免切替は「外国の免許を持っていれば誰でもできる」手続きではありません。特にフィリピン免許では、免許取得後の滞在歴の確認と、フィリピン側書類の準備が重要になります。</p>
-        <p>このページでは、外免切替で先に確認すべき条件と、フィリピン側で求められやすい書類、そして書類準備を進める際の注意点をわかりやすく整理します。</p>
+      <section className="mb-6 text-sm text-gray-700 leading-relaxed space-y-2">
+        <p>フィリピン免許を日本の免許に切り替えるには、「免許取得後にフィリピンへ通算3か月以上滞在した」証明が必要です。免許を持っているだけでは切替できません。</p>
+        <p>このページでは確認すべき条件・必要書類・よくあるつまずきを整理しています。</p>
       </section>
+
+      <div className="max-w-2xl mx-auto px-4">
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">LTO書類代行 料金・期間の目安</h2>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">対象書類</dt>
+              <dd className="font-medium text-gray-800">LTO Certification with Apostille・License History 等</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">100,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※DHL国際配送は実費別途</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜1か月半</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">法人・複数名</dt>
+              <dd className="font-medium text-gray-800">一括依頼・請求書払い対応可</dd>
+            </div>
+          </dl>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">内容</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+            </div>
+            {[
+              { label: 'LTO書類取得（Certification・License History 等）', price: '込み' },
+              { label: 'DFAアポスティーユ認証', price: '込み' },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '100,000円〜', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">※必要書類の種類・案件の状況によって料金は変わります。正確な金額は無料相談後にご提示します。</p>
+        </SectionDivider>
+      </div>
 
       {/* Section 1 */}
       <section className="mb-10">
@@ -189,37 +231,32 @@ export default function LicenseConversionJa() {
       {/* Section 3 */}
       <section className="mb-10">
         <h2 className="text-base font-bold text-gray-900 mb-4">3. よくあるつまずきポイント</h2>
-        <div className="space-y-4">
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-2 mb-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-              <h3 className="text-sm font-bold text-amber-900">3か月の滞在歴を説明できない</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            { title: '3か月の滞在歴を説明できない', note: '免許を持っているだけでは不十分。滞在証明がなければ手続き全体が止まります。' },
+            { title: '免許証だけでは経歴が読めない', note: '初回取得日や更新歴が不明な場合、License History などの追加書類が必要になります。' },
+            { title: 'パスポートだけで滞在歴が足りない', note: 'スタンプがない・旧パスポートがない場合、Immigration Record with Apostille が必要になることがあります。' },
+            { title: '免許センターごとに要件が違う', note: '先に管轄センターへ確認してから動くと、後戻りが少なくなります。' },
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl bg-amber-50 border border-amber-200 p-4">
+              <div className="flex items-start gap-2 mb-1">
+                <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+                <p className="text-sm font-bold text-amber-900">{item.title}</p>
+              </div>
+              <p className="text-xs text-amber-800 leading-relaxed pl-6">{item.note}</p>
             </div>
-            <p className="text-sm text-amber-800 leading-relaxed">外免切替では、単にフィリピン免許を持っているだけでは足りません。免許取得後にその国へ通算3か月以上滞在していたことを、日本側に説明できる必要があります。ここが足りないと、手続き全体が止まります。</p>
-          </div>
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-2 mb-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-              <h3 className="text-sm font-bold text-amber-900">免許証だけでは初回取得日や経歴が分からない</h3>
-            </div>
-            <p className="text-sm text-amber-800 leading-relaxed">フィリピン免許の表記だけでは、初回取得日や更新経歴が十分に読めない場合があります。その場合、License History など追加書類が必要になることがあります。</p>
-          </div>
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-2 mb-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-              <h3 className="text-sm font-bold text-amber-900">パスポートだけで滞在歴が足りない</h3>
-            </div>
-            <p className="text-sm text-amber-800 leading-relaxed">パスポートに出入国スタンプがない、旧パスポートが手元にない、または期間が連続して読めない場合は、Immigration Record with Apostille などが必要になることがあります。</p>
-          </div>
-          <div className="rounded-xl bg-amber-50 border border-amber-200 p-4">
-            <div className="flex items-start gap-2 mb-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-              <h3 className="text-sm font-bold text-amber-900">免許センターごとに求められる内容が少し違う</h3>
-            </div>
-            <p className="text-sm text-amber-800 leading-relaxed">外免切替は全国共通の大枠はありますが、実務上は免許センターごとに確認の細かさが異なります。そのため、先に管轄センターへ確認してから動く方が、後戻りが少なくなります。</p>
-          </div>
+          ))}
         </div>
       </section>
+
+      <CtaBox
+        title="LTO書類の取り寄せ、まず確認します"
+        description="どの書類が必要か、ORの有無、現在の状況をお知らせください。必要書類と費用の目安をご案内します。"
+        buttonText="無料相談はこちら"
+        href="#contact"
+        variant="primary"
+        trustNote="着手前キャンセル無料・返信24時間以内 ｜ 法人・複数名一括対応可"
+      />
 
       {/* Section 4 */}
       <SectionDivider variant="blue">
@@ -306,7 +343,7 @@ export default function LicenseConversionJa() {
       <ComparisonTable
         heading="外免切替 書類準備"
         rows={[
-          { item: 'LTOドライバーズレコード取得', self: false, agency: true },
+          { item: 'LTO運転経歴証明書取得', self: false, agency: true },
           { item: 'DFAアポスティーユ手配', self: false, agency: true },
           { item: '日本語での手続き', self: '英語が必要', agency: true },
           { item: '公安委員会要件の確認', self: '要調査', agency: true },
@@ -323,7 +360,9 @@ export default function LicenseConversionJa() {
       />
 
       <RelatedLinks links={[
-        { path: '/ja/driver-record/', label: 'LTOドライバーズレコード代行（外免切替・企業採用）' },
+        { path: '/ja/driver-record/', label: 'LTO運転経歴証明書代行（外免切替・企業採用）' },
+        { path: '/ja/lto-koyo-kakunin/', label: 'フィリピン人採用のLTO書類3種（雇用確認向け）' },
+        { path: '/ja/lto-sm-seaside-genchi-report/', label: '運転経歴証明書の取得手順【LTO SMシーサイド】' },
         { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
         { path: '/ja/ryokin/', label: '料金一覧' },
       ]} />

@@ -17,7 +17,7 @@ import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } f
 
 export default function CenomarGuideJa() {
   useMeta(
-    `CENOMAR（独身証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・アポスティーユ付き`,
+    `CENOMARとは｜フィリピン独身証明書の取得方法【${SEO_YEAR_MONTH_JA}】代行可・渡航不要`,
     'CENOMARが必要だけどフィリピンに行けない方へ。渡航不要・日本語だけで取得完了。国際結婚・配偶者ビザ・帰化申請に対応。24時間以内に返信。',
   );
   return (
@@ -29,7 +29,7 @@ export default function CenomarGuideJa() {
           '@type': 'Service',
           name: 'CENOMAR（独身証明書）取得代行',
           description: 'フィリピンのCENOMAR（独身証明書）を必要書類の確認から取得・発送までサポート。国際結婚・配偶者ビザ・帰化申請に対応。',
-          url: 'https://ph-document.com/ja/cenomar',
+          url: 'https://ph-document.com/ja/cenomar/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -39,10 +39,10 @@ export default function CenomarGuideJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '40000',
+            price: '50000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '40000',
+              price: '50000',
               priceCurrency: 'JPY',
               description: 'PSA CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
             },
@@ -73,7 +73,7 @@ export default function CenomarGuideJa() {
               name: 'CENOMARの有効期限はありますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6か月有効と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
+                text: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6ヶ月以内と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
               },
             },
             {
@@ -113,16 +113,18 @@ export default function CenomarGuideJa() {
       ]}
     >
       <HeroBanner
-        title="独身証明書"
+        title="CENOMAR（独身証明書）"
         subtitle="国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。"
         badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
+        ctaText="無料で相談する"
+        ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
       <SummaryBlock
         conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
         points={[
           'PSA発行のCENOMAR取得からDFAアポスティーユまで一括対応',
-          '有効期限（発行から6か月）に合わせたタイミングで手配',
+          '有効期限（発行から6ヶ月以内）に合わせたタイミングで手配',
           '提出先の要件を確認し、そのまま使える状態でお届け',
           'フィリピン渡航不要。まずは無料相談で必要書類を確認',
         ]}
@@ -150,14 +152,33 @@ export default function CenomarGuideJa() {
               <dd className="font-medium text-gray-800">Philippine Statistics Authority（PSA）</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">有効期限の目安</dt>
-              <dd className="font-medium text-gray-800">発行から6か月（提出先による）</dd>
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※PSA発行料金（1通420ペソ）込み・DHL国際配送は実費別途</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">PSA発行料金</dt>
-              <dd className="font-medium text-gray-800">1通420ペソ（PSAHelpline参考）</dd>
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜6週間</dd>
             </div>
           </dl>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">内容</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+            </div>
+            {[
+              { label: 'CENOMAR（PSA）取得', price: '込み' },
+              { label: 'DFAアポスティーユ認証', price: '込み' },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
         </SectionDivider>
 
         <SectionDivider variant="white">
@@ -193,7 +214,7 @@ export default function CenomarGuideJa() {
             CENOMARで先に知っておきたいこと
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            CENOMARは「一度取ればずっと使える書類」ではありません。提出先によって、発行日の新しさを求められることがあります。たとえば、在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは<strong>発行から6か月有効</strong>と案内されています。つまり、手元にあるから安心ではなく、<strong>その書類が今回の提出先で通るか</strong>が大事です。
+            CENOMARは「一度取ればずっと使える書類」ではありません。提出先によって、発行日の新しさを求められることがあります。たとえば、在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは<strong>発行から6ヶ月以内</strong>と案内されています。つまり、手元にあるから安心ではなく、<strong>その書類が今回の提出先で通るか</strong>が大事です。
           </p>
           <p className="text-gray-700 leading-relaxed">
             また、必要に応じて <strong>DFA Apostille（アポスティーユ）</strong> が関わることがあります。フィリピンでは、いわゆる昔の「red ribbon」ではなく、現在は Apostille の制度で案内されています。
@@ -248,6 +269,7 @@ export default function CenomarGuideJa() {
             { item: "追加書類の調整", self: false, agency: true },
           ]}
         />
+
       </article>
 
       <CtaBox
@@ -303,7 +325,7 @@ export default function CenomarGuideJa() {
             },
             {
               q: 'CENOMARの有効期限はありますか？',
-              a: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6か月有効と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
+              a: '提出先によって異なります。在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは発行から6ヶ月以内と案内されています。手元の書類が今回の提出先で通るかは、提出先の要件を確認することが大切です。',
             },
             {
               q: 'DFA Apostille（アポスティーユ）は必要ですか？',

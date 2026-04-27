@@ -28,7 +28,7 @@ const WhyUs: React.FC = () => {
 
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-2 block">Why Us</span>
+          <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Why Us</span>
           <h2 className="text-xl font-bold text-secondary">{t('whyus.title')}</h2>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
         </div>
@@ -57,6 +57,35 @@ const WhyUs: React.FC = () => {
               <p className="text-lg font-bold text-secondary mt-1">{t(valueKey)}</p>
             </div>
           ))}
+        </div>
+
+        {/* Office photo strip — real Philippine document processing */}
+        <div className="mt-8">
+          <p className="text-xs text-gray-400 text-center mb-3 uppercase tracking-widest font-bold">
+            {t('whyus.stat1.label') === '依頼方法' ? '現地での書類取得の様子' : 'Our Philippine office operations'}
+          </p>
+          <div className="grid grid-cols-3 gap-2 rounded-xl overflow-hidden">
+            {[
+              { src: '/dfa-galleria-cebu-03.webp', alt: 'DFA Consular Office Cebu — signage' },
+              { src: '/dfa-galleria-cebu-06.webp', alt: 'Apostille Authentication Processing — DFA Cebu' },
+              { src: '/dfa-galleria-cebu-09.webp', alt: 'Authentication window at DFA Galleria Cebu' },
+            ].map((img) => (
+              <div key={img.src} className="relative aspect-video overflow-hidden rounded-lg">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-400 text-center mt-2">
+            {t('whyus.stat1.label') === '依頼方法'
+              ? '※ セブ現地スタッフが各機関で直接手続きを行います'
+              : '※ Our Cebu-based staff handles every step in person at PSA, DFA, and NBI.'}
+          </p>
         </div>
 
         {/* CTA Button */}

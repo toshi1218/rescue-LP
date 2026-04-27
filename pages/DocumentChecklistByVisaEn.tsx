@@ -23,7 +23,7 @@ export default function DocumentChecklistByVisaEn() {
           '@type': 'Article',
           headline: 'Philippine Document Checklist by Visa Type',
           description: 'Complete checklist of Philippine documents required for K-1, CR-1/IR-1, Canada, Australia, UK, and Japan visa and immigration applications.',
-          url: 'https://ph-document.com/en/document-checklist-by-visa',
+          url: 'https://ph-document.com/en/document-checklist-by-visa/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -75,7 +75,7 @@ export default function DocumentChecklistByVisaEn() {
         badges={['K-1 · CR-1 · Spouse Visa · Canada · Australia · UK · Japan', 'All-Inclusive Service', 'Free Consultation']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock
@@ -195,7 +195,7 @@ export default function DocumentChecklistByVisaEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Japan (Immigration Bureau spouse visa / 配偶者ビザ)',
+            title: 'Japan (spouse visa)',
             description: 'Requires PSA Marriage Certificate and PSA Birth Certificate with DFA Apostille plus certified Japanese translation. CENOMAR is needed for the pre-marriage registration stage.',
           },
         ]}

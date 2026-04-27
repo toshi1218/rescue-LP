@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -6,6 +6,8 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SectionDivider from '../components/SectionDivider';
+import ComparisonTable from '../components/ComparisonTable';
+import IconCardGrid from '../components/IconCardGrid';
 import { Baby, AlertTriangle, Clock, FileCheck, Globe, Users, CheckCircle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
@@ -14,8 +16,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function PsaBirthCertJa() {
   useMeta(
-    `PSA出生証明書 取得代行【${SEO_YEAR_MONTH_JA}】料金・期間・アポスティーユ込み対応`,
-    'PSA出生証明書をDFAアポスティーユ付きで代行取得。料金は税抜40,000円〜（DHL郵送費別）。国際結婚・配偶者ビザ・帰化申請に対応。日本語のみでOK、渡航不要。',
+    `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR_MONTH_JA}】PSA・アポスティーユ込み`,
+    'フィリピン出生証明書（PSA）を日本から取り寄せる方法。現地スタッフがPSA申請〜DFAアポスティーユまで代行し紙の原本を郵送。国際結婚・ビザ・帰化に。通常4〜6週間。無料相談受付中。',
     'https://ph-document.com/ja/psa-shussei-shomeisho',
   );
   return (
@@ -26,7 +28,7 @@ export default function PsaBirthCertJa() {
         '@type': 'Service',
         name: 'PSA出生証明書取得代行',
         description: 'フィリピンのPSA出生証明書をDFAアポスティーユ付きで日本語だけで代行取得。国際結婚・配偶者ビザ・帰化申請に対応。フィリピン渡航不要、約1ヶ月〜。',
-        url: 'https://ph-document.com/ja/psa-shussei-shomeisho',
+        url: 'https://ph-document.com/ja/psa-shussei-shomeisho/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -36,10 +38,10 @@ export default function PsaBirthCertJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
@@ -62,7 +64,7 @@ export default function PsaBirthCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜40,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。',
+                text: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜50,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -110,9 +112,9 @@ export default function PsaBirthCertJa() {
       ]}
     >
       <HeroBanner
-        title="出生証明書"
+        title="PSA出生証明書（フィリピン）"
         subtitle="国際結婚、配偶者ビザ準備、帰化申請など、提出先に合わせて必要な形式を確認しながら進めます。"
-        badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
+        badges={['日本語だけでOK', 'DFAアポスティーユ込み対応', '渡航不要']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
@@ -137,7 +139,8 @@ export default function PsaBirthCertJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">40,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※緊急の場合は追加料金を頂くことがあります</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -147,6 +150,28 @@ export default function PsaBirthCertJa() {
           <p className="text-gray-700 leading-relaxed mt-4 text-sm">
             PSA出生証明書は<strong>電子認証版（PSAHelplineオンライン）</strong>と<strong>紙の原本</strong>があります。日本の市区町村役場・入管・法務局への提出では、紙の原本＋DFAアポスティーユが求められるケースがほとんどです。
           </p>
+        </SectionDivider>
+
+        <SectionDivider variant="white">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">代行料金の内訳</h2>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">内容</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+            </div>
+            {[
+              { label: 'PSA出生証明書取得', price: '込み' },
+              { label: 'DFAアポスティーユ認証', price: '込み' },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">※緊急対応の場合は追加料金が発生することがあります。正確な金額は無料相談後にご提示します。</p>
         </SectionDivider>
       </div>
 
@@ -236,10 +261,35 @@ export default function PsaBirthCertJa() {
         ]}
       />
 
+      <IconCardGrid
+        heading="こんな方に向いています"
+        columns={2}
+        cards={[
+          { icon: Users, title: "国際結婚・配偶者ビザの手続き中", description: "市区町村役場や入管への提出に、DFAアポスティーユ付きで対応します", accent: 'teal' },
+          { icon: Baby, title: "帰化申請を進めている", description: "法務局への帰化申請で必要な書類をまとめて手配します", accent: 'blue' },
+          { icon: Clock, title: "提出期限が近い", description: "現状をお知らせください。優先対応の可否を確認してご案内します", accent: 'gold' },
+          { icon: FileCheck, title: "「PSAに記録がない」と言われた", description: "LCR申請など複雑なケースにも対応経験があります", accent: 'purple' },
+        ]}
+      />
+
+      <div className="max-w-2xl mx-auto px-4">
+        <ComparisonTable
+          heading="自分で手配 vs IGRS代行"
+          rows={[
+            { item: "日本語でのやりとり", self: "英語が必要", agency: true },
+            { item: "PSA申請・取得", self: "現地窓口または代理人が必要", agency: true },
+            { item: "DFAアポスティーユ手配", self: false, agency: true },
+            { item: "「PSAに記録がない」ケース対応", self: "自己調査が必要", agency: true },
+            { item: "進捗レポート", self: "—", agency: true },
+            { item: "DHL国際発送手配", self: false, agency: true },
+          ]}
+        />
+      </div>
+
       <FaqSection
         items={[
           { q: 'PSA出生証明書とは何ですか？', a: 'PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（PSA）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚・配偶者ビザ申請・帰化申請などで身元証明として提出を求められます。' },
-          { q: '料金はいくらですか？', a: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜40,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜50,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。' },
           { q: 'PSAに記録がない場合はどうなりますか？', a: 'LCR（地方民事登録局）への申請が必要になります。対応経験がありますので、まずご相談ください。追加費用が発生する場合は事前にご説明します。' },
           { q: '出生証明書とアポスティーユ、両方必要ですか？', a: '日本の提出先では通常、PSA出生証明書＋DFAアポスティーユの両方が必要です。提出先を確認した上でご案内します。' },
           { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },

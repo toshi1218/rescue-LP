@@ -29,20 +29,21 @@ const ja = {
 
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': '日本法人・現地スタッフ対応',
-  'hero.h1line1': 'フィリピン書類のことなら、',
-  'hero.h1line2': '日本語で迷わず',
-  'hero.h1line3': '進められます',
-  'hero.description': '国際結婚、配偶者ビザ準備、外免切替。今の目的に合う進め方をご案内します。',
+  'hero.h1line1': 'フィリピン書類の整理・取得代行',
+  'hero.h1line2': '（CENOMAR・PSA・NBI・LTO・アポスティーユ）',
+  'hero.h1line3': '提出先に合わせて、必要な書類・部数を揃えます。',
+  'hero.description': '国際結婚・配偶者ビザ・外免切替で提出先が求めやすい書類を整理し、フィリピン側での取得・アポスティーユ対応まで進めます。渡航不要・日本語のみ。',
   'hero.disclaimer': '※お手続きにあたり、弊社で作成したauthorization letterへのご署名や、身分証明書のコピー提出をお願いする場合があります。やり取り自体は日本語で進めます。',
-  'hero.ctaA': '自分に合うルートを確認する',
-  'hero.ctaB': '自分に合うルートを確認する',
+  'hero.ctaA': '自分のケースに必要な書類を確認する',
+  'hero.ctaB': '今すぐ無料相談する',
+  'hero.ctaConsult': '見積もり・依頼はこちら',
   'hero.pricingCta': '料金を見る',
   'hero.ctaAriaLabel': '無料相談フォームへ移動',
   'hero.pricingAriaLabel': '料金プランへ移動',
 
   // ── Services ─────────────────────────────────────────────────────────
   'services.title': '用途別サービス',
-  'services.subtitle': 'まずは、今の目的に合うサービスをご確認ください。単なる書類名ではなく、手続全体の中で必要になりやすいものを整理しています。',
+  'services.subtitle': '日本側手続きで止まりにくい形を目的に、提出先ごとに必要になりやすい書類を整理・取得します。書類名より目的から選べます。',
   'services.badge': '人気No.1',
   'services.agencies.title': '各書類の管轄機関',
   'services.agencies.psa': 'PSA（フィリピン統計庁）',
@@ -56,7 +57,7 @@ const ja = {
 
   // ── Pricing ───────────────────────────────────────────────────────────
   'pricing.title': '料金プラン',
-  'pricing.note': '※取得難易度により変動する場合があります',
+  'pricing.note': '※取得難易度・記載内容の確認・追加手続きにより変動します',
   'pricing.featured': '人気 No.1',
   'pricing.detailsBtn': '詳細を見る',
   'pricing.docsTitle': '取得できる書類',
@@ -65,22 +66,24 @@ const ja = {
 
   // ── FAQ ──────────────────────────────────────────────────────────────
   'faq.title': 'よくあるご質問',
-  'faq.ctaTitle': 'まずはお気軽にご相談ください',
+  'faq.ctaTitle': 'まずはご相談ください',
   'faq.ctaDesc': '書類名や手続きの順序が分からなくても問題ありません。用途をお伝えいただければ、必要なものを整理してお見積もりします。',
   'faq.ctaBtn': '自分のケースを相談する',
   'faq.ctaAriaLabel': '自分のケースを相談する',
-  'faq.ctaNote': '匿名OK・書類名が分からなくてもご相談いただけます',
+  'faq.ctaNote': '匿名OK・書類名が分からなくても対応します',
 
   // ── Footer ───────────────────────────────────────────────────────────
-  'footer.title': 'まずはお気軽にご相談ください',
+  'footer.title': 'まずはご相談ください',
   'footer.subtitle': '「自分はどのルートか分からない」「何の書類が必要か分からない」という段階でも大丈夫です。\n今の状況に近い進め方からご案内します。\n\nフィリピン書類のことを、日本語で、迷わず、前に進めるために。',
   'footer.nameLabel': 'お名前',
   'footer.namePlaceholder': '山田 太郎',
   'footer.emailLabel': 'メールアドレス',
   'footer.emailPlaceholder': 'example@email.com',
+  'footer.countryLabel': 'お住まいの国',
+  'footer.countryPlaceholder': '例：日本、アメリカ、オーストラリア',
   'footer.messageLabel': 'ご相談内容',
   'footer.messagePlaceholder': '取得したい書類、用途（結婚・ビザ・外免切替など）、希望納期をご記入ください。',
-  'footer.submit': '自分のケースを相談する',
+  'footer.submit': '送信する',
   'footer.submitAriaLabel': 'お問い合わせフォームを送信',
   'footer.formAriaLabel': 'お問い合わせフォーム',
   'footer.mailto': 'メールで直接送る: igrs20200601@gmail.com',
@@ -92,13 +95,13 @@ const ja = {
   'footer.copyright': '© 2026 株式会社IGRS',
 
   // ── PainPoints ───────────────────────────────────────────────────────
-  'painpoints.title': 'あなたの目的から進められます',
+  'painpoints.title': 'こんなお悩み、ありませんか？',
   'painpoints.1.title': 'CENOMARだけ取ればよいのか分からない',
-  'painpoints.1.desc': '書類名が先行して、目的別に何を揃えるかが整理できていないことが多い',
+  'painpoints.1.desc': '書類名は知っていても、提出先・手続きごとに何が必要かが整理できていないことが多い',
   'painpoints.2.title': '婚姻証明書の次に何が必要か分からない',
   'painpoints.2.desc': '手続き全体の流れが見えないと、書類不備やタイミングのズレが起きやすい',
   'painpoints.3.title': '配偶者ビザ準備でどこまでフィリピン書類が必要か分からない',
-  'painpoints.3.desc': '申請先によって必要書類が変わるため、何を揃えれば足りるかが分かりにくい',
+  'painpoints.3.desc': '提出先・申請段階によって紙アポスティーユの要否や必要部数が変わり、揃え方が分かりにくい',
   'painpoints.4.title': '代行業者が信頼できるか分からない',
   'painpoints.4.desc': '海外の書類代行は実態が見えにくく、支払い後に連絡が取れなくなるケースも耳にする',
 
@@ -109,11 +112,11 @@ const ja = {
   'process.ctaNote': '日本語のみで完結。匿名でのご相談もOK',
 
   // ── WhyUs ────────────────────────────────────────────────────────────
-  'whyus.title': '不安を減らしながら、前に進めるための3つの考え方',
-  'whyus.1.title': '何を取るかより、何のために使うかを先に整理します',
-  'whyus.1.desc': '提出先によって必要書類は変わります。まず用途を確認し、必要になりやすい書類を整理します。',
-  'whyus.2.title': '進捗が見えるようにご案内します',
-  'whyus.2.desc': 'いまどの段階か、次に何をするかが分かるように進めます。',
+  'whyus.title': '書類を取るだけでなく、手続きが通りやすい形に整えます',
+  'whyus.1.title': '提出先の要件を確認し、書類を正確に整えます',
+  'whyus.1.desc': '提出先・手続き段階によって、紙のアポスティーユの要否や必要部数が変わります。用途と提出先を確認し、日本側で止まらない形に整えます。',
+  'whyus.2.title': '順番と全体像を最初に共有します',
+  'whyus.2.desc': 'どの書類をどの順番で取るか、後の手続きで再取得が必要になるポイントを最初にご案内します。',
   'whyus.3.title': 'できることと、できないことを分けてご説明します',
   'whyus.3.desc': '書類取得のご案内と、専門資格者への確認が必要な部分を分けてお伝えします。',
   'whyus.stat1.label': '依頼方法',
@@ -122,8 +125,8 @@ const ja = {
   'whyus.stat2.value': '無料',
   'whyus.stat3.label': '返信スピード',
   'whyus.stat3.value': '平均24時間以内',
-  'whyus.cta': 'フィリピン書類の代行を今すぐ依頼する',
-  'whyus.ctaAriaLabel': 'フィリピン書類取得代行を今すぐ依頼する',
+  'whyus.cta': '自分のケースを相談して書類を整理する',
+  'whyus.ctaAriaLabel': '自分のケースを相談してフィリピン書類を整理する',
 
   // ── SocialProof ──────────────────────────────────────────────────────
   'social.title': '代行依頼の実績・お客様の声',
@@ -145,11 +148,33 @@ const ja = {
   'quickfacts.updated': '最終更新日: 2026-03-01',
 
   // ── GuideLinks ───────────────────────────────────────────────────────
-  'guides.title': 'あなたの目的をお選びください',
+  'guides.title': '手続き別ガイドを読む',
 
   // ── CaseStudies ──────────────────────────────────────────────────────
   'cases.title': '代行依頼事例（匿名）',
   'cases.note': '公開可能な範囲で、実際の代行依頼パターンを要約して掲載しています。',
+
+  // ── FloatingChatWidget ───────────────────────────────────────────────
+  'chat.buttonLabel': 'AIに相談',
+  'chat.openAriaLabel': 'AIチャットを開く',
+  'chat.closeAriaLabel': 'チャットを閉じる',
+  'chat.dialogAriaLabel': 'AIチャットウィンドウ',
+  'chat.inputAriaLabel': 'メッセージを入力',
+  'chat.headerTitle': 'AI一次受付',
+  'chat.headerSubtitle': 'CENOMAR・PSA・NBI・DFAの疑問に即答します',
+  'chat.greeting': 'こんにちは。フィリピン書類（CENOMAR・PSA出生証明書・NBI・DFAアポスティーユ等）についてお気軽にどうぞ。正式な見積もりは人間スタッフが最終確認します。',
+  'chat.placeholder': '例: CENOMARの料金は？',
+  'chat.send': '送信',
+  'chat.sending': '送信中…',
+  'chat.error': '一時的に応答できません。時間をおいて再度お試しください。',
+  'chat.disclaimer': '※AIの回答は参考情報です。正式な料金・納期はフォーム送信後にスタッフが確定します。',
+  'chat.quickPrompt.psa': 'PSA出生証明書の取得方法',
+  'chat.quickPrompt.cenomar': 'CENOMARとは？',
+  'chat.quickPrompt.nbi': 'NBIクリアランスの有効期限',
+  'chat.quickPrompt.apostille': 'DFAアポスティーユの所要時間',
+  'chat.quickPrompt.pricing': '料金の目安を教えて',
+  'chat.handoff.message': 'ご依頼内容が具体的なようです。正式なお見積もりは下記フォームからどうぞ。',
+  'chat.handoff.cta': 'お問い合わせフォームへ進む',
 };
 
 const en: typeof ja = {
@@ -178,13 +203,14 @@ const en: typeof ja = {
 
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': 'Trusted by Filipinos Worldwide',
-  'hero.h1line1': 'PSA, CENOMAR & NBI',
-  'hero.h1line2': 'With DFA Apostille — Shipped Worldwide',
+  'hero.h1line1': 'PSA, CENOMAR & NBI Clearance',
+  'hero.h1line2': 'DFA Apostille — Shipped Worldwide',
   'hero.h1line3': 'USA · Canada · Australia · UK & More',
   'hero.description': 'We retrieve PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille from the Philippines for marriage, immigration, and visa applications worldwide. Shipped via DHL to your door — no trip to the Philippines needed.',
-  'hero.disclaimer': '* Also handling LTO driver records, PSA Marriage Certificates, and other Philippine documents not listed above. Feel free to ask.',
+  'hero.disclaimer': '* Also handling LTO driver records, PSA Marriage Certificates, and other Philippine documents not listed above. Contact us to confirm.',
   'hero.ctaA': 'Free Consultation',
   'hero.ctaB': 'Consult in 30 Sec',
+  'hero.ctaConsult': 'Get a Quote',
   'hero.pricingCta': 'View Pricing',
   'hero.ctaAriaLabel': 'Go to free consultation form',
   'hero.pricingAriaLabel': 'Go to pricing plans',
@@ -227,9 +253,11 @@ const en: typeof ja = {
   'footer.namePlaceholder': 'John Smith',
   'footer.emailLabel': 'Email Address',
   'footer.emailPlaceholder': 'example@email.com',
+  'footer.countryLabel': 'Country of Residence',
+  'footer.countryPlaceholder': 'e.g. Japan, USA, Australia',
   'footer.messageLabel': 'Message',
   'footer.messagePlaceholder': 'Documents needed, purpose (marriage / visa / license transfer), and preferred timeline.',
-  'footer.submit': 'Send Message',
+  'footer.submit': 'Send',
   'footer.submitAriaLabel': 'Submit contact form',
   'footer.formAriaLabel': 'Contact Form',
   'footer.mailto': 'Send directly by email: igrs20200601@gmail.com',
@@ -299,6 +327,28 @@ const en: typeof ja = {
   // ── CaseStudies ──────────────────────────────────────────────────────
   'cases.title': 'Procurement Case Examples (Anonymous)',
   'cases.note': 'Actual procurement cases summarized and shared with client consent.',
+
+  // ── FloatingChatWidget ───────────────────────────────────────────────
+  'chat.buttonLabel': 'Ask AI',
+  'chat.openAriaLabel': 'Open AI chat',
+  'chat.closeAriaLabel': 'Close chat',
+  'chat.dialogAriaLabel': 'AI chat window',
+  'chat.inputAriaLabel': 'Type a message',
+  'chat.headerTitle': 'AI Front Desk',
+  'chat.headerSubtitle': 'Quick answers on CENOMAR, PSA, NBI & DFA',
+  'chat.greeting': 'Hi! Ask me anything about Philippine documents — CENOMAR, PSA Birth Certificate, NBI Clearance, DFA Apostille, and more. Our human staff will confirm your final quote.',
+  'chat.placeholder': 'e.g. How much does CENOMAR cost?',
+  'chat.send': 'Send',
+  'chat.sending': 'Sending…',
+  'chat.error': 'Temporarily unavailable. Please try again in a moment.',
+  'chat.disclaimer': 'AI replies are for reference only. A human staff member will confirm the final price and timeline after you submit the form.',
+  'chat.quickPrompt.psa': 'How to get a PSA Birth Certificate',
+  'chat.quickPrompt.cenomar': 'What is CENOMAR?',
+  'chat.quickPrompt.nbi': 'NBI Clearance validity',
+  'chat.quickPrompt.apostille': 'DFA Apostille turnaround',
+  'chat.quickPrompt.pricing': 'Rough pricing guide',
+  'chat.handoff.message': 'Sounds like a real request — let us give you a formal quote via the contact form.',
+  'chat.handoff.cta': 'Go to contact form',
 };
 
 const dict: Record<Lang, typeof ja> = { ja, en };

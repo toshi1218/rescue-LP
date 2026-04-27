@@ -27,7 +27,7 @@ export default function DocumentChecklistByVisaJa() {
           '@type': 'Article',
           headline: 'ビザ別フィリピン書類チェックリスト',
           description: 'K-1、CR-1/IR-1、カナダ、オーストラリア、UK、日本向けに、必要なフィリピン書類を整理したチェックリストです。',
-          url: 'https://ph-document.com/ja/document-checklist-by-visa',
+          url: 'https://ph-document.com/ja/document-checklist-by-visa/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',

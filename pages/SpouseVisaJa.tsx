@@ -1,4 +1,5 @@
-﻿import React from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -7,6 +8,7 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import SectionDivider from '../components/SectionDivider';
 import { useMeta } from '../lib/useMeta';
 
 export default function SpouseVisaJa() {
@@ -22,7 +24,7 @@ export default function SpouseVisaJa() {
         '@type': 'Service',
         name: '配偶者ビザ申請 フィリピン書類取得代行',
         description: '配偶者ビザ（在留資格「日本人の配偶者等」）申請に必要なPSA婚姻証明書・出生証明書・CENOMAR・DFAアポスティーユを一括代行。入管要件に合わせた形式で手配。',
-        url: 'https://ph-document.com/ja/haigusha-visa',
+        url: 'https://ph-document.com/ja/haigusha-visa/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -32,12 +34,12 @@ export default function SpouseVisaJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
+            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
         },
         },
@@ -101,24 +103,67 @@ export default function SpouseVisaJa() {
         ctaText="無料で相談する"
       />
 
+      <div className="max-w-2xl mx-auto px-4">
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※必要書類の種類によって変わります</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜1か月半</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">主な対応書類</dt>
+              <dd className="font-medium text-gray-800">PSA婚姻証明書・出生証明書・CENOMAR</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">DHL国際配送</dt>
+              <dd className="font-medium text-gray-800">実費別途</dd>
+            </div>
+          </dl>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">内容</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+            </div>
+            {[
+              { label: 'PSA書類・CENOMAR取得', price: '込み' },
+              { label: 'DFAアポスティーユ認証（入管提出用・紙原本）', price: '込み' },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
+        </SectionDivider>
+      </div>
+
       {/* できること / できないこと */}
       <section className="mb-6 rounded-2xl bg-gray-50 border border-gray-200 p-5">
         <h2 className="text-sm font-bold text-gray-800 mb-3">このページでできること・できないこと</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <p className="font-bold text-green-700 mb-1.5">✓ できること</p>
-            <ul className="space-y-1 text-gray-600">
-              <li>・配偶者ビザ申請に必要なフィリピン書類の取得代行</li>
-              <li>・DFAアポスティーユ（紙の原本）の手配</li>
-              <li>・どの書類が必要かの整理・案内</li>
+            <p className="text-sm font-bold text-green-700 mb-2">✓ できること</p>
+            <ul className="space-y-1.5">
+              <li className="text-sm text-gray-700">フィリピン書類（PSA・CENOMAR）の取得代行</li>
+              <li className="text-sm text-gray-700">DFAアポスティーユ（紙の原本）の手配</li>
+              <li className="text-sm text-gray-700">必要書類の整理・案内</li>
             </ul>
           </div>
           <div>
-            <p className="font-bold text-red-600 mb-1.5">✕ できないこと</p>
-            <ul className="space-y-1 text-gray-600">
-              <li>・配偶者ビザの申請手続き代行（行政書士業務）</li>
-              <li>・入国管理局への申請書類の作成</li>
-              <li>・ビザ取得の保証</li>
+            <p className="text-sm font-bold text-red-600 mb-2">✕ できないこと</p>
+            <ul className="space-y-1.5">
+              <li className="text-sm text-gray-500">配偶者ビザの申請代行（行政書士業務）</li>
+              <li className="text-sm text-gray-500">入管への申請書類の作成</li>
+              <li className="text-sm text-gray-500">ビザ取得の保証</li>
             </ul>
           </div>
         </div>
@@ -136,6 +181,10 @@ export default function SpouseVisaJa() {
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>PSA書類・CENOMAR・NBI——<strong>どれが必要かは申請の状況によって異なる</strong></span></li>
         </ul>
         <p className="mt-4 text-sm font-semibold text-amber-900">→ 入管の要件に合わせた形式で、必要書類を一括手配します。</p>
+        <p className="mt-3 text-xs text-gray-500">
+          ※ フィリピン国籍の方がCOEを申請する場合、結核非発病証明書（JPETS）が別途必要になる場合があります（本人が指定Panel Clinicで受診）。
+          <Link to="/ja/kekkaku-shomeisho/" className="underline ml-1">詳細はこちら →</Link>
+        </p>
       </section>
 
       <FeatureList

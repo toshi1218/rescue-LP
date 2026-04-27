@@ -29,7 +29,7 @@ export default function DfaGalleriaCebuJa() {
           name: 'DFA Consular Office Cebu',
           description:
             'フィリピン外務省の領事館。パスポート申請・更新およびアポスティーユ認証を行う公的機関。ロビンソンズガレリアセブのモール内に位置する。',
-          url: 'https://ph-document.com/ja/dfa-apostille-genchi-report',
+          url: 'https://ph-document.com/ja/dfa-apostille-genchi-report/',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Robinsons Galleria Cebu, General Maxilom Ave',
@@ -48,13 +48,13 @@ export default function DfaGalleriaCebuJa() {
           headline: 'DFAアポスティーユ現地レポート【セブ・ロビンソンズガレリア2026年】',
           description:
             'フィリピンのDFAアポスティーユはセブのロビンソンズガレリア内で取得できます。現地写真で場所・専用窓口・最新ルールを解説。',
-          url: 'https://ph-document.com/ja/dfa-apostille-genchi-report',
+          url: 'https://ph-document.com/ja/dfa-apostille-genchi-report/',
           datePublished: '2026-02-01',
           dateModified: '2026-03-01',
           publisher: {
             '@type': 'Organization',
             name: 'フィリピン書類取得代行センター',
-            url: 'https://ph-document.com',
+            url: 'https://ph-document.com/',
           },
         },
         {
@@ -117,7 +117,7 @@ export default function DfaGalleriaCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/dfa-galleria-cebu-01.jpg"
+                src="/dfa-galleria-cebu-01.webp"
                 alt="ロビンソンズガレリアセブの正面外観。ヤシの木と白い外壁が特徴的な大型ショッピングモール"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -128,7 +128,7 @@ export default function DfaGalleriaCebuJa() {
             </figure>
             <figure>
               <img
-                src="/dfa-galleria-cebu-02.jpg"
+                src="/dfa-galleria-cebu-02.webp"
                 alt="幹線道路側から見たロビンソンズガレリアセブ。バイクや車が行き交うセブの街並みの中にある"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -148,7 +148,7 @@ export default function DfaGalleriaCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/dfa-galleria-cebu-03.jpg"
+                src="/dfa-galleria-cebu-03.webp"
                 alt="DFA Consular Office Cebuの入口サイン。煉瓦調の壁にLEDで照らされた「Department of Foreign Affairs Consular Office Cebu」の文字とフィリピン国旗・ASEAN旗"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -159,7 +159,7 @@ export default function DfaGalleriaCebuJa() {
             </figure>
             <figure>
               <img
-                src="/dfa-galleria-cebu-04.jpg"
+                src="/dfa-galleria-cebu-04.webp"
                 alt="DFAのINFORMATIONカウンターとENTRANCEガラス扉。制服を着た警備員が常駐している"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -178,7 +178,7 @@ export default function DfaGalleriaCebuJa() {
           </h2>
           <figure>
             <img
-              src="/dfa-galleria-cebu-05.jpg"
+              src="/dfa-galleria-cebu-05.webp"
               alt="DFAパスポート申請の待合エリア。モール内にベンチと赤いロープで整備された専用ゾーンが設けられており、Jollibeeが背景に見える"
               className="w-full rounded-xl object-cover max-h-80 shadow-card"
               loading="lazy"
@@ -201,7 +201,7 @@ export default function DfaGalleriaCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <figure>
               <img
-                src="/dfa-galleria-cebu-09.jpg"
+                src="/dfa-galleria-cebu-09.webp"
                 alt="アポスティーユ専用の受付エリア。AUTHENTICATION/PROCESSINGの看板と白いベンチが並ぶ待合スペース"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -212,7 +212,7 @@ export default function DfaGalleriaCebuJa() {
             </figure>
             <figure>
               <img
-                src="/dfa-galleria-cebu-10.jpg"
+                src="/dfa-galleria-cebu-10.webp"
                 alt="DFA AUTHENTICATION室の入口。ガラス越しに番号付きの窓口が見える。申請者が窓口前で対応を受けている"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -238,7 +238,7 @@ export default function DfaGalleriaCebuJa() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <figure>
               <img
-                src="/dfa-galleria-cebu-07.jpg"
+                src="/dfa-galleria-cebu-07.webp"
                 alt="DFA Consular Office Cebuが掲示するADVISORY。APPOINTMENT-ONLY POLICY FOR AUTHENTICATION/APOSTILLE SERVICESと記載。2024年12月2日より実施"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -249,7 +249,7 @@ export default function DfaGalleriaCebuJa() {
             </figure>
             <figure>
               <img
-                src="/dfa-galleria-cebu-08.jpg"
+                src="/dfa-galleria-cebu-08.webp"
                 alt="DFA Manilaが発行したPaunawa sa Publiko（公式告知文書）。Online-Appointment-Only Systemへの移行とapostille.gov.phでの予約方法が記載"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -261,7 +261,7 @@ export default function DfaGalleriaCebuJa() {
           </div>
           <figure className="mt-4">
             <img
-              src="/dfa-galleria-cebu-06.jpg"
+              src="/dfa-galleria-cebu-06.webp"
               alt="APOSTILLE AUTHENTICATION/PROCESSINGと大きく書かれた赤い看板。上部にADVISORYとPaunawa sa Publikoが貼付されている"
               className="w-full rounded-xl object-cover max-h-72 shadow-card"
               loading="lazy"

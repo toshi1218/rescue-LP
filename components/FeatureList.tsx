@@ -18,7 +18,7 @@ export default function FeatureList({ heading, items }: FeatureListProps) {
         <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
         <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">{heading}</h2>
       </div>
-      <div className="space-y-3">
+      <div className="space-y-4">
         {items.map((item) => (
           <article
             key={item.title}
@@ -32,8 +32,8 @@ export default function FeatureList({ heading, items }: FeatureListProps) {
                 {item.icon}
               </div>
               <div>
-                <h3 className="text-sm font-bold text-secondary mb-1 leading-snug">{item.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                <h3 className="text-base font-bold text-secondary mb-1.5 leading-snug">{item.title}</h3>
+                <p className="text-base text-gray-500 leading-relaxed">{item.description}</p>
               </div>
             </div>
           </article>

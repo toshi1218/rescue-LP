@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
@@ -26,7 +26,7 @@ export default function NaturalizationJa() {
         '@type': 'Service',
         name: '帰化申請 フィリピン書類取得代行',
         description: '帰化申請に必要なPSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。法務局の要件に合わせた形式で手配。司法書士・行政書士からの依頼も対応。',
-        url: 'https://ph-document.com/ja/kika-shinsei-guide',
+        url: 'https://ph-document.com/ja/kika-shinsei-guide/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -36,12 +36,12 @@ export default function NaturalizationJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
+            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
         },
         },
@@ -106,48 +106,37 @@ export default function NaturalizationJa() {
 
       {/* 固有コンテンツ：帰化申請で必要なフィリピン書類 */}
       <SectionDivider variant="beige">
-        <h2 className="text-base font-bold text-gray-900 mb-4">帰化申請で法務局が求めるフィリピン書類</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">帰化申請で法務局が求めるフィリピン書類</h2>
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
-          帰化申請では、法務局の担当官が必要書類を指定します。フィリピン国籍の方が日本に帰化する場合、以下のようなフィリピン側書類を求められることが多いです（状況によって異なります）。
+          法務局の担当官が必要書類を指定します。状況によって異なりますが、以下が多く求められます。
         </p>
-        <div className="overflow-x-auto mb-4">
-          <table className="w-full text-xs border-collapse">
-            <thead>
-              <tr className="bg-gray-50">
-                <th className="text-left p-2 border border-gray-200 font-bold text-gray-700">書類</th>
-                <th className="text-left p-2 border border-gray-200 font-bold text-gray-700">用途</th>
-                <th className="text-left p-2 border border-gray-200 font-bold text-gray-700">形式</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                { doc: 'PSA出生証明書（Birth Certificate）', use: '本人の出生・国籍の確認', format: 'DFAアポスティーユ付き原本' },
-                { doc: 'PSA婚姻証明書（Certificate of Marriage）', use: '既婚者の場合、婚姻歴の確認', format: 'DFAアポスティーユ付き原本' },
-                { doc: 'CENOMAR（独身証明書）', use: '未婚者の場合、婚姻歴なしの確認', format: 'DFAアポスティーユ付き原本' },
-                { doc: 'NBI Clearance', use: '犯罪歴の確認', format: 'DFAアポスティーユ付きが求められる場合あり' },
-              ].map((row, i) => (
-                <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="p-2 border border-gray-200 text-gray-700 font-medium">{row.doc}</td>
-                  <td className="p-2 border border-gray-200 text-gray-600">{row.use}</td>
-                  <td className="p-2 border border-gray-200 text-gray-500">{row.format}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-xs text-gray-500 mb-4">※ 担当官によって求める書類・形式が異なります。必ず法務局の担当官の指示に従ってください。</p>
-
-        <h3 className="text-sm font-bold text-gray-800 mb-3">帰化申請の書類でよくある差し戻し理由</h3>
-        <ul className="space-y-2 text-sm text-gray-700">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
           {[
-            'DFAアポスティーユが付いていない（原本だけでは不受理）',
-            '書類の発行日が古すぎる（法務局の指示する期間内のものが必要）',
-            '名前のスペルが日本側の書類と一致していない',
-            '翻訳文に翻訳者の署名・住所の記載がない',
+            { icon: FileText, label: 'PSA出生証明書', note: '出生・国籍の確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-blue-50 border-blue-200' },
+            { icon: CheckCircle, label: 'PSA婚姻証明書', note: '既婚者の婚姻歴の確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-green-50 border-green-200' },
+            { icon: CheckCircle, label: 'CENOMAR（独身証明書）', note: '未婚者の婚姻歴なしの確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-amber-50 border-amber-200' },
+            { icon: FileText, label: 'NBI Clearance', note: '犯罪歴の確認', format: 'アポスティーユ付きが求められる場合あり', accent: 'bg-gray-50 border-gray-200' },
+          ].map((item, i) => (
+            <div key={i} className={`rounded-xl border p-4 ${item.accent}`}>
+              <p className="text-sm font-bold text-gray-800 mb-1">{item.label}</p>
+              <p className="text-xs text-gray-600 mb-1">{item.note}</p>
+              <p className="text-xs text-gray-500 font-medium">{item.format}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-gray-500 mb-5">※ 担当官によって書類・形式が異なります。法務局の担当官の指示に従ってください。</p>
+
+        <h3 className="text-sm font-bold text-gray-800 mb-3">よくある差し戻し理由</h3>
+        <ul className="space-y-2">
+          {[
+            { main: 'アポスティーユなし', sub: '原本だけでは不受理になります' },
+            { main: '発行日が古い', sub: '法務局が指示する期間内のものが必要です' },
+            { main: '名前のスペルが不一致', sub: '日本側の書類と一致している必要があります' },
+            { main: '翻訳者情報が不足', sub: '署名・住所の記載が必要です' },
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <span className="text-amber-500 font-bold flex-shrink-0">！</span>
-              <span>{item}</span>
+              <span className="text-amber-500 font-bold flex-shrink-0 mt-0.5">！</span>
+              <span className="text-sm"><span className="font-bold text-gray-800">{item.main}</span><span className="text-gray-500">　{item.sub}</span></span>
             </li>
           ))}
         </ul>

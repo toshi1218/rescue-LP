@@ -35,10 +35,10 @@ export default function UkDocsJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '40000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '40000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
           },

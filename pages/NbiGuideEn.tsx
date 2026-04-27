@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -12,18 +12,18 @@ import RelatedArticles from '../components/RelatedArticles';
 
 export default function NbiGuideEn() {
   useMeta(
-    'What is NBI Clearance? Philippine Criminal Record Certificate | Philippine Document Service',
-    'NBI Clearance is a criminal record certificate from the Philippine National Bureau of Investigation. Required for visas, immigration, and employment. We handle retrieval and DFA Apostille.',
+    'NBI Clearance Application Support | Philippine Criminal Record Certificate',
+    'NBI Clearance application support for Filipinos overseas. Renewal cases handled remotely via our Cebu team. First-time applicants: embassy fingerprint guidance provided. DFA Apostille + DHL shipping included.',
   );
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'NBI Clearance Retrieval' }]}
+      breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'NBI Clearance Support' }]}
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'NBI Clearance Retrieval Service (+ DFA Apostille)',
-        description: 'We retrieve NBI Clearance from the Philippines with DFA Apostille and ship worldwide via DHL. Required for immigration and visa applications in the US, Canada, Australia, UK & more. HIT cases handled.',
-        url: 'https://ph-document.com/en/nbi-clearance',
+        name: 'NBI Clearance Application Support (+ DFA Apostille)',
+        description: 'Renewal-case NBI Clearance handled remotely via our Cebu team. First-time applicants receive embassy fingerprint guidance. DFA Apostille + DHL shipping included. HIT cases supported.',
+        url: 'https://ph-document.com/en/nbi-clearance/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -38,7 +38,7 @@ export default function NbiGuideEn() {
             '@type': 'UnitPriceSpecification',
             price: '399',
             priceCurrency: 'USD',
-            description: 'NBI retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
+            description: 'NBI retrieval + DFA Apostille + DHL shipping worldwide (renewal cases)',
           },
         },
         },
@@ -83,11 +83,11 @@ export default function NbiGuideEn() {
       ]}
     >
       <HeroBanner
-        title="NBI Clearance — Retrieved and Shipped Worldwide"
-        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        title="NBI Clearance — Application Support & Shipping Worldwide"
+        badges={['Renewal Cases Handled Remotely', 'First-Time: Embassy Guidance Included', 'Apostille + DHL Included']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
@@ -97,12 +97,12 @@ export default function NbiGuideEn() {
       </p>
 
       <SummaryBlock
-        conclusion="We retrieve NBI Clearance with DFA Apostille and ship it to your address worldwide. HIT cases handled."
+        conclusion="Renewal cases handled remotely by our Cebu team. First-time applicants receive embassy fingerprint guidance. DFA Apostille + DHL shipping included."
         points={[
           'NBI Clearance is required for visa and immigration applications in the US, Canada, Australia, UK & more',
-          'Our Cebu team handles fingerprint appointment and NBI office processing',
-          'If HIT (MATCH FOUND) occurs, we manage the resolution process',
-          'DFA Apostille + DHL Express shipping worldwide included in one price',
+          'Renewal cases (NBI issued 2014+, no personal info change): our Cebu team handles the process remotely',
+          'First-time applicants: we guide you through Philippine Embassy fingerprint registration in your country',
+          'DFA Apostille + DHL Express shipping worldwide — HIT cases supported',
         ]}
         ctaText="Start Free Consultation"
       />
@@ -134,7 +134,7 @@ export default function NbiGuideEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -142,13 +142,13 @@ export default function NbiGuideEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'NBI Clearance retrieval',
-            description: 'We handle the NBI application and retrieval on your behalf from our Cebu office.',
+            title: 'NBI application support',
+            description: 'Renewal cases: our Cebu team handles the NBI process remotely. First-time applicants: we guide you through embassy fingerprint registration and online application steps.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs. Paper original included.',
+            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs once your NBI Clearance is issued. Paper original included.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -161,10 +161,10 @@ export default function NbiGuideEn() {
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Submit your inquiry with NBI status', description: 'Tell us your use case (K-1, CR-1, Canada PR, etc.), whether you have a prior NBI Clearance, and any known HIT issues.' },
-          { title: 'We confirm eligibility and provide a fixed quote', description: 'We check whether your case qualifies for proxy renewal (or flag HIT resolution requirements) and send all-inclusive pricing upfront.' },
-          { title: 'We register your NBI account, coordinate biometrics, and resolve any HIT', description: 'Our team handles the NBI proxy process in Manila — including HIT flag resolution if present — then adds DFA Apostille.' },
-          { title: 'NBI Clearance (Apostilled) shipped to you via DHL', description: 'The original authenticated NBI Clearance is shipped with tracking. Estimated total: 4–6 weeks from start.' },
+          { title: 'Submit your inquiry with NBI status', description: 'Tell us your use case (K-1, CR-1, Canada PR, etc.), your last NBI issuance year, whether any personal info has changed, and any known HIT issues.' },
+          { title: 'We confirm your case type and provide a quote', description: 'We check whether your case qualifies for remote processing (renewal) or requires embassy fingerprint registration (first-time/name change), and provide all-inclusive pricing upfront.' },
+          { title: 'Processing begins based on your case type', description: 'Renewal: our Cebu team handles the NBI process remotely. First-time: we guide you through the Philippine Embassy appointment and fingerprint process, then handle the rest once the clearance is issued.' },
+          { title: 'NBI Clearance (Apostilled) shipped to you via DHL', description: 'Once your clearance is issued and Apostilled, the original is shipped with tracking. Estimated total: 4–6 weeks (may vary for first-time cases).' },
         ]}
       />
 
@@ -200,7 +200,7 @@ export default function NbiGuideEn() {
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: NBI takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'What if the NBI result shows a HIT?', a: 'A HIT means a record was found in the NBI database. This requires separate handling. Share your situation and we will advise on next steps.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
-          { q: 'Can I get NBI Clearance without going back to the Philippines?', a: 'Yes. With an authorized representative in the Philippines, NBI Clearance can be obtained remotely. Our Cebu team handles enrollment and retrieval on your behalf. No trip needed.' },
+          { q: 'Can I get NBI Clearance without going back to the Philippines?', a: 'It depends on your situation. If you have a prior NBI Clearance issued in 2014 or later with no personal information changes, our Cebu team can handle it remotely — no Philippines trip needed. First-time applicants or those with name changes need to visit the Philippine Embassy or Consulate in your country for fingerprint registration. We provide step-by-step guidance for both paths.' },
           { q: 'What if my name on the NBI does not match my passport?', a: 'Name discrepancies can cause problems at immigration interviews. The NBI document must match your passport exactly. Share the discrepancy details and we will advise on the appropriate correction step.' },
           { q: 'Is NBI Clearance the same as a police clearance?', a: 'No. NBI Clearance is a national-level criminal background check from the National Bureau of Investigation. Police clearance is a local-level document from your local police station. Immigration authorities typically require NBI Clearance, not local police clearance.' },
         ]}
@@ -213,6 +213,7 @@ export default function NbiGuideEn() {
           { href: '/en/nbi-clearance-overseas/', title: 'NBI Clearance from Overseas', description: 'OFWs and Filipinos abroad: get NBI without returning to the Philippines.' },
           { href: '/en/nbi-hit/', title: 'NBI HIT Resolution', description: 'MATCH FOUND result? We handle verification and resolution.' },
           { href: '/en/nbi-validity/', title: 'NBI Validity & Timing', description: 'How long is NBI Clearance valid and when to request it.' },
+          { href: '/en/psa-crs-cebu-report/', title: 'PSA Birth Certificate at Cebu — Field Report', description: 'Step-by-step guide for obtaining PSA documents at the Cebu office.' },
           { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Which documents you need for K-1, CR-1, spouse visa, and more.' },
         ]}
       />

@@ -32,7 +32,7 @@ export default function RoadmapJa() {
         '@type': 'Service',
         name: '個別ロードマップ作成',
         description: 'フィリピン人のパートナーと日本で結婚し、その先も日本で一緒に暮らしたい方へ。必要書類、手続きの順番、提出先、全体の流れを、お二人の状況に合わせて整理した専用ロードマップを作成します。',
-        url: 'https://ph-document.com/ja/kokusai-kekkon-roadmap',
+        url: 'https://ph-document.com/ja/kokusai-kekkon-roadmap/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -97,7 +97,7 @@ export default function RoadmapJa() {
         <a
           href="#contact"
           onClick={ctaClick}
-          className="inline-flex items-center gap-2 bg-primary text-white font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200"
+          className="inline-flex items-center gap-2 bg-primary text-secondary font-bold py-3.5 px-8 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover transition-all duration-200"
         >
           個別ロードマップを申し込む
         </a>
@@ -258,7 +258,7 @@ export default function RoadmapJa() {
           ))}
         </div>
         <div className="rounded-xl bg-gray-50 border border-gray-100 px-5 py-4">
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             逆に、すでに全体像が明確で、必要書類も順番も固まっており、書類取得だけを依頼したい方は、書類取得サービスの方が合う場合があります。
           </p>
         </div>
@@ -373,11 +373,11 @@ export default function RoadmapJa() {
           <p className="text-xs text-gray-400">税込 54,780円</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-gray-50 px-4 py-3 mb-4">
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed">
             本サービスは、個別の法律相談や申請代行ではなく、お二人の状況に応じて手続きの全体像を整理する案内サービスです。内容をご確認のうえ、お申し込みください。
           </p>
         </div>
-        <p className="text-xs text-gray-500 leading-relaxed mb-6">
+        <p className="text-sm text-gray-500 leading-relaxed mb-6">
           お申し込み後、事前確認フォームをもとに状況を確認し、あなたたち専用のロードマップを作成します。できるだけ正確にご記入ください。
         </p>
       </section>

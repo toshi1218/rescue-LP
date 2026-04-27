@@ -21,7 +21,7 @@ export default function NbiValidityJa() {
           '@type': 'Service',
           name: 'NBIクリアランス再取得・更新サポート',
           description: 'フィリピンNBIクリアランスの有効期限確認と再取得・更新手続きを日本語でサポート。提出先の条件確認から書類取得まで対応。',
-          url: 'https://ph-document.com/ja/nbi-koyukigen',
+          url: 'https://ph-document.com/ja/nbi-koyukigen/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -138,6 +138,15 @@ export default function NbiValidityJa() {
           <p>また、更新書類を代理人が提出する場合は、在東京フィリピン大使館の案内では、最新のNBI Clearance、パスポートのデータページ写し、3か月以内に撮影した写真、必要に応じてLetter of Authorization（委任状）が必要とされています。</p>
         </div>
       </section>
+
+      <CtaBox
+        title="更新できるか、まず確認します"
+        description="お手元のNBIクリアランスの発行年と、氏名変更の有無をお知らせください。更新ルートで進められるかを整理してご案内します。"
+        buttonText="無料相談はこちら"
+        href="#contact"
+        variant="primary"
+        trustNote="返信24時間以内・着手前キャンセル無料"
+      />
 
       {/* Section 4 */}
       <section className="mb-10 rounded-2xl bg-amber-50 border border-amber-200 p-6">

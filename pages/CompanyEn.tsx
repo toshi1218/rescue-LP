@@ -56,7 +56,7 @@ export default function CompanyEn() {
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Payment methods</p>
-            <p>Japan: bank transfer. United States: credit card or PayPal.</p>
+            <p>Credit card.</p>
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Cancellation & refund</p>

@@ -22,7 +22,7 @@ export default function PsaCostJa() {
           '@type': 'Article',
           headline: 'フィリピンPSA出生証明書の取得費用はいくら？現地料金と日本へ届けるまでの総額を解説',
           description: 'PSA出生証明書の現地料金と日本へ届けるまでの総費用を解説。365ペソの書類代だけでなく、国際配送・アポスティーユなど実際の負担を整理します。',
-          url: 'https://ph-document.com/ja/psa-shussei-cost',
+          url: 'https://ph-document.com/ja/psa-shussei-cost/',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -65,6 +65,8 @@ export default function PsaCostJa() {
         title="PSA出生証明書の取得費用"
         subtitle="PSAの現地料金は365ペソ。日本へ届けるまでの費用の全体像を整理して解説します。"
         badges={['現地料金を解説', 'アポスティーユ込み対応', '日本語でご相談OK']}
+        ctaText="無料で相談する"
+        ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
       <article className="max-w-2xl mx-auto px-4">

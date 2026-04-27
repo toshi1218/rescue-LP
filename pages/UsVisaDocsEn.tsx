@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
+import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe, Users, Heart } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
@@ -22,7 +23,7 @@ export default function UsVisaDocsEn() {
         '@type': 'Service',
         name: 'US Visa Philippine Documents Retrieval Service (K-1 / CR-1 / IR-1)',
         description: 'We retrieve all Philippine documents for K-1, CR-1, and IR-1 visa applications — CENOMAR, PSA Birth Certificate, Marriage Certificate, NBI Clearance with DFA Apostille. Ships to USA via DHL.',
-        url: 'https://ph-document.com/en/us-visa-documents',
+        url: 'https://ph-document.com/en/us-visa-documents/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -86,7 +87,7 @@ export default function UsVisaDocsEn() {
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock
@@ -127,7 +128,7 @@ export default function UsVisaDocsEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList
@@ -170,6 +171,15 @@ export default function UsVisaDocsEn() {
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/en/k1-visa-documents/', title: 'K-1 Fiancé Visa Documents', description: 'Specific document checklist for K-1 visa petitions filed with USCIS.' },
+          { href: '/en/cr1-visa-documents/', title: 'CR-1 / IR-1 Visa Documents', description: 'Specific document checklist for CR-1 and IR-1 spousal immigrant visas.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'Certificate of No Marriage required for K-1 fiancé visa and most US immigration cases involving a Filipino national.' },
+          { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'Authentication required by US immigration for Philippine documents.' },
+        ]}
       />
     </PageLayout>
   );

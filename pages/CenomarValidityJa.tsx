@@ -26,7 +26,7 @@ export default function CenomarValidityJa() {
           '@type': 'Service',
           name: 'CENOMAR有効期限・最適タイミングでの代行取得',
           description: 'CENOMARの有効期限（多くの提出先で6ヶ月以内）を踏まえ、提出予定日から逆算して最適なタイミングで代行取得。期限切れによる再取得リスクをなくします。',
-          url: 'https://ph-document.com/ja/cenomar-koyukigen',
+          url: 'https://ph-document.com/ja/cenomar-koyukigen/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -36,10 +36,10 @@ export default function CenomarValidityJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '40000',
+            price: '50000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '40000',
+              price: '50000',
               priceCurrency: 'JPY',
               description: 'PSA CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
             },
@@ -79,7 +79,7 @@ export default function CenomarValidityJa() {
     >
       <HeroBanner
         title="CENOMARの有効期限"
-        badges={['有効期限の確認から対応', 'PSAアポスティーユ込み', '追加費用なし']}
+        badges={['有効期限の確認から対応', 'PSAアポスティーユ込み', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
@@ -151,7 +151,7 @@ export default function CenomarValidityJa() {
         variant="visual"
         steps={[
           { title: '婚姻届・ビザ申請の予定日を共有', description: '「いつまでに提出が必要か」をお知らせください。逆算してCENOMARの申請開始時期を確認します。' },
-          { title: '申請開始時期と料金をご提示', description: 'CENOMARの有効期限（6ヶ月）を考慮した最適なタイミングと、料金をご案内します。' },
+          { title: '申請開始時期と料金をご提示', description: 'CENOMARの有効期限（6ヶ月以内）を考慮した最適なタイミングと、料金をご案内します。' },
           { title: 'PSA取得・DFAアポスティーユを代行', description: '現地スタッフがPSA申請・DFAアポスティーユを進めます。進捗は随時ご報告します。' },
           { title: '日本へ郵送・完了', description: '追跡付きでお届けします。提出期限に間に合うよう、スケジュールを管理します。' },
         ]}

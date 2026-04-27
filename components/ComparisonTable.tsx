@@ -18,14 +18,14 @@ function Cell({ val, isAgency }: { val: boolean | string; isAgency: boolean }) {
   if (typeof val === 'boolean') {
     if (val) {
       return (
-        <span className={`flex items-center justify-center gap-1.5 font-medium text-xs ${isAgency ? 'text-emerald-600' : 'text-gray-400'}`}>
+        <span className={`flex items-center justify-center gap-1.5 font-medium text-sm ${isAgency ? 'text-emerald-600' : 'text-gray-400'}`}>
           <CheckCircle className="w-4 h-4 flex-shrink-0" />
           {isAgency ? '対応' : '可能'}
         </span>
       );
     }
     return (
-      <span className="flex items-center justify-center gap-1.5 text-xs text-red-400 font-medium">
+      <span className="flex items-center justify-center gap-1.5 text-sm text-red-400 font-medium">
         <XCircle className="w-4 h-4 flex-shrink-0" />
         要本人対応
       </span>
@@ -38,10 +38,10 @@ function Cell({ val, isAgency }: { val: boolean | string; isAgency: boolean }) {
       </span>
     );
   }
-  return <span className="text-xs text-gray-700 leading-snug">{val}</span>;
+  return <span className="text-sm text-gray-700 leading-snug">{val}</span>;
 }
 
-export default function ComparisonTable({
+function ComparisonTableBase({
   heading,
   rows,
   selfLabel = '自分で手配',
@@ -55,31 +55,38 @@ export default function ComparisonTable({
           <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">{heading}</h2>
         </div>
       )}
-      <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-card">
+      <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-card">
+      <div className="min-w-[480px]" role="table" aria-label={heading ?? '比較表'}>
         {/* ヘッダー */}
-        <div className="grid grid-cols-[1fr_1fr_1fr] bg-secondary">
-          <div className="px-4 py-3 text-sm font-bold text-white border-r border-white/10">比較項目</div>
-          <div className="px-4 py-3 text-sm font-medium text-white/60 text-center border-r border-white/10">{selfLabel}</div>
-          <div className="px-4 py-3 text-sm font-bold text-primary text-center">{agencyLabel}</div>
+        <div className="grid grid-cols-[1fr_1fr_1fr] bg-secondary" role="row">
+          <div className="px-4 py-3 text-sm font-bold text-white border-r border-white/10" role="columnheader" scope="col">比較項目</div>
+          <div className="px-4 py-3 text-sm font-medium text-white/60 text-center border-r border-white/10" role="columnheader" scope="col">{selfLabel}</div>
+          <div className="px-4 py-3 text-sm font-bold text-primary text-center" role="columnheader" scope="col">{agencyLabel}</div>
         </div>
         {/* 行 */}
         {rows.map((row, i) => (
           <div
             key={row.item}
+            role="row"
             className={`grid grid-cols-[1fr_1fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}
           >
-            <div className="px-4 py-3 text-xs font-medium text-gray-700 border-r border-gray-100 flex items-center leading-snug">
+            <div className="px-4 py-3 text-sm font-medium text-gray-700 border-r border-gray-100 flex items-center leading-snug" role="rowheader" scope="row">
               {row.item}
             </div>
-            <div className="px-4 py-3 flex items-center justify-center border-r border-gray-100">
+            <div className="px-4 py-3 flex items-center justify-center border-r border-gray-100" role="cell">
               <Cell val={row.self} isAgency={false} />
             </div>
-            <div className="px-4 py-3 flex items-center justify-center bg-primary/[0.04]">
+            <div className="px-4 py-3 flex items-center justify-center bg-primary/[0.04]" role="cell">
               <Cell val={row.agency} isAgency={true} />
             </div>
           </div>
         ))}
       </div>
+      </div>
     </section>
   );
 }
+
+const ComparisonTable = React.memo(ComparisonTableBase);
+ComparisonTable.displayName = 'ComparisonTable';
+export default ComparisonTable;

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -22,7 +22,7 @@ export default function MarriageGuideEn() {
         '@type': 'Service',
         name: 'Philippine Marriage Documents Retrieval Service (CENOMAR + PSA + Apostille)',
         description: 'We retrieve all Philippine documents needed to marry a Filipino/Filipina — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships worldwide via DHL.',
-        url: 'https://ph-document.com/en/international-marriage-guide',
+        url: 'https://ph-document.com/en/international-marriage-guide/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
@@ -86,7 +86,7 @@ export default function MarriageGuideEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock
@@ -127,7 +127,7 @@ export default function MarriageGuideEn() {
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start ﾂｷ Progress updates at every stage ﾂｷ Pay balance only after confirming document copies"
+        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
       />
 
       <FeatureList

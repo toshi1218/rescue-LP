@@ -24,7 +24,7 @@ export default function NbiClearanceOverseasEn() {
           '@type': 'Service',
           name: 'NBI Clearance Retrieval for Overseas Filipinos (OFW)',
           description: 'We retrieve NBI Clearance from the Philippines on behalf of Filipinos living abroad. No return trip needed. DFA Apostille included. HIT cases handled. Ships worldwide via DHL.',
-          url: 'https://ph-document.com/en/nbi-clearance-overseas',
+          url: 'https://ph-document.com/en/nbi-clearance-overseas/',
           provider: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -88,7 +88,7 @@ export default function NbiClearanceOverseasEn() {
         badges={['OFW & Overseas Filipinos', 'HIT Cases Handled', 'Ships Worldwide via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

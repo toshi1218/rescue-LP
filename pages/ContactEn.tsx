@@ -3,8 +3,9 @@ import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
+import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mojqlqnd';
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
 export default function ContactEn() {
   useMeta(
@@ -12,6 +13,10 @@ export default function ContactEn() {
     'Contact us for Philippine document procurement, international marriage, and spouse visa inquiries. Free consultation. We reply within 1 business day.',
   );
   const [service, setService] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [emailError, setEmailError] = useState('');
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
 
@@ -51,14 +56,54 @@ export default function ContactEn() {
         </span>
       </div>
 
+      {submitted ? (
+        <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
+          <p className="text-3xl mb-3">✅</p>
+          <p className="font-bold text-green-700 mb-2">Your message has been received!</p>
+          <p className="text-sm text-gray-600 mb-3">We will review your request and reply within 24 hours.</p>
+          <div className="text-xs text-gray-500 bg-white border border-gray-100 rounded-lg p-3 text-left space-y-1">
+            <p>• Please also check your <span className="font-semibold">spam / junk folder</span>.</p>
+            <p>• If you have not heard from us within 24 hours, please email us directly:</p>
+            <a href="mailto:igrs20200601@gmail.com" className="font-semibold text-primary hover:underline">igrs20200601@gmail.com</a>
+          </div>
+        </div>
+      ) : (
       <form
-        action={FORMSPREE_ENDPOINT}
-        method="POST"
         className="space-y-4 max-w-xl"
-        onSubmit={() => trackEvent('form_submit', { location: 'contact_page', type: 'formspree', variant: ctaVariant, traffic_source: trafficSource })}
+        noValidate
+        onSubmit={async (e) => {
+          e.preventDefault();
+          const emailInput = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value.trim();
+          if (!emailInput) {
+            setEmailError('Email address is required.');
+            return;
+          }
+          setEmailError('');
+          setSubmitting(true);
+          setSubmitError('');
+          try {
+            const res = await fetch(WEB3FORMS_ENDPOINT, {
+              method: 'POST',
+              body: new FormData(e.currentTarget),
+              headers: { Accept: 'application/json' },
+            });
+            const data = await res.json();
+            if (res.ok && data.success) {
+              trackEvent('form_submit', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
+              setSubmitted(true);
+            } else {
+              setSubmitError('Submission failed. Please try again later.');
+            }
+          } catch {
+            setSubmitError('Submission failed. Please try again later.');
+          } finally {
+            setSubmitting(false);
+          }
+        }}
       >
-        <input type="hidden" name="_subject" value="[Philippine Document Service Inquiry - EN]" />
-        <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" />
+        <input type="hidden" name="access_key" value="c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0" />
+        <input type="hidden" name="subject" value="[Philippine Document Service Inquiry - EN]" />
+        <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
         <input type="hidden" name="cta_variant" value={ctaVariant} />
         <input type="hidden" name="traffic_source" value={trafficSource} />
         <input type="hidden" name="landing_page" value="https://ph-document.com/en/contact/" />
@@ -80,6 +125,29 @@ export default function ContactEn() {
             type="email"
             required
             placeholder="example@email.com"
+            onChange={() => setEmailError('')}
+            className={`w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${emailError ? 'border-red-400' : 'border-gray-200'}`}
+          />
+          {emailError && <p className="mt-1 text-xs text-red-500">{emailError}</p>}
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">
+            Company / Organization <span className="text-xs font-normal text-gray-400">(Optional — for law firms, employers, etc.)</span>
+          </label>
+          <input
+            name="company"
+            placeholder="e.g. Smith & Associates Law Firm"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">Country of Residence <span className="text-red-500">*</span></label>
+          <input
+            name="country"
+            required
+            placeholder="e.g. Japan, USA, Australia"
             className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
@@ -116,22 +184,41 @@ export default function ContactEn() {
           />
         </div>
 
+        {submitError && (
+          <p role="alert" className="text-xs text-red-500">{submitError}</p>
+        )}
+
         <button
           type="submit"
-          className="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3"
+          disabled={submitting}
+          className="w-full bg-primary text-secondary font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          <Send className="w-5 h-5" />
-          Send Message
+          <Send className="w-5 h-5" aria-hidden="true" />
+          {submitting ? 'Sending…' : 'Send Message'}
         </button>
       </form>
+      )}
 
-      <a
-        href="mailto:igrs20200601@gmail.com"
-        className="mt-4 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors"
-      >
-        <Mail className="w-4 h-4" />
-        Email us directly (igrs20200601@gmail.com)
-      </a>
+      <div className="mt-4 flex flex-col gap-2 max-w-xl">
+        <a
+          href="mailto:igrs20200601@gmail.com"
+          className="w-full flex items-center justify-center gap-3 bg-gray-100 hover:bg-gray-200 text-secondary font-bold py-4 rounded-xl shadow transition-all"
+        >
+          <Mail className="w-5 h-5" />
+          Email us directly
+        </a>
+        <a
+          href="https://wa.me/639452833727"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'whatsapp', page_path: window.location.pathname })}
+          aria-label="Contact us on WhatsApp (opens in new tab)"
+          className="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20b858] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
+        >
+          <WhatsAppIcon />
+          WhatsApp us
+        </a>
+      </div>
     </PageLayout>
   );
 }

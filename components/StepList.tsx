@@ -29,7 +29,7 @@ export default function StepList({ heading, steps, variant = 'default' }: StepLi
           <div className="relative">
             {/* コネクターライン */}
             <div className="absolute left-[19px] top-10 bottom-10 w-px bg-gradient-to-b from-primary/50 via-primary/30 to-transparent" />
-            <div className="space-y-4">
+            <div className="space-y-5">
               {steps.map((step, index) => (
                 <article key={step.title} className="group relative flex gap-5">
                   <div className="relative flex-shrink-0">
@@ -38,8 +38,8 @@ export default function StepList({ heading, steps, variant = 'default' }: StepLi
                     </div>
                   </div>
                   <div className="flex-1 bg-white/10 rounded-xl border border-white/10 p-5 transition-all duration-200 group-hover:bg-white/15 group-hover:border-primary/40">
-                    <h3 className="text-sm font-bold text-white mb-1 leading-snug">{step.title}</h3>
-                    <p className="text-sm text-white/70 leading-relaxed">{step.description}</p>
+                    <h3 className="text-base font-bold text-white mb-1.5 leading-snug">{step.title}</h3>
+                    <p className="text-base text-white/70 leading-relaxed">{step.description}</p>
                   </div>
                 </article>
               ))}
@@ -61,7 +61,7 @@ export default function StepList({ heading, steps, variant = 'default' }: StepLi
         {/* コネクターライン */}
         <div className="absolute left-[17px] top-10 bottom-10 w-px bg-gradient-to-b from-primary/40 via-primary/20 to-transparent" />
 
-        <div className="space-y-4">
+        <div className="space-y-5">
           {steps.map((step, index) => (
             <article key={step.title} className="group relative flex gap-5">
               {/* ステップ番号 */}
@@ -73,8 +73,8 @@ export default function StepList({ heading, steps, variant = 'default' }: StepLi
 
               {/* コンテンツ */}
               <div className="flex-1 bg-white rounded-xl border border-gray-100 shadow-card p-5 transition-all duration-200 group-hover:shadow-md group-hover:border-primary/20 group-hover:-translate-y-0.5">
-                <h3 className="text-sm font-bold text-secondary mb-1 leading-snug">{step.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{step.description}</p>
+                <h3 className="text-base font-bold text-secondary mb-1.5 leading-snug">{step.title}</h3>
+                <p className="text-base text-gray-500 leading-relaxed">{step.description}</p>
               </div>
             </article>
           ))}

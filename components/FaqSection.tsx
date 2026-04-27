@@ -18,15 +18,16 @@ export default function FaqSection({ items }: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="mb-10">
+    <section className="mb-10" aria-labelledby="faqsection-heading">
       <div className="flex items-center gap-3 mb-6">
         <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-        <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">FAQ</h2>
+        <h2 id="faqsection-heading" className="text-xl md:text-2xl font-bold text-secondary tracking-tight">FAQ</h2>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-3">
         {items.map((item, index) => {
           const isOpen = openIndex === index;
+          const panelId = `faqsec-panel-${index}`;
           return (
             <div
               key={item.q}
@@ -37,15 +38,17 @@ export default function FaqSection({ items }: FaqSectionProps) {
               } bg-white`}
             >
               <button
+                id={`faqsec-btn-${index}`}
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 aria-expanded={isOpen}
-                className="w-full text-left px-5 py-4 flex items-center justify-between gap-3"
+                aria-controls={panelId}
+                className="w-full text-left px-5 py-5 flex items-center justify-between gap-3"
               >
                 <div className="flex items-start gap-3">
                   <span className={`text-xs font-bold px-2 py-0.5 rounded-md flex-shrink-0 mt-0.5 transition-colors duration-200 ${isOpen ? 'bg-primary text-white' : 'bg-primary/10 text-primary'}`}>
                     Q
                   </span>
-                  <span className="text-sm font-semibold text-secondary leading-snug">{item.q}</span>
+                  <span className="text-base font-semibold text-secondary leading-snug">{item.q}</span>
                 </div>
                 <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-200 ${isOpen ? 'bg-primary text-white' : 'bg-gray-100 text-gray-400'}`}>
                   {isOpen ? <Minus className="w-3 h-3" /> : <Plus className="w-3 h-3" />}
@@ -53,6 +56,9 @@ export default function FaqSection({ items }: FaqSectionProps) {
               </button>
 
               <div
+                id={panelId}
+                role="region"
+                aria-labelledby={`faqsec-btn-${index}`}
                 className={`transition-all duration-300 ease-in-out overflow-hidden ${
                   isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}
@@ -61,7 +67,7 @@ export default function FaqSection({ items }: FaqSectionProps) {
                   <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-secondary/10 text-secondary flex-shrink-0 mt-3 h-fit">
                     A
                   </span>
-                  <p className="text-sm text-gray-600 leading-relaxed pt-3">{item.a}</p>
+                  <p className="text-base text-gray-600 leading-relaxed pt-3">{item.a}</p>
                 </div>
               </div>
             </div>
