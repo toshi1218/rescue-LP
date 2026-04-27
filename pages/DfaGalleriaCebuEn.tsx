@@ -63,7 +63,7 @@ export default function DfaGalleriaCebuEn() {
         badges={['Cebu Location', 'Appointment Required', 'Updated 2026']}
         ctaText="Ask About Apostille Service"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

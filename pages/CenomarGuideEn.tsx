@@ -103,7 +103,7 @@ export default function CenomarGuideEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <div className="max-w-2xl mx-auto px-4 mb-6">
@@ -134,18 +134,28 @@ export default function CenomarGuideEn() {
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
-            title: 'Applying for a K-1 Fiancé Visa',
+            title: 'Applying for a K-1 Fiancé Visa (USA)',
             description: 'USCIS requires a CENOMAR with DFA Apostille as proof of your Filipino partner\'s single status.',
           },
           {
             icon: <Users className="w-4 h-4" />,
-            title: 'Filing for a CR-1 or IR-1 Spouse Visa',
+            title: 'Filing for a CR-1 or IR-1 Spouse Visa (USA)',
             description: 'We handle the full document chain — PSA issuance, DFA Apostille, and international shipping.',
+          },
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'Canada Spousal Sponsorship (IRCC)',
+            description: 'IRCC requires CENOMAR with authentication. We verify the correct format for your specific province and stream before starting.',
+          },
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'Australia Partner Visa / UK Spouse Visa',
+            description: 'Home Affairs (Australia) and UKVI (UK) each have specific authentication requirements. We confirm before ordering.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Not sure what you need?',
-            description: 'Requirements vary by visa type and USCIS office. Consult us first and we will confirm exactly what to order.',
+            description: 'Requirements vary by visa type and destination country. Consult us first and we will confirm exactly what to order.',
           },
         ]}
       />
@@ -234,7 +244,7 @@ export default function CenomarGuideEn() {
 
       <RelatedArticles
         items={[
-          { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. PSA Marriage Certificate', description: 'K-1 or CR-1? Find out which document your visa actually requires.' },
+          { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. PSA Marriage Certificate', description: 'K-1, CR-1, Canada, or Australia? Find out which document your visa type actually requires.' },
           { href: '/en/cenomar-validity/', title: 'CENOMAR Validity & Timing', description: 'CENOMAR is valid for 6 months. We time retrieval to meet your deadline.' },
           { href: '/en/cenomar-apostille/', title: 'Does CENOMAR Need Apostille?', description: 'When DFA Apostille is required and when it is not.' },
           { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Full checklist of Philippine documents needed per visa type.' },

@@ -87,7 +87,7 @@ export default function UkDocsEn() {
         badges={['UKVI-Ready', 'DFA Apostille Included', 'Ships to UK via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

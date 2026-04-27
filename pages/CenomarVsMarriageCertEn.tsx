@@ -75,7 +75,7 @@ export default function CenomarVsMarriageCertEn() {
         badges={['Common Confusion Explained', 'Visa-Specific Guidance', 'Free Consultation']}
         ctaText="Ask Which One You Need"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

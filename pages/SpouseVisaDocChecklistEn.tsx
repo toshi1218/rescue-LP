@@ -59,7 +59,7 @@ export default function SpouseVisaDocChecklistEn() {
         title="Spouse Visa Document Checklist [March 2026]"
         subtitle="Complete list of Philippine documents required for the Japan spouse visa (COE) application. TB Non-Disease Certificate is now mandatory from June 2025."
         badges={['Updated March 2026', 'TB Cert Now Required', 'Document Retrieval Available']}
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
       <article className="max-w-2xl mx-auto px-4">
 
