@@ -99,6 +99,14 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 
 ### やれなかった・凍結明け（2026-04-30以降）にやること
 
+**セキュリティTODO（時期問わず・優先度低）**:
+
+0. **Web3Forms APIキーのローテーション**（凍結対象外・任意のタイミング）
+   - 旧キー `c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0` がコミット `17e8c4f` 以前のgit履歴に残存
+   - 現状の被害想定は低い（Web3Formsはクライアント送信用キーで、悪用されてもスパム送信程度）が、ベストプラクティスとして将来的にローテーション推奨
+   - 手順: ① Web3Forms管理画面で旧キー失効・新キー発行 → ② `.env.local` 更新 → ③ Cloudflare Pages の環境変数 `VITE_WEB3FORMS_KEY` を新キーで上書き → ④ フォーム動作確認
+   - コードは既に `import.meta.env.VITE_WEB3FORMS_KEY` 参照に修正済み（コミット `17e8c4f`）
+
 **最優先（4/30 当日に着手可能）**:
 
 1. **`/en/psa-birth-certificate-cost/` の title/description 改善を先行適用**
