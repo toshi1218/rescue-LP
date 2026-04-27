@@ -102,7 +102,7 @@ export default function PsaEcertificateNihonJa() {
             当社への相談事例
           </div>
           <p className="text-base font-bold text-secondary mb-4">
-            SNSでの投稿はほとんどないものの、当社には2026年3月以降、以下のようなご相談が実際に寄せられています。
+            当社には2026年3月以降、以下のようなご相談が実際に寄せられています。
           </p>
           <ul className="space-y-3">
             {[
