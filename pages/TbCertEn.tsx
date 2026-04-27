@@ -87,7 +87,7 @@ export default function TbCertEn() {
         badges={['Required from June 23, 2025', 'Philippine Nationals', 'Valid 180 Days']}
         ctaText="Ask About Spouse Visa Documents"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

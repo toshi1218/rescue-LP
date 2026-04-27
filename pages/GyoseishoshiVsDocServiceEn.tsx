@@ -62,7 +62,7 @@ export default function GyoseishoshiVsDocServiceEn() {
         badges={['Role Comparison', 'International Marriage', '2026 Guide']}
         ctaText="Ask About Our Document Service"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock
