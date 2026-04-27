@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageLayout from '../components/PageLayout';
 import SummaryBlock from '../components/SummaryBlock';
 import CtaBox from '../components/CtaBox';
 import RelatedLinks from '../components/RelatedLinks';
 import { useMeta } from '../lib/useMeta';
-import { AlertTriangle } from 'lucide-react';
+import { AlertTriangle, Copy, Check } from 'lucide-react';
+
+const TEMPLATE = `件名：フィリピン PSA 電子証明書・DFA eApostille の受理可否確認
+
+お世話になっております。
+フィリピン発行の民事登録書類を御庁へ提出予定です。以下の点をご確認いただけますでしょうか。
+
+１．フィリピン PSA 発行の電子証明書（電子署名付き PDF）を受理されますか。
+２．フィリピン DFA 発行の e-Apostille（PDF 形式、メール送付）を受理されますか。
+３．受理不可の場合、PSA 紙原本・アポスティーユ原本・領事認証のいずれが必要ですか。
+４．必要な書式・提出方法があれば具体的にご教示ください。
+
+何卒よろしくお願いいたします。`;
 
 export default function PsaEcertificateNihonJa() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(TEMPLATE).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
   useMeta(
     'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
     'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
@@ -192,6 +213,36 @@ export default function PsaEcertificateNihonJa() {
             </li>
           ))}
         </ol>
+      </section>
+
+      {/* 照会テンプレ */}
+      <section className="mb-10">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
+          <h2 className="text-xl md:text-2xl font-bold text-secondary">提出先への照会テンプレ</h2>
+        </div>
+        <p className="text-sm text-gray-600 mb-3">
+          入管・市区町村・総領事館への問い合わせにそのままお使いいただけます。
+        </p>
+        <div className="relative rounded-xl border border-gray-200 bg-gray-50">
+          <button
+            onClick={handleCopy}
+            className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors"
+          >
+            {copied ? (
+              <>
+                <Check className="w-3.5 h-3.5 text-green-600" />
+                <span className="text-green-600">コピー完了</span>
+              </>
+            ) : (
+              <>
+                <Copy className="w-3.5 h-3.5" />
+                コピー
+              </>
+            )}
+          </button>
+          <pre className="p-5 pr-24 text-sm text-gray-700 leading-relaxed whitespace-pre-wrap font-sans">{TEMPLATE}</pre>
+        </div>
       </section>
 
       <CtaBox
