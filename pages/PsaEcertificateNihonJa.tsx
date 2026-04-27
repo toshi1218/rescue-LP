@@ -53,9 +53,9 @@ export default function PsaEcertificateNihonJa() {
           </p>
           <p>
             <strong className="text-gray-900">DFA eApostille（2026年3月16日開始）</strong>
-            ：PSA eCertificateに付与される完全デジタルのアポスティーユ。アポスティーユ条約締約国向けに発行され、完成後はメールで送付されます。HCCH基準での法的効力は紙アポスティーユと同等です。
+            ：PSA eCertificateに付与される完全デジタルのアポスティーユ。ハーグ条約（アポスティーユ条約）の枠組みに基づいて発行され、完成後はメールで送付されます。HCCH基準での法的効力は紙アポスティーユと同等です。
             <strong>印刷した場合は公式な印刷版として認められない</strong>
-            ため、デジタル送信での提出が前提です。なお、非締約国向けにはAuthentication Certificate（紙認証）が発行されます。
+            ため、デジタル送信での提出が前提です。
           </p>
           <p>
             <strong className="text-gray-900">重要：PSA e-CertificateへのPaper Apostille（紙アポスティーユ）は原則不可</strong>
