@@ -224,11 +224,6 @@ export default function CenomarGuideEn() {
             title: 'UAE, Qatar, Bahrain and Gulf countries — Apostille accepted',
             description: 'Philippine nationals residing or working in the Gulf region may need CENOMAR for marriage registration at Philippine embassies or local civil authorities. Requirements vary by emirate or country — we confirm before starting.',
           },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: 'Japan — Apostille + certified translation required',
-            description: 'CENOMAR with DFA Apostille is required, plus a certified Japanese translation for submission to the civil registry. We confirm exact requirements for your municipality before ordering.',
-          },
         ]}
       />
 
