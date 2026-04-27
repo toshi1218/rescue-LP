@@ -71,7 +71,7 @@ export default function LtoSmSeasideEn() {
               name: "What is an LTO Driver's Record?",
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: "The Driver's Record is an official LTO document certifying your Philippine driving history. It is required for converting a Philippine driver's license to a Japanese license (外免切替). After obtaining it from LTO, you need a DFA Apostille before submitting to a Japanese prefectural license center.",
+                text: "The Driver's Record is an official LTO document certifying your Philippine driving history. It is required for converting a Philippine driver's license to a Japanese license (外免切替 / foreign license conversion). After obtaining it from LTO, you need a DFA Apostille before submitting to a Japanese prefectural license center.",
               },
             },
           ],
@@ -273,7 +273,7 @@ export default function LtoSmSeasideEn() {
         items={[
           { q: "Where can I get an LTO Driver's Record in Cebu?", a: "At the LTO (Land Transportation Office) window inside SM Seaside City Cebu, South Road Properties, southern Cebu City." },
           { q: 'What are the operating hours?', a: 'Monday to Friday, 8:00 AM – 5:00 PM. Closed on weekends and public holidays.' },
-          { q: "What is a Driver's Record used for?", a: "The Driver's Record is required for converting a Philippine driver's license to a Japanese license (外免切替). After obtaining it from LTO, you need a DFA Apostille, then submit to a Japanese prefectural license center." },
+          { q: "What is a Driver's Record used for?", a: "The Driver's Record is required for converting a Philippine driver's license to a Japanese license (外免切替 / foreign license conversion). After obtaining it from LTO, you need a DFA Apostille, then submit to a Japanese prefectural license center." },
           { q: 'What other services are available at this LTO office?', a: "Driver's Record issuance, license renewals, license re-issuance, and other standard LTO transactions." },
           { q: 'Can you handle this without me being there?', a: 'Yes. Our Cebu-based staff handles the LTO application, document pickup, DFA Apostille, and DHL shipping to Japan. You do not need to travel.' },
         ]}
