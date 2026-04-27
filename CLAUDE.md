@@ -55,6 +55,65 @@ ph-document.com is a multilingual (EN/JA/KO) Philippine document service site bu
 3. **混ぜない**: Redirect を触る日は、他の SEO 変更（hreflang・canonical・noindex・sitemap・Header/Footer/Layout）を**同一デプロイに混ぜない**。事故時の切り分けが不可能になる
 4. **凍結対象**: Redirect 変更は SEO-destructive 変更の中でも最上位の凍結対象。観察期間は最低 2 週間
 
+### IGRS.online 事故ケーススタディ（2026-04-27 追加・最重要参照ケース）
+
+**背景**: ph-document.com の前身サイト igrs.online は 2026-01-31 に**完全 deindex 事故**を起こした。3ヶ月経過後も復活せず、事実上のサイト寿命終了。本ドキュメントの SEO Safety Rules / Redirect rules はすべてこの事故から逆算して書かれている。
+
+**事故の数字（GSC CSV エクスポートで検証済み）**:
+
+| 日付 | Clicks | Impressions | CTR | Position |
+|---|---|---|---|---|
+| 1/24-1/30（健全期） | 平均 1.9/日 | 平均 51/日 | **5.4%** | 5.1〜8.6 |
+| **1/31（事故日）** | **0** | **0** | — | — |
+| 2/1〜4/23（**3ヶ月**） | **0** | **0** | — | — |
+
+**事故パターンの特徴**:
+
+1. **漸減ではない、スナップ消滅**: 前日まで通常 → 翌日から絶対ゼロ。Honeymoon 終了・コンテンツ品質劣化・ペナルティでは絶対起きない形
+2. **CTR は健全だった**: 5.4%（ph-document の現状 1.6% より遥かに高い）。Mobile CTR 7.92%、Tablet 12.5%
+3. **Position も良好**: 平均 5-8 位。検索結果には届いていた
+4. **3ヶ月たっても戻らない**: ブランド検索 "igrs" が 5 impr 残っているのに index に戻らない = Google の信頼スコアが破壊されたシグナル
+5. **新規サイトだったため復活が困難**: queries 6個・pages 26個で、立ち上げ初期段階。trust budget が無く再評価のチャンスを得られない
+
+**スナップ消滅の典型原因（推定）**:
+
+1. `robots.txt` で `Disallow: /` を全クローラーに deploy
+2. 全ページに `<meta name="robots" content="noindex">` を deploy
+3. canonical を全ページ存在しない URL（タイポ・別ドメイン）に向けた
+4. 全ページから他ドメインへの 301 redirect（移行先設定誤り）
+5. HTTPS 証明書失効・サーバ 5xx 長期化
+
+→ いずれも**1コミット・1デプロイで起きうる**。コンテンツ品質・コミット頻度・ビジュアル変更では**絶対起きない**。
+
+**ph-document への直接の教訓**:
+
+1. **「コンテンツ品質で守られる」は嘘**: CTR 5.4% / Pos 5 の健全サイトが1日で消えた。SEO 構造の事故は健全度に関係なく即死
+2. **deindex は事実上の寿命終了**: 3ヶ月で戻らない実例があるので、**事故予防 >>> 事故後対応**。「直せばいいや」は通用しない
+3. **新規サイトほど deindex に弱い**: ph-document も 2/16 立ち上げの新規サイト。IGRS と同じ立場で、同じ事故を起こせば同じ結末になる
+4. **hreflang / canonical / robots / noindex / redirect / sitemap** の6つは**同格の deindex リスク要因**として扱う
+
+**deindex 検知ルール（早期発見が唯一の救い）**:
+
+1. **日次監視**: GSC で前日比 **impr が 50%以上落ちたら**、即座に以下を `curl` で確認
+   - `curl -sI https://ph-document.com/robots.txt` → `Disallow: /` が無いか
+   - `curl -s https://ph-document.com/ | grep -i "noindex"` → グローバル noindex が無いか
+   - `curl -s https://ph-document.com/ | grep canonical` → canonical が正しい URL か
+   - `curl -sI https://ph-document.com/` → 200 OK か（5xx・3xx ループ無いか）
+   - `curl -s https://ph-document.com/sitemap.xml | head -20` → sitemap が生きているか
+2. **GSC URL 検査ツール**: 任意のページが「インデックス登録不可」になっていないか確認
+3. **検知から24時間以内に対応**: deindex は時間が経つほど復活が困難になる
+
+**新規サイトリスク係数（公開後6ヶ月の凍結強化）**:
+
+- ph-document.com は 2026-02-16 公開、現在まだ約 2.5 ヶ月
+- IGRS の事故は公開直後だった（trust budget が無く復活不能）
+- **公開後6ヶ月（2026-08-16 まで）は SEO 構造変更を「凍結級」の慎重さで扱う**
+- この期間中、SEO 構造に触るときは必ず:
+  - 単独デプロイ
+  - デプロイ後 24 時間 GSC 観察
+  - 異常検知ルールに沿って即座に curl 検証
+  - ロールバック手順を事前にメモしておく
+
 ### Verification rules:
 
 When verifying any change (code review, PR review, pre-deploy check), do NOT only verify that the code works correctly. **Always also verify the impact on SEO and LLMO (LLM Optimization)**:
