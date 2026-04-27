@@ -114,7 +114,12 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 
 **凍結明け以降の段階展開（Phase F の残り、各 2 週間観察期間）**:
 
-3. `/en/cenomar/` の title を informational から transactional 表現に変更
+3. **`/en/cenomar/` JSON-LD の Japan 参照を除去**
+   - `pages/CenomarGuideEn.tsx:25` description から "Japan" を削除
+   - `pages/CenomarGuideEn.tsx:32` areaServed から 'JP' を削除
+   - 本文 Japan セクションは 2026-04-27 に削除済み。JSON-LD のみ残存
+
+4. `/en/cenomar/` の title を informational から transactional 表現に変更
 4. `/en/document-checklist-by-visa/` description から "Japan spouse visa" を除去（グローバル OFW 向け整理）
 5. `/ja/haigusha-visa-shorui/` の title 内固定日付を `SEO_YEAR_MONTH_JA` 変数化
 
