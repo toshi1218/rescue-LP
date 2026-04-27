@@ -147,7 +147,7 @@ SEO 構造（hreflang/canonical/sitemap）には触れないコンテンツ文�
 
 | # | ページ | 問題 | 状態 |
 |---|--------|------|------|
-| E1 | `/en/cenomar/` (`pages/CenomarGuideEn.tsx`) | 本文・FAQに「Japan spouse visa」が筆頭、「配偶者ビザ」日本語混入（L203） | ⬜ 未着手 |
+| E1 | `/en/cenomar/` (`pages/CenomarGuideEn.tsx`) | 本文・FAQに「Japan spouse visa」が筆頭、「配偶者ビザ」日本語混入（L203） | ✅ 完了 (2026-04-27) Japan section簡潔化・UAE/Gulf項目追加でグローバルOFW強化 |
 | E2 | `/en/psa-birth-certificate-cost/` | Japan向け説明が主軸になっている可能性 | ⬜ 未着手（E1確認後） |
 | E3 | その他ENページ | 同様のバイアスを順次確認・修正 | ⬜ 未着手（E2確認後） |
 
