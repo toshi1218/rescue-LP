@@ -43,6 +43,41 @@ When verifying any change (code review, PR review, pre-deploy check), do NOT onl
 - After a major SEO fix, observe a **4-week change freeze** before making further SEO modifications
 - Never make multiple SEO-destructive changes in the same day
 
+### コミット頻度ルール（2026-04-27 追加・GSC低下の根本原因対策）
+
+**背景**: SEO構造を壊していない非SEOコミットでも、短期間に多数積み重なるとGoogleの「サイト不安定」シグナルとなり全サイト再評価を引き起こす。実際、4/22 の Footer 7連発 / 4/24-25 の HomeJa 5連発が Japan インプレッション低下の主因と特定されている。
+
+**ルール**:
+
+1. **同一ファイル/同一セクションへの連続コミットは1日2回まで**。3回目以降は一旦停止し、複数の修正を1コミットにまとめる（squash 必須）
+2. **全サイト共通コンポーネント**（`Footer.tsx`、`Navbar.tsx`、`Hero.tsx`、`CtaBox.tsx`、共通レイアウト）への変更は**1日1コミットまで**。連続編集は全ページ再クロール → 全サイト再評価のトリガーになる
+3. **5日間で30コミット以上は赤信号**。直近のコミット数を `git log --since="5 days ago" --oneline | wc -l` で確認し、超えていたら新規コミットを止めて様子見
+4. **「凍結期間」の対象拡大**: SEO-destructive変更だけでなく、**全サイト共通コンポーネントへの変更**も凍結対象に含める（凍結明け前は触らない）
+
+### CWV（Core Web Vitals）チェックルール（2026-04-27 追加）
+
+**背景**: CWV はランキング要因だが、これまで「SEO-destructive」リストに入っておらず、ビジュアルリデザイン等で見落とされていた。
+
+**ルール**:
+
+1. **ビジュアル/UI 変更後**は Lighthouse CI で LCP / CLS / INP を変更前と比較する
+2. **+100行以上のコンポーネント変更**（特に画像追加・アニメーション追加・フォント追加）は CWV 影響を文章で記述する
+3. **新規ライブラリ追加**は bundle size の delta を `npm run build` で確認し、+10KB 以上なら根拠を CLAUDE.md に記載
+4. ビジュアルリデザインは**1コンポーネントずつ**実施し、デプロイ後に PageSpeed Insights で本番 URL を計測してから次へ
+
+### デプロイ後検証ルール（2026-04-27 追加）
+
+**背景**: 4/25 に `/ja/psa-ecertificate-nihon` を追加したが、`public/sitemap.xml` に未反映のままだった。コミットだけで「やった気」になるのを防ぐ。
+
+**ルール**:
+
+SEO関連変更（新ページ追加・title/description変更・hreflang変更等）の実装完了報告には、**必ず以下のデプロイ後検証**を含めること:
+
+1. **本番 sitemap 確認**: `curl -s https://ph-document.com/sitemap.xml | grep <new-url>` でヒットを確認
+2. **本番 HTML 確認**: `curl -s https://ph-document.com/<page>/ | grep -E '(title|hreflang|canonical)'` で metadata がデプロイされているか確認
+3. **GSC URL 検査**: 新ページは Search Console で「URL検査」→「インデックス登録をリクエスト」を実施するよう案内
+4. ビルドが走らない CMS/コンテンツ更新では sitemap が更新されないことに注意。`npm run build` の実行ログをユーザーに見せて初めて完了とする
+
 ### SEO変更の実装手順（Claude Code向け）:
 
 SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JSON-LD・sitemap・robots.txt等）を変更する実装タスクを受けた場合：
