@@ -114,6 +114,115 @@ ph-document.com is a multilingual (EN/JA/KO) Philippine document service site bu
   - 異常検知ルールに沿って即座に curl 検証
   - ロールバック手順を事前にメモしておく
 
+### 横断的リスク棚卸し（2026-04-27 追加・致命度ランク付き）
+
+**背景**: hreflang / Redirect / IGRS の個別ルールに加え、「知らずにやって戻せない」または「戻っても2-4ヶ月の実害」になる事故パターンを横断的にカタログ化。**致命度3段階で分類**。
+
+#### Tier 1: サイトが消える級（IGRS 事故と同レベル・即死リスク）
+
+**T1-1. Domain / DNS / SSL の失効・誤設定**
+- **Domain 期限切れ**: サイト消失。Whois で期限確認、自動更新オン必須
+- **DNS A/AAAA レコード変更**: 反映 24-48h、誤設定で全ダウン
+- **SSL 証明書失効**: Chrome "Not Secure" 警告 → Google flag → ranking 暴落
+- **Cloudflare Pages → 別 origin 移行**: 評価リセットの可能性
+- **検出**: `curl -sI https://ph-document.com/` で 200 / SSL 有効を日次確認
+
+**T1-2. プリレンダリング・SSR の破綻**
+- `scripts/prerender.ts` がエラーを silent に出して `dist/` が空 HTML → Googlebot は何も見えない
+- Vite build 失敗のまま deploy → 古いビルドが残るが SEO metadata が古い
+- JS hydration mismatch → SSR HTML と client HTML がズレ Google 混乱
+- **検証**: `curl -s https://ph-document.com/ja/cenomar/ | grep -E '(<title>|<meta name="description")` で本番 HTML が空でないか確認
+- **build時必須**: `npm run build` のログで prerender が全ページ成功したか目視
+
+**T1-3. ページ大量削除（redirect なし）**
+- backlink・既存 index が全部 404 になる
+- Google は数週間「ページ消失」と判断 → site quality シグナル悪化
+- **必ず 301 redirect を残す**。削除前にリンク元を一覧化（`grep -r "page-slug" pages/ components/`）
+- 削除する場合も `_redirects` に記載してから本番 deploy
+
+**T1-4. URL 構造の根本変更**
+- `/ja/` → `/jp/` のような**言語コード変更**は IGRS 級の事故
+- スラグ命名規則変更（`-` → `_`、複数形 → 単数形）も同じ
+- 過去の hreflang・sitemap・canonical との整合性が一気に崩れる
+- **凍結級の最重要**: CEO 承認なしには絶対にやらない・新規サイト6ヶ月凍結対象に含む
+
+#### Tier 2: 評価が崩れる級（戻るが2-4ヶ月かかる・実害大）
+
+**T2-5. URL 重複生成の罠**
+- **クエリパラメータで content 切替**（`?lang=en` 等）: Google は別ページ扱い、評価分散
+- **URL casing 揺れ**（`/Home` vs `/home`）: サーバ次第で別ページ
+- **trailing slash 混在**: 既に発覚済み（凍結明け対応予定）
+- **UTM 等 tracking parameter** が canonical に出ると重複認定
+- **検証**: `curl -sI 'https://ph-document.com/ja/cenomar?utm_source=test' | grep -i canonical` で canonical が clean URL か確認
+
+**T2-6. JSON-LD / 構造化データの一括削除・誤改修**
+- 既に rich snippet が出ているページから schema 削除 → Google から rich result 取り消し
+- Schema type 違い（Product を非 Product ページに）→ ガイドライン違反 flag
+- **`prerender.ts` の JSON-LD 生成ロジック変更は構造変更扱い**として凍結対象
+- 検証: Rich Results Test (`https://search.google.com/test/rich-results?url=...`) で本番 URL を入れて schema 検出されるか
+
+**T2-7. About / Company / Privacy / Contact ページの破壊**
+- E-E-A-T シグナルの基盤
+- 法人情報（住所・代表者・連絡先）変更は YMYL 領域では大きく影響
+- 削除や統合は数ヶ月単位の信頼再構築
+- 該当ファイル: `pages/CompanyJa.tsx`, `pages/CompanyEn.tsx`, `pages/ContactJa.tsx`, `pages/ContactEn.tsx`, `pages/Terms*.tsx`
+- これらの削除・統合・大幅リライトは凍結対象に含める
+
+**T2-8. JS バンドル肥大による CWV 悪化**
+- ライブラリ追加で +50KB 増加 → Mobile LCP 悪化 → ranking 低下
+- 既存の CWV ルールに**追加**: 「**新規依存追加時の bundle delta を build 出力で確認**」を必須化
+- **検証**: `npm run build` 後に `du -sh dist/assets/*.js | sort -h` で各 chunk のサイズ記録
+- +10KB 以上のライブラリ追加は CLAUDE.md に根拠記載必須（既存ルール）
+
+**T2-9. 内部リンク構造の大幅変更**
+- Navbar / Footer のリンク削除 = 全ページの site hierarchy シグナル変化
+- "重要ページ" の location 変更（top page から footer へ等）は authority 低下
+- リンクテキスト（anchor text）の一斉変更も同様
+- 該当: `components/Navbar.tsx`, `components/Footer.tsx`, `components/GuideLinks.tsx`
+- これらの**リンク追加は OK・削除と reorder は要検討**
+
+#### Tier 3: 検出しにくいサイレント事故
+
+**T3-10. Cloudflare Pages 設定ミス**
+- 環境変数削除 → Chat Worker など backend 機能が silent fail
+- Build branch を main 以外に切替 → wrong branch が production に
+- `_headers` / `_redirects` の優先度誤り → 想定外のレスポンス
+- Custom domain の DNS verification 失敗 → 一時的に default subdomain に戻る
+- **検出**: Cloudflare Pages dashboard で deploy 元 branch・env vars・custom domain status を週次確認
+
+**T3-11. `robots.txt` の AI/特殊クローラー block 誤設定**
+- `GPTBot`, `ClaudeBot`, `Google-Extended`, `PerplexityBot` を全 block → LLMO 完全失敗
+- `User-agent: *` の `Disallow:` パターン誤記 → Googlebot まで block（IGRS 事故の典型原因候補）
+- AI 引用経由の流入はもはや無視できない → robots.txt は LLMO 観点でも検査
+- **検証**: `curl -s https://ph-document.com/robots.txt` を読んで `Disallow:` の対象を1行ずつ確認
+
+**T3-12. ロールバック手順の不在**
+- 上記すべてに共通: **やる前に「戻す手順」を書いておく**
+- git revert で済むのか、本番設定を手で戻すのか、DNS/SSL は何時間かかるのか
+- IGRS は「事故後、戻せたかどうかも不明」状態で 3 ヶ月
+- **ルール**: SEO 構造変更の PR description には**必ず「ロールバック手順」セクション**を含める
+  ```
+  ## Rollback
+  - git revert <commit-sha>
+  - npm run build && deploy
+  - 反映までの推定時間: X 分
+  ```
+
+#### 致命度マトリクス（一覧）
+
+| Tier | 復旧時間 | 検出難度 | 該当項目 |
+|---|---|---|---|
+| T1 | 復旧不可 〜 数ヶ月 | 高（即時影響） | T1-1〜T1-4 |
+| T2 | 2-4ヶ月 | 中（GSC で気づく） | T2-5〜T2-9 |
+| T3 | 数週間〜数ヶ月 | 低（気づきにくい） | T3-10〜T3-12 |
+
+#### 横断ルール（全 Tier 共通）
+
+1. **「触る前に確認」の対象を拡大**: hreflang / canonical / robots / noindex / redirect / sitemap / **prerender.ts / Domain設定 / DNS / SSL / robots.txt / Cloudflare 設定 / Navbar / Footer / Company / Contact / Privacy / Terms**
+2. **新規サイト6ヶ月凍結ルール**（IGRS セクション既述）の対象に T1 全項目・T2-7（About系）・T3-12 を含める
+3. **デプロイ後 24h は GSC で前日比 impr 50%減を監視**（IGRS 検知ルール）
+4. **どの Tier の変更も単独デプロイ**。混ぜて事故ると切り分け不能
+
 ### Verification rules:
 
 When verifying any change (code review, PR review, pre-deploy check), do NOT only verify that the code works correctly. **Always also verify the impact on SEO and LLMO (LLM Optimization)**:
