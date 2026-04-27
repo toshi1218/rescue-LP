@@ -72,7 +72,7 @@ When verifying any change (code review, PR review, pre-deploy check), do NOT onl
 
 ### コミット頻度ルール（2026-04-27 追加・GSC低下の根本原因対策）
 
-**背景**: SEO構造を壊していない非SEOコミットでも、短期間に多数積み重なるとGoogleの「サイト不安定」シグナルとなり全サイト再評価を引き起こす。実際、4/22 の Footer 7連発 / 4/24-25 の HomeJa 5連発が Japan インプレッション低下の主因と特定されている。
+**背景**: SEO構造を壊していない非SEOコミットでも、短期間に多数積み重なるとGoogleの「サイト不安定」シグナルとなり全サイト再評価を引き起こす**可能性がある**。一般的な SEO 知見としては妥当な懸念だが、当サイトのケースで「4/22 Footer 7連発」「4/24-25 HomeJa 5連発」が Japan インプレッション低下の**主因かどうかは GSC 詳細データで確認したところ証明されていない**（4/27 検証で 4/22 当日は impr スパイク、翌日反動だが平均は前後と同水準）。あくまで予防原則として以下のルールを採用する。
 
 **ルール**:
 
@@ -193,6 +193,95 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 
 - 4/30 まで impressions が ~120/day ベースラインに戻るか週次確認
 - 戻らない場合は canonical 競合・content quality を追加調査（Phase B2）
+
+---
+
+## 2026-04-27 セッションサマリー（GSC CSV エクスポートによる検証・前日認識の訂正）
+
+### 背景
+
+4/26 の認識を、4/27 に CSV ダウンロードした GSC データ（Last 3 months / 全 Property）で詳細検証した結果、**前日の主張に複数の誤り**を発見。Opus 4.7 でデータと突き合わせた検証結果を以下に記録する。
+
+### 訂正された事実（旧認識 → データ検証後）
+
+| 項目 | 旧認識（4/26） | 検証後（4/27） |
+|---|---|---|
+| ピーク impr/日 | 約 120/日 | **494/日**（3/2-3/8 平均、ピーク日3/2 は 705） |
+| 現在の下落幅 | 30-50%減 | **92%減**（37/日） |
+| hreflang 事故の影響 | 主因 | **加速要因（全体の18%）。82%は事故前に発生** |
+| `/en/psa-birth-certificate-cost/` impr | 578 | **1,325** |
+| 4/22 Footer 7連発の悪影響 | 「主因と特定」 | **データに証拠なし（noise レベル）** |
+| 4/24-25 HomeJa 5連発の悪影響 | 「主因と特定」 | **GSC データが 4/23 までで未検証** |
+
+### 新発見（CSV データで初めて判明）
+
+1. **Trailing slash 重複インデックス問題（致命的）**
+   - 同一コンテンツが2URL で別々にインデックスされている
+   - 例: `/ja/psa-shussei-cost/` 105 impr vs `/ja/psa-shussei-cost` 134 impr
+   - 例: `/ja/gaimen-kirikae-guide/` 522 impr vs `/ja/gaimen-kirikae-guide` 349 impr
+   - 例: `/nbi-validity/` 74 impr vs `/nbi-validity` 87 impr
+   - `_redirects` でスラッシュ正規化しているはずだが、Google は両方を別ページ認識
+   - canonical タグが効いていない可能性 → **凍結明け即検証**
+
+2. **USA トラフィックの巨大死蔵**
+   - USA: 2,090 impr / **0 clicks** / 0% CTR（Japan の impr を上回る）
+   - 主因は EN ページの日本語バイアス（CLAUDE.md 既存記載の Phase E 課題）
+   - 数値で確定した最大の機会損失
+
+3. **Position 1 で 0 click のクエリ群**（タイトル・snippet 改善の機会）
+   - `フィリピン 出生証明書` pos 1.25 / 16 impr / **0 clicks**
+   - `フィリピン出生証明書` pos 1.0 / 9 impr / 0 clicks
+   - `フィリピン 免許 日本 切り替え` pos 2.75 / 32 impr / 0 clicks
+   - 順位は取れているが click 誘発が機能していない
+
+4. **構造化データがほぼ機能していない**
+   - Search Appearance に出ているのは Product snippets 1種のみ（50 impr）
+   - 実装している FAQ / DefinedTermSet / Speakable / HowTo は SERP に出ていない
+
+5. **真の下落要因仮説: Google Honeymoon Period 終了**
+   - 2/16-3/8 が新規サイト評価期間ブースト（Fresh Site Bonus）
+   - 3/9 以降は実力評価フェーズへ移行 → 自然減衰
+   - 当サイトの decline 形状（急ピーク → 単調減衰）はこのパターンに合致
+   - **確定ではなく仮説**。だが、コミット連発を抑えるだけでは回復しない可能性が高い
+
+### 「一気に変えるか直列か」の判断基準（4/27 の議論結果）
+
+CEO の問い「全部まとめて変える方が回復が早いのでは？」に対する答え:
+
+**変更タイプ別に分ける**:
+
+| 変更タイプ | 一括 OK? | 理由 |
+|---|---|---|
+| Trailing slash canonical / Redirect | NG（必ず単独） | 構造変更、過去事故あり、切り分け不能化 |
+| hreflang 再設計 | NG（必ず単独） | 過去事故再発リスク |
+| Header/Footer/Layout | NG（必ず単独） | 全ページ影響 |
+| 複数ページの title/description リライト | OK 寄り | 同質変更、影響範囲が局所的 |
+| 構造化データ追加 | OK 寄り | 追加系、副作用が小さい |
+
+### 凍結明け（2026-04-30）即着手リスト（優先順位を訂正後の数値で再構成）
+
+1. **【最優先・単独デプロイ】Trailing slash 重複の curl 検証 → canonical/redirect 修正**
+   - 期待効果: impressions 統合で +20-30%
+   - 確認コマンド: `curl -sI https://ph-document.com/ja/psa-shussei-cost`
+   - 301 が返らない、または canonical 不一致なら大事故
+
+2. **`/en/psa-birth-certificate-cost/` の title/description リライト（USA OFW 向け）**
+   - 1,325 impr / 0.30% CTR / pos 8.97 → 数値が最大
+   - `docs/seo-todo-post-freeze.md` Phase F の文案を採用、ただし旧 impr 値（578）は誤りなので補足
+
+3. **`/en/cenomar/` リライト（同様に USA OFW 向け）**
+   - 532 impr / 0.19% CTR
+
+4. **`/ja/gaimen-kirikae-guide/` のタイトル見直し**
+   - `フィリピン 免許 日本 切り替え` pos 2.75 で 0 click → タイトル改善で即効性
+
+5. **`/ja/psa-ecertificate-nihon/` を sitemap.xml に反映**（4/26 から積み残し）
+
+### CLAUDE.md 自体の運用ルール（4/27 追加）
+
+1. 「主因と特定されている」「事故が原因」など**断定表現は数値で裏取り後にのみ使う**。仮説段階は「**可能性がある**」「**仮説**」と明記
+2. 数値（impr, clicks, position）は**必ず CSV エクスポート由来か明記**。GSC 画面のスクショ目視は誤差あり
+3. 訂正が出たら旧記述を削除せず「訂正」セクションを追加（履歴を残す）
 
 ---
 
