@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageLayout from '../components/PageLayout';
 import SummaryBlock from '../components/SummaryBlock';
 import CtaBox from '../components/CtaBox';
 import RelatedLinks from '../components/RelatedLinks';
 import { useMeta } from '../lib/useMeta';
-import { AlertTriangle } from 'lucide-react';
+import { AlertTriangle, Copy, Check } from 'lucide-react';
+
+const TEMPLATE = `件名：フィリピン PSA 電子証明書・DFA eApostille の受理可否確認
+
+お世話になっております。
+フィリピン発行の民事登録書類を御庁へ提出予定です。以下の点をご確認いただけますでしょうか。
+
+１．フィリピン PSA 発行の電子証明書（電子署名付き PDF）を受理されますか。
+２．フィリピン DFA 発行の e-Apostille（PDF 形式、メール送付）を受理されますか。
+３．受理不可の場合、PSA 紙原本・アポスティーユ原本・領事認証のいずれが必要ですか。
+４．必要な書式・提出方法があれば具体的にご教示ください。
+
+何卒よろしくお願いいたします。`;
 
 export default function PsaEcertificateNihonJa() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(TEMPLATE).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
   useMeta(
     'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
     'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
@@ -32,11 +53,11 @@ export default function PsaEcertificateNihonJa() {
       ]}
     >
       <SummaryBlock
-        conclusion="PSA電子文書（eCertificate）とeApostilleは法的に有効です。しかし2026年4月時点では、日本の入管・市区町村・総領事館の多くが紙原本を前提とした運用を続けており、電子文書で提出して再提出を求められるケースが当社に実際に報告されています。"
+        conclusion="PSA電子文書（eCertificate）とDFA eApostilleは法的に有効です。しかし2026年4月時点では、日本の入管・市区町村・総領事館の多くが引き続き紙原本を前提とした運用をしており、電子文書で提出して再提出を求められるケースが当社に実際に寄せられています。"
         points={[
-          'DFA eApostilleは2026年3月16日に全面開始。HCCH基準での法的効力は紙アポスティーユと同等です。',
-          '日本の各提出先（入管・市区町村・総領事館）の受領可否は窓口ごとの判断に委ねられており、一律受理とは言えない状況です。',
-          'SNSでの報告は少ないものの、当社には複数の再提出事例が実際に届いています。提出先への事前確認が必須です。',
+          '2026年3月16日以降、PSA e-CertificateへのPaper Apostille（紙アポスティーユ）は原則発行されなくなりました。e-Certificateには電子のeApostilleのみが付与されます。',
+          '紙のPSA証明書（SECPA）自体の発行・取得は引き続き可能です。日本向け提出には紙原本ルートが安全策です。',
+          '当社には複数の再提出事例が実際に届いています。提出先への事前確認が必須です。',
         ]}
       />
 
@@ -49,16 +70,17 @@ export default function PsaEcertificateNihonJa() {
         <div className="space-y-4 text-gray-700 leading-relaxed">
           <p>
             <strong className="text-gray-900">PSA eCertificate</strong>
-            ：PSAが発行する出生証明書・婚姻証明書・CENOMARのPDF電子版。PSAHelpline等でオンライン申請して取得でき、QRコードで真正性を検証できます。
+            ：PSAが発行する出生証明書・婚姻証明書・CENOMARのPDF電子版。デジタル署名付きで、QRコードとポータルサイトによる真正性検証が可能です。法的効力は紙のPSA発行文書と同等とされていますが、PSA自身も「提出先が受け入れるか事前確認を推奨」としています。
           </p>
           <p>
             <strong className="text-gray-900">DFA eApostille（2026年3月16日開始）</strong>
-            ：PSA eCertificateに付与される完全デジタルのアポスティーユ。ASEAN初のフルデジタル運用で、法的効力は紙アポスティーユと同等（HCCH eAPP基準）。
-            <strong>印刷すると無効</strong>
-            になる場合があるため、デジタル送信を原則とします。
+            ：PSA eCertificateに付与される完全デジタルのアポスティーユ。ハーグ条約（アポスティーユ条約）の枠組みに基づいて発行され、完成後はメールで送付されます。HCCH基準での法的効力は紙アポスティーユと同等です。
+            <strong>印刷した場合は公式な印刷版として認められない</strong>
+            ため、デジタル送信での提出が前提です。
           </p>
           <p>
-            従来の紙原本（Security Paper / SECPA）＋物理アポスティーユは引き続き発行・利用可能です。eApostilleは利便性向上のための選択肢として追加されました。
+            <strong className="text-gray-900">重要：PSA e-CertificateへのPaper Apostille（紙アポスティーユ）は原則不可</strong>
+            ：3月16日の運用変更以降、PSA e-CertificateをベースにしたPaper Apostilleは基本的に発行されなくなりました。一方、<strong>紙のPSA証明書（SECPA）自体の発行・取得は引き続き可能</strong>です。Door-to-door・CRS窓口受取・国際配送などの取得ルートが現在も利用できます。
           </p>
         </div>
       </section>
@@ -73,7 +95,7 @@ export default function PsaEcertificateNihonJa() {
           {[
             {
               title: '入国管理局（入管）',
-              body: '電子版に関する明示的な受領基準は未公表。在留資格申請では従来、PSA Security Paper＋紙アポスティーユが標準。電子版の受領可否は個別窓口への事前確認を強く推奨します。',
+              body: '在留資格申請では従来、PSA Security Paper＋紙アポスティーユが標準として運用されています。電子版に関する明示的な受領基準は未公表で、窓口ごとの判断に委ねられています。重要な申請では紙原本での提出を推奨します。',
             },
             {
               title: '市区町村（婚姻届・戸籍関連）',
@@ -81,7 +103,7 @@ export default function PsaEcertificateNihonJa() {
             },
             {
               title: '在フィリピン日本国大使館・総領事館',
-              body: '公式案内はPSA発行証明書を指定していますが、電子版に関する明示的な基準は未更新。紙原本を前提とした記載が主流です。',
+              body: '在フィリピン日本国大使館は「フィリピンで発行・作成された文書は原本提出」を明記しており、婚姻関係手続ではPSA/LCR発行の出生証明書の原本を要求しています。電子版での受付は確認できていません。',
             },
           ].map(({ title, body }) => (
             <div key={title} className="flex items-start gap-3 p-4 rounded-xl border border-amber-100 bg-amber-50">
@@ -102,7 +124,7 @@ export default function PsaEcertificateNihonJa() {
             当社への相談事例
           </div>
           <p className="text-base font-bold text-secondary mb-4">
-            SNSでの投稿はほとんどないものの、当社には2026年3月以降、以下のようなご相談が実際に寄せられています。
+            当社には2026年3月以降、以下のようなご相談が実際に寄せられています。
           </p>
           <ul className="space-y-3">
             {[
@@ -138,9 +160,10 @@ export default function PsaEcertificateNihonJa() {
             <tbody className="divide-y divide-gray-50">
               {[
                 ['法的有効性', '有効（HCCH基準）', '有効'],
+                ['アポスティーユの形式', 'eApostille（電子）のみ。Paper Apostilleは原則不可', '物理アポスティーユ（紙）'],
                 ['日本での受領確実性', '窓口次第（要事前確認）', '高い（従来の標準）'],
                 ['日本在住での取得', 'オンラインで自力取得が可能', '代行業者が必要なケースが多い'],
-                ['印刷して提出', '原則不可（無効になる場合あり）', '可'],
+                ['印刷して提出', '原則不可（公式な印刷版なし）', '可'],
                 ['再提出リスク', 'あり（移行期につき）', '低い'],
               ].map(([item, electronic, paper]) => (
                 <tr key={item} className="hover:bg-gray-50/50">
@@ -164,15 +187,15 @@ export default function PsaEcertificateNihonJa() {
           {[
             {
               title: '提出先に事前確認（必須）',
-              body: '入管・市区町村・総領事館など具体的な窓口に、電子文書の受領可否を電話またはメールで確認してください。可能であればPDFサンプルを添付して問い合わせると確実です。',
+              body: '入管・市区町村・総領事館など具体的な窓口に、電子文書の受領可否を電話またはメールで確認してください。在フィリピン日本国大使館は原本提出を明記しており、電子版では対応できない手続きが存在します。',
             },
             {
               title: '重要手続きは紙原本を選択（安全策）',
-              body: '在留資格申請・婚姻届など重要な手続きでは、紙原本（SECPA＋物理アポスティーユ）を選択することを推奨します。電子版は補助的な位置づけにとどめてください。',
+              body: '在留資格申請・婚姻届など重要な手続きでは、紙原本（SECPA）での取得を推奨します。PSA e-CertificateにはeApostilleしか付与されないため、紙アポスティーユが必要な場合は紙のPSA証明書を別途取得する必要があります。',
             },
             {
               title: '電子版を使う場合はデジタル送信を徹底',
-              body: 'DFA公式サイト（apostille.gov.ph）経由で取得したPDFを、印刷せずデジタル送信で提出してください。QRコードによる検証情報を必ず添付してください。',
+              body: '電子版での提出が認められた場合は、DFA公式より取得したPDFを印刷せずデジタル送信で提出してください。QRコードによる検証情報を必ず添付してください。',
             },
             {
               title: '今後の運用変更を定期確認',
@@ -190,6 +213,36 @@ export default function PsaEcertificateNihonJa() {
             </li>
           ))}
         </ol>
+      </section>
+
+      {/* 照会テンプレ */}
+      <section className="mb-10">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
+          <h2 className="text-xl md:text-2xl font-bold text-secondary">提出先への照会テンプレ</h2>
+        </div>
+        <p className="text-sm text-gray-600 mb-3">
+          入管・市区町村・総領事館への問い合わせにそのままお使いいただけます。
+        </p>
+        <div className="relative rounded-xl border border-gray-200 bg-gray-50">
+          <button
+            onClick={handleCopy}
+            className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors"
+          >
+            {copied ? (
+              <>
+                <Check className="w-3.5 h-3.5 text-green-600" />
+                <span className="text-green-600">コピー完了</span>
+              </>
+            ) : (
+              <>
+                <Copy className="w-3.5 h-3.5" />
+                コピー
+              </>
+            )}
+          </button>
+          <pre className="p-5 pr-24 text-sm text-gray-700 leading-relaxed whitespace-pre-wrap font-sans">{TEMPLATE}</pre>
+        </div>
       </section>
 
       <CtaBox
