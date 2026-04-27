@@ -11,7 +11,7 @@ compatibility_flags = ["nodejs_compat"]
 
 [[kv_namespaces]]
 binding = "RATE_LIMIT"
-id = "REPLACE_WITH_KV_ID_AFTER_CREATE"
+id = "56e7165bfd664ae7ab4a135d883d95f7"
 
 # Secrets (set via `wrangler secret put`):
 #   ANTHROPIC_API_KEY
