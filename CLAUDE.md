@@ -28,6 +28,33 @@ ph-document.com is a multilingual (EN/JA/KO) Philippine document service site bu
 - Removing `noindex` requires re-indexing which takes 1-2 weeks
 - Never batch-add noindex to more than 2 pages without user confirmation
 
+### Redirect rules（2026-04-27 追加・最重要）:
+
+**背景**: Redirect は「このURLの評価を別URLへ渡す」という強いシグナル。Google公式も URL変更・ドメイン変更・HTTPS移行で Redirect を推奨している一方、誤用すると評価の行き先を誤る。robots / noindex / canonical / redirect / sitemap は**同格の「触る前に検査必須」扱い**とする。
+
+**特に危険なパターン（事故事例から）**:
+
+1. 旧URL → 関係ないURLへ転送 → Google が「ページが消えた／内容が変わった」と判断
+2. 全ページ → トップページへ転送 → 個別ページの評価が失われる（最も致命的）
+3. www / non-www / http / https がぐるぐる → クロール不能・重複・canonical 混乱
+4. Redirect と canonical が別方向 → Google が「どっちが本物？」となり予期しない canonical が選ばれる
+5. Redirect 先が noindex / 404 / soft 404 → 評価を渡した先が index 不可
+
+**ルール**:
+
+> Redirect changes are high-risk SEO operations.
+> Before deployment, list all affected URLs.
+> After deployment, verify every redirect on production with curl.
+> No redirect chain, no redirect loop, no redirect to unrelated pages, no redirect to noindex/404/soft404 pages.
+> Header/Footer/Layout changes must not be mixed with redirect changes in the same deployment.
+
+**運用手順（Redirect は「心臓手術」扱い）**:
+
+1. **触る前に一覧化**: 影響を受ける旧URL・新URL・最終ステータス・canonical・index可否を表で書き出す
+2. **1本ずつ検証**: デプロイ後、各 redirect を `curl -sI` で本番確認（chain/loop が無いか・最終ステータスが 200 か・最終 URL の canonical が一致するか・noindex でないか）
+3. **混ぜない**: Redirect を触る日は、他の SEO 変更（hreflang・canonical・noindex・sitemap・Header/Footer/Layout）を**同一デプロイに混ぜない**。事故時の切り分けが不可能になる
+4. **凍結対象**: Redirect 変更は SEO-destructive 変更の中でも最上位の凍結対象。観察期間は最低 2 週間
+
 ### Verification rules:
 
 When verifying any change (code review, PR review, pre-deploy check), do NOT only verify that the code works correctly. **Always also verify the impact on SEO and LLMO (LLM Optimization)**:
