@@ -16,11 +16,11 @@ Package prices (tax-included, standard international courier shipping included):
 - NBI Clearance: quoted per case
 Note: Remote area surcharge, urgent handling, additional documents, or re-issuance may require a separate quote.
 
-Turnaround (guideline):
-- PSA documents: approx. 2-4 weeks
-- CENOMAR: approx. 2-3 weeks
-- NBI Clearance: approx. 3-5 weeks (longer if HIT result)
-- DFA Apostille: approx. 2-3 weeks after document in hand
+Turnaround (DHL international shipping included, guideline):
+- PSA document + Apostille (Birth Certificate / CENOMAR / Marriage Certificate): approx. 4-6 weeks
+- Marriage PSA Pack (Birth Certificate + CENOMAR, both with Apostille): approx. 4-6 weeks
+- LTO Driver Record + Apostille: approx. 4 weeks
+- NBI Clearance: varies by case — please inquire for an estimate
 
 Operational notes:
 - All coordination is handled in the client's language (JA or EN).
