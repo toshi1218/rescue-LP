@@ -153,6 +153,11 @@ export default function CenomarGuideEn() {
             description: 'Home Affairs (Australia) and UKVI (UK) each have specific authentication requirements. We confirm before ordering.',
           },
           {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'Marriage Registration in UAE, Qatar & Gulf Countries',
+            description: 'OFWs in the Gulf region often need CENOMAR for marriage registration at Philippine embassies or local civil authorities. Requirements vary by country — we verify before starting.',
+          },
+          {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Not sure what you need?',
             description: 'Requirements vary by visa type and destination country. Consult us first and we will confirm exactly what to order.',
@@ -221,8 +226,8 @@ export default function CenomarGuideEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Japan — Apostille + certified Japanese translation',
-            description: 'Japanese Immigration Bureau requires CENOMAR with DFA Apostille plus a certified Japanese translation. Required at the civil registration stage before the marriage is recorded.',
+            title: 'Japan — Apostille + certified translation required',
+            description: 'CENOMAR with DFA Apostille is required, plus a certified Japanese translation for submission to the civil registry. We confirm exact requirements for your municipality before ordering.',
           },
         ]}
       />
