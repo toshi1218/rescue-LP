@@ -9,11 +9,12 @@ Service scope (ph-document.com, operated by IGRS Inc.):
 - LTO Driver Record / license-related documents
 
 Pricing reference (guideline only, subject to case-by-case confirmation):
-- PSA Birth Certificate retrieval: from JPY 15,000
-- CENOMAR retrieval: from JPY 20,000
-- NBI Clearance: from JPY 25,000
-- DFA Apostille (per document): from JPY 10,000 (in addition to document retrieval)
-- Worldwide DHL shipping: quoted per destination
+Package prices (tax-included, standard international courier shipping included):
+- PSA document (1 item) + Apostille: JPY 69,800 / KRW 690,000 / USD 499
+- Marriage PSA Pack — Birth Certificate + CENOMAR, each with Apostille (2 docs): JPY 129,800 / KRW 1,090,000 / USD 799  ← most popular
+- LTO Driver Record + Apostille: JPY 149,800 / KRW 1,290,000 / USD 899
+- NBI Clearance: quoted per case
+Note: Remote area surcharge, urgent handling, additional documents, or re-issuance may require a separate quote.
 
 Turnaround (guideline):
 - PSA documents: approx. 2-4 weeks
