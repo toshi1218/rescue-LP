@@ -244,9 +244,51 @@ descriptionの "Japan spouse visa" を除去し、グローバル OFW 向けに�
 
 変更対象: `scripts/prerender.ts` の各 route の `title` / `description` フィールド
 
-1. `/en/psa-birth-certificate-cost/` を先行適用（L524–525）
-2. 2週間 Search Console で CTR 変化を観測
-3. 回復確認後に `/en/cenomar/` を適用
+**全ページ同時変更でOK。** 1ページずつの制約は「効果測定のため」であり、測定不要なら全ページ一括変更してよい。
+
+```bash
+# 変更後は必ずビルドしてデプロイ
+npm run build
+```
+
+---
+
+### title/description 変更の安全ルール（必読）
+
+#### ✅ de-indexリスク: ゼロ
+title/description の変更でページがインデックスから消えることは**絶対にない**。
+de-index が起きる原因は noindex タグ・robots.txt ブロック・canonical ミス・5xxエラーのみ。
+
+#### ⚠️ ランキング低下リスク: 低い（条件付き）
+
+**守るべきルールは1つだけ: 既存のキーワードを削除しない**
+
+| 変更の種類 | リスク |
+|---|---|
+| キーワードを維持したまま表現を変える（informational→transactional） | **低い** |
+| 新しいキーワードを追加する | **低い** |
+| 既存キーワードを別のキーワードに置き換える | **中** |
+| ターゲットキーワードをタイトルから削除する | **高い → やってはいけない** |
+
+**確認方法**: 変更前後でターゲットキーワードが title に含まれているか必ず確認する。
+
+例:
+```
+✅ 安全
+変更前: "PSA Birth Certificate Fee Philippines 2026"
+変更後: "PSA Birth Certificate Cost [2026]: PHP 365 — Retrieve & Ship Worldwide"
+→ "PSA Birth Certificate" "Philippines" "2026" が維持されている
+
+❌ 危険
+変更前: "PSA Birth Certificate Fee Philippines 2026"
+変更後: "フィリピン書類代行サービス"
+→ ターゲットキーワードが全て消えている
+```
+
+#### 変更後の挙動（想定内）
+- Googlebot が再クロールするまで1〜2週間は古いスニペットが検索結果に残る
+- 再クロール後に1〜2週間ランキングが小幅に変動することがある（想定内）
+- CTRが改善されれば逆にランキングが上がることもある
 
 **SEO リスク**: 低〜中。title/description 変更は Google のインデックス済み情報の更新を促すが、コンテンツ本体は変わらないため順位への悪影響は限定的。ただし一時的な fluctuation は想定内（1-2週）。
 

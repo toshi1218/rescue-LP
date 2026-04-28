@@ -40,8 +40,18 @@ When verifying any change (code review, PR review, pre-deploy check), do NOT onl
 ### Change management:
 
 - SEO-related changes must be **incremental** — test on 1-2 pages first, observe Search Console for 2 weeks, then apply to all pages
+- **例外: title/description のみの変更は全ページ同時変更OK** — de-indexリスクはゼロ、ランキング低下リスクは低い。ただし「既存のターゲットキーワードをtitleから削除しない」こと厳守
 - After a major SEO fix, observe a **4-week change freeze** before making further SEO modifications
 - Never make multiple SEO-destructive changes in the same day
+
+### title/description 変更の安全ルール:
+
+- **de-indexリスク: ゼロ** — noindex・robots.txt・canonical・5xxエラーのみがde-indexの原因。title/descriptionは無関係
+- **ランキング低下を防ぐ唯一のルール: 既存のターゲットキーワードをtitleから削除しない**
+  - ✅ 安全: キーワードを維持したまま表現をinformational→transactionalに変える
+  - ✅ 安全: 新しいキーワードを追加する
+  - ❌ 危険: ターゲットキーワードをtitleから削除する
+- 変更後1〜2週間はランキングが小幅変動することがある（想定内）。CTR改善により逆に上がることもある
 
 ### SEO変更の実装手順（Claude Code向け）:
 
