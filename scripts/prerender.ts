@@ -367,8 +367,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
-    title: `CENOMAR Philippines [${SEO_YEAR}] — Get It Without Going Back Home`,
-    description: `CENOMAR (Certificate of No Marriage Record) from PSA Philippines. Required for K-1 fiancé visa, CR-1, and marriage abroad. We retrieve + apostille + ship. Free consult.`,
+    title: `What Is CENOMAR? Meaning, How to Get It & Costs [${SEO_YEAR}]`,
+    description: `CENOMAR = Certificate of No Marriage Record, issued by PSA Philippines. Required for K-1, spouse visa & marriage abroad. We retrieve it — no trip needed.`,
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -720,7 +720,7 @@ const routes: RouteConfig[] = [
     path: '/en/document-checklist-by-visa/',
     outFile: path.join(projectRoot, 'dist', 'en', 'document-checklist-by-visa', 'index.html'),
     title: `Philippine Document Checklist by Visa Type [${SEO_YEAR_MONTH_EN}] | K-1, CR-1, Spouse Visa`,
-    description: `Which Philippine documents do you need? Complete checklist: K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa, Japan. CENOMAR, PSA, NBI Clearance — all explained.`,
+    description: `Which Philippine documents do you need? Complete checklist by visa type: K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa, Japan spouse visa. CENOMAR, PSA, NBI — all explained.`,
     canonical: `${BASE}/en/document-checklist-by-visa/`,
     lang: 'en',
     enCanonical: `${BASE}/en/document-checklist-by-visa/`,
@@ -1171,7 +1171,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/haigusha-visa-shorui/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa-shorui', 'index.html'),
-    title: `配偶者ビザに必要な書類チェックリスト【${SEO_YEAR_MONTH_JA}】フィリピン人配偶者の在留資格認定証明書申請`,
+    title: `配偶者ビザに必要な書類チェックリスト【2026年3月版】フィリピン人配偶者の在留資格認定証明書申請`,
     description: '2025年6月23日改正対応。フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。結核非発病証明書の追加要件・PSA書類・CENOMARをまとめてご案内。',
     canonical: `${BASE}/ja/haigusha-visa-shorui/`,
     lang: 'ja',
