@@ -244,7 +244,10 @@ descriptionの "Japan spouse visa" を除去し、グローバル OFW 向けに�
 
 変更対象: `scripts/prerender.ts` の各 route の `title` / `description` フィールド
 
-**全ページ同時変更でOK。** 1ページずつの制約は「効果測定のため」であり、測定不要なら全ページ一括変更してよい。
+**4/30は `/en/psa-birth-certificate-cost/` 1ページのみ先行。** 1ページずつの制約は測定目的だけでなく、以下の理由からSEOリスク軽減にも有効：
+- 問題発生時の原因特定（どのページの変更が悪影響を出したか）
+- Googleへの「site-wide change event」シグナルを避ける（4/22 Footer 7コミット事件と同じリスク）
+- prerender.ts複数箇所の同時編集でビルドバグが入った場合のblast radius最小化
 
 ```bash
 # 変更後は必ずビルドしてデプロイ
@@ -255,9 +258,10 @@ npm run build
 
 ### title/description 変更の安全ルール（必読）
 
-#### ✅ de-indexリスク: ゼロ
-title/description の変更でページがインデックスから消えることは**絶対にない**。
-de-index が起きる原因は noindex タグ・robots.txt ブロック・canonical ミス・5xxエラーのみ。
+#### ✅ de-indexリスク: 極めて低い
+title/description の変更そのものでページがインデックスから消えることはほぼない。
+ただし **prerender.ts の編集ミスでビルドが落ちた場合**、SPAフォールバックが200 OK+空ページを返しsoft-404でde-indexになる経路がある。
+→ **変更後は必ず `npm run build` を実行し `dist/` 内HTMLファイル数 = routes数であることを確認すること**
 
 #### ⚠️ ランキング低下リスク: 低い（条件付き）
 
@@ -265,19 +269,28 @@ de-index が起きる原因は noindex タグ・robots.txt ブロック・canoni
 
 | 変更の種類 | リスク |
 |---|---|
-| キーワードを維持したまま表現を変える（informational→transactional） | **低い** |
-| 新しいキーワードを追加する | **低い** |
-| 既存キーワードを別のキーワードに置き換える | **中** |
-| ターゲットキーワードをタイトルから削除する | **高い → やってはいけない** |
+| 年・月の表記を更新する（"2026年3月"→"2026年4月"） | **最低** |
+| descriptionに文言を追加・整理する | **低い** |
+| 既存キーワードを維持しながらtitleの表現を調整する | **低〜中** |
+| informational→transactionalへの意図シフト | **中〜高（カニバリゼーション注意）** |
+| titleからターゲットキーワードを削除する | **高い → やってはいけない** |
 
-**確認方法**: 変更前後でターゲットキーワードが title に含まれているか必ず確認する。
+**確認ルール（必須）**:
+1. 変更前後でターゲットキーワードがtitleに含まれているか確認
+2. **"Fee"→"Cost"は別キーワード**。どちらのクエリで現在ランクインしているかGSCで確認してから変更する
+3. "Philippines" "Apostille"等の地域・サービスキーワードをtitleから削除しない
+4. informational意図のtitleを持つページをtransactionalに変える場合、そのページが現在informationalクエリでランクインしていないかGSCで確認する
+5. **title変更時はJSON-LDの`name`/`description`フィールドも必ず同時更新**（不整合はstructured data信頼性を低下させる）
 
 例:
 ```
-✅ 安全
-変更前: "PSA Birth Certificate Fee Philippines 2026"
+⚠️ 要注意（"Philippines"と"Apostille"が消えている）
+変更前: "PSA Birth Certificate Fee Philippines 2026 — PHP 365 + Apostille"
 変更後: "PSA Birth Certificate Cost [2026]: PHP 365 — Retrieve & Ship Worldwide"
-→ "PSA Birth Certificate" "Philippines" "2026" が維持されている
+
+✅ 安全（キーワード追加のみ）
+変更前: "PSA Birth Certificate Fee Philippines 2026"
+変更後: "PSA Birth Certificate Fee Philippines 2026 — Retrieve & Ship Worldwide"
 
 ❌ 危険
 変更前: "PSA Birth Certificate Fee Philippines 2026"

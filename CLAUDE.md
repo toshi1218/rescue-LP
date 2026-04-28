@@ -40,18 +40,18 @@ When verifying any change (code review, PR review, pre-deploy check), do NOT onl
 ### Change management:
 
 - SEO-related changes must be **incremental** — test on 1-2 pages first, observe Search Console for 2 weeks, then apply to all pages
-- **例外: title/description のみの変更は全ページ同時変更OK** — de-indexリスクはゼロ、ランキング低下リスクは低い。ただし「既存のターゲットキーワードをtitleから削除しない」こと厳守
 - After a major SEO fix, observe a **4-week change freeze** before making further SEO modifications
 - Never make multiple SEO-destructive changes in the same day
 
 ### title/description 変更の安全ルール:
 
-- **de-indexリスク: ゼロ** — noindex・robots.txt・canonical・5xxエラーのみがde-indexの原因。title/descriptionは無関係
-- **ランキング低下を防ぐ唯一のルール: 既存のターゲットキーワードをtitleから削除しない**
-  - ✅ 安全: キーワードを維持したまま表現をinformational→transactionalに変える
-  - ✅ 安全: 新しいキーワードを追加する
-  - ❌ 危険: ターゲットキーワードをtitleから削除する
-- 変更後1〜2週間はランキングが小幅変動することがある（想定内）。CTR改善により逆に上がることもある
+- **de-indexリスク: 極めて低い** — noindex・robots.txt・canonical・5xxエラーのみがde-indexの主因。ただしprerender.tsの編集ミスでビルドが落ちると soft-404経由でde-indexの経路があるため、変更後は必ずビルド出力（dist/内HTMLファイル数 = routes数）を検証すること
+- **ランキング低下リスクを下げるルール（優先度順）**:
+  1. タイトルからターゲットキーワードを削除しない（"Fee"→"Cost"は別KW扱い、"Philippines"削除は高リスク）
+  2. informational→transactionalの意図シフトは既存ランキングを失う可能性があり、カニバリゼーションにも注意
+  3. title変更時はJSON-LDの`name`/`description`も同時更新（不整合はstructured data信頼性を下げる）
+  4. 全ページ同時変更はGoogleに「site-wide change event」として認識され全サイト再評価を誘発するリスクがある — **1〜2ページずつ変更し2週間観察するルールはランキング保護のためであり、測定目的だけではない**
+- 変更後1〜2週間はランキングが小幅変動することがある（想定内）
 
 ### SEO変更の実装手順（Claude Code向け）:
 
