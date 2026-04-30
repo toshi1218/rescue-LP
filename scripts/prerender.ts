@@ -356,8 +356,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/',
     outFile: path.join(projectRoot, 'dist', 'en', 'index.html'),
-    title: `Philippine Document Service | PSA, NBI & CENOMAR [${SEO_YEAR_MONTH_EN}]`,
-    description: `Need Philippine documents for immigration? We retrieve PSA, CENOMAR, NBI Clearance + DFA Apostille. Ships via DHL worldwide. Free consultation.`,
+    title: `Philippine PSA Documents for Overseas Submission [${SEO_YEAR_MONTH_EN}]`,
+    description: `Not every authority accepts a PSA e-Certificate. We verify format requirements, procure physical originals + DFA Apostille, and ship via DHL worldwide.`,
     canonical: `${BASE}/en/`,
     lang: 'en',
     enCanonical: `${BASE}/en/`,

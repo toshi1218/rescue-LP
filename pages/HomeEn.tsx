@@ -20,8 +20,8 @@ import { SEO_DATE_ISO } from '../lib/seoDate';
 
 export default function HomeEn() {
   useMeta(
-    'Philippine PSA Documents for Overseas Submission | Physical Originals & Apostille',
-    'Not every authority accepts a PSA e-Certificate. We verify requirements and procure physical PSA originals with DFA Apostille — shipped via DHL to UAE, Korea, Europe, USA & more.',
+    'Philippine PSA Documents for Overseas Submission',
+    'Not every authority accepts a PSA e-Certificate. We verify format requirements, procure physical originals + DFA Apostille, and ship via DHL worldwide.',
     'https://ph-document.com/en/',
   );
 

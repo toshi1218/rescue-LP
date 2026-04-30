@@ -1,15 +1,6 @@
 import React from 'react';
 import { AlertTriangle, Globe, ShieldCheck } from 'lucide-react';
 
-/**
- * WhyProxy — "Why You Need a Proxy Service" section for the EN homepage.
- *
- * Core message: Official PSA channels (PSA Helpline / Serbilis) can ship
- * regular PSA certificates internationally, but they CANNOT ship
- * paper-based DFA Apostille documents overseas. An intermediary in the
- * Philippines is the only way to get Apostille-authenticated originals
- * delivered to your door worldwide.
- */
 const WhyProxy: React.FC = React.memo(() => {
   return (
     <section className="py-14 bg-gray-50" aria-labelledby="why-proxy-heading">
