@@ -59,7 +59,7 @@ export default function ApostilleGuideEn() {
               name: 'What is the difference between e-Apostille and paper Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'e-Apostille is a digital authentication issued online. Most US immigration authorities (USCIS, NVC) require a paper Apostille original. We provide paper originals.',
+                text: 'DFA issues two formats. e-Apostille is a digital-only PDF — printing it does NOT make it valid. Paper Apostille is a physical sticker on a PSA SECPA document. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. US NVC, US Embassy Manila, and UAE require physical paper Apostille on SECPA. We provide paper Apostille originals shipped via DHL.',
               },
             },
             {
@@ -117,8 +117,8 @@ export default function ApostilleGuideEn() {
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'e-Apostille was rejected by your submission authority',
-            description: 'Most immigration authorities (USCIS, IRCC, Home Affairs, UKVI) require a paper Apostille original. We provide paper originals, not digital versions.',
+            title: 'Your authority requires physical paper Apostille — not e-Apostille',
+            description: 'US NVC, US Embassy Manila, and UAE require a physical PSA on Security Paper (SECPA) with a paper Apostille. Canada (IRCC), Australia, and UK accept e-Apostille PDFs. We provide paper Apostille originals for cases where digital is not accepted.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -207,7 +207,7 @@ export default function ApostilleGuideEn() {
       <FaqSection
         items={[
           { q: 'How much does it cost?', a: 'DFA Apostille is included in all service packages starting at US$349. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.' },
-          { q: 'What is the difference between e-Apostille and paper Apostille?', a: 'e-Apostille is a digital authentication issued online. Most immigration authorities (USCIS, IRCC, Home Affairs, UKVI) require a paper Apostille original. We provide paper originals.' },
+          { q: 'What is the difference between e-Apostille and paper Apostille?', a: 'DFA issues two formats. (1) e-Apostille — a digital PDF that must be submitted electronically. Printing an e-Apostille does not make it valid. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs. (2) Paper Apostille — a physical sticker on a PSA SECPA document, required by US NVC, US Embassy Manila, and UAE. We provide paper Apostille originals shipped via DHL.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
         ]}
