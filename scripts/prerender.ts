@@ -410,6 +410,18 @@ const routes: RouteConfig[] = [
     ogType: 'article',
   },
   {
+    path: '/en/philippine-statistics-authority/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'philippine-statistics-authority', 'index.html'),
+    title: `Philippine Statistics Authority (PSA): Documents & How to Get Them [${SEO_YEAR}]`,
+    description: `The Philippine Statistics Authority (PSA) issues birth certificates, marriage certificates, CENOMAR, and more. Learn what PSA issues, how to get documents from abroad, and what Apostille is required.`,
+    canonical: `${BASE}/en/philippine-statistics-authority/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/philippine-statistics-authority/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+    datePublished: '2026-04-30',
+  },
+  {
     path: '/en/psa-online/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-online', 'index.html'),
     title: `PSA Online: How to Get PSA Certificates from Abroad [${SEO_YEAR}]`,

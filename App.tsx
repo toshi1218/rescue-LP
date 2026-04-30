@@ -39,6 +39,7 @@ const CenomarApostilleJa = lazy(() => import('./pages/CenomarApostilleJa'));
 const CenomarValidityEn = lazy(() => import('./pages/CenomarValidityEn'));
 const CenomarValidityJa = lazy(() => import('./pages/CenomarValidityJa'));
 const PsaOnlineEn = lazy(() => import('./pages/PsaOnlineEn'));
+const PhilippineStatisticsAuthorityEn = lazy(() => import('./pages/PhilippineStatisticsAuthorityEn'));
 const PsaBirthCertEn = lazy(() => import('./pages/PsaBirthCertEn'));
 const PsaBirthCertJa = lazy(() => import('./pages/PsaBirthCertJa'));
 const NbiGuideEn = lazy(() => import('./pages/NbiGuideEn'));
@@ -200,6 +201,8 @@ export default function App() {
         <Route path="/ja/cenomar-koyukigen/" element={<CenomarValidityJa />} />
         <Route path="/en/psa-online" element={<Navigate to="/en/psa-online/" replace />} />
         <Route path="/en/psa-online/" element={<PsaOnlineEn />} />
+        <Route path="/en/philippine-statistics-authority" element={<Navigate to="/en/philippine-statistics-authority/" replace />} />
+        <Route path="/en/philippine-statistics-authority/" element={<PhilippineStatisticsAuthorityEn />} />
         <Route path="/en/psa-birth-certificate" element={<Navigate to="/en/psa-birth-certificate/" replace />} />
         <Route path="/en/psa-birth-certificate/" element={<PsaBirthCertEn />} />
         <Route path="/ja/psa-shussei-shomeisho" element={<Navigate to="/ja/psa-shussei-shomeisho/" replace />} />
