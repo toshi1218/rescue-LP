@@ -927,6 +927,18 @@ const routes: RouteConfig[] = [
     ogType: 'article',
   },
   {
+    path: '/ja/cenomar-toha/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-toha', 'index.html'),
+    title: `CENOMARとは？意味・正式名称・使い方を徹底解説【${SEO_YEAR_MONTH_JA}】`,
+    description: 'CENOMARはフィリピン統計局（PSA）が発行する独身証明書。Certificate of No Marriage Recordの略称で、国際結婚・配偶者ビザ・帰化申請に必要。取得方法・有効期限・アポスティーユまで解説。',
+    canonical: `${BASE}/ja/cenomar-toha/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/cenomar-meaning/`,
+    jaCanonical: `${BASE}/ja/cenomar-toha/`,
+    ogType: 'article',
+    datePublished: '2026-04-30',
+  },
+  {
     path: '/ja/cenomar-apostille/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-apostille', 'index.html'),
     title: `CENOMARのDFAアポスティーユ、代行取得できます【${SEO_YEAR_MONTH_JA}】日本語だけでOK`,
