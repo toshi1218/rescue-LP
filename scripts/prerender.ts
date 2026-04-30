@@ -433,6 +433,18 @@ const routes: RouteConfig[] = [
     ogType: 'article',
   },
   {
+    path: '/en/nbi-clearance-online/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance-online', 'index.html'),
+    title: `NBI Clearance Online: How to Get It from Abroad [${SEO_YEAR}]`,
+    description: `NBI online renewal is available for Filipinos abroad — but only for those with a clean record and an existing NBI account. First-timers and HIT cases still need in-person processing or a document service.`,
+    canonical: `${BASE}/en/nbi-clearance-online/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/nbi-clearance-online/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+    datePublished: '2026-04-30',
+  },
+  {
     path: '/en/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance', 'index.html'),
     title: `NBI Clearance + Apostille Service [${SEO_YEAR_MONTH_EN}]`,

@@ -33,6 +33,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/en/nbi-clearance-online/</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/en/cenomar-apostille/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar-apostille/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar-apostille/"/>
