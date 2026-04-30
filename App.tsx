@@ -85,6 +85,8 @@ const AustraliaDocsEn = lazy(() => import('./pages/AustraliaDocsEn'));
 const AustraliaDocsJa = lazy(() => import('./pages/AustraliaDocsJa'));
 const UkDocsEn = lazy(() => import('./pages/UkDocsEn'));
 const UkDocsJa = lazy(() => import('./pages/UkDocsJa'));
+const NewZealandDocsEn = lazy(() => import('./pages/NewZealandDocsEn'));
+const GermanyDocsEn = lazy(() => import('./pages/GermanyDocsEn'));
 const CompanyEn = lazy(() => import('./pages/CompanyEn'));
 const CompanyJa = lazy(() => import('./pages/CompanyJa'));
 const ContactEn = lazy(() => import('./pages/ContactEn'));
@@ -295,6 +297,10 @@ export default function App() {
         <Route path="/en/uk/" element={<UkDocsEn />} />
         <Route path="/ja/uk" element={<Navigate to="/ja/uk/" replace />} />
         <Route path="/ja/uk/" element={<UkDocsJa />} />
+        <Route path="/en/new-zealand" element={<Navigate to="/en/new-zealand/" replace />} />
+        <Route path="/en/new-zealand/" element={<NewZealandDocsEn />} />
+        <Route path="/en/germany" element={<Navigate to="/en/germany/" replace />} />
+        <Route path="/en/germany/" element={<GermanyDocsEn />} />
         <Route path="/en/company" element={<Navigate to="/en/company/" replace />} />
         <Route path="/en/company/" element={<CompanyEn />} />
         <Route path="/ja/company" element={<Navigate to="/ja/company/" replace />} />
