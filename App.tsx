@@ -32,14 +32,18 @@ class ErrorBoundary extends Component<{ children: ReactNode }, ErrorBoundaryStat
 const HomeEn = lazy(() => import('./pages/HomeEn'));
 const HomeJa = lazy(() => import('./pages/HomeJa'));
 const CenomarGuideEn = lazy(() => import('./pages/CenomarGuideEn'));
+const CenomarMeaningEn = lazy(() => import('./pages/CenomarMeaningEn'));
 const CenomarGuideJa = lazy(() => import('./pages/CenomarGuideJa'));
 const CenomarApostilleEn = lazy(() => import('./pages/CenomarApostilleEn'));
 const CenomarApostilleJa = lazy(() => import('./pages/CenomarApostilleJa'));
 const CenomarValidityEn = lazy(() => import('./pages/CenomarValidityEn'));
 const CenomarValidityJa = lazy(() => import('./pages/CenomarValidityJa'));
+const PsaOnlineEn = lazy(() => import('./pages/PsaOnlineEn'));
+const PhilippineStatisticsAuthorityEn = lazy(() => import('./pages/PhilippineStatisticsAuthorityEn'));
 const PsaBirthCertEn = lazy(() => import('./pages/PsaBirthCertEn'));
 const PsaBirthCertJa = lazy(() => import('./pages/PsaBirthCertJa'));
 const NbiGuideEn = lazy(() => import('./pages/NbiGuideEn'));
+const NbiClearanceOnlineEn = lazy(() => import('./pages/NbiClearanceOnlineEn'));
 const NbiGuideJa = lazy(() => import('./pages/NbiGuideJa'));
 const NbiHitEn = lazy(() => import('./pages/NbiHitEn'));
 const NbiHitJa = lazy(() => import('./pages/NbiHitJa'));
@@ -183,6 +187,8 @@ export default function App() {
 
         <Route path="/en/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
         <Route path="/en/cenomar/" element={<CenomarGuideEn />} />
+        <Route path="/en/cenomar-meaning" element={<Navigate to="/en/cenomar-meaning/" replace />} />
+        <Route path="/en/cenomar-meaning/" element={<CenomarMeaningEn />} />
         <Route path="/ja/cenomar" element={<Navigate to="/ja/cenomar/" replace />} />
         <Route path="/ja/cenomar/" element={<CenomarGuideJa />} />
         <Route path="/en/cenomar-apostille" element={<Navigate to="/en/cenomar-apostille/" replace />} />
@@ -193,10 +199,16 @@ export default function App() {
         <Route path="/en/cenomar-validity/" element={<CenomarValidityEn />} />
         <Route path="/ja/cenomar-koyukigen" element={<Navigate to="/ja/cenomar-koyukigen/" replace />} />
         <Route path="/ja/cenomar-koyukigen/" element={<CenomarValidityJa />} />
+        <Route path="/en/psa-online" element={<Navigate to="/en/psa-online/" replace />} />
+        <Route path="/en/psa-online/" element={<PsaOnlineEn />} />
+        <Route path="/en/philippine-statistics-authority" element={<Navigate to="/en/philippine-statistics-authority/" replace />} />
+        <Route path="/en/philippine-statistics-authority/" element={<PhilippineStatisticsAuthorityEn />} />
         <Route path="/en/psa-birth-certificate" element={<Navigate to="/en/psa-birth-certificate/" replace />} />
         <Route path="/en/psa-birth-certificate/" element={<PsaBirthCertEn />} />
         <Route path="/ja/psa-shussei-shomeisho" element={<Navigate to="/ja/psa-shussei-shomeisho/" replace />} />
         <Route path="/ja/psa-shussei-shomeisho/" element={<PsaBirthCertJa />} />
+        <Route path="/en/nbi-clearance-online" element={<Navigate to="/en/nbi-clearance-online/" replace />} />
+        <Route path="/en/nbi-clearance-online/" element={<NbiClearanceOnlineEn />} />
         <Route path="/en/nbi-clearance" element={<Navigate to="/en/nbi-clearance/" replace />} />
         <Route path="/en/nbi-clearance/" element={<NbiGuideEn />} />
         <Route path="/ja/nbi-clearance" element={<Navigate to="/ja/nbi-clearance/" replace />} />
