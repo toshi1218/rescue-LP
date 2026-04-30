@@ -20,8 +20,8 @@ import { SEO_DATE_ISO } from '../lib/seoDate';
 
 export default function HomeEn() {
   useMeta(
-    'Philippine Document Service | CENOMAR, PSA & NBI — Shipped Worldwide',
-    'Need Philippine documents? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille, then ship via DHL worldwide. Free consultation.',
+    'Philippine PSA Documents for Overseas Submission | Physical Originals & Apostille',
+    'Not every authority accepts a PSA e-Certificate. We verify requirements and procure physical PSA originals with DFA Apostille — shipped via DHL to UAE, Korea, Europe, USA & more.',
     'https://ph-document.com/en/',
   );
 
@@ -36,7 +36,7 @@ export default function HomeEn() {
     alternateName: 'ph-document.com',
     url: 'https://ph-document.com/en/',
     logo: 'https://ph-document.com/logo.png',
-    description: 'Philippine document retrieval service for immigration. We obtain PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille for clients worldwide. Specializing in international marriage, spouse visas, naturalization, and license conversion.',
+    description: 'Philippine PSA document service for overseas submission. We verify receiving authority requirements and procure physical PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille for clients in UAE, Korea, Europe, USA, and worldwide. Paper originals shipped via DHL Express.',
     areaServed: [
       { '@type': 'Country', name: 'US' },
       { '@type': 'Country', name: 'CA' },
@@ -58,13 +58,14 @@ export default function HomeEn() {
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Philippine Document Retrieval Services',
+      name: 'Philippine Document Services for Overseas Submission',
       itemListElement: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CENOMAR (Certificate of No Marriage) Retrieval' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PSA Birth Certificate Retrieval' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NBI Clearance Retrieval' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DFA Apostille Authentication' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'LTO Driver Record Retrieval' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Acceptance Check — Verify receiving authority format requirements' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Physical PSA Birth Certificate (Original, not e-Certificate)' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Physical CENOMAR (Certificate of No Marriage) — Original' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NBI Clearance for Immigration and Visa' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DFA Apostille Authentication — Paper Original' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'International Shipping via DHL Express' } },
       ],
     },
     aggregateRating: {
