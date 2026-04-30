@@ -43,6 +43,7 @@ const CenomarValidityEn = lazy(() => import('./pages/CenomarValidityEn'));
 const CenomarValidityJa = lazy(() => import('./pages/CenomarValidityJa'));
 const PsaOnlineEn = lazy(() => import('./pages/PsaOnlineEn'));
 const PhilippineStatisticsAuthorityEn = lazy(() => import('./pages/PhilippineStatisticsAuthorityEn'));
+const PsaEcertificateAbroadEn = lazy(() => import('./pages/PsaEcertificateAbroadEn'));
 const PsaBirthCertEn = lazy(() => import('./pages/PsaBirthCertEn'));
 const PsaBirthCertJa = lazy(() => import('./pages/PsaBirthCertJa'));
 const NbiGuideEn = lazy(() => import('./pages/NbiGuideEn'));
@@ -137,6 +138,7 @@ const HomeKo = lazy(() => import('./pages/HomeKo'));
 const PricingKo = lazy(() => import('./pages/PricingKo'));
 const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
 const NbiKo = lazy(() => import('./pages/NbiKo'));
+const PsaEcertificateHangukKo = lazy(() => import('./pages/PsaEcertificateHangukKo'));
 const ContactKo = lazy(() => import('./pages/ContactKo'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const FloatingChatWidget = lazy(() => import('./components/FloatingChatWidget'));
@@ -212,6 +214,8 @@ export default function App() {
         <Route path="/ja/cenomar-koyukigen/" element={<CenomarValidityJa />} />
         <Route path="/en/psa-online" element={<Navigate to="/en/psa-online/" replace />} />
         <Route path="/en/psa-online/" element={<PsaOnlineEn />} />
+        <Route path="/en/psa-ecertificate-abroad" element={<Navigate to="/en/psa-ecertificate-abroad/" replace />} />
+        <Route path="/en/psa-ecertificate-abroad/" element={<PsaEcertificateAbroadEn />} />
         <Route path="/en/philippine-statistics-authority" element={<Navigate to="/en/philippine-statistics-authority/" replace />} />
         <Route path="/en/philippine-statistics-authority/" element={<PhilippineStatisticsAuthorityEn />} />
         <Route path="/en/psa-birth-certificate" element={<Navigate to="/en/psa-birth-certificate/" replace />} />
@@ -402,6 +406,8 @@ export default function App() {
         <Route path="/ko/f-6-philippines-documents/" element={<F6DocsKo />} />
         <Route path="/ko/nbi-clearance" element={<Navigate to="/ko/nbi-clearance/" replace />} />
         <Route path="/ko/nbi-clearance/" element={<NbiKo />} />
+        <Route path="/ko/psa-ecertificate-hanguk" element={<Navigate to="/ko/psa-ecertificate-hanguk/" replace />} />
+        <Route path="/ko/psa-ecertificate-hanguk/" element={<PsaEcertificateHangukKo />} />
         <Route path="/ko/contact" element={<Navigate to="/ko/contact/" replace />} />
         <Route path="/ko/contact/" element={<ContactKo />} />
 
