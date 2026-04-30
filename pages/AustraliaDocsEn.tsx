@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function AustraliaDocsEn() {
   useMeta(
-    'PH Documents for Australia Immigration [March 2026]',
+    'PH Documents for Australia Immigration [April 2026]',
     'Applying for Australian partner visa or PR? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille. Ships to Australia via DHL. Free consultation.',
   );
   return (
@@ -87,7 +87,7 @@ export default function AustraliaDocsEn() {
         badges={['Home Affairs-Ready', 'DFA Apostille Included', 'Ships to Australia via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

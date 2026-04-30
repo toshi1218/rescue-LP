@@ -179,14 +179,24 @@ const SocialProof: React.FC = React.memo(() => {
 
         {/* ── 4つの実績数値 ── */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-          {stats.map((s) => (
-            <div key={s.label} className="bg-white border border-gray-100 rounded-xl p-4 text-center shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary" />
-              <p className="text-2xl font-extrabold text-secondary leading-tight mt-1">{s.value}</p>
-              <p className="text-xs font-bold text-gray-700 mt-1">{s.label}</p>
-              <p className="text-[10px] text-gray-400 mt-0.5 leading-snug">{s.sub}</p>
-            </div>
-          ))}
+          {stats.map((s, i) => {
+            const gradients = [
+              'from-secondary/5 to-secondary/10',
+              'from-primary/5 to-amber-50',
+              'from-emerald-50 to-emerald-100/50',
+              'from-violet-50 to-violet-100/50',
+            ];
+            const textColors = ['text-secondary', 'text-primary-dark', 'text-emerald-700', 'text-violet-700'];
+            const barColors = ['bg-secondary', 'bg-primary', 'bg-emerald-500', 'bg-violet-500'];
+            return (
+              <div key={s.label} className={`bg-gradient-to-br ${gradients[i]} rounded-2xl p-4 text-center relative overflow-hidden border border-white/80 shadow-card`}>
+                <div className={`absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl ${barColors[i]}`} />
+                <p className={`text-2xl font-extrabold ${textColors[i]} leading-tight mt-1`}>{s.value}</p>
+                <p className="text-xs font-bold text-gray-700 mt-1">{s.label}</p>
+                <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{s.sub}</p>
+              </div>
+            );
+          })}
         </div>
 
         {/* ── レビューカード ── */}

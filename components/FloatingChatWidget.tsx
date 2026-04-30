@@ -11,7 +11,16 @@ export default function FloatingChatWidget() {
   const { lang, t } = useLanguage();
 
   useEffect(() => {
-    setMounted(true);
+    const ric = (window as Window & typeof globalThis & { requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number; cancelIdleCallback?: (id: number) => void }).requestIdleCallback;
+    if (typeof ric === 'function') {
+      const id = ric(() => setMounted(true), { timeout: 2000 });
+      return () => {
+        const cic = (window as Window & typeof globalThis & { cancelIdleCallback?: (id: number) => void }).cancelIdleCallback;
+        if (typeof cic === 'function') cic(id);
+      };
+    }
+    const timeoutId = window.setTimeout(() => setMounted(true), 1500);
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   if (!mounted) return null;

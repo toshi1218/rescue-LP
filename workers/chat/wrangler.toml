@@ -15,7 +15,9 @@ id = "REPLACE_WITH_KV_ID_AFTER_CREATE"
 
 # Secrets (set via `wrangler secret put`):
 #   ANTHROPIC_API_KEY
+#   SUPABASE_ANON_KEY
 
 [vars]
 ALLOWED_ORIGIN = "https://ph-document.com"
 MODEL = "claude-haiku-4-5-20251001"
+SUPABASE_URL = ""  # e.g. https://xxxx.supabase.co

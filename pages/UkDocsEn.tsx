@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function UkDocsEn() {
   useMeta(
-    'PH Documents for UK Immigration [March 2026]',
+    'PH Documents for UK Immigration [April 2026]',
     'Applying for a UK spouse visa or settlement? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille for UKVI. Ships to the UK via DHL. Free consultation.',
   );
   return (
@@ -87,7 +87,7 @@ export default function UkDocsEn() {
         badges={['UKVI-Ready', 'DFA Apostille Included', 'Ships to UK via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

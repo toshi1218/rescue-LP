@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 export default function DocumentChecklistByVisaEn() {
   useMeta(
     'Philippine Document Checklist by Visa Type — K-1, CR-1, Spouse Visa | Philippine Document Service',
-    'Which Philippine documents do you need? Complete checklist by visa type: K-1 fiancé visa, CR-1/IR-1 spouse visa, Canada spousal sponsorship, Australia partner visa, UK spouse visa, Japan spouse visa.',
+    'Which Philippine documents do you need? Complete checklist by visa type: K-1 fiancé visa, CR-1/IR-1 spouse visa, Canada spousal sponsorship, Australia partner visa, UK spouse visa, UAE, and Japan. CENOMAR, PSA, NBI — all explained.',
   );
   return (
     <PageLayout
@@ -72,10 +72,10 @@ export default function DocumentChecklistByVisaEn() {
     >
       <HeroBanner
         title="Philippine Document Checklist by Visa Type"
-        badges={['K-1 · CR-1 · Spouse Visa · Canada · Australia · UK · Japan', 'All-Inclusive Service', 'Free Consultation']}
+        badges={['K-1 · CR-1 · Canada · Australia · UK · UAE · Japan', 'All-Inclusive Service', 'Free Consultation']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock
@@ -176,7 +176,7 @@ export default function DocumentChecklistByVisaEn() {
       />
 
       <FeatureList
-        heading="Canada, Australia, UK & Japan — Key Requirements"
+        heading="Canada, Australia, UK, UAE & Japan — Key Requirements"
         items={[
           {
             icon: <Globe className="w-4 h-4" />,
@@ -192,6 +192,11 @@ export default function DocumentChecklistByVisaEn() {
             icon: <Globe className="w-4 h-4" />,
             title: 'UK (UKVI spouse visa)',
             description: 'Requires PSA Marriage Certificate, PSA Birth Certificate, and NBI Clearance with DFA Apostille. Documents must comply with UKVI requirements.',
+          },
+          {
+            icon: <Globe className="w-4 h-4" />,
+            title: 'UAE (residence visa / family sponsorship)',
+            description: 'Requires NBI Clearance with DFA Apostille for most visa categories. PSA Birth Certificate and PSA Marriage Certificate may also be required depending on your emirate and employer.',
           },
           {
             icon: <Globe className="w-4 h-4" />,

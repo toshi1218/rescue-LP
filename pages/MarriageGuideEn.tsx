@@ -11,8 +11,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function MarriageGuideEn() {
   useMeta(
-    'Marrying a Filipino? Documents We Get for You [March 2026]',
-    'Planning to marry a Filipino/Filipina? We handle all Philippine documents — CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille. Shipped to your door. Free consultation for US and JP petitioners.',
+    'Marrying a Filipino? Documents We Get for You [April 2026]',
+    'Planning to marry a Filipino/Filipina? We handle all Philippine documents — CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille. Shipped worldwide. Free consultation for K-1, spouse visa, and partner visa petitioners.',
   );
   return (
     <PageLayout
@@ -86,7 +86,7 @@ export default function MarriageGuideEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

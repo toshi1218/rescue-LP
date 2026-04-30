@@ -6,16 +6,16 @@ import { useLanguage } from '../lib/i18n';
 // ── English variant data ──────────────────────────────────────────────────────
 
 const enBadges = [
-  { icon: '🏢', label: 'Japanese Corporation' },
-  { icon: '✈️', label: 'No travel to Philippines' },
-  { icon: '🛡️', label: 'Free cancellation at consultation stage' },
+  { icon: '🔍', label: 'Acceptance Check Included' },
+  { icon: '📄', label: 'Physical PSA Originals' },
+  { icon: '📦', label: 'DHL Express Worldwide' },
 ];
 
 const enDocItems = [
-  { label: 'PSA Birth Certificate', sub: '+ DFA Apostille' },
-  { label: 'CENOMAR', sub: '+ DFA Apostille' },
-  { label: 'NBI Clearance', sub: '+ Apostille available' },
-  { label: 'DHL Express Worldwide', sub: '→ Your address' },
+  { label: 'Acceptance Check', sub: 'Verify what format your authority needs' },
+  { label: 'Physical PSA Document', sub: 'Original certificate, not e-Cert' },
+  { label: 'DFA Apostille', sub: 'Paper apostille for immigration use' },
+  { label: 'DHL Express Worldwide', sub: '→ Delivered to your address' },
 ];
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -126,7 +126,7 @@ const Hero: React.FC = () => {
           <img
             alt="Philippine document procurement — IGRS office operations"
             className="w-full h-full object-cover"
-            style={{ objectPosition: '60% 50%' }}
+            style={{ objectPosition: '92% 50%' }}
             src="/hero-photo.png"
             width={1600}
             height={900}
@@ -158,17 +158,17 @@ const Hero: React.FC = () => {
 
           {/* Eyebrow */}
           <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
-            Philippine Document Retrieval Service
+            Philippine Document Service for Overseas Submission
           </span>
 
           {/* H1 */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-5 drop-shadow-sm">
-            Philippine Documents —<br />
-            <span className="text-primary">Organized for Your Application.</span>
+            Philippine PSA Documents<br />
+            <span className="text-primary">for Overseas Submission.</span>
           </h1>
 
           <p className="text-gray-200 mb-8 text-sm md:text-base leading-relaxed max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            We identify, retrieve, and arrange the Philippine documents required for your marriage, visa, or immigration case — including paper Apostille where needed — and ship worldwide via DHL Express.
+            Not every authority accepts a printed PSA e-Certificate or e-Apostille. We verify your receiving authority's requirements, procure physical PSA originals, and ship worldwide via DHL Express.
           </p>
 
           {/* CTAs */}
@@ -238,14 +238,14 @@ const Hero: React.FC = () => {
               ))}
             </div>
 
-            {/* DFA Apostille stamp */}
-            <div className="mx-5 mb-4 bg-amber-50 border border-amber-100 rounded-xl px-4 py-3 flex items-center justify-between">
+            {/* Authority check badge */}
+            <div className="mx-5 mb-4 bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 flex items-center justify-between">
               <div>
-                <p className="text-xs font-bold text-amber-800">DFA Apostille</p>
-                <p className="text-xs text-amber-600">Required by many consulates</p>
+                <p className="text-xs font-bold text-blue-800">Authority-Accepted Format</p>
+                <p className="text-xs text-blue-600">UAE · Korea · Europe · USA · more</p>
               </div>
-              <div className="w-11 h-11 rounded-full border-2 border-amber-400 flex items-center justify-center">
-                <span className="text-[8px] text-amber-600 font-bold text-center leading-tight">HAGUE<br/>CONV.</span>
+              <div className="w-11 h-11 rounded-full border-2 border-blue-400 flex items-center justify-center">
+                <span className="text-[8px] text-blue-600 font-bold text-center leading-tight">FORMAT<br/>VERIFIED</span>
               </div>
             </div>
 

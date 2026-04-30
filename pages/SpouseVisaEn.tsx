@@ -11,7 +11,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function SpouseVisaEn() {
   useMeta(
-    'Spouse Visa Document Service [March 2026] | PSA & NBI',
+    'Spouse Visa Document Service [April 2026] | PSA & NBI',
     'Overwhelmed by Philippine document requirements for a spouse visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship everything to you. Free consultation for petitioners.',
   );
   return (
@@ -86,7 +86,7 @@ export default function SpouseVisaEn() {
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

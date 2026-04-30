@@ -61,7 +61,7 @@ export default function MarriageOrderEn() {
         badges={['Compare Both Approaches', 'Required Documents Listed', 'Decide by Your Situation']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <article className="space-y-10">

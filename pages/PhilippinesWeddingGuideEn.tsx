@@ -63,7 +63,7 @@ export default function PhilippinesWeddingGuideEn() {
         badges={['Step-by-Step Procedures', 'Required Documents Listed', 'Common Pitfalls Covered']}
         ctaText="Ask About Documents"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <article className="space-y-10">

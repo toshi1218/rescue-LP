@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function UsVisaDocsEn() {
   useMeta(
-    'K-1 / CR-1 Visa Documents Service [March 2026]',
+    'K-1 / CR-1 Visa Documents Service [April 2026]',
     'US petitioner for a K-1 or CR-1/IR-1 visa? We retrieve all Philippine documents — PSA, CENOMAR, NBI + DFA Apostille — and ship to your door. Free consultation for American petitioners.',
   );
   return (
@@ -87,7 +87,7 @@ export default function UsVisaDocsEn() {
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock
@@ -177,7 +177,7 @@ export default function UsVisaDocsEn() {
         items={[
           { href: '/en/k1-visa-documents/', title: 'K-1 Fiancé Visa Documents', description: 'Specific document checklist for K-1 visa petitions filed with USCIS.' },
           { href: '/en/cr1-visa-documents/', title: 'CR-1 / IR-1 Visa Documents', description: 'Specific document checklist for CR-1 and IR-1 spousal immigrant visas.' },
-          { href: '/en/spouse-visa-documents/', title: 'Spouse Visa Documents', description: 'Documents for Japan spouse visa applicants from the Philippines.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'Certificate of No Marriage required for K-1 fiancé visa and most US immigration cases involving a Filipino national.' },
           { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'Authentication required by US immigration for Philippine documents.' },
         ]}
       />

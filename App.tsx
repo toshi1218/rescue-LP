@@ -32,14 +32,22 @@ class ErrorBoundary extends Component<{ children: ReactNode }, ErrorBoundaryStat
 const HomeEn = lazy(() => import('./pages/HomeEn'));
 const HomeJa = lazy(() => import('./pages/HomeJa'));
 const CenomarGuideEn = lazy(() => import('./pages/CenomarGuideEn'));
+const CenomarMeaningEn = lazy(() => import('./pages/CenomarMeaningEn'));
+const CenomarAbroadEn = lazy(() => import('./pages/CenomarAbroadEn'));
+const CenomarTohaJa = lazy(() => import('./pages/CenomarTohaJa'));
+const PsaSerbilisEn = lazy(() => import('./pages/PsaSerbilisEn'));
 const CenomarGuideJa = lazy(() => import('./pages/CenomarGuideJa'));
 const CenomarApostilleEn = lazy(() => import('./pages/CenomarApostilleEn'));
 const CenomarApostilleJa = lazy(() => import('./pages/CenomarApostilleJa'));
 const CenomarValidityEn = lazy(() => import('./pages/CenomarValidityEn'));
 const CenomarValidityJa = lazy(() => import('./pages/CenomarValidityJa'));
+const PsaOnlineEn = lazy(() => import('./pages/PsaOnlineEn'));
+const PhilippineStatisticsAuthorityEn = lazy(() => import('./pages/PhilippineStatisticsAuthorityEn'));
+const PsaEcertificateAbroadEn = lazy(() => import('./pages/PsaEcertificateAbroadEn'));
 const PsaBirthCertEn = lazy(() => import('./pages/PsaBirthCertEn'));
 const PsaBirthCertJa = lazy(() => import('./pages/PsaBirthCertJa'));
 const NbiGuideEn = lazy(() => import('./pages/NbiGuideEn'));
+const NbiClearanceOnlineEn = lazy(() => import('./pages/NbiClearanceOnlineEn'));
 const NbiGuideJa = lazy(() => import('./pages/NbiGuideJa'));
 const NbiHitEn = lazy(() => import('./pages/NbiHitEn'));
 const NbiHitJa = lazy(() => import('./pages/NbiHitJa'));
@@ -79,6 +87,8 @@ const AustraliaDocsEn = lazy(() => import('./pages/AustraliaDocsEn'));
 const AustraliaDocsJa = lazy(() => import('./pages/AustraliaDocsJa'));
 const UkDocsEn = lazy(() => import('./pages/UkDocsEn'));
 const UkDocsJa = lazy(() => import('./pages/UkDocsJa'));
+const NewZealandDocsEn = lazy(() => import('./pages/NewZealandDocsEn'));
+const GermanyDocsEn = lazy(() => import('./pages/GermanyDocsEn'));
 const CompanyEn = lazy(() => import('./pages/CompanyEn'));
 const CompanyJa = lazy(() => import('./pages/CompanyJa'));
 const ContactEn = lazy(() => import('./pages/ContactEn'));
@@ -128,6 +138,7 @@ const HomeKo = lazy(() => import('./pages/HomeKo'));
 const PricingKo = lazy(() => import('./pages/PricingKo'));
 const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
 const NbiKo = lazy(() => import('./pages/NbiKo'));
+const PsaEcertificateHangukKo = lazy(() => import('./pages/PsaEcertificateHangukKo'));
 const ContactKo = lazy(() => import('./pages/ContactKo'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const FloatingChatWidget = lazy(() => import('./components/FloatingChatWidget'));
@@ -183,8 +194,16 @@ export default function App() {
 
         <Route path="/en/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
         <Route path="/en/cenomar/" element={<CenomarGuideEn />} />
+        <Route path="/en/cenomar-meaning" element={<Navigate to="/en/cenomar-meaning/" replace />} />
+        <Route path="/en/cenomar-meaning/" element={<CenomarMeaningEn />} />
+        <Route path="/en/how-to-get-cenomar-abroad" element={<Navigate to="/en/how-to-get-cenomar-abroad/" replace />} />
+        <Route path="/en/how-to-get-cenomar-abroad/" element={<CenomarAbroadEn />} />
+        <Route path="/en/psa-serbilis" element={<Navigate to="/en/psa-serbilis/" replace />} />
+        <Route path="/en/psa-serbilis/" element={<PsaSerbilisEn />} />
         <Route path="/ja/cenomar" element={<Navigate to="/ja/cenomar/" replace />} />
         <Route path="/ja/cenomar/" element={<CenomarGuideJa />} />
+        <Route path="/ja/cenomar-toha" element={<Navigate to="/ja/cenomar-toha/" replace />} />
+        <Route path="/ja/cenomar-toha/" element={<CenomarTohaJa />} />
         <Route path="/en/cenomar-apostille" element={<Navigate to="/en/cenomar-apostille/" replace />} />
         <Route path="/en/cenomar-apostille/" element={<CenomarApostilleEn />} />
         <Route path="/ja/cenomar-apostille" element={<Navigate to="/ja/cenomar-apostille/" replace />} />
@@ -193,10 +212,18 @@ export default function App() {
         <Route path="/en/cenomar-validity/" element={<CenomarValidityEn />} />
         <Route path="/ja/cenomar-koyukigen" element={<Navigate to="/ja/cenomar-koyukigen/" replace />} />
         <Route path="/ja/cenomar-koyukigen/" element={<CenomarValidityJa />} />
+        <Route path="/en/psa-online" element={<Navigate to="/en/psa-online/" replace />} />
+        <Route path="/en/psa-online/" element={<PsaOnlineEn />} />
+        <Route path="/en/psa-ecertificate-abroad" element={<Navigate to="/en/psa-ecertificate-abroad/" replace />} />
+        <Route path="/en/psa-ecertificate-abroad/" element={<PsaEcertificateAbroadEn />} />
+        <Route path="/en/philippine-statistics-authority" element={<Navigate to="/en/philippine-statistics-authority/" replace />} />
+        <Route path="/en/philippine-statistics-authority/" element={<PhilippineStatisticsAuthorityEn />} />
         <Route path="/en/psa-birth-certificate" element={<Navigate to="/en/psa-birth-certificate/" replace />} />
         <Route path="/en/psa-birth-certificate/" element={<PsaBirthCertEn />} />
         <Route path="/ja/psa-shussei-shomeisho" element={<Navigate to="/ja/psa-shussei-shomeisho/" replace />} />
         <Route path="/ja/psa-shussei-shomeisho/" element={<PsaBirthCertJa />} />
+        <Route path="/en/nbi-clearance-online" element={<Navigate to="/en/nbi-clearance-online/" replace />} />
+        <Route path="/en/nbi-clearance-online/" element={<NbiClearanceOnlineEn />} />
         <Route path="/en/nbi-clearance" element={<Navigate to="/en/nbi-clearance/" replace />} />
         <Route path="/en/nbi-clearance/" element={<NbiGuideEn />} />
         <Route path="/ja/nbi-clearance" element={<Navigate to="/ja/nbi-clearance/" replace />} />
@@ -277,6 +304,10 @@ export default function App() {
         <Route path="/en/uk/" element={<UkDocsEn />} />
         <Route path="/ja/uk" element={<Navigate to="/ja/uk/" replace />} />
         <Route path="/ja/uk/" element={<UkDocsJa />} />
+        <Route path="/en/new-zealand" element={<Navigate to="/en/new-zealand/" replace />} />
+        <Route path="/en/new-zealand/" element={<NewZealandDocsEn />} />
+        <Route path="/en/germany" element={<Navigate to="/en/germany/" replace />} />
+        <Route path="/en/germany/" element={<GermanyDocsEn />} />
         <Route path="/en/company" element={<Navigate to="/en/company/" replace />} />
         <Route path="/en/company/" element={<CompanyEn />} />
         <Route path="/ja/company" element={<Navigate to="/ja/company/" replace />} />
@@ -375,6 +406,8 @@ export default function App() {
         <Route path="/ko/f-6-philippines-documents/" element={<F6DocsKo />} />
         <Route path="/ko/nbi-clearance" element={<Navigate to="/ko/nbi-clearance/" replace />} />
         <Route path="/ko/nbi-clearance/" element={<NbiKo />} />
+        <Route path="/ko/psa-ecertificate-hanguk" element={<Navigate to="/ko/psa-ecertificate-hanguk/" replace />} />
+        <Route path="/ko/psa-ecertificate-hanguk/" element={<PsaEcertificateHangukKo />} />
         <Route path="/ko/contact" element={<Navigate to="/ko/contact/" replace />} />
         <Route path="/ko/contact/" element={<ContactKo />} />
 
@@ -447,9 +480,9 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       </Suspense>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <FloatingChatWidget />
-      </Suspense>
+      </Suspense> */}
       </ErrorBoundary>
     </>
   );

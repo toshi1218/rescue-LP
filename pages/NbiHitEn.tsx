@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function NbiHitEn() {
   useMeta(
-    'NBI HIT Resolution Service [March 2026] — We Fix It',
+    'NBI HIT Resolution Service [April 2026] — We Fix It',
     'NBI HIT (MATCH FOUND) delaying your spouse visa or immigration? We handle HIT resolution + NBI Clearance + DFA Apostille. We\'ve helped many petitioners meet their deadlines. Free consultation.',
   );
   return (
@@ -87,7 +87,7 @@ export default function NbiHitEn() {
         badges={['English Support', 'Case-by-Case Handling', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

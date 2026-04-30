@@ -12,8 +12,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function PsaCostEn() {
   useMeta(
-    'PSA Birth Certificate Cost Philippines 2026: PHP 365 + Apostille',
-    'PSA Birth Certificate official fee: PHP 365 per copy (2026). All-in from US$349 incl. DFA Apostille + DHL Express worldwide. No hidden fees. Free quote.',
+    'PSA Birth Certificate Cost [2026]: PHP 365 — Retrieve & Ship Worldwide',
+    'PSA Birth Certificate costs PHP 365/copy. We retrieve, apostille, and ship to your door from US$349 all-in. No return trip needed. Free quote.',
   );
   return (
     <PageLayout
@@ -103,7 +103,7 @@ export default function PsaCostEn() {
         badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">

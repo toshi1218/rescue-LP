@@ -11,7 +11,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function DfaProcessingTimeEn() {
   useMeta(
-    'DFA Apostille Processing Time [March 2026]',
+    'DFA Apostille Processing Time [April 2026]',
     'DFA Apostille takes 5–10 business days. Worried about your visa deadline? Our express proxy service can help you meet it. Free consultation to check your timeline.',
   );
   return (
@@ -79,7 +79,7 @@ export default function DfaProcessingTimeEn() {
         badges={['Deadline-Aware Scheduling', 'Ships via DHL', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

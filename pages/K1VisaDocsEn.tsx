@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function K1VisaDocsEn() {
   useMeta(
-    'K-1 Visa Documents: CENOMAR, PSA & NBI [March 2026]',
+    'K-1 Visa Documents: CENOMAR, PSA & NBI [April 2026]',
     'American petitioner for a K-1 visa? We retrieve CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille for your Filipino fiancé(e). Ships to your US address. Free consultation.',
   );
   return (
@@ -87,7 +87,7 @@ export default function K1VisaDocsEn() {
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock

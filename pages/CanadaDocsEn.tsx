@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function CanadaDocsEn() {
   useMeta(
-    'PH Documents for Canada Immigration [March 2026]',
+    'PH Documents for Canada Immigration [April 2026]',
     'Applying for Canada PR or spousal sponsorship? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for IRCC. Ships via DHL. Free consultation.',
   );
   return (
@@ -87,7 +87,7 @@ export default function CanadaDocsEn() {
         badges={['IRCC-Ready', 'DFA Apostille Included', 'Ships to Canada via DHL']}
         ctaText="Start Free Consultation"
         ctaHref="#contact"
-        lastUpdated="March 1, 2026"
+        lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock
