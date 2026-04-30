@@ -521,8 +521,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Fee Philippines ${SEO_YEAR} — PHP 365 + Apostille`,
-    description: `PSA Birth Certificate fee: PHP 365 per copy (${SEO_YEAR}). Total with DFA Apostille + DHL international shipping from USD $349. No hidden fees.`,
+    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: PHP 365 — Retrieve & Ship Worldwide`,
+    description: `PSA Birth Certificate costs PHP 365/copy. We retrieve, apostille, and ship to your door from US$349 all-in. No return trip needed. Free quote.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -1171,7 +1171,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/haigusha-visa-shorui/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa-shorui', 'index.html'),
-    title: `配偶者ビザに必要な書類チェックリスト【2026年3月版】フィリピン人配偶者の在留資格認定証明書申請`,
+    title: `配偶者ビザに必要な書類チェックリスト【${SEO_YEAR_MONTH_JA}】フィリピン人配偶者の在留資格認定証明書申請`,
     description: '2025年6月23日改正対応。フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。結核非発病証明書の追加要件・PSA書類・CENOMARをまとめてご案内。',
     canonical: `${BASE}/ja/haigusha-visa-shorui/`,
     lang: 'ja',
@@ -1324,7 +1324,6 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/haigusha-visa-shorui/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
-    noindex: true,
   },
   {
     path: '/en/japan-first-vs-philippines-first-marriage/',
