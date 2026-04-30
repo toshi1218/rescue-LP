@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function ApostilleGuideEn() {
   useMeta(
-    'DFA Apostille Service [March 2026] — No Trip Needed',
+    'DFA Apostille Service [April 2026] — No Trip Needed',
     'Need a DFA Apostille but can\'t go to the Philippines? We handle PSA, NBI, CENOMAR authentication — and ship to you. Free consultation available.',
   );
   return (

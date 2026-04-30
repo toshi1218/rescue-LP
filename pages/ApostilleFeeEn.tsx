@@ -11,7 +11,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function ApostilleFeeEn() {
   useMeta(
-    'DFA Apostille Fee [March 2026] — Full Price Breakdown',
+    'DFA Apostille Fee [April 2026] — Full Price Breakdown',
     'Full cost breakdown for DFA Apostille: official fees + proxy service + international shipping. Compare CENOMAR, PSA, and NBI pricing. Free quote available.',
   );
   return (
