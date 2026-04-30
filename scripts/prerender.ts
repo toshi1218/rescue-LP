@@ -388,6 +388,18 @@ const routes: RouteConfig[] = [
     datePublished: '2026-04-30',
   },
   {
+    path: '/en/how-to-get-cenomar-abroad/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'how-to-get-cenomar-abroad', 'index.html'),
+    title: `How to Get CENOMAR From Abroad [${SEO_YEAR}] — No Philippines Trip Needed`,
+    description: `Get your PSA CENOMAR from outside the Philippines. Step-by-step guide for OFWs and Filipinos living abroad. We retrieve, apostille, and ship worldwide. Free quote.`,
+    canonical: `${BASE}/en/how-to-get-cenomar-abroad/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/how-to-get-cenomar-abroad/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+    datePublished: '2026-04-30',
+  },
+  {
     path: '/en/cenomar-apostille/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-apostille', 'index.html'),
     title: `CENOMAR Apostille Service [${SEO_YEAR_MONTH_EN}] | We Handle It`,

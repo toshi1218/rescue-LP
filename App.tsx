@@ -33,6 +33,7 @@ const HomeEn = lazy(() => import('./pages/HomeEn'));
 const HomeJa = lazy(() => import('./pages/HomeJa'));
 const CenomarGuideEn = lazy(() => import('./pages/CenomarGuideEn'));
 const CenomarMeaningEn = lazy(() => import('./pages/CenomarMeaningEn'));
+const CenomarAbroadEn = lazy(() => import('./pages/CenomarAbroadEn'));
 const CenomarGuideJa = lazy(() => import('./pages/CenomarGuideJa'));
 const CenomarApostilleEn = lazy(() => import('./pages/CenomarApostilleEn'));
 const CenomarApostilleJa = lazy(() => import('./pages/CenomarApostilleJa'));
@@ -189,6 +190,8 @@ export default function App() {
         <Route path="/en/cenomar/" element={<CenomarGuideEn />} />
         <Route path="/en/cenomar-meaning" element={<Navigate to="/en/cenomar-meaning/" replace />} />
         <Route path="/en/cenomar-meaning/" element={<CenomarMeaningEn />} />
+        <Route path="/en/how-to-get-cenomar-abroad" element={<Navigate to="/en/how-to-get-cenomar-abroad/" replace />} />
+        <Route path="/en/how-to-get-cenomar-abroad/" element={<CenomarAbroadEn />} />
         <Route path="/ja/cenomar" element={<Navigate to="/ja/cenomar/" replace />} />
         <Route path="/ja/cenomar/" element={<CenomarGuideJa />} />
         <Route path="/en/cenomar-apostille" element={<Navigate to="/en/cenomar-apostille/" replace />} />
