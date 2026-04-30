@@ -400,6 +400,18 @@ const routes: RouteConfig[] = [
     datePublished: '2026-04-30',
   },
   {
+    path: '/en/psa-serbilis/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'psa-serbilis', 'index.html'),
+    title: `PSA Serbilis [${SEO_YEAR}]: What It Was & How to Get PSA Documents Now`,
+    description: `PSA Serbilis was the PSA's online delivery service for civil registry documents. Now replaced by PSAHelpline.ph. Learn how to get your PSA Birth Certificate, CENOMAR, or Marriage Certificate today.`,
+    canonical: `${BASE}/en/psa-serbilis/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/psa-serbilis/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+    datePublished: '2026-04-30',
+  },
+  {
     path: '/en/cenomar-apostille/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-apostille', 'index.html'),
     title: `CENOMAR Apostille Service [${SEO_YEAR_MONTH_EN}] | We Handle It`,
