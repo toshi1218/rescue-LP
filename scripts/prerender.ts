@@ -410,6 +410,18 @@ const routes: RouteConfig[] = [
     ogType: 'article',
   },
   {
+    path: '/en/psa-online/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'psa-online', 'index.html'),
+    title: `PSA Online: How to Get PSA Certificates from Abroad [${SEO_YEAR}]`,
+    description: `PSA Serbilis lets you order PSA certificates online — but only ships within the Philippines. OFWs and overseas Filipinos use a document service to retrieve and ship PSA documents worldwide.`,
+    canonical: `${BASE}/en/psa-online/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/psa-online/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+    datePublished: '2026-04-30',
+  },
+  {
     path: '/en/psa-birth-certificate/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate', 'index.html'),
     title: `PSA Birth Certificate + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
