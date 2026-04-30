@@ -81,6 +81,14 @@ export default function PsaEcertificateHangukKo() {
                 text: 'DFA는 두 가지 형식을 발행합니다. (1) e-Apostille: PSA e-Certificate에 첨부되는 디지털 PDF. 전자 제출 전용이며, 인쇄하면 유효성을 잃습니다. (2) 종이 아포스티유(Paper Apostille): PSA SECPA 용지에 붙이는 물리적 스티커. 모든 제출 방식에서 사용 가능합니다. 2026년 3월 16일부터 DFA는 헤이그 조약 가입국에 대해 e-Apostille를 표준으로 발행하고 있습니다. 종이 아포스티유가 필요한 경우에는 별도의 "Paper Route"로 신청해야 합니다.',
               },
             },
+            {
+              '@type': 'Question',
+              name: 'PSA e-Certificate와 PSA SECPA(Security Paper) 원본의 차이는 무엇인가요?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'PSA e-Certificate는 PSA가 처음부터 디지털로 발행하는 PDF 파일입니다. 실물 종이가 존재하지 않습니다. PSA SECPA는 보안 용지에 인쇄된 실물 문서로, 스캔하거나 직접 제출할 수 있습니다. 한국 기관이 "스캔 원본"을 요구하는 경우, 기대하는 것은 PSA SECPA 실물을 스캔한 이미지이며, PSA e-Certificate PDF 그 자체가 아닙니다. 국제결혼 신고 등 중요한 수속에는 PSA SECPA 원본을 취득하는 것이 안전합니다.',
+              },
+            },
           ],
         },
       ]}
@@ -103,14 +111,28 @@ export default function PsaEcertificateHangukKo() {
         </ul>
       </div>
 
-      {/* Key alert */}
-      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 mb-8 flex items-start gap-3">
-        <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-        <div>
-          <p className="font-bold text-gray-900 mb-1">중요: e-Apostille는 인쇄 문서가 아닙니다</p>
-          <p className="text-sm text-gray-700 leading-relaxed">
-            DFA 공식 안내에 따르면, <strong>e-Apostille를 인쇄하면 유효성을 잃습니다.</strong> 창구에서 확인해야 할 것은 "인쇄된 e-Apostille가 받아들여지는가"가 아니라, <strong>"PDF 파일 형식의 e-Apostille를 전자적으로 제출할 수 있는가"</strong>입니다. 제출처가 종이 원본을 요구하는 경우, PSA SECPA 용지와 물리적 아포스티유가 필요한 별도 경로가 있습니다.
-          </p>
+      {/* Key alerts */}
+      <div className="space-y-4 mb-8">
+        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 flex items-start gap-3">
+          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <div>
+            <p className="font-bold text-gray-900 mb-1">중요 ①: e-Apostille는 인쇄 문서가 아닙니다</p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              DFA 공식 안내에 따르면, <strong>e-Apostille를 인쇄하면 유효성을 잃습니다.</strong> 창구에서 확인해야 할 것은 "인쇄된 e-Apostille가 받아들여지는가"가 아니라, <strong>"PDF 파일 형식의 e-Apostille를 전자적으로 제출할 수 있는가"</strong>입니다. 제출처가 종이 원본을 요구하는 경우, PSA SECPA 용지와 물리적 아포스티유가 필요한 별도 경로가 있습니다.
+            </p>
+          </div>
+        </div>
+        <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 flex items-start gap-3">
+          <AlertTriangle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+          <div>
+            <p className="font-bold text-gray-900 mb-1">중요 ②: PSA e-Certificate ≠ PSA SECPA 스캔</p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <strong>PSA e-Certificate</strong>는 처음부터 디지털 전용으로 발행된 PDF로, 실물 종이가 존재하지 않습니다.
+              반면 <strong>PSA SECPA(Security Paper) 원본</strong>은 보안 용지에 인쇄된 실물 문서로, 스캔하거나 직접 제출할 수 있습니다.
+              한국 기관이 "스캔 제출"을 허용한다고 해도, 기대하는 것은 PSA SECPA 실물을 스캔한 이미지이며, PSA e-Certificate PDF 그 자체가 아닙니다.
+              종이 원본이 필요한 절차(국제결혼 신고 등)에는 반드시 PSA SECPA를 취득하십시오.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -154,7 +176,8 @@ export default function PsaEcertificateHangukKo() {
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
-                ['형식', 'PDF 파일 전용', 'SECPA 용지에 스티커 부착'],
+                ['형식', 'PDF 파일 전용 (실물 없음)', 'SECPA 보안 용지에 스티커 부착'],
+                ['기반 문서', 'PSA e-Certificate (디지털 전용)', 'PSA SECPA (실물 종이 문서)'],
                 ['제출 방법', '전자 업로드 전용', '실물 또는 스캔 원본'],
                 ['인쇄 제출', '✗ 인쇄하면 유효성 상실', '✓ 실물 문서'],
                 ['한국 조약상 유효성', '✓ 유효 (헤이그 조약)', '✓ 유효'],
