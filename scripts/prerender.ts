@@ -376,6 +376,18 @@ const routes: RouteConfig[] = [
     ogType: 'article',
   },
   {
+    path: '/en/cenomar-meaning/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-meaning', 'index.html'),
+    title: `CENOMAR Meaning: What Is It & Why You Need It [${SEO_YEAR}]`,
+    description: `CENOMAR stands for Certificate of No Marriage Record — an official PSA document proving a Filipino is legally single. Required for K-1 fiancé visa, CR-1, and marriage abroad.`,
+    canonical: `${BASE}/en/cenomar-meaning/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/cenomar-meaning/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+    datePublished: '2026-04-30',
+  },
+  {
     path: '/en/cenomar-apostille/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-apostille', 'index.html'),
     title: `CENOMAR Apostille Service [${SEO_YEAR_MONTH_EN}] | We Handle It`,
