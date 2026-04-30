@@ -12,12 +12,12 @@ const servicesData = {
     { icon: Fingerprint,  title: '帰化・無犯罪証明関連',    subtitle: '帰化・その他',   desc: '用途に応じて必要書類を確認したい方へ', hasBadge: false, path: '/ja/nbi-clearance/' },
   ],
   en: [
-    { icon: UserX,       title: 'CENOMAR',       subtitle: 'CENOMAR Procurement (Certificate of No Marriage)',  desc: 'Required for international marriage & spouse visa. We handle the full procurement.', hasBadge: true,  path: '/en/cenomar/' },
-    { icon: Baby,        title: 'PSA Birth',     subtitle: 'PSA Birth Certificate Procurement',                desc: 'Full PSA Birth Certificate procurement. DFA Apostille bundling available.',          hasBadge: false, path: '/en/psa-birth-certificate/' },
-    { icon: Heart,       title: 'PSA Marriage',  subtitle: 'PSA Marriage Certificate Procurement',             desc: 'Full PSA Marriage Certificate procurement. Apostille bundle option available.',     hasBadge: false, path: '/en/psa-marriage-certificate/' },
-    { icon: Fingerprint, title: 'NBI Clearance', subtitle: 'NBI Clearance Procurement',                       desc: 'NBI Clearance for spouse visa and naturalization. DFA authentication included on request.', hasBadge: false, path: '/en/nbi-clearance/' },
-    { icon: Car,         title: 'LTO Documents', subtitle: 'LTO Document Procurement (License Transfer)',      desc: 'LTO documents for foreign license conversion. OR/CR also handled.',                 hasBadge: false, path: '/en/drivers-license-conversion/' },
-    { icon: BadgeCheck,  title: 'DFA Apostille', subtitle: 'DFA Apostille Authentication',                    desc: 'DFA Apostille (Philippine DFA) bundled with document procurement.',                hasBadge: false, path: '/en/apostille/' },
+    { icon: UserX,       title: 'CENOMAR',        subtitle: 'CENOMAR — Physical Original for Marriage & Visa',   desc: 'Physical PSA-issued CENOMAR for international marriage, spouse visa, and civil registry. Many consulates require physical originals, not printed e-Certificates.', hasBadge: true,  path: '/en/cenomar/' },
+    { icon: Baby,        title: 'PSA Birth Cert', subtitle: 'PSA Birth Certificate — Physical Original',         desc: 'Physical PSA Birth Certificate for immigration, visa, and civil registration abroad. DFA Apostille bundling for submission to Hague Convention countries.',        hasBadge: false, path: '/en/psa-birth-certificate/' },
+    { icon: Heart,       title: 'PSA Marriage',   subtitle: 'PSA Marriage Certificate — Physical Original',      desc: 'Physical PSA Marriage Certificate for naturalization, family registration, and dependent visa applications. Apostille bundle available.',                       hasBadge: false, path: '/en/psa-marriage-certificate/' },
+    { icon: Fingerprint, title: 'NBI Clearance',  subtitle: 'NBI Clearance for Immigration & Visa',             desc: 'NBI Clearance for spouse visa, naturalization, and work visa abroad. DFA authentication included on request for countries requiring embassy-level authentication.', hasBadge: false, path: '/en/nbi-clearance/' },
+    { icon: Car,         title: 'LTO Documents',  subtitle: 'LTO Documents for License Conversion',             desc: "LTO driver's abstract and certification for foreign license conversion. Required format confirmed per destination country — OR/CR also handled.",                  hasBadge: false, path: '/en/drivers-license-conversion/' },
+    { icon: BadgeCheck,  title: 'DFA Apostille',  subtitle: 'DFA Apostille & Embassy Authentication',           desc: 'Paper DFA Apostille for Hague Convention countries. Embassy authentication for non-Hague authorities including UAE, Saudi Arabia, and others.',                  hasBadge: false, path: '/en/apostille/' },
   ],
 };
 
@@ -42,6 +42,16 @@ const Services: React.FC = () => {
             <p className="text-base text-gray-500 mt-2">{t('services.subtitle')}</p>
             <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
           </div>
+
+          {lang === 'en' && (
+            <div className="mb-6 p-4 bg-blue-50 border border-blue-100 rounded-xl flex items-start gap-3">
+              <span className="text-blue-500 text-lg flex-shrink-0 mt-0.5">🔍</span>
+              <div>
+                <p className="text-sm font-bold text-blue-800 mb-1">Not sure if your authority accepts an e-Certificate?</p>
+                <p className="text-sm text-blue-700">UAE, Korea, Italy, Germany, and many others require physical PSA originals — not printed e-Certificates. We verify acceptance requirements before you order.</p>
+              </div>
+            </div>
+          )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {services.map((service, index) => (

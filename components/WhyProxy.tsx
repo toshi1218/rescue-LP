@@ -19,12 +19,11 @@ const WhyProxy: React.FC = React.memo(() => {
         <div className="text-center mb-10">
           <p className="text-xs font-bold text-primary-dark uppercase tracking-widest mb-2">Why a Proxy Service?</p>
           <h2 id="why-proxy-heading" className="text-2xl md:text-3xl font-bold text-secondary leading-snug">
-            Official Channels Cannot Ship<br className="hidden md:block" /> Paper Apostille Overseas
+            Will Your Authority Accept<br className="hidden md:block" /> a Printed e-Certificate?
           </h2>
           <p className="mt-3 text-base text-gray-600 max-w-xl mx-auto">
-            PSA Helpline and Serbilis can mail regular PSA certificates internationally —
-            but <strong>paper-based DFA Apostille documents cannot be shipped directly overseas</strong> through any official channel.
-            A local intermediary in the Philippines is the only path.
+            PSA now issues e-Certificates that anyone can print — but <strong>many immigration authorities, consulates, and civil registries still require physical PSA originals</strong>, not printed e-Certificates or e-Apostille.
+            Acceptance varies by country, authority, and document type.
           </p>
         </div>
 
@@ -37,11 +36,11 @@ const WhyProxy: React.FC = React.memo(() => {
               <span className="flex items-center justify-center w-9 h-9 rounded-full bg-red-50 text-red-500 flex-shrink-0">
                 <AlertTriangle className="w-5 h-5" />
               </span>
-              <h3 className="text-base font-bold text-gray-800">The Official Limitation</h3>
+              <h3 className="text-base font-bold text-gray-800">The e-Certificate Problem</h3>
             </div>
             <p className="text-base text-gray-600 leading-relaxed">
-              DFA Apostille is issued as a <strong>physical paper document</strong> attached to the original certificate.
-              PSA Helpline and Serbilis offer e-Apostille for digital use, but <strong>paper Apostille originals — required by USCIS, IRCC, Home Affairs, and UKVI — cannot be shipped overseas through official channels.</strong>
+              PSA e-Certificates are authentic — but <strong>authorities in UAE, Saudi Arabia, Korea, Italy, Germany, and others require physical PSA originals</strong>, not printouts.
+              DFA also issues paper Apostille as a physical attachment; <strong>paper Apostille originals cannot be shipped overseas through official channels.</strong>
             </p>
           </div>
 
@@ -69,8 +68,7 @@ const WhyProxy: React.FC = React.memo(() => {
               <h3 className="text-base font-bold text-gray-800">How We Solve It</h3>
             </div>
             <p className="text-base text-gray-600 leading-relaxed">
-              Our Cebu-based team handles the entire process locally — PSA retrieval, DFA Apostille authentication,
-              and <strong>DHL Express international shipping directly to your address</strong> — wherever you are in the world.
+              We first confirm what format your receiving authority accepts. Then our Cebu-based team handles PSA retrieval, DFA Apostille where required, and <strong>DHL Express international shipping directly to your address</strong> — in exactly the format your authority needs.
               No trip to the Philippines. No local contacts needed.
             </p>
           </div>
@@ -80,7 +78,7 @@ const WhyProxy: React.FC = React.memo(() => {
         {/* Bottom CTA strip */}
         <div className="bg-secondary rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-base text-white font-medium text-center sm:text-left">
-            We handle everything from PSA to DFA Apostille to DHL — so you don't have to.
+            We verify your authority's requirements, then prepare the exact format needed — physical original, Apostille, or both.
           </p>
           <a
             href="#contact"
