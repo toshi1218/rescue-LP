@@ -6,6 +6,24 @@ ph-document.com is a multilingual (EN/JA/KO) Philippine document service site bu
 
 ## SEO Safety Rules
 
+### SEO変更の危険度レベル（触るな危険度）
+
+| レベル | 名称 | 頻度 | 対象 |
+|--------|------|------|------|
+| 🚨 **レベル1** | 激ヤバゾーン | サイトリニューアル等の非常時のみ | URLパス・ドメイン変更 |
+| ⚠️ **レベル2** | 取扱注意ゾーン | 言語追加・ページ統廃合時のみ | hreflang・canonical・301リダイレクト・robots.txt・noindex |
+| 🟡 **レベル3** | 定期メンテゾーン | 数週間〜数ヶ月に1回 | title・H1・meta description・グローバルナビリンク |
+| 🟢 **レベル4** | 毎日ウェルカムゾーン | 毎日・何度でもOK | 本文テキスト・新規ページ追加・内部リンク追加・画像とalt属性 |
+
+**基本方針**: 構造（レベル1・2）は固め、中身（レベル3・4）を磨き続ける。
+
+- **レベル1**: 公開済みURLを変更するとゼロからの評価になる。絶対に変更しない。
+- **レベル2**: Googleがサイト構造を理解するための指示書。設定ミスで重要ページが検索結果から消滅しうる。一度正しく設定したら言語追加・ページ統廃合以外では触らない。
+- **レベル3**: 変更後はGoogleの反応を見るために最低2週間〜1ヶ月は様子を見る。頻繁な変更は順位不安定化の原因になる。
+- **レベル4**: Googleは最新で有益な情報を高く評価する。ここは事故ることはほぼなく、むしろプラスに働く。
+
+---
+
 **SEO-destructive changes** include modifications to: hreflang, canonical, noindex, robots.txt, sitemap.xml, `_redirects`, or `scripts/prerender.ts` route configs.
 
 ### Before making any SEO-destructive change:
