@@ -64,11 +64,8 @@ ph-document.com は過去に 2 度「サイト全死」を経験:
 - **結果**: マージコンフリクト解消時に noindex フラグが意図せず残る等で、重要ページがインデックスから消失
 - **修正**: build 時に noindex ページ数をカウントし、前回 build からの増減を警告
 
-### 2-D. `/en/f-6-philippines-documents/` の hreflang reciprocity 違反
-- **場所**: `scripts/prerender.ts` f-6 route 定義
-- **現状**: KO ページは EN を hreflang alternate に指すが、EN ページは hreflang を出していない
-- **結果**: Google が reciprocity 違反を検出し、hreflang シグナルを無視する
-- **修正**: EN f-6 ページに `koCanonical` を追加し reciprocity を修復
+### ~~2-D. `/en/f-6-philippines-documents/` の hreflang reciprocity 違反~~ → 対応不要
+- F-6ビザは韓国固有の制度。ENページは `noindex: true` で存在するが、KOページは EN f-6 を hreflang alternate に指していない（`enCanonical: /en/`＝ホームページ）。reciprocity 違反は実際には発生していない。KO単独ページが正しい状態。
 
 ---
 
@@ -123,7 +120,7 @@ git config core.hooksPath .githooks
 |---|--------|-----------|------|
 | B1 | Search Console で hreflang 回復確認 | — | 判断ポイント: 4/23 (3 週間後) |
 | B2 | 回復しない場合の追加調査 | — | canonical 競合, content quality |
-| B3 | `/en/f-6/` hreflang reciprocity 修正 | 2-D | 1 ページのみ |
+| ~~B3~~ | ~~`/en/f-6/` hreflang reciprocity 修正~~ | ~~2-D~~ | **対応不要**: KO単独ページが正しい状態（2026-05-01確認） |
 | B4 | lastUpdated 個別日付化 (1-2 ページテスト) | 3-A, 3-B | cenomar, psa-birth-cert から |
 | B5 | 旧 URL インデックス残存対応 | 3-D | Search Console URL 削除 |
 | B6 | useMeta.ts hreflang 再設計 (差分更新) | 2-A | SPA 遷移の品質向上 |
