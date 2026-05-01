@@ -216,8 +216,8 @@ const en: typeof ja = {
   'hero.pricingAriaLabel': 'Go to pricing plans',
 
   // ── Services ─────────────────────────────────────────────────────────
-  'services.title': 'CENOMAR, PSA, LTO & Apostille Procurement Service',
-  'services.subtitle': 'Full-service Philippine document procurement — order from anywhere in the world',
+  'services.title': 'Documents in the Format Your Authority Accepts',
+  'services.subtitle': 'Not all receiving authorities accept e-Certificates. We verify requirements and procure physical PSA originals where needed.',
   'services.badge': 'Most Popular',
   'services.agencies.title': 'Issuing Agencies',
   'services.agencies.psa': 'PSA (Philippine Statistics Authority)',
@@ -269,13 +269,13 @@ const en: typeof ja = {
   'footer.copyright': '© 2026 IGRS Inc.',
 
   // ── PainPoints ───────────────────────────────────────────────────────
-  'painpoints.title': 'Do Any of These Sound Familiar?',
-  'painpoints.1.title': '"Is anyone working on this?"',
-  'painpoints.1.desc': 'You paid, but there are no updates. You have no idea if anything is actually happening.',
-  'painpoints.2.title': '"What if the docs are wrong?"',
-  'painpoints.2.desc': 'A missing Apostille or wrong format could delay your visa or get your application rejected.',
-  'painpoints.3.title': '"I have no idea what I need."',
-  'painpoints.3.desc': "Every country's immigration authority has different requirements. It's impossible to figure out alone.",
+  'painpoints.title': 'Worried Your Documents Won\'t Be Accepted?',
+  'painpoints.1.title': '"Will they accept an e-Certificate?"',
+  'painpoints.1.desc': 'Many authorities in UAE, Europe, and Korea require physical PSA originals — not a printed e-Certificate. We check first.',
+  'painpoints.2.title': '"What format do I actually need?"',
+  'painpoints.2.desc': 'Apostille, embassy authentication, physical original, or e-Apostille — every receiving authority has different rules. Wrong format means rejection.',
+  'painpoints.3.title': '"I don\'t know who to ask."',
+  'painpoints.3.desc': 'Philippine agencies handle issuance, not submission advice. Your foreign authority handles immigration, not Philippine procedures. We bridge the gap.',
   'painpoints.4.title': '"What if this is a scam?"',
   'painpoints.4.desc': 'Cross-border transactions with no physical presence feel risky. How do you know who to trust?',
 

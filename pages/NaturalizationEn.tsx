@@ -11,7 +11,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function NaturalizationEn() {
   useMeta(
-    'Naturalization Document Service [March 2026] | PSA & NBI',
+    'Naturalization Document Service [April 2026] | PSA & NBI',
     'Applying for citizenship or naturalization and need Philippine civil documents? We retrieve PSA Birth Certificate, NBI Clearance + DFA Apostille and ship to your address worldwide via DHL. Free consultation.',
   );
   return (

@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function CenomarApostilleEn() {
   useMeta(
-    'CENOMAR Apostille Service [March 2026] | We Handle It',
+    'CENOMAR Apostille Service [April 2026] | We Handle It',
     'Not sure if your CENOMAR needs DFA Apostille? We advise and handle retrieval with or without Apostille. Free consultation for marriage and visa applicants.',
   );
   return (
@@ -75,7 +75,7 @@ export default function CenomarApostilleEn() {
               name: 'Does USCIS accept e-Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Most USCIS and NVC submissions require a paper Apostille original. We confirm the required format for your specific case.',
+                text: 'USCIS may accept copies; however, the US NVC and US Embassy Manila require physical PSA documents on Security Paper (SECPA) with a paper Apostille for interviews and document submissions. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. We confirm the required format for your specific case.',
               },
             },
           ],
@@ -167,7 +167,7 @@ export default function CenomarApostilleEn() {
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
-          { q: 'Do immigration authorities accept e-Apostille?', a: 'Most immigration authorities (USCIS, IRCC, Home Affairs, UKVI) require a paper Apostille original. We confirm the required format for your specific case.' },
+          { q: 'Do immigration authorities accept e-Apostille?', a: 'It depends on the country. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. US NVC, US Embassy Manila, and UAE require a physical paper Apostille on PSA Security Paper (SECPA). Note: printing an e-Apostille does not make it valid — it must be submitted as a PDF. We confirm the required format for your specific case.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
