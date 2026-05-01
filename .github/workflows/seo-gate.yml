@@ -1,0 +1,54 @@
+name: SEO Gate — PR Block on Destructive Changes
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  seo-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for hreflang deletions
+        run: |
+          DELETED=$(git diff origin/main...HEAD -- scripts/prerender.ts | grep '^-' | grep -E 'hreflang|jaCanonical|enCanonical|koCanonical|x-default' | grep -v '^---' || true)
+          if [ -n "$DELETED" ]; then
+            echo "::error::🚨 hreflang/canonical の削除が検出されました。レベル2変更のため要確認:"
+            echo "$DELETED"
+            exit 1
+          fi
+
+      - name: Check for noindex additions
+        run: |
+          ADDED=$(git diff origin/main...HEAD -- scripts/prerender.ts | grep '^+' | grep -E 'noindex.*true' | grep -v '^+++' || true)
+          if [ -n "$ADDED" ]; then
+            echo "::error::🚨 noindex追加が検出されました。レベル2変更のため要確認:"
+            echo "$ADDED"
+            exit 1
+          fi
+
+      - name: Check sitemap URL count does not decrease
+        run: |
+          # mainブランチのsitemap URLカウント
+          MAIN_COUNT=$(git show origin/main:public/sitemap.xml 2>/dev/null | grep -c '<loc>' || echo 0)
+          # 現在のsitemap URLカウント
+          CURRENT_COUNT=$(grep -c '<loc>' public/sitemap.xml 2>/dev/null || echo 0)
+          echo "main: $MAIN_COUNT URLs, current: $CURRENT_COUNT URLs"
+          if [ "$CURRENT_COUNT" -lt "$MAIN_COUNT" ]; then
+            echo "::error::🚨 sitemapのURL数が減少しています（$MAIN_COUNT → $CURRENT_COUNT）。ページ削除の意図がある場合はレビュアーに確認してください。"
+            exit 1
+          fi
+
+      - name: Check robots.txt not changed to block crawlers
+        run: |
+          DIFF=$(git diff origin/main...HEAD -- public/robots.txt || true)
+          if echo "$DIFF" | grep '^+' | grep -qE 'Disallow: /$|Disallow: \*' 2>/dev/null; then
+            echo "::error::🚨 robots.txtで全クロールをブロックする設定が追加されました。レベル2変更のため要確認。"
+            exit 1
+          fi
+
+      - name: SEO gate passed
+        run: echo "✅ SEOゲート通過: hreflang削除・noindex追加・sitemap URL減少・robots.txt全ブロックなし"
