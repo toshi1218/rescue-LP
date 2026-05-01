@@ -383,7 +383,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/cenomar-meaning/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar-meaning/`,
-    jaCanonical: `${BASE}/ja/`,
+    jaCanonical: `${BASE}/ja/cenomar-toha/`,
     ogType: 'article',
     datePublished: '2026-04-30',
   },
