@@ -40,6 +40,7 @@ interface RouteConfig {
   koCanonical?: string;
   ogType?: string;
   datePublished?: string;
+  lastmod?: string;
   isAboutPage?: boolean;
   noindex?: boolean;
 }
@@ -363,6 +364,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/`,
     koCanonical: `${BASE}/ko/`,
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/cenomar/',
@@ -374,6 +376,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/cenomar/`,
     jaCanonical: `${BASE}/ja/cenomar/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/cenomar-meaning/',
@@ -548,6 +551,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/international-marriage-guide/`,
     jaCanonical: `${BASE}/ja/kokusai-kekkon-guide/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/spouse-visa-documents/',
@@ -559,6 +563,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/spouse-visa-documents/`,
     jaCanonical: `${BASE}/ja/haigusha-visa/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/psa-marriage-certificate/',
@@ -570,6 +575,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/psa-marriage-certificate/`,
     jaCanonical: `${BASE}/ja/psa-kekkon-shomeisho/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/drivers-license-conversion/',
@@ -581,6 +587,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
     jaCanonical: `${BASE}/ja/gaimen-kirikae-guide/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/naturalization-guide/',
@@ -592,6 +599,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/naturalization-guide/`,
     jaCanonical: `${BASE}/ja/kika-shinsei-guide/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/guides/',
@@ -679,6 +687,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/cr1-visa-documents/`,
     jaCanonical: `${BASE}/ja/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/canada/',
@@ -804,6 +813,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/pricing/`,
     jaCanonical: `${BASE}/ja/ryokin/`,
     koCanonical: `${BASE}/ko/pricing/`,
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/company/',
@@ -848,6 +858,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/cenomar-vs-marriage-certificate/`,
     jaCanonical: `${BASE}/ja/cenomar-vs-marriage-certificate/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/document-checklist-by-visa/',
@@ -859,6 +870,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/document-checklist-by-visa/`,
     jaCanonical: `${BASE}/ja/document-checklist-by-visa/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/en/nbi-clearance-overseas/',
@@ -881,6 +893,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/psa-late-registration/`,
     jaCanonical: `${BASE}/ja/psa-late-registration/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
 
   {
@@ -952,6 +965,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/`,
     koCanonical: `${BASE}/ko/`,
+    lastmod: '2026-05-01',
   },
   {
     path: '/ja/cenomar/',
@@ -1075,6 +1089,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/spouse-visa-documents/`,
     jaCanonical: `${BASE}/ja/haigusha-visa/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/ja/psa-kekkon-shomeisho/',
@@ -1129,6 +1144,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
     jaCanonical: `${BASE}/ja/psa-shussei-cost/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/ja/psa-crs-cebu-genchi-report/',
@@ -1196,6 +1212,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/pricing/`,
     jaCanonical: `${BASE}/ja/ryokin/`,
     koCanonical: `${BASE}/ko/pricing/`,
+    lastmod: '2026-05-01',
   },
   {
     path: '/ja/company/',
@@ -1324,6 +1341,7 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/spouse-visa-document-checklist/`,
     jaCanonical: `${BASE}/ja/haigusha-visa-shorui/`,
     ogType: 'article',
+    lastmod: '2026-05-01',
   },
   {
     path: '/ja/business/',
@@ -1943,7 +1961,7 @@ async function generateSitemap() {
 
     entries.push(`  <url>
     <loc>${route.canonical}</loc>${hreflangBlock}
-    <lastmod>${SEO_DATE_ISO}</lastmod>
+    <lastmod>${route.lastmod ?? SEO_DATE_ISO}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`);
