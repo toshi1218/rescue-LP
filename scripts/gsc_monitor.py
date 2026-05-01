@@ -2,9 +2,11 @@
 GSC日次監視スクリプト
 GitHub Actionsで毎日09:00 JSTに自動実行される
 比較方法: 直近7日移動平均 vs 前週同期間7日移動平均
+監視項目: インプレッション数・インデックスページ数・リダイレクト確認
 """
 import os
 import datetime
+import urllib.request
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
@@ -15,6 +17,14 @@ SCOPES = ['https://www.googleapis.com/auth/webmasters.readonly']
 # アラート閾値
 IMPRESSION_DROP_THRESHOLD = 0.30   # 7日平均で前週比30%以上の減少
 ZERO_IMPRESSION_THRESHOLD = 10     # 前週平均がこれ以上あったのに今週ゼロはアラート
+INDEX_DROP_THRESHOLD = 5           # インデックス済みページが5件以上減少
+
+# 旧URLリダイレクト確認（最重要のもの）
+REDIRECT_CHECKS = [
+    ('https://ph-document.com/cenomar/', 'https://ph-document.com/en/cenomar/'),
+    ('https://ph-document.com/nbi-clearance/', 'https://ph-document.com/en/nbi-clearance/'),
+    ('https://ph-document.com/apostille/', 'https://ph-document.com/en/apostille/'),
+]
 
 
 def get_credentials():
@@ -45,6 +55,55 @@ def get_impressions(service, start_date, end_date):
     return int(rows[0].get('impressions', 0)), int(rows[0].get('clicks', 0))
 
 
+def get_sitemap_index_count(service):
+    """サイトマップからインデックス済みページ数を取得"""
+    try:
+        response = service.sitemaps().list(siteUrl=SITE_URL).execute()
+        sitemaps = response.get('sitemap', [])
+        for sitemap in sitemaps:
+            if 'sitemap.xml' in sitemap.get('path', ''):
+                for content in sitemap.get('contents', []):
+                    if content.get('type') == 'web':
+                        return {
+                            'submitted': int(content.get('submitted', 0)),
+                            'indexed': int(content.get('indexed', 0)),
+                        }
+    except Exception:
+        pass
+    return None
+
+
+def check_redirects():
+    """旧URLが正しく301リダイレクトされているか確認"""
+    errors = []
+    for old_url, expected_dest in REDIRECT_CHECKS:
+        try:
+            req = urllib.request.Request(
+                old_url,
+                headers={'User-Agent': 'redirect-checker/1.0'},
+            )
+            # リダイレクトを追わずに1ホップだけ確認
+            opener = urllib.request.build_opener(urllib.request.HTTPRedirectHandler())
+
+            class NoRedirect(urllib.request.HTTPRedirectHandler):
+                def redirect_request(self, req, fp, code, msg, headers, newurl):
+                    return None
+
+            opener = urllib.request.build_opener(NoRedirect())
+            try:
+                opener.open(req, timeout=10)
+            except urllib.error.HTTPError as e:
+                if e.code in (301, 302, 308):
+                    location = e.headers.get('Location', '')
+                    if expected_dest not in location and location != expected_dest:
+                        errors.append(f'リダイレクト先が変更: {old_url} → {location}（期待値: {expected_dest}）')
+                else:
+                    errors.append(f'リダイレクトエラー {e.code}: {old_url}')
+        except Exception as ex:
+            errors.append(f'リダイレクト確認失敗: {old_url} ({ex})')
+    return errors
+
+
 def format_report(alerts, stats):
     """レポート文字列を生成"""
     today = datetime.date.today().strftime('%Y-%m-%d')
@@ -62,8 +121,14 @@ def format_report(alerts, stats):
     lines.append(f'- 7日平均インプレッション/日: **{stats["avg_this"]:.1f}件**')
     lines.append(f'- 前週同期間平均: {stats["avg_last"]:.1f}件')
     lines.append(f'- 前週比: {stats["change_pct"]:+.1f}%')
-    lines.append('')
 
+    if stats.get('sitemap_indexed') is not None:
+        lines.append('')
+        lines.append('## 📄 インデックス状況')
+        lines.append(f'- サイトマップ登録数: {stats["sitemap_submitted"]}ページ')
+        lines.append(f'- インデックス済み: **{stats["sitemap_indexed"]}ページ**')
+
+    lines.append('')
     if not alerts:
         lines.append('✅ 異常なし')
 
@@ -77,14 +142,10 @@ def main():
     service = build('searchconsole', 'v1', credentials=creds)
 
     today = datetime.date.today()
-    # GSCは2日遅延があるため、2日前までのデータを使用
     end_date = today - datetime.timedelta(days=2)
 
-    # 直近7日（今週）
     this_start = end_date - datetime.timedelta(days=6)
     this_end = end_date
-
-    # 前週同期間（7日前〜14日前）
     last_start = this_start - datetime.timedelta(days=7)
     last_end = this_end - datetime.timedelta(days=7)
 
@@ -97,14 +158,17 @@ def main():
 
     avg_this = impressions_this / 7
     avg_last = impressions_last / 7
+    change = (avg_this - avg_last) / avg_last if avg_last > 0 else 0
 
-    if avg_last > 0:
-        change = (avg_this - avg_last) / avg_last
-    else:
-        change = 0
+    # インデックスページ数取得
+    sitemap_stats = get_sitemap_index_count(service)
+
+    # リダイレクト確認
+    redirect_errors = check_redirects()
 
     alerts = []
 
+    # インプレッションアラート
     if impressions_last > ZERO_IMPRESSION_THRESHOLD and impressions_this == 0:
         alerts.append('インプレッションがゼロになりました（サイト消滅の可能性）')
     elif avg_last > 1 and change <= -IMPRESSION_DROP_THRESHOLD:
@@ -113,25 +177,42 @@ def main():
             f'（前週平均 {avg_last:.1f}/日 → 今週平均 {avg_this:.1f}/日）'
         )
 
+    # インデックスページ数アラート（前回の記録と比較）
+    if sitemap_stats:
+        indexed = sitemap_stats['indexed']
+        # 環境変数で前回値を保持（初回は無視）
+        prev_indexed = int(os.environ.get('PREV_INDEXED_COUNT', 0))
+        if prev_indexed > 0 and (prev_indexed - indexed) >= INDEX_DROP_THRESHOLD:
+            alerts.append(
+                f'インデックス済みページが {INDEX_DROP_THRESHOLD}件以上減少: '
+                f'{prev_indexed}ページ → {indexed}ページ'
+            )
+
+    # リダイレクトアラート
+    for err in redirect_errors:
+        alerts.append(err)
+
     stats = {
         'impressions_this': impressions_this,
         'clicks_this': clicks_this,
         'avg_this': avg_this,
         'avg_last': avg_last,
         'change_pct': change * 100,
+        'sitemap_indexed': sitemap_stats['indexed'] if sitemap_stats else None,
+        'sitemap_submitted': sitemap_stats['submitted'] if sitemap_stats else None,
     }
 
     report = format_report(alerts, stats)
     print(report)
 
-    # GitHub Actions の出力に設定
     if os.environ.get('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
             has_alerts = 'true' if alerts else 'false'
             f.write(f'has_alerts={has_alerts}\n')
             f.write(f'report<<EOF\n{report}\nEOF\n')
+            if sitemap_stats:
+                f.write(f'indexed_count={sitemap_stats["indexed"]}\n')
 
-    # アラートがある場合は終了コード1（GitHub Actionsで通知トリガー）
     if alerts:
         exit(1)
 

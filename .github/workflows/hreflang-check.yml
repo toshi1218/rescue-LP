@@ -1,0 +1,38 @@
+name: hreflang Post-Deploy Check
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for Cloudflare Pages deploy
+        run: sleep 120
+
+      - name: Run hreflang check
+        id: hreflang
+        run: python scripts/check_hreflang.py
+        continue-on-error: true
+
+      - name: Send alert if hreflang broken
+        if: steps.hreflang.outcome == 'failure'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.ALERT_EMAIL }}
+          password: ${{ secrets.ALERT_EMAIL_PASSWORD }}
+          to: ${{ secrets.ALERT_EMAIL }}
+          subject: '🚨 ph-document.com hreflangエラー検出'
+          body: |
+            デプロイ後のhreflangチェックでエラーが検出されました。
+
+            ${{ steps.hreflang.outputs.hreflang_errors }}
+
+            直ちに確認してください:
+            https://github.com/toshi1218/rescue-LP/actions
