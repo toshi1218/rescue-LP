@@ -1,4 +1,4 @@
-name: GSC Weekly Monitor
+name: GSC Daily Monitor
 
 on:
   schedule:
