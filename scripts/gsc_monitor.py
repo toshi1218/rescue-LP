@@ -17,7 +17,7 @@ SCOPES = ['https://www.googleapis.com/auth/webmasters.readonly']
 # アラート閾値
 IMPRESSION_DROP_THRESHOLD = 0.30   # 7日平均で前週比30%以上の減少
 ZERO_IMPRESSION_THRESHOLD = 10     # 前週平均がこれ以上あったのに今週ゼロはアラート
-INDEX_DROP_THRESHOLD = 5           # インデックス済みページが5件以上減少
+INDEX_MIN_THRESHOLD = 70           # インデックス済みページがこれ以下になったらアラート（現在約83ページ）
 
 # 旧URLリダイレクト確認（最重要のもの）
 REDIRECT_CHECKS = [
@@ -83,8 +83,6 @@ def check_redirects():
                 headers={'User-Agent': 'redirect-checker/1.0'},
             )
             # リダイレクトを追わずに1ホップだけ確認
-            opener = urllib.request.build_opener(urllib.request.HTTPRedirectHandler())
-
             class NoRedirect(urllib.request.HTTPRedirectHandler):
                 def redirect_request(self, req, fp, code, msg, headers, newurl):
                     return None
@@ -149,7 +147,7 @@ def main():
     this_start = end_date - datetime.timedelta(days=6)
     this_end = end_date
     last_start = this_start - datetime.timedelta(days=7)
-    last_end = this_end - datetime.timedelta(days=7)
+    last_end = last_start + datetime.timedelta(days=6)
 
     impressions_this, clicks_this = get_impressions(
         service, this_start.isoformat(), this_end.isoformat()
@@ -179,15 +177,13 @@ def main():
             f'（前週平均 {avg_last:.1f}/日 → 今週平均 {avg_this:.1f}/日）'
         )
 
-    # インデックスページ数アラート（前回の記録と比較）
+    # インデックスページ数アラート（絶対閾値）
     if sitemap_stats:
         indexed = sitemap_stats['indexed']
-        # 環境変数で前回値を保持（初回は無視）
-        prev_indexed = int(os.environ.get('PREV_INDEXED_COUNT', 0))
-        if prev_indexed > 0 and (prev_indexed - indexed) >= INDEX_DROP_THRESHOLD:
+        if indexed > 0 and indexed < INDEX_MIN_THRESHOLD:
             alerts.append(
-                f'インデックス済みページが {INDEX_DROP_THRESHOLD}件以上減少: '
-                f'{prev_indexed}ページ → {indexed}ページ'
+                f'インデックス済みページが{INDEX_MIN_THRESHOLD}件を下回りました: '
+                f'現在 {indexed}ページ（正常時: 約83ページ）'
             )
 
     # リダイレクトアラート
