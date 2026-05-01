@@ -22,14 +22,14 @@ export default function CenomarGuideEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMAR Retrieval Service (PSA + DFA Apostille)',
-        description: 'We retrieve CENOMAR from PSA with DFA Apostille and ship worldwide via DHL. Required for immigration and visa applications in the US, Canada, Australia, UK, Japan and more.',
+        description: 'We retrieve CENOMAR from PSA with DFA Apostille and ship worldwide via DHL. Required for immigration and visa applications in the US, Canada, Australia, UK, UAE and more.',
         url: 'https://ph-document.com/en/cenomar/',
         provider: {
           '@type': 'Organization',
           name: 'IGRS Inc.',
           url: 'https://ph-document.com/en/',
         },
-        areaServed: ['US', 'CA', 'AU', 'GB', 'JP', 'KR'],
+        areaServed: ['US', 'CA', 'AU', 'GB', 'AE', 'KR'],
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',

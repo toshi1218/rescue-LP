@@ -1293,7 +1293,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/haigusha-visa-shorui/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa-shorui', 'index.html'),
-    title: `配偶者ビザに必要な書類チェックリスト【2026年3月版】フィリピン人配偶者の在留資格認定証明書申請`,
+    title: `配偶者ビザに必要な書類チェックリスト【${SEO_YEAR_MONTH_JA}】フィリピン人配偶者の在留資格認定証明書申請`,
     description: '2025年6月23日改正対応。フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。結核非発病証明書の追加要件・PSA書類・CENOMARをまとめてご案内。',
     canonical: `${BASE}/ja/haigusha-visa-shorui/`,
     lang: 'ja',
@@ -1459,7 +1459,6 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/haigusha-visa-shorui/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
-    noindex: true,
   },
   {
     path: '/en/japan-first-vs-philippines-first-marriage/',
