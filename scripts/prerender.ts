@@ -541,8 +541,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/international-marriage-guide/',
     outFile: path.join(projectRoot, 'dist', 'en', 'international-marriage-guide', 'index.html'),
-    title: `Marrying a Filipino? Documents We Get for You [${SEO_YEAR_MONTH_EN}]`,
-    description: `Marrying a Filipino? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille — shipped worldwide. Free quote for petitioners.`,
+    title: `Philippine Documents for International Marriage [${SEO_YEAR}] — Complete Guide`,
+    description: `Getting married to a Filipino? CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille — we retrieve and ship worldwide. No trip needed. Free quote.`,
     canonical: `${BASE}/en/international-marriage-guide/`,
     lang: 'en',
     enCanonical: `${BASE}/en/international-marriage-guide/`,
@@ -574,8 +574,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/drivers-license-conversion/',
     outFile: path.join(projectRoot, 'dist', 'en', 'drivers-license-conversion', 'index.html'),
-    title: `PH License Conversion: LTO Documents [${SEO_YEAR_MONTH_EN}]`,
-    description: `Converting a Philippine driver's license? We retrieve the LTO Driver's Record with DFA Apostille and ship worldwide via DHL. Free quote.`,
+    title: `Philippine Driver's License Conversion [${SEO_YEAR}] — LTO Record + Apostille`,
+    description: `Need your LTO Driver's Record for license conversion abroad? We retrieve it with DFA Apostille and ship to USA, Canada, Australia, Japan, UAE and more. Free quote.`,
     canonical: `${BASE}/en/drivers-license-conversion/`,
     lang: 'en',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
@@ -672,8 +672,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cr1-visa-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cr1-visa-documents', 'index.html'),
-    title: `CR-1 Visa Documents — NVC Ready [${SEO_YEAR_MONTH_EN}]`,
-    description: `CR-1/IR-1 visa petitioner? We retrieve PSA Marriage Certificate, NBI Clearance + DFA Apostille for NVC. Ships to your US address. Free consultation.`,
+    title: `CR-1 Visa Philippine Documents [${SEO_YEAR}] — PSA + Apostille for NVC`,
+    description: `CR-1/IR-1 spouse visa? Get PSA Marriage Certificate, Birth Certificate, NBI Clearance + DFA Apostille ready for NVC. We handle everything from abroad. Free quote.`,
     canonical: `${BASE}/en/cr1-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cr1-visa-documents/`,
@@ -1068,8 +1068,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/haigusha-visa/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa', 'index.html'),
-    title: `配偶者ビザの書類代行【${SEO_YEAR_MONTH_JA}】PSA・NBI・アポスティーユ`,
-    description: '入管が求める「紙の原本＋DFAアポスティーユ」形式でPSA婚姻証明書・出生証明書・CENOMARを代行取得。新規申請・更新・変更に対応。有効期限に合わせた取得タイミングもアドバイス。無料相談。',
+    title: `配偶者ビザ 必要書類【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI 取得代行`,
+    description: '配偶者ビザ申請に必要なPSA書類・CENOMAR・NBI・DFAアポスティーユを日本から代行取得。紙の原本対応。在留資格認定・更新・変更すべて対応。無料相談。',
     canonical: `${BASE}/ja/haigusha-visa/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/spouse-visa-documents/`,
