@@ -356,8 +356,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/',
     outFile: path.join(projectRoot, 'dist', 'en', 'index.html'),
-    title: `Philippine PSA Documents for Overseas Submission [${SEO_YEAR_MONTH_EN}]`,
-    description: `Not every authority accepts a PSA e-Certificate. We verify format requirements, procure physical originals + DFA Apostille, and ship via DHL worldwide.`,
+    title: `Philippine Documents for International Marriage & Visa [${SEO_YEAR_MONTH_EN}]`,
+    description: `Getting married to a Filipino, or moving countries together? We verify format requirements, procure physical PSA originals + DFA Apostille, and ship via DHL worldwide.`,
     canonical: `${BASE}/en/`,
     lang: 'en',
     enCanonical: `${BASE}/en/`,

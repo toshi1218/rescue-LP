@@ -158,17 +158,17 @@ const Hero: React.FC = () => {
 
           {/* Eyebrow */}
           <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
-            Philippine Document Service for Overseas Submission
+            Philippine Document Service for International Couples
           </span>
 
           {/* H1 */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-5 drop-shadow-sm">
-            Philippine PSA Documents<br />
-            <span className="text-primary">for Overseas Submission.</span>
+            Philippine Documents<br />
+            <span className="text-primary">for Marriage, Visa & Your Next Country.</span>
           </h1>
 
           <p className="text-gray-200 mb-8 text-sm md:text-base leading-relaxed max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            Not every authority accepts a printed PSA e-Certificate or e-Apostille. We verify your receiving authority's requirements, procure physical PSA originals, and ship worldwide via DHL Express.
+            Getting married to a Filipino, or moving to a new country together? We verify format requirements, procure physical PSA originals with DFA Apostille, and ship to your door worldwide via DHL — no trip to the Philippines needed.
           </p>
 
           {/* CTAs */}
