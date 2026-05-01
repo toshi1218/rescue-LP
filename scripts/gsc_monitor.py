@@ -92,6 +92,8 @@ def check_redirects():
             opener = urllib.request.build_opener(NoRedirect())
             try:
                 opener.open(req, timeout=10)
+                # 200が返った = リダイレクトが消えてコンテンツを直接返している
+                errors.append(f'リダイレクト消滅（200応答）: {old_url} → 期待値は301 → {expected_dest}')
             except urllib.error.HTTPError as e:
                 if e.code in (301, 302, 308):
                     location = e.headers.get('Location', '')
