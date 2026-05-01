@@ -112,6 +112,11 @@ const Footer: React.FC = () => {
                 ? '※ ご提供いただいた個人情報は、ご相談・書類取得業務のみに使用します。第三者への提供は行いません。'
                 : '* Your information is used solely for this inquiry and document procurement. We do not share it with third parties.'}
             </p>
+            <p className="text-xs text-gray-500 mt-1.5">
+              {isJa
+                ? '💳 お支払い: Visa · Mastercard · Amex · Apple Pay · Google Pay（Stripe）'
+                : '💳 Pay by credit card — Visa · Mastercard · Amex · Apple Pay · Google Pay'}
+            </p>
           </div>
         )}
 

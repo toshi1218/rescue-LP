@@ -206,6 +206,9 @@ const Hero: React.FC = () => {
             <p className="text-white/60 text-xs">
               International Marriage Package from US$899 (Apostille + DHL incl.)
             </p>
+            <p className="text-white/50 text-xs mt-0.5">
+              💳 Pay by credit card — Visa · Mastercard · Amex · Apple Pay
+            </p>
           </div>
         </div>
 
