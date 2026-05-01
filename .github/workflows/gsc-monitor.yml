@@ -2,7 +2,7 @@ name: GSC Weekly Monitor
 
 on:
   schedule:
-    - cron: '0 0 * * 1'  # 毎週月曜 09:00 JST (UTC 00:00)
+    - cron: '0 0 * * *'  # 毎日 09:00 JST (UTC 00:00)
   workflow_dispatch:       # 手動実行も可能
 
 jobs:
