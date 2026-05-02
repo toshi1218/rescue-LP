@@ -203,6 +203,24 @@ export default function NaturalizationJa() {
         ]}
       />
 
+      <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-8 mb-8">
+        <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+          <div className="px-4 py-3 font-bold">内容</div>
+          <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+        </div>
+        {[
+          { label: 'PSA書類取得（複数書類一括）', price: '込み' },
+          { label: 'DFAアポスティーユ認証', price: '込み' },
+          { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+          { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+        ].map((row, i) => (
+          <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+            <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+            <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+          </div>
+        ))}
+      </div>
+
       <StepList
         variant="visual"
         heading="ご依頼の流れ"
