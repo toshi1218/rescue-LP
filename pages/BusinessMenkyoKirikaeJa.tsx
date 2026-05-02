@@ -28,8 +28,8 @@ import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function BusinessMenkyoKirikaeJa() {
   useMeta(
-    `フィリピン人従業員の日本免許切替サポート｜登録支援機関・監理団体向け【${SEO_YEAR_MONTH_JA}】`,
-    '登録支援機関・監理団体向け。フィリピン人従業員の外免切替に必要なLTO書類（Certification・License History）＋DFAアポスティーユを代行取得。複数名一括対応・進捗報告・請求書払い。日本の免許センターへの代理申請は非対応。',
+    `フィリピン人従業員の日本免許切替サポート｜雇用企業・事業者向け【${SEO_YEAR_MONTH_JA}】`,
+    'フィリピン人従業員を採用した企業・事業者の総務担当者向け。外免切替に必要なLTO書類（Certification・License History）＋DFAアポスティーユを代行取得。複数名一括対応・進捗報告・請求書払い。',
   );
 
   return (
@@ -37,15 +37,15 @@ export default function BusinessMenkyoKirikaeJa() {
       breadcrumbs={[
         { label: 'ホーム', href: '/ja/' },
         { label: '法人の方へ', href: '/ja/business/' },
-        { label: '免許切替サポート（登録支援機関・監理団体）' },
+        { label: '免許切替サポート（雇用企業向け）' },
       ]}
       jsonLd={[
         {
           '@context': 'https://schema.org',
           '@type': 'Service',
-          name: 'フィリピン人従業員 外免切替LTO書類取得サポート（登録支援機関・監理団体向け）',
+          name: 'フィリピン人従業員 外免切替LTO書類取得サポート（雇用企業・事業者向け）',
           description:
-            '登録支援機関・監理団体向け。フィリピン人従業員の外免切替に必要なLTO書類＋DFAアポスティーユの取得を代行。複数名一括・進捗報告・請求書払い対応。',
+            'フィリピン人従業員を採用した企業・事業者向け。外免切替に必要なLTO書類＋DFAアポスティーユの取得を代行。複数名一括・進捗報告・請求書払い対応。',
           url: 'https://ph-document.com/ja/business/menkyo-kirikae/',
           provider: {
             '@type': 'Organization',
@@ -71,10 +71,10 @@ export default function BusinessMenkyoKirikaeJa() {
           mainEntity: [
             {
               '@type': 'Question',
-              name: '登録支援機関・監理団体からまとめて依頼できますか？',
+              name: '複数の従業員分をまとめて依頼できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。1名から複数名まで一括でご依頼いただけます。案件ごとに管理番号を付けて進捗を整理し、担当者様へまとめてご報告します。',
+                text: 'はい。1名から複数名まで一括でご依頼いただけます。案件ごとに管理番号を付けて進捗を整理し、担当者様へまとめてご報告します。継続案件は料金についてもご相談いただけます。',
               },
             },
             {
@@ -114,7 +114,7 @@ export default function BusinessMenkyoKirikaeJa() {
               name: '請求書払いや銀行振込は対応していますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '法人のお客様には銀行振込・請求書払いに対応しています。月末締め等、貴機関の経理フローに合わせてご相談いただけます。',
+                text: '法人のお客様には銀行振込・請求書払いに対応しています。月末締め等、貴社の経理フローに合わせてご相談いただけます。',
               },
             },
           ],
@@ -123,8 +123,8 @@ export default function BusinessMenkyoKirikaeJa() {
     >
       <HeroBanner
         title="フィリピン人従業員の日本免許切替サポート"
-        subtitle="登録支援機関・監理団体向け。フィリピン人材の運転開始に必要なLTO書類とDFAアポスティーユの取得を代行します。複数名一括・進捗報告・請求書払い対応。"
-        badges={['登録支援機関・監理団体向け', '複数名一括対応', '進捗報告付き', '請求書払い対応']}
+        subtitle="フィリピン人材を採用した企業・事業者向け。外免切替に必要なLTO書類とDFAアポスティーユの取得を代行します。複数名一括・進捗報告・請求書払い対応。"
+        badges={['雇用企業・事業者向け', '複数名一括対応', '進捗報告付き', '請求書払い対応']}
         ctaText="まず相談する"
         ctaHref="#contact"
         lastUpdated={SEO_LAST_UPDATED_JA}
@@ -132,10 +132,10 @@ export default function BusinessMenkyoKirikaeJa() {
 
       {/* Section 1: 誰向けか */}
       <SummaryBlock
-        conclusion="フィリピン人材を支援する機関の「総務負荷」を減らすためのサービスです。"
+        conclusion="フィリピン人従業員を雇用する企業・事業所の「総務負荷」を減らすためのサービスです。"
         points={[
           '運送・物流・建設・製造・介護など、社用車・業務車両を使う現場で増加中',
-          '登録支援機関・監理団体が1社で複数従業員分をまとめて依頼可能',
+          '1社で複数従業員分をまとめて依頼可能。採用計画に合わせて一括手配',
           'LTO書類（Certification・License History）＋DFAアポスティーユを一括代行',
           '日本語だけで完結。フィリピン側との英語・タガログ語対応は不要',
         ]}
@@ -143,7 +143,7 @@ export default function BusinessMenkyoKirikaeJa() {
 
       {/* Section 2: よくある詰まり */}
       <IconCardGrid
-        heading="登録支援機関・監理団体のよくある詰まり"
+        heading="雇用企業の総務担当者によくある困りごと"
         columns={3}
         cards={[
           {
@@ -164,7 +164,7 @@ export default function BusinessMenkyoKirikaeJa() {
             icon: Users,
             title: '複数名を同時に進めたい',
             description:
-              '従業員が複数いる。1名ずつ個別に手配するのは非効率で、担当者の負荷が大きい。',
+              '採用した従業員が複数いる。1名ずつ個別に手配するのは非効率で、担当者の負荷が大きい。',
             accent: 'green',
           },
           {
@@ -178,14 +178,14 @@ export default function BusinessMenkyoKirikaeJa() {
             icon: Car,
             title: '3か月条件を満たせるか分からない',
             description:
-              '免許取得後にフィリピンへ通算3か月以上滞在していたか、事前に確認できず不安。',
+              '免許取得後にフィリピンへ通算3か月以上滞在していたか、採用前に確認できず不安。',
             accent: 'purple',
           },
           {
             icon: Headphones,
             title: '現地とのやり取りが英語',
             description:
-              'フィリピン側の機関（LTO・DFA）との連絡は英語・タガログ語。担当者が対応できない。',
+              'フィリピン側の機関（LTO・DFA）との連絡は英語・タガログ語。社内に対応できる担当者がいない。',
             accent: 'teal',
           },
         ]}
@@ -262,7 +262,7 @@ export default function BusinessMenkyoKirikaeJa() {
           {
             title: '無料相談・状況確認',
             description:
-              '対象者のフィリピン免許証の有無・OR保有状況・免許取得後の滞在歴をお知らせください。複数名の場合は人数と時期の目安も共有いただければ、まとめてご案内します。',
+              '対象従業員のフィリピン免許証の有無・OR保有状況・免許取得後の滞在歴をお知らせください。複数名の場合は人数と時期の目安も共有いただければ、まとめてご案内します。',
           },
           {
             title: '必要書類の整理・お見積もり',
@@ -357,7 +357,7 @@ export default function BusinessMenkyoKirikaeJa() {
         <div className="flex items-center gap-3 mb-6">
           <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
           <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">
-            登録支援機関・監理団体向けサポート
+            雇用企業・事業者向けサポート
           </h2>
         </div>
         <IconCardGrid
@@ -382,21 +382,21 @@ export default function BusinessMenkyoKirikaeJa() {
               icon: BarChart3,
               title: '進捗報告レポート',
               description:
-                '複数名分の状況をまとめてご報告。担当者様が一目で状況把握できます。',
+                '複数名分の状況をまとめてご報告。総務担当者様が一目で状況把握できます。',
               accent: 'teal',
             },
             {
               icon: Headphones,
               title: '担当窓口の一本化',
               description:
-                '登録支援機関・監理団体専用の窓口を設置。問い合わせ先が分散しません。',
+                '法人専用の窓口を設置。問い合わせ先が分散せず、総務担当者の手間を最小化します。',
               accent: 'gold',
             },
             {
               icon: ClipboardList,
               title: '採用前の事前確認',
               description:
-                '内定前・入社前の段階でも、対象者の書類取得可能性を事前調査します。',
+                '内定前・入社前の段階でも、候補者の書類取得可能性を事前調査します。',
               accent: 'purple',
             },
             {
@@ -411,7 +411,7 @@ export default function BusinessMenkyoKirikaeJa() {
       </section>
 
       <CtaBox
-        title="まずは担当案件の状況をお聞かせください"
+        title="まずは担当従業員の状況をお聞かせください"
         description="対象者の人数・フィリピン免許の状況・就労開始希望時期をお知らせいただければ、必要書類と取得スケジュールをご案内します。複数名・継続案件のお見積もりも対応します。"
         buttonText="無料相談はこちら"
         href="#contact"
@@ -422,7 +422,7 @@ export default function BusinessMenkyoKirikaeJa() {
       <FaqSection
         items={[
           {
-            q: '登録支援機関・監理団体からまとめて依頼できますか？',
+            q: '複数の従業員分をまとめて依頼できますか？',
             a: 'はい。1名から複数名まで一括でご依頼いただけます。案件ごとに管理番号を付けて進捗を整理し、担当者様へまとめてご報告します。継続案件は料金についてもご相談いただけます。',
           },
           {
@@ -434,8 +434,8 @@ export default function BusinessMenkyoKirikaeJa() {
             a: 'できません。外免切替の申請は本人が免許センターへ出向く必要があります。当社が対応できるのは、フィリピン側で必要なLTO書類とDFAアポスティーユの取得代行のみです。',
           },
           {
-            q: '対象の従業員が外免切替できるかどうか、事前に確認できますか？',
-            a: '外免切替の可否の最終判断は各免許センターによりますが、フィリピン免許の有効性・免許取得後の3か月以上滞在条件の充足可能性について、事前にご確認いただけます。まずはご相談ください。',
+            q: '対象の従業員が外免切替できるかどうか、採用前に確認できますか？',
+            a: '外免切替の可否の最終判断は各免許センターによりますが、フィリピン免許の有効性・免許取得後の3か月以上滞在条件の充足可能性について、内定前の段階からご確認いただけます。まずはご相談ください。',
           },
           {
             q: '書類取得にどのくらいかかりますか？',
@@ -447,7 +447,7 @@ export default function BusinessMenkyoKirikaeJa() {
           },
           {
             q: '請求書払いや銀行振込は対応していますか？',
-            a: '法人のお客様には銀行振込・請求書払いに対応しています。月末締め等、貴機関の経理フローに合わせてご相談いただけます。',
+            a: '法人のお客様には銀行振込・請求書払いに対応しています。月末締め等、貴社の経理フローに合わせてご相談いただけます。',
           },
           {
             q: '採用前の段階で相談できますか？',
