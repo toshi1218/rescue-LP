@@ -120,16 +120,7 @@ export default function CenomarGuideJa() {
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
-      <SummaryBlock
-        conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
-        points={[
-          'PSA発行のCENOMAR取得からDFAアポスティーユまで一括対応',
-          '有効期限（発行から6ヶ月以内）に合わせたタイミングで手配',
-          '提出先の要件を確認し、そのまま使える状態でお届け',
-          'フィリピン渡航不要。まずは無料相談で必要書類を確認',
-        ]}
-        ctaText="無料で相談する（24時間以内に返信）"
-      />
+
       <div className="max-w-2xl mx-auto px-4 my-6">
         <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
           <div className="flex items-start gap-3">
@@ -150,6 +141,17 @@ export default function CenomarGuideJa() {
           </div>
         </div>
       </div>
+
+      <SummaryBlock
+        conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
+        points={[
+          'PSA発行のCENOMAR取得からDFAアポスティーユまで一括対応',
+          '有効期限（発行から6ヶ月以内）に合わせたタイミングで手配',
+          '提出先の要件を確認し、そのまま使える状態でお届け',
+          'フィリピン渡航不要。まずは無料相談で必要書類を確認',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
+      />
 
       <article className="max-w-2xl mx-auto px-4">
 

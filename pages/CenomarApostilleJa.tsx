@@ -94,17 +94,6 @@ export default function CenomarApostilleJa() {
         lastUpdated="2026年3月1日"
       />
 
-      <SummaryBlock
-        conclusion="CENOMARのDFAアポスティーユを、フィリピンに行かずに取得できます。"
-        points={[
-          'PSA CENOMAR取得からDFAアポスティーユまで一括代行',
-          '日本の提出先が求める「紙の原本アポスティーユ」形式で対応',
-          '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
-          '約1ヶ月〜で日本のご住所へ郵送',
-        ]}
-        ctaText="無料で相談する"
-      />
-
       <div className="max-w-2xl mx-auto px-4 my-6">
         <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
           <div className="flex items-start gap-3">
@@ -125,6 +114,17 @@ export default function CenomarApostilleJa() {
           </div>
         </div>
       </div>
+
+      <SummaryBlock
+        conclusion="CENOMARのDFAアポスティーユを、フィリピンに行かずに取得できます。"
+        points={[
+          'PSA CENOMAR取得からDFAアポスティーユまで一括代行',
+          '日本の提出先が求める「紙の原本アポスティーユ」形式で対応',
+          '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
+          '約1ヶ月〜で日本のご住所へ郵送',
+        ]}
+        ctaText="無料で相談する"
+      />
 
       <SectionDivider variant="beige">
         {/* 固有コンテンツ：アポスティーユとは・DFAの手順 */}
