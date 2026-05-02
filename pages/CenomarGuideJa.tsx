@@ -130,6 +130,27 @@ export default function CenomarGuideJa() {
         ]}
         ctaText="無料で相談する（24時間以内に返信）"
       />
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">【2026年3月16日以降】PSAのe-certificate移行について</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                2026年3月16日より、PSAはデジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）の発行に完全移行しました。
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                <strong>日本の市区町村役場・法務局・出入国在留管理庁は、e-Apostilleのプリントアウトを原則として受け付けません。</strong>
+                日本側にQRコードでオンライン検証する内部マニュアルが整備されておらず、「原本のコピー」として不受理になるリスクがあります。
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                当社は<strong>紙の原本＋DFAアポスティーユ</strong>で対応しています。e-certificateしか取れない方は、まずご相談ください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <article className="max-w-2xl mx-auto px-4">
 
         <SectionDivider variant="beige">
