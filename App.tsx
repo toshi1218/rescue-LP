@@ -105,6 +105,7 @@ const GyoseishoshiVsDocServiceJa = lazy(() => import('./pages/GyoseishoshiVsDocS
 const PhilippinesWeddingGuideJa = lazy(() => import('./pages/PhilippinesWeddingGuideJa'));
 const TbCertJa = lazy(() => import('./pages/TbCertJa'));
 const SpouseVisaShoryuJa = lazy(() => import('./pages/SpouseVisaShoryuJa'));
+const BusinessMenkyoKirikaeKigyouJa = lazy(() => import('./pages/BusinessMenkyoKirikaeKigyouJa'));
 const CenomarVsMarriageCertEn = lazy(() => import('./pages/CenomarVsMarriageCertEn'));
 const DocumentChecklistByVisaEn = lazy(() => import('./pages/DocumentChecklistByVisaEn'));
 const NbiClearanceOverseasEn = lazy(() => import('./pages/NbiClearanceOverseasEn'));
@@ -370,6 +371,8 @@ export default function App() {
         <Route path="/ja/business/kigyou/" element={<BusinessKigyouJa />} />
         <Route path="/ja/business/menkyo-kirikae" element={<Navigate to="/ja/business/menkyo-kirikae/" replace />} />
         <Route path="/ja/business/menkyo-kirikae/" element={<BusinessMenkyoKirikaeJa />} />
+        <Route path="/ja/business/menkyo-kirikae-kigyou" element={<Navigate to="/ja/business/menkyo-kirikae-kigyou/" replace />} />
+        <Route path="/ja/business/menkyo-kirikae-kigyou/" element={<BusinessMenkyoKirikaeKigyouJa />} />
         <Route path="/ja/lto-koyo-kakunin" element={<Navigate to="/ja/lto-koyo-kakunin/" replace />} />
         <Route path="/ja/lto-koyo-kakunin/" element={<LtoKoyoKakuninJa />} />
         <Route path="/ja/dfa-apostille-genchi-report" element={<Navigate to="/ja/dfa-apostille-genchi-report/" replace />} />

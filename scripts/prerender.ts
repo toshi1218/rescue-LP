@@ -1394,6 +1394,16 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/business/menkyo-kirikae/`,
   },
   {
+    path: '/ja/business/menkyo-kirikae-kigyou/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'menkyo-kirikae-kigyou', 'index.html'),
+    title: `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR_MONTH_JA}】`,
+    description: '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名98,000円〜・3名パック270,000円〜。請求書払い・複数名対応。',
+    canonical: `${BASE}/ja/business/menkyo-kirikae-kigyou/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/business/menkyo-kirikae-kigyou/`,
+  },
+  {
     path: '/ja/lto-koyo-kakunin/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'lto-koyo-kakunin', 'index.html'),
     title: `フィリピン人採用のLTO書類3種｜License Certification・License History・No Apprehension【${SEO_YEAR_MONTH_JA}】`,
