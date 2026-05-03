@@ -139,6 +139,45 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 
 ---
 
+## 2026-05-03 セッションサマリー（GSC分析・インフラ検証・最終診断）
+
+### 検証結果（curl で本番確認）
+
+| 検証項目 | 結果 |
+|---------|------|
+| sitemap.xml | 114 URL・hreflang en/ja/ko/x-default 全出力 ✅ |
+| /ja/cenomar/ hreflang | 3言語+x-default 正常 ✅ |
+| canonical | self-canonical 正しく設定 ✅ |
+| trailing slash | スラッシュなし→あり 301 正常 ✅ |
+| robots.txt | クローラー・AIbot 全許可 ✅ |
+
+**インフラは完全に健全。現在の構造にバグはない。**
+
+### 最終診断
+
+- **事故**: 3/29〜3/30 にhreflangをHTML・sitemapから全削除、4/2に復旧（3日間消えた）
+- **打撃**: 前後10日間の40+コミット連発が重なり、Googleが「構造不安定サイト」と判定
+- **現状**: Google インデックス ~35件（Bing 99件と大幅乖離）、impressions はピーク比 10〜25%
+- **見通し**: 7月末（事故から4ヶ月）までに 70〜80% 回復が期待値
+
+### 今やること（3つのみ）
+
+1. **GSCで主要ページを手動「インデックス登録リクエスト」**
+   - `/ja/cenomar/`（0クリック/55インプレ）
+   - `/ja/gaimen-kirikae-guide/`（0クリック/47インプレ）
+   - `/ja/psa-shussei-cost/`（pos 1.24 なのに 0クリック）
+2. **GSCで sitemap.xml を再送信**（削除→再登録で強制再クロール）
+3. **`/en/psa-birth-certificate-cost/` の title/description 改善**（Phase F、1ページのみ）
+
+### 絶対にやってはいけないこと（回復完了まで）
+
+- hreflang・canonical・URL構造・noindex・robots.txt に一切触らない
+- 同一日に複数ページの SEO 変更をしない
+- Footer など全サイト共通コンポーネントへの連続コミットを避ける
+  （4/22 の Footer 7連続コミットが Google の全サイト再評価を誘発した可能性あり）
+
+---
+
 ## Build & Deploy
 
 ```bash
