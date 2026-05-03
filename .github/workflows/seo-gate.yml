@@ -51,4 +51,5 @@ jobs:
           fi
 
       - name: SEO gate passed
-        run: echo "✅ SEOゲート通過: hreflang削除・noindex追加・sitemap URL減少・robots.txt全ブロックなし"
+        run: |
+          echo "✅ SEOゲート通過: hreflang削除・noindex追加・sitemap URL減少・robots.txt全ブロックなし"
