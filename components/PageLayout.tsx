@@ -105,6 +105,11 @@ export default function PageLayout({ breadcrumbs, jsonLd, description, children 
             {isJa ? '自分のケースを相談する' : 'Get a free quote'}
           </a>
         </aside>
+        <p className="mt-6 text-xs text-gray-400 text-center">
+          {isJa
+            ? '※ 本サービスはIGRS Inc.が提供する民間代行サービスです。PSA・NBI・DFA等のフィリピン政府機関とは一切無関係です。'
+            : '※ This is a private document retrieval service by IGRS Inc. We are not affiliated with PSA, NBI, DFA, or any Philippine government agency.'}
+        </p>
       </main>
       <BackToTop />
       <Footer />

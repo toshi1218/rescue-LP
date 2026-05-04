@@ -86,6 +86,9 @@ export default function PageLayoutKo({
             문의하기
           </a>
         </aside>
+        <p className="mt-6 text-xs text-gray-400 text-center">
+          ※ 본 서비스는 IGRS Inc.가 제공하는 민간 서류 대행 서비스입니다. PSA, NBI, DFA 등 필리핀 정부기관과 무관합니다.
+        </p>
       </main>
       <BackToTop />
       <FooterKo />
