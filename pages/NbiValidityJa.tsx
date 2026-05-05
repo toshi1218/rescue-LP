@@ -3,6 +3,7 @@ import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
+import RelatedArticles from '../components/RelatedArticles';
 import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
@@ -185,6 +186,15 @@ export default function NbiValidityJa() {
         href="#contact"
         variant="primary"
         trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料"
+      />
+
+      <RelatedArticles
+        items={[
+          { href: '/ja/nbi-clearance/', title: 'NBI Clearance（無犯罪証明書）申請サポート', description: '更新・HIT対応など、基本の申請サポートはこちら。' },
+          { href: '/ja/nbi-hit/', title: 'NBI HITが出たときの対応', description: 'HIT（同名者あり）ケースの考え方と代行対応を説明しています。' },
+          { href: '/ja/nbi-clearance-overseas/', title: '海外在住でのNBI取得', description: '日本在住のフィリピン人が渡航せずに取得する方法。' },
+          { href: '/ja/apostille/', title: 'DFAアポスティーユ代行', description: 'NBI Clearanceにアポスティーユが必要な場合はこちら。' },
+        ]}
       />
     </PageLayout>
   );

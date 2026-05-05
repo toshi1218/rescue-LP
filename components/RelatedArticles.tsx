@@ -15,7 +15,7 @@ type RelatedArticlesProps = {
 
 const RelatedArticles: React.FC<RelatedArticlesProps> = ({
   heading = 'Related Guides',
-  items,
+  items = [],
 }) => {
   return (
     <section className="mt-10 pt-8 border-t border-gray-100">

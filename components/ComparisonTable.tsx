@@ -43,7 +43,7 @@ function Cell({ val, isAgency }: { val: boolean | string; isAgency: boolean }) {
 
 function ComparisonTableBase({
   heading,
-  rows,
+  rows = [],
   selfLabel = '自分で手配',
   agencyLabel = 'IGRS代行',
 }: ComparisonTableProps) {

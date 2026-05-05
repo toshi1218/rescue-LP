@@ -1,9 +1,10 @@
 import React from 'react';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import { Writable } from 'node:stream';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { renderToString } from 'react-dom/server';
+import { renderToPipeableStream } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import App from '../App';
 import { LanguageProvider } from '../lib/i18n';
@@ -1821,17 +1822,40 @@ async function prerender() {
     try {
       console.log(`Prerendering ${route.path}...`);
 
-      const appHtml = renderToString(
-        React.createElement(
-          StaticRouter,
-          { location: route.path },
+      const appHtml = await new Promise<string>((resolve, reject) => {
+        let html = '';
+        const { pipe } = renderToPipeableStream(
           React.createElement(
-            LanguageProvider,
-            null,
-            React.createElement(App)
-          )
-        )
-      );
+            StaticRouter,
+            { location: route.path },
+            React.createElement(
+              LanguageProvider,
+              null,
+              React.createElement(App)
+            )
+          ),
+          {
+            onAllReady() {
+              const chunks: Buffer[] = [];
+              const writable = new Writable({
+                write(chunk: Buffer, _enc: string, cb: () => void) {
+                  chunks.push(chunk);
+                  cb();
+                },
+                final(cb: () => void) {
+                  html = Buffer.concat(chunks).toString('utf8');
+                  resolve(html);
+                  cb();
+                },
+              });
+              pipe(writable);
+            },
+            onError(err: unknown) {
+              reject(err);
+            },
+          }
+        );
+      });
 
       let html = baseHtml.replace(
         '<div id="root"></div>',

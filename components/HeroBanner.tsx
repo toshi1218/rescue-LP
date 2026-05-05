@@ -12,7 +12,7 @@ type HeroBannerProps = {
   lastUpdated?: string;
 };
 
-export default function HeroBanner({ title, subtitle, badges, ctaText, ctaHref, ctaService, lastUpdated }: HeroBannerProps) {
+export default function HeroBanner({ title, subtitle, badges = [], ctaText, ctaHref, ctaService, lastUpdated }: HeroBannerProps) {
   return (
     <section className="relative mb-12 overflow-hidden rounded-2xl bg-secondary px-6 py-10 md:px-10 md:py-14">
       {/* 背景装飾 */}

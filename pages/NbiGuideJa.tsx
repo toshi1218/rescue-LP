@@ -9,7 +9,6 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import RelatedArticles from '../components/RelatedArticles';
-import SectionDivider from '../components/SectionDivider';
 import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
@@ -304,6 +303,9 @@ export default function NbiGuideJa() {
           { href: '/ja/nbi-clearance-overseas/', title: '海外在住のNBI取得', description: 'フィリピンに戻らずに取得したい方はこちら。' },
           { href: '/ja/nbi-hit/', title: 'NBI HIT対応', description: '照会が入ったときの考え方を整理します。' },
           { href: '/ja/nbi-koyukigen/', title: 'NBIの有効期限', description: '提出期限に合わせた取り方の目安が分かります。' },
+          { href: '/ja/apostille-ryokin/', title: 'アポスティーユの料金・費用', description: 'NBI Clearanceにアポスティーユを付ける際の料金目安。' },
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'Regular（4営業日）・Express（翌営業日）の違いを解説。' },
+          { href: '/ja/kika-shinsei-guide/', title: '帰化申請の書類代行', description: '帰化申請でNBI Clearance・PSA出生証明書を法務局要件で揃えます。' },
           { href: '/ja/psa-crs-cebu-genchi-report/', title: 'PSA証明書の取得手順【セブ窓口】', description: 'セブ窓口での実際の取得フローをレポートしています。' },
           { href: '/ja/document-checklist-by-visa/', title: 'ビザ別書類チェックリスト', description: 'K-1や配偶者ビザで他に何が必要かを確認できます。' },
         ]}
