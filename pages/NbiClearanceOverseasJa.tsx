@@ -171,10 +171,10 @@ export default function NbiClearanceOverseasJa() {
 
       <RelatedArticles
         items={[
-          { href: '/ja/nbi-clearance', title: 'NBIクリアランス申請サポート', description: '基本の申請サポートページです。HIT対応もここから確認できます。' },
-          { href: '/ja/nbi-hit', title: 'NBI HIT対応', description: '照会が入ったときの考え方を整理できます。' },
-          { href: '/ja/nbi-koyukigen', title: 'NBIの有効期限', description: '提出期限に合わせた取り方の目安が分かります。' },
-          { href: '/ja/document-checklist-by-visa', title: 'ビザ別チェックリスト', description: 'K-1や配偶者ビザで他に何が必要かを確認できます。' },
+          { href: '/ja/nbi-clearance/', title: 'NBIクリアランス申請サポート', description: '基本の申請サポートページです。HIT対応もここから確認できます。' },
+          { href: '/ja/nbi-hit/', title: 'NBI HIT対応', description: '照会が入ったときの考え方を整理できます。' },
+          { href: '/ja/nbi-koyukigen/', title: 'NBIの有効期限', description: '提出期限に合わせた取り方の目安が分かります。' },
+          { href: '/ja/document-checklist-by-visa/', title: 'ビザ別チェックリスト', description: 'K-1や配偶者ビザで他に何が必要かを確認できます。' },
         ]}
       />
     </PageLayout>

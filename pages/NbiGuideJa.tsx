@@ -9,7 +9,6 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import RelatedArticles from '../components/RelatedArticles';
-import SectionDivider from '../components/SectionDivider';
 import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
