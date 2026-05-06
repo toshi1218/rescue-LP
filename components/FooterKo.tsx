@@ -22,7 +22,7 @@ const FooterKo: React.FC = () => {
     setEmailError('');
     setSubmitting(true);
     setSubmitError('');
-    trackEvent('form_submit', { location: 'footer_ko', type: 'web3forms' });
+    const purpose = (e.currentTarget.elements.namedItem('purpose') as HTMLSelectElement)?.value ?? '';
     try {
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
@@ -31,11 +31,14 @@ const FooterKo: React.FC = () => {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        trackEvent('form_submit_success', { location: 'footer_ko', type: 'web3forms', lang: 'ko', service: purpose, page_path: window.location.pathname });
         setSubmitted(true);
       } else {
+        trackEvent('form_submit_error', { location: 'footer_ko', type: 'web3forms', lang: 'ko' });
         setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
       }
     } catch {
+      trackEvent('form_submit_error', { location: 'footer_ko', type: 'web3forms', lang: 'ko' });
       setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
     } finally {
       setSubmitting(false);
