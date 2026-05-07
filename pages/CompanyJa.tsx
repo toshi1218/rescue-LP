@@ -94,7 +94,7 @@ export default function CompanyJa() {
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">お支払い方法</p>
-              <p>クレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）またはお振込にて承っています。クレジットカードは全額前払い、銀行振込は着手時50%・発送前50%の2回払いです。</p>
+              <p>クレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）または銀行振込にて承っています。いずれも着手時50%・発送前50%の2回払いです。</p>
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">キャンセル・返金</p>
