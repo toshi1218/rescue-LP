@@ -56,11 +56,11 @@ export default function CompanyEn() {
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Payment methods</p>
-            <p>Credit card.</p>
+            <p>Credit card (Visa, Mastercard, Amex, Apple Pay, Google Pay) or bank transfer. Payment is in two stages: 50% upfront to start, and 50% after confirming document copies before we ship.</p>
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Cancellation & refund</p>
-            <p>Free before we start. After we begin, actual expenses and work already performed are non-refundable. Final payment is due after document copies are confirmed and before shipping.</p>
+            <p>Before we start: full refund. After starting, before document retrieval: refund minus actual expenses incurred. After document retrieval, before shipping: refund minus expenses and work performed. After DHL dispatch: non-refundable.</p>
           </div>
         </div>
       </div>

@@ -94,11 +94,11 @@ export default function CompanyJa() {
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">お支払い方法</p>
-              <p>銀行振込にて承っています。</p>
+              <p>クレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）または銀行振込にて承っています。いずれも着手時50%・発送前50%の2回払いです。</p>
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">キャンセル・返金</p>
-              <p>着手前は無料です。着手後は実費と進行済み作業分を差し引いた対応になります。書類写し確認後、残金のご入金をいただいてから発送します。</p>
+              <p>着手前：全額返金。着手後・書類未取得：実費（PSA手数料等）を除いて返金。書類取得後・写し送付前：実費＋作業費を除いて返金。DHL発送後：返金不可。</p>
             </div>
           </div>
         </div>
