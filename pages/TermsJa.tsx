@@ -160,13 +160,13 @@ export default function TermsJa() {
             <h2 className="text-base font-bold text-secondary mb-3">11. お支払い・返金の要約</h2>
             <div className="bg-gray-50 rounded-xl p-5 space-y-2">
               <p className="text-gray-600">
-                ご依頼時に着手金として総額の50%をご入金いただき、書類写しの確認後に残金をお支払いいただきます。
+                ご依頼時に着手金として総額の50%をお支払いいただき、書類写しの確認後に残金をお支払いいただきます。
               </p>
               <p className="text-gray-600">
-                お支払いは銀行振込にて承っています。
+                お支払いはクレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）または銀行振込にて承っています。
               </p>
               <p className="text-gray-600">
-                着手前のキャンセルは無料です。着手後は、実費および進行済みの作業分を差し引いた対応になります。
+                着手前のキャンセルは全額返金。着手後・書類未取得は実費を除いて返金。書類取得後・写し送付前は実費＋作業費を除いて返金。DHL発送後は返金不可です。
               </p>
             </div>
           </section>
