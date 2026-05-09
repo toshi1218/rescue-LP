@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, MessageSquare, ShieldCheck, Send } from 'lucide-react';
+import { Eye, MessageSquare, ShieldCheck, Send, BadgeCheck } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -57,6 +57,18 @@ const WhyUs: React.FC = () => {
               <p className="text-lg font-bold text-secondary mt-1">{t(valueKey)}</p>
             </div>
           ))}
+        </div>
+
+        {/* 返金保証バナー */}
+        <div className="mt-6 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 flex items-start gap-4">
+          <div className="shrink-0 w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
+            <BadgeCheck className="w-6 h-6 text-emerald-600" />
+          </div>
+          <div>
+            <p className="font-bold text-emerald-800 text-sm mb-1">{t('whyus.guarantee.title')}</p>
+            <p className="text-xs text-emerald-700 leading-relaxed">{t('whyus.guarantee.success')}</p>
+            <p className="text-xs text-gray-500 leading-relaxed mt-1">{t('whyus.guarantee.cancel')}</p>
+          </div>
         </div>
 
         {/* Office photo strip — real Philippine document processing */}
