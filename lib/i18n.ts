@@ -127,6 +127,9 @@ const ja = {
   'whyus.stat3.value': '平均24時間以内',
   'whyus.cta': '自分のケースを相談して書類を整理する',
   'whyus.ctaAriaLabel': '自分のケースを相談してフィリピン書類を整理する',
+  'whyus.guarantee.title': '書類取得保証',
+  'whyus.guarantee.success': '当社の手配により書類が取得できなかった場合、着手金を全額返金いたします。',
+  'whyus.guarantee.cancel': 'お客様都合のキャンセルは、着手時に発生した実費を差し引いた金額を返金いたします。',
 
   // ── SocialProof ──────────────────────────────────────────────────────
   'social.title': '代行依頼の実績・お客様の声',
@@ -301,6 +304,9 @@ const en: typeof ja = {
   'whyus.stat3.value': 'Within 24 Hours',
   'whyus.cta': 'Order your Philippine documents now',
   'whyus.ctaAriaLabel': 'Order Philippine document procurement now',
+  'whyus.guarantee.title': 'Document Retrieval Guarantee',
+  'whyus.guarantee.success': 'If we are unable to obtain your documents, we will refund your advance payment in full.',
+  'whyus.guarantee.cancel': 'For client-initiated cancellations, a refund is issued after deducting any actual expenses already incurred.',
 
   // ── SocialProof ──────────────────────────────────────────────────────
   'social.title': 'Procurement Results & Client Reviews',

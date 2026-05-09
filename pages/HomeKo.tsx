@@ -194,10 +194,19 @@ export default function HomeKo() {
                 </div>
               ))}
             </div>
+            {/* 서류 취득 보증 */}
+            <div className="mt-6 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 flex items-start gap-4">
+              <div className="shrink-0 w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
+                <Shield className="w-6 h-6 text-emerald-600" />
+              </div>
+              <div>
+                <p className="font-bold text-emerald-800 text-sm mb-1">서류 취득 보증</p>
+                <p className="text-xs text-emerald-700 leading-relaxed">당사 진행으로 서류 취득이 불가능한 경우, 착수금을 전액 환불해 드립니다.</p>
+                <p className="text-xs text-gray-500 leading-relaxed mt-1">고객 사유 취소의 경우, 착수 시 발생한 실비를 공제한 금액을 환불해 드립니다.</p>
+              </div>
+            </div>
           </div>
         </section>
-
-        {/* 한국 제출용으로 자주 요청되는 서류 */}
         <section className="py-14 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-xl md:text-2xl font-bold text-secondary mb-2 text-center">
