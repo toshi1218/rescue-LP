@@ -175,11 +175,12 @@ export default function PricingKo() {
             <p className="text-sm text-gray-600 mb-1">신용카드（Stripe）</p>
             <p className="text-xs text-gray-500 leading-relaxed">Visa / Mastercard / Amex / Apple Pay 대응. 착수금 청구서（약 50%）결제 후 착수, 서류 확인 후 잔금 청구서（약 50%）발송.</p>
           </div>
-          <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-            <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">취소・환불</p>
-            <ul className="space-y-1">
-              <li className="text-sm text-gray-600">・ 착수 전: 무료 취소 가능</li>
-              <li className="text-sm text-gray-600">・ 착수 후: 실비 + 진행분 공제 후 환불</li>
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 shadow-sm">
+            <p className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-2">서류 취득 보증 · 취소・환불</p>
+            <ul className="space-y-1.5">
+              <li className="text-sm text-emerald-700 font-semibold">・ 서류 취득 불가 시: 착수금 전액 환불</li>
+              <li className="text-sm text-gray-600">・ 착수 전 취소: 무료</li>
+              <li className="text-sm text-gray-600">・ 착수 후 취소（고객 사유）: 실비 공제 후 환불</li>
               <li className="text-sm text-gray-600">・ 서류 사본 확인 후 잔금 입금 → 발송</li>
             </ul>
           </div>
