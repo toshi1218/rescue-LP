@@ -96,6 +96,19 @@ const Hero: React.FC = () => {
             <ArrowRight className="w-4 h-4" />
           </a>
 
+          {/* Urgent LINE CTA */}
+          <a
+            href="https://lin.ee/wALag1U"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent('cta_click', { location: 'hero', type: 'line_urgent', variant: ctaVariant })}
+            className="mt-2 inline-flex items-center justify-center gap-2 text-[#06C755] font-semibold text-xs py-1.5 px-4 rounded-full border border-[#06C755]/40 hover:bg-[#06C755]/10 transition-all"
+            aria-label="急ぎの方はLINEで相談（新しいタブで開く）"
+          >
+            <MessageCircle className="w-3.5 h-3.5" />
+            急ぎの方はLINEへ（即返信）
+          </a>
+
           {/* Trust: Rating badge */}
           <div className="flex items-center justify-center gap-1.5 mt-3" aria-label="平均評価 4.8 / 5.0">
             <span className="text-yellow-400 text-base leading-none" aria-hidden="true">★★★★★</span>
@@ -172,7 +185,7 @@ const Hero: React.FC = () => {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+          <div className="flex flex-col sm:flex-row gap-3 mb-3">
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'contact', variant: ctaVariant })}
@@ -189,6 +202,19 @@ const Hero: React.FC = () => {
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
+
+          {/* Urgent WhatsApp CTA */}
+          <a
+            href="https://wa.me/639452833727"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'whatsapp_urgent', variant: ctaVariant })}
+            className="inline-flex items-center gap-2 text-green-400 font-semibold text-xs py-1.5 px-4 rounded-full border border-green-400/40 hover:bg-green-400/10 transition-all mb-4"
+            aria-label="Urgent? Contact us on WhatsApp (opens in new tab)"
+          >
+            <MessageCircle className="w-3.5 h-3.5" />
+            Urgent? WhatsApp us — fast reply
+          </a>
 
           {/* Rating + urgency */}
           <div className="flex flex-col gap-1">

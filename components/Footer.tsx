@@ -262,6 +262,10 @@ const Footer: React.FC = () => {
             <p role="alert" className="text-xs text-red-500">{submitError}</p>
           )}
 
+          <p className="text-xs text-emerald-700 text-center">
+            ✓ {isJa ? '書類が取得できなければ着手金を全額返金' : 'Full refund of advance payment if documents cannot be obtained'}
+          </p>
+
           <button
             type="submit"
             disabled={submitting}
