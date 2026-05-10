@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
-              className="bg-primary text-secondary font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
+              className="bg-blue-600 text-white font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-blue-600/40 hover:bg-blue-700 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-blue-500/40"
               aria-label="メールでお問い合わせ"
             >
               <MessageCircle className="w-5 h-5 flex-shrink-0" />
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
             <a
               href="/ja/ryokin/"
               onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
-              className="font-bold py-3.5 px-6 rounded-lg bg-white text-secondary hover:bg-gray-100 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-white/40 shadow-lg"
+              className="font-bold py-3.5 px-6 rounded-lg bg-primary text-secondary shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
               aria-label={t('hero.pricingAriaLabel')}
             >
               <ArrowRight className="w-5 h-5 flex-shrink-0" />
@@ -194,14 +194,14 @@ const Hero: React.FC = () => {
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'contact', variant: ctaVariant })}
-              className="flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+              className="flex items-center justify-center gap-2 bg-blue-600 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-blue-600/40 hover:bg-blue-700 hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-blue-500/40"
             >
               <MessageCircle className="w-5 h-5 flex-shrink-0" />
               Free Consultation
             </a>
             <a
               href="#pricing"
-              className="flex items-center justify-center gap-2 font-bold py-3.5 px-6 rounded-xl bg-white text-secondary hover:bg-gray-100 hover:scale-[1.02] transition-all shadow-lg"
+              className="flex items-center justify-center gap-2 font-bold py-3.5 px-6 rounded-xl bg-primary text-secondary shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
             >
               <ArrowRight className="w-5 h-5 flex-shrink-0" />
               See Packages
