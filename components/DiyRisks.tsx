@@ -41,7 +41,7 @@ const contentData = {
       },
     ],
     closing:
-      'Our goal is to ensure your case does not stall due to missing or incorrect Philippine documents. We handle document identification, retrieval, copy planning, and paper Apostille coordination — with a Cebu-based team and a verifiable company track record.',
+      'Our goal is to reduce the chance of your Japan-side application stalling due to missing or incorrect Philippine documents. We handle identification, retrieval, copy planning, and paper Apostille coordination — with a Cebu-based team and a verifiable company track record.',
     cta: 'Free Consultation',
   },
   ja: {
@@ -81,13 +81,13 @@ const DiyRisks: React.FC = () => {
 
   return (
     <section
-      className="py-10 bg-amber-50/40 border-y border-amber-100"
+      className="py-20 bg-amber-50/40 border-y border-amber-100"
       aria-labelledby="diy-risks-heading"
     >
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
 
         {/* Header */}
-        <div className="text-center mb-5">
+        <div className="text-center mb-10">
           <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 uppercase tracking-widest mb-3 bg-amber-100 px-3 py-1 rounded-full">
             <AlertTriangle className="w-3 h-3" />
             {c.badge}
@@ -102,12 +102,16 @@ const DiyRisks: React.FC = () => {
         </div>
 
         {/* Risk cards — 2-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
           {c.risks.map((risk, i) => (
             <div
               key={i}
-              className={`bg-white border border-amber-100 rounded-2xl p-4 hover:border-amber-200 hover:shadow-sm transition-all ${i === c.risks.length - 1 && c.risks.length % 2 === 1 ? 'md:col-span-2' : ''}`}
+              className="bg-white border border-amber-100 rounded-2xl p-5 hover:border-amber-200 hover:shadow-sm transition-all relative overflow-hidden"
             >
+              {/* Large number watermark */}
+              <span className="absolute top-3 right-4 font-bold text-3xl leading-none text-amber-200 font-display select-none">
+                {String(i + 1).padStart(2, '0')}
+              </span>
               <div className="flex items-start gap-3 mb-2">
                 <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center mt-0.5 shrink-0">
                   <AlertTriangle className="w-3.5 h-3.5 text-amber-500" />

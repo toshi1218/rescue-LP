@@ -105,7 +105,7 @@ const SocialProof: React.FC = React.memo(() => {
   const reviews = reviewsData[lang];
 
   return (
-    <section className="py-10 bg-white relative overflow-hidden" aria-labelledby="social-proof-title">
+    <section className="py-20 bg-white relative overflow-hidden" aria-labelledby="social-proof-title">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-0 top-0 w-72 h-72 bg-primary/5 rounded-full blur-[80px]" />
       </div>
@@ -113,46 +113,72 @@ const SocialProof: React.FC = React.memo(() => {
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 relative z-10">
 
         {/* ── セクションヘッダー ── */}
-        <div className="text-center mb-5">
+        <div className="text-center mb-10">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Proof</span>
           <h2 id="social-proof-title" className="text-xl font-bold text-secondary">{t('social.title')}</h2>
           <p className="text-xs text-gray-500 mt-2">{t('social.note')}</p>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3" />
         </div>
 
-        {/* ── 評価概要ブロック（コンパクト横並び） ── */}
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-4 mb-4 w-fit mx-auto">
-          <div className="flex items-center gap-8">
-            {/* 左: 評価 */}
-            <div className="flex items-center gap-3">
-              <p className="text-4xl font-extrabold text-secondary leading-none">4.8</p>
-              <div>
-                <div className="flex gap-0.5">
-                  {[1,2,3,4,5].map(i => <span key={i} className="text-lg text-yellow-400">★</span>)}
-                </div>
-                <p className="text-xs text-gray-400 mt-0.5">
-                  {isJa ? '47件の評価に基づく' : 'Based on 47 reviews'}
-                </p>
+        {/* ── 評価概要ブロック（大きく・目立つ） ── */}
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-6 mb-6">
+          <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
+
+            {/* 大きな評価数字 */}
+            <div className="text-center md:text-left flex-shrink-0">
+              <p className="text-6xl font-extrabold text-secondary leading-none">4.8</p>
+              <div className="flex justify-center md:justify-start gap-0.5 mt-2">
+                {[1,2,3,4,5].map(i => (
+                  <span key={i} className={`text-2xl ${i <= 4 ? 'text-yellow-400' : 'text-yellow-400'}`}>
+                    {i === 5 ? '★' : '★'}
+                  </span>
+                ))}
               </div>
+              <p className="text-sm text-gray-500 mt-1">
+                {isJa ? '5点満点' : 'out of 5.0'}
+              </p>
+              <p className="text-xs text-gray-400 mt-0.5">
+                {isJa ? '47件の評価に基づく' : 'Based on 47 reviews'}
+              </p>
             </div>
-            {/* 区切り */}
-            <div className="w-px h-10 bg-gray-200 flex-shrink-0" />
-            {/* 右: 満足度 */}
-            <div className="text-center flex-shrink-0">
-              <p className="text-3xl font-extrabold text-primary leading-none">98%</p>
-              <p className="text-xs font-bold text-gray-600 mt-0.5">
+
+            {/* 区切り線（デスクトップのみ） */}
+            <div className="hidden md:block w-px self-stretch bg-gray-100" />
+
+            {/* 星別内訳バー */}
+            <div className="flex-1 w-full space-y-2">
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">
+                {isJa ? '評価の内訳' : 'Rating Breakdown'}
+              </p>
+              {ratingBreakdown.map(row => (
+                <StarRow key={row.stars} {...row} isJa={isJa} />
+              ))}
+            </div>
+
+            {/* 区切り線（デスクトップのみ） */}
+            <div className="hidden md:block w-px self-stretch bg-gray-100" />
+
+            {/* 満足度サマリー */}
+            <div className="flex-shrink-0 text-center md:text-left">
+              <p className="text-4xl font-extrabold text-primary leading-none">98%</p>
+              <p className="text-sm font-bold text-gray-700 mt-1">
                 {isJa ? '★4以上の評価' : '4★ or higher'}
               </p>
-              <span className="inline-flex items-center gap-1 text-[10px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-semibold mt-1">
-                <CheckCircle className="w-2.5 h-2.5" />
-                {isJa ? 'アンケートのみ集計' : 'Survey only'}
-              </span>
+              <p className="text-xs text-gray-400 mt-0.5">
+                {isJa ? '（46/47件）' : '(46 out of 47)'}
+              </p>
+              <div className="mt-3 flex justify-center md:justify-start">
+                <span className="inline-flex items-center gap-1 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full font-semibold">
+                  <CheckCircle className="w-3.5 h-3.5" />
+                  {isJa ? 'アンケート回答者のみ集計' : 'Survey respondents only'}
+                </span>
+              </div>
             </div>
           </div>
         </div>
 
         {/* ── 4つの実績数値 ── */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
           {stats.map((s, i) => {
             const gradients = [
               'from-secondary/5 to-secondary/10',
@@ -165,9 +191,9 @@ const SocialProof: React.FC = React.memo(() => {
             return (
               <div key={s.label} className={`bg-gradient-to-br ${gradients[i]} rounded-2xl p-4 text-center relative overflow-hidden border border-white/80 shadow-card`}>
                 <div className={`absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl ${barColors[i]}`} />
-                <p className={`text-3xl font-extrabold ${textColors[i]} leading-tight mt-1`}>{s.value}</p>
+                <p className={`text-2xl font-extrabold ${textColors[i]} leading-tight mt-1`}>{s.value}</p>
                 <p className="text-xs font-bold text-gray-700 mt-1">{s.label}</p>
-                <p className="text-xs text-gray-500 mt-0.5 leading-snug">{s.sub}</p>
+                <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{s.sub}</p>
               </div>
             );
           })}

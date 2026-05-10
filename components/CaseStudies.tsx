@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertCircle, CheckCircle2, Heart, ShieldCheck, Car, Globe, Users, Fingerprint, Briefcase } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Heart, ShieldCheck, Car, Globe, Users, Fingerprint, ArrowDown } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 const caseStudiesData = {
@@ -40,18 +40,6 @@ const caseStudiesData = {
       action: 'LTO運転経歴証明書×2部＋DFAアポスティーユ＋オフィシャルレシートを一式代行。法人として必要な書類要件を事前確認してから取得。',
       result: '外免切替に必要な書類一式をDHLで法人宛に納品。フィリピンへの渡航・現地手配は一切不要で完結。',
     },
-    {
-      icon: Briefcase,
-      iconColor: 'text-violet-600',
-      iconBg: 'bg-violet-50',
-      accentColor: 'border-violet-200',
-      headerBg: 'bg-gradient-to-r from-violet-50 to-violet-100/50',
-      badgeColor: 'bg-violet-100 text-violet-700',
-      title: '海外就労：中東向けNBIクリアランス',
-      fear: '「すでに日本在住で、海外就労ビザのためにNBI＋アポスティーユが3週間以内に必要。フィリピンに戻る時間がない」',
-      action: '就労先の要件（アポスティーユの要否・書類形式）を確認し、NBI取得からDFAアポスティーユまで代行。DHL海外発送まで一括対応。',
-      result: '18日でドバイに届け、就労ビザの書類審査を予定通り通過。渡航ゼロで完結。',
-    },
   ],
   en: [
     {
@@ -90,18 +78,6 @@ const caseStudiesData = {
       action: 'We verified the Department of Home Affairs checklist, obtained CENOMAR and PSA Birth Certificate with DFA Apostille, and shipped within the client\'s deadline.',
       result: 'All Apostille-authenticated originals delivered to Sydney via DHL. Partner visa application submitted successfully.',
     },
-    {
-      icon: Briefcase,
-      iconColor: 'text-violet-600',
-      iconBg: 'bg-violet-50',
-      accentColor: 'border-violet-200',
-      headerBg: 'bg-gradient-to-r from-violet-50 to-violet-100/50',
-      badgeColor: 'bg-violet-100 text-violet-700',
-      title: 'UAE Residence Visa (NBI Clearance)',
-      fear: '"My employer needs NBI Clearance with DFA Apostille within 3 weeks, but I am already overseas and cannot return to the Philippines."',
-      action: 'We confirmed UAE employer requirements, obtained NBI Clearance with DFA Apostille, and shipped via DHL to Dubai — no Philippines trip required.',
-      result: 'NBI with Apostille delivered to Dubai in 18 days. Work visa documentation completed on schedule.',
-    },
   ],
 };
 
@@ -111,39 +87,43 @@ const CaseStudies: React.FC = React.memo(() => {
   const isJa = lang === 'ja';
 
   return (
-    <section className="py-10 bg-slate-50" aria-labelledby="case-studies-title">
+    <section className="py-20 bg-slate-50" aria-labelledby="case-studies-title">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
-        <div className="text-center mb-4">
+        <div className="text-center mb-8">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-1 block">Case Studies</span>
           <h3 id="case-studies-title" className="text-xl font-bold text-secondary">{t('cases.title')}</h3>
           <p className="text-xs text-gray-500 mt-2">{t('cases.note')}</p>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {caseStudies.map((item) => {
             const Icon = item.icon;
             return (
-              <article key={item.title} className={`border ${item.accentColor} bg-white rounded-2xl shadow-card overflow-hidden flex flex-col`}>
-                {/* Header */}
-                <div className={`${item.headerBg} px-4 py-3 flex items-center gap-3 border-b ${item.accentColor}`}>
-                  <div className={`w-9 h-9 rounded-xl ${item.iconBg} border ${item.accentColor} flex items-center justify-center flex-shrink-0`}>
-                    <Icon className={`w-4 h-4 ${item.iconColor}`} />
+              <article key={item.title} className={`border ${item.accentColor} bg-white rounded-2xl shadow-card flex flex-col overflow-hidden`}>
+                {/* Card header */}
+                <div className={`${item.headerBg} px-5 py-4 flex items-center gap-3 border-b ${item.accentColor}`}>
+                  <div className={`w-10 h-10 rounded-xl ${item.iconBg} border ${item.accentColor} flex items-center justify-center flex-shrink-0`}>
+                    <Icon className={`w-5 h-5 ${item.iconColor}`} />
                   </div>
-                  <span className="font-bold text-sm text-secondary leading-snug">{item.title}</span>
+                  <h3 className="font-bold text-sm text-secondary leading-snug">{item.title}</h3>
                 </div>
 
-                {/* Body — always visible */}
-                <div className="p-4 flex flex-col gap-2 flex-1">
-                  {/* CHALLENGE */}
+                <div className="p-5 flex flex-col gap-2 flex-1">
+                  {/* PROBLEM */}
                   <div>
                     <span className={`inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 ${item.badgeColor}`}>
                       {isJa ? '不安' : 'Challenge'}
                     </span>
                     <div className="flex items-start gap-2 bg-red-50 rounded-xl px-3 py-2.5">
-                      <AlertCircle className="w-3.5 h-3.5 text-red-400 flex-shrink-0 mt-0.5" />
+                      <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
                       <p className="text-xs text-gray-600 italic leading-relaxed">{item.fear}</p>
                     </div>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="flex justify-center">
+                    <ArrowDown className="w-4 h-4 text-gray-300" />
                   </div>
 
                   {/* APPROACH */}
@@ -152,20 +132,25 @@ const CaseStudies: React.FC = React.memo(() => {
                       {isJa ? '対応' : 'Approach'}
                     </span>
                     <div className="flex items-start gap-2 bg-gray-50 rounded-xl px-3 py-2.5">
-                      <span className="flex-shrink-0 w-3.5 h-3.5 rounded-full bg-secondary/15 flex items-center justify-center mt-0.5">
-                        <span className="text-secondary text-[8px] font-bold">→</span>
+                      <span className="flex-shrink-0 w-4 h-4 rounded-full bg-secondary/15 flex items-center justify-center mt-0.5">
+                        <span className="text-secondary text-[9px] font-bold">→</span>
                       </span>
                       <p className="text-xs text-gray-500 leading-relaxed">{item.action}</p>
                     </div>
                   </div>
 
+                  {/* Arrow */}
+                  <div className="flex justify-center">
+                    <ArrowDown className="w-4 h-4 text-gray-300" />
+                  </div>
+
                   {/* OUTCOME */}
-                  <div>
+                  <div className="mt-auto">
                     <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 bg-green-100 text-green-700">
                       {isJa ? '結果' : 'Outcome'}
                     </span>
                     <div className="flex items-start gap-2 bg-green-50 border border-green-100 rounded-xl px-3 py-2.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                       <p className="text-xs text-gray-700 font-semibold leading-relaxed">{item.result}</p>
                     </div>
                   </div>
