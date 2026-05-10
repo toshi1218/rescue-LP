@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import PageLayout from '../components/PageLayout';
 import SummaryBlock from '../components/SummaryBlock';
+import CtaBox from '../components/CtaBox';
 import RelatedLinks from '../components/RelatedLinks';
 import { useMeta } from '../lib/useMeta';
-import { AlertTriangle, Copy, Check, ArrowRight } from 'lucide-react';
+import { AlertTriangle, Copy, Check } from 'lucide-react';
 
 const TEMPLATE = `件名：フィリピン PSA 電子証明書・DFA eApostille の受理可否確認
 
@@ -244,50 +245,14 @@ export default function PsaEcertificateNihonJa() {
         </div>
       </section>
 
-      {/* 提出先確認後の2択CTA */}
-      <section className="mb-12">
-        <p className="text-sm font-bold text-gray-700 text-center mb-4">提出先への確認結果で選んでください</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-white p-6">
-            <p className="text-xs font-bold text-amber-600 mb-2">「紙原本が必要」と言われた場合</p>
-            <h3 className="font-bold text-secondary text-base mb-2">当社が紙原本を取得代行します</h3>
-            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-              フィリピン現地スタッフがPSA・DFA窓口で直接取得。着手前キャンセル無料。
-            </p>
-            <a
-              href="/ja/contact/"
-              onClick={(e) => {
-                e.preventDefault();
-                window.dispatchEvent(new CustomEvent('setContactService', { detail: 'PSA書類取得代行' }));
-                setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 50);
-              }}
-              className="inline-flex items-center justify-center gap-2 bg-secondary text-white font-bold py-3 px-5 rounded-xl text-sm hover:bg-secondary-light transition-all w-full"
-            >
-              無料相談・お問い合わせ
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-          <div className="rounded-2xl border border-gray-200 bg-white p-6">
-            <p className="text-xs font-bold text-blue-600 mb-2">「E-certでOK」と言われた場合</p>
-            <h3 className="font-bold text-secondary text-base mb-2">E-cert申請をサポートします</h3>
-            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-              PSA Help Lineの申請フォーム入力・クレジットカード決済代行まで対応。¥19,800〜。
-            </p>
-            <a
-              href="/ja/contact/"
-              onClick={(e) => {
-                e.preventDefault();
-                window.dispatchEvent(new CustomEvent('setContactService', { detail: 'E-cert申請サポート' }));
-                setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 50);
-              }}
-              className="inline-flex items-center justify-center gap-2 border border-gray-300 text-secondary font-bold py-3 px-5 rounded-xl text-sm hover:bg-gray-50 transition-all w-full"
-            >
-              E-cert申請の相談をする
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-      </section>
+      <CtaBox
+        title="紙原本が必要な場合は当社へ"
+        description="当社はフィリピンの現地スタッフがPSA・DFA窓口で直接紙原本を取得しています。電子文書で受理されなかった方・紙原本が必要な方はご相談ください。"
+        buttonText="無料相談・お問い合わせ"
+        href="/ja/contact/"
+        trustNote="着手前キャンセル無料・進捗を随時ご報告"
+        service="PSA書類取得代行"
+      />
 
       <RelatedLinks
         links={[
