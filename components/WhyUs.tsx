@@ -49,14 +49,23 @@ const WhyUs: React.FC = () => {
         </div>
 
         {/* 統計バー */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
-          {stats.map(({ labelKey, valueKey }, i) => (
-            <div key={labelKey} className="bg-white border border-primary/15 rounded-xl p-5 text-center shadow-card relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1 rounded-t-xl" style={{background: 'linear-gradient(90deg, #d69e2e, #b77f1d)'}}></div>
-              <p className="text-xs text-gray-500 mt-1">{t(labelKey)}</p>
-              <p className="text-lg font-bold text-secondary mt-1">{t(valueKey)}</p>
-            </div>
-          ))}
+        <div className="mt-8 grid grid-cols-3 gap-3">
+          {stats.map(({ labelKey, valueKey }, i) => {
+            const gradients = [
+              'from-secondary/5 to-secondary/10',
+              'from-emerald-50 to-emerald-100/50',
+              'from-primary/5 to-amber-50',
+            ];
+            const textColors = ['text-secondary', 'text-emerald-700', 'text-primary-dark'];
+            const barColors  = ['bg-secondary', 'bg-emerald-500', 'bg-primary'];
+            return (
+              <div key={labelKey} className={`bg-gradient-to-br ${gradients[i]} rounded-2xl p-4 text-center relative overflow-hidden border border-white/80 shadow-card`}>
+                <div className={`absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl ${barColors[i]}`} />
+                <p className={`text-base font-extrabold ${textColors[i]} leading-tight mt-1`}>{t(valueKey)}</p>
+                <p className="text-[11px] font-bold text-gray-600 mt-1 leading-snug">{t(labelKey)}</p>
+              </div>
+            );
+          })}
         </div>
 
         {/* 返金保証バナー */}
