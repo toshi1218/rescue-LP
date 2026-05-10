@@ -65,7 +65,7 @@ const contentData = {
         body: '総領事館・市役所・入管など、提出先によって紙のアポスティーユが必要かどうかが異なります。必要と知らずに取得した書類が使えず、取り直しになるケースがあります。',
       },
       {
-        title: '身元不明の業者に依頼してしまうリスク',
+        title: '身元不明の業者に依頼するリスク',
         body: 'SNS等で低価格の書類取得サービスを個人が提供していることがありますが、入金後に連絡が取れなくなるケースが報告されています。登録のない業者に依頼すると、問題が起きた際に対応を求める手段がありません。',
       },
     ],
@@ -81,7 +81,7 @@ const DiyRisks: React.FC = () => {
 
   return (
     <section
-      className="py-16 bg-amber-50/40 border-y border-amber-100"
+      className="py-20 bg-amber-50/40 border-y border-amber-100"
       aria-labelledby="diy-risks-heading"
     >
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">

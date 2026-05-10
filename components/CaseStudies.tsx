@@ -1,5 +1,5 @@
-import React from 'react';
-import { AlertCircle, CheckCircle2, Heart, ShieldCheck, Car, Globe, Users, Fingerprint, ArrowDown } from 'lucide-react';
+import React, { useState } from 'react';
+import { AlertCircle, CheckCircle2, Heart, ShieldCheck, Car, Globe, Users, Fingerprint, ArrowDown, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 const caseStudiesData = {
@@ -85,9 +85,12 @@ const CaseStudies: React.FC = React.memo(() => {
   const { lang, t } = useLanguage();
   const caseStudies = caseStudiesData[lang];
   const isJa = lang === 'ja';
+  const [expanded, setExpanded] = useState(false);
+
+  const visibleCases = expanded ? caseStudies : caseStudies.slice(0, 1);
 
   return (
-    <section className="py-12 bg-white" aria-labelledby="case-studies-title">
+    <section className="py-20 bg-slate-50" aria-labelledby="case-studies-title">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
         <div className="text-center mb-8">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-1 block">Case Studies</span>
@@ -97,7 +100,7 @@ const CaseStudies: React.FC = React.memo(() => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {caseStudies.map((item) => {
+          {visibleCases.map((item) => {
             const Icon = item.icon;
             return (
               <article key={item.title} className={`border ${item.accentColor} bg-white rounded-2xl shadow-card flex flex-col overflow-hidden`}>
@@ -159,6 +162,18 @@ const CaseStudies: React.FC = React.memo(() => {
             );
           })}
         </div>
+
+        {!expanded && (
+          <div className="text-center mt-6">
+            <button
+              onClick={() => setExpanded(true)}
+              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
+            >
+              <ChevronDown className="w-4 h-4" />
+              {isJa ? `他の事例を見る（残り${caseStudies.length - 1}件）` : `See more cases (${caseStudies.length - 1} more)`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
