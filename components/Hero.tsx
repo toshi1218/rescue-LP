@@ -190,36 +190,34 @@ const Hero: React.FC = () => {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-3">
+          <div className="flex flex-col gap-2.5 w-full max-w-sm mb-4">
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'contact', variant: ctaVariant })}
-              className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3.5 px-7 rounded-xl shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
+              className="flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-5 h-5 flex-shrink-0" />
               Free Consultation
             </a>
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center gap-2 text-white font-bold py-3.5 px-7 rounded-xl border border-white/30 hover:bg-white/10 transition-all"
+              className="flex items-center justify-center gap-2 text-white font-bold py-3.5 px-6 rounded-xl border border-white/40 hover:bg-white/10 transition-all"
             >
+              <ArrowRight className="w-5 h-5 flex-shrink-0" />
               See Packages
-              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href="https://wa.me/639452833727"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'whatsapp_urgent', variant: ctaVariant })}
+              className="flex items-center justify-center gap-2 bg-green-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-green-500/40 hover:bg-green-600 hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-green-500/40"
+              aria-label="Urgent? Contact us on WhatsApp (opens in new tab)"
+            >
+              <MessageCircle className="w-5 h-5 flex-shrink-0" />
+              Urgent? WhatsApp us — fast reply
             </a>
           </div>
-
-          {/* Urgent WhatsApp CTA */}
-          <a
-            href="https://wa.me/639452833727"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'whatsapp_urgent', variant: ctaVariant })}
-            className="inline-flex items-center gap-2 text-green-400 font-semibold text-xs py-1.5 px-4 rounded-full border border-green-400/40 hover:bg-green-400/10 transition-all mb-4"
-            aria-label="Urgent? Contact us on WhatsApp (opens in new tab)"
-          >
-            <MessageCircle className="w-3.5 h-3.5" />
-            Urgent? WhatsApp us — fast reply
-          </a>
 
           {/* Rating + urgency */}
           <div className="flex flex-col gap-1">
