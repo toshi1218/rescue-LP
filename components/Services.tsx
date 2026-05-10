@@ -12,12 +12,12 @@ const servicesData = {
     { icon: Fingerprint,  title: '帰化・無犯罪証明関連',    subtitle: '帰化・その他',   desc: '用途に応じて必要書類を確認したい方へ', hasBadge: false, path: '/ja/nbi-clearance/' },
   ],
   en: [
-    { icon: UserX,       title: 'CENOMAR',        subtitle: 'CENOMAR — Physical Original for Marriage & Visa',   desc: 'Physical original for marriage, K-1, and spouse visa. Apostille available.', hasBadge: true,  path: '/en/cenomar/' },
-    { icon: Baby,        title: 'PSA Birth Cert', subtitle: 'PSA Birth Certificate — Physical Original',         desc: 'Physical original for immigration and visa abroad. Apostille bundling available.', hasBadge: false, path: '/en/psa-birth-certificate/' },
-    { icon: Heart,       title: 'PSA Marriage',   subtitle: 'PSA Marriage Certificate — Physical Original',      desc: 'For naturalization and dependent visa. Apostille bundle available.', hasBadge: false, path: '/en/psa-marriage-certificate/' },
-    { icon: Fingerprint, title: 'NBI Clearance',  subtitle: 'NBI Clearance for Immigration & Visa',             desc: 'For spouse visa, naturalization, and work visa. DFA authentication on request.', hasBadge: false, path: '/en/nbi-clearance/' },
-    { icon: Car,         title: 'LTO / License',  subtitle: 'LTO Documents for License Conversion',             desc: "Driver's abstract for license conversion abroad. OR/CR also handled.", hasBadge: false, path: '/en/drivers-license-conversion/' },
-    { icon: BadgeCheck,  title: 'DFA Apostille',  subtitle: 'DFA Apostille & Embassy Authentication',           desc: 'For Hague Convention countries. Embassy auth for UAE, Saudi Arabia, and others.', hasBadge: false, path: '/en/apostille/' },
+    { icon: UserX,       title: 'CENOMAR',        subtitle: 'CENOMAR — Physical Original for Marriage & Visa',   desc: 'Physical PSA-issued CENOMAR for international marriage, spouse visa, and civil registry. Many consulates require physical originals, not printed e-Certificates.', hasBadge: true,  path: '/en/cenomar/' },
+    { icon: Baby,        title: 'PSA Birth Cert', subtitle: 'PSA Birth Certificate — Physical Original',         desc: 'Physical PSA Birth Certificate for immigration, visa, and civil registration abroad. DFA Apostille bundling for submission to Hague Convention countries.',        hasBadge: false, path: '/en/psa-birth-certificate/' },
+    { icon: Heart,       title: 'PSA Marriage',   subtitle: 'PSA Marriage Certificate — Physical Original',      desc: 'Physical PSA Marriage Certificate for naturalization, family registration, and dependent visa applications. Apostille bundle available.',                       hasBadge: false, path: '/en/psa-marriage-certificate/' },
+    { icon: Fingerprint, title: 'NBI Clearance',  subtitle: 'NBI Clearance for Immigration & Visa',             desc: 'NBI Clearance for spouse visa, naturalization, and work visa abroad. DFA authentication included on request for countries requiring embassy-level authentication.', hasBadge: false, path: '/en/nbi-clearance/' },
+    { icon: Car,         title: 'LTO Documents',  subtitle: 'LTO Documents for License Conversion',             desc: "LTO driver's abstract and certification for foreign license conversion. Required format confirmed per destination country — OR/CR also handled.",                  hasBadge: false, path: '/en/drivers-license-conversion/' },
+    { icon: BadgeCheck,  title: 'DFA Apostille',  subtitle: 'DFA Apostille & Embassy Authentication',           desc: 'Paper DFA Apostille for Hague Convention countries. Embassy authentication for non-Hague authorities including UAE, Saudi Arabia, and others.',                  hasBadge: false, path: '/en/apostille/' },
   ],
 };
 
@@ -53,17 +53,15 @@ const Services: React.FC = () => {
             </div>
           )}
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {services.map((service, index) => (
-              <Link key={index} to={service.path} className="group relative p-3 border border-gray-100 rounded-2xl bg-gray-50 hover:border-primary/40 hover:bg-primary/5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-9 h-9 rounded-lg bg-secondary/8 border border-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/10 group-hover:border-primary/20 transition-colors">
-                    <service.icon className="w-5 h-5 text-secondary group-hover:text-primary transition-colors" />
-                  </div>
-                  <span className="font-display font-bold text-sm text-secondary leading-snug">{service.title}</span>
+              <Link key={index} to={service.path} className="group relative p-5 border border-gray-100 rounded-2xl bg-gray-50 hover:border-primary/40 hover:bg-primary/5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 block">
+                <div className="w-14 h-14 rounded-2xl bg-secondary/8 border border-secondary/10 flex items-center justify-center mb-4 group-hover:bg-primary/10 group-hover:border-primary/20 transition-colors">
+                  <service.icon className="w-7 h-7 text-secondary group-hover:text-primary transition-colors flex-shrink-0" />
                 </div>
-                <p className="text-xs text-gray-500 leading-relaxed mb-2 flex-1">{service.desc}</p>
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark border border-primary/40 px-2 py-0.5 rounded-lg group-hover:bg-primary group-hover:text-white transition-all self-start">
+                <span className="font-display font-bold text-base text-secondary block mb-1.5">{service.title}</span>
+                <p className="text-base text-gray-500 leading-relaxed mb-3">{service.desc}</p>
+                <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark border border-primary/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all">
                   {lang === 'ja' ? '詳しく見る' : 'Learn more'} <ArrowRight className="w-3 h-3" />
                 </span>
               </Link>
