@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, ArrowRight, CheckCircle2, Star } from 'lucide-react';
+import { MessageCircle, ArrowRight, CheckCircle2, Star, Mail, Tag } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -71,20 +71,20 @@ const Hero: React.FC = () => {
             {t('hero.h1line2')}<br />{' '}
             <span className="text-primary">{t('hero.h1line3')}</span>
           </h1>
-          <p className="text-gray-200 mb-8 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+          <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
             {t('hero.description')}
           </p>
           {/* CTA Buttons */}
           <div className="flex flex-col gap-2.5 w-full max-w-sm">
-            {/* メールで問い合わせ */}
+            {/* 無料相談する */}
             <a
               href="#contact"
               onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
               className="bg-primary text-secondary font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
-              aria-label="メールでお問い合わせ"
+              aria-label="無料相談フォームへ移動"
             >
-              <MessageCircle className="w-5 h-5 flex-shrink-0" />
-              メールで問い合わせ
+              <Mail className="w-5 h-5 flex-shrink-0" />
+              無料相談する
             </a>
 
             {/* 料金を見る */}
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
               className="font-bold py-3.5 px-6 rounded-lg bg-secondary text-white shadow-lg hover:bg-secondary-light hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-secondary/40"
               aria-label={t('hero.pricingAriaLabel')}
             >
-              <ArrowRight className="w-5 h-5 flex-shrink-0" />
+              <Tag className="w-5 h-5 flex-shrink-0" />
               料金を見る
             </a>
 
@@ -185,7 +185,7 @@ const Hero: React.FC = () => {
             <span className="text-primary">for Marriage, Visa & Your Next Country.</span>
           </h1>
 
-          <p className="text-gray-200 mb-8 text-sm md:text-base leading-relaxed max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+          <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
             Getting married to a Filipino, or moving to a new country together? We verify format requirements, procure physical PSA originals with DFA Apostille, and ship to your door worldwide via DHL — no trip to the Philippines needed.
           </p>
 
@@ -196,14 +196,14 @@ const Hero: React.FC = () => {
               onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'contact', variant: ctaVariant })}
               className="flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
             >
-              <MessageCircle className="w-5 h-5 flex-shrink-0" />
+              <Mail className="w-5 h-5 flex-shrink-0" />
               Free Consultation
             </a>
             <a
               href="#pricing"
               className="flex items-center justify-center gap-2 font-bold py-3.5 px-6 rounded-xl bg-secondary text-white shadow-lg hover:bg-secondary-light hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-secondary/40"
             >
-              <ArrowRight className="w-5 h-5 flex-shrink-0" />
+              <Tag className="w-5 h-5 flex-shrink-0" />
               See Packages
             </a>
             <a
