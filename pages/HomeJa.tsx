@@ -136,6 +136,16 @@ export default function HomeJa() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        {/* スティッキージャンプバー */}
+        <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+          <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-center gap-1 overflow-x-auto">
+            <a href="#faq" className="flex-shrink-0 text-xs font-bold text-gray-600 hover:text-secondary transition-colors py-1.5 px-3 rounded-lg hover:bg-gray-50 whitespace-nowrap">よくある質問</a>
+            <span className="text-gray-200 text-xs">|</span>
+            <a href="/ja/ryokin/" className="flex-shrink-0 text-xs font-bold text-gray-600 hover:text-secondary transition-colors py-1.5 px-3 rounded-lg hover:bg-gray-50 whitespace-nowrap">料金を見る</a>
+            <span className="text-gray-200 text-xs">|</span>
+            <a href="#contact" className="flex-shrink-0 text-xs font-bold text-white bg-secondary py-1.5 px-4 rounded-lg hover:bg-secondary/90 transition-all whitespace-nowrap">今すぐ相談</a>
+          </div>
+        </div>
         <div className="container mx-auto max-w-5xl px-4 pt-8">
           <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
             <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />

@@ -1,5 +1,5 @@
-import React from 'react';
-import { AlertTriangle, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { AlertTriangle, ArrowRight, ChevronDown } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -78,6 +78,8 @@ const contentData = {
 const DiyRisks: React.FC = () => {
   const { lang } = useLanguage();
   const c = contentData[lang];
+  const [expanded, setExpanded] = useState(false);
+  const visibleRisks = expanded ? c.risks : c.risks.slice(0, 2);
 
   return (
     <section
@@ -102,8 +104,8 @@ const DiyRisks: React.FC = () => {
         </div>
 
         {/* Risk cards — 2-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          {c.risks.map((risk, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          {visibleRisks.map((risk, i) => (
             <div
               key={i}
               className="bg-white border border-amber-100 rounded-2xl p-5 hover:border-amber-200 hover:shadow-sm transition-all relative overflow-hidden"
@@ -122,6 +124,20 @@ const DiyRisks: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* Expand button */}
+        {!expanded && (
+          <div className="text-center mb-10">
+            <button
+              onClick={() => setExpanded(true)}
+              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
+            >
+              <ChevronDown className="w-4 h-4" />
+              {lang === 'ja' ? `残り${c.risks.length - 2}件を見る` : `See ${c.risks.length - 2} more`}
+            </button>
+          </div>
+        )}
+        {expanded && <div className="mb-10" />}
 
         {/* Closing bar + CTA */}
         <div className="bg-secondary rounded-2xl px-7 py-8 text-center">
