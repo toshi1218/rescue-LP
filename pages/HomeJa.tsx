@@ -189,6 +189,18 @@ export default function HomeJa() {
                   詳細を見る
                 </button>
               )}
+
+              {/* e-Certificate対応の案内 */}
+              <div className="mt-5 pt-4 border-t border-gray-100 flex items-start gap-3 bg-blue-50 rounded-xl px-4 py-3">
+                <span className="flex-shrink-0 text-blue-500 text-base leading-none mt-0.5">ℹ️</span>
+                <div>
+                  <p className="text-xs font-bold text-blue-800 mb-0.5">e-Certificate（電子文書）での提出が認められている場合</p>
+                  <p className="text-xs text-blue-700 leading-relaxed">
+                    提出先に確認し、電子文書でOKと言われた場合は<strong>e-CertificateおよびeApostilleの取得代行</strong>にも対応しています。
+                    <a href="#contact" className="underline underline-offset-2 font-bold ml-1 hover:text-blue-900 transition-colors">まずご相談ください</a>。
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
         </div>
