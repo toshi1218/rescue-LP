@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
               decoding="async"
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40"></div>
         </div>
 
         {/* Content */}
