@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
               ✈️ 渡航不要
             </span>
             <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
-              🛡️ 見積もり・相談段階のキャンセル完全無料
+              🛡️ キャンセル無料
             </span>
           </div>
 
