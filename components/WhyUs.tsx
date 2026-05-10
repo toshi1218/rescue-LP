@@ -1,10 +1,11 @@
-import React from 'react';
-import { Eye, MessageSquare, ShieldCheck, Send, BadgeCheck } from 'lucide-react';
+import React, { useState } from 'react';
+import { Eye, MessageSquare, ShieldCheck, Send, BadgeCheck, ChevronDown } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
 const WhyUs: React.FC = () => {
   const { t } = useLanguage();
+  const [expanded, setExpanded] = useState(false);
 
   const reasons = [
     { icon: Eye, titleKey: 'whyus.1.title' as const, descKey: 'whyus.1.desc' as const },
@@ -34,7 +35,7 @@ const WhyUs: React.FC = () => {
         </div>
 
         <div className="space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-6">
-          {reasons.map(({ icon: Icon, titleKey, descKey }, i) => (
+          {(expanded ? reasons : reasons.slice(0, 2)).map(({ icon: Icon, titleKey, descKey }, i) => (
             <div key={titleKey} className="flex gap-4 p-6 bg-white rounded-2xl shadow-soft border border-primary/10 md:flex-col md:items-center md:text-center md:h-full hover:shadow-md hover:-translate-y-0.5 transition-all">
               <div className="shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center"
                 style={{background: i === 0 ? 'linear-gradient(135deg, #1a365d, #2c5282)' : i === 1 ? 'linear-gradient(135deg, #d69e2e, #b77f1d)' : 'linear-gradient(135deg, #2d6a4f, #40916c)'}}>
@@ -47,6 +48,18 @@ const WhyUs: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {!expanded && (
+          <div className="text-center mt-4">
+            <button
+              onClick={() => setExpanded(true)}
+              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
+            >
+              <ChevronDown className="w-4 h-4" />
+              {`残り${reasons.length - 2}件を見る`}
+            </button>
+          </div>
+        )}
 
         {/* 統計バー */}
         <div className="mt-8 grid grid-cols-3 gap-3">
