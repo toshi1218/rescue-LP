@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
             <a
               href="/ja/ryokin/"
               onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
-              className="font-bold py-3.5 px-6 rounded-lg border-2 border-white text-white bg-black/30 hover:bg-black/50 transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-white"
+              className="font-bold py-3.5 px-6 rounded-lg bg-white text-secondary hover:bg-gray-100 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-white/40 shadow-lg"
               aria-label={t('hero.pricingAriaLabel')}
             >
               <ArrowRight className="w-5 h-5 flex-shrink-0" />
@@ -201,7 +201,7 @@ const Hero: React.FC = () => {
             </a>
             <a
               href="#pricing"
-              className="flex items-center justify-center gap-2 text-white font-bold py-3.5 px-6 rounded-xl border-2 border-white bg-black/30 hover:bg-black/50 transition-all"
+              className="flex items-center justify-center gap-2 font-bold py-3.5 px-6 rounded-xl bg-white text-secondary hover:bg-gray-100 hover:scale-[1.02] transition-all shadow-lg"
             >
               <ArrowRight className="w-5 h-5 flex-shrink-0" />
               See Packages
