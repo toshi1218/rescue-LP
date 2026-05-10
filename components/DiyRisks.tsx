@@ -81,7 +81,7 @@ const DiyRisks: React.FC = () => {
 
   return (
     <section
-      className="py-16 bg-amber-50/40 border-y border-amber-100"
+      className="py-20 bg-amber-50/40 border-y border-amber-100"
       aria-labelledby="diy-risks-heading"
     >
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
