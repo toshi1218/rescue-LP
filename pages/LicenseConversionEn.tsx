@@ -76,7 +76,7 @@ export default function LicenseConversionEn() {
       <HeroBanner
         title="LTO Driver's Record for Philippine License Conversion — Shipped Worldwide"
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -89,7 +89,7 @@ export default function LicenseConversionEn() {
           'Bulk orders available for employers sponsoring multiple drivers',
           'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

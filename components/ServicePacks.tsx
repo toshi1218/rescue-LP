@@ -16,7 +16,7 @@ const packs = [
   {
     to: '/ja/haigusha-visa/',
     icon: BadgeCheck,
-    title: '配偶者ビザ（在留資格）',
+    title: '配偶者ビザ',
     desc: '入管申請に向けて必要なフィリピン書類の一覧と費用の目安を確認できます',
     accentBg: 'bg-blue-50',
     accentBorder: 'border-blue-100',
@@ -26,7 +26,7 @@ const packs = [
   {
     to: '/ja/gaimen-kirikae-guide/',
     icon: Car,
-    title: '外免切替（免許の切替）',
+    title: '外免切替',
     desc: 'フィリピン免許を日本免許に切り替えるためのLTO書類と費用を確認できます',
     accentBg: 'bg-emerald-50',
     accentBorder: 'border-emerald-100',
@@ -60,39 +60,39 @@ const ServicePacks: React.FC = () => {
   const visiblePacks = expanded ? packs : packs.slice(0, 2);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Services</span>
           <h2 className="text-xl font-bold text-secondary mb-2">目的が決まっている方はこちら</h2>
           <p className="text-xs text-gray-500">必要書類・費用の目安・ご依頼の流れを目的別にまとめています</p>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
           {visiblePacks.map((pack, i) => (
             <Link
               key={pack.to}
               to={pack.to}
-              className={`group relative bg-white border ${pack.accentBorder} rounded-2xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all overflow-hidden`}
+              className={`group relative bg-white border ${pack.accentBorder} rounded-2xl p-3 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all overflow-hidden`}
             >
               {/* Number badge */}
-              <span className={`absolute top-4 right-4 font-bold text-2xl leading-none ${pack.numColor} opacity-20 font-display select-none`}>
+              <span className={`absolute top-2 right-2 font-bold text-xl leading-none ${pack.numColor} opacity-20 font-display select-none`}>
                 {String(i + 1).padStart(2, '0')}
               </span>
 
               {/* Icon */}
-              <div className={`w-11 h-11 rounded-xl ${pack.accentBg} border ${pack.accentBorder} flex items-center justify-center mb-3`}>
-                <pack.icon className={`w-5 h-5 ${pack.iconColor}`} />
+              <div className={`w-9 h-9 rounded-xl ${pack.accentBg} border ${pack.accentBorder} flex items-center justify-center mb-2`}>
+                <pack.icon className={`w-4 h-4 ${pack.iconColor}`} />
               </div>
 
               {/* Title */}
-              <p className="font-bold text-sm text-secondary leading-snug mb-1.5 group-hover:text-primary transition-colors pr-6">
+              <p className="font-bold text-xs text-secondary leading-snug mb-1 group-hover:text-primary transition-colors pr-5">
                 {pack.title}
               </p>
 
               {/* Desc */}
-              <p className="text-xs text-gray-500 leading-relaxed mb-4">{pack.desc}</p>
+              <p className="text-[10px] text-gray-500 leading-relaxed mb-3">{pack.desc}</p>
 
               {/* CTA row */}
               <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark group-hover:gap-2 transition-all">

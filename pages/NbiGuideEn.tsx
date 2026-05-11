@@ -85,7 +85,7 @@ export default function NbiGuideEn() {
       <HeroBanner
         title="NBI Clearance — Application Support & Shipping Worldwide"
         badges={['Renewal Cases Handled Remotely', 'First-Time: Embassy Guidance Included', 'Apostille + DHL Included']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -104,7 +104,7 @@ export default function NbiGuideEn() {
           'First-time applicants: we guide you through Philippine Embassy fingerprint registration in your country',
           'DFA Apostille + DHL Express shipping worldwide — HIT cases supported',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

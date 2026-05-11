@@ -76,7 +76,7 @@ export default function DriverRecordEn() {
       <HeroBanner
         title="LTO Driver's Record — Retrieved and Shipped Worldwide via DHL"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -89,7 +89,7 @@ export default function DriverRecordEn() {
           'Bulk orders available for employers and fleet operators',
           'All-inclusive pricing with DHL Express shipping',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

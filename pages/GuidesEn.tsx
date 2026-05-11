@@ -46,7 +46,7 @@ export default function GuidesEn() {
         <CtaBox
           title="Not sure which documents you need?"
           description="Tell us your visa type and destination country. We confirm exactly what to order — CENOMAR, PSA, NBI, Apostille — and give you a fixed all-inclusive quote."
-          buttonText="Start Free Consultation"
+          buttonText="Free Consultation"
           href="#contact"
           variant="primary"
           trustNote="Free cancellation before start · Reply within 24 hours · Pay by Visa / Mastercard / Amex"

@@ -84,7 +84,7 @@ export default function NaturalizationEn() {
       <HeroBanner
         title="Philippine Documents for Citizenship & Naturalization — Retrieved and Shipped Worldwide"
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -97,7 +97,7 @@ export default function NaturalizationEn() {
           'We confirm exact requirements for your citizenship application',
           'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

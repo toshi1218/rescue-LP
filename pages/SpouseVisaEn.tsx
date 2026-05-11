@@ -84,7 +84,7 @@ export default function SpouseVisaEn() {
       <HeroBanner
         title="Philippine Documents for Your Spouse Visa Petition"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -97,7 +97,7 @@ export default function SpouseVisaEn() {
           'We verify requirements for your specific visa type before starting',
           'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

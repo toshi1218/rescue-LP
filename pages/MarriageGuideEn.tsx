@@ -84,7 +84,7 @@ export default function MarriageGuideEn() {
       <HeroBanner
         title="Philippine Marriage Documents for Your Visa Application Worldwide"
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -97,7 +97,7 @@ export default function MarriageGuideEn() {
           'Works for K-1 visa, CR-1, partner visa, spousal sponsorship & more',
           'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

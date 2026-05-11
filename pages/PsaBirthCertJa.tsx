@@ -128,7 +128,7 @@ export default function PsaBirthCertJa() {
           <p className="text-gray-700 leading-relaxed mb-3">
             PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（Philippine Statistics Authority, PSA）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚の手続きや配偶者ビザ申請、帰化申請など、身元証明が必要な場面で提出を求められます。
           </p>
-          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-sm">
+          <dl className="grid grid-cols-2 gap-3 mt-4 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">正式名称</dt>
               <dd className="font-medium text-gray-800">PSA Birth Certificate</dd>

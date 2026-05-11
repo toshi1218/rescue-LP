@@ -106,7 +106,7 @@ export default function SpouseVisaJa() {
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
           <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
-          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
               <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
@@ -149,7 +149,7 @@ export default function SpouseVisaJa() {
       {/* できること / できないこと */}
       <section className="mb-6 rounded-2xl bg-gray-50 border border-gray-200 p-5">
         <h2 className="text-sm font-bold text-gray-800 mb-3">このページでできること・できないこと</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           <div>
             <p className="text-sm font-bold text-green-700 mb-2">✓ できること</p>
             <ul className="space-y-1.5">

@@ -86,7 +86,7 @@ export default function NbiClearanceOverseasEn() {
       <HeroBanner
         title="NBI Clearance from Overseas — No Trip to the Philippines Needed"
         badges={['OFW & Overseas Filipinos', 'HIT Cases Handled', 'Ships Worldwide via DHL']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -173,7 +173,7 @@ export default function NbiClearanceOverseasEn() {
           { q: 'How long is NBI Clearance valid for overseas use?', a: 'NBI Clearance is valid for 1 year from the issue date, but many immigration authorities require it issued within 6 months. We time retrieval to match your submission deadline.' },
         ]}
         ctaTitle="Share your situation and we will guide your next step"
-        ctaButton="Start Free Consultation"
+        ctaButton="Free Consultation"
       />
 
       <RelatedArticles

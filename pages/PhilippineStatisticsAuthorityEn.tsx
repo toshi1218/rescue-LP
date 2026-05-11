@@ -81,7 +81,7 @@ export default function PhilippineStatisticsAuthorityEn() {
       <HeroBanner
         title="Philippine Statistics Authority (PSA): Your Guide to PSA Documents"
         badges={['Birth Certificate · Marriage Cert · CENOMAR', 'Retrieval from Abroad', 'DFA Apostille Included']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 2026"
       />
@@ -155,7 +155,7 @@ export default function PhilippineStatisticsAuthorityEn() {
       <CtaBox
         title="Need a PSA document shipped internationally?"
         description="We retrieve PSA documents from the Philippines, arrange DFA Apostille, and ship directly to your address worldwide via DHL. No Philippines trip required."
-        buttonText="Start Free Consultation"
+        buttonText="Free Consultation"
         href="#contact"
         variant="primary"
         trustNote="Free cancellation before start · Progress updates at every stage · Ships via DHL Express"
@@ -191,7 +191,7 @@ export default function PhilippineStatisticsAuthorityEn() {
           { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'For most immigration and legal purposes outside the Philippines, yes. DFA Apostille authenticates PSA documents for international use. We confirm the exact requirement for your case.' },
         ]}
         ctaTitle="Not sure which PSA document you need? Ask us."
-        ctaButton="Start Free Consultation"
+        ctaButton="Free Consultation"
       />
 
       <RelatedArticles

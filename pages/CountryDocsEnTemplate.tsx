@@ -64,7 +64,7 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
       <HeroBanner
         title={`Philippine Documents for ${config.name} Immigration`}
         badges={config.badges}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated={SEO_LAST_UPDATED_EN}
       />
@@ -72,7 +72,7 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
       <SummaryBlock
         conclusion={`Applying for ${config.name} ${config.visaType}? We retrieve all required Philippine documents with ${config.authLabel} and ship directly to your ${config.name} address.`}
         points={config.summaryPoints}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList
