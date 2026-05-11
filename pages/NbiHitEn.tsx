@@ -85,7 +85,7 @@ export default function NbiHitEn() {
       <HeroBanner
         title="NBI HIT Result? We Help You Resolve It"
         badges={['English Support', 'Case-by-Case Handling', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

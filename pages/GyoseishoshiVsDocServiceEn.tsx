@@ -60,7 +60,7 @@ export default function GyoseishoshiVsDocServiceEn() {
       <HeroBanner
         title="Administrative Scrivener vs Document Acquisition Service"
         badges={['Role Comparison', 'International Marriage', '2026 Guide']}
-        ctaText="Ask About Our Document Service"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

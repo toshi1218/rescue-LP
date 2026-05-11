@@ -85,7 +85,7 @@ export default function AustraliaDocsEn() {
       <HeroBanner
         title="Philippine Documents for Australia Immigration"
         badges={['Home Affairs-Ready', 'DFA Apostille Included', 'Ships to Australia via DHL']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -98,7 +98,7 @@ export default function AustraliaDocsEn() {
           'Paper Apostille originals shipped via DHL Express to your Australian address',
           'We confirm exact Home Affairs requirements for your specific visa subclass',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

@@ -35,7 +35,7 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
         provider: { '@type': 'Organization', name: 'IGRS Inc.' },
       }}
     >
-      <HeroBanner title={title} badges={badges} ctaText={isJa ? '無料相談はこちら' : 'Start Free Consultation'} ctaHref="#contact" />
+      <HeroBanner title={title} badges={badges} ctaText={isJa ? '無料相談はこちら' : 'Free Consultation'} ctaHref="#contact" />
 
       <FeatureList
         heading={audienceHeading}

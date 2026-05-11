@@ -73,7 +73,7 @@ export default function DocumentChecklistByVisaEn() {
       <HeroBanner
         title="Philippine Document Checklist by Visa Type"
         badges={['K-1 · CR-1 · Canada · Australia · UK · UAE · Japan', 'All-Inclusive Service', 'Free Consultation']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -236,7 +236,7 @@ export default function DocumentChecklistByVisaEn() {
           { q: 'Can you retrieve multiple documents at the same time?', a: 'Yes. We can process CENOMAR, PSA Birth Certificate, PSA Marriage Certificate, and NBI Clearance simultaneously. This saves significant time compared to ordering one by one.' },
         ]}
         ctaTitle="Not sure what your visa requires? Ask us."
-        ctaButton="Start Free Consultation"
+        ctaButton="Free Consultation"
       />
 
       <RelatedArticles

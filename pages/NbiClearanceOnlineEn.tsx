@@ -90,7 +90,7 @@ export default function NbiClearanceOnlineEn() {
       <HeroBanner
         title="NBI Clearance Online: What You Can and Can't Do from Abroad"
         badges={['OFW-Friendly Guide', 'HIT Cases Handled', 'Ships Worldwide via DHL']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 2026"
       />
@@ -156,7 +156,7 @@ export default function NbiClearanceOnlineEn() {
       <CtaBox
         title="Can't travel to the Philippines? We handle NBI for you."
         description="We coordinate NBI Clearance retrieval — including HIT cases — arrange DFA Apostille, and ship directly to your door worldwide."
-        buttonText="Start Free Consultation"
+        buttonText="Free Consultation"
         href="#contact"
         variant="primary"
         trustNote="Free cancellation before start · HIT cases handled · Ships via DHL Express"
@@ -204,7 +204,7 @@ export default function NbiClearanceOnlineEn() {
           { q: 'Can you handle NBI for someone currently outside the Philippines?', a: 'Yes. That is our primary use case. We coordinate everything locally so you do not need to travel or have a Philippines contact.' },
         ]}
         ctaTitle="HIT case or not sure what applies to you? Ask us."
-        ctaButton="Start Free Consultation"
+        ctaButton="Free Consultation"
       />
 
       <RelatedArticles

@@ -85,7 +85,7 @@ export default function Cr1VisaDocsEn() {
       <HeroBanner
         title="CR-1/IR-1 Spouse Visa: Philippine Documents Retrieved and Shipped to the USA"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -98,7 +98,7 @@ export default function Cr1VisaDocsEn() {
           'We verify what your specific case needs before starting',
           'All-inclusive pricing with DHL Express shipping to USA',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

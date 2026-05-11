@@ -85,7 +85,7 @@ export default function UsVisaDocsEn() {
       <HeroBanner
         title="Philippine Documents for Your US Visa Petition"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -98,7 +98,7 @@ export default function UsVisaDocsEn() {
           'We confirm exact requirements for your specific visa type',
           'All-inclusive pricing with DHL Express shipping to USA',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

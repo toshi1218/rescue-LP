@@ -86,7 +86,7 @@ export default function PsaBirthCertEn() {
       <HeroBanner
         title="PSA Birth Certificate — Retrieved and Shipped Worldwide"
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -148,7 +148,7 @@ export default function PsaBirthCertEn() {
           'Shipped via DHL Express directly to your address anywhere in the world',
           'All-inclusive pricing: no hidden fees for Apostille or shipping',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

@@ -84,7 +84,7 @@ export default function ApostilleFeeEn() {
       <HeroBanner
         title="DFA Apostille Pricing: Know the Real Total Before You Start"
         badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

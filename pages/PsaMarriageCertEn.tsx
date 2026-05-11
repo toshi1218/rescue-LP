@@ -85,7 +85,7 @@ export default function PsaMarriageCertEn() {
       <HeroBanner
         title="PSA Marriage Certificate — Retrieved and Shipped Worldwide"
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -98,7 +98,7 @@ export default function PsaMarriageCertEn() {
           'DFA Apostille included for acceptance by USCIS, IRCC, Home Affairs, UKVI & more',
           'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

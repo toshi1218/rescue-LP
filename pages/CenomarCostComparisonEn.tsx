@@ -186,7 +186,7 @@ export default function CenomarCostComparisonEn() {
       <CtaBox
         title="Ready to Get Started?"
         description="All-inclusive from US$349. PSA retrieval + DFA Apostille + DHL shipping worldwide. Free consultation — no commitment until you approve the quote."
-        buttonText="Start Free Consultation"
+        buttonText="Free Consultation"
         href="#contact"
         variant="primary"
         trustNote="Free cancellation before start · Pay balance only after confirming document copies"

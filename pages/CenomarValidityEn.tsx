@@ -78,7 +78,7 @@ export default function CenomarValidityEn() {
       <HeroBanner
         title="CENOMAR Timing: We Help You Get It Right the First Time"
         badges={['Ships via DHL', 'Deadline-Aware Scheduling', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
