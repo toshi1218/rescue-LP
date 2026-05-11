@@ -197,7 +197,7 @@ export default function HomeJa() {
                   <p className="text-xs font-bold text-blue-800 mb-0.5">e-Certificate（電子文書）での提出が認められている場合</p>
                   <p className="text-xs text-blue-700 leading-relaxed">
                     提出先に確認し、電子文書でOKと言われた場合は<strong>e-CertificateおよびeApostilleの取得代行</strong>にも対応しています。
-                    <a href="#contact" className="underline underline-offset-2 font-bold ml-1 hover:text-blue-900 transition-colors">まずご相談ください</a>。
+                    <a href="/ja/psa-ecertificate-nihon/" className="underline underline-offset-2 font-bold ml-1 hover:text-blue-900 transition-colors">詳しくはこちら</a>。
                   </p>
                 </div>
               </div>
