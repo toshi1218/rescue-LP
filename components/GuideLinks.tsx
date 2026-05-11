@@ -57,7 +57,7 @@ const GuideLinks: React.FC<GuideLinksProps> = React.memo(({ maxItems }) => {
           <FileText className="w-5 h-5 text-secondary" />
           <h2 className="text-lg font-bold text-secondary">{t('guides.title')}</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           {guides.map((g) => (
             <Link
               key={g.to}

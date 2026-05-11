@@ -125,7 +125,7 @@ export default function PsaCrsCebuJa() {
             さらにすぐ隣にはLocal Civil Registrar（地元の民事登録局）もあり、
             書類関連の手続きが一か所に集まったエリアです。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_143535.webp"
@@ -160,7 +160,7 @@ export default function PsaCrsCebuJa() {
             CRS Cebu City Outletはガイサノキャピタルサウス（Gaisano Capital South）の近くに位置する繁華街の一角にあります。
             ジプニーやバイクが行き交う、活気あるセブ市内の典型的な街並みです。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_143930.webp"
@@ -197,7 +197,7 @@ export default function PsaCrsCebuJa() {
             当日の飛び込み申請は一切受け付けられません。
             予約は無料で、<strong>https://crs-appointment.psahelpline.ph/</strong> から行います。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_142533.webp"
@@ -233,7 +233,7 @@ export default function PsaCrsCebuJa() {
             予約なしの来場者は入場を断られます。代行サービスではこの入場管理を含め、
             スタッフが書類の受け取りまですべて対応します。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_142346.webp"
@@ -270,7 +270,7 @@ export default function PsaCrsCebuJa() {
             それぞれ異なる窓口で処理されます。
             混雑時には多くの方が座って順番を待っています。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-2 gap-4 mb-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_142017.webp"
@@ -316,7 +316,7 @@ export default function PsaCrsCebuJa() {
             窓口に向かう前に、セルフサービスキオスク（自動端末）で申請書の情報を入力します。
             バーコード付きの申請番号が印刷されて出てくる仕組みで、窓口での処理をスムーズにする役割を担っています。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_142106.webp"
@@ -352,7 +352,7 @@ export default function PsaCrsCebuJa() {
             それぞれ専用の申請書があり、窓口付近に用紙が置かれています。
             ただし現在は予約時にオンラインで情報を入力するため、当日の紙の申請書記入は最小限になっています。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_142305.webp"
@@ -376,7 +376,7 @@ export default function PsaCrsCebuJa() {
               </figcaption>
             </figure>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_142221.webp"

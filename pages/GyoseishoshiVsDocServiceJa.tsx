@@ -189,7 +189,7 @@ export default function GyoseishoshiVsDocServiceJa() {
         {/* 判断基準 */}
         <section className="rounded-2xl bg-white border border-gray-200 p-6">
           <h2 className="text-base font-bold text-gray-900 mb-4">行政書士が必要なケース / 書類取得サービスだけで足りるケース</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <div className="rounded-xl bg-blue-50 border border-blue-200 p-4">
               <div className="flex items-center gap-2 mb-3">
                 <Users className="w-4 h-4 text-blue-600" />

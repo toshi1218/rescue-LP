@@ -100,7 +100,7 @@ export default function PsaBirthCertEn() {
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
           <h2 className="text-xl font-bold text-gray-900 mb-3">Pricing &amp; Timeline</h2>
-          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">Document</dt>
               <dd className="font-medium text-gray-800">PSA Birth Certificate</dd>

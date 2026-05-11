@@ -163,7 +163,7 @@ export default function CenomarGuideJa() {
           <p className="text-gray-700 leading-relaxed mb-3">
             国際結婚の手続き・配偶者ビザ申請・帰化申請・フィリピンでの婚姻手続きなど、フィリピン人の婚姻状況を確認する必要がある場面で提出を求められることがあります。
           </p>
-          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-sm">
+          <dl className="grid grid-cols-2 gap-3 mt-4 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">正式名称</dt>
               <dd className="font-medium text-gray-800">Certificate of No Marriage Record</dd>
