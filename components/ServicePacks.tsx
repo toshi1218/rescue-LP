@@ -60,9 +60,9 @@ const ServicePacks: React.FC = () => {
   const visiblePacks = expanded ? packs : packs.slice(0, 2);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
-        <div className="text-center mb-8">
+        <div className="text-center mb-4">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Services</span>
           <h2 className="text-xl font-bold text-secondary mb-2">目的が決まっている方はこちら</h2>
           <p className="text-xs text-gray-500">必要書類・費用の目安・ご依頼の流れを目的別にまとめています</p>

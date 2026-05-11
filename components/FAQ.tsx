@@ -38,13 +38,13 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white" aria-labelledby="faq-heading">
+    <section id="faq" className="py-10 bg-white" aria-labelledby="faq-heading">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
-        <div className="text-center mb-10">
+        <div className="text-center mb-5">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-1 block">FAQ</span>
           <h2 id="faq-heading" className="text-xl font-bold text-secondary">{t('faq.title')}</h2>
         </div>

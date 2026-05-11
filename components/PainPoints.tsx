@@ -16,7 +16,7 @@ const PainPoints: React.FC = () => {
   const visible = expanded ? cards : cards.slice(0, 2);
 
   return (
-    <section className="py-20 px-4 bg-secondary relative overflow-hidden">
+    <section className="py-10 px-4 bg-secondary relative overflow-hidden">
       {/* 背景装飾 */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -right-24 -top-24 w-80 h-80 bg-primary rounded-full blur-[120px] opacity-10"></div>
@@ -25,7 +25,7 @@ const PainPoints: React.FC = () => {
       </div>
 
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto relative z-10">
-        <div className="text-center mb-10">
+        <div className="text-center mb-5">
           <span className="text-primary font-bold text-xs font-display tracking-widest uppercase mb-2 block">Pain Points</span>
           <h2 className="text-lg md:text-xl font-bold text-white mb-3">{t('painpoints.title')}</h2>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full"></div>

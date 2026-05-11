@@ -20,7 +20,7 @@ const WhyUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fffbf0 0%, #fef9ec 50%, #fff8e6 100%)'}}>
+    <section className="py-10 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fffbf0 0%, #fef9ec 50%, #fff8e6 100%)'}}>
       {/* 背景装飾 */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-0 top-0 w-96 h-96 bg-primary/5 rounded-full blur-[80px]"></div>
@@ -28,7 +28,7 @@ const WhyUs: React.FC = () => {
       </div>
 
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Why Us</span>
           <h2 className="text-xl font-bold text-secondary">{t('whyus.title')}</h2>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
@@ -62,7 +62,7 @@ const WhyUs: React.FC = () => {
         )}
 
         {/* 統計バー */}
-        <div className="mt-8 grid grid-cols-3 gap-3">
+        <div className="mt-5 grid grid-cols-3 gap-3">
           {stats.map(({ labelKey, valueKey }, i) => {
             const gradients = [
               'from-secondary/5 to-secondary/10',
@@ -82,7 +82,7 @@ const WhyUs: React.FC = () => {
         </div>
 
         {/* 返金保証バナー */}
-        <div className="mt-6 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 flex items-start gap-4">
+        <div className="mt-4 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 flex items-start gap-4">
           <div className="shrink-0 w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
             <BadgeCheck className="w-6 h-6 text-emerald-600" />
           </div>
@@ -94,7 +94,7 @@ const WhyUs: React.FC = () => {
         </div>
 
         {/* Office photo strip — real Philippine document processing */}
-        <div className="mt-8">
+        <div className="mt-4">
           <p className="text-xs text-gray-400 text-center mb-3 uppercase tracking-widest font-bold">
             {t('whyus.stat1.label') === '依頼方法' ? '現地での書類取得の様子' : 'Our Philippine office operations'}
           </p>
@@ -123,15 +123,15 @@ const WhyUs: React.FC = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-10 text-center">
+        <div className="mt-6 text-center">
           <a
             href="#contact"
             onClick={() => trackEvent('cta_click', { location: 'why_us', type: 'contact' })}
-            className="inline-flex items-center justify-center gap-2 bg-secondary text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-secondary/90 hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-secondary/40"
+            className="inline-flex items-center justify-center gap-2 bg-secondary text-white font-bold py-3.5 px-6 rounded-xl shadow-lg hover:bg-secondary/90 hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-secondary/40"
             aria-label={t('whyus.ctaAriaLabel')}
           >
-            <Send className="w-5 h-5" />
-            <span>{t('whyus.cta')}</span>
+            <Send className="w-4 h-4 flex-shrink-0" />
+            <span className="whitespace-nowrap">{t('whyus.cta')}</span>
           </a>
         </div>
       </div>

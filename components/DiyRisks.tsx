@@ -83,13 +83,13 @@ const DiyRisks: React.FC = () => {
 
   return (
     <section
-      className="py-20 bg-amber-50/40 border-y border-amber-100"
+      className="py-10 bg-amber-50/40 border-y border-amber-100"
       aria-labelledby="diy-risks-heading"
     >
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
 
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-5">
           <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 uppercase tracking-widest mb-3 bg-amber-100 px-3 py-1 rounded-full">
             <AlertTriangle className="w-3 h-3" />
             {c.badge}
@@ -127,7 +127,7 @@ const DiyRisks: React.FC = () => {
 
         {/* Expand button */}
         {!expanded && (
-          <div className="text-center mb-10">
+          <div className="text-center mb-5">
             <button
               onClick={() => setExpanded(true)}
               className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
