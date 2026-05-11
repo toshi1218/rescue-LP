@@ -218,3 +218,32 @@ npm run build    # runs lint-seo.sh → vite build → prerender.ts
 | `public/sitemap.xml` | Auto-generated sitemap with hreflang |
 | `public/robots.txt` | Crawler directives |
 | `public/_redirects` | 301 redirects and trailing slash normalization |
+
+## UI検証ルール（Verification Rule）
+
+ユーザーから「検証して」「確認して」「verify」などの指示があった場合、コードレビューだけでなく**必ずスクリーンショットで目視確認**を行う。
+
+### 手順
+
+1. **devサーバーを起動**（未起動の場合）
+   ```bash
+   /home/user/rescue-LP/node_modules/.bin/vite --host 0.0.0.0 --port 5173 &
+   sleep 3
+   ```
+
+2. **PC・スマホ両方のスクリーンショットを撮る**
+   - スマホ: `playwright screenshot --browser chromium --viewport-size "390,844" --wait-for-timeout 4000 <URL> <出力>.png`
+   - PC: `playwright screenshot --browser chromium --viewport-size "1280,800" --wait-for-timeout 4000 <URL> <出力>.png`
+   - または node スクリプトで複数セクションをターゲット撮影
+
+3. **Read ツールで画像を読み込んで目視確認**し、問題があれば即修正
+
+4. **確認項目の例**
+   - レイアウト崩れ（2列が1列になっていないか等）
+   - ボタンテキストの折り返し
+   - 要素の重なり・隠れ
+   - PC/スマホ両方で想定通りのレイアウトになっているか
+
+### 使用ツール
+- `playwright`（`/opt/node22/bin/playwright`）: CLIで手軽にスクリーンショット
+- node スクリプト + `playwright` npm モジュール（`/opt/node22/lib/node_modules/playwright/index.js`）: 特定セクションのクリップ撮影に使用
