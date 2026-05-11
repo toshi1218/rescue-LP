@@ -7,51 +7,66 @@ const packs = [
     to: '/ja/kokusai-kekkon-guide/',
     icon: Heart,
     title: '国際結婚',
+    price: '¥99,800〜',
     desc: 'フィリピン婚・日本婚の手続きに必要な書類と費用の目安を確認できます',
     accentBg: 'bg-rose-50',
     accentBorder: 'border-rose-100',
     iconColor: 'text-rose-500',
     numColor: 'text-rose-400',
+    priceColor: 'text-rose-600',
+    priceBg: 'bg-rose-50 border-rose-100',
   },
   {
     to: '/ja/haigusha-visa/',
     icon: BadgeCheck,
     title: '配偶者ビザ',
+    price: '¥50,000〜',
     desc: '入管申請に向けて必要なフィリピン書類の一覧と費用の目安を確認できます',
     accentBg: 'bg-blue-50',
     accentBorder: 'border-blue-100',
     iconColor: 'text-blue-600',
     numColor: 'text-blue-400',
+    priceColor: 'text-blue-700',
+    priceBg: 'bg-blue-50 border-blue-100',
   },
   {
     to: '/ja/gaimen-kirikae-guide/',
     icon: Car,
     title: '外免切替',
+    price: '¥100,000〜',
     desc: 'フィリピン免許を日本免許に切り替えるためのLTO書類と費用を確認できます',
     accentBg: 'bg-emerald-50',
     accentBorder: 'border-emerald-100',
     iconColor: 'text-emerald-600',
     numColor: 'text-emerald-400',
+    priceColor: 'text-emerald-700',
+    priceBg: 'bg-emerald-50 border-emerald-100',
   },
   {
     to: '/ja/nbi-clearance/',
     icon: ShieldCheck,
     title: '海外ビザ用NBIクリアランス',
+    price: '¥55,000〜',
     desc: '海外ビザ申請に必要な無犯罪証明書の取得サポートと費用を確認できます',
     accentBg: 'bg-amber-50',
     accentBorder: 'border-amber-100',
     iconColor: 'text-amber-600',
     numColor: 'text-amber-400',
+    priceColor: 'text-amber-700',
+    priceBg: 'bg-amber-50 border-amber-100',
   },
   {
     to: '/ja/kikka-shinsei/',
     icon: Award,
     title: '帰化申請書類パック',
+    price: '¥50,000〜',
     desc: '法務局への帰化申請に必要なフィリピン書類（出生・婚姻・NBI）の取得サポートと費用を確認できます',
     accentBg: 'bg-violet-50',
     accentBorder: 'border-violet-100',
     iconColor: 'text-violet-600',
     numColor: 'text-violet-400',
+    priceColor: 'text-violet-700',
+    priceBg: 'bg-violet-50 border-violet-100',
   },
 ];
 
@@ -90,6 +105,11 @@ const ServicePacks: React.FC = () => {
               <p className="font-bold text-xs text-secondary leading-snug mb-1 group-hover:text-primary transition-colors pr-5">
                 {pack.title}
               </p>
+
+              {/* Price badge */}
+              <span className={`inline-block text-[10px] font-bold ${pack.priceColor} border ${pack.priceBg} px-1.5 py-0.5 rounded mb-1.5`}>
+                {pack.price}
+              </span>
 
               {/* Desc */}
               <p className="text-[10px] text-gray-500 leading-relaxed mb-3">{pack.desc}</p>

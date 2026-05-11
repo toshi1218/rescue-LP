@@ -104,7 +104,7 @@ const SocialProof: React.FC = React.memo(() => {
   const stats = statsData[lang];
   const reviews = reviewsData[lang];
   const [reviewsExpanded, setReviewsExpanded] = useState(false);
-  const visibleReviews = reviewsExpanded ? reviews : reviews.slice(0, 1);
+  const visibleReviews = reviewsExpanded ? reviews : reviews.slice(0, 2);
 
   return (
     <section className="py-10 bg-white relative overflow-hidden" aria-labelledby="social-proof-title">
@@ -225,7 +225,7 @@ const SocialProof: React.FC = React.memo(() => {
               className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
             >
               <ChevronDown className="w-4 h-4" />
-              {isJa ? `他の口コミを見る（残り${reviews.length - 1}件）` : `See more reviews (${reviews.length - 1} more)`}
+              {isJa ? `他の口コミを見る（残り${reviews.length - 2}件）` : `See more reviews (${reviews.length - 2} more)`}
             </button>
           </div>
         )}

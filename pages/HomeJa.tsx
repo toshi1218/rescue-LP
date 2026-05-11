@@ -13,6 +13,7 @@ import ServicePacks from '../components/ServicePacks';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
+import StickyBottomCta from '../components/StickyBottomCta';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
@@ -216,6 +217,7 @@ export default function HomeJa() {
       </main>
       <Footer />
       <BackToTop />
+      <StickyBottomCta />
     </div>
   );
 }
