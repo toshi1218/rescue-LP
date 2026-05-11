@@ -16,7 +16,7 @@ const packs = [
   {
     to: '/ja/haigusha-visa/',
     icon: BadgeCheck,
-    title: '配偶者ビザ（在留資格）',
+    title: '配偶者ビザ',
     desc: '入管申請に向けて必要なフィリピン書類の一覧と費用の目安を確認できます',
     accentBg: 'bg-blue-50',
     accentBorder: 'border-blue-100',
@@ -26,7 +26,7 @@ const packs = [
   {
     to: '/ja/gaimen-kirikae-guide/',
     icon: Car,
-    title: '外免切替（免許の切替）',
+    title: '外免切替',
     desc: 'フィリピン免許を日本免許に切り替えるためのLTO書類と費用を確認できます',
     accentBg: 'bg-emerald-50',
     accentBorder: 'border-emerald-100',
