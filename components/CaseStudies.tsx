@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { AlertCircle, CheckCircle2, Heart, ShieldCheck, Car, Globe, Users, Fingerprint, ArrowDown, ChevronDown } from 'lucide-react';
+import React from 'react';
+import { AlertCircle, CheckCircle2, Heart, ShieldCheck, Car, Globe, Users, Fingerprint } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 const caseStudiesData = {
@@ -11,7 +11,7 @@ const caseStudiesData = {
       accentColor: 'border-rose-200',
       headerBg: 'bg-gradient-to-r from-rose-50 to-rose-100/50',
       badgeColor: 'bg-rose-100 text-rose-700',
-      title: '国際結婚：PSA＋CENOMAR＋アポスティーユ',
+      title: '国際結婚',
       fear: '「フィリピンに一度も行ったことがなく、現地に知人もいない。必要な書類をどうやって取ればいいか全く分からなかった」（日本在住フィリピン国籍・A様）',
       action: 'PSA出生証明書・CENOMAR・DFAアポスティーユを一式代行。必要書類の整理から現地手配・発送まで日本語だけで完結。',
       result: '日本での婚姻届提出に必要な書類一式をDHLで納品。フィリピンへの渡航なしで婚姻手続きを無事完了。',
@@ -23,7 +23,7 @@ const caseStudiesData = {
       accentColor: 'border-blue-200',
       headerBg: 'bg-gradient-to-r from-blue-50 to-blue-100/50',
       badgeColor: 'bg-blue-100 text-blue-700',
-      title: '配偶者ビザ：NBI・アポスティーユ代行',
+      title: '配偶者ビザ',
       fear: '「ビザ申請の期限が迫っている。書類に不備があったら申請が通らないかもしれない…」',
       action: '入管の要件を事前確認し、不備リスクの高い項目を先回りして排除。期限から逆算してスケジュールを設計。',
       result: '期限内に書類を届け、配偶者ビザ申請を無事に完了。追加手続きの発生なし。',
@@ -35,7 +35,7 @@ const caseStudiesData = {
       accentColor: 'border-emerald-200',
       headerBg: 'bg-gradient-to-r from-emerald-50 to-emerald-100/50',
       badgeColor: 'bg-emerald-100 text-emerald-700',
-      title: '法人：フィリピン人従業員のLTO書類取得',
+      title: '法人：LTO書類取得',
       fear: '「フィリピン人従業員に日本で運転させたいが、LTO書類の取り方が全く分からない。渡航なしで取れるのか不安だった」（静岡・リサイクル業・O社）',
       action: 'LTO運転経歴証明書×2部＋DFAアポスティーユ＋オフィシャルレシートを一式代行。法人として必要な書類要件を事前確認してから取得。',
       result: '外免切替に必要な書類一式をDHLで法人宛に納品。フィリピンへの渡航・現地手配は一切不要で完結。',
@@ -85,9 +85,6 @@ const CaseStudies: React.FC = React.memo(() => {
   const { lang, t } = useLanguage();
   const caseStudies = caseStudiesData[lang];
   const isJa = lang === 'ja';
-  const [expanded, setExpanded] = useState(false);
-
-  const visibleCases = expanded ? caseStudies : caseStudies.slice(0, 1);
 
   return (
     <section className="py-10 bg-slate-50" aria-labelledby="case-studies-title">
@@ -100,7 +97,7 @@ const CaseStudies: React.FC = React.memo(() => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {visibleCases.map((item) => {
+          {caseStudies.map((item) => {
             const Icon = item.icon;
             return (
               <article key={item.title} className={`border ${item.accentColor} bg-white rounded-2xl shadow-card flex flex-col overflow-hidden`}>
@@ -112,21 +109,16 @@ const CaseStudies: React.FC = React.memo(() => {
                   <h3 className="font-bold text-sm text-secondary leading-snug">{item.title}</h3>
                 </div>
 
-                <div className="p-5 flex flex-col gap-2 flex-1">
+                <div className="p-4 flex flex-col gap-3 flex-1">
                   {/* PROBLEM */}
                   <div>
                     <span className={`inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 ${item.badgeColor}`}>
                       {isJa ? '不安' : 'Challenge'}
                     </span>
-                    <div className="flex items-start gap-2 bg-red-50 rounded-xl px-3 py-2.5">
+                    <div className="flex items-start gap-2 bg-red-50 rounded-xl px-3 py-2">
                       <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
                       <p className="text-xs text-gray-600 italic leading-relaxed">{item.fear}</p>
                     </div>
-                  </div>
-
-                  {/* Arrow */}
-                  <div className="flex justify-center">
-                    <ArrowDown className="w-4 h-4 text-gray-300" />
                   </div>
 
                   {/* APPROACH */}
@@ -134,7 +126,7 @@ const CaseStudies: React.FC = React.memo(() => {
                     <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 bg-gray-100 text-gray-500">
                       {isJa ? '対応' : 'Approach'}
                     </span>
-                    <div className="flex items-start gap-2 bg-gray-50 rounded-xl px-3 py-2.5">
+                    <div className="flex items-start gap-2 bg-gray-50 rounded-xl px-3 py-2">
                       <span className="flex-shrink-0 w-4 h-4 rounded-full bg-secondary/15 flex items-center justify-center mt-0.5">
                         <span className="text-secondary text-[9px] font-bold">→</span>
                       </span>
@@ -142,17 +134,12 @@ const CaseStudies: React.FC = React.memo(() => {
                     </div>
                   </div>
 
-                  {/* Arrow */}
-                  <div className="flex justify-center">
-                    <ArrowDown className="w-4 h-4 text-gray-300" />
-                  </div>
-
                   {/* OUTCOME */}
                   <div className="mt-auto">
                     <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 bg-green-100 text-green-700">
                       {isJa ? '結果' : 'Outcome'}
                     </span>
-                    <div className="flex items-start gap-2 bg-green-50 border border-green-100 rounded-xl px-3 py-2.5">
+                    <div className="flex items-start gap-2 bg-green-50 border border-green-100 rounded-xl px-3 py-2">
                       <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                       <p className="text-xs text-gray-700 font-semibold leading-relaxed">{item.result}</p>
                     </div>
@@ -163,17 +150,6 @@ const CaseStudies: React.FC = React.memo(() => {
           })}
         </div>
 
-        {!expanded && (
-          <div className="text-center mt-6">
-            <button
-              onClick={() => setExpanded(true)}
-              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
-            >
-              <ChevronDown className="w-4 h-4" />
-              {isJa ? `他の事例を見る（残り${caseStudies.length - 1}件）` : `See more cases (${caseStudies.length - 1} more)`}
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );
