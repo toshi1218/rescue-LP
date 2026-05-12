@@ -135,6 +135,9 @@ export default function HomeJa() {
   return (
     <div className="min-h-screen bg-background-light text-gray-800 font-body">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <div className="bg-gray-100 border-b border-gray-200 py-1.5 px-4 text-center text-xs text-gray-500">
+        当サイトはフィリピン政府・PSA・DFA・NBI・LTOの公式サイトではありません。IGRS Inc.が運営する民間の書類取得サポートサービスです。ご自身で各政府機関へ直接申請することも可能です。
+      </div>
       <Navbar />
       <main id="main-content">
         <Hero />
