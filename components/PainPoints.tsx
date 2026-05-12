@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { AlertCircle, FileX, HelpCircle, ShieldAlert, ChevronDown } from 'lucide-react';
+import React from 'react';
+import { AlertCircle, FileX, HelpCircle, ShieldAlert } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 const PainPoints: React.FC = () => {
   const { t } = useLanguage();
-  const [expanded, setExpanded] = useState(false);
 
   const cards = [
     { icon: AlertCircle, titleKey: 'painpoints.1.title' as const, descKey: 'painpoints.1.desc' as const },
@@ -12,8 +11,6 @@ const PainPoints: React.FC = () => {
     { icon: HelpCircle, titleKey: 'painpoints.3.title' as const, descKey: 'painpoints.3.desc' as const },
     { icon: ShieldAlert, titleKey: 'painpoints.4.title' as const, descKey: 'painpoints.4.desc' as const },
   ];
-
-  const visible = expanded ? cards : cards.slice(0, 2);
 
   return (
     <section className="py-10 px-4 bg-secondary relative overflow-hidden">
@@ -32,7 +29,7 @@ const PainPoints: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {visible.map(({ icon: Icon, titleKey, descKey }) => (
+          {cards.map(({ icon: Icon, titleKey, descKey }) => (
             <div key={titleKey} className="bg-white/10 backdrop-blur-sm border border-white/10 p-5 rounded-2xl flex flex-col items-start h-full hover:bg-white/15 transition-colors">
               <div className="w-14 h-14 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center mb-4 shrink-0">
                 <Icon className="w-7 h-7 text-primary" />
@@ -43,17 +40,6 @@ const PainPoints: React.FC = () => {
           ))}
         </div>
 
-        {!expanded && (
-          <div className="text-center mt-6">
-            <button
-              onClick={() => setExpanded(true)}
-              className="inline-flex items-center gap-2 text-sm font-bold text-white bg-white/10 border border-white/20 px-6 py-3 rounded-xl hover:bg-white/20 transition-all"
-            >
-              <ChevronDown className="w-4 h-4" />
-              {`残り${cards.length - 2}件を見る`}
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );

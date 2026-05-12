@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { CheckCircle, ChevronDown } from 'lucide-react';
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 // 47件 平均4.8点の内訳（5点満点）
@@ -103,9 +103,6 @@ const SocialProof: React.FC = React.memo(() => {
   const isJa = lang === 'ja';
   const stats = statsData[lang];
   const reviews = reviewsData[lang];
-  const [reviewsExpanded, setReviewsExpanded] = useState(false);
-  const visibleReviews = reviewsExpanded ? reviews : reviews.slice(0, 1);
-
   return (
     <section className="py-10 bg-white relative overflow-hidden" aria-labelledby="social-proof-title">
       <div className="absolute inset-0 pointer-events-none">
@@ -175,7 +172,7 @@ const SocialProof: React.FC = React.memo(() => {
 
         {/* ── レビューカード ── */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {visibleReviews.map((item) => (
+          {reviews.map((item) => (
             <article key={item.service} className="bg-white border border-gray-100 rounded-2xl shadow-card flex flex-col overflow-hidden">
               {/* カードヘッダー */}
               <div className="bg-secondary/5 border-b border-gray-100 px-5 py-3 flex items-center justify-between">
@@ -217,18 +214,6 @@ const SocialProof: React.FC = React.memo(() => {
             </article>
           ))}
         </div>
-
-        {!reviewsExpanded && (
-          <div className="text-center mt-4">
-            <button
-              onClick={() => setReviewsExpanded(true)}
-              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
-            >
-              <ChevronDown className="w-4 h-4" />
-              {isJa ? `他の口コミを見る（残り${reviews.length - 1}件）` : `See more reviews (${reviews.length - 1} more)`}
-            </button>
-          </div>
-        )}
 
       </div>
     </section>
