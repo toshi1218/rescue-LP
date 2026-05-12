@@ -121,7 +121,7 @@ const SocialProof: React.FC = React.memo(() => {
 
         {/* ── 評価概要ブロック（コンパクト横並び） ── */}
         <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-4 mb-4">
-          <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center justify-center gap-8">
             {/* 左: 評価 */}
             <div className="flex items-center gap-3">
               <p className="text-4xl font-extrabold text-secondary leading-none">4.8</p>
@@ -135,7 +135,7 @@ const SocialProof: React.FC = React.memo(() => {
               </div>
             </div>
             {/* 右: 満足度 */}
-            <div className="text-right flex-shrink-0">
+            <div className="text-left flex-shrink-0">
               <p className="text-3xl font-extrabold text-primary leading-none">98%</p>
               <p className="text-xs font-bold text-gray-600 mt-0.5">
                 {isJa ? '★4以上の評価' : '4★ or higher'}
