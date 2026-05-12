@@ -165,6 +165,7 @@ export default function LicenseConversionJa() {
             ))}
           </div>
           <p className="text-xs text-gray-500 mt-2">※必要書類の種類・案件の状況によって料金は変わります。正確な金額は無料相談後にご提示します。</p>
+          <p className="text-xs text-gray-500 mt-1">DFAアポスティーユ単体の料金・費用内訳は<a href="/ja/apostille-ryokin/" className="text-primary underline">DFAアポスティーユの料金ページ</a>で詳しく解説しています。</p>
         </SectionDivider>
       </div>
 
