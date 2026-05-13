@@ -1,2 +1,6 @@
+#!/usr/bin/env sh
+# Pre-commit checks. Operates on staged files only (fast).
+# Heavy checks (typecheck, full lint, tests) run in CI.
+
 npx lint-staged
 bash scripts/lint-seo.sh
