@@ -127,7 +127,7 @@ const Hero: React.FC = () => {
 
           {/* Pricing hint – aligned with actual pricing table */}
           <p className="text-white/60 text-xs mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            国際結婚準備パック ¥99,800〜（税・送料別）
+            国際結婚準備パック ¥90,000〜（税・送料別）
           </p>
         </div>
       </header>
@@ -233,7 +233,7 @@ const Hero: React.FC = () => {
               Now accepting inquiries · Reply within 24 hours
             </p>
             <p className="text-white/60 text-xs">
-              International Marriage Package from US$899 (Apostille + DHL incl.)
+              Single document from US$349 all-in · Packages from US$499
             </p>
             <p className="text-white/50 text-xs mt-0.5">
               💳 Pay by credit card — Visa · Mastercard · Amex · Apple Pay
