@@ -233,7 +233,7 @@ const Hero: React.FC = () => {
               Now accepting inquiries · Reply within 24 hours
             </p>
             <p className="text-white/60 text-xs">
-              Single document from US$249 all-in · Packages from US$399
+              Single document from US$349 all-in · Packages from US$499
             </p>
             <p className="text-white/50 text-xs mt-0.5">
               💳 Pay by credit card — Visa · Mastercard · Amex · Apple Pay
