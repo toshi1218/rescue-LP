@@ -116,7 +116,7 @@ const plansData = {
       subtitle: '法務局への帰化申請に必要なフィリピン書類をまとめて取得',
       why: '帰化申請では法務局からフィリピンの出生・婚姻・無犯罪証明書などの原本提出が求められます',
       outcome: '必要書類が揃えば、法務局への帰化申請の書類準備が整います',
-      price: '¥110,000',
+      price: '¥115,000',
       priceNote: '〜（税・送料別）',
       period: '約6〜10週間',
       detailPath: '/ja/kika-shinsei-guide/',
