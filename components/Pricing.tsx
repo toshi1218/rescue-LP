@@ -29,7 +29,7 @@ const plansData = {
       subtitle: '入管への在留資格申請に必要なフィリピン書類を取得',
       why: '入管への配偶者ビザ申請では、フィリピン側の婚姻・出生証明書をアポスティーユ付きで提出する必要があります',
       outcome: '書類が揃えば、入管への在留資格認定証明書交付申請（または変更申請）が前に進みます',
-      price: '¥100,000',
+      price: '¥90,000',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
       detailPath: '/ja/haigusha-visa-shorui/',
