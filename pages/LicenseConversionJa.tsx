@@ -37,12 +37,12 @@ export default function LicenseConversionJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '88000',
+            price: '100000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '88000',
+              price: '100000',
               priceCurrency: 'JPY',
-              description: 'LTO書類取得・DFAアポスティーユ・DHL国際送料込み（税込）',
+              description: 'LTO書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
             },
           },
         },
@@ -134,8 +134,9 @@ export default function LicenseConversionJa() {
               <dd className="font-medium text-gray-800">LTO Certification with Apostille・License History 等</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金（税込・DHL送料込み）</dt>
-              <dd className="font-medium text-gray-800">88,000円〜（DFAアポスティーユ・DHL送料込み）</dd>
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
+              <dd className="font-medium text-gray-800">100,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※DHL国際配送は実費別途</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -149,13 +150,13 @@ export default function LicenseConversionJa() {
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
             <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
               <div className="px-4 py-3 font-bold">内容</div>
-              <div className="px-4 py-3 font-bold text-center">料金（税込）</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
             </div>
             {[
               { label: 'LTO書類取得（Certification・License History 等）', price: '込み' },
               { label: 'DFAアポスティーユ認証', price: '込み' },
-              { label: 'DHL国際配送（追跡付き）', price: '込み' },
-              { label: '合計（税込・DHL送料込み）', price: '88,000円〜', bold: true },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '100,000円〜', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
