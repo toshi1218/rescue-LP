@@ -10,8 +10,13 @@
   "scripts": {
     "dev": "vite",
     "lint:seo": "bash scripts/lint-seo.sh",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "build": "bash scripts/lint-seo.sh && vite build && tsx scripts/prerender.ts",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky"
   },
   "dependencies": {
     "lucide-react": "^0.564.0",
@@ -20,16 +25,28 @@
     "react-router-dom": "^7.13.0",
     "web-vitals": "^5.2.0"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --max-warnings 999"
+  },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.21",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.4",
     "postcss": "^8.5.6",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.20.5",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "typescript-eslint": "^8.59.3",
+    "vite": "^5.2.0",
+    "vitest": "^4.1.6"
   }
 }
