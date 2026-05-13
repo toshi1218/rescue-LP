@@ -130,7 +130,7 @@ const plansData = {
     {
       id: 'pack-basic',
       icon: Gem,
-      tag: 'Most Popular',
+      tag: null,
       featured: true,
       title: 'International Marriage Basic Package',
       subtitle: 'PSA Birth Certificate & CENOMAR with Apostille — ready for marriage registration',
