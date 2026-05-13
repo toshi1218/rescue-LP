@@ -9,10 +9,11 @@ const plansData = {
     {
       id: 'pack',
       icon: Gem,
-      tag: '人気 No.1',
+      tag: null,
       featured: true,
       title: '国際結婚準備パック',
       subtitle: '日本の役所への婚姻届に必要なフィリピン書類をまとめて取得',
+      includes: ['CENOMAR（独身証明書）', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '日本の役所で婚姻届を出すには、フィリピン側の書類（出生証明・独身証明など）をアポスティーユ付きで用意する必要があります',
       outcome: '書類が揃えば、日本の市区町村への婚姻届の提出が可能になります',
       price: '¥90,000',
@@ -27,6 +28,7 @@ const plansData = {
       featured: false,
       title: '配偶者ビザ準備書類パック',
       subtitle: '入管への在留資格申請に必要なフィリピン書類を取得',
+      includes: ['PSA婚姻証明書', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '入管への配偶者ビザ申請では、フィリピン側の婚姻・出生証明書をアポスティーユ付きで提出する必要があります',
       outcome: '書類が揃えば、入管への在留資格認定証明書交付申請（または変更申請）が前に進みます',
       price: '¥90,000',
@@ -100,6 +102,7 @@ const plansData = {
       featured: false,
       title: '外免切替サポート',
       subtitle: 'フィリピン免許から日本免許への切替に必要なLTO書類を取得',
+      includes: ['LTO書類一式（運転歴証明など）', 'DHL国際発送'],
       why: '外国免許を日本の免許に切り替えるには、フィリピンLTO発行の書類（運転歴証明など）の原本提出が必要です',
       outcome: '書類が揃えば、運転免許センターでの外免切替手続きを開始できます',
       price: '¥100,000',
@@ -114,6 +117,7 @@ const plansData = {
       featured: false,
       title: '帰化申請書類パック',
       subtitle: '法務局への帰化申請に必要なフィリピン書類をまとめて取得',
+      includes: ['PSA出生証明書', 'PSA婚姻証明書 or CENOMAR', 'NBI Clearance', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '帰化申請では法務局からフィリピンの出生・婚姻・無犯罪証明書などの原本提出が求められます',
       outcome: '必要書類が揃えば、法務局への帰化申請の書類準備が整います',
       price: '¥115,000',
@@ -126,7 +130,7 @@ const plansData = {
     {
       id: 'pack-basic',
       icon: Gem,
-      tag: 'Most Popular',
+      tag: null,
       featured: true,
       title: 'International Marriage Basic Package',
       subtitle: 'PSA Birth Certificate & CENOMAR with Apostille — ready for marriage registration',
@@ -285,8 +289,19 @@ const Pricing: React.FC = () => {
                     </div>
                   )}
 
-                  {/* 価格（最上部・大きく） */}
-                  <div className="mb-3">
+                  {/* タイトル・サブタイトル（最上部） */}
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 ${plan.featured ? 'bg-primary/10' : 'bg-secondary/5'}`}>
+                      <Icon className={`w-4 h-4 ${plan.featured ? 'text-primary' : 'text-secondary'}`} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold text-secondary leading-snug">{plan.title}</h3>
+                      <p className="text-sm text-gray-500 mt-0.5 leading-snug">{plan.subtitle}</p>
+                    </div>
+                  </div>
+
+                  {/* 価格 */}
+                  <div className="mb-4">
                     <div className="flex items-baseline gap-2">
                       <span className="text-4xl font-extrabold text-primary leading-none">{plan.price}</span>
                       <span className="text-xs text-gray-500">{plan.priceNote}</span>
@@ -302,31 +317,37 @@ const Pricing: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* タイトル・サブタイトル */}
-                  <div className="flex items-start gap-3 mb-5">
-                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${plan.featured ? 'bg-primary/10' : 'bg-secondary/5'}`}>
-                      <Icon className={`w-4 h-4 ${plan.featured ? 'text-primary' : 'text-secondary'}`} />
+                  {/* 含まれるもの */}
+                  {(plan as any).includes && (
+                    <div className="mb-4 rounded-lg bg-gray-50 border border-gray-100 px-3 py-2.5">
+                      <p className="text-xs font-bold text-secondary mb-1.5">含まれるもの</p>
+                      <ul className="space-y-1">
+                        {(plan as any).includes.map((item: string) => (
+                          <li key={item} className="flex items-center gap-1.5 text-xs text-gray-600">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-sm font-bold text-secondary leading-snug">{plan.title}</h3>
-                      <p className="text-xs text-gray-500 mt-0.5 leading-snug">{plan.subtitle}</p>
-                      {(plan as any).why && (
-                        <p className="text-xs text-gray-500 mt-1 leading-snug">
-                          <span className="font-semibold">必要理由：</span>{(plan as any).why}
-                        </p>
-                      )}
-                    </div>
-                  </div>
+                  )}
+
+                  {/* 必要理由 */}
+                  {(plan as any).why && (
+                    <p className="text-xs text-gray-500 mb-5 leading-snug">
+                      <span className="font-semibold">必要理由：</span>{(plan as any).why}
+                    </p>
+                  )}
 
                   {/* CTAボタン2つ */}
                   <div className="mt-auto flex gap-2">
                     <Link
                       to={(plan as any).detailPath}
                       onClick={() => trackEvent('cta_click', { location: 'pricing_detail', type: plan.id, variant: ctaVariant })}
-                      className="flex-1 flex items-center justify-center gap-1.5 border border-primary text-primary font-bold text-sm py-2.5 px-4 rounded-xl hover:bg-primary/5 transition-all duration-200"
+                      className="flex-1 flex items-center justify-center gap-1.5 border border-primary text-primary font-bold text-sm py-2.5 px-4 rounded-xl hover:bg-primary/5 transition-all duration-200 whitespace-nowrap"
                     >
                       {lang === 'ja' ? '詳細はこちら' : 'Learn More'}
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
                     </Link>
                     <a
                       href="#contact"
