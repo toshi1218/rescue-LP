@@ -285,8 +285,19 @@ const Pricing: React.FC = () => {
                     </div>
                   )}
 
-                  {/* 価格（最上部・大きく） */}
-                  <div className="mb-3">
+                  {/* タイトル・サブタイトル（最上部） */}
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 ${plan.featured ? 'bg-primary/10' : 'bg-secondary/5'}`}>
+                      <Icon className={`w-4 h-4 ${plan.featured ? 'text-primary' : 'text-secondary'}`} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold text-secondary leading-snug">{plan.title}</h3>
+                      <p className="text-sm text-gray-500 mt-0.5 leading-snug">{plan.subtitle}</p>
+                    </div>
+                  </div>
+
+                  {/* 価格 */}
+                  <div className="mb-4">
                     <div className="flex items-baseline gap-2">
                       <span className="text-4xl font-extrabold text-primary leading-none">{plan.price}</span>
                       <span className="text-xs text-gray-500">{plan.priceNote}</span>
@@ -302,31 +313,22 @@ const Pricing: React.FC = () => {
                     </p>
                   </div>
 
-                  {/* タイトル・サブタイトル */}
-                  <div className="flex items-start gap-3 mb-5">
-                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${plan.featured ? 'bg-primary/10' : 'bg-secondary/5'}`}>
-                      <Icon className={`w-4 h-4 ${plan.featured ? 'text-primary' : 'text-secondary'}`} />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-sm font-bold text-secondary leading-snug">{plan.title}</h3>
-                      <p className="text-xs text-gray-500 mt-0.5 leading-snug">{plan.subtitle}</p>
-                      {(plan as any).why && (
-                        <p className="text-xs text-gray-500 mt-1 leading-snug">
-                          <span className="font-semibold">必要理由：</span>{(plan as any).why}
-                        </p>
-                      )}
-                    </div>
-                  </div>
+                  {/* 必要理由 */}
+                  {(plan as any).why && (
+                    <p className="text-xs text-gray-500 mb-5 leading-snug">
+                      <span className="font-semibold">必要理由：</span>{(plan as any).why}
+                    </p>
+                  )}
 
                   {/* CTAボタン2つ */}
                   <div className="mt-auto flex gap-2">
                     <Link
                       to={(plan as any).detailPath}
                       onClick={() => trackEvent('cta_click', { location: 'pricing_detail', type: plan.id, variant: ctaVariant })}
-                      className="flex-1 flex items-center justify-center gap-1.5 border border-primary text-primary font-bold text-sm py-2.5 px-4 rounded-xl hover:bg-primary/5 transition-all duration-200"
+                      className="flex-1 flex items-center justify-center gap-1.5 border border-primary text-primary font-bold text-sm py-2.5 px-4 rounded-xl hover:bg-primary/5 transition-all duration-200 whitespace-nowrap"
                     >
                       {lang === 'ja' ? '詳細はこちら' : 'Learn More'}
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
                     </Link>
                     <a
                       href="#contact"
