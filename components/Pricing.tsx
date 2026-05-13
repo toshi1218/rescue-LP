@@ -15,7 +15,7 @@ const plansData = {
       subtitle: '日本の役所への婚姻届に必要なフィリピン書類をまとめて取得',
       why: '日本の役所で婚姻届を出すには、フィリピン側の書類（出生証明・独身証明など）をアポスティーユ付きで用意する必要があります',
       outcome: '書類が揃えば、日本の市区町村への婚姻届の提出が可能になります',
-      price: '¥99,800',
+      price: '¥90,000',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
       detailPath: '/ja/kokusai-kekkon-guide/',
