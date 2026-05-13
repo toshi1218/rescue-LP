@@ -9,7 +9,7 @@ const plansData = {
     {
       id: 'pack',
       icon: Gem,
-      tag: '人気 No.1',
+      tag: null,
       featured: true,
       title: '国際結婚準備パック',
       subtitle: '日本の役所への婚姻届に必要なフィリピン書類をまとめて取得',
