@@ -49,25 +49,25 @@ export default function PricingJa() {
         trustNote="追加費用が出る場合は事前にご相談します"
       />
 
-      {/* e-Apostille / e-Certificate に関する案内 */}
-      <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 mb-2 flex gap-3">
-        <Info className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-        <div>
-          <p className="text-sm font-bold text-gray-800 mb-1">
-            オンラインで取れる書類（e-Certificate / e-Apostille）について
+      {/* なぜ他社より安くないのか */}
+      <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 mb-2">
+        <p className="text-sm font-bold text-gray-800 mb-3">なぜ他社より安くないのか</p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          フィリピン書類の代行サービスの中には、e-Apostille（電子認証）・e-Certificate（電子書類）で対応している業者もあり、費用を抑えられます。
+        </p>
+        <p className="text-sm text-gray-700 leading-relaxed mb-3">
+          ただし、<strong>日本の市区町村役場・法務局・出入国在留管理庁では、紙の原本・物理アポスティーユを必須とするケースが大半です。</strong>
+        </p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          IGRSが取り扱うのは<strong>物理アポスティーユ（紙原本）のみ</strong>。現地DFAへの予約・申請・受け取りをスタッフが代行するため、予約枠に限りがあり、価格を下げることができません。その分、<strong>日本の提出先で弾かれるリスクはほぼありません。</strong>
+        </p>
+        <div className="rounded-lg border border-blue-200 bg-white p-4">
+          <p className="text-xs font-bold text-blue-700 mb-1">まず提出先に確認してください</p>
+          <p className="text-xs text-gray-600 leading-relaxed mb-2">
+            「e-Apostilleで受理しますか？紙の原本が必要ですか？」と確認してから業者を選ぶことをおすすめします。
           </p>
-          <p className="text-sm text-gray-600 leading-relaxed mb-2">
-            PSAはオンラインでのe-Certificate発行、DFAはデジタルアポスティーユ（e-Apostille）に対応しています。
-            自分でオンライン申請ができる場合は、コストを抑えられる選択肢です。
-          </p>
-          <p className="text-sm text-gray-700 font-semibold leading-relaxed">
-            ただし、日本の提出先（市区町村役場・法務局・出入国在留管理庁など）では、
-            <span className="text-red-600">紙の原本・物理アポスティーユを必須とするケースが多くあります。</span>
-            提出先の要件を必ず確認し、デジタルで対応可能かご確認ください。
-          </p>
-          <p className="text-sm text-gray-500 mt-2">
-            「自分で申請してみたいが不安」という方には、PSA入力サポートプランがあります。
-            提出先に紙が必要と分かった場合は、途中からフルサービスへの切替もご相談いただけます。
+          <p className="text-xs text-gray-500 leading-relaxed">
+            電子対応が確認できた場合は、<strong>PSAオンライン申請代行（¥16,500〜）</strong>でコストを抑えられます。紙原本が必要な場合はフルサービスをご利用ください。
           </p>
         </div>
       </div>
