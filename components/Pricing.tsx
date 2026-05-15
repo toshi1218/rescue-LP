@@ -1,11 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap } from 'lucide-react';
+import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap, LifeBuoy, Stamp } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
 const plansData = {
   ja: [
+    {
+      id: 'input-support',
+      icon: LifeBuoy,
+      tag: '新プラン',
+      featured: false,
+      title: 'PSA入力サポート（自分で取得したい方向け）',
+      subtitle: 'PSAオンライン申請の入力・支払い・送付先設定をサポート。書類はPSAから直接届きます',
+      why: '海外からPSAへのオンライン申請は、英語での入力・国際送金・送付先の3つのハードルがあります。サポートを受けながら自分で申請したい方向けのプランです。なお、日本の提出先（役所・入管など）が紙原本を必須とする場合は、後述のフルサービスへの切替もご相談いただけます',
+      price: '¥15,000',
+      priceNote: '〜（税別）',
+      period: 'オンラインで1〜2回のやり取り',
+      detailPath: '#contact',
+    },
+    {
+      id: 'apostille-only',
+      icon: Stamp,
+      tag: null,
+      featured: false,
+      title: 'DFAアポスティーユのみ（書類持込み）',
+      subtitle: 'すでにPSA・CENOMAR・NBI書類をお持ちの方のDFA物理アポスティーユ取得・国際発送を代行',
+      why: 'フィリピン国内で書類を取得済みの方や、以前取得した書類に後からアポスティーユが必要になった方向けのプランです。書類をIGRS宛に転送していただければ、DFA認証から発送までを代行します',
+      price: '¥30,000',
+      priceNote: '〜（税・送料別）',
+      period: '約4〜6週間',
+      detailPath: '#contact',
+    },
     {
       id: 'pack',
       icon: Gem,
@@ -16,7 +42,7 @@ const plansData = {
       includes: ['CENOMAR（独身証明書）', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '日本の役所で婚姻届を出すには、フィリピン側の書類（出生証明・独身証明など）をアポスティーユ付きで用意する必要があります',
       outcome: '書類が揃えば、日本の市区町村への婚姻届の提出が可能になります',
-      price: '¥90,000',
+      price: '¥80,000',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
       detailPath: '/ja/kokusai-kekkon-guide/',
@@ -31,7 +57,7 @@ const plansData = {
       includes: ['PSA婚姻証明書', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '入管への配偶者ビザ申請では、フィリピン側の婚姻・出生証明書をアポスティーユ付きで提出する必要があります',
       outcome: '書類が揃えば、入管への在留資格認定証明書交付申請（または変更申請）が前に進みます',
-      price: '¥90,000',
+      price: '¥80,000',
       priceNote: '〜（税・送料別）',
       period: '約4〜6週間',
       detailPath: '/ja/haigusha-visa-shorui/',

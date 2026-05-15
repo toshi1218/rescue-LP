@@ -6,6 +6,7 @@ import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { Info } from 'lucide-react';
 
 export default function PricingJa() {
   useMeta(
@@ -31,12 +32,12 @@ export default function PricingJa() {
     >
       <HeroBanner
         title="料金"
-        subtitle="国際結婚準備、配偶者ビザ準備、外免切替など、用途ごとの費用感をご確認いただけます。"
-        badges={['用途別にご案内', '無料お見積もり', '追加費用の後出しなし']}
+        subtitle="入力サポート（¥15,000〜）からフルサービス（¥50,000〜）まで、目的・予算に合わせてお選びいただけます。"
+        badges={['入力サポートから対応', '無料お見積もり', '追加費用の後出しなし']}
         ctaText="無料でお見積もり"
         ctaHref="#contact"
         ctaService="料金のお見積もり"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年5月1日"
       />
 
       <CtaBox
@@ -47,6 +48,29 @@ export default function PricingJa() {
         variant="primary"
         trustNote="追加費用が出る場合は事前にご相談します"
       />
+
+      {/* e-Apostille / e-Certificate に関する案内 */}
+      <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 mb-2 flex gap-3">
+        <Info className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+        <div>
+          <p className="text-sm font-bold text-gray-800 mb-1">
+            オンラインで取れる書類（e-Certificate / e-Apostille）について
+          </p>
+          <p className="text-sm text-gray-600 leading-relaxed mb-2">
+            PSAはオンラインでのe-Certificate発行、DFAはデジタルアポスティーユ（e-Apostille）に対応しています。
+            自分でオンライン申請ができる場合は、コストを抑えられる選択肢です。
+          </p>
+          <p className="text-sm text-gray-700 font-semibold leading-relaxed">
+            ただし、日本の提出先（市区町村役場・法務局・出入国在留管理庁など）では、
+            <span className="text-red-600">紙の原本・物理アポスティーユを必須とするケースが多くあります。</span>
+            提出先の要件を必ず確認し、デジタルで対応可能かご確認ください。
+          </p>
+          <p className="text-sm text-gray-500 mt-2">
+            「自分で申請してみたいが不安」という方には、PSA入力サポートプランがあります。
+            提出先に紙が必要と分かった場合は、途中からフルサービスへの切替もご相談いただけます。
+          </p>
+        </div>
+      </div>
 
       {/* 料金カード */}
       <Pricing />
