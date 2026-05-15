@@ -172,6 +172,7 @@ const Navbar: React.FC = () => {
     { label: 'プライバシーポリシー', path: '/ja/privacy/' },
     { label: '個人情報保護方針',    path: '/ja/kojin-joho-hogo/' },
     { label: '利用規約',           path: '/ja/terms/' },
+    { label: '特定商取引法に基づく表記', path: '/ja/tokusho/' },
   ] : [
     { label: 'About Us',            path: '/en/company/' },
     { label: 'Privacy Policy',      path: '/en/privacy/' },
