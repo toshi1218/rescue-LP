@@ -954,6 +954,17 @@ const routes: RouteConfig[] = [
     ogType: 'article',
     datePublished: '2026-04-24',
   },
+  {
+    path: '/ja/psa-input-support/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'psa-input-support', 'index.html'),
+    title: 'PSA入力サポート｜自分でフィリピン書類を取得したい方へ【IGRS】',
+    description: '海外からのPSA・CENOMAR・NBIオンライン申請を日本語でサポート。フォーム入力・支払い方法・送付先設定まで一緒に進めます。¥15,000〜。自分で取得して費用を抑えたい方向け。',
+    canonical: `${BASE}/ja/psa-input-support/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/psa-input-support/`,
+    lastmod: '2026-05-15',
+  },
 
   /* ── JA canonical routes (/ja/*) ─────────────────────── */
   {
