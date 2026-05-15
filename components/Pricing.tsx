@@ -16,8 +16,9 @@ const plansData = {
       includes: ['CENOMAR（独身証明書）', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '日本の役所で婚姻届を出すには、フィリピン側の書類（出生証明・独身証明など）をアポスティーユ付きで用意する必要があります',
       outcome: '書類が揃えば、日本の市区町村への婚姻届の提出が可能になります',
-      price: '¥90,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥105,000',
+      priceNote: '税込・送料込',
+      breakdown: ['代行費 ¥90,000', '消費税（10%）¥9,000', 'DHL国際発送 ¥6,000'],
       period: '約4〜6週間',
       detailPath: '/ja/kokusai-kekkon-guide/',
     },
@@ -31,8 +32,9 @@ const plansData = {
       includes: ['PSA婚姻証明書', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '入管への配偶者ビザ申請では、フィリピン側の婚姻・出生証明書をアポスティーユ付きで提出する必要があります',
       outcome: '書類が揃えば、入管への在留資格認定証明書交付申請（または変更申請）が前に進みます',
-      price: '¥90,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥105,000',
+      priceNote: '税込・送料込',
+      breakdown: ['代行費 ¥90,000', '消費税（10%）¥9,000', 'DHL国際発送 ¥6,000'],
       period: '約4〜6週間',
       detailPath: '/ja/haigusha-visa-shorui/',
     },
@@ -45,9 +47,11 @@ const plansData = {
       subtitle: 'PSA発行のCENOMAR取得・国際発送（1点から対応）',
       why: '国際結婚の婚姻届や配偶者ビザ申請では、フィリピン側の独身証明書（CENOMAR）をアポスティーユ付きで用意する必要があります',
       outcome: 'CENOMAR原本が揃えば、婚姻届の受理やビザ申請書類の準備が前に進みます',
-      price: '¥20,000',
-      priceNote: '〜（税・送料別 / アポスティーユなし）',
-      priceApostille: '¥50,000〜',
+      price: '¥28,000',
+      priceNote: 'アポスティーユなし・税込・送料込',
+      breakdown: ['書類取得代行 ¥20,000', '消費税（10%）¥2,000', 'DHL国際発送 ¥6,000'],
+      priceApostille: '¥61,000',
+      breakdownApostille: ['書類取得代行 ¥20,000', 'DFAアポスティーユ ¥30,000', '消費税（10%）¥5,000', 'DHL国際発送 ¥6,000'],
       period: '約4〜6週間',
       detailPath: '/ja/cenomar/',
     },
@@ -60,9 +64,11 @@ const plansData = {
       subtitle: 'PSA発行の出生証明書取得・国際発送（1点から対応）',
       why: 'ビザ申請・帰化・国際結婚の手続きでは、PSA発行の出生証明書原本をアポスティーユ付きで提出する必要があります',
       outcome: 'PSA出生証明書原本が揃えば、ビザや婚姻手続きの書類準備が前に進みます',
-      price: '¥20,000',
-      priceNote: '〜（税・送料別 / アポスティーユなし）',
-      priceApostille: '¥50,000〜',
+      price: '¥28,000',
+      priceNote: 'アポスティーユなし・税込・送料込',
+      breakdown: ['書類取得代行 ¥20,000', '消費税（10%）¥2,000', 'DHL国際発送 ¥6,000'],
+      priceApostille: '¥61,000',
+      breakdownApostille: ['書類取得代行 ¥20,000', 'DFAアポスティーユ ¥30,000', '消費税（10%）¥5,000', 'DHL国際発送 ¥6,000'],
       period: '約4〜6週間',
       detailPath: '/ja/psa-shussei-cost/',
     },
@@ -75,9 +81,11 @@ const plansData = {
       subtitle: 'PSA発行の婚姻証明書取得・国際発送（1点から対応）',
       why: '配偶者ビザ申請・帰化・在留資格変更などの手続きでは、PSA発行の婚姻証明書原本をアポスティーユ付きで提出する必要があります',
       outcome: 'PSA婚姻証明書原本が揃えば、ビザや帰化手続きの書類準備が前に進みます',
-      price: '¥20,000',
-      priceNote: '〜（税・送料別 / アポスティーユなし）',
-      priceApostille: '¥50,000〜',
+      price: '¥28,000',
+      priceNote: 'アポスティーユなし・税込・送料込',
+      breakdown: ['書類取得代行 ¥20,000', '消費税（10%）¥2,000', 'DHL国際発送 ¥6,000'],
+      priceApostille: '¥61,000',
+      breakdownApostille: ['書類取得代行 ¥20,000', 'DFAアポスティーユ ¥30,000', '消費税（10%）¥5,000', 'DHL国際発送 ¥6,000'],
       period: '約4〜6週間',
       detailPath: '/ja/psa-kekkon-shomeisho/',
     },
@@ -90,8 +98,9 @@ const plansData = {
       subtitle: 'お客様が取得したNBIクリアランスをIGRSへ転送→DFA物理アポスティーユを取得・発送',
       why: 'NBI Clearanceは本人指紋登録が必要なため、IGRSによる取得代行はできません。お客様がNBI事務所または在外公館で取得後、原本をIGRS宛に転送いただくことで、DFA物理アポスティーユの取得から国際発送までを代行します。',
       outcome: 'アポスティーユ付きNBI Clearance原本が揃えば、帰化申請・ビザ申請の書類セットが完成します',
-      price: '¥30,000',
-      priceNote: '〜（税・送料別 / アポスティーユのみ）',
+      price: '¥72,000',
+      priceNote: '税込・送料込',
+      breakdown: ['NBI代行費 ¥30,000', 'DFAアポスティーユ ¥30,000', '消費税（10%）¥6,000', 'DHL国際発送 ¥6,000'],
       period: '約4〜6週間',
       detailPath: '/ja/nbi-clearance/',
     },
@@ -105,8 +114,9 @@ const plansData = {
       includes: ['LTO書類一式（運転歴証明など）', 'DHL国際発送'],
       why: '外国免許を日本の免許に切り替えるには、フィリピンLTO発行の書類（運転歴証明など）の原本提出が必要です',
       outcome: '書類が揃えば、運転免許センターでの外免切替手続きを開始できます',
-      price: '¥100,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥83,000',
+      priceNote: '税込・送料込',
+      breakdown: ['書類取得代行 ¥70,000', '消費税（10%）¥7,000', 'DHL国際発送 ¥6,000'],
       period: '約4〜6週間',
       detailPath: '/ja/gaimen-kirikae-guide/',
     },
@@ -120,8 +130,9 @@ const plansData = {
       includes: ['PSA出生証明書', 'PSA婚姻証明書 or CENOMAR', 'NBI Clearance', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '帰化申請では法務局からフィリピンの出生・婚姻・無犯罪証明書などの原本提出が求められます',
       outcome: '必要書類が揃えば、法務局への帰化申請の書類準備が整います',
-      price: '¥115,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥132,500',
+      priceNote: '税込・送料込',
+      breakdown: ['代行費 ¥115,000', '消費税（10%）¥11,500', 'DHL国際発送 ¥6,000'],
       period: '約6〜10週間',
       detailPath: '/ja/kika-shinsei-guide/',
     },
@@ -260,8 +271,8 @@ const Pricing: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         {lang === 'ja' && (
           <div className="text-xs text-gray-500 mb-6 space-y-0.5">
-            <p>※表示価格はすべて税抜きです</p>
-            <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
+            <p>※表示価格はすべて税込・DHL国際送料込の総額です</p>
+            <p>※取得難易度、記載内容の不一致、追加確認の有無により変動する場合は事前にご連絡します</p>
           </div>
         )}
 
@@ -306,13 +317,31 @@ const Pricing: React.FC = () => {
                       <span className="text-4xl font-extrabold text-primary leading-none">{plan.price}</span>
                       <span className="text-xs text-gray-500">{plan.priceNote}</span>
                     </div>
-                    {(plan as any).priceApostille && (
-                      <div className="flex items-baseline gap-2 mt-1.5 pl-2 border-l-2 border-primary/30">
-                        <span className="text-sm font-bold text-secondary">{(plan as any).priceApostille}</span>
-                        <span className="text-xs text-gray-400">DFA物理アポスティーユ付き</span>
+                    {/* 内訳（アポスティーユなし） */}
+                    {lang === 'ja' && (plan as any).breakdown && (
+                      <div className="mt-1.5 space-y-0.5">
+                        {(plan as any).breakdown.map((item: string) => (
+                          <p key={item} className="text-xs text-gray-400">{item}</p>
+                        ))}
                       </div>
                     )}
-                    <p className="text-xs text-gray-400 mt-1">
+                    {/* アポスティーユあり価格 */}
+                    {(plan as any).priceApostille && (
+                      <div className="mt-3 pl-3 border-l-2 border-primary/30">
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-lg font-bold text-secondary">{(plan as any).priceApostille}</span>
+                          <span className="text-xs text-gray-400">アポスティーユあり・税込・送料込</span>
+                        </div>
+                        {lang === 'ja' && (plan as any).breakdownApostille && (
+                          <div className="mt-1 space-y-0.5">
+                            {(plan as any).breakdownApostille.map((item: string) => (
+                              <p key={item} className="text-xs text-gray-400">{item}</p>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                    <p className="text-xs text-gray-400 mt-2">
                       {lang === 'ja' ? `納期：${plan.period}` : `Delivery: ${plan.period}`}
                     </p>
                   </div>
