@@ -1279,6 +1279,17 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/terms/`,
   },
   {
+    path: '/ja/tokusho/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'tokusho', 'index.html'),
+    title: '特定商取引法に基づく表記｜フィリピン書類取得代行センター（IGRS Inc.）',
+    description: 'フィリピン書類取得代行センター（株式会社IGRS）の特定商取引法に基づく表記。販売業者・所在地・サービス内容・料金・支払い方法・キャンセルポリシーを掲載しています。',
+    canonical: `${BASE}/ja/tokusho/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/tokusho/`,
+    lastmod: '2026-05-15',
+  },
+  {
     path: '/ja/kojin-joho-hogo/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'kojin-joho-hogo', 'index.html'),
     title: '個人情報保護方針｜フィリピン書類取得代行センター（IGRS Inc.）',

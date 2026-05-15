@@ -99,6 +99,7 @@ const PrivacyEn = lazy(() => import('./pages/PrivacyEn'));
 const PrivacyJa = lazy(() => import('./pages/PrivacyJa'));
 const TermsEn = lazy(() => import('./pages/TermsEn'));
 const TermsJa = lazy(() => import('./pages/TermsJa'));
+const TokushoJa = lazy(() => import('./pages/TokushoJa'));
 const RoadmapJa = lazy(() => import('./pages/RoadmapJa'));
 const MarriageOrderJa = lazy(() => import('./pages/MarriageOrderJa'));
 const GyoseishoshiVsDocServiceJa = lazy(() => import('./pages/GyoseishoshiVsDocServiceJa'));
@@ -331,6 +332,8 @@ export default function App() {
         <Route path="/en/terms/" element={<TermsEn />} />
         <Route path="/ja/terms" element={<Navigate to="/ja/terms/" replace />} />
         <Route path="/ja/terms/" element={<TermsJa />} />
+        <Route path="/ja/tokusho" element={<Navigate to="/ja/tokusho/" replace />} />
+        <Route path="/ja/tokusho/" element={<TokushoJa />} />
         <Route path="/ja/kokusai-kekkon-roadmap" element={<Navigate to="/ja/kokusai-kekkon-roadmap/" replace />} />
         <Route path="/ja/kokusai-kekkon-roadmap/" element={<RoadmapJa />} />
         <Route path="/ja/nihon-senko-ph-senko" element={<Navigate to="/ja/nihon-senko-ph-senko/" replace />} />

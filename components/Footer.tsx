@@ -61,6 +61,7 @@ const Footer: React.FC = () => {
   const termsPath   = isJa ? '/ja/terms/'    : '/en/terms/';
   const pricingPath = isJa ? '/ja/ryokin/'   : '/en/pricing/';
   const contactPath = isJa ? '/ja/contact/'  : '/en/contact/';
+  const tokushoPath = '/ja/tokusho/';
 
   return (
     <footer className="bg-white" id="contact">
@@ -324,6 +325,9 @@ const Footer: React.FC = () => {
           <Link to={companyPath} className="hover:text-secondary transition-colors">{t('footer.company')}</Link>
           <Link to={privacyPath} className="hover:text-secondary transition-colors">{t('footer.privacy')}</Link>
           <Link to={termsPath} className="hover:text-secondary transition-colors">{t('footer.terms')}</Link>
+          {isJa && (
+            <Link to={tokushoPath} className="hover:text-secondary transition-colors">特定商取引法に基づく表記</Link>
+          )}
           <Link to={pricingPath} className="hover:text-secondary transition-colors">{t('footer.pricingLink')}</Link>
           <Link to={contactPath} className="hover:text-secondary transition-colors">{t('footer.contactLink')}</Link>
         </div>
