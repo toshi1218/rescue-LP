@@ -957,8 +957,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-input-support/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-input-support', 'index.html'),
-    title: 'PSA入力サポート｜自分でフィリピン書類を取得したい方へ【IGRS】',
-    description: '海外からのPSA・CENOMAR・NBIオンライン申請を日本語でサポート。フォーム入力・支払い方法・送付先設定まで一緒に進めます。¥15,000〜。自分で取得して費用を抑えたい方向け。',
+    title: 'PSAオンライン申請代行｜海外から¥16,500（税込）で申請まで代行【IGRS】',
+    description: '海外からのPSA・CENOMAR・NBIオンライン申請を日本語で代行。フォーム入力・国際クレカ支払い・送付先設定まで全て代行します。¥16,500（税込）〜。フィリピンに行かずに書類を取得したい方向け。',
     canonical: `${BASE}/ja/psa-input-support/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/`,
