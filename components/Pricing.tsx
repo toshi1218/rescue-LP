@@ -24,7 +24,7 @@ const plansData = {
       priceNote: '〜（税込 / DHL不要）',
       priceBreakdown: '申請代行 ¥15,000 + 消費税 ¥1,500',
       period: 'オンラインで1〜2回のやり取り',
-      detailPath: '#contact',
+      detailPath: '/ja/psa-input-support/',
     },
     {
       id: 'apostille-only',
