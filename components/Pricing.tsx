@@ -1,11 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap } from 'lucide-react';
+import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap, LifeBuoy, Stamp } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
 const plansData = {
   ja: [
+    {
+      id: 'input-support',
+      icon: LifeBuoy,
+      tag: '新プラン',
+      featured: false,
+      title: 'PSAオンライン申請代行',
+      subtitle: 'PSAへのオンライン申請フォームの入力・申請手続きを代行。書類はPSAからお客様へ直接届きます',
+      includes: [
+        'PSAオンラインフォームへの入力・申請',
+        '申請費用の支払い手続き',
+        'お客様住所への送付先設定',
+        '申請後のステータス確認',
+      ],
+      why: 'フィリピンでの物理取得・DFAアポスティーユは含まれません。日本の提出先が紙原本を必須とする場合はフルサービスへの切替もご相談いただけます',
+      price: '¥16,500',
+      priceNote: '〜（税込 / DHL不要）',
+      priceBreakdown: '申請代行 ¥15,000 + 消費税 ¥1,500',
+      period: 'オンラインで1〜2回のやり取り',
+      detailPath: '#contact',
+    },
+    {
+      id: 'apostille-only',
+      icon: Stamp,
+      tag: null,
+      featured: false,
+      title: 'DFAアポスティーユのみ（書類持込み）',
+      subtitle: 'すでにPSA・CENOMAR・NBI書類をお持ちの方のDFA物理アポスティーユ取得・国際発送を代行',
+      why: 'フィリピン国内で書類を取得済みの方や、以前取得した書類に後からアポスティーユが必要になった方向けのプランです。書類をIGRS宛に転送していただければ、DFA認証から発送までを代行します',
+      price: '¥39,000',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'アポスティーユ ¥30,000 + 消費税 ¥3,000 + DHL ¥6,000',
+      period: '約4〜6週間',
+      detailPath: '#contact',
+    },
     {
       id: 'pack',
       icon: Gem,
@@ -16,8 +50,9 @@ const plansData = {
       includes: ['CENOMAR（独身証明書）', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '日本の役所で婚姻届を出すには、フィリピン側の書類（出生証明・独身証明など）をアポスティーユ付きで用意する必要があります',
       outcome: '書類が揃えば、日本の市区町村への婚姻届の提出が可能になります',
-      price: '¥90,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥94,000',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'パック料金 ¥80,000 + 消費税 ¥8,000 + DHL ¥6,000',
       period: '約4〜6週間',
       detailPath: '/ja/kokusai-kekkon-guide/',
     },
@@ -31,8 +66,9 @@ const plansData = {
       includes: ['PSA婚姻証明書', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '入管への配偶者ビザ申請では、フィリピン側の婚姻・出生証明書をアポスティーユ付きで提出する必要があります',
       outcome: '書類が揃えば、入管への在留資格認定証明書交付申請（または変更申請）が前に進みます',
-      price: '¥90,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥94,000',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'パック料金 ¥80,000 + 消費税 ¥8,000 + DHL ¥6,000',
       period: '約4〜6週間',
       detailPath: '/ja/haigusha-visa-shorui/',
     },
@@ -45,9 +81,10 @@ const plansData = {
       subtitle: 'PSA発行のCENOMAR取得・国際発送（1点から対応）',
       why: '国際結婚の婚姻届や配偶者ビザ申請では、フィリピン側の独身証明書（CENOMAR）をアポスティーユ付きで用意する必要があります',
       outcome: 'CENOMAR原本が揃えば、婚姻届の受理やビザ申請書類の準備が前に進みます',
-      price: '¥20,000',
-      priceNote: '〜（税・送料別 / アポスティーユなし）',
-      priceApostille: '¥50,000〜',
+      price: '¥28,000',
+      priceNote: '〜（税込・DHL込み / アポスティーユなし）',
+      priceBreakdown: 'PSA取得 ¥20,000 + 消費税 ¥2,000 + DHL ¥6,000',
+      priceApostille: '¥61,000〜',
       period: '約4〜6週間',
       detailPath: '/ja/cenomar/',
     },
@@ -60,9 +97,10 @@ const plansData = {
       subtitle: 'PSA発行の出生証明書取得・国際発送（1点から対応）',
       why: 'ビザ申請・帰化・国際結婚の手続きでは、PSA発行の出生証明書原本をアポスティーユ付きで提出する必要があります',
       outcome: 'PSA出生証明書原本が揃えば、ビザや婚姻手続きの書類準備が前に進みます',
-      price: '¥20,000',
-      priceNote: '〜（税・送料別 / アポスティーユなし）',
-      priceApostille: '¥50,000〜',
+      price: '¥28,000',
+      priceNote: '〜（税込・DHL込み / アポスティーユなし）',
+      priceBreakdown: 'PSA取得 ¥20,000 + 消費税 ¥2,000 + DHL ¥6,000',
+      priceApostille: '¥61,000〜',
       period: '約4〜6週間',
       detailPath: '/ja/psa-shussei-cost/',
     },
@@ -75,9 +113,10 @@ const plansData = {
       subtitle: 'PSA発行の婚姻証明書取得・国際発送（1点から対応）',
       why: '配偶者ビザ申請・帰化・在留資格変更などの手続きでは、PSA発行の婚姻証明書原本をアポスティーユ付きで提出する必要があります',
       outcome: 'PSA婚姻証明書原本が揃えば、ビザや帰化手続きの書類準備が前に進みます',
-      price: '¥20,000',
-      priceNote: '〜（税・送料別 / アポスティーユなし）',
-      priceApostille: '¥50,000〜',
+      price: '¥28,000',
+      priceNote: '〜（税込・DHL込み / アポスティーユなし）',
+      priceBreakdown: 'PSA取得 ¥20,000 + 消費税 ¥2,000 + DHL ¥6,000',
+      priceApostille: '¥61,000〜',
       period: '約4〜6週間',
       detailPath: '/ja/psa-kekkon-shomeisho/',
     },
@@ -90,8 +129,9 @@ const plansData = {
       subtitle: 'お客様が取得したNBIクリアランスをIGRSへ転送→DFA物理アポスティーユを取得・発送',
       why: 'NBI Clearanceは本人指紋登録が必要なため、IGRSによる取得代行はできません。お客様がNBI事務所または在外公館で取得後、原本をIGRS宛に転送いただくことで、DFA物理アポスティーユの取得から国際発送までを代行します。',
       outcome: 'アポスティーユ付きNBI Clearance原本が揃えば、帰化申請・ビザ申請の書類セットが完成します',
-      price: '¥30,000',
-      priceNote: '〜（税・送料別 / アポスティーユのみ）',
+      price: '¥39,000',
+      priceNote: '〜（税込・DHL込み / アポスティーユのみ）',
+      priceBreakdown: 'アポスティーユ ¥30,000 + 消費税 ¥3,000 + DHL ¥6,000',
       period: '約4〜6週間',
       detailPath: '/ja/nbi-clearance/',
     },
@@ -105,8 +145,9 @@ const plansData = {
       includes: ['LTO書類一式（運転歴証明など）', 'DHL国際発送'],
       why: '外国免許を日本の免許に切り替えるには、フィリピンLTO発行の書類（運転歴証明など）の原本提出が必要です',
       outcome: '書類が揃えば、運転免許センターでの外免切替手続きを開始できます',
-      price: '¥100,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥116,000',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'LTO書類 ¥100,000 + 消費税 ¥10,000 + DHL ¥6,000',
       period: '約4〜6週間',
       detailPath: '/ja/gaimen-kirikae-guide/',
     },
@@ -120,8 +161,9 @@ const plansData = {
       includes: ['PSA出生証明書', 'PSA婚姻証明書 or CENOMAR', 'NBI Clearance', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '帰化申請では法務局からフィリピンの出生・婚姻・無犯罪証明書などの原本提出が求められます',
       outcome: '必要書類が揃えば、法務局への帰化申請の書類準備が整います',
-      price: '¥115,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥132,500',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'パック料金 ¥115,000 + 消費税 ¥11,500 + DHL ¥6,000',
       period: '約6〜10週間',
       detailPath: '/ja/kika-shinsei-guide/',
     },
@@ -260,7 +302,7 @@ const Pricing: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         {lang === 'ja' && (
           <div className="text-xs text-gray-500 mb-6 space-y-0.5">
-            <p>※表示価格はすべて税抜きです</p>
+            <p>※表示価格はすべて税込・DHL送料込みの総額です（PSAオンライン申請代行はDHL不要）</p>
             <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
           </div>
         )}
@@ -306,10 +348,13 @@ const Pricing: React.FC = () => {
                       <span className="text-4xl font-extrabold text-primary leading-none">{plan.price}</span>
                       <span className="text-xs text-gray-500">{plan.priceNote}</span>
                     </div>
+                    {(plan as any).priceBreakdown && (
+                      <p className="text-xs text-gray-400 mt-1">内訳: {(plan as any).priceBreakdown}</p>
+                    )}
                     {(plan as any).priceApostille && (
                       <div className="flex items-baseline gap-2 mt-1.5 pl-2 border-l-2 border-primary/30">
                         <span className="text-sm font-bold text-secondary">{(plan as any).priceApostille}</span>
-                        <span className="text-xs text-gray-400">DFA物理アポスティーユ付き</span>
+                        <span className="text-xs text-gray-400">DFA物理アポスティーユ込み 総額</span>
                       </div>
                     )}
                     <p className="text-xs text-gray-400 mt-1">

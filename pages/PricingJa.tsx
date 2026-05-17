@@ -6,6 +6,7 @@ import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { Info } from 'lucide-react';
 
 export default function PricingJa() {
   useMeta(
@@ -31,12 +32,12 @@ export default function PricingJa() {
     >
       <HeroBanner
         title="料金"
-        subtitle="国際結婚準備、配偶者ビザ準備、外免切替など、用途ごとの費用感をご確認いただけます。"
-        badges={['用途別にご案内', '無料お見積もり', '追加費用の後出しなし']}
+        subtitle="PSAオンライン申請代行（¥16,500〜）からフルサービスパック（¥94,000〜）まで、目的・予算に合わせてお選びいただけます。"
+        badges={['オンライン申請代行から対応', '無料お見積もり', '追加費用の後出しなし']}
         ctaText="無料でお見積もり"
         ctaHref="#contact"
         ctaService="料金のお見積もり"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年5月1日"
       />
 
       <CtaBox
@@ -47,6 +48,29 @@ export default function PricingJa() {
         variant="primary"
         trustNote="追加費用が出る場合は事前にご相談します"
       />
+
+      {/* なぜ他社より安くないのか */}
+      <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 mb-2">
+        <p className="text-sm font-bold text-gray-800 mb-3">なぜ他社より安くないのか</p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          フィリピン書類の代行サービスの中には、e-Apostille（電子認証）・e-Certificate（電子書類）で対応している業者もあり、費用を抑えられます。
+        </p>
+        <p className="text-sm text-gray-700 leading-relaxed mb-3">
+          ただし、<strong>日本の市区町村役場・法務局・出入国在留管理庁では、紙の原本・物理アポスティーユを必須とするケースが大半です。</strong>
+        </p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          IGRSが取り扱うのは<strong>物理アポスティーユ（紙原本）のみ</strong>。現地DFAへの予約・申請・受け取りをスタッフが代行するため、予約枠に限りがあり、価格を下げることができません。その分、<strong>日本の提出先で弾かれるリスクはほぼありません。</strong>
+        </p>
+        <div className="rounded-lg border border-blue-200 bg-white p-4">
+          <p className="text-xs font-bold text-blue-700 mb-1">まず提出先に確認してください</p>
+          <p className="text-xs text-gray-600 leading-relaxed mb-2">
+            「e-Apostilleで受理しますか？紙の原本が必要ですか？」と確認してから業者を選ぶことをおすすめします。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed">
+            電子対応が確認できた場合は、<strong>PSAオンライン申請代行（¥16,500〜）</strong>でコストを抑えられます。紙原本が必要な場合はフルサービスをご利用ください。
+          </p>
+        </div>
+      </div>
 
       {/* 料金カード */}
       <Pricing />
