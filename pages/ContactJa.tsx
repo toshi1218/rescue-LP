@@ -85,6 +85,25 @@ export default function ContactJa() {
             </div>
           </div>
 
+          <div className="rounded-xl border border-gray-200 bg-white p-5">
+            <p className="text-sm font-bold text-gray-800 mb-3">銀行振込先</p>
+            <dl className="text-sm space-y-1.5">
+              {[
+                { label: '銀行', value: '紀陽銀行' },
+                { label: '支店', value: '堀止支店（327）' },
+                { label: '種別', value: '普通預金' },
+                { label: '口座番号', value: '1208866' },
+                { label: '名義', value: 'カ）アイジーアールエス' },
+              ].map(item => (
+                <div key={item.label} className="flex gap-2">
+                  <dt className="text-gray-500 w-20 shrink-0">{item.label}</dt>
+                  <dd className="text-gray-800 font-medium">{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="text-xs text-gray-400 mt-3">クレジットカード（Stripe）でのお支払いもご利用いただけます</p>
+          </div>
+
           <div className="rounded-xl border border-gray-100 bg-gray-50 p-4">
             <p className="text-sm font-bold text-gray-800 mb-2">次にすること</p>
             <ol className="space-y-1.5 text-sm text-gray-600">
