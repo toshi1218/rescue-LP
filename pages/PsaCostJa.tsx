@@ -135,6 +135,21 @@ export default function PsaCostJa() {
             なお、当社は「完全放置で何もしなくてよい」といった誇大な案内はしていません。案件に応じて、本人確認資料、Authorization Letter（委任状）、そのほか必要資料のご用意をお願いする場合があります。必要なものは、内容を確認したうえで当社からご案内します。
           </p>
         </section>
+
+        <div className="rounded-xl border border-primary/20 bg-primary/5 p-5 mb-8">
+          <p className="text-sm font-bold text-gray-900 mb-3">【料金・納期の目安】</p>
+          <ul className="space-y-1.5 text-sm text-gray-700 mb-4">
+            <li>・PSA出生証明書取得＋アポスティーユ＋DHL：<strong className="text-gray-900">¥61,000</strong>（税込・送料込み）</li>
+            <li>・納期：約4〜6週間</li>
+            <li>・お支払い：着手金50%・書類確認後50%</li>
+          </ul>
+          <div className="rounded-lg border border-primary/20 bg-white p-4">
+            <p className="text-xs font-bold text-primary mb-1">▼ もっと早く・安く済ませたい方へ</p>
+            <p className="text-xs text-gray-600 leading-relaxed">
+              提出先がe-Certificate（電子書類）を受理する場合は「PSAオンライン申請代行 <strong>¥16,500（税込）</strong>」をご検討ください。紙原本・物理アポスティーユが必要な方は上記フルサービスが確実です。
+            </p>
+          </div>
+        </div>
       </article>
 
       <CtaBox

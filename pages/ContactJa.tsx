@@ -57,15 +57,60 @@ export default function ContactJa() {
       </div>
 
       {submitted ? (
-        <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
-          <p className="text-3xl mb-3">✅</p>
-          <p className="font-bold text-green-700 mb-2">お問い合わせを受け付けました</p>
-          <p className="text-sm text-gray-600 mb-3">内容を確認し、24時間以内にメールでご連絡します。</p>
-          <div className="text-xs text-gray-500 bg-white border border-gray-100 rounded-lg p-3 text-left space-y-1">
-            <p>• 返信メールが届かない場合は、<span className="font-semibold">迷惑メール・スパムフォルダ</span>もご確認ください。</p>
-            <p>• 24時間以内に返信がない場合は、直接メールでお問い合わせください：</p>
-            <a href="mailto:igrs20200601@gmail.com" className="font-semibold text-primary hover:underline">igrs20200601@gmail.com</a>
+        <div role="status" aria-live="polite" className="max-w-xl space-y-4">
+          <div className="bg-green-50 border border-green-200 rounded-xl p-5 text-center">
+            <p className="text-3xl mb-2">✅</p>
+            <p className="font-bold text-green-700 mb-1">お問い合わせを受け付けました</p>
+            <p className="text-sm text-gray-600">24時間以内に返信メールをお送りします。</p>
           </div>
+
+          <div className="rounded-xl border border-gray-200 bg-white p-5">
+            <p className="text-sm font-bold text-gray-800 mb-3">よくあるご依頼の料金目安</p>
+            <ul className="space-y-2 text-sm">
+              {[
+                { label: 'PSA・CENOMAR（アポスティーユ＋DHL込み）', price: '¥61,000' },
+                { label: 'NBI Clearance（アポスティーユ込み）', price: '¥39,000〜' },
+                { label: '配偶者ビザ書類パック', price: '¥94,000〜' },
+                { label: 'PSAオンライン申請代行のみ', price: '¥16,500〜' },
+              ].map(item => (
+                <li key={item.label} className="flex justify-between gap-2">
+                  <span className="text-gray-600">{item.label}</span>
+                  <span className="font-bold text-gray-900 whitespace-nowrap">{item.price}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-3 pt-3 border-t border-gray-100 text-xs text-gray-500 space-y-0.5">
+              <p>すべて税込・追加請求なし</p>
+              <p>標準納期：約4〜6週間 ／ お支払い：着手金50%・書類確認後50%</p>
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-gray-100 bg-gray-50 p-4">
+            <p className="text-sm font-bold text-gray-800 mb-2">次にすること</p>
+            <ol className="space-y-1.5 text-sm text-gray-600">
+              <li>① 返信メールを確認（<span className="font-semibold">迷惑メール・スパムフォルダ</span>もご確認ください）</li>
+              <li>② 急ぎの場合・追加質問はLINEへ（即返信対応）</li>
+            </ol>
+            <p className="text-xs text-gray-400 mt-2">
+              返信がない場合：<a href="mailto:igrs20200601@gmail.com" className="text-primary hover:underline">igrs20200601@gmail.com</a>
+            </p>
+          </div>
+
+          <a
+            href="https://lin.ee/wALag1U"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-3 bg-[#06C755] hover:bg-[#05b34d] text-white font-bold py-4 rounded-xl shadow-lg transition-all"
+          >
+            <LineIcon />
+            LINEで今すぐ確認する（即返信対応）
+          </a>
+
+          <p className="text-center text-xs text-gray-400">
+            待ち時間に確認できます：
+            <a href="/ja/ryokin/" className="text-primary underline mx-2">料金一覧</a>
+            <a href="/ja/roadmap/" className="text-primary underline mx-2">手続きの流れ</a>
+          </p>
         </div>
       ) : (
       <form
