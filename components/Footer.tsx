@@ -17,6 +17,8 @@ const Footer: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [referral, setReferral] = useState('');
+  const [referralError, setReferralError] = useState('');
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -33,6 +35,11 @@ const Footer: React.FC = () => {
       return;
     }
     setEmailError('');
+    if (!referral) {
+      setReferralError(lang === 'ja' ? '選択してください。' : 'Please select an option.');
+      return;
+    }
+    setReferralError('');
     setSubmitting(true);
     setSubmitError('');
     try {
@@ -245,6 +252,63 @@ const Footer: React.FC = () => {
                 </>
               )}
             </select>
+          </div>
+
+          <div>
+            <label className="block text-sm text-gray-600 mb-2">
+              {isJa ? '当社をどこでお知りになりましたか？' : 'How did you find us?'} <span className="text-red-400" aria-hidden="true">*</span>
+            </label>
+            <div className="grid grid-cols-2 gap-1.5">
+              {(isJa ? [
+                { value: 'Google検索', icon: '🔍' },
+                { value: 'ChatGPT', icon: '🤖' },
+                { value: 'Claude（Anthropic）', icon: '🤖' },
+                { value: 'Gemini（Google AI）', icon: '🤖' },
+                { value: 'SNS（Instagram / X / Facebook）', icon: '📱' },
+                { value: 'note / ブログ記事', icon: '📝' },
+                { value: '知人・紹介', icon: '🤝' },
+                { value: 'その他', icon: '💬' },
+              ] : [
+                { value: 'Google Search', icon: '🔍' },
+                { value: 'ChatGPT', icon: '🤖' },
+                { value: 'Claude (Anthropic)', icon: '🤖' },
+                { value: 'Gemini (Google AI)', icon: '🤖' },
+                { value: 'Social Media (Instagram / X / Facebook)', icon: '📱' },
+                { value: 'Blog / Article', icon: '📝' },
+                { value: 'Friend / Referral', icon: '🤝' },
+                { value: 'Other', icon: '💬' },
+              ]).map(opt => (
+                <label
+                  key={opt.value}
+                  className={`flex items-center gap-1.5 p-2 rounded-lg border cursor-pointer text-xs transition-colors ${
+                    referral === opt.value
+                      ? 'border-primary bg-primary/5 text-secondary font-semibold'
+                      : 'border-gray-200 hover:border-gray-300 text-gray-600'
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="referral_source"
+                    value={opt.value}
+                    checked={referral === opt.value}
+                    onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+                    className="sr-only"
+                  />
+                  <span aria-hidden="true">{opt.icon}</span>
+                  <span>{opt.value}</span>
+                </label>
+              ))}
+            </div>
+            {referral === (isJa ? 'その他' : 'Other') && (
+              <input
+                type="text"
+                name="referral_source_detail"
+                placeholder={isJa ? 'よろしければ詳しく教えてください' : 'Please tell us more (optional)'}
+                className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                maxLength={100}
+              />
+            )}
+            {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
           </div>
 
           <div>

@@ -17,6 +17,8 @@ export default function ContactEn() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [referral, setReferral] = useState('');
+  const [referralError, setReferralError] = useState('');
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
 
@@ -79,6 +81,11 @@ export default function ContactEn() {
             return;
           }
           setEmailError('');
+          if (!referral) {
+            setReferralError('Please select an option.');
+            return;
+          }
+          setReferralError('');
           setSubmitting(true);
           setSubmitError('');
           try {
@@ -171,6 +178,54 @@ export default function ContactEn() {
             <option value="Custom Roadmap">Custom Roadmap</option>
             <option value="Other">Other</option>
           </select>
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-2">
+            How did you find us? <span className="text-red-500">*</span>
+          </label>
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              { value: 'Google Search', icon: '🔍' },
+              { value: 'ChatGPT', icon: '🤖' },
+              { value: 'Claude (Anthropic)', icon: '🤖' },
+              { value: 'Gemini (Google AI)', icon: '🤖' },
+              { value: 'Social Media (Instagram / X / Facebook)', icon: '📱' },
+              { value: 'Blog / Article', icon: '📝' },
+              { value: 'Friend / Referral', icon: '🤝' },
+              { value: 'Other', icon: '💬' },
+            ].map(opt => (
+              <label
+                key={opt.value}
+                className={`flex items-center gap-1.5 p-2.5 rounded-lg border cursor-pointer text-xs transition-colors ${
+                  referral === opt.value
+                    ? 'border-primary bg-primary/5 text-secondary font-semibold'
+                    : 'border-gray-200 hover:border-gray-300 text-gray-600'
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="referral_source"
+                  value={opt.value}
+                  checked={referral === opt.value}
+                  onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+                  className="sr-only"
+                />
+                <span aria-hidden="true">{opt.icon}</span>
+                <span>{opt.value}</span>
+              </label>
+            ))}
+          </div>
+          {referral === 'Other' && (
+            <input
+              type="text"
+              name="referral_source_detail"
+              placeholder="Please tell us more (optional)"
+              className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              maxLength={100}
+            />
+          )}
+          {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
         </div>
 
         <div>
