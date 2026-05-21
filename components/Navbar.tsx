@@ -41,6 +41,7 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.license'),       path: '/ja/gaimen-kirikae-guide/' },
     { label: t('navbar.purpose.naturalization'),path: '/ja/kika-shinsei-guide/' },
     { label: t('navbar.purpose.nbi'),           path: '/ja/nbi-clearance/' },
+    { label: 'PSAオンライン代行',               path: '/ja/psa-input-support/' },
     { label: '個別ロードマップ作成',              path: '/ja/kokusai-kekkon-roadmap/' },
   ] : [
     { label: 'International Marriage',  path: '/en/international-marriage-guide/' },
