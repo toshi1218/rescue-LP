@@ -192,11 +192,9 @@ export default function ContactEn() {
           >
             <option value="">Select…</option>
             <option value="Google Search">Google Search</option>
-            <option value="ChatGPT">ChatGPT</option>
-            <option value="Claude (Anthropic)">Claude (Anthropic)</option>
-            <option value="Gemini (Google AI)">Gemini (Google AI)</option>
+            <option value="AI (ChatGPT / Claude / Gemini, etc.)">AI (ChatGPT / Claude / Gemini, etc.)</option>
             <option value="Social Media (Instagram / X / Facebook)">Social Media (Instagram / X / Facebook)</option>
-            <option value="Blog / Article">Blog / Article</option>
+            <option value="Google Ads">Google Ads</option>
             <option value="Friend / Referral">Friend / Referral</option>
             <option value="Other">Other</option>
           </select>

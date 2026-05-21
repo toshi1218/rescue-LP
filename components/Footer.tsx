@@ -268,22 +268,18 @@ const Footer: React.FC = () => {
               {isJa ? (
                 <>
                   <option value="Google検索">Google検索</option>
-                  <option value="ChatGPT">ChatGPT</option>
-                  <option value="Claude（Anthropic）">Claude（Anthropic）</option>
-                  <option value="Gemini（Google AI）">Gemini（Google AI）</option>
+                  <option value="AI（ChatGPT / Claude / Gemini など）">AI（ChatGPT / Claude / Gemini など）</option>
                   <option value="SNS（Instagram / X / Facebook）">SNS（Instagram / X / Facebook）</option>
-                  <option value="note / ブログ記事">note / ブログ記事</option>
-                  <option value="知人・紹介">知人・紹介</option>
+                  <option value="Google広告">Google広告</option>
+                  <option value="知人の紹介">知人の紹介</option>
                   <option value="その他">その他</option>
                 </>
               ) : (
                 <>
                   <option value="Google Search">Google Search</option>
-                  <option value="ChatGPT">ChatGPT</option>
-                  <option value="Claude (Anthropic)">Claude (Anthropic)</option>
-                  <option value="Gemini (Google AI)">Gemini (Google AI)</option>
+                  <option value="AI (ChatGPT / Claude / Gemini, etc.)">AI (ChatGPT / Claude / Gemini, etc.)</option>
                   <option value="Social Media (Instagram / X / Facebook)">Social Media (Instagram / X / Facebook)</option>
-                  <option value="Blog / Article">Blog / Article</option>
+                  <option value="Google Ads">Google Ads</option>
                   <option value="Friend / Referral">Friend / Referral</option>
                   <option value="Other">Other</option>
                 </>

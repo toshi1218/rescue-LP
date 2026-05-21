@@ -192,12 +192,10 @@ export default function ContactJa() {
           >
             <option value="">選択してください</option>
             <option value="Google検索">Google検索</option>
-            <option value="ChatGPT">ChatGPT</option>
-            <option value="Claude（Anthropic）">Claude（Anthropic）</option>
-            <option value="Gemini（Google AI）">Gemini（Google AI）</option>
+            <option value="AI（ChatGPT / Claude / Gemini など）">AI（ChatGPT / Claude / Gemini など）</option>
             <option value="SNS（Instagram / X / Facebook）">SNS（Instagram / X / Facebook）</option>
-            <option value="note / ブログ記事">note / ブログ記事</option>
-            <option value="知人・紹介">知人・紹介</option>
+            <option value="Google広告">Google広告</option>
+            <option value="知人の紹介">知人の紹介</option>
             <option value="その他">その他</option>
           </select>
           {referral === 'その他' && (

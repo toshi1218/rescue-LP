@@ -163,11 +163,9 @@ const FooterKo: React.FC = () => {
               >
                 <option value="">선택해 주세요</option>
                 <option value="Google 검색">Google 검색</option>
-                <option value="ChatGPT">ChatGPT</option>
-                <option value="Claude（Anthropic）">Claude（Anthropic）</option>
-                <option value="Gemini（Google AI）">Gemini（Google AI）</option>
+                <option value="AI（ChatGPT / Claude / Gemini 등）">AI（ChatGPT / Claude / Gemini 등）</option>
                 <option value="SNS（Instagram / X / Facebook）">SNS（Instagram / X / Facebook）</option>
-                <option value="블로그 / 기사">블로그 / 기사</option>
+                <option value="Google 광고">Google 광고</option>
                 <option value="지인 소개">지인 소개</option>
                 <option value="기타">기타</option>
               </select>
