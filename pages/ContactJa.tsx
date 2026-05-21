@@ -17,6 +17,8 @@ export default function ContactJa() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [referral, setReferral] = useState('');
+  const [referralError, setReferralError] = useState('');
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
 
@@ -79,6 +81,11 @@ export default function ContactJa() {
             return;
           }
           setEmailError('');
+          if (!referral) {
+            setReferralError('どこでお知りになったかをお選びください。');
+            return;
+          }
+          setReferralError('');
           setSubmitting(true);
           setSubmitError('');
           try {
@@ -171,6 +178,36 @@ export default function ContactJa() {
             <option value="書類取得のみ（PSA・CENOMAR・NBI・LTO等）">書類取得のみ（PSA・CENOMAR・NBI・LTO等）</option>
             <option value="その他・不明">その他・わからない</option>
           </select>
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">
+            当社をどこでお知りになりましたか？ <span className="text-red-500">*</span>
+          </label>
+          <select
+            name="referral_source"
+            value={referral}
+            onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+          >
+            <option value="">選択してください</option>
+            <option value="Google検索">Google検索</option>
+            <option value="AI（ChatGPT / Claude / Gemini など）">AI（ChatGPT / Claude / Gemini など）</option>
+            <option value="SNS（Instagram / X / Facebook）">SNS（Instagram / X / Facebook）</option>
+            <option value="Google広告">Google広告</option>
+            <option value="知人の紹介">知人の紹介</option>
+            <option value="その他">その他</option>
+          </select>
+          {referral === 'その他' && (
+            <input
+              type="text"
+              name="referral_source_detail"
+              placeholder="よろしければ詳しく教えてください"
+              className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              maxLength={100}
+            />
+          )}
+          {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
         </div>
 
         <div>

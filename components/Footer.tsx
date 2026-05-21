@@ -17,6 +17,8 @@ const Footer: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [referral, setReferral] = useState('');
+  const [referralError, setReferralError] = useState('');
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -33,6 +35,11 @@ const Footer: React.FC = () => {
       return;
     }
     setEmailError('');
+    if (!referral) {
+      setReferralError(lang === 'ja' ? '選択してください。' : 'Please select an option.');
+      return;
+    }
+    setReferralError('');
     setSubmitting(true);
     setSubmitError('');
     try {
@@ -245,6 +252,49 @@ const Footer: React.FC = () => {
                 </>
               )}
             </select>
+          </div>
+
+          <div>
+            <label className="block text-sm text-gray-600 mb-1">
+              {isJa ? '当社をどこでお知りになりましたか？' : 'How did you find us?'} <span className="text-red-400" aria-hidden="true">*</span>
+            </label>
+            <select
+              name="referral_source"
+              value={referral}
+              onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white"
+            >
+              <option value="">{isJa ? '選択してください' : 'Select…'}</option>
+              {isJa ? (
+                <>
+                  <option value="Google検索">Google検索</option>
+                  <option value="AI（ChatGPT / Claude / Gemini など）">AI（ChatGPT / Claude / Gemini など）</option>
+                  <option value="SNS（Instagram / X / Facebook）">SNS（Instagram / X / Facebook）</option>
+                  <option value="Google広告">Google広告</option>
+                  <option value="知人の紹介">知人の紹介</option>
+                  <option value="その他">その他</option>
+                </>
+              ) : (
+                <>
+                  <option value="Google Search">Google Search</option>
+                  <option value="AI (ChatGPT / Claude / Gemini, etc.)">AI (ChatGPT / Claude / Gemini, etc.)</option>
+                  <option value="Social Media (Instagram / X / Facebook)">Social Media (Instagram / X / Facebook)</option>
+                  <option value="Google Ads">Google Ads</option>
+                  <option value="Friend / Referral">Friend / Referral</option>
+                  <option value="Other">Other</option>
+                </>
+              )}
+            </select>
+            {referral === (isJa ? 'その他' : 'Other') && (
+              <input
+                type="text"
+                name="referral_source_detail"
+                placeholder={isJa ? 'よろしければ詳しく教えてください' : 'Please tell us more (optional)'}
+                className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                maxLength={100}
+              />
+            )}
+            {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
           </div>
 
           <div>

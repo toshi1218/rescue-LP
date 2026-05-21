@@ -17,6 +17,8 @@ export default function ContactEn() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [referral, setReferral] = useState('');
+  const [referralError, setReferralError] = useState('');
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
 
@@ -79,6 +81,11 @@ export default function ContactEn() {
             return;
           }
           setEmailError('');
+          if (!referral) {
+            setReferralError('Please select an option.');
+            return;
+          }
+          setReferralError('');
           setSubmitting(true);
           setSubmitError('');
           try {
@@ -171,6 +178,36 @@ export default function ContactEn() {
             <option value="Custom Roadmap">Custom Roadmap</option>
             <option value="Other">Other</option>
           </select>
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">
+            How did you find us? <span className="text-red-500">*</span>
+          </label>
+          <select
+            name="referral_source"
+            value={referral}
+            onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+          >
+            <option value="">Select…</option>
+            <option value="Google Search">Google Search</option>
+            <option value="AI (ChatGPT / Claude / Gemini, etc.)">AI (ChatGPT / Claude / Gemini, etc.)</option>
+            <option value="Social Media (Instagram / X / Facebook)">Social Media (Instagram / X / Facebook)</option>
+            <option value="Google Ads">Google Ads</option>
+            <option value="Friend / Referral">Friend / Referral</option>
+            <option value="Other">Other</option>
+          </select>
+          {referral === 'Other' && (
+            <input
+              type="text"
+              name="referral_source_detail"
+              placeholder="Please tell us more (optional)"
+              className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              maxLength={100}
+            />
+          )}
+          {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
         </div>
 
         <div>
