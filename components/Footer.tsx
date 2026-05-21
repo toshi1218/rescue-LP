@@ -255,50 +255,40 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <label className="block text-sm text-gray-600 mb-2">
+            <label className="block text-sm text-gray-600 mb-1">
               {isJa ? '当社をどこでお知りになりましたか？' : 'How did you find us?'} <span className="text-red-400" aria-hidden="true">*</span>
             </label>
-            <div className="grid grid-cols-2 gap-1.5">
-              {(isJa ? [
-                { value: 'Google検索', icon: '🔍' },
-                { value: 'ChatGPT', icon: '🤖' },
-                { value: 'Claude（Anthropic）', icon: '🤖' },
-                { value: 'Gemini（Google AI）', icon: '🤖' },
-                { value: 'SNS（Instagram / X / Facebook）', icon: '📱' },
-                { value: 'note / ブログ記事', icon: '📝' },
-                { value: '知人・紹介', icon: '🤝' },
-                { value: 'その他', icon: '💬' },
-              ] : [
-                { value: 'Google Search', icon: '🔍' },
-                { value: 'ChatGPT', icon: '🤖' },
-                { value: 'Claude (Anthropic)', icon: '🤖' },
-                { value: 'Gemini (Google AI)', icon: '🤖' },
-                { value: 'Social Media (Instagram / X / Facebook)', icon: '📱' },
-                { value: 'Blog / Article', icon: '📝' },
-                { value: 'Friend / Referral', icon: '🤝' },
-                { value: 'Other', icon: '💬' },
-              ]).map(opt => (
-                <label
-                  key={opt.value}
-                  className={`flex items-center gap-1.5 p-2 rounded-lg border cursor-pointer text-xs transition-colors ${
-                    referral === opt.value
-                      ? 'border-primary bg-primary/5 text-secondary font-semibold'
-                      : 'border-gray-200 hover:border-gray-300 text-gray-600'
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    name="referral_source"
-                    value={opt.value}
-                    checked={referral === opt.value}
-                    onChange={e => { setReferral(e.target.value); setReferralError(''); }}
-                    className="sr-only"
-                  />
-                  <span aria-hidden="true">{opt.icon}</span>
-                  <span>{opt.value}</span>
-                </label>
-              ))}
-            </div>
+            <select
+              name="referral_source"
+              value={referral}
+              onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white"
+            >
+              <option value="">{isJa ? '選択してください' : 'Select…'}</option>
+              {isJa ? (
+                <>
+                  <option value="Google検索">Google検索</option>
+                  <option value="ChatGPT">ChatGPT</option>
+                  <option value="Claude（Anthropic）">Claude（Anthropic）</option>
+                  <option value="Gemini（Google AI）">Gemini（Google AI）</option>
+                  <option value="SNS（Instagram / X / Facebook）">SNS（Instagram / X / Facebook）</option>
+                  <option value="note / ブログ記事">note / ブログ記事</option>
+                  <option value="知人・紹介">知人・紹介</option>
+                  <option value="その他">その他</option>
+                </>
+              ) : (
+                <>
+                  <option value="Google Search">Google Search</option>
+                  <option value="ChatGPT">ChatGPT</option>
+                  <option value="Claude (Anthropic)">Claude (Anthropic)</option>
+                  <option value="Gemini (Google AI)">Gemini (Google AI)</option>
+                  <option value="Social Media (Instagram / X / Facebook)">Social Media (Instagram / X / Facebook)</option>
+                  <option value="Blog / Article">Blog / Article</option>
+                  <option value="Friend / Referral">Friend / Referral</option>
+                  <option value="Other">Other</option>
+                </>
+              )}
+            </select>
             {referral === (isJa ? 'その他' : 'Other') && (
               <input
                 type="text"

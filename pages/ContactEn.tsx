@@ -181,41 +181,25 @@ export default function ContactEn() {
         </div>
 
         <div>
-          <label className="block text-sm font-bold text-gray-700 mb-2">
+          <label className="block text-sm font-bold text-gray-700 mb-1">
             How did you find us? <span className="text-red-500">*</span>
           </label>
-          <div className="grid grid-cols-2 gap-2">
-            {[
-              { value: 'Google Search', icon: '🔍' },
-              { value: 'ChatGPT', icon: '🤖' },
-              { value: 'Claude (Anthropic)', icon: '🤖' },
-              { value: 'Gemini (Google AI)', icon: '🤖' },
-              { value: 'Social Media (Instagram / X / Facebook)', icon: '📱' },
-              { value: 'Blog / Article', icon: '📝' },
-              { value: 'Friend / Referral', icon: '🤝' },
-              { value: 'Other', icon: '💬' },
-            ].map(opt => (
-              <label
-                key={opt.value}
-                className={`flex items-center gap-1.5 p-2.5 rounded-lg border cursor-pointer text-xs transition-colors ${
-                  referral === opt.value
-                    ? 'border-primary bg-primary/5 text-secondary font-semibold'
-                    : 'border-gray-200 hover:border-gray-300 text-gray-600'
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="referral_source"
-                  value={opt.value}
-                  checked={referral === opt.value}
-                  onChange={e => { setReferral(e.target.value); setReferralError(''); }}
-                  className="sr-only"
-                />
-                <span aria-hidden="true">{opt.icon}</span>
-                <span>{opt.value}</span>
-              </label>
-            ))}
-          </div>
+          <select
+            name="referral_source"
+            value={referral}
+            onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+          >
+            <option value="">Select…</option>
+            <option value="Google Search">Google Search</option>
+            <option value="ChatGPT">ChatGPT</option>
+            <option value="Claude (Anthropic)">Claude (Anthropic)</option>
+            <option value="Gemini (Google AI)">Gemini (Google AI)</option>
+            <option value="Social Media (Instagram / X / Facebook)">Social Media (Instagram / X / Facebook)</option>
+            <option value="Blog / Article">Blog / Article</option>
+            <option value="Friend / Referral">Friend / Referral</option>
+            <option value="Other">Other</option>
+          </select>
           {referral === 'Other' && (
             <input
               type="text"
