@@ -35,7 +35,6 @@ const Footer: React.FC = () => {
     setEmailError('');
     setSubmitting(true);
     setSubmitError('');
-    trackEvent('form_submit', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
     try {
       const form = e.currentTarget;
       const res = await fetch(WEB3FORMS_ENDPOINT, {
@@ -45,11 +44,14 @@ const Footer: React.FC = () => {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        trackEvent('form_submit_success', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, service, lang, page_path: window.location.pathname });
         setSubmitted(true);
       } else {
+        trackEvent('form_submit_error', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, lang });
         setSubmitError(lang === 'ja' ? '送信に失敗しました。しばらく経ってから再度お試しください。' : 'Submission failed. Please try again later.');
       }
     } catch {
+      trackEvent('form_submit_error', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, lang });
       setSubmitError(lang === 'ja' ? '送信に失敗しました。しばらく経ってから再度お試しください。' : 'Submission failed. Please try again later.');
     } finally {
       setSubmitting(false);
