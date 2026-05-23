@@ -104,6 +104,11 @@ def main():
             )
             return
 
+    # Markdownドキュメント（docs/やCLAUDE.md等）はキーワードチェック対象外
+    # （参照・説明として hreflang 等のキーワードが含まれることが多いため）
+    if file_path.endswith(".md"):
+        sys.exit(0)
+
     # ── Level 2 チェック：ファイル名 ──────────────────────────────────────────
     if basename_lower in LEVEL2_FILES:
         block(
