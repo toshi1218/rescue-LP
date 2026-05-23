@@ -119,6 +119,8 @@ const ja = {
   'whyus.2.desc': 'どの書類をどの順番で取るか、後の手続きで再取得が必要になるポイントを最初にご案内します。',
   'whyus.3.title': 'できることと、できないことを分けてご説明します',
   'whyus.3.desc': '書類取得のご案内と、専門資格者への確認が必要な部分を分けてお伝えします。',
+  'whyus.4.title': '日本法人として登記・確認できます',
+  'whyus.4.desc': '株式会社IGRS（和歌山登記）として会社情報を公開しています。身元のわからない業者へのリスクなし。',
   'whyus.stat1.label': '依頼方法',
   'whyus.stat1.value': '渡航ゼロで完結',
   'whyus.stat2.label': '着手前キャンセル',
@@ -141,7 +143,7 @@ const ja = {
   // ── QuickFacts ───────────────────────────────────────────────────────
   'quickfacts.title': '代行の費用・納期・依頼方法まとめ',
   'quickfacts.docs.label': '代行できる書類',
-  'quickfacts.docs.value': 'CENOMAR（独身証明書）・PSA・NBI・DFAアポスティーユ・LTO関連',
+  'quickfacts.docs.value': 'CENOMAR・PSA・NBI・DFA・LTO',
   'quickfacts.period.label': '納期目安',
   'quickfacts.period.value': '約4〜6週間（案件により変動）',
   'quickfacts.lang.label': '依頼方法',
@@ -296,6 +298,8 @@ const en: typeof ja = {
   'whyus.2.desc': 'We deal with PSA, NBI, DFA, and LTO on your behalf. You only communicate with us in English. No Filipino needed.',
   'whyus.3.title': 'Pay the Balance Only After Confirmation',
   'whyus.3.desc': 'Final payment is due only after you confirm document copies. Cancellation before we start is free. Zero financial risk.',
+  'whyus.4.title': 'Registered & Verifiable Company',
+  'whyus.4.desc': 'IGRS Inc. is a registered Japanese corporation (Wakayama). Company details are public — no anonymous providers, no vanishing acts.',
   'whyus.stat1.label': 'How to Order',
   'whyus.stat1.value': 'No Travel Required',
   'whyus.stat2.label': 'Cancellation',
@@ -318,13 +322,13 @@ const en: typeof ja = {
   // ── QuickFacts ───────────────────────────────────────────────────────
   'quickfacts.title': 'Cost, Delivery & How to Order',
   'quickfacts.docs.label': 'Documents We Handle',
-  'quickfacts.docs.value': 'CENOMAR, PSA, NBI, DFA Apostille, LTO',
+  'quickfacts.docs.value': 'CENOMAR · PSA · NBI · DFA · LTO',
   'quickfacts.period.label': 'Typical Delivery',
   'quickfacts.period.value': 'Approx. 4–6 weeks (varies by case)',
   'quickfacts.lang.label': 'How to Order',
-  'quickfacts.lang.value': 'English only — no Philippines trip needed',
+  'quickfacts.lang.value': 'English only · No trip needed',
   'quickfacts.company.label': 'Operated By',
-  'quickfacts.company.value': 'IGRS Inc. (Cebu, Philippines)',
+  'quickfacts.company.value': 'IGRS Inc. · Cebu, Philippines',
   'quickfacts.updated': 'Last updated: 2026-03-01',
 
   // ── GuideLinks ───────────────────────────────────────────────────────

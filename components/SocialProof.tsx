@@ -103,6 +103,7 @@ const SocialProof: React.FC = React.memo(() => {
   const isJa = lang === 'ja';
   const stats = statsData[lang];
   const reviews = reviewsData[lang];
+
   return (
     <section className="py-10 bg-white relative overflow-hidden" aria-labelledby="social-proof-title">
       <div className="absolute inset-0 pointer-events-none">
@@ -120,8 +121,8 @@ const SocialProof: React.FC = React.memo(() => {
         </div>
 
         {/* ── 評価概要ブロック（コンパクト横並び） ── */}
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-4 mb-4">
-          <div className="flex items-center justify-center gap-8">
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-card p-4 mb-4 w-fit mx-auto">
+          <div className="flex items-center gap-8">
             {/* 左: 評価 */}
             <div className="flex items-center gap-3">
               <p className="text-4xl font-extrabold text-secondary leading-none">4.8</p>
@@ -134,8 +135,10 @@ const SocialProof: React.FC = React.memo(() => {
                 </p>
               </div>
             </div>
+            {/* 区切り */}
+            <div className="w-px h-10 bg-gray-200 flex-shrink-0" />
             {/* 右: 満足度 */}
-            <div className="text-left flex-shrink-0">
+            <div className="text-center flex-shrink-0">
               <p className="text-3xl font-extrabold text-primary leading-none">98%</p>
               <p className="text-xs font-bold text-gray-600 mt-0.5">
                 {isJa ? '★4以上の評価' : '4★ or higher'}
@@ -162,9 +165,9 @@ const SocialProof: React.FC = React.memo(() => {
             return (
               <div key={s.label} className={`bg-gradient-to-br ${gradients[i]} rounded-2xl p-4 text-center relative overflow-hidden border border-white/80 shadow-card`}>
                 <div className={`absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl ${barColors[i]}`} />
-                <p className={`text-2xl font-extrabold ${textColors[i]} leading-tight mt-1`}>{s.value}</p>
+                <p className={`text-3xl font-extrabold ${textColors[i]} leading-tight mt-1`}>{s.value}</p>
                 <p className="text-xs font-bold text-gray-700 mt-1">{s.label}</p>
-                <p className="text-[10px] text-gray-500 mt-0.5 leading-snug">{s.sub}</p>
+                <p className="text-xs text-gray-500 mt-0.5 leading-snug">{s.sub}</p>
               </div>
             );
           })}
