@@ -37,10 +37,10 @@ export default function NbiGuideJa() {
           {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '49800',
+            price: '39000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '49800',
+              price: '39000',
               priceCurrency: 'JPY',
               description: 'NBI Clearance海外郵送・追跡管理サポート（税込・DHL込み）。アポスティーユなし。',
             },
@@ -48,12 +48,12 @@ export default function NbiGuideJa() {
           {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '55000',
+            price: '61000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '55000',
+              price: '61000',
               priceCurrency: 'JPY',
-              description: 'NBI Clearance取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+              description: 'NBI Clearance取得・DFAアポスティーユ・DHL込み（税込）',
             },
           },
         ],
@@ -121,7 +121,7 @@ export default function NbiGuideJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">海外郵送・追跡管理（税込・DHL込み）</dt>
-              <dd className="font-medium text-gray-800">49,800円</dd>
+              <dd className="font-medium text-gray-800">39,000円〜</dd>
               <dd className="text-gray-400 text-xs mt-1">※アポスティーユ不要の場合</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
@@ -138,7 +138,7 @@ export default function NbiGuideJa() {
               { label: 'NBI Clearance取得・転送管理', price: '込み' },
               { label: 'NBI Manilaへの追跡付き発送', price: '込み' },
               { label: 'DHL国際配送（日本への返送）', price: '込み' },
-              { label: '合計（アポスティーユなし）', price: '49,800円', bold: true },
+              { label: '合計（アポスティーユなし）', price: '39,000円〜', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -150,7 +150,7 @@ export default function NbiGuideJa() {
 
           <div className="mt-4 p-4 bg-amber-50 rounded-xl border border-amber-100 text-sm">
             <p className="font-bold text-amber-900 mb-1">▼ DFAアポスティーユが必要な方へ</p>
-            <p className="text-amber-800 text-xs leading-relaxed">配偶者ビザ・帰化申請・海外就労でアポスティーユが必要な場合は、NBI Clearance＋DFAアポスティーユ込みプラン（55,000円〜・税抜）をご案内します。まずは無料相談でご要件をお知らせください。</p>
+            <p className="text-amber-800 text-xs leading-relaxed">配偶者ビザ・帰化申請・海外就労でアポスティーユが必要な場合は、NBI Clearance＋DFAアポスティーユ＋DHL込みプラン（61,000円・税込）をご案内します。まずは無料相談でご要件をお知らせください。</p>
           </div>
           <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
         </SectionDivider>
