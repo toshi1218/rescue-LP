@@ -41,7 +41,7 @@ const contentData = {
       },
     ],
     closing:
-      'Our goal is to reduce the chance of your Japan-side application stalling due to missing or incorrect Philippine documents. We handle identification, retrieval, copy planning, and paper Apostille coordination — with a Cebu-based team and a verifiable company track record.',
+      'Our goal is to ensure your case does not stall due to missing or incorrect Philippine documents. We handle document identification, retrieval, copy planning, and paper Apostille coordination — with a Cebu-based team and a verifiable company track record.',
     cta: 'Free Consultation',
   },
   ja: {
@@ -102,17 +102,17 @@ const DiyRisks: React.FC = () => {
         </div>
 
         {/* Risk cards — 2-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
           {c.risks.map((risk, i) => (
             <div
               key={i}
-              className="bg-white border border-amber-100 rounded-2xl p-5 hover:border-amber-200 hover:shadow-sm transition-all"
+              className={`bg-white border border-amber-100 rounded-2xl p-4 hover:border-amber-200 hover:shadow-sm transition-all ${i === c.risks.length - 1 && c.risks.length % 2 === 1 ? 'md:col-span-2' : ''}`}
             >
               <div className="flex items-start gap-3 mb-2">
                 <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center mt-0.5 shrink-0">
                   <AlertTriangle className="w-3.5 h-3.5 text-amber-500" />
                 </span>
-                <p className="text-sm font-bold text-gray-800 leading-snug">{risk.title}</p>
+                <p className="text-sm font-bold text-gray-800 leading-snug pr-8">{risk.title}</p>
               </div>
               <p className="text-sm text-gray-600 leading-relaxed pl-10">{risk.body}</p>
             </div>
