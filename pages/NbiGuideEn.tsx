@@ -92,7 +92,7 @@ export default function NbiGuideEn() {
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
         NBI Clearance is a criminal background check issued by the{' '}
-        <a href="https://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Philippine National Bureau of Investigation (NBI)</a>.
+        <a href="http://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Philippine National Bureau of Investigation (NBI)</a>.
         {' '}Required for most visa and immigration applications in the US, Canada, Australia, UK, and Japan.
       </p>
 

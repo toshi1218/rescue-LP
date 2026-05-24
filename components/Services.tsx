@@ -77,7 +77,7 @@ const Services: React.FC = () => {
                 <ExternalLink className="w-3 h-3" />
                 {t('services.agencies.psa')}
               </a>
-              <a href="https://www.nbi.gov.ph/" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
+              <a href="http://www.nbi.gov.ph/" target="_blank" rel="nofollow noopener noreferrer" className="inline-flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
                 <ExternalLink className="w-3 h-3" />
                 {t('services.agencies.nbi')}
               </a>
