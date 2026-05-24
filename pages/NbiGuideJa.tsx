@@ -89,7 +89,7 @@ export default function NbiGuideJa() {
         title="海外ビザ用NBIクリアランス"
         subtitle="取得歴、氏名変更の有無、現在地を確認し、進められる案件だけを整理してご案内します。"
         badges={['更新案件を中心に対応', '条件を先に確認', '進捗を随時ご報告']}
-        ctaText="更新できるか確認する"
+        ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
