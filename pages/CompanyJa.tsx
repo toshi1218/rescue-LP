@@ -36,7 +36,7 @@ export default function CompanyJa() {
         title="会社概要"
         subtitle="運営会社、対応体制、返信目安、進捗報告の考え方など、ご依頼前に確認したい情報をまとめています。"
         badges={['日本法人', 'フィリピン現地スタッフ', '日本語対応']}
-        ctaText="ご依頼前に確認する"
+        ctaText="無料で相談する"
         ctaHref="/ja/contact"
         lastUpdated="2026年3月1日"
       />

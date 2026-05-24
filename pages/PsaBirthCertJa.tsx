@@ -115,7 +115,7 @@ export default function PsaBirthCertJa() {
         title="フィリピン出生証明書の取り寄せ代行"
         subtitle="フィリピンPSA出生証明書を日本から取り寄せ。国際結婚、配偶者ビザ準備、帰化申請など、提出先に合わせて必要な形式を確認しながら進めます。"
         badges={['日本語だけで取り寄せOK', 'DFAアポスティーユ込み対応', '渡航不要']}
-        ctaText="無料相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

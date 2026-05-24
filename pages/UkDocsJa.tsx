@@ -87,7 +87,7 @@ export default function UkDocsJa() {
       <HeroBanner
         title="UK移民ビザ 書類取得代行"
         badges={['UKVI対応', 'アポスティーユ込み', '料金']}
-        ctaText="無料相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

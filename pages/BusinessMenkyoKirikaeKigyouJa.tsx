@@ -128,7 +128,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
         title="フィリピン人従業員に、運転業務をさせたい会社へ"
         subtitle="介護送迎・社用車・現場移動に必要な日本免許切替（外免切替）。フィリピン側LTO書類とDFAアポスティーユの取得を一括代行します。採用前の事前確認から複数名一括対応まで。"
         badges={['直接雇用企業向け', '1名100,000円〜', '3名パック270,000円〜', '請求書払い対応']}
-        ctaText="まず相談する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated={SEO_LAST_UPDATED_JA}
       />

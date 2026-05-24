@@ -93,7 +93,7 @@ export default function DfaGalleriaCebuJa() {
         title="DFAアポスティーユ現地レポート"
         badges={['現地写真あり', 'セブ在住スタッフが撮影', '日本語解説']}
         lastUpdated="2026年3月1日"
-        ctaText="ご相談・お問い合わせ"
+        ctaText="無料で相談する"
         ctaHref="#contact"
       />
 

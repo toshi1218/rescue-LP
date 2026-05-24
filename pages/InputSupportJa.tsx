@@ -44,7 +44,7 @@ export default function InputSupportJa() {
         title="PSAオンライン申請代行"
         subtitle="PSAへのオンライン申請フォームの入力・申請手続きを代行。書類はPSAからお客様の住所へ直接届きます。"
         badges={['¥16,500〜（税込）', 'オンライン完結・DHL不要', 'PSAから直接お届け']}
-        ctaText="オンライン申請代行を相談する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         ctaService="オンライン申請代行"
         lastUpdated="2026年5月1日"

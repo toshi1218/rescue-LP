@@ -85,7 +85,7 @@ export default function PsaMarriageCertJa() {
         title="婚姻証明書"
         subtitle="配偶者ビザ準備、帰化申請、日本側への婚姻反映など、提出先に応じて必要な形式を確認してご案内します。"
         badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
-        ctaText="必要な形式を確認する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

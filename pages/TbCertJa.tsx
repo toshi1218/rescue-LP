@@ -85,7 +85,7 @@ export default function TbCertJa() {
       <HeroBanner
         title="結核非発病証明書"
         badges={['2025年6月23日〜義務化', 'フィリピン国籍対象', '有効期間180日']}
-        ctaText="配偶者ビザ書類を相談する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
@@ -98,7 +98,7 @@ export default function TbCertJa() {
           '有効期間は検査日（胸部エックス線日）から原則180日以内',
           '配偶者ビザ（日本人の配偶者等）・留学・技能実習などのCOE申請が対象',
         ]}
-        ctaText="無料相談はこちら"
+        ctaText="無料で相談する"
       />
 
       {/* 重要告知ブロック */}

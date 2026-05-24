@@ -80,7 +80,7 @@ export default function CenomarValidityJa() {
       <HeroBanner
         title="CENOMARの有効期限"
         badges={['有効期限の確認から対応', 'PSAアポスティーユ込み', '費用は事前にご案内']}
-        ctaText="無料相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

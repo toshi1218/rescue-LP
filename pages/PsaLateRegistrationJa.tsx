@@ -77,7 +77,7 @@ export default function PsaLateRegistrationJa() {
       <HeroBanner
         title="PSAに記録がない？氏名や生年月日が違う？"
         badges={['No Record 対応', '氏名・生年月日エラー', 'ビザ遅延を防ぐ']}
-        ctaText="状況を相談する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
@@ -94,7 +94,7 @@ export default function PsaLateRegistrationJa() {
           '手続きは数か月単位になることが多い',
           'ビザ締切があるなら、早めの確認が重要',
         ]}
-        ctaText="どの問題か確認する"
+        ctaText="無料で相談する"
       />
 
       <FeatureList

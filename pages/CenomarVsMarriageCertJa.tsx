@@ -77,7 +77,7 @@ export default function CenomarVsMarriageCertJa() {
       <HeroBanner
         title="CENOMARとPSA婚姻証明書、どちらが必要？"
         badges={['K-1 / CR-1で迷いやすい', '違いを3分で確認', '無料相談']}
-        ctaText="必要書類を確認する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
@@ -94,7 +94,7 @@ export default function CenomarVsMarriageCertJa() {
           'K-1はCENOMAR、CR-1/IR-1は婚姻証明書が基本',
           '以前の婚姻歴がある場合は追加資料が必要になることがあります',
         ]}
-        ctaText="どちらが必要か聞く"
+        ctaText="無料で相談する"
       />
 
       <FeatureList

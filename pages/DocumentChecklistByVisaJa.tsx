@@ -77,7 +77,7 @@ export default function DocumentChecklistByVisaJa() {
       <HeroBanner
         title="ビザ別に、必要なフィリピン書類を一覧で確認"
         badges={['K-1 / CR-1 / 配偶者ビザ', 'カナダ・豪州・UK・日本', '無料相談']}
-        ctaText="必要書類を確認する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
@@ -90,7 +90,7 @@ export default function DocumentChecklistByVisaJa() {
           'PSA出生証明書とNBIクリアランスは多くのケースで共通',
           'アポスティーユや翻訳は提出先の条件で追加されます',
         ]}
-        ctaText="自分のケースを確認する"
+        ctaText="無料で相談する"
       />
 
       <FeatureList

@@ -96,7 +96,7 @@ export default function PsaCrsCebuJa() {
         title="PSA CRSセブ現地レポート"
         badges={['現地写真あり', 'セブ在住スタッフが撮影', '日本語解説']}
         lastUpdated="2026年3月23日"
-        ctaText="ご相談・お問い合わせ"
+        ctaText="無料で相談する"
         ctaHref="#contact"
       />
 

@@ -60,7 +60,7 @@ export default function MarriageOrderJa() {
       <HeroBanner
         title="日本先行婚とフィリピン先行婚、どちらを選ぶべき？"
         badges={['手続きの流れを比較', '必要書類を整理', '状況に合わせて判断']}
-        ctaText="無料相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

@@ -114,7 +114,7 @@ export default function LicenseConversionJa() {
         title="外免切替"
         subtitle="フィリピン運転免許を日本免許に切り替える（外免切替）に必要な条件・費用・LTO書類の流れをまとめています。書類の取り寄せは現地スタッフが代行します。"
         badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり', '法人・複数名対応可']}
-        ctaText="書類を確認する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

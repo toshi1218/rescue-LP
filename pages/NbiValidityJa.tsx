@@ -65,7 +65,7 @@ export default function NbiValidityJa() {
       <HeroBanner
         title="NBIクリアランスの有効期限"
         badges={['NBIクリアランス', '有効期限確認', '無料相談あり']}
-        ctaText="無料相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

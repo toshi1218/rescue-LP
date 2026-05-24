@@ -89,7 +89,7 @@ export default function CenomarApostilleJa() {
       <HeroBanner
         title="CENOMAR アポスティーユ取得代行"
         badges={['PSA取得からアポスティーユまで一括', '紙の原本形式で対応', '費用は事前にご案内']}
-        ctaText="無料相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

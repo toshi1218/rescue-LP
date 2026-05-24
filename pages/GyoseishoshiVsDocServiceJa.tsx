@@ -60,7 +60,7 @@ export default function GyoseishoshiVsDocServiceJa() {
       <HeroBanner
         title="行政書士の仕事と、書類取得サービスの仕事の違い"
         badges={['役割の切り分けを解説', '管轄を正確に理解する', '費用の二重払いを防ぐ']}
-        ctaText="フィリピン書類の相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

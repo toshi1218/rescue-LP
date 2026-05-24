@@ -90,7 +90,7 @@ export default function DriverRecordJa() {
       <HeroBanner
         title="LTO運転経歴証明書 取得代行"
         badges={['複数名対応', 'OR・アポスティーユ込み', '外免切替専門対応']}
-        ctaText="無料相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

@@ -125,7 +125,7 @@ export default function BusinessMenkyoKirikaeJa() {
         title="フィリピン人従業員の日本免許切替サポート"
         subtitle="登録支援機関・監理団体向け。フィリピン人材の運転開始に必要なLTO書類とDFAアポスティーユの取得を代行します。複数名一括・進捗報告・請求書払い対応。"
         badges={['登録支援機関・監理団体向け', '複数名一括対応', '進捗報告付き', '請求書払い対応']}
-        ctaText="まず相談する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated={SEO_LAST_UPDATED_JA}
       />

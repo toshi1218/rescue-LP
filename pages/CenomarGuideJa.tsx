@@ -128,7 +128,7 @@ export default function CenomarGuideJa() {
           '提出先の要件を確認し、そのまま使える状態でお届け',
           'フィリピン渡航不要。まずは無料相談で必要書類を確認',
         ]}
-        ctaText="無料で相談する（24時間以内に返信）"
+        ctaText="無料で相談する"
       />
       <div className="max-w-2xl mx-auto px-4 my-6">
         <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">

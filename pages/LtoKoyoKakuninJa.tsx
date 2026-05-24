@@ -90,7 +90,7 @@ export default function LtoKoyoKakuninJa() {
         title="フィリピン人採用に必要なLTO書類3種"
         subtitle="フィリピン人ドライバーを雇う会社が押さえるべき書類は3つ。License Certification・License History・No Apprehension Certificateの違いと、採用チェックリストを整理します。"
         badges={['雇用主・採用担当者向け', 'LTO書類3種を解説', 'チェックリスト付き']}
-        ctaText="書類取得を相談する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated={SEO_LAST_UPDATED_JA}
       />

@@ -89,7 +89,7 @@ export default function NbiHitJa() {
       <HeroBanner
         title="NBI HIT 解決サポート"
         badges={['HIT解消から一括対応', 'アポスティーユ込み', '費用は事前にご案内']}
-        ctaText="無料相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

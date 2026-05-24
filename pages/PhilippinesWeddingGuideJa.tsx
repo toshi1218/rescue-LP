@@ -61,7 +61,7 @@ export default function PhilippinesWeddingGuideJa() {
       <HeroBanner
         title="フィリピンで結婚する全ガイド【2026年版】"
         badges={['手続きの流れをステップ解説', '必要書類を整理', 'つまずきポイントも解説']}
-        ctaText="書類の相談はこちら"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />

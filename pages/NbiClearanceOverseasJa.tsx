@@ -94,7 +94,7 @@ export default function NbiClearanceOverseasJa() {
           'アポスティーユや海外発送までまとめて相談できます',
           '急ぎのビザ案件は、先に段取りを決めると進めやすくなります',
         ]}
-        ctaText="状況を伝える"
+        ctaText="無料で相談する"
       />
 
       <FeatureList
