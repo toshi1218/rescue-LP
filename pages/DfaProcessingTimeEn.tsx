@@ -90,7 +90,7 @@ export default function DfaProcessingTimeEn() {
           'Total timeline includes PSA/NBI retrieval + DFA + shipping',
           'Share your deadline and we will confirm if we can meet it',
         ]}
-        ctaText="Check Your Deadline"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

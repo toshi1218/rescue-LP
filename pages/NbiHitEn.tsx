@@ -98,7 +98,7 @@ export default function NbiHitEn() {
           'NBI Clearance + DFA Apostille shipped worldwide after resolution',
           'Many applicants have met their visa deadlines with our help',
         ]}
-        ctaText="Get Help Now"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

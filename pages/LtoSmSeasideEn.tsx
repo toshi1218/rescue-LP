@@ -81,7 +81,7 @@ export default function LtoSmSeasideEn() {
       <HeroBanner
         title="LTO SM Seaside Cebu — On-Site Report"
         badges={['SM Seaside City', "Driver's Record", 'Mon–Fri 8:00–17:00']}
-        ctaText="Ask About LTO Document Service"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="March 23, 2026"
       />

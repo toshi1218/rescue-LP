@@ -61,7 +61,7 @@ export default function PhilippinesWeddingGuideEn() {
       <HeroBanner
         title="Getting Married in the Philippines — Complete 2026 Guide"
         badges={['Step-by-Step Procedures', 'Required Documents Listed', 'Common Pitfalls Covered']}
-        ctaText="Ask About Documents"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

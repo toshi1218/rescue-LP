@@ -86,7 +86,7 @@ export default function DocumentChecklistByVisaEn() {
           'All documents need DFA Apostille for immigration use',
           'We can retrieve multiple documents simultaneously to save time',
         ]}
-        ctaText="Get All Documents in One Order"
+        ctaText="Free Consultation"
       />
 
       {/* Quick Reference Table */}

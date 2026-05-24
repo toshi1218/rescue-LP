@@ -74,7 +74,7 @@ export default function PsaLateRegistrationEn() {
       <HeroBanner
         title="PSA Record Missing or Has Errors? Here Is What to Do"
         badges={['No Record Scenarios', 'Name & Date Errors', 'Visa Timeline Impact']}
-        ctaText="Ask About Your Situation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -87,7 +87,7 @@ export default function PsaLateRegistrationEn() {
           'These processes are handled in the Philippines and take months — start immediately',
           'Once corrected, we retrieve the corrected PSA document with DFA Apostille and ship it to you',
         ]}
-        ctaText="Tell Us Your Situation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

@@ -89,7 +89,7 @@ export default function CenomarMeaningEn() {
       <HeroBanner
         title="CENOMAR: What It Means and Why You Need It"
         badges={['Issued by PSA Philippines', 'Required for K-1 & Spouse Visa', 'We Retrieve & Ship Worldwide']}
-        ctaText="Get Your CENOMAR"
+        ctaText="Free Consultation"
         ctaHref="/en/cenomar/"
         lastUpdated="April 2026"
       />
@@ -102,7 +102,7 @@ export default function CenomarMeaningEn() {
           'Must have DFA Apostille to be accepted by foreign immigration authorities',
           'Valid for 6 months for most immigration purposes — order at the right time',
         ]}
-        ctaText="Order CENOMAR Now"
+        ctaText="Free Consultation"
       />
 
       <div className="max-w-2xl mx-auto px-4 my-8">

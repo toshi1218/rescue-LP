@@ -103,7 +103,7 @@ export default function NbiClearanceOnlineEn() {
           'HIT cases require in-person appearance regardless of renewal status',
           'For overseas Filipinos who cannot travel, we handle everything locally',
         ]}
-        ctaText="Let Us Handle Your NBI Clearance"
+        ctaText="Free Consultation"
       />
 
       <div className="max-w-2xl mx-auto px-4 my-8">

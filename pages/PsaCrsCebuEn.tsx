@@ -79,7 +79,7 @@ export default function PsaCrsCebuEn() {
       <HeroBanner
         title="PSA CRS Cebu — On-Site Report"
         badges={['Colon Street, Cebu', 'Appointment Required Oct 2025', 'Updated 2026']}
-        ctaText="Ask About PSA Document Service"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="March 23, 2026"
       />

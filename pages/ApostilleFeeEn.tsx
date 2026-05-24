@@ -97,7 +97,7 @@ export default function ApostilleFeeEn() {
           'No surprise add-ons after you commit',
           'Compare total costs across providers before deciding',
         ]}
-        ctaText="Get Your Total Quote"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

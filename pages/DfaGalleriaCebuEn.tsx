@@ -61,7 +61,7 @@ export default function DfaGalleriaCebuEn() {
       <HeroBanner
         title="DFA Apostille Office — Robinsons Galleria Cebu"
         badges={['Cebu Location', 'Appointment Required', 'Updated 2026']}
-        ctaText="Ask About Apostille Service"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

@@ -85,7 +85,7 @@ export default function TbCertEn() {
       <HeroBanner
         title="TB Non-Disease Certificate"
         badges={['Required from June 23, 2025', 'Philippine Nationals', 'Valid 180 Days']}
-        ctaText="Ask About Spouse Visa Documents"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

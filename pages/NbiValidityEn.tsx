@@ -91,7 +91,7 @@ export default function NbiValidityEn() {
           'Getting it too early risks expiration before your interview date',
           'We calculate the optimal retrieval date based on your visa timeline',
         ]}
-        ctaText="Check Your Timeline"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

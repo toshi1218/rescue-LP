@@ -99,7 +99,7 @@ export default function NbiClearanceOverseasEn() {
           'HIT (MATCH FOUND) cases handled without you returning to the Philippines',
           'Required for immigration in the US, Canada, Australia, UK, Japan and more',
         ]}
-        ctaText="Get Started — Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

@@ -142,7 +142,7 @@ export default function PsaCostEn() {
           'No surprise add-ons after you start the process',
           'Compare total costs, not just base fees, when choosing a service',
         ]}
-        ctaText="Get Your Total Quote"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

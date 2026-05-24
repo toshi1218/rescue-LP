@@ -91,7 +91,7 @@ export default function CenomarValidityEn() {
           'If your CENOMAR expires, you will need to re-order and pay again',
           'Free consultation to map out your document timeline',
         ]}
-        ctaText="Check Your Timeline"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

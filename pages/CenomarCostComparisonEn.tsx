@@ -55,7 +55,7 @@ export default function CenomarCostComparisonEn() {
       <HeroBanner
         title="CENOMAR Cost Comparison: All Options Explained [2026]"
         badges={['PSA Direct vs Agent vs Walk-in', 'Full Cost Breakdown', 'Updated May 2026']}
-        ctaText="Get All-Inclusive Quote"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="May 1, 2026"
       />
@@ -74,7 +74,7 @@ export default function CenomarCostComparisonEn() {
           'Representative: variable cost, coordination risk, no accountability',
           'Document service: US$349 all-inclusive — PSA + Apostille + DHL worldwide',
         ]}
-        ctaText="Get All-Inclusive Quote"
+        ctaText="Free Consultation"
       />
 
       {/* Comparison Table */}

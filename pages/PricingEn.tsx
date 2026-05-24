@@ -17,7 +17,7 @@ export default function PricingEn() {
         title="Pricing"
         subtitle="All-inclusive pricing: PSA retrieval, DFA Apostille, and DHL shipping — quoted together with no hidden fees."
         badges={['No hidden fees', 'Free quote', 'Free cancellation before start']}
-        ctaText="Get a Free Quote"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         ctaService="Pricing inquiry"
         lastUpdated="April 1, 2026"

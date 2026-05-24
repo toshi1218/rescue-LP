@@ -73,7 +73,7 @@ export default function CenomarVsMarriageCertEn() {
       <HeroBanner
         title="CENOMAR or PSA Marriage Certificate — Which Do You Need?"
         badges={['Common Confusion Explained', 'Visa-Specific Guidance', 'Free Consultation']}
-        ctaText="Ask Which One You Need"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -86,7 +86,7 @@ export default function CenomarVsMarriageCertEn() {
           'K-1 visa applicants usually need CENOMAR; CR-1/IR-1 applicants usually need PSA Marriage Certificate',
           'Some cases require both — especially if your partner was previously married',
         ]}
-        ctaText="Tell Us Your Situation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

@@ -94,7 +94,7 @@ export default function PhilippineStatisticsAuthorityEn() {
           'Online ordering via PSA Serbilis is available but delivers within the Philippines only',
           'For international use, DFA Apostille is required — we handle retrieval, Apostille, and worldwide shipping',
         ]}
-        ctaText="Get Your PSA Document"
+        ctaText="Free Consultation"
       />
 
       <div className="max-w-2xl mx-auto px-4 my-8">
