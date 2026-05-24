@@ -25,7 +25,7 @@ export default function NbiGuideJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'フィリピンNBIクリアランス（無犯罪証明書）更新サポート',
-        description: '2014年以降に発行されたNBIクリアランスの取得歴があり、個人情報に変更がない更新案件を中心に対応。初回取得・氏名変更がある場合は在日フィリピン大使館等でのご本人対応が必要です。日本語でご相談いただけます。',
+        description: '更新案件（2014年以降取得歴あり・個人情報変更なし）はフル代行対応。初回・2013年以前・氏名変更ありの場合も、フィリピン大使館等でNBI Fingerprint Card Form No. 5（指紋カード）を取得済みであれば、NBIオンライン登録からNBI Manila本局提出・アポスティーユ・発送まで日本語でサポート可能。',
         url: 'https://ph-document.com/ja/nbi-clearance/',
         provider: {
           '@type': 'Organization',
@@ -62,7 +62,7 @@ export default function NbiGuideJa() {
               name: '初めてNBIクリアランスを取るのですが、依頼できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '初回取得は、在日フィリピン大使館・総領事館での本人による指紋対応が必要です。そのため、当社だけで完結する形ではお受けしていません。進め方の整理が必要な場合はご相談ください。',
+                text: '初回でも対応可能です。まずフィリピン大使館・領事館等でNBI Fingerprint Card Form No. 5（指紋カード）を取得・指紋採取を受けてください。その後の手続き（NBIオンライン登録、Reference Number取得、NBI Manila本局への提出、返送後のPDF納品・原本発送）はIGRSが代行します。',
               },
             },
             {
@@ -87,9 +87,9 @@ export default function NbiGuideJa() {
     >
       <HeroBanner
         title="海外ビザ用NBIクリアランス"
-        subtitle="取得歴、氏名変更の有無、現在地を確認し、進められる案件だけを整理してご案内します。"
-        badges={['更新案件を中心に対応', '条件を先に確認', '進捗を随時ご報告']}
-        ctaText="更新できるか確認する"
+        subtitle="更新（2014年以降取得歴あり）はフル代行。初回でも、大使館で指紋カードを取得済みであればそこから先をIGRSが代行します。"
+        badges={['更新・初回（指紋カード取得後）対応', 'HIT対応', '進捗を随時ご報告']}
+        ctaText="状況を相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
@@ -149,7 +149,7 @@ export default function NbiGuideJa() {
 
       <CtaBox
         title="まずは無料相談"
-        description="過去の取得年と氏名変更の有無をお知らせください。更新として進められるか確認します。"
+        description="更新か初回（指紋カード取得済み）かをお知らせください。どちらのルートで進められるか確認してご案内します。"
         buttonText="無料相談はこちら"
         href="#contact"
         variant="primary"
@@ -158,18 +158,18 @@ export default function NbiGuideJa() {
 
       {/* 当社でご案内しやすいケース（先出し） */}
       <SectionDivider variant="beige">
-        <h2 className="text-base font-bold text-gray-900 mb-4">当社でご案内しやすいケース</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-4">対応できるケース</h2>
         <IconCardGrid
           columns={2}
           cards={[
-            { icon: CheckCircle, title: "2014年以降に取得歴がある", description: "2014年以降にNBIクリアランスを取得したことがある方", accent: 'green' },
-            { icon: ShieldCheck, title: "個人情報に変更がない", description: "姓・名・生年月日などに変更がない方", accent: 'blue' },
-            { icon: Globe, title: "日本から手続きしたい", description: "渡航せずに進めたい方", accent: 'teal' },
-            { icon: FileText, title: "更新として進められる案件", description: "新しいFingerprint Card不要で進められる可能性が高い案件", accent: 'gold' },
+            { icon: CheckCircle, title: "更新（2014年以降取得歴あり・個人情報変更なし）", description: "指紋登録不要。NBIオンライン登録から発送まで全てIGRSが代行します。", accent: 'green' },
+            { icon: ShieldCheck, title: "初回・2013年以前・氏名変更あり（指紋カード取得済み）", description: "大使館等でNBI Fingerprint Card Form No. 5を取得・指紋採取済みであれば、そこから先をIGRSが代行します。", accent: 'blue' },
+            { icon: Globe, title: "日本から手続きしたい", description: "渡航せずに進めたい方。指紋カード取得（大使館1回）後はIGRSが日本語で対応します。", accent: 'teal' },
+            { icon: FileText, title: "HIT対応も相談可", description: "同名者照会（HIT）が入った場合も、状況を確認してご案内します。", accent: 'gold' },
           ]}
         />
         <p className="text-xs text-gray-500 border-t border-primary/10 pt-3 mt-4">
-          在東京フィリピン大使館の案内でも、2014年以降の証明書で個人情報変更がなければ更新手続きが可能とされています。
+          東京フィリピン大使館の案内でも、初回申請者はNBI Form No. 5の取得・指紋採取後に代理人ルートで申請を進める流れが案内されています。
         </p>
       </SectionDivider>
 
@@ -195,32 +195,37 @@ export default function NbiGuideJa() {
         ]}
       />
 
-      {/* 対応できないケース（後半に配置） */}
-      <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-6">
+      {/* 指紋カードが必要なケース */}
+      <section className="mb-10 rounded-2xl border border-amber-200 bg-amber-50/60 p-6">
         <div className="flex items-start gap-3 mb-3">
           <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-          <h2 className="text-base font-bold text-gray-900">ご相談前にご確認ください</h2>
+          <h2 className="text-base font-bold text-gray-900">まず大使館での指紋採取が必要なケース</h2>
         </div>
-        <p className="text-sm text-gray-600 mb-4">以下のケースは、在日フィリピン大使館・総領事館でのご本人対応が必要です。当社だけでの完結が難しい場合がありますので、まずはご相談ください。</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <p className="text-sm text-gray-600 mb-4">以下のケースは、在日フィリピン大使館・総領事館でNBI Fingerprint Card Form No. 5の取得と指紋採取が必要です。指紋カードを取得済みであれば、そこからの手続きはIGRSが代行できます。</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
           {[
-            '過去に一度もNBIクリアランスを取得したことがない',
+            '過去に一度もNBIクリアランスを取得したことがない（初回）',
             '最後の取得が2013年以前',
             '結婚等により姓・個人情報に変更がある',
           ].map((item, i) => (
-            <div key={i} className="rounded-xl bg-gray-50 border border-gray-200 p-3 flex items-start gap-2">
-              <XCircle className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
+            <div key={i} className="rounded-xl bg-white border border-amber-200 p-3 flex items-start gap-2">
+              <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
               <p className="text-sm text-gray-700">{item}</p>
             </div>
           ))}
         </div>
+        <div className="rounded-lg border border-amber-300 bg-white p-4">
+          <p className="text-xs font-bold text-amber-800 mb-1">指紋カード取得後はIGRSにお任せください</p>
+          <p className="text-xs text-gray-600 leading-relaxed">大使館でNBI Fingerprint Card Form No. 5を取得・指紋採取を受けた後、カードをIGRSへ転送いただければ、NBIオンライン登録・Reference Number取得・NBI Manila本局への提出・返送後の発送まで代行します。</p>
+        </div>
       </section>
 
       <ComparisonTable
-        heading="更新案件 vs 新規取得"
+        heading="更新 vs 初回（指紋カード取得後）"
         rows={[
-          { item: "IGRSで対応可能", self: "新規・氏名変更", agency: "更新案件（2014年以降）" },
-          { item: "本人の指紋登録", self: "大使館へ本人訪問", agency: "不要（更新の場合）" },
+          { item: "IGRSで対応可能", self: "指紋カード取得前", agency: "どちらも対応可" },
+          { item: "本人の指紋登録", self: "大使館で指紋カード取得が必要（初回・2013年以前・氏名変更あり）", agency: "不要（更新の場合）" },
+          { item: "IGRSの代行範囲", self: "—", agency: "オンライン登録〜NBI提出〜発送" },
           { item: "日本語サポート", self: "英語のみ", agency: true },
           { item: "進捗報告", self: "—", agency: true },
         ]}
@@ -231,8 +236,8 @@ export default function NbiGuideJa() {
         <h2 className="text-base font-bold text-gray-900 mb-4">ご注意ください</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
-            { title: '初回取得は本人対応が必要', note: '大使館でFingerprint Card Form No. 5の作成と指紋対応が必要です。' },
-            { title: '氏名変更は新規扱いに', note: '2014年以降の取得歴があっても、個人情報変更があると新規手順が必要になります。' },
+            { title: '初回・氏名変更は指紋カードが先', note: '初回・2013年以前・氏名変更ありの場合、大使館でNBI Fingerprint Card Form No. 5の取得・指紋採取が必要です。取得後はIGRSが代行します。' },
+            { title: 'NBI処理・HIT・返送遅延は保証外', note: 'NBI側の処理遅延、HIT（同名者照会）による追加確認、返送遅延はIGRSの管理外です。発生した場合も状況を共有してご案内します。' },
             { title: '所要日数は前後する', note: '海外からの申請はNBI Main Office処理のため、現地到着・発送状況にも左右されます。' },
           ].map((item, i) => (
             <div key={i} className="rounded-xl bg-amber-50 border border-amber-200 p-4">
@@ -279,7 +284,7 @@ export default function NbiGuideJa() {
         variant="visual"
         heading="ご依頼の流れ"
         steps={[
-          { title: '無料相談', description: 'まずは、過去の取得年と、氏名変更の有無をお知らせください。更新として進めやすい案件かどうかを確認します。' },
+          { title: '無料相談', description: '更新か初回（指紋カード取得済み）かをお知らせください。どちらのルートで進められるか確認してご案内します。' },
           { title: 'お見積もり', description: '内容を確認し、費用と進め方をご案内します。' },
           { title: '着手金のお支払い', description: '代金総額の50%をご入金いただいた後、手続きを開始します。' },
           { title: '書類取得後のご確認', description: '取得できた段階で、書類の写しをお送りします。内容をご確認ください。' },
@@ -291,7 +296,7 @@ export default function NbiGuideJa() {
       <FaqSection
         items={[
           { q: '自分が更新対象か分かりません', a: 'まずは、最後にNBIクリアランスを取った年と、その後に氏名などの変更があったかをお知らせください。更新として進めやすいかどうかを確認してご案内します。' },
-          { q: '初めてNBIクリアランスを取るのですが、依頼できますか？', a: '初回取得は、在日フィリピン大使館・総領事館での本人による指紋対応が必要です。そのため、当社だけで完結する形ではお受けしていません。進め方の整理が必要な場合はご相談ください。' },
+          { q: '初めてNBIクリアランスを取るのですが、依頼できますか？', a: '初回でも対応可能です。まずフィリピン大使館・領事館等でNBI Fingerprint Card Form No. 5（指紋カード）を取得・指紋採取を受けてください。その後の手続き（NBIオンライン登録、Reference Number取得、NBI Manila本局への提出、返送後のPDF納品・原本発送）はIGRSが代行します。' },
           { q: '結婚して姓が変わりました。更新できますか？', a: '個人情報に変更がある場合は、更新ではなく新規・初回側の手順が必要になることがあります。この場合も、まず状況を確認してご案内します。' },
           { q: 'どのくらいで届きますか？', a: '状況により変わります。在外申請はNBI Main Officeで処理され、公式案内では書類到着後の処理は最大5営業日とされていますが、実際の全体日数は書類準備、配送、受取方法によって前後します。まずは現在の状況をご相談ください。' },
         ]}
