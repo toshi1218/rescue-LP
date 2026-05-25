@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
             </ol>
             <p className="text-xs text-gray-500 mt-2 border-t border-gray-200 pt-2">
               {isJa
-                ? '※ ご提供いただいた個人情報は、ご相談・書類取得業務のみに使用します。第三者への提供は行いません。'
+                ? '※ ご提供いただいた個人情報は、ご相談・書類取得業務のみに使用し、申請・配送に必要な政府機関・現地提携スタッフ・配送業者等への提供を除き、第三者へ提供することはありません。'
                 : '* Your information is used solely for this inquiry and document procurement. We do not share it with third parties.'}
             </p>
             <p className="text-xs text-gray-500 mt-1.5">
