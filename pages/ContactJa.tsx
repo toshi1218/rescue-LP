@@ -96,7 +96,7 @@ export default function ContactJa() {
             });
             const data = await res.json();
             if (res.ok && data.success) {
-              trackEvent('form_submit', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
+              trackEvent('form_submit_success', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
               setSubmitted(true);
             } else {
               setSubmitError('送信に失敗しました。しばらく経ってから再度お試しください。');

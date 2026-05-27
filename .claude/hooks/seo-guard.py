@@ -70,6 +70,9 @@ LEVEL3_CONTENT_KEYWORDS = [
 ]
 
 
+GUARDED_PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+
+
 def main():
     try:
         data = json.load(sys.stdin)
@@ -78,6 +81,12 @@ def main():
 
     tool_input = data.get("tool_input") or {}
     file_path = tool_input.get("file_path") or ""
+
+    # rescue-LP プロジェクト以外のファイルはガード対象外
+    abs_file = os.path.abspath(file_path) if file_path else ""
+    if not abs_file.startswith(GUARDED_PROJECT_DIR + os.sep) and abs_file != GUARDED_PROJECT_DIR:
+        sys.exit(0)
+
     basename = os.path.basename(file_path)          # ファイル名マッチ用（元のcase）
     basename_lower = basename.lower()               # コンテンツ検索用
 

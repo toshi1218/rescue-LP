@@ -96,7 +96,7 @@ export default function ContactEn() {
             });
             const data = await res.json();
             if (res.ok && data.success) {
-              trackEvent('form_submit', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
+              trackEvent('form_submit_success', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
               setSubmitted(true);
             } else {
               setSubmitError('Submission failed. Please try again later.');
