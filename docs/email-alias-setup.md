@@ -2,48 +2,70 @@
 
 ## 概要
 
-NBI Clearance申請では、ポータルにメールアドレスを登録する必要がある。
+NBI Clearance申請ではポータルにメールアドレスを登録する必要がある。
 顧客ごとに異なるエイリアスを使うことで：
 - 「このメールはすでに使われています」エラーを回避
 - 誰の案件かメールアドレスだけで即判別
-- Gmailを大量作成・管理しなくて済む
+- 受信は全件 `igrs20200601@gmail.com` 1箇所に集約
 
-## フォーマット
+---
+
+## 2つのモードと選び方
+
+### モードA：Gmail + エイリアス（推奨スタート）
 
 ```
-nbi.{顧客名}.{YYYYMM}@ph-document.com
+igrs20200601+tanaka.202605@gmail.com
+igrs20200601+sato.202606@gmail.com
 ```
 
-例：
+- **設定不要**。今すぐ使える。
+- 全部 `igrs20200601@gmail.com` に届く。
+- ⚠️ NBI portal が `+` 記号を弾く場合はモードBへ切替。
+
+### モードB：ph-document.com ドメインエイリアス
+
 ```
 nbi.tanaka.202605@ph-document.com
 nbi.sato.202606@ph-document.com
-nbi.yamada.202607@ph-document.com
 ```
 
-→ これら全部が `toshiyuki541218@gmail.com` に届く（Cloudflare Catch-all）
+- Cloudflare Email Routing (無料) を5分設定するだけ。
+- 完全にユニーク、`+` を弾くサイトでも通る。
+- 転送先を `igrs20200601@gmail.com` に設定すれば同じ受信箱に届く。
+
+**判断フロー**:
+1. まずモードAで試す
+2. NBI portal が `+` を弾いたら → モードBに切替
 
 ---
 
-## Cloudflare Email Routing 初期設定（1回だけ）
+## モードBの Cloudflare 設定（5分）
 
-1. [Cloudflare Dashboard](https://dash.cloudflare.com) にログイン
-2. **ph-document.com** を選択
-3. 左メニュー **「Email」→「Email Routing」**
-4. **「Get started」** をクリック
-5. Destination email に `toshiyuki541218@gmail.com` を入力 → **「Save」**
-6. Gmailに届いた確認メールの **「Verify email address」** をクリック
-7. Cloudflareに戻り **「Catch-all address」** を有効化
+1. [Cloudflare Dashboard](https://dash.cloudflare.com) → ph-document.com
+2. **Email → Email Routing**
+3. **Get started** をクリック
+4. Destination email: `igrs20200601@gmail.com` → **Save**
+5. Gmailに届いた確認メールの **Verify email address** をクリック
+6. **Catch-all address** を有効化
    - Action: **Send to**
-   - Destination: **toshiyuki541218@gmail.com**
-8. **「Save」**
+   - Destination: **igrs20200601@gmail.com**
+7. **Save**
 
-設定後は `*@ph-document.com` 宛のメールが全部Gmailに届く。
-個別にエイリアスを作成する作業は一切不要。
+設定後は `nbi.名前.年月@ph-document.com` 宛のメールが全部Gmailに届く。
 
 ---
 
-## 日常の使い方
+## スクリプトの使い方
+
+### 初期設定（モード選択）
+
+`scripts/nbi-alias.sh` の上部を編集：
+
+```bash
+MODE="gmail"    # Gmail + エイリアス（デフォルト）
+# MODE="domain" # ph-document.com エイリアス
+```
 
 ### 新規案件：エイリアス生成
 
@@ -51,12 +73,11 @@ nbi.yamada.202607@ph-document.com
 ./scripts/nbi-alias.sh new tanaka
 ```
 
-出力例：
+出力例（gmailモード）：
 ```
 ✅ 生成しました
-   エイリアス : nbi.tanaka.202605@ph-document.com
-   転送先     : info@ph-document.com (Cloudflare Catch-all)
-   NBI登録用  : nbi.tanaka.202605@ph-document.com
+   NBI登録用  : igrs20200601+tanaka.202605@gmail.com
+   受信先     : igrs20200601@gmail.com
 ```
 
 このアドレスをそのままNBIポータルに入力する。
@@ -70,10 +91,21 @@ nbi.yamada.202607@ph-document.com
 ### 案件完了
 
 ```bash
-./scripts/nbi-alias.sh done nbi.tanaka.202605@ph-document.com
+./scripts/nbi-alias.sh done igrs20200601+tanaka.202605@gmail.com
 ```
 
-ログが `active` → `done` に更新される。
+---
+
+## エイリアスのフォーマット
+
+| モード | 形式 |
+|--------|------|
+| gmail | `igrs20200601+{名前}.{YYYYMM}@gmail.com` |
+| domain | `nbi.{名前}.{YYYYMM}@ph-document.com` |
+
+例：2026年5月、田中さん
+- gmail: `igrs20200601+tanaka.202605@gmail.com`
+- domain: `nbi.tanaka.202605@ph-document.com`
 
 ---
 
@@ -81,25 +113,4 @@ nbi.yamada.202607@ph-document.com
 
 `.nbi-aliases.csv`（リポジトリルートに自動生成、`.gitignore`済み）
 
-| カラム | 内容 |
-|--------|------|
-| alias | エイリアスアドレス |
-| customer | 顧客名（入力値） |
-| created_at | 生成日 |
-| status | active / done |
-
----
-
-## NBI ポータルがGmailしか通らない場合
-
-まず `nbi.test.202605@ph-document.com` で1件試す。
-もし弾かれた場合は、別途専用Gmailアカウントを検討する。
-
----
-
-## Cloudflare Email Routing の仕様
-
-- **無料プラン**で利用可能
-- Catch-all設定後、エイリアスの個別登録は不要
-- MXレコードはCloudflareが自動で追加する
-- 送信（返信）はできない（受信専用）。返信はGmailから `info@ph-document.com` を使う
+顧客データのためgit管理外。このファイルはローカルのみ保存される。
