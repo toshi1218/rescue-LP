@@ -37,7 +37,7 @@ export default function ContactKo() {
       });
       const data = await res.json();
       if (res.ok && data.success) {
-        trackEvent('form_submit', { location: 'contact_page_ko', type: 'web3forms' });
+        trackEvent('form_submit_success', { location: 'contact_page_ko', type: 'web3forms' });
         setSubmitted(true);
       } else {
         setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
