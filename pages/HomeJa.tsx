@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { CheckCircle } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { CheckCircle, ChevronDown } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import GuideLinks from '../components/GuideLinks';
@@ -18,6 +18,8 @@ import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function HomeJa() {
+  const [noticeExpanded, setNoticeExpanded] = useState(false);
+
   useMeta(
     `フィリピン書類、日本語だけで確実に取り寄せできます｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}】`,
     'CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユを日本語だけで安心代行。フィリピン渡航不要。進捗は随時ご報告。国際結婚・配偶者ビザ・帰化申請に対応。無料相談受付中。',
@@ -156,26 +158,37 @@ export default function HomeJa() {
               <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
                 2026年3月のPSAデジタル化以降、電子文書が<span className="text-red-700">受理されず紙原本を要求されるケース</span>が多数報告されています。<span className="text-red-700">当社はPSA・DFA窓口で直接紙原本を取得しており、従来通り対応可能です。</span>
               </p>
-              <ul className="space-y-3 mt-4">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700 leading-relaxed">
-                    <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：フィリピン側の運用が電子化しても、日本の提出先は当面の間、紙原本を求められることが想定されます。
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700 leading-relaxed">
-                    <strong className="text-gray-900">まずは提出先にご確認ください</strong>：電子文書で受理されるかを提出先にご確認いただき、<strong className="text-red-700">紙原本を求められた場合は当社にご相談ください。</strong>
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700 leading-relaxed">
-                    <strong className="text-gray-900">納期の目安</strong>：現在、紙原本のご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
-                  </span>
-                </li>
-              </ul>
+              {noticeExpanded && (
+                <ul className="space-y-3 mt-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700 leading-relaxed">
+                      <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：フィリピン側の運用が電子化しても、日本の提出先は当面の間、紙原本を求められることが想定されます。
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700 leading-relaxed">
+                      <strong className="text-gray-900">まずは提出先にご確認ください</strong>：電子文書で受理されるかを提出先にご確認いただき、<strong className="text-red-700">紙原本を求められた場合は当社にご相談ください。</strong>
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700 leading-relaxed">
+                      <strong className="text-gray-900">納期の目安</strong>：現在、紙原本のご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
+                    </span>
+                  </li>
+                </ul>
+              )}
+              {!noticeExpanded && (
+                <button
+                  onClick={() => setNoticeExpanded(true)}
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-red-700 hover:text-red-800 transition-colors"
+                >
+                  <ChevronDown className="w-3.5 h-3.5" />
+                  詳細を見る
+                </button>
+              )}
 
               {/* e-Certificate対応の案内 */}
               <div className="mt-5 pt-4 border-t border-gray-100 flex items-start gap-3 bg-blue-50 rounded-xl px-4 py-3">

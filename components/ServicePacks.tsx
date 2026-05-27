@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight } from 'lucide-react';
+import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight, ChevronDown } from 'lucide-react';
 
 const packs = [
   {
@@ -11,24 +11,27 @@ const packs = [
     accentBg: 'bg-rose-50',
     accentBorder: 'border-rose-100',
     iconColor: 'text-rose-500',
+    numColor: 'text-rose-400',
   },
   {
     to: '/ja/haigusha-visa/',
     icon: BadgeCheck,
-    title: '配偶者ビザ',
+    title: '配偶者ビザ（在留資格）',
     desc: '入管申請に向けて必要なフィリピン書類の一覧と費用の目安を確認できます',
     accentBg: 'bg-blue-50',
     accentBorder: 'border-blue-100',
     iconColor: 'text-blue-600',
+    numColor: 'text-blue-400',
   },
   {
     to: '/ja/gaimen-kirikae-guide/',
     icon: Car,
-    title: '外免切替',
+    title: '外免切替（免許の切替）',
     desc: 'フィリピン免許を日本免許に切り替えるためのLTO書類と費用を確認できます',
     accentBg: 'bg-emerald-50',
     accentBorder: 'border-emerald-100',
     iconColor: 'text-emerald-600',
+    numColor: 'text-emerald-400',
   },
   {
     to: '/ja/nbi-clearance/',
@@ -38,6 +41,7 @@ const packs = [
     accentBg: 'bg-amber-50',
     accentBorder: 'border-amber-100',
     iconColor: 'text-amber-600',
+    numColor: 'text-amber-400',
   },
   {
     to: '/ja/kikka-shinsei/',
@@ -47,39 +51,48 @@ const packs = [
     accentBg: 'bg-violet-50',
     accentBorder: 'border-violet-100',
     iconColor: 'text-violet-600',
+    numColor: 'text-violet-400',
   },
 ];
 
 const ServicePacks: React.FC = () => {
+  const [expanded, setExpanded] = useState(false);
+  const visiblePacks = expanded ? packs : packs.slice(0, 2);
+
   return (
-    <section className="py-10 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
-        <div className="text-center mb-4">
+        <div className="text-center mb-8">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Services</span>
           <h2 className="text-xl font-bold text-secondary mb-2">目的が決まっている方はこちら</h2>
           <p className="text-xs text-gray-500">必要書類・費用の目安・ご依頼の流れを目的別にまとめています</p>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3" />
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
-          {packs.map((pack) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {visiblePacks.map((pack, i) => (
             <Link
               key={pack.to}
               to={pack.to}
-              className={`group bg-white border ${pack.accentBorder} rounded-2xl p-3 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all overflow-hidden`}
+              className={`group relative bg-white border ${pack.accentBorder} rounded-2xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all overflow-hidden`}
             >
+              {/* Number badge */}
+              <span className={`absolute top-4 right-4 font-bold text-2xl leading-none ${pack.numColor} opacity-20 font-display select-none`}>
+                {String(i + 1).padStart(2, '0')}
+              </span>
+
               {/* Icon */}
-              <div className={`w-9 h-9 rounded-xl ${pack.accentBg} border ${pack.accentBorder} flex items-center justify-center mb-2`}>
-                <pack.icon className={`w-4 h-4 ${pack.iconColor}`} />
+              <div className={`w-11 h-11 rounded-xl ${pack.accentBg} border ${pack.accentBorder} flex items-center justify-center mb-3`}>
+                <pack.icon className={`w-5 h-5 ${pack.iconColor}`} />
               </div>
 
               {/* Title */}
-              <p className="font-bold text-xs text-secondary leading-snug mb-1 group-hover:text-primary transition-colors">
+              <p className="font-bold text-sm text-secondary leading-snug mb-1.5 group-hover:text-primary transition-colors pr-6">
                 {pack.title}
               </p>
 
               {/* Desc */}
-              <p className="text-[10px] text-gray-500 leading-relaxed mb-3">{pack.desc}</p>
+              <p className="text-xs text-gray-500 leading-relaxed mb-4">{pack.desc}</p>
 
               {/* CTA row */}
               <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark group-hover:gap-2 transition-all">
@@ -89,6 +102,18 @@ const ServicePacks: React.FC = () => {
             </Link>
           ))}
         </div>
+
+        {!expanded && (
+          <div className="text-center mt-4">
+            <button
+              onClick={() => setExpanded(true)}
+              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
+            >
+              <ChevronDown className="w-4 h-4" />
+              {`残り${packs.length - 2}件を見る`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
