@@ -32,7 +32,7 @@ export default function PricingJa() {
     >
       <HeroBanner
         title="料金"
-        subtitle="PSAオンライン申請代行（¥16,500〜）からフルサービスパック（¥94,000〜）まで、目的・予算に合わせてお選びいただけます。"
+        subtitle="PSAオンライン申請代行（¥19,800〜）からフルサービスパック（¥94,000〜）まで、目的・予算に合わせてお選びいただけます。"
         badges={['オンライン申請代行から対応', '無料お見積もり', '追加費用の後出しなし']}
         ctaText="無料でお見積もり"
         ctaHref="#contact"
@@ -67,7 +67,7 @@ export default function PricingJa() {
             「e-Apostilleで受理しますか？紙の原本が必要ですか？」と確認してから業者を選ぶことをおすすめします。
           </p>
           <p className="text-xs text-gray-500 leading-relaxed">
-            電子対応が確認できた場合は、<strong>PSAオンライン申請代行（¥16,500〜）</strong>でコストを抑えられます。紙原本が必要な場合はフルサービスをご利用ください。
+            電子対応が確認できた場合は、<strong>PSAオンライン申請代行（¥19,800〜）</strong>でコストを抑えられます。紙原本が必要な場合はフルサービスをご利用ください。
           </p>
         </div>
       </div>

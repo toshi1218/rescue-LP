@@ -9,8 +9,8 @@ import { CheckCircle, AlertTriangle, ArrowRight, Plane, CreditCard, FileCheck, G
 
 export default function InputSupportJa() {
   useMeta(
-    'PSAオンライン申請代行｜海外から¥16,500（税込）で申請まで代行【IGRS】',
-    '海外からのPSA・CENOMAR・NBIオンライン申請を日本語で代行。フォーム入力・国際クレカ支払い・送付先設定まで全て代行します。¥16,500（税込）〜。フィリピンに行かずに書類を取得したい方向け。',
+    'PSAオンライン申請代行｜¥19,800（税込・国際送料なし）で申請まで代行【IGRS】',
+    '海外からのPSA・CENOMAR・NBIオンライン申請を日本語で代行。フォーム入力・国際クレカ支払い・送付先設定まで全て代行します。¥19,800（税込・国際送料なし）〜。フィリピンに行かずに書類を取得したい方向け。',
   );
 
   return (
@@ -34,7 +34,7 @@ export default function InputSupportJa() {
         areaServed: { '@type': 'Country', name: 'JP' },
         offers: {
           '@type': 'Offer',
-          price: '16500',
+          price: '19800',
           priceCurrency: 'JPY',
           priceSpecification: { '@type': 'UnitPriceSpecification', priceType: 'MinimumPrice' },
         },
@@ -43,7 +43,7 @@ export default function InputSupportJa() {
       <HeroBanner
         title="PSAオンライン申請代行"
         subtitle="PSAへのオンライン申請フォームの入力・申請手続きを代行。書類はPSAからお客様の住所へ直接届きます。"
-        badges={['¥16,500〜（税込）', 'オンライン完結・DHL不要', 'PSAから直接お届け']}
+        badges={['¥19,800（税込・国際送料なし）', 'オンライン完結', 'PSAから直接お届け']}
         ctaText="オンライン申請代行を相談する"
         ctaHref="#contact"
         ctaService="オンライン申請代行"
@@ -99,10 +99,29 @@ export default function InputSupportJa() {
         <div className="rounded-2xl border border-primary/20 bg-primary/[0.03] p-6">
           <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">料金</p>
           <div className="flex items-baseline gap-2 mb-1">
-            <span className="text-4xl font-extrabold text-primary">¥16,500</span>
-            <span className="text-sm text-gray-500">〜（税込 / DHL不要）</span>
+            <span className="text-4xl font-extrabold text-primary">¥19,800</span>
+            <span className="text-sm text-gray-500">（税込・国際送料なし）</span>
           </div>
-          <p className="text-xs text-gray-400 mb-1">内訳: 申請代行 ¥15,000 + 消費税 ¥1,500</p>
+          <div className="rounded-lg bg-gray-50 border border-gray-100 px-3 py-2.5 space-y-1 mb-3">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-gray-500">申請代行料</span>
+              <span className="font-medium text-gray-700">¥18,000</span>
+            </div>
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-gray-500">消費税（10%）</span>
+              <span className="font-medium text-gray-700">¥1,800</span>
+            </div>
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-gray-500">国際送料（DHL国際宅配便）</span>
+              <span className="font-medium text-green-600">不要</span>
+            </div>
+            <div className="flex items-center justify-between text-xs font-bold text-secondary border-t border-gray-200 pt-1 mt-0.5">
+              <span>合計</span>
+              <span>¥19,800</span>
+            </div>
+          </div>
+          <p className="text-xs text-blue-600 mb-1 leading-snug">アポスティーユ（DFA認証）が必要な場合は「DFAアポスティーユのみ ¥39,000〜」を別途ご利用ください</p>
+          <p className="text-xs text-gray-400 mb-3 leading-snug italic">納期・内容により料金をご相談できる場合があります。まずはお問い合わせください。</p>
           <p className="text-sm text-gray-600 mb-4">書類1種類あたり。複数書類のご依頼は別途ご相談ください。</p>
           <ul className="space-y-1.5 mb-4">
             {[

@@ -20,9 +20,15 @@ const plansData = {
         '申請後のステータス確認',
       ],
       why: 'フィリピンでの物理取得・DFAアポスティーユは含まれません。日本の提出先が紙原本を必須とする場合はフルサービスへの切替もご相談いただけます',
-      price: '¥16,500',
-      priceNote: '〜（税込 / DHL不要）',
-      priceBreakdown: '申請代行 ¥15,000 + 消費税 ¥1,500',
+      price: '¥19,800',
+      priceNote: '（税込・国際送料なし）',
+      priceLines: [
+        { label: '申請代行料', value: '¥18,000' },
+        { label: '消費税（10%）', value: '¥1,800' },
+        { label: '国際送料（DHL国際宅配便）', value: '不要', highlight: true },
+      ],
+      priceAddOn: 'アポスティーユ（DFA認証）が必要な場合は「DFAアポスティーユのみ ¥39,000〜」を別途ご利用ください',
+      priceNegotiate: '納期・内容により料金をご相談できる場合があります。まずはお問い合わせください。',
       period: 'オンラインで1〜2回のやり取り',
       detailPath: '/ja/psa-input-support/',
     },
@@ -302,7 +308,7 @@ const Pricing: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         {lang === 'ja' && (
           <div className="text-xs text-gray-500 mb-6 space-y-0.5">
-            <p>※表示価格はすべて税込・DHL送料込みの総額です（PSAオンライン申請代行はDHL不要）</p>
+            <p>※表示価格はすべて税込・DHL（国際宅配便）送料込みの総額です（PSAオンライン申請代行は国際送料なし）</p>
             <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
           </div>
         )}
@@ -348,7 +354,20 @@ const Pricing: React.FC = () => {
                       <span className="text-4xl font-extrabold text-primary leading-none">{plan.price}</span>
                       <span className="text-xs text-gray-500">{plan.priceNote}</span>
                     </div>
-                    {(plan as any).priceBreakdown && (
+                    {(plan as any).priceLines ? (
+                      <div className="mt-2 mb-1 rounded-lg bg-gray-50 border border-gray-100 px-3 py-2.5 space-y-1">
+                        {(plan as any).priceLines.map((line: { label: string; value: string; highlight?: boolean }) => (
+                          <div key={line.label} className="flex items-center justify-between text-xs">
+                            <span className="text-gray-500">{line.label}</span>
+                            <span className={`font-medium ${line.highlight ? 'text-green-600' : 'text-gray-700'}`}>{line.value}</span>
+                          </div>
+                        ))}
+                        <div className="flex items-center justify-between text-xs font-bold text-secondary border-t border-gray-200 pt-1 mt-0.5">
+                          <span>合計</span>
+                          <span>{plan.price}</span>
+                        </div>
+                      </div>
+                    ) : (plan as any).priceBreakdown && (
                       <p className="text-xs text-gray-400 mt-1">内訳: {(plan as any).priceBreakdown}</p>
                     )}
                     {(plan as any).priceApostille && (
@@ -356,6 +375,12 @@ const Pricing: React.FC = () => {
                         <span className="text-sm font-bold text-secondary">{(plan as any).priceApostille}</span>
                         <span className="text-xs text-gray-400">DFA物理アポスティーユ込み 総額</span>
                       </div>
+                    )}
+                    {(plan as any).priceAddOn && (
+                      <p className="text-xs text-blue-600 mt-1.5 leading-snug">{(plan as any).priceAddOn}</p>
+                    )}
+                    {(plan as any).priceNegotiate && (
+                      <p className="text-xs text-gray-400 mt-1 leading-snug italic">{(plan as any).priceNegotiate}</p>
                     )}
                     <p className="text-xs text-gray-400 mt-1">
                       {lang === 'ja' ? `納期：${plan.period}` : `Delivery: ${plan.period}`}
