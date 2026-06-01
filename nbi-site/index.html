@@ -71,6 +71,57 @@
       text-transform: uppercase; color: #2563eb;
       margin-bottom: 8px;
     }
+
+    /* Section backgrounds (fallbacks / overrides for CDN delay) */
+    .hero-section {
+      background: linear-gradient(135deg, #0a1628 0%, #1e3a8a 55%, #1d4ed8 100%);
+      color: #fff;
+      padding: 80px 16px 96px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,.15);
+      color: #bfdbfe;
+      font-size: .85rem; font-weight: 600;
+      padding: 6px 16px; border-radius: 999px;
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-size: clamp(1.85rem, 5vw, 3.2rem);
+      font-weight: 900; line-height: 1.2;
+      margin-bottom: 20px; color: #fff;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #bfdbfe; line-height: 1.7;
+      max-width: 600px; margin: 0 auto 40px;
+    }
+    .hero-free { color: #93c5fd; font-size: .875rem; margin-top: 24px; }
+
+    .pricing-section {
+      background: #1e3a8a; color: #fff;
+      padding: 64px 16px;
+    }
+
+    .prob-card-red    { background: #fef2f2; border: 1px solid #fecaca; border-radius: 16px; padding: 24px; }
+    .prob-card-orange { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 16px; padding: 24px; }
+    .prob-card-yellow { background: #fefce8; border: 1px solid #fde68a; border-radius: 16px; padding: 24px; }
+
+    .feat-card {
+      background: #fff; border: 1px solid #f1f5f9;
+      border-radius: 16px; padding: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+      display: flex; gap: 16px;
+    }
+    .feat-icon { font-size: 2rem; flex-shrink: 0; }
+
+    .section-white { background: #fff; padding: 64px 16px; }
+    .section-gray  { background: #f8fafc; padding: 64px 16px; }
+    .section-grad  { background: linear-gradient(to bottom, #f8fafc, #fff); padding: 64px 16px; }
+
+    .max-w-5xl { max-width: 1024px; margin-left: auto; margin-right: auto; }
+    .max-w-4xl { max-width: 896px;  margin-left: auto; margin-right: auto; }
+    .max-w-3xl { max-width: 768px;  margin-left: auto; margin-right: auto; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -94,11 +145,11 @@
 </header>
 
 <!-- ===== HERO ===== -->
-<section class="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white pt-20 pb-24 px-4">
-  <div class="max-w-4xl mx-auto text-center">
-    <div class="inline-block bg-blue-700/60 text-blue-100 text-sm font-semibold px-4 py-1.5 rounded-full mb-6" data-i18n="hero.badge"></div>
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-5" data-i18n="hero.title"></h1>
-    <p class="text-lg sm:text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed" data-i18n="hero.subtitle"></p>
+<section class="hero-section">
+  <div class="max-w-4xl" style="text-align:center">
+    <div class="hero-badge" data-i18n="hero.badge"></div>
+    <h1 class="hero-title" data-i18n="hero.title"></h1>
+    <p class="hero-sub" data-i18n="hero.subtitle"></p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
       <!-- LINE: ※ YOUR_LINE_ID_HERE を実際のLINE IDに変更してください -->
       <a href="https://line.me/ti/p/YOUR_LINE_ID_HERE" target="_blank" rel="noopener" class="btn btn-line text-base">
@@ -115,113 +166,113 @@
         <span data-i18n="cta.email"></span>
       </a>
     </div>
-    <p class="mt-6 text-blue-300 text-sm" data-i18n="hero.free"></p>
+    <p class="hero-free" data-i18n="hero.free"></p>
   </div>
 </section>
 
 <!-- ===== PROBLEMS ===== -->
-<section class="py-16 px-4 bg-white">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-10">
+<section class="section-white">
+  <div class="max-w-5xl">
+    <div style="text-align:center;margin-bottom:40px">
       <span class="section-label" data-i18n="problems.label"></span>
-      <h2 class="text-2xl sm:text-3xl font-black text-gray-900" data-i18n="problems.title"></h2>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#111827" data-i18n="problems.title"></h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <div class="bg-red-50 border border-red-100 rounded-2xl p-6">
-        <div class="text-4xl mb-4">📧</div>
-        <h3 class="font-bold text-gray-900 mb-2" data-i18n="p1.title"></h3>
-        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="p1.body"></p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+      <div class="prob-card-red">
+        <div style="font-size:2.5rem;margin-bottom:16px">📧</div>
+        <h3 style="font-weight:700;color:#111827;margin-bottom:8px" data-i18n="p1.title"></h3>
+        <p style="color:#4b5563;font-size:.875rem;line-height:1.7" data-i18n="p1.body"></p>
       </div>
-      <div class="bg-orange-50 border border-orange-100 rounded-2xl p-6">
-        <div class="text-4xl mb-4">💳</div>
-        <h3 class="font-bold text-gray-900 mb-2" data-i18n="p2.title"></h3>
-        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="p2.body"></p>
+      <div class="prob-card-orange">
+        <div style="font-size:2.5rem;margin-bottom:16px">💳</div>
+        <h3 style="font-weight:700;color:#111827;margin-bottom:8px" data-i18n="p2.title"></h3>
+        <p style="color:#4b5563;font-size:.875rem;line-height:1.7" data-i18n="p2.body"></p>
       </div>
-      <div class="bg-yellow-50 border border-yellow-100 rounded-2xl p-6">
-        <div class="text-4xl mb-4">📦</div>
-        <h3 class="font-bold text-gray-900 mb-2" data-i18n="p3.title"></h3>
-        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="p3.body"></p>
+      <div class="prob-card-yellow">
+        <div style="font-size:2.5rem;margin-bottom:16px">📦</div>
+        <h3 style="font-weight:700;color:#111827;margin-bottom:8px" data-i18n="p3.title"></h3>
+        <p style="color:#4b5563;font-size:.875rem;line-height:1.7" data-i18n="p3.body"></p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== SOLUTION / FEATURES ===== -->
-<section class="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-10">
+<section class="section-grad">
+  <div class="max-w-5xl">
+    <div style="text-align:center;margin-bottom:40px">
       <span class="section-label" data-i18n="solution.label"></span>
-      <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-3" data-i18n="solution.title"></h2>
-      <p class="text-gray-500 max-w-xl mx-auto" data-i18n="solution.subtitle"></p>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#111827;margin-bottom:12px" data-i18n="solution.title"></h2>
+      <p style="color:#6b7280;max-width:500px;margin:0 auto" data-i18n="solution.subtitle"></p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex gap-4">
-        <div class="text-3xl flex-shrink-0">🖥️</div>
-        <div><h3 class="font-bold text-gray-900 mb-1" data-i18n="f1.title"></h3><p class="text-gray-500 text-sm leading-relaxed" data-i18n="f1.body"></p></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+      <div class="feat-card">
+        <div class="feat-icon">🖥️</div>
+        <div><h3 style="font-weight:700;color:#111827;margin-bottom:4px" data-i18n="f1.title"></h3><p style="color:#6b7280;font-size:.875rem;line-height:1.65" data-i18n="f1.body"></p></div>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex gap-4">
-        <div class="text-3xl flex-shrink-0">💰</div>
-        <div><h3 class="font-bold text-gray-900 mb-1" data-i18n="f2.title"></h3><p class="text-gray-500 text-sm leading-relaxed" data-i18n="f2.body"></p></div>
+      <div class="feat-card">
+        <div class="feat-icon">💰</div>
+        <div><h3 style="font-weight:700;color:#111827;margin-bottom:4px" data-i18n="f2.title"></h3><p style="color:#6b7280;font-size:.875rem;line-height:1.65" data-i18n="f2.body"></p></div>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex gap-4">
-        <div class="text-3xl flex-shrink-0">📍</div>
-        <div><h3 class="font-bold text-gray-900 mb-1" data-i18n="f3.title"></h3><p class="text-gray-500 text-sm leading-relaxed" data-i18n="f3.body"></p></div>
+      <div class="feat-card">
+        <div class="feat-icon">📍</div>
+        <div><h3 style="font-weight:700;color:#111827;margin-bottom:4px" data-i18n="f3.title"></h3><p style="color:#6b7280;font-size:.875rem;line-height:1.65" data-i18n="f3.body"></p></div>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex gap-4">
-        <div class="text-3xl flex-shrink-0">📄</div>
-        <div><h3 class="font-bold text-gray-900 mb-1" data-i18n="f4.title"></h3><p class="text-gray-500 text-sm leading-relaxed" data-i18n="f4.body"></p></div>
+      <div class="feat-card">
+        <div class="feat-icon">📄</div>
+        <div><h3 style="font-weight:700;color:#111827;margin-bottom:4px" data-i18n="f4.title"></h3><p style="color:#6b7280;font-size:.875rem;line-height:1.65" data-i18n="f4.body"></p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===== PRICING ===== -->
-<section class="py-16 px-4 bg-blue-900 text-white">
-  <div class="max-w-3xl mx-auto text-center">
-    <span class="section-label text-blue-300" data-i18n="pricing.label"></span>
-    <h2 class="text-2xl sm:text-3xl font-black mb-10" data-i18n="pricing.title"></h2>
-    <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-2xl text-left">
-      <p class="text-center text-blue-600 font-bold text-sm mb-2" data-i18n="pricing.service"></p>
-      <div class="flex items-end justify-center gap-1 mb-1">
-        <span class="text-5xl font-black">¥49,800</span>
-        <span class="text-gray-500 text-lg mb-1" data-i18n="pricing.from"></span>
+<section class="pricing-section">
+  <div class="max-w-3xl" style="text-align:center">
+    <span class="section-label" style="color:#93c5fd" data-i18n="pricing.label"></span>
+    <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#fff;margin-bottom:40px" data-i18n="pricing.title"></h2>
+    <div style="background:#fff;color:#111827;border-radius:24px;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,.25);text-align:left">
+      <p style="text-align:center;color:#2563eb;font-weight:700;font-size:.875rem;margin-bottom:8px" data-i18n="pricing.service"></p>
+      <div style="display:flex;align-items:flex-end;justify-content:center;gap:4px;margin-bottom:4px">
+        <span style="font-size:3.2rem;font-weight:900;line-height:1">¥49,800</span>
+        <span style="color:#9ca3af;font-size:1.1rem;padding-bottom:4px" data-i18n="pricing.from"></span>
       </div>
-      <p class="text-center text-gray-400 text-xs mb-6" data-i18n="pricing.note"></p>
+      <p style="text-align:center;color:#9ca3af;font-size:.75rem;margin-bottom:24px" data-i18n="pricing.note"></p>
 
-      <div class="bg-gray-50 rounded-2xl p-5 mb-4">
-        <p class="font-bold text-gray-700 text-sm mb-3" data-i18n="pricing.includes.title"></p>
-        <ul id="pricing-list" class="space-y-2 text-sm text-gray-600"></ul>
-      </div>
-
-      <div class="bg-blue-50 rounded-2xl p-4 mb-6">
-        <p class="font-bold text-blue-800 text-sm mb-1" data-i18n="pricing.extra.title"></p>
-        <p class="text-blue-700 text-sm" data-i18n="pricing.extra.body"></p>
+      <div style="background:#f8fafc;border-radius:16px;padding:20px;margin-bottom:16px">
+        <p style="font-weight:700;color:#374151;font-size:.875rem;margin-bottom:12px" data-i18n="pricing.includes.title"></p>
+        <ul id="pricing-list" style="list-style:none;padding:0;margin:0"></ul>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center text-center border-t border-gray-100 pt-5">
+      <div style="background:#eff6ff;border-radius:16px;padding:16px;margin-bottom:24px">
+        <p style="font-weight:700;color:#1e40af;font-size:.875rem;margin-bottom:4px" data-i18n="pricing.extra.title"></p>
+        <p style="color:#1d4ed8;font-size:.875rem" data-i18n="pricing.extra.body"></p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;text-align:center;border-top:1px solid #f1f5f9;padding-top:20px">
         <div>
-          <p class="text-gray-400 text-xs mb-0.5" data-i18n="pricing.period.label"></p>
-          <p class="font-bold text-gray-900 text-sm" data-i18n="pricing.period.value"></p>
+          <p style="color:#9ca3af;font-size:.75rem;margin-bottom:2px" data-i18n="pricing.period.label"></p>
+          <p style="font-weight:700;font-size:.9rem" data-i18n="pricing.period.value"></p>
         </div>
-        <div class="hidden sm:block w-px bg-gray-200"></div>
+        <div style="width:1px;background:#e5e7eb"></div>
         <div>
-          <p class="text-gray-400 text-xs mb-0.5" data-i18n="pricing.payment.label"></p>
-          <p class="font-bold text-gray-900 text-sm" data-i18n="pricing.payment.value"></p>
+          <p style="color:#9ca3af;font-size:.75rem;margin-bottom:2px" data-i18n="pricing.payment.label"></p>
+          <p style="font-weight:700;font-size:.9rem" data-i18n="pricing.payment.value"></p>
         </div>
       </div>
     </div>
-    <p class="mt-5 text-blue-300 text-xs" data-i18n="pricing.disclaimer"></p>
+    <p style="margin-top:20px;color:#93c5fd;font-size:.75rem" data-i18n="pricing.disclaimer"></p>
   </div>
 </section>
 
 <!-- ===== PROCESS ===== -->
-<section class="py-16 px-4 bg-white">
-  <div class="max-w-3xl mx-auto">
-    <div class="text-center mb-10">
+<section class="section-white">
+  <div class="max-w-3xl">
+    <div style="text-align:center;margin-bottom:40px">
       <span class="section-label" data-i18n="process.label"></span>
-      <h2 class="text-2xl sm:text-3xl font-black text-gray-900" data-i18n="process.title"></h2>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#111827" data-i18n="process.title"></h2>
     </div>
-    <div id="process-steps" class="space-y-4"></div>
+    <div id="process-steps"></div>
     <div class="mt-8 text-center">
       <a href="#contact" class="btn btn-blue text-base">
         <span data-i18n="process.cta"></span>
@@ -231,25 +282,25 @@
 </section>
 
 <!-- ===== FAQ ===== -->
-<section class="py-16 px-4 bg-gray-50">
-  <div class="max-w-3xl mx-auto">
-    <div class="text-center mb-10">
+<section class="section-gray">
+  <div class="max-w-3xl">
+    <div style="text-align:center;margin-bottom:40px">
       <span class="section-label" data-i18n="faq.label"></span>
-      <h2 class="text-2xl sm:text-3xl font-black text-gray-900" data-i18n="faq.title"></h2>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#111827" data-i18n="faq.title"></h2>
     </div>
-    <div id="faq-list" class="space-y-3"></div>
+    <div id="faq-list"></div>
   </div>
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section id="contact" class="py-16 px-4 bg-white">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12">
+<section id="contact" class="section-white">
+  <div class="max-w-5xl">
+    <div style="text-align:center;margin-bottom:48px">
       <span class="section-label" data-i18n="contact.label"></span>
-      <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2" data-i18n="contact.title"></h2>
-      <p class="text-gray-500" data-i18n="contact.subtitle"></p>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#111827;margin-bottom:8px" data-i18n="contact.title"></h2>
+      <p style="color:#6b7280" data-i18n="contact.subtitle"></p>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px">
       <!-- Channels -->
       <div class="space-y-4">
         <!-- LINE -->
@@ -279,14 +330,14 @@
             <p class="font-normal text-sm opacity-80">igrs20200601@gmail.com</p>
           </div>
         </a>
-        <div class="bg-blue-50 rounded-2xl p-4">
-          <p class="font-bold text-blue-800 text-sm mb-1" data-i18n="cc.hours.title"></p>
-          <p class="text-blue-700 text-sm" data-i18n="cc.hours.body"></p>
+        <div style="background:#eff6ff;border-radius:16px;padding:16px">
+          <p style="font-weight:700;color:#1e40af;font-size:.875rem;margin-bottom:4px" data-i18n="cc.hours.title"></p>
+          <p style="color:#1d4ed8;font-size:.875rem" data-i18n="cc.hours.body"></p>
         </div>
       </div>
 
       <!-- Form -->
-      <div class="bg-gray-50 rounded-2xl p-6">
+      <div style="background:#f8fafc;border-radius:16px;padding:24px">
         <h3 class="font-bold text-lg mb-5" data-i18n="form.heading"></h3>
         <form action="https://formsubmit.co/igrs20200601@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="NBIサポートサイトからのお問い合わせ">
@@ -575,30 +626,32 @@ function applyAll() {
   // Pricing list
   const pl = document.getElementById('pricing-list');
   pl.innerHTML = T[lang]._pricing_includes.map(s =>
-    `<li class="flex gap-2 items-start"><span class="text-green-500 mt-0.5 flex-shrink-0">✓</span><span>${s}</span></li>`
+    `<li style="display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;font-size:.875rem;color:#4b5563"><span style="color:#16a34a;flex-shrink:0;margin-top:1px">✓</span><span>${s}</span></li>`
   ).join('');
 
   // Steps
   const sc = document.getElementById('process-steps');
+  sc.style.cssText = 'display:flex;flex-direction:column;gap:16px';
   sc.innerHTML = T[lang]._steps.map((s, i) => `
-    <div class="flex gap-4 items-start bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+    <div style="display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:16px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid #f1f5f9">
       <div class="step-num">${i + 1}</div>
       <div>
-        <h3 class="font-bold text-gray-900 mb-1">${s.t}</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">${s.b}</p>
+        <h3 style="font-weight:700;color:#111827;margin-bottom:4px">${s.t}</h3>
+        <p style="color:#6b7280;font-size:.875rem;line-height:1.65;margin:0">${s.b}</p>
       </div>
     </div>
   `).join('');
 
   // FAQ
   const fc = document.getElementById('faq-list');
+  fc.style.cssText = 'display:flex;flex-direction:column;gap:12px';
   fc.innerHTML = T[lang]._faqs.map(f => `
-    <details class="faq bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-      <summary class="flex justify-between items-center p-5 gap-4 select-none">
-        <span class="font-semibold text-gray-900 text-sm sm:text-base">${f.q}</span>
-        <svg class="chevron w-5 h-5 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    <details class="faq" style="background:#fff;border-radius:16px;border:1px solid #f1f5f9;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden">
+      <summary style="display:flex;justify-content:space-between;align-items:center;padding:20px;gap:16px;cursor:pointer;user-select:none">
+        <span style="font-weight:600;color:#111827;font-size:.9rem;line-height:1.5">${f.q}</span>
+        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="6 9 12 15 18 9"/></svg>
       </summary>
-      <div class="px-5 pb-5 pt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100">${f.a}</div>
+      <div style="padding:0 20px 20px;padding-top:16px;color:#4b5563;font-size:.875rem;line-height:1.7;border-top:1px solid #f1f5f9">${f.a}</div>
     </details>
   `).join('');
 
