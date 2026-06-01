@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBIサポート | 日本からフィリピンNBIクリアランス取得代行</title>
+  <meta name="description" content="日本在住者のNBIクリアランス取得を全面サポート。NBI Portal登録・フィリピン国内手続き・配送管理を代行。カナダWH・就労ビザ対応。49,800円〜">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Noto Sans JP', 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; padding: 14px 24px; border-radius: 10px;
+      font-weight: 700; font-size: 1rem; text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+      cursor: pointer; border: none; line-height: 1;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-blue  { background: #1d4ed8; color: #fff; }
+    .btn-blue:hover  { background: #1e40af; box-shadow: 0 6px 20px rgba(29,78,216,.35); }
+    .btn-line  { background: #06c755; color: #fff; }
+    .btn-line:hover  { background: #05b84d; box-shadow: 0 6px 20px rgba(6,199,85,.35); }
+    .btn-wa    { background: #25d366; color: #fff; }
+    .btn-wa:hover    { background: #1ebe5d; box-shadow: 0 6px 20px rgba(37,211,102,.35); }
+    .btn-mail  { background: #ea4335; color: #fff; }
+    .btn-mail:hover  { background: #d33426; box-shadow: 0 6px 20px rgba(234,67,53,.35); }
+
+    /* Contact cards */
+    .contact-card {
+      display: flex; align-items: center; gap: 16px;
+      padding: 20px 24px; border-radius: 14px;
+      text-decoration: none; color: #fff;
+      font-weight: 700; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .contact-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.18); }
+
+    /* Form */
+    .field label { display: block; font-size: .875rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+    .field input, .field select, .field textarea {
+      width: 100%; padding: 11px 14px;
+      border: 1.5px solid #d1d5db; border-radius: 8px;
+      font-size: .95rem; font-family: inherit; outline: none;
+      transition: border-color .2s;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #1d4ed8; }
+
+    /* Step number circle */
+    .step-num {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: #1d4ed8; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.1rem; flex-shrink: 0;
+    }
+
+    /* FAQ */
+    details.faq summary { list-style: none; cursor: pointer; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq[open] summary .chevron { transform: rotate(180deg); }
+    .chevron { transition: transform .2s; }
+
+    /* Section label */
+    .section-label {
+      display: inline-block;
+      font-size: .75rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: #2563eb;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- ===== HEADER ===== -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-black text-xl text-blue-700 select-none">
+      🇵🇭 <span data-i18n="brand"></span>
+    </a>
+    <div class="flex items-center gap-3">
+      <button id="lang-btn" onclick="toggleLang()"
+        class="text-sm font-semibold px-3 py-1.5 rounded-full border border-gray-300 hover:bg-gray-100 transition cursor-pointer">
+        🌐 English
+      </button>
+      <a href="#contact" class="hidden sm:flex btn btn-blue text-sm py-2.5 px-4">
+        <span data-i18n="nav.cta"></span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white pt-20 pb-24 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="inline-block bg-blue-700/60 text-blue-100 text-sm font-semibold px-4 py-1.5 rounded-full mb-6" data-i18n="hero.badge"></div>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-5" data-i18n="hero.title"></h1>
+    <p class="text-lg sm:text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed" data-i18n="hero.subtitle"></p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
+      <!-- LINE: ※ YOUR_LINE_ID_HERE を実際のLINE IDに変更してください -->
+      <a href="https://line.me/ti/p/YOUR_LINE_ID_HERE" target="_blank" rel="noopener" class="btn btn-line text-base">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.477 2 2 6.145 2 11.243c0 4.072 2.569 7.565 6.354 9.12.277.126.654.385.75.886.086.455-.046 1.16-.09 1.62l-.153.93c-.1.604.816.508.816.508C13.48 22.115 20 17.48 20 11.243 20 6.145 15.523 2 12 2z"/></svg>
+        <span data-i18n="cta.line"></span>
+      </a>
+      <!-- WhatsApp: ※ 81XXXXXXXXXX を実際の番号に変更してください -->
+      <a href="https://wa.me/81XXXXXXXXXX" target="_blank" rel="noopener" class="btn btn-wa text-base">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="cta.whatsapp"></span>
+      </a>
+      <a href="mailto:igrs20200601@gmail.com" class="btn btn-mail text-base">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        <span data-i18n="cta.email"></span>
+      </a>
+    </div>
+    <p class="mt-6 text-blue-300 text-sm" data-i18n="hero.free"></p>
+  </div>
+</section>
+
+<!-- ===== PROBLEMS ===== -->
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="section-label" data-i18n="problems.label"></span>
+      <h2 class="text-2xl sm:text-3xl font-black text-gray-900" data-i18n="problems.title"></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="bg-red-50 border border-red-100 rounded-2xl p-6">
+        <div class="text-4xl mb-4">📧</div>
+        <h3 class="font-bold text-gray-900 mb-2" data-i18n="p1.title"></h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="p1.body"></p>
+      </div>
+      <div class="bg-orange-50 border border-orange-100 rounded-2xl p-6">
+        <div class="text-4xl mb-4">💳</div>
+        <h3 class="font-bold text-gray-900 mb-2" data-i18n="p2.title"></h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="p2.body"></p>
+      </div>
+      <div class="bg-yellow-50 border border-yellow-100 rounded-2xl p-6">
+        <div class="text-4xl mb-4">📦</div>
+        <h3 class="font-bold text-gray-900 mb-2" data-i18n="p3.title"></h3>
+        <p class="text-gray-600 text-sm leading-relaxed" data-i18n="p3.body"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLUTION / FEATURES ===== -->
+<section class="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="section-label" data-i18n="solution.label"></span>
+      <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-3" data-i18n="solution.title"></h2>
+      <p class="text-gray-500 max-w-xl mx-auto" data-i18n="solution.subtitle"></p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex gap-4">
+        <div class="text-3xl flex-shrink-0">🖥️</div>
+        <div><h3 class="font-bold text-gray-900 mb-1" data-i18n="f1.title"></h3><p class="text-gray-500 text-sm leading-relaxed" data-i18n="f1.body"></p></div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex gap-4">
+        <div class="text-3xl flex-shrink-0">💰</div>
+        <div><h3 class="font-bold text-gray-900 mb-1" data-i18n="f2.title"></h3><p class="text-gray-500 text-sm leading-relaxed" data-i18n="f2.body"></p></div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex gap-4">
+        <div class="text-3xl flex-shrink-0">📍</div>
+        <div><h3 class="font-bold text-gray-900 mb-1" data-i18n="f3.title"></h3><p class="text-gray-500 text-sm leading-relaxed" data-i18n="f3.body"></p></div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 flex gap-4">
+        <div class="text-3xl flex-shrink-0">📄</div>
+        <div><h3 class="font-bold text-gray-900 mb-1" data-i18n="f4.title"></h3><p class="text-gray-500 text-sm leading-relaxed" data-i18n="f4.body"></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="py-16 px-4 bg-blue-900 text-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <span class="section-label text-blue-300" data-i18n="pricing.label"></span>
+    <h2 class="text-2xl sm:text-3xl font-black mb-10" data-i18n="pricing.title"></h2>
+    <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-2xl text-left">
+      <p class="text-center text-blue-600 font-bold text-sm mb-2" data-i18n="pricing.service"></p>
+      <div class="flex items-end justify-center gap-1 mb-1">
+        <span class="text-5xl font-black">¥49,800</span>
+        <span class="text-gray-500 text-lg mb-1" data-i18n="pricing.from"></span>
+      </div>
+      <p class="text-center text-gray-400 text-xs mb-6" data-i18n="pricing.note"></p>
+
+      <div class="bg-gray-50 rounded-2xl p-5 mb-4">
+        <p class="font-bold text-gray-700 text-sm mb-3" data-i18n="pricing.includes.title"></p>
+        <ul id="pricing-list" class="space-y-2 text-sm text-gray-600"></ul>
+      </div>
+
+      <div class="bg-blue-50 rounded-2xl p-4 mb-6">
+        <p class="font-bold text-blue-800 text-sm mb-1" data-i18n="pricing.extra.title"></p>
+        <p class="text-blue-700 text-sm" data-i18n="pricing.extra.body"></p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center text-center border-t border-gray-100 pt-5">
+        <div>
+          <p class="text-gray-400 text-xs mb-0.5" data-i18n="pricing.period.label"></p>
+          <p class="font-bold text-gray-900 text-sm" data-i18n="pricing.period.value"></p>
+        </div>
+        <div class="hidden sm:block w-px bg-gray-200"></div>
+        <div>
+          <p class="text-gray-400 text-xs mb-0.5" data-i18n="pricing.payment.label"></p>
+          <p class="font-bold text-gray-900 text-sm" data-i18n="pricing.payment.value"></p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-5 text-blue-300 text-xs" data-i18n="pricing.disclaimer"></p>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="py-16 px-4 bg-white">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="section-label" data-i18n="process.label"></span>
+      <h2 class="text-2xl sm:text-3xl font-black text-gray-900" data-i18n="process.title"></h2>
+    </div>
+    <div id="process-steps" class="space-y-4"></div>
+    <div class="mt-8 text-center">
+      <a href="#contact" class="btn btn-blue text-base">
+        <span data-i18n="process.cta"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="py-16 px-4 bg-gray-50">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="section-label" data-i18n="faq.label"></span>
+      <h2 class="text-2xl sm:text-3xl font-black text-gray-900" data-i18n="faq.title"></h2>
+    </div>
+    <div id="faq-list" class="space-y-3"></div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="py-16 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="section-label" data-i18n="contact.label"></span>
+      <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-2" data-i18n="contact.title"></h2>
+      <p class="text-gray-500" data-i18n="contact.subtitle"></p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- Channels -->
+      <div class="space-y-4">
+        <!-- LINE -->
+        <a href="https://line.me/ti/p/YOUR_LINE_ID_HERE" target="_blank" rel="noopener"
+           class="contact-card" style="background:#06c755">
+          <span class="text-3xl flex-shrink-0">💬</span>
+          <div>
+            <p class="font-black text-lg" data-i18n="cc.line.title"></p>
+            <p class="font-normal text-sm opacity-80" data-i18n="cc.line.sub"></p>
+          </div>
+        </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/81XXXXXXXXXX" target="_blank" rel="noopener"
+           class="contact-card" style="background:#25d366">
+          <span class="text-3xl flex-shrink-0">📱</span>
+          <div>
+            <p class="font-black text-lg" data-i18n="cc.wa.title"></p>
+            <p class="font-normal text-sm opacity-80" data-i18n="cc.wa.sub"></p>
+          </div>
+        </a>
+        <!-- Email -->
+        <a href="mailto:igrs20200601@gmail.com"
+           class="contact-card" style="background:#ea4335">
+          <span class="text-3xl flex-shrink-0">✉️</span>
+          <div>
+            <p class="font-black text-lg" data-i18n="cc.email.title"></p>
+            <p class="font-normal text-sm opacity-80">igrs20200601@gmail.com</p>
+          </div>
+        </a>
+        <div class="bg-blue-50 rounded-2xl p-4">
+          <p class="font-bold text-blue-800 text-sm mb-1" data-i18n="cc.hours.title"></p>
+          <p class="text-blue-700 text-sm" data-i18n="cc.hours.body"></p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="bg-gray-50 rounded-2xl p-6">
+        <h3 class="font-bold text-lg mb-5" data-i18n="form.heading"></h3>
+        <form action="https://formsubmit.co/igrs20200601@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="NBIサポートサイトからのお問い合わせ">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+          <div class="field mb-4">
+            <label for="f-name" data-i18n="form.name"></label>
+            <input type="text" id="f-name" name="name" required autocomplete="name">
+          </div>
+          <div class="field mb-4">
+            <label for="f-email" data-i18n="form.email"></label>
+            <input type="email" id="f-email" name="email" required autocomplete="email">
+          </div>
+          <div class="field mb-4">
+            <label for="f-purpose" data-i18n="form.purpose"></label>
+            <select id="f-purpose" name="purpose" required>
+              <option value="" data-i18n="form.purpose.default"></option>
+              <option value="canada_wh"     data-i18n="form.p.canada"></option>
+              <option value="australia_wh"  data-i18n="form.p.aus"></option>
+              <option value="work_visa"     data-i18n="form.p.work"></option>
+              <option value="marriage"      data-i18n="form.p.marriage"></option>
+              <option value="other"         data-i18n="form.p.other"></option>
+            </select>
+          </div>
+          <div class="field mb-5">
+            <label for="f-msg" data-i18n="form.message"></label>
+            <textarea id="f-msg" name="message" rows="4" data-i18n-ph="form.message.ph"></textarea>
+          </div>
+          <button type="submit" class="btn btn-blue w-full text-base py-3.5">
+            <span data-i18n="form.submit"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-gray-900 text-gray-400 py-10 px-4">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+    <div class="font-black text-white text-lg">🇵🇭 <span data-i18n="brand"></span></div>
+    <div class="text-center">
+      <p data-i18n="footer.company"></p>
+      <a href="mailto:igrs20200601@gmail.com" class="hover:text-white transition">igrs20200601@gmail.com</a>
+    </div>
+    <p>© 2026 <span data-i18n="brand"></span></p>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// TRANSLATIONS
+// ============================================================
+const T = {
+  ja: {
+    brand: 'NBIサポート',
+    'nav.cta': '無料相談',
+
+    'hero.badge': '日本在住の方向け ─ フィリピンNBIクリアランス取得サポート',
+    'hero.title': '日本からNBIクリアランスを<br>取得したい方へ',
+    'hero.subtitle': 'NBI Portalの登録・フィリピン国内手続き・書類の配送管理まで一括代行。カナダ・オーストラリアWHビザにも対応。',
+    'hero.free': '※ 初回相談は無料です',
+    'cta.line': 'LINEで相談',
+    'cta.whatsapp': 'WhatsAppで相談',
+    'cta.email': 'メールで相談',
+
+    'problems.label': 'こんなお悩みはありませんか？',
+    'problems.title': '日本からのNBI申請はここで詰まりがち',
+    'p1.title': 'NBIへのメールに返信がない',
+    'p1.body': 'NBIのサポートは返信が遅く、数週間以上待っても音沙汰なしということも。次に何をすれば良いかわからなくなります。',
+    'p2.title': 'Portal操作・支払い方法がわからない',
+    'p2.body': 'NBI Online Services の登録や、フィリピン国内でのお支払い手続きは、日本のクレカや口座では通らないことが多く、手続きが止まります。',
+    'p3.title': '書類を送っても状況がわからない',
+    'p3.body': '郵送後にNBIへ届いたのか、処理は進んでいるのか、いつ返送されるのか、何も確認できません。',
+
+    'solution.label': '解決策',
+    'solution.title': 'フィリピン国内手続きを丸ごと代行',
+    'solution.subtitle': '日本から動かせないフィリピン側の手続きをすべてお任せいただけます。',
+    'f1.title': 'NBI Portal登録・申請代行',
+    'f1.body': 'NBI Online Services へのアカウント作成から Reference Number の取得まで、代わりに対応します。',
+    'f2.title': 'フィリピン国内でのお支払い',
+    'f2.body': '日本のクレカでは通りにくいNBI手数料のお支払いも、フィリピン国内で完結させます。',
+    'f3.title': '書類発送〜返送の配送管理',
+    'f3.body': '書類の発送と返送を追跡番号付きで管理。自力申請よりも状況が見える形で進めます。',
+    'f4.title': 'PDF納品・原本の日本発送',
+    'f4.body': 'NBI Clearance完成後はPDFでご納品。原本が必要な場合は日本への国際発送にも対応します（実費別）。',
+
+    'pricing.label': '料金・納期',
+    'pricing.title': '明確な料金体系',
+    'pricing.service': 'NBIクリアランス取得サポート',
+    'pricing.from': '〜（税込・実費別）',
+    'pricing.note': '※ ケースにより費用が異なります。詳細はお気軽にご相談ください。',
+    'pricing.includes.title': 'サービス内容（含まれるもの）',
+    'pricing.extra.title': '実費（別途かかります）',
+    'pricing.extra.body': 'NBI手数料・フィリピン国内配送費・原本の日本発送が必要な場合の国際送料',
+    'pricing.period.label': '目安期間',
+    'pricing.period.value': '書類到着後 2〜3週間',
+    'pricing.payment.label': 'お支払い方法',
+    'pricing.payment.value': '着手金50%→完成後50%',
+    'pricing.disclaimer': '※ NBI内部の審査状況により期間が前後する場合があります。HITがある場合は追加期間が必要です。',
+
+    'process.label': '依頼の流れ',
+    'process.title': 'ご依頼からお届けまで',
+    'process.cta': '無料相談を始める →',
+
+    'faq.label': 'よくある質問',
+    'faq.title': 'FAQ',
+
+    'contact.label': 'お問い合わせ',
+    'contact.title': 'まずは無料相談から',
+    'contact.subtitle': '現在の状況をお聞きして、対応可能かどうかご案内します。',
+    'cc.line.title': 'LINEで相談する',
+    'cc.line.sub': '返信が最も早い',
+    'cc.wa.title': 'WhatsAppで相談する',
+    'cc.wa.sub': '海外在住の方にも便利',
+    'cc.email.title': 'メールで相談する',
+    'cc.hours.title': '対応時間',
+    'cc.hours.body': '平日・週末 9:00〜20:00（フィリピン時間）',
+
+    'form.heading': 'フォームでお問い合わせ',
+    'form.name': 'お名前',
+    'form.email': 'メールアドレス',
+    'form.purpose': '取得目的',
+    'form.purpose.default': '選択してください',
+    'form.p.canada': 'カナダ ワーキングホリデー',
+    'form.p.aus': 'オーストラリア ワーキングホリデー',
+    'form.p.work': '海外就労ビザ',
+    'form.p.marriage': '婚姻・配偶者ビザ',
+    'form.p.other': 'その他',
+    'form.message': 'ご質問・現状（任意）',
+    'form.message.ph': '例：日本で指紋採取済みです。カナダWHビザ申請に使います…',
+    'form.submit': '送信する →',
+
+    'footer.company': '株式会社IGRS',
+
+    _pricing_includes: [
+      'NBI Online Services 登録・申請サポート',
+      'Reference Number 取得',
+      'フィリピン国内でのお支払い対応',
+      '書類発送〜返送の配送管理',
+      'NBI Clearance完成後 PDF スキャン納品',
+      '発送・返送確認時の進捗ご連絡',
+    ],
+    _steps: [
+      { t: '無料相談・書類確認', b: 'LINE/WhatsApp/メールでご連絡ください。現在お持ちの書類と取得目的をお聞きします。' },
+      { t: '依頼確定・着手金お支払い', b: 'ご依頼確定後、サービス料の50%を着手金としてお支払いいただきます。' },
+      { t: 'フィリピン国内手続き開始', b: 'NBI Portal登録・お支払い・書類発送など、フィリピン側の手続きを代行します。' },
+      { t: '書類完成・残金お支払い', b: 'NBI Clearanceが完成したらご連絡します。残りの50%をお支払いいただきます。' },
+      { t: 'PDF納品 / 原本発送', b: 'PDFにてお手元に納品します。原本が必要な場合は日本への発送を手配します（実費別）。' },
+    ],
+    _faqs: [
+      { q: '日本でNBI Fingerprint Cardの指紋採取が済んでいますが、依頼できますか？', a: 'はい、対応可能です。日本のフィリピン大使館で指紋採取が完了している場合、そのままお手続きを進められます。' },
+      { q: 'カナダ・オーストラリアのワーキングホリデービザ申請に使えますか？', a: 'はい。NBI Clearanceは就労ビザ・WH・婚姻手続き等でご利用いただけます。英語表記のため海外ビザ申請書類としてそのまま提出できます。' },
+      { q: '取得にどれくらい時間がかかりますか？', a: '書類が届いてから2〜3週間が目安です。NBI側の審査状況やHIT（照合あり）の場合は追加で時間がかかることがあります。' },
+      { q: '原本が必要な場合は対応できますか？', a: 'はい。PDF納品に加えて、原本をフィリピンから日本へ国際発送する対応も可能です。発送にかかる国際送料は実費でご負担いただきます。' },
+      { q: '書類に不備があった場合はどうなりますか？', a: '事前確認の段階でできる限りチェックします。NBI側から追加書類を求められた場合も、対応方法をご相談しながら進めます。' },
+    ],
+  },
+
+  en: {
+    brand: 'NBI Support',
+    'nav.cta': 'Free Consultation',
+
+    'hero.badge': 'Philippines NBI Clearance Support for Applicants Based in Japan',
+    'hero.title': 'Get Your Philippines NBI Clearance<br>from Japan — Hassle-Free',
+    'hero.subtitle': 'We handle NBI Portal registration, Philippine-side payments, document shipping, and tracking on your behalf.',
+    'hero.free': '* Initial consultation is free',
+    'cta.line': 'Chat on LINE',
+    'cta.whatsapp': 'Chat on WhatsApp',
+    'cta.email': 'Send Email',
+
+    'problems.label': 'Are you facing these challenges?',
+    'problems.title': 'Applying for NBI Clearance from Overseas is Tough',
+    'p1.title': 'NBI doesn\'t reply to emails',
+    'p1.body': 'NBI support is notoriously slow to respond. Weeks can pass with no reply, leaving you unsure of how to proceed.',
+    'p2.title': 'NBI Portal & payment is a hurdle',
+    'p2.body': 'Setting up NBI Online Services and paying fees in the Philippines is difficult — especially when foreign cards are rejected.',
+    'p3.title': 'No way to track your documents',
+    'p3.body': 'Once you\'ve mailed your documents, there\'s no visibility into whether they arrived, are being processed, or when they\'ll be returned.',
+
+    'solution.label': 'Our Solution',
+    'solution.title': 'We Handle Everything Philippine-Side',
+    'solution.subtitle': 'Our team in the Philippines takes care of every step that\'s difficult to do from Japan.',
+    'f1.title': 'NBI Portal Registration & Application',
+    'f1.body': 'We create your NBI Online Services account and obtain your Reference Number on your behalf.',
+    'f2.title': 'Philippine-Side Fee Payment',
+    'f2.body': 'We handle the NBI fee payment inside the Philippines, so foreign card issues are no longer your problem.',
+    'f3.title': 'Document Shipping & Tracking',
+    'f3.body': 'We manage dispatch and return with tracking numbers, giving you more visibility than a self-managed application.',
+    'f4.title': 'PDF Delivery & Original Shipping',
+    'f4.body': 'Receive your NBI Clearance as a PDF. We can also ship the original to Japan if needed (actual cost applies).',
+
+    'pricing.label': 'Pricing & Timeline',
+    'pricing.title': 'Clear, Transparent Pricing',
+    'pricing.service': 'NBI Clearance Acquisition Support',
+    'pricing.from': '~ (tax incl., excl. actual costs)',
+    'pricing.note': '* Exact fee varies by case. Contact us for details.',
+    'pricing.includes.title': 'What\'s included in the service fee',
+    'pricing.extra.title': 'Actual costs (billed separately)',
+    'pricing.extra.body': 'NBI processing fee, Philippines domestic shipping, international postage to Japan (if original document is needed)',
+    'pricing.period.label': 'Estimated timeline',
+    'pricing.period.value': '2–3 weeks after we receive your docs',
+    'pricing.payment.label': 'Payment',
+    'pricing.payment.value': '50% upfront · 50% on completion',
+    'pricing.disclaimer': '* Timeline may vary based on NBI processing. A HIT on your record may require additional time.',
+
+    'process.label': 'How It Works',
+    'process.title': 'From Inquiry to Delivery',
+    'process.cta': 'Start a Free Consultation →',
+
+    'faq.label': 'FAQ',
+    'faq.title': 'Frequently Asked Questions',
+
+    'contact.label': 'Contact Us',
+    'contact.title': 'Start with a Free Consultation',
+    'contact.subtitle': 'Tell us your situation and we\'ll let you know how we can help.',
+    'cc.line.title': 'Chat on LINE',
+    'cc.line.sub': 'Fastest response',
+    'cc.wa.title': 'Chat on WhatsApp',
+    'cc.wa.sub': 'Great for overseas users',
+    'cc.email.title': 'Send us an email',
+    'cc.hours.title': 'Response hours',
+    'cc.hours.body': 'Weekdays & weekends, 9AM–8PM (Philippine Time)',
+
+    'form.heading': 'Contact Form',
+    'form.name': 'Your Name',
+    'form.email': 'Email Address',
+    'form.purpose': 'Purpose of NBI Clearance',
+    'form.purpose.default': 'Please select',
+    'form.p.canada': 'Canada Working Holiday',
+    'form.p.aus': 'Australia Working Holiday',
+    'form.p.work': 'Work Visa (overseas)',
+    'form.p.marriage': 'Marriage / Spouse Visa',
+    'form.p.other': 'Other',
+    'form.message': 'Your question or current situation (optional)',
+    'form.message.ph': 'e.g. I had my fingerprints taken at the Philippine Embassy in Tokyo and need this for a Canadian WH visa...',
+    'form.submit': 'Send →',
+
+    'footer.company': 'IGRS Co., Ltd.',
+
+    _pricing_includes: [
+      'NBI Online Services registration & application support',
+      'Reference Number acquisition',
+      'Philippine-side fee payment',
+      'Document shipping & return management with tracking',
+      'PDF scan delivery upon completion',
+      'Status updates at key milestones',
+    ],
+    _steps: [
+      { t: 'Free Consultation', b: 'Contact us via LINE, WhatsApp, or email. We\'ll review your documents and requirements.' },
+      { t: 'Confirm & Pay Deposit', b: 'Once confirmed, you pay the 50% deposit to get started.' },
+      { t: 'Philippine-Side Processing Begins', b: 'We register your application, handle payment, and dispatch documents inside the Philippines.' },
+      { t: 'Clearance Complete — Pay Balance', b: 'We notify you when your NBI Clearance is ready. You pay the remaining 50%.' },
+      { t: 'PDF Delivery / Original Shipping', b: 'We deliver your NBI Clearance as a PDF. Original shipping to Japan is available at cost.' },
+    ],
+    _faqs: [
+      { q: 'I already had my fingerprints taken at the Philippine Embassy in Japan. Can I still use your service?', a: 'Yes. If you have an NBI Fingerprint Card from the Philippine Embassy, we can proceed from there.' },
+      { q: 'Can this NBI Clearance be used for a Canadian or Australian Working Holiday visa?', a: 'Yes. NBI Clearance is accepted for working holiday visas, work visas, marriage applications, and more. It is issued in English.' },
+      { q: 'How long does the process take?', a: 'Typically 2–3 weeks after we receive your documents. This may vary based on NBI processing. If there is a HIT on your record, additional time may be required.' },
+      { q: 'Do I need the original document?', a: 'We provide PDF delivery as standard. If you need the original, we can arrange international shipping to Japan (actual shipping cost applies).' },
+      { q: 'What if there are issues with my documents?', a: 'We review documents before submission to catch problems early. If NBI requests additional materials, we\'ll work with you to resolve it.' },
+    ],
+  },
+};
+
+// ============================================================
+// ENGINE
+// ============================================================
+let lang = 'ja';
+
+function t(k) { return T[lang][k] ?? T.ja[k] ?? k; }
+
+function applyAll() {
+  // Static text
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t(el.dataset.i18n);
+    if (v !== undefined) el.innerHTML = v;
+  });
+  // Placeholders
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const v = t(el.dataset.i18nPh);
+    if (v) el.placeholder = v;
+  });
+
+  // Pricing list
+  const pl = document.getElementById('pricing-list');
+  pl.innerHTML = T[lang]._pricing_includes.map(s =>
+    `<li class="flex gap-2 items-start"><span class="text-green-500 mt-0.5 flex-shrink-0">✓</span><span>${s}</span></li>`
+  ).join('');
+
+  // Steps
+  const sc = document.getElementById('process-steps');
+  sc.innerHTML = T[lang]._steps.map((s, i) => `
+    <div class="flex gap-4 items-start bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+      <div class="step-num">${i + 1}</div>
+      <div>
+        <h3 class="font-bold text-gray-900 mb-1">${s.t}</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">${s.b}</p>
+      </div>
+    </div>
+  `).join('');
+
+  // FAQ
+  const fc = document.getElementById('faq-list');
+  fc.innerHTML = T[lang]._faqs.map(f => `
+    <details class="faq bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+      <summary class="flex justify-between items-center p-5 gap-4 select-none">
+        <span class="font-semibold text-gray-900 text-sm sm:text-base">${f.q}</span>
+        <svg class="chevron w-5 h-5 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="px-5 pb-5 pt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-100">${f.a}</div>
+    </details>
+  `).join('');
+
+  // form _subject hidden field language
+  const subj = document.querySelector('input[name="_subject"]');
+  if (subj) subj.value = lang === 'ja' ? 'NBIサポートサイトからのお問い合わせ' : 'Inquiry from NBI Support site';
+}
+
+function toggleLang() {
+  lang = lang === 'ja' ? 'en' : 'ja';
+  document.getElementById('lang-btn').textContent = lang === 'ja' ? '🌐 English' : '🌐 日本語';
+  document.documentElement.lang = lang;
+  applyAll();
+}
+
+document.addEventListener('DOMContentLoaded', applyAll);
+</script>
+</body>
+</html>
