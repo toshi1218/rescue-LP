@@ -36,12 +36,12 @@ export default function NbiGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '61000',
+          price: '55000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '61000',
+            price: '55000',
             priceCurrency: 'JPY',
-            description: 'NBIクリアランス取得代行 61,000円（税込・国際送料込み／代行手数料20,000円＋配送代行30,000円＋消費税＋国際送料6,000円）。PDF納品プランは55,000円。DFAアポスティーユ込みは+20,000円',
+            description: '初回申請PDF納品プラン55,000円（税込）、原本郵送込み61,000円。更新・再発行PDF納品39,800円〜、原本郵送込み46,800円〜。DFAアポスティーユ込みは+20,000円',
           },
         },
         },
@@ -97,46 +97,50 @@ export default function NbiGuideJa() {
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
           <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
-          <dl className="grid grid-cols-2 gap-3 text-sm">
-            <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">正式名称</dt>
-              <dd className="font-medium text-gray-800">NBI Clearance（無犯罪証明書）</dd>
-            </div>
-            <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">発行機関</dt>
-              <dd className="font-medium text-gray-800">フィリピン国家捜査局（NBI）</dd>
-            </div>
-            <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金</dt>
-              <dd className="font-medium text-gray-800">61,000円（税込・原本郵送込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※PDF納品プランは55,000円（国際送料不要）。DFAアポスティーユ込みは +20,000円。HIT対応・緊急処理は追加料金が発生することがあります</dd>
-            </div>
-            <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
-              <dd className="font-medium text-gray-800">約1か月</dd>
-            </div>
-          </dl>
-          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
-            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
-              <div className="px-4 py-3 font-bold">内容</div>
-              <div className="px-4 py-3 font-bold text-center">料金</div>
-            </div>
-            {[
-              { label: 'NBIポータル入力代行', price: '20,000円' },
-              { label: '配送代行', price: '30,000円' },
-              { label: '国際送料（原本郵送時）', price: '6,000円' },
-              { label: '消費税（10%）', price: '5,000円' },
-              { label: '合計（原本郵送・税込）', price: '61,000円', bold: true },
-            ].map((row, i) => (
-              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
-                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
-                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+
+          {/* プラン比較カード */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+            {/* 初回申請 */}
+            <div className="bg-white rounded-2xl border-2 border-secondary p-4 flex flex-col">
+              <div className="text-xs font-bold text-white bg-secondary rounded-full px-3 py-0.5 self-start mb-3">初回申請・Form No.5利用</div>
+              <p className="text-xs text-gray-500 mb-3 leading-relaxed">大使館で指紋採取済みの方。ポータル登録・支払い・取得・納品まで代行。</p>
+              <div className="mt-auto">
+                <div className="text-2xl font-bold text-secondary">55,000<span className="text-sm font-normal">円（税込）</span></div>
+                <div className="text-xs text-gray-500 mt-0.5">PDF納品プラン</div>
+                <div className="text-sm text-gray-700 mt-1.5">原本を日本へ郵送 <span className="font-medium">+6,000円 → 61,000円</span></div>
               </div>
-            ))}
+            </div>
+
+            {/* 更新・再発行 */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-4 flex flex-col">
+              <div className="text-xs font-bold text-white bg-gray-500 rounded-full px-3 py-0.5 self-start mb-3">更新・再発行</div>
+              <p className="text-xs text-gray-500 mb-3 leading-relaxed">2014年以降に取得歴があり、氏名等の変更がない方。指紋採取不要で進められるケース。</p>
+              <div className="mt-auto">
+                <div className="text-2xl font-bold text-gray-700">39,800<span className="text-sm font-normal">円（税込）〜</span></div>
+                <div className="text-xs text-gray-500 mt-0.5">PDF納品プラン</div>
+                <div className="text-sm text-gray-700 mt-1.5">原本を日本へ郵送 <span className="font-medium">+7,000円 → 46,800円</span></div>
+              </div>
+            </div>
           </div>
-          <p className="text-xs text-gray-500 mt-2">
-            ※PDF納品（原本の国際郵送なし）プランは国際送料6,000円が不要で <span className="font-medium text-gray-700">55,000円（税込）</span>。DFAアポスティーユ込みは +20,000円。正確な金額は無料相談後にご提示します。
+
+          {/* 最小プラン */}
+          <div className="bg-gray-50 rounded-xl border border-gray-200 p-3 flex items-center justify-between text-sm mb-3">
+            <div>
+              <span className="font-medium text-gray-800">ポータル入力・支払いのみ</span>
+              <span className="text-xs text-gray-500 ml-2">登録〜支払いだけ代行。書類の取得・配送は含まない。</span>
+            </div>
+            <span className="font-bold text-gray-700 whitespace-nowrap ml-3">19,800円</span>
+          </div>
+
+          <p className="text-xs text-gray-500 leading-relaxed">
+            ※DFAアポスティーユ込みは +20,000円。HIT（同名者照合）発生・緊急対応は追加料金が発生することがあります。更新扱いになるかは事前確認が必要です。正確な金額は無料相談後にご提示します。
           </p>
+
+          {/* 所要期間 */}
+          <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-2 text-sm text-gray-600">
+            <Clock className="w-4 h-4 text-gray-400 flex-shrink-0" />
+            <span>所要期間の目安：<span className="font-medium text-gray-800">約1か月</span></span>
+          </div>
         </SectionDivider>
       </div>
 
@@ -146,7 +150,7 @@ export default function NbiGuideJa() {
         <p>
           そんな方に向けて、株式会社IGRSでは、フィリピンNBIクリアランスの更新・転送を日本語で進めやすい形でご案内しています。
           ご相談時に条件を確認し、進められる案件かどうかを先に整理したうえで、必要な流れをご案内します。
-          NBI Clearanceは<a href="https://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン国家捜査局（NBI公式サイト）</a>が発行する公的書類です。
+          NBI Clearanceは<a href="http://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン国家捜査局（NBI公式サイト）</a>が発行する公的書類です。
         </p>
       </div>
 
@@ -181,6 +185,9 @@ export default function NbiGuideJa() {
           </p>
           <p className="text-xs text-gray-500 leading-relaxed mt-2">
             ※NBI内部の審査状況そのものをリアルタイムに確認することはできませんが、書類の発送・返送などの配送状況は追跡してご報告します。公式案内では、書類到着後の処理は最大5営業日とされています。これを大きく超える場合は、同名者照合（HIT）が発生している可能性があります。
+          </p>
+          <p className="text-xs text-gray-600 leading-relaxed mt-2 pt-2 border-t border-gray-100">
+            <span className="font-medium text-gray-800">万一の備えについて：</span>返送中の郵送事故などで原本を紛失した場合でも、パスポートのコピーと委任状をお預かりしていれば、当社にて再取得（再発行）を手配できます。
           </p>
         </div>
         <div className="bg-secondary/5 rounded-xl border border-secondary/20 p-4 mt-3">
