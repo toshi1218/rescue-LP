@@ -9,7 +9,7 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import RelatedArticles from '../components/RelatedArticles';
-import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText } from 'lucide-react';
+import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText, Mail, Smartphone, PackageSearch } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
@@ -36,12 +36,12 @@ export default function NbiGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '55000',
+          price: '49800',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '55000',
+            price: '49800',
             priceCurrency: 'JPY',
-            description: 'NBI Clearance取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: 'NBI Clearance取得サポート（49,800円〜59,800円）。DFAアポスティーユ込みは+20,000円。国際郵送費等は実費別途',
           },
         },
         },
@@ -107,9 +107,9 @@ export default function NbiGuideJa() {
               <dd className="font-medium text-gray-800">フィリピン国家捜査局（NBI）</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">55,000円〜（DFAアポスティーユ込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※HIT対応・緊急処理は追加料金が発生することがあります</dd>
+              <dt className="text-gray-500 text-xs mb-1">代行料金</dt>
+              <dd className="font-medium text-gray-800">49,800円〜59,800円（＋実費）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※DFAアポスティーユ込みは +20,000円。HIT対応・緊急処理は追加料金が発生することがあります</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -119,13 +119,13 @@ export default function NbiGuideJa() {
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
             <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
               <div className="px-4 py-3 font-bold">内容</div>
-              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+              <div className="px-4 py-3 font-bold text-center">料金</div>
             </div>
             {[
-              { label: 'NBI Clearance取得', price: '込み' },
-              { label: 'DFAアポスティーユ認証', price: '込み' },
+              { label: 'NBI Clearance取得サポート', price: '49,800円〜' },
+              { label: 'DFAアポスティーユ認証（オプション）', price: '+20,000円' },
               { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: '合計（DFAアポスティーユ込み）', price: '55,000円〜', bold: true },
+              { label: 'アポスティーユ込みの目安', price: '69,800円〜', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -155,6 +155,45 @@ export default function NbiGuideJa() {
         variant="primary"
         trustNote="条件確認から対応。返信24時間以内"
       />
+
+      {/* 自力申請で詰まるポイント → 当社が代行して可視化 */}
+      <SectionDivider variant="beige">
+        <h2 className="text-base font-bold text-gray-900 mb-2">自力申請で「見えない・詰まる」を、当社が代わりに進めます</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          日本から自分でNBIクリアランスを取ろうとすると、特に初めての方は次のような壁にぶつかりがちです。
+        </p>
+        <IconCardGrid
+          columns={3}
+          cards={[
+            { icon: Mail, title: 'NBIから返信が来ない', description: '海外から問い合わせても返信がなく、進め方が分からないまま止まってしまう。', accent: 'red' },
+            { icon: Smartphone, title: 'ポータル登録・支払いで詰まる', description: 'NBIオンライン登録やReference Number取得、フィリピン国内での支払いでつまずきやすい。', accent: 'gold' },
+            { icon: PackageSearch, title: '送った後の状況が見えない', description: '書類を送った後、今どこにあるのか・処理されたのかが分からず不安になる。', accent: 'blue' },
+          ]}
+        />
+        <div className="bg-white rounded-xl border border-gray-100 p-4 mt-2">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            当社では、NBIからの返信を待つだけの状態にせず、フィリピン国内での申請・支払い・書類のやり取りを代行します。
+            配送には<span className="font-medium text-gray-900">追跡可能な手段</span>を用い、申請・受理・発送など節目ごとに状況をご報告するので、
+            「今どこまで進んでいるか」が見える状態で進められます。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            ※NBI内部の審査状況そのものをリアルタイムに確認することはできませんが、書類の発送・返送などの配送状況は追跡してご報告します。
+          </p>
+        </div>
+        <div className="bg-secondary/5 rounded-xl border border-secondary/20 p-4 mt-3">
+          <div className="flex items-start gap-2">
+            <Fingerprint className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="text-sm font-bold text-gray-900 mb-1">日本の大使館で指紋採取（Form No.5）をお済ませの方へ</p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                指紋採取はご本人が在日フィリピン大使館・総領事館で行う必要がありますが、
+                その後の<span className="font-medium">オンライン申請・支払い・フィリピンでの手続き・書類の受け取り</span>までは当社で代行できます。
+                「大使館までは行ったが、その先で止まっている」という方はご相談ください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </SectionDivider>
 
       {/* 当社でご案内しやすいケース（先出し） */}
       <SectionDivider variant="beige">
@@ -201,7 +240,7 @@ export default function NbiGuideJa() {
           <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
           <h2 className="text-base font-bold text-gray-900">ご相談前にご確認ください</h2>
         </div>
-        <p className="text-sm text-gray-600 mb-4">以下のケースは、在日フィリピン大使館・総領事館でのご本人対応が必要です。当社だけでの完結が難しい場合がありますので、まずはご相談ください。</p>
+        <p className="text-sm text-gray-600 mb-4">以下のケースは、在日フィリピン大使館・総領事館でのご本人対応（指紋採取等）が必要です。なお、大使館での指紋採取がお済みの場合は、その後の手続きを当社で代行できます。まずはご相談ください。</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
             '過去に一度もNBIクリアランスを取得したことがない',
