@@ -182,6 +182,9 @@ export default function NbiGuideJa() {
           <p className="text-xs text-gray-500 leading-relaxed mt-2">
             ※NBI内部の審査状況そのものをリアルタイムに確認することはできませんが、書類の発送・返送などの配送状況は追跡してご報告します。公式案内では、書類到着後の処理は最大5営業日とされています。これを大きく超える場合は、同名者照合（HIT）が発生している可能性があります。
           </p>
+          <p className="text-xs text-gray-600 leading-relaxed mt-2 pt-2 border-t border-gray-100">
+            <span className="font-medium text-gray-800">万一の備えについて：</span>返送中の郵送事故などで原本を紛失した場合でも、パスポートのコピーと委任状をお預かりしていれば、当社にて再取得（再発行）を手配できます。
+          </p>
         </div>
         <div className="bg-secondary/5 rounded-xl border border-secondary/20 p-4 mt-3">
           <div className="flex items-start gap-2">
