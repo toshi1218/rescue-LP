@@ -180,7 +180,7 @@ export default function NbiGuideJa() {
             「今どこまで進んでいるか」が見える状態で進められます。
           </p>
           <p className="text-xs text-gray-500 leading-relaxed mt-2">
-            ※NBI内部の審査状況そのものをリアルタイムに確認することはできませんが、書類の発送・返送などの配送状況は追跡してご報告します。
+            ※NBI内部の審査状況そのものをリアルタイムに確認することはできませんが、書類の発送・返送などの配送状況は追跡してご報告します。公式案内では、書類到着後の処理は最大5営業日とされています。これを大きく超える場合は、同名者照合（HIT）が発生している可能性があります。
           </p>
         </div>
         <div className="bg-secondary/5 rounded-xl border border-secondary/20 p-4 mt-3">
