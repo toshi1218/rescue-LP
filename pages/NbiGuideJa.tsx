@@ -122,7 +122,7 @@ export default function NbiGuideJa() {
               <div className="px-4 py-3 font-bold text-center">料金</div>
             </div>
             {[
-              { label: '代行手数料', price: '20,000円' },
+              { label: 'NBIポータル入力代行', price: '20,000円' },
               { label: '配送代行', price: '30,000円' },
               { label: '国際送料（原本郵送時）', price: '6,000円' },
               { label: '消費税（10%）', price: '5,000円' },
