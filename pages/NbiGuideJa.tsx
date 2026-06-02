@@ -123,7 +123,7 @@ export default function NbiGuideJa() {
             </div>
             {[
               { label: 'NBIポータル入力+支払い代行', price: '20,000円' },
-              { label: '配送代行', price: '30,000円' },
+              { label: 'NBIクリアランス取得代行', price: '30,000円' },
               { label: '国際送料（原本郵送時）', price: '6,000円' },
               { label: '消費税（10%）', price: '5,000円' },
               { label: '合計（原本郵送・税込）', price: '61,000円', bold: true },
