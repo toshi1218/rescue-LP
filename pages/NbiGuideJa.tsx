@@ -36,12 +36,12 @@ export default function NbiGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '49800',
+          price: '61000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '49800',
+            price: '61000',
             priceCurrency: 'JPY',
-            description: 'NBI Clearance取得サポート（49,800円〜59,800円）。DFAアポスティーユ込みは+20,000円。国際郵送費等は実費別途',
+            description: 'NBIクリアランス取得代行 61,000円（税込・国際送料込み／代行手数料20,000円＋配送代行30,000円＋消費税＋国際送料6,000円）。PDF納品プランは55,000円。DFAアポスティーユ込みは+20,000円',
           },
         },
         },
@@ -108,8 +108,8 @@ export default function NbiGuideJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金</dt>
-              <dd className="font-medium text-gray-800">49,800円〜59,800円（＋実費）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※DFAアポスティーユ込みは +20,000円。HIT対応・緊急処理は追加料金が発生することがあります</dd>
+              <dd className="font-medium text-gray-800">61,000円（税込・原本郵送込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※PDF納品プランは55,000円（国際送料不要）。DFAアポスティーユ込みは +20,000円。HIT対応・緊急処理は追加料金が発生することがあります</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -122,10 +122,11 @@ export default function NbiGuideJa() {
               <div className="px-4 py-3 font-bold text-center">料金</div>
             </div>
             {[
-              { label: 'NBI Clearance取得サポート', price: '49,800円〜' },
-              { label: 'DFAアポスティーユ認証（オプション）', price: '+20,000円' },
-              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: 'アポスティーユ込みの目安', price: '69,800円〜', bold: true },
+              { label: '代行手数料', price: '20,000円' },
+              { label: '配送代行', price: '30,000円' },
+              { label: '国際送料（原本郵送時）', price: '6,000円' },
+              { label: '消費税（10%）', price: '5,000円' },
+              { label: '合計（原本郵送・税込）', price: '61,000円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -133,7 +134,9 @@ export default function NbiGuideJa() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
+          <p className="text-xs text-gray-500 mt-2">
+            ※PDF納品（原本の国際郵送なし）プランは国際送料6,000円が不要で <span className="font-medium text-gray-700">55,000円（税込）</span>。DFAアポスティーユ込みは +20,000円。正確な金額は無料相談後にご提示します。
+          </p>
         </SectionDivider>
       </div>
 
