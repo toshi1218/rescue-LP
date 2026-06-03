@@ -93,6 +93,21 @@ ph-document.com is a multilingual (EN/JA/KO) Philippine document service site bu
 **実測影響**: 2026-05-26 ノビリスタで外免切替-3位下落  
 **現在の制約**: 週1PR・1日1コミット・共通コンポーネント完全凍結・週2デプロイ
 
+### ⏰ 2026-06-19 解除候補日にやること（凍結明けタスク）
+
+> セッション開始時にこの日付を確認し、**2026-06-19以降**であれば必ずユーザーに以下を通知すること。
+
+**料金ページ（`/ja/ryokin/`）のNBIカード全面リライト**
+
+- **背景**: NBIフル取得代行が実際に可能と判明。料金ページのNBIカードが古い（アポスティーユ代行のみ）
+- **やること**:
+  1. 既存「NBIクリアランス アポスティーユ代行 ¥39,000」カードを価格改定（¥25,000+税→¥27,500、送料¥6,000別立て）
+  2. 新カード「NBIクリアランス フル取得代行」を追加（初回・更新の2プラン）
+- **価格表示方針**: 代行料を大きく見せ、消費税・国際送料を別行で内訳表示し、総額を小さく併記
+- **対象ファイル**: `/ja/ryokin/` ページコンポーネント（rescue-LP内）
+- **SEOリスク**: Level 3-4・1ページのみ・共通コンポーネント非変更 → 低リスク
+- **コミット方針**: 1コミット・1PR・当日デプロイ
+
 ---
 
 **SEO-destructive changes** include modifications to: hreflang, canonical, noindex, robots.txt, sitemap.xml, `_redirects`, or `scripts/prerender.ts` route configs.
