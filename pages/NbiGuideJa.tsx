@@ -87,9 +87,9 @@ export default function NbiGuideJa() {
     >
       <HeroBanner
         title="海外ビザ用NBIクリアランス"
-        subtitle="取得歴、氏名変更の有無、現在地を確認し、進められる案件だけを整理してご案内します。"
-        badges={['更新案件を中心に対応', '条件を先に確認', '進捗を随時ご報告']}
-        ctaText="更新できるか確認する"
+        subtitle="大使館の案内通りに自力で進めると2ヶ月以上。当社なら最短ルートで約1ヶ月に短縮します。"
+        badges={['納期を半分に短縮', '渡航不要・日本語対応', '進捗を随時ご報告']}
+        ctaText="1ヶ月以内で取れるか確認する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
@@ -137,20 +137,38 @@ export default function NbiGuideJa() {
           </p>
 
           {/* 所要期間 */}
-          <div className="mt-3 pt-3 border-t border-gray-100 flex items-center gap-2 text-sm text-gray-600">
-            <Clock className="w-4 h-4 text-gray-400 flex-shrink-0" />
-            <span>所要期間の目安：<span className="font-medium text-gray-800">約1か月</span></span>
+          <div className="mt-3 pt-3 border-t border-gray-100">
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+              <Clock className="w-4 h-4 text-gray-400 flex-shrink-0" />
+              <span>所要期間の目安</span>
+            </div>
+            <div className="grid grid-cols-2 gap-2 text-center">
+              <div className="rounded-xl bg-gray-50 border border-gray-200 p-3">
+                <div className="text-xs text-gray-400 mb-1">大使館の案内通りに自力申請</div>
+                <div className="text-xl font-bold text-gray-300">2ヶ月以上</div>
+              </div>
+              <div className="rounded-xl bg-secondary/5 border border-secondary/30 p-3">
+                <div className="text-xs text-secondary font-semibold mb-1">当社代行</div>
+                <div className="text-xl font-bold text-secondary">約1ヶ月</div>
+                <div className="text-xs text-gray-500 mt-0.5">最短ルートで半分に短縮</div>
+              </div>
+            </div>
           </div>
         </SectionDivider>
       </div>
 
       {/* イントロ */}
-      <div className="mb-8 space-y-2 text-sm text-gray-600 leading-relaxed">
-        <p>「できるだけ早く取りたい」「更新できるのか分からない」「依頼したあと、今どうなっているのか見えないのが不安」</p>
+      <div className="mb-8 space-y-3 text-sm text-gray-600 leading-relaxed">
+        <p className="text-base font-semibold text-gray-800">
+          日本から自力で申請すると、大使館の案内通りに進めて2ヶ月以上かかります。
+        </p>
         <p>
-          そんな方に向けて、株式会社IGRSでは、フィリピンNBIクリアランスの更新・転送を日本語で進めやすい形でご案内しています。
-          ご相談時に条件を確認し、進められる案件かどうかを先に整理したうえで、必要な流れをご案内します。
-          NBI Clearanceは<a href="http://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン国家捜査局（NBI公式サイト）</a>が発行する公的書類です。
+          当社では、フィリピン国内での申請・支払い・書類の受け取りをすべて代行し、
+          <span className="font-medium text-gray-800">取得までの最短ルートを通ることで1ヶ月以内での納品</span>を実現しています。
+          待ち時間を半分以下にして、ビザ申請のスケジュールに間に合わせます。
+        </p>
+        <p className="text-xs text-gray-500">
+          NBI Clearanceは<a href="http://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン国家捜査局（NBI公式サイト）</a>が発行する公的書類です。ご依頼前に条件（取得歴・氏名変更の有無）を確認し、進められる案件かどうかを先に整理したうえでご案内します。
         </p>
       </div>
 
