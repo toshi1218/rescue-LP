@@ -89,7 +89,7 @@ export default function NbiGuideJa() {
         title="海外ビザ用NBIクリアランス"
         subtitle="大使館の案内通りに自力で進めると2ヶ月以上。当社なら最短ルートで約1ヶ月に短縮します。"
         badges={['納期を半分に短縮', '渡航不要・日本語対応', '進捗を随時ご報告']}
-        ctaText="更新できるか確認する"
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
