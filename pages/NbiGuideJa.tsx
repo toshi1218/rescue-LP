@@ -118,7 +118,7 @@ export default function NbiGuideJa() {
               <div className="mt-auto">
                 <div className="text-2xl font-bold text-gray-700">39,800<span className="text-sm font-normal">円（税込）〜</span></div>
                 <div className="text-xs text-gray-500 mt-0.5">PDF納品プラン</div>
-                <div className="text-sm text-gray-700 mt-1.5">原本を日本へ郵送 <span className="font-medium">+7,000円 → 46,800円</span></div>
+                <div className="text-sm text-gray-700 mt-1.5">原本を日本へ郵送 <span className="font-medium">+6,000円 → 45,800円</span></div>
               </div>
             </div>
           </div>
