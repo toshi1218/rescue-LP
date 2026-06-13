@@ -965,6 +965,18 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/psa-input-support/`,
     lastmod: '2026-05-15',
   },
+  {
+    path: '/ja/honyaku/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'honyaku', 'index.html'),
+    title: 'フィリピン書類の日本語翻訳サービス｜1部¥7,700（税込）〜【IGRS】',
+    description: 'PSA出生証明書・婚姻証明書・CENOMAR・NBI Clearanceなどフィリピンの公的書類を日本語に翻訳。役所・出入国在留管理庁・法務局への提出に対応。1部¥7,700（税込）、2部目以降は半額¥3,850（税込）。お急ぎ便あり。',
+    canonical: `${BASE}/ja/honyaku/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/honyaku/`,
+    datePublished: '2026-06-13',
+    lastmod: '2026-06-13',
+  },
 
   /* ── JA canonical routes (/ja/*) ─────────────────────── */
   {
