@@ -53,7 +53,7 @@ export default function HonyakuJa() {
       <HeroBanner
         title="フィリピン書類の日本語翻訳"
         subtitle="PSA出生証明書・婚姻証明書・CENOMAR・NBI Clearanceなど、フィリピンの公的書類を日本語に翻訳します。役所・入管・法務局への提出にご利用いただけます。"
-        badges={['1部 ¥7,700（税込）', '2部目以降は半額 ¥3,850', 'お急ぎ便あり（+¥2,500）']}
+        badges={['1部 ¥7,700（税込）', '納期 5営業日以内', '2部目以降は半額', 'お急ぎ便 +¥2,500']}
         ctaText="翻訳を相談する"
         ctaHref="#contact"
         ctaService="日本語翻訳"
@@ -129,9 +129,16 @@ export default function HonyakuJa() {
               <span className="text-sm font-bold text-secondary">¥3,500（税抜）／ <span className="text-primary">¥3,850（税込）</span></span>
             </div>
             <div className="flex items-center justify-between rounded-lg bg-amber-50 border border-amber-200 px-4 py-3">
-              <span className="text-sm text-gray-700">お急ぎ便（追加料金）</span>
+              <span className="text-sm text-gray-700">お急ぎ便（5営業日より早く）</span>
               <span className="text-sm font-bold text-amber-700">+¥2,500</span>
             </div>
+          </div>
+
+          <div className="flex items-start gap-2 rounded-lg bg-secondary/5 border border-secondary/10 px-4 py-3 mb-5">
+            <Clock className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <span className="font-bold text-secondary">納期は5営業日以内</span>が目安です。これより早くご希望の場合は、お急ぎ便（+¥2,500）で対応します。
+            </p>
           </div>
 
           <div className="rounded-lg bg-white border border-gray-100 p-4 mb-5">
@@ -171,8 +178,8 @@ export default function HonyakuJa() {
             description: 'フィリピン書類の内容を正確に日本語へ翻訳します。お急ぎ便（+¥2,500）の場合は優先して対応します。',
           },
           {
-            title: '翻訳文のお渡し',
-            description: '完成した日本語訳をお渡しします。提出先の様式に合わせた形式でご用意します。',
+            title: '翻訳文のお渡し（5営業日以内）',
+            description: '完成した日本語訳を5営業日以内にお渡しします。提出先の様式に合わせた形式でご用意します。お急ぎ便（+¥2,500）ならさらに短縮できます。',
           },
         ]}
       />
