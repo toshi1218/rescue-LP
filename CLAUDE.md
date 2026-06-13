@@ -93,6 +93,9 @@ ph-document.com is a multilingual (EN/JA/KO) Philippine document service site bu
 **実測影響**: 2026-05-26 ノビリスタで外免切替-3位下落  
 **現在の制約**: 週1PR・1日1コミット・共通コンポーネント完全凍結・週2デプロイ
 
+**マージ保留中のPR（6/19解除後に処理）**:
+- **PR #288** `/ja/honyaku/` 翻訳サービスページ新規追加（追記のみ・低リスクだが prerender.ts/sitemap.xml に触れるため回復期トリガー扱い）。6/19にGSC impressions 2週連続プラストレンドを確認 → 解除後にマージ。マージ当日は他のSEO変更を重ねない。
+
 ---
 
 **SEO-destructive changes** include modifications to: hreflang, canonical, noindex, robots.txt, sitemap.xml, `_redirects`, or `scripts/prerender.ts` route configs.
