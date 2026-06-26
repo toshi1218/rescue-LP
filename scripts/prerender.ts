@@ -1094,8 +1094,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/haigusha-visa/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa', 'index.html'),
-    title: `配偶者ビザ 必要書類【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI 取得代行`,
-    description: '配偶者ビザ申請に必要なPSA書類・CENOMAR・NBI・DFAアポスティーユを日本から代行取得。紙の原本対応。在留資格認定・更新・変更すべて対応。無料相談。',
+    title: `配偶者ビザ フィリピン書類代行【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・DFAアポスティーユ一括取得`,
+    description: '配偶者ビザ（在留資格「日本人の配偶者等」）に必要なPSA書類・CENOMAR・DFAアポスティーユを日本から一括代行。渡航不要・日本語だけでOK。在留資格認定・更新・変更すべて対応。無料相談。',
     canonical: `${BASE}/ja/haigusha-visa/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/spouse-visa-documents/`,

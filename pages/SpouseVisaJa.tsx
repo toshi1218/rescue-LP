@@ -13,8 +13,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function SpouseVisaJa() {
   useMeta(
-    '配偶者ビザ必要書類【2026年3月版】フィリピン書類の代行取得',
-    '配偶者ビザ申請に必要なフィリピン書類（CENOMAR・PSA出生証明書・NBI Clearance）をDFAアポスティーユ付きで代行取得。渡航不要・日本語だけでOK。無料相談。',
+    '配偶者ビザ フィリピン書類代行【2026年6月版】PSA・CENOMAR・DFAアポスティーユ一括取得',
+    '配偶者ビザ（在留資格「日本人の配偶者等」）に必要なPSA書類・CENOMAR・DFAアポスティーユを日本から一括代行。渡航不要・日本語だけでOK。在留資格認定・更新・変更すべて対応。無料相談。',
   );
   return (
     <PageLayout

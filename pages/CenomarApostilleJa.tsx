@@ -16,8 +16,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function CenomarApostilleJa() {
   useMeta(
-    'CENOMARのDFAアポスティーユ、代行取得できます【2026年3月】日本語だけでOK',
-    'CENOMARのDFAアポスティーユはフィリピン現地での手続きが必要です。当センターが代行取得し、紙の原本アポスティーユで日本へ郵送。国際結婚・配偶者ビザ・帰化申請に対応。無料相談。',
+    'CENOMAR アポスティーユ取得代行【2026年6月】紙の原本・DFA認証で日本へ郵送',
+    'CENOMARに必要なDFAアポスティーユを代行。PSA発行のCENOMARへのアポスティーユ認証から日本郵送まで一括対応。国際結婚・配偶者ビザ・帰化申請対応。日本語だけでOK。無料相談。',
   );
   return (
     <PageLayout
