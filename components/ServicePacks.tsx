@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, BadgeCheck, Car, ShieldCheck, Award, Map, ArrowRight, ChevronDown } from 'lucide-react';
+import { Heart, BadgeCheck, Car, ShieldCheck, Award, Map, ArrowRight } from 'lucide-react';
 
 const packs = [
   {
@@ -66,21 +66,18 @@ const packs = [
 ];
 
 const ServicePacks: React.FC = () => {
-  const [expanded, setExpanded] = useState(false);
-  const visiblePacks = expanded ? packs : packs.slice(0, 3);
-
   return (
     <section className="py-20 bg-white">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
         <div className="text-center mb-8">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Services</span>
           <h2 className="text-xl font-bold text-secondary mb-2">目的が決まっている方はこちら</h2>
-          <p className="text-xs text-gray-500">必要書類・費用の目安・ご依頼の流れを目的別にまとめています</p>
+          <p className="text-xs text-gray-500">目的別のガイドをご用意しました。自分のケースに近いものをご覧ください。</p>
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {visiblePacks.map((pack, i) => (
+          {packs.map((pack, i) => (
             <Link
               key={pack.to}
               to={pack.to}
@@ -113,17 +110,6 @@ const ServicePacks: React.FC = () => {
           ))}
         </div>
 
-        {!expanded && (
-          <div className="text-center mt-4">
-            <button
-              onClick={() => setExpanded(true)}
-              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
-            >
-              <ChevronDown className="w-4 h-4" />
-              {`残り${packs.length - 3}件を見る`}
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );
