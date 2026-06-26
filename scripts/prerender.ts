@@ -1005,8 +1005,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar-apostille/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-apostille', 'index.html'),
-    title: `CENOMARのDFAアポスティーユ、代行取得できます【${SEO_YEAR_MONTH_JA}】日本語だけでOK`,
-    description: 'CENOMARのDFAアポスティーユはフィリピン現地での手続きが必要です。当センターが代行取得し、紙の原本アポスティーユで日本へ郵送。国際結婚・配偶者ビザ・帰化申請に対応。無料相談。',
+    title: `CENOMAR アポスティーユ取得代行【${SEO_YEAR_MONTH_JA}】紙の原本・DFA認証で日本へ郵送`,
+    description: 'CENOMARに必要なDFAアポスティーユを代行。PSA発行のCENOMARへのアポスティーユ認証から日本郵送まで一括対応。国際結婚・配偶者ビザ・帰化申請対応。日本語だけでOK。無料相談。',
     canonical: `${BASE}/ja/cenomar-apostille/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/cenomar-apostille/`,
