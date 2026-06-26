@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight, ChevronDown } from 'lucide-react';
+import { Heart, BadgeCheck, Car, ShieldCheck, Award, Map, ArrowRight, ChevronDown } from 'lucide-react';
 
 const packs = [
   {
@@ -34,6 +34,16 @@ const packs = [
     numColor: 'text-emerald-400',
   },
   {
+    to: '/ja/kika-shinsei-guide/',
+    icon: Award,
+    title: '帰化申請',
+    desc: '法務局への帰化申請に必要なフィリピン書類（出生・婚姻・NBI）の取得サポートと費用を確認できます',
+    accentBg: 'bg-violet-50',
+    accentBorder: 'border-violet-100',
+    iconColor: 'text-violet-600',
+    numColor: 'text-violet-400',
+  },
+  {
     to: '/ja/nbi-clearance/',
     icon: ShieldCheck,
     title: '海外ビザ用NBIクリアランス',
@@ -44,20 +54,20 @@ const packs = [
     numColor: 'text-amber-400',
   },
   {
-    to: '/ja/kikka-shinsei/',
-    icon: Award,
-    title: '帰化申請書類パック',
-    desc: '法務局への帰化申請に必要なフィリピン書類（出生・婚姻・NBI）の取得サポートと費用を確認できます',
-    accentBg: 'bg-violet-50',
-    accentBorder: 'border-violet-100',
-    iconColor: 'text-violet-600',
-    numColor: 'text-violet-400',
+    to: '/ja/kokusai-kekkon-roadmap/',
+    icon: Map,
+    title: '個別ロードマップ作成',
+    desc: '自分のケースに合った手続き順序・必要書類を整理してお伝えします',
+    accentBg: 'bg-sky-50',
+    accentBorder: 'border-sky-100',
+    iconColor: 'text-sky-600',
+    numColor: 'text-sky-400',
   },
 ];
 
 const ServicePacks: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
-  const visiblePacks = expanded ? packs : packs.slice(0, 2);
+  const visiblePacks = expanded ? packs : packs.slice(0, 3);
 
   return (
     <section className="py-20 bg-white">
@@ -110,7 +120,7 @@ const ServicePacks: React.FC = () => {
               className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
             >
               <ChevronDown className="w-4 h-4" />
-              {`残り${packs.length - 2}件を見る`}
+              {`残り${packs.length - 3}件を見る`}
             </button>
           </div>
         )}
