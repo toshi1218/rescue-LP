@@ -110,6 +110,9 @@ const BusinessMenkyoKirikaeKigyouJa = lazy(() => import('./pages/BusinessMenkyoK
 const CenomarVsMarriageCertEn = lazy(() => import('./pages/CenomarVsMarriageCertEn'));
 const DocumentChecklistByVisaEn = lazy(() => import('./pages/DocumentChecklistByVisaEn'));
 const NbiClearanceOverseasEn = lazy(() => import('./pages/NbiClearanceOverseasEn'));
+const NbiClearanceFromAbroadEn = lazy(() => import('./pages/NbiClearanceFromAbroadEn'));
+const NbiApostilleEn = lazy(() => import('./pages/NbiApostilleEn'));
+const NbiRenewalEn = lazy(() => import('./pages/NbiRenewalEn'));
 const PsaLateRegistrationEn = lazy(() => import('./pages/PsaLateRegistrationEn'));
 const CenomarVsMarriageCertJa = lazy(() => import('./pages/CenomarVsMarriageCertJa'));
 const DocumentChecklistByVisaJa = lazy(() => import('./pages/DocumentChecklistByVisaJa'));
@@ -353,6 +356,12 @@ export default function App() {
         <Route path="/en/document-checklist-by-visa/" element={<DocumentChecklistByVisaEn />} />
         <Route path="/en/nbi-clearance-overseas" element={<Navigate to="/en/nbi-clearance-overseas/" replace />} />
         <Route path="/en/nbi-clearance-overseas/" element={<NbiClearanceOverseasEn />} />
+        <Route path="/en/nbi-clearance-from-abroad" element={<Navigate to="/en/nbi-clearance-from-abroad/" replace />} />
+        <Route path="/en/nbi-clearance-from-abroad/" element={<NbiClearanceFromAbroadEn />} />
+        <Route path="/en/nbi-apostille" element={<Navigate to="/en/nbi-apostille/" replace />} />
+        <Route path="/en/nbi-apostille/" element={<NbiApostilleEn />} />
+        <Route path="/en/nbi-renewal" element={<Navigate to="/en/nbi-renewal/" replace />} />
+        <Route path="/en/nbi-renewal/" element={<NbiRenewalEn />} />
         <Route path="/en/psa-late-registration" element={<Navigate to="/en/psa-late-registration/" replace />} />
         <Route path="/en/psa-late-registration/" element={<PsaLateRegistrationEn />} />
         <Route path="/ja/cenomar-vs-marriage-certificate" element={<Navigate to="/ja/cenomar-vs-marriage-certificate/" replace />} />
