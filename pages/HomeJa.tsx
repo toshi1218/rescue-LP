@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { CheckCircle, ChevronDown } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { CheckCircle } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import GuideLinks from '../components/GuideLinks';
@@ -18,8 +18,6 @@ import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function HomeJa() {
-  const [noticeExpanded, setNoticeExpanded] = useState(false);
-
   useMeta(
     `フィリピン書類、日本語だけで確実に取り寄せできます｜CENOMAR・PSA・NBI代行【${SEO_YEAR_MONTH_JA}】`,
     'CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユを日本語だけで安心代行。フィリピン渡航不要。進捗は随時ご報告。国際結婚・配偶者ビザ・帰化申請に対応。無料相談受付中。',
@@ -149,60 +147,63 @@ export default function HomeJa() {
           </div>
         </div>
         <div className="container mx-auto max-w-5xl px-4 pt-8">
-          <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
-            <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />
-            <div className="p-6 md:p-8">
-              <div className="inline-block mb-4 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">
-                紙原本対応
-              </div>
-              <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
-                2026年3月のPSAデジタル化以降、電子文書が<span className="text-red-700">受理されず紙原本を要求されるケース</span>が多数報告されています。<span className="text-red-700">当社はPSA・DFA窓口で直接紙原本を取得しており、従来通り対応可能です。</span>
-              </p>
-              {noticeExpanded && (
-                <ul className="space-y-3 mt-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：フィリピン側の運用が電子化しても、日本の提出先は当面の間、紙原本を求められることが想定されます。
-                    </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+            {/* 紙原本対応 */}
+            <section className="rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
+              <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />
+              <div className="p-5">
+                <div className="inline-block mb-3 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">
+                  紙原本対応
+                </div>
+                <p className="text-sm font-bold text-secondary leading-snug mb-3">
+                  2026年3月のPSAデジタル化以降も、<span className="text-red-700">当社はPSA・DFA窓口で直接紙原本を取得しており、従来通り対応可能です。</span>
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-gray-700 leading-relaxed">日本の役所・入管・総領事館は当面の間、紙原本を求められる可能性があります</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">まずは提出先にご確認ください</strong>：電子文書で受理されるかを提出先にご確認いただき、<strong className="text-red-700">紙原本を求められた場合は当社にご相談ください。</strong>
-                    </span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-gray-700 leading-relaxed">まずは提出先にご確認いただき、<strong className="text-red-700">紙原本を求められた場合はご相談ください</strong></span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">納期の目安</strong>：現在、紙原本のご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
-                    </span>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-gray-700 leading-relaxed">現在、紙原本依頼が集中しており納期は約2ヶ月が目安です</span>
                   </li>
                 </ul>
-              )}
-              {!noticeExpanded && (
-                <button
-                  onClick={() => setNoticeExpanded(true)}
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-red-700 hover:text-red-800 transition-colors"
-                >
-                  <ChevronDown className="w-3.5 h-3.5" />
-                  詳細を見る
-                </button>
-              )}
-
-              {/* e-Certificate対応の案内 */}
-              <div className="mt-5 pt-4 border-t border-gray-100 flex items-start gap-3 bg-blue-50 rounded-xl px-4 py-3">
-                <span className="flex-shrink-0 text-blue-500 text-base leading-none mt-0.5">ℹ️</span>
-                <div>
-                  <p className="text-xs font-bold text-blue-800 mb-0.5">e-Certificate（電子文書）での提出が認められている場合</p>
-                  <p className="text-xs text-blue-700 leading-relaxed">
-                    提出先に確認し、電子文書でOKと言われた場合は<strong>e-CertificateおよびeApostilleの取得代行</strong>にも対応しています。
-                    <a href="#contact" className="underline underline-offset-2 font-bold ml-1 hover:text-blue-900 transition-colors">まずご相談ください</a>。
-                  </p>
-                </div>
+                <a href="#contact" className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-red-700 hover:text-red-800 transition-colors">
+                  詳細を見る →
+                </a>
               </div>
-            </div>
-          </section>
+            </section>
+
+            {/* e-Certificate対応 */}
+            <section className="rounded-2xl bg-blue-50 border border-blue-100 shadow-md">
+              <div className="p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="flex-shrink-0 text-blue-500 text-lg leading-none">ℹ️</span>
+                  <p className="text-sm font-bold text-blue-800">e-Certificate（電子文書）での提出が認められている場合</p>
+                </div>
+                <p className="text-xs text-blue-700 leading-relaxed mb-3">
+                  提出先に確認し、電子文書でOKと言われた場合は<strong>e-CertificateおよびeApostilleの取得代行</strong>にも対応しています。
+                </p>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-blue-700">電子文書での提出可否は提出先にご確認ください</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-blue-700">e-Certificate・eApostille代行にも対応しています</span>
+                  </li>
+                </ul>
+                <a href="#contact" className="inline-block text-xs font-bold text-blue-800 underline underline-offset-2 hover:text-blue-900 transition-colors">
+                  まずご相談ください →
+                </a>
+              </div>
+            </section>
+          </div>
         </div>
         <ServicePacks />
         <PainPoints />
