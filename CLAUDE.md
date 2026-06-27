@@ -187,6 +187,30 @@ SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JS
 
 ## Future Content Tasks (凍結明け以降)
 
+### 【持ち越し】EN client/server タイトル不一致の修正（CTR改善・別日に1〜2ページずつ）
+
+**背景**: client側 `useMeta()` が prerender の良いタイトルを「短く・弱く・陳腐化日付付き」のタイトルで上書きしているページがある（cr1で実証・修正済み）。`[April 2026]` 等のハードコード日付は現在6月で陳腐化＝鮮度シグナル低下でCTRを下げる。
+
+**2026-06-27 セッションで対応済み**:
+- `/en/cenomar/` タイトル/H1/冒頭をOFW＋外国人配偶者の取引意図に転換
+- `/en/cr1-visa-documents/` タイトル/meta をChecklist起点に改善（陳腐化日付除去）
+- 10ページの `useMeta` ハードコード `[April 2026]` を中央定数 `SEO_TITLE_BADGE_EN` に置換（**出力同一・SEO無影響**のドリフト防止リファクタ）
+
+**残・要対応（client が prerender と実際にズレている＝真のCTRバグ。回復期ルール順守で1日1〜2ページ・2週間観察）**:
+| ページ | client現状（弱い・上書き中） | prerender（良い・本来出したい） |
+|--------|------------------------------|-------------------------------|
+| `/en/international-marriage-guide/`（MarriageGuideEn） | `Marrying a Filipino? Documents We Get for You [April 2026]` | `Philippine Documents for International Marriage [2026] — Complete Guide` |
+| `/en/naturalization-guide/`（NaturalizationEn） | `Naturalization Document Service [April 2026]` | `Philippine Documents for Naturalization [2026] — PSA Birth Certificate + NBI + Apostille` |
+| `/en/spouse-visa-documents/`（SpouseVisaEn） | `Spouse Visa Document Service [April 2026]` | `Philippine Documents for Spouse Visa [2026] — PSA, CENOMAR, NBI + Apostille` |
+
+→ 各ページ、client `useMeta` を prerender と一致させる（またはより強いタイトルに統一）＋陳腐化日付除去。国際結婚・帰化・配偶者の3セグメントに直結。
+
+**根本原因（別途・慎重に判断）**: `lib/seoDate.ts` の `SEO_MONTH='4'` が古い（現在6月）。全「重要ページ」title が `[April 2026]` 表示で2ヶ月陳腐化。`SEO_MONTH` を `'6'` に上げれば全英語ページのtitle日付が一斉更新されるが、**これは全サイト同時変更＝大規模再評価シグナル**。回復状況を見て、デプロイ閑散日に単独で実施すること（他のSEO変更と同日にしない）。
+
+### EN追跡KWの盲点（ツール側に追加すべき・外国人配偶者の検索語）
+
+GSC実測では検索されているのに追跡CSVがVol0判定/未追跡。追跡対象に追加: `K-1 visa requirements` / `fiance visa Philippines` / `fiance visa Philippines requirements` / `CR-1 visa documents` / `CR-1 visa Philippines` / `I-129F documents` / `documents needed to marry a Filipina` / `spouse visa Philippines documents`。
+
 ### EN ページのコンテンツ日本語バイアス修正
 
 **背景**: ENページは元々JAページをベースに作られたため、英語圏向けではない内容が混入している。
