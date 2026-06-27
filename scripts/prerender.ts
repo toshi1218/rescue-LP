@@ -670,8 +670,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/k1-visa-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'k1-visa-documents', 'index.html'),
-    title: `K-1 Visa Documents: CENOMAR, PSA & NBI [${SEO_YEAR_MONTH_EN}]`,
-    description: `K-1 visa petitioner? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for your Filipino fiancé(e). Ships to your US address. Free consultation.`,
+    title: `K-1 Fiancé Visa: Philippine Documents Checklist + Apostille [${SEO_YEAR}]`,
+    description: `Complete checklist of Philippine documents for a K-1 fiancé visa: CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille. We retrieve and ship from the Philippines via DHL. Free quote.`,
     canonical: `${BASE}/en/k1-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/k1-visa-documents/`,
