@@ -100,7 +100,7 @@ export default function CenomarGuideEn() {
     >
       <HeroBanner
         title="Get Your PSA CENOMAR From Abroad — No Trip to the Philippines"
-        badges={['Ships Worldwide via DHL', 'DFA Apostille Included', 'For OFWs & Filipinos Abroad']}
+        badges={['For K-1 · Spouse Visa · Marriage Abroad', 'DFA Apostille Included', 'Ships Worldwide via DHL']}
         ctaText="Get a Free Quote"
         ctaHref="#contact"
         lastUpdated="June 27, 2026"
@@ -108,8 +108,8 @@ export default function CenomarGuideEn() {
 
       <div className="max-w-2xl mx-auto px-4 mb-6">
         <p className="text-sm text-gray-600 leading-relaxed mb-3">
-          <strong>Already living abroad and need a PSA CENOMAR for your visa or marriage application?</strong>{' '}
-          You don't have to fly back to the Philippines. Our Cebu-based team retrieves your{' '}
+          <strong>Marrying a Filipino, sponsoring a fiancé(e), or need a PSA CENOMAR from outside the Philippines?</strong>{' '}
+          Whether you are the foreign partner filing a K-1 or spouse visa, or a Filipino living abroad, no one has to fly back home. Our Cebu-based team retrieves the{' '}
           <a href="https://psa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Philippine Statistics Authority (PSA)</a>{' '}
           CENOMAR, handles the DFA Apostille, and ships the original document directly to your address worldwide via DHL.
         </p>
