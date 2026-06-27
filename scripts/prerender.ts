@@ -370,7 +370,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
-    title: `Get CENOMAR from Abroad [${SEO_YEAR}] — PSA + Apostille + DHL, All-Inclusive`,
+    title: `CENOMAR Retrieval Service [${SEO_YEAR}] — PSA + DFA Apostille + DHL, All-Inclusive`,
     description: `We retrieve CENOMAR from PSA, get DFA Apostille, and ship worldwide via DHL — from US$349 all-in. No trip to the Philippines needed. Free consultation.`,
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
@@ -1094,7 +1094,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/haigusha-visa/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa', 'index.html'),
-    title: `配偶者ビザ 必要書類【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI 取得代行`,
+    title: `配偶者ビザ フィリピン書類 取得代行【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI・アポスティーユ一括`,
     description: '配偶者ビザ申請に必要なPSA書類・CENOMAR・NBI・DFAアポスティーユを日本から代行取得。紙の原本対応。在留資格認定・更新・変更すべて対応。無料相談。',
     canonical: `${BASE}/ja/haigusha-visa/`,
     lang: 'ja',
