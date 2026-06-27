@@ -659,7 +659,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/us-visa-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'us-visa-documents', 'index.html'),
-    title: `K-1 / CR-1 Visa Documents Service [${SEO_YEAR_MONTH_EN}]`,
+    title: `US Visa Philippine Documents Service [${SEO_YEAR_MONTH_EN}] — K-1, CR-1 & Spousal Petitions`,
     description: `US petitioner for a K-1 or CR-1/IR-1 visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship to your door. Free consultation for American petitioners.`,
     canonical: `${BASE}/en/us-visa-documents/`,
     lang: 'en',
