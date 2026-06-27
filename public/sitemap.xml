@@ -7,7 +7,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -16,12 +16,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/cenomar-meaning/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar-meaning/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar-toha/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar-meaning/"/>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -135,7 +138,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/international-marriage-guide/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kokusai-kekkon-guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/international-marriage-guide/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -144,7 +147,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/spouse-visa-documents/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/haigusha-visa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/spouse-visa-documents/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -153,7 +156,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-marriage-certificate/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-kekkon-shomeisho/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-marriage-certificate/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -162,7 +165,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/drivers-license-conversion/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/gaimen-kirikae-guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/drivers-license-conversion/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -171,7 +174,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/naturalization-guide/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kika-shinsei-guide/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/naturalization-guide/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -237,7 +240,7 @@
   </url>
   <url>
     <loc>https://ph-document.com/en/cr1-visa-documents/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -299,6 +302,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/en/cenomar-requirements-by-country/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/cenomar-cost-comparison/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/ja/uk/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/uk/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/uk/"/>
@@ -313,7 +328,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/ryokin/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/pricing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/pricing/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -350,7 +365,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/cenomar-vs-marriage-certificate/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/cenomar-vs-marriage-certificate/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/cenomar-vs-marriage-certificate/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -359,7 +374,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/document-checklist-by-visa/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/document-checklist-by-visa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/document-checklist-by-visa/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -377,7 +392,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-late-registration/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-late-registration/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-late-registration/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -428,12 +443,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/ja/psa-input-support/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/ja/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -533,7 +554,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/spouse-visa-documents/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/haigusha-visa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/spouse-visa-documents/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -578,7 +599,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-birth-certificate-cost/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-shussei-cost/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/psa-birth-certificate-cost/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -633,7 +654,7 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/ryokin/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/pricing/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/pricing/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -693,6 +714,12 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/ja/tokusho/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/ja/kojin-joho-hogo/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/personal-information-protection/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/kojin-joho-hogo/"/>
@@ -742,7 +769,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/spouse-visa-document-checklist/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/haigusha-visa-shorui/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/spouse-visa-document-checklist/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -772,6 +799,12 @@
   </url>
   <url>
     <loc>https://ph-document.com/ja/business/menkyo-kirikae/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ja/business/menkyo-kirikae-kigyou/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -839,6 +872,15 @@
     <lastmod>2026-04-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/spouse-visa-document-checklist/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/spouse-visa-document-checklist/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/haigusha-visa-shorui/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/spouse-visa-document-checklist/"/>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/en/japan-first-vs-philippines-first-marriage/</loc>
