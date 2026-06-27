@@ -443,6 +443,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/ja/psa-input-support/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/ja/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/"/>
@@ -706,6 +712,12 @@
     <lastmod>2026-04-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ja/tokusho/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ja/kojin-joho-hogo/</loc>
