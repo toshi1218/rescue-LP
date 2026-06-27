@@ -782,6 +782,18 @@ const routes: RouteConfig[] = [
     datePublished: '2026-05-01',
   },
   {
+    path: '/en/cfo-certificate/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'cfo-certificate', 'index.html'),
+    title: `CFO Certificate — PSA Documents Required to Apply [${SEO_YEAR}]`,
+    description: `Getting a CFO Certificate? We retrieve the PSA Birth Certificate and CENOMAR required for CFO registration — DFA Apostille included, shipped worldwide via DHL. Free consultation.`,
+    canonical: `${BASE}/en/cfo-certificate/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/cfo-certificate/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+    datePublished: '2026-06-27',
+  },
+  {
     path: '/en/cenomar-cost-comparison/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-cost-comparison', 'index.html'),
     title: `CENOMAR Cost Comparison [${SEO_YEAR}]: PSA Direct vs Agent vs Walk-in`,

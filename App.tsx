@@ -91,6 +91,7 @@ const NewZealandDocsEn = lazy(() => import('./pages/NewZealandDocsEn'));
 const GermanyDocsEn = lazy(() => import('./pages/GermanyDocsEn'));
 const CenomarByCountryEn = lazy(() => import('./pages/CenomarByCountryEn'));
 const CenomarCostComparisonEn = lazy(() => import('./pages/CenomarCostComparisonEn'));
+const CfoEn = lazy(() => import('./pages/CfoEn'));
 const CompanyEn = lazy(() => import('./pages/CompanyEn'));
 const CompanyJa = lazy(() => import('./pages/CompanyJa'));
 const ContactEn = lazy(() => import('./pages/ContactEn'));
@@ -317,6 +318,8 @@ export default function App() {
         <Route path="/en/cenomar-requirements-by-country/" element={<CenomarByCountryEn />} />
         <Route path="/en/cenomar-cost-comparison" element={<Navigate to="/en/cenomar-cost-comparison/" replace />} />
         <Route path="/en/cenomar-cost-comparison/" element={<CenomarCostComparisonEn />} />
+        <Route path="/en/cfo-certificate" element={<Navigate to="/en/cfo-certificate/" replace />} />
+        <Route path="/en/cfo-certificate/" element={<CfoEn />} />
         <Route path="/en/company" element={<Navigate to="/en/company/" replace />} />
         <Route path="/en/company/" element={<CompanyEn />} />
         <Route path="/ja/company" element={<Navigate to="/ja/company/" replace />} />
