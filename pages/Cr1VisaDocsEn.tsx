@@ -6,7 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
-import { Heart, FileCheck, Globe, Clock } from 'lucide-react';
+import { Heart, FileCheck, Globe, Clock, Calendar, AlertCircle } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
 
@@ -48,6 +48,38 @@ export default function Cr1VisaDocsEn() {
           mainEntity: [
             {
               '@type': 'Question',
+              name: 'What is the difference between CR-1 and IR-1?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'It depends on how long you have been married when the visa is issued: less than 2 years is CR-1 (your spouse gets a 2-year conditional green card and files Form I-751 later); 2 years or more is IR-1 (a 10-year green card with no conditions). USCIS assigns this automatically — and the Philippine documents required are the same for both.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Does my Filipino spouse need an NBI Clearance for the CR-1/IR-1 visa?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Yes. US immigrant visa applicants must provide a police certificate, and for the Philippines that is the NBI Clearance. We retrieve it and arrange DFA Apostille where required. If the NBI returns a "HIT", we can help resolve it.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'My spouse was previously married. What extra documents are needed?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'You must prove the prior marriage legally ended — typically the annulment/divorce decree with the PSA annotation, or the former spouse\'s PSA Death Certificate. We can retrieve these alongside the main documents.',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'Where will the CR-1/IR-1 interview take place?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'At the US Embassy in Manila, which processes all immigrant visa cases for the Philippines. We make sure your PSA documents and DFA Apostille are ready before your interview date.',
+              },
+            },
+            {
+              '@type': 'Question',
               name: 'What Philippine documents does NVC require for CR-1/IR-1?',
               acceptedAnswer: {
                 '@type': 'Answer',
@@ -87,7 +119,7 @@ export default function Cr1VisaDocsEn() {
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="June 27, 2026"
       />
 
       <SummaryBlock
@@ -100,6 +132,33 @@ export default function Cr1VisaDocsEn() {
         ]}
         ctaText="Free Consultation"
       />
+
+      <div className="max-w-3xl mx-auto px-4 py-8">
+        <h2 className="text-lg font-bold text-secondary mb-2">CR-1 vs IR-1: Which One Are You Filing?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-5">
+          Both are immigrant (spouse) visas that lead to a green card — the only difference is how long you have been married when the visa is issued. You do not choose between them: USCIS assigns CR-1 or IR-1 automatically. <strong>The Philippine documents required from your spouse are exactly the same for both.</strong>
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="rounded-2xl border border-gray-200 bg-white p-5">
+            <div className="flex items-center gap-2 mb-2">
+              <Calendar className="w-4 h-4 text-primary-dark" />
+              <span className="font-bold text-sm text-secondary">CR-1 — Conditional Resident</span>
+            </div>
+            <p className="text-xs text-gray-600 leading-relaxed">
+              Married <strong>less than 2 years</strong> when the visa is issued. Your spouse enters the US on a <strong>2-year conditional green card</strong> and must later file Form I-751 to remove conditions and get the 10-year card.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-gray-200 bg-white p-5">
+            <div className="flex items-center gap-2 mb-2">
+              <Calendar className="w-4 h-4 text-emerald-600" />
+              <span className="font-bold text-sm text-secondary">IR-1 — Immediate Relative</span>
+            </div>
+            <p className="text-xs text-gray-600 leading-relaxed">
+              Married <strong>2 years or more</strong> when the visa is issued. Your spouse receives a <strong>10-year green card</strong> with no conditions — no I-751 step required later.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <FeatureList
         heading="Who This Is For"
@@ -162,8 +221,38 @@ export default function Cr1VisaDocsEn() {
         ]}
       />
 
+      <div className="max-w-3xl mx-auto px-4 py-8">
+        <h2 className="text-lg font-bold text-secondary mb-4">Where Your Philippine Documents Fit in the CR-1/IR-1 Process</h2>
+        <ol className="space-y-4">
+          {[
+            { n: '1', t: 'I-130 approved by USCIS', d: 'The US petitioner files Form I-130. Once approved, the case is forwarded to the National Visa Center (NVC).' },
+            { n: '2', t: 'NVC stage — civil documents submitted', d: 'You pay fees and submit Form DS-260 and civil documents. This is the stage where your spouse\'s PSA Birth Certificate, PSA Marriage Certificate, and NBI Clearance (the Philippine police certificate) are required.' },
+            { n: '3', t: 'Documentarily complete → US Embassy Manila', d: 'After NVC confirms the case is complete, it is sent to the US Embassy in Manila, which handles all immigrant visa interviews for the Philippines.' },
+            { n: '4', t: 'Medical exam + interview', d: 'Your spouse completes a medical exam at an embassy-accredited clinic (such as St. Luke\'s) and attends the interview in Manila with the original documents on hand.' },
+          ].map(({ n, t, d }) => (
+            <li key={n} className="flex gap-4">
+              <div className="shrink-0 w-8 h-8 rounded-full bg-secondary text-white font-bold text-sm flex items-center justify-center">{n}</div>
+              <div>
+                <p className="font-bold text-sm text-secondary leading-snug">{t}</p>
+                <p className="text-xs text-gray-600 leading-relaxed mt-0.5">{d}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <div className="mt-5 bg-amber-50 border border-amber-200 rounded-2xl p-5 flex gap-4">
+          <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <p className="text-xs text-amber-700 leading-relaxed">
+            <strong className="text-amber-800">Important:</strong> PSA documents must be the official copy printed on PSA Security Paper (SECPA) — not a plain photocopy. We retrieve the correct PSA originals and arrange DFA Apostille where your submission requires it. Documents also have validity windows, so we time retrieval to your NVC submission or interview date.
+          </p>
+        </div>
+      </div>
+
       <FaqSection
         items={[
+          { q: 'What is the difference between CR-1 and IR-1?', a: 'It depends on how long you have been married when the visa is issued: less than 2 years is CR-1 (your spouse gets a 2-year conditional green card and files Form I-751 later); 2 years or more is IR-1 (a 10-year green card with no conditions). USCIS assigns this automatically — and the Philippine documents required are the same for both.' },
+          { q: 'Does my Filipino spouse need an NBI Clearance for the CR-1/IR-1 visa?', a: 'Yes. US immigrant visa applicants must provide a police certificate, and for the Philippines that is the NBI Clearance. We retrieve it and arrange DFA Apostille where required. If the NBI returns a "HIT", we can help resolve it.' },
+          { q: 'My spouse was previously married. What extra documents are needed?', a: 'You must prove the prior marriage legally ended — typically the annulment/divorce decree with the PSA annotation, or the former spouse\'s PSA Death Certificate. We can retrieve these alongside the main documents.' },
+          { q: 'Where will the CR-1/IR-1 interview take place?', a: 'At the US Embassy in Manila, which processes all immigrant visa cases for the Philippines. We make sure your PSA documents and DFA Apostille are ready before your interview date.' },
           { q: 'What Philippine documents does NVC require for CR-1/IR-1?', a: 'Typically PSA Marriage Certificate, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements may vary. We confirm for your specific case.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
