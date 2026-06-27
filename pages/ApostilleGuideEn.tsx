@@ -13,7 +13,7 @@ import { useMeta } from '../lib/useMeta';
 export default function ApostilleGuideEn() {
   useMeta(
     'DFA Apostille Service [April 2026] — No Trip Needed',
-    'Need a DFA Apostille but can\'t go to the Philippines? We handle PSA, NBI, CENOMAR authentication — and ship to you. Free consultation available.',
+    'DFA Apostille without going to the Philippines — from US$349 all-in. We retrieve PSA, NBI, or CENOMAR and ship via DHL Express worldwide. 4–6 weeks.',
   );
   return (
     <PageLayout

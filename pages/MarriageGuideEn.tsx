@@ -11,8 +11,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function MarriageGuideEn() {
   useMeta(
-    'Marrying a Filipino? Documents We Get for You [April 2026]',
-    'Planning to marry a Filipino/Filipina? We handle all Philippine documents — CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille. Shipped worldwide. Free consultation for K-1, spouse visa, and partner visa petitioners.',
+    'Philippine Documents for International Marriage [2026] — Retrieval Service',
+    'Getting married to a Filipino? We retrieve CENOMAR, PSA Birth Certificate + DFA Apostille and ship via DHL worldwide — US$899 all-in. No trip needed.',
   );
   return (
     <PageLayout

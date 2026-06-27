@@ -14,7 +14,7 @@ import { useMeta } from '../lib/useMeta';
 export default function SpouseVisaJa() {
   useMeta(
     `配偶者ビザ フィリピン書類 取得代行【2026年版】PSA・CENOMAR・NBI・アポスティーユ一括`,
-    '配偶者ビザ申請に必要なフィリピン書類（CENOMAR・PSA出生証明書・NBI Clearance）をDFAアポスティーユ付きで代行取得。渡航不要・日本語だけでOK。無料相談。',
+    '配偶者ビザに必要なPSA書類・CENOMAR・NBI・アポスティーユを一括代行取得。¥50,000〜（税込）。納期4〜6週間。渡航不要・日本語対応。無料相談。',
   );
   return (
     <PageLayout
