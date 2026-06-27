@@ -982,7 +982,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar', 'index.html'),
-    title: `CENOMARとは｜フィリピン独身証明書の取得方法【${SEO_YEAR_MONTH_JA}】代行可・渡航不要`,
+    title: `CENOMAR取得代行｜フィリピン独身証明書を渡航不要で取り寄せ【${SEO_YEAR_MONTH_JA}】`,
     description: 'CENOMARはフィリピンに行かずに取得できます。PSA申請からDFAアポスティーユ・DHL郵送まで一括代行。国際結婚・配偶者ビザ・帰化申請に対応。通常4〜6週間。まず無料相談を。',
     canonical: `${BASE}/ja/cenomar/`,
     lang: 'ja',

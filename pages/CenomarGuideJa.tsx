@@ -17,7 +17,7 @@ import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } f
 
 export default function CenomarGuideJa() {
   useMeta(
-    `CENOMARとは｜フィリピン独身証明書の取得方法【${SEO_YEAR_MONTH_JA}】代行可・渡航不要`,
+    `CENOMAR取得代行｜フィリピン独身証明書を渡航不要で取り寄せ【${SEO_YEAR_MONTH_JA}】`,
     'CENOMARが必要だけどフィリピンに行けない方へ。渡航不要・日本語だけで取得完了。国際結婚・配偶者ビザ・帰化申請に対応。24時間以内に返信。',
   );
   return (
@@ -155,10 +155,10 @@ export default function CenomarGuideJa() {
 
         <SectionDivider variant="beige">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
-            CENOMARとは何か（独身証明書）
+            CENOMAR（独身証明書）を渡航不要で取得代行
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            CENOMARは <strong>Certificate of No Marriage Record</strong> の略称で、<a href="https://psa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン統計局（PSA公式サイト）</a>が発行する公的書類です。日本語では<strong>「独身証明書」</strong>に相当し、現在フィリピンに婚姻記録がないことを証明します。
+            CENOMARは <strong>Certificate of No Marriage Record</strong> の略称で、<a href="https://psa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン統計局（PSA公式サイト）</a>が発行する公的書類です。日本語では<strong>「独身証明書」</strong>に相当し、現在フィリピンに婚姻記録がないことを証明します。意味・正式名称・読み方をくわしく知りたい方は <a href="/ja/cenomar-toha/" className="underline hover:text-primary">CENOMARとは？意味・正式名称・使い方</a> をご覧ください。本ページは<strong>渡航不要での取得代行</strong>を中心にご案内します。
           </p>
           <p className="text-gray-700 leading-relaxed mb-3">
             国際結婚の手続き・配偶者ビザ申請・帰化申請・フィリピンでの婚姻手続きなど、フィリピン人の婚姻状況を確認する必要がある場面で提出を求められることがあります。
