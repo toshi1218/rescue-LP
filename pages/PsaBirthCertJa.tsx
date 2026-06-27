@@ -115,7 +115,7 @@ export default function PsaBirthCertJa() {
         title="フィリピン出生証明書の取り寄せ代行"
         subtitle="フィリピンPSA出生証明書を日本から取り寄せ。国際結婚、配偶者ビザ準備、帰化申請など、提出先に合わせて必要な形式を確認しながら進めます。"
         badges={['日本語だけで取り寄せOK', 'DFAアポスティーユ込み対応', '渡航不要']}
-        ctaText="無料相談はこちら"
+        ctaText="無料相談・見積もりを依頼する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
@@ -175,6 +175,33 @@ export default function PsaBirthCertJa() {
         </SectionDivider>
       </div>
 
+      {/* タイムライン */}
+      <section className="max-w-2xl mx-auto px-4 mb-8">
+        <div className="bg-blue-50 rounded-xl border border-blue-100 p-4">
+          <h3 className="text-sm font-bold text-blue-900 mb-3 flex items-center gap-2">
+            <Clock className="w-4 h-4" />申込から書類到着までの目安
+          </h3>
+          <div className="flex items-start gap-1 text-xs text-blue-800">
+            {[
+              { step: '1', label: '無料相談・見積もり', days: '即日〜翌日' },
+              { step: '2', label: 'PSA書類取得', days: '約2〜3週間' },
+              { step: '3', label: 'DFAアポスティーユ', days: '約1〜2週間' },
+              { step: '4', label: 'DHL発送・到着', days: '約1週間' },
+            ].map((s, i, arr) => (
+              <React.Fragment key={s.step}>
+                <div className="flex flex-col items-center flex-1 text-center">
+                  <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs mb-1">{s.step}</div>
+                  <p className="font-semibold leading-tight">{s.label}</p>
+                  <p className="text-blue-600 mt-0.5">{s.days}</p>
+                </div>
+                {i < arr.length - 1 && <div className="flex items-center pt-3 text-blue-300 font-bold px-0.5">→</div>}
+              </React.Fragment>
+            ))}
+          </div>
+          <p className="text-xs text-blue-700 mt-3 border-t border-blue-100 pt-2">合計の目安：<strong>約1か月〜1か月半</strong>。婚姻届・ビザ申請の期日が決まっている方は早めにご相談ください。</p>
+        </div>
+      </section>
+
       <SummaryBlock
         conclusion="フィリピン出生証明書（PSA・アポスティーユ付き）を、日本から日本語だけで取り寄せできます。"
         points={[
@@ -185,6 +212,24 @@ export default function PsaBirthCertJa() {
         ]}
         ctaText="無料で相談する"
       />
+
+      {/* 決断トリガー */}
+      <section className="max-w-2xl mx-auto px-4 mb-8 text-sm text-gray-700">
+        <p className="font-bold text-base text-gray-900 mb-3">こんな状況でご相談いただいています</p>
+        <ul className="space-y-2">
+          {[
+            '国際結婚の婚姻届提出のために、PSA出生証明書＋DFAアポスティーユが必要と言われた',
+            '配偶者ビザ（日本・米国・カナダ等）の申請で提出を求められた',
+            'PSAに記録がないと言われて、どうすればいいか分からない',
+            '帰化申請で法務局から出生証明書の提出を求められた',
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {/* 訴求ブロック */}
       <section className="mb-12 rounded-2xl bg-amber-50 border border-amber-200 p-6">
@@ -227,12 +272,12 @@ export default function PsaBirthCertJa() {
       />
 
       <CtaBox
-        title="「PSAに記録がない」場合も相談できます"
-        description="LCR申請・遅延登録など、複雑なケースにも対応しています。まず状況をお知らせください。"
-        buttonText="無料で相談する"
+        title="「PSAに記録がない」場合も対応しています"
+        description="LCR申請・遅延登録など、複雑なケースも経験があります。現在の状況をお知らせいただければ、進め方と費用の目安を即日でご案内します。"
+        buttonText="無料相談・見積もりを依頼する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="見積もり無料・即日回答 ｜ 着手金50%・書類写し確認後に残金50% ｜ 着手前キャンセル無料"
       />
 
       <FeatureList
@@ -296,8 +341,8 @@ export default function PsaBirthCertJa() {
           { q: 'PSA出生証明書とCENOMARは違いますか？', a: '異なる書類です。PSA出生証明書は生年月日・出生地・両親の情報を証明するもので、CENOMARは婚姻記録がないこと（独身）を証明するものです。手続きによっては両方必要になる場合があります。' },
           { q: 'フィリピンに行かなくても取得できますか？', a: 'はい、フィリピン渡航不要で対応しています。日本からメールやフォームでご依頼いただければ、現地スタッフが申請・取得・DFAアポスティーユ・発送まで代行します。' },
         ]}
-        ctaTitle="まずは状況をお聞かせください"
-        ctaButton="無料相談フォームへ"
+        ctaTitle="PSA出生証明書のご相談は無料・即日回答"
+        ctaButton="無料相談・見積もりを依頼する"
       />
       <RelatedArticles
         items={[

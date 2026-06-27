@@ -96,16 +96,42 @@ export default function ApostilleGuideJa() {
       <HeroBanner
         title="アポスティーユ"
         subtitle="国際結婚、配偶者ビザ準備、外免切替、帰化申請など、どの場面で必要になりやすいかを分かりやすくまとめています。"
-        badges={['PSA・CENOMAR・LTO対応', 'DFA認証代行', '日本語でご相談OK']}
-        ctaText="無料で相談する"
+        badges={['PSA・CENOMAR・LTO対応', 'DFA認証代行', '日本語でご相談OK', '渡航不要']}
+        ctaText="無料相談・見積もりを依頼する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
       <article className="max-w-2xl mx-auto px-4">
 
-        <p className="text-gray-700 leading-relaxed mb-8">
+        <p className="text-gray-700 leading-relaxed mb-6">
           日本の役所、入管、警察、免許センターなどから「フィリピンの書類にアポスティーユを付けてください」と言われて、何をすればいいのか分からず止まっていませんか。このページでは、アポスティーユの意味、旧レッドリボンとの違い、必要になりやすいケース、そして進めるときの注意点をまとめて整理します。
         </p>
+
+        {/* 決断トリガー */}
+        <section className="mb-8 text-sm text-gray-700">
+          <p className="font-bold text-base text-gray-900 mb-3">こんな状況でご相談いただいています</p>
+          <ul className="space-y-2">
+            {[
+              '市区町村役場や入管から「DFAアポスティーユが必要」と言われた',
+              'PSA書類は取得したが、アポスティーユのやり方が分からない',
+              '外免切替でLTO書類＋Certification with Apostilleが必要と言われた',
+              '期日が決まっていて、できるだけ早く揃えたい',
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-2">
+                <span className="text-primary font-bold flex-shrink-0">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-4 bg-beige rounded-xl border border-gray-200 p-4">
+            <p className="text-xs font-bold text-gray-600 mb-2">代行料金の目安（税抜）</p>
+            <div className="flex gap-4 text-sm">
+              <div><span className="text-gray-500">PSA書類＋アポスティーユ：</span><strong>50,000円〜</strong></div>
+              <div><span className="text-gray-500">LTO書類＋アポスティーユ：</span><strong>100,000円〜</strong></div>
+            </div>
+            <p className="text-xs text-gray-400 mt-1">※DHL国際配送は実費別途。詳細は<a href="/ja/apostille-ryokin/" className="underline text-primary">料金ページ</a>をご確認ください。</p>
+          </div>
+        </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
@@ -151,11 +177,11 @@ export default function ApostilleGuideJa() {
 
         <CtaBox
           title="どの書類にアポスティーユが必要か、まず確認します"
-          description="何のために使う書類か、どの書類を持っているかをお知らせください。必要な流れと費用の目安をご案内します。"
-          buttonText="無料相談はこちら"
+          description="何のために使う書類か・どの書類を持っているかをお知らせください。必要な流れと費用の目安を即日でご案内します。"
+          buttonText="無料相談・見積もりを依頼する"
           href="#contact"
           variant="primary"
-          trustNote="着手前キャンセル無料・返信24時間以内"
+          trustNote="見積もり無料・即日回答 ｜ 着手前キャンセル無料"
         />
 
         <section className="mb-8">
@@ -199,12 +225,12 @@ export default function ApostilleGuideJa() {
       </article>
 
       <CtaBox
-        title="まずは無料でご相談ください"
-        description="何のために使う書類か、どの書類を持っているかをお知らせください。必要な流れと費用の目安をご案内します。"
-        buttonText="自分のケースを確認する"
+        title="アポスティーユの手配、まずは無料相談から"
+        description="何のために使う書類か・どの書類を持っているかをお知らせください。必要な流れと費用の目安を即日でご案内します。"
+        buttonText="無料相談・見積もりを依頼する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い"
+        trustNote="見積もり無料・即日回答 ｜ 着手金50%・書類写し確認後に残金50% ｜ 着手前キャンセル無料"
       />
 
       <StepList
@@ -268,8 +294,8 @@ export default function ApostilleGuideJa() {
             a: 'DFAアポスティーユの取得には通常1〜2週間かかります。PSA書類の取得（2〜3週間）と合わせると、合計で1か月〜6週間が目安です。繁忙期や書類の種類によって前後することがあります。',
           },
         ]}
-        ctaTitle="まずは無料相談"
-        ctaButton="無料相談フォームへ"
+        ctaTitle="アポスティーユのご相談は無料・即日回答"
+        ctaButton="無料相談・見積もりを依頼する"
       />
 
       <RelatedArticles
