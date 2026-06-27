@@ -2031,6 +2031,12 @@ ${entries.join('\n')}
 
   const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
   await writeFile(sitemapPath, xml, 'utf8');
+  // Also write to dist/ so the deployed sitemap matches the generated routes,
+  // not the vite-copied snapshot of the committed public/sitemap.xml.
+  const distSitemapPath = path.join(projectRoot, 'dist', 'sitemap.xml');
+  if (existsSync(path.join(projectRoot, 'dist'))) {
+    await writeFile(distSitemapPath, xml, 'utf8');
+  }
   console.log(`\nGenerated sitemap.xml with ${entries.length} URLs.`);
 }
 
