@@ -99,7 +99,7 @@ export default function PsaBirthCertEn() {
 
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Pricing &amp; Timeline</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Retrieval Process &amp; Timeline</h2>
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">Document</dt>
@@ -136,7 +136,7 @@ export default function PsaBirthCertEn() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500 mt-2">Urgent cases may incur an additional fee. Exact quote confirmed during free consultation.</p>
+          <p className="text-xs text-gray-500 mt-2">Urgent cases may incur an additional fee. Exact quote confirmed during free consultation. For a full cost breakdown including PSA fee, Apostille, and shipping, see <a href="/en/psa-birth-certificate-cost/" className="underline hover:text-primary">PSA Birth Certificate Cost</a>.</p>
         </SectionDivider>
       </div>
 
@@ -214,7 +214,7 @@ export default function PsaBirthCertEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.' },
+          { q: 'How much does it cost?', a: 'All-inclusive from USD $349 (PSA retrieval + DFA Apostille + DHL shipping). For the full cost breakdown including PSA official fees and shipping estimates by country, see our dedicated <a href="/en/psa-birth-certificate-cost/" className="underline hover:text-primary">PSA Birth Certificate Cost page</a>.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
           { q: 'Can I order CENOMAR and Birth Certificate together?', a: 'Yes. Bundling multiple documents is common for K-1 and CR-1 petitions. We handle them together at no extra coordination cost.' },
