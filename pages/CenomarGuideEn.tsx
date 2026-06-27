@@ -12,8 +12,8 @@ import RelatedArticles from '../components/RelatedArticles';
 
 export default function CenomarGuideEn() {
   useMeta(
-    'What Is CENOMAR? Meaning, How to Get It & Costs [2026]',
-    'CENOMAR = Certificate of No Marriage Record, issued by PSA Philippines. Required for K-1, spouse visa & marriage abroad. We retrieve it — no trip needed.',
+    'Get CENOMAR from Abroad [2026] — PSA + Apostille + DHL, All-Inclusive',
+    'We retrieve CENOMAR from PSA, get DFA Apostille, and ship worldwide via DHL — from US$349 all-in. No trip to the Philippines needed. Free consultation.',
   );
   return (
     <PageLayout
@@ -99,22 +99,22 @@ export default function CenomarGuideEn() {
       ]}
     >
       <HeroBanner
-        title="What Is CENOMAR? — Certificate of No Marriage Record Explained"
-        badges={['Ships Worldwide via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
-        ctaText="Free Consultation"
+        title="Get Your PSA CENOMAR From Abroad — No Trip to the Philippines"
+        badges={['Ships Worldwide via DHL', 'DFA Apostille Included', 'For OFWs & Filipinos Abroad']}
+        ctaText="Get a Free Quote"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="June 27, 2026"
       />
 
       <div className="max-w-2xl mx-auto px-4 mb-6">
         <p className="text-sm text-gray-600 leading-relaxed mb-3">
-          <strong>CENOMAR stands for Certificate of No Marriage Record.</strong>{' '}
-          It is an official document issued by the{' '}
+          <strong>Already living abroad and need a PSA CENOMAR for your visa or marriage application?</strong>{' '}
+          You don't have to fly back to the Philippines. Our Cebu-based team retrieves your{' '}
           <a href="https://psa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Philippine Statistics Authority (PSA)</a>{' '}
-          that certifies a Filipino citizen has no marriage record on file — in other words, proof that the person has never been married in the Philippines.
+          CENOMAR, handles the DFA Apostille, and ships the original document directly to your address worldwide via DHL.
         </p>
         <p className="text-sm text-gray-600 leading-relaxed">
-          CENOMAR is required for K-1 fiancé visa applications, CR-1/IR-1 spouse visas, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and most immigration applications involving a Filipino national. It must typically be issued within 6 months of submission and may require a DFA Apostille depending on the destination country.
+          A CENOMAR (Certificate of No Marriage Record) proves you are legally single in the Philippines, and is required for K-1 fiancé visas, CR-1/IR-1 spouse visas, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and marriage registration in the UAE and Gulf countries. It must usually be issued within 6 months of submission and apostilled depending on the destination — we confirm the exact requirement for your case before you pay.
         </p>
       </div>
 
