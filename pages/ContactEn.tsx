@@ -35,7 +35,7 @@ export default function ContactEn() {
         Tell us your case and we will confirm what documents you need, how long it takes, and the all-inclusive price.
       </p>
       <p className="text-xs text-gray-500 mb-4">
-        We handle inquiries by email only. The form below sends your message to our inbox.
+        Fastest reply: message us on WhatsApp. You can also use the form below or email us — whichever is easiest for you.
       </p>
 
       {/* Trust badges */}
@@ -50,13 +50,31 @@ export default function ContactEn() {
         </span>
         <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
           <Mail className="w-3.5 h-3.5 text-primary" />
-          Email only
+          WhatsApp &amp; email
         </span>
         <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
           <Clock className="w-3.5 h-3.5 text-primary" />
           Mon-Fri, 9:00-17:00 PHT
         </span>
       </div>
+
+      {/* WhatsApp fast lane — primary channel for overseas clients */}
+      <a
+        href="https://wa.me/639452833727"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => trackEvent('cta_click', { location: 'contact_top', type: 'whatsapp', page_path: window.location.pathname })}
+        aria-label="Chat with us on WhatsApp (opens in new tab)"
+        className="mb-6 flex items-center gap-3 max-w-xl rounded-xl border border-[#25D366]/30 bg-[#25D366]/5 px-4 py-3 hover:bg-[#25D366]/10 transition-all"
+      >
+        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366] text-white flex-shrink-0">
+          <WhatsAppIcon />
+        </span>
+        <span className="flex-1">
+          <span className="block text-sm font-bold text-secondary">Prefer to chat? Message us on WhatsApp</span>
+          <span className="block text-xs text-gray-500">Fastest way to reach us — quick questions, quotes, and updates.</span>
+        </span>
+      </a>
 
       {submitted ? (
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
