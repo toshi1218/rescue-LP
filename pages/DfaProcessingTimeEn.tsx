@@ -8,10 +8,11 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_TITLE_BADGE_EN } from '../lib/seoDate';
 
 export default function DfaProcessingTimeEn() {
   useMeta(
-    'DFA Apostille Processing Time [April 2026]',
+    `DFA Apostille Processing Time ${SEO_TITLE_BADGE_EN}`,
     'DFA Apostille takes 5–10 business days. Worried about your visa deadline? Our express proxy service can help you meet it. Free consultation to check your timeline.',
   );
   return (

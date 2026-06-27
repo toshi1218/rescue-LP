@@ -9,10 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
+import { SEO_TITLE_BADGE_EN } from '../lib/seoDate';
 
 export default function CanadaDocsEn() {
   useMeta(
-    'PH Documents for Canada Immigration [April 2026]',
+    `PH Documents for Canada Immigration ${SEO_TITLE_BADGE_EN}`,
     'Applying for Canada PR or spousal sponsorship? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for IRCC. Ships via DHL. Free consultation.',
   );
   return (
