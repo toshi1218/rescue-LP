@@ -114,15 +114,30 @@ export default function LicenseConversionJa() {
         title="外免切替"
         subtitle="フィリピン運転免許を日本免許に切り替える（外免切替）に必要な条件・費用・LTO書類の流れをまとめています。書類の取り寄せは現地スタッフが代行します。"
         badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり', '法人・複数名対応可']}
-        ctaText="書類を確認する"
+        ctaText="無料相談・見積もりを依頼する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
 
-      {/* リード文 */}
-      <section className="mb-6 text-sm text-gray-700 leading-relaxed space-y-2">
-        <p>フィリピン免許を日本の免許に切り替えるには、「免許取得後にフィリピンへ通算3か月以上滞在した」証明が必要です。免許を持っているだけでは切替できません。</p>
-        <p>このページでは確認すべき条件・必要書類・よくあるつまずきを整理しています。</p>
+      {/* リード文 → 決断トリガー */}
+      <section className="mb-6 text-sm text-gray-700 leading-relaxed">
+        <p className="font-bold text-base text-gray-900 mb-3">こんな状況でご相談いただいています</p>
+        <ul className="space-y-2">
+          {[
+            'フィリピン人の配偶者・パートナーの免許を日本免許に切り替えたい',
+            '転職先・就職先から書類提出を求められ、期日がある',
+            'LTOや免許センターに問い合わせたが手続きがよく分からなかった',
+            '企業採用でフィリピン人スタッフの免許書類を複数名まとめて準備したい',
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 text-amber-900 text-xs">
+          <span className="font-bold">⏱ 重要：</span>LTO書類＋DFAアポスティーユの取得には通常<strong>約1か月〜1か月半</strong>かかります。免許センターへの提出期日が決まっている方は、早めにご相談ください。
+        </p>
       </section>
 
       <div className="max-w-2xl mx-auto px-4">
@@ -168,6 +183,31 @@ export default function LicenseConversionJa() {
           <p className="text-xs text-gray-500 mt-1">DFAアポスティーユ単体の料金・費用内訳は<a href="/ja/apostille-ryokin/" className="text-primary underline">DFAアポスティーユの料金ページ</a>で詳しく解説しています。</p>
         </SectionDivider>
       </div>
+
+      {/* タイムライン */}
+      <section className="mb-8 bg-blue-50 rounded-xl border border-blue-100 p-4">
+        <h3 className="text-sm font-bold text-blue-900 mb-3 flex items-center gap-2">
+          <Clock className="w-4 h-4" />申込から免許センター提出までの目安
+        </h3>
+        <div className="flex items-start gap-1 text-xs text-blue-800">
+          {[
+            { step: '1', label: '無料相談・見積もり', days: '即日〜翌日' },
+            { step: '2', label: 'LTO書類取得', days: '約2〜4週間' },
+            { step: '3', label: 'DFAアポスティーユ', days: '約1〜2週間' },
+            { step: '4', label: 'DHL発送・到着', days: '約1週間' },
+          ].map((s, i, arr) => (
+            <React.Fragment key={s.step}>
+              <div className="flex flex-col items-center flex-1 text-center">
+                <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs mb-1">{s.step}</div>
+                <p className="font-semibold leading-tight">{s.label}</p>
+                <p className="text-blue-600 mt-0.5">{s.days}</p>
+              </div>
+              {i < arr.length - 1 && <div className="flex items-center pt-3 text-blue-300 font-bold px-0.5">→</div>}
+            </React.Fragment>
+          ))}
+        </div>
+        <p className="text-xs text-blue-700 mt-3 border-t border-blue-100 pt-2">合計の目安：<strong>約1か月〜1か月半</strong>。提出期日から逆算して早めのご依頼をおすすめします。</p>
+      </section>
 
       {/* Section 1 */}
       <section className="mb-10">
@@ -251,12 +291,12 @@ export default function LicenseConversionJa() {
       </section>
 
       <CtaBox
-        title="LTO書類の取り寄せ、まず確認します"
-        description="どの書類が必要か、ORの有無、現在の状況をお知らせください。必要書類と費用の目安をご案内します。"
-        buttonText="無料相談はこちら"
+        title="LTO書類の取り寄せ、まず状況を確認します"
+        description="免許証・ORの有無・滞在歴の状況をお知らせください。必要書類と費用の目安を即日でご案内します。提出期日がある場合は、その日付も添えてください。"
+        buttonText="無料相談・見積もりを依頼する"
         href="#contact"
         variant="primary"
-        trustNote="着手前キャンセル無料・返信24時間以内 ｜ 法人・複数名一括対応可"
+        trustNote="見積もり無料・即日回答 ｜ 着手前キャンセル無料 ｜ 法人・複数名一括対応可"
       />
 
       {/* Section 4 */}
@@ -324,6 +364,15 @@ export default function LicenseConversionJa() {
         />
       </section>
 
+      <CtaBox
+        title="法人・企業のご担当者様はこちら"
+        description="採用人数・入社時期をお知らせください。複数名一括対応・請求書払い・担当窓口の一本化に対応しています。見積もりは無料・即日回答。"
+        buttonText="法人向け無料相談"
+        href="#contact"
+        variant="secondary"
+        trustNote="請求書払い対応 ｜ 複数名一括依頼可 ｜ 採用前の事前確認もOK"
+      />
+
       <FaqSection
         items={[
           { q: 'フィリピン免許を日本の免許に切り替えるには何が必要ですか？', a: 'フィリピン免許を日本の免許に切り替える「外免切替」には、①有効なフィリピン運転免許証、②免許取得後にフィリピンで通算3か月以上滞在していた証明、③LTO書類（Certification with Apostille、License Historyなど）が必要です。免許センターごとに細かい要件が異なるため、管轄センターへの事前確認が重要です。' },
@@ -352,12 +401,12 @@ export default function LicenseConversionJa() {
       />
 
       <CtaBox
-        title="まずは状況のご確認から"
-        description="外免切替は、LTO書類を取る前の確認がとても大事です。「自分は条件を満たしているか」「どの書類が必要になりそうか」その確認からで大丈夫です。まずはご相談ください。"
-        buttonText="無料相談はこちら"
+        title="まずは状況のご確認から — 無料相談は即日回答"
+        description="「条件を満たしているか分からない」「どの書類が必要か分からない」その確認からで大丈夫です。現在の状況をお聞きし、必要書類と費用の目安を即日でご案内します。"
+        buttonText="無料相談・見積もりを依頼する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料 ｜ 法人のお客様：請求書払い・複数名一括依頼対応可"
+        trustNote="見積もり無料・即日回答 ｜ 着手金50%・書類写し確認後に残金50% ｜ 着手前キャンセル無料"
       />
 
       <RelatedLinks links={[

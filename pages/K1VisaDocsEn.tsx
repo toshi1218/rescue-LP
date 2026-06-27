@@ -92,7 +92,7 @@ export default function K1VisaDocsEn() {
               name: 'Where does the K-1 interview take place?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'At the US Embassy in Manila. Before the interview, your fiancé must complete a medical exam at an embassy-approved clinic (typically St. Luke's Medical Center Extension Clinic, BGC). We make sure PSA documents and DFA Apostille are ready well before the interview date.',
+                text: "At the US Embassy in Manila. Before the interview, your fiancé must complete a medical exam at an embassy-approved clinic (typically St. Luke's Medical Center Extension Clinic, BGC). We make sure PSA documents and DFA Apostille are ready well before the interview date.",
               },
             },
             {
