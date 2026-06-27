@@ -9,10 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
+import { SEO_TITLE_BADGE_EN } from '../lib/seoDate';
 
 export default function AustraliaDocsEn() {
   useMeta(
-    'PH Documents for Australia Immigration [April 2026]',
+    `PH Documents for Australia Immigration ${SEO_TITLE_BADGE_EN}`,
     'Applying for Australian partner visa or PR? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille. Ships to Australia via DHL. Free consultation.',
   );
   return (

@@ -9,10 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
+import { SEO_TITLE_BADGE_EN } from '../lib/seoDate';
 
 export default function CenomarApostilleEn() {
   useMeta(
-    'CENOMAR Apostille Service [April 2026] | We Handle It',
+    `CENOMAR Apostille Service ${SEO_TITLE_BADGE_EN} | We Handle It`,
     'Not sure if your CENOMAR needs DFA Apostille? We advise and handle retrieval with or without Apostille. Free consultation for marriage and visa applicants.',
   );
   return (

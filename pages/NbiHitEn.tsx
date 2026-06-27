@@ -9,10 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import { AlertTriangle, FileCheck, Globe, Clock } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
+import { SEO_TITLE_BADGE_EN } from '../lib/seoDate';
 
 export default function NbiHitEn() {
   useMeta(
-    'NBI HIT Resolution Service [April 2026] — We Fix It',
+    `NBI HIT Resolution Service ${SEO_TITLE_BADGE_EN} — We Fix It`,
     'NBI HIT (MATCH FOUND) delaying your spouse visa or immigration? We handle HIT resolution + NBI Clearance + DFA Apostille. We\'ve helped many petitioners meet their deadlines. Free consultation.',
   );
   return (
