@@ -115,8 +115,8 @@ export default function CenomarGuideJa() {
       <HeroBanner
         title="CENOMAR（独身証明書）"
         subtitle="国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。"
-        badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
-        ctaText="無料で相談する"
+        badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK', '渡航不要']}
+        ctaText="無料相談・見積もりを依頼する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
@@ -130,6 +130,27 @@ export default function CenomarGuideJa() {
         ]}
         ctaText="無料で相談する（24時間以内に返信）"
       />
+      {/* 決断トリガー */}
+      <section className="max-w-2xl mx-auto px-4 mb-6 text-sm text-gray-700">
+        <p className="font-bold text-base text-gray-900 mb-3">こんな状況でご相談いただいています</p>
+        <ul className="space-y-2">
+          {[
+            '婚姻届を出したいが、CENOMARが必要かどうか・有効期限が合うか確認したい',
+            '手元にCENOMARはあるが、発行日が古くて使えるか不安',
+            '配偶者ビザ申請のためにDFAアポスティーユ付きが必要と言われた',
+            '婚姻手続き・ビザ申請の期日が決まっていて、急いで取得したい',
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 text-amber-900 text-xs">
+          <span className="font-bold">⏱ 重要：</span>PSA取得＋DFAアポスティーユには通常<strong>約1か月〜6週間</strong>かかります。婚姻届・ビザ申請の期日が決まっている方は、早めにご相談ください。
+        </p>
+      </section>
+
       <div className="max-w-2xl mx-auto px-4 my-6">
         <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
           <div className="flex items-start gap-3">
@@ -201,6 +222,31 @@ export default function CenomarGuideJa() {
           </div>
           <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
         </SectionDivider>
+
+        {/* タイムライン */}
+        <section className="mb-8 bg-blue-50 rounded-xl border border-blue-100 p-4">
+          <h3 className="text-sm font-bold text-blue-900 mb-3 flex items-center gap-2">
+            <Clock className="w-4 h-4" />申込から書類到着までの目安
+          </h3>
+          <div className="flex items-start gap-1 text-xs text-blue-800">
+            {[
+              { step: '1', label: '無料相談・見積もり', days: '即日〜翌日' },
+              { step: '2', label: 'PSA CENOMAR取得', days: '約1〜3週間' },
+              { step: '3', label: 'DFAアポスティーユ', days: '約1〜2週間' },
+              { step: '4', label: 'DHL発送・到着', days: '約1週間' },
+            ].map((s, i, arr) => (
+              <React.Fragment key={s.step}>
+                <div className="flex flex-col items-center flex-1 text-center">
+                  <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs mb-1">{s.step}</div>
+                  <p className="font-semibold leading-tight">{s.label}</p>
+                  <p className="text-blue-600 mt-0.5">{s.days}</p>
+                </div>
+                {i < arr.length - 1 && <div className="flex items-center pt-3 text-blue-300 font-bold px-0.5">→</div>}
+              </React.Fragment>
+            ))}
+          </div>
+          <p className="text-xs text-blue-700 mt-3 border-t border-blue-100 pt-2">合計の目安：<strong>約1か月〜6週間</strong>。提出期日から逆算して早めのご依頼をおすすめします。</p>
+        </section>
 
         <SectionDivider variant="white">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
@@ -294,12 +340,12 @@ export default function CenomarGuideJa() {
       </article>
 
       <CtaBox
-        title="まずは無料相談"
-        description="ご自身のケースでCENOMARだけで足りるのか、DFA Apostilleまで必要なのか、今ある書類が使える可能性があるのかを確認したい方は、まずはご相談ください。内容を確認したうえで、必要な書類と進め方をご案内します。"
-        buttonText="自分の用途を相談する"
+        title="CENOMARが必要かどうか、まず確認します"
+        description="「CENOMARだけで足りるか」「DFAアポスティーユまで必要か」「手元の書類が使えるか」——その確認からで大丈夫です。用途・提出先・期日をお聞きして、必要書類と費用の目安を即日でご案内します。"
+        buttonText="無料相談・見積もりを依頼する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い"
+        trustNote="見積もり無料・即日回答 ｜ 着手金50%・書類写し確認後に残金50% ｜ 着手前キャンセル無料"
       />
 
       <StepList
@@ -365,8 +411,8 @@ export default function CenomarGuideJa() {
               a: 'CENOMARは婚姻記録がないことを証明する書類です。出生証明書（PSA Birth Certificate）は生年月日・出生地・両親の情報を証明する書類です。手続きによっては両方必要になる場合があります。',
             },
           ]}
-          ctaTitle="CENOMARについてご不明な点はお気軽にご相談ください"
-          ctaButton="無料で相談する"
+          ctaTitle="CENOMARについてのご相談は無料・即日回答"
+          ctaButton="無料相談・見積もりを依頼する"
         />
       </div>
 
