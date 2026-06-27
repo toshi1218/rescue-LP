@@ -5,6 +5,8 @@ import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
+import SectionDivider from '../components/SectionDivider';
+import { CheckCircle, Clock } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
@@ -64,11 +66,90 @@ export default function PsaCostJa() {
       <HeroBanner
         title="PSA出生証明書の取得費用"
         subtitle="PSAの現地料金は365ペソ。日本へ届けるまでの費用の全体像を整理して解説します。"
-        badges={['現地料金を解説', 'アポスティーユ込み対応', '日本語でご相談OK']}
-        ctaText="無料で相談する"
+        badges={['現地料金を解説', 'アポスティーユ込み対応', '日本語でご相談OK', '渡航不要']}
+        ctaText="無料相談・見積もりを依頼する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
+      {/* 料金サマリー */}
+      <div className="max-w-2xl mx-auto px-4">
+        <SectionDivider variant="beige">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">代行料金（税抜）の目安</h2>
+          <dl className="grid grid-cols-2 gap-3 text-sm mb-4">
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">PSA取得＋DFAアポスティーユ込み</dt>
+              <dd className="font-bold text-gray-900 text-base">50,000円〜</dd>
+              <dd className="text-gray-400 text-xs mt-1">※DHL国際配送は実費別途</dd>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-100 p-3">
+              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
+              <dd className="font-medium text-gray-800">約1か月〜1か月半</dd>
+            </div>
+          </dl>
+          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
+            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
+              <div className="px-4 py-3 font-bold">内容</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+            </div>
+            {[
+              { label: 'PSA出生証明書取得', price: '込み' },
+              { label: 'DFAアポスティーユ認証', price: '込み' },
+              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+            ].map((row, i) => (
+              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
+
+          {/* タイムライン */}
+          <div className="mt-4 bg-blue-50 rounded-xl border border-blue-100 p-4">
+            <h3 className="text-sm font-bold text-blue-900 mb-3 flex items-center gap-2">
+              <Clock className="w-4 h-4" />申込から書類到着までの目安
+            </h3>
+            <div className="flex items-start gap-1 text-xs text-blue-800">
+              {[
+                { step: '1', label: '無料相談・見積もり', days: '即日〜翌日' },
+                { step: '2', label: 'PSA書類取得', days: '約2〜3週間' },
+                { step: '3', label: 'DFAアポスティーユ', days: '約1〜2週間' },
+                { step: '4', label: 'DHL発送・到着', days: '約1週間' },
+              ].map((s, i, arr) => (
+                <React.Fragment key={s.step}>
+                  <div className="flex flex-col items-center flex-1 text-center">
+                    <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs mb-1">{s.step}</div>
+                    <p className="font-semibold leading-tight">{s.label}</p>
+                    <p className="text-blue-600 mt-0.5">{s.days}</p>
+                  </div>
+                  {i < arr.length - 1 && <div className="flex items-center pt-3 text-blue-300 font-bold px-0.5">→</div>}
+                </React.Fragment>
+              ))}
+            </div>
+            <p className="text-xs text-blue-700 mt-3 border-t border-blue-100 pt-2">合計の目安：<strong>約1か月〜1か月半</strong></p>
+          </div>
+        </SectionDivider>
+      </div>
+
+      {/* 決断トリガー */}
+      <section className="max-w-2xl mx-auto px-4 mb-8 text-sm text-gray-700">
+        <p className="font-bold text-base text-gray-900 mb-3">こんな状況でご相談いただいています</p>
+        <ul className="space-y-2">
+          {[
+            '「PSA出生証明書はいくらかかるのか」費用の全体像を知りたい',
+            '国際結婚・配偶者ビザ申請に向けてPSA＋アポスティーユを取り寄せたい',
+            '自分で取得しようとしたが、手順が複雑で困っている',
+            '提出期日が決まっていて、早急に揃えたい',
+          ].map((item, i) => (
+            <li key={i} className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <article className="max-w-2xl mx-auto px-4">
 
         <p className="text-gray-700 leading-relaxed mb-4">
@@ -138,12 +219,12 @@ export default function PsaCostJa() {
       </article>
 
       <CtaBox
-        title="まずは無料でお見積もり"
-        description="必要書類とご希望内容を確認し、無料でお見積もりをお出しします。"
-        buttonText="無料相談はこちら"
+        title="PSA出生証明書、費用・期間の目安をすぐお伝えします"
+        description="用途（国際結婚・ビザ申請・帰化申請）と提出先をお知らせください。費用の見積もりを即日でご案内します。「まず費用を確認してから決めたい」方もお気軽にどうぞ。"
+        buttonText="無料相談・見積もりを依頼する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い"
+        trustNote="見積もり無料・即日回答 ｜ 着手金50%・書類写し確認後に残金50% ｜ 着手前キャンセル無料"
       />
 
       <StepList
