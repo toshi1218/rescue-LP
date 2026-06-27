@@ -12,8 +12,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function Cr1VisaDocsEn() {
   useMeta(
-    'CR-1 Visa Documents — NVC Ready [April 2026]',
-    'US petitioner for CR-1/IR-1 visa? We retrieve PSA Marriage Certificate, NBI Clearance + DFA Apostille for NVC submission and ship to your US address. Free consultation for American petitioners.',
+    'CR-1 / IR-1 Visa: Philippine Documents Checklist + Apostille [2026]',
+    'Complete checklist of Philippine documents for a CR-1/IR-1 spouse visa: PSA Marriage & Birth Certificate, NBI Clearance + DFA Apostille for NVC. We retrieve and ship from the Philippines via DHL. Free quote.',
   );
   return (
     <PageLayout

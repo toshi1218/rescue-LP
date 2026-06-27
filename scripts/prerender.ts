@@ -681,8 +681,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cr1-visa-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cr1-visa-documents', 'index.html'),
-    title: `CR-1 Visa Philippine Documents [${SEO_YEAR}] — PSA + Apostille for NVC`,
-    description: `CR-1/IR-1 spouse visa? Get PSA Marriage Certificate, Birth Certificate, NBI Clearance + DFA Apostille ready for NVC. We handle everything from abroad. Free quote.`,
+    title: `CR-1 / IR-1 Visa: Philippine Documents Checklist + Apostille [${SEO_YEAR}]`,
+    description: `Complete checklist of Philippine documents for a CR-1/IR-1 spouse visa: PSA Marriage & Birth Certificate, NBI Clearance + DFA Apostille for NVC. We retrieve and ship from the Philippines via DHL. Free quote.`,
     canonical: `${BASE}/en/cr1-visa-documents/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cr1-visa-documents/`,
