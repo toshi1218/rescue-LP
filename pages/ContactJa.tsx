@@ -50,7 +50,7 @@ export default function ContactJa() {
         </span>
         <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
           <Mail className="w-3.5 h-3.5 text-primary" />
-          メール・LINE対応
+          公式LINE & Email
         </span>
         <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
           <Clock className="w-3.5 h-3.5 text-primary" />
