@@ -1324,7 +1324,6 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/haigusha-visa-shorui/`,
     ogType: 'article',
     datePublished: SEO_DATE_ISO,
-    noindex: true,
   },
   {
     path: '/en/japan-first-vs-philippines-first-marriage/',
