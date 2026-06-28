@@ -217,7 +217,15 @@
 /ja/business/gyoseishoshi    /ja/business/gyoseishoshi/   301
 /ja/business/kigyou          /ja/business/kigyou/         301
 
+# ── KO pages removed — redirect to EN equivalents ─────────────────
+/ko/                           /en/                          301
+/ko/pricing/                   /en/pricing/                  301
+/ko/f-6-philippines-documents/ /en/f-6-philippines-documents/ 301
+/ko/psa-ecertificate-hanguk/   /en/psa-ecertificate-abroad/  301
+/ko/nbi-clearance/             /en/nbi-clearance/            301
+/ko/contact/                   /en/contact/                  301
+/ko/*                          /en/                          301
+
 # ── SPA フォールバック（言語別 index を返すことで lang 属性を正しく維持） ──
 /ja/*  /ja/index.html  200
-/ko/*  /ko/index.html  200
 /*     /en/index.html  200
