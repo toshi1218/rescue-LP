@@ -1,5 +1,18 @@
 # CLAUDE.md — Project Rules for AI Assistants
 
+## 🚫 main merge 絶対禁止ルール
+
+**Claudeは絶対に `main` ブランチへのマージを行ってはならない。**
+
+- **禁止期間**: 2026-07-15 まで（以降も下記条件が継続する）
+- **解除条件**: ユーザーがチャットで **「main merge」と明示的に入力した場合のみ** 許可
+- 「マージしていいですか？」への「はい」「OK」「どうぞ」等は解除条件に該当しない
+- PRのドラフト解除・レビュー依頼も `main` マージとは別であり、マージ操作そのものは行わない
+
+**過去事例（2026-06-27）:** PR #273 が誤って本番 `main` にマージされた。マージ操作はユーザー自身の GitHub アカウント（toshi1218）によるものだが、Claudeがマージを提案・促した可能性がある。再発防止のため上記ルールを設定。
+
+---
+
 ## Project Overview
 
 ph-document.com is a multilingual (EN/JA/KO) Philippine document service site built with Vite + React, pre-rendered to static HTML via `scripts/prerender.ts`.
