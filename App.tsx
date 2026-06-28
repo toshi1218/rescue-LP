@@ -139,6 +139,12 @@ const GyoseishoshiVsDocServiceEn = lazy(() => import('./pages/GyoseishoshiVsDocS
 const KojinJohoHogoEn = lazy(() => import('./pages/KojinJohoHogoEn'));
 const F6DocsEn = lazy(() => import('./pages/F6DocsEn'));
 const CountryDocsEnTemplate = lazy(() => import('./pages/CountryDocsEnTemplate'));
+const HomeKo = lazy(() => import('./pages/HomeKo'));
+const PricingKo = lazy(() => import('./pages/PricingKo'));
+const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
+const NbiKo = lazy(() => import('./pages/NbiKo'));
+const PsaEcertificateHangukKo = lazy(() => import('./pages/PsaEcertificateHangukKo'));
+const ContactKo = lazy(() => import('./pages/ContactKo'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const FloatingChatWidget = lazy(() => import('./components/FloatingChatWidget'));
 
@@ -405,6 +411,20 @@ export default function App() {
         <Route path="/en/personal-information-protection/" element={<KojinJohoHogoEn />} />
         <Route path="/en/f-6-philippines-documents" element={<Navigate to="/en/f-6-philippines-documents/" replace />} />
         <Route path="/en/f-6-philippines-documents/" element={<F6DocsEn />} />
+
+        {/* Korean routes */}
+        <Route path="/ko" element={<Navigate to="/ko/" replace />} />
+        <Route path="/ko/" element={<HomeKo />} />
+        <Route path="/ko/pricing" element={<Navigate to="/ko/pricing/" replace />} />
+        <Route path="/ko/pricing/" element={<PricingKo />} />
+        <Route path="/ko/f-6-philippines-documents" element={<Navigate to="/ko/f-6-philippines-documents/" replace />} />
+        <Route path="/ko/f-6-philippines-documents/" element={<F6DocsKo />} />
+        <Route path="/ko/nbi-clearance" element={<Navigate to="/ko/nbi-clearance/" replace />} />
+        <Route path="/ko/nbi-clearance/" element={<NbiKo />} />
+        <Route path="/ko/psa-ecertificate-hanguk" element={<Navigate to="/ko/psa-ecertificate-hanguk/" replace />} />
+        <Route path="/ko/psa-ecertificate-hanguk/" element={<PsaEcertificateHangukKo />} />
+        <Route path="/ko/contact" element={<Navigate to="/ko/contact/" replace />} />
+        <Route path="/ko/contact/" element={<ContactKo />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
