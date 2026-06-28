@@ -78,7 +78,7 @@ export default function NbiValidityEn() {
       <HeroBanner
         title="NBI Clearance Timing: Get It Right for Your Visa Interview"
         badges={['Ships via DHL', 'Deadline-Aware Scheduling', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

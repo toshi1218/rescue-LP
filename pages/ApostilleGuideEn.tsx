@@ -85,7 +85,7 @@ export default function ApostilleGuideEn() {
       <HeroBanner
         title="DFA Apostille for Philippine Documents — Shipped Worldwide"
         badges={['Paper Apostille Original', 'Ships Worldwide via DHL', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -104,7 +104,7 @@ export default function ApostilleGuideEn() {
           'Paper Apostille original shipped via DHL Express worldwide',
           'Can be combined with document retrieval for a seamless one-stop service',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

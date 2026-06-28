@@ -15,7 +15,7 @@ type RelatedArticlesProps = {
 
 const RelatedArticles: React.FC<RelatedArticlesProps> = ({
   heading = 'Related Guides',
-  items,
+  items = [],
 }) => {
   return (
     <section className="mt-10 pt-8 border-t border-gray-100">
@@ -23,7 +23,7 @@ const RelatedArticles: React.FC<RelatedArticlesProps> = ({
         <span className="h-4 w-1 rounded-full bg-primary inline-block" />
         <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">{heading}</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-3">
         {items.map((item) => (
           <Link
             key={item.href}

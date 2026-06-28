@@ -17,6 +17,8 @@ export default function ContactEn() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [referral, setReferral] = useState('');
+  const [referralError, setReferralError] = useState('');
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
 
@@ -33,7 +35,7 @@ export default function ContactEn() {
         Tell us your case and we will confirm what documents you need, how long it takes, and the all-inclusive price.
       </p>
       <p className="text-xs text-gray-500 mb-4">
-        We handle inquiries by email only. The form below sends your message to our inbox.
+        Fastest reply: message us on WhatsApp. You can also use the form below or email us — whichever is easiest for you.
       </p>
 
       {/* Trust badges */}
@@ -48,13 +50,31 @@ export default function ContactEn() {
         </span>
         <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
           <Mail className="w-3.5 h-3.5 text-primary" />
-          Email only
+          WhatsApp &amp; email
         </span>
         <span className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
           <Clock className="w-3.5 h-3.5 text-primary" />
           Mon-Fri, 9:00-17:00 PHT
         </span>
       </div>
+
+      {/* WhatsApp fast lane — primary channel for overseas clients */}
+      <a
+        href="https://wa.me/639452833727"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => trackEvent('cta_click', { location: 'contact_top', type: 'whatsapp', page_path: window.location.pathname })}
+        aria-label="Chat with us on WhatsApp (opens in new tab)"
+        className="mb-6 flex items-center gap-3 max-w-xl rounded-xl border border-[#25D366]/30 bg-[#25D366]/5 px-4 py-3 hover:bg-[#25D366]/10 transition-all"
+      >
+        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366] text-white flex-shrink-0">
+          <WhatsAppIcon />
+        </span>
+        <span className="flex-1">
+          <span className="block text-sm font-bold text-secondary">Prefer to chat? Message us on WhatsApp</span>
+          <span className="block text-xs text-gray-500">Fastest way to reach us — quick questions, quotes, and updates.</span>
+        </span>
+      </a>
 
       {submitted ? (
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
@@ -79,6 +99,11 @@ export default function ContactEn() {
             return;
           }
           setEmailError('');
+          if (!referral) {
+            setReferralError('Please select an option.');
+            return;
+          }
+          setReferralError('');
           setSubmitting(true);
           setSubmitError('');
           try {
@@ -89,7 +114,7 @@ export default function ContactEn() {
             });
             const data = await res.json();
             if (res.ok && data.success) {
-              trackEvent('form_submit', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
+              trackEvent('form_submit_success', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
               setSubmitted(true);
             } else {
               setSubmitError('Submission failed. Please try again later.');
@@ -101,7 +126,7 @@ export default function ContactEn() {
           }
         }}
       >
-        <input type="hidden" name="access_key" value="c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0" />
+        <input type="hidden" name="access_key" value="b66fdc64-e552-4ae7-bac2-8ba747bfa77a" />
         <input type="hidden" name="subject" value="[Philippine Document Service Inquiry - EN]" />
         <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
         <input type="hidden" name="cta_variant" value={ctaVariant} />
@@ -171,6 +196,36 @@ export default function ContactEn() {
             <option value="Custom Roadmap">Custom Roadmap</option>
             <option value="Other">Other</option>
           </select>
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">
+            How did you find us? <span className="text-red-500">*</span>
+          </label>
+          <select
+            name="referral_source"
+            value={referral}
+            onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+          >
+            <option value="">Select…</option>
+            <option value="Google Search">Google Search</option>
+            <option value="AI (ChatGPT / Claude / Gemini, etc.)">AI (ChatGPT / Claude / Gemini, etc.)</option>
+            <option value="Social Media (Instagram / X / Facebook)">Social Media (Instagram / X / Facebook)</option>
+            <option value="Google Ads">Google Ads</option>
+            <option value="Friend / Referral">Friend / Referral</option>
+            <option value="Other">Other</option>
+          </select>
+          {referral === 'Other' && (
+            <input
+              type="text"
+              name="referral_source_detail"
+              placeholder="Please tell us more (optional)"
+              className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              maxLength={100}
+            />
+          )}
+          {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
         </div>
 
         <div>

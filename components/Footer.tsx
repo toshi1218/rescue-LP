@@ -17,6 +17,8 @@ const Footer: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [referral, setReferral] = useState('');
+  const [referralError, setReferralError] = useState('');
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -33,9 +35,13 @@ const Footer: React.FC = () => {
       return;
     }
     setEmailError('');
+    if (!referral) {
+      setReferralError(lang === 'ja' ? '選択してください。' : 'Please select an option.');
+      return;
+    }
+    setReferralError('');
     setSubmitting(true);
     setSubmitError('');
-    trackEvent('form_submit', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
     try {
       const form = e.currentTarget;
       const res = await fetch(WEB3FORMS_ENDPOINT, {
@@ -45,11 +51,14 @@ const Footer: React.FC = () => {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        trackEvent('form_submit_success', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, service, lang, page_path: window.location.pathname });
         setSubmitted(true);
       } else {
+        trackEvent('form_submit_error', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, lang });
         setSubmitError(lang === 'ja' ? '送信に失敗しました。しばらく経ってから再度お試しください。' : 'Submission failed. Please try again later.');
       }
     } catch {
+      trackEvent('form_submit_error', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, lang });
       setSubmitError(lang === 'ja' ? '送信に失敗しました。しばらく経ってから再度お試しください。' : 'Submission failed. Please try again later.');
     } finally {
       setSubmitting(false);
@@ -61,6 +70,7 @@ const Footer: React.FC = () => {
   const termsPath   = isJa ? '/ja/terms/'    : '/en/terms/';
   const pricingPath = isJa ? '/ja/ryokin/'   : '/en/pricing/';
   const contactPath = isJa ? '/ja/contact/'  : '/en/contact/';
+  const tokushoPath = '/ja/tokusho/';
 
   return (
     <footer className="bg-white" id="contact">
@@ -109,7 +119,7 @@ const Footer: React.FC = () => {
             </ol>
             <p className="text-xs text-gray-500 mt-2 border-t border-gray-200 pt-2">
               {isJa
-                ? '※ ご提供いただいた個人情報は、ご相談・書類取得業務のみに使用します。第三者への提供は行いません。'
+                ? '※ ご提供いただいた個人情報は、ご相談・書類取得業務のみに使用し、申請・配送に必要な政府機関・現地提携スタッフ・配送業者等への提供を除き、第三者へ提供することはありません。'
                 : '* Your information is used solely for this inquiry and document procurement. We do not share it with third parties.'}
             </p>
             <p className="text-xs text-gray-500 mt-1.5">
@@ -157,7 +167,7 @@ const Footer: React.FC = () => {
           aria-label={t('footer.formAriaLabel')}
           noValidate
         >
-          <input type="hidden" name="access_key" value="c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0" />
+          <input type="hidden" name="access_key" value={lang === 'en' ? 'b66fdc64-e552-4ae7-bac2-8ba747bfa77a' : 'c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0'} />
           <input type="hidden" name="subject" value={isJa ? '【LPお問い合わせ】フィリピン書類取得代行' : '[Philippine Document Service Inquiry - EN]'} />
           <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
           <input type="hidden" name="cta_variant" value={ctaVariant} />
@@ -245,6 +255,49 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
+            <label className="block text-sm text-gray-600 mb-1">
+              {isJa ? '当社をどこでお知りになりましたか？' : 'How did you find us?'} <span className="text-red-400" aria-hidden="true">*</span>
+            </label>
+            <select
+              name="referral_source"
+              value={referral}
+              onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white"
+            >
+              <option value="">{isJa ? '選択してください' : 'Select…'}</option>
+              {isJa ? (
+                <>
+                  <option value="Google検索">Google検索</option>
+                  <option value="AI（ChatGPT / Claude / Gemini など）">AI（ChatGPT / Claude / Gemini など）</option>
+                  <option value="SNS（Instagram / X / Facebook）">SNS（Instagram / X / Facebook）</option>
+                  <option value="Google広告">Google広告</option>
+                  <option value="知人の紹介">知人の紹介</option>
+                  <option value="その他">その他</option>
+                </>
+              ) : (
+                <>
+                  <option value="Google Search">Google Search</option>
+                  <option value="AI (ChatGPT / Claude / Gemini, etc.)">AI (ChatGPT / Claude / Gemini, etc.)</option>
+                  <option value="Social Media (Instagram / X / Facebook)">Social Media (Instagram / X / Facebook)</option>
+                  <option value="Google Ads">Google Ads</option>
+                  <option value="Friend / Referral">Friend / Referral</option>
+                  <option value="Other">Other</option>
+                </>
+              )}
+            </select>
+            {referral === (isJa ? 'その他' : 'Other') && (
+              <input
+                type="text"
+                name="referral_source_detail"
+                placeholder={isJa ? 'よろしければ詳しく教えてください' : 'Please tell us more (optional)'}
+                className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                maxLength={100}
+              />
+            )}
+            {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
+          </div>
+
+          <div>
             <label htmlFor="footer-message" className="block text-sm text-gray-600 mb-1">
               {t('footer.messageLabel')}
               <span className="text-gray-400 text-xs ml-1">{isJa ? '（任意）' : '(optional)'}</span>
@@ -261,6 +314,10 @@ const Footer: React.FC = () => {
           {submitError && (
             <p role="alert" className="text-xs text-red-500">{submitError}</p>
           )}
+
+          <p className="text-xs text-emerald-700 text-center">
+            ✓ {isJa ? '書類が取得できなければ着手金を全額返金' : 'Full refund of advance payment if documents cannot be obtained'}
+          </p>
 
           <button
             type="submit"
@@ -320,6 +377,9 @@ const Footer: React.FC = () => {
           <Link to={companyPath} className="hover:text-secondary transition-colors">{t('footer.company')}</Link>
           <Link to={privacyPath} className="hover:text-secondary transition-colors">{t('footer.privacy')}</Link>
           <Link to={termsPath} className="hover:text-secondary transition-colors">{t('footer.terms')}</Link>
+          {isJa && (
+            <Link to={tokushoPath} className="hover:text-secondary transition-colors">特定商取引法に基づく表記</Link>
+          )}
           <Link to={pricingPath} className="hover:text-secondary transition-colors">{t('footer.pricingLink')}</Link>
           <Link to={contactPath} className="hover:text-secondary transition-colors">{t('footer.contactLink')}</Link>
         </div>

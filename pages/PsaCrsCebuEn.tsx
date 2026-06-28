@@ -148,7 +148,7 @@ export default function PsaCrsCebuEn() {
           <p className="text-sm text-gray-600 mb-4">
             The entrance door displays a large notice: <strong>"NO APPOINTMENT, NO TRANSACTION"</strong> and <strong>"ONLINE APPOINTMENT IS FREE."</strong> A uniformed security guard checks appointment confirmation before allowing entry.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_142533.webp"
@@ -179,7 +179,7 @@ export default function PsaCrsCebuEn() {
           <p className="text-sm text-gray-600 mb-4">
             The interior has numbered service counters (1–18+) and a large waiting area. Application, payment, and document release are handled at separate counters. A digital display shows "NOW SERVING" numbers.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_142017.webp"
@@ -210,7 +210,7 @@ export default function PsaCrsCebuEn() {
           <p className="text-sm text-gray-600 mb-4">
             Before proceeding to a counter, applicants enter their information at a self-service kiosk. A barcode-printed queue ticket is issued, which is used at the service counter.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/PSA/IMG_20260120_142106.webp"

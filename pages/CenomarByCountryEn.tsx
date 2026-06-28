@@ -199,7 +199,7 @@ export default function CenomarByCountryEn() {
       <HeroBanner
         title="CENOMAR Requirements by Country — Complete 2026 Guide"
         badges={['15+ Countries Covered', 'Updated May 2026', 'Apostille & Authentication']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="May 1, 2026"
       />
@@ -221,7 +221,7 @@ export default function CenomarByCountryEn() {
           'DHL international shipping to 15+ countries',
           'Free consultation — no commitment until you approve the quote',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <div className="max-w-3xl mx-auto px-4 mb-10">
@@ -266,7 +266,7 @@ export default function CenomarByCountryEn() {
           { q: 'What if my country is not on this list?', a: 'Contact us. We handle CENOMAR retrieval and shipping to any country worldwide. Requirements vary — we research and confirm before starting.' },
         ]}
         ctaTitle="Ready to Get Started?"
-        ctaButton="Start Free Consultation"
+        ctaButton="Free Consultation"
       />
 
       <RelatedArticles

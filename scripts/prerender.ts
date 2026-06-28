@@ -1,9 +1,10 @@
 import React from 'react';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
+import { Writable } from 'node:stream';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { renderToString } from 'react-dom/server';
+import { renderToPipeableStream } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import App from '../App';
 import { LanguageProvider } from '../lib/i18n';
@@ -394,7 +395,7 @@ const routes: RouteConfig[] = [
     path: '/en/how-to-get-cenomar-abroad/',
     outFile: path.join(projectRoot, 'dist', 'en', 'how-to-get-cenomar-abroad', 'index.html'),
     title: `How to Get CENOMAR From Abroad [${SEO_YEAR}] — No Philippines Trip Needed`,
-    description: `Get your PSA CENOMAR from outside the Philippines. Step-by-step guide for OFWs and Filipinos living abroad. We retrieve, apostille, and ship worldwide. Free quote.`,
+    description: `Get your PSA CENOMAR from outside the Philippines. For spouse visa, naturalization, and marriage procedures in Japan. We retrieve, apostille, and ship to Japan. Free quote.`,
     canonical: `${BASE}/en/how-to-get-cenomar-abroad/`,
     lang: 'en',
     enCanonical: `${BASE}/en/how-to-get-cenomar-abroad/`,
@@ -452,7 +453,7 @@ const routes: RouteConfig[] = [
     path: '/en/psa-online/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-online', 'index.html'),
     title: `PSA Online: How to Get PSA Certificates from Abroad [${SEO_YEAR}]`,
-    description: `PSA Serbilis lets you order PSA certificates online — but only ships within the Philippines. OFWs and overseas Filipinos use a document service to retrieve and ship PSA documents worldwide.`,
+    description: `PSA Serbilis lets you order PSA certificates online — but only ships within the Philippines. Those applying for spouse visa or naturalization in Japan use a document service to retrieve and ship PSA documents.`,
     canonical: `${BASE}/en/psa-online/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-online/`,
@@ -614,8 +615,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: PHP 365 — Retrieve & Ship Worldwide`,
-    description: `PSA Birth Certificate costs PHP 365/copy. We retrieve, apostille, and ship to your door from US$349 all-in. No return trip needed. Free quote.`,
+    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: PHP 365 + US$349 All-In`,
+    description: `Official PSA fee: PHP 365/copy. Full price — retrieval, DFA Apostille & DHL Express: US$349 all-in, 4–6 weeks. No hidden fees. USA, UAE, Canada, UK & more.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -953,6 +954,17 @@ const routes: RouteConfig[] = [
     ogType: 'article',
     datePublished: '2026-04-24',
   },
+  {
+    path: '/ja/psa-input-support/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'psa-input-support', 'index.html'),
+    title: 'PSAオンライン申請代行｜海外から¥16,500（税込）で申請まで代行【IGRS】',
+    description: '海外からのPSA・CENOMAR・NBIオンライン申請を日本語で代行。フォーム入力・国際クレカ支払い・送付先設定まで全て代行します。¥16,500（税込）〜。フィリピンに行かずに書類を取得したい方向け。',
+    canonical: `${BASE}/ja/psa-input-support/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/psa-input-support/`,
+    lastmod: '2026-05-15',
+  },
 
   /* ── JA canonical routes (/ja/*) ─────────────────────── */
   {
@@ -1278,6 +1290,17 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/terms/`,
   },
   {
+    path: '/ja/tokusho/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'tokusho', 'index.html'),
+    title: '特定商取引法に基づく表記｜フィリピン書類取得代行センター（IGRS Inc.）',
+    description: 'フィリピン書類取得代行センター（株式会社IGRS）の特定商取引法に基づく表記。販売業者・所在地・サービス内容・料金・支払い方法・キャンセルポリシーを掲載しています。',
+    canonical: `${BASE}/ja/tokusho/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/tokusho/`,
+    lastmod: '2026-05-15',
+  },
+  {
     path: '/ja/kojin-joho-hogo/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'kojin-joho-hogo', 'index.html'),
     title: '個人情報保護方針｜フィリピン書類取得代行センター（IGRS Inc.）',
@@ -1392,6 +1415,16 @@ const routes: RouteConfig[] = [
     lang: 'ja',
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/business/menkyo-kirikae/`,
+  },
+  {
+    path: '/ja/business/menkyo-kirikae-kigyou/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'menkyo-kirikae-kigyou', 'index.html'),
+    title: `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR_MONTH_JA}】`,
+    description: '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名100,000円〜・3名パック270,000円〜。請求書払い・複数名対応。',
+    canonical: `${BASE}/ja/business/menkyo-kirikae-kigyou/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/business/menkyo-kirikae-kigyou/`,
   },
   {
     path: '/ja/lto-koyo-kakunin/',
@@ -1811,17 +1844,40 @@ async function prerender() {
     try {
       console.log(`Prerendering ${route.path}...`);
 
-      const appHtml = renderToString(
-        React.createElement(
-          StaticRouter,
-          { location: route.path },
+      const appHtml = await new Promise<string>((resolve, reject) => {
+        let html = '';
+        const { pipe } = renderToPipeableStream(
           React.createElement(
-            LanguageProvider,
-            null,
-            React.createElement(App)
-          )
-        )
-      );
+            StaticRouter,
+            { location: route.path },
+            React.createElement(
+              LanguageProvider,
+              null,
+              React.createElement(App)
+            )
+          ),
+          {
+            onAllReady() {
+              const chunks: Buffer[] = [];
+              const writable = new Writable({
+                write(chunk: Buffer, _enc: string, cb: () => void) {
+                  chunks.push(chunk);
+                  cb();
+                },
+                final(cb: () => void) {
+                  html = Buffer.concat(chunks).toString('utf8');
+                  resolve(html);
+                  cb();
+                },
+              });
+              pipe(writable);
+            },
+            onError(err: unknown) {
+              reject(err);
+            },
+          }
+        );
+      });
 
       let html = baseHtml.replace(
         '<div id="root"></div>',

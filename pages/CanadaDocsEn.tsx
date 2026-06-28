@@ -85,7 +85,7 @@ export default function CanadaDocsEn() {
       <HeroBanner
         title="Philippine Documents for Canada Immigration"
         badges={['IRCC-Ready', 'DFA Apostille Included', 'Ships to Canada via DHL']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -98,7 +98,7 @@ export default function CanadaDocsEn() {
           'Paper Apostille originals shipped via DHL Express to your Canadian address',
           'We confirm exact IRCC requirements for your specific application type',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

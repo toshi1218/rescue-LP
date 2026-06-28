@@ -112,9 +112,9 @@ export default function PsaBirthCertJa() {
       ]}
     >
       <HeroBanner
-        title="PSA出生証明書（フィリピン）"
-        subtitle="国際結婚、配偶者ビザ準備、帰化申請など、提出先に合わせて必要な形式を確認しながら進めます。"
-        badges={['日本語だけでOK', 'DFAアポスティーユ込み対応', '渡航不要']}
+        title="フィリピン出生証明書の取り寄せ代行"
+        subtitle="フィリピンPSA出生証明書を日本から取り寄せ。国際結婚、配偶者ビザ準備、帰化申請など、提出先に合わせて必要な形式を確認しながら進めます。"
+        badges={['日本語だけで取り寄せOK', 'DFAアポスティーユ込み対応', '渡航不要']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
@@ -123,12 +123,12 @@ export default function PsaBirthCertJa() {
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
           <h2 className="text-xl font-bold text-gray-900 mb-3">
-            PSA出生証明書とは何か
+            フィリピン出生証明書（PSA）とは・取り寄せの基本
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
             PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（Philippine Statistics Authority, PSA）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚の手続きや配偶者ビザ申請、帰化申請など、身元証明が必要な場面で提出を求められます。
           </p>
-          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-sm">
+          <dl className="grid grid-cols-2 gap-3 mt-4 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">正式名称</dt>
               <dd className="font-medium text-gray-800">PSA Birth Certificate</dd>
@@ -148,12 +148,12 @@ export default function PsaBirthCertJa() {
             </div>
           </dl>
           <p className="text-gray-700 leading-relaxed mt-4 text-sm">
-            PSA出生証明書は<strong>電子認証版（PSAHelplineオンライン）</strong>と<strong>紙の原本</strong>があります。日本の市区町村役場・入管・法務局への提出では、紙の原本＋DFAアポスティーユが求められるケースがほとんどです。
+            PSA出生証明書は<strong>電子認証版（PSAHelplineオンライン）</strong>と<strong>紙の原本</strong>があります。日本の市区町村役場・入管・法務局への提出では、紙の原本＋DFAアポスティーユが求められるケースがほとんどです。日本から取り寄せる場合は、現地での申請からアポスティーユ・国際郵送までの一連の流れが必要になります。
           </p>
         </SectionDivider>
 
         <SectionDivider variant="white">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">代行料金の内訳</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">フィリピン出生証明書 取り寄せ代行料金の内訳</h2>
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
             <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
               <div className="px-4 py-3 font-bold">内容</div>
@@ -176,12 +176,12 @@ export default function PsaBirthCertJa() {
       </div>
 
       <SummaryBlock
-        conclusion="PSA出生証明書（アポスティーユ付き）を、日本語だけで取り寄せできます。"
+        conclusion="フィリピン出生証明書（PSA・アポスティーユ付き）を、日本から日本語だけで取り寄せできます。"
         points={[
-          '現地スタッフがPSA申請・DFAアポスティーユを代行',
-          '日本の提出先が求める「紙の原本＋アポスティーユ」形式で対応',
-          '「PSAに記録がない」複雑なケースも相談可能',
-          '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
+          '現地スタッフがPSA出生証明書の取り寄せ・DFAアポスティーユを代行',
+          '日本の提出先が求める「紙の原本＋アポスティーユ」形式で取り寄せ',
+          '「PSAに記録がない」など、通常の取り寄せが難しい複雑なケースも相談可能',
+          '国際結婚・配偶者ビザ・帰化申請、どの用途の取り寄せにも対応',
         ]}
         ctaText="無料で相談する"
       />
@@ -301,10 +301,13 @@ export default function PsaBirthCertJa() {
       />
       <RelatedArticles
         items={[
-          { href: '/ja/psa-late-registration', title: 'PSA記録エラー対応', description: '記録がない・名前が違うときの整理に役立ちます。' },
-          { href: '/ja/psa-shussei-cost', title: 'PSA出生証明書の料金', description: '費用の目安と内訳を確認できます。' },
-          { href: '/ja/cenomar-vs-marriage-certificate', title: 'CENOMARと婚姻証明書の違い', description: '婚姻関連の書類を取り違えないための確認ページです。' },
-          { href: '/ja/document-checklist-by-visa', title: 'ビザ別チェックリスト', description: 'どのビザで何が必要かをまとめて確認できます。' },
+          { href: '/ja/psa-late-registration/', title: 'PSA記録エラー対応', description: '記録がない・名前が違うときの整理に役立ちます。' },
+          { href: '/ja/psa-shussei-cost/', title: 'PSA出生証明書の料金', description: '費用の目安と内訳を確認できます。' },
+          { href: '/ja/cenomar-vs-marriage-certificate/', title: 'CENOMARと婚姻証明書の違い', description: '婚姻関連の書類を取り違えないための確認ページです。' },
+          { href: '/ja/apostille-ryokin/', title: 'アポスティーユの料金・費用', description: 'PSA出生証明書にアポスティーユを付ける際の料金内訳。' },
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'Regular・Expressそれぞれの処理日数を解説。' },
+          { href: '/ja/kika-shinsei-guide/', title: '帰化申請の書類代行', description: '帰化申請ではPSA出生証明書とNBI Clearanceを法務局要件で揃えます。' },
+          { href: '/ja/document-checklist-by-visa/', title: 'ビザ別チェックリスト', description: 'どのビザで何が必要かをまとめて確認できます。' },
         ]}
       />
     </PageLayout>

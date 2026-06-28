@@ -41,6 +41,7 @@ const Navbar: React.FC = () => {
     { label: t('navbar.purpose.license'),       path: '/ja/gaimen-kirikae-guide/' },
     { label: t('navbar.purpose.naturalization'),path: '/ja/kika-shinsei-guide/' },
     { label: t('navbar.purpose.nbi'),           path: '/ja/nbi-clearance/' },
+    { label: 'PSAオンライン代行',               path: '/ja/psa-input-support/' },
     { label: '個別ロードマップ作成',              path: '/ja/kokusai-kekkon-roadmap/' },
   ] : [
     { label: 'International Marriage',  path: '/en/international-marriage-guide/' },
@@ -172,6 +173,7 @@ const Navbar: React.FC = () => {
     { label: 'プライバシーポリシー', path: '/ja/privacy/' },
     { label: '個人情報保護方針',    path: '/ja/kojin-joho-hogo/' },
     { label: '利用規約',           path: '/ja/terms/' },
+    { label: '特定商取引法に基づく表記', path: '/ja/tokusho/' },
   ] : [
     { label: 'About Us',            path: '/en/company/' },
     { label: 'Privacy Policy',      path: '/en/privacy/' },

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight } from 'lucide-react';
+import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight, ChevronDown } from 'lucide-react';
 
 const packs = [
   {
@@ -55,52 +55,67 @@ const packs = [
   },
 ];
 
-const ServicePacks: React.FC = React.memo(() => (
-  <section className="py-12 bg-white">
-    <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
-      <div className="text-center mb-8">
-        <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Services</span>
-        <h2 className="text-xl font-bold text-secondary mb-2">目的が決まっている方はこちら</h2>
-        <p className="text-xs text-gray-500">必要書類・費用の目安・ご依頼の流れを目的別にまとめています</p>
-        <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3" />
+const ServicePacks: React.FC = () => {
+  const [expanded, setExpanded] = useState(false);
+  const visiblePacks = expanded ? packs : packs.slice(0, 2);
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
+        <div className="text-center mb-8">
+          <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Services</span>
+          <h2 className="text-xl font-bold text-secondary mb-2">目的が決まっている方はこちら</h2>
+          <p className="text-xs text-gray-500">必要書類・費用の目安・ご依頼の流れを目的別にまとめています</p>
+          <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3" />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {visiblePacks.map((pack, i) => (
+            <Link
+              key={pack.to}
+              to={pack.to}
+              className={`group relative bg-white border ${pack.accentBorder} rounded-2xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all overflow-hidden`}
+            >
+              {/* Number badge */}
+              <span className={`absolute top-4 right-4 font-bold text-2xl leading-none ${pack.numColor} opacity-20 font-display select-none`}>
+                {String(i + 1).padStart(2, '0')}
+              </span>
+
+              {/* Icon */}
+              <div className={`w-11 h-11 rounded-xl ${pack.accentBg} border ${pack.accentBorder} flex items-center justify-center mb-3`}>
+                <pack.icon className={`w-5 h-5 ${pack.iconColor}`} />
+              </div>
+
+              {/* Title */}
+              <p className="font-bold text-sm text-secondary leading-snug mb-1.5 group-hover:text-primary transition-colors pr-6">
+                {pack.title}
+              </p>
+
+              {/* Desc */}
+              <p className="text-xs text-gray-500 leading-relaxed mb-4">{pack.desc}</p>
+
+              {/* CTA row */}
+              <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark group-hover:gap-2 transition-all">
+                詳しく見る
+                <ArrowRight className="w-3.5 h-3.5" />
+              </span>
+            </Link>
+          ))}
+        </div>
+
+        {!expanded && (
+          <div className="text-center mt-4">
+            <button
+              onClick={() => setExpanded(true)}
+              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
+            >
+              <ChevronDown className="w-4 h-4" />
+              {`残り${packs.length - 2}件を見る`}
+            </button>
+          </div>
+        )}
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {packs.map((pack, i) => (
-          <Link
-            key={pack.to}
-            to={pack.to}
-            className={`group relative bg-white border ${pack.accentBorder} rounded-2xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all overflow-hidden`}
-          >
-            {/* Number badge */}
-            <span className={`absolute top-4 right-4 font-bold text-2xl leading-none ${pack.numColor} opacity-20 font-display select-none`}>
-              {String(i + 1).padStart(2, '0')}
-            </span>
-
-            {/* Icon */}
-            <div className={`w-11 h-11 rounded-xl ${pack.accentBg} border ${pack.accentBorder} flex items-center justify-center mb-3`}>
-              <pack.icon className={`w-5 h-5 ${pack.iconColor}`} />
-            </div>
-
-            {/* Title */}
-            <p className="font-bold text-sm text-secondary leading-snug mb-1.5 group-hover:text-primary transition-colors pr-6">
-              {pack.title}
-            </p>
-
-            {/* Desc */}
-            <p className="text-xs text-gray-500 leading-relaxed mb-4">{pack.desc}</p>
-
-            {/* CTA row */}
-            <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark group-hover:gap-2 transition-all">
-              詳しく見る
-              <ArrowRight className="w-3.5 h-3.5" />
-            </span>
-          </Link>
-        ))}
-      </div>
-    </div>
-  </section>
-));
-
-ServicePacks.displayName = 'ServicePacks';
+    </section>
+  );
+};
 export default ServicePacks;

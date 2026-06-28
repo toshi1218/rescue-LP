@@ -127,7 +127,7 @@ export default function LtoSmSeasideJa() {
             大型モール内の公的機関のため、駐車場やフードコートも完備されており、
             手続き待ちも快適な環境で行えます。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165139.jpg"
@@ -151,7 +151,7 @@ export default function LtoSmSeasideJa() {
               </figcaption>
             </figure>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165237.jpg"
@@ -186,7 +186,7 @@ export default function LtoSmSeasideJa() {
             LTO窓口の入口付近には、手続きの種類・必要書類・流れが掲示されています。
             運転経歴証明書をはじめ、運転免許証の更新・再発行など各手続きの案内が整備されています。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165332.jpg"
@@ -222,7 +222,7 @@ export default function LtoSmSeasideJa() {
             受付から書類申請・支払い・受け取りまで各ステップが整備されています。
             窓口には担当者が常駐し、来訪者の対応を行っています。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165402.jpg"
@@ -246,7 +246,7 @@ export default function LtoSmSeasideJa() {
               </figcaption>
             </figure>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165413.jpg"
@@ -283,7 +283,7 @@ export default function LtoSmSeasideJa() {
             取得後はDFAでアポスティーユ認証を受けたうえで、日本の都道府県免許センターへ提出します。
             LTO SMシーサイドでは、この書類申請の窓口受付が行われています。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165420.jpg"
@@ -307,7 +307,7 @@ export default function LtoSmSeasideJa() {
               </figcaption>
             </figure>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165455.jpg"
@@ -343,7 +343,7 @@ export default function LtoSmSeasideJa() {
             政府機関として「Citizen's Charter（市民憲章）」が掲示されており、
             処理手順・担当者・費用が公式に明示された透明性の高い運営体制です。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165510.jpg"
@@ -367,7 +367,7 @@ export default function LtoSmSeasideJa() {
               </figcaption>
             </figure>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165520.jpg"

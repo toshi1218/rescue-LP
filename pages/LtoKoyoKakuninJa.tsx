@@ -341,7 +341,7 @@ export default function LtoKoyoKakuninJa() {
         <h2 className="text-base font-bold text-gray-900 mb-4">
           採用担当者が特に注意すべきポイント
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           {[
             {
               title: 'License Historyがボトルネックになりやすい',

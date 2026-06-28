@@ -7,10 +7,16 @@ on:
 jobs:
   seo-gate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Fetch main branch
+        run: git fetch origin main --depth=1
 
       - name: Check for hreflang deletions
         run: |
@@ -51,4 +57,5 @@ jobs:
           fi
 
       - name: SEO gate passed
-        run: echo "✅ SEOゲート通過: hreflang削除・noindex追加・sitemap URL減少・robots.txt全ブロックなし"
+        run: |
+          echo "✅ SEOゲート通過: hreflang削除・noindex追加・sitemap URL減少・robots.txt全ブロックなし"

@@ -1,22 +1,58 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap } from 'lucide-react';
+import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap, LifeBuoy, Stamp } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
 const plansData = {
   ja: [
     {
+      id: 'input-support',
+      icon: LifeBuoy,
+      tag: '新プラン',
+      featured: false,
+      title: 'PSAオンライン申請代行',
+      subtitle: 'PSAへのオンライン申請フォームの入力・申請手続きを代行。書類はPSAからお客様へ直接届きます',
+      includes: [
+        'PSAオンラインフォームへの入力・申請',
+        '申請費用の支払い手続き',
+        'お客様住所への送付先設定',
+        '申請後のステータス確認',
+      ],
+      why: 'フィリピンでの物理取得・DFAアポスティーユは含まれません。日本の提出先が紙原本を必須とする場合はフルサービスへの切替もご相談いただけます',
+      price: '¥16,500',
+      priceNote: '〜（税込 / DHL不要）',
+      priceBreakdown: '申請代行 ¥15,000 + 消費税 ¥1,500',
+      period: 'オンラインで1〜2回のやり取り',
+      detailPath: '/ja/psa-input-support/',
+    },
+    {
+      id: 'apostille-only',
+      icon: Stamp,
+      tag: null,
+      featured: false,
+      title: 'DFAアポスティーユのみ（書類持込み）',
+      subtitle: 'すでにPSA・CENOMAR・NBI書類をお持ちの方のDFA物理アポスティーユ取得・国際発送を代行',
+      why: 'フィリピン国内で書類を取得済みの方や、以前取得した書類に後からアポスティーユが必要になった方向けのプランです。書類をIGRS宛に転送していただければ、DFA認証から発送までを代行します',
+      price: '¥39,000',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'アポスティーユ ¥30,000 + 消費税 ¥3,000 + DHL ¥6,000',
+      period: '約4〜6週間',
+      detailPath: '#contact',
+    },
+    {
       id: 'pack',
       icon: Gem,
-      tag: '人気 No.1',
+      tag: null,
       featured: true,
       title: '国際結婚準備パック',
       subtitle: '日本の役所への婚姻届に必要なフィリピン書類をまとめて取得',
+      includes: ['CENOMAR（独身証明書）', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '日本の役所で婚姻届を出すには、フィリピン側の書類（出生証明・独身証明など）をアポスティーユ付きで用意する必要があります',
       outcome: '書類が揃えば、日本の市区町村への婚姻届の提出が可能になります',
-      price: '¥99,800',
-      priceNote: '〜（税・送料別）',
+      price: '¥94,000',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'パック料金 ¥80,000 + 消費税 ¥8,000 + DHL ¥6,000',
       period: '約4〜6週間',
       detailPath: '/ja/kokusai-kekkon-guide/',
     },
@@ -27,10 +63,12 @@ const plansData = {
       featured: false,
       title: '配偶者ビザ準備書類パック',
       subtitle: '入管への在留資格申請に必要なフィリピン書類を取得',
+      includes: ['PSA婚姻証明書', 'PSA出生証明書', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '入管への配偶者ビザ申請では、フィリピン側の婚姻・出生証明書をアポスティーユ付きで提出する必要があります',
       outcome: '書類が揃えば、入管への在留資格認定証明書交付申請（または変更申請）が前に進みます',
-      price: '¥100,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥94,000',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'パック料金 ¥80,000 + 消費税 ¥8,000 + DHL ¥6,000',
       period: '約4〜6週間',
       detailPath: '/ja/haigusha-visa-shorui/',
     },
@@ -40,11 +78,13 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'CENOMAR（独身証明書）単品',
-      subtitle: 'PSA発行のCENOMAR取得・アポスティーユ・国際発送（1点から対応）',
+      subtitle: 'PSA発行のCENOMAR取得・国際発送（1点から対応）',
       why: '国際結婚の婚姻届や配偶者ビザ申請では、フィリピン側の独身証明書（CENOMAR）をアポスティーユ付きで用意する必要があります',
-      outcome: 'CENOMAR原本＋アポスティーユが揃えば、婚姻届の受理やビザ申請書類の準備が前に進みます',
-      price: '¥55,000',
-      priceNote: '〜（税・送料別）',
+      outcome: 'CENOMAR原本が揃えば、婚姻届の受理やビザ申請書類の準備が前に進みます',
+      price: '¥28,000',
+      priceNote: '〜（税込・DHL込み / アポスティーユなし）',
+      priceBreakdown: 'PSA取得 ¥20,000 + 消費税 ¥2,000 + DHL ¥6,000',
+      priceApostille: '¥61,000〜',
       period: '約4〜6週間',
       detailPath: '/ja/cenomar/',
     },
@@ -54,13 +94,46 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA出生証明書単品',
-      subtitle: 'PSA発行の出生証明書取得・アポスティーユ・国際発送（1点から対応）',
+      subtitle: 'PSA発行の出生証明書取得・国際発送（1点から対応）',
       why: 'ビザ申請・帰化・国際結婚の手続きでは、PSA発行の出生証明書原本をアポスティーユ付きで提出する必要があります',
-      outcome: 'PSA出生証明書原本＋アポスティーユが揃えば、ビザや婚姻手続きの書類準備が前に進みます',
-      price: '¥55,000',
-      priceNote: '〜（税・送料別）',
+      outcome: 'PSA出生証明書原本が揃えば、ビザや婚姻手続きの書類準備が前に進みます',
+      price: '¥28,000',
+      priceNote: '〜（税込・DHL込み / アポスティーユなし）',
+      priceBreakdown: 'PSA取得 ¥20,000 + 消費税 ¥2,000 + DHL ¥6,000',
+      priceApostille: '¥61,000〜',
       period: '約4〜6週間',
       detailPath: '/ja/psa-shussei-cost/',
+    },
+    {
+      id: 'psa-marriage',
+      icon: FileText,
+      tag: null,
+      featured: false,
+      title: 'PSA婚姻証明書単品',
+      subtitle: 'PSA発行の婚姻証明書取得・国際発送（1点から対応）',
+      why: '配偶者ビザ申請・帰化・在留資格変更などの手続きでは、PSA発行の婚姻証明書原本をアポスティーユ付きで提出する必要があります',
+      outcome: 'PSA婚姻証明書原本が揃えば、ビザや帰化手続きの書類準備が前に進みます',
+      price: '¥28,000',
+      priceNote: '〜（税込・DHL込み / アポスティーユなし）',
+      priceBreakdown: 'PSA取得 ¥20,000 + 消費税 ¥2,000 + DHL ¥6,000',
+      priceApostille: '¥61,000〜',
+      period: '約4〜6週間',
+      detailPath: '/ja/psa-kekkon-shomeisho/',
+    },
+    {
+      id: 'nbi',
+      icon: Fingerprint,
+      tag: null,
+      featured: false,
+      title: 'NBIクリアランス アポスティーユ代行',
+      subtitle: 'お客様が取得したNBIクリアランスをIGRSへ転送→DFA物理アポスティーユを取得・発送',
+      why: 'NBI Clearanceは本人指紋登録が必要なため、IGRSによる取得代行はできません。お客様がNBI事務所または在外公館で取得後、原本をIGRS宛に転送いただくことで、DFA物理アポスティーユの取得から国際発送までを代行します。',
+      outcome: 'アポスティーユ付きNBI Clearance原本が揃えば、帰化申請・ビザ申請の書類セットが完成します',
+      price: '¥39,000',
+      priceNote: '〜（税込・DHL込み / アポスティーユのみ）',
+      priceBreakdown: 'アポスティーユ ¥30,000 + 消費税 ¥3,000 + DHL ¥6,000',
+      period: '約4〜6週間',
+      detailPath: '/ja/nbi-clearance/',
     },
     {
       id: 'lto',
@@ -69,26 +142,14 @@ const plansData = {
       featured: false,
       title: '外免切替サポート',
       subtitle: 'フィリピン免許から日本免許への切替に必要なLTO書類を取得',
+      includes: ['LTO書類一式（運転歴証明など）', 'DHL国際発送'],
       why: '外国免許を日本の免許に切り替えるには、フィリピンLTO発行の書類（運転歴証明など）の原本提出が必要です',
       outcome: '書類が揃えば、運転免許センターでの外免切替手続きを開始できます',
-      price: '¥100,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥116,000',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'LTO書類 ¥100,000 + 消費税 ¥10,000 + DHL ¥6,000',
       period: '約4〜6週間',
       detailPath: '/ja/gaimen-kirikae-guide/',
-    },
-    {
-      id: 'nbi',
-      icon: Fingerprint,
-      tag: null,
-      featured: false,
-      title: 'NBIクリアランス取得サポート',
-      subtitle: 'ビザ申請・帰化・在留資格手続きに必要な無犯罪証明書を取得',
-      why: '入管・帰化・海外ビザ申請では、フィリピン側の無犯罪証明書（NBI Clearance）の提出が求められます',
-      outcome: '書類が揃えば、ビザや在留資格・帰化申請の書類セットが完成します',
-      price: '¥55,000',
-      priceNote: '〜（税・送料別）',
-      period: '約4〜6週間',
-      detailPath: '/ja/nbi-clearance/',
     },
     {
       id: 'naturalization',
@@ -97,24 +158,38 @@ const plansData = {
       featured: false,
       title: '帰化申請書類パック',
       subtitle: '法務局への帰化申請に必要なフィリピン書類をまとめて取得',
+      includes: ['PSA出生証明書', 'PSA婚姻証明書 or CENOMAR', 'NBI Clearance', 'DFAアポスティーユ認証', 'DHL国際発送'],
       why: '帰化申請では法務局からフィリピンの出生・婚姻・無犯罪証明書などの原本提出が求められます',
       outcome: '必要書類が揃えば、法務局への帰化申請の書類準備が整います',
-      price: '¥110,000',
-      priceNote: '〜（税・送料別）',
+      price: '¥132,500',
+      priceNote: '〜（税込・DHL込み）',
+      priceBreakdown: 'パック料金 ¥115,000 + 消費税 ¥11,500 + DHL ¥6,000',
       period: '約6〜10週間',
       detailPath: '/ja/kika-shinsei-guide/',
     },
   ],
   en: [
     {
-      id: 'pack',
+      id: 'pack-basic',
       icon: Gem,
-      tag: 'Most Popular',
+      tag: null,
       featured: true,
-      title: 'International Marriage Package',
-      subtitle: 'PSA, CENOMAR & NBI — Apostille-ready for marriage & spouse visa',
-      price: 'US$899',
-      priceNote: '〜 (Apostille + DHL incl.)',
+      title: 'International Marriage Basic Package',
+      subtitle: 'PSA Birth Certificate & CENOMAR with Apostille — ready for marriage registration',
+      price: 'US$429',
+      priceNote: 'all-in',
+      period: 'Approx. 4–6 weeks',
+      detailPath: '/en/international-marriage-guide/',
+    },
+    {
+      id: 'pack-full',
+      icon: Gem,
+      tag: null,
+      featured: false,
+      title: 'International Marriage Full Package',
+      subtitle: 'PSA, CENOMAR & NBI — Apostille-ready for marriage, spouse visa & immigration',
+      price: 'US$699',
+      priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/international-marriage-guide/',
     },
@@ -124,9 +199,9 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'CENOMAR — Single Document',
-      subtitle: 'Certificate of No Marriage Record for K-1, CR-1, marriage registration, and spouse visa',
-      price: 'US$349',
-      priceNote: '(Apostille + DHL incl.)',
+      subtitle: 'Physical PSA original with DFA-stamped Apostille — accepted by immigration authorities worldwide',
+      price: 'US$279',
+      priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/cenomar/',
     },
@@ -136,11 +211,23 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA Birth Certificate — Single Document',
-      subtitle: 'Physical PSA birth certificate for immigration, visa, and civil registration abroad',
-      price: 'US$349',
-      priceNote: '(Apostille + DHL incl.)',
+      subtitle: 'Physical PSA original with DFA-stamped Apostille — not an e-certificate',
+      price: 'US$279',
+      priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/psa-birth-certificate/',
+    },
+    {
+      id: 'psa-marriage',
+      icon: FileText,
+      tag: null,
+      featured: false,
+      title: 'PSA Marriage Certificate — Single Document',
+      subtitle: 'Physical PSA original with DFA-stamped Apostille — for spouse visa, immigration, and naturalization',
+      price: 'US$279',
+      priceNote: 'all-in',
+      period: 'Approx. 4–6 weeks',
+      detailPath: '/en/psa-marriage-certificate/',
     },
     {
       id: 'nbi',
@@ -150,7 +237,7 @@ const plansData = {
       title: 'NBI Clearance Retrieval',
       subtitle: 'Philippine police clearance for immigration & visa applications',
       price: 'US$399',
-      priceNote: '〜 (Apostille + DHL incl.)',
+      priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/nbi-clearance/',
     },
@@ -161,8 +248,8 @@ const plansData = {
       featured: false,
       title: 'LTO Document Retrieval',
       subtitle: "Philippine driver's license records for license conversion",
-      price: 'US$699',
-      priceNote: '〜 (DHL incl.)',
+      price: 'US$449',
+      priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/drivers-license-conversion/',
     },
@@ -173,8 +260,8 @@ const plansData = {
       featured: false,
       title: 'Spouse / Partner Visa Support',
       subtitle: 'Philippine documents for spouse & partner visas worldwide',
-      price: 'US$899',
-      priceNote: '〜 (Apostille + DHL incl.)',
+      price: 'US$599',
+      priceNote: 'all-in',
       period: 'Approx. 4–8 weeks',
       detailPath: '/en/spouse-visa-documents/',
     },
@@ -185,10 +272,22 @@ const plansData = {
       featured: false,
       title: 'Citizenship & Naturalization Documents',
       subtitle: 'Philippine documents for citizenship applications worldwide',
-      price: 'US$899',
-      priceNote: '〜 (Apostille + DHL incl.)',
+      price: 'US$699',
+      priceNote: '〜 all-in',
       period: 'Approx. 6–12 weeks',
       detailPath: '/en/naturalization-guide/',
+    },
+    {
+      id: 'complex',
+      icon: AlertCircle,
+      tag: null,
+      featured: false,
+      title: 'Complex / Mismatch / Annotation / Urgent Case',
+      subtitle: 'Remarriage, name discrepancy, late registration, annotation, or time-sensitive cases',
+      price: 'US$899',
+      priceNote: '〜',
+      period: 'Case by case',
+      detailPath: '#contact',
     },
   ],
 };
@@ -203,7 +302,7 @@ const Pricing: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         {lang === 'ja' && (
           <div className="text-xs text-gray-500 mb-6 space-y-0.5">
-            <p>※表示価格はすべて税抜きです</p>
+            <p>※表示価格はすべて税込・DHL送料込みの総額です（PSAオンライン申請代行はDHL不要）</p>
             <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
           </div>
         )}
@@ -232,42 +331,68 @@ const Pricing: React.FC = () => {
                     </div>
                   )}
 
-                  {/* 価格（最上部・大きく） */}
-                  <div className="mb-3">
+                  {/* タイトル・サブタイトル（最上部） */}
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 ${plan.featured ? 'bg-primary/10' : 'bg-secondary/5'}`}>
+                      <Icon className={`w-4 h-4 ${plan.featured ? 'text-primary' : 'text-secondary'}`} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold text-secondary leading-snug">{plan.title}</h3>
+                      <p className="text-sm text-gray-500 mt-0.5 leading-snug">{plan.subtitle}</p>
+                    </div>
+                  </div>
+
+                  {/* 価格 */}
+                  <div className="mb-4">
                     <div className="flex items-baseline gap-2">
                       <span className="text-4xl font-extrabold text-primary leading-none">{plan.price}</span>
                       <span className="text-xs text-gray-500">{plan.priceNote}</span>
                     </div>
+                    {(plan as any).priceBreakdown && (
+                      <p className="text-xs text-gray-400 mt-1">内訳: {(plan as any).priceBreakdown}</p>
+                    )}
+                    {(plan as any).priceApostille && (
+                      <div className="flex items-baseline gap-2 mt-1.5 pl-2 border-l-2 border-primary/30">
+                        <span className="text-sm font-bold text-secondary">{(plan as any).priceApostille}</span>
+                        <span className="text-xs text-gray-400">DFA物理アポスティーユ込み 総額</span>
+                      </div>
+                    )}
                     <p className="text-xs text-gray-400 mt-1">
                       {lang === 'ja' ? `納期：${plan.period}` : `Delivery: ${plan.period}`}
                     </p>
                   </div>
 
-                  {/* タイトル・サブタイトル */}
-                  <div className="flex items-start gap-3 mb-5">
-                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${plan.featured ? 'bg-primary/10' : 'bg-secondary/5'}`}>
-                      <Icon className={`w-4 h-4 ${plan.featured ? 'text-primary' : 'text-secondary'}`} />
+                  {/* 含まれるもの */}
+                  {(plan as any).includes && (
+                    <div className="mb-4 rounded-lg bg-gray-50 border border-gray-100 px-3 py-2.5">
+                      <p className="text-xs font-bold text-secondary mb-1.5">含まれるもの</p>
+                      <ul className="space-y-1">
+                        {(plan as any).includes.map((item: string) => (
+                          <li key={item} className="flex items-center gap-1.5 text-xs text-gray-600">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-sm font-bold text-secondary leading-snug">{plan.title}</h3>
-                      <p className="text-xs text-gray-500 mt-0.5 leading-snug">{plan.subtitle}</p>
-                      {(plan as any).why && (
-                        <p className="text-xs text-gray-500 mt-1 leading-snug">
-                          <span className="font-semibold">必要理由：</span>{(plan as any).why}
-                        </p>
-                      )}
-                    </div>
-                  </div>
+                  )}
+
+                  {/* 必要理由 */}
+                  {(plan as any).why && (
+                    <p className="text-xs text-gray-500 mb-5 leading-snug">
+                      <span className="font-semibold">必要理由：</span>{(plan as any).why}
+                    </p>
+                  )}
 
                   {/* CTAボタン2つ */}
                   <div className="mt-auto flex gap-2">
                     <Link
                       to={(plan as any).detailPath}
                       onClick={() => trackEvent('cta_click', { location: 'pricing_detail', type: plan.id, variant: ctaVariant })}
-                      className="flex-1 flex items-center justify-center gap-1.5 border border-primary text-primary font-bold text-sm py-2.5 px-4 rounded-xl hover:bg-primary/5 transition-all duration-200"
+                      className="flex-1 flex items-center justify-center gap-1.5 border border-primary text-primary font-bold text-sm py-2.5 px-4 rounded-xl hover:bg-primary/5 transition-all duration-200 whitespace-nowrap"
                     >
                       {lang === 'ja' ? '詳細はこちら' : 'Learn More'}
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <ArrowRight className="w-3.5 h-3.5 flex-shrink-0" />
                     </Link>
                     <a
                       href="#contact"
@@ -285,7 +410,7 @@ const Pricing: React.FC = () => {
 
         {lang === 'en' && (
           <p className="text-xs text-gray-400 mt-5 leading-relaxed">
-            * All prices include Philippine tax and DHL international shipping worldwide. Final amount varies based on document condition, urgency, and destination.
+            All prices include document retrieval, DFA Apostille when required, and DHL Express international shipping. Final price may vary for urgent, complex, mismatched, or hard-to-retrieve records.
           </p>
         )}
 

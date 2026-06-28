@@ -85,7 +85,7 @@ export default function CenomarApostilleEn() {
       <HeroBanner
         title="CENOMAR with DFA Apostille — Shipped Worldwide"
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

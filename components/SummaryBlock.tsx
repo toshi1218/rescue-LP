@@ -11,7 +11,7 @@ type SummaryBlockProps = {
   ctaHref?: string;
 };
 
-export default function SummaryBlock({ conclusion, points }: SummaryBlockProps) {
+export default function SummaryBlock({ conclusion, points = [] }: SummaryBlockProps) {
   return (
     <section className="mb-10 rounded-2xl overflow-hidden border border-primary/20 bg-gradient-to-br from-primary/5 via-white to-secondary/5">
       {/* ゴールドの上ライン */}

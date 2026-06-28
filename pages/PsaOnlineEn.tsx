@@ -82,7 +82,7 @@ export default function PsaOnlineEn() {
       <HeroBanner
         title="PSA Online: Getting Your PSA Certificates Without Going Back"
         badges={['PSA Serbilis Explained', 'OFW-Friendly', 'Ships Worldwide via DHL']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 2026"
       />
@@ -144,7 +144,7 @@ export default function PsaOnlineEn() {
       <CtaBox
         title="Skip the logistics — we handle everything"
         description="We retrieve your PSA documents, arrange DFA Apostille, and ship directly to your international address via DHL. One quote, one shipment, no Philippines address needed."
-        buttonText="Start Free Consultation"
+        buttonText="Free Consultation"
         href="#contact"
         variant="primary"
         trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
@@ -191,7 +191,7 @@ export default function PsaOnlineEn() {
           { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'For most immigration and legal purposes outside the Philippines, yes. We confirm the exact requirement for your destination country before starting.' },
         ]}
         ctaTitle="Not sure what you need? Ask us."
-        ctaButton="Start Free Consultation"
+        ctaButton="Free Consultation"
       />
 
       <RelatedArticles

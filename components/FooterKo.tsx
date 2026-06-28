@@ -10,6 +10,8 @@ const FooterKo: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [referral, setReferral] = useState('');
+  const [referralError, setReferralError] = useState('');
   const currentYear = new Date().getFullYear();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,9 +22,14 @@ const FooterKo: React.FC = () => {
       return;
     }
     setEmailError('');
+    if (!referral) {
+      setReferralError('어디서 알게 되셨는지 선택해 주세요.');
+      return;
+    }
+    setReferralError('');
     setSubmitting(true);
     setSubmitError('');
-    trackEvent('form_submit', { location: 'footer_ko', type: 'web3forms' });
+    const purpose = (e.currentTarget.elements.namedItem('purpose') as HTMLSelectElement)?.value ?? '';
     try {
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
@@ -31,11 +38,14 @@ const FooterKo: React.FC = () => {
       });
       const data = await res.json();
       if (res.ok && data.success) {
+        trackEvent('form_submit_success', { location: 'footer_ko', type: 'web3forms', lang: 'ko', service: purpose, page_path: window.location.pathname });
         setSubmitted(true);
       } else {
+        trackEvent('form_submit_error', { location: 'footer_ko', type: 'web3forms', lang: 'ko' });
         setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
       }
     } catch {
+      trackEvent('form_submit_error', { location: 'footer_ko', type: 'web3forms', lang: 'ko' });
       setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
     } finally {
       setSubmitting(false);
@@ -139,6 +149,36 @@ const FooterKo: React.FC = () => {
                 <option value="NBI 단독">NBI Clearance 단독</option>
                 <option value="기타">기타</option>
               </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">
+                어디서 알게 되셨나요? <span className="text-red-500">*</span>
+              </label>
+              <select
+                name="referral_source"
+                value={referral}
+                onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+              >
+                <option value="">선택해 주세요</option>
+                <option value="Google 검색">Google 검색</option>
+                <option value="AI（ChatGPT / Claude / Gemini 등）">AI（ChatGPT / Claude / Gemini 등）</option>
+                <option value="SNS（Instagram / X / Facebook）">SNS（Instagram / X / Facebook）</option>
+                <option value="Google 광고">Google 광고</option>
+                <option value="지인 소개">지인 소개</option>
+                <option value="기타">기타</option>
+              </select>
+              {referral === '기타' && (
+                <input
+                  type="text"
+                  name="referral_source_detail"
+                  placeholder="자세히 알려주시면 감사하겠습니다"
+                  className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  maxLength={100}
+                />
+              )}
+              {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
             </div>
 
             <div>

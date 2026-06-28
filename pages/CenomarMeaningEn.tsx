@@ -196,7 +196,7 @@ export default function CenomarMeaningEn() {
       <CtaBox
         title="Need CENOMAR with DFA Apostille?"
         description="We retrieve CENOMAR from PSA, arrange DFA Apostille, and ship it directly to you worldwide. No trip to the Philippines required."
-        buttonText="Start Free Consultation"
+        buttonText="Free Consultation"
         href="/en/cenomar/"
         variant="primary"
         trustNote="Free cancellation before start · Progress updates at every stage · Ships via DHL Express"
@@ -212,7 +212,7 @@ export default function CenomarMeaningEn() {
           { q: 'Can I get CENOMAR from outside the Philippines?', a: 'Yes. We retrieve CENOMAR on your behalf from PSA in the Philippines and ship it to you worldwide with DFA Apostille. No travel required.' },
         ]}
         ctaTitle="Questions about your case? Ask us."
-        ctaButton="Start Free Consultation"
+        ctaButton="Free Consultation"
       />
 
       <RelatedArticles

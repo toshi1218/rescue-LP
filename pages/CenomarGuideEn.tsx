@@ -101,7 +101,7 @@ export default function CenomarGuideEn() {
       <HeroBanner
         title="What Is CENOMAR? — Certificate of No Marriage Record Explained"
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -126,7 +126,7 @@ export default function CenomarGuideEn() {
           'You consult in English; our Cebu team handles all Philippine government offices',
           'Transparent pricing with no hidden fees or surprise add-ons',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList
@@ -239,7 +239,7 @@ export default function CenomarGuideEn() {
           { q: 'I am a dual citizen (Filipino and another nationality). Can I get CENOMAR?', a: 'Yes. CENOMAR is based on your records in the PSA database, tied to your Philippine civil registration. Dual citizenship status does not prevent you from obtaining CENOMAR. We will confirm the correct name to use based on your PSA records.' },
         ]}
         ctaTitle="Ready to Get Started?"
-        ctaButton="Start Free Consultation"
+        ctaButton="Free Consultation"
       />
 
       <RelatedArticles

@@ -114,7 +114,7 @@ export default function DfaGalleriaCebuJa() {
           <h2 className="text-xl font-bold text-secondary mb-4">
             ロビンソンズガレリアセブの外観
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/dfa-galleria-cebu-01.webp"
@@ -145,7 +145,7 @@ export default function DfaGalleriaCebuJa() {
           <h2 className="text-xl font-bold text-secondary mb-4">
             モール内のDFA入口
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/dfa-galleria-cebu-03.webp"
@@ -198,7 +198,7 @@ export default function DfaGalleriaCebuJa() {
             DFA Galleria Cebuでは、アポスティーユはパスポートとは別の専用エリアで受け付けています。
             「APOSTILLE AUTHENTICATION/PROCESSING」と書かれた赤い看板が目印です。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-2 gap-4 mb-4">
             <figure>
               <img
                 src="/dfa-galleria-cebu-09.webp"
@@ -235,7 +235,7 @@ export default function DfaGalleriaCebuJa() {
             当日窓口でのウォークイン申請は受け付けられていません。
             以下は現地で確認した公式の掲示物です。
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/dfa-galleria-cebu-07.webp"

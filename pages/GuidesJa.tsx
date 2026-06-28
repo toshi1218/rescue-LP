@@ -25,7 +25,7 @@ export default function GuidesJa() {
       <section className="mt-10">
         <h2 className="text-lg font-bold text-secondary mb-3 border-b border-primary/20 pb-2">海外移住・ビザ別の必要書類</h2>
         <p className="text-sm text-gray-600 mb-4">移住先・ビザの種類ごとに、必要なフィリピン書類と認証の要件が異なります。目的地を選んでください。</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-2">
           {COUNTRY_LINKS.map(({ label, path }) => (
             <Link
               key={path}

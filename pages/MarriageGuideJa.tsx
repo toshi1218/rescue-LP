@@ -117,7 +117,7 @@ export default function MarriageGuideJa() {
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
           <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
-          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
               <dd className="font-medium text-gray-800">50,000円〜（書類1種・アポスティーユ込み）</dd>
@@ -167,7 +167,7 @@ export default function MarriageGuideJa() {
           <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
           <h2 className="text-base font-bold text-amber-900">よくある「書類集めの落とし穴」</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           {[
             { num: '①', title: '現地の家族に頼んだまま進まない', note: '予定だけ後ろにずれ、全体スケジュールに影響します。' },
             { num: '②', title: '届いた書類がそのまま使えない', note: '名前・生年月日の不一致があると日本側で差し戻しになります。' },

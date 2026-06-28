@@ -99,12 +99,14 @@ const PrivacyEn = lazy(() => import('./pages/PrivacyEn'));
 const PrivacyJa = lazy(() => import('./pages/PrivacyJa'));
 const TermsEn = lazy(() => import('./pages/TermsEn'));
 const TermsJa = lazy(() => import('./pages/TermsJa'));
+const TokushoJa = lazy(() => import('./pages/TokushoJa'));
 const RoadmapJa = lazy(() => import('./pages/RoadmapJa'));
 const MarriageOrderJa = lazy(() => import('./pages/MarriageOrderJa'));
 const GyoseishoshiVsDocServiceJa = lazy(() => import('./pages/GyoseishoshiVsDocServiceJa'));
 const PhilippinesWeddingGuideJa = lazy(() => import('./pages/PhilippinesWeddingGuideJa'));
 const TbCertJa = lazy(() => import('./pages/TbCertJa'));
 const SpouseVisaShoryuJa = lazy(() => import('./pages/SpouseVisaShoryuJa'));
+const BusinessMenkyoKirikaeKigyouJa = lazy(() => import('./pages/BusinessMenkyoKirikaeKigyouJa'));
 const CenomarVsMarriageCertEn = lazy(() => import('./pages/CenomarVsMarriageCertEn'));
 const DocumentChecklistByVisaEn = lazy(() => import('./pages/DocumentChecklistByVisaEn'));
 const NbiClearanceOverseasEn = lazy(() => import('./pages/NbiClearanceOverseasEn'));
@@ -114,6 +116,7 @@ const DocumentChecklistByVisaJa = lazy(() => import('./pages/DocumentChecklistBy
 const NbiClearanceOverseasJa = lazy(() => import('./pages/NbiClearanceOverseasJa'));
 const PsaLateRegistrationJa = lazy(() => import('./pages/PsaLateRegistrationJa'));
 const PsaEcertificateNihonJa = lazy(() => import('./pages/PsaEcertificateNihonJa'));
+const InputSupportJa = lazy(() => import('./pages/InputSupportJa'));
 const BusinessHomeJa = lazy(() => import('./pages/BusinessHomeJa'));
 const BusinessTourokushienJa = lazy(() => import('./pages/BusinessTourokushienJa'));
 const BusinessGyoseishoshiJa = lazy(() => import('./pages/BusinessGyoseishoshiJa'));
@@ -330,6 +333,8 @@ export default function App() {
         <Route path="/en/terms/" element={<TermsEn />} />
         <Route path="/ja/terms" element={<Navigate to="/ja/terms/" replace />} />
         <Route path="/ja/terms/" element={<TermsJa />} />
+        <Route path="/ja/tokusho" element={<Navigate to="/ja/tokusho/" replace />} />
+        <Route path="/ja/tokusho/" element={<TokushoJa />} />
         <Route path="/ja/kokusai-kekkon-roadmap" element={<Navigate to="/ja/kokusai-kekkon-roadmap/" replace />} />
         <Route path="/ja/kokusai-kekkon-roadmap/" element={<RoadmapJa />} />
         <Route path="/ja/nihon-senko-ph-senko" element={<Navigate to="/ja/nihon-senko-ph-senko/" replace />} />
@@ -360,6 +365,8 @@ export default function App() {
         <Route path="/ja/psa-late-registration/" element={<PsaLateRegistrationJa />} />
         <Route path="/ja/psa-ecertificate-nihon" element={<Navigate to="/ja/psa-ecertificate-nihon/" replace />} />
         <Route path="/ja/psa-ecertificate-nihon/" element={<PsaEcertificateNihonJa />} />
+        <Route path="/ja/psa-input-support" element={<Navigate to="/ja/psa-input-support/" replace />} />
+        <Route path="/ja/psa-input-support/" element={<InputSupportJa />} />
         <Route path="/ja/business" element={<Navigate to="/ja/business/" replace />} />
         <Route path="/ja/business/" element={<BusinessHomeJa />} />
         <Route path="/ja/business/touroku-shien-kikan" element={<Navigate to="/ja/business/touroku-shien-kikan/" replace />} />
@@ -370,6 +377,8 @@ export default function App() {
         <Route path="/ja/business/kigyou/" element={<BusinessKigyouJa />} />
         <Route path="/ja/business/menkyo-kirikae" element={<Navigate to="/ja/business/menkyo-kirikae/" replace />} />
         <Route path="/ja/business/menkyo-kirikae/" element={<BusinessMenkyoKirikaeJa />} />
+        <Route path="/ja/business/menkyo-kirikae-kigyou" element={<Navigate to="/ja/business/menkyo-kirikae-kigyou/" replace />} />
+        <Route path="/ja/business/menkyo-kirikae-kigyou/" element={<BusinessMenkyoKirikaeKigyouJa />} />
         <Route path="/ja/lto-koyo-kakunin" element={<Navigate to="/ja/lto-koyo-kakunin/" replace />} />
         <Route path="/ja/lto-koyo-kakunin/" element={<LtoKoyoKakuninJa />} />
         <Route path="/ja/dfa-apostille-genchi-report" element={<Navigate to="/ja/dfa-apostille-genchi-report/" replace />} />

@@ -188,10 +188,11 @@ export default function DocumentChecklistByVisaJa() {
 
       <RelatedArticles
         items={[
-          { href: '/ja/cenomar-vs-marriage-certificate', title: 'CENOMARと婚姻証明書の違い', description: 'どちらを取るべきか迷うときの最初の確認ページです。' },
-          { href: '/ja/psa-shussei-shomeisho', title: 'PSA出生証明書取得代行', description: '国際結婚・配偶者ビザ・帰化申請で使う基本書類です。' },
-          { href: '/ja/nbi-clearance', title: 'NBIクリアランス取得代行', description: 'HIT対応を含めて、取得の流れを確認できます。' },
-          { href: '/ja/gaimen-kirikae-guide', title: '外免切替ガイド', description: 'フィリピン書類の中でも反響の大きいテーマです。' },
+          { href: '/ja/cenomar-vs-marriage-certificate/', title: 'CENOMARと婚姻証明書の違い', description: 'どちらを取るべきか迷うときの最初の確認ページです。' },
+          { href: '/ja/psa-shussei-shomeisho/', title: 'PSA出生証明書取得代行', description: '国際結婚・配偶者ビザ・帰化申請で使う基本書類です。' },
+          { href: '/ja/nbi-clearance/', title: 'NBIクリアランス取得代行', description: 'HIT対応を含めて、取得の流れを確認できます。' },
+          { href: '/ja/kika-shinsei-guide/', title: '帰化申請の書類代行', description: 'PSA出生証明書・NBI Clearance・アポスティーユを法務局要件で。' },
+          { href: '/ja/gaimen-kirikae-guide/', title: '外免切替ガイド', description: 'フィリピン書類の中でも反響の大きいテーマです。' },
         ]}
       />
     </PageLayout>

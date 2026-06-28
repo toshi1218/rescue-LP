@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, MessageSquare, ShieldCheck, Send } from 'lucide-react';
+import { Eye, MessageSquare, ShieldCheck, Send, BadgeCheck } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -19,7 +19,7 @@ const WhyUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fffbf0 0%, #fef9ec 50%, #fff8e6 100%)'}}>
+    <section className="py-20 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fffbf0 0%, #fef9ec 50%, #fff8e6 100%)'}}>
       {/* 背景装飾 */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-0 top-0 w-96 h-96 bg-primary/5 rounded-full blur-[80px]"></div>
@@ -49,14 +49,35 @@ const WhyUs: React.FC = () => {
         </div>
 
         {/* 統計バー */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-3">
-          {stats.map(({ labelKey, valueKey }, i) => (
-            <div key={labelKey} className="bg-white border border-primary/15 rounded-xl p-5 text-center shadow-card relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-1 rounded-t-xl" style={{background: 'linear-gradient(90deg, #d69e2e, #b77f1d)'}}></div>
-              <p className="text-xs text-gray-500 mt-1">{t(labelKey)}</p>
-              <p className="text-lg font-bold text-secondary mt-1">{t(valueKey)}</p>
-            </div>
-          ))}
+        <div className="mt-8 grid grid-cols-3 gap-3">
+          {stats.map(({ labelKey, valueKey }, i) => {
+            const gradients = [
+              'from-secondary/5 to-secondary/10',
+              'from-emerald-50 to-emerald-100/50',
+              'from-primary/5 to-amber-50',
+            ];
+            const textColors = ['text-secondary', 'text-emerald-700', 'text-primary-dark'];
+            const barColors  = ['bg-secondary', 'bg-emerald-500', 'bg-primary'];
+            return (
+              <div key={labelKey} className={`bg-gradient-to-br ${gradients[i]} rounded-2xl p-4 text-center relative overflow-hidden border border-white/80 shadow-card`}>
+                <div className={`absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl ${barColors[i]}`} />
+                <p className={`text-base font-extrabold ${textColors[i]} leading-tight mt-1`}>{t(valueKey)}</p>
+                <p className="text-[11px] font-bold text-gray-600 mt-1 leading-snug">{t(labelKey)}</p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* 返金保証バナー */}
+        <div className="mt-6 bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-4 flex items-start gap-4">
+          <div className="shrink-0 w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center">
+            <BadgeCheck className="w-6 h-6 text-emerald-600" />
+          </div>
+          <div>
+            <p className="font-bold text-emerald-800 text-sm mb-1">{t('whyus.guarantee.title')}</p>
+            <p className="text-xs text-emerald-700 leading-relaxed">{t('whyus.guarantee.success')}</p>
+            <p className="text-xs text-gray-500 leading-relaxed mt-1">{t('whyus.guarantee.cancel')}</p>
+          </div>
         </div>
 
         {/* Office photo strip — real Philippine document processing */}

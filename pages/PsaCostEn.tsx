@@ -101,7 +101,7 @@ export default function PsaCostEn() {
       <HeroBanner
         title="PSA Birth Certificate: Know the Real Total Cost Before You Start"
         badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

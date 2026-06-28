@@ -77,7 +77,7 @@ export default function DfaProcessingTimeEn() {
       <HeroBanner
         title="DFA Apostille Processing Time: We Plan Around Your Deadline"
         badges={['Deadline-Aware Scheduling', 'Ships via DHL', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />

@@ -85,7 +85,7 @@ export default function K1VisaDocsEn() {
       <HeroBanner
         title="K-1 Fiancé Visa: Philippine Documents Retrieved and Shipped to the USA"
         badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -98,7 +98,7 @@ export default function K1VisaDocsEn() {
           'Shipped via DHL Express to your US address',
           'All-inclusive pricing: no hidden fees for Apostille or shipping',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

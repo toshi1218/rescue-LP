@@ -110,7 +110,7 @@ export default function NaturalizationJa() {
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
           法務局の担当官が必要書類を指定します。状況によって異なりますが、以下が多く求められます。
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+        <div className="grid grid-cols-2 gap-3 mb-4">
           {[
             { icon: FileText, label: 'PSA出生証明書', note: '出生・国籍の確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-blue-50 border-blue-200' },
             { icon: CheckCircle, label: 'PSA婚姻証明書', note: '既婚者の婚姻歴の確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-green-50 border-green-200' },

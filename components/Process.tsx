@@ -9,16 +9,16 @@ const stepsData = {
   ja: [
     { num: 1, title: 'Eメールでご相談', desc: '必要書類と目的、提出予定日をEメールでお知らせください。' },
     { num: 2, title: '必要書類と見積もりを確認', desc: '提出先や状況に応じて、必要になりやすい書類と費用を整理します。' },
-    { num: 3, title: '着手金50%をご入金', desc: '内容に問題がなければ、総額の50%をご入金いただきます。' },
+    { num: 3, title: '着手金50%をご入金', desc: 'クレジットカードまたは銀行振込にて、総額の50%をご入金いただきます。' },
     { num: 4, title: '書類取得・確認', desc: '現地で取得し、書類写しをご確認いただきます。' },
-    { num: 5, title: '残金のお支払い・発送', desc: '残金をご入金後、原本を発送します。' },
+    { num: 5, title: '残金のお支払い・発送', desc: '書類写しご確認後、残りの50%をお支払いいただき、原本をDHLで発送します。' },
   ],
   en: [
     { num: 1, title: 'Contact Us', desc: 'Tell us via email which documents you need and your current situation.' },
     { num: 2, title: 'Quote & Proposal', desc: "We'll review your request and provide a detailed cost and timeline." },
-    { num: 3, title: 'Initial Payment', desc: 'Pay 50% of the fee as a retainer to begin the process.' },
-    { num: 4, title: 'Final Payment & Dispatch', desc: 'After confirming document copies, pay the remaining balance and we dispatch the originals.' },
-    { num: 5, title: 'Document Delivery', desc: 'Documents are delivered to your address via trackable shipping. Please verify contents upon arrival.' },
+    { num: 3, title: 'Initial Payment (50%)', desc: 'Pay 50% by credit card or bank transfer to begin. We start the retrieval process immediately.' },
+    { num: 4, title: 'Document Review', desc: 'We retrieve your documents in the Philippines and send copies for your verification before shipping.' },
+    { num: 5, title: 'Final Payment & Dispatch', desc: 'After confirming document copies, pay the remaining 50%. We then ship your originals via DHL to your address.' },
   ],
 };
 

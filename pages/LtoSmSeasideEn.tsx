@@ -128,7 +128,7 @@ export default function LtoSmSeasideEn() {
           <p className="text-sm text-gray-600 mb-4">
             The LTO window is inside SM Seaside City Cebu. The mall itself is easily accessible from central Cebu City via public transport. The LTO entrance is clearly marked with a "Land Transportation Office" sign.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165139.jpg"
@@ -159,7 +159,7 @@ export default function LtoSmSeasideEn() {
           <p className="text-sm text-gray-600 mb-4">
             The LTO office uses a numbered ticket system. Visitors take a number and wait to be called for application, payment, and document pickup at separate counters. A digital display shows the current number being served.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165402.jpg"
@@ -190,7 +190,7 @@ export default function LtoSmSeasideEn() {
           <p className="text-sm text-gray-600 mb-4">
             The Driver's Record is an official LTO document listing your license number, validity dates, and driving history. After obtaining it, you need a DFA Apostille before submitting to a Japanese prefectural license center for foreign license conversion.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
                 src="/LTO/LTO SM SEASIDE/IMG_20251222_165448.jpg"

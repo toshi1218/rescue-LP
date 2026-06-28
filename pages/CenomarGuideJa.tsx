@@ -120,7 +120,16 @@ export default function CenomarGuideJa() {
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
-
+      <SummaryBlock
+        conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
+        points={[
+          'PSA発行のCENOMAR取得からDFAアポスティーユまで一括対応',
+          '有効期限（発行から6ヶ月以内）に合わせたタイミングで手配',
+          '提出先の要件を確認し、そのまま使える状態でお届け',
+          'フィリピン渡航不要。まずは無料相談で必要書類を確認',
+        ]}
+        ctaText="無料で相談する（24時間以内に返信）"
+      />
       <div className="max-w-2xl mx-auto px-4 my-6">
         <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
           <div className="flex items-start gap-3">
@@ -142,17 +151,6 @@ export default function CenomarGuideJa() {
         </div>
       </div>
 
-      <SummaryBlock
-        conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
-        points={[
-          'PSA発行のCENOMAR取得からDFAアポスティーユまで一括対応',
-          '有効期限（発行から6ヶ月以内）に合わせたタイミングで手配',
-          '提出先の要件を確認し、そのまま使える状態でお届け',
-          'フィリピン渡航不要。まずは無料相談で必要書類を確認',
-        ]}
-        ctaText="無料で相談する（24時間以内に返信）"
-      />
-
       <article className="max-w-2xl mx-auto px-4">
 
         <SectionDivider variant="beige">
@@ -165,7 +163,7 @@ export default function CenomarGuideJa() {
           <p className="text-gray-700 leading-relaxed mb-3">
             国際結婚の手続き・配偶者ビザ申請・帰化申請・フィリピンでの婚姻手続きなど、フィリピン人の婚姻状況を確認する必要がある場面で提出を求められることがあります。
           </p>
-          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 text-sm">
+          <dl className="grid grid-cols-2 gap-3 mt-4 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">正式名称</dt>
               <dd className="font-medium text-gray-800">Certificate of No Marriage Record</dd>
@@ -380,10 +378,12 @@ export default function CenomarGuideJa() {
       ]} />
       <RelatedArticles
         items={[
-          { href: '/ja/cenomar-vs-marriage-certificate', title: 'CENOMARと婚姻証明書の違い', description: 'K-1やCR-1で迷いやすい書類の違いを整理します。' },
-          { href: '/ja/document-checklist-by-visa', title: 'ビザ別書類チェックリスト', description: 'K-1、CR-1、日本向けに必要な書類をまとめて確認できます。' },
-          { href: '/ja/psa-shussei-shomeisho', title: 'PSA出生証明書取得代行', description: '婚姻関連以外の基本書類もあわせて確認できます。' },
-          { href: '/ja/cenomar-apostille', title: 'CENOMARのアポスティーユ', description: '提出先に合わせてアポスティーユが必要か確認できます。' },
+          { href: '/ja/cenomar-vs-marriage-certificate/', title: 'CENOMARと婚姻証明書の違い', description: 'K-1やCR-1で迷いやすい書類の違いを整理します。' },
+          { href: '/ja/document-checklist-by-visa/', title: 'ビザ別書類チェックリスト', description: 'K-1、CR-1、日本向けに必要な書類をまとめて確認できます。' },
+          { href: '/ja/psa-shussei-shomeisho/', title: 'PSA出生証明書取得代行', description: '婚姻関連以外の基本書類もあわせて確認できます。' },
+          { href: '/ja/cenomar-apostille/', title: 'CENOMARのアポスティーユ', description: '提出先に合わせてアポスティーユが必要か確認できます。' },
+          { href: '/ja/apostille-ryokin/', title: 'アポスティーユの料金・費用', description: 'Regular・Express別の料金とPSA・CENOMAR別の費用内訳を確認できます。' },
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'Regular（4営業日）・Express（翌営業日）の違いと提出期限からの逆算を解説。' },
         ]}
       />
     </PageLayout>

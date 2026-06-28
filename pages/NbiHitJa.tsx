@@ -236,6 +236,8 @@ export default function NbiHitJa() {
 
       <RelatedLinks links={[
         { path: '/ja/nbi-clearance/', label: 'NBI Clearance（無犯罪証明書）申請サポート' },
+        { path: '/ja/nbi-koyukigen/', label: 'NBIクリアランスの有効期限' },
+        { path: '/ja/nbi-clearance-overseas/', label: '海外在住でのNBI取得' },
         { path: '/ja/apostille/', label: 'DFAアポスティーユ代行' },
         { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
       ]} />

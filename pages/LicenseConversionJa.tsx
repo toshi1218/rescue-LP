@@ -128,7 +128,7 @@ export default function LicenseConversionJa() {
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
           <h2 className="text-xl font-bold text-gray-900 mb-3">LTO書類代行 料金・期間の目安</h2>
-          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">対象書類</dt>
               <dd className="font-medium text-gray-800">LTO Certification with Apostille・License History 等</dd>
@@ -165,6 +165,7 @@ export default function LicenseConversionJa() {
             ))}
           </div>
           <p className="text-xs text-gray-500 mt-2">※必要書類の種類・案件の状況によって料金は変わります。正確な金額は無料相談後にご提示します。</p>
+          <p className="text-xs text-gray-500 mt-1">DFAアポスティーユ単体の料金・費用内訳は<a href="/ja/apostille-ryokin/" className="text-primary underline">DFAアポスティーユの料金ページ</a>で詳しく解説しています。</p>
         </SectionDivider>
       </div>
 
@@ -231,7 +232,7 @@ export default function LicenseConversionJa() {
       {/* Section 3 */}
       <section className="mb-10">
         <h2 className="text-base font-bold text-gray-900 mb-4">3. よくあるつまずきポイント</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           {[
             { title: '3か月の滞在歴を説明できない', note: '免許を持っているだけでは不十分。滞在証明がなければ手続き全体が止まります。' },
             { title: '免許証だけでは経歴が読めない', note: '初回取得日や更新歴が不明な場合、License History などの追加書類が必要になります。' },

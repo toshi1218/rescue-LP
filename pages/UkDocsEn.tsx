@@ -85,7 +85,7 @@ export default function UkDocsEn() {
       <HeroBanner
         title="Philippine Documents for UK Immigration"
         badges={['UKVI-Ready', 'DFA Apostille Included', 'Ships to UK via DHL']}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
@@ -98,7 +98,7 @@ export default function UkDocsEn() {
           'Paper Apostille originals shipped via DHL Express to your UK address',
           'We confirm exact UKVI requirements for your specific visa type',
         ]}
-        ctaText="Start Free Consultation"
+        ctaText="Free Consultation"
       />
 
       <FeatureList

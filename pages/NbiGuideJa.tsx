@@ -9,8 +9,7 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import RelatedArticles from '../components/RelatedArticles';
-import SectionDivider from '../components/SectionDivider';
-import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText } from 'lucide-react';
+import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText, Mail, Smartphone, PackageSearch } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
@@ -42,7 +41,7 @@ export default function NbiGuideJa() {
             '@type': 'UnitPriceSpecification',
             price: '55000',
             priceCurrency: 'JPY',
-            description: 'NBI Clearance取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: '初回申請PDF納品プラン55,000円（税込）、原本郵送込み61,000円。更新・再発行PDF納品39,800円〜、原本郵送込み46,800円〜。DFAアポスティーユ込みは+20,000円',
           },
         },
         },
@@ -79,7 +78,7 @@ export default function NbiGuideJa() {
               name: 'どのくらいで届きますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '状況により変わります。在外申請はNBI Main Officeで処理され、公式案内では書類到着後の処理は最大5営業日とされていますが、実際の全体日数は書類準備、配送、受取方法によって前後します。まずは現在の状況をご相談ください。',
+                text: '全体ではおおむね1か月が目安です。在外申請はNBI Main Officeで処理され、公式案内では書類到着後の処理は最大5営業日とされていますが、実際の全体日数は書類準備、配送、受取方法によって前後します。まずは現在の状況をご相談ください。',
               },
             },
           ],
@@ -88,9 +87,9 @@ export default function NbiGuideJa() {
     >
       <HeroBanner
         title="海外ビザ用NBIクリアランス"
-        subtitle="取得歴、氏名変更の有無、現在地を確認し、進められる案件だけを整理してご案内します。"
-        badges={['更新案件を中心に対応', '条件を先に確認', '進捗を随時ご報告']}
-        ctaText="更新できるか確認する"
+        subtitle="大使館の案内通りに自力で進めると2ヶ月以上。当社なら最短ルートで約1ヶ月に短縮します。"
+        badges={['納期を半分に短縮', '渡航不要・日本語対応', '進捗を随時ご報告']}
+        ctaText="無料で相談する"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
@@ -98,53 +97,78 @@ export default function NbiGuideJa() {
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
           <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
-          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-            <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">正式名称</dt>
-              <dd className="font-medium text-gray-800">NBI Clearance（無犯罪証明書）</dd>
-            </div>
-            <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">発行機関</dt>
-              <dd className="font-medium text-gray-800">フィリピン国家捜査局（NBI）</dd>
-            </div>
-            <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">55,000円〜（DFAアポスティーユ込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※HIT対応・緊急処理は追加料金が発生することがあります</dd>
-            </div>
-            <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
-              <dd className="font-medium text-gray-800">約1か月〜1か月半</dd>
-            </div>
-          </dl>
-          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
-            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
-              <div className="px-4 py-3 font-bold">内容</div>
-              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
-            </div>
-            {[
-              { label: 'NBI Clearance取得', price: '込み' },
-              { label: 'DFAアポスティーユ認証', price: '込み' },
-              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: '合計（DFAアポスティーユ込み）', price: '55,000円〜', bold: true },
-            ].map((row, i) => (
-              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
-                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
-                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+
+          {/* プラン比較カード */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+            {/* 初回申請 */}
+            <div className="bg-white rounded-2xl border-2 border-secondary p-4 flex flex-col">
+              <div className="text-xs font-bold text-white bg-secondary rounded-full px-3 py-0.5 self-start mb-3">初回申請・Form No.5利用</div>
+              <p className="text-xs text-gray-500 mb-3 leading-relaxed">大使館で指紋採取済みの方。ポータル登録・支払い・取得・納品まで代行。</p>
+              <div className="mt-auto">
+                <div className="text-2xl font-bold text-secondary">55,000<span className="text-sm font-normal">円（税込）</span></div>
+                <div className="text-xs text-gray-500 mt-0.5">PDF納品プラン</div>
+                <div className="text-sm text-gray-700 mt-1.5">原本を日本へ郵送 <span className="font-medium">+6,000円 → 61,000円</span></div>
               </div>
-            ))}
+            </div>
+
+            {/* 更新・再発行 */}
+            <div className="bg-white rounded-2xl border border-gray-200 p-4 flex flex-col">
+              <div className="text-xs font-bold text-white bg-gray-500 rounded-full px-3 py-0.5 self-start mb-3">更新・再発行</div>
+              <p className="text-xs text-gray-500 mb-3 leading-relaxed">2014年以降に取得歴があり、氏名等の変更がない方。指紋採取不要で進められるケース。</p>
+              <div className="mt-auto">
+                <div className="text-2xl font-bold text-gray-700">39,800<span className="text-sm font-normal">円（税込）〜</span></div>
+                <div className="text-xs text-gray-500 mt-0.5">PDF納品プラン</div>
+                <div className="text-sm text-gray-700 mt-1.5">原本を日本へ郵送 <span className="font-medium">+6,000円 → 45,800円</span></div>
+              </div>
+            </div>
           </div>
-          <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
+
+          {/* 最小プラン */}
+          <div className="bg-gray-50 rounded-xl border border-gray-200 p-3 flex items-center justify-between text-sm mb-3">
+            <div>
+              <span className="font-medium text-gray-800">ポータル入力・支払いのみ</span>
+              <span className="text-xs text-gray-500 ml-2">登録〜支払いだけ代行。書類の取得・配送は含まない。</span>
+            </div>
+            <span className="font-bold text-gray-700 whitespace-nowrap ml-3">19,800円</span>
+          </div>
+
+          <p className="text-xs text-gray-500 leading-relaxed">
+            ※DFAアポスティーユ込みは +20,000円。HIT（同名者照合）発生・緊急対応は追加料金が発生することがあります。更新扱いになるかは事前確認が必要です。正確な金額は無料相談後にご提示します。
+          </p>
+
+          {/* 所要期間 */}
+          <div className="mt-3 pt-3 border-t border-gray-100">
+            <div className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+              <Clock className="w-4 h-4 text-gray-400 flex-shrink-0" />
+              <span>所要期間の目安</span>
+            </div>
+            <div className="grid grid-cols-2 gap-2 text-center">
+              <div className="rounded-xl bg-gray-50 border border-gray-200 p-3">
+                <div className="text-xs text-gray-400 mb-1">大使館の案内通りに自力申請</div>
+                <div className="text-xl font-bold text-gray-300">2ヶ月以上</div>
+              </div>
+              <div className="rounded-xl bg-secondary/5 border border-secondary/30 p-3">
+                <div className="text-xs text-secondary font-semibold mb-1">当社代行</div>
+                <div className="text-xl font-bold text-secondary">約1ヶ月</div>
+                <div className="text-xs text-gray-500 mt-0.5">最短ルートで半分に短縮</div>
+              </div>
+            </div>
+          </div>
         </SectionDivider>
       </div>
 
       {/* イントロ */}
-      <div className="mb-8 space-y-2 text-sm text-gray-600 leading-relaxed">
-        <p>「できるだけ早く取りたい」「更新できるのか分からない」「依頼したあと、今どうなっているのか見えないのが不安」</p>
+      <div className="mb-8 space-y-3 text-sm text-gray-600 leading-relaxed">
+        <p className="text-base font-semibold text-gray-800">
+          日本から自力で申請すると、大使館の案内通りに進めて2ヶ月以上かかります。
+        </p>
         <p>
-          そんな方に向けて、株式会社IGRSでは、フィリピンNBIクリアランスの更新・転送を日本語で進めやすい形でご案内しています。
-          ご相談時に条件を確認し、進められる案件かどうかを先に整理したうえで、必要な流れをご案内します。
-          NBI Clearanceは<a href="https://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン国家捜査局（NBI公式サイト）</a>が発行する公的書類です。
+          当社では、フィリピン国内での申請・支払い・書類の受け取りをすべて代行し、
+          <span className="font-medium text-gray-800">取得までの最短ルートを通ることで1ヶ月以内での納品</span>を実現しています。
+          待ち時間を半分以下にして、ビザ申請のスケジュールに間に合わせます。
+        </p>
+        <p className="text-xs text-gray-500">
+          NBI Clearanceは<a href="http://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン国家捜査局（NBI公式サイト）</a>が発行する公的書類です。ご依頼前に条件（取得歴・氏名変更の有無）を確認し、進められる案件かどうかを先に整理したうえでご案内します。
         </p>
       </div>
 
@@ -156,6 +180,48 @@ export default function NbiGuideJa() {
         variant="primary"
         trustNote="条件確認から対応。返信24時間以内"
       />
+
+      {/* 自力申請で詰まるポイント → 当社が代行して可視化 */}
+      <SectionDivider variant="beige">
+        <h2 className="text-base font-bold text-gray-900 mb-2">自力申請で「見えない・詰まる」を、当社が代わりに進めます</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          日本から自分でNBIクリアランスを取ろうとすると、特に初めての方は次のような壁にぶつかりがちです。
+        </p>
+        <IconCardGrid
+          columns={3}
+          cards={[
+            { icon: Mail, title: 'NBIから返信が来ない', description: '海外から問い合わせても返信がなく、進め方が分からないまま止まってしまう。', accent: 'red' },
+            { icon: Smartphone, title: 'ポータル登録・支払いで詰まる', description: 'NBIオンライン登録やReference Number取得、フィリピン国内での支払いでつまずきやすい。', accent: 'gold' },
+            { icon: PackageSearch, title: '送った後の状況が見えない', description: '書類を送った後、今どこにあるのか・処理されたのかが分からず不安になる。', accent: 'blue' },
+          ]}
+        />
+        <div className="bg-white rounded-xl border border-gray-100 p-4 mt-2">
+          <p className="text-sm text-gray-700 leading-relaxed">
+            当社では、NBIからの返信を待つだけの状態にせず、フィリピン国内での申請・支払い・書類のやり取りを代行します。
+            配送には<span className="font-medium text-gray-900">追跡可能な手段</span>を用い、申請・受理・発送など節目ごとに状況をご報告するので、
+            「今どこまで進んでいるか」が見える状態で進められます。
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed mt-2">
+            ※NBI内部の審査状況そのものをリアルタイムに確認することはできませんが、書類の発送・返送などの配送状況は追跡してご報告します。公式案内では、書類到着後の処理は最大5営業日とされています。これを大きく超える場合は、同名者照合（HIT）が発生している可能性があります。
+          </p>
+          <p className="text-xs text-gray-600 leading-relaxed mt-2 pt-2 border-t border-gray-100">
+            <span className="font-medium text-gray-800">万一の備えについて：</span>返送中の郵送事故などで原本を紛失した場合でも、パスポートのコピーと委任状をお預かりしていれば、当社にて再取得（再発行）を手配できます。
+          </p>
+        </div>
+        <div className="bg-secondary/5 rounded-xl border border-secondary/20 p-4 mt-3">
+          <div className="flex items-start gap-2">
+            <Fingerprint className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="text-sm font-bold text-gray-900 mb-1">日本の大使館で指紋採取（Form No.5）をお済ませの方へ</p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                指紋採取はご本人が在日フィリピン大使館・総領事館で行う必要がありますが、
+                その後の<span className="font-medium">オンライン申請・支払い・フィリピンでの手続き・書類の受け取り</span>までは当社で代行できます。
+                「大使館までは行ったが、その先で止まっている」という方はご相談ください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </SectionDivider>
 
       {/* 当社でご案内しやすいケース（先出し） */}
       <SectionDivider variant="beige">
@@ -202,7 +268,7 @@ export default function NbiGuideJa() {
           <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
           <h2 className="text-base font-bold text-gray-900">ご相談前にご確認ください</h2>
         </div>
-        <p className="text-sm text-gray-600 mb-4">以下のケースは、在日フィリピン大使館・総領事館でのご本人対応が必要です。当社だけでの完結が難しい場合がありますので、まずはご相談ください。</p>
+        <p className="text-sm text-gray-600 mb-4">以下のケースは、在日フィリピン大使館・総領事館でのご本人対応（指紋採取等）が必要です。なお、大使館での指紋採取がお済みの場合は、その後の手続きを当社で代行できます。まずはご相談ください。</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
             '過去に一度もNBIクリアランスを取得したことがない',
@@ -294,7 +360,7 @@ export default function NbiGuideJa() {
           { q: '自分が更新対象か分かりません', a: 'まずは、最後にNBIクリアランスを取った年と、その後に氏名などの変更があったかをお知らせください。更新として進めやすいかどうかを確認してご案内します。' },
           { q: '初めてNBIクリアランスを取るのですが、依頼できますか？', a: '初回取得は、在日フィリピン大使館・総領事館での本人による指紋対応が必要です。そのため、当社だけで完結する形ではお受けしていません。進め方の整理が必要な場合はご相談ください。' },
           { q: '結婚して姓が変わりました。更新できますか？', a: '個人情報に変更がある場合は、更新ではなく新規・初回側の手順が必要になることがあります。この場合も、まず状況を確認してご案内します。' },
-          { q: 'どのくらいで届きますか？', a: '状況により変わります。在外申請はNBI Main Officeで処理され、公式案内では書類到着後の処理は最大5営業日とされていますが、実際の全体日数は書類準備、配送、受取方法によって前後します。まずは現在の状況をご相談ください。' },
+          { q: 'どのくらいで届きますか？', a: '全体ではおおむね1か月が目安です。在外申請はNBI Main Officeで処理され、公式案内では書類到着後の処理は最大5営業日とされていますが、実際の全体日数は書類準備、配送、受取方法によって前後します。まずは現在の状況をご相談ください。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
@@ -304,6 +370,9 @@ export default function NbiGuideJa() {
           { href: '/ja/nbi-clearance-overseas/', title: '海外在住のNBI取得', description: 'フィリピンに戻らずに取得したい方はこちら。' },
           { href: '/ja/nbi-hit/', title: 'NBI HIT対応', description: '照会が入ったときの考え方を整理します。' },
           { href: '/ja/nbi-koyukigen/', title: 'NBIの有効期限', description: '提出期限に合わせた取り方の目安が分かります。' },
+          { href: '/ja/apostille-ryokin/', title: 'アポスティーユの料金・費用', description: 'NBI Clearanceにアポスティーユを付ける際の料金目安。' },
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'Regular（4営業日）・Express（翌営業日）の違いを解説。' },
+          { href: '/ja/kika-shinsei-guide/', title: '帰化申請の書類代行', description: '帰化申請でNBI Clearance・PSA出生証明書を法務局要件で揃えます。' },
           { href: '/ja/psa-crs-cebu-genchi-report/', title: 'PSA証明書の取得手順【セブ窓口】', description: 'セブ窓口での実際の取得フローをレポートしています。' },
           { href: '/ja/document-checklist-by-visa/', title: 'ビザ別書類チェックリスト', description: 'K-1や配偶者ビザで他に何が必要かを確認できます。' },
         ]}

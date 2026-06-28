@@ -57,24 +57,24 @@ export default function PricingKo() {
         <div className="grid md:grid-cols-3 gap-4">
           {[
             {
-              name: '베이직 플랜',
-              price: '₩590,000',
-              sub: '약 6.3만엔',
-              items: ['PSA 서류 1통（CENOMAR 또는 출생증명서）', 'DFA 아포스티유 인증', '국제 특송（DHL）'],
+              name: '단품 플랜',
+              price: '₩490,000',
+              sub: '세금 포함 · DHL 포함',
+              items: ['PSA 서류 1통（CENOMAR · 출생증명서 · 혼인증명서 중 택1）', 'DFA 아포스티유 인증（물리 원본）', '국제 특송（DHL Express）'],
               featured: false,
             },
             {
-              name: '스탠다드 플랜',
-              price: '₩990,000',
-              sub: '약 10.5만엔',
-              items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'DFA 아포스티유 인증（2통）', '국제 특송（DHL）'],
+              name: '국제결혼 준비 패키지',
+              price: '₩890,000',
+              sub: '세금 포함 · DHL 포함',
+              items: ['PSA 출생증명서（물리 원본）', 'CENOMAR（미혼증명서）', 'DFA 아포스티유 인증（2통）', '국제 특송（DHL Express）'],
               featured: true,
             },
             {
-              name: 'F-6 준비 패키지',
-              price: '₩1,590,000',
-              sub: '약 16.9만엔',
-              items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance（대사관 지문 등록 후 대행）', 'DFA 아포스티유 인증（3통）', '서류 정리 안내', '국제 특송（DHL）'],
+              name: 'F-6 풀 패키지',
+              price: '₩1,390,000',
+              sub: '세금 포함 · DHL 포함',
+              items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance（대사관 지문 등록 후 대행）', 'DFA 아포스티유 인증（3통）', '서류 정리 안내', '국제 특송（DHL Express）'],
               featured: false,
             },
           ].map((plan) => (
@@ -99,7 +99,7 @@ export default function PricingKo() {
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-400 mt-3">※ 요금은 세금 별도입니다. 취득 난이도에 따라 변동될 수 있으며, 사전에 고지합니다.</p>
+        <p className="text-xs text-gray-400 mt-3">표시 요금은 서류 취득·DFA 아포스티유·DHL 국제 배송료 포함입니다. 기재 불일치·재혼·late registration·긴급 대응 등의 경우 별도 견적을 드립니다.</p>
       </section>
 
       {/* 추가 옵션 */}
@@ -111,18 +111,16 @@ export default function PricingKo() {
               <tr className="bg-gray-50 border-b border-gray-100">
                 <th className="text-left px-4 py-3 font-semibold text-gray-700">옵션</th>
                 <th className="text-left px-4 py-3 font-semibold text-gray-700">요금（KRW）</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-700">일본엔 목안</th>
               </tr>
             </thead>
             <tbody>
               {[
-                { name: 'Express 우선 처리', price: '+₩180,000', yen: '약 +1.9만엔' },
-                { name: 'LCCM 주변 개별 안내・예약 동선 정리', price: '+₩390,000〜', yen: '약 +4.1만엔〜' },
+                { name: 'Express 우선 처리', price: '+₩180,000' },
+                { name: 'LCCM 주변 개별 안내・예약 동선 정리', price: '+₩390,000〜' },
               ].map((opt, i) => (
                 <tr key={opt.name} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
                   <td className="px-4 py-3 text-gray-700">{opt.name}</td>
                   <td className="px-4 py-3 font-medium text-secondary">{opt.price}</td>
-                  <td className="px-4 py-3 text-gray-400 text-xs">{opt.yen}</td>
                 </tr>
               ))}
             </tbody>
@@ -175,11 +173,12 @@ export default function PricingKo() {
             <p className="text-sm text-gray-600 mb-1">신용카드（Stripe）</p>
             <p className="text-xs text-gray-500 leading-relaxed">Visa / Mastercard / Amex / Apple Pay 대응. 착수금 청구서（약 50%）결제 후 착수, 서류 확인 후 잔금 청구서（약 50%）발송.</p>
           </div>
-          <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-            <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">취소・환불</p>
-            <ul className="space-y-1">
-              <li className="text-sm text-gray-600">・ 착수 전: 무료 취소 가능</li>
-              <li className="text-sm text-gray-600">・ 착수 후: 실비 + 진행분 공제 후 환불</li>
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 shadow-sm">
+            <p className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-2">서류 취득 보증 · 취소・환불</p>
+            <ul className="space-y-1.5">
+              <li className="text-sm text-emerald-700 font-semibold">・ 서류 취득 불가 시: 착수금 전액 환불</li>
+              <li className="text-sm text-gray-600">・ 착수 전 취소: 무료</li>
+              <li className="text-sm text-gray-600">・ 착수 후 취소（고객 사유）: 실비 공제 후 환불</li>
               <li className="text-sm text-gray-600">・ 서류 사본 확인 후 잔금 입금 → 발송</li>
             </ul>
           </div>

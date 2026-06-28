@@ -1,5 +1,5 @@
-import React from 'react';
-import { AlertCircle, CheckCircle2, Heart, ShieldCheck, Car, Globe, Users, Fingerprint, ArrowDown } from 'lucide-react';
+import React, { useState } from 'react';
+import { AlertCircle, CheckCircle2, Heart, ShieldCheck, Car, Globe, Users, Fingerprint, ArrowDown, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 const caseStudiesData = {
@@ -11,10 +11,10 @@ const caseStudiesData = {
       accentColor: 'border-rose-200',
       headerBg: 'bg-gradient-to-r from-rose-50 to-rose-100/50',
       badgeColor: 'bg-rose-100 text-rose-700',
-      title: '国際結婚：CENOMAR・PSA一括代行',
-      fear: '「何が必要か全く分からない。手続きを間違えたら婚姻届が受理されないかも…」',
-      action: '必要書類を一式整理し取得順序を設計。申請・受理・発送の各段階で進捗をご報告。',
-      result: '日本の市区町村役場に提出できる書類一式を、日本語だけのやり取りで完全取得。',
+      title: '国際結婚：PSA＋CENOMAR＋アポスティーユ',
+      fear: '「フィリピンに一度も行ったことがなく、現地に知人もいない。必要な書類をどうやって取ればいいか全く分からなかった」（日本在住フィリピン国籍・A様）',
+      action: 'PSA出生証明書・CENOMAR・DFAアポスティーユを一式代行。必要書類の整理から現地手配・発送まで日本語だけで完結。',
+      result: '日本での婚姻届提出に必要な書類一式をDHLで納品。フィリピンへの渡航なしで婚姻手続きを無事完了。',
     },
     {
       icon: ShieldCheck,
@@ -35,10 +35,10 @@ const caseStudiesData = {
       accentColor: 'border-emerald-200',
       headerBg: 'bg-gradient-to-r from-emerald-50 to-emerald-100/50',
       badgeColor: 'bg-emerald-100 text-emerald-700',
-      title: '外免切替：LTO書類取得代行',
-      fear: '「LTO書類の取り方が全く分からない。フィリピンに行かないと無理なのでは…？」',
-      action: '外免切替に必要な書類を整理し、試験場の予約日から逆算して確実に手配。渡航ゼロで完結。',
-      result: 'LTO書類・DFAアポスティーユを取得し、日本の試験場に提出できる形で郵送。',
+      title: '法人：フィリピン人従業員のLTO書類取得',
+      fear: '「フィリピン人従業員に日本で運転させたいが、LTO書類の取り方が全く分からない。渡航なしで取れるのか不安だった」（静岡・リサイクル業・O社）',
+      action: 'LTO運転経歴証明書×2部＋DFAアポスティーユ＋オフィシャルレシートを一式代行。法人として必要な書類要件を事前確認してから取得。',
+      result: '外免切替に必要な書類一式をDHLで法人宛に納品。フィリピンへの渡航・現地手配は一切不要で完結。',
     },
   ],
   en: [
@@ -85,9 +85,12 @@ const CaseStudies: React.FC = React.memo(() => {
   const { lang, t } = useLanguage();
   const caseStudies = caseStudiesData[lang];
   const isJa = lang === 'ja';
+  const [expanded, setExpanded] = useState(false);
+
+  const visibleCases = expanded ? caseStudies : caseStudies.slice(0, 1);
 
   return (
-    <section className="py-12 bg-white" aria-labelledby="case-studies-title">
+    <section className="py-20 bg-slate-50" aria-labelledby="case-studies-title">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
         <div className="text-center mb-8">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-1 block">Case Studies</span>
@@ -97,7 +100,7 @@ const CaseStudies: React.FC = React.memo(() => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {caseStudies.map((item) => {
+          {visibleCases.map((item) => {
             const Icon = item.icon;
             return (
               <article key={item.title} className={`border ${item.accentColor} bg-white rounded-2xl shadow-card flex flex-col overflow-hidden`}>
@@ -159,6 +162,18 @@ const CaseStudies: React.FC = React.memo(() => {
             );
           })}
         </div>
+
+        {!expanded && (
+          <div className="text-center mt-6">
+            <button
+              onClick={() => setExpanded(true)}
+              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
+            >
+              <ChevronDown className="w-4 h-4" />
+              {isJa ? `他の事例を見る（残り${caseStudies.length - 1}件）` : `See more cases (${caseStudies.length - 1} more)`}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
