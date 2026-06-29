@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
           <picture>
             <source srcSet="/hero-photo.webp" type="image/webp" />
             <img
-              alt="フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）"
+              alt="PSA出生証明書・アポスティーユ証明書・DHL国際配送書類の実物イメージ"
               className="w-full h-full object-cover"
               style={{ objectPosition: '80% 50%' }}
               src="/hero-photo.png"
@@ -142,7 +142,7 @@ const Hero: React.FC = () => {
         <picture>
           <source srcSet="/hero-photo.webp" type="image/webp" />
           <img
-            alt="Philippine document procurement — IGRS office operations"
+            alt="Philippine PSA birth certificate, apostille document, and DHL international shipping"
             className="w-full h-full object-cover"
             style={{ objectPosition: '92% 50%' }}
             src="/hero-photo.png"
