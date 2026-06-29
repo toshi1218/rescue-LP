@@ -9,6 +9,7 @@ import WhyUs from '../components/WhyUs';
 import CaseStudies from '../components/CaseStudies';
 import SocialProof from '../components/SocialProof';
 import DiyRisks from '../components/DiyRisks';
+import CtaBox from '../components/CtaBox';
 import ServicePacks from '../components/ServicePacks';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
@@ -209,6 +210,18 @@ export default function HomeJa() {
         <WhyUs />
         <SocialProof />
         <CaseStudies />
+        {/* 中間CTA — 社会的証明のあとで相談へ誘導 */}
+        <div className="container mx-auto max-w-4xl px-4 mt-12">
+          <CtaBox
+            title="書類名がわからなくても大丈夫です"
+            description="「何が必要か分からない」段階でもOK。状況をお聞きし、必要な書類と費用の目安を無料でご案内します。"
+            buttonText="無料で相談する"
+            href="#contact"
+            service="ホーム中間CTA"
+            variant="secondary"
+            trustNote="見積り段階のキャンセル無料・しつこい営業はありません"
+          />
+        </div>
         <DiyRisks />
         <GuideLinks maxItems={6} />
         <QuickFacts />

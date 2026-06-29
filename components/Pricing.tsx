@@ -301,10 +301,35 @@ const Pricing: React.FC = () => {
     <section className="pb-16 px-4" id="pricing">
       <div className="max-w-5xl mx-auto">
         {lang === 'ja' && (
-          <div className="text-xs text-gray-500 mb-6 space-y-0.5">
-            <p>※表示価格はすべて税込・DHL送料込みの総額です（PSAオンライン申請代行はDHL不要）</p>
-            <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
-          </div>
+          <>
+            {/* 目的別クイックナビ — 該当プランへスクロール */}
+            <div className="mb-6 rounded-xl border border-gray-100 bg-gray-50/60 p-4">
+              <p className="text-xs font-bold text-secondary mb-2.5">目的から探す</p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: '国際結婚', id: 'pack' },
+                  { label: '配偶者ビザ', id: 'visa' },
+                  { label: '外免切替', id: 'lto' },
+                  { label: '帰化申請', id: 'naturalization' },
+                  { label: '書類1点から', id: 'cenomar' },
+                  { label: 'オンライン代行', id: 'input-support' },
+                ].map((chip) => (
+                  <a
+                    key={chip.id}
+                    href={`#plan-${chip.id}`}
+                    className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-xs font-bold text-gray-600 hover:border-primary hover:text-primary-dark transition-colors"
+                  >
+                    {chip.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-xs text-gray-500 mb-6 space-y-0.5">
+              <p>※表示価格はすべて税込・DHL送料込みの総額です（PSAオンライン申請代行はDHL不要）</p>
+              <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
+            </div>
+          </>
         )}
 
         {/* 全プランをカードグリッドで表示 */}
@@ -314,7 +339,8 @@ const Pricing: React.FC = () => {
             return (
               <div
                 key={plan.id}
-                className={`relative rounded-2xl overflow-hidden border bg-white flex flex-col ${
+                id={`plan-${plan.id}`}
+                className={`relative scroll-mt-28 rounded-2xl overflow-hidden border bg-white flex flex-col ${
                   plan.featured
                     ? 'border-primary/30 shadow-lg'
                     : 'border-gray-200 shadow-soft'
