@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Car, ExternalLink, MessageCircle, ArrowRight } from 'lucide-react';
+import { Baby, Heart, UserX, Fingerprint, BadgeCheck, Car, ExternalLink, MessageCircle, ArrowRight, ChevronDown } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -24,6 +24,8 @@ const servicesData = {
 const Services: React.FC = () => {
   const { lang, t } = useLanguage();
   const services = servicesData[lang];
+  // 単一開閉アコーディオン（最初の1件を初期表示）
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section className="bg-white relative" id="pricing">
@@ -53,19 +55,50 @@ const Services: React.FC = () => {
             </div>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {services.map((service, index) => (
-              <Link key={index} to={service.path} className="group relative p-5 border border-gray-100 rounded-2xl bg-gray-50 hover:border-primary/40 hover:bg-primary/5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 block">
-                <div className="w-14 h-14 rounded-2xl bg-secondary/8 border border-secondary/10 flex items-center justify-center mb-4 group-hover:bg-primary/10 group-hover:border-primary/20 transition-colors">
-                  <service.icon className="w-7 h-7 text-secondary group-hover:text-primary transition-colors flex-shrink-0" />
+          <div className="space-y-3">
+            {services.map((service, index) => {
+              const open = openIndex === index;
+              const panelId = `service-panel-${index}`;
+              const btnId = `service-button-${index}`;
+              return (
+                <div
+                  key={index}
+                  className={`rounded-2xl border bg-white shadow-card transition-shadow ${open ? 'shadow-card-hover border-primary/30' : 'border-gray-100'}`}
+                >
+                  {/* Title row (always visible) */}
+                  <button
+                    type="button"
+                    id={btnId}
+                    aria-expanded={open}
+                    aria-controls={panelId}
+                    onClick={() => setOpenIndex(open ? null : index)}
+                    className="w-full flex items-center gap-3 p-4 text-left"
+                  >
+                    <span className="w-10 h-10 rounded-xl bg-secondary/8 border border-secondary/10 flex items-center justify-center flex-shrink-0">
+                      <service.icon className="w-5 h-5 text-secondary" />
+                    </span>
+                    <span className="flex-1 min-w-0 font-display font-bold text-base text-secondary leading-snug">{service.title}</span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+                      aria-hidden="true"
+                    />
+                  </button>
+
+                  {/* Body (accordion) */}
+                  {open && (
+                    <div id={panelId} role="region" aria-labelledby={btnId} className="px-4 pb-4 pl-[68px]">
+                      <p className="text-base text-gray-500 leading-relaxed mb-3">{service.desc}</p>
+                      <Link
+                        to={service.path}
+                        className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark border border-primary/40 px-2.5 py-1 rounded-lg hover:bg-primary hover:text-white transition-all"
+                      >
+                        {lang === 'ja' ? '詳しく見る' : 'Learn more'} <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+                  )}
                 </div>
-                <span className="font-display font-bold text-base text-secondary block mb-1.5">{service.title}</span>
-                <p className="text-base text-gray-500 leading-relaxed mb-3">{service.desc}</p>
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark border border-primary/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all">
-                  {lang === 'ja' ? '詳しく見る' : 'Learn more'} <ArrowRight className="w-3 h-3" />
-                </span>
-              </Link>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-8 p-5 bg-secondary/3 rounded-2xl border border-secondary/10">

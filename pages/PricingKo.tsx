@@ -139,6 +139,13 @@ export default function PricingKo() {
             원본 서류는 DHL 국제 특송으로 한국 내 지정 주소로 발송합니다. 배송비는 패키지 요금에 포함되어 있습니다.
             추적 번호를 제공해 드리며, 통상 발송 후 3〜5 영업일 내 도착합니다.
           </p>
+          <div className="mt-4 rounded-lg border border-blue-100 bg-blue-50/60 p-4">
+            <p className="text-sm font-bold text-secondary mb-1">배송 방법을 선택하실 수 있습니다（속도・비용 상담）</p>
+            <p className="text-xs text-gray-600 leading-relaxed">
+              기본은 DHL 국제 특송（추적 가능・최단）입니다. 일정에 여유가 있으시면 추적이 가능한 더 저렴한 배송 방법도 상담해 드립니다.
+              「비용이 더 들어도 빨리 받고 싶다」「조금 늦어도 비용을 아끼고 싶다」 등 우선순위를 알려주시면, 제출 기한에 맞춰 견적 시 최적의 방법을 제안해 드립니다.
+            </p>
+          </div>
         </div>
       </section>
 

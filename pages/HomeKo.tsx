@@ -157,29 +157,34 @@ export default function HomeKo() {
             <p className="text-sm text-gray-500 text-center mb-8">
               필리핀 서류 취득 전 과정을 대행합니다. 방문 불필요, 이메일만으로 완결.
             </p>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="space-y-3">
               {[
                 {
-                  icon: <FileText className="w-6 h-6 text-primary" />,
+                  icon: <FileText className="w-5 h-5 text-primary" />,
                   title: 'PSA 서류 취득',
                   desc: '출생증명서, CENOMAR（미혼증명서）, 혼인증명서를 필리핀 통계청（PSA）에서 취득합니다.',
                 },
                 {
-                  icon: <Shield className="w-6 h-6 text-primary" />,
+                  icon: <Shield className="w-5 h-5 text-primary" />,
                   title: 'NBI Clearance 신청',
                   desc: '필리핀 국가수사국（NBI）의 범죄경력증명서 취득을 지원합니다. 아포스티유 인증까지 대응합니다.',
                 },
                 {
-                  icon: <CheckCircle className="w-6 h-6 text-primary" />,
+                  icon: <CheckCircle className="w-5 h-5 text-primary" />,
                   title: 'DFA 아포스티유 인증',
                   desc: '한국 제출용 아포스티유 인증을 필리핀 외무부（DFA）에서 취득합니다. 국제 특송으로 배송합니다.',
                 },
               ].map((item) => (
-                <div key={item.title} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
-                  <div className="mb-3">{item.icon}</div>
-                  <h3 className="font-bold text-sm text-secondary mb-2">{item.title}</h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
-                </div>
+                <details key={item.title} className="group rounded-xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+                  <summary className="flex items-center gap-3 p-4 cursor-pointer list-none">
+                    <span className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
+                      {item.icon}
+                    </span>
+                    <h3 className="flex-1 min-w-0 font-bold text-sm text-secondary leading-snug">{item.title}</h3>
+                    <span className="shrink-0 text-primary group-open:rotate-45 transition-transform text-lg leading-none">+</span>
+                  </summary>
+                  <p className="px-4 pb-4 pl-[68px] text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+                </details>
               ))}
             </div>
             <div className="mt-6 grid md:grid-cols-3 gap-3">
