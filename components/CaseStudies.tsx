@@ -85,13 +85,12 @@ const CaseStudies: React.FC = React.memo(() => {
   const { lang, t } = useLanguage();
   const caseStudies = caseStudiesData[lang];
   const isJa = lang === 'ja';
-  const [expanded, setExpanded] = useState(false);
-
-  const visibleCases = expanded ? caseStudies : caseStudies.slice(0, 1);
+  // 単一開閉アコーディオン（最初の1件を初期表示）
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <section className="py-20 bg-slate-50" aria-labelledby="case-studies-title">
-      <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
+      <div className="max-w-md md:max-w-2xl mx-auto px-4">
         <div className="text-center mb-8">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-1 block">Case Studies</span>
           <h3 id="case-studies-title" className="text-xl font-bold text-secondary">{t('cases.title')}</h3>
@@ -99,81 +98,86 @@ const CaseStudies: React.FC = React.memo(() => {
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {visibleCases.map((item) => {
+        <div className="space-y-3">
+          {caseStudies.map((item, i) => {
             const Icon = item.icon;
+            const open = openIndex === i;
+            const panelId = `case-panel-${i}`;
+            const btnId = `case-button-${i}`;
             return (
-              <article key={item.title} className={`border ${item.accentColor} bg-white rounded-2xl shadow-card flex flex-col overflow-hidden`}>
-                {/* Card header */}
-                <div className={`${item.headerBg} px-5 py-4 flex items-center gap-3 border-b ${item.accentColor}`}>
-                  <div className={`w-10 h-10 rounded-xl ${item.iconBg} border ${item.accentColor} flex items-center justify-center flex-shrink-0`}>
+              <article key={item.title} className={`border bg-white rounded-2xl shadow-card overflow-hidden transition-shadow ${open ? 'shadow-card-hover ' + item.accentColor : 'border-gray-100'}`}>
+                {/* タイトル行（常時表示） */}
+                <button
+                  type="button"
+                  id={btnId}
+                  aria-expanded={open}
+                  aria-controls={panelId}
+                  onClick={() => setOpenIndex(open ? null : i)}
+                  className={`w-full flex items-center gap-3 px-5 py-4 text-left ${open ? item.headerBg : ''}`}
+                >
+                  <span className={`w-10 h-10 rounded-xl ${item.iconBg} border ${item.accentColor} flex items-center justify-center flex-shrink-0`}>
                     <Icon className={`w-5 h-5 ${item.iconColor}`} />
-                  </div>
-                  <h3 className="font-bold text-sm text-secondary leading-snug">{item.title}</h3>
-                </div>
+                  </span>
+                  <h3 className="flex-1 min-w-0 font-bold text-sm text-secondary leading-snug">{item.title}</h3>
+                  <ChevronDown
+                    className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+                    aria-hidden="true"
+                  />
+                </button>
 
-                <div className="p-5 flex flex-col gap-2 flex-1">
-                  {/* PROBLEM */}
-                  <div>
-                    <span className={`inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 ${item.badgeColor}`}>
-                      {isJa ? '不安' : 'Challenge'}
-                    </span>
-                    <div className="flex items-start gap-2 bg-red-50 rounded-xl px-3 py-2.5">
-                      <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
-                      <p className="text-xs text-gray-600 italic leading-relaxed">{item.fear}</p>
-                    </div>
-                  </div>
-
-                  {/* Arrow */}
-                  <div className="flex justify-center">
-                    <ArrowDown className="w-4 h-4 text-gray-300" />
-                  </div>
-
-                  {/* APPROACH */}
-                  <div>
-                    <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 bg-gray-100 text-gray-500">
-                      {isJa ? '対応' : 'Approach'}
-                    </span>
-                    <div className="flex items-start gap-2 bg-gray-50 rounded-xl px-3 py-2.5">
-                      <span className="flex-shrink-0 w-4 h-4 rounded-full bg-secondary/15 flex items-center justify-center mt-0.5">
-                        <span className="text-secondary text-[9px] font-bold">→</span>
+                {/* 中身（アコーディオン） */}
+                {open && (
+                  <div id={panelId} role="region" aria-labelledby={btnId} className="px-5 pb-5 flex flex-col gap-2 border-t border-gray-100 pt-4">
+                    {/* PROBLEM */}
+                    <div>
+                      <span className={`inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 ${item.badgeColor}`}>
+                        {isJa ? '不安' : 'Challenge'}
                       </span>
-                      <p className="text-xs text-gray-500 leading-relaxed">{item.action}</p>
+                      <div className="flex items-start gap-2 bg-red-50 rounded-xl px-3 py-2.5">
+                        <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
+                        <p className="text-xs text-gray-600 italic leading-relaxed">{item.fear}</p>
+                      </div>
+                    </div>
+
+                    {/* Arrow */}
+                    <div className="flex justify-center">
+                      <ArrowDown className="w-4 h-4 text-gray-300" />
+                    </div>
+
+                    {/* APPROACH */}
+                    <div>
+                      <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 bg-gray-100 text-gray-500">
+                        {isJa ? '対応' : 'Approach'}
+                      </span>
+                      <div className="flex items-start gap-2 bg-gray-50 rounded-xl px-3 py-2.5">
+                        <span className="flex-shrink-0 w-4 h-4 rounded-full bg-secondary/15 flex items-center justify-center mt-0.5">
+                          <span className="text-secondary text-[9px] font-bold">→</span>
+                        </span>
+                        <p className="text-xs text-gray-500 leading-relaxed">{item.action}</p>
+                      </div>
+                    </div>
+
+                    {/* Arrow */}
+                    <div className="flex justify-center">
+                      <ArrowDown className="w-4 h-4 text-gray-300" />
+                    </div>
+
+                    {/* OUTCOME */}
+                    <div>
+                      <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 bg-green-100 text-green-700">
+                        {isJa ? '結果' : 'Outcome'}
+                      </span>
+                      <div className="flex items-start gap-2 bg-green-50 border border-green-100 rounded-xl px-3 py-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                        <p className="text-xs text-gray-700 font-semibold leading-relaxed">{item.result}</p>
+                      </div>
                     </div>
                   </div>
-
-                  {/* Arrow */}
-                  <div className="flex justify-center">
-                    <ArrowDown className="w-4 h-4 text-gray-300" />
-                  </div>
-
-                  {/* OUTCOME */}
-                  <div className="mt-auto">
-                    <span className="inline-block text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 bg-green-100 text-green-700">
-                      {isJa ? '結果' : 'Outcome'}
-                    </span>
-                    <div className="flex items-start gap-2 bg-green-50 border border-green-100 rounded-xl px-3 py-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                      <p className="text-xs text-gray-700 font-semibold leading-relaxed">{item.result}</p>
-                    </div>
-                  </div>
-                </div>
+                )}
               </article>
             );
           })}
         </div>
-
-        {!expanded && (
-          <div className="text-center mt-6">
-            <button
-              onClick={() => setExpanded(true)}
-              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
-            >
-              <ChevronDown className="w-4 h-4" />
-              {isJa ? `他の事例を見る（残り${caseStudies.length - 1}件）` : `See more cases (${caseStudies.length - 1} more)`}
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );
