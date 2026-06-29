@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap, LifeBuoy, Stamp } from 'lucide-react';
+import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap, LifeBuoy, Stamp, Truck } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -612,6 +612,21 @@ const Pricing: React.FC = () => {
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* 配送方法を選べる */}
+        <div className="mt-4 rounded-xl border border-blue-100 bg-blue-50/50 p-5 flex items-start gap-3">
+          <Truck className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+          <div>
+            <p className="text-sm font-bold text-secondary">
+              {lang === 'ja' ? '配送方法を選べます（早さ・価格でご相談）' : 'Choose your shipping — speed or savings'}
+            </p>
+            <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+              {lang === 'ja'
+                ? '標準は DHL Express（追跡可能・最短）でのお届けです。納期に余裕がある場合は、追跡可能でより安価な配送方法もご相談いただけます。「高くても早く受け取りたい」「遅くても費用を抑えたい」など、お届け先（日本／海外）と提出期限に合わせて、お見積り時に最適な方法をご提案します。'
+                : 'Standard delivery is DHL Express (tracked, fastest). If your deadline allows, we can also arrange more affordable tracked shipping. Tell us your priority — "fast even if it costs more" or "lowest cost even if slower" — and we\'ll recommend the best option for your destination and deadline at quote time.'}
+            </p>
+          </div>
         </div>
 
         {/* 急ぎ対応 */}
