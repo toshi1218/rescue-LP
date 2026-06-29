@@ -13,6 +13,7 @@ import SocialProof from '../components/SocialProof';
 import Process from '../components/Process';
 import DiyRisks from '../components/DiyRisks';
 import FAQ from '../components/FAQ';
+import CtaBox from '../components/CtaBox';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
@@ -90,6 +91,16 @@ export default function HomeEn() {
         <TrustTransparency />
         <WhyUs />
         <CaseStudies />
+        <div className="container mx-auto max-w-4xl px-4 my-12">
+          <CtaBox
+            title="Not sure which documents you need?"
+            description="Tell us your situation — we'll map out the exact Philippine documents required and send a clear quote within 24 hours."
+            buttonText="Free Consultation"
+            href="#contact"
+            trustNote="Free cancellation at quote stage · Reply within 24h"
+            whatsappHref="https://wa.me/639452833727"
+          />
+        </div>
         <SocialProof />
         <Process />
         <DiyRisks />
