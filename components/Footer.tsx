@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="py-10 max-w-md md:max-w-xl mx-auto px-6 text-center">
+      <div className="py-10 max-w-md md:max-w-2xl mx-auto px-6 text-center">
 
         {/* Pre-form trust info */}
         {!submitted && (
@@ -156,7 +156,7 @@ const Footer: React.FC = () => {
           </div>
         ) : (
         <form
-          className="space-y-3 text-left"
+          className="grid grid-cols-1 md:grid-cols-2 gap-3 text-left"
           onSubmit={handleSubmit}
           aria-label={t('footer.formAriaLabel')}
           noValidate
@@ -248,7 +248,7 @@ const Footer: React.FC = () => {
             </select>
           </div>
 
-          <div>
+          <div className="md:col-span-2">
             <label className="block text-sm text-gray-600 mb-1">
               {isJa ? '当社をどこでお知りになりましたか？' : 'How did you find us?'}
               <span className="text-gray-400 text-xs ml-1">{isJa ? '（任意）' : '(optional)'}</span>
@@ -291,7 +291,7 @@ const Footer: React.FC = () => {
             )}
           </div>
 
-          <div>
+          <div className="md:col-span-2">
             <label htmlFor="footer-message" className="block text-sm text-gray-600 mb-1">
               {t('footer.messageLabel')}
               <span className="text-gray-400 text-xs ml-1">{isJa ? '（任意）' : '(optional)'}</span>
@@ -306,17 +306,17 @@ const Footer: React.FC = () => {
           </div>
 
           {submitError && (
-            <p role="alert" className="text-xs text-red-500">{submitError}</p>
+            <p role="alert" className="text-xs text-red-500 md:col-span-2">{submitError}</p>
           )}
 
-          <p className="text-xs text-emerald-700 text-center">
+          <p className="text-xs text-emerald-700 text-center md:col-span-2">
             ✓ {isJa ? '書類が取得できなければ着手金を全額返金' : 'Full refund of advance payment if documents cannot be obtained'}
           </p>
 
           <button
             type="submit"
             disabled={submitting}
-            className="w-full bg-primary text-secondary font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 focus:outline-none focus:ring-4 focus:ring-primary/30 disabled:opacity-60 disabled:cursor-not-allowed"
+            className="md:col-span-2 w-full bg-primary text-secondary font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 focus:outline-none focus:ring-4 focus:ring-primary/30 disabled:opacity-60 disabled:cursor-not-allowed"
             aria-label={t('footer.submitAriaLabel')}
           >
             <Send className="w-5 h-5" aria-hidden="true" />

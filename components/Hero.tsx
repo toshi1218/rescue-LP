@@ -44,59 +44,47 @@ const Hero: React.FC = () => {
     const primaryLabel = ctaVariant === 'A' ? t('hero.ctaA') : t('hero.ctaB');
 
     return (
-      <header className="relative bg-secondary text-white overflow-hidden min-h-[520px] md:min-h-[600px]">
-        {/* Background Image & Overlay */}
-        <div className="absolute inset-0 z-0">
-          <picture>
-            <source srcSet="/hero-photo.webp" type="image/webp" />
-            <img
-              alt="フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）"
-              className="w-full h-full object-cover"
-              style={{ objectPosition: '80% 50%' }}
-              src="/hero-photo.png"
-              width={1600}
-              height={900}
-              loading="eager"
-              decoding="async"
-            />
-          </picture>
-          <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/45 to-black/30"></div>
+      <header className="relative bg-gradient-to-br from-slate-50 via-white to-blue-50/50 text-secondary overflow-hidden border-b border-gray-100">
+        {/* Decorative accents (JP red / PH blue) */}
+        <div className="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-red-500/[0.06] blur-3xl" />
+          <div className="absolute -left-28 bottom-0 w-96 h-96 rounded-full bg-blue-500/[0.06] blur-3xl" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-md md:max-w-2xl lg:max-w-5xl mx-auto px-6 py-14 md:py-20 flex flex-col md:flex-row md:items-center gap-10">
+        <div className="relative z-10 max-w-md md:max-w-2xl lg:max-w-5xl mx-auto px-6 py-12 md:py-16 flex flex-col md:flex-row md:items-center gap-10">
 
           {/* ── Left: Text ── */}
           <div className="flex-1 min-w-0 flex flex-col items-center md:items-start text-center md:text-left">
             {/* Trust badges */}
             <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4" aria-label="サービスの特徴">
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white text-secondary text-xs font-medium border border-gray-200 shadow-sm">
                 🏢 日本法人
               </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white text-secondary text-xs font-medium border border-gray-200 shadow-sm">
                 ✈️ 渡航不要
               </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white text-secondary text-xs font-medium border border-gray-200 shadow-sm">
                 🛡️ キャンセル無料
               </span>
             </div>
 
-            <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
+            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary-dark text-xs font-bold mb-4 tracking-wider border border-primary/30">
               {t('hero.badge')}
             </span>
 
             {/* H1 — service name is the dominant element */}
-            <h1 className="font-bold leading-tight mb-3 drop-shadow-sm">
+            <h1 className="font-bold leading-tight mb-3 text-secondary">
               <span className="block text-3xl md:text-4xl lg:text-5xl">{t('hero.h1line1')}</span>
-              <span className="block text-sm md:text-base font-normal text-white/70 leading-snug mt-2">{t('hero.h1line2')}</span>
+              <span className="block text-sm md:text-base font-normal text-gray-500 leading-snug mt-2">{t('hero.h1line2')}</span>
             </h1>
 
             {/* Supporting tagline — secondary to H1 */}
-            <p className="text-primary font-bold text-lg md:text-xl leading-snug mb-4 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+            <p className="text-primary-dark font-bold text-lg md:text-xl leading-snug mb-4">
               {t('hero.h1line3')}
             </p>
 
-            <p className="text-gray-200 mb-5 text-sm md:text-base leading-relaxed max-w-xs md:max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+            <p className="text-gray-600 mb-5 text-sm md:text-base leading-relaxed max-w-xs md:max-w-lg">
               {t('hero.description')}
             </p>
 
@@ -106,7 +94,7 @@ const Hero: React.FC = () => {
               <a
                 href="#contact"
                 onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
-                className="bg-primary text-secondary font-bold text-base py-4 px-6 rounded-xl shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
+                className="bg-red-600 text-white font-bold text-base py-4 px-6 rounded-xl shadow-lg shadow-red-600/25 hover:bg-red-700 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-red-600/30"
                 aria-label="無料相談フォームへ移動"
               >
                 <Mail className="w-5 h-5 flex-shrink-0" />
@@ -120,7 +108,7 @@ const Hero: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackEvent('cta_click', { location: 'hero', type: 'line_urgent', variant: ctaVariant })}
-                  className="bg-[#06C755] text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-[#06C755]/30 hover:bg-[#05b04a] hover:scale-[1.02] transition-all flex items-center justify-center gap-1.5 focus:outline-none focus:ring-4 focus:ring-[#06C755]/40"
+                  className="bg-[#06C755] text-white font-bold py-3 px-4 rounded-xl shadow-md shadow-[#06C755]/25 hover:bg-[#05b04a] hover:scale-[1.02] transition-all flex items-center justify-center gap-1.5 focus:outline-none focus:ring-4 focus:ring-[#06C755]/40"
                   aria-label="LINEで問い合わせ（新しいタブで開く）"
                 >
                   <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -131,7 +119,7 @@ const Hero: React.FC = () => {
                 <a
                   href="/ja/ryokin/"
                   onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
-                  className="font-bold py-3 px-4 rounded-xl bg-white/10 text-white border border-white/30 backdrop-blur-sm hover:bg-white/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-1.5 focus:outline-none focus:ring-4 focus:ring-white/30"
+                  className="font-bold py-3 px-4 rounded-xl bg-white text-secondary border border-gray-300 hover:bg-gray-50 hover:scale-[1.02] transition-all flex items-center justify-center gap-1.5 focus:outline-none focus:ring-4 focus:ring-secondary/20"
                   aria-label={t('hero.pricingAriaLabel')}
                 >
                   <Tag className="w-4 h-4 flex-shrink-0" />
@@ -142,24 +130,39 @@ const Hero: React.FC = () => {
 
             {/* Trust: Rating badge */}
             <div className="flex items-center justify-center md:justify-start gap-1.5 mt-3" aria-label="平均評価 4.8 / 5.0">
-              <span className="text-yellow-400 text-base leading-none" aria-hidden="true">★★★★★</span>
-              <span className="text-white/80 text-xs font-medium">実績500件以上・公開レビュー47件（★4.8）</span>
+              <span className="text-yellow-500 text-base leading-none" aria-hidden="true">★★★★★</span>
+              <span className="text-gray-600 text-xs font-medium">実績500件以上・公開レビュー47件（★4.8）</span>
             </div>
 
             {/* Urgency message */}
-            <p className="text-yellow-300 text-xs font-semibold mt-1 tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+            <p className="text-red-600 text-xs font-semibold mt-1 tracking-wide">
               ただいまお問い合わせ受付中 · 24時間以内に返信
-            </p>
-
-            {/* Pricing hint – aligned with actual pricing table */}
-            <p className="text-white/60 text-xs mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-              国際結婚準備パック ¥94,000〜（税・送料込み）
             </p>
           </div>
 
-          {/* ── Right: Trust card (desktop) ── */}
-          <div className="hidden md:block w-80 flex-shrink-0">
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+          {/* ── Right: Trust card + featured pack card ── */}
+          <div className="w-full md:w-80 flex-shrink-0 space-y-4">
+            {/* Featured pack highlight card */}
+            <div className="rounded-2xl border-2 border-primary bg-gradient-to-br from-primary/[0.07] to-white shadow-lg p-5 text-center">
+              <span className="inline-block px-2.5 py-0.5 rounded-full bg-primary text-white text-[11px] font-bold mb-2 tracking-wide">人気No.1パック</span>
+              <p className="text-sm font-bold text-secondary">国際結婚準備パック</p>
+              <p className="mt-1">
+                <span className="text-3xl font-extrabold text-primary-dark">¥94,000</span>
+                <span className="text-sm font-bold text-gray-500">〜</span>
+              </p>
+              <p className="text-xs text-gray-500 mt-0.5">税込・DHL送料込み（CENOMAR＋出生証明書＋アポスティーユ）</p>
+              <a
+                href="/ja/ryokin/"
+                onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pack_card', variant: ctaVariant })}
+                className="mt-3 inline-flex items-center justify-center gap-1 w-full bg-secondary text-white text-sm font-bold py-2.5 rounded-xl hover:bg-secondary-light transition-colors"
+              >
+                料金の詳細を見る
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            {/* Trust card (desktop only) */}
+            <div className="hidden md:block bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
               {/* Card header */}
               <div className="bg-secondary px-5 py-4">
                 <div className="flex items-center gap-3">
