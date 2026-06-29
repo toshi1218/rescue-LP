@@ -10,6 +10,7 @@ const WhyUs: React.FC = () => {
     { icon: Eye, titleKey: 'whyus.1.title' as const, descKey: 'whyus.1.desc' as const },
     { icon: MessageSquare, titleKey: 'whyus.2.title' as const, descKey: 'whyus.2.desc' as const },
     { icon: ShieldCheck, titleKey: 'whyus.3.title' as const, descKey: 'whyus.3.desc' as const },
+    { icon: BadgeCheck, titleKey: 'whyus.4.title' as const, descKey: 'whyus.4.desc' as const },
   ];
 
   const stats = [
@@ -33,11 +34,11 @@ const WhyUs: React.FC = () => {
           <div className="h-1 w-12 bg-primary mx-auto rounded-full mt-3"></div>
         </div>
 
-        <div className="space-y-4 md:space-y-0 md:grid md:grid-cols-3 md:gap-6">
+        <div className="space-y-4 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6">
           {reasons.map(({ icon: Icon, titleKey, descKey }, i) => (
             <div key={titleKey} className="flex gap-4 p-6 bg-white rounded-2xl shadow-soft border border-primary/10 md:flex-col md:items-center md:text-center md:h-full hover:shadow-md hover:-translate-y-0.5 transition-all">
               <div className="shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center"
-                style={{background: i === 0 ? 'linear-gradient(135deg, #1a365d, #2c5282)' : i === 1 ? 'linear-gradient(135deg, #d69e2e, #b77f1d)' : 'linear-gradient(135deg, #2d6a4f, #40916c)'}}>
+                style={{background: ['linear-gradient(135deg, #1a365d, #2c5282)', 'linear-gradient(135deg, #d69e2e, #b77f1d)', 'linear-gradient(135deg, #2d6a4f, #40916c)', 'linear-gradient(135deg, #6b46c1, #805ad5)'][i]}}>
                 <Icon className="w-7 h-7 text-white" />
               </div>
               <div>

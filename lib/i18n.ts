@@ -291,7 +291,7 @@ const en: typeof ja = {
   'process.ctaNote': '100% in English. Anonymous inquiries welcome.',
 
   // ── WhyUs ────────────────────────────────────────────────────────────
-  'whyus.title': 'Three Promises That Remove Your Risk',
+  'whyus.title': 'What Sets Our Service Apart',
   'whyus.1.title': 'Progress Updates at Every Stage',
   'whyus.1.desc': 'We report at each step: application submitted, received, Apostille done, dispatched. You will never be left wondering.',
   'whyus.2.title': 'English Only — We Handle the Rest',
