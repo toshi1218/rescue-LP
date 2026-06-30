@@ -85,8 +85,6 @@
 </style>
 </head>
 <body>
-<div class="demo-flag">DEMO — 御所のロゴ・事務所名・文言に差し替えるだけで使える定型パッケージのサンプルです</div>
-
 <header class="hero">
   <div class="wrap">
     <span class="badge">行政書士・登録支援機関・監理団体向け</span>
@@ -194,12 +192,13 @@
     <span class="eyebrow">無料デモ</span>
     <h2>15分で、取りこぼしの止め方をお見せします</h2>
     <p class="sub" style="margin:0 auto">オンラインで現状を伺い、御所に当てはめたデモをお見せします。その場で料金もお伝えします。</p>
-    <a class="btn btn-primary" href="mailto:hello@example.com?subject=デモ希望">無料デモを申し込む</a>
+    <a class="btn btn-primary" href="mailto:{{CONTACT_EMAIL}}?subject=デモ希望">無料デモを申し込む</a>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">DEMO LP — 外国人材ニッチ向け「問い合わせ→追客→受注 自動化＋フィリピン書類フルフィルメント」｜ 営業資料・テンプレ原型</div>
+  <div class="wrap">{{BRAND}}｜外国人案件の問い合わせ→追客→受注 自動化 ＋ フィリピン書類フルフィルメント
+    <a href="mailto:{{CONTACT_EMAIL}}" style="color:var(--primary);text-decoration:none">{{CONTACT_EMAIL}}</a>　{{PHONE}}</div>
 </footer>
 </body>
 </html>
