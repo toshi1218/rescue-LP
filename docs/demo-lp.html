@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>外国人案件の問い合わせを取りこぼさない｜追客自動化＋フィリピン書類フルフィルメント</title>
+<meta name="description" content="行政書士・登録支援機関・監理団体向け。問い合わせ→追客→受注を自動で回す仕組みと、フィリピン公的書類の現地取得を、月額のパッケージで。" />
+<style>
+  :root{
+    --primary:#0b6b5b; --primary-d:#084f44; --accent:#c79a3a;
+    --ink:#1d2530; --muted:#5b6675; --line:#e6e9ee; --bg:#f7f9fa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);line-height:1.75;background:#fff;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  .demo-flag{background:#1d2530;color:#fff;text-align:center;font-size:12px;padding:7px 10px;letter-spacing:.04em}
+  /* hero */
+  .hero{background:linear-gradient(160deg,var(--primary) 0%,var(--primary-d) 100%);color:#fff;padding:64px 0 72px}
+  .hero .badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:999px;font-size:12.5px;padding:5px 13px;margin-bottom:20px}
+  .hero h1{font-size:clamp(25px,5vw,40px);line-height:1.4;font-weight:800;letter-spacing:-.01em}
+  .hero h1 .hl{color:var(--accent)}
+  .hero p.lead{margin-top:18px;font-size:clamp(15px,2.4vw,18px);color:rgba(255,255,255,.92);max-width:680px}
+  .cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;border-radius:10px;font-weight:700;text-decoration:none;padding:15px 28px;font-size:16px;transition:.15s}
+  .btn-primary{background:var(--accent);color:#241a00}
+  .btn-primary:hover{background:#dcae46}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.45)}
+  .btn-ghost:hover{background:rgba(255,255,255,.16)}
+  /* sections */
+  section{padding:60px 0;border-bottom:1px solid var(--line)}
+  .eyebrow{color:var(--primary);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+  h2{font-size:clamp(22px,3.6vw,30px);font-weight:800;margin:8px 0 6px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:15px;max-width:680px}
+  /* pain */
+  .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+  .pain{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .pain .n{color:#c0392b;font-weight:800;font-size:13px}
+  .pain h3{font-size:16px;margin:8px 0 6px}
+  .pain p{font-size:13.5px;color:var(--muted)}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px;counter-reset:s}
+  .step{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px 22px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:22px;width:34px;height:34px;background:var(--primary);color:#fff;border-radius:9px;display:grid;place-items:center;font-weight:800}
+  .step h3{font-size:16.5px;margin:10px 0 8px}
+  .step p{font-size:13.5px;color:var(--muted)}
+  /* edge */
+  .edge{background:linear-gradient(160deg,#0d2a26,#13413a);color:#fff;border-radius:18px;padding:40px 34px;margin-top:8px}
+  .edge .eyebrow{color:var(--accent)}
+  .edge h2{color:#fff}
+  .edge p{color:rgba(255,255,255,.9);margin-top:12px;max-width:720px}
+  .edge ul{list-style:none;margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .edge li{font-size:14.5px;padding-left:26px;position:relative}
+  .edge li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:800}
+  /* pricing */
+  .price-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;margin-top:34px}
+  .card{border:1px solid var(--line);border-radius:16px;padding:30px;background:#fff}
+  .card.feature{border:2px solid var(--primary);position:relative}
+  .card.feature .tag{position:absolute;top:-13px;left:30px;background:var(--primary);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px}
+  .card h3{font-size:17px}
+  .price{font-size:34px;font-weight:800;margin:12px 0 2px}
+  .price span{font-size:15px;color:var(--muted);font-weight:600}
+  .card ul{list-style:none;margin-top:16px}
+  .card li{font-size:14px;padding:7px 0 7px 24px;position:relative;border-top:1px dashed var(--line)}
+  .card li::before{content:"›";position:absolute;left:6px;color:var(--primary);font-weight:800}
+  .note{font-size:12.5px;color:var(--muted);margin-top:14px}
+  /* faq */
+  .faq{margin-top:26px}
+  details{border:1px solid var(--line);border-radius:12px;padding:6px 18px;margin-bottom:10px;background:#fff}
+  summary{cursor:pointer;font-weight:700;font-size:15px;padding:12px 0;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"＋";float:right;color:var(--primary)}
+  details[open] summary::after{content:"−"}
+  details p{font-size:14px;color:var(--muted);padding:0 0 14px}
+  /* final cta */
+  .final{background:var(--bg);text-align:center}
+  .final h2{margin-bottom:10px}
+  .final .btn{margin-top:22px}
+  footer{padding:28px 0;text-align:center;color:var(--muted);font-size:12.5px}
+  @media(max-width:720px){
+    .pain-grid,.steps,.price-wrap,.edge ul{grid-template-columns:1fr}
+    .hero{padding:48px 0 54px}
+    section{padding:46px 0}
+  }
+</style>
+</head>
+<body>
+<div class="demo-flag">DEMO — 御所のロゴ・事務所名・文言に差し替えるだけで使える定型パッケージのサンプルです</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">行政書士・登録支援機関・監理団体向け</span>
+    <h1>外国人案件の問い合わせを、<br><span class="hl">取りこぼさない。</span></h1>
+    <p class="lead">問い合わせ → 自動返信 → 追客 → 受注までを自動で回す仕組みを、月額で。
+      さらに、フィリピンの公的書類は私たちが現地で実際に取得します。集客から書類実務まで、外国人案件の裏側をまるごと。</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact">15分の無料デモを見る</a>
+      <a class="btn btn-ghost" href="#price">料金を見る</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">よくある損失</span>
+    <h2>受注率は「初動の速さ」と「追客」で決まる</h2>
+    <p class="sub">外国人ビザ・特定技能の問い合わせは、返信が遅れた瞬間に他事務所へ流れます。多くの取りこぼしは、仕組みが無いだけで起きています。</p>
+    <div class="pain-grid">
+      <div class="pain"><div class="n">LOSS 01</div><h3>初動が遅い</h3><p>問い合わせに数時間〜翌日返信。その間に相見積もりされ、決まらない。</p></div>
+      <div class="pain"><div class="n">LOSS 02</div><h3>追客していない</h3><p>一度返して終わり。「検討します」のまま放置され、受注が消える。</p></div>
+      <div class="pain"><div class="n">LOSS 03</div><h3>書類で詰まる</h3><p>フィリピン書類の取得先が分からず、案件が前に進まない・断ってしまう。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">仕組み</span>
+    <h2>問い合わせ → 追客 → 受注を自動で回す</h2>
+    <p class="sub">フォームに入った瞬間から、受注までの導線を自動化します。先生が手を動かすのは「決まった案件に対応するとき」だけ。</p>
+    <div class="steps">
+      <div class="step"><h3>① 問い合わせ簡略化</h3><p>入力しやすいフォームと即時の自動返信。問い合わせた瞬間に「来た」と相手に伝わり、初動の遅れをゼロに。</p></div>
+      <div class="step"><h3>② 追客自動化</h3><p>返信が来ない相手へ、ステップ配信とリマインドを自動送信。「検討中」を逃さず、受注まで連れていく。</p></div>
+      <div class="step"><h3>③ 受注・実務へ</h3><p>反応した見込み客だけが手元に残る。あとは対応するだけ。書類が要ればそのまま私たちが現地取得。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="edge">
+      <span class="eyebrow">他社にできない理由</span>
+      <h2>サイト屋でも、書類屋でもない。両方やれる。</h2>
+      <p>「サイトを作る」だけなら誰でもできます。私たちの違いは、集客の仕組みと<strong>フィリピンの公的書類の現地取得</strong>を、1か所で出せること。外国人案件の入口から実務まで、裏側をまるごとお任せいただけます。</p>
+      <ul>
+        <li>PSA出生・婚姻証明書の取得</li>
+        <li>LTO運転経歴証明書（外免切替）</li>
+        <li>DFAアポスティーユ認証</li>
+        <li>NBIクリアランス 等</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <span class="eyebrow">料金</span>
+    <h2>定型パッケージ・1プランのみ</h2>
+    <p class="sub">事務所ごとのカスタムはしません。だから速く・安く・確実に立ち上がります。ロゴと文言を差し替えるだけ。</p>
+    <div class="price-wrap">
+      <div class="card feature">
+        <span class="tag">おすすめ</span>
+        <h3>問い合わせ→追客 自動化システム</h3>
+        <div class="price">¥50,000<span>/月</span></div>
+        <div class="note">初期構築費 ¥150,000（税別）</div>
+        <ul>
+          <li>専用LP（御所仕様に差し替え）</li>
+          <li>問い合わせフォーム＋即時自動返信</li>
+          <li>追客ステップ配信・リマインド</li>
+          <li>リード管理・月次レポート</li>
+          <li>運用・保守込み</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>＋ フィリピン書類フルフィルメント</h3>
+        <div class="price">案件ごと<span></span></div>
+        <div class="note">必要な案件だけ・都度</div>
+        <ul>
+          <li>PSA／LTO／DFA／NBI 等の現地取得</li>
+          <li>アポスティーユ・国際郵送対応</li>
+          <li>複数名まとめ依頼可</li>
+          <li>日本語だけで完結</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2>よくある質問</h2>
+    <div class="faq">
+      <details open><summary>導入にどれくらいかかりますか？</summary><p>定型パッケージのため、お申し込みから最短2週間で稼働できます。御所のロゴ・文言・連絡先に差し替えるだけです。</p></details>
+      <details><summary>今あるサイトはそのまま使えますか？</summary><p>はい。既存サイトに問い合わせ・追客の仕組みだけを足す形でも、専用LPを新設する形でも対応できます。</p></details>
+      <details><summary>フィリピン書類だけ頼めますか？</summary><p>可能です。書類フルフィルメントは案件ごとに単体でご依頼いただけます。</p></details>
+      <details><summary>カスタム開発もお願いできますか？</summary><p>新規のお客さまには定型パッケージのみご提供しています。ご契約後、運用が安定した段階で追加機能（書類管理・一括見積・FAQボット等）をご相談いただけます。</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">無料デモ</span>
+    <h2>15分で、取りこぼしの止め方をお見せします</h2>
+    <p class="sub" style="margin:0 auto">オンラインで現状を伺い、御所に当てはめたデモをお見せします。その場で料金もお伝えします。</p>
+    <a class="btn btn-primary" href="mailto:hello@example.com?subject=デモ希望">無料デモを申し込む</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">DEMO LP — 外国人材ニッチ向け「問い合わせ→追客→受注 自動化＋フィリピン書類フルフィルメント」｜ 営業資料・テンプレ原型</div>
+</footer>
+</body>
+</html>
