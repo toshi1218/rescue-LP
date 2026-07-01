@@ -180,9 +180,12 @@ export default function ContactJa() {
           </select>
         </div>
 
+        {service !== '' && service !== 'その他・不明' && (
         <fieldset className="rounded-lg border border-gray-100 bg-gray-50/60 p-3">
           <legend className="px-1 text-xs font-bold text-gray-500">詳細情報（任意・分かる範囲でOK）</legend>
-          <p className="text-xs text-gray-400 mb-3">入力いただけると、初回のご返信で見積もりまでお出しできます。</p>
+          <p className="text-xs text-gray-400 mb-3">
+            この項目が揃うと、初回のご返信で見積もり・納期までお出しできます。空欄のままだと、確認のやり取りが数往復増える場合があります。
+          </p>
 
           <div className="mb-3">
             <label className="block text-sm font-bold text-gray-700 mb-1">この書類を主に使われるのはどなたですか？</label>
@@ -248,6 +251,7 @@ export default function ContactJa() {
             />
           </div>
         </fieldset>
+        )}
 
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">

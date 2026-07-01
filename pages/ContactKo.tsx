@@ -13,6 +13,7 @@ export default function ContactKo() {
   const [emailError, setEmailError] = useState('');
   const [referral, setReferral] = useState('');
   const [referralError, setReferralError] = useState('');
+  const [purpose, setPurpose] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -182,7 +183,8 @@ export default function ContactKo() {
             <select
               name="purpose"
               required
-              defaultValue=""
+              value={purpose}
+              onChange={e => setPurpose(e.target.value)}
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
             >
               <option value="" disabled>선택해 주세요</option>
@@ -225,76 +227,77 @@ export default function ContactKo() {
             {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
           </div>
 
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1">
-              필요한 서류가 무엇인가요? <span className="text-xs font-normal text-gray-400">（모르셔도 괜찮습니다）</span>
-            </label>
-            <input
-              name="documents_needed"
-              placeholder="예: CENOMAR, PSA 출생증명서, NBI Clearance 등"
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
+          {purpose !== '' && purpose !== '기타' && (
+          <fieldset className="rounded-lg border border-gray-100 bg-gray-50/60 p-3 space-y-4">
+            <legend className="px-1 text-xs font-bold text-gray-500">상세 정보（선택 사항）</legend>
+            <p className="text-xs text-gray-400">
+              이 항목이 채워지면 첫 답변에 견적과 예상 기간까지 안내해 드릴 수 있습니다. 비워두시면 확인을 위해 몇 차례 더 연락드릴 수 있습니다.
+            </p>
 
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1">
-              이 서류는 주로 누구를 위한 것인가요? <span className="text-xs font-normal text-gray-400">（선택）</span>
-            </label>
-            <select
-              name="document_user"
-              defaultValue=""
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
-            >
-              <option value="">선택해 주세요（선택）</option>
-              <option value="본인">본인</option>
-              <option value="배우자·파트너">배우자·파트너</option>
-              <option value="기타·모름">기타·모름</option>
-            </select>
-          </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">
+                필요한 서류가 무엇인가요? <span className="text-xs font-normal text-gray-400">（모르셔도 괜찮습니다）</span>
+              </label>
+              <input
+                name="documents_needed"
+                placeholder="예: CENOMAR, PSA 출생증명서, NBI Clearance 등"
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1">
-              필요 부수 <span className="text-xs font-normal text-gray-400">（선택）</span>
-            </label>
-            <input
-              name="copies"
-              placeholder="예: 2부"
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">
+                이 서류는 주로 누구를 위한 것인가요?
+              </label>
+              <select
+                name="document_user"
+                defaultValue=""
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              >
+                <option value="">선택해 주세요（선택）</option>
+                <option value="본인">본인</option>
+                <option value="배우자·파트너">배우자·파트너</option>
+                <option value="기타·모름">기타·모름</option>
+              </select>
+            </div>
 
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1">
-              출생지（시/군） <span className="text-xs font-normal text-gray-400">（선택）</span>
-            </label>
-            <input
-              name="birthplace"
-              placeholder="예: Cebu City, Manila"
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">필요 부수</label>
+              <input
+                name="copies"
+                placeholder="예: 2부"
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1">
-              기존에 가지고 있는 서류가 있나요? <span className="text-xs font-normal text-gray-400">（선택）</span>
-            </label>
-            <input
-              name="existing_documents"
-              placeholder="예: PSA 출생증명서는 이미 있습니다 등"
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">출생지（시/군）</label>
+              <input
+                name="birthplace"
+                placeholder="예: Cebu City, Manila"
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-1">
-              급한 일정이 있나요? <span className="text-xs font-normal text-gray-400">（선택）</span>
-            </label>
-            <input
-              name="deadline"
-              placeholder="예: 3개월 이내, 6월까지 등"
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">기존에 가지고 있는 서류가 있나요?</label>
+              <input
+                name="existing_documents"
+                placeholder="예: PSA 출생증명서는 이미 있습니다 등"
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">급한 일정이 있나요?</label>
+              <input
+                name="deadline"
+                placeholder="예: 3개월 이내, 6월까지 등"
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+              />
+            </div>
+          </fieldset>
+          )}
 
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-1">

@@ -198,9 +198,12 @@ export default function ContactEn() {
           </select>
         </div>
 
+        {service !== '' && service !== 'Other' && (
         <fieldset className="rounded-lg border border-gray-100 bg-gray-50/60 p-3">
           <legend className="px-1 text-xs font-bold text-gray-500">Additional details (optional — whatever you know)</legend>
-          <p className="text-xs text-gray-400 mb-3">Filling these in lets us send a quote in our first reply.</p>
+          <p className="text-xs text-gray-400 mb-3">
+            When these are filled in, we can send your quote and timeline in our first reply. If left blank, we may need a few extra messages to confirm details.
+          </p>
 
           <div className="mb-3">
             <label className="block text-sm font-bold text-gray-700 mb-1">Who is this document mainly for?</label>
@@ -266,6 +269,7 @@ export default function ContactEn() {
             />
           </div>
         </fieldset>
+        )}
 
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">
