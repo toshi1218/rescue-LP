@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FileText, Info } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import GuideLinks from '../components/GuideLinks';
@@ -146,34 +146,62 @@ export default function HomeJa() {
             <a href="#contact" className="flex-shrink-0 text-xs font-bold text-white bg-secondary py-1.5 px-4 rounded-lg hover:bg-secondary/90 transition-all whitespace-nowrap">今すぐ相談</a>
           </div>
         </div>
-        <div className="container mx-auto max-w-5xl px-4 pt-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+        <div className="container mx-auto max-w-5xl px-4 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
             {/* 紙原本対応 */}
-            <section className="rounded-xl bg-white border border-gray-200 border-l-4 border-l-red-700 shadow-sm px-4 py-3.5 flex flex-col gap-2.5">
-              <div className="flex items-start gap-3">
-                <FileText className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
-                <div className="min-w-0">
-                  <span className="inline-block px-2 py-0.5 bg-red-700 text-white text-[10px] font-bold rounded tracking-wide mb-1.5">紙原本対応</span>
-                  <p className="text-xs text-gray-700 leading-relaxed">2026年3月のPSAデジタル化以降も、当社はPSA・DFA窓口で直接<strong className="text-red-700">紙原本の取得・アポスティーユ対応が可能です</strong>。納期は約2ヶ月が目安。</p>
+            <section className="rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
+              <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />
+              <div className="p-5">
+                <div className="inline-block mb-3 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">
+                  紙原本対応
                 </div>
+                <p className="text-sm font-bold text-secondary leading-snug mb-3">
+                  2026年3月のPSAデジタル化以降も、<span className="text-red-700">当社はPSA・DFA窓口で直接紙原本を取得しており、従来通り対応可能です。</span>
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-gray-700 leading-relaxed">日本の役所・入管・総領事館は当面の間、紙原本を求められる可能性があります</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-gray-700 leading-relaxed">まずは提出先にご確認いただき、<strong className="text-red-700">紙原本を求められた場合はご相談ください</strong></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-red-700 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-gray-700 leading-relaxed">現在、紙原本依頼が集中しており納期は約2ヶ月が目安です</span>
+                  </li>
+                </ul>
+                <a href="#contact" className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-red-700 hover:text-red-800 transition-colors">
+                  詳細を見る →
+                </a>
               </div>
-              <a href="#contact" className="inline-flex items-center gap-0.5 text-xs font-bold text-red-700 hover:text-red-800 transition-colors self-start">
-                詳細を見る →
-              </a>
             </section>
 
             {/* e-Certificate対応 */}
-            <section className="rounded-xl bg-blue-50 border border-blue-100 shadow-sm px-4 py-3.5 flex flex-col gap-2.5">
-              <div className="flex items-start gap-3">
-                <Info className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                <div className="min-w-0">
-                  <p className="text-xs font-bold text-blue-800 leading-snug mb-1">e-Certificate（電子文書）での提出が認められている場合</p>
-                  <p className="text-xs text-blue-700 leading-relaxed">電子文書でOKと言われた場合は、<strong>e-CertificateおよびeApostille</strong>の取得代行にも対応しています。</p>
+            <section className="rounded-2xl bg-blue-50 border border-blue-100 shadow-md">
+              <div className="p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="flex-shrink-0 text-blue-500 text-lg leading-none">ℹ️</span>
+                  <p className="text-sm font-bold text-blue-800">e-Certificate（電子文書）での提出が認められている場合</p>
                 </div>
+                <p className="text-xs text-blue-700 leading-relaxed mb-3">
+                  提出先に確認し、電子文書でOKと言われた場合は<strong>e-CertificateおよびeApostilleの取得代行</strong>にも対応しています。
+                </p>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-blue-700">電子文書での提出可否は提出先にご確認ください</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-blue-700">e-Certificate・eApostille代行にも対応しています</span>
+                  </li>
+                </ul>
+                <a href="#contact" className="inline-block text-xs font-bold text-blue-800 underline underline-offset-2 hover:text-blue-900 transition-colors">
+                  まずご相談ください →
+                </a>
               </div>
-              <a href="#contact" className="inline-block text-xs font-bold text-blue-800 underline underline-offset-2 hover:text-blue-900 transition-colors self-start">
-                まずご相談ください →
-              </a>
             </section>
           </div>
         </div>

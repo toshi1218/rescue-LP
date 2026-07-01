@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Eye, MessageSquare, ShieldCheck, Send, BadgeCheck, FileCheck, Layers, Building2 } from 'lucide-react';
+import { CheckCircle, Eye, MessageSquare, ShieldCheck, Send, BadgeCheck } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -27,10 +27,10 @@ const WhyUs: React.FC = () => {
   // ── JA: 2-column redesign (features + stats left, photos right) ──────────
   if (lang === 'ja') {
     const jaReasons = [
-      { icon: FileCheck, color: 'bg-blue-100 text-blue-700', titleKey: 'whyus.1.title' as const, descKey: 'whyus.1.desc' as const },
-      { icon: Eye, color: 'bg-amber-100 text-amber-700', titleKey: 'whyus.2.title' as const, descKey: 'whyus.2.desc' as const },
-      { icon: MessageSquare, color: 'bg-emerald-100 text-emerald-700', titleKey: 'whyus.3.title' as const, descKey: 'whyus.3.desc' as const },
-      { icon: Building2, color: 'bg-secondary/10 text-secondary', titleKey: 'whyus.4.title' as const, descKey: 'whyus.4.desc' as const },
+      { titleKey: 'whyus.1.title' as const, descKey: 'whyus.1.desc' as const },
+      { titleKey: 'whyus.2.title' as const, descKey: 'whyus.2.desc' as const },
+      { titleKey: 'whyus.3.title' as const, descKey: 'whyus.3.desc' as const },
+      { titleKey: 'whyus.4.title' as const, descKey: 'whyus.4.desc' as const },
     ];
 
     const trustStats = [
@@ -58,10 +58,10 @@ const WhyUs: React.FC = () => {
             {/* Left: Feature list + trust stats */}
             <div className="flex-1 min-w-0">
               <ul className="space-y-4 mb-6">
-                {jaReasons.map(({ icon: Icon, color, titleKey, descKey }) => (
+                {jaReasons.map(({ titleKey, descKey }) => (
                   <li key={titleKey} className="flex items-start gap-3">
-                    <div className={`shrink-0 w-9 h-9 rounded-xl flex items-center justify-center mt-0.5 ${color}`}>
-                      <Icon className="w-5 h-5" />
+                    <div className="shrink-0 w-6 h-6 rounded-full bg-secondary flex items-center justify-center mt-0.5">
+                      <CheckCircle className="w-3.5 h-3.5 text-white" />
                     </div>
                     <div>
                       <p className="font-bold text-sm text-secondary leading-snug">{t(titleKey)}</p>
