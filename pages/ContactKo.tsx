@@ -238,6 +238,22 @@ export default function ContactKo() {
 
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-1">
+              이 서류는 주로 누구를 위한 것인가요? <span className="text-xs font-normal text-gray-400">（선택）</span>
+            </label>
+            <select
+              name="document_user"
+              defaultValue=""
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+            >
+              <option value="">선택해 주세요（선택）</option>
+              <option value="본인">본인</option>
+              <option value="배우자·파트너">배우자·파트너</option>
+              <option value="기타·모름">기타·모름</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font-bold text-gray-700 mb-1">
               필요 부수 <span className="text-xs font-normal text-gray-400">（선택）</span>
             </label>
             <input

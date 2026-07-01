@@ -185,6 +185,20 @@ export default function ContactJa() {
           <p className="text-xs text-gray-400 mb-3">入力いただけると、初回のご返信で見積もりまでお出しできます。</p>
 
           <div className="mb-3">
+            <label className="block text-sm font-bold text-gray-700 mb-1">この書類を主に使われるのはどなたですか？</label>
+            <select
+              name="document_user"
+              defaultValue=""
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+            >
+              <option value="">選択してください（任意）</option>
+              <option value="本人（自分自身）">本人（自分自身）</option>
+              <option value="配偶者・パートナー">配偶者・パートナー</option>
+              <option value="その他・わからない">その他・わからない</option>
+            </select>
+          </div>
+
+          <div className="mb-3">
             <label className="block text-sm font-bold text-gray-700 mb-1">必要部数</label>
             <input
               name="copies"

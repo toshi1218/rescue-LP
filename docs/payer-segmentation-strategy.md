@@ -144,3 +144,77 @@ DFA Apostille, shipped worldwide — is the cheap part.
 - **共通テンプレ（CountryDocsEnTemplate）本体への文言直書きはしない**（全国ページ一斉更新シグナル）。per-country は config 側で出し分ける
 - **価格訴求は必ず「確実性・速度」に紐づける**。単独の値上げ・足元見た価格設定はレビューで崩れる
 - **France 追加を「ついで」で他の SEO 変更と同日にやらない**（回復期・単日複数 SEO 変更禁止）
+
+---
+
+## 6. 更新（2026-07-02）— 二層ファネル設計（エビ鯛理論の精査）
+
+CEO提供の分析ドキュメント「エビ鯛理論の精査と二層ファネル設計案」を受けて追記。**理論は条件付きで採用**（詳細はドキュメント原本参照）。条件: (a) 小規模検証を先行 (b) 受益者経由・支払者直接の両導線を張る (c) 判定軸は国籍/性別でなく支払者構造 (d) 内部呼称（エビ/鯛）と運用言語（受益者/支払者）を分離。
+
+### 6.1 理論の精緻化（本ドキュメント §1-§2 との差分）
+
+- 支払者構造は「フィリピン人女性=価格に鈍感」ではなく「**第三者が支払う案件**=価格に鈍感」が正確。エビ側にも経済的に自立した個体（就労済み看護師等）がおり、その場合は受益者=支払者で価格感度が上がる
+- 「エビが検索する」という仮定は半分のみ正しい。**支払者本人が直接検索するケース**（"marrying a Filipina, what documents do I need"）も相当数想定される → 入口を受益者側だけに固定すると片方の水域を落とす。**二層の入口導線が必要**
+- サンプルサイズの限界: 確証はSofia案件1件のみ。過去案件（Oliver=スウェーデン、Sarah=クロアチア等）の支払者構造は未確認 → 大規模制作の前に検証必須
+
+### 6.2 検証計画（Phase 0）— 進捗
+
+| 項目 | 状態 |
+|------|------|
+| フォームに支払者構造の推定設問を追加（"この書類を主に使われるのはどなたですか？" 本人/配偶者・パートナー/その他・わからない） | ✅ 完了（JA/EN/KO 3フォーム、任意項目、非SEO） |
+| 過去案件（Oliver・Sarah・Nico.L・Castro等）の支払者構造タグ付け | 未着手（コード外・CEO/運用マター） |
+| 判定基準: 第三者支払い案件の客単価がOFW型の1.5倍以上、値引き交渉発生率が有意に低い→第3部の設計を全面実装 | 検証待ち |
+
+**この検証が通るまで、6.3以下の新規ページ群（Layer 1a/1b）は着手しない。**
+
+### 6.3 二層ファネルの入口ページ群（検証通過後・回復期解除後に着手）
+
+既存の §2「現状監査」で確認した通り、鯛側（支払者直接検索）ページは K-1/CR-1/US/UK/Canada/Australia＋国別テンプレートで既にかなり手当て済み。今回の分析で追加すべきと判明したのは以下。
+
+**Layer 1a（エビ側＝受益者向け入口。目的は収益化ではなく信頼獲得とハンドオフ誘導）**:
+1. "Documents you need to marry a foreigner: complete PSA checklist"（想定クエリ: `requirements to marry a foreigner Philippines`）
+2. "How to get your PSA birth certificate while living abroad"（想定クエリ: `PSA birth certificate abroad` / `renew PSA overseas`）
+3. "CENOMAR for marriage abroad: what it is and how to get it apostilled"（想定クエリ: `CENOMAR apostille`）
+4. "Getting married in France as a Filipina: the document timeline"（想定クエリ: `marry French citizen requirements Filipina`）— §3-D の France 国別ページと連動
+5. 摩擦特化: "Name mismatch on your PSA records? Fix it before your wedding date"（既存の摩擦ニッチ戦略と直結）
+
+CTA設計: いきなり見積もりを見せず「無料の書類チェックリストPDF」「無料診断（3問フォーム）」でまず案件を掴む。金額はLayer 2（鯛側クロージング）で提示。
+
+**Layer 1b（鯛側＝支払者が直接検索するケース）**:
+1. "Marrying a Filipina: every PSA document you'll need (and how long each takes)"（想定クエリ: `marrying a filipina documents`）
+2. "PSA birth certificate with apostille, delivered to [国名]"（国別ランディング。§3-D France・候補国 Spain/Belgium/Ireland と統合）
+3. "Why [国名] authorities reject Philippine documents — and how to avoid it"（摩擦訴求。要件の最新仕様は制作時に都度要確認）
+
+**反復需要の insight（重要・要追跡）**: フランス等一部の国は証明書の発行後鮮度要件（例: 6ヶ月以内）を課すことがあり、**同一顧客からの再注文が構造的に発生しうる**（婚姻→配偶者ビザ→帰化で同じ書類セットが数年おきに必要）。単発でなくライフイベント連動の反復ビジネスとして設計できる可能性がある。Phase 3候補: 鮮度要件アラート（「フランス提出用証明書の有効期限が近づいています」的な再注文導線）。要件の正確性は必ず現行の公的情報で個別確認すること。
+
+### 6.4 ハンドオフ機構（見積もりPDF）— コード外・運用マター
+
+Sofia案件で観察された「支払い局面で I → We に転換」する瞬間を設計で受け止める。宛名なし・転送前提・EUR/USD併記・工程別内訳・遅延コスト比較1行・会社実在性情報・決済手段一覧を含む「Forward-ready Quote PDF」を作成し、見積もり提示時に渡す。**PDFテンプレート作成・運用フローはコード変更を伴わないため、CEO/運用側のタスク**。サイト側で対応できる関連項目は §3-C（決済バッジ）。
+
+### 6.5 キーワード計測セット（Nobilista英語トラッキング初期セット）
+
+英語56ページが未計測という既存課題への初期セット。**計測登録はコード外（Nobilista側の作業）**だが、記録として残す。
+
+- エビ側: `PSA birth certificate abroad` / `CENOMAR apostille` / `requirements to marry a foreigner Philippines` / `PSA document for marriage abroad` / `fix name mismatch PSA`
+- 鯛側: `marrying a filipina documents` / `PSA apostille France` / `Philippine birth certificate apostille [国名]` / `Philippine documents for marriage in France` / `apostilled birth certificate Philippines delivery`
+
+計測開始後4週間で、エビ側/鯛側どちらのクラスタが先にインプレッションを取るかを見て、Layer 1a/1bどちらに制作リソースを優先配分するか決める。
+
+### 6.6 国別優先順位（更新）
+
+優先度 = 生活コストの高さ × 書類摩擦の大きさ（鮮度要件・紙原本要件・翻訳要件）× 既存問い合わせ実績
+
+| 優先 | 国 | 根拠 |
+|---|---|---|
+| 1 | フランス | 実績あり（Sofia）。鮮度要件による反復需要。婚姻transcription手続きの摩擦大 |
+| 2 | 北欧（ノルウェー/スウェーデン/デンマーク） | 実績あり（Oliver）。所得水準最高クラス |
+| 3 | スイス/ドイツ/オランダ | 所得高。認証・翻訳要件の摩擦大 |
+| 4 | 米国/カナダ/豪州 | 母数最大。ただし競合（CFO系情報等）も多い |
+
+日本語B2B（士業）ラインは本設計と独立に継続。本設計は英語B2Cの照準修正。
+
+### 6.7 やらないこと（6章分・追加）
+
+- **検証（§6.2のPhase 0）が通る前にLayer 1a/1bの新規ページ制作に着手しない**（サンプルサイズ1件で大規模投資判断をしない）
+- **内部呼称「エビ/鯛」を顧客対応・SOP・外部文書で使わない**。「受益者/支払者」に翻訳して使う
+- 判定軸を国籍・性別に置かない（例: 「フィリピン人女性=価格に鈍感」という一般化はしない）。軸はあくまで支払者構造

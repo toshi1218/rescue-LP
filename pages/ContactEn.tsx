@@ -203,6 +203,20 @@ export default function ContactEn() {
           <p className="text-xs text-gray-400 mb-3">Filling these in lets us send a quote in our first reply.</p>
 
           <div className="mb-3">
+            <label className="block text-sm font-bold text-gray-700 mb-1">Who is this document mainly for?</label>
+            <select
+              name="document_user"
+              defaultValue=""
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+            >
+              <option value="">Select (optional)</option>
+              <option value="Myself">Myself</option>
+              <option value="My spouse / partner">My spouse / partner</option>
+              <option value="Other / not sure">Other / not sure</option>
+            </select>
+          </div>
+
+          <div className="mb-3">
             <label className="block text-sm font-bold text-gray-700 mb-1">Number of copies needed</label>
             <input
               name="copies"
