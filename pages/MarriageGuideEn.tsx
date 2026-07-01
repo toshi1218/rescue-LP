@@ -55,6 +55,14 @@ export default function MarriageGuideEn() {
             },
             {
               '@type': 'Question',
+              name: "Can't my partner just get these documents for $10 at the government office?",
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: "The government fee is only a small part of the real picture. From abroad, the risk isn't the $10 — it's a document arriving late, getting rejected at the apostille stage, or missing your visa interview date. Rebooking a consular appointment, re-doing international travel, or postponing the wedding costs far more than getting every document right the first time. We retrieve CENOMAR, PSA, and NBI Clearance with DFA Apostille together, and ship them worldwide with tracking — so your timeline doesn't slip.",
+              },
+            },
+            {
+              '@type': 'Question',
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
@@ -164,6 +172,7 @@ export default function MarriageGuideEn() {
       <FaqSection
         items={[
           { q: 'What documents are needed for a CR-1 visa?', a: 'Typically PSA Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by NVC case. We confirm for your specific case.' },
+          { q: "Can't my partner just get these documents for $10 at the government office?", a: "The government fee is only a small part of the real picture. From abroad, the risk isn't the $10 — it's a document arriving late, getting rejected at the apostille stage, or missing your visa interview date. Rebooking a consular appointment, re-doing international travel, or postponing the wedding costs far more than getting every document right the first time. We retrieve CENOMAR, PSA, and NBI Clearance with DFA Apostille together, and ship them worldwide with tracking — so your timeline doesn't slip." },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.' },
