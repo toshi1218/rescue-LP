@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, CheckCircle2, Star, Mail, Tag } from 'lucide-react';
+import { MessageCircle, ArrowRight, CheckCircle2, Star, Mail, Tag } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -26,6 +26,8 @@ const Hero: React.FC = () => {
 
   // ── Japanese hero ──────────────────────────────────────────────────────────
   if (lang !== 'en') {
+    const primaryLabel = ctaVariant === 'A' ? t('hero.ctaA') : t('hero.ctaB');
+
     return (
       <header className="relative bg-secondary text-white overflow-hidden min-h-[520px] md:min-h-[600px]">
         {/* Background Image & Overlay */}
@@ -43,120 +45,90 @@ const Hero: React.FC = () => {
               decoding="async"
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6 py-14 md:py-20 flex flex-col md:flex-row md:items-center gap-8">
-
-          {/* Left: Text */}
-          <div className="flex-1 min-w-0">
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-2 mb-4" aria-label="サービスの特徴">
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
-                🏢 日本法人
-              </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
-                ✈️ 渡航不要
-              </span>
-              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
-                🛡️ キャンセル無料
-              </span>
-            </div>
-
-            <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
-              {t('hero.badge')}
+        <div className="relative z-10 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6 py-16 md:py-24 flex flex-col items-center text-center">
+          {/* Trust badges */}
+          <div className="flex flex-wrap justify-center gap-2 mb-4" aria-label="サービスの特徴">
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
+              🏢 日本法人
             </span>
-            <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
-              {t('hero.h1line1')}<br />
-              <span className="text-sm md:text-base font-normal text-white/70 leading-snug">{t('hero.h1line2')}</span><br />
-              <span className="text-primary text-lg md:text-xl">{t('hero.h1line3')}</span>
-            </h1>
-            <p className="text-gray-200 mb-5 text-sm md:text-base leading-relaxed drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-              {t('hero.description')}
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col gap-2.5 w-full max-w-sm mb-4">
-              <a
-                href="#contact"
-                onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
-                className="bg-primary text-secondary font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
-                aria-label="無料相談フォームへ移動"
-              >
-                <Mail className="w-5 h-5 flex-shrink-0" />
-                無料相談する
-              </a>
-
-              <a
-                href="/ja/ryokin/"
-                onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
-                className="font-bold py-3.5 px-6 rounded-lg bg-secondary/80 text-white border border-white/30 shadow-lg hover:bg-secondary/60 hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-secondary/40"
-                aria-label={t('hero.pricingAriaLabel')}
-              >
-                <Tag className="w-5 h-5 flex-shrink-0" />
-                料金を見る
-              </a>
-
-              <a
-                href="https://lin.ee/wALag1U"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent('cta_click', { location: 'hero', type: 'line_urgent', variant: ctaVariant })}
-                className="bg-[#06C755] text-white font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-[#06C755]/40 hover:bg-[#05b04a] hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-[#06C755]/40"
-                aria-label="LINEで問い合わせ（新しいタブで開く）"
-              >
-                <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-                </svg>
-                LINEで問い合わせ（即返信）
-              </a>
-            </div>
-
-            {/* Rating + urgency */}
-            <div className="flex items-center gap-1.5" aria-label="平均評価 4.8 / 5.0">
-              <span className="text-yellow-400 text-base leading-none" aria-hidden="true">★★★★★</span>
-              <span className="text-white/80 text-xs font-medium">4.8 / 5.0（公開レビュー47件）</span>
-            </div>
-            <p className="text-yellow-300 text-xs font-semibold mt-1 tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-              ただいまお問い合わせ受付中 · 24時間以内に返信
-            </p>
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
+              ✈️ 渡航不要
+            </span>
+            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
+              🛡️ キャンセル無料
+            </span>
           </div>
 
-          {/* Right: Pricing card (desktop only) */}
-          <div className="hidden md:block w-64 lg:w-72 flex-shrink-0">
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-              <div className="bg-amber-50 border-b border-amber-100 px-5 py-4 text-center">
-                <span className="text-3xl" aria-hidden="true">💍</span>
-                <p className="font-bold text-secondary text-sm mt-2">国際婚姻準備パック</p>
-              </div>
-              <div className="px-5 py-4">
-                <p className="text-3xl font-extrabold text-secondary leading-none text-center">¥99,800<span className="text-base font-bold">〜</span></p>
-                <p className="text-xs text-gray-400 mt-1 text-center">税・送料別</p>
-                <div className="mt-4 space-y-2">
-                  {[
-                    'PSA出生証明書',
-                    'CENOMAR（独身証明書）',
-                    'DFAアポスティーユ認証',
-                    'DHL国際配送込み',
-                  ].map(item => (
-                    <div key={item} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      <span className="text-xs text-gray-700">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <a
-                  href="#contact"
-                  onClick={() => trackEvent('cta_click', { location: 'hero_pack_card', type: 'contact', variant: ctaVariant })}
-                  className="mt-4 block text-center text-xs font-bold text-white bg-primary py-2.5 px-4 rounded-lg hover:bg-primary-hover transition-colors"
-                >
-                  相談する
-                </a>
-              </div>
-            </div>
+          <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
+            {t('hero.badge')}
+          </span>
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
+            {t('hero.h1line1')}<br />
+            <span className="text-base md:text-lg font-normal text-white/70 leading-snug">{t('hero.h1line2')}</span><br />
+            <span className="text-primary">{t('hero.h1line3')}</span>
+          </h1>
+          <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+            {t('hero.description')}
+          </p>
+          {/* CTA Buttons */}
+          <div className="flex flex-col gap-2.5 w-full max-w-sm">
+            {/* 無料相談する */}
+            <a
+              href="#contact"
+              onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
+              className="bg-primary text-secondary font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
+              aria-label="無料相談フォームへ移動"
+            >
+              <Mail className="w-5 h-5 flex-shrink-0" />
+              無料相談する
+            </a>
+
+            {/* 料金を見る */}
+            <a
+              href="/ja/ryokin/"
+              onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
+              className="font-bold py-3.5 px-6 rounded-lg bg-secondary text-white shadow-lg hover:bg-secondary-light hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-secondary/40"
+              aria-label={t('hero.pricingAriaLabel')}
+            >
+              <Tag className="w-5 h-5 flex-shrink-0" />
+              料金を見る
+            </a>
+
+            {/* LINEで問い合わせ */}
+            <a
+              href="https://lin.ee/wALag1U"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent('cta_click', { location: 'hero', type: 'line_urgent', variant: ctaVariant })}
+              className="bg-[#06C755] text-white font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-[#06C755]/40 hover:bg-[#05b04a] hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-[#06C755]/40"
+              aria-label="LINEで問い合わせ（新しいタブで開く）"
+            >
+              <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+              </svg>
+              LINEで問い合わせ（即返信）
+            </a>
           </div>
 
+          {/* Trust: Rating badge */}
+          <div className="flex items-center justify-center gap-1.5 mt-3" aria-label="平均評価 4.8 / 5.0">
+            <span className="text-yellow-400 text-base leading-none" aria-hidden="true">★★★★★</span>
+            <span className="text-white/80 text-xs font-medium">4.8 / 5.0（公開レビュー47件）</span>
+          </div>
+
+          {/* Urgency message */}
+          <p className="text-yellow-300 text-xs font-semibold mt-1 tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+            ただいまお問い合わせ受付中 · 24時間以内に返信
+          </p>
+
+          {/* Pricing hint – aligned with actual pricing table */}
+          <p className="text-white/60 text-xs mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+            国際結婚準備パック ¥99,800〜（税・送料別）
+          </p>
         </div>
       </header>
     );
