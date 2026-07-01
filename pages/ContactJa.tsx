@@ -180,6 +180,61 @@ export default function ContactJa() {
           </select>
         </div>
 
+        <fieldset className="rounded-lg border border-gray-100 bg-gray-50/60 p-3">
+          <legend className="px-1 text-xs font-bold text-gray-500">詳細情報（任意・分かる範囲でOK）</legend>
+          <p className="text-xs text-gray-400 mb-3">入力いただけると、初回のご返信で見積もりまでお出しできます。</p>
+
+          <div className="mb-3">
+            <label className="block text-sm font-bold text-gray-700 mb-1">必要部数</label>
+            <input
+              name="copies"
+              placeholder="例：2部"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
+
+          <div className="mb-3">
+            <label className="block text-sm font-bold text-gray-700 mb-1">出生地（市区町村）</label>
+            <input
+              name="birthplace"
+              placeholder="例：セブ市、マニラ市"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
+
+          <div className="mb-3">
+            <label className="block text-sm font-bold text-gray-700 mb-1">PSA証明書の原本はお持ちですか？</label>
+            <select
+              name="psa_original"
+              defaultValue=""
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+            >
+              <option value="">選択してください（任意）</option>
+              <option value="原本あり">原本あり</option>
+              <option value="原本なし（新規取得が必要）">原本なし（新規取得が必要）</option>
+              <option value="わからない">わからない</option>
+            </select>
+          </div>
+
+          <div className="mb-3">
+            <label className="block text-sm font-bold text-gray-700 mb-1">書類の配送先国</label>
+            <input
+              name="delivery_country"
+              placeholder="居住国と異なる場合のみ。例：日本、アメリカ"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-bold text-gray-700 mb-1">ご希望の期限</label>
+            <input
+              name="desired_deadline"
+              placeholder="例：2026年8月末までに必要"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
+        </fieldset>
+
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">
             当社をどこでお知りになりましたか？ <span className="text-red-500">*</span>
