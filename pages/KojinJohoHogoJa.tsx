@@ -12,7 +12,7 @@ export default function KojinJohoHogoJa() {
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '個人情報保護方針' }]}>
       <HeroBanner
         title="個人情報保護方針"
-        subtitle="最終更新日：2026年3月"
+        subtitle="最終更新日：2026年7月"
         badges={['個人情報保護法準拠', 'IGRS Inc.']}
         ctaText="お問い合わせはこちら"
         ctaHref="/ja/contact"
@@ -95,7 +95,7 @@ export default function KojinJohoHogoJa() {
               {[
                 'お客様ご本人の同意がある場合',
                 '法令の規定に基づく場合',
-                'サービス提供に必要な業務委託先（フィリピン現地スタッフ、DHLなどの配送業者）への提供。この場合、委託先に対して適切な個人情報管理を義務付けます',
+                'サービス提供に必要な業務委託先（PSA・DFA等フィリピン政府機関、フィリピン現地スタッフ、DHLなどの配送業者、Stripe等の決済会社）への提供。この場合、委託先に対して適切な個人情報管理を義務付けます',
               ].map((item) => (
                 <li key={item}>{item}</li>
               ))}

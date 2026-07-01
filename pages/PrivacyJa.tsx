@@ -12,7 +12,7 @@ export default function PrivacyJa() {
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'プライバシーポリシー' }]}>
       <HeroBanner
         title="プライバシーポリシー"
-        subtitle="最終更新日：2026年3月8日"
+        subtitle="最終更新日：2026年7月1日"
         badges={['個人情報の取り扱い', 'IGRS Inc.']}
         ctaText="お問い合わせはこちら"
         ctaHref="/ja/contact"
@@ -79,7 +79,7 @@ export default function PrivacyJa() {
             <ul className="space-y-1.5 pl-4">
               {[
                 'お客様本人の同意がある場合',
-                'サービス提供のために必要な業務委託先（PSA・DFA等フィリピン政府機関、フィリピン現地提携スタッフ、DHL・国際郵便等の配送業者）への提供。委託先に対して適切な管理を求めます',
+                'サービス提供のために必要な業務委託先（PSA・DFA等フィリピン政府機関、フィリピン現地提携スタッフ、DHL・国際郵便等の配送業者、Stripe等の決済会社）への提供。委託先に対して適切な管理を求めます',
                 '法令に基づき開示が求められた場合',
                 '人の生命・身体・財産の保護のために必要な場合',
               ].map((item) => (

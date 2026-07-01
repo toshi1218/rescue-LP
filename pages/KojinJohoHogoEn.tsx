@@ -87,7 +87,7 @@ export default function KojinJohoHogoEn() {
               ))}
             </ul>
             <p className="mt-3">
-              We may share personal information with service providers (e.g., shipping carriers such as DHL, payment processors) to the extent necessary to fulfil your service request. These providers are contractually bound to handle your information appropriately and not to use it for other purposes.
+              We may share personal information with parties necessary to fulfil your service request, including Philippine government agencies (PSA, DFA) for document applications, our Philippine-based partner staff, international shipping carriers (e.g., DHL), and payment processors (e.g., Stripe). All such parties are required to handle your information appropriately and solely for the purposes specified.
             </p>
           </section>
 
@@ -157,7 +157,7 @@ export default function KojinJohoHogoEn() {
           </section>
 
           <p className="text-xs text-gray-400 pt-4 border-t border-gray-100">
-            Last updated: March 1, 2026
+            Last updated: July 1, 2026
           </p>
         </div>
       </div>

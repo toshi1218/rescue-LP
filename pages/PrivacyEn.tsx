@@ -12,7 +12,7 @@ export default function PrivacyEn() {
       <div className="max-w-2xl">
         <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">Privacy Policy</h1>
         <div className="h-0.5 w-12 bg-primary mb-2" />
-        <p className="text-xs text-gray-400 mb-8">Last updated: March 8, 2026</p>
+        <p className="text-xs text-gray-400 mb-8">Last updated: July 1, 2026</p>
 
         <div className="space-y-8 text-sm text-gray-700 leading-relaxed">
 
@@ -71,7 +71,7 @@ export default function PrivacyEn() {
             <ul className="space-y-1.5 pl-4">
               {[
                 'With your explicit consent',
-                'When necessary for service delivery (e.g., sharing with our Philippine-based partner staff, postal/courier services such as DHL). In such cases, we require appropriate information management from our partners',
+                'When necessary for service delivery — including Philippine government agencies (PSA, DFA) for document applications, our Philippine-based partner staff, international shipping carriers (e.g., DHL), and payment processors (e.g., Stripe). We require all such parties to handle your information appropriately.',
                 'When required by law or legal process',
                 'When necessary to protect the life, safety, or property of individuals',
               ].map((item) => (
