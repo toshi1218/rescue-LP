@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
           <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
             {t('hero.badge')}
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
+          <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
             {t('hero.h1line1')}<br />
             <span className="text-base md:text-lg font-normal text-white/70 leading-snug">{t('hero.h1line2')}</span><br />
             <span className="block mt-2 text-primary text-xl md:text-2xl leading-snug">{t('hero.h1line3')}</span>
@@ -180,7 +180,7 @@ const Hero: React.FC = () => {
           </span>
 
           {/* H1 */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-5 drop-shadow-sm">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-5 drop-shadow-sm">
             Philippine Documents<br />
             <span className="text-primary">for Marriage, Visa & Your Next Country.</span>
           </h1>
