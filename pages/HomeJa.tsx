@@ -148,8 +148,8 @@ export default function HomeJa() {
             <a href="#contact" className="flex-shrink-0 text-xs font-bold text-white bg-secondary py-1.5 px-4 rounded-lg hover:bg-secondary/90 transition-all whitespace-nowrap">今すぐ相談</a>
           </div>
         </div>
-        <div className="container mx-auto max-w-5xl px-4 pt-8">
-          <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
+        <div className="container mx-auto max-w-5xl px-4 pt-6">
+          <section className="mb-6 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
             <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />
             <div className="p-6 md:p-8">
               <div className="inline-block mb-4 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">

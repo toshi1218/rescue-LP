@@ -19,7 +19,7 @@ const WhyUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fffbf0 0%, #fef9ec 50%, #fff8e6 100%)'}}>
+    <section className="py-12 md:py-16 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #fffbf0 0%, #fef9ec 50%, #fff8e6 100%)'}}>
       {/* 背景装飾 */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-0 top-0 w-96 h-96 bg-primary/5 rounded-full blur-[80px]"></div>

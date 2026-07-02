@@ -44,7 +44,7 @@ const QuickFacts: React.FC = React.memo(() => {
   ], []);
 
   return (
-    <section className="py-16 px-4 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto" aria-labelledby="quick-facts-title">
+    <section className="py-10 md:py-12 px-4 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto" aria-labelledby="quick-facts-title">
       <h3 id="quick-facts-title" className="text-xs font-bold text-gray-400 uppercase tracking-widest text-center mb-4">
         {t('quickfacts.title')}
       </h3>

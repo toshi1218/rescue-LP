@@ -51,7 +51,7 @@ const GuideLinks: React.FC<GuideLinksProps> = React.memo(({ maxItems }) => {
   const guides = maxItems ? guidesData[lang].slice(0, maxItems) : guidesData[lang];
 
   return (
-    <section className="py-20 bg-slate-50 border-t border-gray-100">
+    <section className="py-12 md:py-16 bg-slate-50 border-t border-gray-100">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
         <div className="flex items-center gap-2 mb-6">
           <FileText className="w-5 h-5 text-secondary" />

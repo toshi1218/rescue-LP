@@ -60,7 +60,7 @@ const ServicePacks: React.FC = () => {
   const visiblePacks = expanded ? packs : packs.slice(0, 2);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 md:py-16 bg-white">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
         <div className="text-center mb-8">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Services</span>
