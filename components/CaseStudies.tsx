@@ -90,7 +90,7 @@ const CaseStudies: React.FC = React.memo(() => {
   const visibleCases = expanded ? caseStudies : caseStudies.slice(0, 1);
 
   return (
-    <section className="py-20 bg-slate-50" aria-labelledby="case-studies-title">
+    <section className="py-12 md:py-20 bg-slate-50" aria-labelledby="case-studies-title">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
         <div className="text-center mb-8">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-1 block">Case Studies</span>

@@ -13,7 +13,7 @@ const PainPoints: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-secondary relative overflow-hidden">
+    <section className="py-12 md:py-20 px-4 bg-secondary relative overflow-hidden">
       {/* 背景装飾 */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -right-24 -top-24 w-80 h-80 bg-primary rounded-full blur-[120px] opacity-10"></div>

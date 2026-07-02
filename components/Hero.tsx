@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
           <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
             {t('hero.h1line1')}<br />
             <span className="text-base md:text-lg font-normal text-white/70 leading-snug">{t('hero.h1line2')}</span><br />
-            <span className="text-primary">{t('hero.h1line3')}</span>
+            <span className="block mt-2 text-primary text-xl md:text-2xl leading-snug">{t('hero.h1line3')}</span>
           </h1>
           <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
             {t('hero.description')}

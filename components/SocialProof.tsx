@@ -105,7 +105,7 @@ const SocialProof: React.FC = React.memo(() => {
   const reviews = reviewsData[lang];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden" aria-labelledby="social-proof-title">
+    <section className="py-12 md:py-20 bg-white relative overflow-hidden" aria-labelledby="social-proof-title">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute right-0 top-0 w-72 h-72 bg-primary/5 rounded-full blur-[80px]" />
       </div>
