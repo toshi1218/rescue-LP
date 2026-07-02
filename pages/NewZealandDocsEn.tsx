@@ -86,13 +86,14 @@ export default function NewZealandDocsEn() {
       <HeroBanner
         title="Philippine Documents for New Zealand Immigration"
         subtitle="CENOMAR, PSA Birth Certificate & NBI Clearance — retrieved, apostilled, and shipped to New Zealand via DHL"
-        ctaLabel="Get a Free Quote"
+        badges={['DFA Apostille Included', 'Ships to New Zealand via DHL', 'Free Consultation']}
+        ctaText="Get a Free Quote"
         ctaHref="/en/contact/"
       />
 
       <SummaryBlock
-        heading="Documents Immigration NZ Requires from Filipino Applicants"
-        body="Filipino nationals applying for New Zealand residence, partner visa, or citizenship must provide Philippine civil documents authenticated by DFA Apostille. New Zealand joined the Hague Apostille Convention, so no additional embassy legalization is required — but DFA Apostille is mandatory for all documents used in Immigration NZ applications."
+        conclusion="Documents Immigration NZ Requires from Filipino Applicants"
+        points={['Filipino nationals applying for New Zealand residence, partner visa, or citizenship must provide Philippine civil documents authenticated by DFA Apostille. New Zealand joined the Hague Apostille Convention, so no additional embassy legalization is required — but DFA Apostille is mandatory for all documents used in Immigration NZ applications.']}
       />
 
       <FeatureList
@@ -127,39 +128,39 @@ export default function NewZealandDocsEn() {
       />
 
       <CtaBox
-        heading="Ready to Get Your Documents for New Zealand?"
-        body="We handle everything — PSA retrieval, DFA Apostille, and DHL shipping to New Zealand. Free quote, no hidden fees."
-        ctaLabel="Get a Free Quote"
-        ctaHref="/en/contact/"
+        title="Ready to Get Your Documents for New Zealand?"
+        description="We handle everything — PSA retrieval, DFA Apostille, and DHL shipping to New Zealand. Free quote, no hidden fees."
+        buttonText="Get a Free Quote"
+        href="/en/contact/"
       />
 
       <FaqSection
         items={[
           {
-            question: 'Does New Zealand require DFA Apostille on Philippine documents?',
-            answer: 'Yes. New Zealand is a Hague Convention member. DFA Apostille is required for Philippine civil documents used in Immigration NZ applications.',
+            q: 'Does New Zealand require DFA Apostille on Philippine documents?',
+            a: 'Yes. New Zealand is a Hague Convention member. DFA Apostille is required for Philippine civil documents used in Immigration NZ applications.',
           },
           {
-            question: 'What Philippine documents are needed for a New Zealand partner visa?',
-            answer: 'PSA Birth Certificate, CENOMAR or PSA Marriage Certificate, and NBI Clearance — all with DFA Apostille.',
+            q: 'What Philippine documents are needed for a New Zealand partner visa?',
+            a: 'PSA Birth Certificate, CENOMAR or PSA Marriage Certificate, and NBI Clearance — all with DFA Apostille.',
           },
           {
-            question: 'Can I get my Philippine documents apostilled and shipped to New Zealand?',
-            answer: 'Yes. We retrieve, apostille, and ship via DHL Express to your New Zealand address. Total time: approximately 2–4 weeks.',
+            q: 'Can I get my Philippine documents apostilled and shipped to New Zealand?',
+            a: 'Yes. We retrieve, apostille, and ship via DHL Express to your New Zealand address. Total time: approximately 2–4 weeks.',
           },
           {
-            question: 'Do I need an NBI Clearance for New Zealand immigration?',
-            answer: 'Immigration NZ typically requires a Philippine police clearance (NBI Clearance + DFA Apostille) for applicants who have lived in the Philippines.',
+            q: 'Do I need an NBI Clearance for New Zealand immigration?',
+            a: 'Immigration NZ typically requires a Philippine police clearance (NBI Clearance + DFA Apostille) for applicants who have lived in the Philippines.',
           },
         ]}
       />
 
       <RelatedArticles
-        articles={[
-          { href: '/en/australia/', label: 'Australia Immigration Documents' },
-          { href: '/en/uk/', label: 'UK Spouse Visa Documents' },
-          { href: '/en/cenomar/', label: 'CENOMAR — How to Get It' },
-          { href: '/en/apostille/', label: 'DFA Apostille Service' },
+        items={[
+          { href: '/en/australia/', title: 'Australia Immigration Documents' },
+          { href: '/en/uk/', title: 'UK Spouse Visa Documents' },
+          { href: '/en/cenomar/', title: 'CENOMAR — How to Get It' },
+          { href: '/en/apostille/', title: 'DFA Apostille Service' },
         ]}
       />
     </PageLayout>

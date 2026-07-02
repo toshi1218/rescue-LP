@@ -86,13 +86,14 @@ export default function GermanyDocsEn() {
       <HeroBanner
         title="Philippine Documents for Germany Immigration"
         subtitle="CENOMAR, PSA Birth Certificate & NBI Clearance — retrieved, apostilled, and shipped to Germany via DHL"
-        ctaLabel="Get a Free Quote"
+        badges={['DFA Apostille Included', 'Ships to Germany via DHL', 'Free Consultation']}
+        ctaText="Get a Free Quote"
         ctaHref="/en/contact/"
       />
 
       <SummaryBlock
-        heading="Documents Required for German Visa & Residence Applications"
-        body="Filipino nationals applying for a German spouse visa (Ehegattennachzug), job seeker visa, or permanent residence must provide Philippine civil documents with DFA Apostille. Germany is a Hague Convention member, so no additional legalization by the German Embassy is required — but DFA Apostille is mandatory for all civil documents submitted to German authorities."
+        conclusion="Documents Required for German Visa & Residence Applications"
+        points={['Filipino nationals applying for a German spouse visa (Ehegattennachzug), job seeker visa, or permanent residence must provide Philippine civil documents with DFA Apostille. Germany is a Hague Convention member, so no additional legalization by the German Embassy is required — but DFA Apostille is mandatory for all civil documents submitted to German authorities.']}
       />
 
       <FeatureList
@@ -134,39 +135,39 @@ export default function GermanyDocsEn() {
       </section>
 
       <CtaBox
-        heading="Ready to Get Your Documents for Germany?"
-        body="We handle PSA retrieval, DFA Apostille, and DHL shipping to Germany. Free quote, no hidden fees."
-        ctaLabel="Get a Free Quote"
-        ctaHref="/en/contact/"
+        title="Ready to Get Your Documents for Germany?"
+        description="We handle PSA retrieval, DFA Apostille, and DHL shipping to Germany. Free quote, no hidden fees."
+        buttonText="Get a Free Quote"
+        href="/en/contact/"
       />
 
       <FaqSection
         items={[
           {
-            question: 'Does Germany require DFA Apostille on Philippine documents?',
-            answer: 'Yes. Germany is a Hague Convention member. DFA Apostille is required for Philippine civil documents used in German visa and residence applications.',
+            q: 'Does Germany require DFA Apostille on Philippine documents?',
+            a: 'Yes. Germany is a Hague Convention member. DFA Apostille is required for Philippine civil documents used in German visa and residence applications.',
           },
           {
-            question: 'What Philippine documents are needed for a German spouse visa?',
-            answer: 'PSA Birth Certificate, PSA Marriage Certificate (or CENOMAR), and NBI Clearance — all with DFA Apostille. A sworn German translation is also typically required.',
+            q: 'What Philippine documents are needed for a German spouse visa?',
+            a: 'PSA Birth Certificate, PSA Marriage Certificate (or CENOMAR), and NBI Clearance — all with DFA Apostille. A sworn German translation is also typically required.',
           },
           {
-            question: 'Do German embassies accept PSA e-certificates?',
-            answer: 'Generally, German authorities prefer physical PSA documents on Security Paper. Confirm with the German Embassy before ordering an e-certificate.',
+            q: 'Do German embassies accept PSA e-certificates?',
+            a: 'Generally, German authorities prefer physical PSA documents on Security Paper. Confirm with the German Embassy before ordering an e-certificate.',
           },
           {
-            question: 'How long does it take to get Philippine documents shipped to Germany?',
-            answer: 'Approximately 2–4 weeks: PSA retrieval + DFA Apostille + DHL Express shipping to Germany.',
+            q: 'How long does it take to get Philippine documents shipped to Germany?',
+            a: 'Approximately 2–4 weeks: PSA retrieval + DFA Apostille + DHL Express shipping to Germany.',
           },
         ]}
       />
 
       <RelatedArticles
-        articles={[
-          { href: '/en/uk/', label: 'UK Spouse Visa Documents' },
-          { href: '/en/australia/', label: 'Australia Immigration Documents' },
-          { href: '/en/cenomar/', label: 'CENOMAR — How to Get It' },
-          { href: '/en/apostille/', label: 'DFA Apostille Service' },
+        items={[
+          { href: '/en/uk/', title: 'UK Spouse Visa Documents' },
+          { href: '/en/australia/', title: 'Australia Immigration Documents' },
+          { href: '/en/cenomar/', title: 'CENOMAR — How to Get It' },
+          { href: '/en/apostille/', title: 'DFA Apostille Service' },
         ]}
       />
     </PageLayout>
