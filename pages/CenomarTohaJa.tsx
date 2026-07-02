@@ -91,13 +91,14 @@ export default function CenomarTohaJa() {
       <HeroBanner
         title="CENOMARとは？"
         subtitle="Certificate of No Marriage Record（独身証明書）の意味・使い方・取得方法をわかりやすく解説"
-        ctaLabel="無料相談はこちら"
+        badges={['フィリピン渡航不要', 'DFAアポスティーユ込み', '日本語で対応']}
+        ctaText="無料相談はこちら"
         ctaHref="/ja/contact/"
       />
 
       <SummaryBlock
-        heading="CENOMARの基本"
-        body="CENOMAR（セノマール）は、フィリピン統計局（PSA）が発行する「独身証明書」です。正式名称はCertificate of No Marriage Recordといい、申請者がフィリピン国内で婚姻登録されていないことを公式に証明します。国際結婚・配偶者ビザ申請・帰化申請など、フィリピン人の独身・婚姻状況を証明する必要がある手続きで広く求められます。"
+        conclusion="CENOMARの基本"
+        points={['CENOMAR（セノマール）は、フィリピン統計局（PSA）が発行する「独身証明書」です。正式名称はCertificate of No Marriage Recordといい、申請者がフィリピン国内で婚姻登録されていないことを公式に証明します。国際結婚・配偶者ビザ申請・帰化申請など、フィリピン人の独身・婚姻状況を証明する必要がある手続きで広く求められます。']}
       />
 
       <section className="py-10 px-4 max-w-3xl mx-auto">
@@ -147,47 +148,47 @@ export default function CenomarTohaJa() {
       </section>
 
       <CtaBox
-        heading="CENOMARが必要ですか？"
-        body="フィリピン渡航不要・日本語だけで対応。PSA取得→DFAアポスティーユ→DHL国際配送まで一括代行します。無料相談受付中。"
-        ctaLabel="無料相談はこちら"
-        ctaHref="/ja/contact/"
+        title="CENOMARが必要ですか？"
+        description="フィリピン渡航不要・日本語だけで対応。PSA取得→DFAアポスティーユ→DHL国際配送まで一括代行します。無料相談受付中。"
+        buttonText="無料相談はこちら"
+        href="/ja/contact/"
       />
 
       <FaqSection
         items={[
           {
-            question: 'CENOMARとは何ですか？',
-            answer: 'Certificate of No Marriage Recordの略称で、フィリピン統計局（PSA）が発行する独身証明書です。国際結婚・配偶者ビザ・帰化申請などに使用されます。',
+            q: 'CENOMARとは何ですか？',
+            a: 'Certificate of No Marriage Recordの略称で、フィリピン統計局（PSA）が発行する独身証明書です。国際結婚・配偶者ビザ・帰化申請などに使用されます。',
           },
           {
-            question: 'CENOMARは誰が発行しますか？',
-            answer: 'フィリピン統計局（PSA）が唯一発行できる公的書類です。在日フィリピン大使館では発行できません。',
+            q: 'CENOMARは誰が発行しますか？',
+            a: 'フィリピン統計局（PSA）が唯一発行できる公的書類です。在日フィリピン大使館では発行できません。',
           },
           {
-            question: 'CENOMARの有効期限は？',
-            answer: 'PSA自体に有効期限はありませんが、提出先（入管・法務局・大使館）によって6ヶ月〜1年以内を要求される場合があります。',
+            q: 'CENOMARの有効期限は？',
+            a: 'PSA自体に有効期限はありませんが、提出先（入管・法務局・大使館）によって6ヶ月〜1年以内を要求される場合があります。',
           },
           {
-            question: 'CENOMARとPSA婚姻証明書の違いは？',
-            answer: 'CENOMARは独身証明、婚姻証明書は既婚証明です。K-1フィアンセビザにはCENOMAR、CR-1/IR-1配偶者ビザには婚姻証明書が必要です。',
+            q: 'CENOMARとPSA婚姻証明書の違いは？',
+            a: 'CENOMARは独身証明、婚姻証明書は既婚証明です。K-1フィアンセビザにはCENOMAR、CR-1/IR-1配偶者ビザには婚姻証明書が必要です。',
           },
           {
-            question: 'CENOMARにはアポスティーユが必要ですか？',
-            answer: '日本の公的機関に提出する場合はDFAアポスティーユが必要です。ハーグ条約締約国のため、在日フィリピン大使館での領事認証は不要です。',
+            q: 'CENOMARにはアポスティーユが必要ですか？',
+            a: '日本の公的機関に提出する場合はDFAアポスティーユが必要です。ハーグ条約締約国のため、在日フィリピン大使館での領事認証は不要です。',
           },
           {
-            question: 'CENOMARは日本から取得できますか？',
-            answer: 'はい。代行サービスを利用すればフィリピン渡航不要で取得できます。PSA取得→DFAアポスティーユ→DHL国際配送まで一括対応します。',
+            q: 'CENOMARは日本から取得できますか？',
+            a: 'はい。代行サービスを利用すればフィリピン渡航不要で取得できます。PSA取得→DFAアポスティーユ→DHL国際配送まで一括対応します。',
           },
         ]}
       />
 
       <RelatedArticles
-        articles={[
-          { href: '/ja/cenomar/', label: 'CENOMAR取得代行サービス' },
-          { href: '/ja/cenomar-koyukigen/', label: 'CENOMARの有効期限' },
-          { href: '/ja/apostille/', label: 'DFAアポスティーユとは' },
-          { href: '/ja/kokusai-kekkon-guide/', label: '国際結婚の流れ' },
+        items={[
+          { href: '/ja/cenomar/', title: 'CENOMAR取得代行サービス' },
+          { href: '/ja/cenomar-koyukigen/', title: 'CENOMARの有効期限' },
+          { href: '/ja/apostille/', title: 'DFAアポスティーユとは' },
+          { href: '/ja/kokusai-kekkon-guide/', title: '国際結婚の流れ' },
         ]}
       />
     </PageLayout>
