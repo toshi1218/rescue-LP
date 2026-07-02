@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6 py-16 md:py-24 flex flex-col items-center text-center">
+        <div className="relative z-10 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6 py-10 md:py-24 flex flex-col items-center text-center">
           {/* Trust badges */}
           <div className="flex flex-wrap justify-center gap-2 mb-4" aria-label="サービスの特徴">
             <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
