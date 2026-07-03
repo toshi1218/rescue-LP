@@ -1,6 +1,6 @@
 # PR マージスケジュール
 
-最終更新: 2026-07-02（PR棚卸し・確定デプロイカレンダー反映）
+最終更新: 2026-07-03（Phase G「useMeta/prerender title不整合」ロールアウトをカレンダー追加）
 
 > **判定基準**（CLAUDE.md「運用の大原則」準拠）
 > - 🟢 **安全**: 構造ファイル無変更・20ファイル未満・共通コンポーネント連打なし → 個別ページ爆発半径・日次OK
@@ -38,7 +38,11 @@
 | 2026-07-09 | #303 | 折り畳み削除＋Home review[]除去（縮小済み） | 🟡 ホーム面。**ここから14日観察開始** |
 | 2026-07-11 | #290 | ENコンテンツ強化（CFO新ページ・深掘り5本・K-1/CR-1 title） | 🟡 EN専用に縮小済み。マージ後 K-1/CR-1 の CTR を GSC で観測 |
 | 2026-07-13 | #305 | UX/CVR改善 — **この日はリベース作業**（デプロイは再検証後） | 🔴→🟡 #303 と3ファイル衝突するため #303 反映後にリベース・重複除去・再スクショ検証 |
+| 2026-07-15 | `claude/overseas-inquiries-2jj2q5`（未PR化） | **Phase G バッチ1**: `/en/cenomar/` useMeta同期（commit b4a6c9c・実装済み） | 🟢 title/desc同期。書き込む値は既に本番prerender HTMLに出ている値＝揺れの解消（新シグナルではない）。個別ページ爆発半径。14日観察不要 |
+| 2026-07-17 | 同上（バッチ2） | **Phase G バッチ2**: `/en/psa-birth-certificate-cost/`（2,484 impr / CTR 0.24% — 最優先）useMeta同期 | 🟢 同上。単独ページ |
+| 2026-07-19 以降 | 同上（以降1-2ページ/デプロイ） | **Phase G 残り**: `/en/nbi-clearance/`→`/en/psa-birth-certificate/`→`/en/international-marriage-guide/`→`/en/spouse-visa-documents/`→`/en/naturalization-guide/`→`/en/cr1-visa-documents/`→`/en/nbi-clearance-overseas/`→`/en/cenomar-validity/`→`/en/nbi-validity/`（文言乖離分）→ 残り約20ページ（[April 2026]→[2026]の軽微差分）| 🟢 詳細・優先順は `docs/seo-todo-post-freeze.md` Phase G。CLAUDE.md「1日1-2ページ・2週間観察」準拠で日次進行可 |
 
+- **Phase G の恒久対策**: `scripts/lint-seo.sh` に「routes[] title と各コンポーネント useMeta 第1引数の一致チェック」を追加すれば以後の再発を防止（SEOコンテンツ無変更・いつでも実施可）。実装できたらこのカレンダーとは別枠で 🟢 デプロイ。
 - 期日が来た行は、マージ（または作業完了）したら「完了済み」表へ移動すること（フックはマージ状態を見ないため、放置すると毎セッション通知され続ける）
 - #302（本ファイルを含む docs 同期）と #306（B2B戦略docs）はビルド非対象のため日程管理外。最優先でマージしてこのカレンダーをフックに載せる
 
