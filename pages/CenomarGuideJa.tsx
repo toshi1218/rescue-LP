@@ -131,7 +131,7 @@ export default function CenomarGuideJa() {
         ctaText="無料で相談する（24時間以内に返信）"
       />
       <div className="max-w-2xl mx-auto px-4 my-6">
-        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+        <div className="rounded-xl border border-amber-300 bg-amber-50 p-5">
           <div className="flex items-start gap-3">
             <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
             <div>
@@ -158,7 +158,7 @@ export default function CenomarGuideJa() {
             CENOMARとは何か（独身証明書）
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            CENOMARは <strong>Certificate of No Marriage Record</strong> の略称で、<a href="https://psa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン統計局（PSA公式サイト）</a>が発行する公的書類です。日本語では<strong>「独身証明書」</strong>に相当し、現在フィリピンに婚姻記録がないことを証明します。
+            CENOMARは Certificate of No Marriage Record の略称で、<a href="https://psa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-dark">フィリピン統計局（PSA公式サイト）</a>が発行する公的書類です。日本語では<strong>「独身証明書」</strong>に相当し、現在フィリピンに婚姻記録がないことを証明します。
           </p>
           <p className="text-gray-700 leading-relaxed mb-3">
             国際結婚の手続き・配偶者ビザ申請・帰化申請・フィリピンでの婚姻手続きなど、フィリピン人の婚姻状況を確認する必要がある場面で提出を求められることがあります。
@@ -195,7 +195,7 @@ export default function CenomarGuideJa() {
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
-                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
+                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary-dark' : 'text-gray-600'}`}>{row.price}</div>
               </div>
             ))}
           </div>
@@ -235,7 +235,7 @@ export default function CenomarGuideJa() {
             CENOMARで先に知っておきたいこと
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
-            CENOMARは「一度取ればずっと使える書類」ではありません。提出先によって、発行日の新しさを求められることがあります。たとえば、在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは<strong>発行から6ヶ月以内</strong>と案内されています。つまり、手元にあるから安心ではなく、<strong>その書類が今回の提出先で通るか</strong>が大事です。
+            CENOMARは「一度取ればずっと使える書類」ではありません。提出先によって、発行日の新しさを求められることがあります。たとえば、在東京フィリピン大使館の婚姻関連手続きでは、CENOMARは<strong>発行から6ヶ月以内</strong>と案内されています。つまり、手元にあるから安心ではなく、その書類が今回の提出先で通るかが大事です。
           </p>
           <p className="text-gray-700 leading-relaxed">
             また、必要に応じて <strong>DFA Apostille（アポスティーユ）</strong> が関わることがあります。フィリピンでは、いわゆる昔の「red ribbon」ではなく、現在は Apostille の制度で案内されています。
