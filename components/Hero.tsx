@@ -63,13 +63,15 @@ const Hero: React.FC = () => {
             </span>
           </div>
 
-          <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
-            {t('hero.badge')}
-          </span>
           <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
             {t('hero.h1line1')}<br />
-            <span className="text-base md:text-lg font-normal text-white/70 leading-snug">{t('hero.h1line2')}</span><br />
-            <span className="text-primary">{t('hero.h1line3')}</span>
+            {/* 単語途中での折り返し防止: ・区切りごとに inline-block で保持 */}
+            <span className="text-base md:text-lg font-normal text-white/70 leading-snug">
+              {t('hero.h1line2').split('・').map((part, i, arr) => (
+                <span key={i} className="inline-block">{part}{i < arr.length - 1 ? '・' : ''}</span>
+              ))}
+            </span><br />
+            <span className="text-xl md:text-2xl text-primary">{t('hero.h1line3')}</span>
           </h1>
           <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
             {t('hero.description')}
@@ -85,17 +87,6 @@ const Hero: React.FC = () => {
             >
               <Mail className="w-5 h-5 flex-shrink-0" />
               無料相談する
-            </a>
-
-            {/* 料金を見る */}
-            <a
-              href="/ja/ryokin/"
-              onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
-              className="font-bold py-3.5 px-6 rounded-lg bg-secondary text-white shadow-lg hover:bg-secondary-light hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-secondary/40"
-              aria-label={t('hero.pricingAriaLabel')}
-            >
-              <Tag className="w-5 h-5 flex-shrink-0" />
-              料金を見る
             </a>
 
             {/* LINEで問い合わせ */}

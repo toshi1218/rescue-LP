@@ -38,7 +38,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white" aria-labelledby="faq-heading">
+    <section id="faq" className="py-20 bg-white scroll-mt-14" aria-labelledby="faq-heading">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

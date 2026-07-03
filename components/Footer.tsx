@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
   const tokushoPath = '/ja/tokusho/';
 
   return (
-    <footer className="bg-white" id="contact">
+    <footer className="bg-white scroll-mt-14" id="contact">
       {/* Gradient hero header */}
       <div className="relative bg-secondary overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
