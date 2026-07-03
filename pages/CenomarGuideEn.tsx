@@ -9,11 +9,15 @@ import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import RelatedArticles from '../components/RelatedArticles';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function CenomarGuideEn() {
+  // Must match the /en/cenomar/ route title/description in scripts/prerender.ts —
+  // useMeta overwrites the prerendered tags on hydration, so any drift here is
+  // what Googlebot sees in the rendered DOM.
   useMeta(
-    'What Is CENOMAR? Meaning, How to Get It & Costs [2026]',
-    'CENOMAR = Certificate of No Marriage Record, issued by PSA Philippines. Required for K-1, spouse visa & marriage abroad. We retrieve it — no trip needed.',
+    `Get CENOMAR from Abroad [${SEO_YEAR}] — PSA + Apostille + DHL, All-Inclusive`,
+    'We retrieve CENOMAR from PSA, get DFA Apostille, and ship worldwide via DHL — from US$349 all-in. No trip to the Philippines needed. Free consultation.',
   );
   return (
     <PageLayout

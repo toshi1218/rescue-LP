@@ -249,6 +249,24 @@ descriptionの "Japan spouse visa" を除去し、グローバル OFW 向けに�
 
 ---
 
+## 6.5 Phase G: useMeta と prerender.ts の title/description 不整合（2026-07-03 発見）
+
+**発見経緯**: 海外問い合わせ分析（GSC 6ヶ月データ）で US CTR 0.03%（3,051 impr / 1 click）の原因調査中に発見。
+
+**問題**: `useMeta()` は hydration 時に `document.title` と meta description を**無条件で上書き**する（`lib/useMeta.ts:54-56`）。prerender.ts の route title を改善しても、コンポーネント側の `useMeta()` 引数が古いままだと、**Googlebot が JS レンダリング後に見る title は古い方**になり、改善が打ち消される。
+
+**実例**: `/en/cenomar/` は prerender.ts では transactional title（"Get CENOMAR from Abroad…"）に改善済みだったが、`CenomarGuideEn.tsx` の useMeta は旧 informational title（"What Is CENOMAR?…"）のままだった → 2026-07-03 に同期修正（このコミット）。
+
+**残り**: EN ページ約30ページで同種の不整合（大半は「[April 2026] vs [2026]」程度の軽微な差分だが、`/en/psa-birth-certificate-cost/`・`/en/nbi-clearance/`・`/en/psa-birth-certificate/`・`/en/international-marriage-guide/`・`/en/spouse-visa-documents/`・`/en/naturalization-guide/`・`/en/cr1-visa-documents/`・`/en/nbi-clearance-overseas/`・`/en/cenomar-validity/`・`/en/nbi-validity/` は文言レベルで乖離）。
+
+**進め方**（CLAUDE.md ルール準拠）:
+1. 1日1〜2ページずつ、prerender.ts の値を正としてコンポーネント側 useMeta を同期（title は既に本番 HTML に出ている値なので、同期は「新しいシグナル」ではなく揺れの解消）
+2. 優先順: `/en/psa-birth-certificate-cost/`（2,484 impr / CTR 0.24%）→ `/en/nbi-clearance/` → 上記リスト順
+3. **恒久対策**: `lint-seo.sh` に「routes[] の title と各コンポーネント useMeta 第1引数の一致チェック」を追加（Phase A 系・SEO コンテンツ無変更なのでいつでも実施可）
+4. B6（useMeta 差分更新化）の実施時に本問題も構造的に解消される
+
+---
+
 ## 7. 検証方法
 
 ### Phase A の検証
