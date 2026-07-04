@@ -158,8 +158,8 @@ export default function HomeJa() {
               <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
                 2026年3月のPSAデジタル化以降、電子文書が<span className="text-red-700">受理されず紙原本を要求されるケース</span>が多数報告されています。<span className="text-red-700">当社はPSA・DFA窓口で直接紙原本を取得しており、従来通り対応可能です。</span>
               </p>
-              {noticeExpanded && (
-                <ul className="space-y-3 mt-4">
+              {/* 本文は常に静的HTMLへ出力し、折り畳みはCSS(hidden)で行う（SEO: 本文欠落防止） */}
+              <ul className={`space-y-3 mt-4 ${noticeExpanded ? '' : 'hidden'}`}>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
@@ -179,7 +179,6 @@ export default function HomeJa() {
                     </span>
                   </li>
                 </ul>
-              )}
               {!noticeExpanded && (
                 <button
                   onClick={() => setNoticeExpanded(true)}

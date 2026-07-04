@@ -1,5 +1,5 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import React, { useState } from 'react';
+import { CheckCircle, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 // 47件 平均4.8点の内訳（5点満点）
@@ -103,6 +103,8 @@ const SocialProof: React.FC = React.memo(() => {
   const isJa = lang === 'ja';
   const stats = statsData[lang];
   const reviews = reviewsData[lang];
+  // モバイルのみレビューを1件に畳む（全文はDOMに残す）。md以上は従来通り全件表示
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <section className="py-12 md:py-20 bg-white relative overflow-hidden" aria-labelledby="social-proof-title">
@@ -201,8 +203,8 @@ const SocialProof: React.FC = React.memo(() => {
 
         {/* ── レビューカード ── */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {reviews.map((item) => (
-            <article key={item.service} className="bg-white border border-gray-100 rounded-2xl shadow-card flex flex-col overflow-hidden">
+          {reviews.map((item, idx) => (
+            <article key={item.service} className={`bg-white border border-gray-100 rounded-2xl shadow-card ${!expanded && idx >= 1 ? 'hidden md:flex' : 'flex'} flex-col overflow-hidden`}>
               {/* カードヘッダー */}
               <div className="bg-secondary/5 border-b border-gray-100 px-5 py-3 flex items-center justify-between">
                 <span className="text-xs font-bold text-primary uppercase tracking-wide truncate max-w-[70%]">
@@ -243,6 +245,19 @@ const SocialProof: React.FC = React.memo(() => {
             </article>
           ))}
         </div>
+
+        {/* モバイル用: 残りのレビューを開くボタン（md以上では全件表示のため非表示） */}
+        {!expanded && reviews.length > 1 && (
+          <div className="text-center mt-4 md:hidden">
+            <button
+              onClick={() => setExpanded(true)}
+              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
+            >
+              <ChevronDown className="w-4 h-4" />
+              {isJa ? `他のレビューを見る（残り${reviews.length - 1}件）` : `See more reviews (${reviews.length - 1} more)`}
+            </button>
+          </div>
+        )}
 
       </div>
     </section>

@@ -67,7 +67,8 @@ const GuideLinks: React.FC<GuideLinksProps> = React.memo(({ maxItems }) => {
               <span className="text-sm font-bold text-gray-800 group-hover:text-secondary transition-colors">
                 {g.title}
               </span>
-              <p className="text-xs text-gray-500 leading-relaxed">{g.desc}</p>
+              {/* モバイルでは説明文を畳んでリンク集をコンパクトに（テキストはDOMに残る） */}
+              <p className="hidden sm:block text-xs text-gray-500 leading-relaxed">{g.desc}</p>
               {g.tag && (
                 <span className="inline-flex items-center gap-1 self-start text-xs font-bold text-primary-dark border border-primary-dark/40 px-2.5 py-1 rounded-lg group-hover:bg-primary group-hover:text-white transition-all mt-1">
                   {g.tag}

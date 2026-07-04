@@ -57,7 +57,6 @@ const packs = [
 
 const ServicePacks: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
-  const visiblePacks = expanded ? packs : packs.slice(0, 2);
 
   return (
     <section className="py-12 md:py-20 bg-white">
@@ -70,11 +69,12 @@ const ServicePacks: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {visiblePacks.map((pack, i) => (
+          {/* 全件を静的HTMLに含め、折り畳みはCSS(hidden)で行う（SEO: 内部リンク欠落防止） */}
+          {packs.map((pack, i) => (
             <Link
               key={pack.to}
               to={pack.to}
-              className={`group relative bg-white border ${pack.accentBorder} rounded-2xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all overflow-hidden`}
+              className={`group relative bg-white border ${pack.accentBorder} rounded-2xl p-5 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all overflow-hidden ${!expanded && i >= 2 ? 'hidden' : ''}`}
             >
               {/* Number badge */}
               <span className={`absolute top-4 right-4 font-bold text-2xl leading-none ${pack.numColor} opacity-20 font-display select-none`}>

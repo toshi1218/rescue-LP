@@ -79,7 +79,6 @@ const DiyRisks: React.FC = () => {
   const { lang } = useLanguage();
   const c = contentData[lang];
   const [expanded, setExpanded] = useState(false);
-  const visibleRisks = expanded ? c.risks : c.risks.slice(0, 2);
 
   return (
     <section
@@ -105,10 +104,11 @@ const DiyRisks: React.FC = () => {
 
         {/* Risk cards — 2-column grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          {visibleRisks.map((risk, i) => (
+          {/* 全件を静的HTMLに含め、折り畳みはCSS(hidden)で行う（SEO: 本文欠落防止） */}
+          {c.risks.map((risk, i) => (
             <div
               key={i}
-              className="bg-white border border-amber-100 rounded-2xl p-5 hover:border-amber-200 hover:shadow-sm transition-all relative overflow-hidden"
+              className={`bg-white border border-amber-100 rounded-2xl p-5 hover:border-amber-200 hover:shadow-sm transition-all relative overflow-hidden ${!expanded && i >= 2 ? 'hidden' : ''}`}
             >
               {/* Large number watermark */}
               <span className="absolute top-3 right-4 font-bold text-3xl leading-none text-amber-200 font-display select-none">

@@ -87,8 +87,6 @@ const CaseStudies: React.FC = React.memo(() => {
   const isJa = lang === 'ja';
   const [expanded, setExpanded] = useState(false);
 
-  const visibleCases = expanded ? caseStudies : caseStudies.slice(0, 1);
-
   return (
     <section className="py-12 md:py-20 bg-slate-50" aria-labelledby="case-studies-title">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4">
@@ -100,10 +98,11 @@ const CaseStudies: React.FC = React.memo(() => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {visibleCases.map((item) => {
+          {/* 全件を静的HTMLに含め、折り畳みはCSS(hidden)で行う（SEO: 本文欠落防止） */}
+          {caseStudies.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <article key={item.title} className={`border ${item.accentColor} bg-white rounded-2xl shadow-card flex flex-col overflow-hidden`}>
+              <article key={item.title} className={`border ${item.accentColor} bg-white rounded-2xl shadow-card ${!expanded && idx > 0 ? 'hidden' : 'flex'} flex-col overflow-hidden`}>
                 {/* Card header */}
                 <div className={`${item.headerBg} px-5 py-4 flex items-center gap-3 border-b ${item.accentColor}`}>
                   <div className={`w-10 h-10 rounded-xl ${item.iconBg} border ${item.accentColor} flex items-center justify-center flex-shrink-0`}>

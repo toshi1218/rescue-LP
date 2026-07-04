@@ -129,7 +129,6 @@ const TrustTransparency: React.FC = React.memo(() => {
   const { lang } = useLanguage();
   const c = contentData[lang];
   const [expanded, setExpanded] = useState(false);
-  const visibleFears = expanded ? c.fears : c.fears.slice(0, 3);
 
   return (
     <section className="py-16 bg-white relative overflow-hidden" aria-labelledby="trust-heading">
@@ -157,12 +156,13 @@ const TrustTransparency: React.FC = React.memo(() => {
 
         {/* 不安カード 2列グリッド */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          {visibleFears.map((item) => {
+          {/* 全件を静的HTMLに含め、折り畳みはCSS(hidden)で行う（SEO: 本文欠落防止） */}
+          {c.fears.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.fear}
-                className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-primary/20 hover:shadow-sm transition-all"
+                className={`bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:border-primary/20 hover:shadow-sm transition-all ${!expanded && idx >= 3 ? 'hidden' : ''}`}
               >
                 {/* 不安の声 */}
                 <div className="flex items-start gap-3 mb-3">
