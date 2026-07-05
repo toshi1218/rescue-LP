@@ -66,13 +66,11 @@ const Hero: React.FC = () => {
           <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
             {t('hero.badge')}
           </span>
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-2 drop-shadow-sm">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
             {t('hero.h1line1')}<br />
-            <span className="text-base md:text-lg font-normal text-white/70 leading-snug">{t('hero.h1line2')}</span>
+            <span className="text-base md:text-lg font-normal text-white/70 leading-snug">{t('hero.h1line2')}</span><br />
+            <span className="text-primary">{t('hero.h1line3')}</span>
           </h1>
-          <p className="text-primary text-lg md:text-xl font-bold leading-snug mb-4 drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">
-            {t('hero.h1line3')}
-          </p>
           <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
             {t('hero.description')}
           </p>
@@ -89,14 +87,14 @@ const Hero: React.FC = () => {
               無料相談する
             </a>
 
-            {/* 料金を見る（副次・アウトライン） */}
+            {/* 料金を見る */}
             <a
               href="/ja/ryokin/"
               onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
-              className="font-semibold py-3 px-6 rounded-lg bg-white/10 text-white border border-white/30 hover:bg-white/20 transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-white/30 backdrop-blur-sm"
+              className="font-bold py-3.5 px-6 rounded-lg bg-secondary text-white shadow-lg hover:bg-secondary-light hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-secondary/40"
               aria-label={t('hero.pricingAriaLabel')}
             >
-              <Tag className="w-4 h-4 flex-shrink-0" />
+              <Tag className="w-5 h-5 flex-shrink-0" />
               料金を見る
             </a>
 
@@ -203,9 +201,9 @@ const Hero: React.FC = () => {
             </a>
             <a
               href="#pricing"
-              className="flex items-center justify-center gap-2 font-semibold py-3 px-6 rounded-xl bg-white/10 text-white border border-white/30 hover:bg-white/20 transition-all focus:outline-none focus:ring-4 focus:ring-white/30 backdrop-blur-sm"
+              className="flex items-center justify-center gap-2 font-bold py-3.5 px-6 rounded-xl bg-secondary text-white shadow-lg hover:bg-secondary-light hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-secondary/40"
             >
-              <Tag className="w-4 h-4 flex-shrink-0" />
+              <Tag className="w-5 h-5 flex-shrink-0" />
               See Packages
             </a>
             <a
