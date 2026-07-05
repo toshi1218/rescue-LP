@@ -53,7 +53,7 @@ const Services: React.FC = () => {
             </div>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4">
             {services.map((service, index) => (
               <Link key={index} to={service.path} className="group relative p-5 border border-gray-100 rounded-2xl bg-gray-50 hover:border-primary/40 hover:bg-primary/5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 block">
                 <div className="w-14 h-14 rounded-2xl bg-secondary/8 border border-secondary/10 flex items-center justify-center mb-4 group-hover:bg-primary/10 group-hover:border-primary/20 transition-colors">
