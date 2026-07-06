@@ -138,31 +138,25 @@ const Hero: React.FC = () => {
           {/* ── Right: Stacked photo composition (desktop only) ── */}
           <div className="hidden lg:block relative w-[26rem] flex-shrink-0 h-[26rem]" aria-hidden="true">
             {/* Back photo: certificates on a desk */}
-            <picture>
-              <source srcSet="/hero-docs-desk.webp" type="image/webp" />
-              <img
-                src="/hero-docs-desk.jpg"
-                alt=""
-                width={640}
-                height={480}
-                loading="eager"
-                decoding="async"
-                className="absolute left-0 top-8 w-[70%] rounded-xl shadow-2xl border-4 border-white object-cover aspect-[4/3] -rotate-6"
-              />
-            </picture>
+            <img
+              src="/hero-docs-desk.jpg"
+              alt=""
+              width={640}
+              height={480}
+              loading="eager"
+              decoding="async"
+              className="absolute left-0 top-8 w-[70%] rounded-xl shadow-2xl border-4 border-white object-cover aspect-[4/3] -rotate-6"
+            />
             {/* Front photo: Philippine passport, ring & documents */}
-            <picture>
-              <source srcSet="/hero-passport-ring.webp" type="image/webp" />
-              <img
-                src="/hero-passport-ring.jpg"
-                alt=""
-                width={520}
-                height={520}
-                loading="eager"
-                decoding="async"
-                className="absolute right-0 bottom-4 w-[58%] rounded-xl shadow-2xl border-4 border-white object-cover aspect-square rotate-3"
-              />
-            </picture>
+            <img
+              src="/hero-passport-ring.jpg"
+              alt=""
+              width={520}
+              height={520}
+              loading="eager"
+              decoding="async"
+              className="absolute right-0 bottom-4 w-[58%] rounded-xl shadow-2xl border-4 border-white object-cover aspect-square rotate-3"
+            />
             {/* Price tag badge */}
             <div className="absolute -bottom-2 left-6 bg-white px-5 py-3 rounded-xl shadow-2xl border border-primary/20 text-center -rotate-2">
               <p className="text-red-600 font-bold text-xs mb-0.5">国際結婚準備パック</p>
