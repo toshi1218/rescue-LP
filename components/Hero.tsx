@@ -45,90 +45,131 @@ const Hero: React.FC = () => {
               decoding="async"
             />
           </picture>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40"></div>
+          {/* Darken more toward the left so text stays legible over the photo composition */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/30 lg:from-secondary/90 lg:via-secondary/70 lg:to-secondary/30"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6 py-16 md:py-24 flex flex-col items-center text-center">
-          {/* Trust badges */}
-          <div className="flex flex-wrap justify-center gap-2 mb-4" aria-label="サービスの特徴">
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
-              🏢 日本法人
+        <div className="relative z-10 max-w-md md:max-w-2xl lg:max-w-6xl mx-auto px-6 py-16 md:py-20 flex flex-col lg:flex-row lg:items-center gap-10">
+
+          {/* ── Left: Text ── */}
+          <div className="flex-1 min-w-0 flex flex-col items-center text-center lg:items-start lg:text-left">
+            {/* Trust badges */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-4" aria-label="サービスの特徴">
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
+                🏢 日本法人
+              </span>
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
+                ✈️ 渡航不要
+              </span>
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
+                🛡️ キャンセル無料
+              </span>
+            </div>
+
+            <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
+              {t('hero.badge')}
             </span>
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
-              ✈️ 渡航不要
-            </span>
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
-              🛡️ キャンセル無料
-            </span>
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
+              {t('hero.h1line1')}<br />
+              <span className="text-base md:text-lg font-normal text-white/70 leading-snug">{t('hero.h1line2')}</span><br />
+              <span className="text-primary">{t('hero.h1line3')}</span>
+            </h1>
+            <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md lg:mx-0 mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+              {t('hero.description')}
+            </p>
+            {/* CTA Buttons */}
+            <div className="flex flex-col gap-2.5 w-full max-w-sm">
+              {/* 無料相談する */}
+              <a
+                href="#contact"
+                onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
+                className="bg-primary text-secondary font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
+                aria-label="無料相談フォームへ移動"
+              >
+                <Mail className="w-5 h-5 flex-shrink-0" />
+                無料相談する
+              </a>
+
+              {/* 料金を見る */}
+              <a
+                href="/ja/ryokin/"
+                onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
+                className="font-bold py-3.5 px-6 rounded-lg bg-secondary text-white shadow-lg hover:bg-secondary-light hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-secondary/40"
+                aria-label={t('hero.pricingAriaLabel')}
+              >
+                <Tag className="w-5 h-5 flex-shrink-0" />
+                料金を見る
+              </a>
+
+              {/* LINEで問い合わせ */}
+              <a
+                href="https://lin.ee/wALag1U"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent('cta_click', { location: 'hero', type: 'line_urgent', variant: ctaVariant })}
+                className="bg-[#06C755] text-white font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-[#06C755]/40 hover:bg-[#05b04a] hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-[#06C755]/40"
+                aria-label="LINEで問い合わせ（新しいタブで開く）"
+              >
+                <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                </svg>
+                LINEで問い合わせ（即返信）
+              </a>
+            </div>
+
+            {/* Trust: Rating badge */}
+            <div className="flex items-center justify-center lg:justify-start gap-1.5 mt-3" aria-label="平均評価 4.8 / 5.0">
+              <span className="text-yellow-400 text-base leading-none" aria-hidden="true">★★★★★</span>
+              <span className="text-white/80 text-xs font-medium">4.8 / 5.0（公開レビュー47件）</span>
+            </div>
+
+            {/* Urgency message */}
+            <p className="text-yellow-300 text-xs font-semibold mt-1 tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+              ただいまお問い合わせ受付中 · 24時間以内に返信
+            </p>
+
+            {/* Pricing hint – aligned with actual pricing table */}
+            <p className="text-white/60 text-xs mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+              国際結婚準備パック ¥99,800〜（税・送料別）
+            </p>
           </div>
 
-          <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold mb-4 tracking-wider border border-primary/30 backdrop-blur-sm">
-            {t('hero.badge')}
-          </span>
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-sm">
-            {t('hero.h1line1')}<br />
-            <span className="text-base md:text-lg font-normal text-white/70 leading-snug">{t('hero.h1line2')}</span><br />
-            <span className="text-primary">{t('hero.h1line3')}</span>
-          </h1>
-          <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            {t('hero.description')}
-          </p>
-          {/* CTA Buttons */}
-          <div className="flex flex-col gap-2.5 w-full max-w-sm">
-            {/* 無料相談する */}
-            <a
-              href="#contact"
-              onClick={() => trackEvent('cta_click', { location: 'hero', type: 'contact', variant: ctaVariant })}
-              className="bg-primary text-secondary font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-primary/30 hover:bg-primary-hover hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-primary/40"
-              aria-label="無料相談フォームへ移動"
-            >
-              <Mail className="w-5 h-5 flex-shrink-0" />
-              無料相談する
-            </a>
-
-            {/* 料金を見る */}
-            <a
-              href="/ja/ryokin/"
-              onClick={() => trackEvent('cta_click', { location: 'hero', type: 'pricing', variant: ctaVariant })}
-              className="font-bold py-3.5 px-6 rounded-lg bg-secondary text-white shadow-lg hover:bg-secondary-light hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-secondary/40"
-              aria-label={t('hero.pricingAriaLabel')}
-            >
-              <Tag className="w-5 h-5 flex-shrink-0" />
-              料金を見る
-            </a>
-
-            {/* LINEで問い合わせ */}
-            <a
-              href="https://lin.ee/wALag1U"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent('cta_click', { location: 'hero', type: 'line_urgent', variant: ctaVariant })}
-              className="bg-[#06C755] text-white font-bold py-3.5 px-6 rounded-lg shadow-lg shadow-[#06C755]/40 hover:bg-[#05b04a] hover:scale-[1.02] transition-all flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-[#06C755]/40"
-              aria-label="LINEで問い合わせ（新しいタブで開く）"
-            >
-              <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
-              </svg>
-              LINEで問い合わせ（即返信）
-            </a>
+          {/* ── Right: Stacked photo composition (desktop only) ── */}
+          <div className="hidden lg:block relative w-[26rem] flex-shrink-0 h-[26rem]" aria-hidden="true">
+            {/* Back photo: certificates on a desk */}
+            <picture>
+              <source srcSet="/hero-docs-desk.webp" type="image/webp" />
+              <img
+                src="/hero-docs-desk.jpg"
+                alt=""
+                width={640}
+                height={480}
+                loading="eager"
+                decoding="async"
+                className="absolute left-0 top-8 w-[70%] rounded-xl shadow-2xl border-4 border-white object-cover aspect-[4/3] -rotate-6"
+              />
+            </picture>
+            {/* Front photo: Philippine passport, ring & documents */}
+            <picture>
+              <source srcSet="/hero-passport-ring.webp" type="image/webp" />
+              <img
+                src="/hero-passport-ring.jpg"
+                alt=""
+                width={520}
+                height={520}
+                loading="eager"
+                decoding="async"
+                className="absolute right-0 bottom-4 w-[58%] rounded-xl shadow-2xl border-4 border-white object-cover aspect-square rotate-3"
+              />
+            </picture>
+            {/* Price tag badge */}
+            <div className="absolute -bottom-2 left-6 bg-white px-5 py-3 rounded-xl shadow-2xl border border-primary/20 text-center -rotate-2">
+              <p className="text-red-600 font-bold text-xs mb-0.5">国際結婚準備パック</p>
+              <p className="text-2xl font-black text-secondary leading-none">¥99,800<span className="text-base">〜</span></p>
+              <p className="text-[10px] text-gray-500 mt-0.5">（税・送料別）</p>
+            </div>
           </div>
-
-          {/* Trust: Rating badge */}
-          <div className="flex items-center justify-center gap-1.5 mt-3" aria-label="平均評価 4.8 / 5.0">
-            <span className="text-yellow-400 text-base leading-none" aria-hidden="true">★★★★★</span>
-            <span className="text-white/80 text-xs font-medium">4.8 / 5.0（公開レビュー47件）</span>
-          </div>
-
-          {/* Urgency message */}
-          <p className="text-yellow-300 text-xs font-semibold mt-1 tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            ただいまお問い合わせ受付中 · 24時間以内に返信
-          </p>
-
-          {/* Pricing hint – aligned with actual pricing table */}
-          <p className="text-white/60 text-xs mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            国際結婚準備パック ¥99,800〜（税・送料別）
-          </p>
         </div>
       </header>
     );
