@@ -13,3 +13,7 @@
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   Cross-Origin-Opener-Policy: same-origin-allow-popups
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://cloudflareinsights.com https://formspree.io https:;
+
+# 顧客専用の注文追跡ページ（個人の注文情報を含むため、常にクロール対象外にする）
+/status/*
+  X-Robots-Tag: noindex, nofollow

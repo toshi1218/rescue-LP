@@ -147,6 +147,7 @@ const NbiKo = lazy(() => import('./pages/NbiKo'));
 const PsaEcertificateHangukKo = lazy(() => import('./pages/PsaEcertificateHangukKo'));
 const ContactKo = lazy(() => import('./pages/ContactKo'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const StatusTracker = lazy(() => import('./pages/StatusTracker'));
 const FloatingChatWidget = lazy(() => import('./components/FloatingChatWidget'));
 
 function NavigationProgress() {
@@ -494,6 +495,9 @@ export default function App() {
         <Route path="/gaimen-kirikae-guide/" element={<Navigate to="/ja/gaimen-kirikae-guide/" replace />} />
         <Route path="/kika-shinsei-guide" element={<Navigate to="/ja/kika-shinsei-guide/" replace />} />
         <Route path="/kika-shinsei-guide/" element={<Navigate to="/ja/kika-shinsei-guide/" replace />} />
+
+        {/* Customer order-tracking page — noindex, not part of the prerendered/sitemap route set */}
+        <Route path="/status/:id" element={<StatusTracker />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

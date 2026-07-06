@@ -85,6 +85,23 @@
   <div class="cols">
     <aside class="side">
       <div class="grp">
+        <label>顧客用の追跡ページ（同じURLで自動更新・任意）</label>
+        <input type="text" id="fPass" placeholder="合言葉（この端末に保存されます）">
+        <div style="display:flex;gap:6px;">
+          <input type="text" id="fLinkId" placeholder="既存ID（更新するときだけ入力）" style="flex:1">
+          <button type="button" class="btn ghost" id="btnLoad" style="white-space:nowrap;">読込</button>
+        </div>
+        <div class="actions" style="margin:2px 0 0;">
+          <button type="button" class="btn gold" id="btnSaveLink">💾 追跡ページを保存</button>
+        </div>
+        <div id="linkStatus" class="hint"></div>
+        <div id="linkResult" style="display:none;gap:6px;align-items:center;">
+          <input type="text" id="fLinkUrl" readonly style="flex:1;font-size:13px;">
+          <button type="button" class="btn ghost" id="btnCopyLink" style="white-space:nowrap;">📋</button>
+        </div>
+      </div>
+
+      <div class="grp">
         <label>お客様に送るカードの言語</label>
         <div class="seg" id="langSeg">
           <button type="button" data-lang="en" aria-pressed="true">英語で作る</button>
@@ -231,6 +248,101 @@
 
   var state = { lang:'en', stage:3, subIdx:-1, name:'', doc:'PSA Birth Certificate', ref:'', eta:'', track:'',
                 order:todayISO(), leadMin:4, leadMax:6, dates:['','','','','',''] };
+
+  // ---------- 顧客用追跡ページ（Worker API 連携） ----------
+  var STATUS_API = 'https://chat.ph-document.com/api/status';
+  var PASS_KEY = 'phdocAdminPass';
+  var fPass = document.getElementById('fPass');
+  var fLinkId = document.getElementById('fLinkId');
+  var linkStatus = document.getElementById('linkStatus');
+  var linkResult = document.getElementById('linkResult');
+  var fLinkUrl = document.getElementById('fLinkUrl');
+
+  fPass.value = localStorage.getItem(PASS_KEY) || '';
+  fPass.addEventListener('input', function(){ localStorage.setItem(PASS_KEY, fPass.value); });
+
+  function fetchWithTimeout(url, opts, ms){
+    var ctrl = new AbortController();
+    var timer = setTimeout(function(){ ctrl.abort(); }, ms || 15000);
+    return fetch(url, Object.assign({}, opts, { signal: ctrl.signal })).finally(function(){ clearTimeout(timer); });
+  }
+  function linkPayload(){
+    return {
+      lang: state.lang, doc: state.doc, name: state.name, ref: state.ref,
+      stage: state.stage, sub_idx: state.subIdx >= 0 ? state.subIdx : null,
+      eta_note: state.eta, track: state.track, order_date: state.order,
+      lead_min: parseInt(state.leadMin,10) || 4, lead_max: parseInt(state.leadMax,10) || 6,
+      stage_dates: state.dates
+    };
+  }
+  function showLinkUrl(id){
+    fLinkUrl.value = 'https://ph-document.com/status/' + id;
+    linkResult.style.display = 'flex';
+  }
+  function applyLoadedRow(row){
+    state.lang = row.lang === 'en' ? 'en' : 'ja';
+    state.doc = row.doc || ''; state.name = row.name || ''; state.ref = row.ref || '';
+    state.stage = row.stage || 1;
+    state.subIdx = (row.sub_idx === null || row.sub_idx === undefined) ? -1 : row.sub_idx;
+    state.eta = row.eta_note || ''; state.track = row.track || '';
+    state.order = row.order_date || state.order;
+    state.leadMin = row.lead_min || 4; state.leadMax = row.lead_max || 6;
+    state.dates = (row.stage_dates && row.stage_dates.length === 6) ? row.stage_dates : state.dates;
+
+    document.getElementById('fDoc').value = state.doc;
+    document.getElementById('fName').value = state.name;
+    document.getElementById('fRef').value = state.ref;
+    document.getElementById('fEta').value = state.eta;
+    document.getElementById('fTrack').value = state.track;
+    document.getElementById('fOrder').value = state.order;
+    document.getElementById('fLeadMin').value = state.leadMin;
+    document.getElementById('fLeadMax').value = state.leadMax;
+    Array.prototype.forEach.call(document.getElementById('langSeg').children, function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.lang === state.lang));
+    });
+    buildStageButtons(); buildSubSelect(); buildDates(); syncTrack(); update();
+  }
+
+  document.getElementById('btnLoad').addEventListener('click', function(){
+    var id = fLinkId.value.trim();
+    if(!id){ linkStatus.textContent = 'IDを入力してください'; return; }
+    linkStatus.textContent = '読み込み中…';
+    fetchWithTimeout(STATUS_API + '/' + encodeURIComponent(id))
+      .then(function(r){ if(!r.ok) throw new Error(String(r.status)); return r.json(); })
+      .then(function(row){
+        applyLoadedRow(row);
+        showLinkUrl(id);
+        linkStatus.textContent = '読み込みました（最終更新 ' + row.updated_at + '）';
+      })
+      .catch(function(){ linkStatus.textContent = '見つかりませんでした（IDをご確認ください）'; });
+  });
+
+  document.getElementById('btnSaveLink').addEventListener('click', function(){
+    var pass = fPass.value.trim();
+    if(!pass){ linkStatus.textContent = '合言葉を入力してください'; return; }
+    var id = fLinkId.value.trim();
+    var method = id ? 'PUT' : 'POST';
+    var url = id ? (STATUS_API + '/' + encodeURIComponent(id)) : STATUS_API;
+    linkStatus.textContent = '保存中…';
+    fetchWithTimeout(url, {
+      method: method,
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Passphrase': pass },
+      body: JSON.stringify(linkPayload())
+    })
+      .then(function(r){ if(!r.ok) throw new Error(String(r.status)); return r.json(); })
+      .then(function(row){
+        fLinkId.value = row.id;
+        showLinkUrl(row.id);
+        linkStatus.textContent = '保存しました（' + row.updated_at + '）';
+      })
+      .catch(function(){ linkStatus.textContent = '保存に失敗しました（合言葉をご確認ください）'; });
+  });
+
+  document.getElementById('btnCopyLink').addEventListener('click', function(){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(fLinkUrl.value).then(function(){ toast('リンクをコピーしました'); });
+    } else { fLinkUrl.select(); document.execCommand('copy'); toast('リンクをコピーしました'); }
+  });
 
   // ---------- date helpers ----------
   function parseOrder(){

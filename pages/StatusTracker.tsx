@@ -21,6 +21,26 @@ const STAGE_LABEL: Record<StatusLang, string[]> = {
   ],
 };
 
+// 各工程の詳細ステップ（public/tools/status.html の SUBSTEPS と揃える）
+const SUBSTEPS: Record<StatusLang, string[][]> = {
+  en: [
+    ['Order received', 'Down payment confirmed'],
+    ['Reservation made', 'Application submitted', 'Application accepted (by PSA)', 'In transit to us', 'Document received (by us)'],
+    ['Appointment booked', 'Application submitted', 'Application accepted (by DFA)', 'In transit to us', 'Apostille received (by us)'],
+    ['Invoice sent', 'Awaiting your payment', 'Payment confirmed'],
+    ['Preparing shipment', 'Handed over to DHL', 'Tracking number issued'],
+    ['Out for delivery', 'Delivered'],
+  ],
+  ja: [
+    ['ご注文を受付しました', '着手金を確認しました'],
+    ['予約が完了しました', '申請しました', 'PSAに申請が受理されました', '配達中です（PSA→当社）', '当社が書類を受け取りました'],
+    ['予約が完了しました', '申請しました', 'DFAに申請が受理されました', '配達中です（DFA→当社）', '当社がアポスティーユを受け取りました'],
+    ['請求書をお送りしました', 'ご入金をお待ちしています', 'ご入金を確認しました'],
+    ['発送準備中です', 'DHLへ引き渡しました', '追跡番号を発行しました'],
+    ['配達中です', 'お届け完了しました'],
+  ],
+};
+
 const DONE_WORD: Record<StatusLang, string> = { en: 'Done', ja: '完了' };
 const BADGE: Record<StatusLang, string> = { en: 'In progress now', ja: 'いまこの工程です' };
 const ARRIVAL_LABEL: Record<StatusLang, string> = { en: 'Estimated arrival', ja: 'お届け予定' };
@@ -152,6 +172,8 @@ export default function StatusTracker() {
             const done = n < status.stage || status.stage === 6;
             const isCurrent = n === status.stage && status.stage < 6;
             const stageDate = status.stage_dates?.[i];
+            const subLabel = status.sub_idx !== null && status.sub_idx !== undefined ? SUBSTEPS[lang][i]?.[status.sub_idx] : '';
+            const extraBits = [subLabel || status.eta_note, status.stage >= 5 && status.track ? `DHL ${status.track}` : ''].filter(Boolean);
             return (
               <li key={label} className="flex gap-4">
                 <div className="flex flex-col items-center">
@@ -168,9 +190,12 @@ export default function StatusTracker() {
                 <div className="pb-6">
                   <p className={'font-bold ' + (done || isCurrent ? 'text-secondary' : 'text-gray-400')}>{label}</p>
                   {isCurrent && (
-                    <span className="inline-block mt-1 text-xs font-bold bg-primary text-secondary rounded-full px-3 py-1">
-                      {BADGE[lang]}
-                    </span>
+                    <div className="mt-1 flex flex-wrap items-center gap-2">
+                      <span className="text-xs font-bold bg-primary text-secondary rounded-full px-3 py-1">
+                        {BADGE[lang]}
+                      </span>
+                      {extraBits.length > 0 && <span className="text-sm text-gray-500">{extraBits.join(' · ')}</span>}
+                    </div>
                   )}
                   {!isCurrent && (
                     <p className="text-sm text-gray-500 mt-0.5">
