@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>進捗カード作成ツール｜ph-document.com</title>
+<style>
+  :root{
+    --bg:#f4f6f9; --panel:#ffffff; --ink:#22304a; --muted:#64748b; --line:#e3e8f0;
+    --navy:#1a365d; --navy2:#2c5282; --gold:#e8b64a; --green:#16a34a;
+    --chip:#eef2f7; --chip-on:#1a365d; --chip-on-ink:#ffffff;
+    --field:#ffffff; --field-line:#cdd6e3;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f1626; --panel:#16203a; --ink:#e6ecf7; --muted:#93a3bd; --line:#26324e;
+           --chip:#1f2b47; --chip-on:#e8b64a; --chip-on-ink:#1a2540;
+           --field:#111a30; --field-line:#31415f; }
+  }
+  :root[data-theme="dark"]{ --bg:#0f1626; --panel:#16203a; --ink:#e6ecf7; --muted:#93a3bd; --line:#26324e;
+           --chip:#1f2b47; --chip-on:#e8b64a; --chip-on-ink:#1a2540;
+           --field:#111a30; --field-line:#31415f; }
+  :root[data-theme="light"]{ --bg:#f4f6f9; --panel:#ffffff; --ink:#22304a; --muted:#64748b; --line:#e3e8f0;
+           --chip:#eef2f7; --chip-on:#1a365d; --chip-on-ink:#ffffff;
+           --field:#ffffff; --field-line:#cdd6e3; }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP",sans-serif;padding:20px;}
+  .wrap{max-width:1180px;margin:0 auto;}
+  header.app{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:6px 2px 18px;}
+  header.app h1{font-size:20px;font-weight:800;}
+  header.app h1 em{color:var(--gold);font-style:normal;}
+  header.app p{font-size:13px;color:var(--muted);}
+  .cols{display:flex;gap:20px;align-items:flex-start;}
+  .side{width:360px;flex:0 0 360px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:16px;}
+  .main{flex:1;min-width:0;display:flex;flex-direction:column;gap:16px;}
+  .grp{display:flex;flex-direction:column;gap:8px;}
+  .grp>label{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+  .seg{display:flex;gap:6px;flex-wrap:wrap;}
+  .seg button{border:1px solid var(--line);background:var(--chip);color:var(--ink);font-size:13px;font-weight:700;padding:8px 12px;border-radius:10px;cursor:pointer;}
+  .seg button[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink);border-color:var(--chip-on);}
+  .seg button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  .stagegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+  .stagegrid button{border:1px solid var(--line);background:var(--chip);color:var(--ink);font-size:12px;font-weight:700;padding:9px 6px;border-radius:10px;cursor:pointer;line-height:1.25;}
+  .stagegrid button[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink);border-color:var(--chip-on);}
+  .stagegrid button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  input[type=text],input[type=date]{width:100%;background:var(--field);border:1px solid var(--field-line);color:var(--ink);border-radius:10px;padding:10px 11px;font-size:16px;font-family:inherit;}
+  input:focus-visible{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold);}
+  select.sel{width:100%;background:var(--field);border:1px solid var(--field-line);color:var(--ink);border-radius:10px;padding:11px;font-size:16px;font-family:inherit;}
+  select.sel:focus-visible{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold);}
+  .lead{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);}
+  .lead input{width:64px;text-align:center;}
+  .dates{display:flex;flex-direction:column;gap:0;}
+  .dates .d{display:flex;flex-direction:column;gap:4px;padding:3px 0;}
+  .dates .d span{font-size:12px;color:var(--ink);font-weight:700;}
+  .dates .arrow{color:#b7c2d4;font-size:16px;line-height:1;text-align:center;padding:3px 0;}
+  .hint{font-size:12px;color:var(--muted);line-height:1.5;}
+  .privacy{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;line-height:1.55;}
+  .privacy b{color:var(--ink);}
+  .preview{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;}
+  .preview canvas{width:100%;height:auto;display:block;transform:translateZ(0);}
+  .actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;}
+  .btn{border:none;border-radius:12px;font-size:14px;font-weight:800;padding:12px 20px;cursor:pointer;}
+  .btn.gold{background:var(--gold);color:#1a2540;}
+  .btn.ghost{background:var(--chip);color:var(--ink);border:1px solid var(--line);}
+  .btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+  .msgbox{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;}
+  .msgbox h2{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+  textarea{width:100%;min-height:130px;background:var(--field);border:1px solid var(--field-line);color:var(--ink);border-radius:10px;padding:11px;font-size:16px;line-height:1.6;resize:vertical;font-family:inherit;}
+  textarea:focus-visible{outline:2px solid var(--gold);outline-offset:1px;}
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(8px);background:var(--navy);color:#fff;font-size:13px;font-weight:700;padding:10px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;}
+  .toast.on{opacity:1;transform:translateX(-50%) translateY(0);}
+  @media (max-width:920px){ .cols{flex-direction:column;} .side{width:100%;flex:1 1 auto;} }
+  @media (prefers-reduced-motion: reduce){ .toast{transition:none;} }
+</style>
+
+<div class="wrap">
+  <header class="app">
+    <h1>📋 注文の進捗カード作成ツール <em>ph-document.com</em></h1>
+    <p>工程を選ぶ → 右のカードが即完成 → 画像を保存＆送信文をコピーして WhatsApp で送る</p>
+  </header>
+
+  <div class="cols">
+    <aside class="side">
+      <div class="grp">
+        <label>お客様に送るカードの言語</label>
+        <div class="seg" id="langSeg">
+          <button type="button" data-lang="en" aria-pressed="true">英語で作る</button>
+          <button type="button" data-lang="ja" aria-pressed="false">日本語で作る</button>
+        </div>
+      </div>
+
+      <div class="grp">
+        <label>いまどの工程ですか？</label>
+        <div class="stagegrid" id="stageSeg"></div>
+      </div>
+
+      <div class="grp">
+        <label>今の工程の詳細ステップ（任意・カードに表示）</label>
+        <select id="fSub" class="sel"></select>
+      </div>
+
+      <div class="grp">
+        <label>受付日（お届け予定日の計算に使います）</label>
+        <input type="date" id="fOrder">
+      </div>
+
+      <div class="grp">
+        <label>納期の目安</label>
+        <div class="lead"><input type="text" id="fLeadMin" inputmode="numeric" value="4"> 〜 <input type="text" id="fLeadMax" inputmode="numeric" value="6"> 週間</div>
+      </div>
+
+      <div class="grp">
+        <label>お客様の名前（任意）</label>
+        <input type="text" id="fName" placeholder="例：Sofia">
+      </div>
+
+      <div class="grp">
+        <label>書類名</label>
+        <input type="text" id="fDoc" value="PSA Birth Certificate">
+      </div>
+
+      <div class="grp">
+        <label>受付番号（任意・下4桁など）</label>
+        <input type="text" id="fRef" placeholder="例：#…4992">
+      </div>
+
+      <div class="grp">
+        <label>今の工程の補足（任意・カードに表示）</label>
+        <input type="text" id="fEta" placeholder="例：追跡番号つき">
+      </div>
+
+      <div class="grp" id="trackGrp" hidden>
+        <label>DHL 追跡番号（任意）</label>
+        <input type="text" id="fTrack" placeholder="例：1234567890">
+      </div>
+
+      <div class="grp">
+        <label>各工程の完了日（任意・空欄でOK）</label>
+        <div class="dates" id="dates"></div>
+      </div>
+
+      <p class="privacy">🔒 <b>運用ルール:</b> カードに住所・電話・メール・生年月日は入れない。注文完了後、預かった書類ファイルは削除する（顧客への約束）。</p>
+    </aside>
+
+    <section class="main">
+      <div class="preview">
+        <canvas id="cv" aria-label="Status card preview"></canvas>
+        <div class="actions">
+          <button type="button" class="btn gold" id="btnPng">⬇ カード画像を保存</button>
+          <button type="button" class="btn ghost" id="btnCopy">📋 送信文をコピー</button>
+        </div>
+      </div>
+      <div class="msgbox">
+        <h2>WhatsApp 送信文（自動作成・編集OK）</h2>
+        <textarea id="msg" spellcheck="false"></textarea>
+      </div>
+      <p class="hint">「お届け予定」は 受付日 ＋ 納期の目安（週）から自動計算します。実日付で出るので「あと何週間？」の問い合わせが減ります。書類名・Ref・追跡番号は文面側に入るので、画像は個人情報ゼロのまま使い回せます。</p>
+    </section>
+  </div>
+</div>
+<div class="toast" id="toast">Copied!</div>
+
+<script>
+(function(){
+  'use strict';
+
+  var STAGES = {
+    en: [
+      {label:'Application & Down Payment', pend:'To get started', emoji:'📝'},
+      {label:'PSA Document Retrieval',     pend:'Physical original', emoji:'📄'},
+      {label:'DFA Apostille',              pend:'Authentication by DFA', emoji:'🏛️'},
+      {label:'Balance Payment',            pend:'After documents are confirmed', emoji:'💳'},
+      {label:'DHL International Shipping', pend:'With tracking number', emoji:'🚚'},
+      {label:'Delivered to You',           pend:'Arrival at your address', emoji:'✅'}
+    ],
+    ja: [
+      {label:'お申込み・着手金', pend:'ここからスタート', emoji:'📝'},
+      {label:'PSA書類の取得',    pend:'紙原本を取得', emoji:'📄'},
+      {label:'DFAアポスティーユ', pend:'DFAによる認証', emoji:'🏛️'},
+      {label:'残金のお支払い',    pend:'書類確認後にご案内', emoji:'💳'},
+      {label:'DHL国際発送',      pend:'追跡番号つき', emoji:'🚚'},
+      {label:'お手元に到着',      pend:'ご指定の住所へ', emoji:'✅'}
+    ]
+  };
+
+  var TITLES = {
+    en: ['Application received 🎉','Obtaining your PSA document 📄','DFA Apostille in progress 🏛️',
+         'Ready for balance payment 💳','On its way via DHL 🚚','Delivered — thank you! ✅'],
+    ja: ['お申込みを受け付けました 🎉','PSA書類を取得中です 📄','DFAアポスティーユ手続き中 🏛️',
+         '残金のお支払いのご案内 💳','DHLで発送しました 🚚','お届け完了・ありがとうございました ✅']
+  };
+
+  var SUBTITLE = {
+    en: 'From application to your doorstep — tracked at every step.',
+    ja: 'お申込みからお届けまで、全工程をご報告します。'
+  };
+  var BADGE = { en:'In progress now', ja:'いまこの工程です' };
+  var FOOTER = { en:"We'll update you at each step · ph-document.com",
+                 ja:'各工程ごとにご連絡します · ph-document.com' };
+  var DONE_WORD = { en:'Done', ja:'完了' };
+  // 操作パネル用（あなた向け）＝常に日本語。お客様に送るカードは言語トグルに従う。
+  var STAGE_JA_OP = ['お申込み・着手金','PSA書類の取得','DFAアポスティーユ','残金のお支払い','DHL国際発送','お手元に到着'];
+
+  // 各工程の中の詳細ステップ（お客様に表示。工程ごとに切替）
+  var SUBSTEPS = {
+    en: [
+      ['Order received','Down payment confirmed'],
+      ['Application submitted','Application accepted','Document obtained'],
+      ['Appointment booked','Application accepted','Apostille received'],
+      ['Invoice sent','Awaiting your payment','Payment confirmed'],
+      ['Preparing shipment','Handed over to DHL','Tracking number issued'],
+      ['Out for delivery','Delivered']
+    ],
+    ja: [
+      ['ご注文を受付しました','着手金を確認しました'],
+      ['申請しました','申請が受理されました','書類を取得しました'],
+      ['予約が完了しました','申請が受理されました','アポスティーユを受領しました'],
+      ['請求書をお送りしました','ご入金をお待ちしています','ご入金を確認しました'],
+      ['発送準備中です','DHLへ引き渡しました','追跡番号を発行しました'],
+      ['配達中です','お届け完了しました']
+    ]
+  };
+  var ARR_LABEL = { en:'Estimated arrival', ja:'お届け予定' };
+  var MON = { en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'] };
+
+  function todayISO(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function pad(n){ return (n<10?'0':'')+n; }
+
+  var state = { lang:'en', stage:3, subIdx:-1, name:'', doc:'PSA Birth Certificate', ref:'', eta:'', track:'',
+                order:todayISO(), leadMin:4, leadMax:6, dates:['','','','','',''] };
+
+  // ---------- date helpers ----------
+  function parseOrder(){
+    if(!state.order) return null;
+    var p = state.order.split('-'); if(p.length!==3) return null;
+    var d = new Date(+p[0], +p[1]-1, +p[2]);
+    return isNaN(d.getTime()) ? null : d;
+  }
+  function addDays(d, n){ var x=new Date(d.getTime()); x.setDate(x.getDate()+n); return x; }
+  function fmtDate(d, lang){
+    if(lang==='ja') return (d.getMonth()+1)+'月'+d.getDate()+'日';
+    return MON.en[d.getMonth()]+' '+d.getDate();
+  }
+  function fmtRange(a, b, lang){
+    if(lang==='ja'){
+      if(a.getMonth()===b.getMonth()) return (a.getMonth()+1)+'月'+a.getDate()+'〜'+b.getDate()+'日';
+      return fmtDate(a,'ja')+'〜'+fmtDate(b,'ja');
+    }
+    if(a.getMonth()===b.getMonth()) return MON.en[a.getMonth()]+' '+a.getDate()+'–'+b.getDate();
+    return fmtDate(a,'en')+' – '+fmtDate(b,'en');
+  }
+  function arrivalText(){
+    var o = parseOrder(); if(!o) return '';
+    var mn = parseInt(state.leadMin,10), mx = parseInt(state.leadMax,10);
+    if(isNaN(mn)) mn=4; if(isNaN(mx)) mx=mn;
+    if(mx<mn){ var t=mn; mn=mx; mx=t; }
+    var a = addDays(o, mn*7), b = addDays(o, mx*7);
+    var range = (mn===mx) ? fmtDate(a, state.lang) : fmtRange(a, b, state.lang);
+    return state.lang==='ja' ? (range+' ごろ') : ('around '+range);
+  }
+
+  // 受付日からの各工程完了までの目安（日）: 申込み0 / PSA+10 / DFA+20 / 残金+21 / 発送+22 / 到着+29
+  var CUM_DAYS = [0, 10, 20, 21, 22, 29];
+  function autofillDates(){
+    var o = parseOrder(); if(!o) return;
+    for(var i=0;i<6;i++){ state.dates[i] = fmtDate(addDays(o, CUM_DAYS[i]), state.lang); }
+  }
+
+  // ---------- controls ----------
+  var stageSeg = document.getElementById('stageSeg');
+  var datesBox = document.getElementById('dates');
+
+  function buildStageButtons(){
+    stageSeg.innerHTML = '';
+    STAGE_JA_OP.forEach(function(name, i){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = (i+1) + '. ' + name;
+      b.setAttribute('aria-pressed', String(state.stage === i+1));
+      b.addEventListener('click', function(){
+        state.stage = i+1; state.subIdx = -1; syncStageButtons(); buildSubSelect(); syncTrack(); update();
+      });
+      stageSeg.appendChild(b);
+    });
+  }
+  var subSel = document.getElementById('fSub');
+  function buildSubSelect(){
+    subSel.innerHTML = '';
+    var none = document.createElement('option');
+    none.value = '-1'; none.textContent = (state.lang==='ja') ? '（指定なし）' : '(none)';
+    subSel.appendChild(none);
+    SUBSTEPS[state.lang][state.stage-1].forEach(function(txt, i){
+      var o = document.createElement('option'); o.value = String(i); o.textContent = txt;
+      subSel.appendChild(o);
+    });
+    subSel.value = String(state.subIdx);
+  }
+  subSel.addEventListener('change', function(){ state.subIdx = parseInt(this.value, 10); update(); });
+  function syncStageButtons(){
+    Array.prototype.forEach.call(stageSeg.children, function(b, i){
+      b.setAttribute('aria-pressed', String(state.stage === i+1));
+    });
+  }
+  function buildDates(){
+    datesBox.innerHTML = '';
+    STAGE_JA_OP.forEach(function(name, i){
+      var d = document.createElement('div'); d.className = 'd';
+      var lab = document.createElement('span'); lab.textContent = (i+1) + '. ' + name;
+      var inp = document.createElement('input'); inp.type = 'text';
+      inp.setAttribute('enterkeyhint', 'done');
+      inp.placeholder = (state.lang==='ja') ? '例：7月2日' : 'e.g. Jul 2';
+      inp.value = state.dates[i];
+      inp.addEventListener('input', function(){ state.dates[i] = inp.value; scheduleUpdate(); });
+      d.appendChild(lab); d.appendChild(inp); datesBox.appendChild(d);
+      if(i < STAGE_JA_OP.length - 1){
+        var ar = document.createElement('div'); ar.className = 'arrow'; ar.textContent = '↓';
+        datesBox.appendChild(ar);
+      }
+    });
+  }
+  function syncTrack(){ document.getElementById('trackGrp').hidden = state.stage < 5; }
+
+  document.getElementById('langSeg').addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    state.lang = b.dataset.lang;
+    Array.prototype.forEach.call(this.children, function(x){ x.setAttribute('aria-pressed', String(x===b)); });
+    buildStageButtons(); buildSubSelect(); autofillDates(); buildDates(); update();
+  });
+  document.getElementById('fOrder').value = state.order;
+  document.getElementById('fOrder').addEventListener('input', function(){ state.order = this.value; autofillDates(); buildDates(); update(); });
+  document.getElementById('fLeadMin').addEventListener('input', function(){ state.leadMin = this.value; scheduleUpdate(); });
+  document.getElementById('fLeadMax').addEventListener('input', function(){ state.leadMax = this.value; scheduleUpdate(); });
+  // Enterで入力を確定してキーボードを閉じる（送信ボタンが無いフォームでも“完了”できるように）
+  document.querySelector('.side').addEventListener('keydown', function(e){
+    if(e.key === 'Enter' && e.target && e.target.tagName === 'INPUT' && e.target.type !== 'date'){
+      e.preventDefault(); e.target.blur();
+    }
+  });
+  document.getElementById('fName').addEventListener('input', function(){ state.name = this.value.trim(); scheduleUpdate(); });
+  document.getElementById('fDoc').addEventListener('input', function(){ state.doc = this.value.trim(); scheduleUpdate(); });
+  document.getElementById('fRef').addEventListener('input', function(){ state.ref = this.value.trim(); scheduleUpdate(); });
+  document.getElementById('fTrack').addEventListener('input', function(){ state.track = this.value.trim(); scheduleUpdate(); });
+  document.getElementById('fEta').addEventListener('input', function(){ state.eta = this.value; scheduleUpdate(); });
+
+  // ---------- canvas ----------
+  var cv = document.getElementById('cv');
+  var ctx = cv.getContext('2d');
+  var W = 1000, PAD = 52, SCALE = 1;  // プレビュー/書き出しとも1000px。巨大キャンバスによるスクロール描画負荷を回避
+  var F = '-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP",sans-serif';
+
+  function rr(x, y, w, h, r){
+    ctx.beginPath();
+    ctx.moveTo(x+r, y);
+    ctx.arcTo(x+w, y,   x+w, y+h, r);
+    ctx.arcTo(x+w, y+h, x,   y+h, r);
+    ctx.arcTo(x,   y+h, x,   y,   r);
+    ctx.arcTo(x,   y,   x+w, y,   r);
+    ctx.closePath();
+  }
+
+  function draw(){
+    var L = STAGES[state.lang], cur = state.stage;
+    var arr = (cur < 6) ? arrivalText() : '';
+    var showArr = !!arr;
+
+    var stepH = [], i;
+    for(i=0;i<6;i++){ stepH.push((i+1===cur && cur<6) ? 138 : 112); }
+    var headH = 200, gapHead = 30, arrH = showArr ? 66 : 0, gapArr = showArr ? 26 : 28, botGap = 30, footH = 84;
+    var bodyStart = headH + gapHead + arrH + gapArr;
+    var bodyH = stepH.reduce(function(a,b){return a+b;},0);
+    var H = bodyStart + bodyH + botGap + footH;
+
+    var nw = W*SCALE, nh = H*SCALE;
+    if(cv.width !== nw) cv.width = nw;   // 寸法が変わる時だけ再確保（毎キーストロークのリフローを防ぐ）
+    if(cv.height !== nh) cv.height = nh;
+    ctx.setTransform(SCALE,0,0,SCALE,0,0);
+
+    ctx.fillStyle = '#ffffff'; ctx.fillRect(0,0,W,H);
+
+    // header
+    var g = ctx.createLinearGradient(0,0,W,headH);
+    g.addColorStop(0,'#1a365d'); g.addColorStop(1,'#2c5282');
+    ctx.fillStyle = g; ctx.fillRect(0,0,W,headH);
+
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillStyle = 'rgba(255,255,255,.88)';
+    ctx.font = '700 21px '+F;
+    var brand = 'ph-document';
+    ctx.fillText(brand, PAD, 62);
+    var bw = ctx.measureText(brand).width;
+    ctx.fillStyle = '#e8b64a'; ctx.fillText('.com', PAD+bw, 62);
+    ctx.fillStyle = 'rgba(255,255,255,.6)';
+    ctx.fillText(' · Order Status', PAD+bw+ctx.measureText('.com').width, 62);
+
+    ctx.fillStyle = '#ffffff'; ctx.font = '800 42px '+F;
+    var headline = state.doc || (state.lang==='ja' ? 'ご注文の書類' : 'Your Document');
+    ctx.fillText(headline, PAD, 124, W-PAD*2);
+
+    ctx.fillStyle = 'rgba(255,255,255,.78)'; ctx.font = '400 21px '+F;
+    ctx.fillText(SUBTITLE[state.lang], PAD, 164, W-PAD*2);
+
+    if(state.ref){
+      ctx.font = '700 18px '+F;
+      var rt = 'Ref ' + state.ref, rw = ctx.measureText(rt).width + 36;
+      ctx.fillStyle = 'rgba(255,255,255,.14)';
+      rr(W-PAD-rw, 40, rw, 38, 12); ctx.fill();
+      ctx.strokeStyle = 'rgba(255,255,255,.28)'; ctx.lineWidth = 1; rr(W-PAD-rw, 40, rw, 38, 12); ctx.stroke();
+      ctx.fillStyle = '#ffffff'; ctx.fillText(rt, W-PAD-rw+18, 66);
+    }
+
+    // arrival summary bar
+    if(showArr){
+      var ay = headH + gapHead;
+      ctx.fillStyle = '#fdf3dc'; rr(PAD, ay, W-PAD*2, arrH, 16); ctx.fill();
+      ctx.strokeStyle = '#f0dca8'; ctx.lineWidth = 1.5; rr(PAD, ay, W-PAD*2, arrH, 16); ctx.stroke();
+      ctx.font = '400 30px '+F; ctx.fillText('🗓️', PAD+22, ay+arrH/2+11);
+      ctx.fillStyle = '#8a6a1f'; ctx.font = '800 20px '+F;
+      ctx.fillText(ARR_LABEL[state.lang], PAD+70, ay+arrH/2-4);
+      ctx.fillStyle = '#1a365d'; ctx.font = '800 26px '+F;
+      ctx.fillText(arr, PAD+70, ay+arrH/2+24);
+    }
+
+    // steps
+    var y = bodyStart, cx = PAD + 28, cys = [];
+    for(i=0;i<6;i++){ cys.push(y+28); y += stepH[i]; }
+
+    for(i=0;i<6;i++){
+      var done = (i+1 < cur) || cur === 6;
+      var isCur = (i+1 === cur && cur < 6);
+      var cy = cys[i];
+
+      if(i<5){
+        ctx.fillStyle = done ? '#16a34a' : '#e2e8f0';
+        ctx.fillRect(cx-2.5, cy+38, 5, (cys[i+1]-38)-(cy+38));
+      }
+      if(isCur){
+        ctx.fillStyle = 'rgba(232,182,74,.24)';
+        ctx.beginPath(); ctx.arc(cx, cy, 38, 0, Math.PI*2); ctx.fill();
+      }
+      ctx.beginPath(); ctx.arc(cx, cy, 28, 0, Math.PI*2);
+      if(done){ ctx.fillStyle = '#16a34a'; ctx.fill(); }
+      else if(isCur){ ctx.fillStyle = '#e8b64a'; ctx.fill(); }
+      else { ctx.fillStyle = '#f1f5f9'; ctx.fill(); ctx.strokeStyle = '#e2e8f0'; ctx.lineWidth = 3; ctx.stroke(); }
+
+      ctx.textAlign = 'center';
+      if(done){ ctx.fillStyle = '#ffffff'; ctx.font = '800 26px '+F; ctx.fillText('✓', cx, cy+9); }
+      else if(isCur){ ctx.font = '400 26px '+F; ctx.fillText(L[i].emoji, cx, cy+9); }
+      else { ctx.fillStyle = '#94a3b8'; ctx.font = '800 22px '+F; ctx.fillText('•', cx, cy+7); }
+      ctx.textAlign = 'left';
+
+      var lx = cx + 62;
+      ctx.font = '800 28px '+F;
+      ctx.fillStyle = (done || isCur) ? '#1a365d' : '#a0aec0';
+      ctx.fillText(L[i].label, lx, cy+8, W-lx-PAD);
+
+      if(isCur){
+        var badge = BADGE[state.lang];
+        ctx.font = '800 16px '+F;
+        var bw2 = ctx.measureText(badge).width + 30;
+        ctx.fillStyle = '#e8b64a'; rr(lx, cy+22, bw2, 32, 16); ctx.fill();
+        ctx.fillStyle = '#1a365d'; ctx.fillText(badge, lx+15, cy+44);
+        var sub = (state.subIdx >= 0) ? SUBSTEPS[state.lang][state.stage-1][state.subIdx] : '';
+        var extra = sub || state.eta || '';
+        if(state.stage>=5 && state.track){ extra += (extra?' · ':'') + 'DHL ' + state.track; }
+        if(extra){ ctx.fillStyle = '#64748b'; ctx.font = '400 19px '+F; ctx.fillText(extra, lx+bw2+14, cy+44, W-(lx+bw2+14)-PAD); }
+      } else {
+        var sub = done ? (state.dates[i] ? state.dates[i] : DONE_WORD[state.lang]) : L[i].pend;
+        if(cur===6 && i===5 && state.dates[5]) sub = state.dates[5];
+        ctx.fillStyle = done ? '#64748b' : '#b3bdcc';
+        ctx.font = '400 19px '+F;
+        ctx.fillText(sub, lx, cy+38, W-lx-PAD);
+      }
+    }
+
+    var fy = H - footH;
+    ctx.fillStyle = '#f8fafc'; ctx.fillRect(0, fy, W, footH);
+    ctx.strokeStyle = '#eef1f5'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(0, fy+.5); ctx.lineTo(W, fy+.5); ctx.stroke();
+    ctx.fillStyle = '#94a3b8'; ctx.font = '400 19px '+F; ctx.textAlign = 'center';
+    ctx.fillText(FOOTER[state.lang], W/2, fy+50);
+    ctx.textAlign = 'left';
+  }
+
+  // ---------- message ----------
+  function buildMsg(){
+    var s = state.stage, doc = state.doc || 'document';
+    var ref = state.ref ? ' ('+(state.lang==='ja'?'受付番号 ':'Ref ')+state.ref+')' : '';
+    var track = state.track ? (state.lang==='ja' ? '（追跡番号: '+state.track+'）' : ' (tracking: '+state.track+')') : '';
+    var arr = arrivalText();
+    var arrEn = arr ? ' Estimated arrival: '+arr+'.' : '';
+    var arrJa = arr ? ' お届け予定は'+arr+'です。' : '';
+    var m;
+    if(state.lang === 'en'){
+      var hi = state.name ? 'Hi '+state.name+'! ' : 'Hi! ';
+      m = [
+        hi+'🎉 We’ve received your application and down payment for your '+doc+ref+'. Next: we’ll obtain the PSA original.'+arrEn+' We’ll keep you updated at every step!',
+        hi+'Quick update on your '+doc+ref+': we’re now obtaining the PSA original 📄. Next step: DFA Apostille.'+arrEn,
+        hi+'Update on your '+doc+ref+': the PSA original is secured ✅ and it’s now at the DFA for Apostille 🏛️.'+arrEn+' We’ll message you as soon as it’s released.',
+        (state.name?'Great news, '+state.name+'! ':'Great news! ')+'Your '+doc+ref+' is apostilled and confirmed ✅ The remaining balance is now due. Once received, we’ll ship via DHL right away 🚀'+arrEn,
+        (state.name?state.name+', your ':'Your ')+doc+ref+' is on its way! 🚚 Shipped via DHL'+track+'.'+arrEn,
+        'Delivered! ✅ Your '+doc+ref+' should now be with you'+(state.name?', '+state.name:'')+'. Please check everything and let us know if you have any questions. Thank you for trusting ph-document.com! 🙏'
+      ][s-1];
+    } else {
+      var sama = state.name ? state.name+'様、' : '';
+      m = [
+        sama+'お申込みと着手金を確認しました 🎉 '+doc+ref+' の手続きを開始します。まずはPSA原本の取得から。'+arrJa+' 各工程ごとにご報告しますね！',
+        sama+doc+ref+' の進捗です：現在PSA原本を取得中です 📄。次の工程はDFAアポスティーユです。'+arrJa,
+        sama+doc+ref+' の進捗です：PSA原本を取得済み ✅ 現在DFAでアポスティーユ手続き中です 🏛️。'+arrJa+' 完了しだいすぐご連絡します。',
+        sama+'朗報です！'+doc+ref+' のアポスティーユが完了しました ✅ 残金のお支払いのご案内です。ご入金確認後、すぐにDHLで発送します 🚀'+arrJa,
+        sama+doc+ref+' をDHLで発送しました 🚚'+track+'。'+arrJa+' 到着まであと少しです！',
+        sama+doc+ref+' のお届けが完了しました ✅ 内容をご確認のうえ、何かあればいつでもご連絡ください。この度はご利用ありがとうございました 🙏'
+      ][s-1];
+    }
+    document.getElementById('msg').value = m;
+  }
+
+  function update(){ draw(); buildMsg(); }
+  // 文字入力は間引いて描画（スクロール・タイプ時のガタつき防止）
+  var updTimer;
+  function scheduleUpdate(){ clearTimeout(updTimer); updTimer = setTimeout(update, 140); }
+
+  document.getElementById('btnPng').addEventListener('click', function(){
+    cv.toBlob(function(blob){
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'status-stage' + state.stage + (state.ref?('-'+state.ref.replace(/[^0-9a-zA-Z]/g,'')):'') + '.png';
+      a.click();
+      setTimeout(function(){ URL.revokeObjectURL(a.href); }, 4000);
+      toast('画像を保存しました');
+    }, 'image/png');
+  });
+  document.getElementById('btnCopy').addEventListener('click', function(){
+    var t = document.getElementById('msg');
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t.value).then(function(){ toast('コピーしました'); });
+    } else { t.select(); document.execCommand('copy'); toast('コピーしました'); }
+  });
+  var toastEl = document.getElementById('toast'), toastTimer;
+  function toast(txt){
+    toastEl.textContent = txt; toastEl.classList.add('on');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function(){ toastEl.classList.remove('on'); }, 1600);
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.side input[type=text]'), function(el){ el.setAttribute('enterkeyhint','done'); });
+  buildStageButtons(); buildSubSelect(); autofillDates(); buildDates(); syncTrack(); update();
+})();
+</script>
+
+</body>
+</html>
