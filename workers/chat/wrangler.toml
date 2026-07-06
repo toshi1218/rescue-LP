@@ -16,6 +16,8 @@ id = "REPLACE_WITH_KV_ID_AFTER_CREATE"
 # Secrets (set via `wrangler secret put`):
 #   ANTHROPIC_API_KEY
 #   SUPABASE_ANON_KEY
+#   SUPABASE_SERVICE_KEY   (Supabase service_role key — used only server-side for order_status reads/writes)
+#   ADMIN_PASSPHRASE       (shared passphrase staff enter in the status tool to create/update order_status)
 
 [vars]
 ALLOWED_ORIGIN = "https://ph-document.com"
