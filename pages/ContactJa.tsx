@@ -3,6 +3,7 @@ import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
+import { notifySlack } from '../lib/notifyApi';
 import LineIcon from '../components/icons/LineIcon';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
@@ -89,9 +90,11 @@ export default function ContactJa() {
           setSubmitting(true);
           setSubmitError('');
           try {
+            const formData = new FormData(e.currentTarget);
+            notifySlack('ja', formData);
             const res = await fetch(WEB3FORMS_ENDPOINT, {
               method: 'POST',
-              body: new FormData(e.currentTarget),
+              body: formData,
               headers: { Accept: 'application/json' },
             });
             const data = await res.json();

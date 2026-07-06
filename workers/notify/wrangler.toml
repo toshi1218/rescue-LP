@@ -1,0 +1,20 @@
+name = "ph-document-notify"
+main = "src/index.ts"
+compatibility_date = "2026-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Custom domain is configured via Cloudflare dashboard:
+#   notify.ph-document.com → this Worker
+# routes = [
+#   { pattern = "notify.ph-document.com/*", custom_domain = true }
+# ]
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "REPLACE_WITH_KV_ID_AFTER_CREATE"
+
+# Secrets (set via `wrangler secret put`):
+#   SLACK_WEBHOOK_URL
+
+[vars]
+ALLOWED_ORIGIN = "https://ph-document.com"
