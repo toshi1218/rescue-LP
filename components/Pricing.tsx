@@ -176,7 +176,7 @@ const plansData = {
       featured: true,
       title: 'International Marriage Basic Package',
       subtitle: 'PSA Birth Certificate & CENOMAR with Apostille — ready for marriage registration',
-      price: 'US$429',
+      price: 'US$349',
       priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/international-marriage-guide/',
