@@ -27,8 +27,17 @@ function setCanonical(href: string) {
 type HreflangAlternate = { hreflang: string; href: string };
 
 function setHreflangTags(alternates: HreflangAlternate[]) {
-  // Remove any existing hreflang tags
-  document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+  // The prerendered HTML already contains the correct hreflang tags for the
+  // initial URL. Only mutate the DOM when the requested set actually differs,
+  // so hydration never removes (even momentarily) what the server emitted.
+  const existing = Array.from(document.querySelectorAll<HTMLLinkElement>('link[rel="alternate"][hreflang]'));
+  const isSame =
+    existing.length === alternates.length &&
+    alternates.every(({ hreflang, href }) =>
+      existing.some((el) => el.getAttribute('hreflang') === hreflang && el.getAttribute('href') === href)
+    );
+  if (isSame) return;
+  existing.forEach((el) => el.remove());
   alternates.forEach(({ hreflang, href }) => {
     const el = document.createElement('link');
     el.rel = 'alternate';
@@ -87,7 +96,11 @@ export function useMeta(title: string, description: string, canonical?: string, 
       setMeta('twitter:description', defaultDesc);
       setMeta('twitter:image', defaultOgImage);
       setCanonical(defaultCanonical);
-      setHreflangTags([]);
+      // Do NOT remove hreflang tags here. No page currently passes
+      // `alternates`, so wiping on unmount would permanently strip the
+      // server-rendered hreflang after any SPA navigation. The prerendered
+      // tags stay in place; a page that does pass `alternates` will replace
+      // them via setHreflangTags on mount.
     };
   }, [title, description, canonical, alternates]);
 }
