@@ -233,7 +233,7 @@ const Hero: React.FC = () => {
               Now accepting inquiries · Reply within 24 hours
             </p>
             <p className="text-white/60 text-xs">
-              International Marriage Package from US$899 (Apostille + DHL incl.)
+              International Marriage Package from US$399 (Apostille + DHL incl.)
             </p>
             <p className="text-white/50 text-xs mt-0.5">
               💳 Pay by credit card — Visa · Mastercard · Amex · Apple Pay

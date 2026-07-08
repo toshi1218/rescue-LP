@@ -176,7 +176,7 @@ const plansData = {
       featured: true,
       title: 'International Marriage Basic Package',
       subtitle: 'PSA Birth Certificate & CENOMAR with Apostille — ready for marriage registration',
-      price: 'US$429',
+      price: 'US$399',
       priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/international-marriage-guide/',
@@ -199,9 +199,10 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'CENOMAR — Single Document',
-      subtitle: 'Physical PSA original with DFA-stamped Apostille — accepted by immigration authorities worldwide',
-      price: 'US$279',
-      priceNote: 'all-in',
+      subtitle: 'Physical PSA original shipped via DHL — add DFA-stamped Apostille for immigration use worldwide',
+      price: 'US$199',
+      priceNote: 'document + DHL (no Apostille)',
+      priceApostille: 'US$349',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/cenomar/',
     },
@@ -211,9 +212,10 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA Birth Certificate — Single Document',
-      subtitle: 'Physical PSA original with DFA-stamped Apostille — not an e-certificate',
-      price: 'US$279',
-      priceNote: 'all-in',
+      subtitle: 'Physical PSA original, not an e-certificate — add DFA-stamped Apostille for overseas use',
+      price: 'US$199',
+      priceNote: 'document + DHL (no Apostille)',
+      priceApostille: 'US$349',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/psa-birth-certificate/',
     },
@@ -223,9 +225,10 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA Marriage Certificate — Single Document',
-      subtitle: 'Physical PSA original with DFA-stamped Apostille — for spouse visa, immigration, and naturalization',
-      price: 'US$279',
-      priceNote: 'all-in',
+      subtitle: 'Physical PSA original for spouse visa, immigration, and naturalization — add DFA-stamped Apostille for overseas use',
+      price: 'US$199',
+      priceNote: 'document + DHL (no Apostille)',
+      priceApostille: 'US$349',
       period: 'Approx. 4–6 weeks',
       detailPath: '/en/psa-marriage-certificate/',
     },
@@ -354,7 +357,7 @@ const Pricing: React.FC = () => {
                     {(plan as any).priceApostille && (
                       <div className="flex items-baseline gap-2 mt-1.5 pl-2 border-l-2 border-primary/30">
                         <span className="text-sm font-bold text-secondary">{(plan as any).priceApostille}</span>
-                        <span className="text-xs text-gray-400">DFA物理アポスティーユ込み 総額</span>
+                        <span className="text-xs text-gray-400">{lang === 'ja' ? 'DFA物理アポスティーユ込み 総額' : 'with DFA physical Apostille — all-in total'}</span>
                       </div>
                     )}
                     <p className="text-xs text-gray-400 mt-1">
