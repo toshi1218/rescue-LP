@@ -67,6 +67,7 @@ const Footer: React.FC = () => {
   const isJa = lang === 'ja';
   const companyPath = isJa ? '/ja/company/'  : '/en/company/';
   const privacyPath = isJa ? '/ja/privacy/'  : '/en/privacy/';
+  const dataSecurityPath = isJa ? '/ja/data-security/' : '/en/data-security/';
   const termsPath   = isJa ? '/ja/terms/'    : '/en/terms/';
   const pricingPath = isJa ? '/ja/ryokin/'   : '/en/pricing/';
   const contactPath = isJa ? '/ja/contact/'  : '/en/contact/';
@@ -375,6 +376,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-4 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
           <Link to={companyPath} className="hover:text-secondary transition-colors">{t('footer.company')}</Link>
+          <Link to={dataSecurityPath} className="hover:text-secondary transition-colors">{isJa ? '個人情報・機密書類の取扱い' : 'Data Security'}</Link>
           <Link to={privacyPath} className="hover:text-secondary transition-colors">{t('footer.privacy')}</Link>
           <Link to={termsPath} className="hover:text-secondary transition-colors">{t('footer.terms')}</Link>
           {isJa && (

@@ -252,6 +252,7 @@ const FooterKo: React.FC = () => {
             <Link to="/ko/f-6-philippines-documents/" className="hover:text-secondary transition-colors">F-6 비자 서류</Link>
             <Link to="/ko/nbi-clearance/" className="hover:text-secondary transition-colors">NBI Clearance</Link>
             <Link to="/ko/contact/" className="hover:text-secondary transition-colors">문의하기</Link>
+            <Link to="/ko/data-security/" className="hover:text-secondary transition-colors">개인정보·보안 정책</Link>
             <Link to="/en/privacy/" className="hover:text-secondary transition-colors">Privacy Policy</Link>
           </nav>
         </div>

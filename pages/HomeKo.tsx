@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, AlertCircle, ArrowRight, Clock, Shield, FileText } from 'lucide-react';
+import { CheckCircle, AlertCircle, ArrowRight, Clock, Shield, FileText, ShieldCheck, Lock, CreditCard, Trash2, Eye, HeartHandshake } from 'lucide-react';
 import NavbarKo from '../components/NavbarKo';
 import FooterKo from '../components/FooterKo';
 import BackToTop from '../components/BackToTop';
@@ -352,6 +352,92 @@ export default function HomeKo() {
                 추가 옵션・상세 요금 보기
                 <ArrowRight className="w-4 h-4" />
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 보안과 안심 */}
+        <section className="py-14 px-4 bg-white" aria-label="보안과 안심">
+          <div className="max-w-3xl mx-auto">
+
+            {/* Part 1: 보안 */}
+            <div className="rounded-2xl border border-gray-200 bg-gradient-to-br from-secondary/[0.03] to-primary/[0.04] p-6 md:p-8 mb-10">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <ShieldCheck className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-primary tracking-wide uppercase mb-0.5">보안 정책</p>
+                  <h2 className="text-xl md:text-2xl font-bold text-secondary leading-snug">
+                    소중한 서류를 SNS나 이메일로 주고받지 않습니다
+                  </h2>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                여권과 증명서는 인생에서 가장 중요한 개인정보입니다. 그래서 당사는 서류 데이터를 주고받고 보관하고 폐기하는 방법을 서비스 설계의 중심에 두고 있습니다.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                {[
+                  { icon: <Lock className="w-5 h-5 text-primary" />, title: '기밀 서류는 채팅·이메일 첨부로 받지 않습니다', desc: '여권·PSA 출생증명서·CENOMAR 이미지는 카카오톡·WhatsApp·메신저나 이메일 첨부가 아닌, 고객 전용 보안 환경으로 주고받습니다.' },
+                  { icon: <CreditCard className="w-5 h-5 text-primary" />, title: '카드 정보는 당사에 전달되지 않습니다', desc: '결제는 Stripe의 암호화된 페이지에서 직접 입력하십니다. 카드 번호를 채팅이나 이메일로 보내실 필요가 없습니다.' },
+                  { icon: <Trash2 className="w-5 h-5 text-primary" />, title: '업무 완료 후 3개월 이내 삭제', desc: '전자 데이터는 업무 완료 후 3개월 이내에 삭제하고, 종이 서류는 파쇄기로 물리적으로 폐기합니다.' },
+                ].map((item) => (
+                  <div key={item.title} className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">
+                    <div className="mb-2">{item.icon}</div>
+                    <h3 className="font-bold text-sm text-secondary mb-1.5">{item.title}</h3>
+                    <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <Link
+                to="/ko/data-security/"
+                className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-secondary transition-colors"
+              >
+                보안 정책 자세히 보기
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Part 2: 이야기 + 안심 */}
+            <div className="rounded-2xl border border-gray-200 bg-secondary p-6 md:p-8 text-white">
+              <div className="flex items-center gap-2 mb-4">
+                <HeartHandshake className="w-5 h-5 text-primary" />
+                <p className="text-xs font-bold text-primary tracking-wide uppercase">왜 이 서비스를 시작했는가</p>
+              </div>
+              <div className="space-y-3 text-sm text-white/80 leading-relaxed mb-6">
+                <p>
+                  계기는 아내의 친구가 Facebook의 업자에게 사기를 당한 일이었습니다. 돈을 지불했지만 서류는 오지 않았고 연락도 끊겼습니다 —
+                  국제결혼 서류 준비에서 결코 드문 이야기가 아닙니다.
+                </p>
+                <p>
+                  Facebook 커뮤니티에서 찾는 개인 업자가 모두 나쁘다고는 할 수 없습니다. 다만 저렴한 만큼 트레이드오프가 있습니다.
+                  개인정보가 메신저로 오가고, 진행 보고도 없으며, 저렴한 배송은 추적도 되지 않아 '정말 도착할까' 하는 불안을 안고 기다리게 됩니다.
+                </p>
+                <p className="text-white font-semibold">
+                  그래서 저희는 자체 데이터베이스로 개인정보를 지키고, 진행 상황을 눈에 보이게 하며, 24시간 이내에 반드시 답변하는 체제를 갖췄습니다.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-3 gap-3 mb-6">
+                {[
+                  { icon: <Eye className="w-5 h-5 text-primary" />, title: '진행 상황을 언제나 확인', desc: '고객 전용 페이지에서 지금 서류가 전체 중 어느 단계인지 확인하실 수 있습니다.' },
+                  { icon: <Clock className="w-5 h-5 text-primary" />, title: '24시간 이내 반드시 답변', desc: '문의에는 24시간 이내에 반드시 답변드리고, 추적 가능한 배송으로 발송합니다.' },
+                  { icon: <ShieldCheck className="w-5 h-5 text-primary" />, title: '일본 법인이 책임지고 대응', desc: '프라이버시·데이터·진행 공유까지 갖춘 일본 법인(IGRS Inc.)의 정식 서비스입니다.' },
+                ].map((item) => (
+                  <div key={item.title} className="bg-white/[0.06] border border-white/10 rounded-xl p-4">
+                    <div className="mb-2">{item.icon}</div>
+                    <h3 className="font-bold text-sm text-white mb-1.5">{item.title}</h3>
+                    <p className="text-xs text-white/60 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="border-t border-white/10 pt-5">
+                <p className="text-base md:text-lg font-bold text-white leading-snug">
+                  정식 요금은 Facebook의 개인 업자보다 조금 높을 수 있습니다. 하지만 그것은 '안심'의 가격입니다.
+                </p>
+                <p className="text-sm text-white/70 mt-2">
+                  프라이버시도, 데이터도, 진행 상황도 일본 법인이 확실히 지켜 전해 드립니다.
+                </p>
+              </div>
             </div>
           </div>
         </section>

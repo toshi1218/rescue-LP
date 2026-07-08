@@ -45,6 +45,7 @@ export const enToJa: Record<string, string> = {
   '/en/personalized-roadmap': '/ja/kokusai-kekkon-roadmap',
   '/en/immigration-lawyer-vs-document-service': '/ja/gyouseishoshi-to-shorui-shuttoku',
   '/en/personal-information-protection': '/ja/kojin-joho-hogo',
+  '/en/data-security': '/ja/data-security',
 };
 
 // Build reverse map: JA path → EN path

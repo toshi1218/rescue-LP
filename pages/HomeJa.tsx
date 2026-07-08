@@ -10,6 +10,7 @@ import CaseStudies from '../components/CaseStudies';
 import SocialProof from '../components/SocialProof';
 import DiyRisks from '../components/DiyRisks';
 import ServicePacks from '../components/ServicePacks';
+import SecurityStory from '../components/SecurityStory';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
@@ -209,6 +210,7 @@ export default function HomeJa() {
         <WhyUs />
         <SocialProof />
         <CaseStudies />
+        <SecurityStory />
         <DiyRisks />
         <GuideLinks maxItems={6} />
         <QuickFacts />

@@ -128,6 +128,7 @@ const DfaGalleriaCebuJa = lazy(() => import('./pages/DfaGalleriaCebuJa'));
 const PsaCrsCebuJa = lazy(() => import('./pages/PsaCrsCebuJa'));
 const LtoSmSeasideJa = lazy(() => import('./pages/LtoSmSeasideJa'));
 const KojinJohoHogoJa = lazy(() => import('./pages/KojinJohoHogoJa'));
+const DataSecurityJa = lazy(() => import('./pages/DataSecurityJa'));
 const TbCertEn = lazy(() => import('./pages/TbCertEn'));
 const SpouseVisaDocChecklistEn = lazy(() => import('./pages/SpouseVisaDocChecklistEn'));
 const MarriageOrderEn = lazy(() => import('./pages/MarriageOrderEn'));
@@ -138,6 +139,7 @@ const LtoSmSeasideEn = lazy(() => import('./pages/LtoSmSeasideEn'));
 const RoadmapEn = lazy(() => import('./pages/RoadmapEn'));
 const GyoseishoshiVsDocServiceEn = lazy(() => import('./pages/GyoseishoshiVsDocServiceEn'));
 const KojinJohoHogoEn = lazy(() => import('./pages/KojinJohoHogoEn'));
+const DataSecurityEn = lazy(() => import('./pages/DataSecurityEn'));
 const F6DocsEn = lazy(() => import('./pages/F6DocsEn'));
 const CountryDocsEnTemplate = lazy(() => import('./pages/CountryDocsEnTemplate'));
 const HomeKo = lazy(() => import('./pages/HomeKo'));
@@ -146,6 +148,7 @@ const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
 const NbiKo = lazy(() => import('./pages/NbiKo'));
 const PsaEcertificateHangukKo = lazy(() => import('./pages/PsaEcertificateHangukKo'));
 const ContactKo = lazy(() => import('./pages/ContactKo'));
+const DataSecurityKo = lazy(() => import('./pages/DataSecurityKo'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const FloatingChatWidget = lazy(() => import('./components/FloatingChatWidget'));
 
@@ -392,6 +395,8 @@ export default function App() {
         <Route path="/ja/lto-sm-seaside-genchi-report/" element={<LtoSmSeasideJa />} />
         <Route path="/ja/kojin-joho-hogo" element={<Navigate to="/ja/kojin-joho-hogo/" replace />} />
         <Route path="/ja/kojin-joho-hogo/" element={<KojinJohoHogoJa />} />
+        <Route path="/ja/data-security" element={<Navigate to="/ja/data-security/" replace />} />
+        <Route path="/ja/data-security/" element={<DataSecurityJa />} />
         <Route path="/en/tb-certificate" element={<Navigate to="/en/tb-certificate/" replace />} />
         <Route path="/en/tb-certificate/" element={<TbCertEn />} />
         <Route path="/en/spouse-visa-document-checklist" element={<Navigate to="/en/spouse-visa-document-checklist/" replace />} />
@@ -412,6 +417,8 @@ export default function App() {
         <Route path="/en/immigration-lawyer-vs-document-service/" element={<GyoseishoshiVsDocServiceEn />} />
         <Route path="/en/personal-information-protection" element={<Navigate to="/en/personal-information-protection/" replace />} />
         <Route path="/en/personal-information-protection/" element={<KojinJohoHogoEn />} />
+        <Route path="/en/data-security" element={<Navigate to="/en/data-security/" replace />} />
+        <Route path="/en/data-security/" element={<DataSecurityEn />} />
         <Route path="/en/f-6-philippines-documents" element={<Navigate to="/en/f-6-philippines-documents/" replace />} />
         <Route path="/en/f-6-philippines-documents/" element={<F6DocsEn />} />
 
@@ -428,6 +435,8 @@ export default function App() {
         <Route path="/ko/psa-ecertificate-hanguk/" element={<PsaEcertificateHangukKo />} />
         <Route path="/ko/contact" element={<Navigate to="/ko/contact/" replace />} />
         <Route path="/ko/contact/" element={<ContactKo />} />
+        <Route path="/ko/data-security" element={<Navigate to="/ko/data-security/" replace />} />
+        <Route path="/ko/data-security/" element={<DataSecurityKo />} />
 
         <Route path="/" element={<Navigate to="/en/" replace />} />
         <Route path="/cenomar" element={<Navigate to="/en/cenomar/" replace />} />
