@@ -22,10 +22,6 @@ const FooterKo: React.FC = () => {
       return;
     }
     setEmailError('');
-    if (!referral) {
-      setReferralError('어디서 알게 되셨는지 선택해 주세요.');
-      return;
-    }
     setReferralError('');
     setSubmitting(true);
     setSubmitError('');
@@ -117,11 +113,10 @@ const FooterKo: React.FC = () => {
 
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-1">
-                어느 나라에 제출하실 예정인가요? <span className="text-red-500">*</span>
+                어느 나라에 제출하실 예정인가요? <span className="text-xs font-normal text-gray-400">(선택)</span>
               </label>
               <select
                 name="submit_country"
-                required
                 className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
               >
                 <option value="">선택해 주세요</option>
@@ -153,7 +148,7 @@ const FooterKo: React.FC = () => {
 
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-1">
-                어디서 알게 되셨나요? <span className="text-red-500">*</span>
+                어디서 알게 되셨나요? <span className="text-xs font-normal text-gray-400">(선택)</span>
               </label>
               <select
                 name="referral_source"
@@ -205,11 +200,10 @@ const FooterKo: React.FC = () => {
 
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-1">
-                문의 내용 <span className="text-red-500">*</span>
+                문의 내용 <span className="text-xs font-normal text-gray-400">(선택)</span>
               </label>
               <textarea
                 name="message"
-                required
                 rows={4}
                 placeholder="현재 상황이나 궁금한 점을 자유롭게 적어주세요. 서류명을 모르셔도 괜찮습니다."
                 className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
