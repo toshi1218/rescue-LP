@@ -62,7 +62,31 @@ export default function NaturalizationJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '必要書類・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
+                text: '書類1通のみは50,000円〜（税抜・送料実費別途）。帰化に必要な複数書類をまとめた帰化書類パックは132,500円〜（税込・アポスティーユ・DHL配送込み）です。実例として、家族分を含む6通で159,000円。通数が増えても国際送料は1回分のみで、通数×単価の掛け算にはなりません。無料相談後に正確な金額をご提示します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '家族の出生証明書などもまとめて依頼できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'はい。父母・兄弟姉妹の出生証明書、父母の婚姻証明書など、ご家族の証明書もまとめて代行取得できます。PSAの規定によりご本人手書きの委任状が必要ですが、文面テンプレートは当社でご用意します。全書類を1つの荷物に集約して配送するため、国際送料は1回分のみです。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: 'e-Certificate・e-Apostille（電子書類）でも帰化申請に使えますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '日本は制度上、ハーグ条約に基づく電子アポスティーユを受け入れていますが、PSAの電子運用は2026年3月16日に始まったばかりで、法務局など提出先側の受け入れ実務はまだ整備されていません。帰化申請では紙原本＋物理アポスティーユを求められるのが現状のため、当社は紙原本でのお届けを標準としています。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '日本語訳文も必要ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'はい。法務局に提出する外国語書類には、翻訳日・翻訳者の住所氏名を記載した日本語訳文の添付が必要です。ご本人による翻訳でも受理されます。当社の翻訳サービス（1部7,700円税込・2部目以降3,850円）もご利用いただけます。',
               },
             },
             {
@@ -78,7 +102,7 @@ export default function NaturalizationJa() {
               name: '法務局から書類の発行日に条件がある場合、対応できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。取得スケジュールをその条件に合わせて調整します。',
+                text: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。国外書類は申請受付時点で発行から6ヶ月以内が目安とされるため、提出時期から逆算して取得スケジュールを調整します。',
               },
             },
           ],
@@ -203,16 +227,15 @@ export default function NaturalizationJa() {
         ]}
       />
 
-      <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-8 mb-8">
+      <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-8">
         <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
           <div className="px-4 py-3 font-bold">内容</div>
-          <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+          <div className="px-4 py-3 font-bold text-center">料金の目安</div>
         </div>
         {[
-          { label: 'PSA書類取得（複数書類一括）', price: '込み' },
-          { label: 'DFAアポスティーユ認証', price: '込み' },
-          { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-          { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+          { label: '書類1通のみ（PSA取得＋DFAアポスティーユ）', price: '50,000円〜（税抜・DHL実費別途）' },
+          { label: '帰化書類パック（複数書類＋アポスティーユ＋DHL配送・税込）', price: '132,500円〜', bold: true },
+          { label: '実例：家族分を含む6通（本人・父母・兄弟姉妹の出生証明書＋父母の婚姻証明書）', price: '159,000円（税込・一括配送込み）' },
         ].map((row, i) => (
           <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
             <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -220,6 +243,50 @@ export default function NaturalizationJa() {
           </div>
         ))}
       </div>
+      <p className="text-xs text-gray-500 mt-3 mb-8 leading-relaxed">
+        ※ パックの「〜」は<strong>通数×単価の掛け算ではありません</strong>。家族の証明書をまとめてご依頼いただくと1通あたりの単価は下がり、全書類を1つの荷物に集約するため国際送料も1回分のみです。<br />
+        ※ お支払いは着手金50%・完成書類のスキャンコピー確認後に残金50%。正確なお見積りは無料相談で通数・書類種別を確認のうえご提示します。
+      </p>
+
+      <SectionDivider variant="beige">
+        <h2 className="text-base font-bold text-gray-900 mb-3">e-Certificate・e-Apostille（電子書類）は帰化申請で使える？</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          2026年3月16日、PSAの証明書発行は電子運用（e-Certificate・e-Apostille）が始まりました。
+          日本も制度上はハーグ条約に基づく電子アポスティーユを受け入れています。
+        </p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          ただし、<strong>提出先側の受け入れ実務はまだ整備の途上</strong>です。運用開始から日が浅く、
+          帰化申請の窓口である法務局では、実務上<strong>紙原本＋物理アポスティーユ</strong>の提出を求められるのが現状です。
+        </p>
+        <ul className="space-y-2 mb-4">
+          {[
+            '大使館や他の窓口で「電子で大丈夫」と案内された場合も、帰化申請については法務局の担当官に必ずご確認ください',
+            '当社はPSA・DFA窓口で紙原本を直接取得しているため、従来どおり確実な形式でお届けできます',
+            '提出先が電子書類を受理すると確認できた場合は、e-Certificate・e-Apostilleの取得代行にも対応します',
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-2 text-sm text-gray-700">
+              <span className="text-primary font-bold flex-shrink-0 mt-0.5">✓</span>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <h3 className="text-sm font-bold text-gray-800 mb-2 mt-6">ご家族の証明書もまとめて取得できます</h3>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          帰化申請では、ご本人だけでなく<strong>父母・兄弟姉妹の出生証明書や父母の婚姻証明書</strong>まで求められるのが一般的です。
+          ご家族分もまとめて代行取得できます。PSAの規定により、ご本人手書きの委任状が必要になりますが、
+          文面のテンプレートは当社でご用意します（印刷＋署名のみ・電子署名はPSAが受け付けないため、お手数ですが手書きをお願いしています）。
+        </p>
+
+        <h3 className="text-sm font-bold text-gray-800 mb-2 mt-6">日本語訳文もお忘れなく</h3>
+        <p className="text-sm text-gray-600 leading-relaxed mb-2">
+          法務局に提出する外国語書類には、<strong>翻訳日・翻訳者の住所氏名を記載した日本語訳文</strong>の添付が必要です。
+          翻訳はご本人が行っても受理されます。ご希望の場合は、当社の翻訳サービス（1部7,700円・2部目以降3,850円、税込）もご利用いただけます。
+        </p>
+        <a href="/ja/honyaku/" className="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-secondary transition-colors">
+          フィリピン書類の日本語翻訳サービスを見る →
+        </a>
+      </SectionDivider>
 
       <StepList
         variant="visual"
@@ -245,10 +312,13 @@ export default function NaturalizationJa() {
 
       <FaqSection
         items={[
-          { q: '帰化申請に必要な書類は何ですか？', a: '一般的にPSA出生証明書・婚姻証明書（DFAアポスティーユ付き）が必要です。状況によって追加書類が必要な場合もあります。無料相談で確認します。' },
-          { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: '帰化申請に必要な書類は何ですか？', a: '一般的にPSA出生証明書・婚姻証明書（DFAアポスティーユ付き）が必要です。ご本人分に加えて、父母・兄弟姉妹の出生証明書や父母の婚姻証明書まで求められるケースが多くあります。状況によって異なるため、無料相談で確認します。' },
+          { q: '料金はいくらですか？', a: '書類1通のみは50,000円〜（税抜・送料実費別途）。帰化に必要な複数書類をまとめた帰化書類パックは132,500円〜（税込・アポスティーユ・DHL配送込み）です。実例として、家族分を含む6通で159,000円。通数が増えても国際送料は1回分のみで、通数×単価の掛け算にはなりません。無料相談後に正確な金額をご提示します。' },
+          { q: '家族の出生証明書などもまとめて依頼できますか？', a: 'はい。父母・兄弟姉妹の出生証明書、父母の婚姻証明書など、ご家族の証明書もまとめて代行取得できます。PSAの規定によりご本人手書きの委任状が必要ですが、文面テンプレートは当社でご用意します。全書類を1つの荷物に集約して配送するため、国際送料は1回分のみです。' },
+          { q: 'e-Certificate・e-Apostille（電子書類）でも帰化申請に使えますか？', a: '日本は制度上、ハーグ条約に基づく電子アポスティーユを受け入れていますが、PSAの電子運用は2026年3月16日に始まったばかりで、法務局など提出先側の受け入れ実務はまだ整備されていません。帰化申請では紙原本＋物理アポスティーユを求められるのが現状のため、当社は紙原本でのお届けを標準としています。' },
+          { q: '日本語訳文も必要ですか？', a: 'はい。法務局に提出する外国語書類には、翻訳日・翻訳者の住所氏名を記載した日本語訳文の添付が必要です。ご本人による翻訳でも受理されます。当社の翻訳サービス（1部7,700円税込・2部目以降3,850円）もご利用いただけます。' },
           { q: '司法書士・行政書士の先生から書類取得を依頼することはできますか？', a: 'はい、対応しています。行政書士の先生がクライアントの帰化申請に必要な書類を取り寄せる場合、当社が現地取得からDFAアポスティーユまで代行し、先生の事務所へ郵送します。' },
-          { q: '法務局から書類の発行日に条件がある場合、対応できますか？', a: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。取得スケジュールをその条件に合わせて調整します。' },
+          { q: '法務局から書類の発行日に条件がある場合、対応できますか？', a: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。国外書類は申請受付時点で発行から6ヶ月以内が目安とされるため、提出時期から逆算して取得スケジュールを調整します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
