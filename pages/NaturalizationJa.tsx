@@ -12,11 +12,12 @@ import ComparisonTable from '../components/ComparisonTable';
 import { FileCheck, Globe, Users, Heart, FileText, Scale, Building, CheckCircle, Clock } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function NaturalizationJa() {
   useMeta(
-    '帰化申請に必要なフィリピン書類【2026年3月】PSA・NBI代行取得',
-    '日本帰化申請に必要なPSA出生証明書・NBI Clearanceを代行取得。DFAアポスティーユ付きで日本へ郵送。書類取得から申請準備まで日本語でサポート。無料相談。',
+    `帰化申請の書類代行【${SEO_YEAR_MONTH_JA}】PSA・NBI・アポスティーユ`,
+    'PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。法務局の要件に合わせた形式で手配。司法書士・行政書士の先生からのご依頼も対応。無料相談で必要書類を確認。',
   );
   return (
     <PageLayout
@@ -103,6 +104,22 @@ export default function NaturalizationJa() {
         ]}
         ctaText="無料で相談する"
       />
+
+      {/* 必要書類一覧（プレーンテキスト） */}
+      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+        <h2 className="text-lg font-bold text-gray-900 mb-2">帰化申請 フィリピン書類 必要書類一覧</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          フィリピン国籍の方が日本に帰化申請する場合、法務局へ提出するフィリピン側書類は以下の通りです（状況により異なります）。
+        </p>
+        <ul className="space-y-1.5 text-sm text-gray-700">
+          <li>・PSA出生証明書（DFAアポスティーユ付き原本）— 出生・国籍の確認</li>
+          <li>・PSA婚姻証明書（既婚者、DFAアポスティーユ付き原本）— 婚姻歴の確認</li>
+          <li>・CENOMAR（独身証明書、未婚者、DFAアポスティーユ付き原本）— 婚姻歴なしの確認</li>
+          <li>・NBI Clearance（無犯罪証明書）— 法務局の担当官の指定により必要な場合あり</li>
+          <li>・全書類共通でDFAアポスティーユ（紙の原本）が必須</li>
+        </ul>
+        <p className="text-xs text-gray-500 mt-3">※ 担当官によって必要書類・発行日の指定が異なります。正確な一覧は無料相談でご確認ください。代行取得のご依頼は司法書士・行政書士の先生からも承っています。</p>
+      </section>
 
       {/* 固有コンテンツ：帰化申請で必要なフィリピン書類 */}
       <SectionDivider variant="beige">

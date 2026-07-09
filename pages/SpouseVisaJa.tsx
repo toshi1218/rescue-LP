@@ -10,11 +10,12 @@ import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-rea
 import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function SpouseVisaJa() {
   useMeta(
-    '配偶者ビザ必要書類【2026年3月版】フィリピン書類の代行取得',
-    '配偶者ビザ申請に必要なフィリピン書類（CENOMAR・PSA出生証明書・NBI Clearance）をDFAアポスティーユ付きで代行取得。渡航不要・日本語だけでOK。無料相談。',
+    `配偶者ビザ 必要書類【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI 取得代行`,
+    '配偶者ビザ申請に必要なPSA書類・CENOMAR・NBI・DFAアポスティーユを日本から代行取得。紙の原本対応。在留資格認定・更新・変更すべて対応。無料相談。',
   );
   return (
     <PageLayout
@@ -145,6 +146,41 @@ export default function SpouseVisaJa() {
           <p className="text-xs text-gray-500 mt-2">※正確な金額は無料相談後にご提示します。</p>
         </SectionDivider>
       </div>
+
+      {/* 必要書類一覧（申請種別ごと） */}
+      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+        <h2 className="text-lg font-bold text-gray-900 mb-2">配偶者ビザ 必要書類一覧</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          在留資格「日本人の配偶者等」の申請区分（新規・更新・変更）によって、必要なフィリピン書類は異なります。
+        </p>
+        <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mb-4">
+          <div className="grid grid-cols-[2fr_1fr_1fr] bg-secondary text-white">
+            <div className="px-4 py-3 font-bold">書類</div>
+            <div className="px-4 py-3 font-bold text-center">新規申請</div>
+            <div className="px-4 py-3 font-bold text-center">更新・変更</div>
+          </div>
+          {[
+            { label: 'PSA婚姻証明書', shinki: '必須', koushin: '状況による' },
+            { label: 'PSA出生証明書', shinki: '必須', koushin: '状況による' },
+            { label: 'CENOMAR（独身証明書）', shinki: '初婚の場合に必要', koushin: '—' },
+            { label: 'NBI Clearance', shinki: '入管の指定による', koushin: '入管の指定による' },
+            { label: 'DFAアポスティーユ', shinki: '全書類に必須', koushin: '全書類に必須', bold: true },
+          ].map((row, i) => (
+            <div key={row.label} className={`grid grid-cols-[2fr_1fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
+              <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
+              <div className="px-4 py-3 text-center text-gray-600">{row.shinki}</div>
+              <div className="px-4 py-3 text-center text-gray-600">{row.koushin}</div>
+            </div>
+          ))}
+        </div>
+        <ul className="space-y-1.5 text-sm text-gray-700">
+          <li>・PSA婚姻証明書・PSA出生証明書 — DFAアポスティーユ付き原本（新規申請の基本書類）</li>
+          <li>・CENOMAR（独身証明書）— 初婚の場合、婚姻歴なしの証明として必要</li>
+          <li>・NBI Clearance（無犯罪証明書）— 入管から指定された場合に必要</li>
+          <li>・すべての書類にDFAアポスティーユ（紙の原本）が必須</li>
+        </ul>
+        <p className="text-xs text-gray-500 mt-3">※ 必要書類は個別の申請状況によって異なります。正確な一覧は無料相談でご確認ください。</p>
+      </section>
 
       {/* できること / できないこと */}
       <section className="mb-6 rounded-2xl bg-gray-50 border border-gray-200 p-5">

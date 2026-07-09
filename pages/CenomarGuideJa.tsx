@@ -375,6 +375,7 @@ export default function CenomarGuideJa() {
         { path: '/ja/cenomar-apostille/', label: 'CENOMARのDFAアポスティーユ取得代行' },
         { path: '/ja/cenomar-koyukigen/', label: 'CENOMARの有効期限と取得タイミング' },
         { path: '/ja/haigusha-visa/', label: '配偶者ビザの書類代行' },
+        { path: '/ja/kika-shinsei-guide/', label: '帰化申請の書類代行' },
       ]} />
       <RelatedArticles
         items={[
