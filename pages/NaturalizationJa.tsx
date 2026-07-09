@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
@@ -12,11 +13,12 @@ import ComparisonTable from '../components/ComparisonTable';
 import { FileCheck, Globe, Users, Heart, FileText, Scale, Building, CheckCircle, Clock } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function NaturalizationJa() {
   useMeta(
-    '帰化申請に必要なフィリピン書類【2026年3月】PSA・NBI代行取得',
-    '日本帰化申請に必要なPSA出生証明書・NBI Clearanceを代行取得。DFAアポスティーユ付きで日本へ郵送。書類取得から申請準備まで日本語でサポート。無料相談。',
+    `帰化申請の書類代行【${SEO_YEAR_MONTH_JA}】PSA・NBI・アポスティーユ`,
+    'PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。法務局の要件に合わせた形式で手配。司法書士・行政書士の先生からのご依頼も対応。無料相談で必要書類を確認。',
   );
   return (
     <PageLayout
@@ -81,6 +83,14 @@ export default function NaturalizationJa() {
                 text: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。取得スケジュールをその条件に合わせて調整します。',
               },
             },
+            {
+              '@type': 'Question',
+              name: 'フィリピンの書類は日本語訳文が必要ですか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'はい。外国語（英語・フィリピン語）で書かれた書類には、翻訳者の氏名・住所・翻訳日付を記載した日本語訳文の添付が求められます。当社で書類取得とあわせて翻訳文の手配もご相談いただけます。',
+              },
+            },
           ],
         },
       ]}
@@ -103,6 +113,27 @@ export default function NaturalizationJa() {
         ]}
         ctaText="無料で相談する"
       />
+
+      {/* 必要書類一覧（プレーンテキスト） */}
+      <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
+        <h2 className="text-lg font-bold text-gray-900 mb-2">帰化申請 フィリピン書類 必要書類一覧</h2>
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          フィリピン国籍の方が日本に帰化申請する場合、法務局へ提出するフィリピン側書類は主に「国籍・身分関係に関する書面」の区分に含まれます。管轄の法務局・担当官によって必要書類は異なりますが、一般的には以下が対象になります。
+        </p>
+        <ul className="space-y-1.5 text-sm text-gray-700">
+          <li>・PSA出生証明書（DFAアポスティーユ付き原本）— 本人はもちろん、案件によっては父母・兄弟姉妹・子・配偶者の分も求められることがあります</li>
+          <li>・PSA婚姻証明書（DFAアポスティーユ付き原本）— 本人が既婚者の場合。父母の婚姻証明書が必要になるケースもあります</li>
+          <li>・CENOMAR（独身証明書、DFAアポスティーユ付き原本）— 本人が未婚者の場合、婚姻歴なしの証明として</li>
+          <li>・警察記録証明書（NBI Clearance等）— 必須書類ではなく「その他」区分として、担当官の判断で求められる場合があります</li>
+          <li>・全書類共通でDFAアポスティーユ（紙の原本）が必要です</li>
+        </ul>
+        <p className="text-sm text-gray-600 leading-relaxed mt-4 mb-1">あわせてご確認ください：</p>
+        <ul className="space-y-1.5 text-sm text-gray-700">
+          <li>・英語（フィリピン語）で書かれた書類には、翻訳者の氏名・住所・翻訳日付を記載した日本語訳文の添付が必要です（<Link to="/ja/honyaku/" className="underline hover:text-primary">当社の翻訳サービス</Link>で対応可能です）</li>
+          <li>・書類の有効期限は、申請受付の時点で発行から6か月以内が目安とされています（法務局により異なる場合があります）</li>
+        </ul>
+        <p className="text-xs text-gray-500 mt-3">※ 必要書類・部数・有効期限の運用は管轄の法務局によって異なります。正確な一覧は無料相談でご確認ください。代行取得のご依頼は司法書士・行政書士の先生からも承っています。</p>
+      </section>
 
       {/* 固有コンテンツ：帰化申請で必要なフィリピン書類 */}
       <SectionDivider variant="beige">
@@ -249,6 +280,7 @@ export default function NaturalizationJa() {
           { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
           { q: '司法書士・行政書士の先生から書類取得を依頼することはできますか？', a: 'はい、対応しています。行政書士の先生がクライアントの帰化申請に必要な書類を取り寄せる場合、当社が現地取得からDFAアポスティーユまで代行し、先生の事務所へ郵送します。' },
           { q: '法務局から書類の発行日に条件がある場合、対応できますか？', a: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。取得スケジュールをその条件に合わせて調整します。' },
+          { q: 'フィリピンの書類は日本語訳文が必要ですか？', a: 'はい。外国語（英語・フィリピン語）で書かれた書類には、翻訳者の氏名・住所・翻訳日付を記載した日本語訳文の添付が求められます。当社で書類取得とあわせて翻訳文の手配もご相談いただけます。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
@@ -258,6 +290,7 @@ export default function NaturalizationJa() {
         { path: '/ja/cenomar/', label: 'CENOMAR（独身証明書）取得代行' },
         { path: '/ja/psa-shussei-shomeisho/', label: 'PSA出生証明書の取得代行' },
         { path: '/ja/nbi-clearance/', label: 'NBI Clearance（無犯罪証明書）取得代行' },
+        { path: '/ja/honyaku/', label: 'フィリピン書類の日本語翻訳サービス' },
         { path: '/ja/gyouseishoshi-to-shorui-shuttoku/', label: '行政書士の仕事と書類取得サービスの違い' },
       ]} />
     </PageLayout>
