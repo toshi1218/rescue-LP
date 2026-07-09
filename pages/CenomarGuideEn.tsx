@@ -20,6 +20,32 @@ export default function CenomarGuideEn() {
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'CENOMAR Service' }]}
       jsonLd={[{
         '@context': 'https://schema.org',
+        '@type': 'DefinedTerm',
+        name: 'CENOMAR',
+        alternateName: 'Certificate of No Marriage Record',
+        description: 'CENOMAR (Certificate of No Marriage Record) is an official document issued by the Philippine Statistics Authority (PSA) certifying that a Filipino citizen has no marriage record on file in the Philippines — proof of single status. It is required for K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and other immigration applications involving a Filipino national.',
+        inDefinedTermSet: 'https://ph-document.com/en/document-checklist-by-visa/',
+        },
+        {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Get a CENOMAR from Outside the Philippines',
+        description: 'Step-by-step process to retrieve a CENOMAR (Certificate of No Marriage Record) with DFA Apostille and ship it worldwide, without traveling to the Philippines.',
+        totalTime: 'P42D',
+        estimatedCost: {
+          '@type': 'MonetaryAmount',
+          currency: 'USD',
+          value: '349',
+        },
+        step: [
+          { '@type': 'HowToStep', name: 'Submit the Consultation Form', text: 'Share your visa type, the full name on the Philippine ID, and your target deadline. We confirm eligibility before anything starts.' },
+          { '@type': 'HowToStep', name: 'Receive Your All-Inclusive Quote', text: 'We send a fixed quote covering PSA retrieval, DFA Apostille (if needed), and DHL shipping — no surprise costs.' },
+          { '@type': 'HowToStep', name: 'We Request CENOMAR from PSA, Then Queue DFA Apostille', text: 'Our Cebu team submits the PSA application, receives the CENOMAR, and handles DFA Apostille authentication on-site in the Philippines.' },
+          { '@type': 'HowToStep', name: 'Original Document Delivered to You via DHL', text: 'The physical CENOMAR (with Apostille) is shipped directly to your address. Tracking number provided. Estimated 4–6 weeks from start.' },
+        ],
+        },
+        {
+        '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMAR Retrieval Service (PSA + DFA Apostille)',
         description: 'We retrieve CENOMAR from PSA with DFA Apostille and ship worldwide via DHL. Required for immigration and visa applications in the US, Canada, Australia, UK, UAE and more.',

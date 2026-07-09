@@ -4,6 +4,7 @@ import HeroBanner from '../components/HeroBanner';
 import Pricing from '../components/Pricing';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
+import FaqSection from '../components/FaqSection';
 import { useMeta } from '../lib/useMeta';
 
 export default function PricingEn() {
@@ -12,7 +13,55 @@ export default function PricingEn() {
     'View 2026 pricing for CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille retrieval. All plans include DHL Express worldwide shipping. Free quote.',
   );
   return (
-    <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Pricing' }]}>
+    <PageLayout
+      breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Pricing' }]}
+      jsonLd={[{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Are there any hidden fees?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'No. All quoted prices are all-inclusive: PSA/CENOMAR/NBI retrieval, DFA Apostille (if required), and DHL Express shipping worldwide are quoted together as one fixed price before you pay anything.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How does payment work?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Two-stage payment via Stripe (credit card): approximately 50% deposit to start, then the remaining balance after we send you photos or PDFs of the retrieved documents for your confirmation. Documents ship only after the balance is paid.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What payment methods do you accept?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Credit card via Stripe: Visa, Mastercard, American Express, Apple Pay, and Google Pay.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I cancel and get a refund?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, free cancellation before we start work. Once processing begins, actual costs incurred and work performed are non-refundable. The balance payment is only requested after you confirm the document copies.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How long does delivery take?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Most documents (PSA, CENOMAR, NBI Clearance with DFA Apostille) take approximately 4–6 weeks from deposit payment to DHL delivery, depending on the document type and destination country.',
+            },
+          },
+        ],
+      }]}
+    >
       <HeroBanner
         title="Pricing"
         subtitle="All-inclusive pricing: PSA retrieval, DFA Apostille, and DHL shipping — quoted together with no hidden fees."
@@ -74,6 +123,18 @@ export default function PricingEn() {
           </ul>
         </div>
       </div>
+
+      <FaqSection
+        items={[
+          { q: 'Are there any hidden fees?', a: 'No. All quoted prices are all-inclusive: PSA/CENOMAR/NBI retrieval, DFA Apostille (if required), and DHL Express shipping worldwide are quoted together as one fixed price before you pay anything.' },
+          { q: 'How does payment work?', a: 'Two-stage payment via Stripe (credit card): approximately 50% deposit to start, then the remaining balance after we send you photos or PDFs of the retrieved documents for your confirmation. Documents ship only after the balance is paid.' },
+          { q: 'What payment methods do you accept?', a: 'Credit card via Stripe: Visa, Mastercard, American Express, Apple Pay, and Google Pay.' },
+          { q: 'Can I cancel and get a refund?', a: 'Yes, free cancellation before we start work. Once processing begins, actual costs incurred and work performed are non-refundable. The balance payment is only requested after you confirm the document copies.' },
+          { q: 'How long does delivery take?', a: 'Most documents (PSA, CENOMAR, NBI Clearance with DFA Apostille) take approximately 4–6 weeks from deposit payment to DHL delivery, depending on the document type and destination country.' },
+        ]}
+        ctaTitle="Ready to Get Started?"
+        ctaButton="Get a Free Quote"
+      />
     </PageLayout>
   );
 }
