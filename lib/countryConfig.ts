@@ -401,6 +401,83 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
     ],
   },
+  // ── Phase 5 ───────────────────────────────────────────────────────────────
+  {
+    slug: 'saudi-arabia',
+    name: 'Saudi Arabia',
+    countryCode: 'SA',
+    agency: 'Saudi Embassy Manila',
+    agencyAbbr: 'Saudi Embassy',
+    visaType: 'Family Visa (Iqama Sponsorship)',
+    badges: ['Saudi Embassy-Ready', 'Embassy Attestation Included', 'Ships to Saudi Arabia via DHL'],
+    isHagueConvention: false,
+    authLabel: 'Embassy Attestation',
+    shippingDays: '3–5 business days',
+    totalWeeks: '4–6 weeks',
+    price: '899',
+    summaryPoints: [
+      'Saudi Arabia requires Embassy Attestation (not Apostille) — we handle DFA authentication and Saudi Embassy attestation',
+      'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
+      'Attested originals shipped via DHL Express to your Saudi Arabia address',
+      'We confirm exact Saudi Embassy requirements for your specific family visa application',
+    ],
+    faqs: [
+      {
+        q: 'Does Saudi Arabia require DFA Apostille or Embassy Attestation on Philippine documents?',
+        a: 'Saudi Arabia requires Embassy Attestation. Saudi Arabia is not a Hague Convention member. Philippine documents must be authenticated by the DFA and then attested by the Saudi Embassy in Manila. We handle both steps.',
+      },
+      {
+        q: 'What documents are needed for a Saudi Arabia family visa (Iqama sponsorship)?',
+        a: 'Typically PSA Birth Certificate and NBI Clearance with Embassy Attestation. For spouse sponsorship, PSA Marriage Certificate is also required. We confirm exact requirements for your specific case.',
+      },
+      {
+        q: 'How much does it cost?',
+        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, Saudi Embassy attestation, and DHL shipping to Saudi Arabia are included.',
+      },
+      {
+        q: 'How long does it take to ship to Saudi Arabia?',
+        a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to Saudi Arabia typically takes 3–5 business days after documents are ready.',
+      },
+    ],
+  },
+  {
+    slug: 'kuwait',
+    name: 'Kuwait',
+    countryCode: 'KW',
+    agency: 'Kuwait Embassy Manila',
+    agencyAbbr: 'Kuwait Embassy',
+    visaType: 'Family Residency Visa (Iqama)',
+    badges: ['Kuwait Embassy-Ready', 'Embassy Attestation Included', 'Ships to Kuwait via DHL'],
+    isHagueConvention: false,
+    authLabel: 'Embassy Attestation',
+    shippingDays: '3–5 business days',
+    totalWeeks: '4–6 weeks',
+    price: '899',
+    summaryPoints: [
+      'Kuwait requires Embassy Attestation (not Apostille) — we handle DFA authentication and Kuwait Embassy attestation',
+      'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
+      'Attested originals shipped via DHL Express to your Kuwait address',
+      'We confirm exact Kuwait Embassy requirements for your specific residency visa application',
+    ],
+    faqs: [
+      {
+        q: 'Does Kuwait require DFA Apostille or Embassy Attestation on Philippine documents?',
+        a: 'Kuwait requires Embassy Attestation. Kuwait is not a Hague Convention member. Philippine documents must be authenticated by the DFA and then attested by the Kuwait Embassy in Manila. We handle both steps.',
+      },
+      {
+        q: 'What documents are needed for a Kuwait family residency visa (Iqama)?',
+        a: 'Typically PSA Birth Certificate and NBI Clearance with Embassy Attestation. For spouse sponsorship, PSA Marriage Certificate is also required. We confirm exact requirements for your specific case.',
+      },
+      {
+        q: 'How much does it cost?',
+        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, Kuwait Embassy attestation, and DHL shipping to Kuwait are included.',
+      },
+      {
+        q: 'How long does it take to ship to Kuwait?',
+        a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to Kuwait typically takes 3–5 business days after documents are ready.',
+      },
+    ],
+  },
   {
     slug: 'switzerland',
     name: 'Switzerland',
