@@ -49,7 +49,7 @@ export default function TermsEn() {
               {[
                 'Services begin after we confirm your requirements and you pay the 50% retainer',
                 'All prices are quoted in JPY or USD, depending on your location and preference',
-                'We accept payment by credit card',
+                'We accept payment by bank transfer, or via Wise for international payments',
                 'The remaining balance is due after document copies are confirmed and before shipping',
                 'Quoted prices include only the items explicitly listed. Additional requests may incur additional fees',
               ].map((item) => (

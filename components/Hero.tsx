@@ -236,7 +236,7 @@ const Hero: React.FC = () => {
               International Marriage Package from US$399 (Apostille + DHL incl.)
             </p>
             <p className="text-white/50 text-xs mt-0.5">
-              💳 Pay by credit card — Visa · Mastercard · Amex · Apple Pay
+              🏦 Pay by bank transfer · Wise for international payments
             </p>
           </div>
         </div>

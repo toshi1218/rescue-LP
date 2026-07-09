@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Lock, CreditCard, Trash2, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Lock, Landmark, Trash2, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import { useMeta } from '../lib/useMeta';
@@ -18,9 +18,9 @@ export default function DataSecurityJa() {
       desc: 'パスポートや証明書の画像は、WhatsApp・Facebook Messenger・LINE等のSNSやメール添付ではお預かりせず、お客様専用のセキュアな環境で受け渡しします。',
     },
     {
-      icon: <CreditCard className="w-6 h-6 text-primary" />,
-      title: 'カード情報は当社に届きません',
-      desc: 'お支払いは国際的な決済基盤Stripeの暗号化された決済ページで直接ご入力いただきます。カード番号をチャットやメールで送っていただくことは一切ありません。',
+      icon: <Landmark className="w-6 h-6 text-primary" />,
+      title: '決済情報をチャットで求めることはありません',
+      desc: 'お支払いは銀行振込（海外からはWise・国際送金）です。振込先は正式なご案内でのみお伝えし、カード番号や口座の暗証番号をチャットやメールでお尋ねすることは一切ありません。',
     },
     {
       icon: <Trash2 className="w-6 h-6 text-primary" />,
@@ -164,20 +164,20 @@ export default function DataSecurityJa() {
           <h2 className="text-xl font-bold text-secondary mb-3">お支払い情報の取り扱い</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-3">
             デジタル環境では、決済情報も個人情報と同じくらい慎重に扱うべきだと考えています。
-            当社のクレジットカード決済は、国際的な決済基盤である<strong>Stripe</strong>の暗号化された決済ページで行います。
+            当社のお支払いは<strong>銀行振込</strong>（海外からのお支払いは<strong>Wise</strong>・国際送金）で承っています。
           </p>
           <ul className="space-y-2 text-sm text-gray-700">
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              カード番号はStripeの決済ページに直接ご入力いただくため、当社のスタッフがカード番号を見ることはありません
+              振込先口座は、お見積り確定後の正式なご案内でのみお伝えします。チャットで突然振込先の変更をお願いすることはありません（そのような連絡は当社を騙る詐欺の可能性があります）
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              カード番号や口座情報をチャット・メールでお送りいただく必要は一切ありません（お送りいただかないようお願いしています）
+              カード番号・口座の暗証番号・ワンタイムパスワード等をチャット・メールでお尋ねすることは絶対にありません
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              Visa・Mastercard・Amex・Apple Pay・Google Payに対応しています
+              お支払いは着手金50%・完成書類のスキャン確認後に残金50%の2段階です
             </li>
           </ul>
         </section>

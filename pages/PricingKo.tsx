@@ -170,8 +170,8 @@ export default function PricingKo() {
         <div className="grid md:grid-cols-2 gap-4">
           <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
             <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">결제 방법</p>
-            <p className="text-sm text-gray-600 mb-1">신용카드（Stripe）</p>
-            <p className="text-xs text-gray-500 leading-relaxed">Visa / Mastercard / Amex / Apple Pay 대응. 착수금 청구서（약 50%）결제 후 착수, 서류 확인 후 잔금 청구서（약 50%）발송.</p>
+            <p className="text-sm text-gray-600 mb-1">은행 송금 / Wise</p>
+            <p className="text-xs text-gray-500 leading-relaxed">일본 국내 계좌로의 은행 송금 또는 Wise（국제 송금）대응. 착수금（약 50%）결제 후 착수, 서류 확인 후 잔금（약 50%）결제.</p>
           </div>
           <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 shadow-sm">
             <p className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-2">서류 취득 보증 · 취소・환불</p>

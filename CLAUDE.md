@@ -13,6 +13,17 @@
 
 ---
 
+## 💳 決済手段の現状（2026-07-09 記録・重要）
+
+- **Stripeは審査却下により停止中**。カード決済（Visa/Mastercard/Amex/Apple Pay/Google Pay）は現在受け付け不可
+- 利用可能な支払い方法: **銀行振込（日本国内口座）** および **Wise（国際送金・海外客向け）** のみ
+- **適格請求書（インボイス）は発行不可**。B2B案件（行政書士・司法書士等）では留意
+- 顧客向けメール・見積でもカード決済・Stripeに言及しないこと
+- 2026-07-09 にサイト全体の決済表記を銀行振込/Wiseに統一（Footer・FAQ・Hero・Process・Pricing 3言語・Company 2言語・Terms 2言語・特商法・GuidesEn・データセキュリティ3ページ・SecurityStory・HomeKo）
+- **Stripeが復活した場合**: `grep -rn "銀行振込\|bank transfer\|Wise" pages/ components/` で対象を洗い出して表記を戻す
+
+---
+
 ## Project Overview
 
 ph-document.com is a multilingual (EN/JA/KO) Philippine document service site built with Vite + React, pre-rendered to static HTML via `scripts/prerender.ts`.

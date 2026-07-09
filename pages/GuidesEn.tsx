@@ -49,7 +49,7 @@ export default function GuidesEn() {
           buttonText="Free Consultation"
           href="#contact"
           variant="primary"
-          trustNote="Free cancellation before start · Reply within 24 hours · Pay by Visa / Mastercard / Amex"
+          trustNote="Free cancellation before start · Reply within 24 hours · Pay by bank transfer or Wise"
           whatsappHref="https://wa.me/639452833727"
         />
       </div>

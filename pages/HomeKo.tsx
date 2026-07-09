@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, AlertCircle, ArrowRight, Clock, Shield, FileText, ShieldCheck, Lock, CreditCard, Trash2, Eye, HeartHandshake } from 'lucide-react';
+import { CheckCircle, AlertCircle, ArrowRight, Clock, Shield, FileText, ShieldCheck, Lock, Landmark, Trash2, Eye, HeartHandshake } from 'lucide-react';
 import NavbarKo from '../components/NavbarKo';
 import FooterKo from '../components/FooterKo';
 import BackToTop from '../components/BackToTop';
@@ -59,7 +59,7 @@ export default function HomeKo() {
     },
     {
       q: '결제는 어떻게 하나요?',
-      a: '신용카드로 결제하실 수 있습니다. 착수금 50% 결제 후 진행을 시작합니다. 서류 사본 확인 후 나머지 50%를 결제하시면 원본을 발송합니다.',
+      a: '결제는 은행 송금(일본 국내 계좌) 또는 Wise(국제 송금)로 가능합니다. 착수금 50% 결제 후 진행을 시작합니다. 서류 사본 확인 후 나머지 50%를 결제하시면 원본을 발송합니다.',
     },
   ];
 
@@ -379,7 +379,7 @@ export default function HomeKo() {
               <div className="grid md:grid-cols-3 gap-4 mb-6">
                 {[
                   { icon: <Lock className="w-5 h-5 text-primary" />, title: '기밀 서류는 채팅·이메일 첨부로 받지 않습니다', desc: '여권·PSA 출생증명서·CENOMAR 이미지는 카카오톡·WhatsApp·메신저나 이메일 첨부가 아닌, 고객 전용 보안 환경으로 주고받습니다.' },
-                  { icon: <CreditCard className="w-5 h-5 text-primary" />, title: '카드 정보는 당사에 전달되지 않습니다', desc: '결제는 Stripe의 암호화된 페이지에서 직접 입력하십니다. 카드 번호를 채팅이나 이메일로 보내실 필요가 없습니다.' },
+                  { icon: <Landmark className="w-5 h-5 text-primary" />, title: '결제 정보를 채팅으로 묻지 않습니다', desc: '결제는 은행 송금 또는 Wise(국제 송금)로 진행하며, 계좌 정보는 정식 안내로만 전달합니다. 카드 번호나 비밀번호를 채팅으로 묻는 일은 절대 없습니다.' },
                   { icon: <Trash2 className="w-5 h-5 text-primary" />, title: '업무 완료 후 3개월 이내 삭제', desc: '전자 데이터는 업무 완료 후 3개월 이내에 삭제하고, 종이 서류는 파쇄기로 물리적으로 폐기합니다.' },
                 ].map((item) => (
                   <div key={item.title} className="bg-white rounded-xl border border-gray-100 p-4 shadow-sm">

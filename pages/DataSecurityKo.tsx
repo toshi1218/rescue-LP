@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Lock, CreditCard, Trash2, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Lock, Landmark, Trash2, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageLayoutKo from '../components/PageLayoutKo';
 
@@ -11,9 +11,9 @@ export default function DataSecurityKo() {
       desc: '여권이나 증명서 이미지는 카카오톡·WhatsApp·Facebook 메신저 등 SNS 채팅이나 이메일 첨부로 받지 않고, 고객 전용 보안 환경을 통해 주고받습니다.',
     },
     {
-      icon: <CreditCard className="w-6 h-6 text-primary" />,
-      title: '카드 정보는 당사에 전달되지 않습니다',
-      desc: '결제는 국제 결제 플랫폼 Stripe의 암호화된 결제 페이지에서 직접 입력하십니다. 카드 번호를 채팅이나 이메일로 보내실 필요가 전혀 없습니다.',
+      icon: <Landmark className="w-6 h-6 text-primary" />,
+      title: '결제 정보를 채팅으로 묻지 않습니다',
+      desc: '결제는 은행 송금(일본 국내 계좌) 또는 Wise(국제 송금)로 진행합니다. 계좌 정보는 정식 안내로만 전달하며, 카드 번호나 계좌 비밀번호를 채팅이나 이메일로 묻는 일은 절대 없습니다.',
     },
     {
       icon: <Trash2 className="w-6 h-6 text-primary" />,
@@ -40,7 +40,7 @@ export default function DataSecurityKo() {
   return (
     <PageLayoutKo
       title="개인정보·기밀 서류 보안 정책 | 필리핀 서류 취득 대행"
-      description="여권·PSA 출생증명서·CENOMAR 등 기밀 서류 이미지를 SNS 채팅이나 이메일 첨부로 주고받지 않는 이유와, 전용 보안 환경·Stripe 결제·업무 완료 후 3개월 이내 데이터 삭제 등 당사의 보안 정책을 안내합니다."
+      description="여권·PSA 출생증명서·CENOMAR 등 기밀 서류 이미지를 SNS 채팅이나 이메일 첨부로 주고받지 않는 이유와, 전용 보안 환경·안전한 결제 절차·업무 완료 후 3개월 이내 데이터 삭제 등 당사의 보안 정책을 안내합니다."
       breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: '개인정보·기밀 서류 보안 정책' }]}
     >
       <h1 className="text-2xl md:text-3xl font-bold text-secondary leading-snug mb-3">

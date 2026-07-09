@@ -45,7 +45,7 @@ export default function PricingEn() {
           },
           {
             title: 'Deposit payment (~50%)',
-            description: 'We send a Stripe invoice link by email. Pay by credit card (Visa, Mastercard, Amex, Apple Pay, Google Pay). We start after payment is confirmed.',
+            description: 'We send our bank details together with the invoice by email. Pay by bank transfer, or via Wise for international payments. We start after payment is confirmed.',
           },
           {
             title: 'Document copy confirmation',
@@ -61,8 +61,8 @@ export default function PricingEn() {
       <div className="grid gap-4 md:grid-cols-2 mb-6">
         <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-3">Payment Methods</p>
-          <p className="text-sm text-gray-700 font-semibold mb-1">Credit card via Stripe</p>
-          <p className="text-sm text-gray-500">Visa · Mastercard · American Express · Apple Pay · Google Pay</p>
+          <p className="text-sm text-gray-700 font-semibold mb-1">Bank transfer / Wise</p>
+          <p className="text-sm text-gray-500">Bank transfer to our Japanese account · Wise for international payments</p>
           <p className="text-xs text-gray-400 mt-2">Two-stage invoicing: deposit on start, balance after document confirmation.</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">

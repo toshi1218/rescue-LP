@@ -163,7 +163,7 @@ export default function TermsJa() {
                 ご依頼時に着手金として総額の50%をお支払いいただき、書類写しの確認後に残金をお支払いいただきます。
               </p>
               <p className="text-gray-600">
-                お支払いはクレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）または銀行振込にて承っています。
+                お支払いは銀行振込にて承っています（海外からのお支払いはWise・国際送金に対応）。
               </p>
               <p className="text-gray-600">
                 着手前のキャンセルは全額返金。申請開始後は着手金（50%）返金不可。書類取得後・DHL発送後は返金不可です。

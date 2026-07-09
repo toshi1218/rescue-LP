@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ShieldCheck, Lock, CreditCard, Trash2, Clock, Eye, HeartHandshake, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Lock, Landmark, Trash2, Clock, Eye, HeartHandshake, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../lib/i18n';
 
 /**
@@ -17,12 +17,12 @@ export default function SecurityStory() {
   const securityPoints = isJa
     ? [
         { icon: <Lock className="w-5 h-5 text-primary" />, title: '機密書類はチャット・メール添付で扱いません', desc: 'パスポート・PSA出生証明書・CENOMARなどの画像は、WhatsApp・Messenger・LINE等のSNSやメール添付ではお預かりせず、お客様専用のセキュアな環境で受け渡しします。' },
-        { icon: <CreditCard className="w-5 h-5 text-primary" />, title: 'カード情報は当社に届きません', desc: 'お支払いは決済基盤Stripeの暗号化ページで直接ご入力。カード番号をチャットやメールで送っていただくことはありません。' },
+        { icon: <Landmark className="w-5 h-5 text-primary" />, title: '決済情報をチャットで求めません', desc: 'お支払いは銀行振込（海外からはWise）。振込先は正式なご案内でのみお伝えし、カード番号や口座の暗証番号をチャットやメールでお尋ねすることは一切ありません。' },
         { icon: <Trash2 className="w-5 h-5 text-primary" />, title: '業務完了後3ヶ月以内にデータを削除', desc: '電子データは業務完了後3ヶ月以内に削除し、紙の書類はシュレッダーで物理的に廃棄します。' },
       ]
     : [
         { icon: <Lock className="w-5 h-5 text-primary" />, title: 'No sensitive documents over chat or email', desc: 'Passport, PSA Birth Certificate, and CENOMAR images are never handled over WhatsApp, Messenger, or email attachments — only through a secure environment we set up for you.' },
-        { icon: <CreditCard className="w-5 h-5 text-primary" />, title: 'Your card details never reach us', desc: 'Payments go through Stripe\'s encrypted checkout. You never send card numbers over chat or email.' },
+        { icon: <Landmark className="w-5 h-5 text-primary" />, title: 'We never ask for payment details over chat', desc: 'Payment is by bank transfer, or Wise for international clients. Account details come only in our formal instructions, and we never ask for card numbers or banking passwords over chat or email.' },
         { icon: <Trash2 className="w-5 h-5 text-primary" />, title: 'Data deleted within 3 months', desc: 'Digital copies are deleted within 3 months of completion; paper documents are physically shredded.' },
       ];
 

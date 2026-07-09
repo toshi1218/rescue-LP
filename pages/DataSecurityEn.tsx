@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Lock, CreditCard, Trash2, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Lock, Landmark, Trash2, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import { useMeta } from '../lib/useMeta';
@@ -7,7 +7,7 @@ import { useMeta } from '../lib/useMeta';
 export default function DataSecurityEn() {
   useMeta(
     'How We Protect Your Documents & Personal Data — ph-document.com',
-    'Why we never exchange passports, PSA certificates, or CENOMAR images over WhatsApp, Facebook Messenger, or email attachments — and how our secure upload environment, Stripe payments, and 3-month data deletion policy protect you.',
+    'Why we never exchange passports, PSA certificates, or CENOMAR images over WhatsApp, Facebook Messenger, or email attachments — and how our secure upload environment, safe payment practices, and 3-month data deletion policy protect you.',
     'https://ph-document.com/en/data-security/',
   );
 
@@ -18,9 +18,9 @@ export default function DataSecurityEn() {
       desc: 'We never ask you to send passport or certificate images over WhatsApp, Facebook Messenger, or as email attachments. Documents are exchanged through a secure environment we set up for you.',
     },
     {
-      icon: <CreditCard className="w-6 h-6 text-primary" />,
-      title: 'Your card details never reach us',
-      desc: 'Payments go through Stripe\'s encrypted checkout page. You enter your card details directly with Stripe — never in a chat message or email to us.',
+      icon: <Landmark className="w-6 h-6 text-primary" />,
+      title: 'We never ask for payment details over chat',
+      desc: 'Payment is by bank transfer to our Japanese account, or via Wise for international clients. Account details come only in our formal instructions — we never ask for card numbers or banking passwords in a chat message or email.',
     },
     {
       icon: <Trash2 className="w-6 h-6 text-primary" />,
@@ -165,21 +165,21 @@ export default function DataSecurityEn() {
           <h2 className="text-xl font-bold text-secondary mb-3">How payments are handled</h2>
           <p className="text-sm text-gray-600 leading-relaxed mb-3">
             We believe payment details deserve the same care as identity documents.
-            All credit card payments run through <strong>Stripe</strong>, one of the world's most trusted
-            payment platforms, on an encrypted checkout page.
+            Payment is by <strong>bank transfer</strong> to our Japanese bank account, or via <strong>Wise</strong> for
+            clients paying from outside Japan.
           </p>
           <ul className="space-y-2 text-sm text-gray-700">
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              You enter your card details directly on Stripe's page — our staff never see your card number
+              Our account details are provided only in the formal instructions after your quote is confirmed — we will never suddenly ask you over chat to send money to a different account (treat any such message as a scam impersonating us)
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              We will never ask you to send card or bank details over chat or email — please don't send them even if asked by anyone claiming to be us
+              We will never ask for card numbers, banking passwords, or one time codes over chat or email — please don't send them even if asked by anyone claiming to be us
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-              Visa, Mastercard, Amex, Apple Pay, and Google Pay are supported
+              Payment is in two stages: 50 percent to begin, and the remaining 50 percent only after you review scanned copies of the completed documents
             </li>
           </ul>
         </section>

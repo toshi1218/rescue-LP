@@ -10,7 +10,7 @@ const faqsData = {
     { q: 'フィリピンで結婚するか、日本で結婚するか迷っています', a: 'どちらのルートにも違いがあります。現在地や状況に近い流れから整理してご案内します。まずは今の状況をお聞かせください。' },
     { q: '取得にはどのくらいかかりますか？', a: '目安は約4〜6週間です。書類の種類、予約状況、現地機関の処理状況により前後します。提出予定日がある場合は、できるだけ早めにご相談ください。' },
     { q: '日本から依頼できますか？フィリピンに行く必要はありますか？', a: '多くの案件は日本からご依頼いただけます。フィリピン現地への渡航なしで進められるケースも多いです。ただし、委任状へのご署名や、一部の手続きではご本人様対応が必要になる場合があります。' },
-    { q: 'お支払い方法を教えてください', a: 'クレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）または銀行振込にてお承りしています。いずれも着手時に総額の50%をご入金いただき、書類写しのご確認後に残金50%をお支払いいただきます。' },
+    { q: 'お支払い方法を教えてください', a: '銀行振込にてお承りしています（海外からのお支払いはWise・国際送金に対応）。着手時に総額の50%をご入金いただき、書類写しのご確認後に残金50%をお支払いいただきます。' },
   ],
   en: [
     { q: 'Do you ship documents internationally?', a: 'Yes. We ship original documents and apostilled copies via DHL Express directly to your address worldwide — whether you\'re in the USA, Canada, Europe, Asia, or anywhere else. Shipping is coordinated after procurement is complete.' },
@@ -19,7 +19,7 @@ const faqsData = {
     { q: 'How long does the whole process take?', a: 'Typically 4–6 weeks from order to delivery at your address. Timelines can vary by document type and agency processing speed. Contact us to discuss your specific timeline.' },
     { q: 'Can I cancel if my visa situation changes?', a: 'Cancellations before we begin are free. After we start, actual expenses and work already performed are non-refundable. We ship only after you confirm the copies and pay the remaining balance.' },
     { q: "I'm not sure which documents I need for my visa stage...", a: "No problem. Just tell us your visa type, destination country, and your current stage and we'll identify the exact documents required." },
-    { q: 'What payment methods do you accept?', a: 'We accept credit card (Visa, Mastercard, Amex, Apple Pay, Google Pay) or bank transfer. Payment is in two stages: 50% upfront to start, and the remaining 50% after you confirm the document copies — before we ship.' },
+    { q: 'What payment methods do you accept?', a: 'We accept payment by bank transfer to our Japanese account, or via Wise for international payments. Payment is in two stages: 50% upfront to start, and the remaining 50% after you confirm the document copies — before we ship.' },
   ],
 };
 

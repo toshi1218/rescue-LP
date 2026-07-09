@@ -56,7 +56,7 @@ export default function CompanyEn() {
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Payment methods</p>
-            <p>Credit card (Visa, Mastercard, Amex, Apple Pay, Google Pay) or bank transfer. Payment is in two stages: 50% upfront to start, and 50% after confirming document copies before we ship.</p>
+            <p>Bank transfer to our Japanese account, or Wise for international payments. Payment is in two stages: 50% upfront to start, and 50% after confirming document copies before we ship.</p>
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Cancellation & refund</p>

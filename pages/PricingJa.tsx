@@ -20,7 +20,7 @@ export default function PricingJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'フィリピン書類取得代行',
-        description: 'PSA・NBI・LTO等のフィリピン書類取得代行サービス。クレジットカードまたは銀行振込にて、着手金50%・書類写し確認後残金50%の2段階決済。',
+        description: 'PSA・NBI・LTO等のフィリピン書類取得代行サービス。銀行振込（海外からはWise対応）にて、着手金50%・書類写し確認後残金50%の2段階決済。',
         url: 'https://ph-document.com/ja/ryokin/',
         provider: {
           '@type': 'Organization',
@@ -85,7 +85,7 @@ export default function PricingJa() {
           },
           {
             title: '着手金50%のお支払い',
-            description: 'クレジットカード（Stripe）または銀行振込でお支払いいただきます。入金確認後に手続きを開始します。',
+            description: '銀行振込（海外からはWise・国際送金）でお支払いいただきます。入金確認後に手続きを開始します。',
           },
           {
             title: '書類写しのご確認',
@@ -93,7 +93,7 @@ export default function PricingJa() {
           },
           {
             title: '残金50%のお支払い・発送',
-            description: '書類写しご確認後、残額50%をクレジットカードまたは銀行振込でお支払いいただきます。入金確認後に原本を発送します。',
+            description: '書類写しご確認後、残額50%を銀行振込（海外からはWise）でお支払いいただきます。入金確認後に原本を発送します。',
           },
         ]}
       />
@@ -101,7 +101,7 @@ export default function PricingJa() {
       <div className="grid gap-4 md:grid-cols-2 mb-6">
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
           <p className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">お支払い方法</p>
-          <p className="text-sm text-gray-600">クレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）または銀行振込</p>
+          <p className="text-sm text-gray-600">銀行振込（海外からのお支払いはWise・国際送金に対応）</p>
           <p className="text-xs text-gray-400 mt-1">いずれも着手金50%・書類写し確認後に残金50%の2回払い</p>
         </div>
         <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">

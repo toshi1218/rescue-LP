@@ -125,8 +125,8 @@ const Footer: React.FC = () => {
             </p>
             <p className="text-xs text-gray-500 mt-1.5">
               {isJa
-                ? '💳 お支払い: Visa · Mastercard · Amex · Apple Pay · Google Pay（Stripe）'
-                : '💳 Pay by credit card — Visa · Mastercard · Amex · Apple Pay · Google Pay'}
+                ? '🏦 お支払い: 銀行振込（海外からはWise・国際送金に対応）'
+                : '🏦 Pay by bank transfer · Wise for international payments'}
             </p>
           </div>
         )}
@@ -370,8 +370,8 @@ const Footer: React.FC = () => {
 
         <p className="mt-6 text-xs text-gray-400">
           {isJa
-            ? 'お支払い: クレジットカード（Visa · Mastercard · Amex · Apple Pay · Google Pay）'
-            : 'Payment: Credit card · Visa · Mastercard · Amex · Apple Pay · Google Pay'}
+            ? 'お支払い: 銀行振込（海外からはWise・国際送金に対応）'
+            : 'Payment: Bank transfer · Wise for international payments'}
         </p>
 
         <div className="mt-4 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
