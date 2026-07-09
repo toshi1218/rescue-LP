@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
@@ -128,7 +129,7 @@ export default function NaturalizationJa() {
         </ul>
         <p className="text-sm text-gray-600 leading-relaxed mt-4 mb-1">あわせてご確認ください：</p>
         <ul className="space-y-1.5 text-sm text-gray-700">
-          <li>・英語（フィリピン語）で書かれた書類には、翻訳者の氏名・住所・翻訳日付を記載した日本語訳文の添付が必要です</li>
+          <li>・英語（フィリピン語）で書かれた書類には、翻訳者の氏名・住所・翻訳日付を記載した日本語訳文の添付が必要です（<Link to="/ja/honyaku/" className="underline hover:text-primary">当社の翻訳サービス</Link>で対応可能です）</li>
           <li>・書類の有効期限は、申請受付の時点で発行から6か月以内が目安とされています（法務局により異なる場合があります）</li>
         </ul>
         <p className="text-xs text-gray-500 mt-3">※ 必要書類・部数・有効期限の運用は管轄の法務局によって異なります。正確な一覧は無料相談でご確認ください。代行取得のご依頼は司法書士・行政書士の先生からも承っています。</p>
@@ -289,6 +290,7 @@ export default function NaturalizationJa() {
         { path: '/ja/cenomar/', label: 'CENOMAR（独身証明書）取得代行' },
         { path: '/ja/psa-shussei-shomeisho/', label: 'PSA出生証明書の取得代行' },
         { path: '/ja/nbi-clearance/', label: 'NBI Clearance（無犯罪証明書）取得代行' },
+        { path: '/ja/honyaku/', label: 'フィリピン書類の日本語翻訳サービス' },
         { path: '/ja/gyouseishoshi-to-shorui-shuttoku/', label: '行政書士の仕事と書類取得サービスの違い' },
       ]} />
     </PageLayout>
