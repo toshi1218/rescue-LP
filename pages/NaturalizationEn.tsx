@@ -58,7 +58,7 @@ export default function NaturalizationEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included. For Japan naturalization cases, the Naturalization Documents Package (your own and your parents\' birth certificates plus your parents\' marriage certificate — 4 certificates with apostille and shipping, tax included) is JPY 132,500, and each additional certificate such as a sibling\'s birth certificate adds JPY 13,250. A real example with 6 certificates totals JPY 159,000.',
+                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included. For Japan naturalization cases, the Naturalization Documents Package covers up to 5 certificates for JPY 132,500 (tax, apostille, and shipping included), and each certificate beyond the 5th adds JPY 26,500. A real example with 6 certificates totals JPY 159,000 — about JPY 26,500 per certificate, not JPY 132,500 multiplied per certificate.',
               },
             },
             {
@@ -224,9 +224,9 @@ export default function NaturalizationEn() {
             <div className="px-4 py-3 font-bold text-center">Estimated price</div>
           </div>
           {[
-            { label: 'Naturalization Documents Package: your own + your parents\' birth certificates + your parents\' marriage certificate (4 certificates) with apostille + DHL to Japan, tax included', price: 'JPY 132,500', bold: true },
-            { label: 'Each additional certificate (e.g., a sibling\'s birth certificate)', price: '+ JPY 13,250' },
-            { label: 'Real example: 6 certificates (base package + 2 siblings\' birth certificates)', price: 'JPY 159,000 all-inclusive' },
+            { label: 'Naturalization Documents Package — up to 5 certificates (e.g., your own, your parents\' and one sibling\'s birth certificates + your parents\' marriage certificate) with apostille + DHL to Japan, tax included', price: 'JPY 132,500', bold: true },
+            { label: 'Each certificate beyond the 5th', price: '+ JPY 26,500' },
+            { label: 'Real example: 6 certificates (your own, your parents\' and two siblings\' birth certificates + your parents\' marriage certificate)', price: 'JPY 159,000 all-inclusive' },
           ].map((row, i) => (
             <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
               <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -235,11 +235,12 @@ export default function NaturalizationEn() {
           ))}
         </div>
         <p className="text-xs text-gray-500 leading-relaxed">
-          Important: the package price is <strong>not multiplied per certificate</strong> — each additional
-          family certificate adds JPY 13,250 (less than half the per-certificate rate of the base package),
-          and shipping is charged only once for the whole consolidated package.
+          Important: the package works out to <strong>JPY 26,500 per certificate</strong> (tax, apostille,
+          and shipping included) — less than half the single-document rate — and it is <strong>not</strong> JPY
+          132,500 multiplied per certificate. Shipping is charged only once for the whole consolidated package.
           Payment is 50% to start and 50% after you review scanned copies of the completed documents.
-          NBI Clearance, translations, and rush handling are quoted separately as needed.
+          Smaller orders (2–4 certificates), NBI Clearance, translations, and rush handling are quoted
+          individually in the free consultation.
         </p>
       </section>
 
@@ -256,7 +257,7 @@ export default function NaturalizationEn() {
       <FaqSection
         items={[
           { q: 'What Philippine documents are required for citizenship or naturalization?', a: 'Requirements vary by country and case. Typically PSA Birth Certificate and/or NBI Clearance with DFA Apostille. For naturalization in Japan, birth certificates of your parents and siblings and your parents\' marriage certificate are usually required as well. We confirm for your specific application.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included. For Japan naturalization cases, the Naturalization Documents Package (your own and your parents\' birth certificates plus your parents\' marriage certificate — 4 certificates with apostille and shipping, tax included) is JPY 132,500, and each additional certificate such as a sibling\'s birth certificate adds JPY 13,250. A real example with 6 certificates totals JPY 159,000.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included. For Japan naturalization cases, the Naturalization Documents Package covers up to 5 certificates for JPY 132,500 (tax, apostille, and shipping included), and each certificate beyond the 5th adds JPY 26,500. A real example with 6 certificates totals JPY 159,000 — about JPY 26,500 per certificate, not JPY 132,500 multiplied per certificate.' },
           { q: 'Can I use a PSA e-Certificate or e-Apostille for naturalization in Japan?', a: 'Japan accepts electronic apostilles in principle under the Hague Convention, and PSA launched e-Certificate / e-Apostille issuance on March 16, 2026. However, receiving offices such as the Legal Affairs Bureau have not yet established procedures to accept them, so in practice paper originals with a physical apostille are requested. We provide paper originals as standard.' },
           { q: 'Can you retrieve certificates for my family members as well?', a: 'Yes. We can retrieve birth certificates of your parents and siblings and your parents\' marriage certificate together with your own documents. PSA requires a handwritten authorization letter from you — we prepare the wording for you to copy and sign. All documents ship together in one DHL package, so shipping is charged only once.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total for standard cases, and 6–10 weeks when multiple family certificates are involved. We coordinate all documents together to minimize total time, and schedule issue dates so they stay within the validity window your authority requires.' },
