@@ -9,11 +9,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaCostEn() {
   useMeta(
-    'PSA Birth Certificate Cost [2026]: PHP 365 — Retrieve & Ship Worldwide',
-    'PSA Birth Certificate costs PHP 365/copy. We retrieve, apostille, and ship to your door from US$349 all-in. No return trip needed. Free quote.',
+    `PSA Birth Certificate Cost [${SEO_YEAR}]: PHP 365 + US$349 All-In`,
+    'Official PSA fee: PHP 365/copy. Full price — retrieval, DFA Apostille & DHL Express: US$349 all-in, 4–6 weeks. No hidden fees. USA, UAE, Canada, UK & more.',
   );
   return (
     <PageLayout
