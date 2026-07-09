@@ -15,8 +15,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function NbiGuideJa() {
   useMeta(
-    `NBI Clearance（無犯罪証明書）申請サポート【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
-    'フィリピンのNBI Clearance（無犯罪証明書）取得を渡航不要で申請サポート。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。まず無料相談。',
+    `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
+    'フィリピンNBI Clearance（無犯罪証明書）を渡航なしで取得代行。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。無料相談。',
   );
   return (
     <PageLayout

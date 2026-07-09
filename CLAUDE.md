@@ -424,3 +424,41 @@ npm run build    # runs lint-seo.sh → vite build → prerender.ts
 
 - **1セッション1〜2PR以内**を上限の目安とする
 - 同じテーマの変更はそのセッション内でまとめてからPRにする
+
+---
+
+## 2026-07-09 セッションサマリー（問い合わせKPIレポート分析・GSC実データ監査・title/descバグ発見）
+
+### 完了したこと（PR #322・ドラフト・main未マージ）
+
+1. **問い合わせKPIレポート分析**：全問い合わせ55件中、英語問い合わせの76%がChatGPT経由と判明。LLMO（AI最適化）が実際に受注を運んでいる実証データ。
+2. **GSC Performance実データ（過去6ヶ月）分析**：国別・サービス別・クエリ別に集計。日本市場はNBI/DFAアポ/LTOが1ページ目上位なのにCTRゼロの取りこぼしが多数あることが判明。米国は表示3,103でクリック1（価格調べ層・非顧客）と確認、深追い不要と結論。
+3. **NBIページ（`/ja/nbi-clearance/`）のhydration時title劣化バグ修正**：`useMeta()`が`prerender.ts`の正しいtitleを古いtitleに上書きしていた。
+4. **中東2ヶ国（Saudi Arabia・Kuwait）着地ページ新規追加**：既存の国別テンプレート方式（`lib/countryConfig.ts`）で追加。
+5. **`/en/psa-birth-certificate-cost/`（GSC最大表示 2,554impr）のtitle/desc同期修正**：4/30のCTR改善titleがJS側で古いtitleに戻されていたバグを実機Playwright検証で確認・修正。
+6. **サイト全体のtitle/descバグ監査**：117ルート中、**85ページで「`useMeta()` vs `prerender.ts`」のtitle不一致**を検出（実機検証込み）。国別テンプレート13ページは`description`が「Applying for X visaType?」vs「Moving to X?」で共通して不一致。
+
+### 今後のタスク（持ち越し・別セッション・別日程で対応）
+
+#### A. 対症療法の続き（残り約84ページのtitle/desc同期修正）
+- 原因：`pages/*.tsx`の`useMeta()`（hydration後にJSがtitleを上書き）と`scripts/prerender.ts`の静的title/descriptionが長期間の個別編集で乖離。Googleの2パスレンダリングで不安定なsnippetが出るリスク。
+- 対応方針：`prerender.ts`側（Googleが実際に見る静的HTML）に`useMeta()`を合わせる。**GSC表示回数順に1回5〜10ページ・複数セッションに分散**（1コミット20ファイル未満・1日5コミット未満厳守。5/11 65ファイル一括変更→15日後-3位下落の教訓に基づく）。
+- 優先度上位の残り（表示回数順）：`/ja/`(558)・`/en/cenomar/`(536)・`/en/drivers-license-conversion/`(442)・`/ja/apostille/`(410)・`/en/pricing/`(377)・`/ja/gaimen-kirikae-guide/`(349)・`/en/apostille/`(335)・`/ja/haigusha-visa/`(308、旧月ハードコード「2026年3月版」も混在)・`/en/apostille-processing-time/`(292)・`/en/apostille-fee/`(237)・`/en/nbi-clearance/`(219) ...以下略。詳細な全85件リストと生データは本セッションの監査スクリプトを再実行すれば再現可能（`scripts/prerender.ts`と各`pages/*.tsx`の`useMeta()`呼び出しを機械比較）。
+
+#### B. 根治（Aが一巡してから着手）
+- `useMeta.ts`と`prerender.ts`のtitle/description二重管理を構造的に解消。単一ソース化（例：ページごとのメタ定義を1箇所にまとめ、prerender.tsとuseMeta()呼び出しの両方がそこを参照する設計）。
+- 既存の「Phase B残課題」に記載の「`useMeta.ts`のhydration中の再設計」と統合して対応。
+
+#### C. 新規着地ページ2本（②結婚・③帰化、両方作る）
+- **②結婚**：配偶者ビザ・国際結婚の「必要書類」着地ページ。GSCで「配偶者ビザ フィリピン 必要書類 一覧」pos80.5、「国際結婚 フィリピン 必要書類 一覧」pos80、「カナダ 配偶者ビザ フィリピン 書類」pos96等、本命クエリが深く沈んでいる。日本＋カナダ/UK/フランス等の組み合わせを想定。
+- **③帰化**：帰化申請の「必要書類・代行」着地ページ強化。「帰化申請 フィリピン 代行」pos39.5、「帰化申請 psa」pos38、「フィリピン 帰化 書類 代行」pos51.5。既存`/ja/kika-shinsei-guide/`はガイドはあるが「代行」検索意図への接続が弱い。書類点数が多く高単価になりやすい層。
+
+#### D. LLMO強化（料金・納期・手順のプレーン明文化＋構造化データ、未着手）
+- ChatGPT経由の受注導線（問い合わせの76%）を太くするため、主要サービスページに料金・納期・手順をLLMが抜き出しやすい形（プレーンテキスト・箇条書き）で明記。
+- FAQ/HowTo/DefinedTermSet構造化データを主要ページに追加。
+
+#### E. 保留中の意思決定（ユーザーのYes/No待ち）
+- **JAトップページ（`HomeJa.tsx`／`Hero.tsx`）のH1を「書類の羅列」から「国際結婚が主柱」の見せ方に寄せるか**：SEOレベル3・共通Heroコンポーネントの変更にあたるため、着手前にユーザーの明示的な承認が必要。実データ上、ENトップは既に結婚主軸の訴求になっているが、JAトップは書類名の羅列のままという非対称が残っている。
+
+#### F. 継続監視
+- PR #322：CI green（seo-gate・Cloudflare Pages）・レビューコメントなし。**main mergeは絶対禁止**（2026-07-15まで、解除は「main merge」明示入力のみ）。マージ・クローズまで監視継続。
