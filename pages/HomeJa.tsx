@@ -82,27 +82,10 @@ export default function HomeJa() {
     },
     priceRange: '¥50,000〜¥100,000',
     currenciesAccepted: 'JPY',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '47',
-    },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Person', name: '30代 女性（国際結婚）' },
-        reviewBody: '日本語で全て対応してもらえ、フィリピンに渡航せずにCENOMARとPSA出生証明書を取得できました。進捗報告も丁寧で安心でした。',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        author: { '@type': 'Person', name: '40代 男性（配偶者ビザ申請）' },
-        reviewBody: 'NBI ClearanceのDFAアポスティーユも含めてまとめて依頼できました。入管提出に間に合い、配偶者ビザ申請が無事完了しました。',
-      },
-    ],
+    // NOTE: aggregateRating はプリレンダのテンプレート（buildLocalBusinessJsonLd）が
+    // LocalBusiness 側で出力する。自己掲載の review[] マークアップは Google の
+    // 自己申告レビュー方針上リスクが高いため JSON-LD からは除去（本文「お客様の声」
+    // 表示は維持）。実在・検証可能なレビュー（GBP等）が用意できたら再検討する。
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'フィリピン書類取得代行サービス',
