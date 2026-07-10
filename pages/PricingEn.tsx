@@ -6,11 +6,12 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function PricingEn() {
   useMeta(
-    'Pricing [2026] | Philippine Document Service — No Hidden Fees',
-    'View 2026 pricing for CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille retrieval. All plans include DHL Express worldwide shipping. Free quote.',
+    `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
+    `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille. All plans include DHL Express worldwide shipping. Free quote.`,
   );
   return (
     <PageLayout
