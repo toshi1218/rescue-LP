@@ -93,6 +93,15 @@ export default function PsaEcertificateHangukKo() {
         },
       ]}
     >
+      <header className="mb-8">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary leading-snug mb-3">
+          PSA e-Certificate・e-Apostille 한국에서 제출 가능한가요?
+        </h1>
+        <p className="text-sm md:text-base text-gray-500 leading-relaxed">
+          출입국·가족관계등록소·주민센터의 접수 현황과 PSA SECPA 원본이 안전한 이유를 정리했습니다.
+        </p>
+      </header>
+
       {/* Summary */}
       <div className="rounded-2xl border border-blue-100 bg-blue-50 p-6 mb-8">
         <p className="font-bold text-gray-900 mb-3">핵심 요약</p>

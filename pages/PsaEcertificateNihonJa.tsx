@@ -52,6 +52,15 @@ export default function PsaEcertificateNihonJa() {
         },
       ]}
     >
+      <header className="mb-8">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary leading-snug mb-3">
+          PSA電子文書・e-Apostilleは日本で使える？
+        </h1>
+        <p className="text-sm md:text-base text-gray-500 leading-relaxed">
+          入管・市区町村・総領事館の受領状況と、紙原本（PSA SECPA）が安全な理由を整理します。
+        </p>
+      </header>
+
       <SummaryBlock
         conclusion="PSA電子文書（eCertificate）とDFA eApostilleは法的に有効です。しかし2026年4月時点では、日本の入管・市区町村・総領事館の多くが引き続き紙原本を前提とした運用をしており、電子文書で提出して再提出を求められるケースが当社に実際に寄せられています。"
         points={[
