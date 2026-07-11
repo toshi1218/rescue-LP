@@ -13,6 +13,34 @@
 
 ---
 
+## ✅ main マージ前 必須チェック（毎回・省略不可）
+
+**ユーザーが「main merge」と入力しても、下記チェックカードを提示してからでないとマージしてはならない。** 感覚・博打での判断を禁止し、毎回同じ手順で機械的に確認する。判定が 🔴 の場合はマージせず、分割・延期・リベースを先に行う。
+
+マージ操作（`merge_pull_request`）の直前に、必ず次のカードを出す：
+
+```
+【main マージ前チェック — PR #xxx】
+1. リベース: base が origin/main 最新か（古ければ先にリベース＆再ビルド）
+2. 変更ファイル: 一覧＋構造ファイル該当有無（prerender/useMeta/urlMap/sitemap/
+   robots/_redirects/seoDate/hreflang/canonical/JSON-LD のいずれかに触れるか）
+3. 波及ページ数【実測】: npm run build 後、dist の *.html を main と比較して
+   「変わったHTMLファイル数」を数える（測定不能なら保守側に倒す）
+4. レバー分類: Level4個別 / Level4大量(20+) / Level3(title等) / 共通コンポーネント / 構造
+5. ローリング14日バケツ: 「完了済み」表を見て、直近14日に大きいシグナル
+   （共通コンポーネント・構造・20ページ超）を既に出していないか
+6. 混入チェック: 意図しないファイル（useMeta.ts 等）が紛れていないか
+7. 判定: 🟢 即OK / 🟡 単独デプロイ＋14日観察付きでOK / 🔴 分割 or 延期
+```
+
+- 判定基準の詳細（レバー×波及数→頻度テーブル、ローリング2週間バケツ）は `docs/merge-schedule.md`「デプロイ頻度の判断基準」を正典とする。
+- 🟡 でマージする場合は、同じ窓（14日）で他の共通コンポーネント・構造変更を出さないことを宣言してから実行する。
+- カード提示 → 判定が 🔴 でない → ユーザーの「main merge」入力が有効、の3条件が揃って初めてマージする。
+
+**過去のヒヤリ（2026-07-08）:** docs 更新PR #318 に、検証作業の副作用で `lib/useMeta.ts` のバグ版が混入し、直前にマージしていれば #307 の修正を巻き戻すところだった。マージ前の「6. 混入チェック」で検知・回避。この手順を毎回踏むことが再発防止になる。
+
+---
+
 ## Project Overview
 
 ph-document.com is a multilingual (EN/JA/KO) Philippine document service site built with Vite + React, pre-rendered to static HTML via `scripts/prerender.ts`.
