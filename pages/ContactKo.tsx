@@ -3,6 +3,7 @@ import { Send, Mail, Clock, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageLayoutKo from '../components/PageLayoutKo';
 import { trackEvent } from '../lib/analytics';
+import { isValidEmail } from '../lib/validation';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -11,6 +12,8 @@ export default function ContactKo() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [emailConfirm, setEmailConfirm] = useState('');
+  const [confirmError, setConfirmError] = useState('');
   const [referral, setReferral] = useState('');
   const [referralError, setReferralError] = useState('');
 
@@ -21,7 +24,16 @@ export default function ContactKo() {
       setEmailError('이메일 주소는 필수입니다.');
       return;
     }
+    if (!isValidEmail(emailInput)) {
+      setEmailError('이메일 주소 형식이 올바르지 않습니다 (예: example@email.com).');
+      return;
+    }
     setEmailError('');
+    if (emailInput !== emailConfirm.trim()) {
+      setConfirmError('이메일 주소가 일치하지 않습니다. 다시 확인해 주세요.');
+      return;
+    }
+    setConfirmError('');
     if (!referral) {
       setReferralError('어디서 알게 되셨는지 선택해 주세요.');
       return;
@@ -155,6 +167,34 @@ export default function ContactKo() {
               className={`w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${emailError ? 'border-red-400' : 'border-gray-200'}`}
             />
             {emailError && <p className="mt-1 text-xs text-red-500">{emailError}</p>}
+          </div>
+
+          <div>
+            <label className="block text-sm font-bold text-gray-700 mb-1">
+              이메일 주소 (확인용) <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              required
+              value={emailConfirm}
+              onChange={e => { setEmailConfirm(e.target.value); setConfirmError(''); }}
+              onPaste={e => e.preventDefault()}
+              placeholder="확인을 위해 다시 입력해 주세요"
+              className={`w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${confirmError ? 'border-red-400' : 'border-gray-200'}`}
+            />
+            {confirmError && <p className="mt-1 text-xs text-red-500">{confirmError}</p>}
+          </div>
+
+          <div>
+            <label className="block text-sm font-bold text-gray-700 mb-1">
+              메신저 연락처 <span className="text-xs font-normal text-gray-400">（선택 · 이메일이 도달하지 않을 경우 예비 연락처）</span>
+            </label>
+            <input
+              name="alt_contact"
+              type="text"
+              placeholder="예: 카카오톡 ID / WhatsApp 번호 / Facebook Messenger 이름 등"
+              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
           </div>
 
           <div>

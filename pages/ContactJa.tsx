@@ -3,6 +3,7 @@ import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
+import { isValidEmail } from '../lib/validation';
 import LineIcon from '../components/icons/LineIcon';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
@@ -17,6 +18,8 @@ export default function ContactJa() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [emailConfirm, setEmailConfirm] = useState('');
+  const [confirmError, setConfirmError] = useState('');
   const [referral, setReferral] = useState('');
   const [referralError, setReferralError] = useState('');
   const ctaVariant = getCtaVariant();
@@ -80,7 +83,16 @@ export default function ContactJa() {
             setEmailError('メールアドレスは必須です。');
             return;
           }
+          if (!isValidEmail(emailInput)) {
+            setEmailError('メールアドレスの形式が正しくないようです（例：example@email.com）。');
+            return;
+          }
           setEmailError('');
+          if (emailInput !== emailConfirm.trim()) {
+            setConfirmError('メールアドレスが一致しません。入力内容をご確認ください。');
+            return;
+          }
+          setConfirmError('');
           if (!referral) {
             setReferralError('どこでお知りになったかをお選びください。');
             return;
@@ -147,6 +159,34 @@ export default function ContactJa() {
             className={`w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${emailError ? 'border-red-400' : 'border-gray-200'}`}
           />
           {emailError && <p className="mt-1 text-xs text-red-500">{emailError}</p>}
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">
+            メールアドレス（確認用） <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            required
+            value={emailConfirm}
+            onChange={e => { setEmailConfirm(e.target.value); setConfirmError(''); }}
+            onPaste={e => e.preventDefault()}
+            placeholder="確認のためもう一度入力してください"
+            className={`w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${confirmError ? 'border-red-400' : 'border-gray-200'}`}
+          />
+          {confirmError && <p className="mt-1 text-xs text-red-500">{confirmError}</p>}
+        </div>
+
+        <div>
+          <label className="block text-sm font-bold text-gray-700 mb-1">
+            メッセージアプリの連絡先 <span className="text-xs font-normal text-gray-400">（任意・メールが届かない場合の予備連絡先）</span>
+          </label>
+          <input
+            name="alt_contact"
+            type="text"
+            placeholder="例：LINE ID / WhatsApp番号 / Facebook Messenger名 など"
+            className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+          />
         </div>
 
         <div>
