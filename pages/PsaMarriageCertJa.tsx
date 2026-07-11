@@ -122,6 +122,20 @@ export default function PsaMarriageCertJa() {
         ]}
       />
 
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">PSA婚姻証明書とは？どんなときに必要になるか</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>PSA婚姻証明書（Marriage Certificate）は、フィリピン統計局（PSA：Philippine Statistics Authority）が発行する、婚姻が正式に登録されていることを証明する公的書類です。フィリピン人配偶者との結婚に関する日本側の手続きで、婚姻の事実を公的に示すために求められます。</p>
+          <p>具体的には、次のような場面で必要になります。</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>配偶者ビザ（在留資格認定証明書）の申請</strong>：入国管理局へ、フィリピンでの婚姻を証明する書類として提出します。</li>
+            <li><strong>日本側への婚姻の反映</strong>：役所での手続きで、フィリピン側の婚姻記録の確認に使われます。</li>
+            <li><strong>帰化申請</strong>：法務局へ提出する身分関係書類の一つとして求められることがあります。</li>
+          </ul>
+          <p>なお、「婚姻記録がある（既婚である）」ことを証明するのがPSA婚姻証明書で、「婚姻記録がない（独身である）」ことを証明する<a href="/ja/cenomar/" className="text-primary underline">CENOMAR（独身証明書）</a>とは用途が逆になります。提出先がどちらを求めているかを最初に確認することが大切です。</p>
+        </div>
+      </section>
+
       <CtaBox
         title="まず「何が必要か」を確認しましょう"
         description="提出先によって必要な形式が異なります。無料相談で整理してから進めます。"
@@ -156,6 +170,23 @@ export default function PsaMarriageCertJa() {
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />
+
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">通常版と「注釈付き（Annotated）」の違い</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>PSA婚姻証明書には、通常版のほかに<strong>注釈付き（Annotated）</strong>版があります。過去にアニュルメント（婚姻無効判決）を受けた場合や、外国での離婚がフィリピンで承認された場合など、婚姻状態に変更があったときは、その事実が注釈（Annotation）として追記された版が必要になることがあります。</p>
+          <p>提出先によっては「最新の状態が反映された注釈付きのもの」を求めるケースがあります。再婚・離婚・アニュルメントなどの経緯がある方は、どちらの形式が必要かを事前に提出先へ確認しておくと、取り直しを避けられます。判断が難しい場合は、状況をお知らせいただければ整理してご案内します。</p>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">日本の提出先で気をつけたい3つのポイント</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p><strong>① アポスティーユ付きの紙の原本が原則</strong><br />日本の入国管理局・法務局・役所へ提出する場合、多くはDFAアポスティーユが付いた紙の原本（SECPAセキュリティペーパー）が必要です。電子版（e-Certificate）を受理するかは提出先によって異なるため、事前確認をおすすめします。</p>
+          <p><strong>② 発行時期（新しさ）を確認</strong><br />書類そのものに有効期限はありませんが、提出先が「発行から◯ヶ月以内」を求めることがあります。特に配偶者ビザなどでは、なるべく新しい発行日のものを求められる傾向があるため、提出予定日から逆算して取得すると安全です。</p>
+          <p><strong>③ 氏名・生年月日の表記を揃える</strong><br />パスポートや他の提出書類とローマ字表記・生年月日が一致しているかを確認してください。表記の不一致は、提出先での確認や差し戻しの原因になることがあります。</p>
+        </div>
+      </section>
 
       <FaqSection
         items={[
