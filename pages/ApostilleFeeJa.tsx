@@ -96,6 +96,20 @@ export default function ApostilleFeeJa() {
         ctaText="無料で相談する"
       />
 
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">DFAアポスティーユの公式手数料（政府手数料）の目安</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>まず、DFA（フィリピン外務省）自体に支払う「アポスティーユ認証の公式手数料」があります。これは処理区分によって異なり、目安は次のとおりです（現地の料金改定で変わることがあります）。</p>
+          <div className="rounded-xl border border-gray-100 bg-gray-50 p-4">
+            <ul className="space-y-2">
+              <li><strong>Regular（通常・数営業日）</strong>：1書類あたり約1,000ペソ前後</li>
+              <li><strong>Express（特急・より短い日数）</strong>：1書類あたり約2,000ペソ前後</li>
+            </ul>
+          </div>
+          <p>これはあくまでDFAに支払う政府手数料の部分です。実際に日本で書類を使うためには、この前後にPSA書類の取得費用・（海外からの場合）代行手数料・日本への国際郵送費が加わります。総額の内訳は次の項目もご覧ください。</p>
+        </div>
+      </section>
+
       <FeatureList
         heading="こんな方へ"
         items={[
@@ -169,6 +183,20 @@ export default function ApostilleFeeJa() {
           ]}
         />
       </SectionDivider>
+
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">「総額」で見るときのポイント（内訳）</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>料金を比較するときは、一部の費用だけでなく、日本に書類が届くまでの総額で見ることが大切です。総額は、大きく次の要素で構成されます。</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>PSA発行手数料（CENOMAR・出生証明書・婚姻証明書など、書類の種類ごと）</li>
+            <li>DFAアポスティーユの政府手数料（Regular / Express）</li>
+            <li>代行手数料（現地での申請・受け取り・日本語サポート）</li>
+            <li>国際郵送費（DHL等・追跡付き）</li>
+          </ul>
+          <p>他社の「1通○○円〜」という表示は、このうちPSA書類の取得費用だけを指していることがあります。アポスティーユ・郵送・追加書類が別途加算されると、最終的な総額は大きく変わります。当社は無料相談の時点で、これらを含めた総額を先にご提示します。</p>
+        </div>
+      </section>
 
       <FaqSection
         items={[
