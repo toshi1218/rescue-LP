@@ -66,6 +66,9 @@ const LicenseConversionJa = lazy(() => import('./pages/LicenseConversionJa'));
 const NaturalizationEn = lazy(() => import('./pages/NaturalizationEn'));
 const NaturalizationJa = lazy(() => import('./pages/NaturalizationJa'));
 const EApostilleFukaJa = lazy(() => import('./pages/EApostilleFukaJa'));
+const DataSecurityJa = lazy(() => import('./pages/DataSecurityJa'));
+const DataSecurityEn = lazy(() => import('./pages/DataSecurityEn'));
+const DataSecurityKo = lazy(() => import('./pages/DataSecurityKo'));
 const GuidesEn = lazy(() => import('./pages/GuidesEn'));
 const GuidesJa = lazy(() => import('./pages/GuidesJa'));
 const PsaCostEn = lazy(() => import('./pages/PsaCostEn'));
@@ -269,6 +272,12 @@ export default function App() {
         <Route path="/ja/kika-shinsei-guide/" element={<NaturalizationJa />} />
         <Route path="/ja/e-apostille-fuka" element={<Navigate to="/ja/e-apostille-fuka/" replace />} />
         <Route path="/ja/e-apostille-fuka/" element={<EApostilleFukaJa />} />
+        <Route path="/ja/data-security" element={<Navigate to="/ja/data-security/" replace />} />
+        <Route path="/ja/data-security/" element={<DataSecurityJa />} />
+        <Route path="/en/data-security" element={<Navigate to="/en/data-security/" replace />} />
+        <Route path="/en/data-security/" element={<DataSecurityEn />} />
+        <Route path="/ko/data-security" element={<Navigate to="/ko/data-security/" replace />} />
+        <Route path="/ko/data-security/" element={<DataSecurityKo />} />
         <Route path="/en/guides" element={<Navigate to="/en/guides/" replace />} />
         <Route path="/en/guides/" element={<GuidesEn />} />
         <Route path="/ja/guides" element={<Navigate to="/ja/guides/" replace />} />

@@ -592,8 +592,32 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ph-document.com/ja/e-apostille-fuka/</loc>
+    <loc>https://ph-document.com/ja/data-security/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/data-security/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/data-security/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/data-security/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/data-security/"/>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ko/data-security/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/data-security/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/data-security/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/data-security/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/data-security/"/>
     <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/data-security/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/data-security/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/data-security/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/data-security/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/data-security/"/>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
