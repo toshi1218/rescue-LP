@@ -5,7 +5,7 @@ import HeroBanner from '../components/HeroBanner';
 import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
-import { CheckCircle, AlertTriangle, ArrowRight, Plane, CreditCard, FileCheck, Globe } from 'lucide-react';
+import { CheckCircle, AlertTriangle, ArrowRight, Plane, CreditCard, FileCheck, Globe, Smartphone } from 'lucide-react';
 
 export default function InputSupportJa() {
   useMeta(
@@ -38,6 +38,36 @@ export default function InputSupportJa() {
           priceCurrency: 'JPY',
           priceSpecification: { '@type': 'UnitPriceSpecification', priceType: 'MinimumPrice' },
         },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'PSAのオンライン申請にはフィリピンの携帯番号が必要ですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PSAのオンライン申請ポータル（PSA Serbilis・PSAHelpline等）では、本人確認のためフィリピンの携帯電話番号あてにOTP（ワンタイムパスワード）が送信される手続きがあります。日本など海外に住んでいてフィリピンのSIM・携帯番号を持っていない場合、このOTP認証で申請が完了できないことがあります。当社の申請代行ではお客様側でフィリピンの携帯番号やOTP受信は不要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'e-Certificate（電子書類）は日本の役所や法務局で使えますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'PSAはe-Certificate（電子書類）、DFAはe-Apostille（電子認証）に対応していますが、日本の市区町村役場・法務局・出入国在留管理庁では紙の原本・物理アポスティーユを求めるケースが多くあります。提出先に受け入れの事前確認が取れている場合はe-Certificate申請が有効ですが、確認が取れていない場合は紙原本ルートのフルサービスをおすすめします。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'オンライン申請代行の料金はいくらですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '書類1種類あたり¥16,500（税込・内訳：申請代行¥15,000＋消費税¥1,500）〜です。DHL国際配送は不要で、書類はPSAからお客様の住所へ直接届きます。複数書類のご依頼は別途ご相談ください。',
+            },
+          },
+        ],
       }]}
     >
       <HeroBanner
@@ -68,6 +98,43 @@ export default function InputSupportJa() {
               <p className="text-sm text-gray-700 leading-relaxed">{text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* OTP・フィリピン携帯番号の詰まりポイント（競合が薄いKW） */}
+      <section className="mb-10">
+        <div className="rounded-2xl border border-primary/20 bg-white p-6 shadow-sm">
+          <div className="flex items-center gap-3 mb-3">
+            <Smartphone className="w-6 h-6 text-primary flex-shrink-0" />
+            <h2 className="text-xl md:text-2xl font-bold text-secondary">フィリピンの携帯番号がなくてOTPが受け取れない方へ</h2>
+          </div>
+          <p className="text-sm text-gray-700 leading-relaxed mb-3">
+            PSAのオンライン申請ポータル（PSA Serbilis・PSAHelpline 等）では、本人確認のために
+            <strong>フィリピンの携帯電話番号あてにOTP（ワンタイムパスワード）が送信される</strong>手続きがあります。
+            日本など海外に住んでいてフィリピンのSIM・携帯番号を持っていない方は、
+            <strong>このOTP認証で止まってしまい、申請を完了できない</strong>ケースが多くあります。
+            在日フィリピン系の方から特に多いご相談です。
+          </p>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            当社の申請代行では、<strong>お客様側でフィリピンの携帯番号やOTPの受信は必要ありません</strong>。
+            申請フォームの入力から本人確認・支払い・送付先設定まで当社が代行するため、
+            「フィリピンの番号がないから自分では申請できない」という壁をそのまま解消できます。
+          </p>
+          <div className="rounded-xl bg-primary/[0.04] border border-primary/15 p-4">
+            <p className="text-sm font-bold text-secondary mb-2">こんな方に特に向いています</p>
+            <ul className="space-y-1.5">
+              {[
+                '日本在住でフィリピンのSIM・携帯番号を解約してしまった',
+                'PSAオンライン申請のOTP画面から先に進めなかった',
+                'フィリピンの家族に頼まず、自分の手続きとして完結させたい',
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-2 text-sm text-gray-700">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
