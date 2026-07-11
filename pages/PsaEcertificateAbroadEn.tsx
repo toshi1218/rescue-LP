@@ -3,6 +3,7 @@ import PageLayout from '../components/PageLayout';
 import SummaryBlock from '../components/SummaryBlock';
 import CtaBox from '../components/CtaBox';
 import RelatedLinks from '../components/RelatedLinks';
+import FaqSection from '../components/FaqSection';
 import { useMeta } from '../lib/useMeta';
 import { CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 
@@ -290,6 +291,27 @@ export default function PsaEcertificateAbroadEn() {
         href="/en/contact/"
         trustNote="Free cancellation before start · Progress updates at every stage"
         service="PSA document retrieval"
+      />
+
+      <FaqSection
+        items={[
+          {
+            q: 'Can I submit a PSA e-Certificate with e-Apostille abroad?',
+            a: 'It depends on the country and the specific authority. Most immigration systems (USCIS, IRCC, Home Affairs, UKVI) allow document uploads as scans, but in practice they expect scans of the physical PSA on Security Paper (SECPA), not a PSA e-certificate (which exists only digitally). US NVC and US Embassy Manila require the physical SECPA at the interview. Canada (IRCC) also expects the official printed copy on Security Paper. UAE does not recognize Apostille at all — embassy attestation is required. Always verify with your specific authority before ordering.',
+          },
+          {
+            q: 'Can I print an e-Apostille and submit it as a hard copy?',
+            a: 'No. DFA officially states that printing an e-Apostille invalidates it. An e-Apostille must be submitted as a PDF file electronically. If your authority requires a physical document, you need to order the paper route: PSA on Security Paper (SECPA) with a physical Apostille sticker.',
+          },
+          {
+            q: 'What is the difference between PSA e-Certificate and physical PSA on Security Paper?',
+            a: 'A physical PSA certificate is printed on special Security Paper (SECPA) with embedded security features. It can be scanned and uploaded, or submitted as an original. A PSA e-Certificate is a digital-only PDF that was never in physical form. Most overseas authorities expect scans of the physical SECPA — not the e-Certificate PDF. The e-Certificate exists solely as a digital file, while the physical PSA has both a paper original and a scannable form.',
+          },
+          {
+            q: 'What is the difference between e-Apostille and paper Apostille?',
+            a: 'DFA issues two separate formats since March 2026. (1) e-Apostille: a digital PDF attached to a PSA e-Certificate. Must be submitted electronically — printing it loses its legal validity. (2) Paper Apostille: a physical sticker applied to a PSA SECPA document. Can be scanned or submitted as an original. For most overseas submissions, the paper Apostille on physical SECPA is the safer choice, as many authorities are still not set up to verify e-Apostilles online.',
+          },
+        ]}
       />
 
       <RelatedLinks
