@@ -71,6 +71,23 @@ function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// Escape the characters that break an HTML attribute / text node when a
+// title/description contains them — chiefly `"` (e.g. a description quoting
+// `PSA says "no record found"`, which otherwise truncates content="..." and
+// destroys the tag), plus `<`/`>` for safety.
+//
+// NOTE: `&` is deliberately NOT escaped. Raw `&` in titles is the current
+// production state (browsers and Google both render it as "&"), so leaving it
+// untouched keeps the blast radius to exactly the one broken page instead of
+// re-emitting ~13 title tags with cosmetic `&`→`&amp;` byte changes on the same
+// deploy. `<`/`>` never introduce a stray `&` here because we don't escape `&`.
+function escapeHtml(value: string): string {
+  return value
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 function formatJsonLd(json: JsonLd): string {
   return JSON.stringify(json, null, 2)
     .split('\n')
@@ -1700,6 +1717,10 @@ routes.push(...countryRoutes);
 function updateHead(html: string, route: RouteConfig): string {
   let result = html;
 
+  // HTML-escape title/description before injecting into <title>/content="..."
+  const safeTitle = escapeHtml(route.title);
+  const safeDescription = escapeHtml(route.description);
+
   // Update html lang attribute
   result = result.replace(
     /<html lang="[^"]*">/,
@@ -1709,13 +1730,13 @@ function updateHead(html: string, route: RouteConfig): string {
   // title
   result = result.replace(
     /<title>[^<]*<\/title>/,
-    `<title>${route.title}</title>`
+    `<title>${safeTitle}</title>`
   );
 
   // meta description
   result = result.replace(
     /<meta name="description" content="[^"]*"/,
-    `<meta name="description" content="${route.description}"`
+    `<meta name="description" content="${safeDescription}"`
   );
 
   // canonical
@@ -1733,13 +1754,13 @@ function updateHead(html: string, route: RouteConfig): string {
   // og:title
   result = result.replace(
     /<meta property="og:title" content="[^"]*"/,
-    `<meta property="og:title" content="${route.title}"`
+    `<meta property="og:title" content="${safeTitle}"`
   );
 
   // og:description
   result = result.replace(
     /<meta property="og:description" content="[^"]*"/,
-    `<meta property="og:description" content="${route.description}"`
+    `<meta property="og:description" content="${safeDescription}"`
   );
 
   // og:locale
@@ -1801,13 +1822,13 @@ function updateHead(html: string, route: RouteConfig): string {
   // twitter:title
   result = result.replace(
     /<meta name="twitter:title" content="[^"]*"/,
-    `<meta name="twitter:title" content="${route.title}"`
+    `<meta name="twitter:title" content="${safeTitle}"`
   );
 
   // twitter:description
   result = result.replace(
     /<meta name="twitter:description" content="[^"]*"/,
-    `<meta name="twitter:description" content="${route.description}"`
+    `<meta name="twitter:description" content="${safeDescription}"`
   );
 
   // og:type (article for guide pages, website for others)

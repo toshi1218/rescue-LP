@@ -10,8 +10,12 @@ const EN_DEFAULT_DESCRIPTION =
 const KO_DEFAULT_TITLE = '필리핀 서류 대행 서비스 — PSA, CENOMAR, NBI & 아포스티유';
 const KO_DEFAULT_DESCRIPTION =
   'PSA 출생증명서, CENOMAR, NBI 클리어런스, DFA 아포스티유를 필리핀에서 대행 취득하여 전 세계로 DHL 배송. 무료 상담 가능.';
-const JA_OG_IMAGE = `${BASE}/og-image-ja.png`;
-const KO_OG_IMAGE = `${BASE}/og-image-ko.png`;
+// JA/KO share the English OG image because no localized variants exist in
+// public/ (og-image-ja.png / og-image-ko.png were never added). Pointing at a
+// non-existent file made JA/KO social/chat thumbnails 404 after hydration.
+// If localized OG images are added later, restore the per-language paths here.
+const JA_OG_IMAGE = `${BASE}/og-image.png`;
+const KO_OG_IMAGE = `${BASE}/og-image.png`;
 const EN_OG_IMAGE = `${BASE}/og-image.png`;
 
 function setMeta(name: string, content: string, attr: 'name' | 'property' = 'name') {
