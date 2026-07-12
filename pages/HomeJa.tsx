@@ -102,8 +102,8 @@ export default function HomeJa() {
         },
         {
           '@type': 'Offer',
-          priceSpecification: { '@type': 'PriceSpecification', minPrice: '99800', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: '国際結婚準備パック（PSA出生証明書＋CENOMAR＋DFAアポスティーユ）', description: '日本での国際結婚手続きに必要なフィリピン側書類をまとめて代行取得。' },
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: '94000', priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: '国際結婚準備パック（PSA出生証明書＋CENOMAR＋DFAアポスティーユ）', description: '日本での国際結婚手続きに必要なフィリピン側書類をまとめて代行取得。税込・DHL送料込み。' },
         },
         {
           '@type': 'Offer',
@@ -124,9 +124,9 @@ export default function HomeJa() {
         {/* スティッキージャンプバー */}
         <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
           <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-center gap-1 overflow-x-auto">
-            <a href="#faq" className="flex-shrink-0 text-xs font-bold text-gray-600 hover:text-secondary transition-colors py-1.5 px-3 rounded-lg hover:bg-gray-50 whitespace-nowrap">よくある質問</a>
-            <span className="text-gray-200 text-xs">|</span>
             <a href="/ja/ryokin/" className="flex-shrink-0 text-xs font-bold text-gray-600 hover:text-secondary transition-colors py-1.5 px-3 rounded-lg hover:bg-gray-50 whitespace-nowrap">料金を見る</a>
+            <span className="text-gray-200 text-xs">|</span>
+            <a href="#faq" className="flex-shrink-0 text-xs font-bold text-gray-600 hover:text-secondary transition-colors py-1.5 px-3 rounded-lg hover:bg-gray-50 whitespace-nowrap">よくある質問</a>
             <span className="text-gray-200 text-xs">|</span>
             <a href="#contact" className="flex-shrink-0 text-xs font-bold text-white bg-secondary py-1.5 px-4 rounded-lg hover:bg-secondary/90 transition-all whitespace-nowrap">今すぐ相談</a>
           </div>
