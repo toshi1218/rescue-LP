@@ -8,11 +8,12 @@ import IconCardGrid from '../components/IconCardGrid';
 import StepList from '../components/StepList';
 import { FileCheck, Clock, ShieldCheck, AlertTriangle, Users, Building2 } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function BusinessKigyouJa() {
   useMeta(
-    '企業向け フィリピン人材の書類取得代行｜技能実習・特定技能対応',
-    '技能実習生・特定技能人材を雇用する企業向け。在留資格申請に必要なフィリピン書類（PSA・CENOMAR・NBI・DFAアポスティーユ）を一括代行。倫理審査用の料金資料あり。',
+    `企業向け フィリピン書類取得代行｜技能実習生・特定技能外国人採用の書類を一括手配【${SEO_YEAR_MONTH_JA}】`,
+    '技能実習生・特定技能外国人を採用する企業向けのフィリピン書類取得代行。PSA出生証明書・NBI Clearance・DFAアポスティーユをまとめて手配。倫理審査向け料金資料もご用意。',
   );
 
   return (

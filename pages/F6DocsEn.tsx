@@ -2,8 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
+import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function F6DocsEn() {
+  useMeta(
+    `F-6 Visa Philippine Documents — CENOMAR, PSA & NBI [${SEO_YEAR_MONTH_EN}]`,
+    `Korean F-6 spouse visa requires CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille. LCCM guidance included. We retrieve all documents from the Philippines and ship to Seoul.`,
+    'https://ph-document.com/en/f-6-philippines-documents/',
+  );
   const faqs = [
     {
       q: "Is CENOMAR enough on its own?",
