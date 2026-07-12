@@ -14,8 +14,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function PsaLateRegistrationJa() {
   useMeta(
     `PSAに記録がない・氏名誤りのときの対応【${SEO_YEAR_MONTH_JA}】`,
-    'PSA出生証明書が見つからない、氏名や生年月日に誤りがある。そんなときに必要になる遅延登録・訂正の違いと、ビザ申請への影響を日本語で整理します。',
-    'https://ph-document.com/ja/psa-late-registration',
+    'PSA出生証明書が見つからない、氏名や生年月日に誤りがある場合の遅延登録・訂正を整理します。',
+    'https://ph-document.com/ja/psa-late-registration/',
   );
 
   return (

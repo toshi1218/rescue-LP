@@ -7,11 +7,12 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { AlertTriangle, MapPin, Clock, Info } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function DfaGalleriaCebuEn() {
   useMeta(
-    'DFA Apostille Office Cebu — Robinsons Galleria [2026 Report]',
-    'On-site report for the DFA (Department of Foreign Affairs) Apostille office inside Robinsons Galleria, Cebu. Appointment required since December 2024. Location, procedures, and what to expect.',
+    `DFA Apostille Office Cebu — Robinsons Galleria [${SEO_YEAR} Report]`,
+    `On-site report for the DFA Apostille office inside Robinsons Galleria, Cebu. Appointment required since December 2024. Location, procedures, and what to expect.`,
   );
   return (
     <PageLayout

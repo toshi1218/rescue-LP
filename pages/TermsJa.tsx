@@ -5,8 +5,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function TermsJa() {
   useMeta(
-    '利用規約 | フィリピン書類取得代行センター',
-    'フィリピン書類取得代行センター（株式会社IGRS）の利用規約。ご依頼前にお読みください。',
+    '利用規約｜フィリピン書類取得代行センター（IGRS Inc.）',
+    'フィリピン書類取得代行センター（IGRS Inc.）の利用規約。サービス内容・料金・キャンセルポリシー・免責事項・準拠法についてご説明します。',
   );
   return (
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '利用規約' }]}>
