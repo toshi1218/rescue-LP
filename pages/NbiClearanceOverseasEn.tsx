@@ -9,11 +9,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { Globe, AlertTriangle, FileCheck, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function NbiClearanceOverseasEn() {
   useMeta(
-    'NBI Clearance from Overseas — How OFWs and Filipinos Abroad Get It | Philippine Document Service',
-    'Living outside the Philippines and need NBI Clearance? We retrieve it without you going back. HIT cases handled. DFA Apostille included. Ships via DHL to your address worldwide.',
+    `NBI Clearance from Overseas [${SEO_YEAR_MONTH_EN}] — No Trip Needed`,
+    `Need NBI Clearance while living abroad? We retrieve it without you returning to the Philippines. HIT cases handled. DFA Apostille included. Free consultation.`,
   );
   return (
     <PageLayout

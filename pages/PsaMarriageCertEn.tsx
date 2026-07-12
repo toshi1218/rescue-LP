@@ -8,12 +8,13 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 import RelatedArticles from '../components/RelatedArticles';
 
 export default function PsaMarriageCertEn() {
   useMeta(
-    'PSA Marriage Certificate + Apostille Service | Philippine Document Service',
-    'PSA Marriage Certificate is an official marriage record from the Philippine Statistics Authority. Required for spouse visas and immigration. We retrieve it with DFA Apostille and ship worldwide.',
+    `PSA Marriage Certificate [${SEO_YEAR}] — Retrieve + Apostille + Ship Worldwide`,
+    `Need a PSA Marriage Certificate from abroad? We retrieve the original, get DFA Apostille, and ship via DHL — from US$349 all-in. No trip needed. Free quote.`,
   );
   return (
     <PageLayout

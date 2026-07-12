@@ -8,11 +8,12 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Car } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function DriverRecordEn() {
   useMeta(
-    "LTO Driver's Record from the Philippines | Philippine Document Service",
-    "LTO Driver's Record from the Philippines — retrieved by our local staff with DFA Apostille. Required for foreign license conversion and background checks.",
+    `LTO Driver's Record Service [${SEO_YEAR_MONTH_EN}]`,
+    `Need an LTO Driver's Record for license conversion or employment verification? We retrieve it with DFA Apostille and ship to you. Ideal for employers and spouses. Free consultation.`,
   );
   return (
     <PageLayout
