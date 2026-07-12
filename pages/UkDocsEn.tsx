@@ -9,11 +9,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function UkDocsEn() {
   useMeta(
-    'PH Documents for UK Immigration [April 2026]',
-    'Applying for a UK spouse visa or settlement? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille for UKVI. Ships to the UK via DHL. Free consultation.',
+    `PH Documents for UK Immigration [${SEO_YEAR_MONTH_EN}]`,
+    `Applying for a UK spouse visa? We retrieve CENOMAR, PSA Birth Certificate & NBI Clearance with DFA Apostille for UKVI. Ships to the UK. Free consultation.`,
   );
   return (
     <PageLayout

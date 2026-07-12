@@ -11,11 +11,12 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { FileCheck, Globe, Users, Shield, FileText, Plane, CheckCircle, Clock, Stamp, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function CanadaDocsJa() {
   useMeta(
-    'カナダ移民ビザのフィリピン書類取得代行 [2026年3月] — IRCC対応・DHL郵送',
-    'カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。',
+    `カナダ移民ビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — IRCC対応・DHL郵送`,
+    `カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。`,
   );
   return (
     <PageLayout

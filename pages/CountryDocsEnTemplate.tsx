@@ -17,7 +17,7 @@ const BASE = 'https://ph-document.com';
 export default function CountryDocsEnTemplate({ config }: { config: CountryConfig }) {
   useMeta(
     `PH Documents for ${config.name} Immigration [${SEO_YEAR_MONTH_EN}]`,
-    `Applying for ${config.name} ${config.visaType}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
+    `Moving to ${config.name}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
   );
   return (
     <PageLayout
