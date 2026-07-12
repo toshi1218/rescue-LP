@@ -4,6 +4,7 @@ import PageLayout from '../components/PageLayout';
 import GuideLinks from '../components/GuideLinks';
 import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
+import { SEO_TITLE_BADGE_YEAR_EN, SEO_YEAR } from '../lib/seoDate';
 
 const COUNTRY_LINKS = [
   { label: 'United States (K-1 / CR-1)', path: '/en/us-visa-documents/' },
@@ -14,8 +15,8 @@ const COUNTRY_LINKS = [
 
 export default function GuidesEn() {
   useMeta(
-    'Philippine Document Guides [2026] | FAQ & How-To',
-    'Complete 2026 guide library for Philippine documents: What is CENOMAR? What is NBI Clearance? What is DFA Apostille? Answers for US visa, K-1, CR-1, and immigration applicants.',
+    `Philippine Document Guides ${SEO_TITLE_BADGE_YEAR_EN} | FAQ & How-To`,
+    `${SEO_YEAR} guide library for Philippine documents: CENOMAR, NBI Clearance, DFA Apostille explained. Answers for US visa, K-1, CR-1, and immigration applicants.`,
   );
   return (
     <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Guides' }]}>
