@@ -8,11 +8,12 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function SpouseVisaEn() {
   useMeta(
-    'Spouse Visa Document Service [April 2026] | PSA & NBI',
-    'Overwhelmed by Philippine document requirements for a spouse visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship everything to you. Free consultation for petitioners.',
+    `Philippine Documents for Spouse Visa [${SEO_YEAR}] — PSA, CENOMAR, NBI + Apostille`,
+    `Which Philippine documents do you need for a spouse visa? PSA Marriage Certificate, CENOMAR, NBI Clearance + DFA Apostille. We retrieve and ship worldwide. Free quote.`,
   );
   return (
     <PageLayout

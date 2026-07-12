@@ -8,11 +8,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function DocumentChecklistByVisaEn() {
   useMeta(
-    'Philippine Document Checklist by Visa Type — K-1, CR-1, Spouse Visa | Philippine Document Service',
-    'Which Philippine documents do you need? Complete checklist by visa type: K-1 fiancé visa, CR-1/IR-1 spouse visa, Canada spousal sponsorship, Australia partner visa, UK spouse visa, UAE, and Japan. CENOMAR, PSA, NBI — all explained.',
+    `Philippine Document Checklist by Visa Type [${SEO_YEAR_MONTH_EN}] | K-1, CR-1, Spouse Visa`,
+    `Which Philippine documents do you need? Complete checklist by visa type: K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa. CENOMAR, PSA, NBI — all explained.`,
   );
   return (
     <PageLayout

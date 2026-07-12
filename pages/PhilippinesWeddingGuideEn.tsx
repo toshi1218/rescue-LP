@@ -8,11 +8,12 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, Clock } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PhilippinesWeddingGuideEn() {
   useMeta(
-    'Getting Married in the Philippines — Complete 2026 Guide',
-    'Step-by-step guide to Philippines-first marriage for Filipino-Japanese couples. Covers LCCM, Marriage License, ceremony, PSA marriage certificate, and reporting the marriage to Japan.',
+    `Getting Married in the Philippines — Complete ${SEO_YEAR} Guide`,
+    `Philippines-first marriage guide for Filipino-Japanese couples: LCCM, Marriage License, ceremony, PSA marriage certificate, and reporting to Japan.`,
   );
   return (
     <PageLayout

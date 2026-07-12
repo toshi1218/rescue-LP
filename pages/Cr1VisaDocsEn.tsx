@@ -9,11 +9,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Clock } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function Cr1VisaDocsEn() {
   useMeta(
-    'CR-1 Visa Documents — NVC Ready [April 2026]',
-    'US petitioner for CR-1/IR-1 visa? We retrieve PSA Marriage Certificate, NBI Clearance + DFA Apostille for NVC submission and ship to your US address. Free consultation for American petitioners.',
+    `CR-1 Visa Philippine Documents [${SEO_YEAR}] — PSA + Apostille for NVC`,
+    `CR-1/IR-1 spouse visa? Get PSA Marriage Certificate, Birth Certificate, NBI Clearance + DFA Apostille ready for NVC. We handle everything from abroad. Free quote.`,
   );
   return (
     <PageLayout
