@@ -30,7 +30,8 @@ const ja = {
   // ── Hero ─────────────────────────────────────────────────────────────
   'hero.badge': '日本法人・現地スタッフ対応',
   'hero.h1line1': 'フィリピン書類の整理・取得代行',
-  'hero.h1line2': '（CENOMAR・PSA・NBI・LTO・アポスティーユ）',
+  // ​（ゼロ幅スペース）は break-keep 環境での折返し許可位置。「アポスティーユ」等の単語中間での改行を防ぐ
+  'hero.h1line2': '（CENOMAR・​PSA・​NBI・​LTO・​アポスティーユ）',
   'hero.h1line3': '提出先に合わせて、必要な書類・部数を揃えます。',
   'hero.description': '国際結婚・配偶者ビザ・外免切替で必要な書類を整理し、フィリピンでの取得・アポスティーユ対応まで進めます。フィリピンに知人・コネがない方も、渡航不要・日本語のみで完結します。',
   'hero.disclaimer': '※お手続きにあたり、弊社で作成したauthorization letterへのご署名や、身分証明書のコピー提出をお願いする場合があります。やり取り自体は日本語で進めます。',
@@ -121,12 +122,13 @@ const ja = {
   'whyus.3.desc': '書類取得のご案内と、専門資格者への確認が必要な部分を分けてお伝えします。',
   'whyus.4.title': '日本法人として登記・確認できます',
   'whyus.4.desc': '株式会社IGRS（和歌山登記）として会社情報を公開しています。身元のわからない業者へのリスクなし。',
+  // ラベル・値の ​（ゼロ幅スペース）は break-keep 環境での折返し許可位置（単語中間での改行防止）
   'whyus.stat1.label': '依頼方法',
-  'whyus.stat1.value': '渡航ゼロで完結',
-  'whyus.stat2.label': '着手前キャンセル',
+  'whyus.stat1.value': '渡航ゼロで​完結',
+  'whyus.stat2.label': '着手前​キャンセル',
   'whyus.stat2.value': '無料',
   'whyus.stat3.label': '返信スピード',
-  'whyus.stat3.value': '平均24時間以内',
+  'whyus.stat3.value': '平均​24時間​以内',
   'whyus.cta': '書類整理を相談する',
   'whyus.ctaAriaLabel': '書類整理を無料相談する',
   'whyus.guarantee.title': '書類取得保証',

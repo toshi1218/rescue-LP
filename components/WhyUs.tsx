@@ -61,8 +61,8 @@ const WhyUs: React.FC = () => {
             return (
               <div key={labelKey} className={`bg-gradient-to-br ${gradients[i]} rounded-2xl p-4 text-center relative overflow-hidden border border-white/80 shadow-card`}>
                 <div className={`absolute top-0 left-0 right-0 h-0.5 rounded-t-2xl ${barColors[i]}`} />
-                <p className={`text-base font-extrabold ${textColors[i]} leading-tight mt-1`}>{t(valueKey)}</p>
-                <p className="text-[11px] font-bold text-gray-600 mt-1 leading-snug">{t(labelKey)}</p>
+                <p className={`text-base font-extrabold ${textColors[i]} leading-tight mt-1 break-keep`}>{t(valueKey)}</p>
+                <p className="text-[11px] font-bold text-gray-600 mt-1 leading-snug break-keep">{t(labelKey)}</p>
               </div>
             );
           })}

@@ -6,6 +6,7 @@ import { useLanguage } from '../lib/i18n';
 const faqsData = {
   ja: [
     { q: '何を取ればよいか、自分でもまだ分かっていません', a: '大丈夫です。まずは用途を確認し、何が必要になりやすいかを整理します。国際結婚、配偶者ビザ準備、外免切替など、今の状況をお知らせいただければ、進め方からご案内します。' },
+    { q: '総額でいくらかかりますか？', a: 'すべて税込・DHL送料込みの総額表示です。PSAオンライン申請代行は16,500円〜、書類1種＋DFAアポスティーユ＋DHLは61,000円〜、国際結婚準備パック（CENOMAR＋出生証明書＋アポスティーユ）は94,000円〜が目安です。後からの追加請求はなく、正確な金額は無料見積もりでご提示します。' },
     { q: 'CENOMARだけあれば足りますか？', a: '提出先によって異なります。出生証明書や婚姻証明書、アポスティーユなどが必要になる場合もあります。まず用途と提出先をお知らせいただければ、必要になりやすい書類を整理してご案内します。' },
     { q: 'フィリピンで結婚するか、日本で結婚するか迷っています', a: 'どちらのルートにも違いがあります。現在地や状況に近い流れから整理してご案内します。まずは今の状況をお聞かせください。' },
     { q: '取得にはどのくらいかかりますか？', a: '目安は約4〜6週間です。書類の種類、予約状況、現地機関の処理状況により前後します。提出予定日がある場合は、できるだけ早めにご相談ください。' },
@@ -13,6 +14,7 @@ const faqsData = {
     { q: 'お支払い方法を教えてください', a: 'クレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）または銀行振込にてお承りしています。いずれも着手時に総額の50%をご入金いただき、書類写しのご確認後に残金50%をお支払いいただきます。' },
   ],
   en: [
+    { q: 'How much does it cost in total?', a: 'All prices are all-in (document retrieval + DHL Express shipping). A single document starts at US$199, a single document with DFA Apostille at US$349 all-in, and the International Marriage Basic Package (PSA Birth Certificate + CENOMAR + Apostille) at US$399. No hidden fees — we confirm the exact total in your free quote before you pay anything.' },
     { q: 'Do you ship documents internationally?', a: 'Yes. We ship original documents and apostilled copies via DHL Express directly to your address worldwide — whether you\'re in the USA, Canada, Europe, Asia, or anywhere else. Shipping is coordinated after procurement is complete.' },
     { q: 'Which countries do you serve?', a: 'We serve clients worldwide — including the USA, Canada, Australia, UK, Europe, Asia, the Middle East, and all other Hague Convention countries. If your country requires DFA Apostille authentication, we handle it. Contact us to confirm for your specific country.' },
     { q: 'What documents are needed for a K-1 or CR-1 visa?', a: 'For USCIS and NVC: typically a PSA Birth Certificate, CENOMAR (if single), and NBI Clearance. A DFA Apostille is usually required for the US Embassy interview stage. We confirm exact requirements for your case.' },

@@ -498,9 +498,9 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       </Suspense>
-      {/* <Suspense fallback={null}>
+      <Suspense fallback={null}>
         <FloatingChatWidget />
-      </Suspense> */}
+      </Suspense>
       </ErrorBoundary>
     </>
   );

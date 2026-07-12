@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight, ChevronDown } from 'lucide-react';
+import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight } from 'lucide-react';
 
 const packs = [
   {
@@ -44,7 +44,7 @@ const packs = [
     numColor: 'text-amber-400',
   },
   {
-    to: '/ja/kikka-shinsei/',
+    to: '/ja/kika-shinsei-guide/',
     icon: Award,
     title: '帰化申請書類パック',
     desc: '法務局への帰化申請に必要なフィリピン書類（出生・婚姻・NBI）の取得サポートと費用を確認できます',
@@ -56,9 +56,6 @@ const packs = [
 ];
 
 const ServicePacks: React.FC = () => {
-  const [expanded, setExpanded] = useState(false);
-  const visiblePacks = expanded ? packs : packs.slice(0, 2);
-
   return (
     <section className="py-20 bg-white">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
@@ -70,7 +67,7 @@ const ServicePacks: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {visiblePacks.map((pack, i) => (
+          {packs.map((pack, i) => (
             <Link
               key={pack.to}
               to={pack.to}
@@ -103,17 +100,6 @@ const ServicePacks: React.FC = () => {
           ))}
         </div>
 
-        {!expanded && (
-          <div className="text-center mt-4">
-            <button
-              onClick={() => setExpanded(true)}
-              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
-            >
-              <ChevronDown className="w-4 h-4" />
-              {`残り${packs.length - 2}件を見る`}
-            </button>
-          </div>
-        )}
       </div>
     </section>
   );
