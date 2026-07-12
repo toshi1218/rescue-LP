@@ -14,10 +14,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { FileText, Stamp, CheckCircle, Clock, AlertTriangle, Building } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function DriverRecordJa() {
   useMeta(
-    'LTO運転経歴証明書代行【2026年3月】外免切替・企業採用',
+    `LTO運転経歴証明書代行【${SEO_YEAR_MONTH_JA}】外免切替・企業採用`,
     'フィリピン免許の外免切替に必要なLTO運転経歴証明書を代行取得。DFAアポスティーユ・オリジナルレシート込みで都道府県の免許センターへの提出形式に対応。複数名まとめ依頼可。無料相談。',
   );
   return (

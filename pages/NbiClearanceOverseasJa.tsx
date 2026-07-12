@@ -14,8 +14,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function NbiClearanceOverseasJa() {
   useMeta(
     `海外在住でも取れるNBIクリアランス【${SEO_YEAR_MONTH_JA}】`,
-    'フィリピンに戻らずにNBIクリアランスを取りたい方へ。OFWや海外在住のフィリピン人向けに、代理申請、HIT対応、アポスティーユ、海外発送までを日本語で案内します。',
-    'https://ph-document.com/ja/nbi-clearance-overseas',
+    'フィリピンに戻らずにNBIクリアランスを取りたい方へ。代理申請、HIT対応、海外発送までを日本語で案内します。',
+    'https://ph-document.com/ja/nbi-clearance-overseas/',
   );
 
   return (

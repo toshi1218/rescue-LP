@@ -12,8 +12,8 @@ import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function LtoKoyoKakuninJa() {
   useMeta(
-    `フィリピン人採用のLTO書類3種【${SEO_YEAR_MONTH_JA}】License Certification・License History・No Apprehension`,
-    'フィリピン人ドライバーを採用する会社向け。雇用時に押さえるLTO書類（License Certification・License History・No Apprehension Certificate）の違い・手数料・処理時間と、採用チェックリストを解説。',
+    `フィリピン人採用のLTO書類3種｜License Certification・License History・No Apprehension【${SEO_YEAR_MONTH_JA}】`,
+    'フィリピン人ドライバーを採用する会社向け。雇用時に押さえるLTO書類（License Certification・License History・No Apprehension Certificate）の違いと取得方法を解説。採用チェックリスト付き。',
   );
 
   return (

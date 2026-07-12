@@ -8,11 +8,12 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function PhilippinesWeddingGuideJa() {
   useMeta(
-    'フィリピンで先に婚姻届を出す方法【2026年3月】',
-    'フィリピン先行婚の手続きと必要書類を解説。PSA婚姻証明書・DFAアポスティーユの取得から日本への届出まで、当センターが代行します。',
+    `フィリピンで結婚する全ガイド【${SEO_YEAR_MONTH_JA}】手続きの流れ・必要書類・注意点`,
+    'フィリピンで婚姻を成立させる（フィリピン先行婚）の全手続きを解説。LCCMの取得・Marriage License・挙式・PSA婚姻証明書の反映待ち・日本への報告的届出まで、ステップ別にまとめました。',
   );
   return (
     <PageLayout
