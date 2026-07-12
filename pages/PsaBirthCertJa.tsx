@@ -18,7 +18,7 @@ export default function PsaBirthCertJa() {
   useMeta(
     `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR_MONTH_JA}】PSA・アポスティーユ込み`,
     'フィリピン出生証明書（PSA）を日本から取り寄せる方法。現地スタッフがPSA申請〜DFAアポスティーユまで代行し紙の原本を郵送。国際結婚・ビザ・帰化に。通常4〜6週間。無料相談受付中。',
-    'https://ph-document.com/ja/psa-shussei-shomeisho',
+    'https://ph-document.com/ja/psa-shussei-shomeisho/',
   );
   return (
     <PageLayout
