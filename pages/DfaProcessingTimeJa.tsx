@@ -85,6 +85,24 @@ export default function DfaProcessingTimeJa() {
         lastUpdated="2026年3月1日"
       />
 
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">【2026年3月16日以降】PSAのe-certificate移行について</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                2026年3月16日より、PSAはCENOMAR・出生証明書・婚姻証明書についてデジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）の発行に完全移行しました。以下のRegular/Express日数は、当社が紙の原本＋DFAアポスティーユ形式で代行する場合の目安です（PSA以外のNBIクリアランス等は従来どおりDFA窓口での処理です）。
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>日本の市区町村役場・法務局・出入国在留管理庁は、e-Apostilleのプリントアウトを原則として受け付けません。</strong>
+                最新のスケジュール感は無料相談で確認してください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <SummaryBlock
         conclusion="DFAアポスティーユの処理期間は通常4〜5営業日。提出予定日を考慮してスケジュールをご案内します。"
         points={[
