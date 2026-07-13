@@ -117,6 +117,7 @@ const NbiClearanceOverseasJa = lazy(() => import('./pages/NbiClearanceOverseasJa
 const PsaLateRegistrationJa = lazy(() => import('./pages/PsaLateRegistrationJa'));
 const PsaEcertificateNihonJa = lazy(() => import('./pages/PsaEcertificateNihonJa'));
 const InputSupportJa = lazy(() => import('./pages/InputSupportJa'));
+const PrcApostilleJa = lazy(() => import('./pages/PrcApostilleJa'));
 const HonyakuJa = lazy(() => import('./pages/HonyakuJa'));
 const BusinessHomeJa = lazy(() => import('./pages/BusinessHomeJa'));
 const BusinessTourokushienJa = lazy(() => import('./pages/BusinessTourokushienJa'));
@@ -368,6 +369,8 @@ export default function App() {
         <Route path="/ja/psa-ecertificate-nihon/" element={<PsaEcertificateNihonJa />} />
         <Route path="/ja/psa-input-support" element={<Navigate to="/ja/psa-input-support/" replace />} />
         <Route path="/ja/psa-input-support/" element={<InputSupportJa />} />
+        <Route path="/ja/prc-apostille" element={<Navigate to="/ja/prc-apostille/" replace />} />
+        <Route path="/ja/prc-apostille/" element={<PrcApostilleJa />} />
         <Route path="/ja/honyaku" element={<Navigate to="/ja/honyaku/" replace />} />
         <Route path="/ja/honyaku/" element={<HonyakuJa />} />
         <Route path="/ja/business" element={<Navigate to="/ja/business/" replace />} />

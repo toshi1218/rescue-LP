@@ -966,6 +966,18 @@ const routes: RouteConfig[] = [
     lastmod: '2026-05-15',
   },
   {
+    path: '/ja/prc-apostille/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'prc-apostille', 'index.html'),
+    title: 'PRC証明書 アポスティーユ取得代行｜専門資格・免許の認証【IGRS】',
+    description: 'PRC（フィリピン専門資格委員会）発行の資格・免許証明書のDFA物理アポスティーユ取得・国際発送を代行。帰化申請・海外就労・資格の海外承認に。非PSA書類のため物理アポスティーユに対応します。',
+    canonical: `${BASE}/ja/prc-apostille/`,
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/prc-apostille/`,
+    datePublished: '2026-07-13',
+    lastmod: '2026-07-13',
+  },
+  {
     path: '/ja/honyaku/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'honyaku', 'index.html'),
     title: 'フィリピン書類の日本語翻訳サービス｜1部¥7,700（税込）〜【IGRS】',
