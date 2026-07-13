@@ -6,7 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
-import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
+import { Clock, Calendar, FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
 export default function DfaProcessingTimeEn() {
@@ -81,6 +81,23 @@ export default function DfaProcessingTimeEn() {
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
+
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: PSA certificates are e-Certificate only</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                The PSA now issues civil registry documents exclusively as digital PSA eCertificates with a digital DFA e-Apostille. The Regular/Express timelines below apply to our paper-original Apostille service (NBI Clearance and other non-PSA documents are unaffected and still processed as before at DFA).
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>Printing an e-Apostille does not make it valid.</strong> Share your destination authority and we will confirm the correct format and current schedule.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <SummaryBlock
         conclusion="DFA Apostille takes 5-10 business days. We help you meet your visa deadline with express options."

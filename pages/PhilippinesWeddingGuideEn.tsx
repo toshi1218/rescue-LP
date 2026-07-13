@@ -66,6 +66,23 @@ export default function PhilippinesWeddingGuideEn() {
         lastUpdated="April 1, 2026"
       />
 
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: PSA Marriage Certificate is e-Certificate only</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                The PSA now issues the Marriage Certificate exclusively as a digital PSA eCertificate with a digital DFA e-Apostille.
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>Printing an e-Apostille does not make it valid,</strong> and Japan's municipal offices generally require a physical paper original for the reportive marriage registration. We continue to provide it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <article className="space-y-10">
 
         {/* Introduction */}

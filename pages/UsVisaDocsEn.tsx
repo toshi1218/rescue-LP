@@ -7,7 +7,7 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
-import { FileCheck, Globe, Users, Heart } from 'lucide-react';
+import { FileCheck, Globe, Users, Heart, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
 export default function UsVisaDocsEn() {
@@ -89,6 +89,23 @@ export default function UsVisaDocsEn() {
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
+
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: PSA certificates are e-Certificate only</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                The PSA now issues CENOMAR, Birth Certificate, and Marriage Certificate exclusively as digital PSA eCertificates with a digital DFA e-Apostille. Walk-in physical Apostille on a printed document is no longer available directly at DFA.
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>US NVC and the US Embassy Manila require a physical PSA document on Security Paper (SECPA) with a paper Apostille.</strong> Printing an e-Apostille does not satisfy this. We continue to provide the paper original.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <SummaryBlock
         conclusion="K-1, CR-1, or IR-1 visa? We retrieve all required Philippine documents with Apostille and ship to you."

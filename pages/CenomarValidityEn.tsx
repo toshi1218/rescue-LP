@@ -6,7 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
-import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
+import { Clock, Calendar, FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import RelatedArticles from '../components/RelatedArticles';
 
@@ -82,6 +82,23 @@ export default function CenomarValidityEn() {
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
+
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: CENOMAR is e-Certificate only</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                The PSA now issues CENOMAR exclusively as a digital PSA eCertificate with a digital DFA e-Apostille. This may also affect how the validity window is counted for some authorities.
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>Printing an e-Apostille does not make it valid.</strong> We continue to provide the physical paper original for authorities that require it, timed to your submission deadline.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <SummaryBlock
         conclusion="CENOMAR validity matters for your visa timeline. We time the retrieval so it does not expire before submission."
