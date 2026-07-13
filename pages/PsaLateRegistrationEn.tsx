@@ -146,7 +146,7 @@ export default function PsaLateRegistrationEn() {
         steps={[
           { title: 'Local Civil Registry transmits the corrected record to PSA', description: 'After court order or civil registry approval, the corrected record is transmitted to PSA. This transmission process alone can take 3–6 months.' },
           { title: 'PSA issues the corrected document', description: 'Once the record appears in the PSA database, we retrieve the corrected birth certificate — official PSA security paper copy.' },
-          { title: 'DFA Apostille authentication', description: 'We submit the document to the DFA for physical Apostille certification for international immigration use.' },
+          { title: 'DFA e-Apostille authentication', description: 'We handle DFA e-Apostille (electronic) certification for international immigration use. Since March 2026, DFA no longer issues a paper Apostille for PSA documents.' },
           { title: 'DHL delivery worldwide', description: 'The corrected document with Apostille is shipped to your address with full tracking. Once the PSA record is available, our part takes 4–6 weeks.' },
         ]}
       />

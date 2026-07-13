@@ -22,7 +22,7 @@ export default function ApostilleGuideEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service',
-        description: 'We handle DFA Apostille authentication for PSA, NBI, CENOMAR, and LTO documents. Physical paper Apostille provided. Ships worldwide via DHL. No trip to the Philippines needed.',
+        description: 'We handle DFA Apostille authentication for PSA, NBI, CENOMAR, and LTO documents. Since March 2026, PSA civil documents (birth, marriage, CENOMAR) receive an electronic e-Apostille; non-PSA documents such as NBI and LTO can still receive a paper Apostille. Ships worldwide via DHL. No trip to the Philippines needed.',
         url: 'https://ph-document.com/en/apostille/',
         provider: {
           '@type': 'Organization',
@@ -59,7 +59,7 @@ export default function ApostilleGuideEn() {
               name: 'What is the difference between e-Apostille and paper Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFA issues two formats. e-Apostille is a digital-only PDF — printing it does NOT make it valid. Paper Apostille is a physical sticker on a PSA SECPA document. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. US NVC, US Embassy Manila, and UAE require physical paper Apostille on SECPA. We provide paper Apostille originals shipped via DHL.',
+                text: 'DFA issues two formats. e-Apostille is a digital-only PDF — printing it does NOT make it valid. Paper Apostille is a physical sticker. Since March 2026, PSA civil documents (birth, marriage, CENOMAR) receive an e-Apostille only, while non-PSA documents such as NBI and LTO can still receive a paper Apostille. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. US NVC and US Embassy Manila expect the physical PSA on SECPA; confirm how they accept its e-Apostille. For non-PSA documents we provide paper Apostille originals shipped via DHL.',
               },
             },
             {
@@ -117,8 +117,8 @@ export default function ApostilleGuideEn() {
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Your authority requires physical paper Apostille — not e-Apostille',
-            description: 'US NVC, US Embassy Manila, and UAE require a physical PSA on Security Paper (SECPA) with a paper Apostille. Canada (IRCC), Australia, and UK accept e-Apostille PDFs. We provide paper Apostille originals for cases where digital is not accepted.',
+            title: 'Your authority expects the physical PSA document — confirm how it accepts the e-Apostille',
+            description: 'US NVC, US Embassy Manila, and UAE expect a physical PSA on Security Paper (SECPA). Since March 2026, DFA authenticates PSA documents with an electronic e-Apostille (no paper sticker), so confirm acceptance in advance; Canada (IRCC), Australia, and UK accept e-Apostille PDFs. For non-PSA documents such as NBI, we provide paper Apostille originals where digital is not accepted.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -163,8 +163,8 @@ export default function ApostilleGuideEn() {
         steps={[
           { title: 'Tell us which documents need Apostille and your deadline', description: 'Share the document type (CENOMAR, NBI, PSA Birth Certificate, etc.), the destination country, and your submission deadline.' },
           { title: 'We confirm Apostille requirements per destination authority', description: 'Requirements differ by country — we verify whether a paper Apostille or e-Apostille is required and confirm the scope before quoting.' },
-          { title: 'We retrieve the document and submit to the DFA Apostille queue', description: 'Our team requests the source document from PSA or NBI, then submits it to DFA for official Apostille authentication in the Philippines.' },
-          { title: 'Apostilled original shipped via DHL — accepted in 124+ countries', description: 'The physical Apostilled document is shipped to your address with DHL tracking. Estimated total: 4–6 weeks.' },
+          { title: 'We retrieve the document and handle DFA Apostille authentication', description: 'Our team requests the source document from PSA or NBI, then handles DFA Apostille authentication in the Philippines.' },
+          { title: 'Authenticated document delivered — accepted in 124+ countries', description: 'The authenticated document is delivered to you: a physical paper Apostille for documents such as NBI Clearance, or an electronic e-Apostille for PSA documents (since March 2026, DFA issues only e-Apostille for PSA civil documents). Estimated total: 4–6 weeks.' },
         ]}
       />
 
@@ -207,7 +207,7 @@ export default function ApostilleGuideEn() {
       <FaqSection
         items={[
           { q: 'How much does it cost?', a: 'DFA Apostille is included in all service packages starting at US$349. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.' },
-          { q: 'What is the difference between e-Apostille and paper Apostille?', a: 'DFA issues two formats. (1) e-Apostille — a digital PDF that must be submitted electronically. Printing an e-Apostille does not make it valid. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs. (2) Paper Apostille — a physical sticker on a PSA SECPA document, required by US NVC, US Embassy Manila, and UAE. We provide paper Apostille originals shipped via DHL.' },
+          { q: 'What is the difference between e-Apostille and paper Apostille?', a: 'DFA issues two formats. (1) e-Apostille — a digital PDF that must be submitted electronically; printing it does not make it valid. Since March 2026 this is the only format for PSA civil documents (birth, marriage, CENOMAR). Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs. (2) Paper Apostille — a physical sticker, still available for non-PSA documents such as NBI and LTO. We provide paper Apostille originals shipped via DHL for those documents.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
         ]}

@@ -136,29 +136,29 @@ export default function HomeJa() {
             <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />
             <div className="p-6 md:p-8">
               <div className="inline-block mb-4 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">
-                紙原本対応
+                PSAデジタル化・e-Apostille対応
               </div>
               <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
-                2026年3月のPSAデジタル化以降、電子文書が<span className="text-red-700">受理されず紙原本を要求されるケース</span>が多数報告されています。<span className="text-red-700">当社はPSA・DFA窓口で直接紙原本を取得しており、従来通り対応可能です。</span>
+                2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）へ<span className="text-red-700">物理アポスティーユ（紙）を発行しなくなり</span>、認証は<span className="text-red-700">e-Apostille（電子）に一本化</span>されました。当社はPSA・DFA e-Apostilleのオンライン申請と支払いを日本語で代行します（NBI・LTO・PRCなどの書類は物理アポスティーユにも対応）。
               </p>
               {noticeExpanded && (
                 <ul className="space-y-3 mt-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：フィリピン側の運用が電子化しても、日本の提出先は当面の間、紙原本を求められることが想定されます。
+                      <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：日本の提出先は当面、紙のPSA原本を前提とする運用が想定されます。ただし物理アポスティーユはDFAが発行しなくなったため、e-Apostille（電子認証）で受理可能かを提出先に確認しておくことが重要です。
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">まずは提出先にご確認ください</strong>：電子文書で受理されるかを提出先にご確認いただき、<strong className="text-red-700">紙原本を求められた場合は当社にご相談ください。</strong>
+                      <strong className="text-gray-900">まずは提出先にご確認ください</strong>：e-Apostille（電子認証）で受理されるかを提出先にご確認ください。<strong className="text-red-700">PSA・e-Apostilleのオンライン申請の入力・支払い代行は当社で対応します。</strong>
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">納期の目安</strong>：現在、紙原本のご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
+                      <strong className="text-gray-900">納期の目安</strong>：現在ご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
                     </span>
                   </li>
                 </ul>

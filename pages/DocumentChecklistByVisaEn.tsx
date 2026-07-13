@@ -39,7 +39,7 @@ export default function DocumentChecklistByVisaEn() {
               name: 'What Philippine documents do I need for a K-1 visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For a K-1 fiancé visa, your Filipino partner typically needs: CENOMAR with DFA Apostille (proof of single status), PSA Birth Certificate with DFA Apostille, and NBI Clearance with DFA Apostille. All documents must be originals with physical Apostille.',
+                text: 'For a K-1 fiancé visa, your Filipino partner typically needs: CENOMAR with DFA Apostille (proof of single status), PSA Birth Certificate with DFA Apostille, and NBI Clearance with DFA Apostille. Since March 2026, PSA documents (CENOMAR, PSA Birth Certificate) are authenticated with an electronic e-Apostille — a paper Apostille is no longer issued for PSA documents — while NBI Clearance can still receive a paper Apostille. Confirm with USCIS how it accepts each format.',
               },
             },
             {

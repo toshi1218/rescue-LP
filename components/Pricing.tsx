@@ -32,7 +32,7 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'DFAアポスティーユのみ（書類持込み）',
-      subtitle: 'すでにPSA・CENOMAR・NBI書類をお持ちの方のDFA物理アポスティーユ取得・国際発送を代行',
+      subtitle: 'すでにNBI等の書類をお持ちの方のDFA物理アポスティーユ取得・国際発送を代行（PSA民事書類はe-Apostille〈電子〉のみ）',
       why: 'フィリピン国内で書類を取得済みの方や、以前取得した書類に後からアポスティーユが必要になった方向けのプランです。書類をIGRS宛に転送していただければ、DFA認証から発送までを代行します',
       price: '¥39,000',
       priceNote: '〜（税込・DHL込み）',
@@ -199,7 +199,7 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'CENOMAR — Single Document',
-      subtitle: 'Physical PSA original shipped via DHL — add DFA-stamped Apostille for immigration use worldwide',
+      subtitle: 'Physical PSA original shipped via DHL — add DFA e-Apostille (electronic) for immigration use worldwide',
       price: 'US$199',
       priceNote: 'document + DHL (no Apostille)',
       priceApostille: 'US$349',
@@ -212,7 +212,7 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA Birth Certificate — Single Document',
-      subtitle: 'Physical PSA original, not an e-certificate — add DFA-stamped Apostille for overseas use',
+      subtitle: 'Physical PSA original, not an e-certificate — add DFA e-Apostille (electronic) for overseas use',
       price: 'US$199',
       priceNote: 'document + DHL (no Apostille)',
       priceApostille: 'US$349',
@@ -225,7 +225,7 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA Marriage Certificate — Single Document',
-      subtitle: 'Physical PSA original for spouse visa, immigration, and naturalization — add DFA-stamped Apostille for overseas use',
+      subtitle: 'Physical PSA original for spouse visa, immigration, and naturalization — add DFA e-Apostille (electronic) for overseas use',
       price: 'US$199',
       priceNote: 'document + DHL (no Apostille)',
       priceApostille: 'US$349',
@@ -357,7 +357,7 @@ const Pricing: React.FC = () => {
                     {(plan as any).priceApostille && (
                       <div className="flex items-baseline gap-2 mt-1.5 pl-2 border-l-2 border-primary/30">
                         <span className="text-sm font-bold text-secondary">{(plan as any).priceApostille}</span>
-                        <span className="text-xs text-gray-400">{lang === 'ja' ? 'DFA物理アポスティーユ込み 総額' : 'with DFA physical Apostille — all-in total'}</span>
+                        <span className="text-xs text-gray-400">{lang === 'ja' ? 'DFA e-Apostille（電子）込み 総額' : 'with DFA e-Apostille — all-in total'}</span>
                       </div>
                     )}
                     <p className="text-xs text-gray-400 mt-1">

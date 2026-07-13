@@ -22,7 +22,7 @@ export default function CenomarApostilleEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMAR DFA Apostille Authentication Service',
-        description: 'We handle DFA Apostille authentication for CENOMAR. Physical paper Apostille provided — required for immigration applications worldwide. Ships via DHL to the US, Canada, Australia, UK & more.',
+        description: 'We handle DFA Apostille authentication for CENOMAR. Since March 2026, DFA issues an electronic e-Apostille for PSA documents (no paper Apostille). We manage the online application and confirm your authority’s format requirements. Physical CENOMAR on Security Paper ships via DHL to the US, Canada, Australia, UK & more.',
         url: 'https://ph-document.com/en/cenomar-apostille/',
         provider: {
           '@type': 'Organization',
@@ -75,7 +75,7 @@ export default function CenomarApostilleEn() {
               name: 'Does USCIS accept e-Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'USCIS may accept copies; however, the US NVC and US Embassy Manila require physical PSA documents on Security Paper (SECPA) with a paper Apostille for interviews and document submissions. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. We confirm the required format for your specific case.',
+                text: 'USCIS may accept copies; however, the US NVC and US Embassy Manila expect physical PSA documents on Security Paper (SECPA) for interviews and document submissions. Since March 2026, DFA authenticates PSA documents (including CENOMAR) with an electronic e-Apostille — a paper Apostille sticker is no longer issued — so confirm how the interview accepts it. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. We confirm the required format for your specific case.',
               },
             },
           ],
@@ -95,7 +95,7 @@ export default function CenomarApostilleEn() {
         points={[
           'DFA Apostille is required for CENOMAR to be accepted by immigration authorities worldwide',
           'We retrieve CENOMAR from PSA and authenticate at DFA in one seamless process',
-          'Paper Apostille original shipped via DHL Express worldwide',
+          'DFA e-Apostille (electronic) — DFA no longer issues a paper Apostille for PSA documents like CENOMAR',
           'No need to visit the Philippines or coordinate with multiple agencies',
         ]}
         ctaText="Get a Free Quote"
@@ -167,7 +167,7 @@ export default function CenomarApostilleEn() {
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
-          { q: 'Do immigration authorities accept e-Apostille?', a: 'It depends on the country. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. US NVC, US Embassy Manila, and UAE require a physical paper Apostille on PSA Security Paper (SECPA). Note: printing an e-Apostille does not make it valid — it must be submitted as a PDF. We confirm the required format for your specific case.' },
+          { q: 'Do immigration authorities accept e-Apostille?', a: 'Since March 2026, DFA issues only an electronic e-Apostille for PSA documents like CENOMAR — a paper Apostille is no longer available for these. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. US NVC and US Embassy Manila expect the physical PSA on Security Paper (SECPA); confirm how they want its e-Apostille presented. UAE is not a Hague member and requires consular attestation, not an Apostille. Note: printing an e-Apostille does not make it valid — it must be submitted as a PDF. We confirm the required format for your specific case.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"

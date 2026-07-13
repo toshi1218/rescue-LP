@@ -161,7 +161,7 @@ export default function CenomarApostilleJa() {
           columns={3}
           cards={[
             { icon: Heart, title: '国際結婚の手続き中', description: '日本の市区町村役場やフィリピン大使館への提出に、DFAアポスティーユ付きCENOMARが必要です。', accent: 'gold' },
-            { icon: FileCheck, title: '配偶者ビザ・在留資格の申請中', description: '入国管理局が求める形式（紙のアポスティーユ原本）で手配します。', accent: 'blue' },
+            { icon: FileCheck, title: '配偶者ビザ・在留資格の申請中', description: '入国管理局への提出を想定し、PSA原本とDFA e-Apostille（電子）で手配します。', accent: 'blue' },
             { icon: Globe, title: '日本の提出先への提出', description: '日本の入管・役所・大使館への提出では、原則として紙の原本＋DFAアポスティーユが必要です。', accent: 'green' },
           ]}
         />

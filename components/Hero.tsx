@@ -14,7 +14,7 @@ const enBadges = [
 const enDocItems = [
   { label: 'Acceptance Check', sub: 'Verify what format your authority needs' },
   { label: 'Physical PSA Document', sub: 'Original certificate, not e-Cert' },
-  { label: 'DFA Apostille', sub: 'Paper apostille for immigration use' },
+  { label: 'DFA e-Apostille', sub: 'Electronic apostille for immigration use' },
   { label: 'DHL Express Worldwide', sub: '→ Delivered to your address' },
 ];
 
@@ -186,7 +186,7 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            Getting married to a Filipino, or moving to a new country together? We verify format requirements, procure physical PSA originals with DFA Apostille, and ship to your door worldwide via DHL — no trip to the Philippines needed.
+            Getting married to a Filipino, or moving to a new country together? We verify format requirements, retrieve physical PSA originals, arrange DFA e-Apostille, and ship to your door worldwide via DHL — no trip to the Philippines needed.
           </p>
 
           {/* CTAs */}
@@ -233,7 +233,7 @@ const Hero: React.FC = () => {
               Now accepting inquiries · Reply within 24 hours
             </p>
             <p className="text-white/60 text-xs">
-              International Marriage Package from US$399 (Apostille + DHL incl.)
+              International Marriage Package from US$399 (e-Apostille + DHL incl.)
             </p>
             <p className="text-white/50 text-xs mt-0.5">
               💳 Pay by credit card — Visa · Mastercard · Amex · Apple Pay

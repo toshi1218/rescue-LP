@@ -117,7 +117,7 @@ export default function CenomarGuideEn() {
               name: 'Do I need a physical Apostille or is e-Apostille OK?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Most USCIS offices require a physical Apostille original. We will confirm the requirement for your specific case before processing.',
+                text: 'Since March 2026, DFA issues an electronic e-Apostille for CENOMAR (a PSA document) — a physical Apostille sticker is no longer available for PSA documents. Whether a given USCIS office accepts the e-Apostille can vary, so we confirm the requirement for your specific case before processing.',
               },
             },
           ],
@@ -211,8 +211,8 @@ export default function CenomarGuideEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFA Apostille Authentication',
-            description: 'We submit the document to the Department of Foreign Affairs (DFA) for physical Apostille certification.',
+            title: 'DFA e-Apostille Authentication',
+            description: 'We handle the DFA e-Apostille (electronic) authentication for your CENOMAR. Since March 2026, DFA no longer issues a paper Apostille sticker for PSA documents.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -227,8 +227,8 @@ export default function CenomarGuideEn() {
         steps={[
           { title: 'Submit the Consultation Form', description: 'Share your visa type, the full name on the Philippine ID, and your target deadline. We confirm eligibility before anything starts.' },
           { title: 'Receive Your All-Inclusive Quote', description: 'We send a fixed quote covering PSA retrieval, DFA Apostille (if needed), and DHL shipping — no surprise costs.' },
-          { title: 'We Request CENOMAR from PSA, Then Queue DFA Apostille', description: 'Our Cebu team submits the PSA application, receives the CENOMAR, and handles DFA Apostille authentication on-site in the Philippines.' },
-          { title: 'Original Document Delivered to You via DHL', description: 'The physical CENOMAR (with Apostille) is shipped directly to your address. Tracking number provided. Estimated 4–6 weeks from start.' },
+          { title: 'We Request CENOMAR from PSA, Then Handle the DFA e-Apostille', description: 'Our team submits the PSA application, obtains the CENOMAR, and handles the DFA e-Apostille (electronic) authentication.' },
+          { title: 'Document Delivered to You', description: 'The CENOMAR (with its DFA e-Apostille) is delivered to you. Estimated 4–6 weeks from start.' },
         ]}
       />
 
@@ -237,8 +237,8 @@ export default function CenomarGuideEn() {
         items={[
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'USA (K-1 & CR-1 visa) — Physical Apostille required',
-            description: 'USCIS and NVC require a CENOMAR issued within 6 months with a physical DFA Apostille. e-Apostille is not always accepted. We confirm the specific requirement before processing.',
+            title: 'USA (K-1 & CR-1 visa) — DFA Apostille required',
+            description: 'USCIS and NVC require a CENOMAR issued within 6 months, authenticated by DFA Apostille. Since March 2026, DFA issues this as an electronic e-Apostille for PSA documents (no paper sticker); acceptance of the e-Apostille can vary by office, so we confirm the specific requirement before processing.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -260,7 +260,7 @@ export default function CenomarGuideEn() {
           { q: 'How much does it cost?', a: 'All-inclusive from US$349 (PSA retrieval + DFA Apostille + DHL shipping). No hidden fees. See our Pricing page for the full breakdown.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL international shipping takes 3–5 business days.' },
           { q: 'Can you handle rush orders?', a: 'Yes. Let us know your deadline and we will check if expedited processing is available.' },
-          { q: 'Do I need a physical Apostille or is e-Apostille OK?', a: 'Most USCIS offices require a physical Apostille original. We will confirm the requirement for your specific case before processing.' },
+          { q: 'Do I need a physical Apostille or is e-Apostille OK?', a: 'Since March 2026, DFA issues an electronic e-Apostille for CENOMAR (a PSA document) — a physical Apostille sticker is no longer available for PSA documents. Whether a given USCIS office accepts the e-Apostille can vary, so we confirm the requirement for your specific case before processing.' },
           { q: 'I was previously married. Do I still need a CENOMAR?', a: 'If your previous marriage was annulled or dissolved, CENOMAR may still be required but will reflect your current civil status. For previously married applicants, additional documents proving dissolution of prior marriage may also be needed. Consult us for your specific case.' },
           { q: 'I am a dual citizen (Filipino and another nationality). Can I get CENOMAR?', a: 'Yes. CENOMAR is based on your records in the PSA database, tied to your Philippine civil registration. Dual citizenship status does not prevent you from obtaining CENOMAR. We will confirm the correct name to use based on your PSA records.' },
         ]}

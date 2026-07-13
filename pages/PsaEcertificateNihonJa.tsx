@@ -56,7 +56,7 @@ export default function PsaEcertificateNihonJa() {
         conclusion="PSA電子文書（eCertificate）とDFA eApostilleは法的に有効です。しかし2026年4月時点では、日本の入管・市区町村・総領事館の多くが引き続き紙原本を前提とした運用をしており、電子文書で提出して再提出を求められるケースが当社に実際に寄せられています。"
         points={[
           '2026年3月16日以降、PSA e-CertificateへのPaper Apostille（紙アポスティーユ）は原則発行されなくなりました。e-Certificateには電子のeApostilleのみが付与されます。',
-          '紙のPSA証明書（SECPA）自体の発行・取得は引き続き可能です。日本向け提出には紙原本ルートが安全策です。',
+          '紙のPSA証明書（SECPA）自体の発行・取得は引き続き可能です。ただし物理アポスティーユ（紙）はPSA民事書類に発行されなくなり、認証はe-Apostille（電子）に一本化されました。日本向けには紙のPSA原本＋e-Apostilleでの対応が現実的です。',
           '当社には複数の再提出事例が実際に届いています。提出先への事前確認が必須です。',
         ]}
       />
@@ -79,8 +79,8 @@ export default function PsaEcertificateNihonJa() {
             ため、デジタル送信での提出が前提です。
           </p>
           <p>
-            <strong className="text-gray-900">重要：PSA e-CertificateへのPaper Apostille（紙アポスティーユ）は原則不可</strong>
-            ：3月16日の運用変更以降、PSA e-CertificateをベースにしたPaper Apostilleは基本的に発行されなくなりました。一方、<strong>紙のPSA証明書（SECPA）自体の発行・取得は引き続き可能</strong>です。Door-to-door・CRS窓口受取・国際配送などの取得ルートが現在も利用できます。
+            <strong className="text-gray-900">重要：PSA民事書類へのPaper Apostille（紙アポスティーユ）は発行不可</strong>
+            ：2026年3月以降、PSA民事書類（出生・婚姻・CENOMAR等）に対するPaper Apostilleは発行されなくなり、DFAの認証は<strong>e-Apostille（電子）に一本化</strong>されました。一方、<strong>紙のPSA証明書（SECPA）自体の発行・取得は引き続き可能</strong>です（Door-to-door・CRS窓口受取・国際配送などのルートが利用できます）。紙原本を取得する場合も、付与される認証はe-Apostilleとなります。
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default function PsaEcertificateNihonJa() {
           {[
             {
               title: '入国管理局（入管）',
-              body: '在留資格申請では従来、PSA Security Paper＋紙アポスティーユが標準として運用されています。電子版に関する明示的な受領基準は未公表で、窓口ごとの判断に委ねられています。重要な申請では紙原本での提出を推奨します。',
+              body: '在留資格申請では従来、PSA Security Paper＋紙アポスティーユが標準として運用されてきました。2026年3月以降、PSA民事書類の認証はe-Apostille（電子）のみとなり、電子版に関する明示的な受領基準は未公表で、窓口ごとの判断に委ねられています。重要な申請では紙のPSA原本での提出と、e-Apostille受理可否の事前確認を推奨します。',
             },
             {
               title: '市区町村（婚姻届・戸籍関連）',
@@ -154,13 +154,13 @@ export default function PsaEcertificateNihonJa() {
               <tr className="bg-gray-50 border-b border-gray-100">
                 <th className="text-left px-4 py-3 font-semibold text-gray-700 w-1/3">比較項目</th>
                 <th className="text-center px-4 py-3 font-semibold text-gray-500">電子文書（eCertificate＋eApostille）</th>
-                <th className="text-center px-4 py-3 font-semibold text-primary">紙原本（SECPA＋物理アポスティーユ）</th>
+                <th className="text-center px-4 py-3 font-semibold text-primary">紙のPSA原本（SECPA）＋e-Apostille</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
                 ['法的有効性', '有効（HCCH基準）', '有効'],
-                ['アポスティーユの形式', 'eApostille（電子）のみ。Paper Apostilleは原則不可', '物理アポスティーユ（紙）'],
+                ['アポスティーユの形式', 'e-Apostille（電子）', 'e-Apostille（電子）※物理アポスティーユは発行不可'],
                 ['日本での受領確実性', '窓口次第（要事前確認）', '高い（従来の標準）'],
                 ['日本在住での取得', 'オンラインで自力取得が可能', '代行業者が必要なケースが多い'],
                 ['印刷して提出', '原則不可（公式な印刷版なし）', '可'],
@@ -190,8 +190,8 @@ export default function PsaEcertificateNihonJa() {
               body: '入管・市区町村・総領事館など具体的な窓口に、電子文書の受領可否を電話またはメールで確認してください。在フィリピン日本国大使館は原本提出を明記しており、電子版では対応できない手続きが存在します。',
             },
             {
-              title: '重要手続きは紙原本を選択（安全策）',
-              body: '在留資格申請・婚姻届など重要な手続きでは、紙原本（SECPA）での取得を推奨します。PSA e-CertificateにはeApostilleしか付与されないため、紙アポスティーユが必要な場合は紙のPSA証明書を別途取得する必要があります。',
+              title: '重要手続きは紙のPSA原本を選択（安全策）',
+              body: '在留資格申請・婚姻届など重要な手続きでは、紙のPSA原本（SECPA）での取得を推奨します。ただしDFAの認証は電子のe-Apostilleのみで、物理アポスティーユ（紙）は発行されません。提出先がe-Apostilleを受理するかを併せて確認してください。',
             },
             {
               title: '電子版を使う場合はデジタル送信を徹底',
@@ -246,8 +246,8 @@ export default function PsaEcertificateNihonJa() {
       </section>
 
       <CtaBox
-        title="紙原本が必要な場合は当社へ"
-        description="当社はフィリピンの現地スタッフがPSA・DFA窓口で直接紙原本を取得しています。電子文書で受理されなかった方・紙原本が必要な方はご相談ください。"
+        title="PSA申請・e-Apostilleでお困りの方へ"
+        description="当社はPSA・DFA e-Apostilleのオンライン申請と支払いを日本語で代行します。紙のPSA原本が必要な場合の申請方法や、提出先での受理可否のご相談も承ります。"
         buttonText="無料相談・お問い合わせ"
         href="/ja/contact/"
         trustNote="着手前キャンセル無料・進捗を随時ご報告"

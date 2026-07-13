@@ -133,7 +133,7 @@ export default function SpouseVisaJa() {
             </div>
             {[
               { label: 'PSA書類・CENOMAR取得', price: '込み' },
-              { label: 'DFAアポスティーユ認証（入管提出用・紙原本）', price: '込み' },
+              { label: 'DFA e-Apostille認証（電子・入管提出用）', price: '込み' },
               { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
               { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
             ].map((row, i) => (
@@ -212,7 +212,7 @@ export default function SpouseVisaJa() {
           <h2 className="text-base font-bold text-amber-900">配偶者ビザの書類準備、こんな落とし穴があります</h2>
         </div>
         <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>入国管理局への申請では<strong>紙のアポスティーユ原本が必要</strong>です</span></li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>2026年3月以降、PSA民事書類の認証は<strong>e-Apostille（電子）のみ</strong>——提出先の受理可否の確認が必要です</span></li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>書類の<strong>有効期限（発行から6ヶ月〜1年）</strong>を過ぎると再取得が必要</span></li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>PSA書類・CENOMAR・NBI——<strong>どれが必要かは申請の状況によって異なる</strong></span></li>
         </ul>
