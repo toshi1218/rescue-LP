@@ -6,7 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
-import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { Heart, FileCheck, Globe, Users, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
 export default function SpouseVisaEn() {
@@ -88,6 +88,23 @@ export default function SpouseVisaEn() {
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
+
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: PSA certificates are e-Certificate only</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                The PSA now issues CENOMAR, Birth Certificate, and Marriage Certificate exclusively as digital PSA eCertificates with a digital DFA e-Apostille. Walk-in physical Apostille on a printed document is no longer available directly at DFA.
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>Printing an e-Apostille does not make it valid.</strong> US NVC, US Embassy Manila, UAE, and most Japanese authorities still require a physical paper original — we continue to provide it. We confirm the correct format for your specific case.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <SummaryBlock
         conclusion="We retrieve all Philippine documents needed for your spouse visa and ship them Apostille-ready worldwide."

@@ -6,7 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
-import { Heart, FileCheck, Globe, Users } from 'lucide-react';
+import { Heart, FileCheck, Globe, Users, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import RelatedArticles from '../components/RelatedArticles';
 
@@ -89,6 +89,23 @@ export default function PsaMarriageCertEn() {
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
+
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: PSA Marriage Certificate is e-Certificate only</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                The PSA now issues the Marriage Certificate exclusively as a digital PSA eCertificate with a digital DFA e-Apostille. Walk-in physical Apostille on a printed certificate is no longer available directly at DFA.
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>Printing an e-Apostille does not make it valid.</strong> US NVC, US Embassy Manila, UAE, and most Japanese authorities still require a physical paper original — we continue to provide it. Canada (IRCC), Australia, and UK authorities that accept e-Apostille PDFs can receive it digitally instead.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <SummaryBlock
         conclusion="We retrieve your PSA Marriage Certificate with DFA Apostille and ship it to your address worldwide."

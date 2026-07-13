@@ -61,6 +61,24 @@ export default function SpouseVisaDocChecklistEn() {
         badges={['Updated March 2026', 'TB Cert Now Required', 'Document Retrieval Available']}
         lastUpdated="April 1, 2026"
       />
+
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: PSA certificates are e-Certificate only</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                The PSA now issues the Marriage Certificate, Birth Certificate, and CENOMAR exclusively as digital PSA eCertificates with a digital DFA e-Apostille. Walk-in physical Apostille on a printed document is no longer available directly at DFA.
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>Japanese municipal offices, the Legal Affairs Bureau, and Immigration Services generally do not accept a printed e-Apostille.</strong> We continue to provide the physical paper original required for the COE application.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <article className="max-w-2xl mx-auto px-4">
 
         {/* June 2025 change alert */}
