@@ -5,6 +5,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
+import { AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
@@ -62,7 +63,7 @@ export default function ApostilleGuideJa() {
               name: 'アポスティーユはどこで取得できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'フィリピンのDFA（外務省）で取得します。DFAオフィスでの窓口申請のほか、PSA書類については一部オンライン申請も可能な場合があります。運用は変わることがあるため、最新の手続きを確認することが重要です。',
+                text: 'フィリピンのDFA（外務省）で取得します。2026年3月16日以降、PSA書類（CENOMAR・出生証明書・婚姻証明書等）はデジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）でのオンライン申請が原則となりました。NBIクリアランス等PSA以外の書類は従来どおりDFA窓口での物理アポスティーユ申請です。運用は変わることがあるため、最新の手続きを確認することが重要です。',
               },
             },
             {
@@ -101,6 +102,28 @@ export default function ApostilleGuideJa() {
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
+
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">【2026年3月16日以降】PSAのe-certificate移行について</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                2026年3月16日より、PSAはCENOMAR・出生証明書・婚姻証明書などの証明書について、デジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）の発行に完全移行しました。DFA窓口での紙の証明書に対する物理アポスティーユ申請は原則できなくなっています（NBIクリアランス等、PSA以外の書類は従来どおり窓口での物理アポスティーユが可能です）。
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                <strong>日本の市区町村役場・法務局・出入国在留管理庁は、e-Apostilleのプリントアウトを原則として受け付けません。</strong>
+                日本側にQRコードでオンライン検証する内部マニュアルが整備されておらず、「原本のコピー」として不受理になるリスクがあります。
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                当社は<strong>紙の原本＋DFAアポスティーユ</strong>形式で対応しています。ご不明点はお気軽にご相談ください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <article className="max-w-2xl mx-auto px-4">
 
         <p className="text-gray-700 leading-relaxed mb-8">
@@ -253,7 +276,7 @@ export default function ApostilleGuideJa() {
           },
           {
             q: 'アポスティーユはどこで取得できますか？',
-            a: 'フィリピンのDFA（外務省）で取得します。DFAオフィスでの窓口申請のほか、PSA書類については一部オンライン申請も可能な場合があります。運用は変わることがあるため、最新の手続きを確認することが重要です。',
+            a: 'フィリピンのDFA（外務省）で取得します。2026年3月16日以降、PSA書類（CENOMAR・出生証明書・婚姻証明書等）はデジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）でのオンライン申請が原則となりました。NBIクリアランス等PSA以外の書類は従来どおりDFA窓口での物理アポスティーユ申請です。運用は変わることがあるため、最新の手続きを確認することが重要です。',
           },
           {
             q: 'アポスティーユは必ず予約が必要ですか？',

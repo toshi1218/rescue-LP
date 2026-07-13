@@ -89,6 +89,23 @@ export default function ApostilleFeeEn() {
         lastUpdated="April 1, 2026"
       />
 
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: PSA documents are e-Certificate only</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                The PSA now issues civil registry documents (CENOMAR, Birth Certificate, Marriage Certificate) exclusively as digital PSA eCertificates with a digital DFA e-Apostille. A printout of an e-Apostille is not valid, and authorities requiring a physical paper original (US NVC, US Embassy Manila, UAE, most Japanese authorities) may reject it.
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                The pricing below covers our paper-original Apostille service, which we still provide for authorities that require it. We confirm the correct format for your case before quoting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <SummaryBlock
         conclusion="DFA Apostille costs more than the government fee alone. We quote the real total upfront."
         points={[

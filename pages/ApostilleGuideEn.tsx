@@ -90,6 +90,23 @@ export default function ApostilleGuideEn() {
         lastUpdated="April 1, 2026"
       />
 
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: PSA documents are e-Certificate only</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                The Philippine Statistics Authority (PSA) now issues civil registry documents (CENOMAR, Birth Certificate, Marriage Certificate) exclusively as digital PSA eCertificates, authenticated with a digital DFA e-Apostille. Walk-in physical Apostille on a printed PSA document is no longer available for these documents (NBI Clearance and other non-PSA documents are unaffected — physical Apostille is still available for those).
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>Printing an e-Apostille does not make it valid.</strong> Authorities that require a physical paper original (US NVC, US Embassy Manila, UAE, and most Japanese city halls/immigration offices) will not accept a printout. We confirm the correct format for your destination authority and provide a paper original where required.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
         DFA Apostille is an official authentication issued by the{' '}
         <a href="https://dfa.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">Philippine Department of Foreign Affairs (DFA)</a>{' '}

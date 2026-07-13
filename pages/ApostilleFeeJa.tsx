@@ -85,6 +85,24 @@ export default function ApostilleFeeJa() {
         lastUpdated="2026年3月1日"
       />
 
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">【2026年3月16日以降】PSAのe-certificate移行について</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                2026年3月16日より、PSAはCENOMAR・出生証明書・婚姻証明書などの証明書について、デジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）の発行に完全移行しました。DFA窓口での紙の証明書に対する物理アポスティーユ申請は原則できなくなっています（NBIクリアランス等、PSA以外の書類は従来どおり窓口での物理アポスティーユが可能です）。
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                <strong>日本の市区町村役場・法務局・出入国在留管理庁は、e-Apostilleのプリントアウトを原則として受け付けません。</strong>
+                当社は<strong>紙の原本＋DFAアポスティーユ</strong>形式で対応しています。下記の料金は、この形式での代行費用です。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <SummaryBlock
         conclusion="DFAアポスティーユの費用は、料金で最初から明示します。後から追加請求はありません。"
         points={[
