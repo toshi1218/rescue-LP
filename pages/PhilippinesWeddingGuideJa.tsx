@@ -66,6 +66,24 @@ export default function PhilippinesWeddingGuideJa() {
         lastUpdated="2026年3月1日"
       />
 
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">【2026年3月16日以降】PSAのe-certificate移行について</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                2026年3月16日より、PSAは婚姻証明書についてデジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）の発行に完全移行しました。DFA窓口での紙の証明書に対する物理アポスティーユ申請は原則できなくなっています。
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                <strong>日本の市区町村役場・法務局・出入国在留管理庁は、e-Apostilleのプリントアウトを原則として受け付けません。</strong>
+                当社は<strong>紙の原本＋DFAアポスティーユ</strong>形式で対応しています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <article className="space-y-10">
 
         {/* 導入 */}

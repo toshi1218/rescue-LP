@@ -9,7 +9,7 @@ import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
-import { FileCheck, Globe, Users, Shield, FileText, Plane, CheckCircle, Clock, Stamp, ShieldCheck } from 'lucide-react';
+import { FileCheck, Globe, Users, Shield, FileText, Plane, CheckCircle, Clock, Stamp, ShieldCheck, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
 export default function CanadaDocsJa() {
@@ -91,6 +91,23 @@ export default function CanadaDocsJa() {
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
       />
+
+      <div className="max-w-2xl mx-auto px-4 my-6">
+        <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-900 text-sm mb-2">【2026年3月16日以降】PSAのe-certificate移行について</p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-2">
+                2026年3月16日より、PSAはCENOMAR・出生証明書についてデジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）の発行に完全移行しました。IRCCはe-Apostille PDFのオンライン提出を受け付けているケースが多いため、認められれば紙原本より早く・安く進められる場合があります。
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed">
+                提出方法はケースにより異なるため、<strong>まず提出先（IRCC）にご確認のうえ</strong>、紙原本・e-Apostille PDFいずれの形式にも対応します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <SummaryBlock
         conclusion="Spousal Sponsorship・永住権申請に必要なPSA証明書・NBIクリアランスをIRCC対応のDFAアポスティーユ付きで一括手配。カナダ移民申請の書類ブロッカーを取り除きます。"
