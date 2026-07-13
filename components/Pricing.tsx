@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap, LifeBuoy, Stamp } from 'lucide-react';
+import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap, LifeBuoy, Stamp, AlertTriangle } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -307,6 +307,34 @@ const Pricing: React.FC = () => {
           <div className="text-xs text-gray-500 mb-6 space-y-0.5">
             <p>※表示価格はすべて税込・DHL送料込みの総額です（PSAオンライン申請代行はDHL不要）</p>
             <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
+          </div>
+        )}
+
+        {lang === 'ja' && (
+          <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5 mb-6">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-amber-900 text-sm mb-2">【2026年3月16日以降】PSAのe-certificate移行について</p>
+                <p className="text-sm text-amber-800 leading-relaxed">
+                  PSAはCENOMAR・出生証明書・婚姻証明書についてデジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）の発行に完全移行しました。日本の市区町村役場・法務局・出入国在留管理庁はe-Apostilleのプリントアウトを原則として受け付けないため、下記「アポスティーユ込み」の料金は<strong>紙の原本＋DFAアポスティーユ</strong>形式での代行費用です。
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {lang === 'en' && (
+          <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-5 mb-6">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-amber-900 text-sm mb-2">Since March 16, 2026: PSA certificates are e-Certificate only</p>
+                <p className="text-sm text-amber-800 leading-relaxed">
+                  The PSA now issues CENOMAR, Birth Certificate, and Marriage Certificate exclusively as digital PSA eCertificates with a digital DFA e-Apostille. Printing an e-Apostille does not make it valid, and authorities requiring a physical original (US NVC, US Embassy Manila, UAE, most Japanese authorities) may reject a printout. The "with Apostille" prices below cover our paper-original Apostille service, which we continue to provide.
+                </p>
+              </div>
+            </div>
           </div>
         )}
 

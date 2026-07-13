@@ -81,6 +81,26 @@ export default function PricingEn() {
         trustNote="No commitment required — free cancellation at quote stage"
       />
 
+      {/* Why we're not the cheapest option */}
+      <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 mb-2 max-w-2xl mx-auto">
+        <p className="text-sm font-bold text-gray-800 mb-3">Why we're not the cheapest option</p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          Since March 16, 2026, the PSA issues CENOMAR, Birth Certificate, and Marriage Certificate exclusively as digital PSA eCertificates with a digital DFA e-Apostille. Some competitors deliver only this digital format, which lets them charge less.
+        </p>
+        <p className="text-sm text-gray-700 leading-relaxed mb-3">
+          However, <strong>US NVC, US Embassy Manila, UAE, and most Japanese municipal/immigration authorities still require a physical paper original with a physical DFA Apostille</strong> — printing an e-Apostille does not satisfy this requirement.
+        </p>
+        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+          We continue to arrange the <strong>physical paper Apostille</strong> in person at DFA. That requires a staff appointment and in-person processing with limited slots, which is why our price cannot go as low as a purely digital service — in exchange, your documents are far less likely to be rejected at your destination.
+        </p>
+        <div className="rounded-lg border border-blue-200 bg-white p-4">
+          <p className="text-xs font-bold text-blue-700 mb-1">Confirm with your destination authority first</p>
+          <p className="text-xs text-gray-600 leading-relaxed">
+            Ask "Do you accept a digital e-Apostille, or do you require a physical paper original?" before choosing a provider. If digital is accepted, our paper-original service may cost more than necessary for your case — contact us and we'll advise honestly.
+          </p>
+        </div>
+      </div>
+
       {/* Pricing cards */}
       <Pricing />
 
