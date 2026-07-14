@@ -1,4 +1,5 @@
 import React from 'react';
+import { Users, Scale, Building2, Archive } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import Pricing from '../components/Pricing';
@@ -11,7 +12,7 @@ import { SEO_YEAR, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function PricingEn() {
   useMeta(
     `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
-    `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille. All plans include DHL Express worldwide shipping. Free quote.`,
+    `Fixed-price CENOMAR, PSA & NBI packages for clients abroad — retrieval, DFA Apostille, and DHL worldwide delivery included. No trip to the Philippines needed. Free quote.`,
   );
   return (
     <PageLayout
@@ -60,22 +61,69 @@ export default function PricingEn() {
               text: 'Most documents (PSA, CENOMAR, NBI Clearance with DFA Apostille) take approximately 4–6 weeks from deposit payment to DHL delivery, depending on the document type and destination country.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'Do you work with attorneys, HR teams, or relocation companies?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. We regularly act as the Philippine documents back office for immigration and family law attorneys, corporate HR and Global Mobility teams, and relocation companies — retrieving PSA, NBI, and DFA Apostille records on their behalf under a single invoice, with progress updates they can pass on to their own clients or employees.',
+            },
+          },
         ],
       }]}
     >
       <HeroBanner
         title="Pricing"
-        subtitle="All-inclusive pricing: PSA retrieval, DFA Apostille, and DHL shipping — quoted together with no hidden fees."
-        badges={['No hidden fees', 'Free quote', 'Free cancellation before start']}
+        subtitle="One fixed price covers document retrieval, DFA Apostille, and DHL delivery worldwide — so you don't have to fly to the Philippines, chase down government offices, or risk a rejected application."
+        badges={['No trip to the Philippines required', 'Fixed price, no hidden fees', 'DHL delivery worldwide']}
         ctaText="Get a Free Quote"
         ctaHref="#contact"
         ctaService="Pricing inquiry"
         lastUpdated="April 1, 2026"
       />
 
+      <div className="grid gap-4 md:grid-cols-2 mb-10">
+        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+          <div className="flex items-center gap-2 mb-2">
+            <Users className="w-4 h-4 text-primary flex-shrink-0" />
+            <p className="text-xs font-bold text-secondary uppercase tracking-wider">Spouses & Partners Abroad</p>
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Married to, or planning to marry, a Filipino citizen while living in the US, UK, Canada, Australia, the EU, or the Gulf. We get the Philippine paperwork done without you flying back.
+          </p>
+        </div>
+        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+          <div className="flex items-center gap-2 mb-2">
+            <Scale className="w-4 h-4 text-primary flex-shrink-0" />
+            <p className="text-xs font-bold text-secondary uppercase tracking-wider">Immigration & Family Law Attorneys</p>
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Handling a client's spouse, fiancé, or naturalization case that needs Philippine civil registry documents. We work as your Philippine back office — fixed price, direct progress updates you can share with your client.
+          </p>
+        </div>
+        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+          <div className="flex items-center gap-2 mb-2">
+            <Building2 className="w-4 h-4 text-primary flex-shrink-0" />
+            <p className="text-xs font-bold text-secondary uppercase tracking-wider">HR & Global Mobility Teams</p>
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Verifying a candidate's or employee's NBI Clearance, education, or civil records for relocation, a work visa, or a background check. One invoice, one point of contact.
+          </p>
+        </div>
+        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+          <div className="flex items-center gap-2 mb-2">
+            <Archive className="w-4 h-4 text-primary flex-shrink-0" />
+            <p className="text-xs font-bold text-secondary uppercase tracking-wider">Estate Administrators & Heirs</p>
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Settling an estate or inheritance matter that requires Philippine birth, marriage, or death records for a foreign court, bank, or notary. We retrieve and reconcile records across Philippine civil registries.
+          </p>
+        </div>
+      </div>
+
       <CtaBox
-        title="Not sure which plan fits your case?"
-        description="Tell us your purpose (marriage, visa, naturalization, etc.) and we will confirm exactly which documents you need and quote you a fixed price."
+        title="Not sure which package fits your case?"
+        description="Tell us your situation — marriage registration, a spouse or fiancé visa, citizenship, a corporate background check, or an estate matter — and we'll confirm exactly which documents are required and quote a fixed, all-inclusive price before anything is charged."
         buttonText="Get a Free Quote"
         href="#contact"
         variant="primary"
@@ -132,6 +180,7 @@ export default function PricingEn() {
           { q: 'What payment methods do you accept?', a: 'Credit card via Stripe: Visa, Mastercard, American Express, Apple Pay, and Google Pay.' },
           { q: 'Can I cancel and get a refund?', a: 'Yes, free cancellation before we start work. Once processing begins, actual costs incurred and work performed are non-refundable. The balance payment is only requested after you confirm the document copies.' },
           { q: 'How long does delivery take?', a: 'Most documents (PSA, CENOMAR, NBI Clearance with DFA Apostille) take approximately 4–6 weeks from deposit payment to DHL delivery, depending on the document type and destination country.' },
+          { q: 'Do you work with attorneys, HR teams, or relocation companies?', a: 'Yes. We regularly act as the Philippine documents back office for immigration and family law attorneys, corporate HR and Global Mobility teams, and relocation companies — retrieving PSA, NBI, and DFA Apostille records on their behalf under a single invoice, with progress updates they can pass on to their own clients or employees.' },
         ]}
         ctaTitle="Ready to Get Started?"
         ctaButton="Get a Free Quote"

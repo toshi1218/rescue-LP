@@ -808,7 +808,7 @@ const routes: RouteConfig[] = [
     path: '/en/pricing/',
     outFile: path.join(projectRoot, 'dist', 'en', 'pricing', 'index.html'),
     title: `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
-    description: `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille. All plans include DHL Express worldwide shipping. Free quote.`,
+    description: `Fixed-price CENOMAR, PSA & NBI packages for clients abroad — retrieval, DFA Apostille, and DHL worldwide delivery included. No trip to the Philippines needed. Free quote.`,
     canonical: `${BASE}/en/pricing/`,
     lang: 'en',
     enCanonical: `${BASE}/en/pricing/`,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap, LifeBuoy, Stamp } from 'lucide-react';
+import { XCircle, ArrowRight, Gem, FileText, Fingerprint, Car, Heart, Award, AlertCircle, Zap, LifeBuoy, Stamp, Archive } from 'lucide-react';
 import { getCtaVariant, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -176,6 +176,7 @@ const plansData = {
       featured: true,
       title: 'International Marriage Basic Package',
       subtitle: 'PSA Birth Certificate & CENOMAR with Apostille — ready for marriage registration',
+      why: 'You get a marriage-ready document set delivered to your door — no flight to Manila, no chasing PSA counters, no researching what an Apostille even is.',
       price: 'US$399',
       priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
@@ -188,6 +189,7 @@ const plansData = {
       featured: false,
       title: 'International Marriage Full Package',
       subtitle: 'PSA, CENOMAR & NBI — Apostille-ready for marriage, spouse visa & immigration',
+      why: 'Covers marriage registration, spouse visa, and immigration filings in one project — retrieved once, accepted everywhere it is required.',
       price: 'US$699',
       priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
@@ -200,6 +202,7 @@ const plansData = {
       featured: false,
       title: 'CENOMAR — Single Document',
       subtitle: 'Physical PSA original shipped via DHL — add DFA-stamped Apostille for immigration use worldwide',
+      why: 'For cases where you already know exactly what is needed — retrieved, verified, and shipped without you setting foot in the Philippines.',
       price: 'US$199',
       priceNote: 'document + DHL (no Apostille)',
       priceApostille: 'US$349',
@@ -213,6 +216,7 @@ const plansData = {
       featured: false,
       title: 'PSA Birth Certificate — Single Document',
       subtitle: 'Physical PSA original, not an e-certificate — add DFA-stamped Apostille for overseas use',
+      why: 'A physical, Apostille-ready original for the receiving offices that will not accept an e-certificate — retrieved and couriered on your behalf.',
       price: 'US$199',
       priceNote: 'document + DHL (no Apostille)',
       priceApostille: 'US$349',
@@ -226,6 +230,7 @@ const plansData = {
       featured: false,
       title: 'PSA Marriage Certificate — Single Document',
       subtitle: 'Physical PSA original for spouse visa, immigration, and naturalization — add DFA-stamped Apostille for overseas use',
+      why: 'The one certificate most spouse-visa and naturalization checklists stall on — retrieved from the civil registry and shipped, Apostille-ready.',
       price: 'US$199',
       priceNote: 'document + DHL (no Apostille)',
       priceApostille: 'US$349',
@@ -239,6 +244,7 @@ const plansData = {
       featured: false,
       title: 'NBI Clearance Retrieval',
       subtitle: 'Philippine police clearance for immigration & visa applications',
+      why: 'A fingerprint-based Philippine police clearance, handled remotely end-to-end — required for most spouse and immigrant visas, including US, UK, Canada, and Australia filings.',
       price: 'US$399',
       priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
@@ -251,6 +257,7 @@ const plansData = {
       featured: false,
       title: 'LTO Document Retrieval',
       subtitle: "Philippine driver's license records for license conversion",
+      why: 'The official Philippine driving record most license-conversion offices refuse to proceed without — retrieved and couriered directly.',
       price: 'US$449',
       priceNote: 'all-in',
       period: 'Approx. 4–6 weeks',
@@ -263,6 +270,7 @@ const plansData = {
       featured: false,
       title: 'Spouse / Partner Visa Support',
       subtitle: 'Philippine documents for spouse & partner visas worldwide',
+      why: 'Built for petitioners and attorneys who need a complete, Apostille-ready document set matched to the visa checklist — not a pile of separate errands.',
       price: 'US$599',
       priceNote: 'all-in',
       period: 'Approx. 4–8 weeks',
@@ -275,10 +283,24 @@ const plansData = {
       featured: false,
       title: 'Citizenship & Naturalization Documents',
       subtitle: 'Philippine documents for citizenship applications worldwide',
+      why: 'Handles the full chain of Philippine records naturalization officers ask for, so the case does not stall on one missing certificate.',
       price: 'US$699',
       priceNote: '〜 all-in',
       period: 'Approx. 6–12 weeks',
       detailPath: '/en/naturalization-guide/',
+    },
+    {
+      id: 'estate',
+      icon: Archive,
+      tag: null,
+      featured: false,
+      title: 'Estate, Inheritance & Family Record Documents',
+      subtitle: 'PSA & civil registry records for heirs, estates, and cross-border inheritance matters',
+      why: 'Executors and heirs often need several family records — birth, marriage, death — pulled from different Philippine civil registries and reconciled before a foreign court, bank, or notary will accept them. We run the retrieval and Apostille chain as one project.',
+      price: 'From US$799',
+      priceNote: '〜 (case-by-case)',
+      period: 'Case by case',
+      detailPath: '#contact',
     },
     {
       id: 'complex',
@@ -287,6 +309,7 @@ const plansData = {
       featured: false,
       title: 'Complex / Mismatch / Annotation / Urgent Case',
       subtitle: 'Remarriage, name discrepancy, late registration, annotation, or time-sensitive cases',
+      why: 'For the cases a standard checklist does not cover — we investigate the record, resolve the discrepancy, and still deliver a document your receiving office will accept.',
       price: 'US$899',
       priceNote: '〜',
       period: 'Case by case',
@@ -307,6 +330,15 @@ const Pricing: React.FC = () => {
           <div className="text-xs text-gray-500 mb-6 space-y-0.5">
             <p>※表示価格はすべて税込・DHL送料込みの総額です（PSAオンライン申請代行はDHL不要）</p>
             <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
+          </div>
+        )}
+
+        {lang === 'en' && (
+          <div className="mb-8 rounded-xl border border-primary/10 bg-primary/[0.03] p-6">
+            <p className="text-sm font-bold text-secondary mb-1.5">You're not paying for our time — you're paying to skip the risk</p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              No flight to the Philippines. No researching which PSA office or NBI branch to visit. No rejected application because a document was missing an Apostille. Every package below is a fixed, all-inclusive price for a specific outcome — delivered to your door via DHL, wherever you are.
+            </p>
           </div>
         )}
 
@@ -368,7 +400,7 @@ const Pricing: React.FC = () => {
                   {/* 含まれるもの */}
                   {(plan as any).includes && (
                     <div className="mb-4 rounded-lg bg-gray-50 border border-gray-100 px-3 py-2.5">
-                      <p className="text-xs font-bold text-secondary mb-1.5">含まれるもの</p>
+                      <p className="text-xs font-bold text-secondary mb-1.5">{lang === 'ja' ? '含まれるもの' : "What's included"}</p>
                       <ul className="space-y-1">
                         {(plan as any).includes.map((item: string) => (
                           <li key={item} className="flex items-center gap-1.5 text-xs text-gray-600">
@@ -383,7 +415,7 @@ const Pricing: React.FC = () => {
                   {/* 必要理由 */}
                   {(plan as any).why && (
                     <p className="text-xs text-gray-500 mb-5 leading-snug">
-                      <span className="font-semibold">必要理由：</span>{(plan as any).why}
+                      <span className="font-semibold">{lang === 'ja' ? '必要理由：' : 'Why this matters: '}</span>{(plan as any).why}
                     </p>
                   )}
 
@@ -413,8 +445,26 @@ const Pricing: React.FC = () => {
 
         {lang === 'en' && (
           <p className="text-xs text-gray-400 mt-5 leading-relaxed">
-            All prices include document retrieval, DFA Apostille when required, and DHL Express international shipping. Final price may vary for urgent, complex, mismatched, or hard-to-retrieve records.
+            All prices include document retrieval, DFA Apostille when required, and DHL Express international shipping — one invoice, no separate errands to coordinate yourself. Final price may vary for urgent, complex, mismatched, or hard-to-retrieve records.
           </p>
+        )}
+
+        {/* Attorneys / HR / relocation partner channel — English */}
+        {lang === 'en' && (
+          <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50/50 p-6">
+            <h3 className="text-base font-bold text-secondary mb-2">Attorneys, HR Teams & Relocation Partners</h3>
+            <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+              If you regularly handle cases that need Philippine documents — spouse visa filings, employee background checks, or relocation packages — we can work as your standing Philippine documents partner instead of a one-off vendor: a single point of contact, consolidated invoicing, and progress updates formatted for you to pass on to your own client or employee.
+            </p>
+            <a
+              href="#contact"
+              onClick={() => trackEvent('cta_click', { location: 'pricing_partner', type: 'general', variant: ctaVariant })}
+              className="group inline-flex items-center gap-1.5 bg-primary text-secondary text-xs font-bold py-2.5 px-5 rounded-lg hover:bg-primary-hover transition-all duration-200"
+            >
+              Discuss a partner arrangement
+              <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+            </a>
+          </div>
         )}
 
         {/* 目的別に必要書類を確認したい方へ */}
