@@ -73,13 +73,14 @@ export default function PsaSerbilisEn() {
       <HeroBanner
         title="PSA Serbilis — What It Was & How to Get Documents Now"
         subtitle="PSA Serbilis has been replaced. Here is how to get your PSA Birth Certificate, CENOMAR, or Marriage Certificate in 2026."
-        ctaLabel="Get a Free Quote"
+        badges={['PSA + Apostille + DHL', 'Ships Worldwide', 'Free Consultation']}
+        ctaText="Get a Free Quote"
         ctaHref="/en/contact/"
       />
 
       <SummaryBlock
-        heading="What Was PSA Serbilis?"
-        body="PSA Serbilis (serbilis.psa.gov.ph) was the Philippine Statistics Authority's first online delivery portal for civil registry documents — Birth Certificates, Marriage Certificates, Death Certificates, and CENOMAR. It allowed Filipinos to order documents online and have them delivered to a Philippine address without visiting a PSA outlet. The service has now been replaced by PSAHelpline.ph, which offers the same documents plus e-certificate (digital PDF) delivery."
+        conclusion="What Was PSA Serbilis?"
+        points={["PSA Serbilis (serbilis.psa.gov.ph) was the Philippine Statistics Authority's first online delivery portal for civil registry documents — Birth Certificates, Marriage Certificates, Death Certificates, and CENOMAR. It allowed Filipinos to order documents online and have them delivered to a Philippine address without visiting a PSA outlet. The service has now been replaced by PSAHelpline.ph, which offers the same documents plus e-certificate (digital PDF) delivery."]}
       />
 
       <section className="py-4 px-4 max-w-3xl mx-auto">
@@ -150,39 +151,39 @@ export default function PsaSerbilisEn() {
       </section>
 
       <CtaBox
-        heading="Need Your PSA Document With Apostille, Shipped Internationally?"
-        body="We retrieve your PSA document, obtain the DFA Apostille, and ship via DHL Express worldwide. No Philippines address needed."
-        ctaLabel="Get a Free Quote"
-        ctaHref="/en/contact/"
+        title="Need Your PSA Document With Apostille, Shipped Internationally?"
+        description="We retrieve your PSA document, obtain the DFA Apostille, and ship via DHL Express worldwide. No Philippines address needed."
+        buttonText="Get a Free Quote"
+        href="/en/contact/"
       />
 
       <FaqSection
         items={[
           {
-            question: 'What was PSA Serbilis?',
-            answer: 'PSA Serbilis was the PSA\'s original online delivery portal for civil registry documents. It has been replaced by PSAHelpline.ph.',
+            q: 'What was PSA Serbilis?',
+            a: 'PSA Serbilis was the PSA\'s original online delivery portal for civil registry documents. It has been replaced by PSAHelpline.ph.',
           },
           {
-            question: 'Is PSA Serbilis still working?',
-            answer: 'PSA Serbilis is no longer the primary service. Use PSAHelpline.ph to order PSA documents online.',
+            q: 'Is PSA Serbilis still working?',
+            a: 'PSA Serbilis is no longer the primary service. Use PSAHelpline.ph to order PSA documents online.',
           },
           {
-            question: 'Where can I order PSA documents online now?',
-            answer: 'Order through PSAHelpline.ph, or use a retrieval service for international delivery including apostille.',
+            q: 'Where can I order PSA documents online now?',
+            a: 'Order through PSAHelpline.ph, or use a retrieval service for international delivery including apostille.',
           },
           {
-            question: 'Can I still get my PSA document delivered internationally?',
-            answer: 'PSAHelpline.ph delivers within the Philippines only. For international delivery, use a retrieval service that includes DHL shipping.',
+            q: 'Can I still get my PSA document delivered internationally?',
+            a: 'PSAHelpline.ph delivers within the Philippines only. For international delivery, use a retrieval service that includes DHL shipping.',
           },
         ]}
       />
 
       <RelatedArticles
-        articles={[
-          { href: '/en/psa-online/', label: 'How to Order PSA Documents Online' },
-          { href: '/en/psa-birth-certificate-cost/', label: 'PSA Birth Certificate Cost' },
-          { href: '/en/cenomar/', label: 'CENOMAR — How to Get It' },
-          { href: '/en/apostille/', label: 'DFA Apostille Service' },
+        items={[
+          { href: '/en/psa-online/', title: 'How to Order PSA Documents Online' },
+          { href: '/en/psa-birth-certificate-cost/', title: 'PSA Birth Certificate Cost' },
+          { href: '/en/cenomar/', title: 'CENOMAR — How to Get It' },
+          { href: '/en/apostille/', title: 'DFA Apostille Service' },
         ]}
       />
     </PageLayout>

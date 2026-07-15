@@ -81,13 +81,14 @@ export default function CenomarAbroadEn() {
       <HeroBanner
         title="How to Get CENOMAR From Abroad"
         subtitle="No Philippines trip needed — step-by-step guide for OFWs and Filipinos living overseas"
-        ctaLabel="Get a Free Quote"
+        badges={['No Philippines Trip Needed', 'DFA Apostille Included', 'Ships Worldwide via DHL']}
+        ctaText="Get a Free Quote"
         ctaHref="/en/contact/"
       />
 
       <SummaryBlock
-        heading="What Is CENOMAR?"
-        body="CENOMAR (Certificate of No Marriage Record) is an official PSA document that proves a Filipino citizen has no registered marriage in the Philippines. It is required for K-1 fiancé visas, CR-1/IR-1 spouse visas, marriage registration abroad, and many other immigration and legal purposes."
+        conclusion="What Is CENOMAR?"
+        points={['CENOMAR (Certificate of No Marriage Record) is an official PSA document that proves a Filipino citizen has no registered marriage in the Philippines. It is required for K-1 fiancé visas, CR-1/IR-1 spouse visas, marriage registration abroad, and many other immigration and legal purposes.']}
       />
 
       <FeatureList
@@ -134,43 +135,43 @@ export default function CenomarAbroadEn() {
       </section>
 
       <CtaBox
-        heading="Ready to Order Your CENOMAR?"
-        body="We handle everything — PSA retrieval, DFA Apostille, and DHL shipping to your door. Free quote, no hidden fees."
-        ctaLabel="Get a Free Quote"
-        ctaHref="/en/contact/"
+        title="Ready to Order Your CENOMAR?"
+        description="We handle everything — PSA retrieval, DFA Apostille, and DHL shipping to your door. Free quote, no hidden fees."
+        buttonText="Get a Free Quote"
+        href="/en/contact/"
       />
 
       <FaqSection
         items={[
           {
-            question: 'Can I get CENOMAR while living abroad?',
-            answer: 'Yes. You can order PSA CENOMAR fully online through PSAHelpline.ph or use a document retrieval service. No trip to the Philippines is required.',
+            q: 'Can I get CENOMAR while living abroad?',
+            a: 'Yes. You can order PSA CENOMAR fully online through PSAHelpline.ph or use a document retrieval service. No trip to the Philippines is required.',
           },
           {
-            question: 'How long does it take to get CENOMAR from abroad?',
-            answer: 'Typically 2–4 weeks including PSA processing and international DHL shipping. Rush options may shorten the timeline for the apostille step.',
+            q: 'How long does it take to get CENOMAR from abroad?',
+            a: 'Typically 2–4 weeks including PSA processing and international DHL shipping. Rush options may shorten the timeline for the apostille step.',
           },
           {
-            question: 'Do I need to apostille my CENOMAR for use abroad?',
-            answer: 'Yes, for most immigration and legal purposes outside the Philippines, CENOMAR must carry a DFA Apostille.',
+            q: 'Do I need to apostille my CENOMAR for use abroad?',
+            a: 'Yes, for most immigration and legal purposes outside the Philippines, CENOMAR must carry a DFA Apostille.',
           },
           {
-            question: 'Can I use an e-CENOMAR (PSA e-certificate) abroad?',
-            answer: 'It depends on the receiving country and institution. Always confirm with your visa authority before ordering.',
+            q: 'Can I use an e-CENOMAR (PSA e-certificate) abroad?',
+            a: 'It depends on the receiving country and institution. Always confirm with your visa authority before ordering.',
           },
           {
-            question: 'What if my name or birthdate on CENOMAR is wrong?',
-            answer: 'Errors require a correction petition at the Local Civil Registry. Contact us for guidance before ordering.',
+            q: 'What if my name or birthdate on CENOMAR is wrong?',
+            a: 'Errors require a correction petition at the Local Civil Registry. Contact us for guidance before ordering.',
           },
         ]}
       />
 
       <RelatedArticles
-        articles={[
-          { href: '/en/cenomar/', label: 'CENOMAR — What It Is & How to Get It' },
-          { href: '/en/cenomar-meaning/', label: 'CENOMAR Meaning Explained' },
-          { href: '/en/cenomar-validity/', label: 'How Long Is CENOMAR Valid?' },
-          { href: '/en/apostille/', label: 'DFA Apostille Service' },
+        items={[
+          { href: '/en/cenomar/', title: 'CENOMAR — What It Is & How to Get It' },
+          { href: '/en/cenomar-meaning/', title: 'CENOMAR Meaning Explained' },
+          { href: '/en/cenomar-validity/', title: 'How Long Is CENOMAR Valid?' },
+          { href: '/en/apostille/', title: 'DFA Apostille Service' },
         ]}
       />
     </PageLayout>
