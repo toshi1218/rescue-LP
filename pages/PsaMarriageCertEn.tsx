@@ -33,10 +33,10 @@ export default function PsaMarriageCertEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '219',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '219',
             priceCurrency: 'USD',
             description: 'PSA online application + DFA e-Apostille application (all-inclusive) — pricing under review following DFA\'s March 2026 e-Apostille policy change',
           },

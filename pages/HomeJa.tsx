@@ -80,7 +80,7 @@ export default function HomeJa() {
       opens: '09:00',
       closes: '17:00',
     },
-    priceRange: '¥50,000〜¥100,000',
+    priceRange: '¥16,500〜¥116,000',
     currenciesAccepted: 'JPY',
     // NOTE: aggregateRating はプリレンダのテンプレート（buildLocalBusinessJsonLd）が
     // LocalBusiness 側で出力する。自己掲載の review[] マークアップは Google の

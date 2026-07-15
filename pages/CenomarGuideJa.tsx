@@ -174,7 +174,7 @@ export default function CenomarGuideJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="font-medium text-gray-800">30,000円〜（DFA e-Apostille〈電子〉込み）</dd>
               <dd className="text-gray-400 text-xs mt-1">※PSA発行料金（1通420ペソ）込み・DHL国際配送は実費別途</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
@@ -191,7 +191,7 @@ export default function CenomarGuideJa() {
               { label: 'CENOMAR（PSA）取得', price: '込み' },
               { label: 'DFAアポスティーユ認証', price: '込み' },
               { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+              { label: '合計（DFA e-Apostille〈電子〉込み）', price: '30,000円〜', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>

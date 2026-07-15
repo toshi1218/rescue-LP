@@ -33,10 +33,10 @@ export default function CenomarApostilleEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '219',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '219',
             priceCurrency: 'USD',
             description: 'CENOMAR retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },

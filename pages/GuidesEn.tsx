@@ -22,7 +22,7 @@ export default function GuidesEn() {
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-4">Philippine Document Services — Guide Index</h1>
       <p className="text-sm text-gray-600 mb-6">
         We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille for Filipino nationals living abroad.
-        All-inclusive service starting from US$349 — shipped worldwide via DHL. No trip to the Philippines needed.
+        All-inclusive service starting from US$219 — PSA online applications with DFA e-Apostille handled for you, plus non-PSA document retrieval shipped worldwide via DHL. No trip to the Philippines needed.
       </p>
       <GuideLinks />
 
