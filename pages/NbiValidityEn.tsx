@@ -129,8 +129,8 @@ export default function NbiValidityEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'NBI Clearance retrieval',
-            description: 'We handle the NBI application and retrieval on your behalf from our Cebu office.',
+            title: 'NBI application support',
+            description: 'Renewal cases (prior NBI issued 2014 or later) are handled remotely by our Cebu office. First-time applicants complete fingerprinting at a Philippine Embassy — we guide you through it.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,

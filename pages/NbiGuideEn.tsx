@@ -184,7 +184,7 @@ export default function NbiGuideEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'Getting NBI while living overseas',
-            description: 'OFWs and Filipinos abroad can get NBI Clearance without returning to the Philippines. Our Cebu team acts as your authorized representative at the NBI office.',
+            description: 'OFWs and Filipinos abroad can often avoid returning to the Philippines: renewal cases (prior NBI issued 2014 or later) can be handled remotely, while first-time applicants complete fingerprinting at a Philippine Embassy or Consulate. We guide you and handle the DFA Apostille and shipping.',
           },
           {
             icon: <Users className="w-4 h-4" />,

@@ -40,7 +40,7 @@ export default function NbiClearanceOnlineEn() {
               name: 'Can I get NBI Clearance online from abroad?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Partial yes. NBI online renewal is available if you already have an NBI account with a clean record. However, first-time applicants and those with a HIT (matching court record) must appear in person at an NBI office in the Philippines. For overseas Filipinos who cannot travel, a document retrieval service can handle the process on their behalf.',
+                text: 'Partial yes. NBI online renewal is available if you already have an NBI account with a clean record. However, first-time applicants and those with a HIT (matching court record) must appear in person for fingerprints — at a Philippine Embassy/Consulate in your country, or at an NBI office in the Philippines. A document service can handle renewal cases remotely and guide first-time applicants through embassy fingerprinting, then add the DFA Apostille and ship the original worldwide.',
               },
             },
             {
@@ -80,7 +80,7 @@ export default function NbiClearanceOnlineEn() {
               name: 'What is an NBI HIT?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'An NBI HIT occurs when your name matches a record in the NBI database — court cases, criminal records, or even name matches with other individuals. A HIT requires you to appear at an NBI office in person. We handle HIT cases and coordinate the resolution process on your behalf.',
+                text: 'An NBI HIT occurs when your name matches a record in the NBI database — court cases, criminal records, or even name matches with other individuals. A HIT requires the applicant to appear at an NBI office in person; this cannot be done by a representative. We advise on the resolution process and handle the DFA Apostille and shipping once the clearance is issued.',
               },
             },
           ],
@@ -101,7 +101,7 @@ export default function NbiClearanceOnlineEn() {
           'NBI online at clearance.nbi.gov.ph — renewal only, for clean records',
           'First-time applicants must appear in person at an NBI office',
           'HIT cases require in-person appearance regardless of renewal status',
-          'For overseas Filipinos who cannot travel, we handle everything locally',
+          'Renewal cases handled remotely; first-time applicants guided through embassy fingerprinting',
         ]}
         ctaText="Let Us Handle Your NBI Clearance"
       />
@@ -143,19 +143,19 @@ export default function NbiClearanceOnlineEn() {
           {
             icon: <AlertTriangle className="w-4 h-4" />,
             title: 'In-person required (first-time or HIT)',
-            description: 'First-time applicants and those with a HIT must appear at an NBI office in the Philippines. If you cannot travel, a document service can coordinate this on your behalf.',
+            description: 'First-time applicants and those with a HIT must appear in person for fingerprints — at a Philippine Embassy/Consulate in your country, or at an NBI office in the Philippines. This step must be done by the applicant; a representative cannot do biometric enrollment for you.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Document service (overseas Filipinos who cannot travel)',
-            description: 'We apply on your behalf, handle HIT resolution if needed, arrange DFA Apostille, and ship directly to your international address via DHL. No Philippines trip required.',
+            title: 'Document service (renewal remote / first-time guided)',
+            description: 'For renewal cases we process the NBI remotely. For first-time applicants we guide you through embassy fingerprinting. Either way, once the clearance is issued we arrange DFA Apostille and ship directly to your international address via DHL.',
           },
         ]}
       />
 
       <CtaBox
-        title="Can't travel to the Philippines? We handle NBI for you."
-        description="We coordinate NBI Clearance retrieval — including HIT cases — arrange DFA Apostille, and ship directly to your door worldwide."
+        title="Renewal remote · First-time guided · Apostille + DHL included"
+        description="For renewal cases we handle the NBI remotely; for first-time applicants we guide you through Philippine Embassy fingerprinting. Once issued, we arrange DFA Apostille and ship directly to your door worldwide."
         buttonText="Free Consultation"
         href="#contact"
         variant="primary"
@@ -167,8 +167,8 @@ export default function NbiClearanceOnlineEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'NBI Clearance retrieval',
-            description: 'We coordinate with NBI on your behalf — including scheduling, in-person processing if needed, and HIT resolution.',
+            title: 'NBI application support',
+            description: 'Renewal cases: handled remotely by our Cebu team. First-time applicants: we guide you through embassy fingerprinting. In-person fingerprints are completed by the applicant.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -188,7 +188,7 @@ export default function NbiClearanceOnlineEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your use case (visa, immigration, work permit) and whether this is your first NBI or a renewal.' },
           { title: 'We confirm scope and quote', description: 'We verify HIT status if applicable and provide all-inclusive pricing including Apostille and shipping.' },
-          { title: 'NBI processing in the Philippines', description: 'Our Cebu team coordinates with NBI — online renewal or in-person depending on your case.' },
+          { title: 'NBI processing based on your case', description: 'Renewal cases are processed remotely by our Cebu team. First-time applicants complete embassy fingerprinting with our step-by-step guidance.' },
           { title: 'DFA Apostille', description: 'After receiving the clearance, we arrange DFA Apostille if required for your destination authority.' },
           { title: 'DHL delivery worldwide', description: 'Shipped with tracking to your international address. Estimated total: 4–6 weeks.' },
         ]}
@@ -196,12 +196,12 @@ export default function NbiClearanceOnlineEn() {
 
       <FaqSection
         items={[
-          { q: 'Can I get NBI Clearance online from abroad?', a: 'For renewals with a clean record, yes via clearance.nbi.gov.ph — but delivery is within the Philippines only. First-timers and HIT cases must appear in person. We handle everything on your behalf if you cannot travel.' },
+          { q: 'Can I get NBI Clearance online from abroad?', a: 'For renewals with a clean record, yes via clearance.nbi.gov.ph — but delivery is within the Philippines only. First-timers and HIT cases must appear in person for fingerprints. Renewal cases we handle remotely; first-time applicants we guide through embassy fingerprinting, then add the Apostille and ship worldwide.' },
           { q: 'How long does NBI Clearance take?', a: 'Online renewal: 7–10 business days within the Philippines. HIT cases: 15–30 business days. Including DFA Apostille and international shipping, plan 4–6 weeks total.' },
           { q: 'How long is NBI Clearance valid?', a: 'NBI Clearance is valid for 1 year. For most immigration purposes, it must be issued within 6 months of your submission date.' },
           { q: 'Does NBI Clearance need DFA Apostille?', a: 'For most immigration purposes outside the Philippines, yes. We confirm the exact requirement for your destination country before starting.' },
-          { q: 'What is an NBI HIT?', a: 'A HIT means your name matched a record in the NBI database. It requires in-person appearance at an NBI office. We handle HIT cases and coordinate the resolution process.' },
-          { q: 'Can you handle NBI for someone currently outside the Philippines?', a: 'Yes. That is our primary use case. We coordinate everything locally so you do not need to travel or have a Philippines contact.' },
+          { q: 'What is an NBI HIT?', a: 'A HIT means your name matched a record in the NBI database. It requires the applicant to appear in person at an NBI office; this cannot be done by a representative. We advise on resolution and handle the Apostille and shipping once the clearance is issued.' },
+          { q: 'Can you handle NBI for someone currently outside the Philippines?', a: 'Yes — with limits. Renewal cases (prior NBI issued 2014 or later) we handle remotely. First-time applicants must complete fingerprinting in person at a Philippine Embassy/Consulate; we guide you and then handle the Apostille and shipping once the clearance is issued.' },
         ]}
         ctaTitle="HIT case or not sure what applies to you? Ask us."
         ctaButton="Free Consultation"
@@ -209,7 +209,7 @@ export default function NbiClearanceOnlineEn() {
 
       <RelatedArticles
         items={[
-          { href: '/en/nbi-clearance/', title: 'NBI Clearance Retrieval Service', description: 'Full NBI Clearance service — retrieval, HIT handling, Apostille, and worldwide shipping.' },
+          { href: '/en/nbi-clearance/', title: 'NBI Clearance Support Service', description: 'Full NBI Clearance support — renewal handling, embassy guidance for first-timers, Apostille, and worldwide shipping.' },
           { href: '/en/nbi-hit/', title: 'NBI HIT Resolution', description: 'What to do when your NBI Clearance comes back with a HIT.' },
           { href: '/en/nbi-validity/', title: 'How Long Is NBI Clearance Valid?', description: 'NBI validity periods for different immigration purposes.' },
           { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Which documents you need for K-1, CR-1, Canada, Australia, UK, and more.' },
