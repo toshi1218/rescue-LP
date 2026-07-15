@@ -41,7 +41,7 @@ export default function CenomarCostComparisonEn() {
             {
               '@type': 'Question',
               name: 'Can I order CENOMAR online from abroad?',
-              acceptedAnswer: { '@type': 'Answer', text: 'PSA\'s online service (PSAHelpline.ph) ships within the Philippines only. If you are abroad, you need to either hire a representative in the Philippines or use a document retrieval service that handles PSA, Apostille, and international shipping end-to-end.' },
+              acceptedAnswer: { '@type': 'Answer', text: 'Yes, via PSAHelpline.ph\'s International Service, which delivers a digital PSA E-Certificate electronically to your address abroad (identity verification required). If you need the physical SECPA original, PSAHelpline requires you to arrange and pay for your own international courier pickup. An application proxy service can complete the ordering, payment, and DFA e-Apostille application on your behalf if navigating this yourself is a barrier.' },
             },
             {
               '@type': 'Question',
@@ -62,17 +62,17 @@ export default function CenomarCostComparisonEn() {
 
       <div className="max-w-2xl mx-auto px-4 mb-8">
         <p className="text-sm text-gray-600 leading-relaxed mb-3">
-          Getting CENOMAR from outside the Philippines is not straightforward. PSA's official online service ships within the Philippines only — which means OFWs and Filipinos living abroad need an alternative. Here is a full breakdown of every option, including real costs and timelines.
+          Getting CENOMAR from outside the Philippines involves a few choices. PSA's official online service (PSAHelpline.ph) delivers a digital e-Certificate electronically to overseas applicants, but a physical original requires you to arrange your own international courier — which is where many OFWs and Filipinos abroad prefer help. Here is a full breakdown of every option, including real costs and timelines.
         </p>
       </div>
 
       <SummaryBlock
-        conclusion="For OFWs and Filipinos abroad, a document service (PSA + Apostille + DHL, all-inclusive) is typically the fastest and most reliable option — no need to coordinate multiple parties."
+        conclusion="For OFWs and Filipinos abroad who want the application handled for them, an application proxy service (PSA online application + DFA e-Apostille application, all-inclusive) removes the English-language forms, payment, and courier-arrangement hassle."
         points={[
-          'PSA direct: PHP 365/copy — Philippines delivery only, no international shipping',
+          'PSA direct (PSAHelpline.ph International Service): PHP 365/copy — digital e-Cert delivered electronically; physical original needs self-arranged international courier',
           'Walk-in PSA branch: same-day but requires someone physically in the Philippines',
           'Representative: variable cost, coordination risk, no accountability',
-          'Document service: US$349 all-inclusive — PSA + Apostille + DHL worldwide',
+          'Application proxy service: all-inclusive — PSA online application + DFA e-Apostille application handled for you',
         ]}
         ctaText="Get All-Inclusive Quote"
       />
@@ -94,11 +94,11 @@ export default function CenomarCostComparisonEn() {
           <tbody>
             <tr>
               <td className="p-3 border border-gray-200 font-medium">PSA Online (PSAHelpline.ph)</td>
-              <td className="p-3 border border-gray-200">PHP 365/copy + local delivery</td>
-              <td className="p-3 border border-gray-200">3–5 business days (PH only)</td>
-              <td className="p-3 border border-gray-200"><XCircle className="w-4 h-4 text-red-400 inline" /> Not included</td>
-              <td className="p-3 border border-gray-200"><XCircle className="w-4 h-4 text-red-400 inline" /> Philippines only</td>
-              <td className="p-3 border border-gray-200">Someone with a PH address</td>
+              <td className="p-3 border border-gray-200">PHP 365/copy (International Service)</td>
+              <td className="p-3 border border-gray-200">Digital e-Cert: a few days; physical original: add courier time</td>
+              <td className="p-3 border border-gray-200"><XCircle className="w-4 h-4 text-red-400 inline" /> Not included (e-Apostille separate)</td>
+              <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> Digital e-Cert only — physical original needs self-arranged courier</td>
+              <td className="p-3 border border-gray-200">Comfortable with English forms and self-arranging courier pickup</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-medium">Walk-in at PSA Branch</td>
@@ -117,16 +117,16 @@ export default function CenomarCostComparisonEn() {
               <td className="p-3 border border-gray-200">If you have a trusted contact in PH</td>
             </tr>
             <tr className="bg-blue-50">
-              <td className="p-3 border border-gray-200 font-bold text-primary">Document Service (IGRS)</td>
-              <td className="p-3 border border-gray-200 font-bold">US$349 all-inclusive</td>
-              <td className="p-3 border border-gray-200">4–6 weeks total</td>
-              <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> DFA Apostille included</td>
-              <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> DHL to 15+ countries</td>
-              <td className="p-3 border border-gray-200">OFWs and Filipinos abroad</td>
+              <td className="p-3 border border-gray-200 font-bold text-primary">Application Proxy Service (IGRS)</td>
+              <td className="p-3 border border-gray-200 font-bold">All-inclusive (confirmed at consultation)</td>
+              <td className="p-3 border border-gray-200">Depends on PSA/DFA processing</td>
+              <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> DFA e-Apostille application included</td>
+              <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> Online application + payment handled in English</td>
+              <td className="p-3 border border-gray-200">OFWs and Filipinos abroad who want the application handled for them</td>
             </tr>
           </tbody>
         </table>
-        <p className="text-xs text-gray-500 mt-2">PSA fees as of 2026. Costs subject to change. US$349 includes PSA retrieval + DFA Apostille + DHL international shipping.</p>
+        <p className="text-xs text-gray-500 mt-2">PSA fees as of 2026. Costs subject to change. The application proxy service fee includes the PSA online application and DFA e-Apostille application.</p>
       </div>
 
       {/* Option Details */}
@@ -135,13 +135,14 @@ export default function CenomarCostComparisonEn() {
 
         <div className="border border-gray-200 rounded-lg p-5">
           <h3 className="font-bold text-gray-900 mb-2">Option 1: PSA Online (PSAHelpline.ph)</h3>
-          <p className="text-sm text-gray-600 mb-3">The official PSA online delivery service. You order directly from the Philippine Statistics Authority website. Delivery is within the Philippines only — they do not ship internationally.</p>
+          <p className="text-sm text-gray-600 mb-3">The official PSA online ordering service. Its International Service (identity-verified) delivers a digital PSA E-Certificate electronically to your address abroad. If you need the physical SECPA original, PSAHelpline requires you to arrange and pay for your own international courier pickup once the document is ready.</p>
           <ul className="text-sm space-y-1">
             <li><span className="text-green-600 font-medium">✓</span> Official PSA document, guaranteed authentic</li>
             <li><span className="text-green-600 font-medium">✓</span> Lowest base cost (PHP 365/copy)</li>
-            <li><span className="text-red-500 font-medium">✗</span> Philippines delivery only — no international shipping</li>
-            <li><span className="text-red-500 font-medium">✗</span> No Apostille — you need to arrange DFA separately</li>
-            <li><span className="text-red-500 font-medium">✗</span> If abroad, you still need someone in the Philippines to receive and forward it</li>
+            <li><span className="text-green-600 font-medium">✓</span> Digital e-Certificate delivered electronically to any country</li>
+            <li><span className="text-red-500 font-medium">✗</span> No Apostille — you need to arrange DFA e-Apostille separately</li>
+            <li><span className="text-red-500 font-medium">✗</span> Physical original requires you to book and pay for your own international courier</li>
+            <li><span className="text-red-500 font-medium">✗</span> Forms and payment are in English/Filipino with no local-language support</li>
           </ul>
         </div>
 
@@ -170,22 +171,22 @@ export default function CenomarCostComparisonEn() {
         </div>
 
         <div className="border-2 border-primary rounded-lg p-5 bg-blue-50">
-          <h3 className="font-bold text-primary mb-2">Option 4: Document Retrieval Service (IGRS) — Recommended for OFWs</h3>
-          <p className="text-sm text-gray-600 mb-3">We handle the entire process end-to-end: PSA retrieval, DFA Apostille, and DHL international shipping to your door. One fixed price, no surprises.</p>
+          <h3 className="font-bold text-primary mb-2">Option 4: Application Proxy Service (IGRS) — Recommended for OFWs</h3>
+          <p className="text-sm text-gray-600 mb-3">We complete the PSA online application and payment on your behalf, and handle the DFA e-Apostille application. One fixed price, no surprises.</p>
           <ul className="text-sm space-y-1">
-            <li><span className="text-green-600 font-medium">✓</span> All-inclusive: PSA + DFA Apostille + DHL shipping (US$349)</li>
-            <li><span className="text-green-600 font-medium">✓</span> Physical DFA Apostille — accepted by USCIS, IRCC, Home Affairs, UKVI</li>
-            <li><span className="text-green-600 font-medium">✓</span> Ships to USA, Canada, Australia, UK, UAE, Korea, Japan and more</li>
+            <li><span className="text-green-600 font-medium">✓</span> All-inclusive: PSA online application + DFA e-Apostille application</li>
+            <li><span className="text-green-600 font-medium">✓</span> DFA e-Apostille — since March 2026 the only format DFA issues for PSA documents; we confirm your authority accepts it</li>
+            <li><span className="text-green-600 font-medium">✓</span> Handled in English/Filipino on your behalf, regardless of your country</li>
             <li><span className="text-green-600 font-medium">✓</span> Progress updates at every stage</li>
             <li><span className="text-green-600 font-medium">✓</span> Free consultation — no commitment until you approve</li>
-            <li><span className="text-gray-500">~</span> Takes 4–6 weeks (PSA 2–3 wks + DFA 1–2 wks + DHL 3–5 days)</li>
+            <li><span className="text-gray-500">~</span> Timing depends on PSA/DFA processing queues</li>
           </ul>
         </div>
       </div>
 
       <CtaBox
         title="Ready to Get Started?"
-        description="All-inclusive from US$349. PSA retrieval + DFA Apostille + DHL shipping worldwide. Free consultation — no commitment until you approve the quote."
+        description="All-inclusive pricing confirmed at consultation. PSA online application + DFA e-Apostille application handled for you. Free consultation — no commitment until you approve the quote."
         buttonText="Free Consultation"
         href="#contact"
         variant="primary"
@@ -195,11 +196,11 @@ export default function CenomarCostComparisonEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does CENOMAR cost from PSA?', a: 'PSA charges PHP 365 per copy. This is the base document fee only. DFA Apostille is additional (approx. PHP 200/document), and international courier shipping is separate.' },
-          { q: 'Can I order CENOMAR online from abroad?', a: 'PSA\'s online service (PSAHelpline.ph) delivers within the Philippines only. If you are abroad, you need a document retrieval service that handles PSA, Apostille, and international shipping end-to-end.' },
-          { q: 'How long does it take to get CENOMAR with Apostille from abroad?', a: 'Approximately 4–6 weeks total: PSA issuance (2–3 weeks) + DFA Apostille (1–2 weeks) + DHL international shipping (3–5 business days).' },
-          { q: 'Is US$349 really all-inclusive?', a: 'Yes. The US$349 covers PSA retrieval, DFA Apostille, and DHL international shipping to your address. There are no hidden fees. We confirm the full quote before you commit.' },
-          { q: 'What if I only need the PSA document without apostille?', a: 'We can arrange PSA-only retrieval. However, most visa and immigration applications require DFA Apostille. We recommend confirming with your receiving authority before deciding.' },
+          { q: 'How much does CENOMAR cost from PSA?', a: 'PSA charges PHP 365 per copy (International Service, for a digital e-Certificate). This is the base document fee only. DFA e-Apostille is additional (approx. PHP 200/document), and a physical original requires a separately arranged international courier.' },
+          { q: 'Can I order CENOMAR online from abroad?', a: 'Yes, via PSAHelpline.ph\'s International Service, which delivers a digital e-Certificate electronically. If you need the physical SECPA original, PSAHelpline requires you to arrange your own international courier pickup — or an application proxy service can handle the online application, payment, and DFA e-Apostille application on your behalf.' },
+          { q: 'How long does it take to get CENOMAR with e-Apostille from abroad?', a: 'Timing depends on PSA and DFA processing queues. We confirm a current estimate for your case before you commit.' },
+          { q: 'Is the pricing really all-inclusive?', a: 'Yes. Our quote covers the PSA online application and DFA e-Apostille application. There are no hidden fees. We confirm the full quote before you commit.' },
+          { q: 'What if I only need the PSA document without apostille?', a: 'We can complete the PSA-only application. However, most visa and immigration applications require DFA Apostille (issued as an e-Apostille for PSA documents). We recommend confirming with your receiving authority before deciding.' },
         ]}
         ctaTitle="Have Questions?"
         ctaButton="Ask Us for Free"
@@ -207,7 +208,7 @@ export default function CenomarCostComparisonEn() {
 
       <RelatedArticles
         items={[
-          { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'All-inclusive CENOMAR retrieval + Apostille + DHL shipping worldwide.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'All-inclusive CENOMAR online application + DFA e-Apostille application, handled for you.' },
           { href: '/en/cenomar-requirements-by-country/', title: 'CENOMAR Requirements by Country', description: 'What each country requires: apostille, authentication, validity period.' },
           { href: '/en/cenomar-apostille/', title: 'Does CENOMAR Need Apostille?', description: 'When DFA Apostille is required and when it is not.' },
           { href: '/en/cenomar-validity/', title: 'CENOMAR Validity & Timing', description: 'CENOMAR is valid for 6 months. We time retrieval to meet your deadline.' },

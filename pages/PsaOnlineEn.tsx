@@ -13,7 +13,7 @@ import { useMeta } from '../lib/useMeta';
 export default function PsaOnlineEn() {
   useMeta(
     'PSA Online: How to Get PSA Certificates from Abroad [2026]',
-    'PSA Serbilis lets you order PSA certificates online — but only ships within the Philippines. OFWs and overseas Filipinos use a document service to retrieve and ship PSA documents worldwide.',
+    'PSAHelpline.ph lets you order PSA certificates online, including a digital e-Certificate delivered electronically abroad. OFWs and overseas Filipinos who find the English forms or DFA e-Apostille process a barrier can use an application proxy service.',
   );
   return (
     <PageLayout
@@ -23,7 +23,7 @@ export default function PsaOnlineEn() {
           '@context': 'https://schema.org',
           '@type': 'Article',
           headline: 'PSA Online: How to Get PSA Certificates from Abroad',
-          description: 'PSA Serbilis is the official online ordering system for PSA civil registry documents. This guide explains how it works, its limitations for overseas Filipinos, and the fastest way to get PSA documents shipped internationally.',
+          description: 'PSAHelpline.ph is the official online ordering system for PSA civil registry documents. This guide explains how it works for overseas Filipinos, and how an application proxy service can help with the online forms and DFA e-Apostille application.',
           url: 'https://ph-document.com/en/psa-online/',
           publisher: {
             '@type': 'Organization',
@@ -40,7 +40,7 @@ export default function PsaOnlineEn() {
               name: 'Can I order PSA certificates online from abroad?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes, PSA Serbilis allows online orders from anywhere. However, PSA Serbilis only delivers within the Philippines — you need a local address or representative to receive the documents. For international delivery, use a document retrieval service that ships via DHL.',
+                text: 'Yes. PSAHelpline.ph\'s International Service (identity-verified) delivers a digital PSA E-Certificate electronically to your address abroad. If you need the physical SECPA original, PSAHelpline requires you to arrange and pay for your own international courier pickup.',
               },
             },
             {
@@ -56,7 +56,7 @@ export default function PsaOnlineEn() {
               name: 'How long does PSA Serbilis delivery take?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA Serbilis typically takes 10–15 business days for processing and delivery within the Philippines. For overseas delivery via a document service, add DFA Apostille time (1–2 weeks) and DHL international shipping (3–5 business days).',
+                text: 'PSA online processing timing varies by document and demand. For a physical original, add time to arrange your own international courier pickup. If a DFA e-Apostille is needed, that is a separate application with its own processing time.',
               },
             },
             {
@@ -72,7 +72,7 @@ export default function PsaOnlineEn() {
               name: 'Do PSA documents need DFA Apostille for use abroad?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For most immigration and legal purposes outside the Philippines, yes. DFA Apostille authenticates PSA documents for use in Hague Convention member countries. We confirm the exact requirement for your destination country before starting.',
+                text: 'For most immigration and legal purposes outside the Philippines, yes. Since March 2026, DFA authenticates PSA documents with an electronic e-Apostille (a paper Apostille is no longer issued for PSA documents). We confirm the exact requirement for your destination country before starting.',
               },
             },
           ],
@@ -81,33 +81,33 @@ export default function PsaOnlineEn() {
     >
       <HeroBanner
         title="PSA Online: Getting Your PSA Certificates Without Going Back"
-        badges={['PSA Serbilis Explained', 'OFW-Friendly', 'Ships Worldwide via DHL']}
+        badges={['PSAHelpline.ph Explained', 'OFW-Friendly', 'Online Application Handled']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 2026"
       />
 
       <SummaryBlock
-        conclusion="PSA Serbilis lets you order PSA documents online, but only delivers within the Philippines. Overseas Filipinos use a document service to retrieve and ship internationally."
+        conclusion="PSAHelpline.ph lets you order PSA documents online, and its International Service delivers a digital e-Certificate electronically abroad. A physical original requires you to arrange your own international courier — an application proxy service can handle the online forms, payment, and DFA e-Apostille application for you."
         points={[
-          'PSA Serbilis is the official PSA online portal — orders processed remotely',
-          'Delivery within Philippines only — international shipment requires a local representative or service',
-          'DFA Apostille is needed for most immigration and legal use abroad',
-          'We retrieve, apostille, and ship PSA documents to you worldwide via DHL',
+          'PSAHelpline.ph is the official PSA online portal — orders processed remotely',
+          'Digital e-Certificate delivered electronically to overseas applicants; physical original needs self-arranged courier',
+          'DFA e-Apostille is needed for most immigration and legal use abroad — issued electronically for PSA documents',
+          'We complete the PSA online application and DFA e-Apostille application on your behalf, in English',
         ]}
-        ctaText="Get PSA Documents Shipped to You"
+        ctaText="Get Help With Your PSA Application"
       />
 
       <div className="max-w-2xl mx-auto px-4 my-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Is PSA Online (PSA Serbilis)?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">What Is PSA Online (PSAHelpline.ph)?</h2>
         <p className="text-sm text-gray-700 leading-relaxed mb-4">
-          <strong>PSA Serbilis</strong> is the official online ordering system of the{' '}
-          <a href="https://psaserbilis.com.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
+          <strong>PSAHelpline.ph</strong> is the official online ordering system of the{' '}
+          <a href="https://psahelpline.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
             Philippine Statistics Authority (PSA)
           </a>. It allows Filipinos anywhere in the world to order civil registry documents online — without visiting a PSA office or sending someone in person.
         </p>
         <p className="text-sm text-gray-700 leading-relaxed mb-4">
-          Documents you can order via PSA Serbilis include:
+          Documents you can order via PSAHelpline.ph include:
         </p>
         <ul className="list-disc list-inside text-sm text-gray-700 space-y-1 mb-4 pl-2">
           <li>PSA Birth Certificate (SECPA copy)</li>
@@ -116,34 +116,34 @@ export default function PsaOnlineEn() {
           <li>PSA Death Certificate</li>
         </ul>
         <p className="text-sm text-gray-700 leading-relaxed">
-          However, there is a critical limitation for overseas Filipinos: <strong>PSA Serbilis only delivers within the Philippines.</strong> If you are based abroad, you need someone with a Philippine address to receive the documents — or you can use a document retrieval service that handles the pickup and international shipping for you.
+          Its International Service (identity-verified) delivers a <strong>digital PSA E-Certificate electronically</strong> to your address abroad. If you need the physical SECPA original, PSAHelpline requires <strong>you to arrange and pay for your own international courier pickup</strong> once the document is ready — a task an application proxy service can help coordinate if English-language logistics is a barrier.
         </p>
       </div>
 
       <FeatureList
-        heading="Limitations of PSA Serbilis for Overseas Filipinos"
+        heading="Things to Know Before Ordering from PSAHelpline.ph"
         items={[
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Philippine delivery address required',
-            description: 'PSA Serbilis ships only to addresses within the Philippines. If you have no one there to receive and forward your documents, you cannot use the portal directly.',
+            title: 'English-language forms and payment',
+            description: 'The application, identity verification, and payment are all in English. If this is a barrier, an application proxy service can complete it on your behalf.',
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'No DFA Apostille included',
-            description: 'PSA Serbilis delivers raw PSA documents. For immigration use, you separately need DFA Apostille — which requires the original to be physically submitted to DFA. This adds 1–2 weeks and another set of steps.',
+            title: 'No DFA e-Apostille included',
+            description: 'PSAHelpline delivers the raw PSA document. For immigration use, you separately need a DFA e-Apostille — a distinct online application. Since March 2026, this is issued electronically only for PSA documents.',
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Processing time: 10–15 business days',
-            description: 'Standard PSA Serbilis orders take 10–15 business days within the Philippines. International delivery and Apostille add further time — plan for 4–6 weeks total.',
+            title: 'Physical original needs a self-arranged courier',
+            description: 'The digital e-Certificate is delivered electronically, but a physical SECPA original requires you to book and pay for international courier pickup yourself.',
           },
         ]}
       />
 
       <CtaBox
-        title="Skip the logistics — we handle everything"
-        description="We retrieve your PSA documents, arrange DFA Apostille, and ship directly to your international address via DHL. One quote, one shipment, no Philippines address needed."
+        title="Skip the English-language hassle — we handle the applications"
+        description="We complete your PSA online application and payment, and handle the DFA e-Apostille application, on your behalf. One quote, no Philippines address needed."
         buttonText="Free Consultation"
         href="#contact"
         variant="primary"
@@ -151,22 +151,22 @@ export default function PsaOnlineEn() {
       />
 
       <FeatureList
-        heading="What We Do (vs. PSA Serbilis)"
+        heading="What We Do (vs. Ordering Directly from PSAHelpline.ph)"
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA retrieval — handled locally in Cebu',
-            description: 'Our Cebu-based team applies to PSA on your behalf and receives the documents at our local address. No Philippines address required on your end.',
+            title: 'PSA online application — completed on your behalf',
+            description: 'We fill out the PSAHelpline.ph application and handle payment for you, in English. No Philippines address required on your end.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFA Apostille — arranged after retrieval',
-            description: 'We submit the original PSA documents to DFA for Apostille authentication. This step is required for most immigration authorities outside the Philippines.',
+            title: 'DFA e-Apostille — a separate application we handle',
+            description: 'We submit the DFA e-Apostille application for your PSA document. This is required for most immigration authorities outside the Philippines, and is issued electronically for PSA documents.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL international shipping — tracked delivery to your door',
-            description: 'After Apostille, we ship directly to your address worldwide via DHL Express with tracking. No forwarding, no extra steps.',
+            title: 'Format guidance for your authority',
+            description: 'We confirm what your specific immigration authority accepts (e-Apostille PDF, or a physical PSA original with self-arranged courier) before you order.',
           },
         ]}
       />
@@ -175,20 +175,20 @@ export default function PsaOnlineEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us which documents you need and your use case (visa, immigration, marriage registration, etc.).' },
-          { title: 'We confirm scope and quote', description: 'We verify what Apostille or format is required and provide all-inclusive pricing.' },
-          { title: 'PSA retrieval in the Philippines', description: 'Our Cebu team applies to PSA Serbilis / PSA office and collects your documents.' },
-          { title: 'DFA Apostille authentication', description: 'We submit originals to DFA for Apostille. Paper originals returned with authentication stamp.' },
-          { title: 'DHL delivery to you', description: 'All documents shipped with tracking directly to your international address. Estimated total: 4–6 weeks.' },
+          { title: 'We confirm scope and quote', description: 'We verify what e-Apostille or format is required and provide all-inclusive pricing.' },
+          { title: 'We complete your PSA online application', description: 'We fill out the PSAHelpline.ph application and payment on your behalf, in English.' },
+          { title: 'DFA e-Apostille application', description: 'We submit the DFA e-Apostille application for your document. It is delivered electronically for submission.' },
+          { title: 'Document delivered', description: 'PSA delivers your document electronically; for a physical original, we advise on arranging your own international courier.' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: 'Can I order PSA certificates online from abroad?', a: 'Yes, via PSA Serbilis — but it only delivers within the Philippines. For international delivery, use a document service that picks up locally and ships worldwide via DHL.' },
-          { q: 'What is PSA Serbilis?', a: 'PSA Serbilis is the official online ordering portal of the Philippine Statistics Authority. It processes orders for birth certificates, marriage certificates, CENOMAR, and death certificates.' },
-          { q: 'How long does PSA Serbilis take?', a: 'PSA Serbilis typically takes 10–15 business days for delivery within the Philippines. Including DFA Apostille and international shipping, plan 4–6 weeks total.' },
-          { q: 'What documents can I get from PSA online?', a: 'PSA Birth Certificate, PSA Marriage Certificate, CENOMAR (Certificate of No Marriage Record), and PSA Death Certificate are all available online through PSA Serbilis.' },
-          { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'For most immigration and legal purposes outside the Philippines, yes. We confirm the exact requirement for your destination country before starting.' },
+          { q: 'Can I order PSA certificates online from abroad?', a: 'Yes, via PSAHelpline.ph\'s International Service, which delivers a digital e-Certificate electronically. If you need the physical original, you arrange your own international courier — or an application proxy service can complete the forms, payment, and DFA e-Apostille application for you.' },
+          { q: 'What is PSAHelpline.ph?', a: 'PSAHelpline.ph is the official online ordering portal of the Philippine Statistics Authority (successor to PSA Serbilis). It processes orders for birth certificates, marriage certificates, CENOMAR, and death certificates.' },
+          { q: 'How long does PSA online processing take?', a: 'Timing varies by document and demand. If a DFA e-Apostille is needed, that is a separate application with its own processing time — we confirm a current estimate for your case.' },
+          { q: 'What documents can I get from PSA online?', a: 'PSA Birth Certificate, PSA Marriage Certificate, CENOMAR (Certificate of No Marriage Record), and PSA Death Certificate are all available online through PSAHelpline.ph.' },
+          { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'For most immigration and legal purposes outside the Philippines, yes. Since March 2026, this is issued as an electronic e-Apostille for PSA documents (a paper Apostille is no longer issued for these). We confirm the exact requirement for your destination country before starting.' },
         ]}
         ctaTitle="Not sure what you need? Ask us."
         ctaButton="Free Consultation"
@@ -196,10 +196,10 @@ export default function PsaOnlineEn() {
 
       <RelatedArticles
         items={[
-          { href: '/en/psa-birth-certificate/', title: 'PSA Birth Certificate Retrieval', description: 'Get your PSA Birth Certificate with DFA Apostille shipped worldwide.' },
-          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'CENOMAR (Certificate of No Marriage Record) retrieved from PSA with Apostille.' },
+          { href: '/en/psa-birth-certificate/', title: 'PSA Birth Certificate Application', description: 'We handle the online application and DFA e-Apostille for your PSA Birth Certificate.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Application Service', description: 'CENOMAR (Certificate of No Marriage Record) online application and DFA e-Apostille, handled for you.' },
           { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'Why Apostille is needed and how we arrange it for every PSA document.' },
-          { href: '/en/psa-birth-certificate-cost/', title: 'PSA Birth Certificate Cost', description: 'Full cost breakdown: PSA fee + DFA Apostille + DHL shipping.' },
+          { href: '/en/psa-birth-certificate-cost/', title: 'PSA Birth Certificate Cost', description: 'Full cost breakdown: government fee + online application service + DFA e-Apostille application.' },
         ]}
       />
     </PageLayout>

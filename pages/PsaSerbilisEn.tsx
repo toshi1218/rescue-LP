@@ -55,7 +55,7 @@ export default function PsaSerbilisEn() {
               name: 'Where can I order PSA documents online now?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'You can order PSA documents (Birth Certificate, CENOMAR, Marriage Certificate) through PSAHelpline.ph. Alternatively, use a document retrieval service to handle ordering, apostille, and international shipping on your behalf.',
+                text: 'You can order PSA documents (Birth Certificate, CENOMAR, Marriage Certificate) through PSAHelpline.ph directly. If English-language forms or online payment are a barrier, an application proxy service can complete the ordering and DFA e-Apostille application on your behalf.',
               },
             },
             {
@@ -63,7 +63,7 @@ export default function PsaSerbilisEn() {
               name: 'Can I still get my PSA document delivered internationally?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSAHelpline.ph delivers within the Philippines. For international delivery, you need to arrange forwarding from a Philippine address, or use a retrieval service that includes DHL international shipping.',
+                text: 'Yes, via the PSAHelpline.ph International Service (identity-verified), which delivers a digital PSA E-Certificate electronically to your address abroad. If you need the physical SECPA original, PSAHelpline requires you to arrange and pay for your own international courier pickup.',
               },
             },
           ],
@@ -168,11 +168,11 @@ export default function PsaSerbilisEn() {
           },
           {
             question: 'Where can I order PSA documents online now?',
-            answer: 'Order through PSAHelpline.ph, or use a retrieval service for international delivery including apostille.',
+            answer: 'Order through PSAHelpline.ph directly, or use an application proxy service to complete the ordering and DFA e-Apostille application on your behalf.',
           },
           {
             question: 'Can I still get my PSA document delivered internationally?',
-            answer: 'PSAHelpline.ph delivers within the Philippines only. For international delivery, use a retrieval service that includes DHL shipping.',
+            answer: 'Yes, via the PSAHelpline.ph International Service, which delivers a digital PSA E-Certificate electronically to your address abroad. A physical original requires you to arrange and pay for your own international courier pickup.',
           },
         ]}
       />

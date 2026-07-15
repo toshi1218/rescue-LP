@@ -14,7 +14,7 @@ import RelatedArticles from '../components/RelatedArticles';
 export default function PsaBirthCertEn() {
   useMeta(
     'PSA Birth Certificate — Official Philippine Birth Record | Philippine Document Service',
-    'A PSA Birth Certificate is an official civil registry document from the Philippine Statistics Authority. Required for visas, immigration, and legal processes. Retrieved with DFA Apostille.',
+    'A PSA Birth Certificate is an official civil registry document from the Philippine Statistics Authority. Required for visas, immigration, and legal processes. We handle the online PSA application and DFA e-Apostille application on your behalf.',
   );
   return (
     <PageLayout
@@ -22,8 +22,8 @@ export default function PsaBirthCertEn() {
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'PSA Birth Certificate Retrieval Service (+ DFA Apostille)',
-        description: 'We retrieve PSA Birth Certificate from the Philippines with DFA Apostille and ship worldwide via DHL. Required for visa and immigration applications in the US, Canada, Australia, UK & more.',
+        name: 'PSA Birth Certificate Online Application Service (+ DFA e-Apostille)',
+        description: 'We handle your PSA Birth Certificate online application and DFA e-Apostille application on your behalf — in English, with payment handled for you. Required for visa and immigration applications in the US, Canada, Australia, UK & more.',
         url: 'https://ph-document.com/en/psa-birth-certificate/',
         provider: {
           '@type': 'Organization',
@@ -39,7 +39,7 @@ export default function PsaBirthCertEn() {
             '@type': 'UnitPriceSpecification',
             price: '349',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
+            description: 'PSA online application + DFA e-Apostille application (all-inclusive) — pricing under review following DFA\'s March 2026 e-Apostille policy change',
           },
         },
         },
@@ -52,7 +52,7 @@ export default function PsaBirthCertEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.',
+                text: 'We provide all-inclusive pricing after reviewing your case, covering the PSA online application and DFA e-Apostille application.',
               },
             },
             {
@@ -60,7 +60,7 @@ export default function PsaBirthCertEn() {
               name: 'How long does it take?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+                text: 'Timing depends on PSA and DFA processing queues. We confirm a current estimate for your case before you commit.',
               },
             },
             {
@@ -84,8 +84,8 @@ export default function PsaBirthCertEn() {
       ]}
     >
       <HeroBanner
-        title="PSA Birth Certificate — Retrieved and Shipped Worldwide"
-        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        title="PSA Birth Certificate — Online Application &amp; e-Apostille, Handled For You"
+        badges={['Online Application Handled', 'DFA e-Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -111,12 +111,12 @@ export default function PsaBirthCertEn() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">All-Inclusive Price</dt>
-              <dd className="font-medium text-gray-800">USD $349</dd>
-              <dd className="text-gray-400 text-xs mt-1">PSA + DFA Apostille + DHL shipping</dd>
+              <dd className="font-medium text-gray-800">Confirmed at consultation</dd>
+              <dd className="text-gray-400 text-xs mt-1">PSA online application + DFA e-Apostille application</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">Estimated Timeline</dt>
-              <dd className="font-medium text-gray-800">4–6 weeks total</dd>
+              <dd className="font-medium text-gray-800">Depends on PSA/DFA processing</dd>
             </div>
           </dl>
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
@@ -125,10 +125,9 @@ export default function PsaBirthCertEn() {
               <div className="px-4 py-3 font-bold text-center">Price</div>
             </div>
             {[
-              { label: 'PSA Birth Certificate retrieval', price: 'included' },
-              { label: 'DFA Apostille authentication', price: 'included' },
-              { label: 'DHL international shipping (tracked)', price: 'included' },
-              { label: 'Total (all-inclusive)', price: 'USD $349', bold: true },
+              { label: 'PSA Birth Certificate online application (input + payment)', price: 'included' },
+              { label: 'DFA e-Apostille application', price: 'included' },
+              { label: 'Total (all-inclusive)', price: 'Confirmed at consultation', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -141,12 +140,12 @@ export default function PsaBirthCertEn() {
       </div>
 
       <SummaryBlock
-        conclusion="We retrieve your PSA Birth Certificate with DFA Apostille and ship it to your address worldwide. No trip to the Philippines."
+        conclusion="We handle your PSA Birth Certificate online application and DFA e-Apostille application on your behalf — in English, no trip to the Philippines, no navigating government portals yourself."
         points={[
           'PSA Birth Certificate is required for nearly every visa and immigration case worldwide',
-          'DFA Apostille included so it is accepted by USCIS, IRCC, Home Affairs, UKVI & more',
-          'Shipped via DHL Express directly to your address anywhere in the world',
-          'All-inclusive pricing: no hidden fees for Apostille or shipping',
+          'Since March 2026, DFA authenticates PSA documents with an electronic e-Apostille (a paper Apostille is no longer issued for PSA documents) — we handle that application too',
+          'We complete the online forms and payment in English on your behalf; PSA delivers the document to you',
+          'All-inclusive pricing: no hidden fees for the application or e-Apostille',
         ]}
         ctaText="Free Consultation"
       />
@@ -157,17 +156,17 @@ export default function PsaBirthCertEn() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: 'Filing a visa or immigration application',
-            description: 'Immigration authorities worldwide (USCIS, IRCC, Home Affairs, UKVI) require a PSA Birth Certificate with DFA Apostille. We handle the full process.',
+            description: 'Immigration authorities worldwide (USCIS, IRCC, Home Affairs, UKVI) require a PSA Birth Certificate with DFA authentication. We handle the online application and e-Apostille process.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Not sure what format is required',
-            description: 'We confirm whether Apostille is needed for your specific submission authority before we start — no guesswork.',
+            description: 'We confirm whether Apostille is needed — and whether your authority accepts the e-Apostille — for your specific submission before we start.',
           },
           {
             icon: <Users className="w-4 h-4" />,
-            title: 'No contacts in the Philippines',
-            description: 'Our Cebu-based team handles everything locally. You just need to provide the applicant information.',
+            title: 'Not comfortable with the government portals in English',
+            description: 'We complete the PSA and DFA online applications and payment on your behalf. You just need to provide the applicant information.',
           },
         ]}
       />
@@ -186,18 +185,18 @@ export default function PsaBirthCertEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA Birth Certificate retrieval',
-            description: 'We apply to the Philippine Statistics Authority (PSA) and obtain the SECPA-printed original on your behalf.',
+            title: 'PSA Birth Certificate online application',
+            description: 'We complete the Philippine Statistics Authority (PSA) online application form and payment on your behalf, in English.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs. Paper original included.',
+            title: 'DFA e-Apostille application',
+            description: 'We handle the DFA e-Apostille (electronic) application at the Philippine Department of Foreign Affairs. Since March 2026, DFA no longer issues a paper Apostille for PSA documents.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping worldwide',
-            description: 'Tracked international delivery directly to your door anywhere in the world. No forwarding needed.',
+            title: 'Format guidance for your authority',
+            description: 'We confirm what your specific immigration authority accepts (e-Apostille PDF, or a physical PSA original) before you order.',
           },
         ]}
       />
@@ -206,16 +205,16 @@ export default function PsaBirthCertEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your use case (K-1, CR-1, etc.) and your target submission date.' },
-          { title: 'We confirm scope and quote', description: 'We verify whether Apostille is required and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille authentication.' },
-          { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'We confirm scope and quote', description: 'We verify whether e-Apostille is accepted by your authority and provide all-inclusive pricing.' },
+          { title: 'We complete the PSA and DFA online applications', description: 'We handle the PSA application, payment, and DFA e-Apostille application on your behalf, in English.' },
+          { title: 'Document delivered', description: 'PSA delivers your document; the DFA e-Apostille is delivered electronically for submission.' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.' },
-          { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case, covering the PSA online application and DFA e-Apostille application.' },
+          { q: 'How long does it take?', a: 'Timing depends on PSA and DFA processing queues. We confirm a current estimate for your case before you commit.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
           { q: 'Can I order CENOMAR and Birth Certificate together?', a: 'Yes. Bundling multiple documents is common for K-1 and CR-1 petitions. We handle them together at no extra coordination cost.' },
         ]}
