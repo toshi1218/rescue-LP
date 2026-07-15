@@ -35,7 +35,7 @@ export default function F6DocsEn() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'Philippine Documents for Korean F-6 Spouse Visa',
-          description: 'We retrieve PSA Birth Certificate, CENOMAR, DFA Apostille for the Korean F-6 spousal immigration visa. NBI Clearance application support included. LCCM guidance available.',
+          description: 'We handle your PSA Birth Certificate and CENOMAR online applications with DFA e-Apostille for the Korean F-6 spousal immigration visa. NBI Clearance application support included. LCCM guidance available.',
           url: 'https://ph-document.com/en/f-6-philippines-documents/',
           provider: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/en/' },
           areaServed: { '@type': 'Country', name: 'KR' },
@@ -171,7 +171,7 @@ export default function F6DocsEn() {
             { n: '1', title: 'Free consultation', desc: 'Tell us what documents you need and your purpose. You do not need to know the document names.' },
             { n: '2', title: 'Confirm scope and quote', desc: 'We clarify the document set, cost, and expected timeline upfront.' },
             { n: '3', title: 'Pay 50% to start', desc: 'Once payment is confirmed, we begin the Philippine-side process.' },
-            { n: '4', title: 'PSA & CENOMAR retrieval + DFA Apostille', desc: 'Our local team retrieves PSA and CENOMAR documents and arranges Apostille authentication. For NBI Clearance, we provide application guidance and Apostille support (fingerprint registration must be done in person at the Philippine Embassy in Seoul).' },
+            { n: '4', title: 'PSA & CENOMAR online application + DFA e-Apostille', desc: 'We complete the PSA and CENOMAR online applications and payment on your behalf, and handle the DFA e-Apostille application. For NBI Clearance, we provide application guidance and physical Apostille support (fingerprint registration must be done in person at the Philippine Embassy in Seoul).' },
             { n: '5', title: 'Confirm document copies, pay balance, DHL shipping', desc: 'After you confirm the document copies, pay the remaining 50% and we ship to Korea via DHL.' },
           ].map((step) => (
             <li key={step.n} className="flex gap-4 p-4 rounded-xl border border-gray-100 bg-white shadow-sm">

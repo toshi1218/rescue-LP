@@ -13,7 +13,7 @@ import { useMeta } from '../lib/useMeta';
 export default function UkDocsEn() {
   useMeta(
     'PH Documents for UK Immigration [April 2026]',
-    'Applying for a UK spouse visa or settlement? We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille for UKVI. Ships to the UK via DHL. Free consultation.',
+    'Applying for a UK spouse visa or settlement? We handle your CENOMAR & PSA Birth Certificate online applications with DFA e-Apostille for UKVI, plus NBI Clearance retrieval with physical Apostille shipped to the UK via DHL. Free consultation.',
   );
   return (
     <PageLayout
@@ -136,8 +136,8 @@ export default function UkDocsEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA document retrieval (Birth Cert, Marriage Cert, CENOMAR, NBI Clearance)',
-            description: 'We retrieve all required PSA documents in one coordinated flow.',
+            title: 'PSA online application + NBI Clearance retrieval',
+            description: 'We complete the PSA online applications (Birth Cert, Marriage Cert, CENOMAR) and DFA e-Apostille applications on your behalf, and handle NBI Clearance retrieval with its physical DFA Apostille, in one coordinated flow.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -157,7 +157,7 @@ export default function UkDocsEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa type (spouse visa, settlement, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents for UKVI and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
+          { title: 'We handle the applications', description: 'We complete the PSA online applications and DFA e-Apostille applications; our Cebu team handles NBI Clearance retrieval and its physical DFA Apostille.' },
           { title: 'DHL delivery to the UK', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />

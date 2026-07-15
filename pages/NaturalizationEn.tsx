@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 export default function NaturalizationEn() {
   useMeta(
     'Naturalization Document Service [April 2026] | PSA & NBI',
-    'Applying for citizenship or naturalization and need Philippine civil documents? We retrieve PSA Birth Certificate, NBI Clearance + DFA Apostille and ship to your address worldwide via DHL. Free consultation.',
+    'Applying for citizenship or naturalization and need Philippine civil documents? We handle your PSA Birth Certificate online application with DFA e-Apostille, plus NBI Clearance retrieval with physical Apostille shipped worldwide via DHL. Free consultation.',
   );
   return (
     <PageLayout
@@ -21,7 +21,7 @@ export default function NaturalizationEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Philippine Documents for Citizenship & Naturalization (PSA + NBI + Apostille)',
-        description: 'We retrieve PSA Birth Certificate, NBI Clearance, and other Philippine civil documents with DFA Apostille for citizenship and naturalization applications worldwide. Ships via DHL.',
+        description: 'We handle the PSA Birth Certificate online application with DFA e-Apostille, and NBI Clearance retrieval with physical DFA Apostille, for citizenship and naturalization applications worldwide. NBI documents ship via DHL.',
         url: 'https://ph-document.com/en/naturalization-guide/',
         provider: {
           '@type': 'Organization',
@@ -135,8 +135,8 @@ export default function NaturalizationEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA document retrieval',
-            description: 'We retrieve all required PSA documents in one coordinated flow from our Cebu office.',
+            title: 'PSA online application + NBI Clearance retrieval',
+            description: 'We complete the PSA online applications and DFA e-Apostille applications on your behalf, and handle NBI Clearance retrieval with its physical DFA Apostille from our Cebu office.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -156,7 +156,7 @@ export default function NaturalizationEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your citizenship application status and your submission deadline.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
+          { title: 'We handle the applications', description: 'We complete the PSA online applications and DFA e-Apostille applications; our Cebu team handles NBI Clearance retrieval and its physical DFA Apostille.' },
           { title: 'DHL delivery worldwide', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />

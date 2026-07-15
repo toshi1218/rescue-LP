@@ -13,7 +13,7 @@ import { useMeta } from '../lib/useMeta';
 export default function Cr1VisaDocsEn() {
   useMeta(
     'CR-1 Visa Documents — NVC Ready [April 2026]',
-    'US petitioner for CR-1/IR-1 visa? We retrieve PSA Marriage Certificate, NBI Clearance + DFA Apostille for NVC submission and ship to your US address. Free consultation for American petitioners.',
+    'US petitioner for CR-1/IR-1 visa? We handle your PSA Marriage Certificate online application with DFA e-Apostille for NVC submission, plus NBI Clearance retrieval with physical Apostille shipped to your US address. Free consultation for American petitioners.',
   );
   return (
     <PageLayout
@@ -22,7 +22,7 @@ export default function Cr1VisaDocsEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CR-1/IR-1 Spouse Visa Philippine Documents Retrieval Service',
-        description: 'We retrieve all Philippine documents required for a CR-1/IR-1 spouse visa — PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille. NVC-ready. Ships to USA via DHL.',
+        description: 'We handle the PSA Marriage Certificate and Birth Certificate online applications with DFA e-Apostille, plus NBI Clearance retrieval with physical Apostille, required for a CR-1/IR-1 spouse visa. NVC-ready. NBI ships to USA via DHL.',
         url: 'https://ph-document.com/en/cr1-visa-documents/',
         provider: {
           '@type': 'Organization',
@@ -91,7 +91,7 @@ export default function Cr1VisaDocsEn() {
       />
 
       <SummaryBlock
-        conclusion="Filing a CR-1 or IR-1 spouse visa? We retrieve all Philippine documents NVC-ready and ship to your door."
+        conclusion="Filing a CR-1 or IR-1 spouse visa? We handle the PSA online applications and DFA e-Apostille, and NBI Clearance retrieval, to get your documents NVC-ready."
         points={[
           'PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille',
           'Documents formatted for NVC submission requirements',
@@ -137,7 +137,7 @@ export default function Cr1VisaDocsEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'PSA Marriage Certificate, Birth Certificate, NBI Clearance retrieval',
-            description: 'We retrieve all required CR-1/IR-1 documents in one coordinated flow from our Cebu office.',
+            description: 'We complete the PSA online applications and DFA e-Apostille applications, and handle NBI Clearance retrieval with its physical Apostille, in one coordinated flow from our Cebu office.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -157,7 +157,7 @@ export default function Cr1VisaDocsEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your CR-1/IR-1 case status and your NVC submission or interview deadline.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles Marriage Certificate, Birth Certificate, NBI Clearance, and DFA Apostille.' },
+          { title: 'We handle the applications', description: 'We complete the PSA Marriage Certificate and Birth Certificate online applications with DFA e-Apostille; our Cebu team handles NBI Clearance retrieval and its physical DFA Apostille.' },
           { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />

@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 export default function SpouseVisaEn() {
   useMeta(
     'Spouse Visa Document Service [April 2026] | PSA & NBI',
-    'Overwhelmed by Philippine document requirements for a spouse visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship everything to you. Free consultation for petitioners.',
+    'Overwhelmed by Philippine document requirements for a spouse visa? We handle your PSA and CENOMAR online applications with DFA e-Apostille, plus NBI Clearance retrieval with physical Apostille, and ship what needs shipping to you. Free consultation for petitioners.',
   );
   return (
     <PageLayout
@@ -135,18 +135,18 @@ export default function SpouseVisaEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA document retrieval',
-            description: 'We retrieve all required PSA documents (Marriage Cert, Birth Cert, CENOMAR) in one flow.',
+            title: 'PSA online application',
+            description: 'We complete the online applications for all required PSA documents (Marriage Cert, Birth Cert, CENOMAR) and payment, on your behalf.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided.',
+            title: 'DFA e-Apostille application',
+            description: 'We handle the DFA e-Apostille application for PSA documents that require it, and physical Apostille for non-PSA documents like NBI Clearance.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping worldwide',
-            description: 'All documents shipped together with tracking to your address. No forwarding needed.',
+            title: 'Format guidance for your authority',
+            description: 'We confirm what your specific submission authority accepts before you order. Physical documents (e.g. NBI Clearance) ship worldwide via DHL.',
           },
         ]}
       />
@@ -156,8 +156,8 @@ export default function SpouseVisaEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa type (CR-1, IR-1, partner visa, spousal sponsorship, etc.) and your submission deadline.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
-          { title: 'DHL delivery worldwide', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
+          { title: 'We handle the applications', description: 'We complete the PSA online applications and DFA e-Apostille applications; our Cebu team handles NBI Clearance retrieval and its physical DFA Apostille.' },
+          { title: 'Delivery', description: 'PSA documents delivered electronically; physical documents (e.g. NBI Clearance) shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
 

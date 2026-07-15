@@ -13,7 +13,7 @@ import { useMeta } from '../lib/useMeta';
 export default function NewZealandDocsEn() {
   useMeta(
     'Philippine Documents for New Zealand Immigration [2026]',
-    'Applying for a New Zealand partner visa or residence? We retrieve CENOMAR, PSA Birth Certificate & NBI Clearance with DFA Apostille. Ships to NZ via DHL. Free consultation.',
+    'Applying for a New Zealand partner visa or residence? We handle your CENOMAR & PSA Birth Certificate online applications with DFA e-Apostille, plus NBI Clearance retrieval with physical Apostille shipped to NZ via DHL. Free consultation.',
   );
   return (
     <PageLayout
@@ -68,7 +68,7 @@ export default function NewZealandDocsEn() {
               name: 'Can I get my Philippine documents apostilled and shipped to New Zealand?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes. We retrieve PSA documents, obtain DFA Apostille, and ship directly to your New Zealand address via DHL Express. Total processing time is approximately 2–4 weeks.',
+                text: 'Yes. We complete the PSA online applications and DFA e-Apostille applications on your behalf, and handle NBI Clearance retrieval with physical Apostille shipped directly to your New Zealand address via DHL Express. Total processing time is approximately 2–4 weeks.',
               },
             },
             {
@@ -96,17 +96,17 @@ export default function NewZealandDocsEn() {
       />
 
       <FeatureList
-        heading="What We Retrieve for New Zealand Applications"
+        heading="What We Handle for New Zealand Applications"
         items={[
           {
             icon: <FileCheck className="w-6 h-6 text-blue-600" />,
-            title: 'PSA Birth Certificate + DFA Apostille',
-            description: 'Required for all residence and citizenship applications. We retrieve directly from PSA and obtain DFA Apostille.',
+            title: 'PSA Birth Certificate + DFA e-Apostille',
+            description: 'Required for all residence and citizenship applications. We complete the PSA online application and DFA e-Apostille application on your behalf.',
           },
           {
             icon: <FileCheck className="w-6 h-6 text-blue-600" />,
-            title: 'CENOMAR or PSA Marriage Certificate + DFA Apostille',
-            description: 'CENOMAR for single applicants; PSA Marriage Certificate for married applicants. Both require DFA Apostille.',
+            title: 'CENOMAR or PSA Marriage Certificate + DFA e-Apostille',
+            description: 'CENOMAR for single applicants; PSA Marriage Certificate for married applicants. Both authenticated by DFA e-Apostille (PSA documents no longer receive a paper Apostille).',
           },
           {
             icon: <Shield className="w-6 h-6 text-blue-600" />,
@@ -120,15 +120,15 @@ export default function NewZealandDocsEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your request', description: 'Fill out our form with your full name, date of birth, and the documents you need.' },
-          { title: 'We retrieve from PSA / NBI', description: 'We order from official PSA channels and arrange NBI clearance (3–7 business days each).' },
-          { title: 'DFA Apostille', description: 'We bring documents to DFA for Apostille authentication (3–5 business days).' },
-          { title: 'DHL Express to New Zealand', description: 'We ship directly to your NZ address (3–5 business days). Tracking provided.' },
+          { title: 'We handle the PSA online applications / NBI retrieval', description: 'We complete the PSA online applications and arrange NBI clearance (3–7 business days each).' },
+          { title: 'DFA e-Apostille / physical Apostille', description: 'We handle the DFA e-Apostille application for PSA documents, and physical Apostille authentication for NBI Clearance (3–5 business days).' },
+          { title: 'Delivery to New Zealand', description: 'PSA documents delivered electronically; NBI Clearance shipped via DHL Express (3–5 business days). Tracking provided.' },
         ]}
       />
 
       <CtaBox
         heading="Ready to Get Your Documents for New Zealand?"
-        body="We handle everything — PSA retrieval, DFA Apostille, and DHL shipping to New Zealand. Free quote, no hidden fees."
+        body="We handle everything — PSA online applications, DFA e-Apostille, and NBI Clearance retrieval with DHL shipping to New Zealand. Free quote, no hidden fees."
         ctaLabel="Get a Free Quote"
         ctaHref="/en/contact/"
       />

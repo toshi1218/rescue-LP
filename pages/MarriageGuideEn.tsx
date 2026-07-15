@@ -135,8 +135,8 @@ export default function MarriageGuideEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA document retrieval (Marriage Cert, Birth Cert, CENOMAR)',
-            description: 'We retrieve all required PSA documents in one coordinated flow.',
+            title: 'PSA online application (Marriage Cert, Birth Cert, CENOMAR)',
+            description: 'We complete the PSA online applications and DFA e-Apostille applications on your behalf, in one coordinated flow.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -156,7 +156,7 @@ export default function MarriageGuideEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa type (K-1, CR-1, partner visa, spousal sponsorship, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
+          { title: 'We handle the applications', description: 'We complete the PSA online applications and DFA e-Apostille applications on your behalf, in English.' },
           { title: 'DHL delivery worldwide', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />

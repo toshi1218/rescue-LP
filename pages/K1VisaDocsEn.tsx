@@ -13,7 +13,7 @@ import { useMeta } from '../lib/useMeta';
 export default function K1VisaDocsEn() {
   useMeta(
     'K-1 Visa Documents: CENOMAR, PSA & NBI [April 2026]',
-    'American petitioner for a K-1 visa? We retrieve CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille for your Filipino fiancé(e). Ships to your US address. Free consultation.',
+    'American petitioner for a K-1 visa? We handle the CENOMAR and PSA Birth Certificate online applications with DFA e-Apostille, plus NBI Clearance retrieval with physical Apostille shipped to your US address, for your Filipino fiancé(e). Free consultation.',
   );
   return (
     <PageLayout
@@ -22,7 +22,7 @@ export default function K1VisaDocsEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'K-1 Fiancé Visa Philippine Documents Retrieval Service',
-        description: 'We retrieve all Philippine documents required for a K-1 fiancé visa — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. USCIS-ready. Ships to your US address via DHL.',
+        description: 'We handle the CENOMAR and PSA Birth Certificate online applications with DFA e-Apostille, plus NBI Clearance retrieval with physical Apostille, required for a K-1 fiancé visa. USCIS-ready. NBI ships to your US address via DHL.',
         url: 'https://ph-document.com/en/k1-visa-documents/',
         provider: {
           '@type': 'Organization',
@@ -137,7 +137,7 @@ export default function K1VisaDocsEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'PSA CENOMAR, Birth Certificate, NBI Clearance retrieval',
-            description: 'We retrieve all required K-1 documents in one coordinated flow from our Cebu office.',
+            description: 'We complete the PSA online applications and DFA e-Apostille applications, and handle NBI Clearance retrieval with its physical Apostille, in one coordinated flow from our Cebu office.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -157,7 +157,7 @@ export default function K1VisaDocsEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your K-1 case status and your target USCIS or embassy interview date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles CENOMAR, Birth Certificate, NBI Clearance, and DFA Apostille.' },
+          { title: 'We handle the applications', description: 'We complete the CENOMAR and PSA Birth Certificate online applications with DFA e-Apostille; our Cebu team handles NBI Clearance retrieval and its physical DFA Apostille.' },
           { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
