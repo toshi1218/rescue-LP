@@ -5,7 +5,7 @@ import { useMeta } from '../lib/useMeta';
 export default function CompanyEn() {
   useMeta(
     'About Us | IGRS Inc. — Philippine Document Retrieval Service',
-    'IGRS Inc. is a document retrieval agency with an operations office in Cebu, Philippines. We retrieve PSA, NBI, LTO, and DFA Apostille documents for US visa and immigration applicants. English support.',
+    'IGRS Inc. is a Philippine document service with an operations office in Cebu, Philippines. We handle PSA online applications with DFA e-Apostille, and retrieve NBI and LTO documents with physical DFA Apostille, for US visa and immigration applicants. English support.',
   );
   return (
     <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'About Us' }]}>

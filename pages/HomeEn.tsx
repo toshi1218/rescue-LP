@@ -21,7 +21,7 @@ import { SEO_DATE_ISO } from '../lib/seoDate';
 export default function HomeEn() {
   useMeta(
     'Philippine Documents for International Marriage & Visa',
-    'Getting married to a Filipino, or moving countries together? We verify format requirements, procure physical PSA originals + DFA Apostille, and ship via DHL worldwide.',
+    'Getting married to a Filipino, or moving countries together? We verify format requirements, handle your PSA online applications with DFA e-Apostille, and retrieve non-PSA documents like NBI Clearance with physical Apostille shipped via DHL worldwide.',
     'https://ph-document.com/en/',
   );
 
@@ -36,7 +36,7 @@ export default function HomeEn() {
     alternateName: 'ph-document.com',
     url: 'https://ph-document.com/en/',
     logo: 'https://ph-document.com/logo.png',
-    description: 'Philippine PSA document service for overseas submission. We verify receiving authority requirements and procure physical PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille for clients in UAE, Korea, Europe, USA, and worldwide. Paper originals shipped via DHL Express.',
+    description: 'Philippine document service for overseas submission. We verify receiving authority requirements, handle PSA Birth Certificate and CENOMAR online applications with DFA e-Apostille, and retrieve NBI Clearance with physical DFA Apostille for clients in UAE, Korea, Europe, USA, and worldwide. Physical documents shipped via DHL Express.',
     areaServed: [
       { '@type': 'Country', name: 'US' },
       { '@type': 'Country', name: 'CA' },

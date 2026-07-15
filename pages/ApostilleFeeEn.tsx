@@ -111,7 +111,7 @@ export default function ApostilleFeeEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Want to know the total cost before committing',
-            description: 'We provide all-inclusive pricing after a free consultation — DFA Apostille, PSA retrieval, and DHL shipping included.',
+            description: 'We provide all-inclusive pricing after a free consultation — DFA Apostille application (electronic for PSA documents, physical for others), PSA online application, and DHL shipping for physical documents included.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -123,7 +123,7 @@ export default function ApostilleFeeEn() {
 
       <CtaBox
         title="Get the real total — not just the base fee"
-        description="We quote DFA Apostille, PSA retrieval, and DHL shipping together. No surprise add-ons after you start."
+        description="We quote the DFA Apostille application, PSA online application, and DHL shipping for physical documents together. No surprise add-ons after you start."
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
@@ -135,13 +135,13 @@ export default function ApostilleFeeEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs. Paper original provided.',
+            title: 'DFA Apostille application',
+            description: 'We handle the DFA Apostille application at the Philippine Department of Foreign Affairs — electronic e-Apostille for PSA documents, physical Apostille for non-PSA documents like NBI Clearance.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA document retrieval (when needed)',
-            description: 'We can bundle PSA retrieval with Apostille for a single all-inclusive price.',
+            title: 'PSA online application (when needed)',
+            description: 'We can bundle the PSA online application with the DFA e-Apostille application for a single all-inclusive price.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -155,15 +155,15 @@ export default function ApostilleFeeEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us which documents need Apostille and your submission authority.' },
-          { title: 'We provide all-inclusive pricing', description: 'DFA Apostille, PSA retrieval, and DHL shipping quoted together upfront.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles retrieval and authentication.' },
+          { title: 'We provide all-inclusive pricing', description: 'DFA Apostille application, PSA online application, and DHL shipping for physical documents quoted together upfront.' },
+          { title: 'We handle the applications', description: 'We complete PSA online applications and DFA e-Apostille applications; our Cebu team handles physical retrieval and Apostille for non-PSA documents.' },
           { title: 'DHL delivery worldwide', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: 'How much does DFA Apostille cost?', a: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included in one quote.' },
+          { q: 'How much does DFA Apostille cost?', a: 'We provide all-inclusive pricing after reviewing your case. The DFA Apostille application, PSA online application (when needed), and DHL shipping for physical documents are all included in one quote.' },
           { q: 'Why is your price higher than some agencies?', a: 'Some agencies quote only the base fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.' },
           { q: 'Is Apostille always required?', a: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },

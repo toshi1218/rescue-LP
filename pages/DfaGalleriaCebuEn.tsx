@@ -153,7 +153,7 @@ export default function DfaGalleriaCebuEn() {
 
       <CtaBox
         title="We Handle the DFA Apostille Process for You"
-        description="Our local staff in the Philippines can retrieve PSA documents and obtain DFA Apostille authentication on your behalf, then ship to Japan via DHL. No travel required."
+        description="We complete PSA online applications and DFA e-Apostille applications on your behalf, and our local staff in the Philippines retrieve non-PSA documents like NBI Clearance with physical DFA Apostille, shipped to Japan via DHL. No travel required."
         buttonText="Free Consultation"
         href="#contact"
         variant="primary"
