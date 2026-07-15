@@ -11,6 +11,7 @@ import SocialProof from '../components/SocialProof';
 import DiyRisks from '../components/DiyRisks';
 import ServicePacks from '../components/ServicePacks';
 import FAQ from '../components/FAQ';
+import FinalCta from '../components/FinalCta';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 import { trackLandingView } from '../lib/analytics';
@@ -132,31 +133,31 @@ export default function HomeJa() {
           </div>
         </div>
         <div className="container mx-auto max-w-5xl px-4 pt-8">
-          <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
-            <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />
+          <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-primary bg-white shadow-md">
+            <div className="h-1.5 w-full bg-gradient-to-r from-primary via-primary-dark to-primary" />
             <div className="p-6 md:p-8">
-              <div className="inline-block mb-4 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">
-                紙原本対応
+              <div className="inline-block mb-4 px-3 py-1 bg-secondary text-white text-xs font-bold rounded tracking-wide">
+                紙原本にも対応
               </div>
               <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
-                2026年3月のPSAデジタル化以降、電子文書が<span className="text-red-700">受理されず紙原本を要求されるケース</span>が多数報告されています。<span className="text-red-700">当社はPSA・DFA窓口で直接紙原本を取得しており、従来通り対応可能です。</span>
+                <span className="text-primary-dark">紙原本が必要でもご安心ください。</span>当社はPSA・DFA窓口で直接<span className="text-primary-dark">紙原本</span>を取得しており、2026年3月のPSAデジタル化以降も従来通り対応可能です。電子文書が受理されず紙原本を求められるケースが増えています。
               </p>
               {noticeExpanded && (
                 <ul className="space-y-3 mt-4">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-primary-dark flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
                       <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：フィリピン側の運用が電子化しても、日本の提出先は当面の間、紙原本を求められることが想定されます。
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-primary-dark flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">まずは提出先にご確認ください</strong>：電子文書で受理されるかを提出先にご確認いただき、<strong className="text-red-700">紙原本を求められた場合は当社にご相談ください。</strong>
+                      <strong className="text-gray-900">まずは提出先にご確認ください</strong>：電子文書で受理されるかを提出先にご確認いただき、<strong className="text-primary-dark">紙原本を求められた場合は当社にご相談ください。</strong>
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-primary-dark flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
                       <strong className="text-gray-900">納期の目安</strong>：現在、紙原本のご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
                     </span>
@@ -166,7 +167,7 @@ export default function HomeJa() {
               {!noticeExpanded && (
                 <button
                   onClick={() => setNoticeExpanded(true)}
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-red-700 hover:text-red-800 transition-colors"
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-primary-dark hover:text-secondary transition-colors"
                 >
                   <ChevronDown className="w-3.5 h-3.5" />
                   詳細を見る
@@ -192,6 +193,7 @@ export default function HomeJa() {
         <WhyUs />
         <SocialProof />
         <CaseStudies />
+        <FinalCta />
         <DiyRisks />
         <GuideLinks maxItems={6} />
         <QuickFacts />

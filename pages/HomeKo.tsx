@@ -356,8 +356,26 @@ export default function HomeKo() {
           </div>
         </section>
 
+        {/* 중간 CTA */}
+        <section className="px-4 py-12 bg-background-light">
+          <div className="max-w-3xl mx-auto rounded-2xl bg-secondary px-6 py-8 text-center md:text-left md:flex md:items-center md:justify-between gap-6">
+            <div className="mb-4 md:mb-0">
+              <h2 className="text-lg font-bold text-white mb-1">어떤 서류가 필요한지 모르셔도 괜찮습니다</h2>
+              <p className="text-sm text-white/70">현재 상황을 알려주시면 필요한 서류와 견적을 24시간 이내에 정리해 드립니다.</p>
+              <p className="mt-2 text-xs text-primary/80">견적 단계까지 무료 · 착수 전 취소 무료</p>
+            </div>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3.5 px-8 rounded-xl shadow-lg hover:bg-primary-hover transition-all text-sm whitespace-nowrap shrink-0"
+            >
+              무료로 상담하기
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </section>
+
         {/* 자주 묻는 질문 */}
-        <section className="py-14 px-4 bg-background-light">
+        <section className="py-14 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-xl md:text-2xl font-bold text-secondary mb-8 text-center">
               자주 묻는 질문
