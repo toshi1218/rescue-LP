@@ -28,7 +28,7 @@ export default function CenomarGuideJa() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'CENOMAR（独身証明書）取得代行',
-          description: 'フィリピンのCENOMAR（独身証明書）を必要書類の確認から取得・発送までサポート。国際結婚・配偶者ビザ・帰化申請に対応。',
+          description: 'フィリピンのCENOMAR（独身証明書）を、必要書類の確認からPSAオンライン申請・DFA e-Apostille（電子認証）申請まで日本語で代行。国際結婚・配偶者ビザ・帰化申請に対応。',
           url: 'https://ph-document.com/ja/cenomar/',
           provider: {
             '@type': 'Organization',
@@ -144,7 +144,7 @@ export default function CenomarGuideJa() {
                 日本側にQRコードでオンライン検証する内部マニュアルが整備されておらず、「原本のコピー」として不受理になるリスクがあります。
               </p>
               <p className="text-sm text-amber-800 leading-relaxed">
-                当社は<strong>紙の原本＋DFAアポスティーユ</strong>で対応しています。e-certificateしか取れない方は、まずご相談ください。
+                2026年3月以降、DFAの認証は<strong>e-Apostille（電子）のみ</strong>で、物理アポスティーユは発行されません。当社はPSAオンライン申請とDFA e-Apostille申請を日本語で代行し、提出先がe-Apostilleを受理するかの確認や、紙のPSA原本（SECPA）が必要な場合の進め方までご案内します。まずはご相談ください。
               </p>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function CenomarGuideJa() {
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
               <dd className="font-medium text-gray-800">30,000円〜（DFA e-Apostille〈電子〉込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※PSA発行料金（1通420ペソ）込み・DHL国際配送は実費別途</dd>
+              <dd className="text-gray-400 text-xs mt-1">※PSA発行料金（1通420ペソ）込み・DFA e-Apostille（電子認証）申請込み</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -188,9 +188,9 @@ export default function CenomarGuideJa() {
               <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
             </div>
             {[
-              { label: 'CENOMAR（PSA）取得', price: '込み' },
-              { label: 'DFAアポスティーユ認証', price: '込み' },
-              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+              { label: 'CENOMAR（PSA）オンライン申請', price: '込み' },
+              { label: 'DFA e-Apostille認証（電子）申請', price: '込み' },
+              { label: '紙のPSA原本（SECPA）が必要な場合の国際配送', price: '実費・要相談' },
               { label: '合計（DFA e-Apostille〈電子〉込み）', price: '30,000円〜', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
@@ -304,7 +304,7 @@ export default function CenomarGuideJa() {
 
       <StepList
         variant="visual"
-        heading="ご依頼から発送までの流れ"
+        heading="ご依頼から完了までの流れ"
         steps={[
           {
             title: '無料相談・お見積もり',
@@ -315,20 +315,20 @@ export default function CenomarGuideJa() {
             description: '内容に問題がなければ、着手金をご入金いただき、手続きを開始します。',
           },
           {
-            title: '必要書類のご案内と取得手配',
-            description: '案件に応じて、本人確認資料や委任状等をご案内し、取得手配を進めます。',
+            title: '必要書類のご案内とオンライン申請',
+            description: '案件に応じて本人確認資料等をご案内し、PSA・DFA e-Apostilleのオンライン申請の入力・支払いを代行します。',
           },
           {
-            title: '取得完了後、写しをご確認',
-            description: '書類が取得できた段階で、写し（写真またはPDF）をご確認いただきます。',
+            title: '申請完了後、写しをご確認',
+            description: '書類が発行された段階で、写し（PDF等）をご確認いただきます。',
           },
           {
             title: '残金50%のお支払い',
             description: '内容に問題がなければ、残額をご入金いただきます。',
           },
           {
-            title: '原本発送',
-            description: '入金確認後、原本の発送手続きへ進みます。',
+            title: 'e-Apostille交付・完了',
+            description: 'DFA e-Apostille（電子）を受領します。紙のPSA原本が必要な場合の受け取り方法もご案内します。',
           },
         ]}
       />

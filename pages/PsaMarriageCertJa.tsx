@@ -37,7 +37,7 @@ export default function PsaMarriageCertJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: 'PSAオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜）',
           },
         },
         },
@@ -50,7 +50,7 @@ export default function PsaMarriageCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
+                text: 'PSAオンライン申請とDFA e-Apostille（電子認証）申請をまとめた料金です。紙のPSA原本が必要な場合の国際配送は実費・要相談です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -94,7 +94,7 @@ export default function PsaMarriageCertJa() {
         conclusion="PSA婚姻証明書（アポスティーユ付き）を、日本語だけで取り寄せできます。"
         points={[
           'PSAオンライン申請の入力・支払いとDFA e-Apostille（電子認証）申請を日本語で代行',
-          '配偶者ビザ・帰化申請に必要な「紙の原本」形式で対応',
+          '2026年3月以降、PSA民事書類の認証はe-Apostille（電子）に一本化（物理アポスティーユは発行不可）',
           '注釈付き（Annotated）婚姻証明書にも対応',
           '約1ヶ月〜で日本のご住所へ郵送',
         ]}
@@ -117,7 +117,7 @@ export default function PsaMarriageCertJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: '提出先に合った形式で揃えたい',
-            description: 'アポスティーユが必要かどうか、提出先ごとに確認して手配します。日本の提出先では紙の原本が原則必要です。',
+            description: 'アポスティーユが必要かどうか、提出先ごとに確認して手配します。日本の提出先は従来紙の原本を前提としてきましたが、DFAの認証は2026年3月以降e-Apostille（電子）のみです。',
           },
         ]}
       />
@@ -128,7 +128,7 @@ export default function PsaMarriageCertJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類発行の確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -137,7 +137,7 @@ export default function PsaMarriageCertJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'PSA婚姻証明書取得',
-            description: 'フィリピン統計局（PSA）への申請・取得を代行します。SECPAセキュリティペーパー印刷の原本をお届けします。',
+            description: 'フィリピン統計局（PSA）へのオンライン申請フォーム入力・本人確認・支払いを日本語で代行します。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -152,14 +152,14 @@ export default function PsaMarriageCertJa() {
         steps={[
           { title: 'フォームで相談', description: '用途（配偶者ビザ・帰化申請など）と提出先をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
+          { title: 'オンライン申請を代行', description: 'PSA・DFA e-Apostilleのオンライン申請の入力・支払いを日本語で進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSAオンライン申請とDFA e-Apostille（電子認証）申請をまとめた料金です。紙のPSA原本が必要な場合の国際配送は実費・要相談です。無料相談後に正確な金額をご提示します。' },
           { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },
           { q: '注釈付き（Annotated）の婚姻証明書は取れますか？', a: '対応可能です。アニュルメント後や外国離婚承認後の注釈付き書類も手配できます。まずは状況をお知らせください。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },

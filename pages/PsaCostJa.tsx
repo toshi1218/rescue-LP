@@ -11,7 +11,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function PsaCostJa() {
   useMeta(
     `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】総額いくら？現地365ペソだけでは届かない理由`,
-    'PSA出生証明書の現地料金は365ペソ。でも日本に届けるにはアポスティーユ・国際郵送が必要です。追加請求なしの総額料金で代行。無料見積もり。',
+    'PSA出生証明書の現地料金は365ペソ。日本で使うにはDFA e-Apostille（電子認証）等が必要です。オンライン申請とe-Apostille申請を総額明示で代行。無料見積もり。',
   );
   return (
     <PageLayout
@@ -163,8 +163,8 @@ export default function PsaCostJa() {
             description: '書類取得が完了した段階で、写し（写真またはPDF）をご確認いただきます。',
           },
           {
-            title: '残額50%ご入金・原本発送',
-            description: '内容に問題がなければ、残額50%をご入金いただき、入金確認後に原本発送へ進みます。',
+            title: '残額50%ご入金・e-Apostille交付',
+            description: '内容に問題がなければ、残額50%をご入金いただき、入金確認後にDFA e-Apostille（電子）を交付します。紙のPSA原本が必要な場合の受け取り方法もご案内します。',
           },
         ]}
       />

@@ -145,7 +145,7 @@ export default function PsaLateRegistrationJa() {
           { title: '地方民事登録局や裁判所で手続き完了', description: 'まず、正しい記録が公的に整うことが先です。' },
           { title: 'PSAに反映されるのを待つ', description: 'PSAのデータベースに反映されるまで、さらに時間がかかることがあります。' },
           { title: '修正後の書類を取得', description: '記録が整ったら、改めてPSA出生証明書を取得します。' },
-          { title: 'アポスティーユと海外発送', description: '必要に応じてDFAアポスティーユを付け、提出先へ発送します。' },
+          { title: 'DFA e-Apostille（電子認証）', description: '必要に応じてDFA e-Apostille申請を代行します。2026年3月以降、PSA民事書類の認証は電子のe-Apostilleのみです。' },
         ]}
       />
 

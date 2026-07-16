@@ -17,7 +17,7 @@ import { useMeta } from '../lib/useMeta';
 export default function CenomarApostilleJa() {
   useMeta(
     'CENOMARのDFAアポスティーユ、代行取得できます【2026年3月】日本語だけでOK',
-    'CENOMARのDFAアポスティーユはフィリピン現地での手続きが必要です。当センターが代行取得し、紙の原本アポスティーユで日本へ郵送。国際結婚・配偶者ビザ・帰化申請に対応。無料相談。',
+    'CENOMARのDFA e-Apostille（電子認証）申請を、フィリピンに行かずに日本語で代行。2026年3月以降、PSA民事書類の認証はe-Apostilleに一本化。国際結婚・配偶者ビザ・帰化申請に対応。無料相談。',
   );
   return (
     <PageLayout
@@ -26,7 +26,7 @@ export default function CenomarApostilleJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CENOMARのDFAアポスティーユ取得代行',
-        description: 'CENOMARのDFAアポスティーユをフィリピンに行かずに代行取得。国際結婚・配偶者ビザ・帰化申請に必要な紙の原本アポスティーユで対応。日本語だけで完結。',
+        description: 'CENOMARのDFA e-Apostille（電子認証）申請をフィリピンに行かずに代行。2026年3月以降、PSA民事書類の認証は電子のe-Apostilleに一本化。日本語だけで完結。',
         url: 'https://ph-document.com/ja/cenomar-apostille/',
         provider: {
           '@type': 'Organization',
@@ -55,7 +55,7 @@ export default function CenomarApostilleJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
+                text: 'PSAオンライン申請とDFA e-Apostille（電子認証）申請をまとめた料金です。紙のPSA原本が必要な場合の国際配送は実費・要相談です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -71,7 +71,7 @@ export default function CenomarApostilleJa() {
               name: '日本の入管・役所には紙の原本でないと提出できませんか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '原則として紙の原本＋DFAアポスティーユが必要です。PSAのオンライン電子版（e-Apostille）は日本の入管や市区町村役場では原則として受け付けられません。当社は紙の原本形式で対応します。',
+                text: '日本の入管・市区町村役場は従来、紙の原本を前提に運用してきました。ただし2026年3月以降、DFAの認証はe-Apostille（電子）のみとなり、物理アポスティーユは発行されません。当社はPSAオンライン申請とDFA e-Apostille申請を代行し、提出先がe-Apostilleを受理するかの確認や、紙のPSA原本（SECPA）の取得方法までご案内します。',
               },
             },
             {
@@ -88,7 +88,7 @@ export default function CenomarApostilleJa() {
     >
       <HeroBanner
         title="CENOMAR アポスティーユ取得代行"
-        badges={['PSA取得からアポスティーユまで一括', '紙の原本形式で対応', '費用は事前にご案内']}
+        badges={['PSA申請からe-Apostilleまで一括代行', 'e-Apostille（電子認証）対応', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
         lastUpdated="2026年3月1日"
@@ -97,10 +97,10 @@ export default function CenomarApostilleJa() {
       <SummaryBlock
         conclusion="CENOMARのDFAアポスティーユを、フィリピンに行かずに取得できます。"
         points={[
-          'PSA CENOMAR取得からDFAアポスティーユまで一括代行',
-          '日本の提出先が求める「紙の原本アポスティーユ」形式で対応',
+          'PSA CENOMARのオンライン申請からDFA e-Apostille申請まで一括代行',
+          '2026年3月以降、PSA民事書類の認証はe-Apostille（電子）に一本化（物理アポスティーユは発行不可）',
           '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
-          '約1ヶ月〜で日本のご住所へ郵送',
+          'e-Apostille（電子）で交付。紙のPSA原本が必要な場合の受け取り方法もご案内',
         ]}
         ctaText="無料で相談する"
       />
@@ -119,7 +119,7 @@ export default function CenomarApostilleJa() {
                 日本側にQRコードでオンライン検証する内部マニュアルが整備されておらず、「原本のコピー」として不受理になるリスクがあります。
               </p>
               <p className="text-sm text-amber-800 leading-relaxed">
-                当社は<strong>紙の原本＋DFAアポスティーユ</strong>で対応しています。国際結婚・配偶者ビザ・帰化申請でお困りの方はご相談ください。
+                当社は<strong>PSAオンライン申請とDFA e-Apostille（電子認証）申請</strong>を日本語で代行します。提出先がe-Apostilleを受理するかの確認や、紙のPSA原本（SECPA）が必要な場合の進め方もご案内します。国際結婚・配偶者ビザ・帰化申請でお困りの方はご相談ください。
               </p>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function CenomarApostilleJa() {
           <div className="space-y-3 mb-4">
             {[
               { step: '1', title: 'PSA CENOMARをオンライン申請', detail: 'フィリピン統計局（PSA）のオンライン申請フォーム入力・本人確認・支払いを日本語で代行します。' },
-              { step: '2', title: 'DFAにアポスティーユを申請', detail: 'フィリピン外務省（DFA）のAuthentication Division にCENOMARを持参（または郵送）し、アポスティーユを申請します。DFAのオフィスはManilaとcebu等にあります。' },
+              { step: '2', title: 'DFA e-Apostille（電子）を申請', detail: 'フィリピン外務省（DFA）のオンライン窓口（apostille.gov.ph）でe-Apostille（電子認証）を申請します。2026年3月以降、PSA民事書類に物理アポスティーユは発行されません。' },
               { step: '3', title: 'アポスティーユ付きCENOMARを受け取り', detail: 'DFAがCENOMARの裏面または別紙にアポスティーユ証明を付与します。これで日本の公的機関に提出できる形式になります。' },
             ].map(({ step, title, detail }) => (
               <div key={step} className="flex gap-3">
@@ -162,18 +162,18 @@ export default function CenomarApostilleJa() {
           cards={[
             { icon: Heart, title: '国際結婚の手続き中', description: '日本の市区町村役場やフィリピン大使館への提出に、DFAアポスティーユ付きCENOMARが必要です。', accent: 'gold' },
             { icon: FileCheck, title: '配偶者ビザ・在留資格の申請中', description: '入国管理局への提出を想定し、PSA原本とDFA e-Apostille（電子）で手配します。', accent: 'blue' },
-            { icon: Globe, title: '日本の提出先への提出', description: '日本の入管・役所・大使館への提出では、原則として紙の原本＋DFAアポスティーユが必要です。', accent: 'green' },
+            { icon: Globe, title: '日本の提出先への提出', description: '日本の入管・役所・大使館は従来、紙の原本を前提に運用してきました。2026年3月以降、DFAの認証はe-Apostille（電子）のみです。提出先の受理形式を事前に確認します。', accent: 'green' },
           ]}
         />
       </SectionDivider>
 
       <CtaBox
         title="CENOMAR＋DFAアポスティーユを一括でご依頼いただけます"
-        description="日本の入管・役所・大使館への提出では、原則として紙の原本＋DFAアポスティーユが必要です。まずはご相談ください。"
+        description="日本の入管・役所・大使館は従来、紙の原本を前提に運用してきました。2026年3月以降、DFAの認証はe-Apostille（電子）のみです。提出先の受理形式を事前に確認します。まずはご相談ください。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類発行の確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <SectionDivider variant="blue">
@@ -188,7 +188,7 @@ export default function CenomarApostilleJa() {
             {
               icon: <FileCheck className="w-4 h-4" />,
               title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-              description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。紙の原本で対応。',
+              description: 'フィリピン外務省（DFA）のe-Apostille（電子認証）申請を代行します。物理アポスティーユは2026年3月以降発行されません。',
             },
           ]}
         />
@@ -201,7 +201,7 @@ export default function CenomarApostilleJa() {
           {[
             { label: 'CENOMAR（PSA）取得', price: '込み' },
             { label: 'DFAアポスティーユ認証', price: '込み' },
-            { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
+            { label: '紙のPSA原本（SECPA）が必要な場合の国際配送', price: '実費・要相談' },
             { label: '合計（DFA e-Apostille〈電子〉込み）', price: '30,000円〜', bold: true },
           ].map((row, i) => (
             <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
@@ -216,7 +216,7 @@ export default function CenomarApostilleJa() {
           rows={[
             { item: 'PSAへのCENOMAR申請', self: false, agency: true },
             { item: 'DFAアポスティーユ手配', self: false, agency: true },
-            { item: '紙の原本形式での対応', self: '要現地渡航', agency: true },
+            { item: 'DFA e-Apostille（電子）の申請・受領', self: '要現地渡航・英語対応', agency: true },
             { item: '日本語でのサポート', self: false, agency: true },
             { item: '提出先に合う形式の確認', self: '要調査', agency: true },
           ]}
@@ -229,16 +229,16 @@ export default function CenomarApostilleJa() {
         steps={[
           { title: 'フォームで相談', description: '用途（国際結婚・ビザ申請など）と提出先をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得→DFAアポスティーユ認証を現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+          { title: 'オンライン申請を代行', description: 'PSA・DFA e-Apostilleのオンライン申請の入力・支払いを日本語で進めます。' },
+          { title: 'e-Apostille交付・完了', description: 'DFA e-Apostille（電子）を受領します。紙のPSA原本が必要な場合の受け取り方法もご案内します。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSAオンライン申請とDFA e-Apostille（電子認証）申請をまとめた料金です。紙のPSA原本が必要な場合の国際配送は実費・要相談です。無料相談後に正確な金額をご提示します。' },
           { q: 'CENOMARとDFAアポスティーユ、まとめて依頼できますか？', a: 'はい。PSA CENOMAR取得からDFAアポスティーユ認証まで一括で代行します。個別に依頼するより手間がかからず、全体の目安はおおむね1ヶ月半です。' },
-          { q: '日本の入管・役所には紙の原本でないと提出できませんか？', a: '原則として紙の原本＋DFAアポスティーユが必要です。PSAのオンライン電子版（e-Apostille）は日本の入管や市区町村役場では原則として受け付けられません。当社は紙の原本形式で対応します。' },
+          { q: '日本の入管・役所には紙の原本でないと提出できませんか？', a: '日本の入管・市区町村役場は従来、紙の原本を前提に運用してきました。ただし2026年3月以降、DFAの認証はe-Apostille（電子）のみとなり、物理アポスティーユは発行されません。当社はPSAオンライン申請とDFA e-Apostille申請を代行し、提出先がe-Apostilleを受理するかの確認や、紙のPSA原本（SECPA）の取得方法までご案内します。' },
           { q: 'フィリピン人の方が日本在住でも取得できますか？', a: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
