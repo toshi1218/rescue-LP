@@ -93,7 +93,7 @@ export default function PsaMarriageCertJa() {
       <SummaryBlock
         conclusion="PSA婚姻証明書（アポスティーユ付き）を、日本語だけで取り寄せできます。"
         points={[
-          '現地スタッフがPSA申請・DFAアポスティーユを代行',
+          'PSAオンライン申請の入力・支払いとDFA e-Apostille（電子認証）申請を日本語で代行',
           '配偶者ビザ・帰化申請に必要な「紙の原本」形式で対応',
           '注釈付き（Annotated）婚姻証明書にも対応',
           '約1ヶ月〜で日本のご住所へ郵送',

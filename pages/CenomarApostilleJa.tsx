@@ -42,7 +42,7 @@ export default function CenomarApostilleJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: 'CENOMARオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜）',
           },
         },
         },
@@ -140,7 +140,7 @@ export default function CenomarApostilleJa() {
           <h3 className="text-sm font-bold text-gray-800 mb-3">DFAアポスティーユの取得手順</h3>
           <div className="space-y-3 mb-4">
             {[
-              { step: '1', title: 'PSAからCENOMARを取得', detail: 'フィリピン統計局（PSA）に申請し、SECPAセキュリティペーパーに印刷されたCENOMARを受け取ります。' },
+              { step: '1', title: 'PSA CENOMARをオンライン申請', detail: 'フィリピン統計局（PSA）のオンライン申請フォーム入力・本人確認・支払いを日本語で代行します。' },
               { step: '2', title: 'DFAにアポスティーユを申請', detail: 'フィリピン外務省（DFA）のAuthentication Division にCENOMARを持参（または郵送）し、アポスティーユを申請します。DFAのオフィスはManilaとcebu等にあります。' },
               { step: '3', title: 'アポスティーユ付きCENOMARを受け取り', detail: 'DFAがCENOMARの裏面または別紙にアポスティーユ証明を付与します。これで日本の公的機関に提出できる形式になります。' },
             ].map(({ step, title, detail }) => (

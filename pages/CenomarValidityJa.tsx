@@ -41,7 +41,7 @@ export default function CenomarValidityJa() {
               '@type': 'UnitPriceSpecification',
               price: '50000',
               priceCurrency: 'JPY',
-              description: 'PSA CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+              description: 'PSA CENOMARオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜）',
             },
           },
         },
@@ -152,7 +152,7 @@ export default function CenomarValidityJa() {
         steps={[
           { title: '婚姻届・ビザ申請の予定日を共有', description: '「いつまでに提出が必要か」をお知らせください。逆算してCENOMARの申請開始時期を確認します。' },
           { title: '申請開始時期と料金をご提示', description: 'CENOMARの有効期限（6ヶ月以内）を考慮した最適なタイミングと、料金をご案内します。' },
-          { title: 'PSA取得・DFAアポスティーユを代行', description: '現地スタッフがPSA申請・DFAアポスティーユを進めます。進捗は随時ご報告します。' },
+          { title: 'PSA・DFA e-Apostilleのオンライン申請を代行', description: 'PSAオンライン申請の入力・支払いとDFA e-Apostille（電子認証）申請を日本語で進めます。進捗は随時ご報告します。' },
           { title: '日本へ郵送・完了', description: '追跡付きでお届けします。提出期限に間に合うよう、スケジュールを管理します。' },
         ]}
       />

@@ -44,7 +44,7 @@ export default function CenomarGuideJa() {
               '@type': 'UnitPriceSpecification',
               price: '50000',
               priceCurrency: 'JPY',
-              description: 'PSA CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+              description: 'PSA CENOMARオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜）',
             },
           },
         },
