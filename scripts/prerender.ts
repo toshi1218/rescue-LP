@@ -359,7 +359,7 @@ const routes: RouteConfig[] = [
     path: '/en/',
     outFile: path.join(projectRoot, 'dist', 'en', 'index.html'),
     title: `Philippine Documents for International Marriage & Visa [${SEO_YEAR_MONTH_EN}]`,
-    description: `Getting married to a Filipino, or moving countries together? We verify format requirements, procure physical PSA originals + DFA Apostille, and ship via DHL worldwide.`,
+    description: `Getting married to a Filipino, or moving countries together? We verify format requirements, handle your PSA online applications with DFA e-Apostille, and retrieve non-PSA documents like NBI Clearance with physical Apostille shipped via DHL.`,
     canonical: `${BASE}/en/`,
     lang: 'en',
     enCanonical: `${BASE}/en/`,
