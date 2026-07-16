@@ -54,7 +54,7 @@ export default function DfaProcessingTimeJa() {
               name: 'DFAアポスティーユにはどのくらいかかりますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安はおおむね1ヶ月半です。',
+                text: 'DFA e-ApostilleはRegular（通常5日程度）またはExpress（3日程度）で申請できます。PSAのオンライン申請とDFA e-Apostilleは数週間が目安です。NBI等の物理書類は取得・物理アポスティーユ・国際郵送を含め、おおむね1ヶ月半が目安です。',
               },
             },
             {
@@ -89,7 +89,7 @@ export default function DfaProcessingTimeJa() {
         conclusion="DFAアポスティーユの処理期間は通常4〜5営業日。提出予定日を考慮してスケジュールをご案内します。"
         points={[
           'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請可能',
-          'PSA取得・アポスティーユ・郵送を含めた全体の目安はおおむね1ヶ月半',
+          'PSAはオンライン申請＋DFA e-Apostilleで数週間。NBI等の物理書類は郵送含め全体でおおむね1ヶ月半が目安',
           '提出予定日から逆算して、最適な申請開始時期をご案内',
           '期限に間に合うかどうかも、無料相談で確認できます',
         ]}
@@ -103,7 +103,7 @@ export default function DfaProcessingTimeJa() {
           cards={[
             { icon: Clock, title: '処理期間を確認したい', description: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。全体の目安はおおむね1ヶ月半です。', accent: 'gold' },
             { icon: Calendar, title: '提出期限が決まっている', description: '提出予定日から逆算して、最適なタイミングで申請を開始します。間に合うかどうかも事前にご確認します。', accent: 'blue' },
-            { icon: FileCheck, title: 'PSA書類からまとめて頼みたい', description: 'PSA書類の取得からDFAアポスティーユ・国際郵送まで一括で手配できます。', accent: 'green' },
+            { icon: FileCheck, title: 'PSA書類からまとめて頼みたい', description: 'PSA書類のオンライン申請からDFA e-Apostille（電子認証）申請まで一括で代行できます。', accent: 'green' },
           ]}
         />
       </SectionDivider>
@@ -159,7 +159,7 @@ export default function DfaProcessingTimeJa() {
 
       <FaqSection
         items={[
-          { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請できます。当社の代行サービス全体（PSA取得〜DFA手配）の目安は約2週間、郵送を含めた全体の目安はおおむね1ヶ月半です。' },
+          { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFA e-ApostilleはRegular（通常5日程度）またはExpress（3日程度）で申請できます。PSAのオンライン申請とDFA e-Apostilleは数週間が目安です。NBI等の物理書類は取得・物理アポスティーユ・国際郵送を含め、おおむね1ヶ月半が目安です。' },
           { q: '提出期限に合わせてExpressで申請できますか？', a: 'はい。提出予定日をお知らせいただければ、RegularとExpressどちらが適切かを含めてご案内します。できる限り間に合うよう進めますが、現地機関の処理状況によって前後する場合があります。' },
           { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）をまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
           { q: '期限に間に合うかどうか不安です', a: '提出予定日をお知らせいただければ、間に合うかどうかを確認してご案内します。まずはご相談ください。' },

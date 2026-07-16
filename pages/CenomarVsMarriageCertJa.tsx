@@ -174,7 +174,7 @@ export default function CenomarVsMarriageCertJa() {
 
       <RelatedArticles
         items={[
-          { href: '/ja/cenomar/', title: 'CENOMAR取得代行', description: 'PSA取得からDFAアポスティーユ、発送まで一括で対応します。' },
+          { href: '/ja/cenomar/', title: 'CENOMAR取得代行', description: 'PSAオンライン申請からDFA e-Apostille（電子認証）申請まで一括で代行します。' },
           { href: '/ja/psa-kekkon-shomeisho/', title: 'PSA婚姻証明書取得代行', description: '婚姻後の手続きに必要な婚姻証明書はこちら。' },
           { href: '/ja/cenomar-koyukigen/', title: 'CENOMARの有効期限', description: 'いつ取り直すべきか、提出期限に合わせて整理します。' },
           { href: '/ja/kokusai-kekkon-guide/', title: '国際結婚の書類ガイド', description: '婚姻手続き全体の流れをまとめて確認できます。' },

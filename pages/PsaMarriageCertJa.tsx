@@ -11,7 +11,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function PsaMarriageCertJa() {
   useMeta(
-    'PSA婚姻証明書の取得代行【2026年3月】DFAアポスティーユ付き・日本へ郵送',
+    'PSA婚姻証明書 オンライン申請代行【2026年3月】DFA e-Apostille（電子認証）込み',
     'PSA婚姻証明書をフィリピンから取り寄せる方法。日本での婚姻届・配偶者ビザ申請に。DFAアポスティーユ付きで日本へ郵送。渡航不要。無料相談受付中。',
   );
   return (

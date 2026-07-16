@@ -15,7 +15,7 @@ import { useMeta } from '../lib/useMeta';
 export default function ApostilleFeeJa() {
   useMeta(
     'DFAアポスティーユの料金【2026年3月】Regular・Express別の費用と総額の目安',
-    'DFAアポスティーユの料金はRegular約1,000ペソ・Express約2,000ペソ。PSA取得費・国際郵送費を含めた総額の目安と、CENOMAR・PSA・NBI別の費用内訳を解説。',
+    'DFAアポスティーユの料金はRegular約1,000ペソ・Express約2,000ペソ。PSAオンライン申請費・DFA e-Apostille費を含めた総額の目安と、CENOMAR・PSA・NBI別の費用内訳を解説。',
   );
   return (
     <PageLayout
@@ -88,7 +88,7 @@ export default function ApostilleFeeJa() {
       <SummaryBlock
         conclusion="DFAアポスティーユの費用は、料金で最初から明示します。後から追加請求はありません。"
         points={[
-          'DFAアポスティーユ・PSA取得・国際郵送をまとめた料金',
+          'PSAはDFA e-Apostille＋オンライン申請をまとめた料金（NBI等の物理書類は国際郵送込み）',
           '他社の「1通○○円〜」は書類取得費用のみの場合が多い',
           '日本の手続きでは紙の原本にDFAアポスティーユがほぼ必須',
           '見積もり後の追加請求なし。総額で比較してください',
@@ -112,7 +112,7 @@ export default function ApostilleFeeJa() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: '日本の提出先ではアポスティーユが原則必須',
-            description: '日本の入管・役所・大使館への提出では、原則として紙の原本＋DFAアポスティーユが必要です。',
+            description: '日本の入管・役所・大使館は従来紙の原本を前提に運用してきましたが、2026年3月以降、DFAの認証はe-Apostille（電子）のみです。提出先の受理形式を事前に確認します。',
           },
         ]}
       />
@@ -163,9 +163,9 @@ export default function ApostilleFeeJa() {
           variant="visual"
           steps={[
             { title: '書類の種類と提出先を共有', description: 'CENOMAR・PSA・NBI等の種類と、提出先（市役所・大使館・入管など）をお知らせください。アポスティーユが必要かどうかも確認します。' },
-            { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めた料金をご案内します。' },
-            { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（4営業日）またはExpress（翌営業日）を状況に応じて選択します。' },
-            { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安はおおむね1ヶ月半。' },
+            { title: '必要な認証と総額をご提示', description: 'DFA e-Apostille・PSAオンライン申請（必要な場合）を含めた料金をご案内します。NBI等の物理書類は国際郵送込みです。' },
+            { title: 'DFA e-Apostille／物理アポスティーユを代行', description: 'PSA民事書類はDFA e-Apostille（電子）申請を代行。NBI等の非PSA書類は現地スタッフが物理アポスティーユを取得します（Regular/Express選択可）。' },
+            { title: '交付・完了', description: 'PSAはe-Apostille（電子）を交付。NBI等の物理書類は追跡付きでお届けします。' },
           ]}
         />
       </SectionDivider>

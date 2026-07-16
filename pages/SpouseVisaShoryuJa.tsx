@@ -132,7 +132,7 @@ export default function SpouseVisaShoryuJa() {
                   <span>発行から6ヶ月〜1年以内（入管の判断による）</span>
                 </div>
                 <div className="rounded-lg bg-blue-50 border border-blue-200 p-2.5 text-xs text-blue-800 mt-2">
-                  <strong>ポイント：</strong>電子認証版（e-Certificate）は入管では使用不可。紙の原本＋DFAアポスティーユが必須。
+                  <strong>ポイント：</strong>2026年3月以降、DFAの認証はe-Apostille（電子）のみ（物理アポスティーユは発行不可）。入管は従来紙の原本を前提に運用してきたため、e-Apostilleの受理可否は事前確認が重要です。
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function SpouseVisaShoryuJa() {
             <div className="rounded-xl bg-blue-50 border border-blue-200 p-3 flex items-start gap-2">
               <Info className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
               <p className="text-sm text-blue-800">
-                PSA書類の取得からDFAアポスティーユ・DHL郵送まで、全体で<strong>約1〜2ヶ月</strong>かかります。結核証明書の取得スケジュールと合わせて、余裕を持って準備を始めることをおすすめします。
+                PSA書類のオンライン申請からDFA e-Apostille（電子認証）申請まで、全体で<strong>約1〜2ヶ月</strong>かかります。結核証明書の取得スケジュールと合わせて、余裕を持って準備を始めることをおすすめします。
               </p>
             </div>
           </div>

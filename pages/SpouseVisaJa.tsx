@@ -96,7 +96,7 @@ export default function SpouseVisaJa() {
       <SummaryBlock
         conclusion="配偶者ビザ（在留資格「日本人の配偶者等」）に必要なフィリピン書類を、日本語だけで取り寄せできます。"
         points={[
-          '入管が求める「紙の原本＋DFAアポスティーユ」形式で手配',
+          'DFA e-Apostille（電子認証）申請を代行。入管の受理形式（e-Apostille/紙原本）は事前確認',
           'PSA婚姻証明書・PSA出生証明書・CENOMARをまとめて代行',
           '有効期限に合わせた取得タイミングもアドバイス',
           '新規申請・更新・変更、どの申請にも対応',

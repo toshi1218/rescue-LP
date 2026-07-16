@@ -93,7 +93,7 @@ export default function HomeJa() {
         {
           '@type': 'Offer',
           priceSpecification: { '@type': 'PriceSpecification', minPrice: '50000', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: 'CENOMAR・PSA出生証明書取得代行＋DFAアポスティーユ', description: 'フィリピン統計局（PSA）発行の独身証明書・出生証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
+          itemOffered: { '@type': 'Service', name: 'CENOMAR・PSA出生証明書 オンライン申請代行＋DFA e-Apostille', description: 'フィリピン統計局（PSA）発行の独身証明書・出生証明書のオンライン申請とDFA e-Apostille（電子認証）申請を日本語で代行。' },
         },
         {
           '@type': 'Offer',

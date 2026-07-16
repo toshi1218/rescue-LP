@@ -11,7 +11,7 @@ import { Info } from 'lucide-react';
 export default function PricingJa() {
   useMeta(
     `料金一覧【${SEO_YEAR_MONTH_JA}】料金・追加請求なし｜フィリピン書類取得代行`,
-    'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユ・国際郵送をまとめた料金。後から追加請求なし。無料見積もり受付中。',
+    'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSAはオンライン申請＋DFA e-Apostille、NBI等は物理取得＋アポスティーユ。後から追加請求なし。無料見積もり受付中。',
   );
   return (
     <PageLayout
