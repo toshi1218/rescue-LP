@@ -152,7 +152,7 @@ export default function DfaProcessingTimeJa() {
         steps={[
           { title: '提出予定日を共有', description: '婚姻届・ビザ申請などの提出予定日をお知らせください。' },
           { title: '申請開始時期を確認', description: '逆算して最適な申請開始時期と料金の目安をご案内します。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
+          { title: 'フィリピン現地で手配', description: 'PSAはオンライン申請＋DFA e-Apostille（電子認証）、NBI等は現地スタッフが物理取得・アポスティーユを進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。' },
         ]}
       />
