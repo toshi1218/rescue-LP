@@ -11,11 +11,12 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { FileCheck, Globe, Users, Shield, FileText, Heart, CheckCircle, Clock, Stamp, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function UkDocsJa() {
   useMeta(
-    'UK移民ビザのフィリピン書類取得代行 [2026年3月] — UKVI対応・DHL郵送',
-    'UK配偶者ビザ・永住許可（ILR）申請に必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。',
+    `UK移民ビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — UKVI対応・DHL郵送`,
+    `UK配偶者ビザ・永住許可（ILR）申請に必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。`,
   );
   return (
     <PageLayout
