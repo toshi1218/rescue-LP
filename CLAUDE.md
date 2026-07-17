@@ -510,3 +510,40 @@ npm run build    # runs lint-seo.sh → vite build → prerender.ts
 
 #### F. 継続監視
 - PR #322：CI green（seo-gate・Cloudflare Pages）・レビューコメントなし。**main mergeは絶対禁止**（2026-07-15まで、解除は「main merge」明示入力のみ）。マージ・クローズまで監視継続。
+
+---
+
+## 2026-07-17 セッションサマリー（DFA物理アポスティーユ廃止対応・PSA事業モデル転換）
+
+### 背景
+
+DFA（フィリピン外務省）の窓口確認により、**PSA民事書類（出生証明書・婚姻証明書・CENOMAR）には物理アポスティーユが発行されなくなった**ことが判明（2026年3月〜、認証はe-Apostille〈電子〉に一本化）。加えて、PSA原本の物理取得・国際発送も差別化要素ではなくなった（PSAHelpline.phのInternational Serviceが電子e-Certificateを海外へ直接配送するため）。これにより「うちだけ物理アポスティーユを取得できる」「セブスタッフが紙原本を取得してDHL発送」という、これまでの中核オファーがすべて事実と異なる状態になっていた。
+
+**確定した新事業モデル**：
+- **PSA民事書類**（出生・婚姻・CENOMAR）：**オンライン申請の入力・支払い代行＋DFA e-Apostille申請代行**（ライブネスチェック・本人確認・英語フォーム入力・国際決済の実作業を代行）
+- **NBI・LTO・PRC**（非PSA書類）：物理取得・物理DFAアポスティーユ・DHL発送を**従来通り継続**
+
+### 完了したこと（ブランチ `claude/psa-apostille-docs-fn6rqw`・PR未作成・main未マージ、全20コミット）
+
+1. **虚偽文言の全撤去**：共有コンポーネント（Hero.tsx・Pricing.tsx）・JAトップ赤枠バナー・LLMO（llms.txt/llms-full.txt）・JA/EN個別サービスページ、計20ファイル超
+2. **PRC証明書ページ新規追加**：`/ja/prc-apostille/`（雛形・仮価格 ¥39,000〜。対象書類・確定料金は未確定）
+3. **EN全ページのオンライン代行モデル化**：PSA単独ページ8本・混在ビザページ11本（K-1/CR-1/US/UK/Canada/Australia/NZ等）・一般ページ6本を書き換え。途中、ユーザー提供のPSAHelplineスクリーンショットにより「国内配送のみ」という既存記述が古い誤りと判明し、正しい仕様（Internationalサービスは電子e-Cert海外配送、物理原本は自己手配クーリエが必要）に統一
+4. **価格再設計**：PSA単品¥28,000→¥16,500（申請のみ）／¥61,000→¥33,000（e-Apostille込み）、国際結婚・配偶者ビザパック¥94,000→¥55,000、帰化パック¥132,500→¥94,000、US$版も同基準で改定。NBI・LTO・PRCは据置
+5. **JA本文の全セクション追い込み**：PSA/CENOMAR単品ページ・混在ビザ・入管・費用・比較ページの本文（Hero/SummaryBlock/StepList/比較表/FAQ/trustNote）をEN側と同水準まで書き換え
+6. **prerender.ts SEOメタの段階同期**（4ページ完了）：`/ja/psa-shussei-cost`・`/ja/cenomar`・`/en/cenomar`・`/en/psa-marriage-certificate`のtitle/descをuseMeta側と一致させ、旧価格（US$349→US$219・¥50,000→¥30,000）も是正
+
+### 今後のタスク（持ち越し・別セッション・段階的に対応）
+
+#### G. prerender.ts SEOメタの段階同期（残り29ページ）
+- 対象：K-1/CR-1/US/UK/Canada/Australia/NZ/Germany/F-6等の**混在ビザページ**（PSA＋NBIが同じdescriptionに同居している）。単純な一括置換ではなく、**PSA部分＝オンライン申請＋e-Apostille／NBI部分＝物理取得＋DHL発送**に分離する書き換えが必要（ページ本文側で実施済みの分離と同じ手間）
+- 該当箇所は`scripts/prerender.ts`内の`We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille...Ships via DHL`パターン（K1VisaDocsEn・Cr1VisaDocsEn・UsVisaDocsEn・UkDocsEn・CanadaDocsEn・AustraliaDocsEn・NewZealandDocsEn・DfaGalleriaCebuEn(ドイツ向け含む)・F6DocsEn・国別テンプレート`config.name`部分 等）
+- **CLAUDE.mdのSEOガード（レベル2フック）が`prerender.ts`への1編集ごとにブロックする仕様のため、1〜2ページずつ・複数セッションに分けて進める**。NBI/LTO/PRC単独ページ（NbiHitEn・NbiValidityEn・NbiClearanceOverseasEn・NbiGuideEn・DriverRecordEn・LicenseConversionEn等）は**物理継続で正当なため対象外・変更不要**
+
+#### H. PRCページの本番仕様化
+- `/ja/prc-apostille/`は雛形・仮価格（¥39,000〜）。対象書類・正式料金・納期が確定次第、本文とprerender.tsを更新
+
+#### I. 新価格の最終確認
+- 今回設定した金額（PSA単品¥16,500／e-Apostille込¥33,000、パック¥55,000、US$119/$219/$249/$449等）は「物理アポスティーユ・DHL分を減額、ライブネス・入力・決済代行の実作業は評価」という考え方に基づく暫定案。実際の原価・利幅と合っているか最終確認が必要
+
+#### J. 継続監視
+- ブランチ`claude/psa-apostille-docs-fn6rqw`：PR未作成。**main mergeは絶対禁止**（解除はユーザーの「main merge」明示入力のみ）。次回セッションでG（残り29ページ）から再開する場合、このサマリーを起点に状況を把握できる。
