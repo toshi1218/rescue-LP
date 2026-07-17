@@ -370,8 +370,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
-    title: `Get CENOMAR from Abroad [${SEO_YEAR}] — PSA + Apostille + DHL, All-Inclusive`,
-    description: `We retrieve CENOMAR from PSA, get DFA Apostille, and ship worldwide via DHL — from US$219 all-in. No trip to the Philippines needed. Free consultation.`,
+    title: `CENOMAR from Abroad [${SEO_YEAR}] — Online Application + DFA e-Apostille`,
+    description: `We handle your CENOMAR online application and DFA e-Apostille (electronic) — no trip to the Philippines needed. For K-1, spouse visa & marriage abroad. Free consultation.`,
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar/`,
