@@ -5,6 +5,7 @@ import CtaBox from '../components/CtaBox';
 import RelatedLinks from '../components/RelatedLinks';
 import FaqSection from '../components/FaqSection';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 import { CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 
 const countries = [
@@ -63,8 +64,8 @@ const statusIcon = (status: 'ok' | 'mixed' | 'no') => {
 
 export default function PsaEcertificateAbroadEn() {
   useMeta(
-    'PSA e-Certificate & DFA e-Apostille Abroad: Accepted? [2026 Country Guide]',
-    'PSA e-Certificate and DFA e-Apostille country guide: US, Canada, Australia, UK, UAE. Printing an e-Apostille is invalid. Most authorities still require the physical PSA on Security Paper.',
+    `PSA e-Certificate & DFA e-Apostille Abroad: Accepted? [${SEO_YEAR} Country Guide]`,
+    `PSA e-Certificate and DFA e-Apostille acceptance by country: Canada, Australia, UK accept PDF. US NVC and UAE require physical paper. Check before ordering.`,
   );
 
   return (

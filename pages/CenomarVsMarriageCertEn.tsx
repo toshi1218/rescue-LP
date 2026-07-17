@@ -8,11 +8,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Heart, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function CenomarVsMarriageCertEn() {
   useMeta(
-    'CENOMAR vs. PSA Marriage Certificate [Mar 2026]',
-    "CENOMAR proves you're single. PSA Marriage Certificate proves you're married. Not sure which to order? We explain the difference and retrieve it.",
+    `CENOMAR vs PSA Marriage Certificate [${SEO_YEAR}] — Which Do You Need?`,
+    `CENOMAR = proof you've never been married. PSA Marriage Certificate = proof you are married. Wrong document = visa rejection. We explain and retrieve both.`,
   );
   return (
     <PageLayout

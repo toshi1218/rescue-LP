@@ -7,11 +7,12 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { FileCheck, ListOrdered, Map, CheckCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function RoadmapEn() {
   useMeta(
-    'Personalized Document Roadmap for Filipino-Japanese Couples [2026]',
-    'Custom roadmap service for Filipino-Japanese couples navigating international marriage and Japan spouse visa. We clarify the required documents, correct order, and full timeline for your specific situation.',
+    `Personalized Document Roadmap for Filipino-Japanese Couples [${SEO_YEAR}]`,
+    `Custom roadmap service for Filipino-Japanese couples navigating international marriage and Japan spouse visa. We clarify the required documents, correct order, and full timeline for your situation.`,
   );
   return (
     <PageLayout
