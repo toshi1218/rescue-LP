@@ -6,11 +6,12 @@ import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function MarriageOrderEn() {
   useMeta(
-    'Japan-First vs Philippines-First Marriage [2026] — Which Should You Choose?',
-    'Comparing Japan-first and Philippines-first marriage for Filipino-Japanese couples. Understand the steps, required documents, timelines, pros and cons of each approach before deciding.',
+    `Japan-First vs Philippines-First Marriage [${SEO_YEAR}]`,
+    `Japan-first vs Philippines-first marriage for Filipino-Japanese couples: steps, required documents, timelines, and pros and cons to help you decide.`,
   );
   return (
     <PageLayout

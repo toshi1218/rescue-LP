@@ -8,11 +8,12 @@ import SectionDivider from '../components/SectionDivider';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, Info, FileText, Stamp, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function SpouseVisaDocChecklistEn() {
   useMeta(
-    'Spouse Visa Document Checklist [March 2026] — Philippine National Applying for Japan',
-    'Updated March 2026. Complete checklist of Philippine documents needed for Japan spouse visa (COE) application: PSA marriage cert, birth cert, CENOMAR, TB certificate (new from June 2025), and Japanese translations.',
+    `Spouse Visa Document Checklist [${SEO_YEAR_MONTH_EN}] — Philippine National Applying for Japan`,
+    `Updated ${SEO_YEAR_MONTH_EN}. Complete checklist of Philippine documents needed for Japan spouse visa (COE): PSA marriage cert, birth cert, CENOMAR, TB certificate (new from June 2025), and translations.`,
   );
 
   return (

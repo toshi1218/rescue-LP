@@ -8,11 +8,12 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function MarriageGuideEn() {
   useMeta(
-    'Marrying a Filipino? Documents We Get for You [April 2026]',
-    'Planning to marry a Filipino/Filipina? We handle all Philippine documents — CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille. Shipped worldwide. Free consultation for K-1, spouse visa, and partner visa petitioners.',
+    `Philippine Documents for International Marriage [${SEO_YEAR}] — Complete Guide`,
+    `Getting married to a Filipino? CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille — we retrieve and ship worldwide. No trip needed. Free quote.`,
   );
   return (
     <PageLayout
