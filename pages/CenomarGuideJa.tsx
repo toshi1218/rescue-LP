@@ -18,7 +18,7 @@ import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } f
 export default function CenomarGuideJa() {
   useMeta(
     `CENOMARとは｜フィリピン独身証明書の取得方法【${SEO_YEAR_MONTH_JA}】代行可・渡航不要`,
-    'CENOMARが必要だけどフィリピンに行けない方へ。渡航不要・日本語だけで取得完了。国際結婚・配偶者ビザ・帰化申請に対応。24時間以内に返信。',
+    'CENOMARはフィリピンに行かずに取得できます。PSA申請からDFAアポスティーユ・DHL郵送まで一括代行。国際結婚・配偶者ビザ・帰化申請に対応。通常4〜6週間。まず無料相談を。',
   );
   return (
     <PageLayout

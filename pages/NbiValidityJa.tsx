@@ -11,8 +11,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function NbiValidityJa() {
   useMeta(
-    `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】期限切れになる前に、最適タイミングで代行取得`,
-    'NBI Clearanceは発行から1年有効ですが、提出先によっては6ヶ月以内を求める場合も。提出予定日から逆算して最適なタイミングで取得。期限切れで再取得になるリスクをなくします。無料相談。',
+    `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】発行から1年｜提出先別の注意点`,
+    'NBI Clearanceの有効期限は発行から1年。ただし入管や大使館では6ヶ月以内を求められる場合も。提出先別の基準・期限切れを防ぐ取得タイミング・アポスティーユとの関係を解説。',
   );
   return (
     <PageLayout

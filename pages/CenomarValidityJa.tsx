@@ -11,10 +11,11 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function CenomarValidityJa() {
   useMeta(
-    'CENOMARの有効期限【2026年3月】発行から6ヶ月が目安｜提出先別の基準まとめ',
+    `CENOMARの有効期限【${SEO_YEAR_MONTH_JA}】発行から6ヶ月が目安｜提出先別の基準まとめ`,
     'CENOMARの有効期限は多くの提出先で発行から6ヶ月以内。入管・市区町村役場・大使館など提出先別の基準と、期限切れを防ぐ最適な取得タイミングを解説します。',
   );
   return (
