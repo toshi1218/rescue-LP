@@ -1,5 +1,6 @@
 import React from 'react';
 import PageLayoutKo from '../components/PageLayoutKo';
+import FaqSection from '../components/FaqSection';
 import { CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 
 const institutions = [
@@ -236,6 +237,27 @@ export default function PsaEcertificateHangukKo() {
           ))}
         </ol>
       </section>
+
+      <FaqSection
+        items={[
+          {
+            q: '한국에서 PSA e-Certificate와 DFA e-Apostille를 제출할 수 있나요?',
+            a: '한국은 헤이그 아포스티유 조약 가입국이므로 e-Apostille는 조약상 유효합니다. 2026년 4월에 주한 필리핀 대사관이 한국 기관에 공식 통보를 마쳤습니다. 다만 출입국관리사무소·가족관계등록소·주민센터에 따라 창구의 대응이 다를 수 있으므로, 제출 전 해당 기관에 반드시 확인하십시오.',
+          },
+          {
+            q: 'e-Apostille를 인쇄해서 제출해도 되나요?',
+            a: '안 됩니다. DFA 공식 안내에 따르면, e-Apostille를 인쇄하면 유효성을 잃습니다. e-Apostille는 반드시 PDF 파일 형태로 전자 제출해야 합니다. 종이 원본이 필요한 경우에는 PSA SECPA 용지(실물 문서)와 물리적 아포스티유 스티커가 필요하며, 이는 별도 경로로 신청해야 합니다.',
+          },
+          {
+            q: 'e-Apostille와 종이 아포스티유(Paper Apostille)의 차이는 무엇인가요?',
+            a: 'DFA는 두 가지 형식을 발행합니다. (1) e-Apostille: PSA e-Certificate에 첨부되는 디지털 PDF. 전자 제출 전용이며, 인쇄하면 유효성을 잃습니다. (2) 종이 아포스티유(Paper Apostille): PSA SECPA 용지에 붙이는 물리적 스티커. 모든 제출 방식에서 사용 가능합니다. 2026년 3월 16일부터 DFA는 헤이그 조약 가입국에 대해 e-Apostille를 표준으로 발행하고 있습니다. 종이 아포스티유가 필요한 경우에는 별도의 "Paper Route"로 신청해야 합니다.',
+          },
+          {
+            q: 'PSA e-Certificate와 PSA SECPA(Security Paper) 원본의 차이는 무엇인가요?',
+            a: 'PSA e-Certificate는 PSA가 처음부터 디지털로 발행하는 PDF 파일입니다. 실물 종이가 존재하지 않습니다. PSA SECPA는 보안 용지에 인쇄된 실물 문서로, 스캔하거나 직접 제출할 수 있습니다. 한국 기관이 "스캔 원본"을 요구하는 경우, 기대하는 것은 PSA SECPA 실물을 스캔한 이미지이며, PSA e-Certificate PDF 그 자체가 아닙니다. 국제결혼 신고 등 중요한 수속에는 PSA SECPA 원본을 취득하는 것이 안전합니다.',
+          },
+        ]}
+      />
 
       {/* CTA */}
       <div className="rounded-2xl bg-primary/5 border border-primary/20 p-6 text-center">

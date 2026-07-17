@@ -5,6 +5,7 @@ import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import SectionDivider from '../components/SectionDivider';
+import FaqSection from '../components/FaqSection';
 import { AlertTriangle, Info, FileText, Stamp, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
@@ -314,6 +315,21 @@ export default function SpouseVisaDocChecklistEn() {
         variant="primary"
         trustNote="50% on start / 50% after documents ready for DHL — cancel before start at no charge"
       />
+
+      <div className="max-w-2xl mx-auto px-4 mt-8">
+        <FaqSection
+          items={[
+            {
+              q: 'What Philippine documents are needed for the Japan spouse visa COE application?',
+              a: 'As of March 2026: PSA Marriage Certificate (with DFA Apostille, paper original), PSA Birth Certificate (with DFA Apostille, paper original), CENOMAR, TB Non-Disease Certificate (mandatory from June 23, 2025), and Japanese translations of each document.',
+            },
+            {
+              q: 'What is the new document required from June 2025?',
+              a: 'The TB Non-Disease Certificate. Since June 23, 2025, Philippine nationals applying for a Certificate of Eligibility (COE) in Japan must submit this certificate. It is only issued by Japan-government-designated Panel Clinics (IOM Manila, NHS, St. Luke\'s). Valid for 180 days from exam date.',
+            },
+          ]}
+        />
+      </div>
 
       <article className="max-w-2xl mx-auto px-4 mt-8">
         <RelatedLinks links={[

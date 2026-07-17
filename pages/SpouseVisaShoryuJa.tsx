@@ -5,6 +5,7 @@ import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import SectionDivider from '../components/SectionDivider';
+import FaqSection from '../components/FaqSection';
 import { AlertTriangle, CheckCircle, Info, Calendar, FileText, Stamp, ShieldCheck, Heart } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
@@ -321,6 +322,21 @@ export default function SpouseVisaShoryuJa() {
         variant="primary"
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
+
+      <div className="max-w-2xl mx-auto px-4 mt-8">
+        <FaqSection
+          items={[
+            {
+              q: '配偶者ビザのCOE申請に必要なフィリピン書類は？',
+              a: '2026年3月時点では、PSA婚姻証明書（DFAアポスティーユ付き）、PSA出生証明書（DFAアポスティーユ付き）、CENOMAR（独身証明書）、各書類の日本語訳、そして2025年6月23日から新たに義務化された結核非発病証明書（指定Panel Clinic発行）が必要です。',
+            },
+            {
+              q: '2025年6月から追加された新しい書類は何ですか？',
+              a: '「結核非発病証明書」です。フィリピン国籍の方が在留資格認定証明書（COE）を申請する際、2025年6月23日から提出が義務化されました。IOM Manila Health Centre、Nationwide Health Systems（NHS）、St. Luke\'s Medical Center Extension Clinicなど、日本政府が指定したPanel Clinicでのみ発行されます。有効期間は検査日から180日です。',
+            },
+          ]}
+        />
+      </div>
 
       <article className="max-w-2xl mx-auto px-4 mt-8">
         <RelatedLinks links={[

@@ -96,6 +96,20 @@ export default function DfaProcessingTimeJa() {
         ctaText="無料で相談する"
       />
 
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">【比較】RegularとExpressの違いと選び方</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>DFA（フィリピン外務省）のアポスティーユ認証には、処理スピードの異なる2つの申請区分があります。</p>
+          <div className="rounded-xl border border-gray-100 bg-gray-50 p-4">
+            <ul className="space-y-2">
+              <li><strong>Regular（通常）</strong>：DFA内部の処理はおおむね5営業日前後が目安。追加料金がかからない標準の区分です。</li>
+              <li><strong>Express（特急）</strong>：追加料金を払うことで、DFA内部の処理を3営業日前後に短縮できます。提出期限が迫っているときの選択肢です。</li>
+            </ul>
+          </div>
+          <p>ここで注意したいのは、上記はあくまで「DFAの認証処理だけ」にかかる期間だという点です。実際には、この前段にPSA書類の取得、後段に日本への国際郵送が加わります。そのため、Expressにしても全体が数日で終わるわけではありません。「提出日までにどれだけ余裕があるか」で、Regularで十分か、Expressが必要かを判断します。判断が難しい場合は、提出予定日をお知らせいただければ、どちらが適切かを含めてご案内します。</p>
+        </div>
+      </section>
+
       <SectionDivider variant="beige">
         <IconCardGrid
           heading="こんな方に選ばれています"
@@ -156,6 +170,19 @@ export default function DfaProcessingTimeJa() {
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。' },
         ]}
       />
+
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">申請から受け取りまでの全体スケジュール</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>「アポスティーユだけ」ではなく、書類が手元に届くまでの全体像で見ておくと、期限の見通しが立てやすくなります。当社で一括代行する場合の目安は次のとおりです。</p>
+          <ol className="list-decimal pl-5 space-y-1">
+            <li>PSA書類の取得：約2〜3週間</li>
+            <li>DFAアポスティーユ認証：Regularで5営業日前後／Expressで3営業日前後（DFA内部処理）</li>
+            <li>日本への国際郵送（追跡付き）：約1週間</li>
+          </ol>
+          <p>これらを合計した全体の目安は、おおむね1ヶ月〜1ヶ月半です。現地機関の混雑状況や、NBIなどでHIT（照会）等の追加確認があると前後することがあります。提出期限がある場合は、この全体期間から逆算して、早めに申請を開始するのが安全です。</p>
+        </div>
+      </section>
 
       <FaqSection
         items={[

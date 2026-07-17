@@ -4,6 +4,7 @@ import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import RelatedArticles from '../components/RelatedArticles';
+import FaqSection from '../components/FaqSection';
 import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
@@ -186,6 +187,23 @@ export default function NbiValidityJa() {
         href="#contact"
         variant="primary"
         trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料"
+      />
+
+      <FaqSection
+        items={[
+          {
+            q: 'NBIクリアランスはどのくらいの期間有効ですか？',
+            a: '提出先によって異なります。在フィリピン日本国大使館の案内では申請日から3か月以内、在東京フィリピン大使館の非クオータ移民査証では6か月以内とされています。提出先の条件を先に確認することが重要です。',
+          },
+          {
+            q: '手元のNBIクリアランスはまだ使えますか？',
+            a: '発行日と提出先の条件次第です。まず手元のDate Issued（発行日）を確認し、提出先が求める期間条件に合っているかを確認してください。',
+          },
+          {
+            q: '更新でいけるのか、新規扱いになるのか分かりません',
+            a: '2014年以降に発行されたNBI Clearanceがあり、氏名など個人情報に変更がない場合は更新ルートで進められることが多いです。2014年より前のものや個人情報変更がある場合は新規に近い手続きになります。',
+          },
+        ]}
       />
 
       <RelatedArticles

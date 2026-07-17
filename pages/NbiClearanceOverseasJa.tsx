@@ -118,6 +118,15 @@ export default function NbiClearanceOverseasJa() {
         ]}
       />
 
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">「HIT」とは？出たときに何が起きるか</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>NBIクリアランスを申請すると、システム上で同姓同名や類似する氏名の記録と照合が行われます。ここで一致の可能性があると判断されると「HIT」という状態になり、その場で即日発行されず、追加の確認（本人確認・照会）が必要になります。</p>
+          <p>重要なのは、<strong>HIT＝犯罪歴ではない</strong>という点です。フィリピンでは同じ氏名の方が多く、名前が似ているだけでHITになるケースが少なくありません。ただしHITが出ると通常より発行までの時間が延び、場合によっては現地でのインタビューや追加書類が求められることがあります。</p>
+          <p>海外在住の方の場合、HITが出てから慌てて対応すると、往復や再申請で時間を大きくロスします。提出期限がある手続き（配偶者ビザ・OFW関連など）では、HITの可能性も見込んで早めに動くのが安全です。詳しい対応は<a href="/ja/nbi-hit/" className="text-primary underline">NBI HIT対応</a>のページでも解説しています。</p>
+        </div>
+      </section>
+
       <FeatureList
         heading="このページが役立つ方"
         items={[
@@ -157,6 +166,20 @@ export default function NbiClearanceOverseasJa() {
         variant="primary"
         trustNote="着手前キャンセル無料・進捗共有あり・残金は書類写し確認後にご案内"
       />
+
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">海外から進めるときに準備しておくもの</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>海外在住のままNBIクリアランスを進める場合、事前に次の情報・書類を用意しておくと手続きがスムーズです。</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>パスポートのデータページ（氏名・生年月日のローマ字表記が分かるもの）</li>
+            <li>有効な本人確認書類</li>
+            <li>過去に取得したNBIクリアランス（お持ちの場合。更新ルートで進められることがあります）</li>
+            <li>提出先が求める形式（アポスティーユの要否・紙原本か電子かなど）</li>
+          </ul>
+          <p>なお、すべてを完全に代理で完結できるとは限りません。案件によっては、ご本人の署名や本人確認対応が必要になる場合があります。これは適法に進めるために必要な対応です。まずは現在の状況と提出先をお知らせいただければ、どのルートで進められるかを整理してご案内します。</p>
+        </div>
+      </section>
 
       <FaqSection
         items={[
