@@ -11,11 +11,12 @@ import IconCardGrid from '../components/IconCardGrid';
 import SummaryBlock from '../components/SummaryBlock';
 import { AlertTriangle, Calendar, Clock, MapPin, FileCheck, Users, Info, ShieldCheck, Heart } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function TbCertJa() {
   useMeta(
-    '結核非発病証明書（結核証明書）の取得【2026年3月】配偶者ビザに必須',
-    '配偶者ビザ申請に必要な結核非発病証明書（TB証明書）の取得方法を解説。2025年6月以降は日本人配偶者ビザでも必須。取得場所・費用・期限を整理します。',
+    `結核非発病証明書（TB Non-Disease Certificate）ガイド【${SEO_YEAR_MONTH_JA}】フィリピン国籍者の在留資格認定証明書申請に必須`,
+    '2025年6月23日施行。フィリピン国籍者がCOE（在留資格認定証明書）を申請する際に必要な結核非発病証明書について、指定Panel Clinic・費用・有効期間・手続きの流れを解説します。',
   );
   return (
     <PageLayout

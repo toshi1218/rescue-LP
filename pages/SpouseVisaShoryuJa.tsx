@@ -12,8 +12,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function SpouseVisaShoryuJa() {
   useMeta(
-    `配偶者ビザに必要な書類チェックリスト【${SEO_YEAR_MONTH_JA}版】フィリピン人配偶者の在留資格認定証明書申請`,
-    '2025年6月23日改正対応。フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。結核非発病証明書の追加要件・PSA書類・CENOMARをまとめてご案内。',
+    `配偶者ビザ 必要書類チェックリスト【${SEO_YEAR_MONTH_JA}】在留資格認定証明書 フィリピン人`,
+    'フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。PSA書類・CENOMAR・結核非発病証明書の取得代行も対応。無料相談。',
   );
 
   return (

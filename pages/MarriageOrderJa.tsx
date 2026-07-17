@@ -7,10 +7,11 @@ import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function MarriageOrderJa() {
   useMeta(
-    '日本先行婚とフィリピン先行婚【2026年3月】どちらを選ぶべき？手続きと必要書類を比較',
+    `日本先行婚とフィリピン先行婚【${SEO_YEAR_MONTH_JA}】どちらを選ぶべき？手続きと必要書類を比較`,
     'フィリピン人との国際結婚で「日本とフィリピン、どちらで先に結婚するか」を比較。手続きの流れ・必要書類・メリット・デメリットをステップ別に整理。渡航不要で進めたい方は日本先行婚が有利です。',
   );
   return (

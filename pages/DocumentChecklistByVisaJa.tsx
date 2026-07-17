@@ -14,8 +14,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function DocumentChecklistByVisaJa() {
   useMeta(
     `ビザ別フィリピン書類チェックリスト【${SEO_YEAR_MONTH_JA}】`,
-    'K-1、CR-1/IR-1、カナダ、オーストラリア、UK、日本向けに、フィリピン書類の必要書類を整理した日本語チェックリストです。CENOMAR、PSA出生証明書、NBI、婚姻証明書、アポスティーユの確認に使えます。',
-    'https://ph-document.com/ja/document-checklist-by-visa',
+    'K-1、CR-1/IR-1、カナダ、オーストラリア、UK、日本向けに、フィリピン書類の必要書類を整理した日本語チェックリストです。',
+    'https://ph-document.com/ja/document-checklist-by-visa/',
   );
 
   return (
