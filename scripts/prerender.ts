@@ -570,7 +570,7 @@ const routes: RouteConfig[] = [
     path: '/en/psa-marriage-certificate/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-marriage-certificate', 'index.html'),
     title: `PSA Marriage Certificate [${SEO_YEAR}] — Retrieve + Apostille + Ship Worldwide`,
-    description: `Need a PSA Marriage Certificate from abroad? We retrieve the original, get DFA Apostille, and ship via DHL — from US$219 all-in. No trip needed. Free quote.`,
+    description: `Need a PSA Marriage Certificate from abroad? We handle your online application and DFA e-Apostille — from US$219 all-in. No trip needed. Free quote.`,
     canonical: `${BASE}/en/psa-marriage-certificate/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-marriage-certificate/`,
