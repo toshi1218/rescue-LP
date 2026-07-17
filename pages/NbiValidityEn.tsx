@@ -8,12 +8,13 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 import RelatedArticles from '../components/RelatedArticles';
 
 export default function NbiValidityEn() {
   useMeta(
-    'How Long Is NBI Clearance Valid? Expiration & Timing Guide | Philippine Document Service',
-    'NBI Clearance is valid for 1 year from issue, but many visa applications require it within 6 months. Learn the timing rules and get yours retrieved on schedule.',
+    `NBI Clearance Validity [${SEO_YEAR_MONTH_EN}] — Timing Guide`,
+    `NBI Clearance is valid for 1 year, but spouse visas often require it within 6 months. Timing matters. We help you get it at the right time. Free consultation.`,
   );
   return (
     <PageLayout

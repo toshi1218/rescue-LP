@@ -8,11 +8,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { Globe, Clock, CheckCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function CenomarAbroadEn() {
   useMeta(
-    'How to Get CENOMAR From Abroad [2026] — No Philippines Trip Needed',
-    'Get your PSA CENOMAR from outside the Philippines. Step-by-step guide for OFWs and Filipinos living abroad. We retrieve, apostille, and ship worldwide. Free quote.',
+    `How to Get CENOMAR From Abroad [${SEO_YEAR}] — No Philippines Trip Needed`,
+    `Get your PSA CENOMAR from outside the Philippines. For spouse visa, naturalization, and marriage procedures in Japan. We retrieve, apostille, and ship to Japan. Free quote.`,
   );
   return (
     <PageLayout

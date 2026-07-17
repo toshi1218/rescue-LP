@@ -9,12 +9,13 @@ import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 import RelatedArticles from '../components/RelatedArticles';
 
 export default function PsaBirthCertEn() {
   useMeta(
-    'PSA Birth Certificate — Official Philippine Birth Record | Philippine Document Service',
-    'A PSA Birth Certificate is an official civil registry document from the Philippine Statistics Authority. Required for visas, immigration, and legal processes. Retrieved with DFA Apostille.',
+    `PSA Birth Certificate + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    `Get a PSA Birth Certificate from the Philippines without flying there. We handle retrieval + DFA Apostille + DHL delivery to your door. Free quote.`,
   );
   return (
     <PageLayout

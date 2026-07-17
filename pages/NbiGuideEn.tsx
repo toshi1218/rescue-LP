@@ -8,13 +8,14 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 import RelatedArticles from '../components/RelatedArticles';
 import PaymentTrust from '../components/PaymentTrust';
 
 export default function NbiGuideEn() {
   useMeta(
-    'NBI Clearance Application Support | Philippine Criminal Record Certificate',
-    'NBI Clearance application support for Filipinos overseas. Renewal cases handled remotely via our Cebu team. First-time applicants: embassy fingerprint guidance provided. DFA Apostille + DHL shipping included.',
+    `NBI Clearance + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    `Need NBI Clearance for a spouse visa or work permit? We retrieve it with DFA Apostille and ship worldwide. HIT cases handled. Free quote.`,
   );
   return (
     <PageLayout

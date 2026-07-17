@@ -9,11 +9,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaOnlineEn() {
   useMeta(
-    'PSA Online: How to Get PSA Certificates from Abroad [2026]',
-    'PSA Serbilis lets you order PSA certificates online — but only ships within the Philippines. OFWs and overseas Filipinos use a document service to retrieve and ship PSA documents worldwide.',
+    `PSA Online: How to Get PSA Certificates from Abroad [${SEO_YEAR}]`,
+    `PSA Serbilis lets you order PSA certificates online — but only ships within the Philippines. Those applying for spouse visa or naturalization in Japan use a document service to retrieve and ship PSA documents.`,
   );
   return (
     <PageLayout
