@@ -124,6 +124,15 @@ export default function PsaEcertificateAbroadEn() {
         },
       ]}
     >
+      <header className="mb-8">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary leading-snug mb-3">
+          PSA e-Certificate &amp; DFA e-Apostille Abroad: Are They Accepted?
+        </h1>
+        <p className="text-sm md:text-base text-gray-500 leading-relaxed">
+          A country-by-country guide for the US, Canada, Australia, UK, and UAE — and why most authorities still require the physical PSA on Security Paper (SECPA).
+        </p>
+      </header>
+
       <SummaryBlock
         conclusion="PSA e-Certificates and DFA e-Apostilles are legally valid under the Hague Convention. However, most overseas immigration authorities still expect scans of the physical PSA on Security Paper (SECPA) — not a PSA e-certificate. Printing an e-Apostille is invalid. When in doubt, obtain the physical PSA with a paper Apostille."
         points={[
