@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
 import IconCardGrid from '../components/IconCardGrid';
 import StepList from '../components/StepList';
+import RelatedLinks from '../components/RelatedLinks';
 import { FileCheck, Clock, Scale, ShieldCheck, AlertTriangle, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
@@ -178,6 +179,12 @@ export default function BusinessGyoseishoshiJa() {
           },
         ]}
       />
+
+      <RelatedLinks links={[
+        { path: '/ja/business/gyoseishoshi-e-apostille/', label: '【2026年3月制度変更後】e-Apostille申請実務ガイド' },
+        { path: '/ja/gyouseishoshi-to-shorui-shuttoku/', label: '行政書士の仕事と書類取得サービスの違い' },
+        { path: '/ja/business/', label: '法人の方へ：登録支援機関・企業向けサービス一覧' },
+      ]} />
     </PageLayout>
   );
 }

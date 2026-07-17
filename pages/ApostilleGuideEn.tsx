@@ -239,6 +239,7 @@ export default function ApostilleGuideEn() {
           { href: '/en/dfa-apostille-cebu-report/', title: 'DFA Apostille at Cebu Window — Field Report', description: 'Step-by-step guide for obtaining DFA Apostille at the Cebu office.' },
           { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'CENOMAR retrieval with DFA Apostille included.' },
           { href: '/en/nbi-clearance/', title: 'NBI Clearance Service', description: 'NBI Clearance retrieval with DFA Apostille included.' },
+          { href: '/en/psa-e-apostille-service/', title: 'PSA e-Apostille Online Filing Service', description: 'Assisted e-Apostille filing since the March 2026 rule change — even if family is abroad.' },
         ]}
       />
     </PageLayout>

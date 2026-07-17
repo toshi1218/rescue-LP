@@ -250,6 +250,7 @@ export default function CenomarApostilleJa() {
         { path: '/ja/cenomar-koyukigen/', label: 'CENOMARの有効期限と取得タイミング' },
         { path: '/ja/apostille/', label: 'DFAアポスティーユ代行（PSA全書類対応）' },
         { path: '/ja/kokusai-kekkon-guide/', label: '国際結婚の書類一括代行' },
+        { path: '/ja/psa-e-apostille-daiko/', label: 'PSAアポスティーユのオンライン申請代行（ご自身で申請する方向け）' },
       ]} />
     </PageLayout>
   );

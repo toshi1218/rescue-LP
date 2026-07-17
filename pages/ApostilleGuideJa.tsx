@@ -301,6 +301,7 @@ export default function ApostilleGuideJa() {
           { href: '/ja/apostille-ryokin/', title: 'アポスティーユの費用', description: 'PSA書類取得・DHL送料込みの料金体系を確認できます。' },
           { href: '/ja/dfa-apostille-genchi-report/', title: 'アポスティーユ取得手順【DFAセブ窓口】', description: 'セブ窓口での実際の取得手順をレポートしています。' },
           { href: '/ja/cenomar/', title: 'CENOMAR（独身証明書）', description: 'CENOMAR取得とDFAアポスティーユをまとめて代行。' },
+          { href: '/ja/psa-e-apostille-daiko/', title: 'PSAアポスティーユのオンライン申請代行', description: '2026年3月以降のe-Apostilleオンライン申請を代行。海外在住のご家族にも対応。' },
         ]}
       />
 

@@ -196,6 +196,7 @@ export default function CenomarApostilleEn() {
           { href: '/en/cenomar-validity/', title: 'How Long Is CENOMAR Valid?', description: 'CENOMAR validity for K-1, CR-1, and other visa types.' },
           { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. Marriage Certificate', description: 'Which one does your visa actually require?' },
           { href: '/en/apostille/', title: 'DFA Apostille Guide', description: 'What DFA Apostille is, why it is required, and how we obtain it.' },
+          { href: '/en/psa-e-apostille-service/', title: 'PSA e-Apostille Online Filing Service', description: 'Filing the e-Apostille online yourself? We can file on your behalf instead.' },
         ]}
       />
     </PageLayout>

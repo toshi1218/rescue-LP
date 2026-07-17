@@ -139,6 +139,9 @@ const RoadmapEn = lazy(() => import('./pages/RoadmapEn'));
 const GyoseishoshiVsDocServiceEn = lazy(() => import('./pages/GyoseishoshiVsDocServiceEn'));
 const KojinJohoHogoEn = lazy(() => import('./pages/KojinJohoHogoEn'));
 const F6DocsEn = lazy(() => import('./pages/F6DocsEn'));
+const PsaEApostilleServiceEn = lazy(() => import('./pages/PsaEApostilleServiceEn'));
+const PsaEApostilleDaikoJa = lazy(() => import('./pages/PsaEApostilleDaikoJa'));
+const BusinessGyoseishoshiEApostilleJa = lazy(() => import('./pages/BusinessGyoseishoshiEApostilleJa'));
 const CountryDocsEnTemplate = lazy(() => import('./pages/CountryDocsEnTemplate'));
 const HomeKo = lazy(() => import('./pages/HomeKo'));
 const PricingKo = lazy(() => import('./pages/PricingKo'));
@@ -414,6 +417,12 @@ export default function App() {
         <Route path="/en/personal-information-protection/" element={<KojinJohoHogoEn />} />
         <Route path="/en/f-6-philippines-documents" element={<Navigate to="/en/f-6-philippines-documents/" replace />} />
         <Route path="/en/f-6-philippines-documents/" element={<F6DocsEn />} />
+        <Route path="/en/psa-e-apostille-service" element={<Navigate to="/en/psa-e-apostille-service/" replace />} />
+        <Route path="/en/psa-e-apostille-service/" element={<PsaEApostilleServiceEn />} />
+        <Route path="/ja/psa-e-apostille-daiko" element={<Navigate to="/ja/psa-e-apostille-daiko/" replace />} />
+        <Route path="/ja/psa-e-apostille-daiko/" element={<PsaEApostilleDaikoJa />} />
+        <Route path="/ja/business/gyoseishoshi-e-apostille" element={<Navigate to="/ja/business/gyoseishoshi-e-apostille/" replace />} />
+        <Route path="/ja/business/gyoseishoshi-e-apostille/" element={<BusinessGyoseishoshiEApostilleJa />} />
 
         {/* Korean routes */}
         <Route path="/ko" element={<Navigate to="/ko/" replace />} />
