@@ -6,7 +6,7 @@ import PageLayoutKo from '../components/PageLayoutKo';
 export default function PricingKo() {
   return (
     <PageLayoutKo
-      title="요금 안내 | 필리핀 PSA · 아포스티유 · NBI 대행"
+      title="필리핀 서류 대행 요금 | PSA · CENOMAR · NBI · 아포스티유 비용 안내"
       description="CENOMAR, PSA 출생증명서, NBI Clearance, DFA 아포스티유 대행 요금 안내. 아포스티유 인증 + 국제 배송 포함. 추가 비용 사전 고지. 무료 견적 신청 가능."
       canonical="https://ph-document.com/ko/pricing/"
       breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: '요금 안내' }]}

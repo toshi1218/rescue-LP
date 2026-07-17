@@ -29,8 +29,8 @@ export default function NbiKo() {
 
   return (
     <PageLayoutKo
-      title="NBI Clearance 대행 | 필리핀 범죄경력증명서 취득 지원"
-      description="한국 거주 필리핀 국민의 NBI Clearance 취득을 지원합니다. 주한 필리핀 대사관에서 지문 등록 후 필리핀 현지 취득・DFA 아포스티유 인증・국제 특송까지 대행합니다."
+      title="NBI Clearance 신청 지원 | 필리핀 범죄경력증명서 취득 서포트"
+      description="F-6 결혼비자용 필리핀 NBI Clearance（범죄경력증명서） 취득을 서포트. 주한 필리핀 대사관 지문 등록 예약 안내, 온라인 신청, DFA 아포스티유 수배, DHL 발송까지 원스톱. 귀화 신청에도 대응."
       canonical="https://ph-document.com/ko/nbi-clearance/"
       breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: 'NBI Clearance 신청 지원' }]}
       jsonLd={[

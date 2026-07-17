@@ -8,7 +8,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function HomeKo() {
   useMeta(
-    '필리핀 서류 취득 대행 | PSA · 아포스티유 · NBI 원스톱 지원',
+    'F-6 결혼비자 필리핀 서류 취득 대행 | PSA · CENOMAR · NBI · 아포스티유',
     'CENOMAR(미혼증명서), PSA 출생증명서, NBI Clearance, 아포스티유 취득을 대행합니다. F-6 결혼이민비자 준비, 한국 제출용 필리핀 서류를 처음부터 끝까지 지원합니다.',
     'https://ph-document.com/ko/',
   );
