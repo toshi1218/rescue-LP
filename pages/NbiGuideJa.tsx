@@ -9,6 +9,7 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import RelatedArticles from '../components/RelatedArticles';
+import PaymentTrust from '../components/PaymentTrust';
 import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText, Mail, Smartphone, PackageSearch } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
@@ -354,6 +355,8 @@ export default function NbiGuideJa() {
           { title: '原本の発送', description: '残金の着金確認後、原本を発送します。' },
         ]}
       />
+
+      <PaymentTrust />
 
       <FaqSection
         items={[

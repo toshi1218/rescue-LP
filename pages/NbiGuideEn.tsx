@@ -9,6 +9,7 @@ import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import RelatedArticles from '../components/RelatedArticles';
+import PaymentTrust from '../components/PaymentTrust';
 
 export default function NbiGuideEn() {
   useMeta(
@@ -193,6 +194,8 @@ export default function NbiGuideEn() {
           },
         ]}
       />
+
+      <PaymentTrust />
 
       <FaqSection
         items={[
