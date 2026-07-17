@@ -5,8 +5,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function KojinJohoHogoJa() {
   useMeta(
-    '個人情報保護方針 | フィリピン書類取得代行センター',
-    '株式会社IGRSの個人情報保護方針。個人情報の保護に関する基本方針・取組みをご説明します。',
+    '個人情報保護方針｜フィリピン書類取得代行センター（IGRS Inc.）',
+    '株式会社IGRSの個人情報保護方針。個人情報保護法に基づく個人情報の取得・利用目的・第三者提供・安全管理措置・開示請求への対応を説明します。',
   );
   return (
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '個人情報保護方針' }]}>

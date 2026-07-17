@@ -5,8 +5,8 @@ import { useMeta } from '../lib/useMeta';
 
 export default function PrivacyJa() {
   useMeta(
-    'プライバシーポリシー | フィリピン書類取得代行センター',
-    'フィリピン書類取得代行センター（株式会社IGRS）のプライバシーポリシー。個人情報の収集・利用・管理方法を説明します。',
+    'プライバシーポリシー｜フィリピン書類取得代行センター（IGRS Inc.）',
+    'フィリピン書類取得代行センター（IGRS Inc.）のプライバシーポリシー。個人情報の収集・利用目的・第三者提供・安全管理についてご説明します。',
   );
   return (
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'プライバシーポリシー' }]}>

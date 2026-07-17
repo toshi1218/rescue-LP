@@ -11,7 +11,7 @@ const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 export default function ContactJa() {
   useMeta(
     '無料相談・お問い合わせ｜フィリピン書類取得代行センター',
-    'フィリピン書類取得代行・国際結婚・配偶者ビザ・帰化申請・外免切替のご相談はこちら。24時間以内に返信します。書類名が分からない段階でも対応します。',
+    'フィリピン書類取得代行・国際結婚・配偶者ビザ・帰化申請・外免切替に関するご相談はこちら。24時間以内に返信します。まずはお気軽にご相談ください。',
   );
   const [service, setService] = useState('');
   const [submitted, setSubmitted] = useState(false);

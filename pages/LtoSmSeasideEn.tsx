@@ -9,11 +9,12 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import { MapPin, Clock, FileText } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function LtoSmSeasideEn() {
   useMeta(
-    "LTO SM Seaside Cebu — Driver's Record & License Renewal [2026 Report]",
-    "On-site report for the LTO (Land Transportation Office) window inside SM Seaside City Cebu. Location, photos, and how to get a Driver's Record for Japan license conversion.",
+    `LTO SM Seaside Cebu — Driver's Record & License Renewal [${SEO_YEAR} Report]`,
+    `On-site report for the LTO window inside SM Seaside City Cebu. Location, photos, and how to get a Driver's Record for Japan license conversion.`,
   );
   return (
     <PageLayout

@@ -9,11 +9,12 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import { AlertTriangle, MapPin, Clock, FileText } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaCrsCebuEn() {
   useMeta(
-    'PSA CRS Cebu — How to Get Birth & Marriage Certificates [2026 Report]',
-    'On-site report for the PSA Civil Registration System (CRS) outlet in Cebu City, Colon Street. Appointment required since October 2025. Location, photos, and what documents you can get.',
+    `PSA CRS Cebu — Birth & Marriage Certificates [${SEO_YEAR} Report]`,
+    `On-site report for the PSA CRS outlet in Cebu City (Colon Street). Appointment required since October 2025. Location, photos, and available documents.`,
   );
   return (
     <PageLayout
