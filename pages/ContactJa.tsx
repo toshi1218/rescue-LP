@@ -220,6 +220,90 @@ export default function ContactJa() {
           </select>
         </div>
 
+        {/* 見積もりに役立つ詳細（任意・選択式）— 初回返信から概算見積を出すため */}
+        <div className="rounded-xl border border-gray-100 bg-gray-50/60 p-4">
+          <p className="text-sm font-bold text-gray-700 mb-1">お見積もりに役立つ詳細</p>
+          <p className="text-xs text-gray-500 mb-3">すべて任意です。わかる範囲で選んでいただくと、初回のご返信で概算のお見積もりをお出しできます。</p>
+          <div className="space-y-3">
+            <div>
+              <label className="block text-xs font-bold text-gray-600 mb-1">必要な証明書・続柄</label>
+              <select
+                name="doc_types"
+                defaultValue=""
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+              >
+                <option value="">選択してください（任意）</option>
+                <option value="本人の出生証明書のみ">本人の出生証明書のみ</option>
+                <option value="本人＋配偶者">本人＋配偶者の分</option>
+                <option value="本人＋父母">本人＋父母の分</option>
+                <option value="家族まとめて（父母・兄弟姉妹など）">家族まとめて（父母・兄弟姉妹など）</option>
+                <option value="まだわからない">まだわからない</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-xs font-bold text-gray-600 mb-1">提出先</label>
+              <select
+                name="submit_to"
+                defaultValue=""
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+              >
+                <option value="">選択してください（任意）</option>
+                <option value="日本の市区町村役場">日本の市区町村役場</option>
+                <option value="法務局（帰化申請）">法務局（帰化申請）</option>
+                <option value="出入国在留管理庁（ビザ）">出入国在留管理庁（ビザ）</option>
+                <option value="海外の政府機関・大使館">海外の政府機関・大使館</option>
+                <option value="その他・わからない">その他・わからない</option>
+              </select>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-bold text-gray-600 mb-1">NBIクリアランス</label>
+                <select
+                  name="nbi_needed"
+                  defaultValue=""
+                  className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+                >
+                  <option value="">任意</option>
+                  <option value="必要">必要</option>
+                  <option value="不要">不要</option>
+                  <option value="わからない">わからない</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-gray-600 mb-1">部数</label>
+                <select
+                  name="copies"
+                  defaultValue=""
+                  className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+                >
+                  <option value="">任意</option>
+                  <option value="1通">1通</option>
+                  <option value="2通">2通</option>
+                  <option value="3通">3通</option>
+                  <option value="4〜5通">4〜5通</option>
+                  <option value="6通以上">6通以上</option>
+                  <option value="わからない">わからない</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label className="block text-xs font-bold text-gray-600 mb-1">ご希望の期限</label>
+              <select
+                name="deadline"
+                defaultValue=""
+                className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+              >
+                <option value="">選択してください（任意）</option>
+                <option value="特に急がない">特に急がない</option>
+                <option value="1ヶ月以内">1ヶ月以内</option>
+                <option value="2〜3ヶ月以内">2〜3ヶ月以内</option>
+                <option value="提出日が決まっている">提出日が決まっている（内容欄に記入）</option>
+                <option value="わからない">わからない</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">
             当社をどこでお知りになりましたか？ <span className="text-red-500">*</span>
