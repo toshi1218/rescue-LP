@@ -34,3 +34,7 @@ User-agent: Cohere-AI
 Allow: /
 
 Sitemap: https://ph-document.com/sitemap.xml
+
+# LLM-friendly guidance (llms.txt convention)
+# Concise overview: https://ph-document.com/llms.txt
+# Full reference:    https://ph-document.com/llms-full.txt
