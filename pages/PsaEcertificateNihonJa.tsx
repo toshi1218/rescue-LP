@@ -94,6 +94,89 @@ export default function PsaEcertificateNihonJa() {
         </div>
       </section>
 
+      {/* 実費と納品パターン */}
+      <section className="mb-10">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
+          <h2 className="text-xl md:text-2xl font-bold text-secondary">PSA e-Certificate・e-Apostilleの実費と納品パターン</h2>
+        </div>
+        <div className="space-y-4 text-gray-700 leading-relaxed">
+          <p>
+            現在、PSA e-Certificateとe-Apostilleは<strong className="text-gray-900">1つのオンライン申請でまとめて発行</strong>されます。移行期間の終了により、PSA書類向けの<strong className="text-gray-900">物理アポスティーユ（紙のアポスティーユ）は新規発行が停止</strong>され、認証は電子のe-Apostilleに一本化されました。フィリピン政府（PSA・DFA）に支払う実費の目安は次のとおりです。
+          </p>
+          <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
+            <table className="w-full min-w-[420px] text-sm">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-100">
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">納品パターン</th>
+                  <th className="text-right px-4 py-3 font-semibold text-gray-700 whitespace-nowrap">政府実費の目安</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-50">
+                <tr className="bg-primary/5">
+                  <td className="px-4 py-3 font-bold text-gray-900">電子のみ（e-Certificate＋e-Apostille）</td>
+                  <td className="px-4 py-3 text-right font-bold text-primary whitespace-nowrap">約500ペソ／通</td>
+                </tr>
+                <tr className="bg-primary/5">
+                  <td className="px-4 py-3 font-bold text-gray-900">電子＋紙原本（＋物理PSA証明書）</td>
+                  <td className="px-4 py-3 text-right font-bold text-primary whitespace-nowrap">約850ペソ／通</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-400">
+            ※ いずれも政府実費の目安で、現地の料金改定・決済チャネル手数料（数十ペソ）により変動します。紙原本を海外へ発送する場合は別途、国際配送費（DHL・PHLPost EMS等）が加わります。当社の代行手数料は上記に含まれません。
+          </p>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2 mt-6">
+          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+            <p className="font-bold text-secondary mb-1">デジタル納品（電子のみ）</p>
+            <p className="text-sm text-primary font-semibold mb-2">実費 約500ペソ／通・配送不要</p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              PSA e-Certificate＋e-Apostilleをメールで納品。国際配送が不要なため納期が短く、提出先が電子文書を受理する場合はこれで完結します。
+            </p>
+          </div>
+          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+            <p className="font-bold text-secondary mb-1">ハイブリッド納品（電子＋紙原本）</p>
+            <p className="text-sm text-primary font-semibold mb-2">実費 約850ペソ／通＋国際配送費</p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              上記の電子2点に、物理PSA証明書（紙原本）を追加。電子文書と紙原本を<strong>一度の手続きでまとめて取得</strong>でき、紙原本のために別ルートで申請し直す必要はありません。
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-4 flex items-start gap-3 p-4 rounded-xl border border-blue-100 bg-blue-50">
+          <AlertTriangle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+          <p className="text-sm text-gray-700 leading-relaxed">
+            <strong className="text-gray-900">重要：</strong>紙原本が必要な場合も、電子文書と同じ手続きの中でまとめて手配できます。ただし
+            <strong>物理PSA証明書に紙のアポスティーユは貼付されません</strong>（PSA向け物理アポスティーユは停止済み）。認証はあくまで電子のe-Apostilleで行われるため、紙原本＝紙アポスティーユではない点にご注意ください。
+          </p>
+        </div>
+      </section>
+
+      {/* オンライン申請の本人確認・決済 */}
+      <section className="mb-10">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
+          <h2 className="text-xl md:text-2xl font-bold text-secondary">オンライン申請の本人確認・支払いの注意点</h2>
+        </div>
+        <div className="space-y-4">
+          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+            <p className="font-bold text-gray-900 mb-1">本人確認（liveness check）が必要</p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              e-Certificateの発行には、有効な身分証のアップロードとカメラによるリアルタイム本人確認（liveness check）が求められます。これは<strong>申請者本人が行う必要があり、第三者が代理で顔認証を行うことはできません</strong>。一方で、海外在住でも手続きはメールで完結でき、フィリピンのSIM・携帯番号は原則不要です（本人確認・書類受領はメールで行えます）。
+            </p>
+          </div>
+          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+            <p className="font-bold text-gray-900 mb-1">支払いはフィリピン現地の決済手段が中心</p>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              政府への支払いは GCash・Maya・ShopeePay・GrabPay・現金など<strong>フィリピン国内向けの決済手段</strong>が中心で、海外クレジットカードは前面に出ていません。海外在住の方は、決済手段の用意や「申請番号と入金の正しい紐付け」でつまずきやすい部分です。当社は<strong>日本円でのお支払い</strong>で、フィリピン政府機関への決済までまとめて代行します。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* 日本の受領状況 */}
       <section className="mb-10">
         <div className="flex items-center gap-3 mb-4">
@@ -163,13 +246,13 @@ export default function PsaEcertificateNihonJa() {
               <tr className="bg-gray-50 border-b border-gray-100">
                 <th className="text-left px-4 py-3 font-semibold text-gray-700 w-1/3">比較項目</th>
                 <th className="text-center px-4 py-3 font-semibold text-gray-500">電子文書（eCertificate＋eApostille）</th>
-                <th className="text-center px-4 py-3 font-semibold text-primary">紙原本（SECPA＋物理アポスティーユ）</th>
+                <th className="text-center px-4 py-3 font-semibold text-primary">紙原本（SECPA）＋e-Apostille</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
                 ['法的有効性', '有効（HCCH基準）', '有効'],
-                ['アポスティーユの形式', 'eApostille（電子）のみ。Paper Apostilleは原則不可', '物理アポスティーユ（紙）'],
+                ['アポスティーユの形式', 'eApostille（電子）', 'eApostille（電子）。PSA向け物理アポスティーユは新規発行停止'],
                 ['日本での受領確実性', '窓口次第（要事前確認）', '高い（従来の標準）'],
                 ['日本在住での取得', 'オンラインで自力取得が可能', '代行業者が必要なケースが多い'],
                 ['印刷して提出', '原則不可（公式な印刷版なし）', '可'],
