@@ -37,12 +37,12 @@ export default function MarriageGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '50000',
+          price: '61000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '50000',
+            price: '61000',
             priceCurrency: 'JPY',
-            description: 'PSA書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: 'PSA書類1種＋DFAアポスティーユ＋DHL国際郵送込み（税込）。2種セットは国際結婚準備パック¥94,000〜',
           },
         },
         },
@@ -119,9 +119,9 @@ export default function MarriageGuideJa() {
           <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">50,000円〜（書類1種・アポスティーユ込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※必要書類の種類・組み合わせによって変わります</dd>
+              <dt className="text-gray-500 text-xs mb-1">代行料金（税込・DHL込み）</dt>
+              <dd className="font-medium text-gray-800">61,000円〜（書類1種・アポスティーユ込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">※出生証明書＋CENOMARの2種セットは国際結婚準備パック 94,000円〜</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -133,7 +133,7 @@ export default function MarriageGuideJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">DHL国際配送</dt>
-              <dd className="font-medium text-gray-800">実費別途</dd>
+              <dd className="font-medium text-gray-800">料金に込み</dd>
             </div>
           </dl>
           <p className="text-xs text-gray-500 mt-3">※必要書類の種類・組み合わせによって料金は変わります。無料相談後に正確な金額をご提示します。</p>
