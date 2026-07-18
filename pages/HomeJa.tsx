@@ -64,6 +64,7 @@ export default function HomeJa() {
       'https://note.com/igrs_philippines',
       'https://x.com/GswCnxL7Sg15778',
       'https://www.facebook.com/share/1KTmc7CeXi/',
+      'https://page.line.me/827jdwvl',
     ],
     areaServed: [
       { '@type': 'Country', name: 'JP' },
