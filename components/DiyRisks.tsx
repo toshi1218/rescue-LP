@@ -41,7 +41,7 @@ const contentData = {
       },
     ],
     closing:
-      'Our goal is to reduce the chance of your Japan-side application stalling due to missing or incorrect Philippine documents. We handle identification, retrieval, copy planning, and paper Apostille coordination — with a Cebu-based team and a verifiable company track record.',
+      'Our goal is to reduce the chance of your Japan-side application stalling due to missing or incorrect Philippine documents. We handle identification, retrieval, copy planning, and Apostille coordination (e-Apostille for PSA documents, paper Apostille for NBI and other non-PSA documents) — with a Cebu-based team and a verifiable company track record.',
     cta: 'Free Consultation',
   },
   ja: {

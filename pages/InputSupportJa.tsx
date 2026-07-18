@@ -199,15 +199,15 @@ export default function InputSupportJa() {
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 flex gap-3">
           <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
           <div>
-            <p className="text-sm font-bold text-gray-800 mb-2">日本の提出先では紙原本が必要な場合があります</p>
+            <p className="text-sm font-bold text-gray-800 mb-2">日本の提出先では紙のPSA原本が必要な場合があります</p>
             <p className="text-sm text-gray-700 leading-relaxed mb-3">
-              PSAはオンラインでのe-Certificate（電子書類）、DFAはeApostille（電子認証）に対応しています。しかし、
-              <strong>日本の市区町村役場・法務局・出入国在留管理庁では、紙の原本・物理アポスティーユを求めるケースが多く</strong>
+              PSAはオンラインでのe-Certificate（電子書類）、DFAはe-Apostille（電子認証）に対応しています。2026年3月以降、DFAはPSA民事書類へ物理アポスティーユ（紙）を発行しなくなり、認証はe-Apostilleに一本化されました。一方で
+              <strong>日本の市区町村役場・法務局・出入国在留管理庁では、今も紙のPSA原本を前提に運用するケースが多く</strong>
               あります。
             </p>
             <p className="text-sm text-gray-700 leading-relaxed mb-3">
-              提出先に事前確認が取れている場合はe-Certificate申請が有効です。
-              不安な場合や確認が取れていない場合は、紙原本ルートのフルサービスをご検討ください。
+              提出先がe-Apostille（電子認証）を受理する場合はe-Certificate申請が有効です。
+              紙のPSA原本が必要な場合は、PSA原本＋e-Apostilleを手配するフルサービスをご検討ください。
             </p>
             <Link
               to="/ja/psa-ecertificate-nihon/"
@@ -225,8 +225,8 @@ export default function InputSupportJa() {
         <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
           <p className="text-sm font-bold text-secondary mb-2">途中からフルサービスへの切り替えも可能です</p>
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
-            オンライン申請代行で進めていたが、提出先で紙原本・物理アポスティーユが必要と分かった場合は、
-            フルサービス（PSA物理書類取得＋DFA物理アポスティーユ）へ切り替えできます。
+            オンライン申請代行で進めていたが、提出先で紙のPSA原本が必要と分かった場合は、
+            フルサービス（PSA原本〈紙〉取得＋DFA e-Apostille〈電子認証〉＋国際発送）へ切り替えできます。
             支払い済みの代行費用はフルサービス料金の一部に充当します（要相談）。
           </p>
           <Link

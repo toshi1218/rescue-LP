@@ -169,11 +169,11 @@ export default function PsaSerbilisEn() {
           },
           {
             q: 'Where can I order PSA documents online now?',
-            a: 'Order through PSAHelpline.ph, or use a retrieval service for international delivery including apostille.',
+            a: 'Order through PSAHelpline.ph directly, or use an application proxy service to complete the ordering and DFA e-Apostille application on your behalf.',
           },
           {
             q: 'Can I still get my PSA document delivered internationally?',
-            a: 'PSAHelpline.ph delivers within the Philippines only. For international delivery, use a retrieval service that includes DHL shipping.',
+            a: 'Yes, via the PSAHelpline.ph International Service, which delivers a digital PSA E-Certificate electronically to your address abroad. A physical original requires you to arrange and pay for your own international courier pickup.',
           },
         ]}
       />
