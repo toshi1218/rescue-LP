@@ -32,8 +32,8 @@ const contentData = {
         body: 'Filing a petition → NVC processing → embassy interview — the same document is often required at multiple stages. Starting without the full picture guarantees delays you could have avoided.',
       },
       {
-        title: 'Paper Apostille is required by some destinations — and if you miss it, you restart',
-        body: "Whether a paper-based DFA Apostille is required depends on the specific consulate or office you're submitting to. Documents obtained without it are rejected — and the entire retrieval must be repeated from the beginning.",
+        title: 'Whether your destination accepts e-Apostille (or still insists on a paper original) is easy to miss',
+        body: "Since March 2026, DFA no longer issues a physical Apostille for PSA civil documents (birth certificate, marriage certificate, CENOMAR) — only e-Apostille (electronic). Some receiving offices still expect a paper original with a physical stamp. Finding this out after submission means restarting the entire process.",
       },
       {
         title: 'You risk dealing with unverified providers',
@@ -61,8 +61,8 @@ const contentData = {
         body: '婚姻届 → 配偶者ビザ → 在留カードの流れで、同じ書類を複数回使う場面があります。最初に必要部数を把握しておかないと、途中で手続きが止まります。',
       },
       {
-        title: '紙のアポスティーユが必要かどうか、提出先次第で変わる',
-        body: '総領事館・市役所・入管など、提出先によって紙のアポスティーユが必要かどうかが異なります。必要と知らずに取得した書類が使えず、取り直しになるケースがあります。',
+        title: '提出先がe-Apostille（電子）を受理するか、事前確認が必要',
+        body: '2026年3月以降、DFAはPSA書類（出生証明書・婚姻証明書・CENOMAR）へ紙のアポスティーユを発行しなくなり、e-Apostille（電子）のみになりました。提出先によっては当面、紙原本を前提とする運用が残っており、知らずに進めると受理されず取り直しになるケースがあります。',
       },
       {
         title: '身元不明の業者に依頼するリスク',

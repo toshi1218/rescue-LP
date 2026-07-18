@@ -55,7 +55,7 @@ export default function HomeKo() {
     },
     {
       q: '아포스티유가 꼭 필요한가요?',
-      a: '한국 제출용 필리핀 서류는 원칙적으로 DFA 아포스티유 인증이 필요합니다. 저희 패키지에는 기본적으로 포함되어 있습니다.',
+      a: '한국 제출용 필리핀 서류는 원칙적으로 DFA 아포스티유 인증이 필요합니다. 2026년 3월부터 PSA 서류(출생증명서・CENOMAR 등)는 e-아포스티유(전자)로만 발급되며, NBI Clearance 등 비PSA 서류는 기존과 같이 실물 아포스티유로 진행됩니다. 제출처가 전자 인증을 수리하는지 사전 확인을 권장합니다.',
     },
     {
       q: '결제는 어떻게 하나요?',
@@ -303,7 +303,7 @@ export default function HomeKo() {
                   price: '₩590,000',
                   sub: '약 6.3만엔',
                   desc: 'PSA 서류 1통 + 아포스티유 + 국제 배송',
-                  items: ['PSA 서류 1통 (CENOMAR 또는 출생증명서)', 'DFA 아포스티유 인증', '국제 특송 (DHL)'],
+                  items: ['PSA 서류 1통 (CENOMAR 또는 출생증명서)', 'DFA e-아포스티유 인증（전자）', '국제 특송 (DHL)'],
                   featured: false,
                 },
                 {
@@ -311,7 +311,7 @@ export default function HomeKo() {
                   price: '₩990,000',
                   sub: '약 10.5만엔',
                   desc: 'PSA 출생증명서 + CENOMAR + 아포스티유 + 국제 배송',
-                  items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'DFA 아포스티유 인증（2통）', '국제 특송 (DHL)'],
+                  items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'DFA e-아포스티유 인증（전자, 2건）', '국제 특송 (DHL)'],
                   featured: true,
                 },
                 {
@@ -319,7 +319,7 @@ export default function HomeKo() {
                   price: '₩1,590,000',
                   sub: '약 16.9만엔',
                   desc: 'PSA 출생증명서 + CENOMAR + NBI Clearance + 아포스티유 + 서류 정리 안내 + 진행 보고',
-                  items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance（대사관 지문 등록 후 대행）', 'DFA 아포스티유 인증（3통）', '서류 정리 안내', '국제 특송 (DHL)'],
+                  items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance（대사관 지문 등록 후 대행）', 'DFA 아포스티유 인증（PSA서류 e-아포스티유 2건 + NBI 실물 아포스티유 1건）', '서류 정리 안내', '국제 특송 (DHL)'],
                   featured: false,
                 },
               ].map((plan) => (
