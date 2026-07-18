@@ -68,6 +68,56 @@ export default function DocumentChecklistByVisaEn() {
               },
             },
           ],
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['#faqsection-heading', "[id^='faqsec-panel-']"],
+          },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'DefinedTermSet',
+          '@id': 'https://ph-document.com/en/document-checklist-by-visa/#glossary',
+          name: 'Philippine Civil Document & Apostille Glossary',
+          description: 'Authoritative plain-language definitions of the Philippine civil documents and authentication types required for overseas immigration and visa applications. Referenced across ph-document.com.',
+          hasDefinedTerm: [
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/en/document-checklist-by-visa/#cenomar',
+              name: 'CENOMAR',
+              alternateName: 'Certificate of No Marriage Record',
+              description: 'A PSA-issued certificate stating a Filipino citizen has no marriage record on file — official proof of single status, required for K-1, CR-1/IR-1, and most spouse/partner visa applications.',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/en/document-checklist-by-visa/#psa-birth-certificate',
+              name: 'PSA Birth Certificate',
+              description: 'The official birth certificate issued by the Philippine Statistics Authority (PSA), used to prove identity, filiation, and citizenship in immigration and naturalization cases.',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/en/document-checklist-by-visa/#psa-marriage-certificate',
+              name: 'PSA Marriage Certificate',
+              description: 'The official marriage certificate issued by the PSA, proving a marriage registered in the Philippines. Required for CR-1/IR-1 spouse visas and spousal sponsorship.',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/en/document-checklist-by-visa/#nbi-clearance',
+              name: 'NBI Clearance',
+              description: 'A criminal background check issued by the Philippine National Bureau of Investigation (NBI), commonly required for visas, naturalization, and employment abroad.',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/en/document-checklist-by-visa/#dfa-apostille',
+              name: 'DFA Apostille',
+              description: 'Authentication by the Philippine Department of Foreign Affairs (DFA) that makes a Philippine document valid in other Apostille Convention countries without further consular legalization.',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/en/document-checklist-by-visa/#e-apostille',
+              name: 'e-Apostille',
+              description: 'The electronic (PDF) Apostille that, since March 2026, the DFA issues for PSA civil documents (birth, marriage, CENOMAR). It is submitted digitally; printing it voids its validity. Non-PSA documents such as NBI Clearance still use a paper Apostille.',
+            },
+          ],
         },
       ]}
     >

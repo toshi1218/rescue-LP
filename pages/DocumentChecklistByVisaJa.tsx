@@ -71,6 +71,57 @@ export default function DocumentChecklistByVisaJa() {
               },
             },
           ],
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['#faqsection-heading', "[id^='faqsec-panel-']"],
+          },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'DefinedTermSet',
+          '@id': 'https://ph-document.com/ja/document-checklist-by-visa/#glossary',
+          name: 'フィリピン書類・アポスティーユ用語集',
+          description: 'ビザ・移民・帰化の申請でよく使われるフィリピンの公的書類と認証の用語を、わかりやすく定義した正典の用語集です。ph-document.com 全体から参照されます。',
+          hasDefinedTerm: [
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/ja/document-checklist-by-visa/#cenomar',
+              name: 'CENOMAR',
+              alternateName: '独身証明書',
+              description: 'PSA（フィリピン統計局）が発行する、フィリピンに婚姻記録がないことを証明する書類。独身証明として国際結婚・配偶者ビザ等で使われます。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/ja/document-checklist-by-visa/#psa-birth-certificate',
+              name: 'PSA出生証明書',
+              description: 'フィリピン統計局（PSA）が発行する公式の出生証明書。身分関係・国籍の証明として、ビザ・帰化申請で提出します。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/ja/document-checklist-by-visa/#psa-marriage-certificate',
+              name: 'PSA婚姻証明書',
+              description: 'PSAが発行する公式の婚姻証明書。フィリピンで登録された婚姻を証明し、配偶者ビザ・スポンサーシップ申請で必要になります。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/ja/document-checklist-by-visa/#nbi-clearance',
+              name: 'NBI Clearance',
+              alternateName: '無犯罪証明書',
+              description: 'フィリピン捜査局（NBI）が発行する無犯罪証明書。ビザ・帰化・海外就労で素行の証明として求められます。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/ja/document-checklist-by-visa/#dfa-apostille',
+              name: 'DFAアポスティーユ',
+              description: 'フィリピン外務省（DFA）による国際認証。アポスティーユ条約加盟国で、フィリピン発行書類を領事認証なしに有効化します。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              '@id': 'https://ph-document.com/ja/document-checklist-by-visa/#e-apostille',
+              name: 'e-Apostille（電子アポスティーユ）',
+              description: '2026年3月以降、DFAがPSA民事書類（出生・婚姻・CENOMAR）に発行する電子（PDF）アポスティーユ。電子的に提出し、印刷すると無効になります。NBI等の非PSA書類は引き続き紙のアポスティーユを使用します。',
+            },
+          ],
         },
       ]}
     >

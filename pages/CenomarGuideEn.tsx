@@ -25,7 +25,7 @@ export default function CenomarGuideEn() {
         name: 'CENOMAR',
         alternateName: 'Certificate of No Marriage Record',
         description: 'CENOMAR (Certificate of No Marriage Record) is an official document issued by the Philippine Statistics Authority (PSA) certifying that a Filipino citizen has no marriage record on file in the Philippines — proof of single status. It is required for K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and other immigration applications involving a Filipino national.',
-        inDefinedTermSet: 'https://ph-document.com/en/document-checklist-by-visa/',
+        inDefinedTermSet: 'https://ph-document.com/en/document-checklist-by-visa/#glossary',
         },
         {
         '@context': 'https://schema.org',
@@ -126,41 +126,6 @@ export default function CenomarGuideEn() {
             '@type': 'SpeakableSpecification',
             cssSelector: ['#faqsection-heading', "[id^='faqsec-panel-']"],
           },
-        },
-        {
-          '@context': 'https://schema.org',
-          '@type': 'DefinedTermSet',
-          '@id': 'https://ph-document.com/en/cenomar/#glossary',
-          name: 'Philippine Civil Document & Apostille Glossary',
-          description: 'Plain-language definitions of the Philippine civil documents and authentication types most often required for overseas immigration and visa applications.',
-          hasDefinedTerm: [
-            {
-              '@type': 'DefinedTerm',
-              name: 'CENOMAR',
-              alternateName: 'Certificate of No Marriage Record',
-              description: 'A PSA-issued certificate stating a Filipino citizen has no marriage record on file — official proof of single status, required for K-1, CR-1/IR-1, and most spouse/partner visa applications.',
-            },
-            {
-              '@type': 'DefinedTerm',
-              name: 'PSA Birth Certificate',
-              description: 'The official birth certificate issued by the Philippine Statistics Authority (PSA), used to prove identity, filiation, and citizenship in immigration and naturalization cases.',
-            },
-            {
-              '@type': 'DefinedTerm',
-              name: 'NBI Clearance',
-              description: 'A criminal background check issued by the Philippine National Bureau of Investigation (NBI), commonly required for visas, naturalization, and employment abroad.',
-            },
-            {
-              '@type': 'DefinedTerm',
-              name: 'DFA Apostille',
-              description: 'Authentication by the Philippine Department of Foreign Affairs (DFA) that makes a Philippine document valid in other Apostille Convention countries without further consular legalization.',
-            },
-            {
-              '@type': 'DefinedTerm',
-              name: 'e-Apostille',
-              description: 'The electronic (PDF) Apostille that, since March 2026, the DFA issues for PSA civil documents (birth, marriage, CENOMAR). It is submitted digitally; printing it voids its validity. Non-PSA documents such as NBI Clearance still use a paper Apostille.',
-            },
-          ],
         },
       ]}
     >
