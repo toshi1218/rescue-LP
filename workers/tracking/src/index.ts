@@ -247,11 +247,19 @@ app.post('/api/upload', async (c) => {
 
   const code = String(form.get('code') ?? '').trim().toLowerCase();
   const pin = String(form.get('pin') ?? '').trim();
-  const file = form.get('file');
+  const fileEntry = form.get('file');
 
-  if (!code || !pin || !(file instanceof File)) {
+  // form.get returns string | File | null; narrow out the non-file cases, then
+  // treat as a structural File (workers-types File typing varies by version).
+  if (!code || !pin || fileEntry === null || typeof fileEntry === 'string') {
     return c.json({ error: 'invalid_body' }, 400);
   }
+  const file = fileEntry as unknown as {
+    name: string;
+    type: string;
+    size: number;
+    arrayBuffer(): Promise<ArrayBuffer>;
+  };
 
   const rl = await checkRateLimit(c.env.RATE_LIMIT, `upload:${ip}:${code}`, 15);
   if (!rl.allowed) return c.json({ error: 'rate_limited' }, 429);
