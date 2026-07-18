@@ -153,7 +153,7 @@ export default function PsaEcertificateNihonJa() {
             <p className="font-bold text-secondary mb-1">ハイブリッド納品（電子＋紙原本）</p>
             <p className="text-sm text-primary font-semibold mb-2">実費 約850ペソ／通＋国際配送費</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              上記の電子2点に、物理PSA証明書（紙原本）を追加。電子と紙原本が<strong>同一の申請・同一の登録記録</strong>から発行されるため、紙原本のために別申請をする必要がありません。
+              上記の電子2点に、物理PSA証明書（紙原本）を追加。電子文書と紙原本を<strong>一度の手続きでまとめて取得</strong>でき、紙原本のために別ルートで申請し直す必要はありません。
             </p>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function PsaEcertificateNihonJa() {
         <div className="mt-4 flex items-start gap-3 p-4 rounded-xl border border-blue-100 bg-blue-50">
           <AlertTriangle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
           <p className="text-sm text-gray-700 leading-relaxed">
-            <strong className="text-gray-900">重要：</strong>紙原本も同じオンライン申請の「物理PSA証明書が必要ですか？」を選ぶことで取得できます。ただし
+            <strong className="text-gray-900">重要：</strong>紙原本が必要な場合も、電子文書と同じ手続きの中でまとめて手配できます。ただし
             <strong>物理PSA証明書に紙のアポスティーユは貼付されません</strong>（PSA向け物理アポスティーユは停止済み）。認証はあくまで電子のe-Apostilleで行われるため、紙原本＝紙アポスティーユではない点にご注意ください。
           </p>
         </div>
