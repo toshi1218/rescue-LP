@@ -108,29 +108,17 @@ export default function PsaEcertificateNihonJa() {
             <table className="w-full min-w-[420px] text-sm">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-100">
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">内訳（政府実費）</th>
-                  <th className="text-right px-4 py-3 font-semibold text-gray-700 whitespace-nowrap">手数料の目安</th>
+                  <th className="text-left px-4 py-3 font-semibold text-gray-700">納品パターン</th>
+                  <th className="text-right px-4 py-3 font-semibold text-gray-700 whitespace-nowrap">政府実費の目安</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-50">
-                <tr>
-                  <td className="px-4 py-3 text-gray-800">PSA e-Certificate（電子証明書）</td>
-                  <td className="px-4 py-3 text-right text-gray-600 whitespace-nowrap">約300ペソ／通</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 text-gray-800">DFA e-Apostille（電子アポスティーユ）</td>
-                  <td className="px-4 py-3 text-right text-gray-600 whitespace-nowrap">約200ペソ／通</td>
-                </tr>
                 <tr className="bg-primary/5">
-                  <td className="px-4 py-3 font-bold text-gray-900">電子のみ 小計</td>
+                  <td className="px-4 py-3 font-bold text-gray-900">電子のみ（e-Certificate＋e-Apostille）</td>
                   <td className="px-4 py-3 text-right font-bold text-primary whitespace-nowrap">約500ペソ／通</td>
                 </tr>
-                <tr>
-                  <td className="px-4 py-3 text-gray-800">＋ 物理PSA証明書（SECPA・紙原本）</td>
-                  <td className="px-4 py-3 text-right text-gray-600 whitespace-nowrap">＋約350ペソ／通</td>
-                </tr>
                 <tr className="bg-primary/5">
-                  <td className="px-4 py-3 font-bold text-gray-900">電子＋紙原本 小計</td>
+                  <td className="px-4 py-3 font-bold text-gray-900">電子＋紙原本（＋物理PSA証明書）</td>
                   <td className="px-4 py-3 text-right font-bold text-primary whitespace-nowrap">約850ペソ／通</td>
                 </tr>
               </tbody>
