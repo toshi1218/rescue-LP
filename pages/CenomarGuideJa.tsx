@@ -109,6 +109,10 @@ export default function CenomarGuideJa() {
               },
             },
           ],
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['#faqsection-heading', "[id^='faqsec-panel-']"],
+          },
         },
       ]}
     >
