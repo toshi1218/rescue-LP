@@ -14,28 +14,37 @@
 
 ## 初回セットアップ（ユーザー側の手動デプロイ）
 
+このリポジトリの CI/エージェント環境には Cloudflare の認証情報がないため、
+D1/R2/KV の作成と `wrangler deploy` は**あなた自身のターミナルで**実行する必要があります。
+
+**1本のスクリプトで完結**（`npm install` → ログイン → D1/R2/KV作成 → スキーマ適用 → secret設定 → デプロイまで）:
+
+```bash
+cd workers/tracking
+./deploy.sh
+```
+
+- 実行中に `wrangler login` でブラウザが開くので Cloudflare アカウントでログイン
+- D1・KV 作成後、出力される ID を `wrangler.toml` に貼り付けるよう促されるので、指示通りに編集して Enter
+- 最後に管理パスワード（`ADMIN_PASSWORD`）の入力を求められる（`/tools/tracking-admin.html` のログインに使う値）
+- 既に D1/R2/KV を作成済みの場合、該当コマンドは失敗しても無視して先に進む設計になっている（`|| true`）
+
+完了後、Cloudflare ダッシュボード → Workers & Pages → `ph-document-tracking` → Settings → Domains & Routes で
+`tracking.ph-document.com` をカスタムドメインとして追加する（スクリプトの最後にも案内が出ます）。
+
+### 手動で1ステップずつ行う場合
+
 ```bash
 cd workers/tracking
 npm install
-
-# 1. D1 データベース作成 → 出力された database_id を wrangler.toml に貼る
-npx wrangler d1 create ph-document-tracking
+npx wrangler login
+npx wrangler d1 create ph-document-tracking          # → database_id を wrangler.toml に貼る
 npx wrangler d1 execute ph-document-tracking --file=./schema.sql --remote
-
-# 2. R2 バケット作成
 npx wrangler r2 bucket create ph-document-tracking-uploads
-
-# 3. KV 作成 → 出力された id を wrangler.toml に貼る
-npx wrangler kv namespace create RATE_LIMIT
-
-# 4. 管理画面パスワードを設定
+npx wrangler kv namespace create RATE_LIMIT           # → id を wrangler.toml に貼る
 npx wrangler secret put ADMIN_PASSWORD
-
-# 5. デプロイ
 npx wrangler deploy
 ```
-
-デプロイ後、Cloudflare ダッシュボードで `tracking.ph-document.com` をこの Worker のカスタムドメインに紐付ける。
 
 ## 運用フロー
 
