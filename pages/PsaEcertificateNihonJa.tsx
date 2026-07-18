@@ -165,7 +165,7 @@ export default function PsaEcertificateNihonJa() {
           <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
             <p className="font-bold text-gray-900 mb-1">本人確認（liveness check）が必要</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              e-Certificateの発行には、有効な身分証のアップロードとカメラによるリアルタイム本人確認（liveness check）が求められます。これは<strong>申請者本人が行う必要があり、第三者が代理で顔認証を行うことはできません</strong>。一方で、海外在住でも手続きはメールで完結でき、フィリピンのSIM・携帯番号は原則不要です（本人確認・書類受領はメールで行えます）。
+              e-Certificateの発行には、有効な身分証のアップロードとカメラによるリアルタイム本人確認（liveness check）が求められます。これは<strong>手続きを行う申請者自身の身分証・顔で行う認証</strong>であり、証明書の対象者本人でなくても、委任状等で認められた代理人がご自身の身分証で申請・本人確認を行うことができます（他人になりすますことはできません）。海外在住でも手続きはメールで完結でき、フィリピンのSIM・携帯番号は原則不要です（本人確認・書類受領はメールで行えます）。ただし、案件によっては追加確認の過程で携帯電話番号の入力を求められる場合もあります。
             </p>
           </div>
           <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
