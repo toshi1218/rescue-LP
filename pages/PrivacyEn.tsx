@@ -35,6 +35,7 @@ export default function PrivacyEn() {
                 'Mailing address (for document delivery)',
                 'Inquiry and consultation details',
                 'Document-related information required for service delivery (e.g., date of birth, passport number)',
+                'Documents you choose to upload via our order-tracking portal (accessed with a tracking code and PIN), such as your passport or copies of previously issued civil-status or birth certificates',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-gray-600">
                   <span className="text-primary font-bold flex-shrink-0 mt-0.5">—</span>
@@ -109,6 +110,11 @@ export default function PrivacyEn() {
               Access to personal information is restricted to authorized personnel who require it for service delivery.
               Inquiry data is retained only as long as reasonably necessary for follow-up, legal, accounting, and dispute-resolution purposes.
               Document data is deleted or disposed of after the service and applicable retention obligations have ended.
+            </p>
+            <p className="mt-3">
+              Documents uploaded through our order-tracking portal are stored on encrypted cloud storage and can only be accessed
+              by the person who holds the matching tracking code and PIN, or by authorized staff. These uploaded files are
+              deleted using the same disposal process described above.
             </p>
           </section>
 
