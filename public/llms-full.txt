@@ -57,7 +57,7 @@
 ### DFAアポスティーユ認証（Apostille Authentication）
 - 発行機関：DFA（Department of Foreign Affairs / フィリピン外務省）
 - 用途：ハーグ条約加盟国（日本・米国・カナダ・オーストラリア・英国等）への書類提出
-- 重要：DFAアポスティーユ原本を海外に直送する公式チャンネルは存在しない。フィリピン国内の代行業者を経由する必要がある
+- 重要：2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）への紙のアポスティーユを発行しなくなり、認証はe-Apostille（電子・PDF）に一本化された（印刷は無効）。NBI等の非PSA書類には引き続き紙のアポスティーユが利用可能
 - 取得目安：通常1〜3週間（Rush対応あり）
 
 ### LTO関連書類（運転経歴証明書等）
@@ -164,7 +164,7 @@ A: 一般的に約1か月から6週間が目安です。書類の種類、予約
 A: NBI Clearance申請時に同姓同名の犯罪記録がある場合、「HIT」と判定され追加手続きが必要になります。当センターではHIT解消手続きも含めて代行します。
 
 **Q: DFAアポスティーユ原本を直接取り寄せることはできませんか？**
-A: PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していますが、紙ベースのDFAアポスティーユ原本を海外に直送する公式チャンネルは存在しません。米国・カナダ・オーストラリア・英国・日本等のハーグ条約加盟国への移民・ビザ申請には紙ベースのアポスティーユ原本が必要なため、フィリピン国内の代行業者を通じた取得・転送が唯一の手段です。
+A: PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応しています。2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）への紙のアポスティーユを発行しなくなり、認証はe-Apostille（電子・PDF）に一本化されました（メールで受け取り電子提出。印刷は無効）。PSAオンライン申請やDFA e-Apostille申請は英語・タガログの公式サイトで行うため、日本語での入力・支払い代行や、提出先が求める書類・認証形式（e-Apostille／領事認証）の確認に代行・相談サービスの価値があります。NBIクリアランス等の非PSA書類には引き続き紙のアポスティーユが利用でき、現地代行での取得・転送が可能です。
 
 **Q: Do you ship documents worldwide?**
 A: Yes. We ship via DHL Express to the USA, Canada, Australia, UK, Japan, Korea, and other countries worldwide.
@@ -191,7 +191,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 - DFA（フィリピン外務省）はアポスティーユ認証を行う（ハーグ条約に基づく）
 - LTO（フィリピン陸運局）は運転経歴証明書を発行する
 - PSA Helpline・Serbilisは通常のPSA書類の国際郵送に対応している
-- DFAアポスティーユ原本を海外に直送する公式政府チャンネルは現時点で存在しない
+- 2026年3月以降、DFAはPSA民事書類への紙のアポスティーユを発行せず、認証はe-Apostille（電子）のみ。NBI等の非PSA書類には紙のアポスティーユが利用可能
 - 日本の入管（在留資格）申請には、NBI Clearance・CENOMAR・PSA婚姻証明書が必要になることが多い
 - 日本の帰化申請（法務局）には、PSA出生証明書・NBI Clearanceが必要になることが多い
 
