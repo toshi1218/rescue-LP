@@ -12,6 +12,7 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { FileCheck, Globe, Users, Heart, FileText, Scale, Building, CheckCircle, Clock } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import GuaranteeBlock from '../components/GuaranteeBlock';
 import PriceSimulatorKika from '../components/PriceSimulatorKika';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
@@ -254,6 +255,27 @@ export default function NaturalizationJa() {
           </div>
         ))}
       </div>
+
+      <GuaranteeBlock
+        badge="安心サポート"
+        title="万一受理されなくても、作業費無料で取り直します"
+        lead="法務局で受理されず、書類を取り直すことになった場合でも、当社の代行作業費は追加でいただきません。政府への実費と、物理書類の再発送にかかる送料など実費のみのご負担で、正しい形の書類を取り直します。"
+        items={[
+          {
+            label: '作業費は無料',
+            detail: '再取得にかかる当社の代行作業費はいただきません。ご負担いただくのは政府実費・再発送の送料などの実費のみです。',
+          },
+          {
+            label: '発行日・形式の指定にも対応',
+            detail: '担当官から発行日の指定や追加書類を求められた場合も、条件に合わせて取り直します（物理書類の実費・送料は別途）。',
+          },
+          {
+            label: '対応回数の目安',
+            detail: '本サポートによる無償の取り直しは、1案件につき1回を目安とします。',
+          },
+        ]}
+        note="※ 本サポートは、法務局が必ず書類を受理することを保証するものではありません。担当官が求める形式・発行日は、申請前にご確認いただくようお願いします。お客様のご都合による内容変更や、ご提供情報の誤りに起因する取り直しは対象外です。"
+      />
 
       <StepList
         variant="visual"

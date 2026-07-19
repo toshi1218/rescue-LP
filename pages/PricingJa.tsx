@@ -4,6 +4,7 @@ import HeroBanner from '../components/HeroBanner';
 import Pricing from '../components/Pricing';
 import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
+import GuaranteeBlock from '../components/GuaranteeBlock';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA, SEO_TITLE_BADGE_JA } from '../lib/seoDate';
 import { Info } from 'lucide-react';
@@ -74,6 +75,28 @@ export default function PricingJa() {
 
       {/* 料金カード */}
       <Pricing />
+
+      {/* 安心・再取得サポート */}
+      <GuaranteeBlock
+        badge="安心サポート"
+        title="万一受理されなくても、作業費無料で取り直します"
+        lead="提出先で受理されず、書類を取り直すことになった場合でも、当社の代行作業費は追加でいただきません。政府への実費と、物理書類の再発送にかかる送料など実費のみのご負担で、正しい形の書類を取り直します。"
+        items={[
+          {
+            label: '作業費は無料',
+            detail: '再取得にかかる当社の代行作業費はいただきません。ご負担いただくのは政府実費・再発送の送料などの実費のみです。',
+          },
+          {
+            label: '電子・紙の切替にも対応',
+            detail: '「電子で提出したら紙原本を求められた」といった形式の行き違いにも、紙原本の取得へ切り替えて対応します（物理書類の実費・送料は別途）。',
+          },
+          {
+            label: '対応回数の目安',
+            detail: '本サポートによる無償の取り直しは、1案件につき1回を目安とします。',
+          },
+        ]}
+        note="※ 本サポートは、提出先（法務局・出入国在留管理庁・市区町村役場・在外公館等）が必ず書類を受理することを保証するものではありません。提出先が求める形式（電子／紙）は、申請前に提出先へご確認いただくようお願いします。お客様のご都合による内容変更や、ご提供情報の誤りに起因する取り直しは対象外です。"
+      />
 
       {/* 2段階決済 */}
       <StepList

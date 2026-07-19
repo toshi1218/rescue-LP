@@ -6,6 +6,7 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
+import GuaranteeBlock from '../components/GuaranteeBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR } from '../lib/seoDate';
@@ -150,6 +151,27 @@ export default function SpouseVisaEn() {
             description: 'All documents shipped together with tracking to your address. No forwarding needed.',
           },
         ]}
+      />
+
+      <GuaranteeBlock
+        badge="Peace-of-mind support"
+        title="If it isn't accepted, we redo the retrieval at no service charge"
+        lead="If your document is not accepted and has to be re-obtained, we do not charge our service fee again. You cover only the actual costs — the government fee and any reshipping of physical documents — and we retrieve the document in the correct form for you."
+        items={[
+          {
+            label: 'No repeat service fee',
+            detail: "We don't charge our handling fee again for the re-retrieval. You pay only actual costs, such as the government fee and reshipping.",
+          },
+          {
+            label: 'Format switch covered',
+            detail: 'If a digital submission is bounced and a physical original is required, we switch to retrieving the paper document (physical document cost and shipping apply).',
+          },
+          {
+            label: 'Reasonable limit',
+            detail: 'This no-charge redo applies once per case as a guideline.',
+          },
+        ]}
+        note="※ This support does not guarantee that the receiving authority (e.g. US NVC, IRCC, Home Affairs, UKVI) will accept the document. Please confirm the required format (digital or paper) with the receiving authority before applying. Re-retrieval caused by a change on your side, or by incorrect information you provided, is not covered."
       />
 
       <StepList

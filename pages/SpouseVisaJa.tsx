@@ -8,6 +8,7 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
+import GuaranteeBlock from '../components/GuaranteeBlock';
 import SectionDivider from '../components/SectionDivider';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
@@ -222,6 +223,27 @@ export default function SpouseVisaJa() {
           <Link to="/ja/kekkaku-shomeisho/" className="underline ml-1">詳細はこちら →</Link>
         </p>
       </section>
+
+      <GuaranteeBlock
+        badge="安心サポート"
+        title="万一受理されなくても、作業費無料で取り直します"
+        lead="入国管理局で受理されず、書類を取り直すことになった場合でも、当社の代行作業費は追加でいただきません。政府への実費と、物理書類の再発送にかかる送料など実費のみのご負担で、正しい形の書類を取り直します。"
+        items={[
+          {
+            label: '作業費は無料',
+            detail: '再取得にかかる当社の代行作業費はいただきません。ご負担いただくのは政府実費・再発送の送料などの実費のみです。',
+          },
+          {
+            label: '電子・紙の切替にも対応',
+            detail: '「電子で提出したら紙原本を求められた」といった形式の行き違いにも、紙原本の取得へ切り替えて対応します（物理書類の実費・送料は別途）。',
+          },
+          {
+            label: '対応回数の目安',
+            detail: '本サポートによる無償の取り直しは、1案件につき1回を目安とします。',
+          },
+        ]}
+        note="※ 本サポートは、入国管理局が必ず書類を受理することを保証するものではありません。提出先が求める形式（電子／紙）は、申請前に入管窓口へご確認いただくようお願いします。お客様のご都合による内容変更や、ご提供情報の誤りに起因する取り直しは対象外です。"
+      />
 
       <FeatureList
         heading="こんな方に選ばれています"
