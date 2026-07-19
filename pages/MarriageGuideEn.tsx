@@ -8,12 +8,11 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR } from '../lib/seoDate';
 
 export default function MarriageGuideEn() {
   useMeta(
-    `Philippine Documents for International Marriage [${SEO_YEAR}] — Complete Guide`,
-    `Getting married to a Filipino? CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille — we retrieve and ship worldwide. No trip needed. Free quote.`,
+    'Marrying a Filipino? Documents We Get for You [April 2026]',
+    'Planning to marry a Filipino/Filipina? We handle all Philippine documents — CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille. Shipped worldwide. Free consultation for K-1, spouse visa, and partner visa petitioners.',
   );
   return (
     <PageLayout
@@ -136,8 +135,8 @@ export default function MarriageGuideEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA document retrieval (Marriage Cert, Birth Cert, CENOMAR)',
-            description: 'We retrieve all required PSA documents in one coordinated flow.',
+            title: 'PSA online application (Marriage Cert, Birth Cert, CENOMAR)',
+            description: 'We complete the PSA online applications and DFA e-Apostille applications on your behalf, in one coordinated flow.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -157,7 +156,7 @@ export default function MarriageGuideEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa type (K-1, CR-1, partner visa, spousal sponsorship, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
+          { title: 'We handle the applications', description: 'We complete the PSA online applications and DFA e-Apostille applications on your behalf, in English.' },
           { title: 'DHL delivery worldwide', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />

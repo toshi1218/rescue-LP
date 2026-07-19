@@ -6,12 +6,11 @@ import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR } from '../lib/seoDate';
 
 export default function GyoseishoshiVsDocServiceEn() {
   useMeta(
-    `Administrative Scrivener vs Document Service [${SEO_YEAR}]`,
-    `What does a Japanese 行政書士 handle vs. a Philippine document service? Find out when you need both — a guide for Filipino-Japanese couples.`,
+    'Administrative Scrivener vs Document Acquisition Service — What\'s the Difference? [2026]',
+    'Clear comparison of what Japanese administrative scriveners (行政書士) handle vs. what a Philippine document acquisition service handles. When do you need both? A guide for Filipino-Japanese couples.',
   );
   return (
     <PageLayout
@@ -51,7 +50,7 @@ export default function GyoseishoshiVsDocServiceEn() {
               name: 'Do I need both a scrivener and a document service?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For the Japan spouse visa (COE) application, many couples use both: a document service to retrieve PSA documents and DFA Apostille from the Philippines, and an administrative scrivener to prepare and file the Japan-side COE application.',
+                text: 'For the Japan spouse visa (COE) application, many couples use both: a document service to handle PSA online applications and DFA e-Apostille from the Philippines, and an administrative scrivener to prepare and file the Japan-side COE application.',
               },
             },
           ],
@@ -70,7 +69,7 @@ export default function GyoseishoshiVsDocServiceEn() {
         conclusion="For Filipino-Japanese couples, two different types of service providers handle different parts of the process. Understanding which handles what prevents confusion and delays."
         points={[
           'Administrative scriveners (行政書士) are licensed for Japan-side filings — visa applications, COE applications, Japan immigration procedures',
-          'Document acquisition services handle Philippine-side documents — PSA retrieval, DFA Apostille, Philippine document logistics',
+          'Document acquisition services handle Philippine-side documents — PSA online applications, DFA e-Apostille, non-PSA document retrieval and logistics',
           'Most scriveners do not retrieve Philippine documents; most document services do not handle Japan-side filings',
           'Many couples need both services at different stages of the process',
         ]}
@@ -220,7 +219,7 @@ export default function GyoseishoshiVsDocServiceEn() {
         items={[
           { q: 'What does a Japanese administrative scrivener handle?', a: "Administrative scriveners (行政書士) are licensed for Japan-side filings: spouse visa COE applications, Japan immigration submissions, and advising on Japan-side marriage registration. They handle the Japanese government side of the process." },
           { q: 'What do administrative scriveners NOT handle?', a: 'Most do not retrieve Philippine documents (PSA certificates, CENOMAR) or handle DFA Apostille authentication — these require local staff in the Philippines.' },
-          { q: 'What does your document service cover?', a: 'We handle the Philippine side: PSA document retrieval (birth certificates, marriage certificates, CENOMAR), DFA Apostille authentication, and international shipping to Japan via DHL. We do not handle Japan-side visa applications.' },
+          { q: 'What does your document service cover?', a: 'We handle the Philippine side: PSA online applications (birth certificates, marriage certificates, CENOMAR) with DFA e-Apostille, non-PSA document retrieval (e.g. NBI Clearance) with physical DFA Apostille, and international shipping to Japan via DHL. We do not handle Japan-side visa applications.' },
           { q: 'Do I need both a scrivener and your service?', a: 'For a complete spouse visa process, many couples use both: our service for Philippine documents, and an administrative scrivener for the Japan COE application. They cover different parts of the same process.' },
           { q: 'Can you recommend an administrative scrivener?', a: 'We can discuss your situation and provide guidance on what type of professional you may need at each stage. Contact us for a free consultation.' },
         ]}

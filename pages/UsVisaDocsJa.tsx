@@ -11,12 +11,11 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function UsVisaDocsJa() {
   useMeta(
-    `米国ビザの書類代行【${SEO_YEAR_MONTH_JA}】K-1・CR-1対応`,
-    'CENOMAR・PSA出生証明書・婚姻証明書・NBI ClearanceをDFAアポスティーユ付きで一括代行。USCIS・NVC提出に対応。英語の書類も当センターが確認・手配。無料相談。',
+    'K-1・CR-1ビザのフィリピン書類取得代行【2026年3月】',
+    'K-1・CR-1/IR-1ビザ申請に必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。アメリカ在住の請願者向け。日本語でもOK。無料相談。',
   );
   return (
     <PageLayout
@@ -41,7 +40,7 @@ export default function UsVisaDocsJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
+            description: 'PSAオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜、書類1通あたり）',
           },
         },
         },
@@ -176,7 +175,7 @@ export default function UsVisaDocsJa() {
         steps={[
           { title: 'フォームで相談', description: 'ビザの種類・申請状況・提出期限をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類をリストアップし、料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
+          { title: 'フィリピン現地で手配', description: 'PSAはオンライン申請＋DFA e-Apostille（電子認証）、NBI等は現地スタッフが物理取得・アポスティーユを進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />

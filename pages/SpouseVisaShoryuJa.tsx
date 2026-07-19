@@ -5,15 +5,14 @@ import RelatedLinks from '../components/RelatedLinks';
 import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import SectionDivider from '../components/SectionDivider';
-import FaqSection from '../components/FaqSection';
 import { AlertTriangle, CheckCircle, Info, Calendar, FileText, Stamp, ShieldCheck, Heart } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function SpouseVisaShoryuJa() {
   useMeta(
-    `配偶者ビザ 必要書類チェックリスト【${SEO_YEAR_MONTH_JA}】在留資格認定証明書 フィリピン人`,
-    'フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。PSA書類・CENOMAR・結核非発病証明書の取得代行も対応。無料相談。',
+    `配偶者ビザに必要な書類チェックリスト【${SEO_YEAR_MONTH_JA}版】フィリピン人配偶者の在留資格認定証明書申請`,
+    '2025年6月23日改正対応。フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。結核非発病証明書の追加要件・PSA書類・CENOMARをまとめてご案内。',
   );
 
   return (
@@ -133,7 +132,7 @@ export default function SpouseVisaShoryuJa() {
                   <span>発行から6ヶ月〜1年以内（入管の判断による）</span>
                 </div>
                 <div className="rounded-lg bg-blue-50 border border-blue-200 p-2.5 text-xs text-blue-800 mt-2">
-                  <strong>ポイント：</strong>電子認証版（e-Certificate）は入管では使用不可。紙の原本＋DFAアポスティーユが必須。
+                  <strong>ポイント：</strong>2026年3月以降、DFAの認証はe-Apostille（電子）のみ（物理アポスティーユは発行不可）。入管は従来紙の原本を前提に運用してきたため、e-Apostilleの受理可否は事前確認が重要です。
                 </div>
               </div>
             </div>
@@ -256,7 +255,7 @@ export default function SpouseVisaShoryuJa() {
             <div className="rounded-xl bg-blue-50 border border-blue-200 p-3 flex items-start gap-2">
               <Info className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
               <p className="text-sm text-blue-800">
-                PSA書類の取得からDFAアポスティーユ・DHL郵送まで、全体で<strong>約1〜2ヶ月</strong>かかります。結核証明書の取得スケジュールと合わせて、余裕を持って準備を始めることをおすすめします。
+                PSA書類のオンライン申請からDFA e-Apostille（電子認証）申請まで、全体で<strong>約1〜2ヶ月</strong>かかります。結核証明書の取得スケジュールと合わせて、余裕を持って準備を始めることをおすすめします。
               </p>
             </div>
           </div>
@@ -322,21 +321,6 @@ export default function SpouseVisaShoryuJa() {
         variant="primary"
         trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
       />
-
-      <div className="max-w-2xl mx-auto px-4 mt-8">
-        <FaqSection
-          items={[
-            {
-              q: '配偶者ビザのCOE申請に必要なフィリピン書類は？',
-              a: '2026年3月時点では、PSA婚姻証明書（DFAアポスティーユ付き）、PSA出生証明書（DFAアポスティーユ付き）、CENOMAR（独身証明書）、各書類の日本語訳、そして2025年6月23日から新たに義務化された結核非発病証明書（指定Panel Clinic発行）が必要です。',
-            },
-            {
-              q: '2025年6月から追加された新しい書類は何ですか？',
-              a: '「結核非発病証明書」です。フィリピン国籍の方が在留資格認定証明書（COE）を申請する際、2025年6月23日から提出が義務化されました。IOM Manila Health Centre、Nationwide Health Systems（NHS）、St. Luke\'s Medical Center Extension Clinicなど、日本政府が指定したPanel Clinicでのみ発行されます。有効期間は検査日から180日です。',
-            },
-          ]}
-        />
-      </div>
 
       <article className="max-w-2xl mx-auto px-4 mt-8">
         <RelatedLinks links={[

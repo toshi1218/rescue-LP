@@ -8,12 +8,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PhilippineStatisticsAuthorityEn() {
   useMeta(
-    `Philippine Statistics Authority (PSA): Documents & How to Get Them [${SEO_YEAR}]`,
-    `The Philippine Statistics Authority (PSA) issues birth certificates, marriage certificates, CENOMAR, and more. Learn what PSA issues, how to get documents from abroad, and what Apostille is required.`,
+    'Philippine Statistics Authority (PSA): Documents & How to Get Them [2026]',
+    'The Philippine Statistics Authority (PSA) issues birth certificates, marriage certificates, CENOMAR, and NBI Clearance. Learn what PSA issues, how to get documents from abroad, and what Apostille is required.',
   );
   return (
     <PageLayout
@@ -56,7 +55,7 @@ export default function PhilippineStatisticsAuthorityEn() {
               name: 'How do I get PSA documents from abroad?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'You can order PSA documents online via PSA Serbilis (psaserbilis.com.ph), but delivery is within the Philippines only. Overseas Filipinos typically use a document retrieval service that picks up the documents locally, arranges DFA Apostille, and ships internationally via DHL.',
+                text: 'PSAHelpline.ph offers an International Service (identity-verified) that delivers a digital PSA E-Certificate electronically to your address abroad. If you need the physical SECPA original, PSAHelpline requires you to arrange and pay for your own international courier pickup. If English-language forms or online payment are a barrier, an application proxy service can complete the order and payment on your behalf, and handle the DFA e-Apostille application if authentication is required.',
               },
             },
             {
@@ -154,12 +153,12 @@ export default function PhilippineStatisticsAuthorityEn() {
       </div>
 
       <CtaBox
-        title="Need a PSA document shipped internationally?"
-        description="We retrieve PSA documents from the Philippines, arrange DFA Apostille, and ship directly to your address worldwide via DHL. No Philippines trip required."
+        title="Need help with your PSA application or DFA e-Apostille?"
+        description="We complete the PSA online application and DFA e-Apostille application on your behalf, in English, with payment handled for you. No Philippines trip required."
         buttonText="Free Consultation"
         href="#contact"
         variant="primary"
-        trustNote="Free cancellation before start · Progress updates at every stage · Ships via DHL Express"
+        trustNote="Free cancellation before start · Progress updates at every stage"
       />
 
       <FeatureList
@@ -167,13 +166,13 @@ export default function PhilippineStatisticsAuthorityEn() {
         items={[
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'PSA Serbilis online (limited)',
-            description: 'Order at psaserbilis.com.ph. Delivery within the Philippines only. Suitable if you have a local address or representative to receive and forward documents.',
+            title: 'PSAHelpline.ph online (self-service)',
+            description: 'Order via PSAHelpline.ph International Service — a digital PSA E-Certificate is delivered electronically to your address abroad. For a physical original, you arrange and pay for your own international courier pickup. Requires navigating the site and payment yourself in English.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'Document retrieval service (recommended for OFWs)',
-            description: 'We apply to PSA on your behalf, collect documents at our Cebu address, arrange DFA Apostille, and ship directly to your international address via DHL. No Philippines presence needed.',
+            title: 'Online application proxy service (recommended if English/payment is a barrier)',
+            description: 'We complete the PSA online application and payment on your behalf, and handle the DFA e-Apostille application if your submission requires authentication. PSA ships the document directly to you.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -187,9 +186,9 @@ export default function PhilippineStatisticsAuthorityEn() {
         items={[
           { q: 'What is the Philippine Statistics Authority (PSA)?', a: 'PSA is the Philippine government agency responsible for civil registration. It issues birth certificates, marriage certificates, CENOMAR, and death certificates — all on PSA security paper (SECPA).' },
           { q: 'What documents does PSA issue?', a: 'PSA issues: Birth Certificate, Marriage Certificate, CENOMAR (Certificate of No Marriage Record), Death Certificate, and Late Registration Birth Certificate.' },
-          { q: 'How do I get PSA documents from abroad?', a: 'Via PSA Serbilis online (Philippines delivery only), or through a document retrieval service that picks up locally, arranges DFA Apostille, and ships internationally via DHL.' },
+          { q: 'How do I get PSA documents from abroad?', a: 'Via PSAHelpline.ph International Service (digital e-Certificate delivered electronically; physical original requires you to arrange your own international courier), or through an application proxy service that completes the PSA online application, payment, and DFA e-Apostille application on your behalf.' },
           { q: 'What is the difference between PSA and NSO?', a: 'PSA replaced NSO in 2013. The documents are the same — older NSO copies are still valid. New requests go through PSA.' },
-          { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'For most immigration and legal purposes outside the Philippines, yes. DFA Apostille authenticates PSA documents for international use. We confirm the exact requirement for your case.' },
+          { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'For most immigration and legal purposes outside the Philippines, yes. Since March 2026, DFA authenticates PSA documents with an electronic e-Apostille (a paper Apostille is no longer issued for PSA documents). We confirm the exact requirement for your case.' },
         ]}
         ctaTitle="Not sure which PSA document you need? Ask us."
         ctaButton="Free Consultation"
@@ -197,10 +196,10 @@ export default function PhilippineStatisticsAuthorityEn() {
 
       <RelatedArticles
         items={[
-          { href: '/en/psa-birth-certificate/', title: 'PSA Birth Certificate Retrieval', description: 'Get your PSA Birth Certificate with DFA Apostille shipped worldwide.' },
-          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'CENOMAR (Certificate of No Marriage Record) retrieved from PSA with Apostille.' },
+          { href: '/en/psa-birth-certificate/', title: 'PSA Birth Certificate Application', description: 'We handle the online application and DFA e-Apostille for your PSA Birth Certificate.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Application Service', description: 'CENOMAR (Certificate of No Marriage Record) online application and DFA e-Apostille, handled for you.' },
           { href: '/en/psa-online/', title: 'PSA Online Guide', description: 'How PSA Serbilis works and its limitations for overseas Filipinos.' },
-          { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'Why DFA Apostille is required and how we arrange it for PSA documents.' },
+          { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'Why DFA Apostille is required and how we handle the application for PSA and non-PSA documents.' },
         ]}
       />
     </PageLayout>

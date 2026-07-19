@@ -120,7 +120,7 @@ export default function MarriageGuideJa() {
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">50,000円〜（書類1種・アポスティーユ込み）</dd>
+              <dd className="font-medium text-gray-800">30,000円〜（書類1種・DFA e-Apostille〈電子〉込み）</dd>
               <dd className="text-gray-400 text-xs mt-1">※必要書類の種類・組み合わせによって変わります</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
