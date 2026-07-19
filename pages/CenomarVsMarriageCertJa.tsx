@@ -13,9 +13,9 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function CenomarVsMarriageCertJa() {
   useMeta(
-    `CENOMARとPSA婚姻証明書の違い【${SEO_YEAR_MONTH_JA}】`,
-    'CENOMARは独身を証明し、PSA婚姻証明書は婚姻を証明します。K-1、CR-1/IR-1、国際結婚でどちらが必要かを日本語で整理します。',
-    'https://ph-document.com/ja/cenomar-vs-marriage-certificate/',
+    `CENOMARとPSA婚姻証明書の違い【${SEO_YEAR_MONTH_JA}】どちらが必要？`,
+    'CENOMARは独身を証明し、PSA婚姻証明書は婚姻を証明します。K-1、CR-1/IR-1、国際結婚でどちらを取るべきかを日本語で整理します。',
+    'https://ph-document.com/ja/cenomar-vs-marriage-certificate',
   );
 
   return (
@@ -174,7 +174,7 @@ export default function CenomarVsMarriageCertJa() {
 
       <RelatedArticles
         items={[
-          { href: '/ja/cenomar/', title: 'CENOMAR取得代行', description: 'PSA取得からDFAアポスティーユ、発送まで一括で対応します。' },
+          { href: '/ja/cenomar/', title: 'CENOMAR取得代行', description: 'PSAオンライン申請からDFA e-Apostille（電子認証）申請まで一括で代行します。' },
           { href: '/ja/psa-kekkon-shomeisho/', title: 'PSA婚姻証明書取得代行', description: '婚姻後の手続きに必要な婚姻証明書はこちら。' },
           { href: '/ja/cenomar-koyukigen/', title: 'CENOMARの有効期限', description: 'いつ取り直すべきか、提出期限に合わせて整理します。' },
           { href: '/ja/kokusai-kekkon-guide/', title: '国際結婚の書類ガイド', description: '婚姻手続き全体の流れをまとめて確認できます。' },

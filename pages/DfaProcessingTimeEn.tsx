@@ -8,12 +8,11 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function DfaProcessingTimeEn() {
   useMeta(
-    `DFA Apostille Processing Time [${SEO_YEAR_MONTH_EN}]`,
-    'DFA Apostille takes 5–10 business days. Visa deadline approaching? Our express proxy service can help you meet it. Free consultation to check your timeline.',
+    'DFA Apostille Processing Time [April 2026]',
+    'DFA Apostille takes 5–10 business days. Worried about your visa deadline? Our express proxy service can help you meet it. Free consultation to check your timeline.',
   );
   return (
     <PageLayout
@@ -34,10 +33,10 @@ export default function DfaProcessingTimeEn() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'USD',
-            price: '349',
+            price: '219',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '349',
+              price: '219',
               priceCurrency: 'USD',
               description: 'DFA Apostille authentication + DHL shipping worldwide (all-inclusive)',
             },
@@ -52,7 +51,7 @@ export default function DfaProcessingTimeEn() {
               name: 'How long does DFA Apostille take?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including PSA retrieval and DHL shipping is approximately 4–6 weeks.',
+                text: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including the PSA online application and DHL shipping (for physical documents) is approximately 4–6 weeks.',
               },
             },
             {
@@ -88,7 +87,7 @@ export default function DfaProcessingTimeEn() {
         points={[
           'Regular processing: 4-5 business days at DFA',
           'Express processing available for urgent cases',
-          'Total timeline includes PSA/NBI retrieval + DFA + shipping',
+          'Total timeline includes the PSA online application / NBI retrieval + DFA Apostille application + shipping (for physical documents)',
           'Share your deadline and we will confirm if we can meet it',
         ]}
         ctaText="Check Your Deadline"
@@ -110,7 +109,7 @@ export default function DfaProcessingTimeEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Want to bundle document retrieval and Apostille',
-            description: 'We handle PSA retrieval, DFA Apostille, and DHL shipping together in one flow.',
+            description: 'We handle the PSA online application, DFA Apostille application, and DHL shipping for physical documents together in one flow.',
           },
         ]}
       />
@@ -134,8 +133,8 @@ export default function DfaProcessingTimeEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA document retrieval (when needed)',
-            description: 'We can bundle PSA retrieval with Apostille for a single all-inclusive price.',
+            title: 'PSA online application (when needed)',
+            description: 'We can bundle the PSA online application with the DFA e-Apostille application for a single all-inclusive price.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -150,16 +149,16 @@ export default function DfaProcessingTimeEn() {
         steps={[
           { title: 'Share your target date', description: 'Tell us your visa interview, immigration submission, or other deadline.' },
           { title: 'We plan the timeline and quote', description: 'We confirm whether Express is needed and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille (Regular or Express).' },
+          { title: 'We handle the applications', description: 'We complete PSA online applications and DFA e-Apostille applications; our Cebu team handles physical retrieval and Apostille for non-PSA documents (Regular or Express).' },
           { title: 'DHL delivery worldwide', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: 'How long does DFA Apostille take?', a: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including PSA retrieval and DHL shipping is approximately 4–6 weeks.' },
+          { q: 'How long does DFA Apostille take?', a: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including the PSA online application and DHL shipping (for physical documents) is approximately 4–6 weeks.' },
           { q: 'Can I request Express processing?', a: 'Yes. If your deadline requires it, we will arrange Express DFA Apostille. Share your deadline and we will confirm what is needed.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. The DFA Apostille application, PSA online application (when needed), and DHL shipping for physical documents are all included.' },
           { q: 'I am worried about missing my deadline', a: 'Share your deadline and we will confirm whether it is feasible. Starting early is the best way to stay on track.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"

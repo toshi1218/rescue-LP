@@ -11,11 +11,10 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function CenomarValidityJa() {
   useMeta(
-    `CENOMARの有効期限【${SEO_YEAR_MONTH_JA}】発行から6ヶ月が目安｜提出先別の基準まとめ`,
+    'CENOMARの有効期限【2026年3月】発行から6ヶ月が目安｜提出先別の基準まとめ',
     'CENOMARの有効期限は多くの提出先で発行から6ヶ月以内。入管・市区町村役場・大使館など提出先別の基準と、期限切れを防ぐ最適な取得タイミングを解説します。',
   );
   return (
@@ -42,7 +41,7 @@ export default function CenomarValidityJa() {
               '@type': 'UnitPriceSpecification',
               price: '50000',
               priceCurrency: 'JPY',
-              description: 'PSA CENOMAR取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+              description: 'PSA CENOMARオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜）',
             },
           },
         },
@@ -97,22 +96,6 @@ export default function CenomarValidityJa() {
         ctaText="無料で相談する"
       />
 
-      <section className="mb-10">
-        <h2 className="text-base font-bold text-gray-900 mb-4">【提出先別】CENOMAR有効期限の目安</h2>
-        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
-          <p>CENOMAR自体に、発行元のPSA（フィリピン統計局）が定める法的な有効期限はありません。有効期限を実質的に決めているのは「提出先」で、その基準は提出先ごとに異なります。以下は代表的な目安です（最終的には各提出先の最新の案内を必ずご確認ください）。</p>
-          <div className="rounded-xl border border-gray-100 bg-gray-50 p-4">
-            <ul className="space-y-2">
-              <li><strong>市区町村役場（婚姻届）</strong>：発行から6ヶ月以内を目安とすることが多い</li>
-              <li><strong>出入国在留管理庁（配偶者ビザ・在留資格申請）</strong>：書類の新しさを重視される傾向。提出時点でなるべく新しい発行日のものが安全（提出先の案内に従う）</li>
-              <li><strong>在日フィリピン大使館（婚姻要件具備証明書・LCCM取得時）</strong>：発行から6ヶ月以内</li>
-              <li><strong>法務局（帰化申請）</strong>：申請前3〜6ヶ月以内が目安（管轄法務局により異なる）</li>
-            </ul>
-          </div>
-          <p>共通する考え方は「取得が早すぎると、提出前に期限が切れてしまう」という点です。特に、婚姻届→配偶者ビザ、といった手続きが連続する場合、最初の手続きに合わせて早く取ると、後半の手続きの時点で期限切れになることがあります。提出スケジュール全体を見て、逆算して取得時期を決めるのが安全です。</p>
-        </div>
-      </section>
-
       <SectionDivider variant="beige">
         <IconCardGrid
           heading="こんな方に選ばれています"
@@ -131,7 +114,7 @@ export default function CenomarValidityJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・書類発行の確認後に残金50%お支払い・着手前キャンセル無料"
       />
 
       <SectionDivider variant="blue">
@@ -169,31 +152,17 @@ export default function CenomarValidityJa() {
         steps={[
           { title: '婚姻届・ビザ申請の予定日を共有', description: '「いつまでに提出が必要か」をお知らせください。逆算してCENOMARの申請開始時期を確認します。' },
           { title: '申請開始時期と料金をご提示', description: 'CENOMARの有効期限（6ヶ月以内）を考慮した最適なタイミングと、料金をご案内します。' },
-          { title: 'PSA取得・DFAアポスティーユを代行', description: '現地スタッフがPSA申請・DFAアポスティーユを進めます。進捗は随時ご報告します。' },
+          { title: 'PSA・DFA e-Apostilleのオンライン申請を代行', description: 'PSAオンライン申請の入力・支払いとDFA e-Apostille（電子認証）申請を日本語で進めます。進捗は随時ご報告します。' },
           { title: '日本へ郵送・完了', description: '追跡付きでお届けします。提出期限に間に合うよう、スケジュールを管理します。' },
         ]}
       />
-
-      <section className="mb-10">
-        <h2 className="text-base font-bold text-gray-900 mb-4">有効期限切れを防ぐ「逆算」の考え方</h2>
-        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
-          <p>CENOMARは「早く取れば安心」というものではありません。取得が早すぎると、肝心の提出日には6ヶ月を過ぎてしまうことがあります。次の順序で逆算すると、期限切れを避けやすくなります。</p>
-          <ol className="list-decimal pl-5 space-y-1">
-            <li>提出先と提出予定日を確定する（例：配偶者ビザ申請を◯月に提出）</li>
-            <li>その提出先が求める有効期限を確認する（例：発行から6ヶ月以内）</li>
-            <li>提出日から逆算して「取得しても期限内に収まる最も早い時期」を決める</li>
-            <li>PSA取得＋DFAアポスティーユ＋郵送にかかる期間（おおむね1ヶ月〜1ヶ月半）を見込んで申請を開始する</li>
-          </ol>
-          <p>複数の書類・手続きが連続する場合は、最も期限が厳しい提出先に合わせるのが基本です。判断が難しいときは、提出予定日をお知らせいただければ、逆算して最適な申請開始時期をご案内します。</p>
-        </div>
-      </section>
 
       <FaqSection
         items={[
           { q: 'CENOMARの有効期限はどのくらいですか？', a: '法律上の有効期限はありませんが、ほとんどの提出先（大使館・市役所・入管）が発行から6ヶ月以内のものを求めます。提出スケジュールに合わせて取得時期を決めることが重要です。' },
           { q: '取得してから使うまでに時間がかかりそうです', a: '提出予定日をお知らせいただければ、逆算して最適な申請開始時期をご案内します。早すぎると有効期限切れのリスクがあります。' },
           { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSAオンライン申請とDFA e-Apostille（電子認証）申請をまとめた料金です。紙のPSA原本が必要な場合の国際配送は実費・要相談です。無料相談後に正確な金額をご提示します。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"
