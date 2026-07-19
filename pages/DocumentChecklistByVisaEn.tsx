@@ -68,6 +68,10 @@ export default function DocumentChecklistByVisaEn() {
               },
             },
           ],
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['#faqsection-heading', "[id^='faqsec-panel-']"],
+          },
         },
       ]}
     >

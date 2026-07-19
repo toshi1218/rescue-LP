@@ -93,6 +93,54 @@ export default function NaturalizationJa() {
               },
             },
           ],
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['#faqsection-heading', "[id^='faqsec-panel-']"],
+          },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: '帰化申請のフィリピン書類を代行取得する流れ',
+          description: '帰化申請に必要なフィリピンのPSA出生証明書・NBI Clearance・DFAアポスティーユを、日本にいながら代行取得する手順です。',
+          totalTime: 'P42D',
+          step: [
+            { '@type': 'HowToStep', name: '無料相談', text: '必要書類・通数・法務局から指定された発行日条件を確認します。司法書士・行政書士からのご依頼も対応します。' },
+            { '@type': 'HowToStep', name: 'お見積り', text: '書類の通数に応じた料金（帰化書類パック等）を確定してご提示します。' },
+            { '@type': 'HowToStep', name: '現地取得＋アポスティーユ', text: 'セブの現地スタッフがPSA出生証明書・NBI Clearance等を取得し、DFAアポスティーユ認証まで手配します。' },
+            { '@type': 'HowToStep', name: '日本語訳の手配', text: '翻訳者の氏名・住所・翻訳日付を記載した日本語訳文をあわせて手配します。' },
+            { '@type': 'HowToStep', name: '郵送', text: 'ご自宅または依頼元の事務所へDHLで郵送します。追跡番号をお知らせします。' },
+          ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'DefinedTermSet',
+          '@id': 'https://ph-document.com/ja/kika-shinsei-guide/#glossary',
+          name: '帰化申請フィリピン書類の用語集',
+          description: 'フィリピン国籍の方の帰化申請でよく使われる書類・認証の用語をわかりやすく定義します。',
+          hasDefinedTerm: [
+            {
+              '@type': 'DefinedTerm',
+              name: '帰化申請',
+              description: '外国籍の方が日本国籍を取得するための法務局への申請。フィリピン国籍者の場合、本国のPSA出生証明書・婚姻証明書等（DFAアポスティーユ付き）が必要になります。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              name: 'PSA出生証明書',
+              description: 'フィリピン統計局（PSA）が発行する公式の出生証明書。帰化申請で身分関係を証明するために提出します。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              name: 'NBI Clearance',
+              alternateName: '無犯罪証明書',
+              description: 'フィリピン捜査局（NBI）が発行する無犯罪証明書。帰化申請やビザ申請で素行を証明するために求められることがあります。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              name: 'DFAアポスティーユ',
+              description: 'フィリピン外務省（DFA）による国際認証。日本の法務局に提出する際、書類が正式なものであることを証明します。PSA民事書類は2026年3月以降、電子のe-Apostilleに一本化されています。',
+            },
+          ],
         },
       ]}
     >
