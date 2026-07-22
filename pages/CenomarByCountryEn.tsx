@@ -64,7 +64,7 @@ export default function CenomarByCountryEn() {
           visaTypes: 'UK Spouse Visa, Fiancé(e) Visa',
           apostille: 'DFA Apostille required',
           validity: '6 months from issuance',
-          notes: 'UKVI requires authentication of Philippine civil documents. Physical Apostille is the standard accepted format.',
+          notes: 'UKVI requires authentication of Philippine civil documents. Since March 2026, DFA authenticates PSA documents with an electronic e-Apostille (a paper Apostille is no longer issued for PSA documents).',
           authority: 'UK Visas and Immigration (UKVI)',
         },
         {
@@ -262,7 +262,7 @@ export default function CenomarByCountryEn() {
           { q: 'Is apostille required for CENOMAR in Canada?', a: 'Yes. IRCC requires authentication of Philippine documents. DFA Apostille is the standard accepted format for spousal sponsorship applications.' },
           { q: 'Does Japan accept apostilled CENOMAR?', a: 'Yes, as of 2024 Japan joined the Hague Apostille Convention. Apostilled Philippine documents are now accepted for spouse visa (配偶者等) applications.' },
           { q: 'How long is CENOMAR valid for visa applications?', a: 'Most countries require CENOMAR issued within 6 months of submission. Some authorities have stricter requirements — always confirm before ordering.' },
-          { q: 'Can I use e-Apostille instead of physical apostille?', a: 'It depends on the receiving country and authority. Most USCIS offices require a physical apostille. We confirm the specific requirement for your case before processing.' },
+          { q: 'Is CENOMAR authenticated with an e-Apostille or a physical apostille?', a: 'Since March 2026, DFA issues only an electronic e-Apostille for PSA documents like CENOMAR — a physical apostille sticker is no longer available. Whether a given authority accepts the e-Apostille varies, so we confirm the specific requirement for your case before processing.' },
           { q: 'What if my country is not on this list?', a: 'Contact us. We handle CENOMAR retrieval and shipping to any country worldwide. Requirements vary — we research and confirm before starting.' },
         ]}
         ctaTitle="Ready to Get Started?"

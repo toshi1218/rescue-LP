@@ -7,12 +7,11 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { AlertTriangle, MapPin, Clock, Info } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR } from '../lib/seoDate';
 
 export default function DfaGalleriaCebuEn() {
   useMeta(
-    `DFA Apostille Office Cebu — Robinsons Galleria [${SEO_YEAR} Report]`,
-    `On-site report for the DFA Apostille office inside Robinsons Galleria, Cebu. Appointment required since December 2024. Location, procedures, and what to expect.`,
+    'DFA Apostille Office Cebu — Robinsons Galleria [2026 Report]',
+    'On-site report for the DFA (Department of Foreign Affairs) Apostille office inside Robinsons Galleria, Cebu. Appointment required since December 2024. Location, procedures, and what to expect.',
   );
   return (
     <PageLayout
@@ -154,7 +153,7 @@ export default function DfaGalleriaCebuEn() {
 
       <CtaBox
         title="We Handle the DFA Apostille Process for You"
-        description="Our local staff in the Philippines can retrieve PSA documents and obtain DFA Apostille authentication on your behalf, then ship to Japan via DHL. No travel required."
+        description="We complete PSA online applications and DFA e-Apostille applications on your behalf, and our local staff in the Philippines retrieve non-PSA documents like NBI Clearance with physical DFA Apostille, shipped to Japan via DHL. No travel required."
         buttonText="Free Consultation"
         href="#contact"
         variant="primary"

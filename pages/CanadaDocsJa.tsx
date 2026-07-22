@@ -11,12 +11,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { FileCheck, Globe, Users, Shield, FileText, Plane, CheckCircle, Clock, Stamp, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function CanadaDocsJa() {
   useMeta(
-    `カナダ移民ビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — IRCC対応・DHL郵送`,
-    `カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。`,
+    'カナダ移民ビザのフィリピン書類取得代行 [2026年3月] — IRCC対応・DHL郵送',
+    'カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。',
   );
   return (
     <PageLayout
@@ -41,7 +40,7 @@ export default function CanadaDocsJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ・国際郵送込み（税抜、書類1通あたり）',
+            description: 'PSAオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜、書類1通あたり）',
           },
         },
         },
@@ -177,7 +176,7 @@ export default function CanadaDocsJa() {
           steps={[
             { title: 'フォームで相談', description: '申請種別（永住権・配偶者スポンサーシップなど）と提出目標日をお知らせください。' },
             { title: '必要書類・料金の確認', description: 'IRCC要件をもとに必要書類をリストアップし、料金をご提示します。' },
-            { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
+            { title: 'フィリピン現地で手配', description: 'PSAはオンライン申請＋DFA e-Apostille（電子認証）、NBI等は現地スタッフが物理取得・アポスティーユを進めます。' },
             { title: 'カナダへ郵送', description: '書類が揃い次第、DHLで追跡付きお届け。目安は全体で約4〜6週間。' },
           ]}
         />
