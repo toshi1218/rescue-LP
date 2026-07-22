@@ -96,7 +96,7 @@ export default function SpouseVisaJa() {
       <SummaryBlock
         conclusion="配偶者ビザ（在留資格「日本人の配偶者等」）に必要なフィリピン書類を、日本語だけで取り寄せできます。"
         points={[
-          '入管が求める「紙の原本＋DFAアポスティーユ」形式で手配',
+          'DFA e-Apostille（電子認証）申請を代行。入管の受理形式（e-Apostille/紙原本）は事前確認',
           'PSA婚姻証明書・PSA出生証明書・CENOMARをまとめて代行',
           '有効期限に合わせた取得タイミングもアドバイス',
           '新規申請・更新・変更、どの申請にも対応',
@@ -110,7 +110,7 @@ export default function SpouseVisaJa() {
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="font-medium text-gray-800">30,000円〜（DFA e-Apostille〈電子〉込み）</dd>
               <dd className="text-gray-400 text-xs mt-1">※必要書類の種類によって変わります</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
@@ -133,9 +133,9 @@ export default function SpouseVisaJa() {
             </div>
             {[
               { label: 'PSA書類・CENOMAR取得', price: '込み' },
-              { label: 'DFAアポスティーユ認証（入管提出用・紙原本）', price: '込み' },
+              { label: 'DFA e-Apostille認証（電子・入管提出用）', price: '込み' },
               { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+              { label: '合計（DFA e-Apostille〈電子〉込み）', price: '30,000円〜', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -212,7 +212,7 @@ export default function SpouseVisaJa() {
           <h2 className="text-base font-bold text-amber-900">配偶者ビザの書類準備、こんな落とし穴があります</h2>
         </div>
         <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>入国管理局への申請では<strong>紙のアポスティーユ原本が必要</strong>です</span></li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>2026年3月以降、PSA民事書類の認証は<strong>e-Apostille（電子）のみ</strong>——提出先の受理可否の確認が必要です</span></li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>書類の<strong>有効期限（発行から6ヶ月〜1年）</strong>を過ぎると再取得が必要</span></li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>PSA書類・CENOMAR・NBI——<strong>どれが必要かは申請の状況によって異なる</strong></span></li>
         </ul>
@@ -279,7 +279,7 @@ export default function SpouseVisaJa() {
         steps={[
           { title: 'フォームで相談（無料）', description: '申請の種類（新規・更新・変更）と必要書類をお知らせください。入管の要件を確認してご案内します。' },
           { title: '必要書類・料金の確認', description: '料金をご提示します。ご依頼時に着手金50%、書類取得・DHL配送準備完了後に残金50%をお支払いいただきます。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。進捗は随時ご報告します。' },
+          { title: 'フィリピン現地で手配', description: 'PSAはオンライン申請＋DFA e-Apostille（電子認証）、NBI等は現地スタッフが物理取得・アポスティーユを進めます。進捗は随時ご報告します。' },
           { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />
