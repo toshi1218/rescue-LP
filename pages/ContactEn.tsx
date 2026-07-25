@@ -5,6 +5,7 @@ import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
 import { isValidEmail } from '../lib/validation';
 import WhatsAppIcon from '../components/icons/WhatsAppIcon';
+import PaymentTrust from '../components/PaymentTrust';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -283,6 +284,8 @@ export default function ContactEn() {
         {submitError && (
           <p role="alert" className="text-xs text-red-500">{submitError}</p>
         )}
+
+        <PaymentTrust />
 
         <button
           type="submit"
