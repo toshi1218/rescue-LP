@@ -82,9 +82,10 @@ const plansData = {
       why: '国際結婚の婚姻届や配偶者ビザ申請では、フィリピン側の独身証明書（CENOMAR）をアポスティーユ付きで用意する必要があります',
       outcome: 'CENOMAR原本が揃えば、婚姻届の受理やビザ申請書類の準備が前に進みます',
       price: '¥28,000',
-      priceNote: '〜（税込・DHL込み / アポスティーユなし）',
+      priceNote: '〜（税込・DHL込み / 認証なし）',
       priceBreakdown: 'PSA取得 ¥20,000 + 消費税 ¥2,000 + DHL ¥6,000',
-      priceApostille: '¥61,000〜',
+      priceEApostille: '¥30,000〜',
+      priceEApostilleNote: '※物理書類の発送も必要な場合は+¥10,000（合計¥40,000〜）',
       period: '約4〜6週間',
       detailPath: '/ja/cenomar/',
     },
@@ -98,9 +99,10 @@ const plansData = {
       why: 'ビザ申請・帰化・国際結婚の手続きでは、PSA発行の出生証明書原本をアポスティーユ付きで提出する必要があります',
       outcome: 'PSA出生証明書原本が揃えば、ビザや婚姻手続きの書類準備が前に進みます',
       price: '¥28,000',
-      priceNote: '〜（税込・DHL込み / アポスティーユなし）',
+      priceNote: '〜（税込・DHL込み / 認証なし）',
       priceBreakdown: 'PSA取得 ¥20,000 + 消費税 ¥2,000 + DHL ¥6,000',
-      priceApostille: '¥61,000〜',
+      priceEApostille: '¥30,000〜',
+      priceEApostilleNote: '※物理書類の発送も必要な場合は+¥10,000（合計¥40,000〜）',
       period: '約4〜6週間',
       detailPath: '/ja/psa-shussei-cost/',
     },
@@ -114,9 +116,10 @@ const plansData = {
       why: '配偶者ビザ申請・帰化・在留資格変更などの手続きでは、PSA発行の婚姻証明書原本をアポスティーユ付きで提出する必要があります',
       outcome: 'PSA婚姻証明書原本が揃えば、ビザや帰化手続きの書類準備が前に進みます',
       price: '¥28,000',
-      priceNote: '〜（税込・DHL込み / アポスティーユなし）',
+      priceNote: '〜（税込・DHL込み / 認証なし）',
       priceBreakdown: 'PSA取得 ¥20,000 + 消費税 ¥2,000 + DHL ¥6,000',
-      priceApostille: '¥61,000〜',
+      priceEApostille: '¥30,000〜',
+      priceEApostilleNote: '※物理書類の発送も必要な場合は+¥10,000（合計¥40,000〜）',
       period: '約4〜6週間',
       detailPath: '/ja/psa-kekkon-shomeisho/',
     },
@@ -359,6 +362,15 @@ const Pricing: React.FC = () => {
                         <span className="text-sm font-bold text-secondary">{(plan as any).priceApostille}</span>
                         <span className="text-xs text-gray-400">{lang === 'ja' ? 'DFA物理アポスティーユ込み 総額' : 'with DFA physical Apostille — all-in total'}</span>
                       </div>
+                    )}
+                    {(plan as any).priceEApostille && (
+                      <div className="flex items-baseline gap-2 mt-1.5 pl-2 border-l-2 border-primary/30">
+                        <span className="text-sm font-bold text-secondary">{(plan as any).priceEApostille}</span>
+                        <span className="text-xs text-gray-400">DFA e-Apostille（電子）込み 総額</span>
+                      </div>
+                    )}
+                    {(plan as any).priceEApostilleNote && (
+                      <p className="text-xs text-gray-400 mt-1">{(plan as any).priceEApostilleNote}</p>
                     )}
                     <p className="text-xs text-gray-400 mt-1">
                       {lang === 'ja' ? `納期：${plan.period}` : `Delivery: ${plan.period}`}
