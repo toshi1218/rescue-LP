@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Send, Mail, Clock, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageLayoutKo from '../components/PageLayoutKo';
@@ -16,6 +16,7 @@ export default function ContactKo() {
   const [confirmError, setConfirmError] = useState('');
   const [referral, setReferral] = useState('');
   const [referralError, setReferralError] = useState('');
+  const emailConfirmRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -31,6 +32,8 @@ export default function ContactKo() {
     setEmailError('');
     if (emailInput !== emailConfirm.trim()) {
       setConfirmError('이메일 주소가 일치하지 않습니다. 다시 확인해 주세요.');
+      emailConfirmRef.current?.focus();
+      emailConfirmRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
     setConfirmError('');
@@ -174,11 +177,11 @@ export default function ContactKo() {
               이메일 주소 (확인용) <span className="text-red-500">*</span>
             </label>
             <input
+              ref={emailConfirmRef}
               type="email"
               required
               value={emailConfirm}
               onChange={e => { setEmailConfirm(e.target.value); setConfirmError(''); }}
-              onPaste={e => e.preventDefault()}
               placeholder="확인을 위해 다시 입력해 주세요"
               className={`w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${confirmError ? 'border-red-400' : 'border-gray-200'}`}
             />

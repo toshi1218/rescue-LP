@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
@@ -22,6 +22,7 @@ export default function ContactEn() {
   const [confirmError, setConfirmError] = useState('');
   const [referral, setReferral] = useState('');
   const [referralError, setReferralError] = useState('');
+  const emailConfirmRef = useRef<HTMLInputElement>(null);
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
 
@@ -108,6 +109,8 @@ export default function ContactEn() {
           setEmailError('');
           if (emailInput !== emailConfirm.trim()) {
             setConfirmError('The email addresses do not match. Please re-check for typos.');
+            emailConfirmRef.current?.focus();
+            emailConfirmRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
             return;
           }
           setConfirmError('');
@@ -171,11 +174,11 @@ export default function ContactEn() {
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">Confirm Email <span className="text-red-500">*</span></label>
           <input
+            ref={emailConfirmRef}
             type="email"
             required
             value={emailConfirm}
             onChange={e => { setEmailConfirm(e.target.value); setConfirmError(''); }}
-            onPaste={e => e.preventDefault()}
             placeholder="Re-enter your email address"
             className={`w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${confirmError ? 'border-red-400' : 'border-gray-200'}`}
           />
