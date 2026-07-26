@@ -2,13 +2,37 @@ import React from 'react';
 import PageLayout from '../components/PageLayout';
 import { useMeta } from '../lib/useMeta';
 
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'IGRS Inc.',
+  alternateName: '株式会社IGRS',
+  url: 'https://ph-document.com/',
+  email: 'igrs20200601@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'JP',
+    addressRegion: 'Wakayama',
+    addressLocality: 'Wakayama City',
+  },
+  sameAs: [
+    'https://ph-document.com/ja/company/',
+    'https://ph-document.com/en/company/',
+    'https://share.google/oOoXo3nIRvnAAhbg0',
+    'https://note.com/igrs_philippines',
+    'https://x.com/GswCnxL7Sg15778',
+    'https://www.facebook.com/share/1KTmc7CeXi/',
+    'https://page.line.me/827jdwvl',
+  ],
+};
+
 export default function CompanyEn() {
   useMeta(
     'About Us | IGRS Inc. — Philippine Document Retrieval Service',
     'IGRS Inc. is a Cebu-based document retrieval agency. We handle PSA, NBI, LTO & DFA Apostille for US visa and immigration applicants worldwide. English support.',
   );
   return (
-    <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'About Us' }]}>
+    <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'About Us' }]} jsonLd={orgJsonLd}>
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-6">About Us</h1>
       <div className="bg-white rounded-xl border border-gray-100 shadow-card p-6 space-y-4 text-sm text-gray-700">
         <div className="grid grid-cols-3 gap-4 border-b border-gray-100 pb-4">
