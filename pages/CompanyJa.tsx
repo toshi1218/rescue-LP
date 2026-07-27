@@ -19,6 +19,11 @@ const orgJsonLd = {
   sameAs: [
     'https://ph-document.com/ja/company/',
     'https://ph-document.com/en/company/',
+    'https://share.google/oOoXo3nIRvnAAhbg0',
+    'https://note.com/igrs_philippines',
+    'https://x.com/GswCnxL7Sg15778',
+    'https://www.facebook.com/share/1KTmc7CeXi/',
+    'https://page.line.me/827jdwvl',
   ],
 };
 
