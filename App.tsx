@@ -150,6 +150,8 @@ const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
 const NbiKo = lazy(() => import('./pages/NbiKo'));
 const PsaEcertificateHangukKo = lazy(() => import('./pages/PsaEcertificateHangukKo'));
 const ContactKo = lazy(() => import('./pages/ContactKo'));
+const ChedEcavEn = lazy(() => import('./pages/ChedEcavEn'));
+const PrcCertificateEn = lazy(() => import('./pages/PrcCertificateEn'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const FloatingChatWidget = lazy(() => import('./components/FloatingChatWidget'));
 
@@ -426,6 +428,10 @@ export default function App() {
         <Route path="/en/personal-information-protection/" element={<KojinJohoHogoEn />} />
         <Route path="/en/f-6-philippines-documents" element={<Navigate to="/en/f-6-philippines-documents/" replace />} />
         <Route path="/en/f-6-philippines-documents/" element={<F6DocsEn />} />
+        <Route path="/en/ched-ecav" element={<Navigate to="/en/ched-ecav/" replace />} />
+        <Route path="/en/ched-ecav/" element={<ChedEcavEn />} />
+        <Route path="/en/prc-certificate" element={<Navigate to="/en/prc-certificate/" replace />} />
+        <Route path="/en/prc-certificate/" element={<PrcCertificateEn />} />
 
         {/* Korean routes */}
         <Route path="/ko" element={<Navigate to="/ko/" replace />} />

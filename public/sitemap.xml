@@ -388,6 +388,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/en/ched-ecav/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/en/prc-certificate/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/en/psa-late-registration/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-late-registration/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-late-registration/"/>

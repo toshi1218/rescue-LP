@@ -41,6 +41,8 @@ const guidesData: Record<'ja' | 'en', GuideItem[]> = {
     { to: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', desc: 'K-1, CR-1, Canada, Australia, UK, Japan complete checklist', tag: null },
     { to: '/en/nbi-clearance-overseas/', title: 'NBI Clearance from Overseas', desc: 'OFWs & Filipinos abroad: get NBI without returning to PH', tag: null },
     { to: '/en/psa-late-registration/', title: 'PSA Record Missing or Has Errors', desc: 'No record found or name error? Here is what to do.', tag: null },
+    { to: '/en/ched-ecav/', title: 'CHED eCAV Processing', desc: 'Diploma & TOR authentication, fully electronic since March 2026', tag: null },
+    { to: '/en/prc-certificate/', title: 'PRC Certificate Retrieval', desc: 'Certificate of Passing, Rating & Good Standing with DFA Apostille', tag: null },
   ],
 };
 
