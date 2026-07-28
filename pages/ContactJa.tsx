@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
 import { isValidEmail } from '../lib/validation';
 import LineIcon from '../components/icons/LineIcon';
+import PaymentTrust from '../components/PaymentTrust';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -22,6 +23,7 @@ export default function ContactJa() {
   const [confirmError, setConfirmError] = useState('');
   const [referral, setReferral] = useState('');
   const [referralError, setReferralError] = useState('');
+  const emailConfirmRef = useRef<HTMLInputElement>(null);
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
 
@@ -90,6 +92,8 @@ export default function ContactJa() {
           setEmailError('');
           if (emailInput !== emailConfirm.trim()) {
             setConfirmError('メールアドレスが一致しません。入力内容をご確認ください。');
+            emailConfirmRef.current?.focus();
+            emailConfirmRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
             return;
           }
           setConfirmError('');
@@ -166,11 +170,11 @@ export default function ContactJa() {
             メールアドレス（確認用） <span className="text-red-500">*</span>
           </label>
           <input
+            ref={emailConfirmRef}
             type="email"
             required
             value={emailConfirm}
             onChange={e => { setEmailConfirm(e.target.value); setConfirmError(''); }}
-            onPaste={e => e.preventDefault()}
             placeholder="確認のためもう一度入力してください"
             className={`w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 ${confirmError ? 'border-red-400' : 'border-gray-200'}`}
           />
@@ -348,6 +352,8 @@ export default function ContactJa() {
         {submitError && (
           <p role="alert" className="text-xs text-red-500">{submitError}</p>
         )}
+
+        <PaymentTrust />
 
         <button
           type="submit"
