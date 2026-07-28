@@ -53,6 +53,54 @@ export default function SpouseVisaShoryuJa() {
               },
             },
           ],
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['#faqsection-heading', "[id^='faqsec-panel-']"],
+          },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: '配偶者ビザ（日本人の配偶者等）COE申請に必要なフィリピン書類一覧',
+          description: 'フィリピン国籍の配偶者について在留資格認定証明書（COE）を申請する際に必要となる、フィリピン側で取得する書類の一覧です。',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'PSA婚姻証明書（DFAアポスティーユ付き）' },
+            { '@type': 'ListItem', position: 2, name: 'PSA出生証明書（DFAアポスティーユ付き）' },
+            { '@type': 'ListItem', position: 3, name: 'CENOMAR（独身証明書 / Certificate of No Marriage Record）' },
+            { '@type': 'ListItem', position: 4, name: '各書類の日本語訳' },
+            { '@type': 'ListItem', position: 5, name: '結核非発病証明書（指定Panel Clinic発行・2025年6月23日〜義務化）' },
+          ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'DefinedTermSet',
+          '@id': 'https://ph-document.com/ja/haigusha-visa-shorui/#glossary',
+          name: '配偶者ビザ書類の用語集',
+          description: 'フィリピン人配偶者の在留資格（配偶者ビザ）申請でよく使われる書類・認証の用語をわかりやすく定義します。',
+          hasDefinedTerm: [
+            {
+              '@type': 'DefinedTerm',
+              name: '在留資格認定証明書（COE）',
+              alternateName: 'Certificate of Eligibility',
+              description: '日本での在留資格を事前に証明する書類。配偶者ビザ（日本人の配偶者等）は、まず入管でこのCOEを取得してから在外公館でビザを申請します。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              name: '結核非発病証明書',
+              description: '2025年6月23日から、フィリピン国籍者のCOE申請で義務化された書類。日本政府指定のPanel Clinic（IOM Manila / NHS / St. Luke\'s 等）でのみ発行され、胸部エックス線日から180日間有効。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              name: 'CENOMAR',
+              alternateName: '独身証明書',
+              description: 'PSA（フィリピン統計局）が発行する、フィリピンに婚姻記録がないことを証明する書類。国際結婚・配偶者ビザの独身証明として使われます。',
+            },
+            {
+              '@type': 'DefinedTerm',
+              name: 'DFAアポスティーユ',
+              description: 'フィリピン外務省（DFA）による国際認証。PSA民事書類（出生・婚姻・CENOMAR）は2026年3月以降、電子のe-Apostilleに一本化されています。',
+            },
+          ],
         },
       ]}
     >

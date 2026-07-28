@@ -25,7 +25,7 @@ export default function CenomarGuideEn() {
         name: 'CENOMAR',
         alternateName: 'Certificate of No Marriage Record',
         description: 'CENOMAR (Certificate of No Marriage Record) is an official document issued by the Philippine Statistics Authority (PSA) certifying that a Filipino citizen has no marriage record on file in the Philippines — proof of single status. It is required for K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and other immigration applications involving a Filipino national.',
-        inDefinedTermSet: 'https://ph-document.com/en/document-checklist-by-visa/',
+        inDefinedTermSet: 'https://ph-document.com/#glossary',
         },
         {
         '@context': 'https://schema.org',
@@ -122,6 +122,10 @@ export default function CenomarGuideEn() {
               },
             },
           ],
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['#faqsection-heading', "[id^='faqsec-panel-']"],
+          },
         },
       ]}
     >
