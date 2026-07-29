@@ -35,10 +35,6 @@ const Footer: React.FC = () => {
       return;
     }
     setEmailError('');
-    if (!referral) {
-      setReferralError(lang === 'ja' ? '選択してください。' : 'Please select an option.');
-      return;
-    }
     setReferralError('');
     setSubmitting(true);
     setSubmitError('');
@@ -205,15 +201,14 @@ const Footer: React.FC = () => {
 
           <div>
             <label htmlFor="footer-country" className="block text-sm text-gray-600 mb-1">
-              {t('footer.countryLabel')} <span className="text-red-400" aria-hidden="true">*</span>
+              {t('footer.countryLabel')}
+              <span className="text-gray-400 text-xs ml-1">{isJa ? '（任意）' : '(optional)'}</span>
             </label>
             <input
               id="footer-country"
               name="country"
-              required
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               placeholder={t('footer.countryPlaceholder')}
-              aria-required="true"
             />
           </div>
 
@@ -256,7 +251,8 @@ const Footer: React.FC = () => {
 
           <div>
             <label className="block text-sm text-gray-600 mb-1">
-              {isJa ? '当社をどこでお知りになりましたか？' : 'How did you find us?'} <span className="text-red-400" aria-hidden="true">*</span>
+              {isJa ? '当社をどこでお知りになりましたか？' : 'How did you find us?'}
+              <span className="text-gray-400 text-xs ml-1">{isJa ? '（任意）' : '(optional)'}</span>
             </label>
             <select
               name="referral_source"
