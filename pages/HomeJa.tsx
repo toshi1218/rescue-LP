@@ -138,31 +138,37 @@ export default function HomeJa() {
           </div>
         </div>
         <div className="container mx-auto max-w-5xl px-4 pt-8">
-          <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
-            <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />
+          <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-secondary bg-white shadow-md">
+            <div className="h-1.5 w-full bg-gradient-to-r from-secondary via-secondary-light to-secondary" />
             <div className="p-6 md:p-8">
-              <div className="inline-block mb-4 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">
-                PSAデジタル化・e-Apostille対応
+              <div className="inline-block mb-4 px-3 py-1 bg-secondary text-white text-xs font-bold rounded tracking-wide">
+                PSA紙原本 取得可能
               </div>
               <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
-                2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）へ<span className="text-red-700">物理アポスティーユ（紙）を発行しなくなり</span>、認証は<span className="text-red-700">e-Apostille（電子）に一本化</span>されました。当社はPSA・DFA e-Apostilleのオンライン申請と支払いを日本語で代行します（NBI・LTO・PRCなどの書類は物理アポスティーユにも対応）。
+                <span className="text-primary-dark">PSAの紙原本は現在も取得できます。</span>2026年3月以降に変更されたのは<strong>認証方法のみ</strong>で、DFAの認証がe-Apostille（電子）へ移行しました。当社では、<strong>PSA紙原本の取得からe-Apostille、海外発送（DHL）まで一括で対応</strong>します。
               </p>
               {noticeExpanded && (
                 <ul className="space-y-3 mt-4">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：日本の提出先は当面、紙のPSA原本を前提とする運用が想定されます。ただし物理アポスティーユはDFAが発行しなくなったため、e-Apostille（電子認証）で受理可能かを提出先に確認しておくことが重要です。
+                      <strong className="text-gray-900">変わったこと・変わらないこと</strong>：変わったのはDFAの認証方法だけです。PSA民事書類（出生・婚姻・CENOMAR等）へ貼る<strong>物理アポスティーユ（紙）は2026年3月以降発行されず、e-Apostille（電子）に一本化</strong>されました。一方で<strong className="text-primary-dark">PSAの紙原本（SECPA）そのものは従来どおり取得でき、DHLで日本・海外へお届けできます</strong>。NBI・LTO・PRCなどのPSA以外の書類には、引き続き物理アポスティーユが利用できます。
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">まずは提出先にご確認ください</strong>：e-Apostille（電子認証）で受理されるかを提出先にご確認ください。<strong className="text-red-700">PSA・e-Apostilleのオンライン申請の入力・支払い代行は当社で対応します。</strong>
+                      <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：日本の提出先は当面、紙のPSA原本を前提とする運用が想定されます。紙原本はこれまでどおりお届けできますので、確認が必要なのは<strong>認証をe-Apostille（電子）で受理してもらえるか</strong>の一点です。確認の進め方が分からない場合も、当社が一緒に整理します。
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700 leading-relaxed">
+                      <strong className="text-gray-900">当社が行うこと</strong>：現地でのPSA紙原本の取得手配、DFA e-Apostilleのオンライン申請・支払い代行（英語・タガログのみの公式サイトを日本語で代行）、書類のチェック、DHLでの海外発送までをまとめてお引き受けします。
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
                       <strong className="text-gray-900">納期の目安</strong>：現在ご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
                     </span>
@@ -172,7 +178,7 @@ export default function HomeJa() {
               {!noticeExpanded && (
                 <button
                   onClick={() => setNoticeExpanded(true)}
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-red-700 hover:text-red-800 transition-colors"
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-secondary hover:text-secondary-light transition-colors"
                 >
                   <ChevronDown className="w-3.5 h-3.5" />
                   詳細を見る
