@@ -99,7 +99,7 @@ export default function HomeJa() {
         {
           '@type': 'Offer',
           priceSpecification: { '@type': 'PriceSpecification', minPrice: '50000', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: 'CENOMAR・PSA出生証明書取得代行＋DFAアポスティーユ', description: 'フィリピン統計局（PSA）発行の独身証明書・出生証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
+          itemOffered: { '@type': 'Service', name: 'CENOMAR・PSA出生証明書取得代行＋DFA e-Apostille', description: 'フィリピン統計局（PSA）発行の独身証明書・出生証明書の紙原本を取り寄せ、DFA e-Apostille（電子認証）を付けて代行取得。2026年3月以降、PSA民事書類への物理アポスティーユは発行されません。' },
         },
         {
           '@type': 'Offer',
@@ -109,7 +109,7 @@ export default function HomeJa() {
         {
           '@type': 'Offer',
           priceSpecification: { '@type': 'PriceSpecification', minPrice: '55000', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: '国際結婚準備パック（PSA出生証明書＋CENOMAR＋DFAアポスティーユ）', description: '日本での国際結婚手続きに必要なフィリピン側書類をまとめて代行取得。' },
+          itemOffered: { '@type': 'Service', name: '国際結婚準備パック（PSA出生証明書＋CENOMAR＋DFA e-Apostille）', description: '日本での国際結婚手続きに必要なフィリピン側書類をまとめて代行取得。PSA民事書類のため認証はDFA e-Apostille（電子）です。DHL国際配送込み。' },
         },
         {
           '@type': 'Offer',
