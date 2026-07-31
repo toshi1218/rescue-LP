@@ -1152,7 +1152,7 @@ const routes: RouteConfig[] = [
     path: '/ja/e-apostille-fuka/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'e-apostille-fuka', 'index.html'),
     title: `e-Apostille（電子アポスティーユ）は帰化申請に使える？法務局が紙原本を求める理由【${SEO_YEAR_MONTH_JA}】`,
-    description: 'フィリピンのe-Certificate・e-Apostille（電子書類）は帰化申請に使えるのか。日本は制度上ハーグ条約の電子アポスティーユを受け入れていますが、法務局など提出先の受け入れ実務は未整備で、実務上は紙原本＋物理アポスティーユが必要です。誤解が起きる理由と確実な準備方法を解説。',
+    description: 'フィリピンのe-Certificate・e-Apostille（電子書類）は帰化申請に使えるのか。法務局は今も紙のPSA原本を前提に運用していますが、2026年3月以降DFAはPSA民事書類へ物理アポスティーユを発行せず、認証はe-Apostille（電子）に一本化されました。現在の正しい組み合わせと、提出先への事前確認の仕方を解説。',
     canonical: `${BASE}/ja/e-apostille-fuka/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/`,
