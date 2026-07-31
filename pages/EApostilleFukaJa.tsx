@@ -86,7 +86,7 @@ export default function EApostilleFukaJa() {
           <li>・一方で<strong>2026年3月16日以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）へ物理アポスティーユ（紙）を発行していません</strong>。認証は<strong>e-Apostille（電子）に一本化</strong>されました。</li>
           <li>・つまり<strong>「紙原本＋紙のアポスティーユ」という従来の組み合わせは、PSA書類では物理的に取得できません</strong>。これを約束する業者がいれば、その説明は現行運用と一致していません。</li>
           <li>・現在用意できる最も確実な形は<strong>「紙のPSA原本（SECPA）＋ e-Apostille（電子認証）」</strong>です。<strong>提出先の法務局にこの形で受理可能かを事前確認</strong>してから取得に進んでください。</li>
-          <li>・<strong>e-Apostilleはメールで受け取り、電子のまま提出します（印刷したものは無効）</strong>。DHLで届くのは紙のPSA原本のみで、紙の証明書にアポスティーユが貼られて届くわけではありません。</li>
+          <li>・<strong>e-Certificate（電子）と紙のPSA原本（SECPA）は同じ書類・同じ参照番号で発行され、e-Apostilleはその番号に対して付きます</strong>。したがって電子・紙のどちらにも認証が及び、1回の申請でまとめて取得できます。ただし<strong>紙原本に紙のアポスティーユが貼付されるわけではなく</strong>、認証自体は電子のe-Apostilleとしてメールでお渡しします。</li>
           <li>・<strong>NBI Clearance・LTO（運転記録）・PRC（資格証明）などは対象外</strong>で、従来どおりDFAの物理アポスティーユを取得できます。</li>
         </ul>
       </section>
@@ -112,7 +112,7 @@ export default function EApostilleFukaJa() {
           { item: '帰化申請（法務局）での確実性', self: '低い（紙原本を求められると再取得）', agency: '高い（紙原本があり認証も現行形式）' },
           { item: '証明書の形式', self: '電子データ（PDF）', agency: '紙の原本（SECPAセキュリティ用紙）' },
           { item: '認証の形式', self: 'e-Apostille（電子）', agency: 'e-Apostille（電子）※PSAは物理発行停止のため共通' },
-          { item: '納品方法', self: 'メールで電子納品（印刷は無効）', agency: '紙原本はDHL・e-Apostilleはメール（別々の成果物）' },
+          { item: '納品方法', self: 'メールで電子納品のみ', agency: '紙原本をDHLで発送＋e-Apostilleをメールで納品（同一申請・同一番号）' },
           { item: '差し戻し・再取得リスク', self: '高い', agency: '低い（ただし提出先の事前確認は必要）' },
           { item: '当社の標準対応', self: '提出先が電子のみで受理する場合', agency: '対応（帰化申請での標準）' },
         ]}
@@ -121,7 +121,7 @@ export default function EApostilleFukaJa() {
       <SectionDivider variant="blue">
         <h2 className="text-base font-bold text-gray-900 mb-3">当社は紙のPSA原本＋e-Apostilleを標準にしています</h2>
         <p className="text-sm text-gray-600 leading-relaxed mb-3">
-          帰化申請での差し戻しを避けるため、当社は<strong>PSA出生証明書・婚姻証明書・CENOMAR等を紙の原本（SECPA）で取り寄せ、あわせてDFA e-Apostille（電子認証）を申請する</strong>のを標準としています。<strong>e-Apostilleはメールで電子的に納品され、印刷したものは認証として無効です。DHLでお届けするのは紙のPSA原本のみ</strong>で、この2つは別々の成果物としてお渡しします（紙の証明書にアポスティーユが貼られて届くわけではありません）。前述のとおりPSA書類への物理アポスティーユは発行が停止されているため、紙のアポスティーユが必要と言われた場合は、その場で提出先へ確認する方法までご案内します。
+          帰化申請での差し戻しを避けるため、当社は<strong>PSA出生証明書・婚姻証明書・CENOMAR等を紙の原本（SECPA）で取り寄せ、DFA e-Apostille（電子認証）を付してDHLでお届けする</strong>のを標準としています。<strong>e-Certificateと紙原本（SECPA）は同じ書類・同じ参照番号</strong>で、e-Apostilleはその番号に対して発行されるため、<strong>電子・紙のどちらにも認証が及びます</strong>（1回の申請でまとめて取得でき、紙原本のために別ルートで申請し直す必要はありません）。なお<strong>紙原本に紙のアポスティーユが貼付されるわけではなく</strong>、認証は電子のe-Apostilleとしてメールでお渡しします。前述のとおりPSA書類への物理アポスティーユは発行が停止されているため、紙のアポスティーユが必要と言われた場合は、その場で提出先へ確認する方法までご案内します。
         </p>
         <p className="text-sm text-gray-600 leading-relaxed mb-3">
           帰化申請で同時に必要になりやすい<strong>NBI Clearance・LTO・PRCの書類は、従来どおり物理アポスティーユを取得できます</strong>。書類ごとに認証の形式が変わるため、必要書類の一覧をお見せいただければ、どれが電子でどれが紙になるかを整理してお伝えします。
@@ -146,7 +146,7 @@ export default function EApostilleFukaJa() {
           { q: 'なぜ「紙のアポスティーユが必要」と案内されることがあるのですか？', a: '2026年3月15日までは、PSA書類にDFAが紙のアポスティーユを貼付する運用が長く続いていたためです。書籍・ブログ・行政の古い案内やAI検索の回答にも、その前提が残っています。現在DFAはPSA民事書類へ物理アポスティーユを発行していないため、求められても物理的に用意できません。その場合は紙のPSA原本とe-Apostilleで対応可能かを提出先にご確認ください。' },
           { q: 'e-Certificateとe-Apostilleの違いは何ですか？', a: 'e-Certificate（電子証明書）はPSAが発行する電子データの証明書、e-Apostille（電子アポスティーユ）はDFAがそれに付す電子形式の認証です。この2つは別物で、紙のPSA原本（SECPA）は今も取り寄せられます。「紙の証明書そのもの」は入手でき、「紙のアポスティーユ」だけが発行停止になった、という関係です。' },
           { q: 'NBI Clearanceにも物理アポスティーユは付けられないのですか？', a: 'いいえ。物理アポスティーユが発行停止になったのはPSAの民事書類のみです。NBI Clearance・LTO（運転記録）・PRC（資格証明）などには、従来どおりDFAの物理アポスティーユを取得できます。帰化申請で複数種類の書類を揃える場合、書類ごとに認証の形式が変わる点にご注意ください。' },
-          { q: '紙のPSA原本の取得を依頼できますか？', a: 'はい。PSA出生証明書・婚姻証明書・CENOMAR等を紙の原本（SECPA）で取り寄せ、あわせてDFA e-Apostille（電子認証）を申請します。納品は2つに分かれ、紙のPSA原本はDHLでお届けし、e-Apostilleはメールで電子的にお渡しします。e-Apostilleは印刷したものでは認証として無効なため、電子のまま提出してください。法務局の発行日指定にも対応します。' },
+          { q: '紙のPSA原本の取得を依頼できますか？', a: 'はい。PSA出生証明書・婚姻証明書・CENOMAR等を紙の原本（SECPA）で取り寄せ、DFA e-Apostille（電子認証）を付してDHLでお届けします。e-Certificate（電子）と紙原本は同じ書類・同じ参照番号で発行され、e-Apostilleはその番号に対して付くため、電子・紙のどちらにも認証が及びます。1回の申請でまとめて取得でき、紙原本のために別ルートで申請し直す必要はありません。なお紙原本に紙のアポスティーユが貼付されるわけではなく、認証は電子のe-Apostilleとしてメールでお渡しします。法務局の発行日指定にも対応します。' },
         ]}
         ctaTitle="提出先の要件を一緒に確認します"
         ctaButton="無料相談フォームへ"
