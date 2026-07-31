@@ -308,7 +308,8 @@ const Pricing: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         {lang === 'ja' && (
           <div className="text-xs text-gray-500 mb-6 space-y-0.5">
-            <p>※表示価格はすべて税込・DHL送料込みの総額です（PSAオンライン申請代行はDHL不要）</p>
+            <p>※表示価格はすべて税込です。パック・単品（認証なし）はDHL国際送料込みの総額です</p>
+            <p>※電子で完結するプラン（PSAオンライン申請代行・PSA単品のe-Apostilleのみ）は送料不要。紙のPSA原本の発送が必要な場合のみ、DHL国際発送 ¥6,000 を別途申し受けます</p>
             <p>※取得難易度、記載内容の不一致、追加確認の有無により変動します</p>
           </div>
         )}

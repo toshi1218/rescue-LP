@@ -56,10 +56,10 @@ export default function PricingJa() {
           フィリピン書類の代行サービスの中には、e-Apostille（電子認証）・e-Certificate（電子書類）で対応している業者もあり、費用を抑えられます。
         </p>
         <p className="text-sm text-gray-700 leading-relaxed mb-3">
-          ただし、<strong>日本の市区町村役場・法務局・出入国在留管理庁では、紙の原本・物理アポスティーユを必須とするケースが大半です。</strong>
+          ただし、<strong>日本の市区町村役場・法務局・出入国在留管理庁の多くは、今も紙のPSA原本を前提に運用しています。</strong>なお2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）へ<strong>物理アポスティーユ（紙）を発行しなくなり、認証はe-Apostille（電子）に一本化</strong>されました。
         </p>
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
-          IGRSが取り扱うのは<strong>物理アポスティーユ（紙原本）のみ</strong>。現地DFAへの予約・申請・受け取りをスタッフが代行するため、予約枠に限りがあり、価格を下げることができません。その分、<strong>日本の提出先で弾かれるリスクはほぼありません。</strong>
+          IGRSは<strong>PSA・DFA e-Apostilleのオンライン申請の入力・支払いを日本語で代行</strong>し、提出先に合わせた書類・認証の要否をご案内します。NBI・LTO・PRCなど<strong>物理取得・物理アポスティーユが必要な書類</strong>は、現地での取得から国際発送まで対応します。その分、<strong>書類の不備や提出先での差し戻しリスクを抑えられます。</strong>
         </p>
         <div className="rounded-lg border border-blue-200 bg-white p-4">
           <p className="text-xs font-bold text-blue-700 mb-1">まず提出先に確認してください</p>
@@ -67,7 +67,7 @@ export default function PricingJa() {
             「e-Apostilleで受理しますか？紙の原本が必要ですか？」と確認してから業者を選ぶことをおすすめします。
           </p>
           <p className="text-xs text-gray-500 leading-relaxed">
-            電子対応が確認できた場合は、<strong>PSAオンライン申請代行（¥16,500〜）</strong>でコストを抑えられます。紙原本が必要な場合はフルサービスをご利用ください。
+            電子対応が確認できた場合は、<strong>PSAオンライン申請代行（¥16,500〜）</strong>でコストを抑えられます。紙のPSA原本が必要な場合は、PSA原本＋e-Apostilleのフルサービスをご利用ください。
           </p>
         </div>
       </div>
