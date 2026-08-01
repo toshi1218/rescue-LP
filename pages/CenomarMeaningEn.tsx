@@ -131,7 +131,7 @@ export default function CenomarMeaningEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'K-1 Fiancé Visa (USA)',
-            description: 'USCIS requires CENOMAR with DFA Apostille as proof your Filipino fiancé(e) is legally single. Must be issued within 6 months of the petition.',
+            description: 'A CENOMAR may be requested as evidence of civil status. Authentication and document-age requirements depend on the authority and application stage.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,

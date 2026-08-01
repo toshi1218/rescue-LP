@@ -23,7 +23,7 @@ export default function K1VisaDocsEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'K-1 Fiancé Visa Philippine Documents Retrieval Service',
-        description: 'We retrieve all Philippine documents required for a K-1 fiancé visa — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. USCIS-ready. Ships to your US address via DHL.',
+        description: 'We retrieve Philippine documents requested for a K-1 fiancé visa and match the format to the current petition or interview-stage checklist. Ships to your US address via DHL.',
         url: 'https://ph-document.com/en/k1-visa-documents/',
         provider: {
           '@type': 'Organization',
@@ -94,7 +94,7 @@ export default function K1VisaDocsEn() {
       <SummaryBlock
         conclusion="Filing a K-1 fiance visa? We get CENOMAR, PSA Birth Certificate, and NBI Clearance with Apostille."
         points={[
-          'USCIS requires CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille',
+          'Current USCIS, NVC, and embassy-stage requirements checked before processing',
           'We handle the entire document chain from retrieval to authentication',
           'Shipped via DHL Express to your US address',
           'All-inclusive pricing: no hidden fees for Apostille or shipping',
@@ -108,7 +108,7 @@ export default function K1VisaDocsEn() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: 'US citizen filing a K-1 fiancé visa petition',
-            description: 'USCIS requires CENOMAR, Birth Certificate, and NBI Clearance with DFA Apostille from your Filipino fiancé. We handle all of it.',
+            description: 'Required documents differ by K-1 stage. PSA civil records and NBI Clearance may be requested; we verify the current official checklist before processing.',
           },
           {
             icon: <Clock className="w-4 h-4" />,
@@ -165,7 +165,7 @@ export default function K1VisaDocsEn() {
 
       <FaqSection
         items={[
-          { q: 'What Philippine documents does USCIS require for K-1?', a: 'Typically CENOMAR, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements may vary. We confirm for your specific case.' },
+          { q: 'What Philippine documents does USCIS require for K-1?', a: 'Requirements differ between petition and interview stages. PSA civil records and NBI Clearance may be requested. We confirm the current official checklist for your case.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your USCIS or interview deadline and we will confirm whether priority processing is feasible.' },

@@ -96,7 +96,7 @@ export default function CenomarVsMarriageCertEn() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: 'K-1 Fiancé Visa applications',
-            description: 'USCIS requires proof that your Filipino fiancé(e) is legally single and eligible to marry. CENOMAR (Certificate of No Marriage Record) from PSA is the standard document.',
+            description: 'A CENOMAR may be requested as evidence of civil status. Check the current K-1 petition and interview-stage instructions for the specific case.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -122,7 +122,7 @@ export default function CenomarVsMarriageCertEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Canada, Australia, UK, Japan and other immigration',
-            description: 'Immigration authorities worldwide — IRCC (Canada), Home Affairs (Australia), UKVI (UK), Japanese Immigration Bureau, and others — require the PSA Marriage Certificate as proof of valid marriage.',
+            description: 'A PSA Marriage Certificate is commonly used as proof of marriage, but format and authentication requirements vary by authority and procedure.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -176,7 +176,7 @@ export default function CenomarVsMarriageCertEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'USA (K-1 visa → CENOMAR; CR-1/IR-1 → PSA Marriage Certificate)',
-            description: 'K-1 petitioners need CENOMAR with DFA Apostille. After marriage, CR-1/IR-1 petitioners need PSA Marriage Certificate. Both require physical DFA Apostille.',
+            description: 'The document checklist differs between K-1 and CR-1/IR-1 cases and by stage. Authentication is arranged only when the current official instructions require it.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
