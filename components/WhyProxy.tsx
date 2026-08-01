@@ -31,7 +31,7 @@ const WhyProxy: React.FC = React.memo(() => {
             </div>
             <p className="text-base text-gray-600 leading-relaxed">
               PSA e-Certificates are authentic — but <strong>authorities in UAE, Saudi Arabia, Korea, Italy, Germany, and others require physical PSA originals</strong>, not printouts.
-              Since March 2026, DFA issues an electronic e-Apostille (PDF) for PSA civil documents — <strong>a paper Apostille is no longer available for these.</strong> Non-PSA documents such as NBI can still receive a paper Apostille, which a local intermediary obtains and forwards.
+              For PSA e-Certificate applications, DFA issues an electronic e-Apostille (PDF). <strong>The authentication route depends on the document and the receiving authority.</strong> Non-PSA documents such as NBI can still follow a physical Apostille route when applicable.
             </p>
           </div>
 
