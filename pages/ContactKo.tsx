@@ -139,7 +139,7 @@ export default function ContactKo() {
           </div>
         </div>
       ) : (
-        <form className="space-y-5 max-w-xl" noValidate onSubmit={handleSubmit}>
+        <form className="space-y-5 max-w-xl" onSubmit={handleSubmit}>
           <input type="hidden" name="access_key" value="c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0" />
           <input type="hidden" name="subject" value="【한국어 LP 문의】필리핀 서류 취득 대행" />
           <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />

@@ -135,7 +135,7 @@ export default function CenomarValidityEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA e-Apostille (when required)',
-            description: 'We handle the DFA e-Apostille application based on your submission requirements. Since March 2026, DFA no longer issues a paper Apostille for PSA documents.',
+            description: 'We handle the applicable DFA e-Apostille application and confirm your receiving authority’s current format requirements before filing.',
           },
           {
             icon: <Globe className="w-4 h-4" />,

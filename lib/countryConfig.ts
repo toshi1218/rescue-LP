@@ -33,15 +33,15 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     totalWeeks: '4–6 weeks',
     price: '899',
     summaryPoints: [
-      'New Zealand is a Hague Convention member — DFA Apostille is required on Philippine documents',
+      'New Zealand is a Hague Convention member — confirm the document and e-Apostille requirements with INZ for your application',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your New Zealand address',
+      'DFA e-Apostille delivered digitally; physical PSA originals shipped via DHL when needed',
       'We confirm exact INZ requirements for your specific application type',
     ],
     faqs: [
       {
         q: 'Does New Zealand require DFA Apostille on Philippine documents?',
-        a: 'Yes. New Zealand is a Hague Convention member. INZ requires DFA Apostille authentication on Philippine civil documents such as PSA Birth Certificates, CENOMAR, and NBI Clearance for immigration applications.',
+        a: 'New Zealand is a Hague Convention member, but authentication requirements depend on the document and application. Confirm the current INZ checklist; we verify the required format before processing.',
       },
       {
         q: 'What documents are needed for a New Zealand partner visa?',
@@ -71,15 +71,15 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     totalWeeks: '4–6 weeks',
     price: '899',
     summaryPoints: [
-      'Germany is a Hague Convention member — DFA Apostille is required on Philippine documents',
+      'Germany is a Hague Convention member — confirm the document, translation, and e-Apostille requirements for the receiving authority',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your German address',
+      'DFA e-Apostille delivered digitally; physical PSA originals shipped via DHL when needed',
       'We confirm exact German Embassy requirements for your specific application type',
     ],
     faqs: [
       {
         q: 'Does Germany require DFA Apostille on Philippine documents?',
-        a: 'Yes. Germany is a Hague Convention member. The German Embassy in Manila and German immigration authorities require DFA Apostille authentication on Philippine civil documents for family reunification (Familiennachzug) applications.',
+        a: 'Germany is a Hague Convention member, but requirements vary by authority and procedure. Confirm the current German Embassy or local registry checklist; we verify the required format before processing.',
       },
       {
         q: 'What documents are needed for Ehegattennachzug (spousal reunification) to Germany?',
@@ -109,15 +109,15 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     totalWeeks: '4–6 weeks',
     price: '899',
     summaryPoints: [
-      'The Netherlands is a Hague Convention member — DFA Apostille is required on Philippine documents',
+      'The Netherlands is a Hague Convention member — confirm the document, translation, and e-Apostille requirements with IND or the receiving municipality',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Netherlands address',
+      'DFA e-Apostille delivered digitally; physical PSA originals shipped via DHL when needed',
       'We confirm exact IND requirements for your specific MVV or residence permit application',
     ],
     faqs: [
       {
         q: 'Does the Netherlands require DFA Apostille on Philippine documents?',
-        a: 'Yes. The Netherlands is a Hague Convention member. IND (Dutch Immigration Service) requires DFA Apostille authentication on Philippine civil documents for MVV and residence permit (verblijfsvergunning) applications.',
+        a: 'The Netherlands is a Hague Convention member, but requirements vary by procedure and receiving authority. Confirm the current IND or municipality checklist; we verify the required format before processing.',
       },
       {
         q: 'What documents are needed for a Netherlands MVV or family reunification visa?',
@@ -186,15 +186,15 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     totalWeeks: '3–5 weeks',
     price: '899',
     summaryPoints: [
-      'Singapore is a Hague Convention member — DFA Apostille is required on Philippine documents',
+      'Singapore is a Hague Convention member — confirm whether ICA requires an e-Apostille for the specific document and pass type',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Singapore address',
+      'DFA e-Apostille delivered digitally; physical PSA originals shipped via DHL when needed',
       'We confirm exact ICA requirements for your specific pass or visa application',
     ],
     faqs: [
       {
         q: 'Does Singapore require DFA Apostille on Philippine documents?',
-        a: 'Yes. Singapore joined the Hague Convention in 2021. ICA (Immigration & Checkpoints Authority) requires DFA Apostille authentication on Philippine civil documents for pass and immigration applications.',
+        a: 'Singapore is a Hague Convention member, but requirements vary by pass type and document. Confirm the current ICA checklist; we verify the required format before processing.',
       },
       {
         q: "What documents are needed for a Singapore LTVP or Dependant's Pass?",
@@ -301,15 +301,15 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     totalWeeks: '4–6 weeks',
     price: '899',
     summaryPoints: [
-      'Italy is a Hague Convention member — DFA Apostille is required on Philippine documents',
+      'Italy is a Hague Convention member — confirm the document, translation, and e-Apostille requirements for the receiving authority',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Italian address',
+      'DFA e-Apostille delivered digitally; physical PSA originals shipped via DHL when needed',
       'We confirm exact Italian Embassy requirements for your specific application type',
     ],
     faqs: [
       {
         q: 'Does Italy require DFA Apostille on Philippine documents?',
-        a: 'Yes. Italy is a Hague Convention member. The Italian Embassy in Manila and Italian immigration authorities require DFA Apostille authentication on Philippine civil documents for family reunification (ricongiungimento familiare) applications.',
+        a: 'Italy is a Hague Convention member, but requirements vary by procedure and receiving authority. Confirm the current Italian Embassy or local authority checklist; we verify the required format before processing.',
       },
       {
         q: 'What documents are needed for Italian family reunification (ricongiungimento familiare)?',
@@ -339,15 +339,15 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     totalWeeks: '4–6 weeks',
     price: '899',
     summaryPoints: [
-      'Norway is a Hague Convention member — DFA Apostille is required on Philippine documents',
+      'Norway is a Hague Convention member — confirm the document and e-Apostille requirements with UDI for your application',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Norwegian address',
+      'DFA e-Apostille delivered digitally; physical PSA originals shipped via DHL when needed',
       'We confirm exact UDI requirements for your specific family immigration application',
     ],
     faqs: [
       {
         q: 'Does Norway require DFA Apostille on Philippine documents?',
-        a: 'Yes. Norway is a Hague Convention member. UDI (Norwegian Directorate of Immigration) requires DFA Apostille authentication on Philippine civil documents for family immigration applications.',
+        a: 'Norway is a Hague Convention member, but requirements vary by procedure and document. Confirm the current UDI checklist; we verify the required format before processing.',
       },
       {
         q: 'What documents are needed for Norwegian family immigration?',
@@ -377,15 +377,15 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     totalWeeks: '4–6 weeks',
     price: '899',
     summaryPoints: [
-      'Sweden is a Hague Convention member — DFA Apostille is required on Philippine documents',
+      'Sweden is a Hague Convention member — confirm the document and e-Apostille requirements with Migrationsverket',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Swedish address',
+      'DFA e-Apostille delivered digitally; physical PSA originals shipped via DHL when needed',
       'We confirm exact Migrationsverket requirements for your specific residence permit application',
     ],
     faqs: [
       {
         q: 'Does Sweden require DFA Apostille on Philippine documents?',
-        a: 'Yes. Sweden is a Hague Convention member. Migrationsverket (Swedish Migration Agency) requires DFA Apostille authentication on Philippine civil documents for family reunification applications.',
+        a: 'Sweden is a Hague Convention member, but requirements vary by procedure and document. Confirm the current Migrationsverket checklist; we verify the required format before processing.',
       },
       {
         q: 'What documents are needed for a Swedish family reunification residence permit?',
@@ -492,15 +492,15 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     totalWeeks: '4–6 weeks',
     price: '899',
     summaryPoints: [
-      'Switzerland is a Hague Convention member — DFA Apostille is required on Philippine documents',
+      'Switzerland is a Hague Convention member — confirm the document and e-Apostille requirements with SEM or the receiving authority',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Swiss address',
+      'DFA e-Apostille delivered digitally; physical PSA originals shipped via DHL when needed',
       'We confirm exact SEM requirements for your specific family reunification application',
     ],
     faqs: [
       {
         q: 'Does Switzerland require DFA Apostille on Philippine documents?',
-        a: 'Yes. Switzerland is a Hague Convention member. SEM (State Secretariat for Migration) and the Swiss Embassy in Manila require DFA Apostille authentication on Philippine civil documents for family reunification applications.',
+        a: 'Switzerland is a Hague Convention member, but requirements vary by canton, procedure, and document. Confirm the current SEM or receiving-authority checklist; we verify the required format before processing.',
       },
       {
         q: 'What documents are needed for a Swiss family reunification visa?',

@@ -38,7 +38,7 @@ export default function HomeJa() {
     legalName: '株式会社IGRS',
     alternateName: ['ph-document.com', 'IGRS Inc.'],
     url: 'https://ph-document.com/ja/',
-    logo: 'https://ph-document.com/logo.png',
+    logo: 'https://ph-document.com/favicon.svg',
     image: 'https://ph-document.com/og-image.png',
     description: 'フィリピンの公的書類（PSA出生証明書・CENOMAR・NBI Clearance・DFAアポスティーユ）を日本語だけで代行取得するサービスを提供。国際結婚・配偶者ビザ・帰化申請・外免切替に対応。渡航不要。',
     address: {

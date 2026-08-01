@@ -51,7 +51,7 @@ export default function CanadaDocsEn() {
               name: 'Does Canada require DFA Apostille on Philippine documents?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes. Canada is a Hague Convention member. IRCC requires DFA Apostille authentication on Philippine civil documents such as PSA Birth Certificates, CENOMAR, and NBI Clearance for immigration applications.',
+                text: 'Canada is a Hague Convention member, but IRCC requirements vary by application and document. Confirm the current IRCC checklist; we verify whether authentication is needed before processing.',
               },
             },
             {
@@ -95,7 +95,7 @@ export default function CanadaDocsEn() {
         points={[
           'Canada is a Hague Convention member — DFA Apostille is required on Philippine documents',
           'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-          'Paper Apostille originals shipped via DHL Express to your Canadian address',
+          'PSA e-Apostille delivered digitally; NBI and physical originals shipped via DHL when needed',
           'We confirm exact IRCC requirements for your specific application type',
         ]}
         ctaText="Free Consultation"
@@ -107,7 +107,7 @@ export default function CanadaDocsEn() {
           {
             icon: <Shield className="w-4 h-4" />,
             title: 'Applying for Canada PR or spousal sponsorship',
-            description: 'IRCC requires Philippine civil documents with DFA Apostille. We handle all required documents in one coordinated flow.',
+            description: 'IRCC document and authentication requirements vary by application. We verify the current checklist and handle the agreed documents in one coordinated flow.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -164,7 +164,7 @@ export default function CanadaDocsEn() {
 
       <FaqSection
         items={[
-          { q: 'Does Canada require DFA Apostille on Philippine documents?', a: 'Yes. Canada is a Hague Convention member. IRCC requires DFA Apostille authentication on Philippine civil documents such as PSA Birth Certificates, CENOMAR, and NBI Clearance for immigration applications.' },
+          { q: 'Does Canada require DFA Apostille on Philippine documents?', a: 'Not in every case. Canada is a Hague Convention member, but IRCC requirements vary by application and document. Confirm the current checklist; we verify the required format before processing.' },
           { q: 'What documents are needed for Canada PR or spouse visa?', a: 'Typically NBI Clearance with DFA Apostille and PSA Birth Certificate for IRCC applications. For spousal sponsorship, CENOMAR or PSA Marriage Certificate may also be required. We confirm for your specific case.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Canada are included.' },
           { q: 'How long does it take to ship to Canada?', a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to Canada typically takes 3–5 business days after documents are ready.' },

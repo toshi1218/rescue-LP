@@ -15,6 +15,12 @@ import type { CountryConfig } from '../lib/countryConfig';
 const BASE = 'https://ph-document.com';
 
 export default function CountryDocsEnTemplate({ config }: { config: CountryConfig }) {
+  const authenticationDelivery = config.isHagueConvention
+    ? `DFA e-Apostille delivered digitally; any physical PSA originals are shipped to your ${config.name} address via DHL`
+    : `Physical Certificate of Authentication and any required embassy attestation shipped to your ${config.name} address via DHL`;
+  const safeSummaryPoints = config.summaryPoints.map(point =>
+    point.startsWith('Paper Apostille originals shipped') ? authenticationDelivery : point,
+  );
   useMeta(
     `PH Documents for ${config.name} Immigration [${SEO_YEAR_MONTH_EN}]`,
     `Moving to ${config.name}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
@@ -71,7 +77,7 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
 
       <SummaryBlock
         conclusion={`Applying for ${config.name} ${config.visaType}? We retrieve all required Philippine documents with ${config.authLabel} and ship directly to your ${config.name} address.`}
-        points={config.summaryPoints}
+        points={safeSummaryPoints}
         ctaText="Free Consultation"
       />
 
@@ -116,7 +122,9 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: `${config.authLabel}`,
-            description: `We arrange ${config.authLabel} for all documents that require it. ${config.isHagueConvention ? `Paper originals provided — required by ${config.agencyAbbr}.` : `Authentication required for ${config.name} immigration.`}`,
+            description: config.isHagueConvention
+              ? `Where required, we arrange the DFA e-Apostille as a digital document. We confirm acceptance with ${config.agencyAbbr} before processing.`
+              : `Where required, we arrange the physical authentication and embassy-attestation route for ${config.name}.`,
           },
           {
             icon: <Globe className="w-4 h-4" />,

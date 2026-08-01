@@ -14,7 +14,7 @@ const countries = [
     status: 'mixed' as const,
     label: '△ Partial — physical PSA required at interview',
     detail:
-      'USCIS allows scanned copies for initial filing. However, U.S. visa guidelines explicitly require an "original birth certificate or certified copy" — meaning the physical PSA on Security Paper (SECPA). The NVC and US Embassy Manila mandate bringing the physical PSA certificate to the interview stage. A PSA e-Certificate can be scanned for initial upload, but the physical SECPA must also be on hand. Note: as of March 2026, DFA issues only an electronic e-Apostille for PSA civil documents — there is no paper Apostille sticker — and a printed e-Apostille is invalid (DFA rule). Safe option: Obtain the physical PSA on SECPA and confirm with USCIS/NVC how they want the document authenticated (e-Apostille acceptance).',
+      'U.S. document requirements differ between petition, NVC, and interview stages. Use the current official checklist for the specific case. A PSA e-Certificate and DFA e-Apostille are digital documents; if a physical PSA original is requested, obtain the SECPA copy separately. Do not assume an Apostille is required unless the receiving authority says so.',
   },
   {
     flag: '🇨🇦',
@@ -23,7 +23,7 @@ const countries = [
     status: 'mixed' as const,
     label: '△ Upload accepted, but physical PSA recommended',
     detail:
-      'IRCC online applications accept scanned document uploads. However, official guidance and immigration law practice indicate IRCC requires "the official printed copy on PSA Security Paper" — even if submitted as a scan. Canada joined the Hague Apostille Convention in January 2024, making e-Apostille legally valid by treaty. But in practice, the document being scanned should be the physical PSA on SECPA, not a PSA e-certificate (which has no physical form). IRCC will not treat a printed e-Apostille as valid. Note: since March 2026 DFA issues only an electronic e-Apostille for PSA civil documents — no paper Apostille sticker. Safe option: Obtain the physical PSA on SECPA, pair it with the DFA e-Apostille, and confirm IRCC acceptance before submitting.',
+      'IRCC requirements vary by application and document. Confirm whether the current checklist accepts a PSA e-Certificate, requests a scan of a physical SECPA copy, or requires authentication. An e-Apostille remains a digital document and should be submitted in its original electronic form.',
   },
   {
     flag: '🇦🇺',
@@ -93,7 +93,7 @@ export default function PsaEcertificateAbroadEn() {
               name: 'Can I submit a PSA e-Certificate with e-Apostille abroad?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'It depends on the country and the specific authority. Most immigration systems (USCIS, IRCC, Home Affairs, UKVI) allow document uploads as scans, but in practice they expect scans of the physical PSA on Security Paper (SECPA), not a PSA e-certificate (which exists only digitally). US NVC and US Embassy Manila require the physical SECPA at the interview. Canada (IRCC) also expects the official printed copy on Security Paper. UAE does not recognize Apostille at all — embassy attestation is required. Always verify with your specific authority before ordering.',
+                text: 'It depends on the country, application stage, and receiving authority. Confirm whether it accepts a PSA e-Certificate, requests a physical SECPA copy, and requires authentication. Non-Apostille-Convention destinations may require a Certificate of Authentication and embassy attestation.',
               },
             },
             {
@@ -101,7 +101,7 @@ export default function PsaEcertificateAbroadEn() {
               name: 'Can I print an e-Apostille and submit it as a hard copy?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'No. DFA officially states that printing an e-Apostille invalidates it. An e-Apostille must be submitted as a PDF file electronically. If your authority requires a physical document, order the physical PSA on Security Paper (SECPA). Note: as of March 2026, DFA no longer issues a paper Apostille sticker for PSA civil documents — the Apostille is issued electronically (e-Apostille) only.',
+                text: 'No. An e-Apostille is a digital document and must be submitted electronically in its original form. If your authority requires a physical PSA document, order the SECPA copy separately and confirm the required authentication route.',
               },
             },
             {
@@ -117,7 +117,7 @@ export default function PsaEcertificateAbroadEn() {
               name: 'What happened to the paper Apostille for PSA documents?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Since March 2026, DFA no longer issues a paper Apostille sticker for PSA civil documents (birth, marriage, CENOMAR). The only Apostille format for these documents is now the e-Apostille — a digital PDF that must be submitted electronically (printing it voids it). The underlying document can still be a physical PSA on Security Paper (SECPA) or a PSA e-Certificate, but its DFA authentication is electronic in both cases. Paper Apostille stickers remain available only for non-PSA documents such as NBI Clearance.',
+                text: 'For PSA e-Certificates intended for Apostille Convention countries, DFA uses the digital e-Apostille route. For non-member destinations, DFA issues a physical Certificate of Authentication. Other documents, such as NBI Clearance, may use a physical Apostille route. Confirm the document and destination before ordering.',
               },
             },
           ],
@@ -127,7 +127,7 @@ export default function PsaEcertificateAbroadEn() {
       <SummaryBlock
         conclusion="PSA e-Certificates and DFA e-Apostilles are legally valid under the Hague Convention. However, most overseas immigration authorities still expect scans of the physical PSA on Security Paper (SECPA) — not a PSA e-certificate. Printing an e-Apostille is invalid. When in doubt, obtain the physical PSA on SECPA and confirm how your authority accepts its DFA authentication."
         points={[
-          'Since March 2026, DFA no longer issues a paper Apostille for PSA civil documents — the Apostille is electronic (e-Apostille) whether the document is a physical SECPA or a PSA e-Certificate. Paper Apostille stickers remain only for non-PSA documents (e.g. NBI).',
+          'For PSA e-Certificates intended for Apostille Convention countries, DFA issues a digital e-Apostille. Non-member destinations use a physical Certificate of Authentication, while non-PSA documents may use a different route.',
           'Printing an e-Apostille invalidates it (DFA official rule). It must be submitted electronically as a PDF.',
           'Most authorities (USCIS, IRCC, Home Affairs, UKVI) allow document uploads as scans — but expect scans of the physical SECPA, not the PSA e-certificate.',
           'UAE is not a Hague member. Apostille has no legal force there; a consular attestation chain is required.',
@@ -142,7 +142,7 @@ export default function PsaEcertificateAbroadEn() {
           <div>
             <p className="font-bold text-gray-900 mb-1">Critical #1: Printing an e-Apostille invalidates it</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              DFA officially states that an e-Apostille <strong>loses its validity if printed</strong>. It must be submitted as a PDF file electronically. If a physical document is needed, obtain the physical PSA on SECPA — but note DFA no longer issues a paper Apostille sticker for PSA civil documents, so its authentication remains the electronic e-Apostille.
+              An e-Apostille is a <strong>digital document</strong> and should be submitted electronically in its original form. If a physical document is needed, obtain the PSA SECPA copy separately and confirm the authentication route with the receiving authority.
             </p>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function PsaEcertificateAbroadEn() {
           <div>
             <p className="font-bold text-gray-900 mb-1">Critical #2: PSA e-Certificate ≠ scan of physical PSA</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Most overseas authorities permit document <em>uploads as scans</em> — but they expect scans of the <strong>physical PSA on Security Paper (SECPA)</strong>. A PSA e-Certificate is a digital-only PDF that never existed in physical form. IRCC and other agencies have stated in practice that the <strong>official printed copy on PSA Security Paper</strong> is required, even if submitted as a scan.
+              A PSA e-Certificate is a digital document, while a SECPA copy is a separately issued physical document. The receiving authority decides which format is acceptable. Check its current document checklist rather than assuming one format works everywhere.
             </p>
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function PsaEcertificateAbroadEn() {
             <span className="font-bold text-gray-500 flex-shrink-0 w-6">2.</span>
             <p className="text-gray-700">If Yes — will the authority <strong>accept e-Apostille electronically</strong> (confirmed in advance)?<br />
               <span className="text-green-600">If confirmed Yes</span> → Order PSA e-Certificate + DFA e-Apostille; submit as PDF with the online registry verification link.<br />
-              <span className="text-amber-600">If No or Uncertain</span> → Obtain the physical PSA on SECPA (its DFA authentication is the electronic e-Apostille — DFA no longer issues a paper Apostille for PSA documents) and confirm acceptance with the authority.
+              <span className="text-amber-600">If No or Uncertain</span> → Confirm whether the authority needs a physical PSA SECPA copy, digital e-Apostille, or another authentication route before ordering.
             </p>
           </div>
           <div className="flex items-start gap-3">
@@ -231,7 +231,7 @@ export default function PsaEcertificateAbroadEn() {
               {[
                 ['🇺🇸 USA (USCIS)', '△ Scan OK for filing', '✗ Invalid', '✓ Required at interview'],
                 ['🇺🇸 USA (NVC/Embassy)', '△ Upload allowed', '✗ Invalid', '✓ Required at interview'],
-                ['🇨🇦 Canada (IRCC)', '△ Scan of SECPA OK', '✗ Invalid', '✓ Practical requirement'],
+                ['🇨🇦 Canada (IRCC)', 'Check current checklist', 'Check current checklist', 'Varies by application'],
                 ['🇦🇺 Australia (DHA)', '△ Scan upload OK', '✗ Invalid', '✓ Safer with SECPA'],
                 ['🇬🇧 UK (UKVI)', '△ Upload permitted', '✗ Invalid', '✓ Safer with SECPA'],
                 ['🇦🇪 UAE (ICP/MOFA)', '✗ Apostille not recognized', '✗ N/A', '✓ + Embassy attestation chain'],
@@ -246,7 +246,7 @@ export default function PsaEcertificateAbroadEn() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-400 mt-2">Sources: DFA/PSA official advisories; U.S. State Dept. visa guidance; IRCC immigration law practice; Australian DHA certified copy rules; UKVI evidence upload instructions; UAE/MOFA legalization requirements.</p>
+        <p className="text-xs text-gray-400 mt-2">Always use the latest official checklist from the receiving authority. Requirements can change and may differ by application stage.</p>
       </section>
 
       {/* Recommended approach */}
@@ -265,7 +265,7 @@ export default function PsaEcertificateAbroadEn() {
           <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
             <p className="font-bold text-amber-800 mb-2">Canada · Australia · UK · US (USCIS filing)</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Upload a color scan of the physical PSA on Security Paper (SECPA) together with its DFA e-Apostille (DFA no longer issues a paper Apostille for PSA documents). Do not rely on PSA e-certificate for upload — obtain the physical SECPA.
+              Use the document format listed in the current official checklist. Do not substitute a printed e-Apostille for the original digital file.
             </p>
           </div>
           <div className="rounded-xl border border-red-200 bg-red-50 p-5">

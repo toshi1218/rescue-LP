@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
               alt="フィリピン書類取得代行センターの背景イメージ（日本・フィリピン国旗と書類）"
               className="w-full h-full object-cover"
               style={{ objectPosition: '80% 50%' }}
-              src="/hero-photo.png"
+              src="/hero-photo.webp"
               width={1600}
               height={900}
               loading="eager"
@@ -145,7 +145,7 @@ const Hero: React.FC = () => {
             alt="Philippine document procurement — IGRS office operations"
             className="w-full h-full object-cover"
             style={{ objectPosition: '92% 50%' }}
-            src="/hero-photo.png"
+            src="/hero-photo.webp"
             width={1600}
             height={900}
             loading="eager"

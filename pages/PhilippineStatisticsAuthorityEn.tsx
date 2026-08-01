@@ -188,7 +188,7 @@ export default function PhilippineStatisticsAuthorityEn() {
           { q: 'What documents does PSA issue?', a: 'PSA issues: Birth Certificate, Marriage Certificate, CENOMAR (Certificate of No Marriage Record), Death Certificate, and Late Registration Birth Certificate.' },
           { q: 'How do I get PSA documents from abroad?', a: 'Via PSAHelpline.ph International Service (digital e-Certificate delivered electronically; physical original requires you to arrange your own international courier), or through an application proxy service that completes the PSA online application, payment, and DFA e-Apostille application on your behalf.' },
           { q: 'What is the difference between PSA and NSO?', a: 'PSA replaced NSO in 2013. The documents are the same — older NSO copies are still valid. New requests go through PSA.' },
-          { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'For most immigration and legal purposes outside the Philippines, yes. Since March 2026, DFA authenticates PSA documents with an electronic e-Apostille (a paper Apostille is no longer issued for PSA documents). We confirm the exact requirement for your case.' },
+          { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'It depends on the receiving authority. For a PSA e-Certificate used in an Apostille Convention country, DFA issues a digital e-Apostille. Non-member destinations use a physical Certificate of Authentication and may require embassy attestation. We confirm the route before processing.' },
         ]}
         ctaTitle="Not sure which PSA document you need? Ask us."
         ctaButton="Free Consultation"

@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "check:content": "python3 scripts/check-content.py",
     "lint:seo": "bash scripts/lint-seo.sh",
-    "build": "bash scripts/lint-seo.sh && vite build && tsx scripts/prerender.ts",
+    "build": "python3 scripts/check-content.py && bash scripts/lint-seo.sh && vite build && node --import tsx scripts/prerender.ts",
     "preview": "vite preview"
   },
   "dependencies": {

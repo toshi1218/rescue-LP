@@ -145,7 +145,7 @@ A: NBI Clearance申請時に同姓同名の犯罪記録がある場合、「HIT�
 A: Yes. We ship via DHL Express to the USA, Canada, Australia, UK, Japan, Korea, and other countries worldwide.
 
 **Q: Why can't I just order Apostille documents directly from PSA Helpline or Serbilis?**
-A: PSA Helpline and Serbilis can ship regular PSA certificates internationally. Since March 2026, DFA no longer issues a paper Apostille for PSA civil documents (birth, marriage, CENOMAR) — these are authenticated with an electronic e-Apostille (a PDF submitted electronically; printing it voids it). The value of a service like ours is handling the English/Filipino online applications (PSA and DFA e-Apostille) and payment on your behalf, and confirming which document and authentication format your authority accepts. For non-PSA documents such as NBI Clearance, a paper Apostille is still available and a local intermediary can obtain and forward it.
+A: PSA Helpline and Serbilis can ship regular PSA certificates internationally. DFA e-Apostille is an electronic PDF and must be used in its valid digital form. The correct route depends on the PSA product, destination, and receiving authority, so we confirm the current official checklist before filing. For non-PSA documents such as NBI Clearance, a physical Apostille route may still be available when applicable.
 
 **Q: Do you handle K-1 and CR-1 visa documents?**
 A: Yes. We provide complete document packages for K-1 fiancé visa and CR-1/IR-1 spouse visa applications, including CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille.

@@ -144,7 +144,7 @@ export default function NbiClearanceOverseasEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Filipinos on K-1, CR-1, spouse visa applications',
-            description: 'Immigration authorities (USCIS, IRCC, Home Affairs, UKVI, Immigration Bureau Japan) all require NBI Clearance with DFA Apostille. We handle the full process.',
+            description: 'NBI Clearance and authentication requirements vary by country and procedure. We confirm the current checklist before processing.',
           },
           {
             icon: <Globe className="w-4 h-4" />,

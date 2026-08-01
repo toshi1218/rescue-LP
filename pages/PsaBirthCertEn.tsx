@@ -145,7 +145,7 @@ export default function PsaBirthCertEn() {
         conclusion="We retrieve your PSA Birth Certificate with DFA Apostille and ship it to your address worldwide. No trip to the Philippines."
         points={[
           'PSA Birth Certificate is required for nearly every visa and immigration case worldwide',
-          'DFA Apostille included so it is accepted by USCIS, IRCC, Home Affairs, UKVI & more',
+          'Authentication arranged only when the receiving authority requires it',
           'Shipped via DHL Express directly to your address anywhere in the world',
           'All-inclusive pricing: no hidden fees for Apostille or shipping',
         ]}
@@ -158,7 +158,7 @@ export default function PsaBirthCertEn() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: 'Filing a visa or immigration application',
-            description: 'Immigration authorities worldwide (USCIS, IRCC, Home Affairs, UKVI) require a PSA Birth Certificate with DFA Apostille. We handle the full process.',
+            description: 'Authorities differ on whether a PSA Birth Certificate needs authentication. We confirm the current checklist and arrange the required format.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,

@@ -22,7 +22,7 @@ export default function CenomarByCountryEn() {
           visaTypes: 'K-1 Fiancé Visa, CR-1/IR-1 Spouse Visa, IR-2',
           apostille: 'Physical DFA Apostille required',
           validity: '6 months from issuance',
-          notes: 'USCIS and NVC require the physical original with apostille. e-Apostille is not universally accepted — confirm with your specific USCIS field office before ordering.',
+          notes: 'Requirements differ by visa stage. Confirm the current USCIS, NVC, or embassy checklist before ordering; do not assume an Apostille is required.',
           authority: 'USCIS / National Visa Center (NVC)',
         },
         {
@@ -43,7 +43,7 @@ export default function CenomarByCountryEn() {
           visaTypes: 'Partner Visa (subclass 309/100, 820/801)',
           apostille: 'DFA Apostille required',
           validity: '6 months from issuance',
-          notes: 'Department of Home Affairs requires authentication. Apostille is the standard accepted form for Philippine documents.',
+          notes: 'Authentication requirements vary by visa subclass and document. Confirm the current Home Affairs checklist before ordering.',
           authority: 'Department of Home Affairs',
         },
         {
@@ -64,7 +64,7 @@ export default function CenomarByCountryEn() {
           visaTypes: 'UK Spouse Visa, Fiancé(e) Visa',
           apostille: 'DFA Apostille required',
           validity: '6 months from issuance',
-          notes: 'UKVI requires authentication of Philippine civil documents. Since March 2026, DFA authenticates PSA documents with an electronic e-Apostille (a paper Apostille is no longer issued for PSA documents).',
+          notes: 'Authentication requirements vary by route and document. For PSA e-Certificates used in Apostille Convention countries, DFA issues an electronic e-Apostille.',
           authority: 'UK Visas and Immigration (UKVI)',
         },
         {
@@ -175,12 +175,12 @@ export default function CenomarByCountryEn() {
             {
               '@type': 'Question',
               name: 'Does CENOMAR need an apostille for US visa applications?',
-              acceptedAnswer: { '@type': 'Answer', text: 'Yes. USCIS and NVC require a physical DFA Apostille on the CENOMAR for K-1 and CR-1/IR-1 visa applications. e-Apostille is not universally accepted — confirm with your specific USCIS field office.' },
+              acceptedAnswer: { '@type': 'Answer', text: 'Not necessarily. Requirements differ by visa type and stage. Confirm the current USCIS, NVC, or embassy checklist before ordering.' },
             },
             {
               '@type': 'Question',
               name: 'Is apostille required for CENOMAR in Canada?',
-              acceptedAnswer: { '@type': 'Answer', text: 'Yes. IRCC (Immigration, Refugees and Citizenship Canada) requires authentication of Philippine documents. DFA Apostille is the standard accepted format for spousal sponsorship applications.' },
+              acceptedAnswer: { '@type': 'Answer', text: 'Not in every case. IRCC requirements vary by application and document. Confirm the current checklist before ordering.' },
             },
             {
               '@type': 'Question',
@@ -206,7 +206,7 @@ export default function CenomarByCountryEn() {
 
       <div className="max-w-2xl mx-auto px-4 mb-8">
         <p className="text-sm text-gray-600 leading-relaxed mb-3">
-          CENOMAR (Certificate of No Marriage Record) is required by immigration authorities worldwide when a Filipino national applies for a spouse or partner visa. However, <strong>each country has different authentication requirements</strong> — some require a physical DFA Apostille, others require additional translations, and requirements can vary even within the same country.
+          A CENOMAR (Certificate of No Marriage Record) may be requested in spouse, partner, or marriage procedures. <strong>Each authority has different document and authentication requirements</strong>, and requirements can vary even within the same country.
         </p>
         <p className="text-sm text-gray-600 leading-relaxed">
           This guide covers the CENOMAR requirements for all major destination countries. We verify the specific requirements for your case before starting — free consultation.
@@ -258,8 +258,8 @@ export default function CenomarByCountryEn() {
 
       <FaqSection
         items={[
-          { q: 'Does CENOMAR need an apostille for US visa applications?', a: 'Yes. USCIS and NVC require a physical DFA Apostille for K-1 and CR-1/IR-1 visa applications. e-Apostille is not universally accepted — confirm with your specific USCIS field office before ordering.' },
-          { q: 'Is apostille required for CENOMAR in Canada?', a: 'Yes. IRCC requires authentication of Philippine documents. DFA Apostille is the standard accepted format for spousal sponsorship applications.' },
+          { q: 'Does CENOMAR need an apostille for US visa applications?', a: 'Not necessarily. Requirements differ by visa type and stage. Confirm the current USCIS, NVC, or embassy checklist before ordering.' },
+          { q: 'Is apostille required for CENOMAR in Canada?', a: 'Not in every case. IRCC requirements vary by application and document. Confirm the current checklist before ordering.' },
           { q: 'Does Japan accept apostilled CENOMAR?', a: 'Yes, as of 2024 Japan joined the Hague Apostille Convention. Apostilled Philippine documents are now accepted for spouse visa (配偶者等) applications.' },
           { q: 'How long is CENOMAR valid for visa applications?', a: 'Most countries require CENOMAR issued within 6 months of submission. Some authorities have stricter requirements — always confirm before ordering.' },
           { q: 'Is CENOMAR authenticated with an e-Apostille or a physical apostille?', a: 'Since March 2026, DFA issues only an electronic e-Apostille for PSA documents like CENOMAR — a physical apostille sticker is no longer available. Whether a given authority accepts the e-Apostille varies, so we confirm the specific requirement for your case before processing.' },
