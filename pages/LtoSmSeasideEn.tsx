@@ -132,7 +132,7 @@ export default function LtoSmSeasideEn() {
           <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165139.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165139.webp"
                 alt="Exterior of SM Seaside City Cebu — large shopping mall"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -143,7 +143,7 @@ export default function LtoSmSeasideEn() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165237.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165237.webp"
                 alt="LTO SM Seaside entrance with Land Transportation Office signage"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -163,7 +163,7 @@ export default function LtoSmSeasideEn() {
           <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165402.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165402.webp"
                 alt="LTO SM Seaside reception counters with staff assisting customers"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -174,7 +174,7 @@ export default function LtoSmSeasideEn() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165408.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165408.webp"
                 alt="Number ticket machine and waiting area at LTO SM Seaside"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -194,7 +194,7 @@ export default function LtoSmSeasideEn() {
           <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165448.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165448.webp"
                 alt="LTO Driver's Record document — official driving history certificate"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -205,7 +205,7 @@ export default function LtoSmSeasideEn() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165503.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165503.webp"
                 alt="Official LTO stamp and signature on Driver's Record"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
