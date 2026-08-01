@@ -3,6 +3,7 @@ import { Send, Mail, Clock, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageLayoutKo from '../components/PageLayoutKo';
 import { trackEvent } from '../lib/analytics';
+import { notifySlack } from '../lib/notifyApi';
 import { isValidEmail } from '../lib/validation';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
@@ -45,9 +46,11 @@ export default function ContactKo() {
     setSubmitting(true);
     setSubmitError('');
     try {
+      const formData = new FormData(e.currentTarget);
+      notifySlack('ko', formData);
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
-        body: new FormData(e.currentTarget),
+        body: formData,
         headers: { Accept: 'application/json' },
       });
       const data = await res.json();
