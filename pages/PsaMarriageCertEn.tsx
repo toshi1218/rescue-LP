@@ -96,7 +96,7 @@ export default function PsaMarriageCertEn() {
         points={[
           'Required for spouse visa and immigration applications worldwide',
           'Annotated or standard format available based on your needs',
-          'DFA Apostille included for acceptance by USCIS, IRCC, Home Affairs, UKVI & more',
+          'Authentication arranged only when the receiving authority requires it',
           'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
         ctaText="Free Consultation"
@@ -108,7 +108,7 @@ export default function PsaMarriageCertEn() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: 'Filing a spouse visa or immigration application',
-            description: 'Immigration authorities worldwide require a PSA Marriage Certificate with DFA Apostille. We handle the full process from retrieval to delivery.',
+            description: 'Authorities differ on whether a PSA Marriage Certificate needs authentication. We confirm the current checklist and handle the agreed process from retrieval to delivery.',
           },
           {
             icon: <Users className="w-4 h-4" />,
