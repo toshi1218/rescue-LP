@@ -5,6 +5,7 @@ import App from './App';
 import { LanguageProvider } from './lib/i18n';
 import { reportWebVitals } from './lib/analytics';
 import ErrorBoundary from './components/ErrorBoundary';
+import CookieConsent from './components/CookieConsent';
 import './styles.css';
 
 const rootElement = document.getElementById('root');
@@ -19,6 +20,7 @@ root.render(
       <BrowserRouter>
         <LanguageProvider>
           <App />
+          <CookieConsent />
         </LanguageProvider>
       </BrowserRouter>
     </ErrorBoundary>
