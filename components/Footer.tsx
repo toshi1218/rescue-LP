@@ -161,7 +161,6 @@ const Footer: React.FC = () => {
           className="space-y-3 text-left"
           onSubmit={handleSubmit}
           aria-label={t('footer.formAriaLabel')}
-          noValidate
         >
           <input type="hidden" name="access_key" value={lang === 'en' ? 'b66fdc64-e552-4ae7-bac2-8ba747bfa77a' : 'c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0'} />
           <input type="hidden" name="subject" value={isJa ? '【LPお問い合わせ】フィリピン書類取得代行' : '[Philippine Document Service Inquiry - EN]'} />

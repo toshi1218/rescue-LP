@@ -77,7 +77,6 @@ export default function ContactJa() {
       ) : (
       <form
         className="space-y-4 max-w-xl"
-        noValidate
         onSubmit={async (e) => {
           e.preventDefault();
           const emailInput = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value.trim();
