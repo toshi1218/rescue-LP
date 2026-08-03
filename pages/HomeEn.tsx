@@ -85,6 +85,18 @@ export default function HomeEn() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <section className="bg-white px-4 py-8">
+          <div className="mx-auto max-w-4xl rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <h2 className="mb-2 text-lg font-bold text-secondary">One service from retrieval to authentication and worldwide delivery</h2>
+            <p className="text-sm leading-relaxed text-gray-700">
+              We coordinate PSA and NBI retrieval, DFA authentication, and international delivery. For PSA civil documents, DFA authentication is issued as an e-Apostille; where your authority needs a physical PSA original, we confirm the required format before arranging DHL delivery.
+            </p>
+            <p className="mt-2 text-xs text-gray-500">Free quote · Reply within one business day. Tell us the receiving authority even if you are unsure whether an electronic or physical document is required.</p>
+            <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              Request a Free Quote
+            </a>
+          </div>
+        </section>
         <Services />
         <PainPoints />
         <WhyProxy />
@@ -112,4 +124,3 @@ export default function HomeEn() {
     </div>
   );
 }
-
