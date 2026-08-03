@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
-import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
+import { buildSubmissionData, getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
 import { isValidEmail } from '../lib/validation';
 import WhatsAppIcon from '../components/icons/WhatsAppIcon';
@@ -125,7 +125,7 @@ export default function ContactEn() {
           try {
             const res = await fetch(WEB3FORMS_ENDPOINT, {
               method: 'POST',
-              body: new FormData(e.currentTarget),
+              body: buildSubmissionData(e.currentTarget),
               headers: { Accept: 'application/json' },
             });
             const data = await res.json();

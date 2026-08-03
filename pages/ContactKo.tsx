@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Send, Mail, Clock, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageLayoutKo from '../components/PageLayoutKo';
-import { trackEvent } from '../lib/analytics';
+import { buildSubmissionData, trackEvent } from '../lib/analytics';
 import { isValidEmail } from '../lib/validation';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
@@ -47,7 +47,7 @@ export default function ContactKo() {
     try {
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
-        body: new FormData(e.currentTarget),
+        body: buildSubmissionData(e.currentTarget),
         headers: { Accept: 'application/json' },
       });
       const data = await res.json();

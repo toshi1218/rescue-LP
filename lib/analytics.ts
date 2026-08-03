@@ -62,6 +62,29 @@ export function getTrafficSource(): string {
   return 'direct';
 }
 
+/**
+ * Builds the FormData for a Web3Forms submission with the attribution fields
+ * resolved at submit time.
+ *
+ * The forms carry `landing_page` / `cta_variant` / `traffic_source` as hidden
+ * inputs, but those are baked into the pre-rendered HTML, so their static
+ * values are wrong: `landing_page` was a hardcoded literal shared by every
+ * page, and the A/B fields serialize with their SSR defaults ('A' / 'unknown').
+ * Overriding them here keeps the markup byte-identical (no re-render of every
+ * static page) while sending the real values.
+ */
+export function buildSubmissionData(form: HTMLFormElement): FormData {
+  const data = new FormData(form);
+
+  if (typeof window !== 'undefined') {
+    data.set('landing_page', window.location.href);
+    data.set('cta_variant', getCtaVariant());
+    data.set('traffic_source', getTrafficSource());
+  }
+
+  return data;
+}
+
 export function trackLandingView() {
   if (typeof window === 'undefined') return;
 

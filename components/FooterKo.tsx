@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Send, Mail } from 'lucide-react';
-import { trackEvent } from '../lib/analytics';
+import { buildSubmissionData, trackEvent } from '../lib/analytics';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -29,7 +29,7 @@ const FooterKo: React.FC = () => {
     try {
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
-        body: new FormData(e.currentTarget),
+        body: buildSubmissionData(e.currentTarget),
         headers: { Accept: 'application/json' },
       });
       const data = await res.json();

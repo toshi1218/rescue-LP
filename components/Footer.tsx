@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Send } from 'lucide-react';
-import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
+import { buildSubmissionData, getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 import LineIcon from './icons/LineIcon';
 import WhatsAppIcon from './icons/WhatsAppIcon';
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
       const form = e.currentTarget;
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
-        body: new FormData(form),
+        body: buildSubmissionData(form),
         headers: { Accept: 'application/json' },
       });
       const data = await res.json();
