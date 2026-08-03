@@ -87,8 +87,8 @@ export default function HomeKo() {
               필리핀 서류 취득,<br />처음부터 끝까지 도와드립니다
             </h1>
             <p className="text-white/70 text-sm md:text-base mb-8 max-w-xl">
-              CENOMAR（미혼증명서）, PSA 출생증명서, NBI Clearance, DFA 아포스티유를 필리핀 방문 없이 대행합니다.
-              F-6 결혼이민비자 준비부터 한국 혼인신고까지 필리핀 측 서류를 정리해 드립니다.
+              PSA·NBI 서류 취득, DFA 인증, 국제 배송까지 필리핀 방문 없이 지원합니다.
+              PSA 민사서류의 e-Apostille과 종이 PSA 원본 중 어떤 형식이 필요한지 제출처 기준으로 먼저 확인합니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
@@ -108,6 +108,19 @@ export default function HomeKo() {
             <p className="text-white/40 text-xs mt-4">
               카카오톡 또는 이메일로 상담 가능합니다 · 필요한 서류가 아직 정확하지 않아도 괜찮습니다
             </p>
+          </div>
+        </section>
+
+        <section className="px-4 py-8 bg-white">
+          <div className="max-w-3xl mx-auto rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <h2 className="text-lg font-bold text-secondary mb-2">취득부터 인증·국제 배송까지 한 번에</h2>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              PSA·NBI 취득, DFA 인증, 해외 배송을 함께 진행합니다. 전자본과 종이 원본 중 무엇을 제출해야 하는지 불확실한 경우에도 제출처 요건부터 확인해 안내드립니다.
+            </p>
+            <p className="mt-2 text-xs text-gray-500">무료 견적 · 보통 1영업일 이내 회신</p>
+            <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              무료 견적 요청
+            </a>
           </div>
         </section>
 
