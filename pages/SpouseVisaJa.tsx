@@ -10,11 +10,11 @@ import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-rea
 import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function SpouseVisaJa() {
   useMeta(
-    `配偶者ビザ 必要書類【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI 取得代行`,
+    `配偶者ビザ 必要書類【${SEO_YEAR}年版】PSA・CENOMAR・NBI 取得代行`,
     '配偶者ビザ申請に必要なPSA書類・CENOMAR・NBI・DFAアポスティーユを日本から代行取得。紙の原本対応。在留資格認定・更新・変更すべて対応。無料相談。',
   );
   return (

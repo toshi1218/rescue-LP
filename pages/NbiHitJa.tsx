@@ -13,11 +13,11 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function NbiHitJa() {
   useMeta(
-    `NBI HITが出た——あきらめないでください【${SEO_YEAR_MONTH_JA}】HIT解消から代行取得まで対応`,
+    `NBI HITが出た——あきらめないでください【${SEO_YEAR}年版】HIT解消から代行取得まで対応`,
     'NBI HITは必ずしも犯罪歴ではありません。同姓同名の別人の記録の場合も多い。当センターがHIT確認・解消・NBI取得・DFAアポスティーユまで一括代行。まず状況をご相談ください。',
   );
   return (

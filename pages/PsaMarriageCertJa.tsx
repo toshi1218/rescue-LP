@@ -8,11 +8,11 @@ import FaqSection from '../components/FaqSection';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaMarriageCertJa() {
   useMeta(
-    `PSA婚姻証明書の取得代行【${SEO_YEAR_MONTH_JA}】アポスティーユ付き`,
+    `PSA婚姻証明書の取得代行【${SEO_YEAR}年版】アポスティーユ付き`,
     'PSA婚姻証明書はフィリピンに行かずに取得できます。現地スタッフがPSA申請・DFAアポスティーユを代行し、紙の原本で日本へ郵送。注釈付き（Annotated）にも対応。無料相談。',
   );
   return (

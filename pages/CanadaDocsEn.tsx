@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function CanadaDocsEn() {
   useMeta(
-    'PH Documents for Canada Immigration [April 2026]',
+    'PH Documents for Canada Immigration [2026]',
     'Applying for Canada PR or spousal sponsorship? We handle your CENOMAR & PSA online applications with DFA e-Apostille for IRCC, plus NBI Clearance retrieval with physical Apostille shipped via DHL. Free consultation.',
   );
   return (

@@ -9,14 +9,14 @@ import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_LAST_UPDATED_EN, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR, SEO_LAST_UPDATED_EN } from '../lib/seoDate';
 import type { CountryConfig } from '../lib/countryConfig';
 
 const BASE = 'https://ph-document.com';
 
 export default function CountryDocsEnTemplate({ config }: { config: CountryConfig }) {
   useMeta(
-    `PH Documents for ${config.name} Immigration [${SEO_YEAR_MONTH_EN}]`,
+    `PH Documents for ${config.name} Immigration [${SEO_YEAR}]`,
     `Moving to ${config.name}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
   );
   return (

@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function CenomarApostilleEn() {
   useMeta(
-    'CENOMAR Apostille Service [April 2026] | We Handle It',
+    'CENOMAR Apostille Service [2026] | We Handle It',
     'Not sure if your CENOMAR needs DFA Apostille? We advise and handle retrieval with or without Apostille. Free consultation for marriage and visa applicants.',
   );
   return (

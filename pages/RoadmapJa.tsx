@@ -6,7 +6,7 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 import { FileCheck, ListOrdered, Map, CheckCircle } from 'lucide-react';
 
 const ctaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -17,7 +17,7 @@ const ctaClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 
 export default function RoadmapJa() {
   useMeta(
-    `フィリピン国際結婚の手続きロードマップ作成【${SEO_YEAR_MONTH_JA}】お二人の状況に合わせた書類・手順を整理`,
+    `フィリピン国際結婚の手続きロードマップ作成【${SEO_YEAR}年版】お二人の状況に合わせた書類・手順を整理`,
     'フィリピン人パートナーと日本で結婚・同居を目指す方向けの個別ロードマップ作成。必要書類・手続きの順番・提出先を、お二人の状況に合わせて整理してお渡しします。49,800円（税込54,780円）。',
   );
 

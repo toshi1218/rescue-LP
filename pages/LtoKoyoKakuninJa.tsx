@@ -8,11 +8,11 @@ import SectionDivider from '../components/SectionDivider';
 import RelatedLinks from '../components/RelatedLinks';
 import { CheckCircle, AlertTriangle, ShieldCheck, FileText, Clock, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
+import { SEO_YEAR, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function LtoKoyoKakuninJa() {
   useMeta(
-    `フィリピン人採用のLTO書類3種｜License Certification・License History・No Apprehension【${SEO_YEAR_MONTH_JA}】`,
+    `フィリピン人採用のLTO書類3種｜License Certification・License History・No Apprehension【${SEO_YEAR}年版】`,
     'フィリピン人ドライバーを採用する会社向け。雇用時に押さえるLTO書類（License Certification・License History・No Apprehension Certificate）の違いと取得方法を解説。採用チェックリスト付き。',
   );
 

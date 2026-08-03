@@ -8,7 +8,7 @@ import FaqSection from '../components/FaqSection';
 import StepList from '../components/StepList';
 import { Building2, Scale, Briefcase, Car, ArrowRight, CheckCircle, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 const segments = [
   {
@@ -39,7 +39,7 @@ const segments = [
 
 export default function BusinessHomeJa() {
   useMeta(
-    `法人向けフィリピン書類取得代行｜登録支援機関・行政書士・企業の方へ【${SEO_YEAR_MONTH_JA}】`,
+    `法人向けフィリピン書類取得代行｜登録支援機関・行政書士・企業の方へ【${SEO_YEAR}年版】`,
     '登録支援機関・行政書士・技能実習生を雇用する企業向けのフィリピン書類取得代行。CENOMAR・PSA・NBI・DFAアポスティーユを一括手配。案件ごとの進捗報告・継続割引あり。',
   );
 

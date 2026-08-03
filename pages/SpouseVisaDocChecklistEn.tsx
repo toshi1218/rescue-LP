@@ -8,22 +8,22 @@ import SectionDivider from '../components/SectionDivider';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, Info, FileText, Stamp, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function SpouseVisaDocChecklistEn() {
   useMeta(
-    `Spouse Visa Document Checklist [${SEO_YEAR_MONTH_EN}] — Philippine National Applying for Japan`,
-    `Updated ${SEO_YEAR_MONTH_EN}. Complete checklist of Philippine documents needed for Japan spouse visa (COE): PSA marriage cert, birth cert, CENOMAR, TB certificate (new from June 2025), and translations.`,
+    `Spouse Visa Document Checklist [${SEO_YEAR}] — Philippine National Applying for Japan`,
+    `Updated ${SEO_YEAR}. Complete checklist of Philippine documents needed for Japan spouse visa (COE): PSA marriage cert, birth cert, CENOMAR, TB certificate (new from June 2025), and translations.`,
   );
 
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Spouse Visa Document Checklist [March 2026]' }]}
+      breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Spouse Visa Document Checklist [2026]' }]}
       jsonLd={[
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'Spouse Visa Document Checklist [March 2026] — Philippine National, Japan COE Application',
+          headline: 'Spouse Visa Document Checklist [2026] — Philippine National, Japan COE Application',
           description: 'TB Non-Disease Certificate is now mandatory from June 2025. Full checklist of Philippine documents for Japan spouse visa COE application: PSA marriage cert, birth cert, CENOMAR, apostille, TB certificate.',
           url: 'https://ph-document.com/en/spouse-visa-document-checklist/',
           dateModified: '2026-03-14',
@@ -58,7 +58,7 @@ export default function SpouseVisaDocChecklistEn() {
       ]}
     >
       <HeroBanner
-        title="Spouse Visa Document Checklist [March 2026]"
+        title="Spouse Visa Document Checklist [2026]"
         subtitle="Complete list of Philippine documents required for the Japan spouse visa (COE) application. TB Non-Disease Certificate is now mandatory from June 2025."
         badges={['Updated March 2026', 'TB Cert Now Required', 'Document Retrieval Available']}
         lastUpdated="April 1, 2026"

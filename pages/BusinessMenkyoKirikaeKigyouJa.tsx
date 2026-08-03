@@ -24,11 +24,11 @@ import {
   BarChart3,
 } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
+import { SEO_YEAR, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function BusinessMenkyoKirikaeKigyouJa() {
   useMeta(
-    `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR_MONTH_JA}】`,
+    `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR}年版】`,
     '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名100,000円〜・3名パック270,000円〜。請求書払い・複数名対応。',
   );
 

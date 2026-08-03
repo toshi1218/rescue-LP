@@ -9,11 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { Globe, AlertTriangle, FileCheck, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function NbiClearanceOverseasEn() {
   useMeta(
-    `NBI Clearance from Overseas [${SEO_YEAR_MONTH_EN}] — No Trip Needed`,
+    `NBI Clearance from Overseas [${SEO_YEAR}] — No Trip Needed`,
     `Need NBI Clearance while living abroad? We retrieve it without you returning to the Philippines. HIT cases handled. DFA Apostille included. Free consultation.`,
   );
   return (

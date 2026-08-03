@@ -9,11 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function NewZealandDocsEn() {
   useMeta(
-    `PH Documents for New Zealand Immigration [${SEO_YEAR_MONTH_EN}]`,
+    `PH Documents for New Zealand Immigration [${SEO_YEAR}]`,
     `Moving to New Zealand? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for INZ. Ships via DHL. Free consultation.`,
   );
   return (

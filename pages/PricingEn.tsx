@@ -6,11 +6,11 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PricingEn() {
   useMeta(
-    `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
+    `Pricing [${SEO_YEAR}] | CENOMAR, PSA & NBI Service`,
     `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille. All plans include DHL Express worldwide shipping. Free quote.`,
   );
   return (

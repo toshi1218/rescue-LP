@@ -8,11 +8,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import StepList from '../components/StepList';
 import { FileCheck, Clock, Globe, Users, ShieldCheck, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function BusinessTourokushienJa() {
   useMeta(
-    `登録支援機関向け フィリピン書類取得代行｜PSA・CENOMAR・DFAアポスティーユ【${SEO_YEAR_MONTH_JA}】`,
+    `登録支援機関向け フィリピン書類取得代行｜PSA・CENOMAR・DFAアポスティーユ【${SEO_YEAR}年版】`,
     '登録支援機関向けのフィリピン書類取得代行。技能実習生・特定技能外国人に必要なPSA出生証明書・NBI・DFAアポスティーユを一括手配。案件ごとの進捗報告付き。',
   );
 

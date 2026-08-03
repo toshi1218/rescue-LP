@@ -6,11 +6,11 @@ import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaCostJa() {
   useMeta(
-    `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】日本まで届く総額はいくら？`,
+    `PSA出生証明書の費用【${SEO_YEAR}年版】日本まで届く総額はいくら？`,
     '現地PSA料金365ペソ＋DFAアポスティーユ＋国際配送の総額を解説。日本から代行依頼で追加請求なし・総額明示。¥50,000（税別）から。無料見積もり。',
   );
   return (

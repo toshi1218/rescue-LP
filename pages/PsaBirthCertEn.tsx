@@ -9,12 +9,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import { Heart, FileCheck, Globe, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 import RelatedArticles from '../components/RelatedArticles';
 
 export default function PsaBirthCertEn() {
   useMeta(
-    `PSA Birth Certificate + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    `PSA Birth Certificate + Apostille Service [${SEO_YEAR}]`,
     `Get a PSA Birth Certificate from the Philippines without flying there. We handle retrieval + DFA Apostille + DHL delivery to your door. Free quote.`,
   );
   return (

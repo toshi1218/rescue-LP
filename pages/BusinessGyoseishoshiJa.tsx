@@ -8,11 +8,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import StepList from '../components/StepList';
 import { FileCheck, Clock, Scale, ShieldCheck, AlertTriangle, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function BusinessGyoseishoshiJa() {
   useMeta(
-    `行政書士向け フィリピン書類取得代行｜国際結婚・配偶者ビザ・帰化申請対応【${SEO_YEAR_MONTH_JA}】`,
+    `行政書士向け フィリピン書類取得代行｜国際結婚・配偶者ビザ・帰化申請対応【${SEO_YEAR}年版】`,
     '行政書士向けのフィリピン書類取得代行。国際結婚・配偶者ビザ・帰化申請に必要なCENOMAR・PSA・NBI・DFAアポスティーユを日本語で一括手配。案件ごとの進捗報告・継続割引あり。',
   );
 

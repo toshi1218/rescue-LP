@@ -8,11 +8,11 @@ import ComparisonTable from '../components/ComparisonTable';
 import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function EApostilleFukaJa() {
   useMeta(
-    `e-Apostille（電子アポスティーユ）は帰化申請に使える？法務局が紙原本を求める理由【${SEO_YEAR_MONTH_JA}】`,
+    `e-Apostille（電子アポスティーユ）は帰化申請に使える？法務局が紙原本を求める理由【${SEO_YEAR}年版】`,
     'フィリピンのe-Certificate・e-Apostille（電子書類）は帰化申請に使えるのか。日本は制度上ハーグ条約の電子アポスティーユを受け入れていますが、法務局など提出先の受け入れ実務は未整備で、実務上は紙原本＋物理アポスティーユが必要です。誤解が起きる理由と確実な準備方法を解説。',
   );
   return (

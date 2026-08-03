@@ -11,11 +11,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import SummaryBlock from '../components/SummaryBlock';
 import { AlertTriangle, Calendar, Clock, MapPin, FileCheck, Users, Info, ShieldCheck, Heart } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function TbCertJa() {
   useMeta(
-    `結核非発病証明書（TB Non-Disease Certificate）ガイド【${SEO_YEAR_MONTH_JA}】フィリピン国籍者の在留資格認定証明書申請に必須`,
+    `結核非発病証明書（TB Non-Disease Certificate）ガイド【${SEO_YEAR}年版】フィリピン国籍者の在留資格認定証明書申請に必須`,
     '2025年6月23日施行。フィリピン国籍者がCOE（在留資格認定証明書）を申請する際に必要な結核非発病証明書について、指定Panel Clinic・費用・有効期間・手続きの流れを解説します。',
   );
   return (

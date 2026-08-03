@@ -9,11 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import { AlertTriangle, FileCheck, Globe, Clock } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function NbiHitEn() {
   useMeta(
-    `NBI HIT Resolution Service [${SEO_YEAR_MONTH_EN}] — We Fix It`,
+    `NBI HIT Resolution Service [${SEO_YEAR}] — We Fix It`,
     `NBI HIT (MATCH FOUND) delaying your visa? We resolve HIT + retrieve NBI Clearance + DFA Apostille so you meet your deadline. Free consultation.`,
   );
   return (

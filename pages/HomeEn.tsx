@@ -17,11 +17,11 @@ import CtaBox from '../components/CtaBox';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
-import { SEO_DATE_ISO, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR, SEO_DATE_ISO } from '../lib/seoDate';
 
 export default function HomeEn() {
   useMeta(
-    `Philippine Documents for International Marriage & Visa [${SEO_YEAR_MONTH_EN}]`,
+    `Philippine Documents for International Marriage & Visa [${SEO_YEAR}]`,
     `Getting married to a Filipino, or moving countries together? We verify format requirements, procure physical PSA originals + DFA Apostille, and ship via DHL worldwide.`,
     'https://ph-document.com/en/',
   );

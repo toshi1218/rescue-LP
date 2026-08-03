@@ -9,6 +9,12 @@
 
 // ── 基本値（ここだけ変更） ──────────────────────────────────
 export const SEO_YEAR = '2026';
+
+/**
+ * 1–12。**title には使われていない**（月表記は廃止済み）。
+ * 現在の用途は SEO_DATE_ISO（sitemap lastmod / JSON-LD dateModified）と
+ * SEO_LAST_UPDATED_*（本文の「最終更新」表示）のみ。
+ */
 export const SEO_MONTH = '4'; // 1–12
 
 // ── 派生値（自動計算） ──────────────────────────────────────
@@ -35,11 +41,18 @@ export const SEO_LAST_UPDATED_EN = `${SEO_MONTH_EN} 1, ${SEO_YEAR}`;
 
 // ── Title tag 用パーツ ───────────────────────────────────────
 
-/** "【2026年3月最新】" — 重要ページの title / H1 用 */
-export const SEO_TITLE_BADGE_JA = `【${SEO_YEAR_MONTH_JA}最新】`;
+/**
+ * "【2026年最新版】" — 重要ページの title / H1 用
+ *
+ * 以前は「【2026年4月最新】」と月まで出していたが、SEO_MONTH の更新が
+ * 止まると検索結果に古い月がそのまま出続けるため（実際に 2026-04-03 以降
+ * 更新が止まり、8月時点で全ページが「4月」を表示していた）、月表記を廃止
+ * して年表記に統一した。年表記なら更新漏れで古く見えることがない。
+ */
+export const SEO_TITLE_BADGE_JA = `【${SEO_YEAR}年最新版】`;
 
-/** "[March 2026]" — 重要ページの英語 title 用 */
-export const SEO_TITLE_BADGE_EN = `[${SEO_YEAR_MONTH_EN}]`;
+/** "[2026]" — 重要ページの英語 title 用（同上の理由で月表記を廃止） */
+export const SEO_TITLE_BADGE_EN = `[${SEO_YEAR}]`;
 
 /** "【2026年最新版】" — 通常ページの title / H1 用 */
 export const SEO_TITLE_BADGE_YEAR_JA = `【${SEO_YEAR}年最新版】`;

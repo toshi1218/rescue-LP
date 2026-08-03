@@ -9,11 +9,11 @@ import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe, Heart, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function DocumentChecklistByVisaJa() {
   useMeta(
-    `ビザ別フィリピン書類チェックリスト【${SEO_YEAR_MONTH_JA}】`,
+    `ビザ別フィリピン書類チェックリスト【${SEO_YEAR}年版】`,
     'K-1、CR-1/IR-1、カナダ、オーストラリア、UK、日本向けに、フィリピン書類の必要書類を整理した日本語チェックリストです。',
     'https://ph-document.com/ja/document-checklist-by-visa/',
   );

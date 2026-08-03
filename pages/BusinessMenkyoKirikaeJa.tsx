@@ -24,11 +24,11 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
+import { SEO_YEAR, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function BusinessMenkyoKirikaeJa() {
   useMeta(
-    `フィリピン人従業員の日本免許切替サポート｜登録支援機関・監理団体向け【${SEO_YEAR_MONTH_JA}】`,
+    `フィリピン人従業員の日本免許切替サポート｜登録支援機関・監理団体向け【${SEO_YEAR}年版】`,
     '登録支援機関・監理団体向け。フィリピン人従業員の外免切替に必要なLTO書類（Certification・License History）＋DFAアポスティーユを代行取得。複数名一括対応・進捗報告・請求書払い。',
   );
 

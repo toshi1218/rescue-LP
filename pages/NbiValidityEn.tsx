@@ -8,12 +8,12 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 import RelatedArticles from '../components/RelatedArticles';
 
 export default function NbiValidityEn() {
   useMeta(
-    `NBI Clearance Validity [${SEO_YEAR_MONTH_EN}] — Timing Guide`,
+    `NBI Clearance Validity [${SEO_YEAR}] — Timing Guide`,
     `NBI Clearance is valid for 1 year, but spouse visas often require it within 6 months. Timing matters. We help you get it at the right time. Free consultation.`,
   );
   return (

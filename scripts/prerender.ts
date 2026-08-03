@@ -8,17 +8,7 @@ import { renderToPipeableStream } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 import App from '../App';
 import { LanguageProvider } from '../lib/i18n';
-import {
-  SEO_YEAR,
-  SEO_DATE_ISO,
-  SEO_YEAR_MONTH_JA,
-  SEO_YEAR_MONTH_EN,
-  SEO_TITLE_BADGE_JA,
-  SEO_TITLE_BADGE_EN,
-  SEO_TITLE_BADGE_YEAR_JA,
-  SEO_TITLE_BADGE_YEAR_EN,
-  SEO_TITLE_BADGE_YEAR_SHORT_JA,
-} from '../lib/seoDate';
+import { SEO_YEAR, SEO_DATE_ISO, SEO_TITLE_BADGE_JA, SEO_TITLE_BADGE_YEAR_EN, SEO_TITLE_BADGE_YEAR_SHORT_JA } from '../lib/seoDate';
 import { COUNTRY_CONFIGS } from '../lib/countryConfig';
 import { enToJa } from '../lib/urlMap';
 
@@ -358,7 +348,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/',
     outFile: path.join(projectRoot, 'dist', 'en', 'index.html'),
-    title: `Philippine Documents for International Marriage & Visa [${SEO_YEAR_MONTH_EN}]`,
+    title: `Philippine Documents for International Marriage & Visa [${SEO_YEAR}]`,
     description: `Getting married to a Filipino, or moving countries together? We verify format requirements, procure physical PSA originals + DFA Apostille, and ship via DHL worldwide.`,
     canonical: `${BASE}/en/`,
     lang: 'en',
@@ -418,7 +408,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar-apostille/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-apostille', 'index.html'),
-    title: `CENOMAR Apostille Service [${SEO_YEAR_MONTH_EN}] | We Handle It`,
+    title: `CENOMAR Apostille Service [${SEO_YEAR}] | We Handle It`,
     description: `Not sure if your CENOMAR needs DFA Apostille? We advise and handle retrieval with or without Apostille. Free consultation for marriage and visa applicants.`,
     canonical: `${BASE}/en/cenomar-apostille/`,
     lang: 'en',
@@ -429,7 +419,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar-validity/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-validity', 'index.html'),
-    title: `CENOMAR Validity Period [${SEO_YEAR_MONTH_EN}] — Timing Guide`,
+    title: `CENOMAR Validity Period [${SEO_YEAR}] — Timing Guide`,
     description: `CENOMAR is typically valid for 6 months. If it expires during your marriage or visa process, you'll need a new one. We time the retrieval perfectly. Free consultation.`,
     canonical: `${BASE}/en/cenomar-validity/`,
     lang: 'en',
@@ -464,7 +454,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate', 'index.html'),
-    title: `PSA Birth Certificate + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    title: `PSA Birth Certificate + Apostille Service [${SEO_YEAR}]`,
     description: `Get a PSA Birth Certificate from the Philippines without flying there. We handle retrieval + DFA Apostille + DHL delivery to your door. Free quote.`,
     canonical: `${BASE}/en/psa-birth-certificate/`,
     lang: 'en',
@@ -500,7 +490,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance', 'index.html'),
-    title: `NBI Clearance + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    title: `NBI Clearance + Apostille Service [${SEO_YEAR}]`,
     description: `Need NBI Clearance for a spouse visa or work permit? We retrieve it with DFA Apostille and ship worldwide. HIT cases handled. Free quote.`,
     canonical: `${BASE}/en/nbi-clearance/`,
     lang: 'en',
@@ -512,7 +502,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/nbi-hit/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-hit', 'index.html'),
-    title: `NBI HIT Resolution Service [${SEO_YEAR_MONTH_EN}] — We Fix It`,
+    title: `NBI HIT Resolution Service [${SEO_YEAR}] — We Fix It`,
     description: `NBI HIT (MATCH FOUND) delaying your visa? We resolve HIT + retrieve NBI Clearance + DFA Apostille so you meet your deadline. Free consultation.`,
     canonical: `${BASE}/en/nbi-hit/`,
     lang: 'en',
@@ -523,7 +513,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille/',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille', 'index.html'),
-    title: `DFA Apostille Service [${SEO_YEAR_MONTH_EN}] — No Trip Needed`,
+    title: `DFA Apostille Service [${SEO_YEAR}] — No Trip Needed`,
     description: `Need a DFA Apostille but can't go to the Philippines? We handle PSA, NBI, CENOMAR authentication — and ship to you. Free consultation available.`,
     canonical: `${BASE}/en/apostille/`,
     lang: 'en',
@@ -534,7 +524,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille-processing-time/',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille-processing-time', 'index.html'),
-    title: `DFA Apostille Processing Time [${SEO_YEAR_MONTH_EN}]`,
+    title: `DFA Apostille Processing Time [${SEO_YEAR}]`,
     description: `DFA Apostille takes 5–10 business days. Visa deadline approaching? Our express proxy service can help you meet it. Free consultation to check your timeline.`,
     canonical: `${BASE}/en/apostille-processing-time/`,
     lang: 'en',
@@ -626,7 +616,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille-fee/',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille-fee', 'index.html'),
-    title: `DFA Apostille Fee [${SEO_YEAR_MONTH_EN}] — Full Price Breakdown`,
+    title: `DFA Apostille Fee [${SEO_YEAR}] — Full Price Breakdown`,
     description: `Full cost breakdown for DFA Apostille: official fees + proxy service + international shipping. Compare CENOMAR, PSA, and NBI pricing. Free quote available.`,
     canonical: `${BASE}/en/apostille-fee/`,
     lang: 'en',
@@ -637,7 +627,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/nbi-validity/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-validity', 'index.html'),
-    title: `NBI Clearance Validity [${SEO_YEAR_MONTH_EN}] — Timing Guide`,
+    title: `NBI Clearance Validity [${SEO_YEAR}] — Timing Guide`,
     description: `NBI Clearance is valid for 1 year, but spouse visas often require it within 6 months. Timing matters. We help you get it at the right time. Free consultation.`,
     canonical: `${BASE}/en/nbi-validity/`,
     lang: 'en',
@@ -648,7 +638,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/driver-record/',
     outFile: path.join(projectRoot, 'dist', 'en', 'driver-record', 'index.html'),
-    title: `LTO Driver's Record Service [${SEO_YEAR_MONTH_EN}]`,
+    title: `LTO Driver's Record Service [${SEO_YEAR}]`,
     description: `Need an LTO Driver's Record for license conversion or employment verification? We retrieve it with DFA Apostille and ship to you. Ideal for employers and spouses. Free consultation.`,
     canonical: `${BASE}/en/driver-record/`,
     lang: 'en',
@@ -659,7 +649,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/us-visa-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'us-visa-documents', 'index.html'),
-    title: `K-1 / CR-1 Visa Documents Service [${SEO_YEAR_MONTH_EN}]`,
+    title: `K-1 / CR-1 Visa Documents Service [${SEO_YEAR}]`,
     description: `US petitioner for a K-1 or CR-1/IR-1 visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship to your door. Free consultation for American petitioners.`,
     canonical: `${BASE}/en/us-visa-documents/`,
     lang: 'en',
@@ -670,7 +660,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/k1-visa-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'k1-visa-documents', 'index.html'),
-    title: `K-1 Visa Documents: CENOMAR, PSA & NBI [${SEO_YEAR_MONTH_EN}]`,
+    title: `K-1 Visa Documents: CENOMAR, PSA & NBI [${SEO_YEAR}]`,
     description: `K-1 visa petitioner? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for your Filipino fiancé(e). Ships to your US address. Free consultation.`,
     canonical: `${BASE}/en/k1-visa-documents/`,
     lang: 'en',
@@ -693,7 +683,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/canada/',
     outFile: path.join(projectRoot, 'dist', 'en', 'canada', 'index.html'),
-    title: `PH Documents for Canada Immigration [${SEO_YEAR_MONTH_EN}]`,
+    title: `PH Documents for Canada Immigration [${SEO_YEAR}]`,
     description: `Applying for Canada PR or spousal sponsorship? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for IRCC. Ships via DHL. Free consultation.`,
     canonical: `${BASE}/en/canada/`,
     lang: 'en',
@@ -704,7 +694,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/canada/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'canada', 'index.html'),
-    title: `カナダ移民ビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — IRCC対応・DHL郵送`,
+    title: `カナダ移民ビザのフィリピン書類取得代行 [${SEO_YEAR}年版] — IRCC対応・DHL郵送`,
     description: `カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。`,
     canonical: `${BASE}/ja/canada/`,
     lang: 'ja',
@@ -715,7 +705,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/australia/',
     outFile: path.join(projectRoot, 'dist', 'en', 'australia', 'index.html'),
-    title: `PH Documents for Australia Immigration [${SEO_YEAR_MONTH_EN}]`,
+    title: `PH Documents for Australia Immigration [${SEO_YEAR}]`,
     description: `Applying for Australian partner visa or PR? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille. Ships to Australia via DHL. Free consultation.`,
     canonical: `${BASE}/en/australia/`,
     lang: 'en',
@@ -726,7 +716,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/australia/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'australia', 'index.html'),
-    title: `オーストラリアビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — Home Affairs対応・DHL郵送`,
+    title: `オーストラリアビザのフィリピン書類取得代行 [${SEO_YEAR}年版] — Home Affairs対応・DHL郵送`,
     description: `オーストラリアパートナービザ・永住権申請に必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。`,
     canonical: `${BASE}/ja/australia/`,
     lang: 'ja',
@@ -737,7 +727,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/uk/',
     outFile: path.join(projectRoot, 'dist', 'en', 'uk', 'index.html'),
-    title: `PH Documents for UK Immigration [${SEO_YEAR_MONTH_EN}]`,
+    title: `PH Documents for UK Immigration [${SEO_YEAR}]`,
     description: `Applying for a UK spouse visa? We retrieve CENOMAR, PSA Birth Certificate & NBI Clearance with DFA Apostille for UKVI. Ships to the UK. Free consultation.`,
     canonical: `${BASE}/en/uk/`,
     lang: 'en',
@@ -796,7 +786,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/uk/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'uk', 'index.html'),
-    title: `UK移民ビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — UKVI対応・DHL郵送`,
+    title: `UK移民ビザのフィリピン書類取得代行 [${SEO_YEAR}年版] — UKVI対応・DHL郵送`,
     description: `UK配偶者ビザ・永住許可（ILR）申請に必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。`,
     canonical: `${BASE}/ja/uk/`,
     lang: 'ja',
@@ -807,7 +797,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/pricing/',
     outFile: path.join(projectRoot, 'dist', 'en', 'pricing', 'index.html'),
-    title: `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
+    title: `Pricing [${SEO_YEAR}] | CENOMAR, PSA & NBI Service`,
     description: `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille. All plans include DHL Express worldwide shipping. Free quote.`,
     canonical: `${BASE}/en/pricing/`,
     lang: 'en',
@@ -864,7 +854,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/document-checklist-by-visa/',
     outFile: path.join(projectRoot, 'dist', 'en', 'document-checklist-by-visa', 'index.html'),
-    title: `Philippine Document Checklist by Visa Type [${SEO_YEAR_MONTH_EN}] | K-1, CR-1, Spouse Visa`,
+    title: `Philippine Document Checklist by Visa Type [${SEO_YEAR}] | K-1, CR-1, Spouse Visa`,
     description: `Which Philippine documents do you need? Complete checklist by visa type: K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa. CENOMAR, PSA, NBI — all explained.`,
     canonical: `${BASE}/en/document-checklist-by-visa/`,
     lang: 'en',
@@ -876,7 +866,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/nbi-clearance-overseas/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance-overseas', 'index.html'),
-    title: `NBI Clearance from Overseas [${SEO_YEAR_MONTH_EN}] — No Trip Needed`,
+    title: `NBI Clearance from Overseas [${SEO_YEAR}] — No Trip Needed`,
     description: `Need NBI Clearance while living abroad? We retrieve it without you returning to the Philippines. HIT cases handled. DFA Apostille included. Free consultation.`,
     canonical: `${BASE}/en/nbi-clearance-overseas/`,
     lang: 'en',
@@ -900,7 +890,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar-vs-marriage-certificate/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-vs-marriage-certificate', 'index.html'),
-    title: `CENOMARとPSA婚姻証明書の違い【${SEO_YEAR_MONTH_JA}】`,
+    title: `CENOMARとPSA婚姻証明書の違い【${SEO_YEAR}年版】`,
     description: 'CENOMARは独身を証明し、PSA婚姻証明書は婚姻を証明します。K-1、CR-1/IR-1、国際結婚でどちらが必要かを日本語で整理します。',
     canonical: `${BASE}/ja/cenomar-vs-marriage-certificate/`,
     lang: 'ja',
@@ -911,7 +901,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/document-checklist-by-visa/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'document-checklist-by-visa', 'index.html'),
-    title: `ビザ別フィリピン書類チェックリスト【${SEO_YEAR_MONTH_JA}】`,
+    title: `ビザ別フィリピン書類チェックリスト【${SEO_YEAR}年版】`,
     description: 'K-1、CR-1/IR-1、カナダ、オーストラリア、UK、日本向けに、フィリピン書類の必要書類を整理した日本語チェックリストです。',
     canonical: `${BASE}/ja/document-checklist-by-visa/`,
     lang: 'ja',
@@ -922,7 +912,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-clearance-overseas/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-clearance-overseas', 'index.html'),
-    title: `海外在住でも取れるNBIクリアランス【${SEO_YEAR_MONTH_JA}】`,
+    title: `海外在住でも取れるNBIクリアランス【${SEO_YEAR}年版】`,
     description: 'フィリピンに戻らずにNBIクリアランスを取りたい方へ。代理申請、HIT対応、海外発送までを日本語で案内します。',
     canonical: `${BASE}/ja/nbi-clearance-overseas/`,
     lang: 'ja',
@@ -933,7 +923,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-late-registration/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-late-registration', 'index.html'),
-    title: `PSAに記録がない・氏名誤りのときの対応【${SEO_YEAR_MONTH_JA}】`,
+    title: `PSAに記録がない・氏名誤りのときの対応【${SEO_YEAR}年版】`,
     description: 'PSA出生証明書が見つからない、氏名や生年月日に誤りがある場合の遅延登録・訂正を整理します。',
     canonical: `${BASE}/ja/psa-late-registration/`,
     lang: 'ja',
@@ -944,7 +934,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-ecertificate-nihon/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-ecertificate-nihon', 'index.html'),
-    title: 'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
+    title: 'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年版】',
     description: 'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
     canonical: `${BASE}/ja/psa-ecertificate-nihon/`,
     lang: 'ja',
@@ -994,7 +984,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar', 'index.html'),
-    title: `CENOMARとは｜フィリピン独身証明書の取得方法【${SEO_YEAR_MONTH_JA}】代行可・渡航不要`,
+    title: `CENOMARとは｜フィリピン独身証明書の取得方法【${SEO_YEAR}年版】代行可・渡航不要`,
     description: 'CENOMARはフィリピンに行かずに取得できます。PSA申請からDFAアポスティーユ・DHL郵送まで一括代行。国際結婚・配偶者ビザ・帰化申請に対応。通常4〜6週間。まず無料相談を。',
     canonical: `${BASE}/ja/cenomar/`,
     lang: 'ja',
@@ -1005,7 +995,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar-toha/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-toha', 'index.html'),
-    title: `CENOMARとは？意味・正式名称・使い方を徹底解説【${SEO_YEAR_MONTH_JA}】`,
+    title: `CENOMARとは？意味・正式名称・使い方を徹底解説【${SEO_YEAR}年版】`,
     description: 'CENOMARはフィリピン統計局（PSA）が発行する独身証明書。Certificate of No Marriage Recordの略称で、国際結婚・配偶者ビザ・帰化申請に必要。取得方法・有効期限・アポスティーユまで解説。',
     canonical: `${BASE}/ja/cenomar-toha/`,
     lang: 'ja',
@@ -1017,7 +1007,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar-apostille/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-apostille', 'index.html'),
-    title: `CENOMARのDFAアポスティーユ、代行取得できます【${SEO_YEAR_MONTH_JA}】日本語だけでOK`,
+    title: `CENOMARのDFAアポスティーユ、代行取得できます【${SEO_YEAR}年版】日本語だけでOK`,
     description: 'CENOMARのDFAアポスティーユはフィリピン現地での手続きが必要です。当センターが代行取得し、紙の原本アポスティーユで日本へ郵送。国際結婚・配偶者ビザ・帰化申請に対応。無料相談。',
     canonical: `${BASE}/ja/cenomar-apostille/`,
     lang: 'ja',
@@ -1028,7 +1018,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar-koyukigen/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar-koyukigen', 'index.html'),
-    title: `CENOMARの有効期限【${SEO_YEAR_MONTH_JA}】発行から6ヶ月が目安｜提出先別の基準まとめ`,
+    title: `CENOMARの有効期限【${SEO_YEAR}年版】発行から6ヶ月が目安｜提出先別の基準まとめ`,
     description: 'CENOMARの有効期限は多くの提出先で発行から6ヶ月以内。入管・市区町村役場・大使館など提出先別の基準と、期限切れを防ぐ最適な取得タイミングを解説します。',
     canonical: `${BASE}/ja/cenomar-koyukigen/`,
     lang: 'ja',
@@ -1039,7 +1029,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-shussei-shomeisho/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-shomeisho', 'index.html'),
-    title: `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR_MONTH_JA}】PSA・アポスティーユ込み`,
+    title: `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR}年版】PSA・アポスティーユ込み`,
     description: 'フィリピン出生証明書（PSA）を日本から取り寄せ代行。セブ在住スタッフが直接PSA申請→DFAアポスティーユ→国際郵送まで一括対応。紙の原本を4〜6週間で自宅へ。追加請求なし。無料相談。',
     canonical: `${BASE}/ja/psa-shussei-shomeisho/`,
     lang: 'ja',
@@ -1050,7 +1040,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-clearance', 'index.html'),
-    title: `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
+    title: `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR}年版】渡航不要・HIT対応`,
     description: 'フィリピンNBI Clearance（無犯罪証明書）を渡航なしで取得代行。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。無料相談。',
     canonical: `${BASE}/ja/nbi-clearance/`,
     lang: 'ja',
@@ -1062,7 +1052,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-hit/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-hit', 'index.html'),
-    title: `NBI HITが出た——あきらめないでください【${SEO_YEAR_MONTH_JA}】HIT解消から代行取得まで対応`,
+    title: `NBI HITが出た——あきらめないでください【${SEO_YEAR}年版】HIT解消から代行取得まで対応`,
     description: 'NBI HITは必ずしも犯罪歴ではありません。同姓同名の別人の記録の場合も多い。当センターがHIT確認・解消・NBI取得・DFAアポスティーユまで一括代行。まず状況をご相談ください。',
     canonical: `${BASE}/ja/nbi-hit/`,
     lang: 'ja',
@@ -1073,7 +1063,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille', 'index.html'),
-    title: `フィリピンDFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応・渡航不要`,
+    title: `フィリピンDFAアポスティーユ代行【${SEO_YEAR}年版】書類取得から一括対応・渡航不要`,
     description: 'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
     canonical: `${BASE}/ja/apostille/`,
     lang: 'ja',
@@ -1084,7 +1074,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-shori-kikan/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-shori-kikan', 'index.html'),
-    title: `DFAアポスティーユの処理期間【${SEO_YEAR_MONTH_JA}】Regular 4営業日・Express 翌営業日`,
+    title: `DFAアポスティーユの処理期間【${SEO_YEAR}年版】Regular 4営業日・Express 翌営業日`,
     description: 'DFAアポスティーユの処理期間はRegular（4営業日）またはExpress（翌営業日）。申請から受け取りまでの流れ・費用の違い・提出期限から逆算したスケジュールの立て方を解説。',
     canonical: `${BASE}/ja/apostille-shori-kikan/`,
     lang: 'ja',
@@ -1095,7 +1085,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/kokusai-kekkon-guide/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'kokusai-kekkon-guide', 'index.html'),
-    title: `フィリピン人との国際結婚 手続きの流れ・費用・必要書類【${SEO_YEAR_MONTH_JA}】`,
+    title: `フィリピン人との国際結婚 手続きの流れ・費用・必要書類【${SEO_YEAR}年版】`,
     description: 'フィリピン人との国際結婚の手続き・費用・必要書類を解説。CENOMAR・PSA出生証明書・DFAアポスティーユを日本語で一括代行。日本先行婚・フィリピン先行婚対応。無料相談。',
     canonical: `${BASE}/ja/kokusai-kekkon-guide/`,
     lang: 'ja',
@@ -1106,7 +1096,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/haigusha-visa/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa', 'index.html'),
-    title: `配偶者ビザ 必要書類【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI 取得代行`,
+    title: `配偶者ビザ 必要書類【${SEO_YEAR}年版】PSA・CENOMAR・NBI 取得代行`,
     description: '配偶者ビザ申請に必要なPSA書類・CENOMAR・NBI・DFAアポスティーユを日本から代行取得。紙の原本対応。在留資格認定・更新・変更すべて対応。無料相談。',
     canonical: `${BASE}/ja/haigusha-visa/`,
     lang: 'ja',
@@ -1118,7 +1108,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-kekkon-shomeisho/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-kekkon-shomeisho', 'index.html'),
-    title: `PSA婚姻証明書の取得代行【${SEO_YEAR_MONTH_JA}】アポスティーユ付き`,
+    title: `PSA婚姻証明書の取得代行【${SEO_YEAR}年版】アポスティーユ付き`,
     description: 'PSA婚姻証明書はフィリピンに行かずに取得できます。現地スタッフがPSA申請・DFAアポスティーユを代行し、紙の原本で日本へ郵送。注釈付き（Annotated）にも対応。無料相談。',
     canonical: `${BASE}/ja/psa-kekkon-shomeisho/`,
     lang: 'ja',
@@ -1129,7 +1119,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/gaimen-kirikae-guide/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'gaimen-kirikae-guide', 'index.html'),
-    title: `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】渡航不要`,
+    title: `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR}年版】渡航不要`,
     description: 'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
     canonical: `${BASE}/ja/gaimen-kirikae-guide/`,
     lang: 'ja',
@@ -1140,7 +1130,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/kika-shinsei-guide/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'kika-shinsei-guide', 'index.html'),
-    title: `帰化申請の書類代行【${SEO_YEAR_MONTH_JA}】PSA・NBI・アポスティーユ`,
+    title: `帰化申請の書類代行【${SEO_YEAR}年版】PSA・NBI・アポスティーユ`,
     description: 'PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。法務局の要件に合わせた形式で手配。司法書士・行政書士の先生からのご依頼も対応。無料相談で必要書類を確認。',
     canonical: `${BASE}/ja/kika-shinsei-guide/`,
     lang: 'ja',
@@ -1151,7 +1141,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/e-apostille-fuka/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'e-apostille-fuka', 'index.html'),
-    title: `e-Apostille（電子アポスティーユ）は帰化申請に使える？法務局が紙原本を求める理由【${SEO_YEAR_MONTH_JA}】`,
+    title: `e-Apostille（電子アポスティーユ）は帰化申請に使える？法務局が紙原本を求める理由【${SEO_YEAR}年版】`,
     description: 'フィリピンのe-Certificate・e-Apostille（電子書類）は帰化申請に使えるのか。日本は制度上ハーグ条約の電子アポスティーユを受け入れていますが、法務局など提出先の受け入れ実務は未整備で、実務上は紙原本＋物理アポスティーユが必要です。誤解が起きる理由と確実な準備方法を解説。',
     canonical: `${BASE}/ja/e-apostille-fuka/`,
     lang: 'ja',
@@ -1210,7 +1200,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-shussei-cost/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-cost', 'index.html'),
-    title: `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】日本まで届く総額はいくら？`,
+    title: `PSA出生証明書の費用【${SEO_YEAR}年版】日本まで届く総額はいくら？`,
     description: '現地PSA料金365ペソ＋DFAアポスティーユ＋国際配送の総額を解説。日本から代行依頼で追加請求なし・総額明示。¥50,000（税別）から。無料見積もり。',
     canonical: `${BASE}/ja/psa-shussei-cost/`,
     lang: 'ja',
@@ -1234,7 +1224,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-ryokin/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
-    title: `DFAアポスティーユの料金【${SEO_YEAR_MONTH_JA}】Regular・Express別の費用と総額の目安`,
+    title: `DFAアポスティーユの料金【${SEO_YEAR}年版】Regular・Express別の費用と総額の目安`,
     description: 'DFAアポスティーユの料金はRegular約1,000ペソ・Express約2,000ペソ。PSA取得費・国際郵送費を含めた総額の目安と、CENOMAR・PSA・NBI別の費用内訳を解説。',
     canonical: `${BASE}/ja/apostille-ryokin/`,
     lang: 'ja',
@@ -1245,7 +1235,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-koyukigen/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-koyukigen', 'index.html'),
-    title: `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】発行から1年｜提出先別の注意点`,
+    title: `NBI Clearanceの有効期限【${SEO_YEAR}年版】発行から1年｜提出先別の注意点`,
     description: 'NBI Clearanceの有効期限は発行から1年。ただし入管や大使館では6ヶ月以内を求められる場合も。提出先別の基準・期限切れを防ぐ取得タイミング・アポスティーユとの関係を解説。',
     canonical: `${BASE}/ja/nbi-koyukigen/`,
     lang: 'ja',
@@ -1256,7 +1246,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/driver-record/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'driver-record', 'index.html'),
-    title: `LTO運転経歴証明書代行【${SEO_YEAR_MONTH_JA}】外免切替・企業採用`,
+    title: `LTO運転経歴証明書代行【${SEO_YEAR}年版】外免切替・企業採用`,
     description: 'フィリピン免許の外免切替に必要なLTO運転経歴証明書を代行取得。DFAアポスティーユ・オリジナルレシート込みで都道府県の免許センターへの提出形式に対応。複数名まとめ依頼可。無料相談。',
     canonical: `${BASE}/ja/driver-record/`,
     lang: 'ja',
@@ -1267,7 +1257,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/us-visa-documents/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'us-visa-documents', 'index.html'),
-    title: `米国ビザの書類代行【${SEO_YEAR_MONTH_JA}】K-1・CR-1対応`,
+    title: `米国ビザの書類代行【${SEO_YEAR}年版】K-1・CR-1対応`,
     description: 'CENOMAR・PSA出生証明書・婚姻証明書・NBI ClearanceをDFAアポスティーユ付きで一括代行。USCIS・NVC提出に対応。英語の書類も当センターが確認・手配。無料相談。',
     canonical: `${BASE}/ja/us-visa-documents/`,
     lang: 'ja',
@@ -1332,7 +1322,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/kokusai-kekkon-roadmap/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'kokusai-kekkon-roadmap', 'index.html'),
-    title: `フィリピン国際結婚の手続きロードマップ作成【${SEO_YEAR_MONTH_JA}】お二人の状況に合わせた書類・手順を整理`,
+    title: `フィリピン国際結婚の手続きロードマップ作成【${SEO_YEAR}年版】お二人の状況に合わせた書類・手順を整理`,
     description: 'フィリピン人パートナーと日本で結婚・同居を目指す方向けの個別ロードマップ作成。必要書類・手続きの順番・提出先を、お二人の状況に合わせて整理してお渡しします。49,800円（税込54,780円）。',
     canonical: `${BASE}/ja/kokusai-kekkon-roadmap/`,
     lang: 'ja',
@@ -1374,7 +1364,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nihon-senko-ph-senko/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nihon-senko-ph-senko', 'index.html'),
-    title: `日本先行婚とフィリピン先行婚【${SEO_YEAR_MONTH_JA}】どちらを選ぶべき？手続きと必要書類を比較`,
+    title: `日本先行婚とフィリピン先行婚【${SEO_YEAR}年版】どちらを選ぶべき？手続きと必要書類を比較`,
     description: 'フィリピン人との国際結婚で「日本とフィリピン、どちらで先に結婚するか」を比較。手続きの流れ・必要書類・メリット・デメリットをステップ別に整理。渡航不要で進めたい方は日本先行婚が有利です。',
     canonical: `${BASE}/ja/nihon-senko-ph-senko/`,
     lang: 'ja',
@@ -1385,7 +1375,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/gyouseishoshi-to-shorui-shuttoku/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'gyouseishoshi-to-shorui-shuttoku', 'index.html'),
-    title: `行政書士の仕事とフィリピン書類取得サービスの違い【${SEO_YEAR_MONTH_JA}】管轄を正確に理解する`,
+    title: `行政書士の仕事とフィリピン書類取得サービスの違い【${SEO_YEAR}年版】管轄を正確に理解する`,
     description: '国際結婚・配偶者ビザ・帰化申請で行政書士と書類取得サービスを使い分ける方法。入管申請は行政書士、フィリピン現地書類（PSA・CENOMAR・NBI）の取得は書類取得サービスの管轄です。',
     canonical: `${BASE}/ja/gyouseishoshi-to-shorui-shuttoku/`,
     lang: 'ja',
@@ -1396,7 +1386,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/philippines-de-kekkon/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'philippines-de-kekkon', 'index.html'),
-    title: `フィリピンで結婚する全ガイド【${SEO_YEAR_MONTH_JA}】手続きの流れ・必要書類・注意点`,
+    title: `フィリピンで結婚する全ガイド【${SEO_YEAR}年版】手続きの流れ・必要書類・注意点`,
     description: 'フィリピンで婚姻を成立させる（フィリピン先行婚）の全手続きを解説。LCCMの取得・Marriage License・挙式・PSA婚姻証明書の反映待ち・日本への報告的届出まで、ステップ別にまとめました。',
     canonical: `${BASE}/ja/philippines-de-kekkon/`,
     lang: 'ja',
@@ -1407,7 +1397,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/kekkaku-shomeisho/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'kekkaku-shomeisho', 'index.html'),
-    title: `結核非発病証明書（TB Non-Disease Certificate）ガイド【${SEO_YEAR_MONTH_JA}】フィリピン国籍者の在留資格認定証明書申請に必須`,
+    title: `結核非発病証明書（TB Non-Disease Certificate）ガイド【${SEO_YEAR}年版】フィリピン国籍者の在留資格認定証明書申請に必須`,
     description: '2025年6月23日施行。フィリピン国籍者がCOE（在留資格認定証明書）を申請する際に必要な結核非発病証明書について、指定Panel Clinic・費用・有効期間・手続きの流れを解説します。',
     canonical: `${BASE}/ja/kekkaku-shomeisho/`,
     lang: 'ja',
@@ -1418,7 +1408,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/haigusha-visa-shorui/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa-shorui', 'index.html'),
-    title: `配偶者ビザ 必要書類チェックリスト【${SEO_YEAR_MONTH_JA}】在留資格認定証明書 フィリピン人`,
+    title: `配偶者ビザ 必要書類チェックリスト【${SEO_YEAR}年版】在留資格認定証明書 フィリピン人`,
     description: 'フィリピン人配偶者の在留資格認定証明書（COE）申請に必要な書類を最新情報で解説。PSA書類・CENOMAR・結核非発病証明書の取得代行も対応。無料相談。',
     canonical: `${BASE}/ja/haigusha-visa-shorui/`,
     lang: 'ja',
@@ -1430,7 +1420,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/business/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'index.html'),
-    title: `法人向けフィリピン書類取得代行｜登録支援機関・行政書士・企業の方へ【${SEO_YEAR_MONTH_JA}】`,
+    title: `法人向けフィリピン書類取得代行｜登録支援機関・行政書士・企業の方へ【${SEO_YEAR}年版】`,
     description: '登録支援機関・行政書士・技能実習生を雇用する企業向けのフィリピン書類取得代行。CENOMAR・PSA・NBI・DFAアポスティーユを一括手配。案件ごとの進捗報告・継続割引あり。',
     canonical: `${BASE}/ja/business/`,
     lang: 'ja',
@@ -1440,7 +1430,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/business/touroku-shien-kikan/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'touroku-shien-kikan', 'index.html'),
-    title: `登録支援機関向け フィリピン書類取得代行｜PSA・CENOMAR・DFAアポスティーユ【${SEO_YEAR_MONTH_JA}】`,
+    title: `登録支援機関向け フィリピン書類取得代行｜PSA・CENOMAR・DFAアポスティーユ【${SEO_YEAR}年版】`,
     description: '登録支援機関向けのフィリピン書類取得代行。技能実習生・特定技能外国人に必要なPSA出生証明書・NBI・DFAアポスティーユを一括手配。案件ごとの進捗報告付き。',
     canonical: `${BASE}/ja/business/touroku-shien-kikan/`,
     lang: 'ja',
@@ -1450,7 +1440,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/business/gyoseishoshi/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'gyoseishoshi', 'index.html'),
-    title: `行政書士向け フィリピン書類取得代行｜国際結婚・配偶者ビザ・帰化申請対応【${SEO_YEAR_MONTH_JA}】`,
+    title: `行政書士向け フィリピン書類取得代行｜国際結婚・配偶者ビザ・帰化申請対応【${SEO_YEAR}年版】`,
     description: '行政書士向けのフィリピン書類取得代行。国際結婚・配偶者ビザ・帰化申請に必要なCENOMAR・PSA・NBI・DFAアポスティーユを日本語で一括手配。案件ごとの進捗報告・継続割引あり。',
     canonical: `${BASE}/ja/business/gyoseishoshi/`,
     lang: 'ja',
@@ -1460,7 +1450,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/business/kigyou/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'kigyou', 'index.html'),
-    title: `企業向け フィリピン書類取得代行｜技能実習生・特定技能外国人採用の書類を一括手配【${SEO_YEAR_MONTH_JA}】`,
+    title: `企業向け フィリピン書類取得代行｜技能実習生・特定技能外国人採用の書類を一括手配【${SEO_YEAR}年版】`,
     description: '技能実習生・特定技能外国人を採用する企業向けのフィリピン書類取得代行。PSA出生証明書・NBI Clearance・DFAアポスティーユをまとめて手配。倫理審査向け料金資料もご用意。',
     canonical: `${BASE}/ja/business/kigyou/`,
     lang: 'ja',
@@ -1470,7 +1460,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/business/menkyo-kirikae/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'menkyo-kirikae', 'index.html'),
-    title: `フィリピン人従業員の日本免許切替サポート｜登録支援機関・監理団体向け【${SEO_YEAR_MONTH_JA}】`,
+    title: `フィリピン人従業員の日本免許切替サポート｜登録支援機関・監理団体向け【${SEO_YEAR}年版】`,
     description: '登録支援機関・監理団体向け。フィリピン人従業員の外免切替に必要なLTO書類（Certification・License History）＋DFAアポスティーユを代行取得。複数名一括対応・進捗報告・請求書払い。',
     canonical: `${BASE}/ja/business/menkyo-kirikae/`,
     lang: 'ja',
@@ -1480,7 +1470,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/business/menkyo-kirikae-kigyou/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'menkyo-kirikae-kigyou', 'index.html'),
-    title: `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR_MONTH_JA}】`,
+    title: `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR}年版】`,
     description: '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名100,000円〜・3名パック270,000円〜。請求書払い・複数名対応。',
     canonical: `${BASE}/ja/business/menkyo-kirikae-kigyou/`,
     lang: 'ja',
@@ -1490,7 +1480,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/lto-koyo-kakunin/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'lto-koyo-kakunin', 'index.html'),
-    title: `フィリピン人採用のLTO書類3種｜License Certification・License History・No Apprehension【${SEO_YEAR_MONTH_JA}】`,
+    title: `フィリピン人採用のLTO書類3種｜License Certification・License History・No Apprehension【${SEO_YEAR}年版】`,
     description: 'フィリピン人ドライバーを採用する会社向け。雇用時に押さえるLTO書類（License Certification・License History・No Apprehension Certificate）の違いと取得方法を解説。採用チェックリスト付き。',
     canonical: `${BASE}/ja/lto-koyo-kakunin/`,
     lang: 'ja',
@@ -1587,8 +1577,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/spouse-visa-document-checklist/',
     outFile: path.join(projectRoot, 'dist', 'en', 'spouse-visa-document-checklist', 'index.html'),
-    title: `Spouse Visa Document Checklist [${SEO_YEAR_MONTH_EN}] — Philippine National Applying for Japan`,
-    description: `Updated ${SEO_YEAR_MONTH_EN}. Complete checklist of Philippine documents needed for Japan spouse visa (COE): PSA marriage cert, birth cert, CENOMAR, TB certificate (new from June 2025), and translations.`,
+    title: `Spouse Visa Document Checklist [${SEO_YEAR}] — Philippine National Applying for Japan`,
+    description: `Updated ${SEO_YEAR}. Complete checklist of Philippine documents needed for Japan spouse visa (COE): PSA marriage cert, birth cert, CENOMAR, TB certificate (new from June 2025), and translations.`,
     canonical: `${BASE}/en/spouse-visa-document-checklist/`,
     lang: 'en' as const,
     enCanonical: `${BASE}/en/spouse-visa-document-checklist/`,
@@ -1693,7 +1683,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/f-6-philippines-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'f-6-philippines-documents', 'index.html'),
-    title: `F-6 Visa Philippine Documents — CENOMAR, PSA & NBI [${SEO_YEAR_MONTH_EN}]`,
+    title: `F-6 Visa Philippine Documents — CENOMAR, PSA & NBI [${SEO_YEAR}]`,
     description: `Korean F-6 spouse visa requires CENOMAR, PSA Birth Certificate, and NBI Clearance with DFA Apostille. LCCM guidance included. We retrieve all documents from the Philippines and ship to Seoul.`,
     canonical: `${BASE}/en/f-6-philippines-documents/`,
     lang: 'en' as const,
@@ -1734,7 +1724,7 @@ const routes: RouteConfig[] = [
 const countryRoutes: RouteConfig[] = COUNTRY_CONFIGS.map(config => ({
   path: `/en/${config.slug}/`,
   outFile: path.join(projectRoot, 'dist', 'en', config.slug, 'index.html'),
-  title: `PH Documents for ${config.name} Immigration [${SEO_YEAR_MONTH_EN}]`,
+  title: `PH Documents for ${config.name} Immigration [${SEO_YEAR}]`,
   description: `Moving to ${config.name}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
   canonical: `${BASE}/en/${config.slug}/`,
   lang: 'en' as const,

@@ -9,11 +9,11 @@ import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { Globe, AlertTriangle, FileCheck, Users } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function NbiClearanceOverseasJa() {
   useMeta(
-    `海外在住でも取れるNBIクリアランス【${SEO_YEAR_MONTH_JA}】`,
+    `海外在住でも取れるNBIクリアランス【${SEO_YEAR}年版】`,
     'フィリピンに戻らずにNBIクリアランスを取りたい方へ。代理申請、HIT対応、海外発送までを日本語で案内します。',
     'https://ph-document.com/ja/nbi-clearance-overseas/',
   );

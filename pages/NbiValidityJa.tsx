@@ -7,11 +7,11 @@ import RelatedArticles from '../components/RelatedArticles';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function NbiValidityJa() {
   useMeta(
-    `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】発行から1年｜提出先別の注意点`,
+    `NBI Clearanceの有効期限【${SEO_YEAR}年版】発行から1年｜提出先別の注意点`,
     'NBI Clearanceの有効期限は発行から1年。ただし入管や大使館では6ヶ月以内を求められる場合も。提出先別の基準・期限切れを防ぐ取得タイミング・アポスティーユとの関係を解説。',
   );
   return (

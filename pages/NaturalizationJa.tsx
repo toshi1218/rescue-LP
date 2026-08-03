@@ -14,11 +14,11 @@ import { FileCheck, Globe, Users, Heart, FileText, Scale, Building, CheckCircle,
 import SummaryBlock from '../components/SummaryBlock';
 import PriceSimulatorKika from '../components/PriceSimulatorKika';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function NaturalizationJa() {
   useMeta(
-    `帰化申請の書類代行【${SEO_YEAR_MONTH_JA}】PSA・NBI・アポスティーユ`,
+    `帰化申請の書類代行【${SEO_YEAR}年版】PSA・NBI・アポスティーユ`,
     'PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。法務局の要件に合わせた形式で手配。司法書士・行政書士の先生からのご依頼も対応。無料相談で必要書類を確認。',
   );
   return (

@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function AustraliaDocsEn() {
   useMeta(
-    'PH Documents for Australia Immigration [April 2026]',
+    'PH Documents for Australia Immigration [2026]',
     'Applying for Australian partner visa or PR? We handle your CENOMAR & PSA online applications with DFA e-Apostille, plus NBI Clearance retrieval with physical Apostille shipped via DHL. Free consultation.',
   );
   return (

@@ -5,7 +5,7 @@ import Pricing from '../components/Pricing';
 import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA, SEO_TITLE_BADGE_JA } from '../lib/seoDate';
+import { SEO_TITLE_BADGE_JA } from '../lib/seoDate';
 import { Info } from 'lucide-react';
 
 export default function PricingJa() {

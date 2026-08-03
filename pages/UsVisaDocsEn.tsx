@@ -9,11 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe, Users, Heart } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function UsVisaDocsEn() {
   useMeta(
-    `K-1 / CR-1 Visa Documents Service [${SEO_YEAR_MONTH_EN}]`,
+    `K-1 / CR-1 Visa Documents Service [${SEO_YEAR}]`,
     `US petitioner for a K-1 or CR-1/IR-1 visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship to your door. Free consultation for American petitioners.`,
   );
   return (

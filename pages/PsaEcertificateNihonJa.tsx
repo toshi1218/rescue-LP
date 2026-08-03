@@ -29,7 +29,7 @@ export default function PsaEcertificateNihonJa() {
   };
 
   useMeta(
-    'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
+    'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年版】',
     'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
   );
 
@@ -44,7 +44,7 @@ export default function PsaEcertificateNihonJa() {
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
+          headline: 'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年版】',
           description: 'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
           datePublished: '2026-04-24',
           author: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/ja/' },

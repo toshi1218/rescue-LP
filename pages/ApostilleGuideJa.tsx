@@ -6,11 +6,11 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function ApostilleGuideJa() {
   useMeta(
-    `フィリピンDFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応・渡航不要`,
+    `フィリピンDFAアポスティーユ代行【${SEO_YEAR}年版】書類取得から一括対応・渡航不要`,
     'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
   );
   return (

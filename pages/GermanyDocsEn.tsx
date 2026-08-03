@@ -9,11 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe, Shield } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function GermanyDocsEn() {
   useMeta(
-    `PH Documents for Germany Immigration [${SEO_YEAR_MONTH_EN}]`,
+    `PH Documents for Germany Immigration [${SEO_YEAR}]`,
     `Moving to Germany? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for German Embassy. Ships via DHL. Free consultation.`,
   );
   return (

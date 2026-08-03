@@ -8,11 +8,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileText, Globe, CheckCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function CenomarTohaJa() {
   useMeta(
-    `CENOMARとは？意味・正式名称・使い方を徹底解説【${SEO_YEAR_MONTH_JA}】`,
+    `CENOMARとは？意味・正式名称・使い方を徹底解説【${SEO_YEAR}年版】`,
     'CENOMARはフィリピン統計局（PSA）が発行する独身証明書。Certificate of No Marriage Recordの略称で、国際結婚・配偶者ビザ・帰化申請に必要。取得方法・有効期限・アポスティーユまで解説。',
   );
   return (

@@ -8,13 +8,13 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Heart, FileCheck, Globe, Users, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 import RelatedArticles from '../components/RelatedArticles';
 import PaymentTrust from '../components/PaymentTrust';
 
 export default function NbiGuideEn() {
   useMeta(
-    `NBI Clearance + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    `NBI Clearance + Apostille Service [${SEO_YEAR}]`,
     `Need NBI Clearance for a spouse visa or work permit? We retrieve it with DFA Apostille and ship worldwide. HIT cases handled. Free quote.`,
   );
   return (

@@ -14,7 +14,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function DfaProcessingTimeJa() {
   useMeta(
-    'DFAアポスティーユの処理期間【2026年3月】Regular 4営業日・Express 翌営業日',
+    'DFAアポスティーユの処理期間【2026年版】Regular 4営業日・Express 翌営業日',
     'DFAアポスティーユの処理期間はRegular（4営業日）またはExpress（翌営業日）。申請から受け取りまでの流れ・費用の違い・提出期限から逆算したスケジュールの立て方を解説。',
   );
   return (

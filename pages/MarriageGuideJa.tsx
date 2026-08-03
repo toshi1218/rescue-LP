@@ -12,11 +12,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users, ShieldCheck, FileText, CheckCircle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function MarriageGuideJa() {
   useMeta(
-    `フィリピン人との国際結婚 手続きの流れ・費用・必要書類【${SEO_YEAR_MONTH_JA}】`,
+    `フィリピン人との国際結婚 手続きの流れ・費用・必要書類【${SEO_YEAR}年版】`,
     'フィリピン人との国際結婚の手続き・費用・必要書類を解説。CENOMAR・PSA出生証明書・DFAアポスティーユを日本語で一括代行。日本先行婚・フィリピン先行婚対応。無料相談。',
   );
   return (

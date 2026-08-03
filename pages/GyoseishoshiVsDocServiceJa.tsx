@@ -7,11 +7,11 @@ import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
 import { CheckCircle, XCircle, Users, FileCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function GyoseishoshiVsDocServiceJa() {
   useMeta(
-    `行政書士の仕事とフィリピン書類取得サービスの違い【${SEO_YEAR_MONTH_JA}】管轄を正確に理解する`,
+    `行政書士の仕事とフィリピン書類取得サービスの違い【${SEO_YEAR}年版】管轄を正確に理解する`,
     '国際結婚・配偶者ビザ・帰化申請で行政書士と書類取得サービスを使い分ける方法。入管申請は行政書士、フィリピン現地書類（PSA・CENOMAR・NBI）の取得は書類取得サービスの管轄です。',
   );
   return (
