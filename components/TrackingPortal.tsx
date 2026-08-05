@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { CheckCircle2, Circle, Upload, AlertCircle, Loader2 } from 'lucide-react';
 import {
   verifyTracking,
@@ -123,13 +123,12 @@ export default function TrackingPortal({ lang }: { lang: TrackingLang }) {
   const [uploadMsg, setUploadMsg] = useState('');
   const [uploadErr, setUploadErr] = useState('');
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  async function runVerify(codeValue: string, pinValue: string) {
     setChecking(true);
     setError('');
     setData(null);
 
-    const result = await verifyTracking(code.trim().toLowerCase(), pin.trim());
+    const result = await verifyTracking(codeValue.trim().toLowerCase(), pinValue.trim());
     setChecking(false);
 
     if (!result.ok) {
@@ -140,6 +139,28 @@ export default function TrackingPortal({ lang }: { lang: TrackingLang }) {
     }
     setData(result.data);
   }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    void runVerify(code, pin);
+  }
+
+  // スタッフが発行するURL（?code=...&pin=...）で開かれた場合は、入力なしでそのまま進捗を表示する。
+  // 読み取り後はアドレスバーからPINを消す（履歴・スクリーンショット経由の漏れを減らす）。
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    const urlCode = params.get('code');
+    const urlPin = params.get('pin');
+    if (!urlCode || !urlPin) return;
+
+    setCode(urlCode);
+    setPin(urlPin);
+    window.history.replaceState(null, '', window.location.pathname);
+    void runVerify(urlCode, urlPin);
+    // 初回マウント時のみ実行する
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];

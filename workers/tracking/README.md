@@ -24,13 +24,21 @@ cd workers/tracking
 ./deploy.sh
 ```
 
-- 実行中に `wrangler login` でブラウザが開くので Cloudflare アカウントでログイン
-- D1・KV 作成後、出力される ID を `wrangler.toml` に貼り付けるよう促されるので、指示通りに編集して Enter
-- 最後に管理パスワード（`ADMIN_PASSWORD`）の入力を求められる（`/tools/tracking-admin.html` のログインに使う値）
-- 既に D1/R2/KV を作成済みの場合、該当コマンドは失敗しても無視して先に進む設計になっている（`|| true`）
+操作が必要なのは次の2点だけです。
 
-完了後、Cloudflare ダッシュボード → Workers & Pages → `ph-document-tracking` → Settings → Domains & Routes で
-`tracking.ph-document.com` をカスタムドメインとして追加する（スクリプトの最後にも案内が出ます）。
+1. `wrangler login` でブラウザが開くので Cloudflare アカウントでログイン
+2. 管理パスワード（`ADMIN_PASSWORD`）を入力（`/tools/tracking-admin.html` のログインに使う値）
+
+D1・KV の ID は `wrangler.toml` へ**自動で書き戻される**ため、コピペ作業はありません。
+`tracking.ph-document.com` のカスタムドメイン紐付けも `wrangler.toml` の `routes` 設定により
+`wrangler deploy` が同時に行います（DNSレコードも自動作成）。
+
+スクリプトは冪等です。途中で失敗しても、直してからもう一度 `./deploy.sh` を実行すれば、
+作成済みのリソースはスキップして続きから進みます。
+
+デプロイ後は `wrangler.toml` に実IDが入った状態になります。この差分はコミットして構いません
+（D1/KV の ID は秘密情報ではありません。秘密なのは `ADMIN_PASSWORD` だけで、これは
+Cloudflare の secret に保存され、リポジトリには入りません）。
 
 ### 手動で1ステップずつ行う場合
 
@@ -43,8 +51,18 @@ npx wrangler d1 execute ph-document-tracking --file=./schema.sql --remote
 npx wrangler r2 bucket create ph-document-tracking-uploads
 npx wrangler kv namespace create RATE_LIMIT           # → id を wrangler.toml に貼る
 npx wrangler secret put ADMIN_PASSWORD
-npx wrangler deploy
+npx wrangler deploy                                   # routes 設定によりカスタムドメインも紐付く
 ```
+
+## 稼働確認
+
+```bash
+curl https://tracking.ph-document.com/
+# → ph-document tracking worker: OK
+```
+
+これが返れば Worker は稼働しています。返らない場合は DNS 伝播待ち（数分）か、
+カスタムドメインが紐付いていない可能性があります（`npx wrangler deployments list` で確認）。
 
 ## 運用フロー
 

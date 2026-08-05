@@ -3,11 +3,12 @@ main = "src/index.ts"
 compatibility_date = "2026-04-01"
 compatibility_flags = ["nodejs_compat"]
 
-# Custom domain is configured via the Cloudflare dashboard:
-#   tracking.ph-document.com -> this Worker
-# routes = [
-#   { pattern = "tracking.ph-document.com/*", custom_domain = true }
-# ]
+# tracking.ph-document.com をこのWorkerに紐付ける（DNSレコードも wrangler が作成）。
+# ph-document.com のゾーンが同じCloudflareアカウントにある前提。別アカウントの場合は
+# この3行をコメントアウトし、ダッシュボードから手動でカスタムドメインを追加する。
+routes = [
+  { pattern = "tracking.ph-document.com", custom_domain = true }
+]
 
 [[d1_databases]]
 binding = "DB"

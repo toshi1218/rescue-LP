@@ -118,14 +118,41 @@ $('loginBtn').onclick = async () => {
   renderList(await res.json());
 };
 
+const SITE = 'https://ph-document.com';
+function portalUrl(lang, code, pin){
+  return SITE + '/' + lang + '/tracking/?code=' + encodeURIComponent(code) + '&pin=' + encodeURIComponent(pin);
+}
+function messageTemplate(lang, url){
+  if (lang === 'en') return 'You can check the progress of your order and upload documents here:\n' + url + '\n\n(This link contains your access code — please do not share it.)';
+  if (lang === 'ko') return '진행 상황 확인 및 서류 업로드는 아래 링크에서 하실 수 있습니다:\n' + url + '\n\n(이 링크에는 접속 정보가 포함되어 있으니 공유하지 마세요.)';
+  return 'ご依頼の進捗確認と書類のアップロードは、こちらのリンクからお願いいたします。\n' + url + '\n\n※このリンクにはお客様専用のアクセス情報が含まれています。第三者に共有しないでください。';
+}
+async function copyText(text, btn){
+  try { await navigator.clipboard.writeText(text); }
+  catch { const t=document.createElement('textarea'); t.value=text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
+  const label = btn.textContent; btn.textContent = 'コピーしました'; setTimeout(()=>{ btn.textContent = label; }, 1500);
+}
+
 $('createBtn').onclick = async () => {
   const res = await api('/api/admin/create', { method:'POST', body: JSON.stringify({ customer_name: $('newName').value || null }) });
   if (!res.ok){ $('createResult').innerHTML = '<p class="err">発行に失敗しました</p>'; return; }
   const { code, pin } = await res.json();
   $('createResult').innerHTML =
-    '<hr><p>発行しました。お客様にお伝えください：</p>'+
-    '<p>追跡番号: <span class="code">'+code+'</span> ／ PIN: <span class="code">'+pin+'</span></p>'+
-    '<p class="muted">確認URL: https://ph-document.com/ja/tracking/</p>';
+    '<hr><p>発行しました。<strong>下のリンクをそのままお客様に送れば</strong>、入力なしで進捗確認と書類アップロードができます。</p>'+
+    '<label style="margin-top:10px;">お客様の言語</label>'+
+    '<select id="urlLang"><option value="ja">日本語</option><option value="en">English</option><option value="ko">한국어</option></select>'+
+    '<label>送付リンク</label>'+
+    '<input id="sendUrl" readonly value="'+portalUrl('ja', code, pin)+'" />'+
+    '<button id="copyUrl" class="gold">リンクをコピー</button> '+
+    '<button id="copyMsg" style="background:#475569;">案内文ごとコピー</button>'+
+    '<p class="muted" style="margin-top:10px;">追跡番号: <span class="code">'+code+'</span> ／ PIN: <span class="code">'+pin+'</span>'+
+    '（お客様が手入力する場合は '+SITE+'/ja/tracking/ でこの2つを入力）</p>';
+
+  const sync = () => { $('sendUrl').value = portalUrl($('urlLang').value, code, pin); };
+  $('urlLang').onchange = sync;
+  $('copyUrl').onclick = () => copyText($('sendUrl').value, $('copyUrl'));
+  $('copyMsg').onclick = () => copyText(messageTemplate($('urlLang').value, $('sendUrl').value), $('copyMsg'));
+
   $('newName').value=''; refresh();
 };
 
@@ -155,11 +182,17 @@ async function openDetail(code){
     ? d.uploads.map(u => '<div class="file">📎 <a class="dl" href="#" data-id="'+u.id+'">'+u.filename+'</a> <span class="muted">('+fmt(u.uploaded_at)+')</span></div>').join('')
     : '<p class="muted">アップロードされた書類はありません。</p>';
   $('detailBody').innerHTML =
+    '<hr><label>お客様への送付リンク（再送用）</label>'+
+    '<select id="dLang"><option value="ja">日本語</option><option value="en">English</option><option value="ko">한국어</option></select>'+
+    '<input id="dUrl" readonly value="'+portalUrl('ja', code, d.tracking.pin)+'" />'+
+    '<button id="dCopy" style="background:#475569;">リンクをコピー</button>'+
     '<hr><label>ステータス更新</label><select id="stSel">'+options+'</select>'+
     '<label>メモ（任意・お客様に表示されます）</label><textarea id="stNote" rows="2">'+(d.tracking.status_note||'')+'</textarea>'+
     '<button id="saveSt" class="gold">更新して保存</button> <span id="saveMsg" class="muted"></span>'+
     '<hr><label>アップロード書類</label>'+files;
   $('detailPanel').classList.remove('hidden');
+  $('dLang').onchange = () => { $('dUrl').value = portalUrl($('dLang').value, code, d.tracking.pin); };
+  $('dCopy').onclick = () => copyText($('dUrl').value, $('dCopy'));
   $('saveSt').onclick = async () => {
     const r = await api('/api/admin/status', { method:'POST', body: JSON.stringify({ code, status: $('stSel').value, note: $('stNote').value }) });
     $('saveMsg').innerHTML = r.ok ? '<span class="ok">保存しました</span>' : '<span class="err">失敗</span>';
