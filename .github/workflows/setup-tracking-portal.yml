@@ -23,8 +23,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-          cache-dependency-path: workers/tracking/package-lock.json
 
       - name: Check required secrets
         run: |
@@ -33,7 +31,7 @@ jobs:
           test -n "$TRACKING_ADMIN_PASSWORD"
 
       - name: Install Worker dependencies
-        run: npm ci
+        run: npm install
 
       - name: Create storage resources
         id: resources
