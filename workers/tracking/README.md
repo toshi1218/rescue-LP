@@ -12,10 +12,46 @@
 - **KV**（`RATE_LIMIT`）: レート制限
 - **Secret** `ADMIN_PASSWORD`: 管理画面の認証
 
-## 初回セットアップ（ユーザー側の手動デプロイ）
+## 初回セットアップ
 
-このリポジトリの CI/エージェント環境には Cloudflare の認証情報がないため、
-D1/R2/KV の作成と `wrangler deploy` は**あなた自身のターミナルで**実行する必要があります。
+Cloudflare の認証情報はリポジトリに置いていないため、初回だけ**あなたの操作**が必要です。
+やり方は2通りあります。**スマホしか無い場合は A、PCがあるなら B** が簡単です。
+
+### A. スマホのブラウザだけで完結する（GitHub Actions 経由）
+
+ターミナル不要。3ステップです。
+
+**① Cloudflare で API トークンを作る**（dash.cloudflare.com → 右上アイコン → Profile → API Tokens → Create Token → Create Custom Token）
+
+必要な権限（すべて Account スコープ、ゾーンのみ Zone スコープ）:
+
+| 種類 | 項目 | 権限 |
+|---|---|---|
+| Account | Workers Scripts | Edit |
+| Account | Workers KV Storage | Edit |
+| Account | Workers R2 Storage | Edit |
+| Account | D1 | Edit |
+| Zone | Workers Routes | Edit |
+| Zone | DNS | Edit |
+
+Zone は `ph-document.com` を指定（`tracking.ph-document.com` のDNSレコード作成に必要）。
+Account ID は Cloudflare ダッシュボードの Workers & Pages 画面の右側に表示されている英数字。
+
+**② GitHub にシークレットを3つ登録**（リポジトリ → Settings → Secrets and variables → Actions → New repository secret）
+
+| 名前 | 中身 |
+|---|---|
+| `CLOUDFLARE_API_TOKEN` | ①で作ったトークン |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare のアカウントID |
+| `TRACKING_ADMIN_PASSWORD` | 管理画面のログインパスワード（自分で決める・20文字以上のランダム推奨） |
+
+**③ ワークフローを実行**（リポジトリ → Actions → **Deploy tracking Worker** → Run workflow → 入力欄に `deploy` と入力 → 実行）
+
+D1/R2/KV の作成、スキーマ適用、パスワード設定、デプロイ、カスタムドメイン紐付け、
+稼働確認まで自動で走ります。完了後の Summary に案内URLが出ます。
+2回目以降も同じ手順で再実行でき、作成済みのリソースはスキップされます。
+
+### B. PCのターミナルで実行する
 
 **1本のスクリプトで完結**（`npm install` → ログイン → D1/R2/KV作成 → スキーマ適用 → secret設定 → デプロイまで）:
 
