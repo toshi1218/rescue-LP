@@ -174,7 +174,7 @@ export default function CenomarCostComparisonEn() {
           <p className="text-sm text-gray-600 mb-3">We handle the entire process end-to-end: PSA retrieval, DFA Apostille, and DHL international shipping to your door. One fixed price, no surprises.</p>
           <ul className="text-sm space-y-1">
             <li><span className="text-green-600 font-medium">✓</span> All-inclusive: PSA + DFA Apostille + DHL shipping (US$349)</li>
-            <li><span className="text-green-600 font-medium">✓</span> Physical DFA Apostille — accepted by USCIS, IRCC, Home Affairs, UKVI</li>
+            <li><span className="text-green-600 font-medium">✓</span> Authentication route matched to the receiving authority</li>
             <li><span className="text-green-600 font-medium">✓</span> Ships to USA, Canada, Australia, UK, UAE, Korea, Japan and more</li>
             <li><span className="text-green-600 font-medium">✓</span> Progress updates at every stage</li>
             <li><span className="text-green-600 font-medium">✓</span> Free consultation — no commitment until you approve</li>
