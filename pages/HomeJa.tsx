@@ -192,6 +192,16 @@ export default function HomeJa() {
               </div>
             </div>
           </section>
+          <section className="mb-10 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <h2 className="text-base md:text-lg font-bold text-secondary mb-2">取得から認証・海外発送まで、提出先に合わせて一括対応</h2>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              PSA・NBIの取得、DFA認証、海外発送までまとめて手配します。PSA民事書類はe-Apostille（電子）が原則で、紙のPSA原本や原本発送が必要な提出先にも対応方法を確認してご案内します。
+            </p>
+            <p className="mt-2 text-xs text-gray-500">見積無料・通常1営業日以内に返信。電子版・原本のどちらが必要か分からない段階でもご相談ください。</p>
+            <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              無料見積を依頼する
+            </a>
+          </section>
         </div>
         <ServicePacks />
         <PainPoints />

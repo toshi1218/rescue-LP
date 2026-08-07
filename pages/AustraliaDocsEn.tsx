@@ -51,7 +51,7 @@ export default function AustraliaDocsEn() {
               name: 'Does Australia require DFA Apostille on Philippine documents?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes. Australia is a Hague Convention member. The Department of Home Affairs requires DFA Apostille authentication on Philippine civil documents for partner visa and immigration applications.',
+                text: 'Australia is a Hague Convention member, but Home Affairs requirements vary by visa subclass and document. We verify the current checklist before processing.',
               },
             },
             {
@@ -95,7 +95,7 @@ export default function AustraliaDocsEn() {
         points={[
           'Australia is a Hague Convention member — DFA Apostille is required on Philippine documents',
           'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-          'Paper Apostille originals shipped via DHL Express to your Australian address',
+          'PSA e-Apostille delivered digitally; NBI and physical originals shipped via DHL when needed',
           'We confirm exact Home Affairs requirements for your specific visa subclass',
         ]}
         ctaText="Free Consultation"
@@ -107,7 +107,7 @@ export default function AustraliaDocsEn() {
           {
             icon: <Shield className="w-4 h-4" />,
             title: 'Applying for Australian partner visa or PR',
-            description: 'The Department of Home Affairs requires Philippine civil documents with DFA Apostille. We handle all required documents in one coordinated flow.',
+            description: 'Home Affairs document and authentication requirements vary by visa subclass. We verify the current checklist and handle the agreed documents in one coordinated flow.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -164,7 +164,7 @@ export default function AustraliaDocsEn() {
 
       <FaqSection
         items={[
-          { q: 'Does Australia require DFA Apostille on Philippine documents?', a: 'Yes. Australia is a Hague Convention member. The Department of Home Affairs requires DFA Apostille authentication on Philippine civil documents for partner visa and immigration applications.' },
+          { q: 'Does Australia require DFA Apostille on Philippine documents?', a: 'Not in every case. Australia is a Hague Convention member, but requirements vary by visa subclass and document. We verify the current Home Affairs checklist before processing.' },
           { q: 'What documents are needed for an Australian partner visa (subclass 820/801)?', a: 'Typically CENOMAR and PSA Birth Certificate with DFA Apostille. NBI Clearance may also be required. Requirements vary by visa subclass. We confirm for your specific case.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Australia are included.' },
           { q: 'How long does it take to ship to Australia?', a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to Australia typically takes 3–5 business days after documents are ready.' },
