@@ -5,13 +5,12 @@ import Pricing from '../components/Pricing';
 import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA, SEO_TITLE_BADGE_JA } from '../lib/seoDate';
-import { Info } from 'lucide-react';
+import { SEO_TITLE_BADGE_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function PricingJa() {
   useMeta(
     `料金一覧${SEO_TITLE_BADGE_JA}料金・追加請求なし｜フィリピン書類取得代行`,
-    'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユ・国際郵送をまとめた料金。後から追加請求なし。無料見積もり受付中。',
+    'PSA電子書類＋e-Apostilleは1通39,800円、2通69,800円。入力・決済サポート22,000円から。紙原本付き、NBI、LTO、帰化申請にも対応。',
   );
   return (
     <PageLayout
@@ -32,12 +31,12 @@ export default function PricingJa() {
     >
       <HeroBanner
         title="料金"
-        subtitle="PSAオンライン申請代行（¥16,500〜）からフルサービスパック（¥94,000〜）まで、目的・予算に合わせてお選びいただけます。"
-        badges={['オンライン申請代行から対応', '無料お見積もり', '追加費用の後出しなし']}
+        subtitle="入力・決済サポート22,000円から、電子書類2通パック69,800円、紙原本付き79,800円まで。必要な範囲だけ選べます。"
+        badges={['税込価格を表示', '無料お見積もり', '追加費用は着手前に確認']}
         ctaText="無料でお見積もり"
         ctaHref="#contact"
         ctaService="料金のお見積もり"
-        lastUpdated="2026年5月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <CtaBox
@@ -49,25 +48,22 @@ export default function PricingJa() {
         trustNote="追加費用が出る場合は事前にご相談します"
       />
 
-      {/* なぜ他社より安くないのか */}
+      {/* 電子化後の料金設計 */}
       <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 mb-2">
-        <p className="text-sm font-bold text-gray-800 mb-3">なぜ他社より安くないのか</p>
+        <p className="text-sm font-bold text-gray-800 mb-3">電子版・紙原本・個別サポートで料金を分けています</p>
         <p className="text-sm text-gray-600 leading-relaxed mb-3">
-          フィリピン書類の代行サービスの中には、e-Apostille（電子認証）・e-Certificate（電子書類）で対応している業者もあり、費用を抑えられます。
+          PSA民事登録書類は、現在e-Certificateとe-Apostilleをオンラインで取得できます。そのため、紙の国際配送を前提としていた旧料金ではなく、必要なサービス範囲に応じた価格に見直しました。
         </p>
         <p className="text-sm text-gray-700 leading-relaxed mb-3">
-          ただし、<strong>日本の市区町村役場・法務局・出入国在留管理庁では、紙の原本・物理アポスティーユを必須とするケースが大半です。</strong>
-        </p>
-        <p className="text-sm text-gray-600 leading-relaxed mb-4">
-          IGRSが取り扱うのは<strong>物理アポスティーユ（紙原本）のみ</strong>。現地DFAへの予約・申請・受け取りをスタッフが代行するため、予約枠に限りがあり、価格を下げることができません。その分、<strong>日本の提出先で弾かれるリスクはほぼありません。</strong>
+          <strong>電子版のみなら1通39,800円、よく使う2通は69,800円。</strong>PSA SECPA紙原本と同梱配送が必要な場合は79,800円、提出先の確認項目整理や個別管理を含む安心サポートは94,800円からです。
         </p>
         <div className="rounded-lg border border-blue-200 bg-white p-4">
-          <p className="text-xs font-bold text-blue-700 mb-1">まず提出先に確認してください</p>
+          <p className="text-xs font-bold text-blue-700 mb-1">お申し込み前に提出先へご確認ください</p>
           <p className="text-xs text-gray-600 leading-relaxed mb-2">
-            「e-Apostilleで受理しますか？紙の原本が必要ですか？」と確認してから業者を選ぶことをおすすめします。
+            「e-ApostilleのPDFで受理されるか」「PSA SECPA紙原本も必要か」の2点を確認すると、過不足のないプランを選べます。
           </p>
           <p className="text-xs text-gray-500 leading-relaxed">
-            電子対応が確認できた場合は、<strong>PSAオンライン申請代行（¥16,500〜）</strong>でコストを抑えられます。紙原本が必要な場合はフルサービスをご利用ください。
+            入力・決済サポート22,000円には、書類発行、e-Certificate／e-Apostilleの納品、政府手数料は含まれません。
           </p>
         </div>
       </div>

@@ -365,6 +365,15 @@ const Navbar: React.FC = () => {
             </span>
           </Link>
         )}
+        {isHome && isJa && (
+          <div className="hidden md:flex items-center gap-1 ml-auto mr-3">
+            <a href="#services" className="px-3 py-2 text-xs font-semibold text-gray-600 hover:text-secondary">対応サービス</a>
+            <Link to="/ja/ryokin/" className="px-3 py-2 text-xs font-semibold text-gray-600 hover:text-secondary">料金</Link>
+            <Link to="/ja/company/" className="px-3 py-2 text-xs font-semibold text-gray-600 hover:text-secondary">会社概要</Link>
+            <a href="#faq" className="px-3 py-2 text-xs font-semibold text-gray-600 hover:text-secondary">FAQ</a>
+            <a href="#contact" className="rounded-full bg-primary px-4 py-2 text-xs font-bold text-secondary hover:bg-primary-hover">無料見積もり</a>
+          </div>
+        )}
         <div className="flex items-center gap-2 ml-2">
           {/* モバイル用お問い合わせボタン */}
           <a
@@ -392,7 +401,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* ナビゲーションタブ行 — desktop only */}
-      <div className="hidden md:block border-t border-gray-100 bg-white/95">
+      <div className={`${isHome && isJa ? 'hidden' : 'hidden md:block'} border-t border-gray-100 bg-white/95`}>
         <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-2 py-1.5 flex items-center">
           <div className="flex overflow-x-auto scrollbar-hide gap-1 min-w-0">
 

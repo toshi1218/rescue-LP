@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight, ChevronDown } from 'lucide-react';
+import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight } from 'lucide-react';
+import { JA_PRICING, formatJpy } from '../lib/pricing';
 
 const packs = [
   {
@@ -8,6 +9,7 @@ const packs = [
     icon: Heart,
     title: '国際結婚',
     desc: 'フィリピン婚・日本婚の手続きに必要な書類と費用の目安を確認できます',
+    price: `電子2通 ${formatJpy(JA_PRICING.digitalPair)}〜`,
     accentBg: 'bg-rose-50',
     accentBorder: 'border-rose-100',
     iconColor: 'text-rose-500',
@@ -18,6 +20,7 @@ const packs = [
     icon: BadgeCheck,
     title: '配偶者ビザ（在留資格）',
     desc: '入管申請に向けて必要なフィリピン書類の一覧と費用の目安を確認できます',
+    price: `電子1通 ${formatJpy(JA_PRICING.digitalSingle)}〜`,
     accentBg: 'bg-blue-50',
     accentBorder: 'border-blue-100',
     iconColor: 'text-blue-600',
@@ -28,6 +31,7 @@ const packs = [
     icon: Car,
     title: '外免切替（免許の切替）',
     desc: 'フィリピン免許を日本免許に切り替えるためのLTO書類と費用を確認できます',
+    price: `${formatJpy(JA_PRICING.lto)}〜`,
     accentBg: 'bg-emerald-50',
     accentBorder: 'border-emerald-100',
     iconColor: 'text-emerald-600',
@@ -38,16 +42,18 @@ const packs = [
     icon: ShieldCheck,
     title: '海外ビザ用NBIクリアランス',
     desc: '海外ビザ申請に必要な無犯罪証明書の取得サポートと費用を確認できます',
+    price: `認証代行 ${formatJpy(JA_PRICING.nbiApostille)}〜`,
     accentBg: 'bg-amber-50',
     accentBorder: 'border-amber-100',
     iconColor: 'text-amber-600',
     numColor: 'text-amber-400',
   },
   {
-    to: '/ja/kikka-shinsei/',
+    to: '/ja/kika-shinsei-guide/',
     icon: Award,
     title: '帰化申請書類パック',
     desc: '法務局への帰化申請に必要なフィリピン書類（出生・婚姻・NBI）の取得サポートと費用を確認できます',
+    price: `${formatJpy(JA_PRICING.naturalization)}〜`,
     accentBg: 'bg-violet-50',
     accentBorder: 'border-violet-100',
     iconColor: 'text-violet-600',
@@ -56,11 +62,8 @@ const packs = [
 ];
 
 const ServicePacks: React.FC = () => {
-  const [expanded, setExpanded] = useState(false);
-  const visiblePacks = expanded ? packs : packs.slice(0, 2);
-
   return (
-    <section className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white">
       <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-6">
         <div className="text-center mb-8">
           <span className="text-primary-dark font-bold text-xs font-display tracking-widest uppercase mb-2 block">Services</span>
@@ -70,7 +73,7 @@ const ServicePacks: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {visiblePacks.map((pack, i) => (
+          {packs.map((pack, i) => (
             <Link
               key={pack.to}
               to={pack.to}
@@ -94,6 +97,8 @@ const ServicePacks: React.FC = () => {
               {/* Desc */}
               <p className="text-xs text-gray-500 leading-relaxed mb-4">{pack.desc}</p>
 
+              <p className="mb-3 text-sm font-extrabold text-secondary">{pack.price}<span className="ml-1 text-[10px] font-normal text-gray-400">税込</span></p>
+
               {/* CTA row */}
               <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-dark group-hover:gap-2 transition-all">
                 詳しく見る
@@ -103,17 +108,11 @@ const ServicePacks: React.FC = () => {
           ))}
         </div>
 
-        {!expanded && (
-          <div className="text-center mt-4">
-            <button
-              onClick={() => setExpanded(true)}
-              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
-            >
-              <ChevronDown className="w-4 h-4" />
-              {`残り${packs.length - 2}件を見る`}
-            </button>
-          </div>
-        )}
+        <div className="mt-8 text-center">
+          <Link to="/ja/ryokin/" className="inline-flex items-center gap-2 rounded-xl border border-secondary px-6 py-3 text-sm font-bold text-secondary hover:bg-secondary hover:text-white">
+            全プランと含まれる内容を見る <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );

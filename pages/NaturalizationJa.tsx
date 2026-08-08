@@ -15,6 +15,7 @@ import SummaryBlock from '../components/SummaryBlock';
 import PriceSimulatorKika from '../components/PriceSimulatorKika';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { JA_PRICING } from '../lib/pricing';
 
 export default function NaturalizationJa() {
   useMeta(
@@ -39,12 +40,12 @@ export default function NaturalizationJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '50000',
+          price: String(JA_PRICING.naturalization),
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '50000',
+            price: String(JA_PRICING.naturalization),
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: '帰化申請用PSA書類最大5通・e-Apostille・必要に応じた紙原本・同梱配送込み（税込）',
           },
         },
         },
@@ -65,7 +66,7 @@ export default function NaturalizationJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '書類1通のみは50,000円〜（税抜・送料実費別途）。帰化書類パックは5通まで132,500円（税込・アポスティーユ・DHL配送込み）、6通目以降は追加1通ごとに＋26,500円です。実例として家族分6通で159,000円。パック内の1通あたり単価は26,500円と単品依頼の半額以下で、通数が増えても国際送料は1回分のみです。「132,500円×通数」ではありません。無料相談後に正確な金額をご提示します。',
+                text: 'PSA電子書類1通は39,800円〜（税込）。帰化申請書類パックはPSA書類5通まで132,500円〜（税込）です。NBI Clearanceは本人による指紋採取・原本取得が必要なため、内容を確認して個別にご案内します。',
               },
             },
             {
@@ -291,10 +292,10 @@ export default function NaturalizationJa() {
           <div className="px-4 py-3 font-bold text-center">料金</div>
         </div>
         {[
-          { label: '書類1通のみ（PSA取得＋DFAアポスティーユ）', price: '50,000円〜（税抜・送料別）' },
+          { label: 'PSA電子書類1通（e-Apostille込み）', price: '39,800円〜（税込）' },
           { label: '帰化書類パック：5通まで（アポスティーユ・DHL配送込み）', price: '132,500円（税込）', bold: true },
-          { label: '6通目以降、追加1通ごと', price: '＋26,500円（税込）' },
-          { label: '実例：家族6通（本人・父母・兄弟姉妹＋父母の婚姻証明書）', price: '159,000円（税込・一括配送込み）' },
+          { label: '6通目以降、追加1通ごと', price: '＋29,800円（税込）' },
+          { label: '実例：家族6通（本人・父母・兄弟姉妹＋父母の婚姻証明書）', price: '162,300円（税込・一括配送込み）' },
         ].map((row, i) => (
           <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
             <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -328,7 +329,7 @@ export default function NaturalizationJa() {
       <FaqSection
         items={[
           { q: '帰化申請に必要な書類は何ですか？', a: '一般的にPSA出生証明書・婚姻証明書（DFAアポスティーユ付き）が必要です。状況によって追加書類が必要な場合もあります。無料相談で確認します。' },
-          { q: '料金はいくらですか？（132,500円は1通の値段ですか？）', a: '書類1通のみは50,000円〜（税抜・送料実費別途）。帰化書類パックは5通まで132,500円（税込・アポスティーユ・DHL配送込み）、6通目以降は追加1通ごとに＋26,500円です。実例として家族分6通で159,000円。パック内の1通あたり単価は26,500円と単品依頼の半額以下で、通数が増えても国際送料は1回分のみです。「132,500円×通数」の掛け算ではありませんのでご安心ください。' },
+          { q: '料金はいくらですか？（132,500円は1通の値段ですか？）', a: 'PSA電子書類1通は39,800円〜（税込）。帰化書類パックはPSA書類5通まで132,500円（税込）です。6通目以降やNBI Clearance、翻訳などは必要内容を確認して個別にお見積もりします。「132,500円×通数」ではありません。' },
           { q: '司法書士・行政書士の先生から書類取得を依頼することはできますか？', a: 'はい、対応しています。行政書士の先生がクライアントの帰化申請に必要な書類を取り寄せる場合、当社が現地取得からDFAアポスティーユまで代行し、先生の事務所へ郵送します。' },
           { q: '法務局から書類の発行日に条件がある場合、対応できますか？', a: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。取得スケジュールをその条件に合わせて調整します。' },
           { q: 'フィリピンの書類は日本語訳文が必要ですか？', a: 'はい。外国語（英語・フィリピン語）で書かれた書類には、翻訳者の氏名・住所・翻訳日付を記載した日本語訳文の添付が求められます。当社で書類取得とあわせて翻訳文の手配もご相談いただけます。' },

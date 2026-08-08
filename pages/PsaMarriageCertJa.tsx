@@ -33,10 +33,10 @@ export default function PsaMarriageCertJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '50000',
+          price: '39800',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '50000',
+            price: '39800',
             priceCurrency: 'JPY',
             description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },

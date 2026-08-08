@@ -36,10 +36,10 @@ export default function CenomarValidityJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '50000',
+            price: '39800',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '50000',
+              price: '39800',
               priceCurrency: 'JPY',
               description: 'PSA CENOMARオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜）',
             },

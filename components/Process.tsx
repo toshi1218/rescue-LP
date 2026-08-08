@@ -7,11 +7,11 @@ const stepIcons = [Mail, FileText, CreditCard, CheckCircle, PackageCheck];
 
 const stepsData = {
   ja: [
-    { num: 1, title: 'Eメールでご相談', desc: '必要書類と目的、提出予定日をEメールでお知らせください。' },
+    { num: 1, title: 'フォーム・LINEで相談', desc: '目的、提出先、希望期限を分かる範囲でお知らせください。匿名相談も可能です。' },
     { num: 2, title: '必要書類と見積もりを確認', desc: '提出先や状況に応じて、必要になりやすい書類と費用を整理します。' },
     { num: 3, title: '着手金50%をご入金', desc: 'クレジットカードまたは銀行振込にて、総額の50%をご入金いただきます。' },
-    { num: 4, title: '書類取得・確認', desc: '現地で取得し、書類写しをご確認いただきます。' },
-    { num: 5, title: '残金のお支払い・発送', desc: '書類写しご確認後、残りの50%をお支払いいただき、原本をDHLで発送します。' },
+    { num: 4, title: '書類取得・確認', desc: '申請を進め、電子版または紙原本の写しをご確認いただきます。' },
+    { num: 5, title: '残金のお支払い・納品', desc: '写しの確認後に残金をお支払いいただき、電子版を納品。紙原本付きは追跡付きで発送します。' },
   ],
   en: [
     { num: 1, title: 'Contact Us', desc: 'Tell us via email which documents you need and your current situation.' },

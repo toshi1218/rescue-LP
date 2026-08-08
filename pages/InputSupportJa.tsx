@@ -6,11 +6,13 @@ import StepList from '../components/StepList';
 import CtaBox from '../components/CtaBox';
 import { useMeta } from '../lib/useMeta';
 import { CheckCircle, AlertTriangle, ArrowRight, Plane, CreditCard, FileCheck, Globe, Smartphone } from 'lucide-react';
+import { JA_PRICING, formatJpy } from '../lib/pricing';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 export default function InputSupportJa() {
   useMeta(
-    'PSAオンライン申請代行｜海外から¥16,500（税込）で申請まで代行【IGRS】',
-    '海外からのPSA・CENOMAR・NBIオンライン申請を日本語で代行。フォーム入力・国際クレカ支払い・送付先設定まで全て代行します。¥16,500（税込）〜。フィリピンに行かずに書類を取得したい方向け。',
+    `PSAオンライン申請入力・決済サポート｜${formatJpy(JA_PRICING.inputSupport)}（税込）【IGRS】`,
+    `PSAオンライン申請の英語フォーム入力・本人確認・決済操作を日本語でサポート。${formatJpy(JA_PRICING.inputSupport)}（税込）。書類発行・e-Apostille納品・政府手数料は含みません。`,
   );
 
   return (
@@ -23,8 +25,8 @@ export default function InputSupportJa() {
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'PSAオンライン申請代行',
-        description: '海外からのPSAオンライン申請（フォーム入力・支払い・送付先設定）を日本語で代行。書類はPSAからお客様に直接届きます。',
+        name: 'PSAオンライン申請入力・決済サポート',
+        description: '海外からのPSAオンライン申請（英語フォーム入力・本人確認・決済操作）を日本語でサポート。書類発行・電子版納品・政府手数料は含みません。',
         url: 'https://ph-document.com/ja/psa-input-support/',
         provider: {
           '@type': 'Organization',
@@ -34,7 +36,7 @@ export default function InputSupportJa() {
         areaServed: { '@type': 'Country', name: 'JP' },
         offers: {
           '@type': 'Offer',
-          price: '16500',
+          price: String(JA_PRICING.inputSupport),
           priceCurrency: 'JPY',
           priceSpecification: { '@type': 'UnitPriceSpecification', priceType: 'MinimumPrice' },
         },
@@ -56,7 +58,7 @@ export default function InputSupportJa() {
             name: 'e-Certificate（電子書類）は日本の役所や法務局で使えますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'PSAはe-Certificate（電子書類）、DFAはe-Apostille（電子認証）に対応していますが、日本の市区町村役場・法務局・出入国在留管理庁では紙の原本・物理アポスティーユを求めるケースが多くあります。提出先に受け入れの事前確認が取れている場合はe-Certificate申請が有効ですが、確認が取れていない場合は紙原本ルートのフルサービスをおすすめします。',
+              text: '提出先ごとに受理条件が異なります。e-ApostilleのPDFで受理されるか、PSA SECPA紙原本も必要かを事前に確認してください。PSA民事登録書類への認証は2026年3月16日以降e-Apostilleに一本化されています。',
             },
           },
           {
@@ -64,20 +66,20 @@ export default function InputSupportJa() {
             name: 'オンライン申請代行の料金はいくらですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '書類1種類あたり¥16,500（税込・内訳：申請代行¥15,000＋消費税¥1,500）〜です。DHL国際配送は不要で、書類はPSAからお客様の住所へ直接届きます。複数書類のご依頼は別途ご相談ください。',
+              text: `22,000円（税込）のサポート料です。書類発行、e-Certificate・e-Apostilleの納品、政府手数料は含みません。取得から電子納品まで必要な場合は、1通39,800円のプランをご利用ください。`,
             },
           },
         ],
       }]}
     >
       <HeroBanner
-        title="PSAオンライン申請代行"
-        subtitle="PSAへのオンライン申請フォームの入力・申請手続きを代行。書類はPSAからお客様の住所へ直接届きます。"
-        badges={['¥16,500〜（税込）', 'オンライン完結・DHL不要', 'PSAから直接お届け']}
+        title="PSAオンライン申請 入力・決済サポート"
+        subtitle="英語フォーム・本人確認・決済操作を日本語でサポート。取得代行や電子書類の納品は含まれないライトプランです。"
+        badges={[`${formatJpy(JA_PRICING.inputSupport)}（税込）`, 'オンライン完結', '政府手数料は別途']}
         ctaText="オンライン申請代行を相談する"
         ctaHref="#contact"
         ctaService="オンライン申請代行"
-        lastUpdated="2026年5月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       {/* このプランが向いている人 */}
@@ -166,11 +168,11 @@ export default function InputSupportJa() {
         <div className="rounded-2xl border border-primary/20 bg-primary/[0.03] p-6">
           <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">料金</p>
           <div className="flex items-baseline gap-2 mb-1">
-            <span className="text-4xl font-extrabold text-primary">¥16,500</span>
-            <span className="text-sm text-gray-500">〜（税込 / DHL不要）</span>
+            <span className="text-4xl font-extrabold text-primary">{formatJpy(JA_PRICING.inputSupport)}</span>
+            <span className="text-sm text-gray-500">（税込 / サポート料）</span>
           </div>
-          <p className="text-xs text-gray-400 mb-1">内訳: 申請代行 ¥15,000 + 消費税 ¥1,500</p>
-          <p className="text-sm text-gray-600 mb-4">書類1種類あたり。複数書類のご依頼は別途ご相談ください。</p>
+          <p className="text-xs text-gray-500 mb-1">書類発行・e-Certificate／e-Apostille納品・政府手数料は含みません</p>
+          <p className="text-sm text-gray-600 mb-4">ご本人名義でオンライン申請を進めるための操作サポートです。</p>
           <ul className="space-y-1.5 mb-4">
             {[
               'PSAオンラインフォームへの入力・申請',

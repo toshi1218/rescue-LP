@@ -11,7 +11,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function PsaCostJa() {
   useMeta(
     `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】日本まで届く総額はいくら？`,
-    '現地PSA料金365ペソ＋DFAアポスティーユ＋国際配送の総額を解説。日本から代行依頼で追加請求なし・総額明示。¥50,000（税別）から。無料見積もり。',
+    'PSAの政府手数料と代行料金の違いを解説。e-Certificate＋e-Apostilleの電子版1通39,800円、入力・決済サポート22,000円から。無料見積もり。',
   );
   return (
     <PageLayout

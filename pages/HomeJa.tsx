@@ -1,29 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { CheckCircle, ChevronDown } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { CheckCircle } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import GuideLinks from '../components/GuideLinks';
-import QuickFacts from '../components/QuickFacts';
-import PainPoints from '../components/PainPoints';
 import WhyUs from '../components/WhyUs';
-import CaseStudies from '../components/CaseStudies';
 import SocialProof from '../components/SocialProof';
-import DiyRisks from '../components/DiyRisks';
 import ServicePacks from '../components/ServicePacks';
+import Process from '../components/Process';
 import FAQ from '../components/FAQ';
-import FinalCta from '../components/FinalCta';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
-import { SEO_TITLE_BADGE_JA } from '../lib/seoDate';
+import { SEO_DATE_ISO } from '../lib/seoDate';
+import { JA_PRICING } from '../lib/pricing';
 
 export default function HomeJa() {
-  const [noticeExpanded, setNoticeExpanded] = useState(false);
-
   useMeta(
-    `フィリピン書類、日本語だけで確実に取り寄せできます｜CENOMAR・PSA・NBI代行${SEO_TITLE_BADGE_JA}`,
-    'CENOMAR・PSA出生証明書・NBI Clearance・DFAアポスティーユを日本語だけで安心代行。フィリピン渡航不要。進捗は随時ご報告。国際結婚・配偶者ビザ・帰化申請に対応。無料相談受付中。',
+    'フィリピン書類取得代行｜PSA・CENOMAR・NBIを日本語でサポート',
+    'PSA出生証明書・CENOMAR・NBI Clearance・e-Apostilleの取得を日本語でサポート。料金は22,000円から。国際結婚・配偶者ビザ・帰化申請・外免切替に対応。無料見積もり受付中。',
     'https://ph-document.com/ja/',
   );
 
@@ -86,7 +80,7 @@ export default function HomeJa() {
       opens: '09:00',
       closes: '17:00',
     },
-    priceRange: '¥50,000〜¥100,000',
+    priceRange: '¥22,000〜¥132,500',
     currenciesAccepted: 'JPY',
     // NOTE: aggregateRating はプリレンダのテンプレート（buildLocalBusinessJsonLd）が
     // LocalBusiness 側で出力する。自己掲載の review[] マークアップは Google の
@@ -98,27 +92,27 @@ export default function HomeJa() {
       itemListElement: [
         {
           '@type': 'Offer',
-          priceSpecification: { '@type': 'PriceSpecification', minPrice: '50000', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: 'CENOMAR・PSA出生証明書取得代行＋DFAアポスティーユ', description: 'フィリピン統計局（PSA）発行の独身証明書・出生証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: String(JA_PRICING.inputSupport), priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: 'PSAオンライン申請入力・決済サポート', description: 'PSAオンライン申請の英語入力・本人確認・決済操作を日本語でサポート。書類発行・政府手数料は含みません。' },
         },
         {
           '@type': 'Offer',
-          priceSpecification: { '@type': 'PriceSpecification', minPrice: '55000', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: 'NBI Clearance取得代行＋DFAアポスティーユ', description: 'フィリピン国家捜査局（NBI）発行の無犯罪証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: String(JA_PRICING.digitalSingle), priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: 'PSA電子書類＋e-Apostille 1通', description: 'PSA e-CertificateとDFA e-Apostilleをオンラインで取得し、電子版を納品。' },
         },
         {
           '@type': 'Offer',
-          priceSpecification: { '@type': 'PriceSpecification', minPrice: '99800', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: '国際結婚準備パック（PSA出生証明書＋CENOMAR＋DFAアポスティーユ）', description: '日本での国際結婚手続きに必要なフィリピン側書類をまとめて代行取得。' },
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: String(JA_PRICING.digitalPair), priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: 'PSA電子書類2通パック', description: 'PSA e-CertificateとDFA e-Apostilleを2通まとめて取得。国際結婚・配偶者ビザ向け。' },
         },
         {
           '@type': 'Offer',
-          priceSpecification: { '@type': 'PriceSpecification', minPrice: '100000', priceCurrency: 'JPY' },
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: String(JA_PRICING.lto), priceCurrency: 'JPY' },
           itemOffered: { '@type': 'Service', name: 'LTO運転経歴証明書取得代行（外免切替用）', description: 'フィリピン陸運局（LTO）発行の運転経歴証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
         },
       ],
     },
-    dateModified: '2026-03-01',
+    dateModified: SEO_DATE_ISO,
   };
 
   return (
@@ -127,91 +121,22 @@ export default function HomeJa() {
       <Navbar />
       <main id="main-content">
         <Hero />
-        {/* スティッキージャンプバー */}
-        <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
-          <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-center gap-1 overflow-x-auto">
-            <a href="#faq" className="flex-shrink-0 text-xs font-bold text-gray-600 hover:text-secondary transition-colors py-1.5 px-3 rounded-lg hover:bg-gray-50 whitespace-nowrap">よくある質問</a>
-            <span className="text-gray-200 text-xs">|</span>
-            <a href="/ja/ryokin/" className="flex-shrink-0 text-xs font-bold text-gray-600 hover:text-secondary transition-colors py-1.5 px-3 rounded-lg hover:bg-gray-50 whitespace-nowrap">料金を見る</a>
-            <span className="text-gray-200 text-xs">|</span>
-            <a href="#contact" className="flex-shrink-0 text-xs font-bold text-white bg-secondary py-1.5 px-4 rounded-lg hover:bg-secondary/90 transition-all whitespace-nowrap">今すぐ相談</a>
-          </div>
-        </div>
         <div className="container mx-auto max-w-5xl px-4 pt-8">
-          <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-md">
-            <div className="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-600 to-red-700" />
-            <div className="p-6 md:p-8">
-              <div className="inline-block mb-4 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">
-                PSAデジタル化・e-Apostille対応
-              </div>
-              <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
-                2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）へ<span className="text-red-700">物理アポスティーユ（紙）を発行しなくなり</span>、認証は<span className="text-red-700">e-Apostille（電子）に一本化</span>されました。当社はPSA・DFA e-Apostilleのオンライン申請と支払いを日本語で代行します（NBI・LTO・PRCなどの書類は物理アポスティーユにも対応）。
-              </p>
-              {noticeExpanded && (
-                <ul className="space-y-3 mt-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">日本の役所・入管・総領事館の傾向</strong>：日本の提出先は当面、紙のPSA原本を前提とする運用が想定されます。ただし物理アポスティーユはDFAが発行しなくなったため、e-Apostille（電子認証）で受理可能かを提出先に確認しておくことが重要です。
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">まずは提出先にご確認ください</strong>：e-Apostille（電子認証）で受理されるかを提出先にご確認ください。<strong className="text-red-700">PSA・e-Apostilleのオンライン申請の入力・支払い代行は当社で対応します。</strong>
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">納期の目安</strong>：現在ご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
-                    </span>
-                  </li>
-                </ul>
-              )}
-              {!noticeExpanded && (
-                <button
-                  onClick={() => setNoticeExpanded(true)}
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-red-700 hover:text-red-800 transition-colors"
-                >
-                  <ChevronDown className="w-3.5 h-3.5" />
-                  詳細を見る
-                </button>
-              )}
-
-              {/* e-Certificate対応の案内 */}
-              <div className="mt-5 pt-4 border-t border-gray-100 flex items-start gap-3 bg-blue-50 rounded-xl px-4 py-3">
-                <span className="flex-shrink-0 text-blue-500 text-base leading-none mt-0.5">ℹ️</span>
-                <div>
-                  <p className="text-xs font-bold text-blue-800 mb-0.5">e-Certificate（電子文書）での提出が認められている場合</p>
-                  <p className="text-xs text-blue-700 leading-relaxed">
-                    提出先に確認し、電子文書でOKと言われた場合は<strong>e-CertificateおよびeApostilleの取得代行</strong>にも対応しています。
-                    <a href="#contact" className="underline underline-offset-2 font-bold ml-1 hover:text-blue-900 transition-colors">まずご相談ください</a>。
-                  </p>
-                </div>
+          <section className="rounded-2xl border border-blue-200 bg-blue-50 p-5 md:p-6" aria-labelledby="digital-notice-title">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-700" />
+              <div>
+                <h2 id="digital-notice-title" className="font-bold text-secondary">PSA書類はe-Apostille（電子認証）が現在の標準です</h2>
+                <p className="mt-1 text-sm leading-relaxed text-gray-700">2026年3月16日以降、出生証明書・婚姻証明書・CENOMARなどPSA民事登録書類の認証はe-Apostilleに一本化されました。紙原本が必要な場合は、PSA SECPA紙原本を別途同梱します。受理条件は提出先ごとに異なるため、申請前の確認をおすすめします。</p>
+                <p className="mt-2 text-xs text-gray-500">電子版：通常2〜4週間／紙原本付き：通常3〜6週間／NBI・LTO等：通常4〜6週間</p>
               </div>
             </div>
           </section>
-          <section className="mb-10 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
-            <h2 className="text-base md:text-lg font-bold text-secondary mb-2">取得から認証・海外発送まで、提出先に合わせて一括対応</h2>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              PSA・NBIの取得、DFA認証、海外発送までまとめて手配します。PSA民事書類はe-Apostille（電子）が原則で、紙のPSA原本や原本発送が必要な提出先にも対応方法を確認してご案内します。
-            </p>
-            <p className="mt-2 text-xs text-gray-500">見積無料・通常1営業日以内に返信。電子版・原本のどちらが必要か分からない段階でもご相談ください。</p>
-            <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
-              無料見積を依頼する
-            </a>
-          </section>
         </div>
         <ServicePacks />
-        <PainPoints />
+        <Process />
         <WhyUs />
         <SocialProof />
-        <CaseStudies />
-        <FinalCta />
-        <DiyRisks />
-        <GuideLinks maxItems={6} />
-        <QuickFacts />
         <FAQ />
       </main>
       <Footer />

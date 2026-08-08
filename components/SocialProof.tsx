@@ -14,14 +14,14 @@ const ratingBreakdown = [
 
 const statsData = {
   ja: [
-    { value: '47件', label: '公開レビュー件数',  sub: 'アンケート同意ベース' },
-    { value: '4.8',  label: '平均評価（5点満点）', sub: '★★★★★ 86%・★★★★ 13%・★★★ 1%' },
-    { value: '50ヶ国以上', label: 'DHL発送先国',   sub: '日本国内・海外どちらも対応' },
+    { value: '47件', label: 'ご利用者アンケート', sub: '掲載同意を得た回答' },
+    { value: '4.8',  label: '平均評価（5点満点）', sub: '★★★★★ 85%・★★★★ 13%・★★★ 2%' },
+    { value: '2段階', label: '安心のお支払い', sub: '残金は書類の写し確認後' },
     { value: '24時間以内', label: '平均返信スピード', sub: '平日営業日ベース' },
   ],
   en: [
     { value: '47',  label: 'Published Reviews',  sub: 'Survey-based, shared with consent' },
-    { value: '4.8', label: 'Average Rating',      sub: '5★ 86% · 4★ 13% · 3★ 1%' },
+    { value: '4.8', label: 'Average Rating',      sub: '5★ 85% · 4★ 13% · 3★ 2%' },
     { value: '50+', label: 'Countries Served',    sub: 'DHL worldwide delivery' },
     { value: '24h', label: 'Avg. Reply Time',     sub: 'On business days' },
   ],
@@ -42,7 +42,7 @@ const reviewsData = {
       author: 'K.S.様', meta: '大阪府・40代男性',
       service: 'NBI Clearance・配偶者ビザ申請',
       rating: 5,
-      body: '進捗を段階ごとに報告してもらえて、待っている間も安心でした。入管への申請書類も不備なく揃い、配偶者ビザ取得まで一度も止まりませんでした。',
+      body: '進捗を段階ごとに報告してもらえて、待っている間も安心でした。必要書類を受け取り、期限前に提出準備を完了できました。',
       date: '2026年1月',
     },
     {
@@ -127,12 +127,8 @@ const SocialProof: React.FC = React.memo(() => {
             {/* 大きな評価数字 */}
             <div className="text-center md:text-left flex-shrink-0">
               <p className="text-6xl font-extrabold text-secondary leading-none">4.8</p>
-              <div className="flex justify-center md:justify-start gap-0.5 mt-2">
-                {[1,2,3,4,5].map(i => (
-                  <span key={i} className={`text-2xl ${i <= 4 ? 'text-yellow-400' : 'text-yellow-400'}`}>
-                    {i === 5 ? '★' : '★'}
-                  </span>
-                ))}
+              <div className="flex justify-center md:justify-start gap-0.5 mt-2" aria-label="平均評価 4.8 / 5.0">
+                <span aria-hidden="true" className="text-2xl text-yellow-400">★★★★★</span>
               </div>
               <p className="text-sm text-gray-500 mt-1">
                 {isJa ? '5点満点' : 'out of 5.0'}
@@ -213,10 +209,8 @@ const SocialProof: React.FC = React.memo(() => {
 
               <div className="p-5 flex flex-col flex-1">
                 {/* 星評価 */}
-                <div className="flex items-center gap-1 mb-3">
-                  {[1,2,3,4,5].map(i => (
-                    <span key={i} className={`text-lg ${i <= item.rating ? 'text-yellow-400' : 'text-gray-200'}`}>★</span>
-                  ))}
+                <div className="flex items-center gap-1 mb-3" aria-label={`${item.rating}.0 / 5.0`}>
+                  <span aria-hidden="true" className="text-lg tracking-wide text-yellow-400">{'★'.repeat(item.rating)}<span className="text-gray-300">{'☆'.repeat(5 - item.rating)}</span></span>
                   <span className="text-xs text-gray-500 ml-1">{item.rating}.0</span>
                 </div>
 
@@ -236,7 +230,7 @@ const SocialProof: React.FC = React.memo(() => {
                   </div>
                   <span className="ml-auto flex-shrink-0 inline-flex items-center gap-1 text-[10px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-medium">
                     <CheckCircle className="w-3 h-3" />
-                    {isJa ? '確認済み' : 'Verified'}
+                    {isJa ? '掲載同意済み' : 'Shared with consent'}
                   </span>
                 </div>
               </div>

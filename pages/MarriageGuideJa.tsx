@@ -37,10 +37,10 @@ export default function MarriageGuideJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '50000',
+          price: '39800',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '50000',
+            price: '39800',
             priceCurrency: 'JPY',
             description: 'PSA書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
           },
@@ -120,7 +120,7 @@ export default function MarriageGuideJa() {
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">30,000円〜（書類1種・DFA e-Apostille〈電子〉込み）</dd>
+              <dd className="font-medium text-gray-800">39,800円〜（書類1種・DFA e-Apostille〈電子〉込み）</dd>
               <dd className="text-gray-400 text-xs mt-1">※必要書類の種類・組み合わせによって変わります</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">

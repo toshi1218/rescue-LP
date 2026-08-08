@@ -5,20 +5,20 @@ import { Calculator, Info } from 'lucide-react';
 /**
  * 帰化書類パックの総額シミュレーター（JA・自己完結）
  *
- * 価格モデル（税込・アポスティーユ・DHL配送込み。単品のみ税抜・送料別）:
- *  - 書類1通のみ  : 50,000円〜（税抜・DHL実費別途）＝単品
+ * 価格モデル（税込。単品は電子納品、パックは必要に応じた紙原本・配送込み）:
+ *  - 書類1通のみ  : 39,800円〜（税込・電子納品）＝単品
  *  - パック5通まで : 132,500円（税込・込み）
- *  - 6通目以降    : ＋26,500円/通（税込）
- *  例）家族6通 = 132,500 + 26,500 = 159,000円
+ *  - 6通目以降    : ＋29,800円/通（税込）
+ *  例）家族6通 = 132,500 + 29,800 = 162,300円
  *
  * 「132,500円 × 通数」という誤読（Arai様の失注寸前事例）を、通数を選ぶと
  * 総額が即出る形で解消する。爆発半径＝このコンポーネントを import する
  * ページのみ（共通コンポーネント・構造ファイルには非該当）。
  */
 
-const SINGLE_FROM = 50000; // 単品（税抜・送料別）
+const SINGLE_FROM = 39800; // 単品（税込・電子納品）
 const PACK_UP_TO_5 = 132500; // 5通まで定額（税込・込み）
-const ADD_PER_COPY = 26500; // 6通目以降 追加1通（税込・込み）
+const ADD_PER_COPY = 29800; // 6通目以降 追加1通（税込・込み）
 const PACK_INCLUDED = 5;
 
 const yen = (n: number) => '¥' + n.toLocaleString('ja-JP');
@@ -86,7 +86,7 @@ export default function PriceSimulatorKika() {
                 <span className="text-base font-bold text-gray-500">〜</span>
               </p>
               <p className="text-xs text-gray-500 mt-1">
-                PSA取得＋DFAアポスティーユ込み（税抜）。DHL国際送料は実費別途。
+                PSA e-Certificate＋DFA e-Apostille込み（税込・電子納品）。
               </p>
               <p className="text-xs text-gray-600 mt-2 bg-white rounded-lg px-3 py-2 border border-gray-100">
                 2通以上は<strong>パック料金がお得</strong>です（1通あたりの単価が下がります）。
@@ -118,7 +118,7 @@ export default function PriceSimulatorKika() {
             <strong>「132,500円 × 通数」ではありません。</strong>
             132,500円は<strong>5通までまとめて</strong>の定額（税込・アポスティーユ・DHL込み）。
             全書類を1つの荷物に集約するため、通数が増えても<strong>国際送料は1回分のみ</strong>です。
-            パック内の1通あたり単価は26,500円で、単品依頼の半額以下になります。
+            6通目以降は追加1通29,800円で、同じ案件としてまとめて手配します。
           </p>
         </div>
 

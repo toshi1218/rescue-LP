@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 const BASE = 'https://ph-document.com';
-const JA_DEFAULT_TITLE = 'フィリピン書類取得代行｜CENOMAR・PSA・LTO 日本語だけで確実に取り寄せ';
+const JA_DEFAULT_TITLE = 'フィリピン書類取得代行｜CENOMAR・PSA・LTOを日本語でサポート';
 const JA_DEFAULT_DESCRIPTION =
   'フィリピン書類の取得を日本語だけで安心おまかせ。CENOMAR（独身証明書）・PSA出生証明書・LTO・DFAアポスティーユを現地スタッフが完全代行。進捗は随時ご報告。国際結婚・外免切替・配偶者ビザに対応。無料相談受付中。';
 const EN_DEFAULT_TITLE = 'Philippine Document Retrieval Service — PSA, CENOMAR, NBI & Apostille';

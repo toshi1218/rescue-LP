@@ -175,10 +175,8 @@ const Footer: React.FC = () => {
             <input
               id="footer-name"
               name="name"
-              required
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               placeholder={t('footer.namePlaceholder')}
-              aria-required="true"
             />
           </div>
 
@@ -249,11 +247,9 @@ const Footer: React.FC = () => {
             </select>
           </div>
 
-          <div>
-            <label className="block text-sm text-gray-600 mb-1">
-              {isJa ? '当社をどこでお知りになりましたか？' : 'How did you find us?'}
-              <span className="text-gray-400 text-xs ml-1">{isJa ? '（任意）' : '(optional)'}</span>
-            </label>
+          <details className="rounded-lg border border-gray-100 bg-gray-50 px-3 py-2">
+            <summary className="cursor-pointer text-xs font-medium text-gray-500">{isJa ? '任意アンケート：当社を知ったきっかけ' : 'Optional survey: How did you find us?'}</summary>
+            <div className="mt-2">
             <select
               name="referral_source"
               value={referral}
@@ -291,7 +287,8 @@ const Footer: React.FC = () => {
               />
             )}
             {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
-          </div>
+            </div>
+          </details>
 
           <div>
             <label htmlFor="footer-message" className="block text-sm text-gray-600 mb-1">
@@ -312,7 +309,7 @@ const Footer: React.FC = () => {
           )}
 
           <p className="text-xs text-emerald-700 text-center">
-            ✓ {isJa ? '書類が取得できなければ着手金を全額返金' : 'Full refund of advance payment if documents cannot be obtained'}
+            ✓ {isJa ? '当社の手配上の理由で取得できなかった場合は着手金を全額返金' : 'Full refund of advance payment if our arrangements prevent procurement'}
           </p>
 
           <button

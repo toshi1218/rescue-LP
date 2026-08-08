@@ -13,11 +13,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { JA_PRICING } from '../lib/pricing';
 
 export default function PsaBirthCertJa() {
   useMeta(
     `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR_MONTH_JA}】PSA・アポスティーユ込み`,
-    'フィリピン出生証明書（PSA）を日本から取り寄せ代行。セブ在住スタッフが直接PSA申請→DFAアポスティーユ→国際郵送まで一括対応。紙の原本を4〜6週間で自宅へ。追加請求なし。無料相談。',
+    'フィリピン出生証明書（PSA）のe-Certificate＋e-Apostilleを日本語で取得代行。電子版1通39,800円から。紙原本が必要な場合も対応。',
     'https://ph-document.com/ja/psa-shussei-shomeisho/',
   );
   return (
@@ -38,12 +39,12 @@ export default function PsaBirthCertJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '50000',
+          price: String(JA_PRICING.digitalSingle),
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '50000',
+            price: String(JA_PRICING.digitalSingle),
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: 'PSA e-Certificate・DFA e-Apostille込み（税込・電子納品）',
           },
         },
         },
@@ -64,7 +65,7 @@ export default function PsaBirthCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜50,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。',
+                text: 'PSA e-Certificate＋DFA e-Apostilleの電子版1通は39,800円〜（税込）です。PSA SECPA紙原本や国際配送が必要な場合は別プランをご案内します。',
               },
             },
             {
@@ -138,8 +139,8 @@ export default function PsaBirthCertJa() {
               <dd className="font-medium text-gray-800">Philippine Statistics Authority（PSA）</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
+              <dt className="text-gray-500 text-xs mb-1">電子版代行料金（税込）</dt>
+              <dd className="font-medium text-gray-800">39,800円〜（e-Apostille込み）</dd>
               <dd className="text-gray-400 text-xs mt-1">※緊急の場合は追加料金を頂くことがあります</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
@@ -148,7 +149,7 @@ export default function PsaBirthCertJa() {
             </div>
           </dl>
           <p className="text-gray-700 leading-relaxed mt-4 text-sm">
-            PSA出生証明書は<strong>電子認証版（PSAHelplineオンライン）</strong>と<strong>紙の原本</strong>があります。日本の市区町村役場・入管・法務局への提出では、紙の原本＋DFAアポスティーユが求められるケースがほとんどです。日本から取り寄せる場合は、現地での申請からアポスティーユ・国際郵送までの一連の流れが必要になります。
+            PSA出生証明書は<strong>e-Certificate（電子版）</strong>と<strong>SECPA紙原本</strong>があります。認証はe-Apostilleで発行されます。提出先によって紙原本の要否が異なるため、申請前に受理条件をご確認ください。
           </p>
         </SectionDivider>
 
@@ -157,13 +158,13 @@ export default function PsaBirthCertJa() {
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
             <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
               <div className="px-4 py-3 font-bold">内容</div>
-              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税込）</div>
             </div>
             {[
               { label: 'PSA出生証明書取得', price: '込み' },
               { label: 'DFAアポスティーユ認証', price: '込み' },
-              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+              { label: '電子版納品', price: '込み' },
+              { label: '合計（e-Apostille込み）', price: '39,800円〜', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -289,7 +290,7 @@ export default function PsaBirthCertJa() {
       <FaqSection
         items={[
           { q: 'PSA出生証明書とは何ですか？', a: 'PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（PSA）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚・配偶者ビザ申請・帰化申請などで身元証明として提出を求められます。' },
-          { q: '料金はいくらですか？', a: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜50,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA出生証明書e-Certificate＋DFA e-Apostilleの電子版1通は39,800円〜（税込）です。PSA SECPA紙原本や国際配送が必要な場合は別途ご案内します。' },
           { q: 'PSAに記録がない場合はどうなりますか？', a: 'LCR（地方民事登録局）への申請が必要になります。対応経験がありますので、まずご相談ください。追加費用が発生する場合は事前にご説明します。' },
           { q: '出生証明書とアポスティーユ、両方必要ですか？', a: '日本の提出先では通常、PSA出生証明書＋DFAアポスティーユの両方が必要です。提出先を確認した上でご案内します。' },
           { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },

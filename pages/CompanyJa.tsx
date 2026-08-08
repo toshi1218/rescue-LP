@@ -2,6 +2,7 @@ import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import { useMeta } from '../lib/useMeta';
+import { SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 
 const orgJsonLd = {
   '@context': 'https://schema.org',
@@ -43,7 +44,7 @@ export default function CompanyJa() {
         badges={['日本法人', 'フィリピン現地スタッフ', '日本語対応']}
         ctaText="ご依頼前に確認する"
         ctaHref="/ja/contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated={SEO_LAST_UPDATED_JA}
       />
 
       <div className="max-w-2xl">
@@ -51,6 +52,7 @@ export default function CompanyJa() {
         <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-soft">
           {[
             { label: '会社名', value: 'IGRS Inc.' },
+            { label: '設立', value: '2020年6月1日' },
             { label: '本店所在地', value: '和歌山県和歌山市' },
             { label: '営業所', value: 'フィリピン共和国 セブ市' },
             { label: '事業内容', value: 'フィリピン公的書類取得代行（PSA・NBI・LTO・DFAアポスティーユ）' },
