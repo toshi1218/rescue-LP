@@ -2,26 +2,20 @@ import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import GuideLinks from '../components/GuideLinks';
-import QuickFacts from '../components/QuickFacts';
-import PainPoints from '../components/PainPoints';
-import WhyProxy from '../components/WhyProxy';
-import TrustTransparency from '../components/TrustTransparency';
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
 import CaseStudies from '../components/CaseStudies';
 import SocialProof from '../components/SocialProof';
 import Process from '../components/Process';
-import DiyRisks from '../components/DiyRisks';
 import FAQ from '../components/FAQ';
-import CtaBox from '../components/CtaBox';
 import Footer from '../components/Footer';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
-import { SEO_DATE_ISO, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_DATE_ISO } from '../lib/seoDate';
 
 export default function HomeEn() {
   useMeta(
-    `Philippine Documents for International Marriage & Visa [${SEO_YEAR_MONTH_EN}]`,
+    'Philippine Documents for International Marriage & Visa',
     `Getting married to a Filipino, or moving countries together? We verify format requirements, procure physical PSA originals + DFA Apostille, and ship via DHL worldwide.`,
     'https://ph-document.com/en/',
   );
@@ -98,26 +92,42 @@ export default function HomeEn() {
           </div>
         </section>
         <Services />
-        <PainPoints />
-        <WhyProxy />
-        <TrustTransparency />
+        <section className="bg-secondary px-4 py-16 text-white" aria-labelledby="home-pricing-title">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-8 text-center">
+              <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-primary">Transparent pricing</span>
+              <h2 id="home-pricing-title" className="text-2xl font-bold">Know the likely cost before you contact us</h2>
+              <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/70">
+                Your final quote depends on the document, destination, and receiving authority. We confirm the required format before you pay.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {[
+                { name: 'Marriage Basic', price: 'US$399', detail: 'PSA Birth Certificate + CENOMAR, required authentication, and DHL', time: 'Approx. 4–6 weeks' },
+                { name: 'Marriage Full', price: 'US$699', detail: 'PSA documents + CENOMAR + NBI, required authentication, and DHL', time: 'Approx. 4–6 weeks' },
+                { name: 'Single PSA Document', price: 'From US$199', detail: 'Physical PSA original + DHL. Authentication quoted only when required.', time: 'Approx. 4–6 weeks' },
+              ].map((plan) => (
+                <article key={plan.name} className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
+                  <h3 className="text-sm font-bold text-primary">{plan.name}</h3>
+                  <p className="mt-2 text-2xl font-extrabold">{plan.price}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-white/75">{plan.detail}</p>
+                  <p className="mt-4 text-xs font-semibold text-white/60">{plan.time}</p>
+                </article>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <a href="/en/pricing/" className="inline-flex items-center justify-center rounded-xl bg-primary px-7 py-4 font-bold text-secondary shadow-lg transition-all hover:bg-primary-hover">
+                View All Pricing & Inclusions
+              </a>
+              <p className="mt-3 text-xs text-white/60">Fixed quote before work starts · No commitment at quote stage</p>
+            </div>
+          </div>
+        </section>
         <WhyUs />
         <CaseStudies />
-        <div className="container mx-auto max-w-4xl px-4 my-12">
-          <CtaBox
-            title="Not sure which documents you need?"
-            description="Tell us your situation — we'll map out the exact Philippine documents required and send a clear quote within 24 hours."
-            buttonText="Free Consultation"
-            href="#contact"
-            trustNote="Free cancellation at quote stage · Reply within 24h"
-            whatsappHref="https://wa.me/639452833727"
-          />
-        </div>
         <SocialProof />
         <Process />
-        <DiyRisks />
-        <GuideLinks maxItems={6} />
-        <QuickFacts />
+        <GuideLinks maxItems={4} />
         <FAQ />
       </main>
       <Footer />
