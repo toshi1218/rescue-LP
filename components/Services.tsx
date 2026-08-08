@@ -17,7 +17,7 @@ const servicesData = {
     { icon: Heart,       title: 'PSA Marriage',   subtitle: 'PSA Marriage Certificate — Physical Original',      desc: 'Physical PSA Marriage Certificate for naturalization, family registration, and dependent visa applications. Apostille bundle available.',                       hasBadge: false, path: '/en/psa-marriage-certificate/' },
     { icon: Fingerprint, title: 'NBI Clearance',  subtitle: 'NBI Clearance for Immigration & Visa',             desc: 'NBI Clearance for spouse visa, naturalization, and work visa abroad. DFA authentication included on request for countries requiring embassy-level authentication.', hasBadge: false, path: '/en/nbi-clearance/' },
     { icon: Car,         title: 'LTO Documents',  subtitle: 'LTO Documents for License Conversion',             desc: "LTO driver's abstract and certification for foreign license conversion. Required format confirmed per destination country — OR/CR also handled.",                  hasBadge: false, path: '/en/drivers-license-conversion/' },
-    { icon: BadgeCheck,  title: 'DFA Apostille',  subtitle: 'DFA Apostille & Embassy Authentication',           desc: 'Paper DFA Apostille for Hague Convention countries. Embassy authentication for non-Hague authorities including UAE, Saudi Arabia, and others.',                  hasBadge: false, path: '/en/apostille/' },
+    { icon: BadgeCheck,  title: 'DFA Apostille',  subtitle: 'DFA Apostille & Embassy Authentication',           desc: 'For PSA civil documents, DFA authentication may be electronic; eligible non-PSA documents may follow a different route. We confirm the correct process for your receiving authority.',                  hasBadge: false, path: '/en/apostille/' },
   ],
 };
 
@@ -26,7 +26,7 @@ const Services: React.FC = () => {
   const services = servicesData[lang];
 
   return (
-    <section className="bg-white relative" id="pricing">
+    <section className="bg-white relative" id="services">
       {/* 上部波形（PainPointsセクションとの境界） */}
       <div className="w-full overflow-hidden leading-none">
         <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" className="block w-full" style={{marginBottom: '-2px'}}>
@@ -48,7 +48,7 @@ const Services: React.FC = () => {
               <span className="text-blue-500 text-lg flex-shrink-0 mt-0.5">🔍</span>
               <div>
                 <p className="text-sm font-bold text-blue-800 mb-1">Not sure if your authority accepts an e-Certificate?</p>
-                <p className="text-sm text-blue-700">UAE, Korea, Italy, Germany, and many others require physical PSA originals — not printed e-Certificates. We verify acceptance requirements before you order.</p>
+                <p className="text-sm text-blue-700">Acceptance depends on the receiving authority, document type, and destination. We confirm whether you need a physical PSA original, e-Certificate, e-Apostille, or another authentication route before you order.</p>
               </div>
             </div>
           )}
