@@ -14,7 +14,7 @@ const enBadges = [
 const enDocItems = [
   { label: 'Acceptance Check', sub: 'Verify what format your authority needs' },
   { label: 'Physical PSA Document', sub: 'Original certificate, not e-Cert' },
-  { label: 'DFA e-Apostille', sub: 'Electronic apostille for immigration use' },
+  { label: 'DFA Authentication', sub: 'Correct route confirmed for your document' },
   { label: 'DHL Express Worldwide', sub: '→ Delivered to your address' },
 ];
 
@@ -142,7 +142,7 @@ const Hero: React.FC = () => {
         <picture>
           <source srcSet="/hero-photo.webp" type="image/webp" />
           <img
-            alt="Philippine document procurement — IGRS office operations"
+            alt="Philippine documents prepared for international submission"
             className="w-full h-full object-cover"
             style={{ objectPosition: '92% 50%' }}
             src="/hero-photo.png"
@@ -181,12 +181,12 @@ const Hero: React.FC = () => {
 
           {/* H1 */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-5 drop-shadow-sm">
-            Philippine Documents<br />
-            <span className="text-primary">for Marriage, Visa & Your Next Country.</span>
+            Get Philippine Documents<br />
+            <span className="text-primary">Accepted Abroad — Without Traveling.</span>
           </h1>
 
           <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            Getting married to a Filipino, or moving to a new country together? We verify format requirements, retrieve physical PSA originals, arrange DFA e-Apostille, and ship to your door worldwide via DHL — no trip to the Philippines needed.
+            Tell us where the documents will be submitted. We confirm the required format, retrieve the Philippine originals, arrange the appropriate authentication, and deliver them worldwide by DHL.
           </p>
 
           {/* CTAs */}
@@ -197,25 +197,25 @@ const Hero: React.FC = () => {
               className="flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-primary/25 hover:bg-primary-hover hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-primary/40"
             >
               <Mail className="w-5 h-5 flex-shrink-0" />
-              Free Consultation
+              Check What Documents I Need — Free
             </a>
             <a
-              href="#pricing"
+              href="/en/pricing/"
               className="flex items-center justify-center gap-2 font-bold py-3.5 px-6 rounded-xl bg-secondary text-white shadow-lg hover:bg-secondary-light hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-secondary/40"
             >
               <Tag className="w-5 h-5 flex-shrink-0" />
-              See Packages
+              View Pricing & Packages
             </a>
             <a
               href="https://wa.me/639452833727"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent('cta_click', { location: 'hero_en', type: 'whatsapp_urgent', variant: ctaVariant })}
-              className="flex items-center justify-center gap-2 bg-green-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-green-500/40 hover:bg-green-600 hover:scale-[1.02] transition-all focus:outline-none focus:ring-4 focus:ring-green-500/40"
+              className="flex items-center justify-center gap-2 border border-white/25 bg-white/10 text-white font-semibold py-3 px-6 rounded-xl hover:bg-white/20 transition-all focus:outline-none focus:ring-4 focus:ring-white/20"
               aria-label="Urgent? Contact us on WhatsApp (opens in new tab)"
             >
               <MessageCircle className="w-5 h-5 flex-shrink-0" />
-              Urgent? WhatsApp us — fast reply
+              Prefer WhatsApp? Message Us
             </a>
           </div>
 
@@ -227,7 +227,7 @@ const Hero: React.FC = () => {
                   <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </span>
-              <span className="text-white/70 text-xs font-medium">4.8 / 5.0 (client reviews)</span>
+              <span className="text-white/70 text-xs font-medium">4.8 / 5.0 (47 client survey responses)</span>
             </div>
             <p className="text-primary text-xs font-semibold">
               Now accepting inquiries · Reply within 24 hours
@@ -273,8 +273,8 @@ const Hero: React.FC = () => {
             {/* Authority check badge */}
             <div className="mx-5 mb-4 bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 flex items-center justify-between">
               <div>
-                <p className="text-xs font-bold text-blue-800">Authority-Accepted Format</p>
-                <p className="text-xs text-blue-600">UAE · Korea · Europe · USA · more</p>
+                <p className="text-xs font-bold text-blue-800">Format Checked for Your Authority</p>
+                <p className="text-xs text-blue-600">Destination · authority · document type</p>
               </div>
               <div className="w-11 h-11 rounded-full border-2 border-blue-400 flex items-center justify-center">
                 <span className="text-[8px] text-blue-600 font-bold text-center leading-tight">FORMAT<br/>VERIFIED</span>
@@ -284,8 +284,8 @@ const Hero: React.FC = () => {
             {/* Stats bar */}
             <div className="border-t border-gray-100 grid grid-cols-3 divide-x divide-gray-100">
               {[
-                { num: '500+', label: 'Cases' },
-                { num: '4.8★', label: 'Rating' },
+                { num: '4–6 wk', label: 'Typical' },
+                { num: 'DHL', label: 'Worldwide' },
                 { num: '24h', label: 'Reply' },
               ].map((s) => (
                 <div key={s.label} className="py-3 text-center">
