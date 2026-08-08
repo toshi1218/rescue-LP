@@ -180,7 +180,7 @@ Googleが再評価するのは `dist/` の静的HTML。判断はソースのフ�
 
 ### デプロイ確認の落とし穴（2026-08-09 調査で判明）
 
-- **Cloudflare Pages のデプロイは GitHub Actions に記録されない**。`.github/workflows/` にあるのは `gsc-monitor.yml`・`hreflang-check.yml`・`seo-gate.yml` の3つだけで、サイトのデプロイは Cloudflare の Git 連携が `main` への push を検知して自前でビルドしている。**ビルドの成功/失敗そのものは Cloudflare ダッシュボードにしかない**。GitHub側で追えるのは「デプロイ後に本番を叩いた検証結果」だけ。
+- **Cloudflare Pages のデプロイは GitHub Actions には出ない（Checks には出る）**。`.github/workflows/` にあるのは `gsc-monitor.yml`・`hreflang-check.yml`・`seo-gate.yml` の3つだけで、サイトのデプロイは Cloudflare の Git 連携が push を検知して自前でビルドしている。ただし Cloudflare Pages の GitHub App は **`Cloudflare Pages` という名前の check run** を出すため、**Actionsタブではなく Checks（PRのチェック一覧）を見ること**。PRではプレビューデプロイの成否がここで確認でき、BotがプレビューURL付きのコメントも残す（#413 で実測）。ビルドログ本体は Cloudflare ダッシュボード（check run の details_url）にある。
 - **`hreflang Post-Deploy Check` の緑チェックは「hreflang が正常」の証明にならない**。`hreflang-check.yml` の検証ステップに `continue-on-error: true` が付いているため、**hreflang が全削除されていてもジョブは success で終わり**、メール通知が飛ぶだけ。Actions一覧の ✅ は「デプロイが完了した」ことしか意味しない。実際の合否は **ジョブのステップ単位**（`Run hreflang check` の conclusion と `Send alert if hreflang broken` が skipped か）で確認するか、`python scripts/check_hreflang.py` を手元から本番に対して実行して確かめること。
 - **マージ前フックの文言が古い**。フックは「ローリング**14日**バケツ」と表示するが、#378（2026-07-25・ユーザー承認）で**7日**に短縮済み。正典は本ファイルと CLAUDE.md であり、フックの表示ではない。
 - **docs のみのPRでも Cloudflare のビルドは毎回走る**（ビルド出力は変わらないためGoogleへの更新シグナルにはならない）。2026-08-08 は12分間に5回 push され、ビルドも5本連続で走った。CLAUDE.md の「デプロイは1日1回まで」からの逸脱にあたるため、**docs 更新は複数件をまとめて1回の push にすること**。
