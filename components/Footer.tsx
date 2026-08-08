@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
             <p className="text-xs text-gray-500 mt-2 border-t border-gray-200 pt-2">
               {isJa
                 ? '※ ご提供いただいた個人情報は、ご相談・書類取得業務のみに使用し、申請・配送に必要な政府機関・現地提携スタッフ・配送業者等への提供を除き、第三者へ提供することはありません。'
-                : '* Your information is used solely for this inquiry and document procurement. We do not share it with third parties.'}
+                : '* We use your information only for this inquiry and document procurement, and share it only when necessary with relevant agencies, processing partners, and delivery providers.'}
             </p>
             <p className="text-xs text-gray-500 mt-1.5">
               {isJa
@@ -161,7 +161,6 @@ const Footer: React.FC = () => {
           className="space-y-3 text-left"
           onSubmit={handleSubmit}
           aria-label={t('footer.formAriaLabel')}
-          noValidate
         >
           <input type="hidden" name="access_key" value={lang === 'en' ? 'b66fdc64-e552-4ae7-bac2-8ba747bfa77a' : 'c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0'} />
           <input type="hidden" name="subject" value={isJa ? '【LPお問い合わせ】フィリピン書類取得代行' : '[Philippine Document Service Inquiry - EN]'} />
@@ -171,7 +170,7 @@ const Footer: React.FC = () => {
           <input type="hidden" name="landing_page" value="https://ph-document.com/" />
 
           <div>
-            <label htmlFor="footer-name" className="block text-sm text-gray-600 mb-1">{t('footer.nameLabel')}</label>
+            <label htmlFor="footer-name" className="block text-sm text-gray-600 mb-1">{t('footer.nameLabel')} <span className="text-red-500">*</span></label>
             <input
               id="footer-name"
               name="name"
@@ -201,14 +200,14 @@ const Footer: React.FC = () => {
 
           <div>
             <label htmlFor="footer-country" className="block text-sm text-gray-600 mb-1">
-              {t('footer.countryLabel')}
+              {isJa ? t('footer.countryLabel') : 'Submission country & receiving authority'}
               <span className="text-gray-400 text-xs ml-1">{isJa ? '（任意）' : '(optional)'}</span>
             </label>
             <input
               id="footer-country"
               name="country"
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              placeholder={t('footer.countryPlaceholder')}
+              placeholder={isJa ? t('footer.countryPlaceholder') : 'e.g. Germany — local civil registry'}
             />
           </div>
 
@@ -243,19 +242,21 @@ const Footer: React.FC = () => {
                   <option value="License Transfer">License Transfer</option>
                   <option value="Naturalization">Naturalization</option>
                   <option value="Custom Roadmap">Custom Roadmap</option>
-                  <option value="Other">Other</option>
+                  <option value="Document Retrieval Only">Document Retrieval Only</option>
+                  <option value="Other / Not Sure">Other / Not Sure</option>
                 </>
               )}
             </select>
           </div>
 
-          <div>
+          <div className={isJa ? '' : 'hidden'} aria-hidden={!isJa}>
             <label className="block text-sm text-gray-600 mb-1">
               {isJa ? '当社をどこでお知りになりましたか？' : 'How did you find us?'}
               <span className="text-gray-400 text-xs ml-1">{isJa ? '（任意）' : '(optional)'}</span>
             </label>
             <select
               name="referral_source"
+              disabled={!isJa}
               value={referral}
               onChange={e => { setReferral(e.target.value); setReferralError(''); }}
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white"
@@ -303,7 +304,7 @@ const Footer: React.FC = () => {
               name="message"
               rows={3}
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              placeholder={t('footer.messagePlaceholder')}
+              placeholder={isJa ? t('footer.messagePlaceholder') : 'What document do you need, where will you submit it, and when is your deadline?'}
             />
           </div>
 
