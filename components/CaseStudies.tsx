@@ -51,8 +51,8 @@ const caseStudiesData = {
       badgeColor: 'bg-rose-100 text-rose-700',
       title: 'K-1 Fiancé Visa (USCIS Petition)',
       fear: '"I don\'t know exactly what USCIS needs. If I get the wrong documents, the petition could be delayed for months."',
-      action: 'We confirmed the exact USCIS document checklist, coordinated DFA Apostille, and shipped everything before the embassy interview date.',
-      result: 'All documents arrived at the US address via DHL well before the USCIS deadline. Petition filed without issues.',
+      action: 'We reviewed the receiving authority's published document requirements, coordinated the requested Philippine documents, and shipped them before the client's stated deadline.',
+      result: 'All requested documents arrived at the US address via DHL before the client's stated deadline.',
     },
     {
       icon: Globe,
