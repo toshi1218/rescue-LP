@@ -20,9 +20,9 @@ const statsData = {
     { value: '24時間以内', label: '平均返信スピード', sub: '平日営業日ベース' },
   ],
   en: [
-    { value: '47',  label: 'Published Reviews',  sub: 'Survey-based, shared with consent' },
+    { value: '47',  label: 'Survey Responses',   sub: 'Client surveys shared with consent' },
     { value: '4.8', label: 'Average Rating',      sub: '5★ 86% · 4★ 13% · 3★ 1%' },
-    { value: '50+', label: 'Countries Served',    sub: 'DHL worldwide delivery' },
+    { value: 'DHL', label: 'Worldwide Shipping',  sub: 'International tracked delivery' },
     { value: '24h', label: 'Avg. Reply Time',     sub: 'On business days' },
   ],
 };
@@ -138,7 +138,7 @@ const SocialProof: React.FC = React.memo(() => {
                 {isJa ? '5点満点' : 'out of 5.0'}
               </p>
               <p className="text-xs text-gray-400 mt-0.5">
-                {isJa ? '47件の評価に基づく' : 'Based on 47 reviews'}
+                {isJa ? '47件の評価に基づく' : 'Based on 47 client survey responses'}
               </p>
             </div>
 
@@ -236,7 +236,7 @@ const SocialProof: React.FC = React.memo(() => {
                   </div>
                   <span className="ml-auto flex-shrink-0 inline-flex items-center gap-1 text-[10px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-medium">
                     <CheckCircle className="w-3 h-3" />
-                    {isJa ? '確認済み' : 'Verified'}
+                    {isJa ? '確認済み' : 'Client survey'}
                   </span>
                 </div>
               </div>
