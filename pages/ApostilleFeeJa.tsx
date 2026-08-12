@@ -15,8 +15,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function ApostilleFeeJa() {
   useMeta(
-    `DFAアポスティーユの料金【${SEO_YEAR_MONTH_JA}】Regular・Express別の費用と総額の目安`,
-    'DFAアポスティーユの料金はRegular約1,000ペソ・Express約2,000ペソ。PSA取得費・国際郵送費を含めた総額の目安と、CENOMAR・PSA・NBI別の費用内訳を解説。',
+    'DFAアポスティーユの料金【2026年】Regular 100ペソ・Express 200ペソ｜総額の目安',
+    'DFAアポスティーユの政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
   );
   return (
     <PageLayout
@@ -52,10 +52,10 @@ export default function ApostilleFeeJa() {
           mainEntity: [
             {
               '@type': 'Question',
-              name: 'DFAアポスティーユの料金はいくらですか？',
+              name: 'DFAアポスティーユの政府手数料はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFAアポスティーユ・PSA取得（必要な場合）をまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
+                text: 'DFAの政府手数料は、Regularが1書類あたり100ペソ、Expressが1書類あたり200ペソです。これは認証手数料のみで、PSA書類の取得費・代行手数料・国際配送費は別に必要です。',
               },
             },
             {
@@ -68,10 +68,10 @@ export default function ApostilleFeeJa() {
             },
             {
               '@type': 'Question',
-              name: '日本の提出先ではアポスティーユが原則必須です',
+              name: '日本への提出にアポスティーユは必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '提出先によって異なります。無料相談で確認してからご案内します。',
+                text: '提出先によって異なります。PSAの出生証明書・婚姻証明書・CENOMARなどの民事書類は、2026年3月以降DFA e-Apostille（電子）のみが発行されます。提出先がe-Apostilleを受理するかを事前に確認してください。',
               },
             },
           ],
@@ -83,7 +83,7 @@ export default function ApostilleFeeJa() {
         badges={['費用は事前にご案内', '総額で事前ご提示', 'DFA公式料金込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月12日"
       />
 
       <SummaryBlock
@@ -91,7 +91,7 @@ export default function ApostilleFeeJa() {
         points={[
           'DFAアポスティーユ・PSA取得・国際郵送をまとめた料金',
           '他社の「1通○○円〜」は書類取得費用のみの場合が多い',
-          '日本の手続きでは紙の原本にDFAアポスティーユがほぼ必須',
+          'アポスティーユの要否・受理形式は提出先ごとに確認',
           '見積もり後の追加請求なし。総額で比較してください',
         ]}
         ctaText="無料で相談する"
@@ -103,8 +103,8 @@ export default function ApostilleFeeJa() {
           <p>まず、DFA（フィリピン外務省）自体に支払う「アポスティーユ認証の公式手数料」があります。これは処理区分によって異なり、目安は次のとおりです（現地の料金改定で変わることがあります）。</p>
           <div className="rounded-xl border border-gray-100 bg-gray-50 p-4">
             <ul className="space-y-2">
-              <li><strong>Regular（通常・数営業日）</strong>：1書類あたり約1,000ペソ前後</li>
-              <li><strong>Express（特急・より短い日数）</strong>：1書類あたり約2,000ペソ前後</li>
+              <li><strong>Regular（通常・数営業日）</strong>：1書類あたり<strong>100ペソ</strong></li>
+              <li><strong>Express（特急・より短い日数）</strong>：1書類あたり<strong>200ペソ</strong></li>
             </ul>
           </div>
           <p>これはあくまでDFAに支払う政府手数料の部分です。実際に日本で書類を使うためには、この前後にPSA書類の取得費用・（海外からの場合）代行手数料・日本への国際郵送費が加わります。総額の内訳は次の項目もご覧ください。</p>
@@ -126,15 +126,15 @@ export default function ApostilleFeeJa() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: '日本の提出先ではアポスティーユが原則必須',
-            description: '日本の入管・役所・大使館への提出では、原則として紙の原本＋DFAアポスティーユが必要です。',
+            title: '提出先がe-Apostilleを受理するか確認したい',
+            description: 'アポスティーユの要否と受理形式は提出先ごとに異なります。PSA民事書類の認証はe-Apostille（電子）のみです。',
           },
         ]}
       />
 
       <CtaBox
         title="必要書類と料金をまとめてご案内します"
-        description="日本での手続きでは、紙の原本にDFAアポスティーユがほぼ必須です。まず用途をお知らせいただければ、必要な書類と総額をご案内します。"
+        description="アポスティーユの要否とe-Apostilleの受理形式は提出先によって異なります。用途をお知らせいただければ、必要な書類と総額をご案内します。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
@@ -147,8 +147,8 @@ export default function ApostilleFeeJa() {
           items={[
             {
               icon: <FileCheck className="w-4 h-4" />,
-              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-              description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。紙の原本で対応。',
+              title: 'DFA認証の申請',
+              description: 'PSA民事書類はDFA e-Apostille（電子）を申請します。NBI Clearanceなど非PSA書類は物理アポスティーユの対象です。',
             },
             {
               icon: <FileCheck className="w-4 h-4" />,
@@ -201,9 +201,9 @@ export default function ApostilleFeeJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）をまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: 'DFAアポスティーユの政府手数料はいくらですか？', a: 'DFAの政府手数料は、Regularが1書類あたり100ペソ、Expressが1書類あたり200ペソです。これは認証手数料のみで、PSA書類の取得費・代行手数料・国際配送費は別に必要です。' },
           { q: '他社より高くなりませんか？', a: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めた料金なので、最終的な総額で比較してください。' },
-          { q: '日本の提出先ではアポスティーユが原則必須です', a: '提出先によって異なります。無料相談で確認してからご案内します。' },
+          { q: '日本への提出にアポスティーユは必要ですか？', a: '提出先によって異なります。PSAの出生証明書・婚姻証明書・CENOMARなどの民事書類は、2026年3月以降DFA e-Apostille（電子）のみが発行されます。提出先がe-Apostilleを受理するかを事前に確認してください。' },
           { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
