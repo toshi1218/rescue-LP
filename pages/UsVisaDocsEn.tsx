@@ -52,7 +52,7 @@ export default function UsVisaDocsEn() {
               name: 'What documents are required for a K-1 visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Typically CENOMAR, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements vary by USCIS case. We confirm for your specific petition.',
+                text: 'The checklist differs by visa type and stage. PSA civil records and NBI Clearance may be requested; authentication is arranged only when the current official instructions require it.',
               },
             },
             {
@@ -95,7 +95,7 @@ export default function UsVisaDocsEn() {
         conclusion="K-1, CR-1, or IR-1 visa? We retrieve all required Philippine documents with Apostille and ship to you."
         points={[
           'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-          'DFA Apostille included for USCIS, NVC, and US Embassy acceptance',
+          'Authentication arranged only when the current U.S. checklist requires it',
           'We confirm exact requirements for your specific visa type',
           'All-inclusive pricing with DHL Express shipping to USA',
         ]}
@@ -108,7 +108,7 @@ export default function UsVisaDocsEn() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: 'Filing a K-1, CR-1, or IR-1 visa petition',
-            description: 'USCIS and NVC require Philippine civil documents with DFA Apostille. We handle all required documents in one flow.',
+            description: 'USCIS, NVC, and embassy document requirements differ by stage. We verify the current official checklist and handle the agreed documents in one flow.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -165,7 +165,7 @@ export default function UsVisaDocsEn() {
 
       <FaqSection
         items={[
-          { q: 'What documents are required for a K-1 visa?', a: 'Typically CENOMAR, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements vary by USCIS case. We confirm for your specific petition.' },
+          { q: 'What documents are required for a K-1 visa?', a: 'The checklist differs between petition, NVC, and interview stages. PSA civil records and NBI Clearance may be requested. We confirm the current official instructions for your case before quoting.' },
           { q: 'What documents are required for a CR-1 visa?', a: 'Typically Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by NVC case. We confirm for your specific petition.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
