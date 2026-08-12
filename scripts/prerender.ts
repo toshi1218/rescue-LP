@@ -1235,8 +1235,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-ryokin/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
-    title: `DFAアポスティーユの料金【${SEO_YEAR_MONTH_JA}】Regular・Express別の費用と総額の目安`,
-    description: 'DFAアポスティーユの料金はRegular約1,000ペソ・Express約2,000ペソ。PSA取得費・国際郵送費を含めた総額の目安と、CENOMAR・PSA・NBI別の費用内訳を解説。',
+    title: 'DFAアポスティーユの料金【2026年】Regular 100ペソ・Express 200ペソ｜総額の目安',
+    description: 'DFAアポスティーユの政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
     canonical: `${BASE}/ja/apostille-ryokin/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/apostille-fee/`,
