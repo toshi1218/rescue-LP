@@ -13,6 +13,12 @@ dist
 dist-ssr
 *.local
 
+# wrangler のローカルエミュレータ状態（miniflare の D1/KV/R2 実体）
+# workers/*/.gitignore だけだと、そのファイルを持たないブランチで
+# git add -A に巻き込まれる（2026-08-12 に #409 で実際に9件混入した）
+.wrangler/
+**/.wrangler/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
