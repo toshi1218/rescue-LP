@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import OperatorIdentity from '../components/OperatorIdentity';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import GuideLinks from '../components/GuideLinks';
@@ -85,6 +86,9 @@ export default function HomeEn() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <section className="bg-white px-4 pb-0 pt-6">
+          <OperatorIdentity locale="en" className="mx-auto max-w-4xl" />
+        </section>
         <section className="bg-white px-4 py-8">
           <div className="mx-auto max-w-4xl rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
             <h2 className="mb-2 text-lg font-bold text-secondary">One service from retrieval to authentication and worldwide delivery</h2>
