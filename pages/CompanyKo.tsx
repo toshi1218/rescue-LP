@@ -18,13 +18,13 @@ const orgJsonLd = {
 
 export default function CompanyKo() {
   const details = [
-    { label: '서비스명', value: '필리핀 서류 취득 대행 센터' },
-    { label: '운영 회사', value: 'IGRS Inc. (株式会社IGRS)' },
+    { label: '서비스명', value: '필리핀 서류 취득 대행 센터', type: 'text' },
+    { label: '운영 회사', value: 'IGRS Inc. (株式会社IGRS)', type: 'text' },
     { label: '법인번호', type: 'registry' },
-    { label: '본점 소재지', value: '일본 와카야마현 와카야마시' },
-    { label: '현지 업무 거점', value: '필리핀 세부시' },
-    { label: '담당 창구', value: 'Igarashi' },
-    { label: '서비스 내용', value: '필리핀 공적 서류 취득 대행: PSA, NBI, LTO, DFA Apostille' },
+    { label: '본점 소재지', value: '일본 와카야마현 와카야마시', type: 'text' },
+    { label: '현지 업무 거점', value: '필리핀 세부시', type: 'text' },
+    { label: '담당 창구', value: 'Igarashi', type: 'text' },
+    { label: '서비스 내용', value: '필리핀 공적 서류 취득 대행: PSA, NBI, LTO, DFA Apostille', type: 'text' },
     { label: '문의', type: 'email' },
   ] as const;
 
