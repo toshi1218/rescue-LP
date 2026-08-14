@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import OperatorIdentity from '../components/OperatorIdentity';
 import { Send, Mail, Clock, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageLayoutKo from '../components/PageLayoutKo';
@@ -125,6 +126,8 @@ export default function ContactKo() {
           ))}
         </ul>
       </section>
+
+      <OperatorIdentity locale="ko" className="mb-8 max-w-xl" />
 
       {/* 문의 양식 */}
       {submitted ? (
