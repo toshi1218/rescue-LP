@@ -29,14 +29,14 @@ export default function CompanyEn() {
   );
 
   const details = [
-    { label: 'Service name', value: 'Philippine Document Procurement Center' },
-    { label: 'Operating company', value: 'IGRS Inc. (株式会社IGRS)' },
+    { label: 'Service name', value: 'Philippine Document Procurement Center', type: 'text' },
+    { label: 'Operating company', value: 'IGRS Inc. (株式会社IGRS)', type: 'text' },
     { label: 'Corporate number', type: 'registry' },
-    { label: 'Head office', value: 'Wakayama City, Wakayama, Japan' },
-    { label: 'Operations base', value: 'Cebu City, Philippines' },
-    { label: 'Contact desk', value: 'Igarashi' },
-    { label: 'Services', value: 'Philippine public-document retrieval: PSA, NBI, LTO and DFA Apostille' },
-    { label: 'Language support', value: 'English and Japanese' },
+    { label: 'Head office', value: 'Wakayama City, Wakayama, Japan', type: 'text' },
+    { label: 'Operations base', value: 'Cebu City, Philippines', type: 'text' },
+    { label: 'Contact desk', value: 'Igarashi', type: 'text' },
+    { label: 'Services', value: 'Philippine public-document retrieval: PSA, NBI, LTO and DFA Apostille', type: 'text' },
+    { label: 'Language support', value: 'English and Japanese', type: 'text' },
     { label: 'Email', type: 'email' },
   ] as const;
 
