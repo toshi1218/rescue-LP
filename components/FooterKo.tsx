@@ -239,13 +239,17 @@ const FooterKo: React.FC = () => {
       {/* Footer links */}
       <div className="border-t border-gray-100 py-8 px-6">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-          <p>© {currentYear} IGRS Inc.</p>
+          <div className="text-center md:text-left">
+            <p>© {currentYear} IGRS Inc.</p>
+            <p className="mt-1">운영: IGRS Inc. · 담당 창구: Igarashi</p>
+          </div>
           <nav className="flex flex-wrap gap-4 justify-center" aria-label="하단 메뉴">
             <Link to="/ko/" className="hover:text-secondary transition-colors">홈</Link>
             <Link to="/ko/pricing/" className="hover:text-secondary transition-colors">요금</Link>
             <Link to="/ko/f-6-philippines-documents/" className="hover:text-secondary transition-colors">F-6 비자 서류</Link>
             <Link to="/ko/nbi-clearance/" className="hover:text-secondary transition-colors">NBI Clearance</Link>
             <Link to="/ko/contact/" className="hover:text-secondary transition-colors">문의하기</Link>
+            <Link to="/ko/company/" className="hover:text-secondary transition-colors">회사 정보</Link>
             <Link to="/en/privacy/" className="hover:text-secondary transition-colors">Privacy Policy</Link>
           </nav>
         </div>
