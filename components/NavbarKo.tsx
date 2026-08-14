@@ -10,6 +10,7 @@ const NavbarKo: React.FC = () => {
     { label: '요금', path: '/ko/pricing/' },
     { label: 'F-6 비자 서류', path: '/ko/f-6-philippines-documents/' },
     { label: 'NBI Clearance', path: '/ko/nbi-clearance/' },
+    { label: '회사 정보', path: '/ko/company/' },
   ];
 
   const isActive = (path: string) =>

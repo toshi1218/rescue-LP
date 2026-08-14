@@ -144,7 +144,7 @@ export default function PrivacyEn() {
             <h2 className="text-base font-bold text-secondary mb-3">11. Contact</h2>
             <div className="bg-gray-50 rounded-xl p-5 space-y-1">
               <p className="font-bold text-secondary">IGRS Inc.</p>
-              <p className="text-gray-600">2-13 Shintaka-cho, Wakayama City, Wakayama, Japan</p>
+              <p className="text-gray-600">Wakayama City, Wakayama Prefecture, Japan</p>
               <p className="text-gray-600">
                 Email: <a href="/en/contact" className="text-primary hover:underline">Please use our contact form</a>
               </p>

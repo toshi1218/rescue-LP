@@ -1,4 +1,5 @@
 import React from 'react';
+import OperatorIdentity from '../components/OperatorIdentity';
 import { Link } from 'react-router-dom';
 import { CheckCircle, AlertCircle, ArrowRight, Clock, Shield, FileText } from 'lucide-react';
 import NavbarKo from '../components/NavbarKo';
@@ -109,6 +110,10 @@ export default function HomeKo() {
               카카오톡 또는 이메일로 상담 가능합니다 · 필요한 서류가 아직 정확하지 않아도 괜찮습니다
             </p>
           </div>
+        </section>
+
+        <section className="bg-white px-4 pb-0 pt-6">
+          <OperatorIdentity locale="ko" className="mx-auto max-w-3xl" />
         </section>
 
         <section className="px-4 py-8 bg-white">

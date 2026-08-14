@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import OperatorIdentity from '../components/OperatorIdentity';
 import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
@@ -80,6 +81,8 @@ export default function ContactEn() {
           <span className="block text-xs text-gray-500">Fastest way to reach us — quick questions, quotes, and updates.</span>
         </span>
       </a>
+
+      <OperatorIdentity locale="en" className="mb-6 max-w-xl" />
 
       {submitted ? (
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">

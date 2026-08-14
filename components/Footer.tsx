@@ -369,8 +369,19 @@ const Footer: React.FC = () => {
             : 'Payment: Credit card · Visa · Mastercard · Amex · Apple Pay · Google Pay'}
         </p>
 
-        <div className="mt-4 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
-          <Link to={companyPath} className="hover:text-secondary transition-colors">{t('footer.company')}</Link>
+        <div className="mt-6 rounded-xl border border-gray-100 bg-gray-50 px-4 py-3 text-xs text-gray-500">
+          <p>
+            {isJa
+              ? '運営：株式会社IGRS（IGRS Inc.）　·　担当窓口：五十嵐'
+              : 'Operated by IGRS Inc. · Contact desk: Igarashi'}
+          </p>
+          <Link to={companyPath} className="mt-1 inline-block font-medium text-secondary hover:underline">
+            {isJa ? '運営会社情報を確認する' : 'View company information'}
+          </Link>
+        </div>
+
+        <div className="mt-4 flex flex-col items-center justify-center gap-4 text-xs text-gray-400 md:flex-row">
+          <Link to={companyPath} className="hover:text-secondary transition-colors">{isJa ? '運営会社情報' : 'Company Information'}</Link>
           <Link to={privacyPath} className="hover:text-secondary transition-colors">{t('footer.privacy')}</Link>
           <Link to={termsPath} className="hover:text-secondary transition-colors">{t('footer.terms')}</Link>
           {isJa && (

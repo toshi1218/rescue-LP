@@ -336,8 +336,9 @@
     <loc>https://ph-document.com/en/company/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/company/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/company/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/company/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/company/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -704,8 +705,9 @@
     <loc>https://ph-document.com/ja/company/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/company/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/company/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/company/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/company/"/>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -904,6 +906,16 @@
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ph-document.com/ko/company/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/company/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/company/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ph-document.com/ko/company/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/company/"/>
+    <lastmod>2026-08-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ph-document.com/ko/contact/</loc>

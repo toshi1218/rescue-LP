@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import OperatorIdentity from '../components/OperatorIdentity';
 import { CheckCircle, ChevronDown } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -127,6 +128,9 @@ export default function HomeJa() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <section className="bg-white px-4 pt-6">
+          <OperatorIdentity locale="ja" className="mx-auto max-w-4xl" />
+        </section>
         {/* スティッキージャンプバー */}
         <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
           <div className="max-w-md md:max-w-2xl lg:max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-center gap-1 overflow-x-auto">

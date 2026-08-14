@@ -19,100 +19,72 @@ const orgJsonLd = {
   sameAs: [
     'https://ph-document.com/ja/company/',
     'https://ph-document.com/en/company/',
-    'https://share.google/oOoXo3nIRvnAAhbg0',
-    'https://note.com/igrs_philippines',
-    'https://x.com/GswCnxL7Sg15778',
-    'https://www.facebook.com/share/1KTmc7CeXi/',
-    'https://page.line.me/827jdwvl',
+    'https://ph-document.com/ko/company/',
   ],
 };
 
 export default function CompanyJa() {
   useMeta(
-    '会社概要｜IGRS Inc.（フィリピン書類取得代行センター）',
-    'フィリピン書類取得代行センターを運営するIGRS Inc.の会社概要。代表・設立年・所在地（和歌山県和歌山市 / フィリピン共和国セブ市）・事業内容を掲載。PSA・CENOMAR・NBI・DFAアポスティーユ取得を日本語でサポート。',
+    '運営会社情報｜IGRS Inc.（フィリピン書類取得代行センター）',
+    'フィリピン書類取得代行センターを運営するIGRS Inc.の会社情報。日本法人として和歌山市を本店所在地とし、セブ市の現地業務拠点と連携してフィリピン公的書類の取得をサポートします。',
   );
+
+  const details = [
+    { label: 'サービス名', value: 'フィリピン書類取得代行センター', type: 'text' },
+    { label: '運営会社', value: 'IGRS Inc.（株式会社IGRS）', type: 'text' },
+    { label: '法人番号', type: 'registry' },
+    { label: '本店所在地', value: '和歌山県和歌山市', type: 'text' },
+    { label: '現地業務拠点', value: 'フィリピン共和国 セブ市', type: 'text' },
+    { label: '担当窓口', value: '五十嵐', type: 'text' },
+    { label: '事業内容', value: 'フィリピン公的書類取得代行（PSA・NBI・LTO・DFAアポスティーユ）', type: 'text' },
+    { label: '対応言語', value: '日本語・英語', type: 'text' },
+    { label: 'お問い合わせ', type: 'email' },
+  ] as const;
+
   return (
-    <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '会社概要' }]}
-      jsonLd={orgJsonLd}
-    >
+    <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '運営会社情報' }]} jsonLd={orgJsonLd}>
       <HeroBanner
-        title="会社概要"
-        subtitle="運営会社、対応体制、返信目安、進捗報告の考え方など、ご依頼前に確認したい情報をまとめています。"
-        badges={['日本法人', 'フィリピン現地スタッフ', '日本語対応']}
-        ctaText="ご依頼前に確認する"
+        title="運営会社情報"
+        subtitle="本サービスを運営する会社、対応体制、連絡先をご案内します。"
+        badges={['日本法人', 'フィリピン現地対応', '日本語対応']}
+        ctaText="お問い合わせはこちら"
         ctaHref="/ja/contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月14日"
       />
 
       <div className="max-w-2xl">
-
-        <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-soft">
-          {[
-            { label: '会社名', value: 'IGRS Inc.' },
-            { label: '本店所在地', value: '和歌山県和歌山市新高町2番13号' },
-            { label: '法人番号', value: null, type: 'registry' },
-            { label: '営業所', value: 'フィリピン共和国 セブ市' },
-            { label: '事業内容', value: 'フィリピン公的書類取得代行（PSA・NBI・LTO・DFAアポスティーユ）' },
-            { label: '対応言語', value: '日本語・英語' },
-            { label: 'お問い合わせ', value: null },
-          ].map(({ label, value, type }, i, arr) => (
-            <div
-              key={label}
-              className={`flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-0 px-6 py-4 ${
-                i < arr.length - 1 ? 'border-b border-gray-50' : ''
-              }`}
-            >
-              <span className="sm:w-36 flex-shrink-0 text-xs font-bold text-gray-400 uppercase tracking-wider pt-0.5">
-                {label}
-              </span>
-              <span className="text-sm text-gray-700 leading-relaxed">
-                {type === 'registry' ? (
-                  <a href="https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2170001016118" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
-                    2170001016118（政府法人情報）
-                  </a>
-                ) : value ?? (
-                  <a href="mailto:igrs20200601@gmail.com" className="text-primary hover:underline font-medium">
-                    igrs20200601@gmail.com
-                  </a>
-                )}
+        <div className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-soft">
+          {details.map((item, i) => (
+            <div key={item.label} className={`flex flex-col gap-1 px-6 py-4 sm:flex-row sm:gap-0 ${i < details.length - 1 ? 'border-b border-gray-50' : ''}`}>
+              <span className="w-full shrink-0 pt-0.5 text-xs font-bold uppercase tracking-wider text-gray-400 sm:w-40">{item.label}</span>
+              <span className="text-sm leading-relaxed text-gray-700">
+                {item.type === 'registry' ? (
+                  <a href="https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2170001016118" target="_blank" rel="noopener noreferrer" className="font-medium text-primary hover:underline">2170001016118（政府法人情報）</a>
+                ) : item.type === 'email' ? (
+                  <a href="mailto:igrs20200601@gmail.com" className="font-medium text-primary hover:underline">igrs20200601@gmail.com</a>
+                ) : item.value}
               </span>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl bg-secondary/[0.03] border border-secondary/10 p-6">
-          <h2 className="text-sm font-bold text-secondary mb-3">サービスについて</h2>
-          <p className="text-sm text-gray-600 leading-relaxed">
-            IGRS Inc. は、日本在住のお客様を対象に、フィリピン公的書類の取得代行サービスを提供しています。
-            日本法人が窓口となり、フィリピン・セブ市の現地スタッフが PSA・NBI・LTO・DFA アポスティーユの手続きを代行します。
-            国際結婚・配偶者ビザ・外免切替・帰化申請など、用途に合わせた書類を日本語だけでご依頼いただけます。
+        <div className="mt-8 rounded-2xl border border-secondary/10 bg-secondary/[0.03] p-6">
+          <h2 className="mb-3 text-sm font-bold text-secondary">サービスについて</h2>
+          <p className="text-sm leading-relaxed text-gray-600">
+            IGRS Inc. は、日本法人としてご依頼を受け付け、セブ市の現地業務拠点と連携して PSA・NBI・LTO・DFA アポスティーユ等の手続きを進めます。
+            国際結婚・配偶者ビザ・外免切替・帰化申請など、提出先に合わせた書類の整理から取得・発送まで対応します。
           </p>
         </div>
 
-        <div className="mt-6 rounded-2xl bg-secondary/[0.03] border border-secondary/10 p-6">
-          <h2 className="text-sm font-bold text-secondary mb-4">営業時間・お支払い・返金</h2>
-          <div className="grid gap-4 md:grid-cols-2 text-sm text-gray-600">
-            <div>
-              <p className="font-semibold text-secondary mb-1">営業時間</p>
-              <p>月曜日〜金曜日 9:00〜17:00（フィリピン時間）</p>
-            </div>
-            <div>
-              <p className="font-semibold text-secondary mb-1">連絡手段</p>
-              <p>Eメール・LINEで承っています。電話による受付は行っていません。</p>
-            </div>
-            <div>
-              <p className="font-semibold text-secondary mb-1">お支払い方法</p>
-              <p>クレジットカード（Visa・Mastercard・Amex・Apple Pay・Google Pay）または銀行振込にて承っています。いずれも着手時50%・発送前50%の2回払いです。</p>
-            </div>
-            <div>
-              <p className="font-semibold text-secondary mb-1">キャンセル・返金</p>
-              <p>着手前：全額返金。着手後・書類未取得：実費（PSA手数料等）を除いて返金。書類取得後・写し送付前：実費＋作業費を除いて返金。DHL発送後：返金不可。</p>
-            </div>
+        <div className="mt-6 rounded-2xl border border-secondary/10 bg-secondary/[0.03] p-6">
+          <h2 className="mb-4 text-sm font-bold text-secondary">営業時間・お支払い・返金</h2>
+          <div className="grid gap-4 text-sm text-gray-600 md:grid-cols-2">
+            <div><p className="mb-1 font-semibold text-secondary">営業時間</p><p>月曜日〜金曜日 9:00〜17:00（フィリピン時間）</p></div>
+            <div><p className="mb-1 font-semibold text-secondary">連絡手段</p><p>Eメール・LINEで承っています。電話による受付は行っていません。</p></div>
+            <div><p className="mb-1 font-semibold text-secondary">お支払い方法</p><p>クレジットカードまたは銀行振込。着手時50%・発送前50%の2回払いです。</p></div>
+            <div><p className="mb-1 font-semibold text-secondary">キャンセル・返金</p><p>着手前は全額返金。着手後は実費・作業の進行状況に応じて返金額を計算します。</p></div>
           </div>
         </div>
-
       </div>
     </PageLayout>
   );
