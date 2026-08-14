@@ -7,12 +7,11 @@ import RelatedArticles from '../components/RelatedArticles';
 import FaqSection from '../components/FaqSection';
 import { AlertTriangle, Info, CheckCircle, XCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function NbiValidityJa() {
   useMeta(
-    `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】発行から1年｜提出先別の注意点`,
-    'NBI Clearanceの有効期限は発行から1年。ただし入管や大使館では6ヶ月以内を求められる場合も。提出先別の基準・期限切れを防ぐ取得タイミング・アポスティーユとの関係を解説。',
+    'NBIクリアランスの有効期限が切れたら？再発行の要否と手順',
+    'NBIクリアランスが使えるかは「発行から1年」ではなく提出先の基準で決まります。期限内でも却下される条件、更新で足りる人・再取得が必要な人の判定基準を実務目線で解説します。',
   );
   return (
     <PageLayout

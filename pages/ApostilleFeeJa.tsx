@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
 import FeatureList from '../components/FeatureList';
@@ -11,12 +12,11 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import { FileText, Stamp, CheckCircle, Clock, MessageSquare, Package } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function ApostilleFeeJa() {
   useMeta(
-    'DFAアポスティーユの料金【2026年】Regular 100ペソ・Express 200ペソ｜総額の目安',
-    'DFAアポスティーユの政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
+    'DFAアポスティーユの料金は状況で変わります｜3パターンの実額',
+    'アポスティーユの料金は書類の種類と提出先で変わります。政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類のe-Apostille／NBI等の物理アポスティーユ／パック利用の3パターン別に、実際にかかる総額を公開します。',
   );
   return (
     <PageLayout
@@ -108,6 +108,49 @@ export default function ApostilleFeeJa() {
             </ul>
           </div>
           <p>これはあくまでDFAに支払う政府手数料の部分です。実際に日本で書類を使うためには、この前後にPSA書類の取得費用・（海外からの場合）代行手数料・日本への国際郵送費が加わります。総額の内訳は次の項目もご覧ください。</p>
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-base font-bold text-gray-900 mb-4">実際にかかる総額：よくある3パターン</h2>
+        <div className="text-sm text-gray-700 leading-relaxed space-y-3">
+          <p>「アポスティーユはいくらか」の答えは1つではありません。<strong>どの書類に、どの形式の認証を付けるか</strong>で総額が変わります。当センターへのご依頼で多い3パターンの実額は次のとおりです（いずれも税込・DFAの政府手数料を含んだ代行料金です）。</p>
+
+          <div className="space-y-3">
+            <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+              <div className="flex items-baseline justify-between gap-3 mb-2">
+                <p className="font-bold text-gray-900">① PSA民事書類＋DFA e-Apostille（電子）</p>
+                <p className="font-bold text-primary whitespace-nowrap">¥30,000〜</p>
+              </div>
+              <p className="text-gray-600">CENOMAR・PSA出生証明書・PSA婚姻証明書など。2026年3月以降、PSA発行の民事書類に紙のアポスティーユは発行されないため、認証はe-Apostille（電子）になります。</p>
+              <p className="text-xs text-gray-500 mt-2">※紙のPSA原本（SECPA）の国際発送も必要な場合は +¥10,000（合計 ¥40,000〜）。認証なしで原本の取得・発送のみなら ¥28,000〜。</p>
+            </div>
+
+            <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+              <div className="flex items-baseline justify-between gap-3 mb-2">
+                <p className="font-bold text-gray-900">② お手持ちの書類に物理アポスティーユのみ</p>
+                <p className="font-bold text-primary whitespace-nowrap">¥39,000〜</p>
+              </div>
+              <p className="text-gray-600">NBI Clearanceなど、すでに取得済みの非PSA書類をIGRS宛に転送いただき、DFAの物理アポスティーユ取得から国際発送までを代行するパターンです。</p>
+              <p className="text-xs text-gray-500 mt-2">※内訳：アポスティーユ ¥30,000 ＋ 消費税 ¥3,000 ＋ DHL ¥6,000</p>
+            </div>
+
+            <div className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+              <div className="flex items-baseline justify-between gap-3 mb-2">
+                <p className="font-bold text-gray-900">③ 複数書類をまとめて（国際結婚準備パック）</p>
+                <p className="font-bold text-primary whitespace-nowrap">¥94,000〜</p>
+              </div>
+              <p className="text-gray-600">CENOMAR＋PSA出生証明書＋DFAアポスティーユ認証＋DHL国際発送。1点ずつ頼むより、婚姻届や配偶者ビザに必要な書類をまとめた方が総額を抑えられます。</p>
+              <p className="text-xs text-gray-500 mt-2">※内訳：パック料金 ¥80,000 ＋ 消費税 ¥8,000 ＋ DHL ¥6,000</p>
+            </div>
+          </div>
+
+          <p className="text-xs text-gray-500">※書類の点数・案件の状況によって金額は変わります。正確な金額は無料相談後にご提示し、見積もり後の追加請求はありません。</p>
+          <p>
+            <Link to="/ja/ryokin/" className="text-primary-dark font-semibold hover:underline">
+              すべてのプランの料金一覧を見る →
+            </Link>
+          </p>
         </div>
       </section>
 

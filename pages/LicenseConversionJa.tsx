@@ -11,12 +11,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { AlertTriangle, CheckCircle, ClipboardList, Car, FileText, Stamp, Clock, Globe, Users, Receipt, BarChart3, Building2, Headphones } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function LicenseConversionJa() {
   useMeta(
-    `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】渡航不要`,
-    'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
+    'フィリピン運転免許→日本の外免切替｜必要書類と落とし穴',
+    'フィリピン免許から日本免許への外免切替で求められる書類（License History・Certification with Apostille・OR・Immigration Record）と、3か月滞在歴・日本語翻訳文でつまずく落とし穴を解説。LTO書類の取得代行にも対応。',
   );
   return (
     <PageLayout
@@ -227,6 +226,19 @@ export default function LicenseConversionJa() {
             { icon: Globe, title: '免許センターで確認を', description: '求める書類は免許センターごとに異なる。先に管轄センターへ確認することが重要。', accent: 'purple' },
           ]}
         />
+
+        <div className="mt-6 rounded-xl border-l-4 border-secondary bg-white p-5 shadow-sm">
+          <p className="text-sm font-bold text-secondary mb-2">フィリピンの書類には日本語訳の提出を求められます</p>
+          <p className="text-sm text-gray-700 leading-relaxed mb-3">
+            外免切替では、フィリピン運転免許証やLTO発行の証明書について、日本語の翻訳文をあわせて求められます。
+            <strong>免許証本体の翻訳文は発行元（在日フィリピン大使館・JAF等）を指定している免許センターがある</strong>ため、
+            管轄センターの指定を先にご確認ください。発行元の指定がない書類については、当センターの日本語翻訳サービス
+            （1部 ¥7,700 税込〜・納期5営業日以内）で翻訳のみのご依頼も承っています。
+          </p>
+          <Link to="/ja/honyaku/" className="text-sm font-bold text-primary-dark hover:underline">
+            フィリピン書類の日本語翻訳について詳しく見る →
+          </Link>
+        </div>
       </SectionDivider>
 
       {/* Section 3 */}

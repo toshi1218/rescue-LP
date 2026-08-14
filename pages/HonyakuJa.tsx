@@ -202,6 +202,24 @@ export default function HonyakuJa() {
         </div>
       </section>
 
+      {/* 外免切替をご検討の方へ */}
+      <section className="mb-10">
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-5">
+          <p className="text-sm font-bold text-secondary mb-2">外免切替（フィリピン免許→日本免許）をご検討の方へ</p>
+          <p className="text-sm text-gray-600 leading-relaxed mb-4">
+            外免切替では、LTO発行の証明書やフィリピン運転免許証の日本語訳を求められます。
+            翻訳文の発行元を指定している免許センターもあるため、必要書類とあわせて先にご確認ください。
+          </p>
+          <Link
+            to="/ja/gaimen-kirikae-guide/"
+            className="inline-flex items-center gap-1.5 text-sm text-primary-dark font-semibold hover:underline"
+          >
+            外免切替の必要書類と手続きの流れを見る
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+      </section>
+
       {/* 注意点 */}
       <section className="mb-10">
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-5 flex gap-3">

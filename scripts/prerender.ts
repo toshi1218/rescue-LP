@@ -1129,8 +1129,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/gaimen-kirikae-guide/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'gaimen-kirikae-guide', 'index.html'),
-    title: `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】渡航不要`,
-    description: 'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
+    title: 'フィリピン運転免許→日本の外免切替｜必要書類と落とし穴',
+    description: 'フィリピン免許から日本免許への外免切替で求められる書類（License History・Certification with Apostille・OR・Immigration Record）と、3か月滞在歴・日本語翻訳文でつまずく落とし穴を解説。LTO書類の取得代行にも対応。',
     canonical: `${BASE}/ja/gaimen-kirikae-guide/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
@@ -1235,8 +1235,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-ryokin/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
-    title: 'DFAアポスティーユの料金【2026年】Regular 100ペソ・Express 200ペソ｜総額の目安',
-    description: 'DFAアポスティーユの政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
+    title: 'DFAアポスティーユの料金は状況で変わります｜3パターンの実額',
+    description: 'アポスティーユの料金は書類の種類と提出先で変わります。政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類のe-Apostille／NBI等の物理アポスティーユ／パック利用の3パターン別に、実際にかかる総額を公開します。',
     canonical: `${BASE}/ja/apostille-ryokin/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/apostille-fee/`,
@@ -1246,8 +1246,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-koyukigen/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-koyukigen', 'index.html'),
-    title: `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】発行から1年｜提出先別の注意点`,
-    description: 'NBI Clearanceの有効期限は発行から1年。ただし入管や大使館では6ヶ月以内を求められる場合も。提出先別の基準・期限切れを防ぐ取得タイミング・アポスティーユとの関係を解説。',
+    title: 'NBIクリアランスの有効期限が切れたら？再発行の要否と手順',
+    description: 'NBIクリアランスが使えるかは「発行から1年」ではなく提出先の基準で決まります。期限内でも却下される条件、更新で足りる人・再取得が必要な人の判定基準を実務目線で解説します。',
     canonical: `${BASE}/ja/nbi-koyukigen/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/nbi-validity/`,
