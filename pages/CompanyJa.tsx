@@ -30,14 +30,14 @@ export default function CompanyJa() {
   );
 
   const details = [
-    { label: 'サービス名', value: 'フィリピン書類取得代行センター' },
-    { label: '運営会社', value: 'IGRS Inc.（株式会社IGRS）' },
+    { label: 'サービス名', value: 'フィリピン書類取得代行センター', type: 'text' },
+    { label: '運営会社', value: 'IGRS Inc.（株式会社IGRS）', type: 'text' },
     { label: '法人番号', type: 'registry' },
-    { label: '本店所在地', value: '和歌山県和歌山市' },
-    { label: '現地業務拠点', value: 'フィリピン共和国 セブ市' },
-    { label: '担当窓口', value: '五十嵐' },
-    { label: '事業内容', value: 'フィリピン公的書類取得代行（PSA・NBI・LTO・DFAアポスティーユ）' },
-    { label: '対応言語', value: '日本語・英語' },
+    { label: '本店所在地', value: '和歌山県和歌山市', type: 'text' },
+    { label: '現地業務拠点', value: 'フィリピン共和国 セブ市', type: 'text' },
+    { label: '担当窓口', value: '五十嵐', type: 'text' },
+    { label: '事業内容', value: 'フィリピン公的書類取得代行（PSA・NBI・LTO・DFAアポスティーユ）', type: 'text' },
+    { label: '対応言語', value: '日本語・英語', type: 'text' },
     { label: 'お問い合わせ', type: 'email' },
   ] as const;
 
