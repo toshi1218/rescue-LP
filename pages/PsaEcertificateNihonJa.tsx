@@ -64,12 +64,12 @@ export default function PsaEcertificateNihonJa() {
       </header>
 
       <SummaryBlock
-        conclusion="PSA e-Certificate＋DFA e-Apostilleが使えるかは、書類そのものの有効性ではなく、提出先がその形式を受け付けるかで決まります。最初から一律に紙原本を付けるのではなく、用途と提出先を確認して必要な形式だけ取得するのが合理的です。"
+        conclusion="PSA e-Certificate＋DFA e-Apostilleが使えるかは、書類そのものの有効性ではなく、提出先がその形式を受け付けるかで決まります。アポスティーユ自体が不要な手続きもあるため、最初から一律に認証や紙原本を付けず、用途と提出先を確認して必要なものだけ取得するのが合理的です。"
         points={[
           'PSA民事書類の認証はe-Apostille（電子）へ移行しています',
           '在東京フィリピン大使館のLCCMでは、当社の2026年8月直接確認で電子版＋e-Apostilleの受付可との案内を確認',
           '日本の市区町村は自治体ごとに必要書類・原本形式が異なります',
-          '入管の公式必要書類は申請区分ごとに確認し、外国語書類には日本語訳が必要です',
+          '永住許可申請では、出入国在留管理庁の通常の提出書類にアポスティーユは含まれていません',
         ]}
       />
 
@@ -94,7 +94,7 @@ export default function PsaEcertificateNihonJa() {
           </p>
           <div className="rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm">
             <strong className="text-gray-900">ポイント：</strong>
-            「e-Apostilleが電子だから紙原本も必ず必要」「紙原本があるから紙アポスティーユも付く」という意味ではありません。必要な組み合わせは提出先ごとに確認します。
+            「e-Apostilleが電子だから紙原本も必ず必要」「紙原本があるから紙アポスティーユも付く」という意味ではありません。アポスティーユ自体が不要な手続きも含め、必要な組み合わせは提出先ごとに確認します。
           </div>
         </div>
       </section>
@@ -108,21 +108,21 @@ export default function PsaEcertificateNihonJa() {
         <div className="grid gap-4 md:grid-cols-2">
           <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
             <p className="font-bold text-secondary mb-1">電子版のみ</p>
-            <p className="text-sm text-primary font-semibold mb-2">e-Certificate＋e-Apostille</p>
+            <p className="text-sm text-primary font-semibold mb-2">e-Certificate＋必要な場合のみe-Apostille</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              提出先が電子文書を受け付ける場合は、国際配送をせず電子データで納品できます。紙原本が不要な手続きに向いています。
+              提出先が電子文書を受け付ける場合は、国際配送をせず電子データで納品できます。アポスティーユが不要な手続きには追加しません。
             </p>
           </div>
           <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
             <p className="font-bold text-secondary mb-1">電子版＋紙原本</p>
-            <p className="text-sm text-primary font-semibold mb-2">e-Certificate＋e-Apostille＋SECPA</p>
+            <p className="text-sm text-primary font-semibold mb-2">e-Certificate＋必要な認証＋SECPA</p>
             <p className="text-sm text-gray-700 leading-relaxed">
               市区町村などがPSA紙原本を求める場合にSECPAを追加します。紙原本はフィリピンで受領後、日本へ発送します。
             </p>
           </div>
         </div>
         <p className="mt-3 text-xs text-gray-500">
-          ※当社では、用途と提出先を確認し、不要な紙原本や追加手続きをできるだけ省く形でご案内します。
+          ※当社では、用途と提出先を確認し、不要なアポスティーユ・紙原本・追加手続きをできるだけ省く形でご案内します。
         </p>
       </section>
 
@@ -153,12 +153,12 @@ export default function PsaEcertificateNihonJa() {
             </div>
           </div>
 
-          <div className="flex items-start gap-3 p-4 rounded-xl border border-amber-100 bg-amber-50">
-            <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+          <div className="flex items-start gap-3 p-4 rounded-xl border border-green-100 bg-green-50">
+            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="font-bold text-gray-900 mb-1">地方出入国在留管理局：在留・永住関係</p>
+              <p className="font-bold text-gray-900 mb-1">地方出入国在留管理局：永住許可申請</p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                出入国在留管理庁の必要書類は、申請する在留資格や永住許可の区分ごとに定められています。外国で発行された婚姻証明書等を求める手続きがありますが、フィリピンの民事登録書類すべてにアポスティーユを必須とする一律の記載ではありません。外国語で作成された書類には日本語訳を添付し、必要に応じて管轄入管へ確認してください。
+                <strong>永住許可申請では、出入国在留管理庁が公開する通常の提出書類にアポスティーユは含まれていません。</strong>日本人の配偶者として申請する場合は、配偶者の戸籍謄本と、申請人の国籍国の機関から発行された婚姻証明書等が求められます。外国語で作成された書類には日本語訳を添付します。審査上必要な場合に追加資料を求められることはありますが、PSA婚姻証明書等へDFAアポスティーユを付けることが通常要件ではありません。
               </p>
             </div>
           </div>
@@ -211,11 +211,11 @@ export default function PsaEcertificateNihonJa() {
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
-                ['構成', 'e-Certificate＋e-Apostille', '電子2点＋PSA紙原本'],
+                ['構成', 'e-Certificate＋必要な場合のみe-Apostille', '電子版＋必要な認証＋PSA紙原本'],
                 ['国際配送', '原則不要', '必要'],
                 ['向いているケース', '提出先が電子文書を受理', '提出先がPSA紙原本を要求'],
                 ['受理可否', '提出先に事前確認', '紙原本でも必要書類自体は提出先に確認'],
-                ['当社の方針', '電子版で足りればこれで完結', '必要な場合だけ追加'],
+                ['当社の方針', '不要な認証は付けない', '必要な場合だけ追加'],
               ].map(([item, electronic, paper]) => (
                 <tr key={item} className="hover:bg-gray-50/50">
                   <td className="px-4 py-3 font-medium text-gray-800">{item}</td>
@@ -241,12 +241,12 @@ export default function PsaEcertificateNihonJa() {
               body: 'LCCM、大使館、入管、市区町村など、どの手続きでどこへ出す書類かを先に確認します。',
             },
             {
-              title: '電子版の受理可否を確認する',
-              body: 'e-Certificate＋e-Apostilleで足りるなら、紙原本を追加せず電子版で進めます。',
+              title: 'アポスティーユの要否を先に確認する',
+              body: '永住許可申請のように通常の提出書類としてアポスティーユが求められていない手続きには付けません。必要な提出先だけ認証を追加します。',
             },
             {
-              title: '紙原本が必要な場合だけSECPAを追加する',
-              body: '市区町村等から紙原本を求められた書類だけを追加し、フィリピンから発送します。',
+              title: '電子版・紙原本の形式を確認する',
+              body: '電子版で足りる場合はデータで納品し、市区町村等から紙原本を求められた書類だけSECPAを追加します。',
             },
             {
               title: '申請直前にも最新運用を確認する',
@@ -297,8 +297,8 @@ export default function PsaEcertificateNihonJa() {
       </section>
 
       <CtaBox
-        title="提出先に合わせて、電子版・紙原本を必要な分だけ手配します"
-        description="用途と提出先（大使館・入管・市区町村名）をお知らせください。e-Certificate＋e-Apostilleで足りるか、SECPA紙原本まで必要かを整理してご案内します。"
+        title="提出先に合わせて、必要な認証・電子版・紙原本だけ手配します"
+        description="用途と提出先（大使館・入管・市区町村名）をお知らせください。アポスティーユが必要か、電子版で足りるか、SECPA紙原本まで必要かを整理してご案内します。"
         buttonText="無料相談・お問い合わせ"
         href="/ja/contact/"
         trustNote="着手前キャンセル無料・進捗を随時ご報告"
