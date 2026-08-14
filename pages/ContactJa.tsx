@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import OperatorIdentity from '../components/OperatorIdentity';
 import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
@@ -62,6 +63,8 @@ export default function ContactJa() {
           月〜金 9:00〜17:00（PHT）
         </span>
       </div>
+
+      <OperatorIdentity locale="ja" className="mb-6 max-w-xl" />
 
       {submitted ? (
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
