@@ -49,25 +49,54 @@ export default function PricingJa() {
         trustNote="追加費用が出る場合は事前にご相談します"
       />
 
-      {/* なぜ他社より安くないのか */}
+      {/* 行政・領事手続きサポート */}
+      <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6 mb-6">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div className="flex-1">
+            <p className="text-xs font-bold tracking-wider text-primary mb-2">オプションサービス</p>
+            <h2 className="text-lg font-bold text-secondary mb-2">行政・領事手続きの確認・問い合わせサポート</h2>
+            <p className="text-sm text-gray-700 leading-relaxed mb-3">
+              大使館・領事館・PSA・DFAなどへの英語での問い合わせ、必要書類や手続き順序の確認、提出先に確認すべきポイントの整理をサポートします。書類取得だけでなく、手続きに伴う確認作業そのものを減らしたい方向けです。
+            </p>
+            <ul className="space-y-1.5 text-sm text-gray-600">
+              <li>・関係機関への英語問い合わせ・回答内容の整理</li>
+              <li>・必要書類、手続き順序、確認事項の整理</li>
+              <li>・提出先ごとの運用確認に必要な質問事項の作成・フォロー</li>
+            </ul>
+          </div>
+          <div className="md:w-64 rounded-xl border border-primary/20 bg-white p-5 shadow-sm">
+            <p className="text-xs text-gray-500 mb-1">書類取得サービスへの追加</p>
+            <p className="text-2xl font-extrabold text-primary">+¥11,000〜¥33,000</p>
+            <p className="text-xs text-gray-500 mt-1">税込 / 内容・問い合わせ回数により個別見積</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              対応可否を相談する
+            </a>
+          </div>
+        </div>
+        <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+          ※本人出頭・本人署名・本人確認など、ご本人にしかできない行為は代行できません。公的機関の判断・回答内容・処理期間を保証するサービスではありません。複雑案件や調査量が多い案件は別途お見積もりします。
+        </p>
+      </div>
+
+      {/* 電子・紙で料金が変わる理由 */}
       <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 mb-2">
-        <p className="text-sm font-bold text-gray-800 mb-3">なぜ他社より安くないのか</p>
+        <p className="text-sm font-bold text-gray-800 mb-3">電子版で完結できるか、紙原本まで必要かで料金が変わります</p>
         <p className="text-sm text-gray-600 leading-relaxed mb-3">
-          フィリピン書類の代行サービスの中には、e-Apostille（電子認証）・e-Certificate（電子書類）で対応している業者もあり、費用を抑えられます。
+          フィリピン書類は、提出先によってe-Certificate・e-Apostille（電子）で足りる場合と、PSA紙原本の取得・国際発送まで必要な場合があります。
         </p>
         <p className="text-sm text-gray-700 leading-relaxed mb-3">
-          ただし、<strong>日本の市区町村役場・法務局・出入国在留管理庁では、紙の原本・物理アポスティーユを必須とするケースが大半です。</strong>
+          <strong>PSA民事書類（出生・婚姻・CENOMAR等）のDFA認証はe-Apostille（電子）が原則</strong>です。一方、NBI・LTO・PRC等の非PSA書類では物理アポスティーユが必要になるケースがあります。
         </p>
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
-          IGRSが取り扱うのは<strong>物理アポスティーユ（紙原本）のみ</strong>。現地DFAへの予約・申請・受け取りをスタッフが代行するため、予約枠に限りがあり、価格を下げることができません。その分、<strong>日本の提出先で弾かれるリスクはほぼありません。</strong>
+          IGRSでは、提出先の要件に合わせて、電子で完結する方法と、紙原本の取得・発送を含む方法を分けてご案内します。不要な取得や発送を前提にせず、必要な範囲でお見積もりします。
         </p>
         <div className="rounded-lg border border-blue-200 bg-white p-4">
           <p className="text-xs font-bold text-blue-700 mb-1">まず提出先に確認してください</p>
           <p className="text-xs text-gray-600 leading-relaxed mb-2">
-            「e-Apostilleで受理しますか？紙の原本が必要ですか？」と確認してから業者を選ぶことをおすすめします。
+            「e-Certificate・e-Apostilleで受理されますか？PSAの紙原本も必要ですか？」と確認すると、必要なプランを絞り込めます。
           </p>
           <p className="text-xs text-gray-500 leading-relaxed">
-            電子対応が確認できた場合は、<strong>PSAオンライン申請代行（¥16,500〜）</strong>でコストを抑えられます。紙原本が必要な場合はフルサービスをご利用ください。
+            ご自身での確認が難しい場合は、上記の<strong>行政・領事手続きサポート</strong>として確認事項の整理や問い合わせも承ります。
           </p>
         </div>
       </div>
