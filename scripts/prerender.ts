@@ -132,13 +132,20 @@ function buildArticleJsonLd(route: RouteConfig): JsonLd {
 
 function buildAboutPageJsonLd(route: RouteConfig): JsonLd {
   const isJa = route.lang === 'ja';
+  const isKo = route.lang === 'ko';
+  const pageName = isJa
+    ? '運営会社情報｜IGRS Inc.（フィリピン書類取得代行センター）'
+    : isKo
+      ? '회사 정보｜IGRS Inc.（필리핀 서류 취득 대행 센터）'
+      : 'Company Information | IGRS Inc. — Philippine Document Procurement Center';
+
   return {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: isJa ? '会社概要｜IGRS Inc.（フィリピン書類取得代行センター）' : 'About IGRS Inc. — Philippine Document Retrieval Service',
+    name: pageName,
     url: route.canonical,
     description: route.description,
-    inLanguage: isJa ? 'ja-JP' : 'en-US',
+    inLanguage: isJa ? 'ja-JP' : isKo ? 'ko-KR' : 'en-US',
     about: {
       '@type': 'Organization',
       name: 'IGRS Inc.',
@@ -149,8 +156,8 @@ function buildAboutPageJsonLd(route: RouteConfig): JsonLd {
         {
           '@type': 'PostalAddress',
           addressCountry: 'JP',
-          addressLocality: isJa ? '和歌山市' : 'Wakayama City',
-          addressRegion: isJa ? '和歌山県' : 'Wakayama Prefecture',
+          addressLocality: isJa ? '和歌山市' : isKo ? '와카야마시' : 'Wakayama City',
+          addressRegion: isJa ? '和歌山県' : isKo ? '와카야마현' : 'Wakayama Prefecture',
         },
         {
           '@type': 'PostalAddress',
@@ -164,6 +171,7 @@ function buildAboutPageJsonLd(route: RouteConfig): JsonLd {
     },
   };
 }
+
 
 function buildWebPageJsonLd(route: RouteConfig): JsonLd {
   return {
@@ -819,12 +827,13 @@ const routes: RouteConfig[] = [
   {
     path: '/en/company/',
     outFile: path.join(projectRoot, 'dist', 'en', 'company', 'index.html'),
-    title: 'About Us | IGRS Inc. — Philippine Document Retrieval Service',
-    description: 'IGRS Inc. is a Cebu-based document retrieval agency. We handle PSA, NBI, LTO & DFA Apostille for US visa and immigration applicants worldwide. English support.',
+    title: 'Company Information | IGRS Inc. — Philippine Document Procurement Center',
+    description: 'IGRS Inc. is the Japan-registered operator of Philippine Document Procurement Center. Our Wakayama head office works with a Cebu operations team for PSA, NBI, LTO and DFA Apostille procedures.',
     canonical: `${BASE}/en/company/`,
     lang: 'en',
     enCanonical: `${BASE}/en/company/`,
     jaCanonical: `${BASE}/ja/company/`,
+    koCanonical: `${BASE}/ko/company/`,
     isAboutPage: true,
   },
   {
@@ -1291,12 +1300,13 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/company/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'company', 'index.html'),
-    title: '会社概要｜IGRS Inc.（フィリピン書類取得代行センター）',
-    description: 'フィリピン書類取得代行センターを運営するIGRS Inc.の会社概要。代表・設立年・所在地（和歌山県和歌山市 / フィリピン共和国セブ市）・事業内容を掲載。PSA・CENOMAR・NBI・DFAアポスティーユ取得を日本語でサポート。',
+    title: '運営会社情報｜IGRS Inc.（フィリピン書類取得代行センター）',
+    description: 'フィリピン書類取得代行センターを運営するIGRS Inc.の会社情報。日本法人として和歌山市を本店所在地とし、セブ市の現地業務拠点と連携してフィリピン公的書類の取得をサポートします。',
     canonical: `${BASE}/ja/company/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/company/`,
     jaCanonical: `${BASE}/ja/company/`,
+    koCanonical: `${BASE}/ko/company/`,
     isAboutPage: true,
   },
   {
@@ -1559,6 +1569,18 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/nbi-clearance/`,
     koCanonical: `${BASE}/ko/nbi-clearance/`,
     ogType: 'article',
+  },
+  {
+    path: '/ko/company/',
+    outFile: path.join(projectRoot, 'dist', 'ko', 'company', 'index.html'),
+    title: '회사 정보 | IGRS Inc. — 필리핀 서류 취득 대행 센터',
+    description: '필리핀 서류 취득 대행 센터를 운영하는 일본 법인 IGRS Inc.의 회사 정보입니다. 와카야마시 본점과 세부시 현지 업무 거점이 연계하여 PSA, NBI, LTO, DFA Apostille 관련 업무를 지원합니다.',
+    canonical: `${BASE}/ko/company/`,
+    lang: 'ko',
+    enCanonical: `${BASE}/en/company/`,
+    jaCanonical: `${BASE}/ja/company/`,
+    koCanonical: `${BASE}/ko/company/`,
+    isAboutPage: true,
   },
   {
     path: '/ko/contact/',
