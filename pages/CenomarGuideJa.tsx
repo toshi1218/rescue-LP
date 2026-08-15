@@ -158,7 +158,7 @@ export default function CenomarGuideJa() {
       <article className="max-w-2xl mx-auto px-4">
 
         <SectionDivider variant="beige">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">
+          <h2 id="toha" className="text-xl font-bold text-gray-900 mb-3 scroll-mt-24">
             CENOMARとは何か（独身証明書）
           </h2>
           <p className="text-gray-700 leading-relaxed mb-3">
@@ -166,6 +166,11 @@ export default function CenomarGuideJa() {
           </p>
           <p className="text-gray-700 leading-relaxed mb-3">
             国際結婚の手続き・配偶者ビザ申請・帰化申請・フィリピンでの婚姻手続きなど、フィリピン人の婚姻状況を確認する必要がある場面で提出を求められることがあります。
+          </p>
+          <p className="mb-3">
+            <Link to="/ja/cenomar-toha/" className="text-primary-dark font-semibold hover:underline">
+              CENOMARの意味・正式名称・使い方をさらに詳しく見る →
+            </Link>
           </p>
           <dl className="grid grid-cols-2 gap-3 mt-4 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
@@ -244,6 +249,82 @@ export default function CenomarGuideJa() {
           <p className="text-gray-700 leading-relaxed">
             また、必要に応じて <strong>DFA Apostille（アポスティーユ）</strong> が関わることがあります。フィリピンでは、いわゆる昔の「red ribbon」ではなく、現在は Apostille の制度で案内されています。
           </p>
+        </SectionDivider>
+
+        <SectionDivider variant="white">
+          <h2 id="koyukigen" className="text-xl font-bold text-gray-900 mb-3 scroll-mt-24">
+            CENOMARの有効期限
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            CENOMAR自体に法律上の有効期限はありません。ただし実務では、<strong>提出先が「発行から何ヶ月以内のものか」を見ます</strong>。
+            多くの提出先で<strong>発行から6ヶ月以内</strong>が目安ですが、提出先によっては3ヶ月以内を求められることもあります。
+          </p>
+          <ul className="space-y-2 text-gray-700 text-sm mb-3">
+            <li className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+              <span><strong>在東京フィリピン大使館の婚姻関連手続き</strong>：発行から6ヶ月以内と案内されています</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+              <span><strong>日本の市区町村役場（婚姻届）・入管</strong>：役場・窓口ごとに基準が異なります。提出前の確認を推奨します</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+              <span><strong>海外の役所への提出</strong>：3〜6ヶ月以内を求められるのが一般的です</span>
+            </li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            取得から提出までの期間が空くと、せっかく取った書類が「古い」と扱われて取り直しになります。
+            提出予定日が決まっている場合は、そこから逆算して申請時期を決めるのが確実です。
+          </p>
+          <Link to="/ja/cenomar-koyukigen/" className="text-primary-dark font-semibold hover:underline">
+            提出先別の基準と、逆算した取得タイミングを詳しく見る →
+          </Link>
+        </SectionDivider>
+
+        <SectionDivider variant="beige">
+          <h2 id="apostille" className="text-xl font-bold text-gray-900 mb-3 scroll-mt-24">
+            CENOMARにアポスティーユは必要か
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            日本の役所・入管・法務局へ提出する場合、CENOMARにはDFA（フィリピン外務省）のアポスティーユ認証を求められるのが一般的です。
+            ここで注意が必要なのが、<strong>2026年3月のDFA運用変更</strong>です。
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            この変更により、<strong>PSA発行の民事書類（CENOMAR・出生証明書・婚姻証明書）に紙のアポスティーユは発行されなくなりました</strong>。
+            現在はe-Certificate＋e-Apostille（PDF）での発行のみです。
+            そのため、まず<strong>提出先がe-Apostilleを受理するか</strong>を確認することが、取得より先に必要な確認事項になります。
+          </p>
+          <Link to="/ja/cenomar-apostille/" className="text-primary-dark font-semibold hover:underline">
+            CENOMARのアポスティーユ取得の流れを詳しく見る →
+          </Link>
+        </SectionDivider>
+
+        <SectionDivider variant="white">
+          <h2 id="vs-marriage-certificate" className="text-xl font-bold text-gray-900 mb-3 scroll-mt-24">
+            CENOMARと婚姻証明書の違い
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            混同されやすい2つですが、証明する内容は正反対です。
+          </p>
+          <div className="grid gap-3 mb-3 text-sm">
+            <div className="rounded-lg border border-gray-100 bg-white p-4">
+              <p className="font-bold text-gray-800 mb-1">CENOMAR（独身証明書）</p>
+              <p className="text-gray-600">フィリピンに<strong>婚姻記録がない</strong>ことを証明する書類。これから結婚する手続きで使います。</p>
+            </div>
+            <div className="rounded-lg border border-gray-100 bg-white p-4">
+              <p className="font-bold text-gray-800 mb-1">PSA婚姻証明書（Marriage Certificate）</p>
+              <p className="text-gray-600">フィリピンに<strong>婚姻が登録されている</strong>ことを証明する書類。結婚後の手続きで使います。</p>
+            </div>
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            どちらが必要かは提出先と手続きの段階で決まります。国際結婚の婚姻届の準備段階ならCENOMAR、
+            婚姻登録後の配偶者ビザ申請などならPSA婚姻証明書が基本です。
+            なお、以前に婚姻歴がある場合は、離婚・婚姻無効判決などの追加資料を求められることがあります。
+          </p>
+          <Link to="/ja/cenomar-vs-marriage-certificate/" className="text-primary-dark font-semibold hover:underline">
+            ビザ種別ごとにどちらが必要かを詳しく見る →
+          </Link>
         </SectionDivider>
 
         <SectionDivider variant="blue">
