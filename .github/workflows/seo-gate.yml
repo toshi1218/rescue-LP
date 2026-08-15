@@ -28,11 +28,13 @@ jobs:
           fi
 
       - name: Check for noindex additions
+        # 既存（インデックス済み）ルートへの noindex 追加のみブロックする。
+        # 同じPRで新規追加されたルートに最初から付いている noindex は、検索結果から
+        # 消える既存ページが無いため通す。判定は scripts/check-noindex-additions.sh
+        # に集約（ローカルの scripts/lint-seo.sh と同一ロジック）。
         run: |
-          ADDED=$(git diff origin/main...HEAD -- scripts/prerender.ts | grep '^+' | grep -E 'noindex.*true' | grep -v '^+++' || true)
-          if [ -n "$ADDED" ]; then
-            echo "::error::🚨 noindex追加が検出されました。レベル2変更のため要確認:"
-            echo "$ADDED"
+          if ! git diff origin/main...HEAD -U0 -- scripts/prerender.ts | bash scripts/check-noindex-additions.sh; then
+            echo "::error::🚨 既存ページへの noindex 追加が検出されました。レベル2変更のため要確認"
             exit 1
           fi
 

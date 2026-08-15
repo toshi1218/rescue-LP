@@ -1,0 +1,30 @@
+name = "ph-document-tracking"
+main = "src/index.ts"
+compatibility_date = "2026-04-01"
+compatibility_flags = ["nodejs_compat"]
+
+# tracking.ph-document.com をこのWorkerに紐付ける（DNSレコードも wrangler が作成）。
+# ph-document.com のゾーンが同じCloudflareアカウントにある前提。別アカウントの場合は
+# この3行をコメントアウトし、ダッシュボードから手動でカスタムドメインを追加する。
+routes = [
+  { pattern = "tracking.ph-document.com", custom_domain = true }
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ph-document-tracking"
+database_id = "REPLACE_WITH_D1_ID_AFTER_CREATE"
+
+[[r2_buckets]]
+binding = "UPLOADS"
+bucket_name = "ph-document-tracking-uploads"
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "REPLACE_WITH_KV_ID_AFTER_CREATE"
+
+# Secrets (set via `wrangler secret put`):
+#   ADMIN_PASSWORD   -- password for the staff admin tool (/tools/tracking-admin.html)
+
+[vars]
+ALLOWED_ORIGIN = "https://ph-document.com"
