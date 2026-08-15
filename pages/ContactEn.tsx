@@ -3,6 +3,7 @@ import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
+import { notifySlack } from '../lib/notifyApi';
 import { isValidEmail } from '../lib/validation';
 import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 import PaymentTrust from '../components/PaymentTrust';
@@ -123,9 +124,11 @@ export default function ContactEn() {
           setSubmitting(true);
           setSubmitError('');
           try {
+            const formData = new FormData(e.currentTarget);
+            notifySlack('en', formData);
             const res = await fetch(WEB3FORMS_ENDPOINT, {
               method: 'POST',
-              body: new FormData(e.currentTarget),
+              body: formData,
               headers: { Accept: 'application/json' },
             });
             const data = await res.json();
