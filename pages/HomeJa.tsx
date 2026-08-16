@@ -202,6 +202,39 @@ export default function HomeJa() {
               無料見積を依頼する
             </a>
           </section>
+
+          <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
+            <div className="mb-5">
+              <p className="text-xs font-bold tracking-wider text-primary mb-2">行政・領事手続きサポート</p>
+              <h2 className="text-xl md:text-2xl font-bold text-secondary mb-3">書類だけでなく、面倒な確認や問い合わせもサポートします</h2>
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                フィリピン関係の手続きでは、必要書類が分かっていても、英語での問い合わせ、窓口ごとの案内確認、提出先ごとの運用確認に時間がかかることがあります。IGRSでは、書類取得に加えて、代理可能な範囲でこうした確認作業もお引き受けします。
+              </p>
+            </div>
+            <div className="grid gap-3 md:grid-cols-3 mb-5">
+              {[
+                '大使館・領事館・PSA・DFA等への英語問い合わせ',
+                '必要書類・手続き順序・確認事項の整理',
+                '提出先に確認すべきポイントの整理・フォロー',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-2 rounded-xl bg-gray-50 p-4">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-gray-700 leading-relaxed">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-gray-500 leading-relaxed mb-4">
+              ※本人出頭・本人署名・本人確認など、ご本人にしかできない手続きは代行できません。対応範囲と費用は事前にお見積もりします。
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a href="/ja/ryokin/" className="inline-flex items-center justify-center rounded-xl border border-secondary px-5 py-3 text-sm font-bold text-secondary transition-colors hover:bg-secondary/5">
+                サポート料金を見る
+              </a>
+              <a href="#contact" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+                手続き内容を相談する
+              </a>
+            </div>
+          </section>
         </div>
         <ServicePacks />
         <PainPoints />
