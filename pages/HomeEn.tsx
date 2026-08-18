@@ -22,7 +22,7 @@ import { SEO_DATE_ISO, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function HomeEn() {
   useMeta(
     `Philippine Documents for International Marriage & Visa [${SEO_YEAR_MONTH_EN}]`,
-    `Getting married to a Filipino, or moving countries together? We verify format requirements, procure physical PSA originals + DFA Apostille, and ship via DHL worldwide.`,
+    `Getting married to a Filipino, or moving countries together? We verify format requirements, procure the required PSA or NBI documents, arrange the appropriate DFA authentication, and coordinate delivery worldwide.`,
     'https://ph-document.com/en/',
   );
 
@@ -37,7 +37,7 @@ export default function HomeEn() {
     alternateName: 'ph-document.com',
     url: 'https://ph-document.com/en/',
     logo: 'https://ph-document.com/logo.png',
-    description: 'Philippine PSA document service for overseas submission. We verify receiving authority requirements and procure physical PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille for clients in UAE, Korea, Europe, USA, and worldwide. Paper originals shipped via DHL Express.',
+    description: 'Philippine document service for overseas submission. We verify receiving-authority requirements and coordinate PSA Birth Certificates, CENOMAR, NBI Clearance, the appropriate DFA authentication, and DHL delivery when a physical document is required.',
     areaServed: [
       { '@type': 'Country', name: 'US' },
       { '@type': 'Country', name: 'CA' },
@@ -65,7 +65,7 @@ export default function HomeEn() {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Physical PSA Birth Certificate (Original, not e-Certificate)' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Physical CENOMAR (Certificate of No Marriage) — Original' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NBI Clearance for Immigration and Visa' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DFA Apostille Authentication — Paper Original' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DFA Authentication — e-Apostille or physical route as applicable' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'International Shipping via DHL Express' } },
       ],
     },
