@@ -6,6 +6,19 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      var analyticsConsent = 'denied';
+      try {
+        analyticsConsent = localStorage.getItem('ph-document-analytics-consent') === 'granted' ? 'granted' : 'denied';
+      } catch (e) {
+        analyticsConsent = 'denied';
+      }
+      gtag('consent', 'default', {
+        analytics_storage: analyticsConsent,
+        ad_storage: analyticsConsent,
+        ad_user_data: analyticsConsent,
+        ad_personalization: analyticsConsent,
+        wait_for_update: 500
+      });
       gtag('js', new Date());
       gtag('config', 'G-KRN6VVHJTQ');
       gtag('config', 'AW-735961307');
@@ -21,7 +34,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href="https://ph-document.com/en/" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
     <!-- OGP -->
     <meta property="og:type" content="website" />
@@ -172,9 +185,9 @@
         {
           "@type": "Offer",
           "name": "Immigration Document Package (CENOMAR + PSA + NBI + Apostille)",
-          "price": "899",
+          "price": "699",
           "priceCurrency": "USD",
-          "description": "Complete Philippine document package for immigration: CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships worldwide via DHL Express."
+          "description": "International Marriage Full Package: PSA documents, CENOMAR, NBI Clearance, authentication as required, and DHL Express shipping."
         }
       ]
     }

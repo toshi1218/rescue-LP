@@ -36,7 +36,7 @@ export default function HomeEn() {
     name: 'IGRS Inc.',
     alternateName: 'ph-document.com',
     url: 'https://ph-document.com/en/',
-    logo: 'https://ph-document.com/logo.png',
+    logo: 'https://ph-document.com/favicon.svg',
     description: 'Philippine PSA document service for overseas submission. We verify receiving authority requirements and procure physical PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille for clients in UAE, Korea, Europe, USA, and worldwide. Paper originals shipped via DHL Express.',
     areaServed: [
       { '@type': 'Country', name: 'US' },
