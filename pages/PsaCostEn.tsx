@@ -13,8 +13,8 @@ import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaCostEn() {
   useMeta(
-    `PSA Birth Certificate Cost [${SEO_YEAR}]: PHP 365 + US$349 All-In`,
-    'Official PSA fee: PHP 365/copy. Full price — retrieval, DFA Apostille & DHL Express: US$349 all-in, 4–6 weeks. No hidden fees. USA, UAE, Canada, UK & more.',
+    `PSA Birth Certificate Cost [${SEO_YEAR}]: ₱155 Walk-In / ₱365 Online`,
+    'A PSA birth certificate costs ₱155 at a PSA outlet or ₱365 through PSAHelpline domestic online delivery. International format, authentication, and delivery costs depend on the route and receiving authority.',
   );
   return (
     <PageLayout
@@ -23,7 +23,7 @@ export default function PsaCostEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Birth Certificate Retrieval — All-Inclusive Pricing',
-        description: 'Full cost breakdown for PSA Birth Certificate retrieval: PSA fee + DFA Apostille + DHL shipping worldwide. All-inclusive pricing with no hidden fees. Free quote available.',
+        description: 'Cost guide for PSA Birth Certificate retrieval: PSA issuance fees, delivery choices, and the DFA authentication route when required. Free quote available for complex or overseas cases.',
         url: 'https://ph-document.com/en/psa-birth-certificate-cost/',
         provider: {
           '@type': 'Organization',
@@ -39,7 +39,7 @@ export default function PsaCostEn() {
             '@type': 'UnitPriceSpecification',
             price: '349',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
+            description: 'PSA retrieval, the applicable DFA authentication route, and DHL shipping when a physical document is needed',
           },
         },
         },
@@ -52,7 +52,7 @@ export default function PsaCostEn() {
               name: 'How much does a PSA Birth Certificate cost in 2026?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'The official PSA fee is PHP 365 per copy. With DFA Apostille and international DHL shipping, the total cost starts at USD $349.',
+                text: 'A PSA Birth Certificate costs PHP 155 at a PSA outlet. PSAHelpline lists PHP 365 for domestic online delivery; international formats and courier arrangements vary by route.',
               },
             },
             {
@@ -60,7 +60,7 @@ export default function PsaCostEn() {
               name: 'What is the PSA Birth Certificate price with Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Our all-inclusive price covering PSA retrieval (PHP 365 official fee), DFA Apostille authentication, and DHL worldwide shipping starts at USD $349. No hidden fees.',
+                text: 'Our service quote is based on the required document format, authentication route, and delivery destination. We confirm the full scope before you pay.',
               },
             },
             {
@@ -108,7 +108,7 @@ export default function PsaCostEn() {
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
-        The official PSA certificate fee is ₱365 per copy. However, using it abroad requires DFA Apostille authentication and international shipping — here's the full cost breakdown.
+        A PSA Birth Certificate costs <strong>₱155 at a PSA outlet</strong>. PSAHelpline lists <strong>₱365 for domestic online delivery</strong>. For use abroad, the required document format, authentication route, and delivery method depend on the receiving authority.
       </p>
 
       <div className="max-w-2xl mx-auto px-4">
@@ -120,9 +120,10 @@ export default function PsaCostEn() {
               <div className="px-4 py-3 font-bold text-center">Cost</div>
             </div>
             {[
-              { label: 'Official PSA fee (government)', price: '₱365 / copy' },
-              { label: 'DFA Apostille authentication', price: 'included' },
-              { label: 'DHL international shipping (tracked)', price: 'included' },
+              { label: 'PSA outlet certificate fee', price: '₱155 / copy' },
+              { label: 'PSAHelpline online domestic delivery', price: '₱365 / copy' },
+              { label: 'DFA authentication', price: 'depends on route' },
+              { label: 'International delivery', price: 'depends on route' },
               { label: 'Our all-inclusive service price', price: 'USD $349', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
@@ -131,15 +132,15 @@ export default function PsaCostEn() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500 mt-2">Urgent cases may incur an additional fee. Apostille is included by default — if not needed for your case, we confirm before charging.</p>
+          <p className="text-xs text-gray-500 mt-2">PSA and DFA routes change by document format and destination. We confirm the receiving authority's requirement before quoting.</p>
         </SectionDivider>
       </div>
 
       <SummaryBlock
-        conclusion="The real cost of a PSA Birth Certificate is more than the PHP 365 government fee. We quote everything upfront."
+        conclusion="PSA Birth Certificate costs vary by request route. Confirm the format and receiving-authority requirement before paying for authentication or delivery."
         points={[
-          'Government fee is only the base; DFA Apostille, shipping, and handling add up',
-          'Our all-inclusive price covers PSA retrieval + DFA Apostille + DHL shipping',
+          'PSA outlet and online-delivery prices are different',
+          'Authentication and international delivery depend on the document format and receiving authority',
           'No surprise add-ons after you start the process',
           'Compare total costs, not just base fees, when choosing a service',
         ]}
