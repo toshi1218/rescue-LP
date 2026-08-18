@@ -36,12 +36,12 @@ export default function CenomarCostComparisonEn() {
             {
               '@type': 'Question',
               name: 'How much does CENOMAR cost from PSA?',
-              acceptedAnswer: { '@type': 'Answer', text: 'PSA charges PHP 365 per copy of CENOMAR. This is the base document cost. If you need DFA Apostille, add approximately PHP 200 per document. International shipping via courier is additional and can cost PHP 2,000–5,000+ depending on destination.' },
+              acceptedAnswer: { '@type': 'Answer', text: 'A CENOMAR costs PHP 210 at a PSA outlet. PSAHelpline lists PHP 420 for domestic online delivery. International formats, delivery, and authentication depend on the route and receiving authority.' },
             },
             {
               '@type': 'Question',
               name: 'Can I order CENOMAR online from abroad?',
-              acceptedAnswer: { '@type': 'Answer', text: 'PSA\'s online service (PSAHelpline.ph) ships within the Philippines only. If you are abroad, you need to either hire a representative in the Philippines or use a document retrieval service that handles PSA, Apostille, and international shipping end-to-end.' },
+              acceptedAnswer: { '@type': 'Answer', text: 'PSA provides online ordering options, including routes for applicants abroad. Availability, identity verification, document format, and courier arrangements depend on the current PSA portal and destination.' },
             },
             {
               '@type': 'Question',
@@ -62,15 +62,15 @@ export default function CenomarCostComparisonEn() {
 
       <div className="max-w-2xl mx-auto px-4 mb-8">
         <p className="text-sm text-gray-600 leading-relaxed mb-3">
-          Getting CENOMAR from outside the Philippines is not straightforward. PSA's official online service ships within the Philippines only — which means OFWs and Filipinos living abroad need an alternative. Here is a full breakdown of every option, including real costs and timelines.
+          Getting CENOMAR from outside the Philippines requires choosing the correct PSA route. PSA provides online ordering options, but international delivery, identity verification, document format, and courier arrangements vary. Here is a practical comparison of the main options.
         </p>
       </div>
 
       <SummaryBlock
         conclusion="For OFWs and Filipinos abroad, a document service (PSA + Apostille + DHL, all-inclusive) is typically the fastest and most reliable option — no need to coordinate multiple parties."
         points={[
-          'PSA direct: PHP 365/copy — Philippines delivery only, no international shipping',
-          'Walk-in PSA branch: same-day but requires someone physically in the Philippines',
+          'PSA direct: ₱210 walk-in; PSAHelpline lists ₱420 for domestic online delivery',
+          'PSA online international options require checking the current route, identity verification, and courier arrangements',
           'Representative: variable cost, coordination risk, no accountability',
           'Document service: US$349 all-inclusive — PSA + Apostille + DHL worldwide',
         ]}
@@ -94,15 +94,15 @@ export default function CenomarCostComparisonEn() {
           <tbody>
             <tr>
               <td className="p-3 border border-gray-200 font-medium">PSA Online (PSAHelpline.ph)</td>
-              <td className="p-3 border border-gray-200">PHP 365/copy + local delivery</td>
-              <td className="p-3 border border-gray-200">3–5 business days (PH only)</td>
+              <td className="p-3 border border-gray-200">₱420 domestic online delivery; international route varies</td>
+              <td className="p-3 border border-gray-200">Depends on the selected route</td>
               <td className="p-3 border border-gray-200"><XCircle className="w-4 h-4 text-red-400 inline" /> Not included</td>
-              <td className="p-3 border border-gray-200"><XCircle className="w-4 h-4 text-red-400 inline" /> Philippines only</td>
-              <td className="p-3 border border-gray-200">Someone with a PH address</td>
+              <td className="p-3 border border-gray-200">Check current international availability</td>
+              <td className="p-3 border border-gray-200">Applicants who can meet the portal's current requirements</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-medium">Walk-in at PSA Branch</td>
-              <td className="p-3 border border-gray-200">PHP 365/copy</td>
+              <td className="p-3 border border-gray-200">₱210/copy</td>
               <td className="p-3 border border-gray-200">Same day or next day</td>
               <td className="p-3 border border-gray-200"><XCircle className="w-4 h-4 text-red-400 inline" /> Not included</td>
               <td className="p-3 border border-gray-200"><XCircle className="w-4 h-4 text-red-400 inline" /> You must be in PH</td>
@@ -120,13 +120,13 @@ export default function CenomarCostComparisonEn() {
               <td className="p-3 border border-gray-200 font-bold text-primary">Document Service (IGRS)</td>
               <td className="p-3 border border-gray-200 font-bold">US$349 all-inclusive</td>
               <td className="p-3 border border-gray-200">4–6 weeks total</td>
-              <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> DFA Apostille included</td>
+              <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> Required DFA route confirmed</td>
               <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> DHL to 15+ countries</td>
               <td className="p-3 border border-gray-200">OFWs and Filipinos abroad</td>
             </tr>
           </tbody>
         </table>
-        <p className="text-xs text-gray-500 mt-2">PSA fees as of 2026. Costs subject to change. US$349 includes PSA retrieval + DFA Apostille + DHL international shipping.</p>
+        <p className="text-xs text-gray-500 mt-2">PSA fees and delivery options can change. We confirm the current document format, authentication route, and delivery scope before quoting.</p>
       </div>
 
       {/* Option Details */}
@@ -135,13 +135,13 @@ export default function CenomarCostComparisonEn() {
 
         <div className="border border-gray-200 rounded-lg p-5">
           <h3 className="font-bold text-gray-900 mb-2">Option 1: PSA Online (PSAHelpline.ph)</h3>
-          <p className="text-sm text-gray-600 mb-3">The official PSA online delivery service. You order directly from the Philippine Statistics Authority website. Delivery is within the Philippines only — they do not ship internationally.</p>
+          <p className="text-sm text-gray-600 mb-3">PSA provides online ordering channels. Availability for applicants abroad, identity verification, document format, and courier arrangements depend on the current PSA route and destination.</p>
           <ul className="text-sm space-y-1">
             <li><span className="text-green-600 font-medium">✓</span> Official PSA document, guaranteed authentic</li>
-            <li><span className="text-green-600 font-medium">✓</span> Lowest base cost (PHP 365/copy)</li>
-            <li><span className="text-red-500 font-medium">✗</span> Philippines delivery only — no international shipping</li>
+            <li><span className="text-green-600 font-medium">✓</span> PSAHelpline lists ₱420 for domestic online delivery</li>
+            <li><span className="text-red-500 font-medium">✗</span> International availability and courier arrangements must be checked for the selected route</li>
             <li><span className="text-red-500 font-medium">✗</span> No Apostille — you need to arrange DFA separately</li>
-            <li><span className="text-red-500 font-medium">✗</span> If abroad, you still need someone in the Philippines to receive and forward it</li>
+            <li><span className="text-red-500 font-medium">✗</span> The correct authentication route still depends on the receiving authority</li>
           </ul>
         </div>
 
@@ -150,7 +150,7 @@ export default function CenomarCostComparisonEn() {
           <p className="text-sm text-gray-600 mb-3">Visit a PSA branch in the Philippines in person. Fastest option for getting the raw document, but requires physical presence in the Philippines.</p>
           <ul className="text-sm space-y-1">
             <li><span className="text-green-600 font-medium">✓</span> Same-day or next-day issuance</li>
-            <li><span className="text-green-600 font-medium">✓</span> Lowest cost (PHP 365/copy)</li>
+            <li><span className="text-green-600 font-medium">✓</span> PSA outlet fee: ₱210/copy</li>
             <li><span className="text-red-500 font-medium">✗</span> Must be physically present in the Philippines</li>
             <li><span className="text-red-500 font-medium">✗</span> No Apostille — must queue again at DFA</li>
             <li><span className="text-red-500 font-medium">✗</span> Not realistic for OFWs abroad</li>
@@ -171,9 +171,9 @@ export default function CenomarCostComparisonEn() {
 
         <div className="border-2 border-primary rounded-lg p-5 bg-blue-50">
           <h3 className="font-bold text-primary mb-2">Option 4: Document Retrieval Service (IGRS) — Recommended for OFWs</h3>
-          <p className="text-sm text-gray-600 mb-3">We handle the entire process end-to-end: PSA retrieval, DFA Apostille, and DHL international shipping to your door. One fixed price, no surprises.</p>
+          <p className="text-sm text-gray-600 mb-3">We handle the process end-to-end: PSA retrieval, the required DFA authentication route, and DHL international shipping when a physical document is needed. One fixed price, no surprises.</p>
           <ul className="text-sm space-y-1">
-            <li><span className="text-green-600 font-medium">✓</span> All-inclusive: PSA + DFA Apostille + DHL shipping (US$349)</li>
+            <li><span className="text-green-600 font-medium">✓</span> All-inclusive: PSA + required authentication route + DHL shipping when needed (US$349)</li>
             <li><span className="text-green-600 font-medium">✓</span> Authentication route matched to the receiving authority</li>
             <li><span className="text-green-600 font-medium">✓</span> Ships to USA, Canada, Australia, UK, UAE, Korea, Japan and more</li>
             <li><span className="text-green-600 font-medium">✓</span> Progress updates at every stage</li>
@@ -185,7 +185,7 @@ export default function CenomarCostComparisonEn() {
 
       <CtaBox
         title="Ready to Get Started?"
-        description="All-inclusive from US$349. PSA retrieval + DFA Apostille + DHL shipping worldwide. Free consultation — no commitment until you approve the quote."
+        description="All-inclusive from US$349. PSA retrieval, the required authentication route, and DHL shipping when needed. Free consultation — no commitment until you approve the quote."
         buttonText="Free Consultation"
         href="#contact"
         variant="primary"
@@ -195,11 +195,11 @@ export default function CenomarCostComparisonEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does CENOMAR cost from PSA?', a: 'PSA charges PHP 365 per copy. This is the base document fee only. DFA Apostille is additional (approx. PHP 200/document), and international courier shipping is separate.' },
-          { q: 'Can I order CENOMAR online from abroad?', a: 'PSA\'s online service (PSAHelpline.ph) delivers within the Philippines only. If you are abroad, you need a document retrieval service that handles PSA, Apostille, and international shipping end-to-end.' },
+          { q: 'How much does CENOMAR cost from PSA?', a: 'A CENOMAR costs ₱210 at a PSA outlet. PSAHelpline lists ₱420 for domestic online delivery. International formats, delivery, and authentication depend on the route and receiving authority.' },
+          { q: 'Can I order CENOMAR online from abroad?', a: 'PSA provides online ordering options for applicants abroad. Check the current route for identity verification, document format, courier arrangements, and destination availability before paying.' },
           { q: 'How long does it take to get CENOMAR with Apostille from abroad?', a: 'Approximately 4–6 weeks total: PSA issuance (2–3 weeks) + DFA Apostille (1–2 weeks) + DHL international shipping (3–5 business days).' },
           { q: 'Is US$349 really all-inclusive?', a: 'Yes. The US$349 covers PSA retrieval, DFA Apostille, and DHL international shipping to your address. There are no hidden fees. We confirm the full quote before you commit.' },
-          { q: 'What if I only need the PSA document without apostille?', a: 'We can arrange PSA-only retrieval. However, most visa and immigration applications require DFA Apostille. We recommend confirming with your receiving authority before deciding.' },
+          { q: 'What if I only need the PSA document without authentication?', a: 'We can arrange PSA-only retrieval. Confirm the receiving authority's current requirement before deciding whether any DFA authentication is needed.' },
         ]}
         ctaTitle="Have Questions?"
         ctaButton="Ask Us for Free"
