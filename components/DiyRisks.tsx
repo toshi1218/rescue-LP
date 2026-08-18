@@ -32,8 +32,8 @@ const contentData = {
         body: 'Filing a petition → NVC processing → embassy interview — the same document is often required at multiple stages. Starting without the full picture guarantees delays you could have avoided.',
       },
       {
-        title: 'Paper Apostille is required by some destinations — and if you miss it, you restart',
-        body: "Whether a paper-based DFA Apostille is required depends on the specific consulate or office you're submitting to. Documents obtained without it are rejected — and the entire retrieval must be repeated from the beginning.",
+        title: 'The receiving authority may require a specific document and authentication format — confirm first',
+        body: "For PSA civil records, DFA issues an e-Apostille for PSA e-Certificates. Some authorities may separately require a physical PSA copy or a different authentication route. Confirm the current checklist before ordering so you do not need to start again.",
       },
       {
         title: 'You risk dealing with unverified providers',
@@ -41,7 +41,7 @@ const contentData = {
       },
     ],
     closing:
-      'Our goal is to reduce the chance of your Japan-side application stalling due to missing or incorrect Philippine documents. We handle identification, retrieval, copy planning, and Apostille coordination (e-Apostille for PSA documents, paper Apostille for NBI and other non-PSA documents) — with a Cebu-based team and a verifiable company track record.',
+      'Our goal is to reduce the chance of your Japan-side application stalling due to missing or incorrect Philippine documents. We handle identification, retrieval, copy planning, and the correct authentication route for the document and receiving authority — with a Cebu-based team and a verifiable company track record.',
     cta: 'Free Consultation',
   },
   ja: {
