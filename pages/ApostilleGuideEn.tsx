@@ -169,40 +169,15 @@ export default function ApostilleGuideEn() {
         ]}
       />
 
-      {/* Which documents need Apostille reference table */}
-      <div className="my-8">
-        <h2 className="text-base font-bold text-secondary mb-3">Which Documents Need DFA Apostille?</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-xs border-collapse rounded-xl overflow-hidden shadow-sm">
-            <thead>
-              <tr className="bg-secondary text-white">
-                <th className="px-3 py-2.5 text-left font-semibold">Document</th>
-                <th className="px-3 py-2.5 text-center font-semibold">USA</th>
-                <th className="px-3 py-2.5 text-center font-semibold">Canada</th>
-                <th className="px-3 py-2.5 text-center font-semibold">Australia</th>
-                <th className="px-3 py-2.5 text-center font-semibold">UK</th>
-                <th className="px-3 py-2.5 text-center font-semibold">Japan</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ['CENOMAR', '✓', '✓', '✓', '✓', '✓'],
-                ['PSA Birth Certificate', '✓', '✓', '✓', '✓', '✓'],
-                ['PSA Marriage Certificate', '✓', '✓', '✓', '✓', '✓'],
-                ['NBI Clearance', '✓', '✓', '✓', '✓', '✓'],
-                ['LTO Driver\'s Record', '✓', '✓', '✓', '✓', '✓'],
-              ].map(([doc, ...checks], i) => (
-                <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-3 py-2.5 font-medium text-gray-700 border-t border-gray-100">{doc}</td>
-                  {checks.map((c, j) => (
-                    <td key={j} className="px-3 py-2.5 text-center text-green-600 font-medium border-t border-gray-100">{c}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-xs text-gray-400 mt-2">✓ = DFA Apostille required for immigration use. We verify the exact format requirement for your specific authority before starting.</p>
+      <div className="my-8 rounded-xl border border-gray-100 bg-gray-50 p-5">
+        <h2 className="mb-3 text-base font-bold text-secondary">Does your document need DFA authentication?</h2>
+        <p className="text-sm leading-relaxed text-gray-700">There is no country-wide yes/no rule for every immigration case. The requirement depends on the document, destination, application stage, and receiving authority.</p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-gray-700">
+          <li>For PSA e-Certificates intended for Apostille Convention use, DFA issues an electronic e-Apostille.</li>
+          <li>For non-Apostille destinations, a physical Certificate of Authentication and further consular legalization may be required.</li>
+          <li>Non-PSA documents, such as NBI Clearance or LTO records, can follow a different physical-document route.</li>
+        </ul>
+        <p className="mt-3 text-xs text-gray-500">Always confirm the current official checklist from the receiving authority before ordering or paying for authentication.</p>
       </div>
 
       <FaqSection
