@@ -202,7 +202,7 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'CENOMAR — Single Document',
-      subtitle: 'Physical PSA original shipped via DHL — add DFA-stamped Apostille for immigration use worldwide',
+      subtitle: 'Physical PSA original shipped via DHL — add the appropriate DFA authentication when required',
       price: 'US$199',
       priceNote: 'document + DHL (no Apostille)',
       priceApostille: 'US$349',
@@ -215,7 +215,7 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA Birth Certificate — Single Document',
-      subtitle: 'Physical PSA original, not an e-certificate — add DFA-stamped Apostille for overseas use',
+      subtitle: 'Physical PSA original, not an e-certificate — add the appropriate DFA authentication when required',
       price: 'US$199',
       priceNote: 'document + DHL (no Apostille)',
       priceApostille: 'US$349',
@@ -228,7 +228,7 @@ const plansData = {
       tag: null,
       featured: false,
       title: 'PSA Marriage Certificate — Single Document',
-      subtitle: 'Physical PSA original for spouse visa, immigration, and naturalization — add DFA-stamped Apostille for overseas use',
+      subtitle: 'Physical PSA original for spouse visa, immigration, and naturalization — authentication added when required',
       price: 'US$199',
       priceNote: 'document + DHL (no Apostille)',
       priceApostille: 'US$349',
@@ -360,7 +360,7 @@ const Pricing: React.FC = () => {
                     {(plan as any).priceApostille && (
                       <div className="flex items-baseline gap-2 mt-1.5 pl-2 border-l-2 border-primary/30">
                         <span className="text-sm font-bold text-secondary">{(plan as any).priceApostille}</span>
-                        <span className="text-xs text-gray-400">{lang === 'ja' ? 'DFA物理アポスティーユ込み 総額' : 'with DFA physical Apostille — all-in total'}</span>
+                        <span className="text-xs text-gray-400">{lang === 'ja' ? '必要なDFA認証対応込み 総額' : 'with the required DFA authentication — all-in total'}</span>
                       </div>
                     )}
                     {(plan as any).priceEApostille && (
