@@ -1,11 +1,9 @@
 name = "ph-document-tracking"
-main = "src/index.ts"
+main = "src/main.ts"
 compatibility_date = "2026-04-01"
 compatibility_flags = ["nodejs_compat"]
 
 # tracking.ph-document.com をこのWorkerに紐付ける（DNSレコードも wrangler が作成）。
-# ph-document.com のゾーンが同じCloudflareアカウントにある前提。別アカウントの場合は
-# この3行をコメントアウトし、ダッシュボードから手動でカスタムドメインを追加する。
 routes = [
   { pattern = "tracking.ph-document.com", custom_domain = true }
 ]
@@ -22,7 +20,18 @@ bucket_name = "ph-document-tracking-uploads"
 triggers = { crons = ["0 3 * * *"] }
 
 # Secrets (set via `wrangler secret put`):
-#   ADMIN_PASSWORD   -- password for the staff admin tool (/tools/tracking-admin.html)
+#   ADMIN_PASSWORD              -- staff admin tool
+#   CRM_INGEST_SECRET           -- Gmail bridge / sheet sync / send API
+#   WHATSAPP_VERIFY_TOKEN       -- Meta webhook verification
+#   WHATSAPP_APP_SECRET         -- Meta webhook signature verification
+#   WHATSAPP_ACCESS_TOKEN       -- outbound WhatsApp API
+#   WHATSAPP_PHONE_NUMBER_ID    -- outbound WhatsApp API
+#   LINE_CHANNEL_SECRET         -- LINE webhook signature verification
+#   LINE_CHANNEL_ACCESS_TOKEN   -- LINE profile lookup + outbound API
+#
+# Vars:
+#   WHATSAPP_GRAPH_VERSION      -- set to the Meta Graph API version configured for the account
 
 [vars]
 ALLOWED_ORIGIN = "https://ph-document.com"
+WHATSAPP_GRAPH_VERSION = "v23.0"
