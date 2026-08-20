@@ -43,13 +43,28 @@ pick_json_field() {
 }
 
 echo "-- D1 データベース --"
-wr d1 create "$D1_NAME" >/dev/null 2>&1 || echo "   （既に存在するため作成をスキップ）"
-if d1_id=$(wr d1 list --json 2>/dev/null | pick_json_field name "$D1_NAME" uuid,database_id exact); then
-  sed -i.bak -E "s|^database_id *=.*|database_id = \"$d1_id\"|" wrangler.toml && rm -f wrangler.toml.bak
-  echo "   ✅ database_id = $d1_id"
+configured_d1_id=$(sed -nE 's/^database_id *= *"([^"]+)".*/\1/p' wrangler.toml | head -n 1)
+if [[ "$configured_d1_id" =~ ^[0-9a-fA-F-]{36}$ ]]; then
+  # D1 ID は秘密情報ではなく、デプロイ設定の一部。既存環境では API の一覧取得を
+  # 毎回要求しないことで、一時的な list API 障害や権限判定の差に影響されない。
+  d1_id="$configured_d1_id"
+  echo "   ✅ 設定済み database_id = $d1_id"
 else
-  echo "   ❌ database_id を取得できませんでした（権限不足の可能性: D1 の編集権限を確認してください）"
-  exit 1
+  create_output=$(wr d1 create "$D1_NAME" 2>&1) || true
+  list_output=$(wr d1 list --json 2>&1) || {
+    echo "$create_output"
+    echo "$list_output"
+    echo "   ❌ D1 一覧を取得できませんでした。上記の Cloudflare エラーを確認してください"
+    exit 1
+  }
+  if d1_id=$(printf '%s' "$list_output" | pick_json_field name "$D1_NAME" uuid,database_id exact); then
+    sed -i.bak -E "s|^database_id *=.*|database_id = \"$d1_id\"|" wrangler.toml && rm -f wrangler.toml.bak
+    echo "   ✅ database_id = $d1_id"
+  else
+    echo "$list_output"
+    echo "   ❌ D1 '$D1_NAME' の database_id を取得できませんでした"
+    exit 1
+  fi
 fi
 
 echo "-- D1 スキーマ適用 --"
