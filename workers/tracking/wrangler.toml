@@ -26,3 +26,7 @@ triggers = { crons = ["0 3 * * *"] }
 
 [vars]
 ALLOWED_ORIGIN = "https://ph-document.com"
+# Set as Worker secrets during deployment.
+#   CF_ACCESS_TEAM_DOMAIN
+#   CF_ACCESS_AUD
+#   ADMIN_ALLOWED_EMAIL

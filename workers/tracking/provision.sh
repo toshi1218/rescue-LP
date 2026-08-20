@@ -54,7 +54,12 @@ fi
 
 echo "-- D1 スキーマ適用 --"
 wr d1 execute "$D1_NAME" --file=./schema.sql --remote --yes >/dev/null
-echo "   ✅ テーブル作成完了（CREATE TABLE IF NOT EXISTS のため再実行しても安全）"
+if ! wr d1 execute "$D1_NAME" --command "PRAGMA table_info(trackings)" --remote --json | grep -q 'access_expires_at'; then
+  wr d1 execute "$D1_NAME" --command "ALTER TABLE trackings ADD COLUMN access_expires_at INTEGER" --remote --yes >/dev/null
+  wr d1 execute "$D1_NAME" --command "UPDATE trackings SET access_expires_at = created_at + 2592000000 WHERE access_expires_at IS NULL" --remote --yes >/dev/null
+  echo "   ✅ 既存追跡データに30日のアクセス期限を追加"
+fi
+echo "   ✅ テーブル作成・スキーマ移行完了（再実行可）"
 
 echo "-- R2 バケット --"
 wr r2 bucket create "$R2_BUCKET" >/dev/null 2>&1 || echo "   （既に存在するため作成をスキップ）"

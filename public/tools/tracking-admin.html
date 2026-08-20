@@ -103,6 +103,7 @@ function fmt(ts){ return new Date(ts).toLocaleString('ja-JP'); }
 async function api(path, opts={}){
   const res = await fetch(API + path, {
     ...opts,
+    credentials: 'include',
     headers: { 'Content-Type':'application/json', 'Authorization':'Bearer '+PW, ...(opts.headers||{}) },
   });
   return res;
@@ -117,6 +118,10 @@ $('loginBtn').onclick = async () => {
   $('loginPanel').classList.add('hidden'); $('app').classList.remove('hidden');
   renderList(await res.json());
 };
+
+// Establish the Cloudflare Access session before using the password-protected admin API.
+$('loginPanel').insertAdjacentHTML('beforeend', '<p class="muted">初回または再ログイン時は、先に <a id="accessLogin" href="#">Cloudflare Accessでログイン</a> を開いてGoogleログインしてください。</p>');
+$('accessLogin').onclick = (e) => { e.preventDefault(); window.open($('apiUrl').value.replace(/\/$/, '') + '/api/admin/list', '_blank'); };
 
 const SITE = 'https://ph-document.com';
 function portalUrl(lang, code, pin){
@@ -190,6 +195,7 @@ async function openDetail(code){
     '<hr><label>ステータス更新</label><select id="stSel">'+options+'</select>'+
     '<label>メモ（任意・お客様に表示されます）</label><textarea id="stNote" rows="2">'+(d.tracking.status_note||'')+'</textarea>'+
     '<button id="saveSt" class="gold">更新して保存</button> <span id="saveMsg" class="muted"></span>'+
+    '<hr><label>お客様リンクの有効期限</label><p class="muted">'+fmt(d.tracking.access_expires_at)+' まで</p><button id="renewAccess" style="background:#475569;">30日延長</button> <span id="renewMsg" class="muted"></span>'+
     '<hr><label>アップロード書類</label>'+files;
   $('detailPanel').classList.remove('hidden');
   $('dLang').onchange = () => { $('dUrl').value = portalUrl($('dLang').value, code, d.tracking.pin); };
@@ -198,6 +204,11 @@ async function openDetail(code){
     const r = await api('/api/admin/status', { method:'POST', body: JSON.stringify({ code, status: $('stSel').value, note: $('stNote').value }) });
     $('saveMsg').innerHTML = r.ok ? '<span class="ok">保存しました</span>' : '<span class="err">失敗</span>';
     if(r.ok) refresh();
+  };
+  $('renewAccess').onclick = async () => {
+    const r = await api('/api/admin/renew-access', { method:'POST', body: JSON.stringify({ code }) });
+    $('renewMsg').innerHTML = r.ok ? '<span class="ok">30日延長しました</span>' : '<span class="err">更新失敗</span>';
+    if(r.ok) openDetail(code);
   };
   document.querySelectorAll('#detailBody a.dl').forEach(a => a.onclick = async (e) => {
     e.preventDefault();
