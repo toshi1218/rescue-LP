@@ -16,13 +16,14 @@ routes = [
 [[d1_databases]]
 binding = "DB"
 database_name = "ph-document-tracking"
-database_id = "REPLACE_WITH_D1_ID_AFTER_CREATE"
+database_id = "313a6464-9358-4eba-bcc7-f9b5222a62b8"
 
 [[r2_buckets]]
 binding = "UPLOADS"
 bucket_name = "ph-document-tracking-uploads"
 
-triggers = { crons = ["0 3 * * *"] }
+[triggers]
+crons = ["0 3 * * *"]
 
 # Secrets (set via `wrangler secret put`):
 #   ADMIN_PASSWORD   -- password for the staff admin tool (/tools/tracking-admin.html)
