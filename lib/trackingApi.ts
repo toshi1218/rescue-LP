@@ -62,7 +62,10 @@ export type TrackingData = {
   uploads: TrackingUpload[];
 };
 
-const DEFAULT_API_URL = 'https://tracking.ph-document.com';
+// Browser-facing API is kept on the primary domain. This avoids sending
+// customers to the separately hosted Worker domain and keeps admin Access
+// authentication on the trusted ph-document.com hostname.
+const DEFAULT_API_URL = 'https://ph-document.com';
 
 function resolveApiUrl(): string {
   const envUrl = (import.meta as unknown as { env?: Record<string, string> }).env?.VITE_TRACKING_API_URL;

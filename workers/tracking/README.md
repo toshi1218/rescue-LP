@@ -15,7 +15,7 @@
 ## 管理画面の二段階保護
 
 管理APIは、管理パスワードに加えてCloudflare AccessのJWTを検証する。Cloudflare Zero Trustで
-tracking.ph-document.com/api/admin/* を対象にSelf-hosted applicationを作成し、
+ph-document.com/api/admin/* を対象にSelf-hosted applicationを作成し、
 GoogleをIdentity Providerとして、許可ポリシーを管理者のメールアドレス1件に限定する。
 
 GitHub Actionsには次の3つもRepository secretとして登録する。
@@ -28,6 +28,9 @@ GitHub Actionsには次の3つもRepository secretとして登録する。
 
 管理者は、最初に管理画面の「Cloudflare Accessでログイン」を開いてGoogleログインしてから、
 管理パスワードを入力する。
+
+顧客・管理者のブラウザ通信は `https://ph-document.com/api/*` に集約する。
+`tracking.ph-document.com` はWorkerの稼働確認用として残す。
 
 ## 顧客リンクの期限
 

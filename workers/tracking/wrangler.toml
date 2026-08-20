@@ -7,7 +7,10 @@ compatibility_flags = ["nodejs_compat"]
 # ph-document.com のゾーンが同じCloudflareアカウントにある前提。別アカウントの場合は
 # この3行をコメントアウトし、ダッシュボードから手動でカスタムドメインを追加する。
 routes = [
-  { pattern = "tracking.ph-document.com", custom_domain = true }
+  { pattern = "tracking.ph-document.com", custom_domain = true },
+  # ブラウザからのAPI通信は本体ドメインに集約する。Cloudflare Accessは
+  # ph-document.com/api/admin/* のみを保護し、顧客用APIは code + PIN のまま。
+  { pattern = "ph-document.com/api/*" }
 ]
 
 [[d1_databases]]
