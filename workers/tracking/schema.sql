@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS trackings (
   pin TEXT NOT NULL,
   customer_name TEXT,
   created_at INTEGER NOT NULL,
+  access_expires_at INTEGER NOT NULL,
   current_status TEXT NOT NULL DEFAULT 'received',
   status_note TEXT,
   status_updated_at INTEGER NOT NULL

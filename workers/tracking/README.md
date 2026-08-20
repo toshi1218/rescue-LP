@@ -12,6 +12,28 @@
 - **D1**（`rate_limits` テーブル）: 原子的なレート制限
 - **Secret** `ADMIN_PASSWORD`: 管理画面の認証
 
+## 管理画面の二段階保護
+
+管理APIは、管理パスワードに加えてCloudflare AccessのJWTを検証する。Cloudflare Zero Trustで
+tracking.ph-document.com/api/admin/* を対象にSelf-hosted applicationを作成し、
+GoogleをIdentity Providerとして、許可ポリシーを管理者のメールアドレス1件に限定する。
+
+GitHub Actionsには次の3つもRepository secretとして登録する。
+
+| Secret | 値 |
+|---|---|
+| CF_ACCESS_TEAM_DOMAIN | Cloudflare Access team domain（例: your-team.cloudflareaccess.com） |
+| CF_ACCESS_AUD | 作成したAccess applicationのAudience (AUD) tag |
+| TRACKING_ADMIN_EMAIL | Googleログインを許可する管理者メールアドレス |
+
+管理者は、最初に管理画面の「Cloudflare Accessでログイン」を開いてGoogleログインしてから、
+管理パスワードを入力する。
+
+## 顧客リンクの期限
+
+顧客の追跡番号とPINは発行から30日で失効する。案件が継続中なら、管理画面から30日延長できる。
+既存の追跡データには、最初のデプロイ時に作成日から30日の期限が自動で設定される。
+
 ## 初回セットアップ
 
 Cloudflare の認証情報はリポジトリに置いていないため、初回だけ**あなたの操作**が必要です。

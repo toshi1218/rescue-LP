@@ -7,6 +7,9 @@ import { STATUS_STAGES, isValidStatusKey } from './status';
 type Bindings = {
   ALLOWED_ORIGIN: string;
   ADMIN_PASSWORD?: string;
+  CF_ACCESS_TEAM_DOMAIN?: string;
+  CF_ACCESS_AUD?: string;
+  ADMIN_ALLOWED_EMAIL?: string;
   DB: D1Database;
   UPLOADS: R2Bucket;
 };
@@ -15,6 +18,7 @@ const MAX_FILE_BYTES = 15 * 1024 * 1024; // 15MB
 const MAX_UPLOADS_PER_CODE = 10;
 const RETENTION_MS = 90 * 24 * 60 * 60 * 1000;
 const CLEANUP_BATCH_SIZE = 100;
+const CUSTOMER_ACCESS_MS = 30 * 24 * 60 * 60 * 1000;
 const ALLOWED_CONTENT_TYPES = new Set([
   'image/jpeg',
   'image/png',
@@ -32,6 +36,7 @@ app.use('*', (c, next) => {
     origin,
     allowMethods: ['GET', 'POST', 'OPTIONS'],
     allowHeaders: ['Content-Type', 'Accept', 'Authorization'],
+    credentials: true,
     maxAge: 86400,
   })(c, next);
 });
@@ -57,12 +62,52 @@ async function deleteExpiredUploads(env: Bindings): Promise<number> {
   return deleted;
 }
 
-function requireAdmin(c: { req: { header: (name: string) => string | undefined }; env: Bindings }): boolean {
+type AccessClaims = { aud?: string | string[]; email?: string; exp?: number };
+type AccessJwk = JsonWebKey & { kid?: string };
+
+function decodeJwtPart<T>(part: string): T | null {
+  try {
+    const base64 = part.replace(/-/g, '+').replace(/_/g, '/').padEnd(Math.ceil(part.length / 4) * 4, '=');
+    return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(base64), (char) => char.charCodeAt(0)))) as T;
+  } catch {
+    return null;
+  }
+}
+
+async function hasValidAccessAssertion(c: { req: { header: (name: string) => string | undefined }; env: Bindings }): Promise<boolean> {
+  const { CF_ACCESS_TEAM_DOMAIN: teamDomain, CF_ACCESS_AUD: audience, ADMIN_ALLOWED_EMAIL: allowedEmail } = c.env;
+  const assertion = c.req.header('cf-access-jwt-assertion');
+  if (!teamDomain || !audience || !allowedEmail || !assertion) return false;
+
+  const [encodedHeader, encodedClaims, encodedSignature, ...rest] = assertion.split('.');
+  if (!encodedHeader || !encodedClaims || !encodedSignature || rest.length > 0) return false;
+  const header = decodeJwtPart<{ alg?: string; kid?: string }>(encodedHeader);
+  const claims = decodeJwtPart<AccessClaims>(encodedClaims);
+  if (!header?.kid || header.alg !== 'RS256' || !claims?.email || !claims.exp) return false;
+  if (claims.exp * 1000 <= Date.now() || claims.email.toLowerCase() !== allowedEmail.toLowerCase()) return false;
+  const audiences = Array.isArray(claims.aud) ? claims.aud : [claims.aud];
+  if (!audiences.includes(audience)) return false;
+
+  try {
+    const response = await fetch('https://' + teamDomain + '/cdn-cgi/access/certs');
+    if (!response.ok) return false;
+    const { keys } = (await response.json()) as { keys?: AccessJwk[] };
+    const jwk = keys?.find((key) => key.kid === header.kid);
+    if (!jwk) return false;
+    const key = await crypto.subtle.importKey('jwk', jwk, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
+    const signature = Uint8Array.from(atob(encodedSignature.replace(/-/g, '+').replace(/_/g, '/').padEnd(Math.ceil(encodedSignature.length / 4) * 4, '=')), (char) => char.charCodeAt(0));
+    return crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, signature, new TextEncoder().encode(encodedHeader + '.' + encodedClaims));
+  } catch {
+    return false;
+  }
+}
+
+async function requireAdmin(c: { req: { header: (name: string) => string | undefined }; env: Bindings }): Promise<boolean> {
   const configured = c.env.ADMIN_PASSWORD;
   if (!configured) return false;
   const header = c.req.header('Authorization') ?? '';
   const token = header.startsWith('Bearer ') ? header.slice(7) : '';
-  return token.length > 0 && safeEqual(token, configured);
+  return token.length > 0 && safeEqual(token, configured) && hasValidAccessAssertion(c);
 }
 
 function sanitizeFilename(name: string): string {
@@ -72,7 +117,7 @@ function sanitizeFilename(name: string): string {
 /* ── Admin endpoints ─────────────────────────────────────────── */
 
 app.post('/api/admin/create', async (c) => {
-  if (!requireAdmin(c)) return c.json({ error: 'unauthorized' }, 401);
+  if (!(await requireAdmin(c))) return c.json({ error: 'unauthorized' }, 401);
 
   let body: { customer_name?: string };
   try {
@@ -84,12 +129,13 @@ app.post('/api/admin/create', async (c) => {
   const code = generateTrackingCode();
   const pin = generatePin();
   const now = Date.now();
+  const accessExpiresAt = now + CUSTOMER_ACCESS_MS;
 
   await c.env.DB.prepare(
-    `INSERT INTO trackings (code, pin, customer_name, created_at, current_status, status_updated_at)
-     VALUES (?, ?, ?, ?, 'received', ?)`,
+    `INSERT INTO trackings (code, pin, customer_name, created_at, access_expires_at, current_status, status_updated_at)
+     VALUES (?, ?, ?, ?, ?, 'received', ?)`,
   )
-    .bind(code, pin, body.customer_name ?? null, now, now)
+    .bind(code, pin, body.customer_name ?? null, now, accessExpiresAt, now)
     .run();
 
   await c.env.DB.prepare(
@@ -98,14 +144,14 @@ app.post('/api/admin/create', async (c) => {
     .bind(code, now)
     .run();
 
-  return c.json({ code, pin });
+  return c.json({ code, pin, access_expires_at: accessExpiresAt });
 });
 
 app.get('/api/admin/list', async (c) => {
-  if (!requireAdmin(c)) return c.json({ error: 'unauthorized' }, 401);
+  if (!(await requireAdmin(c))) return c.json({ error: 'unauthorized' }, 401);
 
   const { results } = await c.env.DB.prepare(
-    `SELECT code, customer_name, current_status, status_updated_at, created_at
+    `SELECT code, customer_name, current_status, status_updated_at, created_at, access_expires_at
      FROM trackings ORDER BY created_at DESC LIMIT 200`,
   ).all();
 
@@ -113,7 +159,7 @@ app.get('/api/admin/list', async (c) => {
 });
 
 app.get('/api/admin/detail/:code', async (c) => {
-  if (!requireAdmin(c)) return c.json({ error: 'unauthorized' }, 401);
+  if (!(await requireAdmin(c))) return c.json({ error: 'unauthorized' }, 401);
   const code = c.req.param('code');
 
   const tracking = await c.env.DB.prepare(`SELECT * FROM trackings WHERE code = ?`).bind(code).first();
@@ -135,7 +181,7 @@ app.get('/api/admin/detail/:code', async (c) => {
 });
 
 app.post('/api/admin/status', async (c) => {
-  if (!requireAdmin(c)) return c.json({ error: 'unauthorized' }, 401);
+  if (!(await requireAdmin(c))) return c.json({ error: 'unauthorized' }, 401);
 
   let body: { code?: string; status?: string; note?: string };
   try {
@@ -169,8 +215,26 @@ app.post('/api/admin/status', async (c) => {
   return c.json({ ok: true });
 });
 
+app.post('/api/admin/renew-access', async (c) => {
+  if (!(await requireAdmin(c))) return c.json({ error: 'unauthorized' }, 401);
+  let body: { code?: string };
+  try {
+    body = await c.req.json();
+  } catch {
+    return c.json({ error: 'invalid_json' }, 400);
+  }
+  if (!body.code) return c.json({ error: 'invalid_body' }, 400);
+
+  const accessExpiresAt = Date.now() + CUSTOMER_ACCESS_MS;
+  const result = await c.env.DB.prepare(`UPDATE trackings SET access_expires_at = ? WHERE code = ?`)
+    .bind(accessExpiresAt, body.code)
+    .run();
+  if (!result.meta.changes) return c.json({ error: 'not_found' }, 404);
+  return c.json({ ok: true, access_expires_at: accessExpiresAt });
+});
+
 app.get('/api/admin/download/:code/:uploadId', async (c) => {
-  if (!requireAdmin(c)) return c.json({ error: 'unauthorized' }, 401);
+  if (!(await requireAdmin(c))) return c.json({ error: 'unauthorized' }, 401);
   const code = c.req.param('code');
   const uploadId = c.req.param('uploadId');
 
@@ -213,8 +277,8 @@ app.post('/api/verify', async (c) => {
   if (!rl.allowed) return c.json({ error: 'rate_limited' }, 429);
 
   const tracking = await c.env.DB.prepare(
-    `SELECT code, pin, customer_name, current_status, status_note, status_updated_at, created_at
-     FROM trackings WHERE code = ?`,
+    `SELECT code, pin, customer_name, current_status, status_note, status_updated_at, created_at,
+      access_expires_at FROM trackings WHERE code = ?`,
   )
     .bind(code)
     .first<{
@@ -225,11 +289,13 @@ app.post('/api/verify', async (c) => {
       status_note: string | null;
       status_updated_at: number;
       created_at: number;
+      access_expires_at: number;
     }>();
 
   if (!tracking || !safeEqual(tracking.pin, pin)) {
     return c.json({ error: 'not_found_or_pin_mismatch' }, 404);
   }
+  if (tracking.access_expires_at <= Date.now()) return c.json({ error: 'access_expired' }, 410);
 
   const { results: history } = await c.env.DB.prepare(
     `SELECT status, note, created_at FROM status_history WHERE code = ? ORDER BY created_at ASC`,
@@ -284,12 +350,13 @@ app.post('/api/upload', async (c) => {
   const rl = await checkRateLimit(c.env.DB, `upload:${ip}:${code}`, 15);
   if (!rl.allowed) return c.json({ error: 'rate_limited' }, 429);
 
-  const tracking = await c.env.DB.prepare(`SELECT pin FROM trackings WHERE code = ?`)
+  const tracking = await c.env.DB.prepare(`SELECT pin, access_expires_at FROM trackings WHERE code = ?`)
     .bind(code)
-    .first<{ pin: string }>();
+    .first<{ pin: string; access_expires_at: number }>();
   if (!tracking || !safeEqual(tracking.pin, pin)) {
     return c.json({ error: 'not_found_or_pin_mismatch' }, 404);
   }
+  if (tracking.access_expires_at <= Date.now()) return c.json({ error: 'access_expired' }, 410);
 
   if (!ALLOWED_CONTENT_TYPES.has(file.type)) {
     return c.json({ error: 'unsupported_file_type' }, 400);
