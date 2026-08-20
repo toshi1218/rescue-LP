@@ -9,7 +9,7 @@
 
 - **D1**（`DB`）: 追跡レコード・ステータス履歴・アップロード台帳
 - **R2**（`UPLOADS`）: アップロードされた書類ファイルの実体
-- **KV**（`RATE_LIMIT`）: レート制限
+- **D1**（`rate_limits` テーブル）: 原子的なレート制限
 - **Secret** `ADMIN_PASSWORD`: 管理画面の認証
 
 ## 初回セットアップ
@@ -28,7 +28,6 @@ Cloudflare の認証情報はリポジトリに置いていないため、初回
 | 種類 | 項目 | 権限 |
 |---|---|---|
 | Account | Workers Scripts | Edit |
-| Account | Workers KV Storage | Edit |
 | Account | Workers R2 Storage | Edit |
 | Account | D1 | Edit |
 | Zone | Workers Routes | Edit |
@@ -47,13 +46,13 @@ Account ID は Cloudflare ダッシュボードの Workers & Pages 画面の右�
 
 **③ ワークフローを実行**（リポジトリ → Actions → **Deploy tracking Worker** → Run workflow → 入力欄に `deploy` と入力 → 実行）
 
-D1/R2/KV の作成、スキーマ適用、パスワード設定、デプロイ、カスタムドメイン紐付け、
+D1/R2 の作成、スキーマ適用、パスワード設定、デプロイ、カスタムドメイン紐付け、
 稼働確認まで自動で走ります。完了後の Summary に案内URLが出ます。
 2回目以降も同じ手順で再実行でき、作成済みのリソースはスキップされます。
 
 ### B. PCのターミナルで実行する
 
-**1本のスクリプトで完結**（`npm install` → ログイン → D1/R2/KV作成 → スキーマ適用 → secret設定 → デプロイまで）:
+**1本のスクリプトで完結**（`npm install` → ログイン → D1/R2作成 → スキーマ適用 → secret設定 → デプロイまで）:
 
 ```bash
 cd workers/tracking
@@ -65,7 +64,7 @@ cd workers/tracking
 1. `wrangler login` でブラウザが開くので Cloudflare アカウントでログイン
 2. 管理パスワード（`ADMIN_PASSWORD`）を入力（`/tools/tracking-admin.html` のログインに使う値）
 
-D1・KV の ID は `wrangler.toml` へ**自動で書き戻される**ため、コピペ作業はありません。
+D1 の ID は `wrangler.toml` へ**自動で書き戻される**ため、コピペ作業はありません。
 `tracking.ph-document.com` のカスタムドメイン紐付けも `wrangler.toml` の `routes` 設定により
 `wrangler deploy` が同時に行います（DNSレコードも自動作成）。
 
@@ -73,7 +72,7 @@ D1・KV の ID は `wrangler.toml` へ**自動で書き戻される**ため、�
 作成済みのリソースはスキップして続きから進みます。
 
 デプロイ後は `wrangler.toml` に実IDが入った状態になります。この差分はコミットして構いません
-（D1/KV の ID は秘密情報ではありません。秘密なのは `ADMIN_PASSWORD` だけで、これは
+（D1 の ID は秘密情報ではありません。秘密なのは `ADMIN_PASSWORD` だけで、これは
 Cloudflare の secret に保存され、リポジトリには入りません）。
 
 ### 手動で1ステップずつ行う場合
@@ -85,7 +84,6 @@ npx wrangler login
 npx wrangler d1 create ph-document-tracking          # → database_id を wrangler.toml に貼る
 npx wrangler d1 execute ph-document-tracking --file=./schema.sql --remote
 npx wrangler r2 bucket create ph-document-tracking-uploads
-npx wrangler kv namespace create RATE_LIMIT           # → id を wrangler.toml に貼る
 npx wrangler secret put ADMIN_PASSWORD
 npx wrangler deploy                                   # routes 設定によりカスタムドメインも紐付く
 ```

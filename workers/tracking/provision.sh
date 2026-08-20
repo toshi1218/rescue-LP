@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # workers/tracking/provision.sh
 #
-# D1 / R2 / KV を作成し、生成された ID を wrangler.toml に書き戻してスキーマを適用する。
+# D1 / R2 を作成し、生成された ID を wrangler.toml に書き戻してスキーマを適用する。
 # 対話入力を一切しないので、ローカル（deploy.sh 経由）と GitHub Actions の両方から使える。
 #
 # 認証は呼び出し側の責任:
@@ -14,7 +14,6 @@ cd "$(dirname "$0")"
 
 D1_NAME="ph-document-tracking"
 R2_BUCKET="ph-document-tracking-uploads"
-KV_BINDING="RATE_LIMIT"
 
 wr() { npx --yes wrangler "$@"; }
 
@@ -60,13 +59,3 @@ echo "   ✅ テーブル作成完了（CREATE TABLE IF NOT EXISTS のため再�
 echo "-- R2 バケット --"
 wr r2 bucket create "$R2_BUCKET" >/dev/null 2>&1 || echo "   （既に存在するため作成をスキップ）"
 echo "   ✅ $R2_BUCKET"
-
-echo "-- KV namespace --"
-wr kv namespace create "$KV_BINDING" >/dev/null 2>&1 || echo "   （既に存在するため作成をスキップ）"
-if kv_id=$(wr kv namespace list 2>/dev/null | pick_json_field title "$KV_BINDING" id includes); then
-  sed -i.bak -E "s|^id *=.*|id = \"$kv_id\"|" wrangler.toml && rm -f wrangler.toml.bak
-  echo "   ✅ KV id = $kv_id"
-else
-  echo "   ❌ KV namespace の id を取得できませんでした（権限不足の可能性: KV の編集権限を確認してください）"
-  exit 1
-fi
