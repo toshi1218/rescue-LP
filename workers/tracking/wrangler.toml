@@ -19,9 +19,7 @@ database_id = "REPLACE_WITH_D1_ID_AFTER_CREATE"
 binding = "UPLOADS"
 bucket_name = "ph-document-tracking-uploads"
 
-[[kv_namespaces]]
-binding = "RATE_LIMIT"
-id = "REPLACE_WITH_KV_ID_AFTER_CREATE"
+triggers = { crons = ["0 3 * * *"] }
 
 # Secrets (set via `wrangler secret put`):
 #   ADMIN_PASSWORD   -- password for the staff admin tool (/tools/tracking-admin.html)

@@ -1,6 +1,6 @@
 name: Deploy tracking Worker
 
-# tracking Worker（顧客の進捗確認・書類アップロード）を D1/R2/KV の作成込みでデプロイする。
+# tracking Worker（顧客の進捗確認・書類アップロード）を D1/R2 の作成込みでデプロイする。
 # スマホのブラウザからでも実行できるよう、手動トリガー（Run workflow）のみ。
 # 自動では絶対に走らせない（サイト本体のデプロイとは無関係・誤発火を避けるため）。
 on:
@@ -58,7 +58,7 @@ jobs:
         working-directory: workers/tracking
         run: npm ci
 
-      - name: D1 / R2 / KV を作成しスキーマを適用
+      - name: D1 / R2 を作成しスキーマを適用
         working-directory: workers/tracking
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

@@ -9,11 +9,12 @@ type Bindings = {
   ADMIN_PASSWORD?: string;
   DB: D1Database;
   UPLOADS: R2Bucket;
-  RATE_LIMIT?: KVNamespace;
 };
 
 const MAX_FILE_BYTES = 15 * 1024 * 1024; // 15MB
 const MAX_UPLOADS_PER_CODE = 10;
+const RETENTION_MS = 90 * 24 * 60 * 60 * 1000;
+const CLEANUP_BATCH_SIZE = 100;
 const ALLOWED_CONTENT_TYPES = new Set([
   'image/jpeg',
   'image/png',
@@ -36,6 +37,25 @@ app.use('*', (c, next) => {
 });
 
 app.get('/', (c) => c.text('ph-document tracking worker: OK', 200));
+
+async function deleteExpiredUploads(env: Bindings): Promise<number> {
+  const cutoff = Date.now() - RETENTION_MS;
+  const { results } = await env.DB.prepare(
+    `SELECT id, r2_key FROM uploads WHERE uploaded_at < ? ORDER BY id ASC LIMIT ?`,
+  )
+    .bind(cutoff, CLEANUP_BATCH_SIZE)
+    .all<{ id: number; r2_key: string }>();
+
+  let deleted = 0;
+  for (const upload of results) {
+    // Delete the object first. If R2 is temporarily unavailable, retain its D1 row
+    // so that the next scheduled run can retry instead of orphaning sensitive data.
+    await env.UPLOADS.delete(upload.r2_key);
+    await env.DB.prepare(`DELETE FROM uploads WHERE id = ?`).bind(upload.id).run();
+    deleted += 1;
+  }
+  return deleted;
+}
 
 function requireAdmin(c: { req: { header: (name: string) => string | undefined }; env: Bindings }): boolean {
   const configured = c.env.ADMIN_PASSWORD;
@@ -189,7 +209,7 @@ app.post('/api/verify', async (c) => {
   const pin = (body.pin ?? '').trim();
   if (!code || !pin) return c.json({ error: 'invalid_body' }, 400);
 
-  const rl = await checkRateLimit(c.env.RATE_LIMIT, `verify:${ip}:${code}`, 10);
+  const rl = await checkRateLimit(c.env.DB, `verify:${ip}:${code}`, 10);
   if (!rl.allowed) return c.json({ error: 'rate_limited' }, 429);
 
   const tracking = await c.env.DB.prepare(
@@ -261,7 +281,7 @@ app.post('/api/upload', async (c) => {
     arrayBuffer(): Promise<ArrayBuffer>;
   };
 
-  const rl = await checkRateLimit(c.env.RATE_LIMIT, `upload:${ip}:${code}`, 15);
+  const rl = await checkRateLimit(c.env.DB, `upload:${ip}:${code}`, 15);
   if (!rl.allowed) return c.json({ error: 'rate_limited' }, 429);
 
   const tracking = await c.env.DB.prepare(`SELECT pin FROM trackings WHERE code = ?`)
@@ -302,4 +322,13 @@ app.post('/api/upload', async (c) => {
   return c.json({ ok: true, filename });
 });
 
-export default app;
+export default {
+  fetch: app.fetch,
+  async scheduled(_controller: ScheduledController, env: Bindings, ctx: ExecutionContext) {
+    ctx.waitUntil(
+      deleteExpiredUploads(env).catch((err) => {
+        console.error('[cleanup] failed to delete expired uploads', err);
+      }),
+    );
+  },
+} satisfies ExportedHandler<Bindings>;

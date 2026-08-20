@@ -145,18 +145,19 @@ export default function TrackingPortal({ lang }: { lang: TrackingLang }) {
     void runVerify(code, pin);
   }
 
-  // スタッフが発行するURL（?code=...&pin=...）で開かれた場合は、入力なしでそのまま進捗を表示する。
-  // 読み取り後はアドレスバーからPINを消す（履歴・スクリーンショット経由の漏れを減らす）。
+  // スタッフが発行するURL（#code=...&pin=...）で開かれた場合は、入力なしでそのまま進捗を表示する。
+  // fragment はHTTPリクエスト・CDNログ・通常のアクセス解析へ送信されない。
+  // 読み取り後はアドレスバーからも消す。
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.hash.slice(1));
     const urlCode = params.get('code');
     const urlPin = params.get('pin');
     if (!urlCode || !urlPin) return;
 
     setCode(urlCode);
     setPin(urlPin);
-    window.history.replaceState(null, '', window.location.pathname);
+    window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
     void runVerify(urlCode, urlPin);
     // 初回マウント時のみ実行する
     // eslint-disable-next-line react-hooks/exhaustive-deps

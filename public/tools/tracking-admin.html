@@ -120,7 +120,8 @@ $('loginBtn').onclick = async () => {
 
 const SITE = 'https://ph-document.com';
 function portalUrl(lang, code, pin){
-  return SITE + '/' + lang + '/tracking/?code=' + encodeURIComponent(code) + '&pin=' + encodeURIComponent(pin);
+  // fragment はサーバー・CDN・通常のアクセス解析に送信されない。
+  return SITE + '/' + lang + '/tracking/#code=' + encodeURIComponent(code) + '&pin=' + encodeURIComponent(pin);
 }
 function messageTemplate(lang, url){
   if (lang === 'en') return 'You can check the progress of your order and upload documents here:\n' + url + '\n\n(This link contains your access code — please do not share it.)';
