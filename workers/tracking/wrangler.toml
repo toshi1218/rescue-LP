@@ -10,7 +10,7 @@ routes = [
   { pattern = "tracking.ph-document.com", custom_domain = true },
   # ブラウザからのAPI通信は本体ドメインに集約する。Cloudflare Accessは
   # ph-document.com/api/admin/* のみを保護し、顧客用APIは code + PIN のまま。
-  { pattern = "ph-document.com/api/*" }
+  { pattern = "ph-document.com/api/*", zone_name = "ph-document.com" }
 ]
 
 [[d1_databases]]
