@@ -27,6 +27,10 @@
     border-radius:9px;padding:9px 11px;font-size:14px;margin-bottom:12px;}
   button{background:var(--navy);color:#fff;border:0;border-radius:9px;padding:10px 16px;font-size:14px;font-weight:700;cursor:pointer;}
   button.gold{background:var(--gold);color:#1a2540;}
+  a.access{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;border-radius:9px;
+    padding:10px 16px;font-size:14px;font-weight:700;margin:2px 0 14px;}
+  .step{font-size:13px;line-height:1.6;margin-bottom:6px;}
+  .help{font-size:12px;color:var(--muted);margin:-6px 0 14px;}
   button:disabled{opacity:.55;cursor:default;}
   .row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;}
   .row>div{flex:1;min-width:150px;}
@@ -52,7 +56,7 @@
 
   <div class="panel" id="loginPanel">
     <label>API URL</label>
-    <input id="apiUrl" value="https://ph-document.com" />
+    <input id="apiUrl" value="https://ph-document.com" readonly />
     <label>管理パスワード（ADMIN_PASSWORD）</label>
     <input id="adminPw" type="password" placeholder="wrangler secret put で設定した値" />
     <button id="loginBtn" class="gold">ログイン</button>
@@ -101,28 +105,42 @@ let API = '', PW = '';
 const $ = (id) => document.getElementById(id);
 function fmt(ts){ return new Date(ts).toLocaleString('ja-JP'); }
 async function api(path, opts={}){
-  const res = await fetch(API + path, {
-    ...opts,
-    credentials: 'include',
-    headers: { 'Content-Type':'application/json', 'Authorization':'Bearer '+PW, ...(opts.headers||{}) },
-  });
-  return res;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 15000);
+  try {
+    return await fetch(API + path, {
+      ...opts,
+      credentials: 'include',
+      signal: controller.signal,
+      headers: { 'Content-Type':'application/json', 'Authorization':'Bearer '+PW, ...(opts.headers||{}) },
+    });
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 $('loginBtn').onclick = async () => {
   API = $('apiUrl').value.replace(/\/$/,''); PW = $('adminPw').value;
+  if (!PW){ $('loginMsg').innerHTML = '<span class="err">管理パスワードを入力してください</span>'; return; }
+  $('loginBtn').disabled = true;
   $('loginMsg').textContent = '確認中…';
-  const res = await api('/api/admin/list');
-  if (res.status === 401){ $('loginMsg').innerHTML = '<span class="err">パスワードが違います</span>'; return; }
-  if (!res.ok){ $('loginMsg').innerHTML = '<span class="err">接続エラー</span>'; return; }
-  $('loginPanel').classList.add('hidden'); $('app').classList.remove('hidden');
-  renderList(await res.json());
+  try {
+    const res = await api('/api/admin/list');
+    const type = res.headers.get('content-type') || '';
+    if (res.status === 401){ $('loginMsg').innerHTML = '<span class="err">パスワードが違います</span>'; return; }
+    if (!res.ok || !type.includes('application/json')){
+      $('loginMsg').innerHTML = '<span class="err">APIに接続できませんでした</span>';
+      return;
+    }
+    $('loginPanel').classList.add('hidden'); $('app').classList.remove('hidden');
+    renderList(await res.json());
+  } catch (err) {
+    const timedOut = err && err.name === 'AbortError';
+    $('loginMsg').innerHTML = '<span class="err">'+(timedOut ? '接続がタイムアウトしました' : 'APIに接続できませんでした')+'</span>';
+  } finally {
+    $('loginBtn').disabled = false;
+  }
 };
-
-// Establish the Cloudflare Access session before using the password-protected admin API.
-$('loginPanel').insertAdjacentHTML('beforeend', '<p class="muted">初回または再ログイン時は、先に <a id="accessLogin" href="#">Cloudflare Accessでログイン</a> を開いてGoogleログインしてください。</p>');
-$('accessLogin').onclick = (e) => { e.preventDefault(); window.open($('apiUrl').value.replace(/\/$/, '') + '/api/admin/list', '_blank'); };
-
 const SITE = 'https://ph-document.com';
 function portalUrl(lang, code, pin){
   // fragment はサーバー・CDN・通常のアクセス解析に送信されない。
