@@ -23,6 +23,8 @@ AIモデルの既定値は `gpt-5.6-luna`。
 
 1件の問い合わせにつきAI呼び出しは最大1回。15分間隔そのものではAPI料金は発生しない。
 
+初回有効化では、過去14日分の既存Web3Formsスレッドを先に `baseline` として処理済みにする。これにより導入直後に過去案件へ一斉にAIを呼ぶこともない。
+
 ## プライバシー
 
 AIに送るのは返信作成に必要な Name / Country / Service / Message / Purpose / Documents / Deadline / Landing page / Subject のみ。
@@ -31,7 +33,7 @@ AIに送るのは返信作成に必要な Name / Country / Service / Message / P
 
 ## Apps Scriptの設定
 
-既存プロジェクトに `Drafts.gs` と `AIDrafts.gs` を追加する。
+既存プロジェクトに `Drafts.gs`、`AIDrafts.gs`、`AIEnable.gs` を追加する。
 
 Apps Scriptの「プロジェクトの設定」→「スクリプト プロパティ」に次を追加する。
 
@@ -43,9 +45,11 @@ Apps Scriptの「プロジェクトの設定」→「スクリプト プロパ�
 
 API keyはChatGPTやGitHubへ貼らず、Apps ScriptのScript Propertiesへ直接登録する。
 
-その後 `installAiDraftTrigger()` を1回だけ手動実行する。
+その後 `enableAiDraftAutomation()` を1回だけ手動実行する。
 
-この関数は旧 `draftJob` のトリガーを削除し、`aiDraftJob` だけを15分間隔で登録する。
+この関数は既存問い合わせをbaseline登録した後、旧 `draftJob` のトリガーを削除し、`aiDraftJob` だけを15分間隔で登録する。
+
+以後に届いた新規問い合わせだけがAI処理対象になる。
 
 ## 料金ルール
 
