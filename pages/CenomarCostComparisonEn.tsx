@@ -199,7 +199,7 @@ export default function CenomarCostComparisonEn() {
           { q: 'Can I order CENOMAR online from abroad?', a: 'PSA provides online ordering options for applicants abroad. Check the current route for identity verification, document format, courier arrangements, and destination availability before paying.' },
           { q: 'How long does it take to get CENOMAR with Apostille from abroad?', a: 'Approximately 4–6 weeks total: PSA issuance (2–3 weeks) + DFA Apostille (1–2 weeks) + DHL international shipping (3–5 business days).' },
           { q: 'Is US$349 really all-inclusive?', a: 'Yes. The US$349 covers PSA retrieval, DFA Apostille, and DHL international shipping to your address. There are no hidden fees. We confirm the full quote before you commit.' },
-          { q: 'What if I only need the PSA document without authentication?', a: 'We can arrange PSA-only retrieval. Confirm the receiving authority's current requirement before deciding whether any DFA authentication is needed.' },
+          { q: 'What if I only need the PSA document without authentication?', a: "We can arrange PSA-only retrieval. Confirm the receiving authority's current requirement before deciding whether any DFA authentication is needed." },
         ]}
         ctaTitle="Have Questions?"
         ctaButton="Ask Us for Free"
