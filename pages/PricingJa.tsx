@@ -66,8 +66,8 @@ export default function PricingJa() {
           </div>
           <div className="md:w-64 rounded-xl border border-primary/20 bg-white p-5 shadow-sm">
             <p className="text-xs text-gray-500 mb-1">書類取得サービスへの追加</p>
-            <p className="text-2xl font-extrabold text-primary">+¥11,000〜¥33,000</p>
-            <p className="text-xs text-gray-500 mt-1">税込 / 内容・問い合わせ回数により個別見積</p>
+            <p className="text-2xl font-extrabold text-primary">¥33,000</p>
+            <p className="text-xs text-gray-500 mt-1">税込 / 1案件</p>
             <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
               対応可否を相談する
             </a>
@@ -75,6 +75,35 @@ export default function PricingJa() {
         </div>
         <p className="mt-4 text-xs text-gray-500 leading-relaxed">
           ※本人出頭・本人署名・本人確認など、ご本人にしかできない行為は代行できません。公的機関の判断・回答内容・処理期間を保証するサービスではありません。複雑案件や調査量が多い案件は別途お見積もりします。
+        </p>
+      </div>
+
+      {/* 難案件の取得可否調査 */}
+      <div className="rounded-2xl border border-amber-300 bg-amber-50/70 p-5 md:p-6 mb-6">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+          <div className="flex-1">
+            <p className="text-xs font-bold tracking-wider text-amber-700 mb-2">特殊案件</p>
+            <h2 className="text-lg font-bold text-secondary mb-2">難しい案件の取得可否調査</h2>
+            <p className="text-sm text-gray-700 leading-relaxed mb-3">
+              通常の申請方法では対応可否を判断できない案件について、PSA・DFA・大使館などへの確認を行い、取得可能性と合法的な手続きルートを調査します。
+            </p>
+            <ul className="space-y-1.5 text-sm text-gray-600">
+              <li>・取得を妨げている条件と必要資料の確認</li>
+              <li>・代理申請の要件、代替記録、別ルートの調査</li>
+              <li>・主要段階の進捗報告と最終書面報告</li>
+            </ul>
+          </div>
+          <div className="md:w-64 rounded-xl border border-amber-300 bg-white p-5 shadow-sm">
+            <p className="text-xs text-gray-500 mb-1">取得可否調査・前払い</p>
+            <p className="text-2xl font-extrabold text-amber-700">¥55,000〜</p>
+            <p className="text-xs text-gray-500 mt-1">税込 / 目安2〜3週間</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              有料調査について相談する
+            </a>
+          </div>
+        </div>
+        <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+          ※調査は書類の取得を保証するものではありません。書類取得費、公的機関の手数料、弁護士等の専門家費用、その他の第三者費用は含まれません。追加費用が必要な場合は、着手前に内容と金額をご案内し、承認をいただいてから進めます。
         </p>
       </div>
 
