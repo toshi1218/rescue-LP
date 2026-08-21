@@ -7,9 +7,6 @@ import { STATUS_STAGES, isValidStatusKey } from './status';
 type Bindings = {
   ALLOWED_ORIGIN: string;
   ADMIN_PASSWORD?: string;
-  CF_ACCESS_TEAM_DOMAIN?: string;
-  CF_ACCESS_AUD?: string;
-  ADMIN_ALLOWED_EMAIL?: string;
   DB: D1Database;
   UPLOADS: R2Bucket;
 };
@@ -62,52 +59,12 @@ async function deleteExpiredUploads(env: Bindings): Promise<number> {
   return deleted;
 }
 
-type AccessClaims = { aud?: string | string[]; email?: string; exp?: number };
-type AccessJwk = JsonWebKey & { kid?: string };
-
-function decodeJwtPart<T>(part: string): T | null {
-  try {
-    const base64 = part.replace(/-/g, '+').replace(/_/g, '/').padEnd(Math.ceil(part.length / 4) * 4, '=');
-    return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(base64), (char) => char.charCodeAt(0)))) as T;
-  } catch {
-    return null;
-  }
-}
-
-async function hasValidAccessAssertion(c: { req: { header: (name: string) => string | undefined }; env: Bindings }): Promise<boolean> {
-  const { CF_ACCESS_TEAM_DOMAIN: teamDomain, CF_ACCESS_AUD: audience, ADMIN_ALLOWED_EMAIL: allowedEmail } = c.env;
-  const assertion = c.req.header('cf-access-jwt-assertion');
-  if (!teamDomain || !audience || !allowedEmail || !assertion) return false;
-
-  const [encodedHeader, encodedClaims, encodedSignature, ...rest] = assertion.split('.');
-  if (!encodedHeader || !encodedClaims || !encodedSignature || rest.length > 0) return false;
-  const header = decodeJwtPart<{ alg?: string; kid?: string }>(encodedHeader);
-  const claims = decodeJwtPart<AccessClaims>(encodedClaims);
-  if (!header?.kid || header.alg !== 'RS256' || !claims?.email || !claims.exp) return false;
-  if (claims.exp * 1000 <= Date.now() || claims.email.toLowerCase() !== allowedEmail.toLowerCase()) return false;
-  const audiences = Array.isArray(claims.aud) ? claims.aud : [claims.aud];
-  if (!audiences.includes(audience)) return false;
-
-  try {
-    const response = await fetch('https://' + teamDomain + '/cdn-cgi/access/certs');
-    if (!response.ok) return false;
-    const { keys } = (await response.json()) as { keys?: AccessJwk[] };
-    const jwk = keys?.find((key) => key.kid === header.kid);
-    if (!jwk) return false;
-    const key = await crypto.subtle.importKey('jwk', jwk, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
-    const signature = Uint8Array.from(atob(encodedSignature.replace(/-/g, '+').replace(/_/g, '/').padEnd(Math.ceil(encodedSignature.length / 4) * 4, '=')), (char) => char.charCodeAt(0));
-    return crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, signature, new TextEncoder().encode(encodedHeader + '.' + encodedClaims));
-  } catch {
-    return false;
-  }
-}
-
-async function requireAdmin(c: { req: { header: (name: string) => string | undefined }; env: Bindings }): Promise<boolean> {
+function requireAdmin(c: { req: { header: (name: string) => string | undefined }; env: Bindings }): boolean {
   const configured = c.env.ADMIN_PASSWORD;
   if (!configured) return false;
   const header = c.req.header('Authorization') ?? '';
   const token = header.startsWith('Bearer ') ? header.slice(7) : '';
-  return token.length > 0 && safeEqual(token, configured) && hasValidAccessAssertion(c);
+  return token.length > 0 && safeEqual(token, configured);
 }
 
 function sanitizeFilename(name: string): string {
