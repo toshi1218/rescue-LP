@@ -57,10 +57,6 @@
   <div class="panel" id="loginPanel">
     <label>API URL</label>
     <input id="apiUrl" value="https://ph-document.com" readonly />
-    <p class="step"><strong>1.</strong> 先にGoogleアカウントで認証してください。</p>
-    <a id="accessLogin" class="access" href="https://ph-document.com/api/admin/list" target="_blank" rel="noopener">Googleアカウントで認証</a>
-    <p class="help" id="accessMsg">認証後に新しいタブで「unauthorized」と表示されても正常です。この画面へ戻ってください。</p>
-    <p class="step"><strong>2.</strong> 管理パスワードを入力してください。</p>
     <label>管理パスワード（ADMIN_PASSWORD）</label>
     <input id="adminPw" type="password" placeholder="wrangler secret put で設定した値" />
     <button id="loginBtn" class="gold">ログイン</button>
@@ -131,25 +127,20 @@ $('loginBtn').onclick = async () => {
   try {
     const res = await api('/api/admin/list');
     const type = res.headers.get('content-type') || '';
-    if (res.status === 401){ $('loginMsg').innerHTML = '<span class="err">パスワードが違うか、Google認証が完了していません</span>'; return; }
-    if (res.status === 403){ $('loginMsg').innerHTML = '<span class="err">このGoogleアカウントにはアクセス権限がありません</span>'; return; }
+    if (res.status === 401){ $('loginMsg').innerHTML = '<span class="err">パスワードが違います</span>'; return; }
     if (!res.ok || !type.includes('application/json')){
-      $('loginMsg').innerHTML = '<span class="err">Google認証を完了してから、もう一度ログインしてください</span>';
+      $('loginMsg').innerHTML = '<span class="err">APIに接続できませんでした</span>';
       return;
     }
     $('loginPanel').classList.add('hidden'); $('app').classList.remove('hidden');
     renderList(await res.json());
   } catch (err) {
     const timedOut = err && err.name === 'AbortError';
-    $('loginMsg').innerHTML = '<span class="err">'+(timedOut ? '接続がタイムアウトしました' : 'Google認証が未完了です。上の認証ボタンを押してください')+'</span>';
+    $('loginMsg').innerHTML = '<span class="err">'+(timedOut ? '接続がタイムアウトしました' : 'APIに接続できませんでした')+'</span>';
   } finally {
     $('loginBtn').disabled = false;
   }
 };
-$('accessLogin').onclick = () => {
-  $('accessMsg').innerHTML = '<span class="ok">認証用タブを開きました。Google認証後、この画面へ戻ってログインしてください。</span>';
-};
-
 const SITE = 'https://ph-document.com';
 function portalUrl(lang, code, pin){
   // fragment はサーバー・CDN・通常のアクセス解析に送信されない。
