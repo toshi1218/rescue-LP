@@ -13,9 +13,9 @@ import {
 type Copy = {
   heading: string;
   intro: string;
-  codeLabel: string;
-  pinLabel: string;
-  submit: string;
+  secureLinkRequired: string;
+  operator: string;
+  securityNote: string;
   checking: string;
   errorNotFound: string;
   errorRateLimited: string;
@@ -38,10 +38,10 @@ type Copy = {
 const COPY: Record<TrackingLang, Copy> = {
   ja: {
     heading: 'ご依頼の進捗確認',
-    intro: 'お渡しした追跡番号とPINを入力すると、現在の進捗状況を確認できます。',
-    codeLabel: '追跡番号',
-    pinLabel: 'PIN（6桁）',
-    submit: '確認する',
+    intro: 'IGRS Inc.からお送りしたお客様専用リンクで、現在の進捗状況を確認できます。',
+    secureLinkRequired: 'このページは、IGRS Inc.からお送りしたお客様専用リンクからのみ開けます。リンクがない場合は担当者へご連絡ください。',
+    operator: '運営：IGRS Inc.（フィリピン書類取得代行センター）',
+    securityNote: 'このページでクレジットカード番号や外部サービスのパスワードを求めることはありません。',
     checking: '確認中...',
     errorNotFound: '追跡番号またはPINが一致しません。お渡しした内容をご確認ください。',
     errorRateLimited: '試行回数が多すぎます。しばらくしてから再度お試しください。',
@@ -62,10 +62,10 @@ const COPY: Record<TrackingLang, Copy> = {
   },
   en: {
     heading: 'Track Your Order',
-    intro: 'Enter the tracking code and PIN we sent you to check the current status.',
-    codeLabel: 'Tracking code',
-    pinLabel: 'PIN (6 digits)',
-    submit: 'Check status',
+    intro: 'Use the private customer link sent by IGRS Inc. to view the current status of your order.',
+    secureLinkRequired: 'This page can only be opened from the private customer link sent by IGRS Inc. Please contact us if you do not have that link.',
+    operator: 'Operated by IGRS Inc. (Philippine Document Service)',
+    securityNote: 'We will never ask for your credit card number or the password to another service on this page.',
     checking: 'Checking...',
     errorNotFound: 'Tracking code or PIN did not match. Please check the details we sent you.',
     errorRateLimited: 'Too many attempts. Please try again in a few minutes.',
@@ -86,10 +86,10 @@ const COPY: Record<TrackingLang, Copy> = {
   },
   ko: {
     heading: '진행 상황 확인',
-    intro: '전달받은 추적 번호와 PIN을 입력하면 현재 진행 상황을 확인할 수 있습니다.',
-    codeLabel: '추적 번호',
-    pinLabel: 'PIN (6자리)',
-    submit: '확인하기',
+    intro: 'IGRS Inc.에서 보낸 고객 전용 링크를 통해 현재 진행 상황을 확인할 수 있습니다.',
+    secureLinkRequired: '이 페이지는 IGRS Inc.에서 보낸 고객 전용 링크로만 열 수 있습니다. 링크가 없으면 담당자에게 문의해 주세요.',
+    operator: '운영: IGRS Inc. (필리핀 서류 취득 대행 센터)',
+    securityNote: '이 페이지에서는 신용카드 번호나 다른 서비스의 비밀번호를 요청하지 않습니다.',
     checking: '확인 중...',
     errorNotFound: '추적 번호 또는 PIN이 일치하지 않습니다. 전달받은 내용을 확인해 주세요.',
     errorRateLimited: '시도 횟수가 너무 많습니다. 잠시 후 다시 시도해 주세요.',
@@ -145,11 +145,6 @@ export default function TrackingPortal({ lang }: { lang: TrackingLang }) {
     setData(result.data);
   }
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    void runVerify(code, pin);
-  }
-
   // スタッフが発行するURL（#code=...&pin=...）で開かれた場合は、入力なしでそのまま進捗を表示する。
   // fragment はHTTPリクエスト・CDNログ・通常のアクセス解析へ送信されない。
   // 読み取り後はアドレスバーからも消す。
@@ -200,61 +195,24 @@ export default function TrackingPortal({ lang }: { lang: TrackingLang }) {
   return (
     <div className="max-w-xl mx-auto">
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">{c.heading}</h1>
-      <p className="text-sm text-gray-600 mb-6">{c.intro}</p>
+      <p className="text-sm text-gray-600 mb-2">{c.intro}</p>
+      <p className="text-xs text-gray-500 mb-6">{c.operator}</p>
 
       {!data && (
-        <form onSubmit={handleSubmit} className="space-y-4 bg-white rounded-2xl shadow-soft border border-gray-100 p-6">
-          <div>
-            <label htmlFor="tracking-code" className="block text-sm font-medium text-gray-700 mb-1">
-              {c.codeLabel}
-            </label>
-            <input
-              id="tracking-code"
-              type="text"
-              value={code}
-              onChange={(ev) => setCode(ev.target.value)}
-              required
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              autoComplete="off"
-            />
-          </div>
-          <div>
-            <label htmlFor="tracking-pin" className="block text-sm font-medium text-gray-700 mb-1">
-              {c.pinLabel}
-            </label>
-            <input
-              id="tracking-pin"
-              type="text"
-              inputMode="numeric"
-              value={pin}
-              onChange={(ev) => setPin(ev.target.value)}
-              required
-              className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-              autoComplete="off"
-            />
-          </div>
-
-          {error && (
-            <p className="flex items-start gap-2 text-sm text-red-600">
-              <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
-              {error}
+        <div className="bg-white rounded-2xl shadow-soft border border-gray-100 p-6">
+          {checking ? (
+            <p className="inline-flex items-center gap-2 text-sm text-gray-600">
+              <Loader2 className="w-4 h-4 animate-spin" /> {c.checking}
+            </p>
+          ) : (
+            <p className="flex items-start gap-2 text-sm text-gray-700">
+              <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-primary-dark" />
+              {error || c.secureLinkRequired}
             </p>
           )}
-
-          <button
-            type="submit"
-            disabled={checking}
-            className="w-full inline-flex items-center justify-center gap-2 bg-primary text-secondary font-bold py-3 rounded-xl shadow-lg hover:bg-primary-hover transition-all text-sm disabled:opacity-60"
-          >
-            {checking ? (
-              <>
-                <Loader2 className="w-4 h-4 animate-spin" /> {c.checking}
-              </>
-            ) : (
-              c.submit
-            )}
-          </button>
-        </form>
+          <p className="mt-4 text-xs text-gray-500">{c.operator}</p>
+          <p className="mt-1 text-xs text-gray-500">{c.securityNote}</p>
+        </div>
       )}
 
       {data && (
@@ -286,6 +244,7 @@ export default function TrackingPortal({ lang }: { lang: TrackingLang }) {
 
           <div className="bg-white rounded-2xl shadow-soft border border-gray-100 p-6">
             <h2 className="text-sm font-bold text-secondary mb-1">{c.uploadHeading}</h2>
+            <p className="text-xs text-gray-500 mb-2">{c.securityNote}</p>
             <p className="text-xs text-gray-500 mb-4">{c.uploadHint}</p>
 
             <label className="inline-flex items-center gap-2 border border-primary/30 text-primary-dark font-medium text-sm px-4 py-2.5 rounded-xl cursor-pointer hover:bg-primary/5 transition-all">
