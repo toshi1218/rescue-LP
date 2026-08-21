@@ -54,7 +54,12 @@
   <h1>進捗管理 <em>スタッフ用</em></h1>
   <p class="sub">Cloudflare Accessで許可されたスタッフのみ利用できます。管理パスワードとの二重認証です。</p>
 
-  <div class="panel" style="border-left:4px solid var(--green);padding-left:14px;">\n    <p class="step"><strong>🔒 Cloudflare Access 認証済み</strong></p>\n    <p class="help" style="margin:4px 0 0;">この画面と管理APIは、許可メールアドレスでの認証後のみ利用できます。</p>\n  </div>\n\n  <div class="panel" id="loginPanel">
+  <div class="panel" style="border-left:4px solid var(--green);padding-left:14px;">
+    <p class="step"><strong>🔒 Cloudflare Access 認証済み</strong></p>
+    <p class="help" style="margin:4px 0 0;">この画面と管理APIは、許可メールアドレスでの認証後のみ利用できます。</p>
+  </div>
+
+  <div class="panel" id="loginPanel">
     <label>API URL</label>
     <input id="apiUrl" value="https://ph-document.com" readonly />
     <label>管理パスワード（ADMIN_PASSWORD）</label>
