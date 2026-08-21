@@ -33,16 +33,22 @@ jobs:
           CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           ADMIN_PW: ${{ secrets.TRACKING_ADMIN_PASSWORD }}
+          ACCESS_TEAM: ${{ secrets.CF_ACCESS_TEAM_DOMAIN }}
+          ACCESS_AUD: ${{ secrets.CF_ACCESS_AUD }}
+          ADMIN_EMAIL: ${{ secrets.TRACKING_ADMIN_EMAIL }}
         run: |
           missing=""
           [ -z "$CF_TOKEN" ]   && missing="$missing CLOUDFLARE_API_TOKEN"
           [ -z "$CF_ACCOUNT" ] && missing="$missing CLOUDFLARE_ACCOUNT_ID"
           [ -z "$ADMIN_PW" ]   && missing="$missing TRACKING_ADMIN_PASSWORD"
+          [ -z "$ACCESS_TEAM" ] && missing="$missing CF_ACCESS_TEAM_DOMAIN"
+          [ -z "$ACCESS_AUD" ]  && missing="$missing CF_ACCESS_AUD"
+          [ -z "$ADMIN_EMAIL" ] && missing="$missing TRACKING_ADMIN_EMAIL"
           if [ -n "$missing" ]; then
             echo "::error::リポジトリの Settings → Secrets and variables → Actions に未設定のシークレットがあります:$missing"
             exit 1
           fi
-          echo "必要な3つのシークレットを確認"
+          echo "必要な6つのシークレットを確認"
 
       - name: Worker ソースの存在確認
         # このワークフローは main に先行して置かれるため、tracking のコードがまだ
@@ -71,8 +77,14 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           ADMIN_PW: ${{ secrets.TRACKING_ADMIN_PASSWORD }}
+          ACCESS_TEAM: ${{ secrets.CF_ACCESS_TEAM_DOMAIN }}
+          ACCESS_AUD: ${{ secrets.CF_ACCESS_AUD }}
+          ADMIN_EMAIL: ${{ secrets.TRACKING_ADMIN_EMAIL }}
         run: |
           printf '%s' "$ADMIN_PW" | npx --yes wrangler secret put ADMIN_PASSWORD
+          printf '%s' "$ACCESS_TEAM" | npx --yes wrangler secret put CF_ACCESS_TEAM_DOMAIN
+          printf '%s' "$ACCESS_AUD" | npx --yes wrangler secret put CF_ACCESS_AUD
+          printf '%s' "$ADMIN_EMAIL" | npx --yes wrangler secret put ADMIN_ALLOWED_EMAIL
 
       - name: デプロイ（tracking.ph-document.com の紐付けを含む）
         working-directory: workers/tracking
@@ -94,7 +106,7 @@ jobs:
               echo "✅ Worker 稼働確認: $body"
               echo "### ✅ デプロイ完了" >> $GITHUB_STEP_SUMMARY
               echo "お客様に案内するURL: https://ph-document.com/ja/tracking/" >> $GITHUB_STEP_SUMMARY
-              echo "管理画面: Safe Browsing対策のため公開停止中" >> $GITHUB_STEP_SUMMARY
+              echo "管理画面（Cloudflare Access保護）: https://ph-document.com/tools/tracking-admin.html" >> $GITHUB_STEP_SUMMARY
               exit 0
             fi
             sleep 20
