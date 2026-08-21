@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # workers/tracking/provision.sh
 #
-# D1 / R2 / KV を作成し、生成された ID を wrangler.toml に書き戻してスキーマを適用する。
+# D1 / R2 を作成し、生成された ID を wrangler.toml に書き戻してスキーマを適用する。
 # 対話入力を一切しないので、ローカル（deploy.sh 経由）と GitHub Actions の両方から使える。
 #
 # 認証は呼び出し側の責任:
@@ -14,7 +14,6 @@ cd "$(dirname "$0")"
 
 D1_NAME="ph-document-tracking"
 R2_BUCKET="ph-document-tracking-uploads"
-KV_BINDING="RATE_LIMIT"
 
 wr() { npx --yes wrangler "$@"; }
 
@@ -44,29 +43,39 @@ pick_json_field() {
 }
 
 echo "-- D1 データベース --"
-wr d1 create "$D1_NAME" >/dev/null 2>&1 || echo "   （既に存在するため作成をスキップ）"
-if d1_id=$(wr d1 list --json 2>/dev/null | pick_json_field name "$D1_NAME" uuid,database_id exact); then
-  sed -i.bak -E "s|^database_id *=.*|database_id = \"$d1_id\"|" wrangler.toml && rm -f wrangler.toml.bak
-  echo "   ✅ database_id = $d1_id"
+configured_d1_id=$(sed -nE 's/^database_id *= *"([^"]+)".*/\1/p' wrangler.toml | head -n 1)
+if [[ "$configured_d1_id" =~ ^[0-9a-fA-F-]{36}$ ]]; then
+  # D1 ID は秘密情報ではなく、デプロイ設定の一部。既存環境では API の一覧取得を
+  # 毎回要求しないことで、一時的な list API 障害や権限判定の差に影響されない。
+  d1_id="$configured_d1_id"
+  echo "   ✅ 設定済み database_id = $d1_id"
 else
-  echo "   ❌ database_id を取得できませんでした（権限不足の可能性: D1 の編集権限を確認してください）"
-  exit 1
+  create_output=$(wr d1 create "$D1_NAME" 2>&1) || true
+  list_output=$(wr d1 list --json 2>&1) || {
+    echo "$create_output"
+    echo "$list_output"
+    echo "   ❌ D1 一覧を取得できませんでした。上記の Cloudflare エラーを確認してください"
+    exit 1
+  }
+  if d1_id=$(printf '%s' "$list_output" | pick_json_field name "$D1_NAME" uuid,database_id exact); then
+    sed -i.bak -E "s|^database_id *=.*|database_id = \"$d1_id\"|" wrangler.toml && rm -f wrangler.toml.bak
+    echo "   ✅ database_id = $d1_id"
+  else
+    echo "$list_output"
+    echo "   ❌ D1 '$D1_NAME' の database_id を取得できませんでした"
+    exit 1
+  fi
 fi
 
 echo "-- D1 スキーマ適用 --"
 wr d1 execute "$D1_NAME" --file=./schema.sql --remote --yes >/dev/null
-echo "   ✅ テーブル作成完了（CREATE TABLE IF NOT EXISTS のため再実行しても安全）"
+if ! wr d1 execute "$D1_NAME" --command "PRAGMA table_info(trackings)" --remote --json | grep -q 'access_expires_at'; then
+  wr d1 execute "$D1_NAME" --command "ALTER TABLE trackings ADD COLUMN access_expires_at INTEGER" --remote --yes >/dev/null
+  wr d1 execute "$D1_NAME" --command "UPDATE trackings SET access_expires_at = created_at + 2592000000 WHERE access_expires_at IS NULL" --remote --yes >/dev/null
+  echo "   ✅ 既存追跡データに30日のアクセス期限を追加"
+fi
+echo "   ✅ テーブル作成・スキーマ移行完了（再実行可）"
 
 echo "-- R2 バケット --"
 wr r2 bucket create "$R2_BUCKET" >/dev/null 2>&1 || echo "   （既に存在するため作成をスキップ）"
 echo "   ✅ $R2_BUCKET"
-
-echo "-- KV namespace --"
-wr kv namespace create "$KV_BINDING" >/dev/null 2>&1 || echo "   （既に存在するため作成をスキップ）"
-if kv_id=$(wr kv namespace list 2>/dev/null | pick_json_field title "$KV_BINDING" id includes); then
-  sed -i.bak -E "s|^id *=.*|id = \"$kv_id\"|" wrangler.toml && rm -f wrangler.toml.bak
-  echo "   ✅ KV id = $kv_id"
-else
-  echo "   ❌ KV namespace の id を取得できませんでした（権限不足の可能性: KV の編集権限を確認してください）"
-  exit 1
-fi

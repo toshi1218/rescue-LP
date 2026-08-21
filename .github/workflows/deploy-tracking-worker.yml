@@ -1,6 +1,6 @@
 name: Deploy tracking Worker
 
-# tracking Worker（顧客の進捗確認・書類アップロード）を D1/R2/KV の作成込みでデプロイする。
+# tracking Worker（顧客の進捗確認・書類アップロード）を D1/R2 の作成込みでデプロイする。
 # スマホのブラウザからでも実行できるよう、手動トリガー（Run workflow）のみ。
 # 自動では絶対に走らせない（サイト本体のデプロイとは無関係・誤発火を避けるため）。
 on:
@@ -42,7 +42,7 @@ jobs:
             echo "::error::リポジトリの Settings → Secrets and variables → Actions に未設定のシークレットがあります:$missing"
             exit 1
           fi
-          echo "3つとも設定済み"
+          echo "必要な3つのシークレットを確認"
 
       - name: Worker ソースの存在確認
         # このワークフローは main に先行して置かれるため、tracking のコードがまだ
@@ -58,7 +58,7 @@ jobs:
         working-directory: workers/tracking
         run: npm ci
 
-      - name: D1 / R2 / KV を作成しスキーマを適用
+      - name: D1 / R2 を作成しスキーマを適用
         working-directory: workers/tracking
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -71,7 +71,8 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           ADMIN_PW: ${{ secrets.TRACKING_ADMIN_PASSWORD }}
-        run: printf '%s' "$ADMIN_PW" | npx --yes wrangler secret put ADMIN_PASSWORD
+        run: |
+          printf '%s' "$ADMIN_PW" | npx --yes wrangler secret put ADMIN_PASSWORD
 
       - name: デプロイ（tracking.ph-document.com の紐付けを含む）
         working-directory: workers/tracking

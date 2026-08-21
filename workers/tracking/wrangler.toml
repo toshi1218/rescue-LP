@@ -7,24 +7,30 @@ compatibility_flags = ["nodejs_compat"]
 # ph-document.com のゾーンが同じCloudflareアカウントにある前提。別アカウントの場合は
 # この3行をコメントアウトし、ダッシュボードから手動でカスタムドメインを追加する。
 routes = [
-  { pattern = "tracking.ph-document.com", custom_domain = true }
+  { pattern = "tracking.ph-document.com", custom_domain = true },
+  # ブラウザからのAPI通信は本体ドメインに集約する。Cloudflare Accessは
+  # ph-document.com/api/admin/* のみを保護し、顧客用APIは code + PIN のまま。
+  { pattern = "ph-document.com/api/*", zone_name = "ph-document.com" }
 ]
 
 [[d1_databases]]
 binding = "DB"
 database_name = "ph-document-tracking"
-database_id = "REPLACE_WITH_D1_ID_AFTER_CREATE"
+database_id = "313a6464-9358-4eba-bcc7-f9b5222a62b8"
 
 [[r2_buckets]]
 binding = "UPLOADS"
 bucket_name = "ph-document-tracking-uploads"
 
-[[kv_namespaces]]
-binding = "RATE_LIMIT"
-id = "REPLACE_WITH_KV_ID_AFTER_CREATE"
+[triggers]
+crons = ["0 3 * * *"]
 
 # Secrets (set via `wrangler secret put`):
 #   ADMIN_PASSWORD   -- password for the staff admin tool (/tools/tracking-admin.html)
 
 [vars]
 ALLOWED_ORIGIN = "https://ph-document.com"
+# Set as Worker secrets during deployment.
+#   CF_ACCESS_TEAM_DOMAIN
+#   CF_ACCESS_AUD
+#   ADMIN_ALLOWED_EMAIL

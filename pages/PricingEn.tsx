@@ -82,6 +82,51 @@ export default function PricingEn() {
         trustNote="No commitment required — free cancellation at quote stage"
       />
 
+      {/* Inquiry and feasibility assessment services */}
+      <section className="mb-8">
+        <div className="mb-4">
+          <p className="text-xs font-bold uppercase tracking-wider text-primary mb-1">Optional professional support</p>
+          <h2 className="text-xl font-bold text-secondary">Institutional inquiries and special-case assessment</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            Choose a standard inquiry when the procedure is known but confirmation is needed. Cases that cannot be assessed through the normal application route require a paid feasibility assessment.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-primary mb-2">STANDARD INQUIRY</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">Institutional Inquiry Support</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              We contact an embassy, consulate, PSA, DFA, or other relevant office to confirm requirements, procedure order, or submission points and provide a written summary.
+            </p>
+            <p className="text-2xl font-extrabold text-primary">US$199</p>
+            <p className="text-xs text-gray-500 mt-1">Per case</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              Ask About Inquiry Support
+            </a>
+          </div>
+          <div className="rounded-2xl border border-amber-300 bg-amber-50/70 p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-amber-700 mb-2">SPECIAL CASE</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">Feasibility Assessment</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-3">
+              For old, missing, restricted, third-party, or otherwise unusual records, we investigate the obstacles, lawful request requirements, and possible alternative routes.
+            </p>
+            <ul className="space-y-1.5 text-sm text-gray-600 mb-4">
+              <li>· Review of barriers and required evidence</li>
+              <li>· PSA, DFA, embassy, or other relevant inquiries</li>
+              <li>· Written progress updates and final findings</li>
+            </ul>
+            <p className="text-2xl font-extrabold text-amber-700">From US$399</p>
+            <p className="text-xs text-gray-500 mt-1">Prepaid · usually 2–3 weeks</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              Ask About a Special Case
+            </a>
+          </div>
+        </div>
+        <p className="mt-3 text-xs text-gray-500 leading-relaxed">
+          A feasibility assessment does not guarantee document retrieval. Document procurement, government fees, lawyers or other professional fees, and third-party costs are not included. Any additional work or cost is quoted for your approval before it begins.
+        </p>
+      </section>
+
       {/* Pricing cards */}
       <Pricing />
 

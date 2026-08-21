@@ -19,6 +19,7 @@ type Copy = {
   checking: string;
   errorNotFound: string;
   errorRateLimited: string;
+  errorAccessExpired: string;
   errorNetwork: string;
   lastUpdated: string;
   uploadHeading: string;
@@ -44,6 +45,7 @@ const COPY: Record<TrackingLang, Copy> = {
     checking: '確認中...',
     errorNotFound: '追跡番号またはPINが一致しません。お渡しした内容をご確認ください。',
     errorRateLimited: '試行回数が多すぎます。しばらくしてから再度お試しください。',
+    errorAccessExpired: 'この追跡番号のアクセス期限が切れています。担当者へご連絡ください。',
     errorNetwork: '通信エラーが発生しました。時間をおいて再度お試しください。',
     lastUpdated: '最終更新',
     uploadHeading: '書類のアップロード',
@@ -67,6 +69,7 @@ const COPY: Record<TrackingLang, Copy> = {
     checking: 'Checking...',
     errorNotFound: 'Tracking code or PIN did not match. Please check the details we sent you.',
     errorRateLimited: 'Too many attempts. Please try again in a few minutes.',
+    errorAccessExpired: 'This tracking link has expired. Please contact us for a new link.',
     errorNetwork: 'A network error occurred. Please try again shortly.',
     lastUpdated: 'Last updated',
     uploadHeading: 'Upload documents',
@@ -90,6 +93,7 @@ const COPY: Record<TrackingLang, Copy> = {
     checking: '확인 중...',
     errorNotFound: '추적 번호 또는 PIN이 일치하지 않습니다. 전달받은 내용을 확인해 주세요.',
     errorRateLimited: '시도 횟수가 너무 많습니다. 잠시 후 다시 시도해 주세요.',
+    errorAccessExpired: '이 추적 링크는 만료되었습니다. 담당자에게 문의해 주세요.',
     errorNetwork: '통신 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.',
     lastUpdated: '마지막 업데이트',
     uploadHeading: '서류 업로드',
@@ -133,6 +137,7 @@ export default function TrackingPortal({ lang }: { lang: TrackingLang }) {
 
     if (!result.ok) {
       if (result.error === 'rate_limited') setError(c.errorRateLimited);
+      else if (result.error === 'access_expired') setError(c.errorAccessExpired);
       else if (result.error === 'network_error') setError(c.errorNetwork);
       else setError(c.errorNotFound);
       return;
@@ -145,18 +150,19 @@ export default function TrackingPortal({ lang }: { lang: TrackingLang }) {
     void runVerify(code, pin);
   }
 
-  // スタッフが発行するURL（?code=...&pin=...）で開かれた場合は、入力なしでそのまま進捗を表示する。
-  // 読み取り後はアドレスバーからPINを消す（履歴・スクリーンショット経由の漏れを減らす）。
+  // スタッフが発行するURL（#code=...&pin=...）で開かれた場合は、入力なしでそのまま進捗を表示する。
+  // fragment はHTTPリクエスト・CDNログ・通常のアクセス解析へ送信されない。
+  // 読み取り後はアドレスバーからも消す。
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.hash.slice(1));
     const urlCode = params.get('code');
     const urlPin = params.get('pin');
     if (!urlCode || !urlPin) return;
 
     setCode(urlCode);
     setPin(urlPin);
-    window.history.replaceState(null, '', window.location.pathname);
+    window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
     void runVerify(urlCode, urlPin);
     // 初回マウント時のみ実行する
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -176,6 +182,7 @@ export default function TrackingPortal({ lang }: { lang: TrackingLang }) {
 
     if (!result.ok) {
       const map: Record<string, string> = {
+        access_expired: c.errorAccessExpired,
         unsupported_file_type: c.uploadErrorType,
         file_too_large: c.uploadErrorSize,
         too_many_uploads: c.uploadErrorTooMany,

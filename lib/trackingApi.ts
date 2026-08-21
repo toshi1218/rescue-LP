@@ -62,14 +62,17 @@ export type TrackingData = {
   uploads: TrackingUpload[];
 };
 
-const DEFAULT_API_URL = 'https://tracking.ph-document.com';
+// Browser-facing API is kept on the primary domain. This avoids sending
+// customers to the separately hosted Worker domain and keeps admin Access
+// authentication on the trusted ph-document.com hostname.
+const DEFAULT_API_URL = 'https://ph-document.com';
 
 function resolveApiUrl(): string {
   const envUrl = (import.meta as unknown as { env?: Record<string, string> }).env?.VITE_TRACKING_API_URL;
   return envUrl || DEFAULT_API_URL;
 }
 
-export type TrackingError = 'not_found' | 'rate_limited' | 'network_error';
+export type TrackingError = 'not_found' | 'access_expired' | 'rate_limited' | 'network_error';
 
 export async function verifyTracking(
   code: string,
@@ -82,6 +85,7 @@ export async function verifyTracking(
       body: JSON.stringify({ code, pin }),
     });
     if (res.status === 429) return { ok: false, error: 'rate_limited' };
+    if (res.status === 410) return { ok: false, error: 'access_expired' };
     if (!res.ok) return { ok: false, error: 'not_found' };
     const data = (await res.json()) as TrackingData;
     return { ok: true, data };
@@ -90,7 +94,7 @@ export async function verifyTracking(
   }
 }
 
-export type UploadError = 'not_found' | 'rate_limited' | 'unsupported_file_type' | 'file_too_large' | 'too_many_uploads' | 'network_error';
+export type UploadError = 'not_found' | 'access_expired' | 'rate_limited' | 'unsupported_file_type' | 'file_too_large' | 'too_many_uploads' | 'network_error';
 
 export async function uploadTrackingFile(
   code: string,
@@ -106,6 +110,7 @@ export async function uploadTrackingFile(
     const res = await fetch(`${resolveApiUrl()}/api/upload`, { method: 'POST', body: form });
     if (res.ok) return { ok: true };
     if (res.status === 429) return { ok: false, error: 'rate_limited' };
+    if (res.status === 410) return { ok: false, error: 'access_expired' };
     const body = (await res.json().catch(() => ({}))) as { error?: string };
     if (body.error === 'unsupported_file_type' || body.error === 'file_too_large' || body.error === 'too_many_uploads') {
       return { ok: false, error: body.error };

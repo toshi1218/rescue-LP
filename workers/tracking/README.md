@@ -9,8 +9,33 @@
 
 - **D1**（`DB`）: 追跡レコード・ステータス履歴・アップロード台帳
 - **R2**（`UPLOADS`）: アップロードされた書類ファイルの実体
-- **KV**（`RATE_LIMIT`）: レート制限
+- **D1**（`rate_limits` テーブル）: 原子的なレート制限
 - **Secret** `ADMIN_PASSWORD`: 管理画面の認証
+
+## 管理画面の二段階保護
+
+管理APIは、管理パスワードに加えてCloudflare AccessのJWTを検証する。Cloudflare Zero Trustで
+ph-document.com/api/admin/* を対象にSelf-hosted applicationを作成し、
+GoogleをIdentity Providerとして、許可ポリシーを管理者のメールアドレス1件に限定する。
+
+GitHub Actionsには次の3つもRepository secretとして登録する。
+
+| Secret | 値 |
+|---|---|
+| CF_ACCESS_TEAM_DOMAIN | Cloudflare Access team domain（例: your-team.cloudflareaccess.com） |
+| CF_ACCESS_AUD | 作成したAccess applicationのAudience (AUD) tag |
+| TRACKING_ADMIN_EMAIL | Googleログインを許可する管理者メールアドレス |
+
+管理者は、最初に管理画面の「Cloudflare Accessでログイン」を開いてGoogleログインしてから、
+管理パスワードを入力する。
+
+顧客・管理者のブラウザ通信は `https://ph-document.com/api/*` に集約する。
+`tracking.ph-document.com` はWorkerの稼働確認用として残す。
+
+## 顧客リンクの期限
+
+顧客の追跡番号とPINは発行から30日で失効する。案件が継続中なら、管理画面から30日延長できる。
+既存の追跡データには、最初のデプロイ時に作成日から30日の期限が自動で設定される。
 
 ## 初回セットアップ
 
@@ -28,7 +53,6 @@ Cloudflare の認証情報はリポジトリに置いていないため、初回
 | 種類 | 項目 | 権限 |
 |---|---|---|
 | Account | Workers Scripts | Edit |
-| Account | Workers KV Storage | Edit |
 | Account | Workers R2 Storage | Edit |
 | Account | D1 | Edit |
 | Zone | Workers Routes | Edit |
@@ -47,13 +71,13 @@ Account ID は Cloudflare ダッシュボードの Workers & Pages 画面の右�
 
 **③ ワークフローを実行**（リポジトリ → Actions → **Deploy tracking Worker** → Run workflow → 入力欄に `deploy` と入力 → 実行）
 
-D1/R2/KV の作成、スキーマ適用、パスワード設定、デプロイ、カスタムドメイン紐付け、
+D1/R2 の作成、スキーマ適用、パスワード設定、デプロイ、カスタムドメイン紐付け、
 稼働確認まで自動で走ります。完了後の Summary に案内URLが出ます。
 2回目以降も同じ手順で再実行でき、作成済みのリソースはスキップされます。
 
 ### B. PCのターミナルで実行する
 
-**1本のスクリプトで完結**（`npm install` → ログイン → D1/R2/KV作成 → スキーマ適用 → secret設定 → デプロイまで）:
+**1本のスクリプトで完結**（`npm install` → ログイン → D1/R2作成 → スキーマ適用 → secret設定 → デプロイまで）:
 
 ```bash
 cd workers/tracking
@@ -65,7 +89,7 @@ cd workers/tracking
 1. `wrangler login` でブラウザが開くので Cloudflare アカウントでログイン
 2. 管理パスワード（`ADMIN_PASSWORD`）を入力（`/tools/tracking-admin.html` のログインに使う値）
 
-D1・KV の ID は `wrangler.toml` へ**自動で書き戻される**ため、コピペ作業はありません。
+D1 の ID は `wrangler.toml` へ**自動で書き戻される**ため、コピペ作業はありません。
 `tracking.ph-document.com` のカスタムドメイン紐付けも `wrangler.toml` の `routes` 設定により
 `wrangler deploy` が同時に行います（DNSレコードも自動作成）。
 
@@ -73,7 +97,7 @@ D1・KV の ID は `wrangler.toml` へ**自動で書き戻される**ため、�
 作成済みのリソースはスキップして続きから進みます。
 
 デプロイ後は `wrangler.toml` に実IDが入った状態になります。この差分はコミットして構いません
-（D1/KV の ID は秘密情報ではありません。秘密なのは `ADMIN_PASSWORD` だけで、これは
+（D1 の ID は秘密情報ではありません。秘密なのは `ADMIN_PASSWORD` だけで、これは
 Cloudflare の secret に保存され、リポジトリには入りません）。
 
 ### 手動で1ステップずつ行う場合
@@ -85,7 +109,6 @@ npx wrangler login
 npx wrangler d1 create ph-document-tracking          # → database_id を wrangler.toml に貼る
 npx wrangler d1 execute ph-document-tracking --file=./schema.sql --remote
 npx wrangler r2 bucket create ph-document-tracking-uploads
-npx wrangler kv namespace create RATE_LIMIT           # → id を wrangler.toml に貼る
 npx wrangler secret put ADMIN_PASSWORD
 npx wrangler deploy                                   # routes 設定によりカスタムドメインも紐付く
 ```

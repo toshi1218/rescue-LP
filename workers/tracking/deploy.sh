@@ -28,7 +28,7 @@ else
 fi
 
 echo ""
-echo "== 3/5: D1 / R2 / KV の作成とスキーマ適用 =="
+echo "== 3/5: D1 / R2 の作成とスキーマ適用 =="
 ./provision.sh
 
 echo ""
