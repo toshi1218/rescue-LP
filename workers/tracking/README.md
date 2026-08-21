@@ -3,20 +3,25 @@
 顧客向け進捗確認ポータルと、書類アップロード受け取りのバックエンド。
 
 - 顧客用ページ: `/ja/tracking/`（`/en/`, `/ko/`）— IGRS Inc.が発行した専用リンクからのみ進捗確認・書類アップロード
-- スタッフ用管理画面: 公開停止中。`/tools/tracking-admin.html` は入力欄のない案内ページ
+- スタッフ用管理画面: `/tools/tracking-admin.html` — Cloudflare Access + 管理パスワードの二重認証
 
 ## 構成
 
 - **D1**（`DB`）: 追跡レコード・ステータス履歴・アップロード台帳
 - **R2**（`UPLOADS`）: アップロードされた書類ファイルの実体
 - **D1**（`rate_limits` テーブル）: 原子的なレート制限
-- **Secret** `ADMIN_PASSWORD`: 管理画面の認証
+- **Secrets**: `ADMIN_PASSWORD`（第二認証）、`CF_ACCESS_TEAM_DOMAIN` / `CF_ACCESS_AUD` / `ADMIN_ALLOWED_EMAIL`（Cloudflare Access検証）
 
-## 管理画面の公開停止
+## 管理画面の保護
 
-Safe Browsing対策として、公開サイト上のパスワード入力画面は停止している。
-管理APIは引き続き `ADMIN_PASSWORD` で保護されているが、ブラウザ用管理画面は
-Cloudflare Accessなどの認証ゲートをドメイン側に設定するまで再公開しない。
+Cloudflare Zero Trustで次の2パスを個別に保護する。
+
+- `ph-document.com/tools/tracking-admin.html`: 管理画面本体
+- `ph-document.com/api/admin/*`: 管理API
+
+どちらも許可メールアドレスのみ通す。管理APIはさらにAccess JWTの署名・有効期限・Audience・
+メールアドレスをWorker内で検証し、その後 `ADMIN_PASSWORD` も照合する。Accessを無効にした状態で
+管理画面を本番公開しないこと。
 
 顧客ページには追跡番号やPINの手入力欄を表示せず、IGRS Inc.が個別に発行した
 フラグメント付き専用リンクから開いた場合のみ検証・アップロード機能を表示する。
@@ -50,13 +55,16 @@ Cloudflare の認証情報はリポジトリに置いていないため、初回
 Zone は `ph-document.com` を指定（`tracking.ph-document.com` のDNSレコード作成に必要）。
 Account ID は Cloudflare ダッシュボードの Workers & Pages 画面の右側に表示されている英数字。
 
-**② GitHub にシークレットを3つ登録**（リポジトリ → Settings → Secrets and variables → Actions → New repository secret）
+**② GitHub にシークレットを6つ登録**（リポジトリ → Settings → Secrets and variables → Actions → New repository secret）
 
 | 名前 | 中身 |
 |---|---|
 | `CLOUDFLARE_API_TOKEN` | ①で作ったトークン |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare のアカウントID |
 | `TRACKING_ADMIN_PASSWORD` | 管理画面のログインパスワード（自分で決める・20文字以上のランダム推奨） |
+| `CF_ACCESS_TEAM_DOMAIN` | Zero Trustのチームドメイン（例: `example.cloudflareaccess.com`） |
+| `CF_ACCESS_AUD` | `/api/admin/*` 用AccessアプリのApplication Audience (AUD) |
+| `TRACKING_ADMIN_EMAIL` | Accessで許可する管理者メールアドレス |
 
 **③ ワークフローを実行**（リポジトリ → Actions → **Deploy tracking Worker** → Run workflow → 入力欄に `deploy` と入力 → 実行）
 
@@ -114,7 +122,7 @@ curl https://tracking.ph-document.com/
 
 ## 運用フロー
 
-公開管理画面は一時停止中。既存の顧客専用リンクは引き続き利用できる。
+管理画面はCloudflare Accessで許可されたスタッフだけが開ける。既存の顧客専用リンクは引き続き利用できる。
 顧客が追跡ページを直接開いた場合、番号・PIN入力欄は表示せず、担当者から届いた
 専用リンクの利用を案内する。
 
