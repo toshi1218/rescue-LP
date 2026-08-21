@@ -52,7 +52,7 @@ export default function UkDocsEn() {
               name: 'Does the UK require DFA Apostille on Philippine documents?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes. The UK is a Hague Convention member. UK Visas and Immigration (UKVI) requires DFA Apostille authentication on Philippine civil documents for spouse visa and immigration applications.',
+                text: 'The UK is a Hague Convention member, but UKVI requirements vary by route and document. We verify the current checklist before processing.',
               },
             },
             {
@@ -96,7 +96,7 @@ export default function UkDocsEn() {
         points={[
           'The UK is a Hague Convention member — DFA Apostille is required on Philippine documents',
           'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-          'Paper Apostille originals shipped via DHL Express to your UK address',
+          'PSA e-Apostille delivered digitally; NBI and physical originals shipped via DHL when needed',
           'We confirm exact UKVI requirements for your specific visa type',
         ]}
         ctaText="Free Consultation"
@@ -108,7 +108,7 @@ export default function UkDocsEn() {
           {
             icon: <Shield className="w-4 h-4" />,
             title: 'Applying for a UK spouse visa or settlement',
-            description: 'UKVI requires Philippine civil documents with DFA Apostille. We handle all required documents in one coordinated flow.',
+            description: 'UKVI document and authentication requirements vary by route. We verify the current checklist and handle the agreed documents in one coordinated flow.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -165,7 +165,7 @@ export default function UkDocsEn() {
 
       <FaqSection
         items={[
-          { q: 'Does the UK require DFA Apostille on Philippine documents?', a: 'Yes. The UK is a Hague Convention member. UK Visas and Immigration (UKVI) requires DFA Apostille authentication on Philippine civil documents for spouse visa and immigration applications.' },
+          { q: 'Does the UK require DFA Apostille on Philippine documents?', a: 'Not in every case. The UK is a Hague Convention member, but requirements vary by route and document. We verify the current UKVI checklist before processing.' },
           { q: 'What documents are needed for a UK spouse visa?', a: 'Typically CENOMAR and PSA Birth Certificate with DFA Apostille. NBI Clearance may also be required. Requirements vary by visa type. We confirm for your specific case.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to the UK are included.' },
           { q: 'How long does it take to ship to the UK?', a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to the UK typically takes 3–5 business days after documents are ready.' },

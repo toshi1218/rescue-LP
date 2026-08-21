@@ -164,7 +164,7 @@ export default function SpouseVisaEn() {
 
       <FaqSection
         items={[
-          { q: 'What documents does NVC require for a spouse visa?', a: 'Typically PSA Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by case. We confirm for your specific petition.' },
+          { q: 'What documents does NVC require for a spouse visa?', a: 'The checklist depends on the visa type and case stage. PSA Marriage and Birth Certificates may be requested; authentication is arranged only when the current official instructions require it.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.' },

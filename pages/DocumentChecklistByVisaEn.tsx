@@ -39,7 +39,7 @@ export default function DocumentChecklistByVisaEn() {
               name: 'What Philippine documents do I need for a K-1 visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For a K-1 fiancé visa, your Filipino partner typically needs: CENOMAR with DFA Apostille (proof of single status), PSA Birth Certificate with DFA Apostille, and NBI Clearance with DFA Apostille. Since March 2026, PSA documents (CENOMAR, PSA Birth Certificate) are authenticated with an electronic e-Apostille — a paper Apostille is no longer issued for PSA documents — while NBI Clearance can still receive a paper Apostille. Confirm with USCIS how it accepts each format.',
+                text: 'For a K-1 fiancé visa, document requirements differ between petition and interview stages. PSA civil records and NBI Clearance may be requested. If authentication is required for a PSA e-Certificate used in an Apostille Convention country, DFA issues a digital e-Apostille. Confirm the current USCIS, NVC, and embassy instructions before ordering.',
               },
             },
             {
@@ -134,7 +134,7 @@ export default function DocumentChecklistByVisaEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'CENOMAR with DFA Apostille',
-            description: 'Proof your Filipino fiancé(e) is legally single. USCIS requires this with a physical DFA Apostille. Valid within 6 months of submission.',
+            description: 'May be requested as evidence of civil status. Document age and authentication requirements depend on the current application-stage checklist.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -195,7 +195,7 @@ export default function DocumentChecklistByVisaEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'UK (UKVI spouse visa)',
-            description: 'Requires PSA Marriage Certificate, PSA Birth Certificate, and NBI Clearance with DFA Apostille. Documents must comply with UKVI requirements.',
+            description: 'PSA civil records and NBI Clearance may be requested. Confirm the current UKVI route-specific checklist and authentication requirements.',
           },
           {
             icon: <Globe className="w-4 h-4" />,

@@ -106,7 +106,7 @@ export default function MarriageGuideEn() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: 'Filing a spouse visa or partner visa petition',
-            description: 'Immigration authorities worldwide (NVC, IRCC, Home Affairs, UKVI) require PSA Marriage Certificate and Birth Certificate with DFA Apostille. We handle all documents in one flow.',
+            description: 'Marriage, birth, and authentication requirements vary by authority and procedure. We confirm the current checklist and handle the agreed documents in one flow.',
           },
           {
             icon: <Users className="w-4 h-4" />,

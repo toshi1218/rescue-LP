@@ -41,7 +41,13 @@ export default function CompanyEn() {
         </div>
         <div className="grid grid-cols-3 gap-4 border-b border-gray-100 pb-4">
           <span className="font-bold text-secondary">Head Office</span>
-          <span className="col-span-2">Wakayama City, Wakayama, Japan</span>
+          <span className="col-span-2">2-13 Shintaka-cho, Wakayama City, Wakayama, Japan</span>
+        </div>
+        <div className="grid grid-cols-3 gap-4 border-b border-gray-100 pb-4">
+          <span className="font-bold text-secondary">Corporate Number</span>
+          <span className="col-span-2">
+            <a href="https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2170001016118" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">2170001016118 (Japan government registry)</a>
+          </span>
         </div>
         <div className="grid grid-cols-3 gap-4 border-b border-gray-100 pb-4">
           <span className="font-bold text-secondary">Operations Office</span>
@@ -76,7 +82,7 @@ export default function CompanyEn() {
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Contact</p>
-            <p>Email only. We do not offer phone support.</p>
+            <p>Email and WhatsApp. We do not offer phone-call support.</p>
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Payment methods</p>

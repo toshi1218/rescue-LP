@@ -12,7 +12,7 @@ export default function PrivacyJa() {
     <PageLayout breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: 'プライバシーポリシー' }]}>
       <HeroBanner
         title="プライバシーポリシー"
-        subtitle="最終更新日：2026年3月8日"
+        subtitle="最終更新日：2026年8月1日"
         badges={['個人情報の取り扱い', 'IGRS Inc.']}
         ctaText="お問い合わせはこちら"
         ctaHref="/ja/contact"
@@ -42,6 +42,7 @@ export default function PrivacyJa() {
                 'ご住所（書類の送付先）',
                 'お問い合わせ・ご相談の内容',
                 'サービス提供に必要な書類情報（生年月日・パスポート番号・パスポートコピー・NBIクリアランス・PSA証明書等）',
+                '進捗確認ポータル（追跡番号・PINでアクセス）を通じてお客様が任意にアップロードされる書類（パスポート、過去に取得された独身証明書・出生証明書の写し等）',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-gray-600">
                   <span className="text-primary font-bold flex-shrink-0 mt-0.5">—</span>
@@ -79,7 +80,7 @@ export default function PrivacyJa() {
             <ul className="space-y-1.5 pl-4">
               {[
                 'お客様本人の同意がある場合',
-                'サービス提供のために必要な業務委託先（PSA・DFA等フィリピン政府機関、フィリピン現地提携スタッフ、DHL・国際郵便等の配送業者）への提供。委託先に対して適切な管理を求めます',
+                'サービス提供に必要な委託先（PSA・DFA等の政府機関、現地提携スタッフ、DHL等の配送業者、決済事業者、問い合わせ処理を行うWeb3Forms、任意のAIチャットを提供するAnthropic）への提供。委託先に対して適切な管理を求めます',
                 '法令に基づき開示が求められた場合',
                 '人の生命・身体・財産の保護のために必要な場合',
               ].map((item) => (
@@ -92,16 +93,32 @@ export default function PrivacyJa() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">5. 個人情報の管理</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">5. 外部サービス・AIチャット</h2>
             <p>
-              当社は、個人情報の漏洩・紛失・改ざんを防止するため、適切な安全管理措置を講じます。
-              個人情報へのアクセスは、業務上必要な担当者に限定します。
-              書類申請完了後は原則90日以内に、お預かりした書類情報（パスポートコピー等）を含む個人情報を適切な方法で削除・廃棄します。
+              お問い合わせフォームの送信内容はWeb3Formsを通じて処理されます。任意のAIチャットはAnthropicの技術を利用し、
+              入力したメッセージは回答生成のため同サービスへ送信されます。AIチャットにはパスポート番号・本人確認書類の画像・
+              決済情報などの機微情報を入力しないでください。個別案件はお問い合わせフォームをご利用ください。
+              各事業者は、適用される保護措置のもと国外でデータを処理する場合があります。
+            </p>
+            <p className="mt-3">
+              進捗確認ポータルにアップロードされた書類は、クラウドストレージ上に暗号化された状態で保管され、
+              対応する追跡番号・PINを知る本人、または当社の担当者のみがアクセスできます。
+              これらのアップロード書類についても、上記と同様に原則90日以内に削除します。
             </p>
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">6. 越境データ移転</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">6. 個人情報の管理・保存期間</h2>
+            <p>
+              当社は、個人情報の漏洩・紛失・改ざんを防止するため、適切な安全管理措置を講じます。
+              個人情報へのアクセスは、業務上必要な担当者に限定します。
+              お問い合わせ情報は、対応・法令・会計・紛争対応に合理的に必要な期間のみ保存します。
+              書類情報は、申請完了後原則90日以内（法令上の保存義務がある場合を除く）に適切な方法で削除・廃棄します。
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-bold text-secondary mb-3">7. 越境データ移転</h2>
             <p>
               サービス提供のため、お客様の個人情報（お名前・生年月日等の申請情報）をフィリピン現地の提携スタッフに共有します。
               共有する情報は業務に必要な最小限とし、提携先に対して適切な情報管理を求めます。
@@ -109,16 +126,16 @@ export default function PrivacyJa() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">7. Cookieおよびアクセス解析</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">8. Cookieおよびアクセス解析</h2>
             <p>
               当サイトでは、サービス改善のためにGoogle Analytics等のアクセス解析ツールを使用しています。
               これらのツールはCookieを使用してアクセス情報を収集しますが、個人を特定する情報は含まれません。
-              ブラウザの設定によりCookieを無効にすることができます。
+              アクセス解析Cookieは、サイト上のバナーで同意した場合にのみ有効になります。ブラウザのサイト設定を削除することで選択を変更できます。
             </p>
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">8. 個人情報の開示・訂正・削除</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">9. 個人情報の開示・訂正・削除</h2>
             <p>
               お客様は、当社が保有するご自身の個人情報について、開示・訂正・削除・利用停止を請求することができます。
               削除依頼については、本人確認のうえ速やかに対応いたします。
@@ -128,7 +145,7 @@ export default function PrivacyJa() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">9. プライバシーポリシーの変更</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">10. プライバシーポリシーの変更</h2>
             <p>
               本ポリシーは、法令の改正やサービス内容の変更に応じて改定することがあります。
               重要な変更がある場合は、当サイト上でお知らせします。
@@ -137,10 +154,10 @@ export default function PrivacyJa() {
           </section>
 
           <section>
-            <h2 className="text-base font-bold text-secondary mb-3">10. お問い合わせ先</h2>
+            <h2 className="text-base font-bold text-secondary mb-3">11. お問い合わせ先</h2>
             <div className="bg-gray-50 rounded-xl p-5 space-y-1">
               <p className="font-bold text-secondary">IGRS Inc.</p>
-              <p className="text-gray-600">和歌山県和歌山市</p>
+              <p className="text-gray-600">和歌山県和歌山市新高町2番13号</p>
               <p className="text-gray-600">
                 メール：<a href="/ja/contact" className="text-primary hover:underline">お問い合わせフォームよりご連絡ください</a>
               </p>

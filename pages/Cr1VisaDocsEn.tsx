@@ -108,7 +108,7 @@ export default function Cr1VisaDocsEn() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: 'US citizen or LPR filing a CR-1 or IR-1 petition',
-            description: 'NVC requires PSA Marriage Certificate, Birth Certificate, and NBI Clearance with DFA Apostille from your Filipino spouse. We handle all of it.',
+            description: 'The NVC and interview-stage checklist may request PSA civil records and NBI Clearance. We verify the current official instructions and arrange authentication only when required.',
           },
           {
             icon: <Clock className="w-4 h-4" />,
@@ -165,7 +165,7 @@ export default function Cr1VisaDocsEn() {
 
       <FaqSection
         items={[
-          { q: 'What Philippine documents does NVC require for CR-1/IR-1?', a: 'Typically PSA Marriage Certificate, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements may vary. We confirm for your specific case.' },
+          { q: 'What Philippine documents does NVC require for CR-1/IR-1?', a: 'Requirements depend on the case and stage. PSA Marriage and Birth Certificates and NBI Clearance may be requested. We confirm the current official checklist before processing.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.' },

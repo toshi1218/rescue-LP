@@ -13,7 +13,7 @@ const WhyProxy: React.FC = React.memo(() => {
             Will Your Authority Accept<br className="hidden md:block" /> a Printed e-Certificate?
           </h2>
           <p className="mt-3 text-base text-gray-600 max-w-xl mx-auto">
-            PSA now issues e-Certificates that anyone can print — but <strong>many immigration authorities, consulates, and civil registries still require physical PSA originals</strong>, not printed e-Certificates or e-Apostille.
+            PSA now issues e-Certificates, while some receiving authorities may separately require a physical PSA original or a particular submission format. <strong>Do not assume that a printed electronic document will meet the receiving authority's requirement.</strong>
             Acceptance varies by country, authority, and document type.
           </p>
         </div>
@@ -30,8 +30,7 @@ const WhyProxy: React.FC = React.memo(() => {
               <h3 className="text-base font-bold text-gray-800">The e-Certificate Problem</h3>
             </div>
             <p className="text-base text-gray-600 leading-relaxed">
-              PSA e-Certificates are authentic — but <strong>authorities in UAE, Saudi Arabia, Korea, Italy, Germany, and others require physical PSA originals</strong>, not printouts.
-              Since March 2026, DFA issues an electronic e-Apostille (PDF) for PSA civil documents — <strong>a paper Apostille is no longer available for these.</strong> Non-PSA documents such as NBI can still receive a paper Apostille, which a local intermediary obtains and forwards.
+              PSA e-Certificates are authentic, but acceptance depends on the document, destination, and receiving authority. For PSA e-Certificate applications, DFA issues an electronic e-Apostille (PDF) for Apostille Convention use. <strong>For non-PSA documents and non-Apostille destinations, the route can be different.</strong>
             </p>
           </div>
 
@@ -59,7 +58,7 @@ const WhyProxy: React.FC = React.memo(() => {
               <h3 className="text-base font-bold text-gray-800">How We Solve It</h3>
             </div>
             <p className="text-base text-gray-600 leading-relaxed">
-              We first confirm what format your receiving authority accepts. Then our Cebu-based team handles PSA retrieval, DFA Apostille where required, and <strong>DHL Express international shipping directly to your address</strong> — in exactly the format your authority needs.
+              We first confirm what format your receiving authority accepts. Then our Cebu-based team handles PSA retrieval, the applicable DFA authentication route, and <strong>DHL Express international shipping directly to your address</strong> when a physical document is needed.
               No trip to the Philippines. No local contacts needed.
             </p>
           </div>
@@ -69,7 +68,7 @@ const WhyProxy: React.FC = React.memo(() => {
         {/* Bottom CTA strip */}
         <div className="bg-secondary rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-base text-white font-medium text-center sm:text-left">
-            We verify your authority's requirements, then prepare the exact format needed — physical original, Apostille, or both.
+            We verify your authority's requirements, then prepare the exact format needed — physical original, e-Apostille, physical authentication, or another approved route.
           </p>
           <a
             href="#contact"

@@ -115,7 +115,7 @@ export default function NbiGuideEn() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: 'Filing a visa or immigration application',
-            description: 'Immigration authorities worldwide (USCIS, IRCC, Home Affairs, UKVI) require NBI Clearance with DFA Apostille. We handle the full process.',
+            description: 'Many procedures request NBI Clearance, but authentication requirements vary. We confirm the current receiving-authority checklist before processing.',
           },
           {
             icon: <Users className="w-4 h-4" />,

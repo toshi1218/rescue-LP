@@ -20,7 +20,7 @@ export default function DataSecurityEn() {
     {
       icon: <Landmark className="w-6 h-6 text-primary" />,
       title: 'We never ask for payment details over chat',
-      desc: 'Payment is by bank transfer to our Japanese account, or via Wise for international clients. Account details come only in our formal instructions — we never ask for card numbers or banking passwords in a chat message or email.',
+      desc: 'Payment is by credit card or bank transfer. Payment links and account details come only in our formal instructions — we never ask for card numbers, banking passwords, or one-time codes in chat or email.',
     },
     {
       icon: <Trash2 className="w-6 h-6 text-primary" />,

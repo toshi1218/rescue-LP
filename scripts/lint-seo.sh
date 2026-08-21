@@ -72,13 +72,12 @@ if [ -n "$DIFF_CMD" ]; then
 fi
 
 # 6. noindex 追加検知 (route config の "noindex: true" のみ検出)
+# 危険なのは「既にインデックスされている既存ページ」に noindex が付くケース。
+# 同じ差分で新規追加されたルート（管理用ページ等）に最初から付いている noindex は、
+# 消えるインデックス済みページが存在しないため情報表示のみとする。切り分けは
+# scripts/check-noindex-additions.sh に委譲（判定ロジックは seo-gate.yml と共用）。
 if [ -n "$DIFF_CMD" ]; then
-  noindex_added=$($DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep -c '^+.*noindex:\s*true' || true)
-  if [ "$noindex_added" -gt 0 ]; then
-    echo "WARNING: noindex is being ADDED to pages!"
-    echo "  Added lines: $noindex_added"
-    echo "  This will remove pages from Google's index. Re-indexing takes 1-2 weeks."
-    $DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | grep '^+.*noindex:\s*true' | head -10
+  if ! $DIFF_CMD -U0 -- $SEO_PATHS 2>/dev/null | bash "$(dirname "$0")/check-noindex-additions.sh"; then
     errors=$((errors + 1))
   fi
 fi

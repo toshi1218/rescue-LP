@@ -1,5 +1,20 @@
 # CLAUDE.md — Project Rules for AI Assistants
 
+## 🚫 PR の自動監視をしない
+
+**PR を作成しても、定期的な自己チェックインを仕掛けないこと。**
+
+- `send_later` / `create_trigger` / `ScheduleWakeup` で「N時間後にPRを再確認」を仕込まない
+- 「変化がなければ黙って再セット」を繰り返さない
+- `subscribe_pr_activity` の購読自体は、イベントが届いたときだけ反応するので構わない
+
+理由: 定期確認は状況が動くまで永久に「変化なし」を返し続けるだけになる。
+2026年8月16〜18日に medical-secretary-bot で20回以上ループし、無駄にトークンを消費した。
+
+監視が必要だと判断した場合は、**仕掛ける前に必ず確認を取ること。**
+
+---
+
 ## 🚫 main merge 絶対禁止ルール
 
 **Claudeは絶対に `main` ブランチへのマージを行ってはならない。**
@@ -509,4 +524,5 @@ npm run build    # runs lint-seo.sh → vite build → prerender.ts
 - **JAトップページ（`HomeJa.tsx`／`Hero.tsx`）のH1を「書類の羅列」から「国際結婚が主柱」の見せ方に寄せるか**：SEOレベル3・共通Heroコンポーネントの変更にあたるため、着手前にユーザーの明示的な承認が必要。実データ上、ENトップは既に結婚主軸の訴求になっているが、JAトップは書類名の羅列のままという非対称が残っている。
 
 #### F. 継続監視
-- PR #322：CI green（seo-gate・Cloudflare Pages）・レビューコメントなし。**main mergeは絶対禁止**（2026-07-15まで、解除は「main merge」明示入力のみ）。マージ・クローズまで監視継続。
+- PR #322：CI green（seo-gate・Cloudflare Pages）・レビューコメントなし。**main mergeは絶対禁止**（2026-07-15まで、解除は「main merge」明示入力のみ）。
+  状態が知りたいときにその都度確認する。**定期的な自動監視は仕掛けない**（冒頭「PR の自動監視をしない」参照）。
