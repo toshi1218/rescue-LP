@@ -51,6 +51,51 @@ export default function PricingKo() {
         </a>
       </div>
 
+      {/* 기관 문의 및 특수사례 조사 */}
+      <section className="mb-10">
+        <div className="mb-4">
+          <p className="text-xs font-bold tracking-wider text-primary mb-1">유료 전문 지원</p>
+          <h2 className="text-lg font-bold text-secondary">기관 문의 및 특수사례 취득 가능성 조사</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            일반 절차의 확인이 필요한 경우에는 기관 문의 지원을, 통상적인 신청 방법으로 판단할 수 없는 경우에는 유료 취득 가능성 조사를 제공합니다.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-primary mb-2">일반 문의</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">기관 문의 지원</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              대사관, 영사관, PSA, DFA 등 관련 기관에 필요한 서류, 절차 순서, 제출 요건을 확인하고 답변 내용을 서면으로 정리해 드립니다.
+            </p>
+            <p className="text-2xl font-extrabold text-primary">₩330,000</p>
+            <p className="text-xs text-gray-500 mt-1">1건 기준</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              기관 문의 상담하기
+            </a>
+          </div>
+          <div className="rounded-2xl border border-amber-300 bg-amber-50/70 p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-amber-700 mb-2">특수사례</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">취득 가능성 조사</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-3">
+              오래된 기록, 미등록·누락 기록, 제3자 관련 기록 등 일반 신청으로 처리하기 어려운 사례의 장애 요인과 합법적인 대체 절차를 조사합니다.
+            </p>
+            <ul className="space-y-1.5 text-sm text-gray-600 mb-4">
+              <li>· 취득 장애 요인과 필요한 증빙 검토</li>
+              <li>· PSA, DFA, 대사관 등 관련 기관 확인</li>
+              <li>· 주요 진행 단계 및 최종 결과 서면 보고</li>
+            </ul>
+            <p className="text-2xl font-extrabold text-amber-700">₩550,000부터</p>
+            <p className="text-xs text-gray-500 mt-1">선결제 · 통상 2~3주</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              특수사례 상담하기
+            </a>
+          </div>
+        </div>
+        <p className="mt-3 text-xs text-gray-500 leading-relaxed">
+          취득 가능성 조사는 서류 발급을 보장하지 않습니다. 서류 발급비, 정부 수수료, 변호사 등 전문가 비용 및 기타 제3자 비용은 포함되지 않습니다. 추가 업무나 비용이 필요한 경우 사전에 내용과 금액을 안내하고 승인을 받은 후 진행합니다.
+        </p>
+      </section>
+
       {/* 기본 요금 */}
       <section className="mb-10">
         <h2 className="text-lg font-bold text-secondary mb-5">패키지 요금</h2>
