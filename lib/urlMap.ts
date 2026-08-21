@@ -34,7 +34,6 @@ export const enToJa: Record<string, string> = {
   '/en/document-checklist-by-visa': '/ja/document-checklist-by-visa',
   '/en/nbi-clearance-overseas': '/ja/nbi-clearance-overseas',
   '/en/psa-late-registration': '/ja/psa-late-registration',
-  '/en/dfa-apostille-genchi-report': '/ja/dfa-apostille-genchi-report',
   '/en/tb-certificate': '/ja/kekkaku-shomeisho',
   '/en/spouse-visa-document-checklist': '/ja/haigusha-visa-shorui',
   '/en/japan-first-vs-philippines-first-marriage': '/ja/nihon-senko-ph-senko',
