@@ -2,8 +2,8 @@
 
 顧客向け進捗確認ポータルと、書類アップロード受け取りのバックエンド。
 
-- 顧客用ページ: `/ja/tracking/`（`/en/`, `/ko/`）— 追跡番号＋PINで進捗確認・書類アップロード
-- スタッフ用管理画面: `/tools/tracking-admin.html`（検索非掲載・パスワード保護）
+- 顧客用ページ: `/ja/tracking/`（`/en/`, `/ko/`）— IGRS Inc.が発行した専用リンクからのみ進捗確認・書類アップロード
+- スタッフ用管理画面: 公開停止中。`/tools/tracking-admin.html` は入力欄のない案内ページ
 
 ## 構成
 
@@ -12,25 +12,14 @@
 - **D1**（`rate_limits` テーブル）: 原子的なレート制限
 - **Secret** `ADMIN_PASSWORD`: 管理画面の認証
 
-## 管理画面の二段階保護
+## 管理画面の公開停止
 
-管理APIは、管理パスワードに加えてCloudflare AccessのJWTを検証する。Cloudflare Zero Trustで
-ph-document.com/api/admin/* を対象にSelf-hosted applicationを作成し、
-GoogleをIdentity Providerとして、許可ポリシーを管理者のメールアドレス1件に限定する。
+Safe Browsing対策として、公開サイト上のパスワード入力画面は停止している。
+管理APIは引き続き `ADMIN_PASSWORD` で保護されているが、ブラウザ用管理画面は
+Cloudflare Accessなどの認証ゲートをドメイン側に設定するまで再公開しない。
 
-GitHub Actionsには次の3つもRepository secretとして登録する。
-
-| Secret | 値 |
-|---|---|
-| CF_ACCESS_TEAM_DOMAIN | Cloudflare Access team domain（例: your-team.cloudflareaccess.com） |
-| CF_ACCESS_AUD | 作成したAccess applicationのAudience (AUD) tag |
-| TRACKING_ADMIN_EMAIL | Googleログインを許可する管理者メールアドレス |
-
-管理者は、最初に管理画面の「Cloudflare Accessでログイン」を開いてGoogleログインしてから、
-管理パスワードを入力する。
-
-顧客・管理者のブラウザ通信は `https://ph-document.com/api/*` に集約する。
-`tracking.ph-document.com` はWorkerの稼働確認用として残す。
+顧客ページには追跡番号やPINの手入力欄を表示せず、IGRS Inc.が個別に発行した
+フラグメント付き専用リンクから開いた場合のみ検証・アップロード機能を表示する。
 
 ## 顧客リンクの期限
 
@@ -87,7 +76,7 @@ cd workers/tracking
 操作が必要なのは次の2点だけです。
 
 1. `wrangler login` でブラウザが開くので Cloudflare アカウントでログイン
-2. 管理パスワード（`ADMIN_PASSWORD`）を入力（`/tools/tracking-admin.html` のログインに使う値）
+2. 管理API用パスワード（`ADMIN_PASSWORD`）を入力
 
 D1 の ID は `wrangler.toml` へ**自動で書き戻される**ため、コピペ作業はありません。
 `tracking.ph-document.com` のカスタムドメイン紐付けも `wrangler.toml` の `routes` 設定により
@@ -125,10 +114,9 @@ curl https://tracking.ph-document.com/
 
 ## 運用フロー
 
-1. スタッフが `/tools/tracking-admin.html` を開き、管理パスワードでログイン
-2. 「追跡番号を発行」→ 発行された **追跡番号＋PIN** を顧客に伝える
-3. 顧客は `/ja/tracking/` で番号＋PINを入力 → 進捗確認・書類アップロード
-4. スタッフは管理画面でステータスを更新（申込受付 → 申請中 → … → お届け完了）、アップロードされた書類をダウンロード
+公開管理画面は一時停止中。既存の顧客専用リンクは引き続き利用できる。
+顧客が追跡ページを直接開いた場合、番号・PIN入力欄は表示せず、担当者から届いた
+専用リンクの利用を案内する。
 
 ## エンドポイント
 

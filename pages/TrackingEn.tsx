@@ -6,7 +6,7 @@ import TrackingPortal from '../components/TrackingPortal';
 export default function TrackingEn() {
   useMeta(
     'Track Your Order | Philippine Document Service',
-    'Enter your tracking code and PIN to check the status of your order and upload documents.',
+    'Open the private customer link sent by IGRS Inc. to check your order status securely.',
   );
 
   return (

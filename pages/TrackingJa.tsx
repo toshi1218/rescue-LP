@@ -6,7 +6,7 @@ import TrackingPortal from '../components/TrackingPortal';
 export default function TrackingJa() {
   useMeta(
     'ご依頼の進捗確認｜フィリピン書類取得代行センター',
-    '追跡番号とPINを入力して、ご依頼の進捗状況を確認・書類のアップロードができます。',
+    'IGRS Inc.からお送りしたお客様専用リンクで、ご依頼の進捗状況を安全に確認できます。',
   );
 
   return (
