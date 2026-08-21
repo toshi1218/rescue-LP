@@ -23,7 +23,7 @@ export default function ApostilleGuideEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service',
-        description: 'We handle DFA Apostille authentication for PSA, NBI, CENOMAR, and LTO documents. Physical paper Apostille provided. Ships worldwide via DHL. No trip to the Philippines needed.',
+        description: 'We handle the appropriate DFA authentication route for PSA, NBI, CENOMAR, and LTO documents. PSA e-Apostilles are delivered digitally; physical documents ship via DHL when needed.',
         url: 'https://ph-document.com/en/apostille/',
         provider: {
           '@type': 'Organization',
@@ -60,7 +60,7 @@ export default function ApostilleGuideEn() {
               name: 'What is the difference between e-Apostille and paper Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFA issues two formats. e-Apostille is a digital-only PDF — printing it does NOT make it valid. Paper Apostille is a physical sticker on a PSA SECPA document. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs submitted digitally. US NVC, US Embassy Manila, and UAE require physical paper Apostille on SECPA. We provide paper Apostille originals shipped via DHL.',
+                text: 'The route depends on the document and destination. For PSA e-Certificates used in Apostille Convention countries, DFA issues a digital e-Apostille. Non-member destinations use a physical Certificate of Authentication and may require embassy attestation. Confirm the receiving authority before ordering.',
               },
             },
             {
@@ -85,7 +85,7 @@ export default function ApostilleGuideEn() {
     >
       <HeroBanner
         title="DFA Apostille for Philippine Documents — Shipped Worldwide"
-        badges={['Paper Apostille Original', 'Ships Worldwide via DHL', 'All-Inclusive Pricing']}
+        badges={['Correct Authentication Route', 'Digital or DHL Delivery', 'All-Inclusive Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -102,7 +102,7 @@ export default function ApostilleGuideEn() {
         points={[
           'DFA Apostille is required for Philippine documents to be accepted abroad',
           'We authenticate PSA, NBI, CENOMAR, and other government documents',
-          'Paper Apostille original shipped via DHL Express worldwide',
+          'Digital e-Apostille or physical authentication delivered through the correct route',
           'Can be combined with document retrieval for a seamless one-stop service',
         ]}
         ctaText="Free Consultation"
@@ -118,8 +118,8 @@ export default function ApostilleGuideEn() {
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Your authority requires physical paper Apostille — not e-Apostille',
-            description: 'US NVC, US Embassy Manila, and UAE require a physical PSA on Security Paper (SECPA) with a paper Apostille. Canada (IRCC), Australia, and UK accept e-Apostille PDFs. We provide paper Apostille originals for cases where digital is not accepted.',
+            title: 'Your authority requires a different authentication route',
+            description: 'Apostille Convention countries, non-member countries, and individual authorities use different routes. We confirm whether you need an e-Apostille, a physical Certificate of Authentication, embassy attestation, or no authentication.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -163,52 +163,27 @@ export default function ApostilleGuideEn() {
         heading="How It Works"
         steps={[
           { title: 'Tell us which documents need Apostille and your deadline', description: 'Share the document type (CENOMAR, NBI, PSA Birth Certificate, etc.), the destination country, and your submission deadline.' },
-          { title: 'We confirm Apostille requirements per destination authority', description: 'Requirements differ by country — we verify whether a paper Apostille or e-Apostille is required and confirm the scope before quoting.' },
+          { title: 'We confirm authentication requirements per destination authority', description: 'Requirements differ by document and country — we verify whether an e-Apostille, Certificate of Authentication, embassy attestation, or no authentication is required.' },
           { title: 'We retrieve the document and submit to the DFA Apostille queue', description: 'Our team requests the source document from PSA or NBI, then submits it to DFA for official Apostille authentication in the Philippines.' },
-          { title: 'Apostilled original shipped via DHL — accepted in 124+ countries', description: 'The physical Apostilled document is shipped to your address with DHL tracking. Estimated total: 4–6 weeks.' },
+          { title: 'Correct format delivered digitally or by DHL', description: 'Digital authentication is emailed in its original form; physical documents are shipped with DHL tracking when needed. Estimated total: 4–6 weeks.' },
         ]}
       />
 
-      {/* Which documents need Apostille reference table */}
-      <div className="my-8">
-        <h2 className="text-base font-bold text-secondary mb-3">Which Documents Need DFA Apostille?</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-xs border-collapse rounded-xl overflow-hidden shadow-sm">
-            <thead>
-              <tr className="bg-secondary text-white">
-                <th className="px-3 py-2.5 text-left font-semibold">Document</th>
-                <th className="px-3 py-2.5 text-center font-semibold">USA</th>
-                <th className="px-3 py-2.5 text-center font-semibold">Canada</th>
-                <th className="px-3 py-2.5 text-center font-semibold">Australia</th>
-                <th className="px-3 py-2.5 text-center font-semibold">UK</th>
-                <th className="px-3 py-2.5 text-center font-semibold">Japan</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ['CENOMAR', '✓', '✓', '✓', '✓', '✓'],
-                ['PSA Birth Certificate', '✓', '✓', '✓', '✓', '✓'],
-                ['PSA Marriage Certificate', '✓', '✓', '✓', '✓', '✓'],
-                ['NBI Clearance', '✓', '✓', '✓', '✓', '✓'],
-                ['LTO Driver\'s Record', '✓', '✓', '✓', '✓', '✓'],
-              ].map(([doc, ...checks], i) => (
-                <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-3 py-2.5 font-medium text-gray-700 border-t border-gray-100">{doc}</td>
-                  {checks.map((c, j) => (
-                    <td key={j} className="px-3 py-2.5 text-center text-green-600 font-medium border-t border-gray-100">{c}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-xs text-gray-400 mt-2">✓ = DFA Apostille required for immigration use. We verify the exact format requirement for your specific authority before starting.</p>
+      <div className="my-8 rounded-xl border border-gray-100 bg-gray-50 p-5">
+        <h2 className="mb-3 text-base font-bold text-secondary">Does your document need DFA authentication?</h2>
+        <p className="text-sm leading-relaxed text-gray-700">There is no country-wide yes/no rule for every immigration case. The requirement depends on the document, destination, application stage, and receiving authority.</p>
+        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-gray-700">
+          <li>For PSA e-Certificates intended for Apostille Convention use, DFA issues an electronic e-Apostille.</li>
+          <li>For non-Apostille destinations, a physical Certificate of Authentication and further consular legalization may be required.</li>
+          <li>Non-PSA documents, such as NBI Clearance or LTO records, can follow a different physical-document route.</li>
+        </ul>
+        <p className="mt-3 text-xs text-gray-500">Always confirm the current official checklist from the receiving authority before ordering or paying for authentication.</p>
       </div>
 
       <FaqSection
         items={[
           { q: 'How much does it cost?', a: 'DFA Apostille is included in all service packages starting at US$349. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.' },
-          { q: 'What is the difference between e-Apostille and paper Apostille?', a: 'DFA issues two formats. (1) e-Apostille — a digital PDF that must be submitted electronically. Printing an e-Apostille does not make it valid. Canada (IRCC), Australia (Home Affairs), and UK (UKVI) accept e-Apostille PDFs. (2) Paper Apostille — a physical sticker on a PSA SECPA document, required by US NVC, US Embassy Manila, and UAE. We provide paper Apostille originals shipped via DHL.' },
+          { q: 'What is the difference between e-Apostille and physical authentication?', a: 'For PSA e-Certificates used in Apostille Convention countries, DFA issues a digital e-Apostille. For non-member destinations, DFA issues a physical Certificate of Authentication and the destination may require embassy attestation. The receiving authority decides which route is acceptable.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
         ]}

@@ -22,7 +22,7 @@ import { SEO_DATE_ISO, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function HomeEn() {
   useMeta(
     `Philippine Documents for International Marriage & Visa [${SEO_YEAR_MONTH_EN}]`,
-    `Getting married to a Filipino, or moving countries together? We verify format requirements, procure physical PSA originals + DFA Apostille, and ship via DHL worldwide.`,
+    `Getting married to a Filipino, or moving countries together? We verify format requirements, procure the required PSA or NBI documents, arrange the appropriate DFA authentication, and coordinate delivery worldwide.`,
     'https://ph-document.com/en/',
   );
 
@@ -37,7 +37,7 @@ export default function HomeEn() {
     alternateName: 'ph-document.com',
     url: 'https://ph-document.com/en/',
     logo: 'https://ph-document.com/logo.png',
-    description: 'Philippine PSA document service for overseas submission. We verify receiving authority requirements and procure physical PSA Birth Certificates, CENOMAR, NBI Clearance, and DFA Apostille for clients in UAE, Korea, Europe, USA, and worldwide. Paper originals shipped via DHL Express.',
+    description: 'Philippine document service for overseas submission. We verify receiving-authority requirements and coordinate PSA Birth Certificates, CENOMAR, NBI Clearance, the appropriate DFA authentication, and DHL delivery when a physical document is required.',
     areaServed: [
       { '@type': 'Country', name: 'US' },
       { '@type': 'Country', name: 'CA' },
@@ -65,7 +65,7 @@ export default function HomeEn() {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Physical PSA Birth Certificate (Original, not e-Certificate)' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Physical CENOMAR (Certificate of No Marriage) — Original' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'NBI Clearance for Immigration and Visa' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DFA Apostille Authentication — Paper Original' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DFA Authentication — e-Apostille or physical route as applicable' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'International Shipping via DHL Express' } },
       ],
     },
@@ -85,6 +85,18 @@ export default function HomeEn() {
       <Navbar />
       <main id="main-content">
         <Hero />
+        <section className="bg-white px-4 py-8">
+          <div className="mx-auto max-w-4xl rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <h2 className="mb-2 text-lg font-bold text-secondary">One service from retrieval to authentication and worldwide delivery</h2>
+            <p className="text-sm leading-relaxed text-gray-700">
+              We coordinate PSA and NBI retrieval, DFA authentication, and international delivery. For PSA civil documents, DFA authentication is issued as an e-Apostille; where your authority needs a physical PSA original, we confirm the required format before arranging DHL delivery.
+            </p>
+            <p className="mt-2 text-xs text-gray-500">Free quote · Reply within one business day. Tell us the receiving authority even if you are unsure whether an electronic or physical document is required.</p>
+            <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              Request a Free Quote
+            </a>
+          </div>
+        </section>
         <Services />
         <PainPoints />
         <WhyProxy />
@@ -112,4 +124,3 @@ export default function HomeEn() {
     </div>
   );
 }
-

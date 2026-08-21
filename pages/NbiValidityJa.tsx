@@ -11,8 +11,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function NbiValidityJa() {
   useMeta(
-    `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】発行から1年｜提出先別の注意点`,
-    'NBI Clearanceの有効期限は発行から1年。ただし入管や大使館では6ヶ月以内を求められる場合も。提出先別の基準・期限切れを防ぐ取得タイミング・アポスティーユとの関係を解説。',
+    `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】提出先別の基準と再取得の判断`,
+    '有効期限は提出先ごとに違います。在フィリピン日本国大使館は申請日から3か月以内、在東京フィリピン大使館の非クオータ移民査証は6か月以内。提出先別の基準・再取得が必要になる条件・更新ルートで進められるかの判断を解説。',
   );
   return (
     <PageLayout

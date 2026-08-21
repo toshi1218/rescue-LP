@@ -1,0 +1,117 @@
+name: Deploy tracking Worker
+
+# tracking Worker（顧客の進捗確認・書類アップロード）を D1/R2 の作成込みでデプロイする。
+# スマホのブラウザからでも実行できるよう、手動トリガー（Run workflow）のみ。
+# 自動では絶対に走らせない（サイト本体のデプロイとは無関係・誤発火を避けるため）。
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'デプロイする場合は deploy と入力'
+        required: true
+        default: ''
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 入力確認
+        run: |
+          if [ "${{ inputs.confirm }}" != "deploy" ]; then
+            echo "::error::確認欄に 'deploy' と入力してください（誤操作防止）"
+            exit 1
+          fi
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 必要なシークレットの確認
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          ADMIN_PW: ${{ secrets.TRACKING_ADMIN_PASSWORD }}
+        run: |
+          missing=""
+          [ -z "$CF_TOKEN" ]   && missing="$missing CLOUDFLARE_API_TOKEN"
+          [ -z "$CF_ACCOUNT" ] && missing="$missing CLOUDFLARE_ACCOUNT_ID"
+          [ -z "$ADMIN_PW" ]   && missing="$missing TRACKING_ADMIN_PASSWORD"
+          if [ -n "$missing" ]; then
+            echo "::error::リポジトリの Settings → Secrets and variables → Actions に未設定のシークレットがあります:$missing"
+            exit 1
+          fi
+          echo "必要な3つのシークレットを確認"
+
+      - name: Worker ソースの存在確認
+        # このワークフローは main に先行して置かれるため、tracking のコードがまだ
+        # 無いブランチで実行される可能性がある。その場合は分かりやすく止める。
+        run: |
+          if [ ! -f workers/tracking/provision.sh ]; then
+            echo "::error::選択したブランチに workers/tracking がありません。Run workflow のブランチ選択で、tracking ポータルのブランチ（claude/pr-361-production-setup-v48dg5）か、それをマージ済みの main を選んでください。"
+            exit 1
+          fi
+          echo "workers/tracking を確認"
+
+      - name: npm ci
+        working-directory: workers/tracking
+        run: npm ci
+
+      - name: D1 / R2 を作成しスキーマを適用
+        working-directory: workers/tracking
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: ./provision.sh
+
+      - name: 管理パスワードを Worker のシークレットに設定
+        working-directory: workers/tracking
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          ADMIN_PW: ${{ secrets.TRACKING_ADMIN_PASSWORD }}
+        run: |
+          printf '%s' "$ADMIN_PW" | npx --yes wrangler secret put ADMIN_PASSWORD
+
+      - name: デプロイ（tracking.ph-document.com の紐付けを含む）
+        working-directory: workers/tracking
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler deploy
+
+      - name: 稼働確認
+        # エンドポイントが最後まで応答しなかった場合は失敗させる。DNS伝播待ちと
+        # ルート/ランタイムの設定ミスは外から区別できず、緑で終えると後者を
+        # 「そのうち直る」と誤解させるため。再実行は冪等なので、伝播待ちだった
+        # 場合はもう一度流せば緑になる。
+        run: |
+          echo "DNS伝播を待って稼働確認します（最大5分）"
+          for i in $(seq 1 15); do
+            body=$(curl -s -m 10 https://tracking.ph-document.com/ || true)
+            if [ "$body" = "ph-document tracking worker: OK" ]; then
+              echo "✅ Worker 稼働確認: $body"
+              echo "### ✅ デプロイ完了" >> $GITHUB_STEP_SUMMARY
+              echo "お客様に案内するURL: https://ph-document.com/ja/tracking/" >> $GITHUB_STEP_SUMMARY
+              echo "管理画面: https://ph-document.com/tools/tracking-admin.html" >> $GITHUB_STEP_SUMMARY
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "::error::Worker のデプロイ自体は成功しましたが、tracking.ph-document.com が5分間応答しませんでした。"
+          echo "最後の応答: ${body:-（応答なし）}"
+          {
+            echo "### ⚠️ デプロイは成功・ドメインが応答せず"
+            echo ""
+            echo "Worker は Cloudflare に配置されましたが、\`https://tracking.ph-document.com/\` が5分間"
+            echo "\`ph-document tracking worker: OK\` を返しませんでした。次を確認してください。"
+            echo ""
+            echo "1. 数分待ってから https://tracking.ph-document.com/ を開く（DNS伝播が遅れているだけなら、これで解決）"
+            echo "2. 直らない場合: Cloudflareダッシュボード → Workers & Pages → ph-document-tracking →"
+            echo "   Settings → Domains & Routes で tracking.ph-document.com が登録されているか確認"
+            echo "3. API トークンに Zone の DNS / Workers Routes 権限があるか確認"
+            echo ""
+            echo "このワークフローは冪等です。原因を直したら、もう一度 Run workflow してください。"
+          } >> $GITHUB_STEP_SUMMARY
+          exit 1

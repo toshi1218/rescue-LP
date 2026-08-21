@@ -51,12 +51,13 @@ export default function CompanyJa() {
         <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-soft">
           {[
             { label: '会社名', value: 'IGRS Inc.' },
-            { label: '本店所在地', value: '和歌山県和歌山市' },
+            { label: '本店所在地', value: '和歌山県和歌山市新高町2番13号' },
+            { label: '法人番号', value: null, type: 'registry' },
             { label: '営業所', value: 'フィリピン共和国 セブ市' },
             { label: '事業内容', value: 'フィリピン公的書類取得代行（PSA・NBI・LTO・DFAアポスティーユ）' },
             { label: '対応言語', value: '日本語・英語' },
             { label: 'お問い合わせ', value: null },
-          ].map(({ label, value }, i, arr) => (
+          ].map(({ label, value, type }, i, arr) => (
             <div
               key={label}
               className={`flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-0 px-6 py-4 ${
@@ -67,7 +68,11 @@ export default function CompanyJa() {
                 {label}
               </span>
               <span className="text-sm text-gray-700 leading-relaxed">
-                {value ?? (
+                {type === 'registry' ? (
+                  <a href="https://info.gbiz.go.jp/hojin/ichiran?hojinBango=2170001016118" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">
+                    2170001016118（政府法人情報）
+                  </a>
+                ) : value ?? (
                   <a href="mailto:igrs20200601@gmail.com" className="text-primary hover:underline font-medium">
                     igrs20200601@gmail.com
                   </a>
@@ -95,7 +100,7 @@ export default function CompanyJa() {
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">連絡手段</p>
-              <p>Eメールのみで承っています。</p>
+              <p>Eメール・LINEで承っています。電話による受付は行っていません。</p>
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">お支払い方法</p>

@@ -4,17 +4,17 @@ import SummaryBlock from '../components/SummaryBlock';
 import CtaBox from '../components/CtaBox';
 import RelatedLinks from '../components/RelatedLinks';
 import { useMeta } from '../lib/useMeta';
-import { AlertTriangle, Copy, Check } from 'lucide-react';
+import { AlertTriangle, Copy, Check, CheckCircle } from 'lucide-react';
 
-const TEMPLATE = `件名：フィリピン PSA 電子証明書・DFA eApostille の受理可否確認
+const TEMPLATE = `件名：フィリピン PSA 電子証明書・DFA e-Apostille の受理可否確認
 
 お世話になっております。
-フィリピン発行の民事登録書類を御庁へ提出予定です。以下の点をご確認いただけますでしょうか。
+フィリピン発行の民事登録書類を提出予定です。以下の点をご確認いただけますでしょうか。
 
-１．フィリピン PSA 発行の電子証明書（電子署名付き PDF）を受理されますか。
-２．フィリピン DFA 発行の e-Apostille（PDF 形式、メール送付）を受理されますか。
-３．受理不可の場合、PSA 紙原本・アポスティーユ原本・領事認証のいずれが必要ですか。
-４．必要な書式・提出方法があれば具体的にご教示ください。
+１．PSA発行のe-Certificate（電子署名付きPDF）を受理されますか。
+２．DFA発行のe-Apostille（PDF）を受理されますか。
+３．PSAのSECPA紙原本も別途必要でしょうか。
+４．その他、必要な書式・日本語訳・提出方法があればご教示ください。
 
 何卒よろしくお願いいたします。`;
 
@@ -28,6 +28,7 @@ export default function PsaEcertificateNihonJa() {
     });
   };
 
+  // 静的title/descriptionはprerender.tsと同期管理しているため、構造変更とは分離して更新する。
   useMeta(
     'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
     'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
@@ -44,9 +45,10 @@ export default function PsaEcertificateNihonJa() {
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
-          description: 'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
+          headline: 'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況',
+          description: 'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・在東京フィリピン大使館など提出先ごとの違いと確認手順を整理。',
           datePublished: '2026-04-24',
+          dateModified: '2026-08-14',
           author: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/ja/' },
           publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/ja/' },
         },
@@ -57,303 +59,63 @@ export default function PsaEcertificateNihonJa() {
           PSA電子文書・e-Apostilleは日本で使える？
         </h1>
         <p className="text-sm md:text-base text-gray-500 leading-relaxed">
-          入管・市区町村・総領事館の受領状況と、紙原本（PSA SECPA）が安全な理由を整理します。
+          提出先によって電子版で完結する場合と、SECPA紙原本を求められる場合があります。2026年8月14日時点の確認情報を整理します。
         </p>
       </header>
 
       <SummaryBlock
-        conclusion="PSA電子文書（eCertificate）とDFA eApostilleは法的に有効です。しかし2026年4月時点では、日本の入管・市区町村・総領事館の多くが引き続き紙原本を前提とした運用をしており、電子文書で提出して再提出を求められるケースが当社に実際に寄せられています。"
+        conclusion="PSA e-Certificate＋DFA e-Apostilleが使えるかは、書類そのものの有効性ではなく、提出先がその形式を受け付けるかで決まります。アポスティーユ自体が不要な手続きもあるため、最初から一律に認証や紙原本を付けず、用途と提出先を確認して必要なものだけ取得するのが合理的です。"
         points={[
-          '2026年3月16日以降、PSA e-CertificateへのPaper Apostille（紙アポスティーユ）は原則発行されなくなりました。e-Certificateには電子のeApostilleのみが付与されます。',
-          '紙のPSA証明書（SECPA）自体の発行・取得は引き続き可能です。日本向け提出には紙原本ルートが安全策です。',
-          '当社には複数の再提出事例が実際に届いています。提出先への事前確認が必須です。',
+          'PSA民事書類の認証はe-Apostille（電子）へ移行しています',
+          '在東京フィリピン大使館のLCCMでは、当社の2026年8月直接確認で電子版＋e-Apostilleの受付可との案内を確認',
+          '日本の市区町村は自治体ごとに必要書類・原本形式が異なります',
+          '永住許可申請では、出入国在留管理庁の通常の提出書類にアポスティーユは含まれていません',
         ]}
       />
 
-      {/* 用語解説 */}
       <section className="mb-10">
         <div className="flex items-center gap-3 mb-4">
           <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary">PSA電子文書・eApostilleとは</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-secondary">電子版と紙原本は別物です</h2>
         </div>
         <div className="space-y-4 text-gray-700 leading-relaxed">
-          <p>
-            <strong className="text-gray-900">PSA eCertificate</strong>
-            ：PSAが発行する出生証明書・婚姻証明書・CENOMARのPDF電子版。デジタル署名付きで、QRコードとポータルサイトによる真正性検証が可能です。法的効力は紙のPSA発行文書と同等とされていますが、PSA自身も「提出先が受け入れるか事前確認を推奨」としています。
-          </p>
-          <p>
-            <strong className="text-gray-900">DFA eApostille（2026年3月16日開始）</strong>
-            ：PSA eCertificateに付与される完全デジタルのアポスティーユ。ハーグ条約（アポスティーユ条約）の枠組みに基づいて発行され、完成後はメールで送付されます。HCCH基準での法的効力は紙アポスティーユと同等です。
-            <strong>印刷した場合は公式な印刷版として認められない</strong>
-            ため、デジタル送信での提出が前提です。
-          </p>
-          <p>
-            <strong className="text-gray-900">重要：PSA e-CertificateへのPaper Apostille（紙アポスティーユ）は原則不可</strong>
-            ：3月16日の運用変更以降、PSA e-CertificateをベースにしたPaper Apostilleは基本的に発行されなくなりました。一方、<strong>紙のPSA証明書（SECPA）自体の発行・取得は引き続き可能</strong>です。Door-to-door・CRS窓口受取・国際配送などの取得ルートが現在も利用できます。
-          </p>
+          <p><strong className="text-gray-900">PSA e-Certificate</strong>：PSAが発行する出生証明書・婚姻証明書・CENOMAR等の電子文書です。PDFとして発行され、電子署名や検証情報を使って真正性を確認します。</p>
+          <p><strong className="text-gray-900">DFA e-Apostille</strong>：PSA e-Certificateに対して発行される電子アポスティーユです。電子文書として取り扱うため、提出先が電子ファイルを受け付けるかを事前に確認する必要があります。</p>
+          <p><strong className="text-gray-900">PSA SECPA紙原本</strong>：PSAが紙で発行する証明書です。e-Certificateとは別の形式で、紙原本を要求する市区町村等に提出するため追加取得する場合があります。</p>
+          <div className="rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm"><strong className="text-gray-900">ポイント：</strong>「e-Apostilleが電子だから紙原本も必ず必要」「紙原本があるから紙アポスティーユも付く」という意味ではありません。アポスティーユ自体が不要な手続きも含め、必要な組み合わせは提出先ごとに確認します。</div>
         </div>
       </section>
 
-      {/* 実費と納品パターン */}
       <section className="mb-10">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary">PSA e-Certificate・e-Apostilleの実費と納品パターン</h2>
+        <div className="flex items-center gap-3 mb-4"><div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" /><h2 className="text-xl md:text-2xl font-bold text-secondary">当社の基本的な手配パターン</h2></div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"><p className="font-bold text-secondary mb-1">電子版のみ</p><p className="text-sm text-primary font-semibold mb-2">e-Certificate＋必要な場合のみe-Apostille</p><p className="text-sm text-gray-700 leading-relaxed">提出先が電子文書を受け付ける場合は、国際配送をせず電子データで納品できます。アポスティーユが不要な手続きには追加しません。</p></div>
+          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"><p className="font-bold text-secondary mb-1">電子版＋紙原本</p><p className="text-sm text-primary font-semibold mb-2">e-Certificate＋必要な認証＋SECPA</p><p className="text-sm text-gray-700 leading-relaxed">市区町村などがPSA紙原本を求める場合にSECPAを追加します。紙原本はフィリピンで受領後、日本へ発送します。</p></div>
         </div>
-        <div className="space-y-4 text-gray-700 leading-relaxed">
-          <p>
-            現在、PSA e-Certificateとe-Apostilleは<strong className="text-gray-900">1つのオンライン申請でまとめて発行</strong>されます。移行期間の終了により、PSA書類向けの<strong className="text-gray-900">物理アポスティーユ（紙のアポスティーユ）は新規発行が停止</strong>され、認証は電子のe-Apostilleに一本化されました。フィリピン政府（PSA・DFA）に支払う実費の目安は次のとおりです。
-          </p>
-          <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
-            <table className="w-full min-w-[420px] text-sm">
-              <thead>
-                <tr className="bg-gray-50 border-b border-gray-100">
-                  <th className="text-left px-4 py-3 font-semibold text-gray-700">納品パターン</th>
-                  <th className="text-right px-4 py-3 font-semibold text-gray-700 whitespace-nowrap">政府実費の目安</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-50">
-                <tr className="bg-primary/5">
-                  <td className="px-4 py-3 font-bold text-gray-900">電子のみ（e-Certificate＋e-Apostille）</td>
-                  <td className="px-4 py-3 text-right font-bold text-primary whitespace-nowrap">約500ペソ／通</td>
-                </tr>
-                <tr className="bg-primary/5">
-                  <td className="px-4 py-3 font-bold text-gray-900">電子＋紙原本（＋物理PSA証明書）</td>
-                  <td className="px-4 py-3 text-right font-bold text-primary whitespace-nowrap">約850ペソ／通</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-gray-400">
-            ※ いずれも政府実費の目安で、現地の料金改定・決済チャネル手数料（数十ペソ）により変動します。紙原本を海外へ発送する場合は別途、国際配送費（DHL・PHLPost EMS等）が加わります。当社の代行手数料は上記に含まれません。
-          </p>
-        </div>
-
-        <div className="grid gap-4 md:grid-cols-2 mt-6">
-          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-            <p className="font-bold text-secondary mb-1">デジタル納品（電子のみ）</p>
-            <p className="text-sm text-primary font-semibold mb-2">実費 約500ペソ／通・配送不要</p>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              PSA e-Certificate＋e-Apostilleをメールで納品。国際配送が不要なため納期が短く、提出先が電子文書を受理する場合はこれで完結します。
-            </p>
-          </div>
-          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-            <p className="font-bold text-secondary mb-1">ハイブリッド納品（電子＋紙原本）</p>
-            <p className="text-sm text-primary font-semibold mb-2">実費 約850ペソ／通＋国際配送費</p>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              上記の電子2点に、物理PSA証明書（紙原本）を追加。電子文書と紙原本を<strong>一度の手続きでまとめて取得</strong>でき、紙原本のために別ルートで申請し直す必要はありません。
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-4 flex items-start gap-3 p-4 rounded-xl border border-blue-100 bg-blue-50">
-          <AlertTriangle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
-          <p className="text-sm text-gray-700 leading-relaxed">
-            <strong className="text-gray-900">重要：</strong>紙原本が必要な場合も、電子文書と同じ手続きの中でまとめて手配できます。ただし
-            <strong>物理PSA証明書に紙のアポスティーユは貼付されません</strong>（PSA向け物理アポスティーユは停止済み）。認証はあくまで電子のe-Apostilleで行われるため、紙原本＝紙アポスティーユではない点にご注意ください。
-          </p>
-        </div>
+        <p className="mt-3 text-xs text-gray-500">※当社では、用途と提出先を確認し、不要なアポスティーユ・紙原本・追加手続きをできるだけ省く形でご案内します。</p>
       </section>
 
-      {/* オンライン申請の本人確認・決済 */}
       <section className="mb-10">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary">オンライン申請の本人確認・支払いの注意点</h2>
-        </div>
-        <div className="space-y-4">
-          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-            <p className="font-bold text-gray-900 mb-1">本人確認（liveness check）が必要</p>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              e-Certificateの発行には、有効な身分証のアップロードとカメラによるリアルタイム本人確認（liveness check）が求められます。これは<strong>手続きを行う申請者自身の身分証・顔で行う認証</strong>であり、証明書の対象者本人でなくても、委任状等で認められた代理人がご自身の身分証で申請・本人確認を行うことができます（他人になりすますことはできません）。海外在住でも手続きはメールで完結でき、フィリピンのSIM・携帯番号は原則不要です（本人確認・書類受領はメールで行えます）。ただし、案件によっては追加確認の過程で携帯電話番号の入力を求められる場合もあります。
-            </p>
-          </div>
-          <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-            <p className="font-bold text-gray-900 mb-1">支払いはフィリピン現地の決済手段が中心</p>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              政府への支払いは GCash・Maya・ShopeePay・GrabPay・現金など<strong>フィリピン国内向けの決済手段</strong>が中心で、海外クレジットカードは前面に出ていません。海外在住の方は、決済手段の用意や「申請番号と入金の正しい紐付け」でつまずきやすい部分です。当社は<strong>日本円でのお支払い</strong>で、フィリピン政府機関への決済までまとめて代行します。
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 日本の受領状況 */}
-      <section className="mb-10">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary">日本の提出先別 受領状況（2026年4月時点）</h2>
-        </div>
+        <div className="flex items-center gap-3 mb-4"><div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" /><h2 className="text-xl md:text-2xl font-bold text-secondary">日本の提出先別の考え方（2026年8月確認）</h2></div>
         <div className="space-y-3">
-          {[
-            {
-              title: '入国管理局（入管）',
-              body: '在留資格申請では従来、PSA Security Paper＋紙アポスティーユが標準として運用されています。電子版に関する明示的な受領基準は未公表で、窓口ごとの判断に委ねられています。重要な申請では紙原本での提出を推奨します。',
-            },
-            {
-              title: '市区町村（婚姻届・戸籍関連）',
-              body: '一部の自治体では電子版（PDF＋eApostille）での受領実績があります。ただし自治体ごとに判断が異なり、紙原本を求められるケースも存在します。事前問い合わせが必須です。',
-            },
-            {
-              title: '在フィリピン日本国大使館・総領事館',
-              body: '在フィリピン日本国大使館は「フィリピンで発行・作成された文書は原本提出」を明記しており、婚姻関係手続ではPSA/LCR発行の出生証明書の原本を要求しています。電子版での受付は確認できていません。',
-            },
-          ].map(({ title, body }) => (
-            <div key={title} className="flex items-start gap-3 p-4 rounded-xl border border-amber-100 bg-amber-50">
-              <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-              <div>
-                <p className="font-bold text-gray-900 mb-1">{title}</p>
-                <p className="text-sm text-gray-700 leading-relaxed">{body}</p>
-              </div>
-            </div>
-          ))}
+          <div className="flex items-start gap-3 p-4 rounded-xl border border-green-100 bg-green-50"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /><div><p className="font-bold text-gray-900 mb-1">在東京フィリピン大使館：LCCM</p><p className="text-sm text-gray-700 leading-relaxed">大使館公式サイトでは、LCCM申請のPSA出生証明書・CENOMARについてDFAアポスティーユ済みの「原本＋コピー」と記載されています。一方、当社が2026年8月に同大使館へ直接確認した際は、<strong>PSA e-Certificate＋DFA e-Apostilleで受付可能で、別途SECPA紙原本は不要</strong>との案内でした。公式ページの表現と実務案内に差があるため、申請時点で再確認するのが安全です。</p></div></div>
+          <div className="flex items-start gap-3 p-4 rounded-xl border border-amber-100 bg-amber-50"><AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" /><div><p className="font-bold text-gray-900 mb-1">市区町村：婚姻届・戸籍関係</p><p className="text-sm text-gray-700 leading-relaxed">自治体によって必要書類と受領形式が異なります。出生証明書のSECPA紙原本を求める自治体もあり、CENOMARを別途提出するか、電子版を受け付けるかも一律ではありません。婚姻届を出す市区町村へ事前確認してください。</p></div></div>
+          <div className="flex items-start gap-3 p-4 rounded-xl border border-green-100 bg-green-50"><CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" /><div><p className="font-bold text-gray-900 mb-1">地方出入国在留管理局：永住許可申請</p><p className="text-sm text-gray-700 leading-relaxed"><strong>永住許可申請では、出入国在留管理庁が公開する通常の提出書類にアポスティーユは含まれていません。</strong>日本人の配偶者として申請する場合は、配偶者の戸籍謄本と、申請人の国籍国の機関から発行された婚姻証明書等が求められます。外国語で作成された書類には日本語訳を添付します。審査上必要な場合に追加資料を求められることはありますが、PSA婚姻証明書等へDFAアポスティーユを付けることが通常要件ではありません。</p></div></div>
+          <div className="flex items-start gap-3 p-4 rounded-xl border border-gray-200 bg-gray-50"><AlertTriangle className="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" /><div><p className="font-bold text-gray-900 mb-1">在フィリピン日本国大使館・総領事館</p><p className="text-sm text-gray-700 leading-relaxed">日本国内の市区町村や在東京フィリピン大使館とは別の提出先です。手続きによって原本提出を求める案内があるため、その手続きの公式必要書類を個別に確認してください。</p></div></div>
         </div>
       </section>
 
-      {/* 当社に寄せられた事例 */}
-      <section className="mb-10 rounded-2xl overflow-hidden border border-gray-200 border-l-4 border-l-red-700 bg-white shadow-sm">
-        <div className="p-6 md:p-8">
-          <div className="inline-block mb-3 px-3 py-1 bg-red-700 text-white text-xs font-bold rounded tracking-wide">
-            当社への相談事例
-          </div>
-          <p className="text-base font-bold text-secondary mb-4">
-            当社には2026年3月以降、以下のようなご相談が実際に寄せられています。
-          </p>
-          <ul className="space-y-3">
-            {[
-              'PSAHelplineで電子文書を取得して市区町村の窓口に持参したところ、「紙の原本を持ってきてください」と言われた。',
-              '他社に依頼したら電子文書で納品された。提出先に確認すると紙原本が必要と言われ、改めて当社に依頼することになった。',
-              '電子文書でも受理されると聞いていたが、入管から「従来通りの書類を準備してください」と言われた。',
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-1" />
-                <p className="text-sm text-gray-700 leading-relaxed">「{item}」</p>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-xs text-gray-400">※ 個人を特定できない形に加工した相談内容をもとに作成しています。</p>
-        </div>
-      </section>
+      <section className="mb-10 rounded-2xl overflow-hidden border border-primary/20 bg-primary/5"><div className="p-6 md:p-8"><p className="text-xs font-bold text-primary mb-2">国際結婚で特に間違いやすい点</p><h2 className="text-xl font-bold text-secondary mb-4">LCCM用と、市区町村への婚姻届用を分けて考える</h2><div className="space-y-3 text-sm text-gray-700 leading-relaxed"><p>在東京フィリピン大使館でLCCMを取得するために必要なPSA書類と、LCCM取得後に日本の市区町村へ婚姻届を出すための書類は、同じセットとは限りません。</p><p>たとえばLCCM申請が電子版だけで進められても、婚姻届を出す自治体がPSA出生証明書の紙原本を求める場合があります。反対に、CENOMARの紙原本まで一律に追加する必要があるとは限りません。</p><p className="font-medium text-gray-900">先に「最終提出先」を確認してから取得内容を決めることで、不要な追加取得と国際配送を減らせます。</p></div></div></section>
 
-      {/* 比較表 */}
-      <section className="mb-10">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary">電子文書 vs 紙原本 比較</h2>
-        </div>
-        <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
-          <table className="w-full min-w-[480px] text-sm">
-            <thead>
-              <tr className="bg-gray-50 border-b border-gray-100">
-                <th className="text-left px-4 py-3 font-semibold text-gray-700 w-1/3">比較項目</th>
-                <th className="text-center px-4 py-3 font-semibold text-gray-500">電子文書（eCertificate＋eApostille）</th>
-                <th className="text-center px-4 py-3 font-semibold text-primary">紙原本（SECPA）＋e-Apostille</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-50">
-              {[
-                ['法的有効性', '有効（HCCH基準）', '有効'],
-                ['アポスティーユの形式', 'eApostille（電子）', 'eApostille（電子）。PSA向け物理アポスティーユは新規発行停止'],
-                ['日本での受領確実性', '窓口次第（要事前確認）', '高い（従来の標準）'],
-                ['日本在住での取得', 'オンラインで自力取得が可能', '代行業者が必要なケースが多い'],
-                ['印刷して提出', '原則不可（公式な印刷版なし）', '可'],
-                ['再提出リスク', 'あり（移行期につき）', '低い'],
-              ].map(([item, electronic, paper]) => (
-                <tr key={item} className="hover:bg-gray-50/50">
-                  <td className="px-4 py-3 font-medium text-gray-800">{item}</td>
-                  <td className="px-4 py-3 text-center text-gray-600">{electronic}</td>
-                  <td className="px-4 py-3 text-center text-gray-800 font-medium">{paper}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+      <section className="mb-10"><div className="flex items-center gap-3 mb-4"><div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" /><h2 className="text-xl md:text-2xl font-bold text-secondary">電子版と紙原本の使い分け</h2></div><div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm"><table className="w-full min-w-[480px] text-sm"><thead><tr className="bg-gray-50 border-b border-gray-100"><th className="text-left px-4 py-3 font-semibold text-gray-700 w-1/3">比較項目</th><th className="text-center px-4 py-3 font-semibold text-gray-500">電子版</th><th className="text-center px-4 py-3 font-semibold text-primary">SECPA紙原本を追加</th></tr></thead><tbody className="divide-y divide-gray-50">{[['構成', 'e-Certificate＋必要な場合のみe-Apostille', '電子版＋必要な認証＋PSA紙原本'],['国際配送', '原則不要', '必要'],['向いているケース', '提出先が電子文書を受理', '提出先がPSA紙原本を要求'],['受理可否', '提出先に事前確認', '紙原本でも必要書類自体は提出先に確認'],['当社の方針', '不要な認証は付けない', '必要な場合だけ追加']].map(([item, electronic, paper]) => (<tr key={item} className="hover:bg-gray-50/50"><td className="px-4 py-3 font-medium text-gray-800">{item}</td><td className="px-4 py-3 text-center text-gray-600">{electronic}</td><td className="px-4 py-3 text-center text-gray-800 font-medium">{paper}</td></tr>))}</tbody></table></div></section>
 
-      {/* 推奨対応 */}
-      <section className="mb-10">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary">推奨対応（優先順位順）</h2>
-        </div>
-        <ol className="space-y-4">
-          {[
-            {
-              title: '提出先に事前確認（必須）',
-              body: '入管・市区町村・総領事館など具体的な窓口に、電子文書の受領可否を電話またはメールで確認してください。在フィリピン日本国大使館は原本提出を明記しており、電子版では対応できない手続きが存在します。',
-            },
-            {
-              title: '重要手続きは紙原本を選択（安全策）',
-              body: '在留資格申請・婚姻届など重要な手続きでは、紙原本（SECPA）での取得を推奨します。PSA e-CertificateにはeApostilleしか付与されないため、紙アポスティーユが必要な場合は紙のPSA証明書を別途取得する必要があります。',
-            },
-            {
-              title: '電子版を使う場合はデジタル送信を徹底',
-              body: '電子版での提出が認められた場合は、DFA公式より取得したPDFを印刷せずデジタル送信で提出してください。QRコードによる検証情報を必ず添付してください。',
-            },
-            {
-              title: '今後の運用変更を定期確認',
-              body: '制度開始から日が浅く、各機関の運用が変わる可能性があります。DFA・PSA公式サイトおよび法務省入国管理局サイトを定期的にご確認ください。',
-            },
-          ].map(({ title, body }, i) => (
-            <li key={title} className="flex gap-4">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
-                {i + 1}
-              </div>
-              <div>
-                <p className="font-bold text-gray-900 mb-1">{title}</p>
-                <p className="text-sm text-gray-700 leading-relaxed">{body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </section>
+      <section className="mb-10"><div className="flex items-center gap-3 mb-4"><div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" /><h2 className="text-xl md:text-2xl font-bold text-secondary">失敗しにくい確認順序</h2></div><ol className="space-y-4">{[{title:'用途と最終提出先を確定する',body:'LCCM、大使館、入管、市区町村など、どの手続きでどこへ出す書類かを先に確認します。'},{title:'アポスティーユの要否を先に確認する',body:'永住許可申請のように通常の提出書類としてアポスティーユが求められていない手続きには付けません。必要な提出先だけ認証を追加します。'},{title:'電子版・紙原本の形式を確認する',body:'電子版で足りる場合はデータで納品し、市区町村等から紙原本を求められた書類だけSECPAを追加します。'},{title:'申請直前にも最新運用を確認する',body:'電子化移行中は公式サイトの表記と窓口運用が一致しない場合があります。提出直前の確認が最も確実です。'}].map(({ title, body }, i) => (<li key={title} className="flex gap-4"><div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">{i + 1}</div><div><p className="font-bold text-gray-900 mb-1">{title}</p><p className="text-sm text-gray-700 leading-relaxed">{body}</p></div></li>))}</ol></section>
 
-      {/* 照会テンプレ */}
-      <section className="mb-10">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary">提出先への照会テンプレ</h2>
-        </div>
-        <p className="text-sm text-gray-600 mb-3">
-          入管・市区町村・総領事館への問い合わせにそのままお使いいただけます。
-        </p>
-        <div className="relative rounded-xl border border-gray-200 bg-gray-50">
-          <button
-            onClick={handleCopy}
-            className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors"
-          >
-            {copied ? (
-              <>
-                <Check className="w-3.5 h-3.5 text-green-600" />
-                <span className="text-green-600">コピー完了</span>
-              </>
-            ) : (
-              <>
-                <Copy className="w-3.5 h-3.5" />
-                コピー
-              </>
-            )}
-          </button>
-          <pre className="p-5 pr-24 text-sm text-gray-700 leading-relaxed whitespace-pre-wrap font-sans">{TEMPLATE}</pre>
-        </div>
-      </section>
+      <section className="mb-10"><div className="flex items-center gap-3 mb-4"><div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" /><h2 className="text-xl md:text-2xl font-bold text-secondary">提出先への照会テンプレ</h2></div><p className="text-sm text-gray-600 mb-3">入管・市区町村・大使館への問い合わせにそのままお使いいただけます。</p><div className="relative rounded-xl border border-gray-200 bg-gray-50"><button onClick={handleCopy} className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors">{copied ? (<><Check className="w-3.5 h-3.5 text-green-600" /><span className="text-green-600">コピー完了</span></>) : (<><Copy className="w-3.5 h-3.5" />コピー</>)}</button><pre className="p-5 pr-24 text-sm text-gray-700 leading-relaxed whitespace-pre-wrap font-sans">{TEMPLATE}</pre></div></section>
 
-      <CtaBox
-        title="紙原本が必要な場合は当社へ"
-        description="当社はフィリピンの現地スタッフがPSA・DFA窓口で直接紙原本を取得しています。電子文書で受理されなかった方・紙原本が必要な方はご相談ください。"
-        buttonText="無料相談・お問い合わせ"
-        href="/ja/contact/"
-        trustNote="着手前キャンセル無料・進捗を随時ご報告"
-        service="PSA書類取得代行"
-      />
+      <CtaBox title="提出先に合わせて、必要な認証・電子版・紙原本だけ手配します" description="用途と提出先（大使館・入管・市区町村名）をお知らせください。アポスティーユが必要か、電子版で足りるか、SECPA紙原本まで必要かを整理してご案内します。" buttonText="無料相談・お問い合わせ" href="/ja/contact/" trustNote="着手前キャンセル無料・進捗を随時ご報告" service="PSA書類取得代行" />
 
-      <RelatedLinks
-        links={[
-          { label: 'PSA出生証明書の取得方法', path: '/ja/psa-shussei-shomeisho/' },
-          { label: 'DFAアポスティーユガイド', path: '/ja/apostille/' },
-          { label: 'PSA婚姻証明書の取得方法', path: '/ja/psa-kekkon-shomeisho/' },
-          { label: 'CENOMAR（独身証明書）取得代行', path: '/ja/cenomar/' },
-        ]}
-      />
+      <RelatedLinks links={[{ label: 'フィリピン人との国際結婚ガイド', path: '/ja/kokusai-kekkon-guide/' },{ label: 'PSA出生証明書の取得方法', path: '/ja/psa-shussei-shomeisho/' },{ label: 'DFAアポスティーユガイド', path: '/ja/apostille/' },{ label: 'CENOMAR（独身証明書）取得代行', path: '/ja/cenomar/' }]} />
     </PageLayout>
   );
 }

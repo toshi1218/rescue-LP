@@ -79,7 +79,7 @@ export default function PsaEcertificateHangukKo() {
               name: 'e-Apostille와 종이 아포스티유(Paper Apostille)의 차이는 무엇인가요?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFA는 두 가지 형식을 발행합니다. (1) e-Apostille: PSA e-Certificate에 첨부되는 디지털 PDF. 전자 제출 전용이며, 인쇄하면 유효성을 잃습니다. (2) 종이 아포스티유(Paper Apostille): PSA SECPA 용지에 붙이는 물리적 스티커. 모든 제출 방식에서 사용 가능합니다. 2026년 3월 16일부터 DFA는 헤이그 조약 가입국에 대해 e-Apostille를 표준으로 발행하고 있습니다. 종이 아포스티유가 필요한 경우에는 별도의 "Paper Route"로 신청해야 합니다.',
+                text: 'PSA e-Certificate를 아포스티유 협약국에 제출하는 경우 DFA는 디지털 e-Apostille을 발행합니다. 비협약국은 물리적 Certificate of Authentication 경로를 사용하며 대사관 인증이 추가될 수 있습니다. 제출 기관의 최신 요구사항을 먼저 확인해야 합니다.',
               },
             },
             {
@@ -222,7 +222,7 @@ export default function PsaEcertificateHangukKo() {
             },
             {
               title: '중요 수속에는 종이 원본을 선택 (안전책)',
-              body: '국제결혼 신고·귀화 신청 등 중요한 수속에는 PSA SECPA 종이 원본과 물리적 아포스티유(Paper Apostille)가 안전합니다. e-Apostille가 전자 제출로 수리되지 않는 경우, PSA SECPA 경로로 별도 취득이 필요합니다.',
+              body: '국제결혼 신고·귀화 신청은 제출 기관마다 요구 형식이 다릅니다. PSA e-Certificate, SECPA 종이 원본, e-Apostille 또는 추가 영사 인증 중 무엇이 필요한지 먼저 확인하십시오.',
             },
           ].map(({ title, body }, i) => (
             <li key={title} className="flex gap-4">
@@ -250,7 +250,7 @@ export default function PsaEcertificateHangukKo() {
           },
           {
             q: 'e-Apostille와 종이 아포스티유(Paper Apostille)의 차이는 무엇인가요?',
-            a: 'DFA는 두 가지 형식을 발행합니다. (1) e-Apostille: PSA e-Certificate에 첨부되는 디지털 PDF. 전자 제출 전용이며, 인쇄하면 유효성을 잃습니다. (2) 종이 아포스티유(Paper Apostille): PSA SECPA 용지에 붙이는 물리적 스티커. 모든 제출 방식에서 사용 가능합니다. 2026년 3월 16일부터 DFA는 헤이그 조약 가입국에 대해 e-Apostille를 표준으로 발행하고 있습니다. 종이 아포스티유가 필요한 경우에는 별도의 "Paper Route"로 신청해야 합니다.',
+            a: 'PSA e-Certificate를 아포스티유 협약국에 제출하는 경우 DFA는 디지털 e-Apostille을 발행합니다. 비협약국은 물리적 Certificate of Authentication 경로를 사용하며 대사관 인증이 추가될 수 있습니다. 제출 기관의 최신 요구사항을 먼저 확인해야 합니다.',
           },
           {
             q: 'PSA e-Certificate와 PSA SECPA(Security Paper) 원본의 차이는 무엇인가요?',

@@ -83,11 +83,11 @@ export default function DfaProcessingTimeEn() {
       />
 
       <SummaryBlock
-        conclusion="DFA Apostille takes 5-10 business days. We help you meet your visa deadline with express options."
+        conclusion="Processing time depends on the document type and authentication route. Confirm the current DFA process before planning around a deadline."
         points={[
-          'Regular processing: 4-5 business days at DFA',
-          'Express processing available for urgent cases',
-          'Total timeline includes the PSA online application / NBI retrieval + DFA Apostille application + shipping (for physical documents)',
+          'Physical-document processing times may differ from PSA e-Apostille processing',
+          'Priority options depend on the document type and current DFA availability',
+          'Total timeline includes source-document issuance, the applicable authentication route, and shipping only when a physical document is required',
           'Share your deadline and we will confirm if we can meet it',
         ]}
         ctaText="Check Your Deadline"
@@ -99,7 +99,7 @@ export default function DfaProcessingTimeEn() {
           {
             icon: <Clock className="w-4 h-4" />,
             title: 'Want to know how long DFA Apostille takes',
-            description: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including PSA and DHL shipping is approximately 4–6 weeks.',
+            description: 'Physical-document and PSA e-Apostille routes follow different processes. We confirm the current route and work backward from your deadline before quoting.',
           },
           {
             icon: <Calendar className="w-4 h-4" />,
@@ -109,7 +109,7 @@ export default function DfaProcessingTimeEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Want to bundle document retrieval and Apostille',
-            description: 'We handle the PSA online application, DFA Apostille application, and DHL shipping for physical documents together in one flow.',
+            description: 'We handle the PSA application, the applicable DFA authentication route, and DHL shipping when a physical document is required.',
           },
         ]}
       />
@@ -129,7 +129,7 @@ export default function DfaProcessingTimeEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille (Regular or Express based on your timeline). Paper original provided.',
+            description: 'For PSA e-Certificates, the DFA e-Apostille is delivered electronically. Non-PSA documents may follow a physical route when applicable.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -156,8 +156,8 @@ export default function DfaProcessingTimeEn() {
 
       <FaqSection
         items={[
-          { q: 'How long does DFA Apostille take?', a: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including the PSA online application and DHL shipping (for physical documents) is approximately 4–6 weeks.' },
-          { q: 'Can I request Express processing?', a: 'Yes. If your deadline requires it, we will arrange Express DFA Apostille. Share your deadline and we will confirm what is needed.' },
+          { q: 'How long does DFA Apostille take?', a: 'Timing depends on the document and authentication route. PSA e-Apostille processing is electronic, while physical-document routes can have different schedules. Share your deadline and we will confirm the current process.' },
+          { q: 'Can I request priority handling?', a: 'Share your deadline and document type. We will confirm whether any priority option is available for the applicable route before you commit.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. The DFA Apostille application, PSA online application (when needed), and DHL shipping for physical documents are all included.' },
           { q: 'I am worried about missing my deadline', a: 'Share your deadline and we will confirm whether it is feasible. Starting early is the best way to stay on track.' },
         ]}
