@@ -56,12 +56,12 @@ export default function BusinessMenkyoKirikaeJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '100000',
+            price: '99000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '100000',
+              price: '99000',
               priceCurrency: 'JPY',
-              description: 'LTO書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+              description: 'LTO書類取得・DFAアポスティーユ込み（税込・DHL国際送料込み）',
             },
           },
         },
@@ -297,7 +297,7 @@ export default function BusinessMenkyoKirikaeJa() {
         <div className="flex items-center gap-3 mb-6">
           <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
           <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">
-            参考料金（税抜）
+            参考料金（税込）
           </h2>
         </div>
         <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-white to-secondary/5 overflow-hidden">
@@ -318,7 +318,7 @@ export default function BusinessMenkyoKirikaeJa() {
                     <br />
                     <span className="text-xs text-gray-400">＋DFAアポスティーユ込み</span>
                   </td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥100,000〜</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥99,000〜</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
@@ -341,7 +341,7 @@ export default function BusinessMenkyoKirikaeJa() {
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                DHL国際郵送費は実費別途
+                DHL国際郵送費は料金に含まれます
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />

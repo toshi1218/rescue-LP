@@ -29,7 +29,7 @@ import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 export default function BusinessMenkyoKirikaeKigyouJa() {
   useMeta(
     `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR_MONTH_JA}】`,
-    '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名100,000円〜・3名パック270,000円〜。請求書払い・複数名対応。',
+    '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名99,000円〜（税込・DHL送料込み）。請求書払い・複数名対応。',
   );
 
   return (
@@ -57,14 +57,8 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
             {
               '@type': 'Offer',
               priceCurrency: 'JPY',
-              price: '100000',
-              description: '1名プラン（LTO書類取得・DFAアポスティーユ込み、税抜）',
-            },
-            {
-              '@type': 'Offer',
-              priceCurrency: 'JPY',
-              price: '270000',
-              description: '3名パック（LTO書類取得・DFAアポスティーユ込み、税抜）',
+              price: '99000',
+              description: '1名プラン（LTO書類取得・DFAアポスティーユ込み、税込・DHL国際送料込み）',
             },
           ],
         },
@@ -85,7 +79,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
               name: '複数名の従業員分をまとめて依頼できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。1名から複数名まで一括でご依頼いただけます。3名パック（270,000円〜）をはじめ、人数・時期に応じてご相談いただけます。従業員ごとに進捗を管理し、担当者様へまとめてご報告します。',
+                text: 'はい。1名から複数名まで一括でご依頼いただけます。人数・時期に応じて料金をご相談いただけます。従業員ごとに進捗を管理し、担当者様へまとめてご報告します。',
               },
             },
             {
@@ -127,7 +121,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
       <HeroBanner
         title="フィリピン人従業員に、運転業務をさせたい会社へ"
         subtitle="介護送迎・社用車・現場移動に必要な日本免許切替（外免切替）。フィリピン側LTO書類とDFAアポスティーユの取得を一括代行します。採用前の事前確認から複数名一括対応まで。"
-        badges={['直接雇用企業向け', '1名100,000円〜', '3名パック270,000円〜', '請求書払い対応']}
+        badges={['直接雇用企業向け', '1名99,000円〜', '複数名は要相談', '請求書払い対応']}
         ctaText="まず相談する"
         ctaHref="#contact"
         lastUpdated={SEO_LAST_UPDATED_JA}
@@ -299,7 +293,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
         <div className="flex items-center gap-3 mb-6">
           <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
           <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">
-            法人プラン料金（税抜）
+            法人プラン料金（税込）
           </h2>
         </div>
         <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-white to-secondary/5 overflow-hidden">
@@ -309,7 +303,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
               <thead>
                 <tr className="border-b border-gray-200">
                   <th className="text-left py-2 text-secondary font-bold">プラン</th>
-                  <th className="text-right py-2 text-secondary font-bold">料金（税抜）</th>
+                  <th className="text-right py-2 text-secondary font-bold">料金（税込）</th>
                   <th className="text-right py-2 text-secondary font-bold hidden sm:table-cell">備考</th>
                 </tr>
               </thead>
@@ -320,26 +314,14 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
                     <br />
                     <span className="text-xs text-gray-400">LTO書類＋DFAアポスティーユ込み</span>
                   </td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥100,000〜</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥99,000〜</td>
                   <td className="py-3 text-right text-xs text-gray-500 hidden sm:table-cell">
                     Immigration Record が必要な場合は148,000円〜
                   </td>
                 </tr>
-                <tr className="bg-primary/5">
-                  <td className="py-3 text-gray-700">
-                    <span className="inline-block bg-primary text-white text-xs font-bold px-2 py-0.5 rounded mr-2">おすすめ</span>
-                    3名パック
-                    <br />
-                    <span className="text-xs text-gray-400">LTO書類＋DFAアポスティーユ込み</span>
-                  </td>
-                  <td className="py-3 text-right font-bold text-primary text-base">¥270,000〜</td>
-                  <td className="py-3 text-right text-xs text-gray-500 hidden sm:table-cell">
-                    1名あたり約90,000円。4名以上は要相談
-                  </td>
-                </tr>
                 <tr>
                   <td className="py-3 text-gray-700">
-                    4名以上・継続案件
+                    複数名・継続案件
                   </td>
                   <td className="py-3 text-right font-semibold text-secondary">要相談</td>
                   <td className="py-3 text-right text-xs text-gray-500 hidden sm:table-cell">
@@ -355,7 +337,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                DHL国際郵送費は実費別途
+                DHL国際郵送費は料金に含まれます
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
@@ -469,7 +451,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
           },
           {
             q: '複数名の従業員分をまとめて依頼できますか？',
-            a: 'はい。1名から複数名まで一括でご依頼いただけます。3名パック（270,000円〜）をはじめ、人数・時期に応じてご相談いただけます。従業員ごとに進捗を管理し、担当者様へまとめてご報告します。',
+            a: 'はい。1名から複数名まで一括でご依頼いただけます。人数・時期に応じて料金をご相談いただけます。従業員ごとに進捗を管理し、担当者様へまとめてご報告します。',
           },
           {
             q: '従業員が外免切替できるか採用前に確認できますか？',
@@ -478,10 +460,6 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
           {
             q: '書類取得にどのくらいかかりますか？',
             a: 'LTO書類の取得に通常2〜4週間、DFAアポスティーユに1〜2週間かかります。合計で約1か月〜6週間が目安です。運転業務の開始日を逆算してご相談ください。',
-          },
-          {
-            q: '1名プランと3名パックの違いは何ですか？',
-            a: '3名パックは3名分をまとめてご依頼いただく場合の料金で、1名あたりの費用が下がります（1名100,000円〜 → 3名270,000円〜で1名あたり約90,000円）。4名以上・継続案件は別途ご相談ください。',
           },
           {
             q: '請求書払いや銀行振込は対応していますか？',
