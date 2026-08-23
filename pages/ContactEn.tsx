@@ -66,7 +66,7 @@ export default function ContactEn() {
 
       {/* WhatsApp fast lane — primary channel for overseas clients */}
       <a
-        href="https://wa.me/639452833727"
+        href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackEvent('cta_click', { location: 'contact_top', type: 'whatsapp', page_path: window.location.pathname })}
@@ -77,8 +77,8 @@ export default function ContactEn() {
           <WhatsAppIcon />
         </span>
         <span className="flex-1">
-          <span className="block text-sm font-bold text-secondary">Prefer to chat? Message us on WhatsApp</span>
-          <span className="block text-xs text-gray-500">Fastest way to reach us — quick questions, quotes, and updates.</span>
+          <span className="block text-sm font-bold text-secondary">Get a faster quote on WhatsApp</span>
+          <span className="block text-xs text-gray-500">No form needed — send a document photo or tell us what you need and your deadline.</span>
         </span>
       </a>
 
@@ -88,11 +88,11 @@ export default function ContactEn() {
           <p className="font-bold text-green-700 mb-2">Your message has been received!</p>
           <p className="text-sm text-gray-600 mb-4">We will review your request and reply within 24 hours.</p>
           <a
-            href="https://wa.me/639452833727"
+            href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent('cta_click', { location: 'contact_success', type: 'whatsapp', page_path: window.location.pathname })}
-            aria-label="Continue on WhatsApp (opens in new tab)"
+            aria-label="Continue on WhatsApp for a faster quote (opens in new tab)"
             className="mb-4 flex w-full items-center justify-center gap-3 rounded-xl bg-[#25D366] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#20b858]"
           >
             <WhatsAppIcon />
@@ -322,7 +322,7 @@ export default function ContactEn() {
           Email us directly
         </a>
         <a
-          href="https://wa.me/639452833727"
+          href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackEvent('cta_click', { location: 'contact_page', type: 'whatsapp', page_path: window.location.pathname })}
