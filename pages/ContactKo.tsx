@@ -99,16 +99,17 @@ export default function ContactKo() {
       </p>
 
       <a
-        href="https://wa.me/639452833727"
+        href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackEvent('cta_click', { location: 'contact_top_ko', type: 'whatsapp', page_path: window.location.pathname })}
         className="mb-6 flex max-w-xl items-center justify-center gap-3 rounded-xl bg-[#25D366] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#20b858]"
       >
         <WhatsAppIcon />
-        WhatsApp으로 상담하기（가장 빠름）
+        WhatsApp으로 무료 상담・견적받기（가장 빠름）
       </a>
-      <p className="mb-3 text-sm font-bold text-secondary">이메일 문의 양식</p>
+      <p className="mb-6 -mt-4 text-center text-xs text-gray-500">양식 작성 없이 서류 사진・PDF 또는 필요한 서류와 기한만 보내 주세요.</p>
+      <p className="mb-3 text-sm font-bold text-secondary">WhatsApp을 사용할 수 없는 경우 이메일로 문의하세요</p>
 
       {/* 신뢰 배지 */}
       <div className="flex flex-wrap gap-3 mb-8">
@@ -149,14 +150,14 @@ export default function ContactKo() {
           <p className="font-bold text-green-700 mb-2">문의가 접수되었습니다</p>
           <p className="text-sm text-gray-600 mb-4">내용을 확인 후 24시간 이내에 연락드립니다.</p>
           <a
-            href="https://wa.me/639452833727"
+            href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent('cta_click', { location: 'contact_success_ko', type: 'whatsapp', page_path: window.location.pathname })}
             className="mb-4 flex w-full items-center justify-center gap-3 rounded-xl bg-[#25D366] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#20b858]"
           >
             <WhatsAppIcon />
-            WhatsApp에서 상담 계속하기
+            WhatsApp에서 빠르게 상담 계속하기
           </a>
           <div className="text-xs text-gray-500 bg-white border border-gray-100 rounded-lg p-3 text-left space-y-1">
             <p>• 답변 메일이 오지 않을 경우 <span className="font-semibold">스팸 메일함</span>도 확인해 주세요.</p>
@@ -356,7 +357,7 @@ export default function ContactKo() {
       )}
 
       <a
-        href="https://wa.me/639452833727"
+        href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => trackEvent('cta_click', { location: 'contact_bottom_ko', type: 'whatsapp', page_path: window.location.pathname })}
