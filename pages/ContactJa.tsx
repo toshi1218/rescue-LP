@@ -41,8 +41,19 @@ export default function ContactJa() {
         必要書類・料金・期間など、まずはご相談ください。日本語で対応します。
       </p>
       <p className="text-xs text-gray-500 mb-4">
-        メールまたは公式LINEでご相談いただけます。下のフォームから送信された内容もメールで届きます。
+        お急ぎのご相談・お見積もりは、公式LINEが最もスムーズです。メールをご希望の場合は下のフォームをご利用ください。
       </p>
+      <a
+        href="https://lin.ee/wALag1U"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => trackEvent('cta_click', { location: 'contact_top', type: 'line', page_path: window.location.pathname })}
+        className="mb-6 flex max-w-xl items-center justify-center gap-3 rounded-xl bg-[#06C755] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#05b34d]"
+      >
+        <LineIcon />
+        公式LINEで相談する（最短）
+      </a>
+      <p className="mb-3 text-sm font-bold text-secondary">メールでお問い合わせの場合</p>
 
       {/* 信頼バッジ */}
       <div className="flex flex-wrap gap-3 mb-6">
@@ -376,7 +387,7 @@ export default function ContactJa() {
           className="w-full bg-primary text-secondary font-bold py-4 rounded-xl shadow-lg hover:bg-primary-hover transition-all flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           <Send className="w-5 h-5" aria-hidden="true" />
-          {submitting ? '送信中…' : '送信する'}
+          {submitting ? '送信中…' : 'メールで問い合わせる'}
         </button>
       </form>
       )}

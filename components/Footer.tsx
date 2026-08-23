@@ -61,6 +61,7 @@ const Footer: React.FC = () => {
     }
   };
   const isJa = lang === 'ja';
+  const isContactPage = typeof window !== 'undefined' && window.location.pathname.includes('/contact/');
   const companyPath = isJa ? '/ja/company/'  : '/en/company/';
   const privacyPath = isJa ? '/ja/privacy/'  : '/en/privacy/';
   const termsPath   = isJa ? '/ja/terms/'    : '/en/terms/';
@@ -91,7 +92,7 @@ const Footer: React.FC = () => {
       <div className="py-10 max-w-md md:max-w-xl mx-auto px-6 text-center">
 
         {/* Pre-form trust info */}
-        {!submitted && (
+        {!isContactPage && !submitted && (
           <div className="mb-6 text-left bg-gray-50 rounded-xl p-4 border border-gray-100">
             <h4 className="font-bold text-secondary text-sm mb-2">
               {isJa ? 'ご相談の流れ' : 'How It Works'}
@@ -158,7 +159,7 @@ const Footer: React.FC = () => {
           </div>
         ) : (
         <form
-          className="space-y-3 text-left"
+          className={isContactPage ? 'hidden' : 'space-y-3 text-left'}
           onSubmit={handleSubmit}
           aria-label={t('footer.formAriaLabel')}
           noValidate

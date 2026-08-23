@@ -5,6 +5,7 @@ import PageLayoutKo from '../components/PageLayoutKo';
 import { trackEvent } from '../lib/analytics';
 import { notifySlack } from '../lib/notifyApi';
 import { isValidEmail } from '../lib/validation';
+import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -91,18 +92,30 @@ export default function ContactKo() {
     >
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">문의하기</h1>
       <p className="text-sm text-gray-600 mb-2">
-        카카오톡 또는 이메일로 상담 가능합니다.
+        WhatsApp 또는 이메일로 상담 가능합니다.
       </p>
       <p className="text-xs text-gray-500 mb-6">
         필요한 서류가 아직 정확하지 않아도 괜찮습니다. 현재 상황을 알려주시면 정리해 드립니다.
       </p>
+
+      <a
+        href="https://wa.me/639452833727"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => trackEvent('cta_click', { location: 'contact_top_ko', type: 'whatsapp', page_path: window.location.pathname })}
+        className="mb-6 flex max-w-xl items-center justify-center gap-3 rounded-xl bg-[#25D366] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#20b858]"
+      >
+        <WhatsAppIcon />
+        WhatsApp으로 상담하기（가장 빠름）
+      </a>
+      <p className="mb-3 text-sm font-bold text-secondary">이메일 문의 양식</p>
 
       {/* 신뢰 배지 */}
       <div className="flex flex-wrap gap-3 mb-8">
         {[
           { icon: <Clock className="w-3.5 h-3.5 text-primary" />, label: '24시간 이내 답변' },
           { icon: <ShieldCheck className="w-3.5 h-3.5 text-primary" />, label: '착수 전 취소 무료' },
-          { icon: <Mail className="w-3.5 h-3.5 text-primary" />, label: '이메일 대응' },
+          { icon: <Mail className="w-3.5 h-3.5 text-primary" />, label: 'WhatsApp & 이메일' },
         ].map((badge) => (
           <span key={badge.label} className="inline-flex items-center gap-1.5 text-xs text-gray-600 bg-gray-50 border border-gray-200 rounded-full px-3 py-1">
             {badge.icon}
@@ -134,7 +147,17 @@ export default function ContactKo() {
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
           <p className="text-3xl mb-3">✅</p>
           <p className="font-bold text-green-700 mb-2">문의가 접수되었습니다</p>
-          <p className="text-sm text-gray-600 mb-3">내용을 확인 후 24시간 이내에 이메일로 연락드립니다.</p>
+          <p className="text-sm text-gray-600 mb-4">내용을 확인 후 24시간 이내에 연락드립니다.</p>
+          <a
+            href="https://wa.me/639452833727"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent('cta_click', { location: 'contact_success_ko', type: 'whatsapp', page_path: window.location.pathname })}
+            className="mb-4 flex w-full items-center justify-center gap-3 rounded-xl bg-[#25D366] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#20b858]"
+          >
+            <WhatsAppIcon />
+            WhatsApp에서 상담 계속하기
+          </a>
           <div className="text-xs text-gray-500 bg-white border border-gray-100 rounded-lg p-3 text-left space-y-1">
             <p>• 답변 메일이 오지 않을 경우 <span className="font-semibold">스팸 메일함</span>도 확인해 주세요.</p>
             <p>• 24시간 이내에 답변이 없으면 직접 이메일로 문의해 주세요:</p>
@@ -332,6 +355,16 @@ export default function ContactKo() {
         </form>
       )}
 
+      <a
+        href="https://wa.me/639452833727"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => trackEvent('cta_click', { location: 'contact_bottom_ko', type: 'whatsapp', page_path: window.location.pathname })}
+        className="mt-6 flex max-w-xl items-center justify-center gap-3 rounded-xl bg-[#25D366] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#20b858]"
+      >
+        <WhatsAppIcon />
+        WhatsApp으로 상담하기
+      </a>
       <a
         href="mailto:igrs20200601@gmail.com"
         className="mt-6 inline-flex items-center gap-2 text-xs text-gray-500 hover:text-secondary transition-colors"
