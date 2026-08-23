@@ -13,8 +13,8 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function CenomarVsMarriageCertJa() {
   useMeta(
-    `CENOMARとPSA婚姻証明書の違い【${SEO_YEAR_MONTH_JA}】どちらが必要？`,
-    'CENOMARは独身を証明し、PSA婚姻証明書は婚姻を証明します。K-1、CR-1/IR-1、国際結婚でどちらを取るべきかを日本語で整理します。',
+    `CENOMARとPSA婚姻証明書の違い【${SEO_YEAR_MONTH_JA}】`,
+    'CENOMARは独身を証明し、PSA婚姻証明書は婚姻を証明します。K-1、CR-1/IR-1、国際結婚でどちらが必要かを日本語で整理します。',
     'https://ph-document.com/ja/cenomar-vs-marriage-certificate',
   );
 

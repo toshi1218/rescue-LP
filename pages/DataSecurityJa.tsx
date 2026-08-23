@@ -6,7 +6,7 @@ import { useMeta } from '../lib/useMeta';
 
 export default function DataSecurityJa() {
   useMeta(
-    '個人情報・機密書類のセキュリティ体制｜SNS・メール添付を使わない理由',
+    '個人情報・機密書類のお取り扱い｜SNS・メール添付を使わない理由（IGRS Inc.）',
     'パスポート・PSA出生証明書・CENOMARなどの機密書類の画像を、WhatsApp・Messenger等のSNSチャットやメール添付でやり取りしない理由と、専用環境での受け渡し・業務完了後3ヶ月以内のデータ削除など、当社のセキュリティへの取り組みをご説明します。',
     'https://ph-document.com/ja/data-security/',
   );
