@@ -86,7 +86,7 @@ export default function HomeJa() {
       opens: '09:00',
       closes: '17:00',
     },
-    priceRange: '¥50,000〜¥100,000',
+    priceRange: '¥16,500〜¥132,500',
     currenciesAccepted: 'JPY',
     // NOTE: aggregateRating はプリレンダのテンプレート（buildLocalBusinessJsonLd）が
     // LocalBusiness 側で出力する。自己掲載の review[] マークアップは Google の
@@ -108,17 +108,17 @@ export default function HomeJa() {
         },
         {
           '@type': 'Offer',
-          priceSpecification: { '@type': 'PriceSpecification', minPrice: '99800', priceCurrency: 'JPY' },
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: '88000', priceCurrency: 'JPY' },
           itemOffered: { '@type': 'Service', name: '国際結婚準備パック（PSA出生証明書＋CENOMAR＋DFAアポスティーユ）', description: '日本での国際結婚手続きに必要なフィリピン側書類をまとめて代行取得。' },
         },
         {
           '@type': 'Offer',
-          priceSpecification: { '@type': 'PriceSpecification', minPrice: '100000', priceCurrency: 'JPY' },
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: '99000', priceCurrency: 'JPY' },
           itemOffered: { '@type': 'Service', name: 'LTO運転経歴証明書取得代行（外免切替用）', description: 'フィリピン陸運局（LTO）発行の運転経歴証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
         },
       ],
     },
-    dateModified: '2026-03-01',
+    dateModified: '2026-08-23',
   };
 
   return (

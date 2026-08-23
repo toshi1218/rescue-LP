@@ -39,12 +39,12 @@ export default function DriverRecordJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '100000',
+          price: '99000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '100000',
+            price: '99000',
             priceCurrency: 'JPY',
-            description: 'LTO書類取得・DFAアポスティーユ込み（税抜・送料別）',
+            description: 'LTO書類取得・DFAアポスティーユ込み（税込・DHL国際送料込み）',
           },
         },
         },
@@ -65,7 +65,7 @@ export default function DriverRecordJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'LTO取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
+                text: 'LTO取得・DFAアポスティーユ・DHL国際送料をすべて含めて99,000円（税込）〜です。無料相談後に正確な金額をご提示します。',
               },
             },
             {
@@ -238,7 +238,7 @@ export default function DriverRecordJa() {
       <FaqSection
         items={[
           { q: '外免切替に必要な書類は何ですか？', a: '一般的にLTO運転経歴証明書（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。' },
-          { q: '料金はいくらですか？', a: 'LTO取得・DFAアポスティーユ・ORをまとめた料金です。国際郵送費は実費別途です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'LTO取得・DFAアポスティーユ・OR・DHL国際送料をすべて含めて99,000円（税込）〜です。無料相談後に正確な金額をご提示します。' },
           { q: '複数名分まとめて依頼できますか？', a: 'はい、可能です。人数と状況をお知らせいただければ、まとめて手配します。' },
           { q: '都道府県ごとに必要書類が異なると聞きましたが、確認してもらえますか？', a: 'はい。都道府県の運転免許センターによって求める書類や書式が異なります。無料相談で提出先の都道府県をお知らせいただければ、その要件に合わせた書類を手配します。' },
         ]}
