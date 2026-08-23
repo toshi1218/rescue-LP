@@ -42,7 +42,7 @@ export default function NbiGuideJa() {
             '@type': 'UnitPriceSpecification',
             price: '55000',
             priceCurrency: 'JPY',
-            description: '初回申請PDF納品プラン55,000円（税込）、原本郵送込み61,000円。更新・再発行PDF納品39,800円〜、原本郵送込み46,800円〜。DFAアポスティーユ込みは+20,000円',
+            description: '初回申請・Form No.5利用プラン55,000円（税込・DFAアポスティーユ・原本のDHL国際郵送込みの総額）。更新・再発行PDF納品39,800円〜、原本郵送込み45,800円〜（DFAアポスティーユを付ける場合は+20,000円）',
           },
         },
         },
@@ -107,8 +107,8 @@ export default function NbiGuideJa() {
               <p className="text-xs text-gray-500 mb-3 leading-relaxed">大使館で指紋採取済みの方。ポータル登録・支払い・取得・納品まで代行。</p>
               <div className="mt-auto">
                 <div className="text-2xl font-bold text-secondary">55,000<span className="text-sm font-normal">円（税込）</span></div>
-                <div className="text-xs text-gray-500 mt-0.5">PDF納品プラン</div>
-                <div className="text-sm text-gray-700 mt-1.5">原本を日本へ郵送 <span className="font-medium">+6,000円 → 61,000円</span></div>
+                <div className="text-xs text-gray-500 mt-0.5">DFAアポスティーユ・原本のDHL国際郵送まで含む総額</div>
+                <div className="text-sm text-gray-700 mt-1.5">追加費用なし <span className="font-medium">55,000円で完結</span></div>
               </div>
             </div>
 
@@ -134,7 +134,7 @@ export default function NbiGuideJa() {
           </div>
 
           <p className="text-xs text-gray-500 leading-relaxed">
-            ※DFAアポスティーユ込みは +20,000円。HIT（同名者照合）発生・緊急対応は追加料金が発生することがあります。更新扱いになるかは事前確認が必要です。正確な金額は無料相談後にご提示します。
+            ※上記「初回申請・Form No.5利用」55,000円は、DFAアポスティーユと原本のDHL国際郵送を含む総額です。「更新・再発行」「ポータル入力・支払いのみ」にDFAアポスティーユを付ける場合は +20,000円。HIT（同名者照合）発生・緊急対応は追加料金が発生することがあります。更新扱いになるかは事前確認が必要です。正確な金額は無料相談後にご提示します。
           </p>
 
           {/* 所要期間 */}
