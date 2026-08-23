@@ -44,7 +44,7 @@ const packs = [
     numColor: 'text-amber-400',
   },
   {
-    to: '/ja/kikka-shinsei/',
+    to: '/ja/kika-shinsei-guide/',
     icon: Award,
     title: '帰化申請書類パック',
     desc: '法務局への帰化申請に必要なフィリピン書類（出生・婚姻・NBI）の取得サポートと費用を確認できます',
