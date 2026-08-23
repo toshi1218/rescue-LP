@@ -68,7 +68,19 @@ export default function ContactJa() {
         <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
           <p className="text-3xl mb-3">✅</p>
           <p className="font-bold text-green-700 mb-2">お問い合わせを受け付けました</p>
-          <p className="text-sm text-gray-600 mb-3">内容を確認し、24時間以内にメールでご連絡します。</p>
+          <p className="text-sm text-gray-600 mb-4">内容を確認し、24時間以内にご連絡します。</p>
+          <a
+            href="https://lin.ee/wALag1U"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent('cta_click', { location: 'contact_success', type: 'line', page_path: window.location.pathname })}
+            aria-label="公式LINEで相談を続ける（新しいタブで開く）"
+            className="mb-4 flex w-full items-center justify-center gap-3 rounded-xl bg-[#06C755] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#05b34d]"
+          >
+            <LineIcon />
+            公式LINEで相談を続ける
+          </a>
+          <p className="text-xs text-gray-500 mb-3">追加の質問や進捗確認は、LINEの方がスムーズです。</p>
           <div className="text-xs text-gray-500 bg-white border border-gray-100 rounded-lg p-3 text-left space-y-1">
             <p>• 返信メールが届かない場合は、<span className="font-semibold">迷惑メール・スパムフォルダ</span>もご確認ください。</p>
             <p>• 24時間以内に返信がない場合は、直接メールでお問い合わせください：</p>
