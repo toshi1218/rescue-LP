@@ -108,7 +108,7 @@ export default function BusinessKigyouJa() {
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">参考料金（税抜）</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">参考料金（税込）</h2>
         </div>
         <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-white to-secondary/5 overflow-hidden">
           <div className="h-1 w-full bg-gradient-to-r from-primary via-primary/70 to-transparent" />
@@ -136,8 +136,16 @@ export default function BusinessKigyouJa() {
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
-                  <td className="py-3 text-gray-700">PSA出生証明書 + DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
+                  <td className="py-3 text-gray-700">
+                    PSA出生証明書 + DFA e-Apostille
+                    <br />
+                    <span className="text-xs text-gray-400">SECPA紙原本の発送込み</span>
+                  </td>
+                  <td className="py-3 text-right font-semibold text-secondary">
+                    ¥40,000〜
+                    <br />
+                    <span className="text-xs font-normal text-gray-400">税込・DHL送料込み</span>
+                  </td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
               </tbody>
