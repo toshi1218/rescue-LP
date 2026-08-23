@@ -98,8 +98,8 @@ export default function HomeJa() {
       itemListElement: [
         {
           '@type': 'Offer',
-          priceSpecification: { '@type': 'PriceSpecification', minPrice: '50000', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: 'CENOMAR・PSA出生証明書取得代行＋DFAアポスティーユ', description: 'フィリピン統計局（PSA）発行の独身証明書・出生証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
+          priceSpecification: { '@type': 'PriceSpecification', minPrice: '60000', priceCurrency: 'JPY' },
+          itemOffered: { '@type': 'Service', name: '国際結婚準備パック（電子版）— CENOMAR・PSA出生証明書＋DFA e-Apostille', description: 'フィリピン統計局（PSA）発行の独身証明書・出生証明書をe-Certificate（電子）で取得し、DFA e-Apostille（電子）を付けてPDFで納品。紙原本の発送は含みません。紙原本が必要な場合はSECPA紙原本つきの国際結婚準備パックをご利用ください。' },
         },
         {
           '@type': 'Offer',

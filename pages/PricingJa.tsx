@@ -37,7 +37,7 @@ export default function PricingJa() {
         ctaText="無料でお見積もり"
         ctaHref="#contact"
         ctaService="料金のお見積もり"
-        lastUpdated="2026年5月1日"
+        lastUpdated="2026年8月23日"
       />
 
       <CtaBox
