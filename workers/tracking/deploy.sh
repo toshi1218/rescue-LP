@@ -32,7 +32,7 @@ echo "== 3/5: D1 / R2 の作成とスキーマ適用 =="
 ./provision.sh
 
 echo ""
-echo "== 4/5: 管理パスワード（ADMIN_PASSWORD）=="
+echo "== 4/6: 管理パスワード（ADMIN_PASSWORD）=="
 if wr secret list 2>/dev/null | grep -q ADMIN_PASSWORD; then
   echo "設定済みです。変更する場合は 'npx wrangler secret put ADMIN_PASSWORD' を手動実行してください。"
 else
@@ -42,7 +42,23 @@ else
 fi
 
 echo ""
-echo "== 5/5: デプロイ =="
+echo "== 5/6: Cloudflare Access（Googleログインのゲート）=="
+echo "先にCloudflare Zero Trustダッシュボードで、ph-document.com/tools/tracking-admin.html と"
+echo "ph-document.com/api/admin/* の両方を保護するAccess Applicationを作成しておいてください"
+echo "（README.mdの『管理画面のアクセス保護』章を参照）。作成済みなら、その値を以下で登録します。"
+if wr secret list 2>/dev/null | grep -q CF_ACCESS_TEAM_DOMAIN; then
+  echo "設定済みです。変更する場合は 'npx wrangler secret put CF_ACCESS_TEAM_DOMAIN' 等を手動実行してください。"
+else
+  echo "Team Domain（例: your-team.cloudflareaccess.com）:"
+  wr secret put CF_ACCESS_TEAM_DOMAIN
+  echo "Application の Audience (AUD) タグ:"
+  wr secret put CF_ACCESS_AUD
+  echo "管理画面へのログインを許可するGoogleアカウントのメールアドレス:"
+  wr secret put ADMIN_ALLOWED_EMAIL
+fi
+
+echo ""
+echo "== 6/6: デプロイ =="
 echo "wrangler.toml の routes 設定により $CUSTOM_DOMAIN も同時に紐付けます。"
 if ! wr deploy; then
   echo ""
@@ -58,7 +74,7 @@ echo ""
 echo "✅ デプロイ完了。この順で動作確認してください:"
 echo "  1. curl https://$CUSTOM_DOMAIN/"
 echo "     → 'ph-document tracking worker: OK' が返れば Worker 稼働中（DNS伝播に数分かかる場合あり）"
-echo "  2. https://ph-document.com/tools/tracking-admin.html を開き、設定したパスワードでログイン"
+echo "  2. https://ph-document.com/tools/tracking-admin.html を開く（先にCloudflare AccessのGoogleログインを求められる）→ 設定したパスワードでログイン"
 echo "  3. 「追跡番号を発行」→ 表示された追跡番号とPINで https://ph-document.com/ja/tracking/ を開き、"
 echo "     進捗タイムラインの表示と、テスト用画像/PDFのアップロードを確認"
 echo "  4. 管理画面の詳細から、アップロードしたファイルがダウンロードできることを確認"
