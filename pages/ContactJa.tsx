@@ -51,9 +51,10 @@ export default function ContactJa() {
         className="mb-6 flex max-w-xl items-center justify-center gap-3 rounded-xl bg-[#06C755] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#05b34d]"
       >
         <LineIcon />
-        公式LINEで相談する（最短）
+        LINEで無料相談・見積り（最短）
       </a>
-      <p className="mb-3 text-sm font-bold text-secondary">メールでお問い合わせの場合</p>
+      <p className="mb-6 -mt-4 text-center text-xs text-gray-500">フォーム入力なしでOK。書類の写真・PDFもそのまま送れます。</p>
+      <p className="mb-3 text-sm font-bold text-secondary">LINEが使えない場合はメールでお問い合わせ</p>
 
       {/* 信頼バッジ */}
       <div className="flex flex-wrap gap-3 mb-6">
@@ -85,13 +86,13 @@ export default function ContactJa() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent('cta_click', { location: 'contact_success', type: 'line', page_path: window.location.pathname })}
-            aria-label="公式LINEで相談を続ける（新しいタブで開く）"
+            aria-label="LINEで相談を続ける（新しいタブで開く）"
             className="mb-4 flex w-full items-center justify-center gap-3 rounded-xl bg-[#06C755] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#05b34d]"
           >
             <LineIcon />
             公式LINEで相談を続ける
           </a>
-          <p className="text-xs text-gray-500 mb-3">追加の質問や進捗確認は、LINEの方がスムーズです。</p>
+          <p className="text-xs text-gray-500 mb-3">LINE追加後に「相談」と送ると、すぐにやり取りを始められます。</p>
           <div className="text-xs text-gray-500 bg-white border border-gray-100 rounded-lg p-3 text-left space-y-1">
             <p>• 返信メールが届かない場合は、<span className="font-semibold">迷惑メール・スパムフォルダ</span>もご確認ください。</p>
             <p>• 24時間以内に返信がない場合は、直接メールでお問い合わせください：</p>
