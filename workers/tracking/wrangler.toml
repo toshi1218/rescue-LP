@@ -8,10 +8,16 @@ compatibility_flags = ["nodejs_compat"]
 # この3行をコメントアウトし、ダッシュボードから手動でカスタムドメインを追加する。
 routes = [
   { pattern = "tracking.ph-document.com", custom_domain = true },
-  # ブラウザからのAPI通信は本体ドメインに集約する。Cloudflare Accessは
-  # ph-document.com/api/admin/* のみを保護し、顧客用APIは code + PIN のまま。
+  # ブラウザからのAPI通信は本体ドメインに集約する。顧客用APIは code + PIN のまま。
   { pattern = "ph-document.com/api/*", zone_name = "ph-document.com" }
 ]
+
+# Cloudflare Access（Zero Trust）のApplicationは、ダッシュボード側で
+# 次の両方のパスを保護対象に含めること（どちらか一方だけだと不十分）:
+#   - ph-document.com/tools/tracking-admin.html  … ページ自体を未認証で読ませない
+#     （ここを保護しないと、パスワード入力欄が誰でも閲覧できる状態になり、
+#      Safe Browsingにフィッシングとして誤検知される原因になる。2026-08-21に実際に発生）
+#   - ph-document.com/api/admin/*                … APIリクエストにcf-access-jwt-assertionを付与させる
 
 [[d1_databases]]
 binding = "DB"
