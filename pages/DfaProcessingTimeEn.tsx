@@ -79,7 +79,7 @@ export default function DfaProcessingTimeEn() {
         badges={['Deadline-Aware Scheduling', 'Ships via DHL', 'All-Inclusive Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="August 18, 2026"
       />
 
       <SummaryBlock

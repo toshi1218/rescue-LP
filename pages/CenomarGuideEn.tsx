@@ -134,7 +134,7 @@ export default function CenomarGuideEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="August 8, 2026"
       />
 
       <div className="max-w-2xl mx-auto px-4 mb-6">

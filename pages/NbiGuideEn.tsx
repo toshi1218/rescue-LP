@@ -89,7 +89,7 @@ export default function NbiGuideEn() {
         badges={['Renewal Cases Handled Remotely', 'First-Time: Embassy Guidance Included', 'Apostille + DHL Included']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="August 12, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
