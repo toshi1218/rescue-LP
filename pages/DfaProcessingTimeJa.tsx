@@ -83,7 +83,7 @@ export default function DfaProcessingTimeJa() {
         badges={['Regular/Expedited対応', '提出期限に合わせて手配', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月13日"
       />
 
       <SummaryBlock

@@ -68,7 +68,7 @@ export default function NbiValidityJa() {
         badges={['NBIクリアランス', '有効期限確認', '無料相談あり']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月16日"
       />
 
       {/* リード文 */}

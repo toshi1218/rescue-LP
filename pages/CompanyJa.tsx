@@ -43,7 +43,7 @@ export default function CompanyJa() {
         badges={['日本法人', 'フィリピン現地スタッフ', '日本語対応']}
         ctaText="ご依頼前に確認する"
         ctaHref="/ja/contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月12日"
       />
 
       <div className="max-w-2xl">
