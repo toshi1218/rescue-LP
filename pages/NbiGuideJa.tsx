@@ -92,7 +92,7 @@ export default function NbiGuideJa() {
         badges={['納期を半分に短縮', '渡航不要・日本語対応', '進捗を随時ご報告']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月23日"
       />
 
       <div className="max-w-2xl mx-auto px-4">

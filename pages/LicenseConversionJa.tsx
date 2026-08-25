@@ -116,7 +116,7 @@ export default function LicenseConversionJa() {
         badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり', '法人・複数名対応可']}
         ctaText="書類を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月23日"
       />
 
       {/* リード文 */}

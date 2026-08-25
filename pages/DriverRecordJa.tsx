@@ -93,7 +93,7 @@ export default function DriverRecordJa() {
         badges={['複数名対応', 'OR・アポスティーユ込み', '外免切替専門対応']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月23日"
       />
 
       <SummaryBlock

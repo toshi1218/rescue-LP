@@ -64,7 +64,7 @@ export default function EApostilleFukaJa() {
         badges={['法務局＝紙のPSA原本が前提', 'PSAの物理アポスティーユは発行停止', 'NBI・LTO・PRCは物理対応可']}
         ctaText="提出先の要件を相談する"
         ctaHref="#contact"
-        lastUpdated="2026年7月31日"
+        lastUpdated="2026年8月9日"
       />
 
       <SummaryBlock

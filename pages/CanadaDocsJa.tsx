@@ -90,7 +90,7 @@ export default function CanadaDocsJa() {
         badges={['IRCC対応', 'アポスティーユ込み', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月13日"
       />
 
       <SummaryBlock
