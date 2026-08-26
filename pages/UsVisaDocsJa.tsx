@@ -40,7 +40,7 @@ export default function UsVisaDocsJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSAオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜、書類1通あたり）',
+            description: 'PSA書類1通のe-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
           },
         },
         },
@@ -61,7 +61,7 @@ export default function UsVisaDocsJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '必要書類・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
+                text: 'PSA民事書類1通のフルセットは50,000円（税込・DHL込み）です。NBI Clearanceや追加書類を含む場合は、必要書類を確認後に総額をご提示します。',
               },
             },
             {
@@ -89,7 +89,7 @@ export default function UsVisaDocsJa() {
         badges={['K-1・CR-1・IR-1対応', 'USCIS書類形式で手配', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月26日"
       />
 
       <SummaryBlock
@@ -194,7 +194,7 @@ export default function UsVisaDocsJa() {
       <FaqSection
         items={[
           { q: '米国ビザに必要な書類は何ですか？', a: 'ビザの種類によって異なります。K-1はCENOMAR・出生証明書・NBI Clearance、CR-1は婚姻証明書・出生証明書などが必要です。無料相談で確認します。' },
-          { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA民事書類1通のフルセットは50,000円（税込・DHL込み）です。NBI Clearanceや追加書類を含む場合は、必要書類を確認後に総額をご提示します。' },
           { q: 'USCIS・NVC提出に必要な書類形式はK-1とCR-1で違いますか？', a: 'はい、異なります。K-1（I-129F）ではCENOMAR・出生証明書・NBI Clearanceが必要で、CR-1（I-130）では婚姻証明書・出生証明書が中心となります。無料相談で申請中のビザ種類をお知らせいただければ、対応する書類をご案内します。' },
           { q: 'NVCからケース番号が発行された後、すぐに書類取得を始めるべきですか？', a: 'NVCのケースファイル後は書類提出期限が設定されます。おおむね1ヶ月半の取得期間を見込んで、期限が決まったらできるだけ早めにご連絡ください。' },
         ]}

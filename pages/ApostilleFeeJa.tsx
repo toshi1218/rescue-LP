@@ -42,7 +42,7 @@ export default function ApostilleFeeJa() {
               '@type': 'UnitPriceSpecification',
               price: '50000',
               priceCurrency: 'JPY',
-              description: 'DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+              description: 'PSA e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
             },
           },
         },
@@ -83,7 +83,7 @@ export default function ApostilleFeeJa() {
         badges={['費用は事前にご案内', '総額で事前ご提示', 'DFA公式料金込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年8月12日"
+        lastUpdated="2026年8月26日"
       />
 
       <SummaryBlock
@@ -122,7 +122,7 @@ export default function ApostilleFeeJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: '総額でいくらかかるか知りたい',
-            description: '当社はDFAアポスティーユ・PSA取得をまとめた料金でご案内します。（DHL国際郵送費は実費別途となります）見積もり後の追加請求はありません。',
+            description: 'PSA民事書類1通のフルセットは50,000円（税込・DHL込み）です。e-Certificateのみ30,000円、e-Apostille付き電子版40,000円も選べます。',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -138,7 +138,7 @@ export default function ApostilleFeeJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="PSAフルセットは着手金25,000円・発送前残金25,000円・着手前キャンセル無料"
       />
 
       <SectionDivider variant="beige">
@@ -202,7 +202,7 @@ export default function ApostilleFeeJa() {
       <FaqSection
         items={[
           { q: 'DFAアポスティーユの政府手数料はいくらですか？', a: 'DFAの政府手数料は、Regularが1書類あたり100ペソ、Expressが1書類あたり200ペソです。これは認証手数料のみで、PSA書類の取得費・代行手数料・国際配送費は別に必要です。' },
-          { q: '他社より高くなりませんか？', a: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社はアポスティーユ・郵送まで含めた料金なので、最終的な総額で比較してください。' },
+          { q: '他社より高くなりませんか？', a: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社のPSA民事書類フルセット50,000円は、e-Certificate・e-Apostille・SECPA紙原本・DHL国際送料を含む税込総額です。' },
           { q: '日本への提出にアポスティーユは必要ですか？', a: '提出先によって異なります。PSAの出生証明書・婚姻証明書・CENOMARなどの民事書類は、2026年3月以降DFA e-Apostille（電子）のみが発行されます。提出先がe-Apostilleを受理するかを事前に確認してください。' },
           { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
         ]}

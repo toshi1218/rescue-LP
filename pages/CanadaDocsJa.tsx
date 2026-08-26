@@ -41,7 +41,7 @@ export default function CanadaDocsJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSAオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜、書類1通あたり）',
+            description: 'PSA書類1通のe-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
           },
         },
         },
@@ -90,7 +90,7 @@ export default function CanadaDocsJa() {
         badges={['IRCC対応', 'アポスティーユ込み', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年8月13日"
+        lastUpdated="2026年8月26日"
       />
 
       <SummaryBlock

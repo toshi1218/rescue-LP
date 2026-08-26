@@ -32,12 +32,12 @@ export default function PricingJa() {
     >
       <HeroBanner
         title="料金"
-        subtitle="PSAオンライン申請代行（¥16,500〜）からフルサービスパック（¥88,000〜）まで、目的・予算に合わせてお選びいただけます。"
+        subtitle="PSA電子版1通¥30,000から、紙原本・e-Apostille・DHL込み1通¥50,000、2通セット¥80,000まで明確な総額でご案内します。"
         badges={['オンライン申請代行から対応', '無料お見積もり', '追加費用の後出しなし']}
         ctaText="無料でお見積もり"
         ctaHref="#contact"
         ctaService="料金のお見積もり"
-        lastUpdated="2026年8月23日"
+        lastUpdated="2026年8月26日"
       />
 
       <CtaBox

@@ -42,7 +42,7 @@ export default function CenomarValidityJa() {
               '@type': 'UnitPriceSpecification',
               price: '50000',
               priceCurrency: 'JPY',
-              description: 'PSA CENOMARオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜）',
+              description: 'CENOMAR e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
             },
           },
         },
@@ -83,7 +83,7 @@ export default function CenomarValidityJa() {
         badges={['有効期限の確認から対応', 'PSAアポスティーユ込み', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年8月13日"
+        lastUpdated="2026年8月26日"
       />
 
       <SummaryBlock
@@ -115,7 +115,7 @@ export default function CenomarValidityJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類発行の確認後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金25,000円・書類発行の確認後に残金25,000円お支払い・着手前キャンセル無料"
       />
 
       <SectionDivider variant="blue">
@@ -163,7 +163,7 @@ export default function CenomarValidityJa() {
           { q: 'CENOMARの有効期限はどのくらいですか？', a: '法律上の有効期限はありませんが、ほとんどの提出先（大使館・市役所・入管）が発行から6ヶ月以内のものを求めます。提出スケジュールに合わせて取得時期を決めることが重要です。' },
           { q: '取得してから使うまでに時間がかかりそうです', a: '提出予定日をお知らせいただければ、逆算して最適な申請開始時期をご案内します。早すぎると有効期限切れのリスクがあります。' },
           { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
-          { q: '料金はいくらですか？', a: 'PSAオンライン申請とDFA e-Apostille（電子認証）申請をまとめた料金です。紙のPSA原本が必要な場合の国際配送は実費・要相談です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'CENOMAR 1通のフルセットは50,000円（税込・DHL込み）です。e-Certificateのみは30,000円、e-Apostille付き電子版は40,000円です。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"

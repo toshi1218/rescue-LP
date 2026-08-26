@@ -44,7 +44,7 @@ export default function CenomarGuideJa() {
               '@type': 'UnitPriceSpecification',
               price: '50000',
               priceCurrency: 'JPY',
-              description: 'PSA CENOMARオンライン申請＋DFA e-Apostille（電子認証）申請の代行（税抜）',
+              description: 'PSA CENOMAR e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
             },
           },
         },
@@ -122,7 +122,7 @@ export default function CenomarGuideJa() {
         badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月26日"
       />
       <SummaryBlock
         conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
@@ -177,9 +177,9 @@ export default function CenomarGuideJa() {
               <dd className="font-medium text-gray-800">Philippine Statistics Authority（PSA）</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">30,000円〜（DFA e-Apostille〈電子〉込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※PSA発行料金（1通420ペソ）込み・DFA e-Apostille（電子認証）申請込み</dd>
+              <dt className="text-gray-500 text-xs mb-1">フルセット料金（税込）</dt>
+              <dd className="font-medium text-gray-800">50,000円（DHL国際送料込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">電子版のみ30,000円・e-Apostille付き電子版40,000円</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -189,13 +189,13 @@ export default function CenomarGuideJa() {
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
             <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
               <div className="px-4 py-3 font-bold">内容</div>
-              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税込）</div>
             </div>
             {[
-              { label: 'CENOMAR（PSA）オンライン申請', price: '込み' },
-              { label: 'DFA e-Apostille認証（電子）申請', price: '込み' },
-              { label: '紙のPSA原本（SECPA）が必要な場合の国際配送', price: '実費・要相談' },
-              { label: '合計（DFA e-Apostille〈電子〉込み）', price: '30,000円〜', bold: true },
+              { label: 'CENOMAR e-Certificateのみ（電子納品）', price: '30,000円' },
+              { label: 'e-Certificate＋DFA e-Apostille（電子納品）', price: '40,000円' },
+              { label: 'SECPA紙原本＋DHL国際配送を追加', price: '込み' },
+              { label: 'フルセット合計', price: '50,000円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -303,7 +303,7 @@ export default function CenomarGuideJa() {
         buttonText="自分の用途を相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い"
+        trustNote="着手金25,000円・書類写し確認後に残金25,000円"
       />
 
       <StepList

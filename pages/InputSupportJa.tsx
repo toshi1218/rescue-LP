@@ -9,8 +9,8 @@ import { CheckCircle, AlertTriangle, ArrowRight, Plane, CreditCard, FileCheck, G
 
 export default function InputSupportJa() {
   useMeta(
-    'PSAオンライン申請代行｜海外から¥16,500（税込）で申請まで代行【IGRS】',
-    '海外からのPSA・CENOMAR・NBIオンライン申請を日本語で代行。フォーム入力・国際クレカ支払い・送付先設定まで全て代行します。¥16,500（税込）〜。フィリピンに行かずに書類を取得したい方向け。',
+    'PSA e-Certificate取得代行｜海外から¥30,000（税込）・電子納品【IGRS】',
+    '海外からPSA出生証明書・CENOMAR・婚姻証明書のe-Certificate取得を日本語で代行。本人確認・申請・支払いからPDF納品まで¥30,000（税込）。',
   );
 
   return (
@@ -18,13 +18,13 @@ export default function InputSupportJa() {
       breadcrumbs={[
         { label: 'ホーム', href: '/ja/' },
         { label: '料金', href: '/ja/ryokin/' },
-        { label: 'PSAオンライン申請代行' },
+        { label: 'PSA e-Certificate取得代行' },
       ]}
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'PSAオンライン申請代行',
-        description: '海外からのPSAオンライン申請（フォーム入力・支払い・送付先設定）を日本語で代行。書類はPSAからお客様に直接届きます。',
+        name: 'PSA e-Certificate取得代行',
+        description: '海外からPSA e-Certificateの取得を日本語で代行。本人確認・フォーム入力・支払いからPDF納品まで対応します。',
         url: 'https://ph-document.com/ja/psa-input-support/',
         provider: {
           '@type': 'Organization',
@@ -34,7 +34,7 @@ export default function InputSupportJa() {
         areaServed: { '@type': 'Country', name: 'JP' },
         offers: {
           '@type': 'Offer',
-          price: '16500',
+          price: '30000',
           priceCurrency: 'JPY',
           priceSpecification: { '@type': 'UnitPriceSpecification', priceType: 'MinimumPrice' },
         },
@@ -61,23 +61,23 @@ export default function InputSupportJa() {
           },
           {
             '@type': 'Question',
-            name: 'オンライン申請代行の料金はいくらですか？',
+            name: 'PSA e-Certificate取得代行の料金はいくらですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '書類1種類あたり¥16,500（税込・内訳：申請代行¥15,000＋消費税¥1,500）〜です。DHL国際配送は不要で、書類はPSAからお客様の住所へ直接届きます。複数書類のご依頼は別途ご相談ください。',
+              text: '書類1種類あたり¥30,000（税込）です。PSA e-Certificateの取得からPDF納品までを含み、DHL国際配送は不要です。DFA e-Apostilleが必要な場合は¥40,000（税込）です。',
             },
           },
         ],
       }]}
     >
       <HeroBanner
-        title="PSAオンライン申請代行"
-        subtitle="PSAへのオンライン申請フォームの入力・申請手続きを代行。書類はPSAからお客様の住所へ直接届きます。"
-        badges={['¥16,500〜（税込）', 'オンライン完結・DHL不要', 'PSAから直接お届け']}
-        ctaText="オンライン申請代行を相談する"
+        title="PSA e-Certificate取得代行"
+        subtitle="本人確認・オンライン申請・支払いから、PSA e-CertificateのPDF納品まで代行します。"
+        badges={['¥30,000（税込）', '電子納品・DHL不要', 'e-Apostille付き¥40,000']}
+        ctaText="e-Certificate取得を相談する"
         ctaHref="#contact"
-        ctaService="オンライン申請代行"
-        lastUpdated="2026年5月1日"
+        ctaService="PSA e-Certificate取得代行"
+        lastUpdated="2026年8月26日"
       />
 
       {/* このプランが向いている人 */}
@@ -148,15 +148,15 @@ export default function InputSupportJa() {
           },
           {
             title: 'PSAオンライン申請フォームの入力・送信',
-            description: 'PSA Serbilis等のオンラインポータルでの申請フォーム入力・送信をすべて代行します。お客様の英語入力は不要です。',
+            description: 'PSAのオンラインポータルでe-Certificateの申請フォーム入力・送信を代行します。お客様の英語入力は不要です。',
           },
           {
             title: '申請費用の支払い代行',
             description: '海外からの支払い（国際クレジットカード等）をIGRSが代行します。為替・支払いトラブルの心配がありません。',
           },
           {
-            title: '送付先設定・ステータス確認',
-            description: 'お客様指定の住所をPSAに登録し、申請後の進捗確認・受け取りまでフォローします。',
+            title: 'ステータス確認・電子納品',
+            description: '申請後の進捗を確認し、取得したPSA e-CertificateをPDFで納品します。',
           },
         ]}
       />
@@ -166,17 +166,17 @@ export default function InputSupportJa() {
         <div className="rounded-2xl border border-primary/20 bg-primary/[0.03] p-6">
           <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">料金</p>
           <div className="flex items-baseline gap-2 mb-1">
-            <span className="text-4xl font-extrabold text-primary">¥16,500</span>
-            <span className="text-sm text-gray-500">〜（税込 / DHL不要）</span>
+            <span className="text-4xl font-extrabold text-primary">¥30,000</span>
+            <span className="text-sm text-gray-500">（税込 / DHL不要）</span>
           </div>
-          <p className="text-xs text-gray-400 mb-1">内訳: 申請代行 ¥15,000 + 消費税 ¥1,500</p>
-          <p className="text-sm text-gray-600 mb-4">書類1種類あたり。複数書類のご依頼は別途ご相談ください。</p>
+          <p className="text-xs text-gray-400 mb-1">PSA e-Certificate 1種類の取得・PDF納品を含む総額</p>
+          <p className="text-sm text-gray-600 mb-4">DFA e-Apostille付きは¥40,000（税込）。書類2種類以上はセット料金をご案内します。</p>
           <ul className="space-y-1.5 mb-4">
             {[
               'PSAオンラインフォームへの入力・申請',
               '申請費用の支払い手続き代行',
-              'お客様住所への送付先設定',
-              '申請後のステータス確認',
+              '本人確認手続きのサポート',
+              'PSA e-Certificateの取得・PDF納品',
             ].map((item) => (
               <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
                 <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
@@ -188,7 +188,7 @@ export default function InputSupportJa() {
             href="#contact"
             className="inline-flex items-center gap-2 bg-primary text-secondary font-bold text-sm py-3 px-6 rounded-xl shadow-md shadow-primary/20 hover:bg-primary-hover transition-all duration-200"
           >
-            オンライン申請代行を相談する
+            e-Certificate取得を相談する
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
