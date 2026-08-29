@@ -82,6 +82,10 @@ export default function HomeKo() {
                 <span className="w-1 h-1 rounded-full bg-primary inline-block" />
                 한국어 이메일 상담
               </span>
+              <span className="inline-flex items-center gap-1 text-xs font-semibold bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full">
+                <span className="w-1 h-1 rounded-full bg-primary inline-block" />
+                접수 보증
+              </span>
             </div>
             <h1 className="text-2xl md:text-4xl font-bold leading-snug mb-4">
               필리핀 서류 취득,<br />처음부터 끝까지 도와드립니다
@@ -90,6 +94,12 @@ export default function HomeKo() {
               PSA·NBI 서류 취득, DFA 인증, 국제 배송까지 필리핀 방문 없이 지원합니다.
               PSA 민사서류의 e-Apostille과 종이 PSA 원본 중 어떤 형식이 필요한지 제출처 기준으로 먼저 확인합니다.
             </p>
+            <div className="mb-6 max-w-xl rounded-xl border border-emerald-300/40 bg-emerald-950/55 px-4 py-3">
+              <p className="text-sm font-bold text-emerald-200">접수 보증 · 당사 오류 시 무료 재처리</p>
+              <p className="mt-1 text-xs leading-relaxed text-white/80">
+                당사의 서류 선정·발급·인증·번역 오류로 접수가 거절된 경우, 추가 비용 없이 재처리해 드립니다.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#contact"
