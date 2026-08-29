@@ -6,7 +6,7 @@ import { useLanguage } from '../lib/i18n';
 // ── English variant data ──────────────────────────────────────────────────────
 
 const enBadges = [
-  { icon: '🔍', label: 'Acceptance Check Included' },
+  { icon: '🛡️', label: 'Acceptance Guarantee' },
   { icon: '📄', label: 'Physical PSA Originals' },
   { icon: '📦', label: 'DHL Express Worldwide' },
 ];
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
               ✈️ 渡航不要
             </span>
             <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white/90 text-xs font-medium border border-white/20 backdrop-blur-sm">
-              🛡️ キャンセル無料
+              🛡️ 受理保証
             </span>
           </div>
 
@@ -74,6 +74,12 @@ const Hero: React.FC = () => {
           <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-xs md:max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
             {t('hero.description')}
           </p>
+          <div className="mb-4 w-full max-w-md rounded-xl border border-emerald-300/40 bg-emerald-950/55 px-4 py-3 text-left backdrop-blur-sm">
+            <p className="text-sm font-bold text-emerald-200">受理保証・当社不備は無償再対応</p>
+            <p className="mt-1 text-xs leading-relaxed text-white/80">
+              当社の書類選定・取得・認証・翻訳の不備により受理されなかった場合、追加費用なしで再対応いたします。
+            </p>
+          </div>
           {/* CTA Buttons */}
           <div className="flex flex-col gap-2.5 w-full max-w-sm">
             {/* 無料相談する */}
@@ -188,6 +194,13 @@ const Hero: React.FC = () => {
           <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
             Getting married to a Filipino, or moving to a new country together? We verify format requirements, retrieve physical PSA originals, arrange DFA e-Apostille, and ship to your door worldwide via DHL — no trip to the Philippines needed.
           </p>
+
+          <div className="mb-4 w-full max-w-lg rounded-xl border border-emerald-300/40 bg-emerald-950/55 px-4 py-3 backdrop-blur-sm">
+            <p className="text-sm font-bold text-emerald-200">Acceptance Guarantee · Free Reprocessing for Our Errors</p>
+            <p className="mt-1 text-xs leading-relaxed text-white/80">
+              If your documents are rejected due to an error in our document selection, procurement, authentication, or translation, we will correct and reprocess them at no additional charge.
+            </p>
+          </div>
 
           {/* CTAs */}
           <div className="flex flex-col gap-2.5 w-full max-w-sm mb-4">
