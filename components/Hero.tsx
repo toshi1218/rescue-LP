@@ -75,9 +75,9 @@ const Hero: React.FC = () => {
             {t('hero.description')}
           </p>
           <div className="mb-4 w-full max-w-md rounded-xl border border-emerald-300/40 bg-emerald-950/55 px-4 py-3 text-left backdrop-blur-sm">
-            <p className="text-sm font-bold text-emerald-200">受理保証・当社不備は無償再対応</p>
+            <p className="text-sm font-bold text-emerald-200">受理保証：無料再手配・返金保証</p>
             <p className="mt-1 text-xs leading-relaxed text-white/80">
-              当社の書類選定・取得・認証・翻訳の不備により受理されなかった場合、追加費用なしで再対応いたします。
+              当社の書類選定・取得・認証・翻訳の不備が原因の場合、追加費用なしで再手配します。再手配後も受理されない場合は、当社サービス料金を返金します。
             </p>
           </div>
           {/* CTA Buttons */}
@@ -196,9 +196,9 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="mb-4 w-full max-w-lg rounded-xl border border-emerald-300/40 bg-emerald-950/55 px-4 py-3 backdrop-blur-sm">
-            <p className="text-sm font-bold text-emerald-200">Acceptance Guarantee · Free Reprocessing for Our Errors</p>
+            <p className="text-sm font-bold text-emerald-200">Acceptance Guarantee · Free Reprocessing or Service-Fee Refund</p>
             <p className="mt-1 text-xs leading-relaxed text-white/80">
-              If your documents are rejected due to an error in our document selection, procurement, authentication, or translation, we will correct and reprocess them at no additional charge.
+              If your documents are rejected due to an error in our document selection, procurement, authentication, or translation, we will reprocess them at no additional charge. If they are still rejected after reprocessing, we will refund our service fee.
             </p>
           </div>
 
