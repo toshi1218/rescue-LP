@@ -51,7 +51,7 @@ export default function NaturalizationEn() {
               name: 'What Philippine documents does USCIS require for naturalization?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Requirements vary by case. Typically Birth Certificate and/or Marriage Certificate with DFA Apostille. We confirm for your specific application.',
+                text: 'Requirements vary by country, authority, and case. Birth, marriage, or police records may be requested; authentication is arranged only when the current instructions require it.',
               },
             },
             {
@@ -93,7 +93,7 @@ export default function NaturalizationEn() {
       <SummaryBlock
         conclusion="Applying for citizenship or naturalization? We retrieve all Philippine civil documents your authority requires."
         points={[
-          'PSA Birth Certificate, NBI Clearance, and other documents with DFA Apostille',
+          'PSA civil records, NBI Clearance, and other documents specified for the case',
           'Ready for USCIS, IRCC, Home Affairs, UKVI and other authorities',
           'We confirm exact requirements for your citizenship application',
           'All-inclusive pricing with DHL Express shipping worldwide',
@@ -142,7 +142,7 @@ export default function NaturalizationEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided.',
+            description: 'For PSA records, required Apostilles are electronic PDFs; SECPA paper records are separate. Eligible non-PSA records use the physical authentication route.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -164,7 +164,7 @@ export default function NaturalizationEn() {
 
       <FaqSection
         items={[
-          { q: 'What Philippine documents are required for citizenship or naturalization?', a: 'Requirements vary by country and case. Typically PSA Birth Certificate and/or NBI Clearance with DFA Apostille. We confirm for your specific application.' },
+          { q: 'What Philippine documents are required for citizenship or naturalization?', a: 'Requirements vary by country, authority, and case. PSA civil records or NBI Clearance may be requested; authentication is arranged only when the current instructions require it.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your submission deadline and we will confirm whether priority processing is feasible.' },

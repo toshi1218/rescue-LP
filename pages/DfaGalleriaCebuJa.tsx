@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 export default function DfaGalleriaCebuJa() {
   useMeta(
     'DFAアポスティーユ現地レポート【セブ・ロビンソンズガレリア2026年】',
-    'フィリピンのDFAアポスティーユはセブのロビンソンズガレリア内で取得できます。現地写真で場所・専用窓口・最新ルールを解説。日本語対応の代行サービスも。',
+    'セブのDFA物理アポスティーユ窓口を現地写真で解説。PSA民事書類は2026年3月16日以降e-Apostille電子手続きとなり、窓口対象とは区別が必要です。',
   );
 
   return (
@@ -47,10 +47,10 @@ export default function DfaGalleriaCebuJa() {
           '@type': 'Article',
           headline: 'DFAアポスティーユ現地レポート【セブ・ロビンソンズガレリア2026年】',
           description:
-            'フィリピンのDFAアポスティーユはセブのロビンソンズガレリア内で取得できます。現地写真で場所・専用窓口・最新ルールを解説。',
+            'セブのDFA物理アポスティーユ窓口を現地写真で解説。PSA民事書類は2026年3月16日以降e-Apostille電子手続きです。',
           url: 'https://ph-document.com/ja/dfa-apostille-genchi-report/',
           datePublished: '2026-02-01',
-          dateModified: '2026-03-01',
+          dateModified: '2026-08-30',
           publisher: {
             '@type': 'Organization',
             name: 'フィリピン書類取得代行センター',
@@ -74,7 +74,7 @@ export default function DfaGalleriaCebuJa() {
               name: 'アポスティーユの手続きはどのように行われますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '専用の「APOSTILLE AUTHENTICATION/PROCESSING」コーナーで受け付けています。2024年12月2日より事前オンライン予約が必要になっています（当日ウォークイン不可）。',
+                text: 'NBI・LTO等の対象書類は専用窓口で受け付け、事前予約が必要です。PSA民事書類は2026年3月16日以降e-Apostille電子手続きとなり、この物理窓口へ持ち込むルートではありません。',
               },
             },
             {
@@ -92,7 +92,7 @@ export default function DfaGalleriaCebuJa() {
       <HeroBanner
         title="DFAアポスティーユ現地レポート"
         badges={['現地写真あり', 'セブ在住スタッフが撮影', '日本語解説']}
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月30日"
         ctaText="ご相談・お問い合わせ"
         ctaHref="#contact"
       />
@@ -102,7 +102,7 @@ export default function DfaGalleriaCebuJa() {
         points={[
           'DFA（フィリピン外務省領事館）はロビンソンズガレリアセブのモール内に入っています',
           'パスポート申請・更新とアポスティーユ認証を扱う政府機関です',
-          '2024年12月より、アポスティーユは事前オンライン予約制になっています',
+          '物理手続きは事前予約制。PSA民事書類は2026年3月16日以降e-Apostille電子手続きです',
         ]}
       />
 
@@ -306,7 +306,7 @@ export default function DfaGalleriaCebuJa() {
 
       <CtaBox
         title="書類取得・アポスティーユのご依頼はこちら"
-        description="フィリピン外務省（DFA）でのアポスティーユ認証を含む書類取得を、セブ在住スタッフが日本語でサポートします。"
+        description="PSAはe-Apostille電子手続き、NBI・LTO等は対象に応じた物理手続きとして、書類種別に合うDFA認証を日本語でサポートします。"
         buttonText="無料でご相談する"
         href="#contact"
         variant="primary"
@@ -321,7 +321,7 @@ export default function DfaGalleriaCebuJa() {
           },
           {
             q: 'アポスティーユの手続きはどのように行われますか？',
-            a: '専用の「APOSTILLE AUTHENTICATION/PROCESSING」コーナーで受け付けています。2024年12月2日より事前オンライン予約が必要になっています（当日ウォークイン不可）。',
+            a: 'NBI・LTO等の対象書類は専用窓口で受け付け、事前予約が必要です。PSA民事書類は2026年3月16日以降e-Apostille電子手続きとなり、物理窓口へ持ち込むルートではありません。',
           },
           {
             q: '現地の様子はどんな環境ですか？',

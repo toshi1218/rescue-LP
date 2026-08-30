@@ -35,7 +35,7 @@ export default function DfaGalleriaCebuEn() {
               name: 'Where is the DFA Apostille office in Cebu?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'The DFA Apostille office in Cebu is located inside Robinsons Galleria Cebu shopping mall. It is a Philippine government office (DFA consular office) handling apostille authentication for PSA documents and other public documents.',
+                text: 'The DFA Apostille office in Cebu is located inside Robinsons Galleria Cebu shopping mall. It handles physical Apostille transactions for eligible non-PSA public documents; PSA civil-record Apostilles moved to the electronic system on March 16, 2026.',
               },
             },
             {
@@ -51,7 +51,7 @@ export default function DfaGalleriaCebuEn() {
               name: 'What documents can be apostilled at this office?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA documents (birth certificates, marriage certificates, CENOMAR), NBI Clearance, and other Philippine public documents can be authenticated with DFA Apostille at this office.',
+                text: 'Eligible non-PSA public documents, including NBI Clearance and other documents listed by DFA, can use the physical Apostille process. PSA civil records use DFA\'s electronic Apostille system from March 16, 2026.',
               },
             },
           ],
@@ -71,7 +71,7 @@ export default function DfaGalleriaCebuEn() {
         points={[
           'Located inside Robinsons Galleria Cebu — a public government office inside a commercial mall',
           'Appointment-only since December 2024 (no walk-ins)',
-          'Handles apostille authentication for PSA documents, NBI Clearance, and other public documents',
+          'Handles physical Apostille transactions for eligible non-PSA public documents; PSA civil records now use e-Apostille',
           'Our local staff can handle the Apostille process on your behalf',
         ]}
         ctaText="Free Consultation"
@@ -128,7 +128,7 @@ export default function DfaGalleriaCebuEn() {
         <h2 className="text-base font-bold text-gray-900 mb-4">Services Available</h2>
         <div className="space-y-3">
           {[
-            { title: 'DFA Apostille Authentication', detail: 'Apostille certification for PSA documents (birth certificate, marriage certificate, CENOMAR), NBI Clearance, and other public documents. Required when submitting Philippine documents to Japan.' },
+            { title: 'DFA Apostille Authentication', detail: 'Physical Apostille processing for eligible non-PSA documents such as NBI Clearance. PSA civil records moved to DFA e-Apostille on March 16, 2026. Authentication is needed only when the receiving authority requests it.' },
             { title: 'Passport Applications and Renewals', detail: 'Philippine passport applications, renewals, and related services.' },
             { title: 'Other Consular Services', detail: 'Authentication of documents and other consular services available at this location.' },
           ].map((item, i) => (
@@ -142,12 +142,12 @@ export default function DfaGalleriaCebuEn() {
 
       {/* Why apostille matters for Japan */}
       <section className="mb-10 rounded-2xl bg-gray-50 border border-gray-200 p-6">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Why is DFA Apostille needed for Japan submissions?</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">When is DFA Apostille needed for Japan submissions?</h2>
         <p className="text-sm text-gray-700 leading-relaxed mb-3">
-          When submitting Philippine public documents (PSA birth certificates, marriage certificates, CENOMAR) to Japanese immigration, municipal offices, or other institutions, the documents typically need to be authenticated with a DFA Apostille. This confirms the document's authenticity for international use.
+          An Apostille is needed only when the Japanese receiving authority asks for authentication. Requirements differ between immigration, municipal, Legal Affairs Bureau, and other procedures, so the current case-specific checklist controls.
         </p>
         <p className="text-sm text-gray-700 leading-relaxed">
-          Important: The e-Certificate (digital version) available from PSAHelpline online does not come with DFA Apostille and is generally not accepted by Japanese immigration. A paper original with DFA Apostille is required.
+          Important: From March 16, 2026, DFA issues Apostilles for PSA birth, marriage, death, and CENOMAR e-Certificates electronically. A separately ordered SECPA paper certificate is a different record; confirm whether the receiving authority wants the electronic authenticated file, a paper certificate, or both.
         </p>
       </section>
 
@@ -164,7 +164,7 @@ export default function DfaGalleriaCebuEn() {
         items={[
           { q: 'Where is the DFA Apostille office in Cebu?', a: 'Inside Robinsons Galleria Cebu shopping mall in Cebu City. It is a DFA consular satellite office handling apostille and other consular services.' },
           { q: 'Do I need an appointment?', a: 'Yes. Since December 2024, all transactions require a prior appointment booked through the DFA online system. Walk-ins are not accepted.' },
-          { q: 'What documents can be apostilled here?', a: 'PSA documents (birth certificates, marriage certificates, CENOMAR), NBI Clearance, and other Philippine public documents.' },
+          { q: 'What documents can be apostilled here?', a: 'Eligible non-PSA public documents, including NBI Clearance, can use the physical process. PSA civil records use DFA e-Apostille from March 16, 2026.' },
           { q: 'Can I handle the apostille remotely from Japan?', a: 'Yes. Our local staff in the Philippines can handle the apostille process on your behalf. You do not need to travel or be present.' },
           { q: 'How long does apostille take?', a: 'Processing time varies. Standard processing typically takes a few business days after the appointment. Our service includes coordination of the full retrieval and apostille process.' },
         ]}

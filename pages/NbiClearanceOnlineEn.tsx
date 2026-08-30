@@ -199,7 +199,7 @@ export default function NbiClearanceOnlineEn() {
           { q: 'Can I get NBI Clearance online from abroad?', a: 'For renewals with a clean record, yes via clearance.nbi.gov.ph — but delivery is within the Philippines only. First-timers and HIT cases must appear in person. We handle everything on your behalf if you cannot travel.' },
           { q: 'How long does NBI Clearance take?', a: 'Online renewal: 7–10 business days within the Philippines. HIT cases: 15–30 business days. Including DFA Apostille and international shipping, plan 4–6 weeks total.' },
           { q: 'How long is NBI Clearance valid?', a: 'NBI Clearance is valid for 1 year. For most immigration purposes, it must be issued within 6 months of your submission date.' },
-          { q: 'Does NBI Clearance need DFA Apostille?', a: 'For most immigration purposes outside the Philippines, yes. We confirm the exact requirement for your destination country before starting.' },
+          { q: 'Does NBI Clearance need DFA Apostille?', a: 'It depends on the receiving authority and application stage. We confirm the current official checklist before arranging physical DFA Apostille.' },
           { q: 'What is an NBI HIT?', a: 'A HIT means your name matched a record in the NBI database. It requires in-person appearance at an NBI office. We handle HIT cases and coordinate the resolution process.' },
           { q: 'Can you handle NBI for someone currently outside the Philippines?', a: 'Yes. That is our primary use case. We coordinate everything locally so you do not need to travel or have a Philippines contact.' },
         ]}

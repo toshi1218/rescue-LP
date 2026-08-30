@@ -145,7 +145,7 @@ export default function HomeJa() {
                 PSAデジタル化・e-Apostille対応
               </div>
               <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
-                2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）へ<span className="text-red-700">物理アポスティーユ（紙）を発行しなくなり</span>、認証は<span className="text-red-700">e-Apostille（電子）に一本化</span>されました。当社はPSA・DFA e-Apostilleのオンライン申請と支払いを日本語で代行します（NBI・LTO・PRCなどの書類は物理アポスティーユにも対応）。
+                2026年3月16日以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）へ<span className="text-red-700">物理アポスティーユ（紙）を発行せず</span>、認証は<span className="text-red-700">e-Apostille（電子）に一本化</span>しました。当社はPSA・DFA e-Apostilleのオンライン申請と支払いを日本語で代行します（NBI・LTO・PRCなどの書類は物理アポスティーユにも対応）。
               </p>
               {noticeExpanded && (
                 <ul className="space-y-3 mt-4">
