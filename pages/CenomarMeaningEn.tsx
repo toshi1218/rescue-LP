@@ -182,8 +182,8 @@ export default function CenomarMeaningEn() {
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Forgetting DFA Apostille',
-            description: 'A PSA CENOMAR without DFA Apostille is not accepted by most foreign immigration authorities. The Apostille must be a physical paper original attached to the document.',
+            title: 'Assuming Apostille is always required',
+            description: 'Authentication depends on the receiving authority and application stage. When a DFA Apostille is required for CENOMAR, it is issued electronically for the PSA e-Certificate from March 16, 2026; any SECPA paper certificate is separate.',
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,

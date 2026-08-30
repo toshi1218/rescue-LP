@@ -73,7 +73,7 @@ export default function CenomarTohaJa() {
               name: 'CENOMARにはアポスティーユが必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '日本の公的機関（入管・役所・法務局）に提出する場合、DFAアポスティーユ（公印確認）が必要です。アポスティーユがあれば、在日フィリピン大使館での領事認証は不要です（ハーグ条約締約国のため）。',
+                text: '一律必須ではありません。用途と提出先により異なるため、先に確認します。必要な場合、PSA書類のApostilleは2026年3月16日以降e-Apostilleとして電子発行されます。',
               },
             },
             {
@@ -81,7 +81,7 @@ export default function CenomarTohaJa() {
               name: 'CENOMARは日本から取得できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。フィリピンに戻らなくても取得できます。PSAHelpline.phからオンライン申請するか、代行サービスを利用してPSA取得→DFAアポスティーユ→国際DHL配送まで一括依頼する方法があります。',
+                text: 'はい。PSAHelplineからオンライン申請できます。必要な場合のDFA e-Apostilleは電子PDFで発行され、SECPA紙原本は提出先が必要とする場合のみ別途配送します。',
               },
             },
           ],
@@ -91,7 +91,7 @@ export default function CenomarTohaJa() {
       <HeroBanner
         title="CENOMARとは？"
         subtitle="Certificate of No Marriage Record（独身証明書）の意味・使い方・取得方法をわかりやすく解説"
-        badges={['フィリピン渡航不要', 'DFAアポスティーユ込み', '日本語で対応']}
+        badges={['フィリピン渡航不要', '必要な場合のみe-Apostille', '日本語で対応']}
         ctaText="無料相談はこちら"
         ctaHref="/ja/contact/"
       />
@@ -127,7 +127,7 @@ export default function CenomarTohaJa() {
           {
             icon: <Globe className="w-6 h-6 text-blue-600" />,
             title: 'DFAアポスティーユ',
-            description: '日本の役所・入管・法務局に提出するにはDFAアポスティーユが必要。ハーグ条約締約国では領事認証の代替として有効。',
+            description: '一律必須ではありません。提出先が認証を求める場合は、PSA e-Certificateに対するe-Apostilleを電子で手配します。',
           },
         ]}
       />
@@ -149,7 +149,7 @@ export default function CenomarTohaJa() {
 
       <CtaBox
         title="CENOMARが必要ですか？"
-        description="フィリピン渡航不要・日本語だけで対応。PSA取得→DFAアポスティーユ→DHL国際配送まで一括代行します。無料相談受付中。"
+        description="フィリピン渡航不要・日本語だけで対応。PSA電子書類と必要な場合のe-Apostilleを手配し、紙原本は必要な場合のみ配送します。"
         buttonText="無料相談はこちら"
         href="/ja/contact/"
       />
@@ -174,11 +174,11 @@ export default function CenomarTohaJa() {
           },
           {
             q: 'CENOMARにはアポスティーユが必要ですか？',
-            a: '日本の公的機関に提出する場合はDFAアポスティーユが必要です。ハーグ条約締約国のため、在日フィリピン大使館での領事認証は不要です。',
+            a: '一律必須ではありません。用途と提出先により異なるため、先に確認します。必要な場合、PSA書類のApostilleは2026年3月16日以降e-Apostilleとして電子発行されます。',
           },
           {
             q: 'CENOMARは日本から取得できますか？',
-            a: 'はい。代行サービスを利用すればフィリピン渡航不要で取得できます。PSA取得→DFAアポスティーユ→DHL国際配送まで一括対応します。',
+            a: 'はい。PSA電子書類と必要な場合のe-Apostilleはオンラインで取得できます。SECPA紙原本は提出先が必要とする場合のみ別途配送します。',
           },
         ]}
       />

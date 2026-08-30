@@ -192,7 +192,7 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="text-gray-200 mb-4 text-sm md:text-base leading-relaxed max-w-lg drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-            Getting married to a Filipino, or moving to a new country together? We verify format requirements, retrieve physical PSA originals, arrange DFA e-Apostille, and ship to your door worldwide via DHL — no trip to the Philippines needed.
+            Getting married to a Filipino, or moving to a new country together? We verify format requirements, arrange PSA e-Certificates and DFA e-Apostilles when required, and separately ship SECPA paper records via DHL when requested.
           </p>
 
           <div className="mb-4 w-full max-w-lg rounded-xl border border-emerald-300/40 bg-emerald-950/55 px-4 py-3 backdrop-blur-sm">

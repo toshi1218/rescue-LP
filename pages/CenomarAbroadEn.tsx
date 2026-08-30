@@ -128,7 +128,7 @@ export default function CenomarAbroadEn() {
       <section className="py-8 px-4 max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">Do You Need an Apostille?</h2>
         <p className="text-gray-700 mb-3">
-          For most immigration purposes — K-1 visa, CR-1, Australian partner visa, UK spouse visa, Canadian spousal sponsorship — <strong>yes, you need a DFA Apostille</strong>. The Philippines is a signatory to the Hague Apostille Convention, so no additional embassy legalization is needed in most countries.
+          <strong>Do not assume Apostille is required.</strong> K-1, CR-1, Australian partner visa, UK spouse visa, and Canadian sponsorship routes each have their own official checklist. Hague Convention membership determines how an Apostille is recognized when requested; it does not make authentication mandatory.
         </p>
         <p className="text-gray-700">
           If your destination country is <em>not</em> a Hague Convention member, you may need DFA authentication plus embassy legalization. Contact us and we will advise based on your specific country.

@@ -57,7 +57,7 @@ export default function NaturalizationJa() {
               name: '帰化申請に必要な書類は何ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '一般的にPSA出生証明書・婚姻証明書（DFAアポスティーユ付き）が必要です。状況によって追加書類が必要な場合もあります。無料相談で確認します。',
+                text: '必要書類・部数・認証形式は、本人と家族の身分関係および管轄法務局の担当官の指示で異なります。PSA書類へのDFAアポスティーユが一律必須とは限りません。',
               },
             },
             {
@@ -122,7 +122,7 @@ export default function NaturalizationJa() {
             {
               '@type': 'DefinedTerm',
               name: '帰化申請',
-              description: '外国籍の方が日本国籍を取得するための法務局への申請。フィリピン国籍者の場合、本国のPSA出生証明書・婚姻証明書等（DFAアポスティーユ付き）が必要になります。',
+              description: '外国籍の方が日本国籍を取得するための法務局への申請。フィリピン国籍者の場合、担当官の指示に応じてPSA出生証明書・婚姻証明書等を用意します。',
             },
             {
               '@type': 'DefinedTerm',
@@ -138,7 +138,7 @@ export default function NaturalizationJa() {
             {
               '@type': 'DefinedTerm',
               name: 'DFAアポスティーユ',
-              description: 'フィリピン外務省（DFA）による国際認証。日本の法務局に提出する際、書類が正式なものであることを証明します。PSA民事書類は2026年3月以降、電子のe-Apostilleに一本化されています。',
+              description: 'フィリピン外務省（DFA）による国際認証。管轄法務局が指定した場合に手配します。PSA民事書類は2026年3月16日以降、電子のe-Apostilleに一本化されています。',
             },
           ],
         },
@@ -146,17 +146,17 @@ export default function NaturalizationJa() {
     >
       <HeroBanner
         title="帰化申請"
-        badges={['法務局要件に対応', '書士への書類提供可', 'アポスティーユ込み']}
+        badges={['法務局要件に対応', '書士への書類提供可', '必要な場合のみ認証']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月30日"
       />
 
       <SummaryBlock
-        conclusion="帰化申請で法務局が求めるPSA証明書・NBIクリアランスをアポスティーユ付きで一括取り寄せ。申請期限に間に合うよう優先対応します。"
+        conclusion="管轄法務局の指示に合わせて、必要なPSA証明書・NBI Clearanceと、必要な場合のみ認証を一括手配します。"
         points={[
           'PSA出生証明書・婚姻証明書・CENOMARをまとめて代行',
-          'DFAアポスティーユ付きで法務局の要件に対応',
+          'DFA認証の要否を法務局の指示書・担当官の案内で確認',
           '司法書士・行政書士の先生からのご依頼も対応',
           '必要書類が不明な場合も、無料相談で整理します',
         ]}
@@ -170,11 +170,11 @@ export default function NaturalizationJa() {
           フィリピン国籍の方が日本に帰化申請する場合、法務局へ提出するフィリピン側書類は主に「国籍・身分関係に関する書面」の区分に含まれます。管轄の法務局・担当官によって必要書類は異なりますが、一般的には以下が対象になります。
         </p>
         <ul className="space-y-1.5 text-sm text-gray-700">
-          <li>・PSA出生証明書（DFAアポスティーユ付き原本）— 本人はもちろん、案件によっては父母・兄弟姉妹・子・配偶者の分も求められることがあります</li>
-          <li>・PSA婚姻証明書（DFAアポスティーユ付き原本）— 本人が既婚者の場合。父母の婚姻証明書が必要になるケースもあります</li>
-          <li>・CENOMAR（独身証明書、DFAアポスティーユ付き原本）— 本人が未婚者の場合、婚姻歴なしの証明として</li>
+          <li>・PSA出生証明書 — 本人はもちろん、案件によっては父母・兄弟姉妹・子・配偶者の分も求められることがあります</li>
+          <li>・PSA婚姻証明書 — 本人が既婚者の場合。父母の婚姻証明書が必要になるケースもあります</li>
+          <li>・CENOMAR（独身証明書）— 本人が未婚者の場合、婚姻歴なしの証明として求められることがあります</li>
           <li>・警察記録証明書（NBI Clearance等）— 必須書類ではなく「その他」区分として、担当官の判断で求められる場合があります</li>
-          <li>・全書類共通でDFAアポスティーユ（紙の原本）が必要です</li>
+          <li>・DFAアポスティーユの要否は管轄法務局の担当官へ確認します。PSA書類のApostilleは2026年3月16日以降、電子発行のみです</li>
         </ul>
         <p className="text-sm text-gray-600 leading-relaxed mt-4 mb-1">あわせてご確認ください：</p>
         <ul className="space-y-1.5 text-sm text-gray-700">
@@ -192,9 +192,9 @@ export default function NaturalizationJa() {
         </p>
         <div className="grid grid-cols-2 gap-3 mb-4">
           {[
-            { icon: FileText, label: 'PSA出生証明書', note: '出生・国籍の確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-blue-50 border-blue-200' },
-            { icon: CheckCircle, label: 'PSA婚姻証明書', note: '既婚者の婚姻歴の確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-green-50 border-green-200' },
-            { icon: CheckCircle, label: 'CENOMAR（独身証明書）', note: '未婚者の婚姻歴なしの確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-amber-50 border-amber-200' },
+            { icon: FileText, label: 'PSA出生証明書', note: '出生・国籍の確認', format: '形式は担当官の指定を確認', accent: 'bg-blue-50 border-blue-200' },
+            { icon: CheckCircle, label: 'PSA婚姻証明書', note: '既婚者の婚姻歴の確認', format: '形式は担当官の指定を確認', accent: 'bg-green-50 border-green-200' },
+            { icon: CheckCircle, label: 'CENOMAR（独身証明書）', note: '未婚者の婚姻歴なしの確認', format: '形式は担当官の指定を確認', accent: 'bg-amber-50 border-amber-200' },
             { icon: FileText, label: 'NBI Clearance', note: '犯罪歴の確認', format: 'アポスティーユ付きが求められる場合あり', accent: 'bg-gray-50 border-gray-200' },
           ].map((item, i) => (
             <div key={i} className={`rounded-xl border p-4 ${item.accent}`}>
@@ -209,7 +209,7 @@ export default function NaturalizationJa() {
         <h3 className="text-sm font-bold text-gray-800 mb-3">よくある差し戻し理由</h3>
         <ul className="space-y-2">
           {[
-            { main: 'アポスティーユなし', sub: '原本だけでは不受理になります' },
+            { main: '担当官の指定と形式が不一致', sub: '必要書類・認証・原本の指定を先に確認します' },
             { main: '発行日が古い', sub: '法務局が指示する期間内のものが必要です' },
             { main: '名前のスペルが不一致', sub: '日本側の書類と一致している必要があります' },
             { main: '翻訳者情報が不足', sub: '署名・住所の記載が必要です' },
@@ -225,10 +225,10 @@ export default function NaturalizationJa() {
           heading="帰化申請に必要な書類の特徴"
           columns={3}
           cards={[
-            { icon: FileText, title: 'PSA出生証明書', description: '本人の出生・国籍を証明。アポスティーユ付き原本が法務局の要件。', accent: 'gold' },
+            { icon: FileText, title: 'PSA出生証明書', description: '本人の出生・国籍を証明。必要部数と形式は担当官の指示を確認。', accent: 'gold' },
             { icon: Scale, title: 'NBI Clearance', description: '無犯罪証明書。フィリピン捜査局が発行。帰化申請で求められることが多い。', accent: 'blue' },
             { icon: Building, title: '法務局への提出', description: '帰化申請は法務局が窓口。担当官の指定する形式・発行日が重要。', accent: 'green' },
-            { icon: CheckCircle, title: 'アポスティーユ必須', description: 'DFAアポスティーユなしの原本だけでは不受理になる場合あり。', accent: 'teal' },
+            { icon: CheckCircle, title: '認証要否を確認', description: 'DFAアポスティーユが必要かは担当官の指示に合わせます。', accent: 'teal' },
             { icon: Clock, title: '発行日の指定あり', description: '法務局から「○ヶ月以内に発行」と指定がある場合は発行日を指定して依頼。', accent: 'red' },
             { icon: Globe, title: '書士からの依頼も対応', description: '行政書士・司法書士の先生からのご依頼も対応。事務所への直送可。', accent: 'purple' },
           ]}
@@ -277,8 +277,8 @@ export default function NaturalizationJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: '提出先の要件に応じてDFAアポスティーユ認証を手配します。',
+            title: '必要な場合のDFA e-Apostille',
+            description: '法務局の担当官が認証を指定した場合のみ、PSA e-Apostilleを電子で手配します。',
           },
         ]}
       />
@@ -327,7 +327,7 @@ export default function NaturalizationJa() {
 
       <FaqSection
         items={[
-          { q: '帰化申請に必要な書類は何ですか？', a: '一般的にPSA出生証明書・婚姻証明書（DFAアポスティーユ付き）が必要です。状況によって追加書類が必要な場合もあります。無料相談で確認します。' },
+          { q: '帰化申請に必要な書類は何ですか？', a: '必要書類・部数・認証形式は、本人と家族の身分関係および管轄法務局の担当官の指示で異なります。PSA書類へのDFAアポスティーユが一律必須とは限りません。' },
           { q: '料金はいくらですか？（132,500円は1通の値段ですか？）', a: '書類1通のみは50,000円〜（税抜・送料実費別途）。帰化書類パックは5通まで132,500円（税込・アポスティーユ・DHL配送込み）、6通目以降は追加1通ごとに＋26,500円です。実例として家族分6通で159,000円。パック内の1通あたり単価は26,500円と単品依頼の半額以下で、通数が増えても国際送料は1回分のみです。「132,500円×通数」の掛け算ではありませんのでご安心ください。' },
           { q: '司法書士・行政書士の先生から書類取得を依頼することはできますか？', a: 'はい、対応しています。行政書士の先生がクライアントの帰化申請に必要な書類を取り寄せる場合、当社が現地取得からDFAアポスティーユまで代行し、先生の事務所へ郵送します。' },
           { q: '法務局から書類の発行日に条件がある場合、対応できますか？', a: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。取得スケジュールをその条件に合わせて調整します。' },

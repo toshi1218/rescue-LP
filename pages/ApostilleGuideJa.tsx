@@ -11,7 +11,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function ApostilleGuideJa() {
   useMeta(
     `フィリピンDFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応・渡航不要`,
-    'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
+    '提出先が求めるDFA認証を確認して代行。PSA民事書類は2026年3月16日以降e-Apostille（電子PDF）、NBI・LTO等は対象に応じて物理認証に対応します。',
   );
   return (
     <PageLayout
@@ -62,7 +62,7 @@ export default function ApostilleGuideJa() {
               name: 'アポスティーユはどこで取得できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'フィリピンのDFA（外務省）で取得します。DFAオフィスでの窓口申請のほか、PSA書類については一部オンライン申請も可能な場合があります。運用は変わることがあるため、最新の手続きを確認することが重要です。',
+                text: '書類により手続きが異なります。PSA民事書類のアポスティーユは2026年3月16日以降オンラインのe-Apostille（電子PDF）のみです。NBI・LTO等の非PSA書類は、対象に応じてDFAの物理認証手続きを利用します。',
               },
             },
             {
@@ -99,7 +99,7 @@ export default function ApostilleGuideJa() {
         badges={['PSA・CENOMAR・LTO対応', 'DFA認証代行', '日本語でご相談OK']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月30日"
       />
       <article className="max-w-2xl mx-auto px-4">
 
@@ -145,7 +145,7 @@ export default function ApostilleGuideJa() {
             まず多いのが、「PSAの書類を取ればそのまま使える」と思ってしまうことです。実際には、提出先によっては PSA の原本だけでは足りず、さらに DFA Apostille が必要になることがあります。
           </p>
           <p className="text-gray-700 leading-relaxed">
-            次に多いのが、「アポスティーユはいつでも同じ方法で取れる」と思ってしまうことです。DFA の運用は固定ではなく、2025年には PSA Documents の Fully Online Apostille の案内や、Apostille Services の予約プロセス変更も出ています。つまり、「予約が必須」「必ず窓口へ行く」などと決めつけず、その時点の運用確認が必要です。
+            次に多いのが、「アポスティーユはいつでも同じ方法で取れる」と思ってしまうことです。2026年3月16日以降、PSA民事書類のアポスティーユはe-Certificateを対象とするe-Apostille（電子PDF）のみとなり、物理アポスティーユは発行されません。NBI・LTO等の非PSA書類は別の物理手続きとなるため、書類種別ごとに現行ルートを確認します。
           </p>
         </section>
 

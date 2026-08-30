@@ -184,8 +184,8 @@ export default function DriverRecordJa() {
             },
             {
               icon: <FileCheck className="w-4 h-4" />,
-              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-              description: '日本の免許センターへの提出に必須のDFAアポスティーユ認証を手配します。',
+              title: '提出先が指定するDFAアポスティーユ認証',
+              description: '都道府県警察・免許センターの最新案内で指定された場合に、LTO書類の物理アポスティーユを手配します。',
             },
             {
               icon: <FileCheck className="w-4 h-4" />,

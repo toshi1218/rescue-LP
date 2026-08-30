@@ -129,7 +129,7 @@ export default function CenomarValidityJa() {
             },
             {
               icon: <FileCheck className="w-4 h-4" />,
-              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
+              title: '必要な場合のDFA e-Apostille認証',
               description: '提出先の要件に応じてDFAアポスティーユ認証も手配します。',
             },
           ]}

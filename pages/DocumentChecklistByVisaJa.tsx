@@ -119,7 +119,7 @@ export default function DocumentChecklistByVisaJa() {
               '@type': 'DefinedTerm',
               '@id': 'https://ph-document.com/ja/document-checklist-by-visa/#e-apostille',
               name: 'e-Apostille（電子アポスティーユ）',
-              description: '2026年3月以降、DFAがPSA民事書類（出生・婚姻・CENOMAR）に発行する電子（PDF）アポスティーユ。電子的に提出し、印刷すると無効になります。NBI等の非PSA書類は引き続き紙のアポスティーユを使用します。',
+              description: '2026年3月16日以降、DFAがPSA民事書類（出生・婚姻・CENOMAR）に発行する電子（PDF）アポスティーユ。電子的に提出し、印刷物は電子原本として扱われません。NBI等の非PSA書類は引き続き物理アポスティーユを使用します。',
             },
           ],
         },
@@ -202,7 +202,7 @@ export default function DocumentChecklistByVisaJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'アポスティーユと翻訳',
-            description: '多くの提出先では、DFAアポスティーユや日本語・英語翻訳が必要です。',
+            description: '認証や翻訳の要否は提出先と申請段階で異なります。現行チェックリストで指定されたものだけを手配します。',
           },
         ]}
       />

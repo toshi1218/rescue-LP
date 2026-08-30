@@ -170,7 +170,7 @@ export default function NbiClearanceOverseasEn() {
           { q: 'Can I get NBI Clearance through the Philippine consulate or embassy?', a: 'Some consulates offer NBI assistance, but availability is limited and wait times can be months. Our proxy service is typically faster and available regardless of your location.' },
           { q: 'What if my NBI result shows a HIT while I am overseas?', a: 'A HIT requires in-person verification at an NBI office in the Philippines. We handle this on your behalf through our local team. Share your situation and we will advise on the resolution process.' },
           { q: 'How long does NBI Clearance take from overseas?', a: 'Approximately 4–6 weeks: NBI processing 2–3 weeks, DFA Apostille 1–2 weeks, DHL shipping 3–5 business days. HIT cases take longer.' },
-          { q: 'Does NBI Clearance need DFA Apostille when used for immigration abroad?', a: 'Yes, for most immigration purposes. We include DFA Apostille as standard in our service. If your specific authority does not require it, we will let you know before we start.' },
+          { q: 'Does NBI Clearance need DFA Apostille when used for immigration abroad?', a: 'Not automatically. Follow the current checklist of the receiving immigration authority. When physical DFA Apostille is required for NBI Clearance, we can arrange it.' },
           { q: 'How long is NBI Clearance valid for overseas use?', a: 'NBI Clearance is valid for 1 year from the issue date, but many immigration authorities require it issued within 6 months. We time retrieval to match your submission deadline.' },
         ]}
         ctaTitle="Share your situation and we will guide your next step"

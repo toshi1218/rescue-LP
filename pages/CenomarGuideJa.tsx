@@ -119,10 +119,10 @@ export default function CenomarGuideJa() {
       <HeroBanner
         title="CENOMAR（独身証明書）"
         subtitle="国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。"
-        badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
+        badges={['国際結婚対応', '必要な場合のみe-Apostille', '日本語でご相談OK']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月30日"
       />
       <SummaryBlock
         conclusion="CENOMARは国際結婚・配偶者ビザ・帰化申請で必要になることが多い書類です。日本語のみで取得を代行します。"
@@ -141,14 +141,13 @@ export default function CenomarGuideJa() {
             <div>
               <p className="font-bold text-amber-900 text-sm mb-2">【2026年3月16日以降】PSAのe-certificate移行について</p>
               <p className="text-sm text-amber-800 leading-relaxed mb-2">
-                2026年3月16日より、PSAはデジタル証明書（e-certificate）とDFA電子アポスティーユ（e-Apostille）の発行に完全移行しました。
+                2026年3月16日より、ハーグ条約加盟国向けのPSA書類はe-Certificateに対するDFA e-Apostilleとして電子発行され、物理Apostilleは発行されなくなりました。
               </p>
               <p className="text-sm text-amber-800 leading-relaxed mb-2">
-                <strong>日本の市区町村役場・法務局・出入国在留管理庁は、e-Apostilleのプリントアウトを原則として受け付けません。</strong>
-                日本側にQRコードでオンライン検証する内部マニュアルが整備されておらず、「原本のコピー」として不受理になるリスクがあります。
+                DFA公式FAQでは、e-Apostilleを印刷して紙で提出すると電子文書としての効力を失うため、PDFのまま提出先へ転送するよう案内されています。
               </p>
               <p className="text-sm text-amber-800 leading-relaxed">
-                2026年3月以降、DFAの認証は<strong>e-Apostille（電子）のみ</strong>で、物理アポスティーユは発行されません。当社はPSAオンライン申請とDFA e-Apostille申請を日本語で代行し、提出先がe-Apostilleを受理するかの確認や、紙のPSA原本（SECPA）が必要な場合の進め方までご案内します。まずはご相談ください。
+                アポスティーユ自体が必要か、e-Certificateで足りるか、SECPA紙原本も必要かは提出先ごとに確認します。紙原本が必要な場合でも、e-Apostilleとは別書類として手配します。
               </p>
             </div>
           </div>
@@ -387,8 +386,8 @@ export default function CenomarGuideJa() {
           { href: '/ja/document-checklist-by-visa/', title: 'ビザ別書類チェックリスト', description: 'K-1、CR-1、日本向けに必要な書類をまとめて確認できます。' },
           { href: '/ja/psa-shussei-shomeisho/', title: 'PSA出生証明書取得代行', description: '婚姻関連以外の基本書類もあわせて確認できます。' },
           { href: '/ja/cenomar-apostille/', title: 'CENOMARのアポスティーユ', description: '提出先に合わせてアポスティーユが必要か確認できます。' },
-          { href: '/ja/apostille-ryokin/', title: 'アポスティーユの料金・費用', description: 'Regular・Express別の料金とPSA・CENOMAR別の費用内訳を確認できます。' },
-          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'Regular（4営業日）・Express（翌営業日）の違いと提出期限からの逆算を解説。' },
+          { href: '/ja/apostille-ryokin/', title: 'アポスティーユの料金・費用', description: 'PSA e-Certificateとe-Apostilleの現行費用を確認できます。' },
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: '電子申請の現行処理期間と提出期限からの逆算を解説。' },
         ]}
       />
     </PageLayout>
