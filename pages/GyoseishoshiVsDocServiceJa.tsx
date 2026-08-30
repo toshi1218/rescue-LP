@@ -161,7 +161,7 @@ export default function GyoseishoshiVsDocServiceJa() {
                 title: '配偶者ビザ申請のケース',
                 rows: [
                   { role: '行政書士', task: '在留資格認定証明書交付申請書・理由書・申告書の作成、入国管理局への提出代行' },
-                  { role: 'IGRSなど書類取得サービス', task: 'PSA婚姻証明書・PSA出生証明書・DFAアポスティーユの取得・日本への郵送' },
+                  { role: 'IGRSなど書類取得サービス', task: 'PSA電子書類・必要なe-Apostilleの取得と、別途必要なSECPA紙原本の日本への郵送' },
                 ],
               },
               {

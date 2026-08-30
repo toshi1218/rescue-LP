@@ -93,8 +93,8 @@ export default function CenomarApostilleEn() {
       <SummaryBlock
         conclusion="Need DFA Apostille on your CENOMAR? We handle the entire process from PSA to Apostille and ship to your door worldwide."
         points={[
-          'DFA Apostille is required for CENOMAR to be accepted by immigration authorities worldwide',
-          'We retrieve CENOMAR from PSA and authenticate at DFA in one seamless process',
+          'Authentication depends on the receiving authority and application stage',
+          'When required, we coordinate the PSA e-Certificate and DFA e-Apostille electronically',
           'Applicable DFA e-Apostille process, confirmed against the receiving authority’s current requirements',
           'No need to visit the Philippines or coordinate with multiple agencies',
         ]}
@@ -142,7 +142,7 @@ export default function CenomarApostilleEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs. Paper original included.',
+            description: 'For PSA CENOMAR, DFA authentication is an electronic e-Apostille from March 16, 2026. A SECPA paper CENOMAR can be ordered separately when needed.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
