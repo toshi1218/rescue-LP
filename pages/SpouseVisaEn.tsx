@@ -22,7 +22,7 @@ export default function SpouseVisaEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Spouse Visa Philippine Documents Retrieval Service',
-        description: 'We retrieve all Philippine documents required for spouse visa applications worldwide — PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille. Ships via DHL.',
+        description: 'We retrieve the Philippine records identified by the current spouse-visa checklist and arrange authentication only when required. PSA Apostilles are delivered electronically.',
         url: 'https://ph-document.com/en/spouse-visa-documents/',
         provider: {
           '@type': 'Organization',
@@ -51,7 +51,7 @@ export default function SpouseVisaEn() {
               name: 'What documents does NVC require for a spouse visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Typically PSA Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by case. We confirm for your specific petition.',
+                text: 'PSA Marriage and Birth Certificates may be requested. Authentication requirements vary by country, authority, and case stage, so we confirm the current official checklist before processing.',
               },
             },
             {
@@ -91,10 +91,10 @@ export default function SpouseVisaEn() {
       />
 
       <SummaryBlock
-        conclusion="We retrieve all Philippine documents needed for your spouse visa and ship them Apostille-ready worldwide."
+        conclusion="We retrieve the Philippine documents identified by your spouse-visa checklist and arrange the required format."
         points={[
           'PSA Marriage Certificate, Birth Certificate, NBI Clearance, and CENOMAR available',
-          'DFA Apostille included so documents are accepted by immigration authorities worldwide',
+          'Authentication arranged only when the receiving authority requires it',
           'We verify requirements for your specific visa type before starting',
           'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
@@ -142,7 +142,7 @@ export default function SpouseVisaEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided.',
+            description: 'For PSA records, required Apostilles are electronic PDFs; SECPA paper records are separate. Eligible non-PSA records use the physical authentication route.',
           },
           {
             icon: <Globe className="w-4 h-4" />,

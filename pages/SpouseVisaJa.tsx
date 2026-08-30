@@ -15,7 +15,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function SpouseVisaJa() {
   useMeta(
     `配偶者ビザ 必要書類【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI 取得代行`,
-    '配偶者ビザ申請に必要なPSA書類・CENOMAR・NBI・DFAアポスティーユを日本から代行取得。紙の原本対応。在留資格認定・更新・変更すべて対応。無料相談。',
+    '配偶者ビザ申請向けのPSA婚姻証明書等を日本から代行取得。入管の現行要件を確認し、紙原本やDFA e-Apostilleは必要な場合だけ手配します。',
   );
   return (
     <PageLayout
@@ -24,7 +24,7 @@ export default function SpouseVisaJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: '配偶者ビザ申請 フィリピン書類取得代行',
-        description: '配偶者ビザ（在留資格「日本人の配偶者等」）申請に必要なPSA婚姻証明書・出生証明書・CENOMAR・DFAアポスティーユを一括代行。入管要件に合わせた形式で手配。',
+        description: '配偶者ビザ（在留資格「日本人の配偶者等」）向けのPSA婚姻証明書等を代行取得。入管の現行要件を確認し、認証は必要な場合だけ手配。',
         url: 'https://ph-document.com/ja/haigusha-visa/',
         provider: {
           '@type': 'Organization',
@@ -53,7 +53,7 @@ export default function SpouseVisaJa() {
               name: '配偶者ビザ申請に必要な書類は何ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA婚姻証明書・PSA出生証明書・DFAアポスティーユが基本です。申請の状況によって異なるため、まずご相談ください。',
+                text: '外国の機関が発行した婚姻証明書と日本語訳などが基本ですが、申請区分や提出先によって異なります。PSA出生証明書・CENOMAR・NBI・DFAアポスティーユが一律必須というわけではありません。',
               },
             },
             {
@@ -87,10 +87,10 @@ export default function SpouseVisaJa() {
       <HeroBanner
         title="配偶者ビザ"
         subtitle="PSA婚姻証明書、PSA出生証明書など、日本での申請準備に使うフィリピン書類を、必要に応じて整理してご案内します。"
-        badges={['日本語だけでOK', '入管要件に合わせて手配', 'アポスティーユ込み']}
+        badges={['日本語だけでOK', '入管要件に合わせて手配', '不要な認証は省略']}
         ctaText="必要書類を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月30日"
       />
 
       <SummaryBlock
@@ -110,7 +110,7 @@ export default function SpouseVisaJa() {
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">30,000円〜（DFA e-Apostille〈電子〉込み）</dd>
+              <dd className="font-medium text-gray-800">30,000円〜</dd>
               <dd className="text-gray-400 text-xs mt-1">※必要書類の種類によって変わります</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
@@ -133,9 +133,9 @@ export default function SpouseVisaJa() {
             </div>
             {[
               { label: 'PSA書類・CENOMAR取得', price: '込み' },
-              { label: 'DFA e-Apostille認証（電子・入管提出用）', price: '込み' },
+              { label: '必要な場合のDFA e-Apostille（電子）', price: '見積時に確認' },
               { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: '合計（DFA e-Apostille〈電子〉込み）', price: '30,000円〜', bold: true },
+              { label: '合計', price: '30,000円〜', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -160,11 +160,11 @@ export default function SpouseVisaJa() {
             <div className="px-4 py-3 font-bold text-center">更新・変更</div>
           </div>
           {[
-            { label: 'PSA婚姻証明書', shinki: '必須', koushin: '状況による' },
-            { label: 'PSA出生証明書', shinki: '必須', koushin: '状況による' },
-            { label: 'CENOMAR（独身証明書）', shinki: '初婚の場合に必要', koushin: '—' },
+            { label: 'PSA婚姻証明書', shinki: '通常確認', koushin: '状況による' },
+            { label: 'PSA出生証明書', shinki: '状況による', koushin: '状況による' },
+            { label: 'CENOMAR（独身証明書）', shinki: '提出先の指定による', koushin: '—' },
             { label: 'NBI Clearance', shinki: '入管の指定による', koushin: '入管の指定による' },
-            { label: 'DFAアポスティーユ', shinki: '全書類に必須', koushin: '全書類に必須', bold: true },
+            { label: 'DFAアポスティーユ', shinki: '提出先の指定による', koushin: '提出先の指定による', bold: true },
           ].map((row, i) => (
             <div key={row.label} className={`grid grid-cols-[2fr_1fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
               <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -174,10 +174,10 @@ export default function SpouseVisaJa() {
           ))}
         </div>
         <ul className="space-y-1.5 text-sm text-gray-700">
-          <li>・PSA婚姻証明書・PSA出生証明書 — DFAアポスティーユ付き原本（新規申請の基本書類）</li>
-          <li>・CENOMAR（独身証明書）— 初婚の場合、婚姻歴なしの証明として必要</li>
-          <li>・NBI Clearance（無犯罪証明書）— 入管から指定された場合に必要</li>
-          <li>・すべての書類にDFAアポスティーユ（紙の原本）が必須</li>
+          <li>・外国の機関が発行した婚姻証明書と日本語訳 — 申請内容に応じて準備</li>
+          <li>・PSA出生証明書・CENOMAR・NBI Clearance — 提出先から指定された場合に準備</li>
+          <li>・DFAアポスティーユ — 一律必須ではなく、提出先の指定を確認</li>
+          <li>・PSA書類のe-Apostilleは2026年3月16日以降、電子発行のみ</li>
         </ul>
         <p className="text-xs text-gray-500 mt-3">※ 必要書類は個別の申請状況によって異なります。正確な一覧は無料相談でご確認ください。</p>
       </section>
@@ -190,7 +190,7 @@ export default function SpouseVisaJa() {
             <p className="text-sm font-bold text-green-700 mb-2">✓ できること</p>
             <ul className="space-y-1.5">
               <li className="text-sm text-gray-700">フィリピン書類（PSA・CENOMAR）の取得代行</li>
-              <li className="text-sm text-gray-700">DFAアポスティーユ（紙の原本）の手配</li>
+              <li className="text-sm text-gray-700">必要な場合のDFA e-Apostille（電子）の手配</li>
               <li className="text-sm text-gray-700">必要書類の整理・案内</li>
             </ul>
           </div>
@@ -212,7 +212,7 @@ export default function SpouseVisaJa() {
           <h2 className="text-base font-bold text-amber-900">配偶者ビザの書類準備、こんな落とし穴があります</h2>
         </div>
         <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>2026年3月以降、PSA民事書類の認証は<strong>e-Apostille（電子）のみ</strong>——提出先の受理可否の確認が必要です</span></li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>2026年3月16日以降、PSA民事書類の認証は<strong>e-Apostille（電子）のみ</strong>——提出方法の確認が必要です</span></li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>書類の<strong>有効期限（発行から6ヶ月〜1年）</strong>を過ぎると再取得が必要</span></li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span><span>PSA書類・CENOMAR・NBI——<strong>どれが必要かは申請の状況によって異なる</strong></span></li>
         </ul>
@@ -229,7 +229,7 @@ export default function SpouseVisaJa() {
           {
             icon: <Heart className="w-4 h-4" />,
             title: '在留資格「日本人の配偶者等」を申請する方',
-            description: 'PSA婚姻証明書・PSA出生証明書・DFAアポスティーユが必要です。入管の要件に合わせた形式で手配します。',
+            description: '外国の婚姻証明書等を、入管の現行要件に合わせて手配します。出生証明書や認証が必要かも事前確認します。',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -268,8 +268,8 @@ export default function SpouseVisaJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
+            title: '必要な場合のDFA e-Apostille',
+            description: '提出先が認証を求める場合のみ手配します。PSA書類のe-Apostilleは電子PDFで納品します。',
           },
         ]}
       />
@@ -286,7 +286,7 @@ export default function SpouseVisaJa() {
 
       <FaqSection
         items={[
-          { q: '配偶者ビザ申請に必要な書類は何ですか？', a: 'PSA婚姻証明書・PSA出生証明書・DFAアポスティーユが基本です。申請の状況によって異なるため、まずご相談ください。' },
+          { q: '配偶者ビザ申請に必要な書類は何ですか？', a: '外国の機関が発行した婚姻証明書と日本語訳などが基本ですが、申請区分や提出先によって異なります。PSA出生証明書・CENOMAR・NBI・DFAアポスティーユが一律必須というわけではありません。' },
           { q: 'フィリピン人の方が日本在住でも書類取得を依頼できますか？', a: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。' },
           { q: '書類の有効期限はありますか？', a: 'PSA書類・CENOMARは発行から6ヶ月〜1年が有効期限の目安です。申請タイミングに合わせた取得時期をご案内します。' },
           { q: '更新・変更申請でも書類が必要ですか？', a: '更新・変更申請でも書類の再取得が必要なケースがあります。現在お持ちの書類の有効期限を確認した上でご案内します。' },

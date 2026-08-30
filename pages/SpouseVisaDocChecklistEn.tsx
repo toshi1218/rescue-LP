@@ -18,15 +18,15 @@ export default function SpouseVisaDocChecklistEn() {
 
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Spouse Visa Document Checklist [March 2026]' }]}
+      breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Spouse Visa Document Checklist [August 2026]' }]}
       jsonLd={[
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'Spouse Visa Document Checklist [March 2026] — Philippine National, Japan COE Application',
-          description: 'TB Non-Disease Certificate is now mandatory from June 2025. Full checklist of Philippine documents for Japan spouse visa COE application: PSA marriage cert, birth cert, CENOMAR, apostille, TB certificate.',
+          headline: 'Spouse Visa Document Checklist [August 2026] — Philippine National, Japan COE Application',
+          description: 'TB Non-Disease Certificate is mandatory from June 2025. Philippine civil-document and authentication requirements vary by case and immigration office; PSA Apostilles have been electronic since March 16, 2026.',
           url: 'https://ph-document.com/en/spouse-visa-document-checklist/',
-          dateModified: '2026-03-14',
+          dateModified: '2026-08-30',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -42,7 +42,7 @@ export default function SpouseVisaDocChecklistEn() {
               name: 'What Philippine documents are needed for the Japan spouse visa COE application?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'As of March 2026: PSA Marriage Certificate (with DFA Apostille, paper original), PSA Birth Certificate (with DFA Apostille, paper original), CENOMAR, TB Non-Disease Certificate (mandatory from June 23, 2025), and Japanese translations of each document.',
+                text: 'The exact PSA civil records depend on the case and immigration office. A TB Non-Disease Certificate is mandatory for covered COE applications from June 23, 2025, and foreign-language records need Japanese translations. If authentication is specifically requested, PSA Apostilles are issued electronically from March 16, 2026.',
               },
             },
             {
@@ -58,10 +58,10 @@ export default function SpouseVisaDocChecklistEn() {
       ]}
     >
       <HeroBanner
-        title="Spouse Visa Document Checklist [March 2026]"
+        title="Spouse Visa Document Checklist [August 2026]"
         subtitle="Complete list of Philippine documents required for the Japan spouse visa (COE) application. TB Non-Disease Certificate is now mandatory from June 2025."
-        badges={['Updated March 2026', 'TB Cert Now Required', 'Document Retrieval Available']}
-        lastUpdated="April 1, 2026"
+        badges={['Updated August 2026', 'TB Cert Now Required', 'Document Retrieval Available']}
+        lastUpdated="August 30, 2026"
       />
       <article className="max-w-2xl mx-auto px-4">
 
@@ -102,7 +102,7 @@ export default function SpouseVisaDocChecklistEn() {
             The "Spouse or Child of Japanese National" residence status allows a Philippine national married to a Japanese citizen to reside long-term in Japan. To bring your spouse to Japan for the first time, a <strong>Certificate of Eligibility (COE)</strong> must be obtained first — then a visa is applied for, and entry follows.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            This page lists the Philippine documents required for the COE application, based on the latest information as of March 2026.
+            This page lists Philippine documents commonly requested for the COE application. The responsible immigration office's current checklist and case-specific instructions control.
           </p>
         </section>
 
@@ -122,12 +122,12 @@ export default function SpouseVisaDocChecklistEn() {
                   <span className="font-semibold text-gray-500">Issuer</span>
                   <span>PSA (Philippine Statistics Authority)</span>
                   <span className="font-semibold text-gray-500">Format</span>
-                  <span>Paper original with DFA Apostille</span>
+                  <span>Format specified by the immigration office; authentication only if requested</span>
                   <span className="font-semibold text-gray-500">Validity (guide)</span>
                   <span>Within 6 months–1 year of issue (depends on immigration office)</span>
                 </div>
                 <div className="rounded-lg bg-blue-50 border border-blue-200 p-2.5 text-xs text-blue-800 mt-2">
-                  <strong>Important:</strong> e-Certificate (digital version from PSAHelpline) is NOT accepted by Japan immigration. You need a paper original + DFA Apostille.
+                  <strong>Important:</strong> Do not assume every case requires an Apostille. If DFA authentication is requested, PSA Apostilles have been issued only as an electronic PDF since March 16, 2026. A separately ordered SECPA paper certificate is a different record and is not automatically covered by that e-Apostille.
                 </div>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function SpouseVisaDocChecklistEn() {
                   <span className="font-semibold text-gray-500">Issuer</span>
                   <span>PSA (Philippine Statistics Authority)</span>
                   <span className="font-semibold text-gray-500">Format</span>
-                  <span>Paper original with DFA Apostille</span>
+                  <span>Format specified by the immigration office; authentication only if requested</span>
                   <span className="font-semibold text-gray-500">Validity (guide)</span>
                   <span>Within 1 year of issue (Philippine Embassy in Japan standard)</span>
                 </div>
@@ -164,7 +164,7 @@ export default function SpouseVisaDocChecklistEn() {
                   <span className="font-semibold text-gray-500">Issuer</span>
                   <span>PSA (Philippine Statistics Authority)</span>
                   <span className="font-semibold text-gray-500">Format</span>
-                  <span>Paper original with DFA Apostille</span>
+                  <span>Format specified by the immigration office; authentication only if requested</span>
                   <span className="font-semibold text-gray-500">Validity (guide)</span>
                   <span>Within 6 months of issue (depends on submission destination)</span>
                   <span className="font-semibold text-gray-500">Purpose</span>
@@ -225,7 +225,7 @@ export default function SpouseVisaDocChecklistEn() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">Timing Your Document Preparation</h2>
           <div className="space-y-4 text-sm text-gray-700">
             <p className="leading-relaxed">
-              Documents have expiry dates, so there are two risks: getting them too early (they expire before you apply) and too late (they aren't ready in time). As of March 2026, keep the following in mind:
+              Receiving authorities may impose issue-date limits, so there are two risks: getting records too early and getting them too late. Confirm the current limit with the responsible immigration office.
             </p>
 
             <div className="rounded-xl bg-white border border-gray-200 p-4">
@@ -250,7 +250,7 @@ export default function SpouseVisaDocChecklistEn() {
             <div className="rounded-lg bg-blue-50 border border-blue-200 p-3 flex items-start gap-2">
               <Info className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
               <p className="text-sm text-blue-800">
-                From PSA retrieval through DFA Apostille and DHL shipping, the total process takes about <strong>1–2 months</strong>. Start early and coordinate with the TB certificate timeline.
+                Timing depends on whether you need an electronic PSA record and e-Apostille, a separate SECPA paper record, or both. Confirm the required format before ordering and coordinate it with the TB certificate timeline.
               </p>
             </div>
           </div>
@@ -288,13 +288,14 @@ export default function SpouseVisaDocChecklistEn() {
 
         {/* Summary */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Summary: Spouse Visa Documents as of March 2026</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Summary: confirm the current case-specific checklist</h2>
           <div className="rounded-xl bg-secondary text-white p-5">
             <div className="space-y-2">
               {[
-                { icon: '📄', text: 'PSA Marriage Certificate + DFA Apostille (paper original)', new: false },
-                { icon: '📄', text: 'PSA Birth Certificate + DFA Apostille (paper original)', new: false },
-                { icon: '📄', text: 'CENOMAR + DFA Apostille', new: false },
+                { icon: '📄', text: 'PSA Marriage Certificate, if requested for the case', new: false },
+                { icon: '📄', text: 'PSA Birth Certificate, if requested for the case', new: false },
+                { icon: '📄', text: 'CENOMAR, if requested for the case', new: false },
+                { icon: '💻', text: 'DFA e-Apostille (electronic PDF) only when authentication is requested', new: false },
                 { icon: '🆕', text: 'TB Non-Disease Certificate (required from June 2025) — designated Panel Clinic, valid 180 days', new: true },
                 { icon: '📝', text: 'Japanese translation of each document (translator info required)', new: false },
               ].map((item, i) => (
@@ -310,7 +311,7 @@ export default function SpouseVisaDocChecklistEn() {
 
       <CtaBox
         title="We Handle Your Philippine Documents Together"
-        description="PSA marriage certificate, PSA birth certificate, CENOMAR, and DFA Apostille — all in one order. We can also advise on coordinating the TB certificate exam with your document timeline."
+        description="We confirm the documents and formats specified for your case, then arrange PSA records, an electronic DFA Apostille when required, and any separately requested SECPA paper records."
         buttonText="Free Consultation"
         href="#contact"
         variant="primary"
@@ -322,7 +323,7 @@ export default function SpouseVisaDocChecklistEn() {
           items={[
             {
               q: 'What Philippine documents are needed for the Japan spouse visa COE application?',
-              a: 'As of March 2026: PSA Marriage Certificate (with DFA Apostille, paper original), PSA Birth Certificate (with DFA Apostille, paper original), CENOMAR, TB Non-Disease Certificate (mandatory from June 23, 2025), and Japanese translations of each document.',
+              a: 'The exact PSA civil records depend on the case and immigration office. A TB Non-Disease Certificate is mandatory for covered COE applications from June 23, 2025, and foreign-language records need Japanese translations. If authentication is specifically requested, PSA Apostilles are issued electronically from March 16, 2026.',
             },
             {
               q: 'What is the new document required from June 2025?',
