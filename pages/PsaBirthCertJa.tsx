@@ -17,7 +17,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function PsaBirthCertJa() {
   useMeta(
     `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR_MONTH_JA}】PSA・アポスティーユ込み`,
-    'フィリピン出生証明書（PSA）を日本から取り寄せ代行。セブ在住スタッフが直接PSA申請→DFAアポスティーユ→国際郵送まで一括対応。紙の原本を4〜6週間で自宅へ。追加請求なし。無料相談。',
+    'フィリピン出生証明書（PSA）を日本から代行取得。PSA電子書類、必要な場合のDFA e-Apostille、SECPA紙原本を提出先に合わせて手配します。',
     'https://ph-document.com/ja/psa-shussei-shomeisho/',
   );
   return (
@@ -27,7 +27,7 @@ export default function PsaBirthCertJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA出生証明書取得代行',
-        description: 'フィリピンのPSA出生証明書をDFAアポスティーユ付きで日本語だけで代行取得。国際結婚・配偶者ビザ・帰化申請に対応。フィリピン渡航不要、約1ヶ月〜。',
+        description: 'フィリピンのPSA出生証明書を日本語だけで代行取得。必要な場合のDFA e-ApostilleとSECPA紙原本にも対応。',
         url: 'https://ph-document.com/ja/psa-shussei-shomeisho/',
         provider: {
           '@type': 'Organization',
@@ -80,7 +80,7 @@ export default function PsaBirthCertJa() {
               name: '出生証明書とアポスティーユ、両方必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '日本の提出先では通常、PSA出生証明書＋DFAアポスティーユの両方が必要です。提出先を確認した上でご案内します。',
+                text: '一律ではありません。提出先へPSA出生証明書、DFA認証、SECPA紙原本のどれが必要か確認します。必要な場合、PSA書類のApostilleは電子発行です。',
               },
             },
             {
@@ -88,7 +88,7 @@ export default function PsaBirthCertJa() {
               name: 'いつ届きますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。',
+                text: '必要な組み合わせにより異なります。PSA e-Certificateとe-Apostilleは電子手続き、SECPA紙原本が必要な場合は別途取得・国際配送となるため、提出期限を確認して個別にご案内します。',
               },
             },
             {
@@ -114,10 +114,10 @@ export default function PsaBirthCertJa() {
       <HeroBanner
         title="フィリピン出生証明書の取り寄せ代行"
         subtitle="フィリピンPSA出生証明書を日本から取り寄せ。国際結婚、配偶者ビザ準備、帰化申請など、提出先に合わせて必要な形式を確認しながら進めます。"
-        badges={['日本語だけで取り寄せOK', 'DFAアポスティーユ込み対応', '渡航不要']}
+        badges={['日本語だけで取り寄せOK', '必要な場合のみe-Apostille', '渡航不要']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月30日"
       />
 
       <div className="max-w-2xl mx-auto px-4">
@@ -148,7 +148,7 @@ export default function PsaBirthCertJa() {
             </div>
           </dl>
           <p className="text-gray-700 leading-relaxed mt-4 text-sm">
-            PSA出生証明書は<strong>電子認証版（PSAHelplineオンライン）</strong>と<strong>紙の原本</strong>があります。日本の市区町村役場・入管・法務局への提出では、紙の原本＋DFAアポスティーユが求められるケースがほとんどです。日本から取り寄せる場合は、現地での申請からアポスティーユ・国際郵送までの一連の流れが必要になります。
+            PSA出生証明書には<strong>e-Certificate（電子）</strong>と<strong>SECPA紙原本</strong>があります。2026年3月16日以降、必要なApostilleはe-Certificateに対するe-Apostilleとして電子発行されます。認証や紙原本の要否は提出先ごとに確認します。
           </p>
         </SectionDivider>
 
@@ -176,10 +176,10 @@ export default function PsaBirthCertJa() {
       </div>
 
       <SummaryBlock
-        conclusion="フィリピン出生証明書（PSA・アポスティーユ付き）を、日本から日本語だけで取り寄せできます。"
+        conclusion="PSA出生証明書を、電子版・紙原本・必要な場合のe-Apostilleから提出先に合う形で取り寄せできます。"
         points={[
-          '現地スタッフがPSA出生証明書の取り寄せ・DFAアポスティーユを代行',
-          '日本の提出先が求める「紙の原本＋アポスティーユ」形式で取り寄せ',
+          'PSA出生証明書と必要な場合のDFA e-Apostilleを代行',
+          'SECPA紙原本は提出先が必要とする場合のみ別途手配',
           '「PSAに記録がない」など、通常の取り寄せが難しい複雑なケースも相談可能',
           '国際結婚・配偶者ビザ・帰化申請、どの用途の取り寄せにも対応',
         ]}
@@ -193,8 +193,8 @@ export default function PsaBirthCertJa() {
           <h2 className="text-base font-bold text-amber-900">PSAオンライン申請で「届いた書類が使えない」ケースがあります</h2>
         </div>
         <ul className="space-y-2 text-sm text-amber-800 leading-relaxed">
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>PSAオンライン（PSAHelpline）で取得できるのは<strong>電子認証版のみ</strong>。DFAアポスティーユは別途必要</li>
-          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>日本の提出先では<strong>紙の原本＋DFAアポスティーユ</strong>が求められるケースがほとんど</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>PSA e-Apostilleは<strong>電子PDFのみ</strong>。印刷物は電子原本として扱われません</li>
+          <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>SECPA紙原本が必要かは提出先ごとに異なり、e-Apostilleとは別に確認が必要</li>
           <li className="flex items-start gap-2"><span className="text-amber-500 font-bold flex-shrink-0">✕</span>「PSAに記録がない」場合は<strong>LCR（地方民事登録局）への申請</strong>が必要になることも</li>
         </ul>
         <p className="mt-4 text-sm font-semibold text-amber-900">→ 書類の取得からDFAアポスティーユまで、一括で代行します。</p>
@@ -206,7 +206,7 @@ export default function PsaBirthCertJa() {
           {
             icon: <Users className="w-4 h-4" />,
             title: '国際結婚・配偶者ビザの手続き中の方',
-            description: '日本の市区町村役場やフィリピン大使館への提出に、DFAアポスティーユ付きPSA出生証明書が必要です。書類取得とアポスティーユを一括で手配します。',
+            description: '市区町村や大使館の現行チェックリストを確認し、必要なPSA書類と認証だけを手配します。',
           },
           {
             icon: <Baby className="w-4 h-4" />,
@@ -245,8 +245,8 @@ export default function PsaBirthCertJa() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-            description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配。紙の原本で対応します。',
+            title: '必要な場合のDFA e-Apostille',
+            description: '提出先が認証を求める場合、PSA e-Certificateに対するe-Apostilleを電子で手配します。',
           },
         ]}
       />
@@ -255,9 +255,9 @@ export default function PsaBirthCertJa() {
         heading="ご依頼の流れ"
         steps={[
           { title: 'フォームで相談（無料）', description: '用途（国際結婚・ビザ申請など）と提出先をお知らせください。24時間以内に返信します。' },
-          { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+          { title: '必要書類・料金の確認', description: '認証や紙原本の要否を確認し、必要な範囲で料金をご提示します。' },
+          { title: 'オンラインで手配', description: 'PSA e-Certificateと、必要な場合のDFA e-Apostilleをオンライン申請します。' },
+          { title: '納品', description: '電子書類はPDFで納品し、SECPA紙原本が必要な場合のみ追跡付きで郵送します。' },
         ]}
       />
 
@@ -265,7 +265,7 @@ export default function PsaBirthCertJa() {
         heading="こんな方に向いています"
         columns={2}
         cards={[
-          { icon: Users, title: "国際結婚・配偶者ビザの手続き中", description: "市区町村役場や入管への提出に、DFAアポスティーユ付きで対応します", accent: 'teal' },
+          { icon: Users, title: "国際結婚・配偶者ビザの手続き中", description: "市区町村や入管の現行要件に合わせ、必要な形式だけ手配します", accent: 'teal' },
           { icon: Baby, title: "帰化申請を進めている", description: "法務局への帰化申請で必要な書類をまとめて手配します", accent: 'blue' },
           { icon: Clock, title: "提出期限が近い", description: "現状をお知らせください。優先対応の可否を確認してご案内します", accent: 'gold' },
           { icon: FileCheck, title: "「PSAに記録がない」と言われた", description: "LCR申請など複雑なケースにも対応経験があります", accent: 'purple' },
@@ -291,8 +291,8 @@ export default function PsaBirthCertJa() {
           { q: 'PSA出生証明書とは何ですか？', a: 'PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（PSA）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚・配偶者ビザ申請・帰化申請などで身元証明として提出を求められます。' },
           { q: '料金はいくらですか？', a: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜50,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。' },
           { q: 'PSAに記録がない場合はどうなりますか？', a: 'LCR（地方民事登録局）への申請が必要になります。対応経験がありますので、まずご相談ください。追加費用が発生する場合は事前にご説明します。' },
-          { q: '出生証明書とアポスティーユ、両方必要ですか？', a: '日本の提出先では通常、PSA出生証明書＋DFAアポスティーユの両方が必要です。提出先を確認した上でご案内します。' },
-          { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },
+          { q: '出生証明書とアポスティーユ、両方必要ですか？', a: '一律ではありません。提出先へPSA出生証明書、DFA認証、SECPA紙原本のどれが必要か確認します。必要な場合、PSA書類のApostilleは電子発行です。' },
+          { q: 'いつ届きますか？', a: '必要な組み合わせにより異なります。PSA e-Certificateとe-Apostilleは電子手続き、SECPA紙原本が必要な場合は別途取得・国際配送となるため、提出期限を確認して個別にご案内します。' },
           { q: 'PSA出生証明書とCENOMARは違いますか？', a: '異なる書類です。PSA出生証明書は生年月日・出生地・両親の情報を証明するもので、CENOMARは婚姻記録がないこと（独身）を証明するものです。手続きによっては両方必要になる場合があります。' },
           { q: 'フィリピンに行かなくても取得できますか？', a: 'はい、フィリピン渡航不要で対応しています。日本からメールやフォームでご依頼いただければ、現地スタッフが申請・取得・DFAアポスティーユ・発送まで代行します。' },
         ]}
@@ -305,7 +305,7 @@ export default function PsaBirthCertJa() {
           { href: '/ja/psa-shussei-cost/', title: 'PSA出生証明書の料金', description: '費用の目安と内訳を確認できます。' },
           { href: '/ja/cenomar-vs-marriage-certificate/', title: 'CENOMARと婚姻証明書の違い', description: '婚姻関連の書類を取り違えないための確認ページです。' },
           { href: '/ja/apostille-ryokin/', title: 'アポスティーユの料金・費用', description: 'PSA出生証明書にアポスティーユを付ける際の料金内訳。' },
-          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'Regular・Expressそれぞれの処理日数を解説。' },
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'PSA e-Apostilleの電子申請と現行処理期間を解説。' },
           { href: '/ja/kika-shinsei-guide/', title: '帰化申請の書類代行', description: '帰化申請ではPSA出生証明書とNBI Clearanceを法務局要件で揃えます。' },
           { href: '/ja/document-checklist-by-visa/', title: 'ビザ別チェックリスト', description: 'どのビザで何が必要かをまとめて確認できます。' },
         ]}

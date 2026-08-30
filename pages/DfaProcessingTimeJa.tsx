@@ -124,8 +124,8 @@ export default function DfaProcessingTimeJa() {
           items={[
             {
               icon: <FileCheck className="w-4 h-4" />,
-              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-              description: 'フィリピン外務省（DFA）によるアポスティーユ認証を手配します。DFA内部処理はRegular 5日程度・Express 3日程度。当社の代行手配込みで約2週間が目安です（DFAの処理のみの期間）。',
+              title: '提出先が求める場合のDFA認証',
+              description: 'PSA民事書類はe-Apostille電子手続き、NBI・LTO等は対象に応じた物理手続きを手配します。所要日数は書類種別とDFAの現行処理状況で変わります。',
             },
             {
               icon: <FileCheck className="w-4 h-4" />,

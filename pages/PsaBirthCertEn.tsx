@@ -15,7 +15,7 @@ import RelatedArticles from '../components/RelatedArticles';
 export default function PsaBirthCertEn() {
   useMeta(
     `PSA Birth Certificate + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
-    `Get a PSA Birth Certificate from the Philippines without flying there. We handle retrieval + DFA Apostille + DHL delivery to your door. Free quote.`,
+    `Get a PSA Birth Certificate from abroad. We arrange the PSA record, electronic DFA Apostille when required, and separate SECPA paper delivery when requested.`,
   );
   return (
     <PageLayout
@@ -24,7 +24,7 @@ export default function PsaBirthCertEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Birth Certificate Retrieval Service (+ DFA Apostille)',
-        description: 'We retrieve PSA Birth Certificate from the Philippines with DFA Apostille and ship worldwide via DHL. Required for visa and immigration applications in the US, Canada, Australia, UK & more.',
+        description: 'We arrange a PSA Birth Certificate, electronic DFA Apostille when required, and separate SECPA paper delivery when requested by the receiving authority.',
         url: 'https://ph-document.com/en/psa-birth-certificate/',
         provider: {
           '@type': 'Organization',
@@ -142,7 +142,7 @@ export default function PsaBirthCertEn() {
       </div>
 
       <SummaryBlock
-        conclusion="We retrieve your PSA Birth Certificate with DFA Apostille and ship it to your address worldwide. No trip to the Philippines."
+        conclusion="We arrange the PSA Birth Certificate in the format your receiving authority requests, without a trip to the Philippines."
         points={[
           'PSA Birth Certificate is required for nearly every visa and immigration case worldwide',
           'Authentication arranged only when the receiving authority requires it',
@@ -193,7 +193,7 @@ export default function PsaBirthCertEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs. Paper original included.',
+            description: 'When required, we arrange the DFA e-Apostille for the PSA e-Certificate. Any SECPA paper certificate requested by the receiving authority is ordered separately.',
           },
           {
             icon: <Globe className="w-4 h-4" />,

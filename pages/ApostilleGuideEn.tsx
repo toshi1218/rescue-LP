@@ -98,10 +98,10 @@ export default function ApostilleGuideEn() {
       </p>
 
       <SummaryBlock
-        conclusion="We handle DFA Apostille for any Philippine document and ship the authenticated original to your door."
+        conclusion="We identify the correct DFA authentication route and deliver it in the format applicable to the document."
         points={[
-          'DFA Apostille is required for Philippine documents to be accepted abroad',
-          'We authenticate PSA, NBI, CENOMAR, and other government documents',
+          'Apostille is arranged only when the receiving authority requires authentication',
+          'PSA civil records use e-Apostille; eligible non-PSA records may use a physical route',
           'Digital e-Apostille or physical authentication delivered through the correct route',
           'Can be combined with document retrieval for a seamless one-stop service',
         ]}
@@ -144,7 +144,7 @@ export default function ApostilleGuideEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs. Paper original provided.',
+            description: 'PSA civil-record Apostilles are electronic PDFs from March 16, 2026. Eligible non-PSA documents may still receive physical authentication.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -164,7 +164,7 @@ export default function ApostilleGuideEn() {
         steps={[
           { title: 'Tell us which documents need Apostille and your deadline', description: 'Share the document type (CENOMAR, NBI, PSA Birth Certificate, etc.), the destination country, and your submission deadline.' },
           { title: 'We confirm authentication requirements per destination authority', description: 'Requirements differ by document and country — we verify whether an e-Apostille, Certificate of Authentication, embassy attestation, or no authentication is required.' },
-          { title: 'We retrieve the document and submit to the DFA Apostille queue', description: 'Our team requests the source document from PSA or NBI, then submits it to DFA for official Apostille authentication in the Philippines.' },
+          { title: 'We use the applicable DFA route', description: 'PSA e-Certificates use the online e-Apostille process; eligible non-PSA documents follow the applicable physical process.' },
           { title: 'Correct format delivered digitally or by DHL', description: 'Digital authentication is emailed in its original form; physical documents are shipped with DHL tracking when needed. Estimated total: 4–6 weeks.' },
         ]}
       />

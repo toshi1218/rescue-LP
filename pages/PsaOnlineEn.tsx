@@ -93,8 +93,8 @@ export default function PsaOnlineEn() {
         points={[
           'PSA Serbilis is the official PSA online portal — orders processed remotely',
           'Delivery within Philippines only — international shipment requires a local representative or service',
-          'DFA Apostille is needed for most immigration and legal use abroad',
-          'We retrieve, apostille, and ship PSA documents to you worldwide via DHL',
+          'Authentication depends on the receiving authority and application stage',
+          'When required, DFA e-Apostille is delivered electronically; separate SECPA paper records can ship by DHL',
         ]}
         ctaText="Get PSA Documents Shipped to You"
       />
@@ -132,7 +132,7 @@ export default function PsaOnlineEn() {
           {
             icon: <AlertTriangle className="w-4 h-4" />,
             title: 'No DFA Apostille included',
-            description: 'PSA Serbilis delivers raw PSA documents. For immigration use, you separately need DFA Apostille — which requires the original to be physically submitted to DFA. This adds 1–2 weeks and another set of steps.',
+            description: 'PSA Serbilis does not automatically include authentication. If the receiving authority requires it, PSA civil records use the DFA e-Apostille process from March 16, 2026; no physical PSA original is submitted to DFA.',
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
@@ -162,12 +162,12 @@ export default function PsaOnlineEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille — arranged after retrieval',
-            description: 'We submit the original PSA documents to DFA for Apostille authentication. This step is required for most immigration authorities outside the Philippines.',
+            description: 'When the receiving authority requires authentication, we arrange DFA e-Apostille for the PSA e-Certificate. A SECPA paper certificate is a separate order.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'DHL international shipping — tracked delivery to your door',
-            description: 'After Apostille, we ship directly to your address worldwide via DHL Express with tracking. No forwarding, no extra steps.',
+            description: 'Any separately requested SECPA paper records ship to your address via DHL Express. The e-Apostille remains an electronic PDF and should be forwarded electronically.',
           },
         ]}
       />
@@ -178,7 +178,7 @@ export default function PsaOnlineEn() {
           { title: 'Submit your inquiry', description: 'Tell us which documents you need and your use case (visa, immigration, marriage registration, etc.).' },
           { title: 'We confirm scope and quote', description: 'We verify what Apostille or format is required and provide all-inclusive pricing.' },
           { title: 'PSA retrieval in the Philippines', description: 'Our Cebu team applies to PSA Serbilis / PSA office and collects your documents.' },
-          { title: 'DFA Apostille authentication', description: 'We submit originals to DFA for Apostille. Paper originals returned with authentication stamp.' },
+          { title: 'DFA e-Apostille when required', description: 'For PSA civil records, DFA issues an electronic Apostille for the e-Certificate. We keep the authenticated PDF electronic and arrange any separate SECPA paper copy only when requested.' },
           { title: 'DHL delivery to you', description: 'All documents shipped with tracking directly to your international address. Estimated total: 4–6 weeks.' },
         ]}
       />
@@ -189,7 +189,7 @@ export default function PsaOnlineEn() {
           { q: 'What is PSA Serbilis?', a: 'PSA Serbilis is the official online ordering portal of the Philippine Statistics Authority. It processes orders for birth certificates, marriage certificates, CENOMAR, and death certificates.' },
           { q: 'How long does PSA Serbilis take?', a: 'PSA Serbilis typically takes 10–15 business days for delivery within the Philippines. Including DFA Apostille and international shipping, plan 4–6 weeks total.' },
           { q: 'What documents can I get from PSA online?', a: 'PSA Birth Certificate, PSA Marriage Certificate, CENOMAR (Certificate of No Marriage Record), and PSA Death Certificate are all available online through PSA Serbilis.' },
-          { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'For most immigration and legal purposes outside the Philippines, yes. We confirm the exact requirement for your destination country before starting.' },
+          { q: 'Do PSA documents need DFA Apostille for use abroad?', a: 'It depends on the receiving authority and application stage. Hague Convention membership does not make authentication mandatory for every submission. We confirm the exact requirement before starting.' },
         ]}
         ctaTitle="Not sure what you need? Ask us."
         ctaButton="Free Consultation"
@@ -199,7 +199,7 @@ export default function PsaOnlineEn() {
         items={[
           { href: '/en/psa-birth-certificate/', title: 'PSA Birth Certificate Retrieval', description: 'Get your PSA Birth Certificate with DFA Apostille shipped worldwide.' },
           { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'CENOMAR (Certificate of No Marriage Record) retrieved from PSA with Apostille.' },
-          { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'Why Apostille is needed and how we arrange it for every PSA document.' },
+          { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'When authentication is required and how PSA e-Apostille differs from physical non-PSA processing.' },
           { href: '/en/psa-birth-certificate-cost/', title: 'PSA Birth Certificate Cost', description: 'Full cost breakdown: PSA fee + DFA Apostille + DHL shipping.' },
         ]}
       />

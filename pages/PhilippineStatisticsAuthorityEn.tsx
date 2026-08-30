@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 export default function PhilippineStatisticsAuthorityEn() {
   useMeta(
     'Philippine Statistics Authority (PSA): Documents & How to Get Them [2026]',
-    'The Philippine Statistics Authority (PSA) issues birth certificates, marriage certificates, CENOMAR, and NBI Clearance. Learn what PSA issues, how to get documents from abroad, and what Apostille is required.',
+    'The Philippine Statistics Authority (PSA) issues birth certificates, marriage certificates, death certificates, and CENOMAR. Learn how to get records from abroad and when authentication is required.',
   );
   return (
     <PageLayout
@@ -71,7 +71,7 @@ export default function PhilippineStatisticsAuthorityEn() {
               name: 'Do PSA documents need DFA Apostille for use abroad?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For most immigration and legal purposes outside the Philippines, yes. DFA Apostille authenticates PSA documents for use in Hague Convention member countries. The DFA (Department of Foreign Affairs) issues Apostille on Philippine government documents.',
+                text: 'It depends on the receiving authority. Hague Convention membership explains how an Apostille is recognized when required; it does not make authentication mandatory for every foreign use. DFA issues PSA Apostilles electronically from March 16, 2026.',
               },
             },
           ],
@@ -92,7 +92,7 @@ export default function PhilippineStatisticsAuthorityEn() {
           'PSA (formerly NSO) issues birth certificates, marriage certificates, CENOMAR, and death certificates',
           'All PSA documents are printed on SECPA security paper with an official seal',
           'Online ordering via PSA Serbilis is available but delivers within the Philippines only',
-          'For international use, DFA Apostille is required — we handle retrieval, Apostille, and worldwide shipping',
+          'For international use, follow the receiving authority\'s format and authentication instructions',
         ]}
         ctaText="Get Your PSA Document"
       />
