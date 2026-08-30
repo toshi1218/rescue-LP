@@ -36,15 +36,15 @@ export default function BusinessGyoseishoshiJa() {
       <HeroBanner
         title="行政書士の方へ"
         subtitle="国際結婚・配偶者ビザ・帰化申請に必要なフィリピン書類を、先生の案件に合わせて一括代行します。"
-        badges={['案件ごとの進捗報告', '継続割引あり', '紙の原本アポスティーユ対応']}
-        lastUpdated="2026年3月1日"
+        badges={['案件ごとの進捗報告', '継続割引あり', '電子・物理の適用形式に対応']}
+        lastUpdated="2026年8月30日"
       />
 
       <SummaryBlock
         conclusion="先生のクライアント案件に必要なフィリピン書類を、日本語だけで取得できます。"
         points={[
           'CENOMAR・PSA出生証明書・PSA婚姻証明書・NBI・DFAアポスティーユに対応',
-          '入管・市区町村役場・裁判所が求める「紙の原本アポスティーユ」形式で手配',
+          'PSAはe-Apostille電子PDF、非PSAは対象に応じた物理認証として正しい形式で手配',
           '案件ごとの進捗を受理・取得・発送の各段階でご報告',
           '継続的にご依頼いただく場合はボリュームディスカウントを適用',
         ]}
@@ -84,7 +84,7 @@ export default function BusinessGyoseishoshiJa() {
         <div className="grid gap-3 md:grid-cols-2">
           {[
             { title: '国際結婚（日本先行婚）', desc: 'CENOMAR + DFAアポスティーユ、PSA出生証明書の取得。市区町村役場への提出に対応。' },
-            { title: '配偶者ビザ申請', desc: 'PSA書類 + DFAアポスティーユを「紙の原本」形式で手配。入管の求める形式に対応。' },
+            { title: '配偶者ビザ申請', desc: '担当入管が指定するPSA書類を取得し、認証が必要な場合はe-Apostille電子PDFを手配。SECPA紙原本は必要に応じて別途取得。' },
             { title: '帰化申請', desc: 'CENOMAR・PSA出生証明書・PSA婚姻証明書のDFAアポスティーユ付き取得。法務局提出用。' },
             { title: '在留資格更新・変更', desc: '在留資格の更新時に追加で求められるフィリピン書類の取得にも対応します。' },
           ].map((item) => (

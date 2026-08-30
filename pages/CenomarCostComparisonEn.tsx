@@ -152,7 +152,7 @@ export default function CenomarCostComparisonEn() {
             <li><span className="text-green-600 font-medium">✓</span> Same-day or next-day issuance</li>
             <li><span className="text-green-600 font-medium">✓</span> PSA outlet fee: ₱210/copy</li>
             <li><span className="text-red-500 font-medium">✗</span> Must be physically present in the Philippines</li>
-            <li><span className="text-red-500 font-medium">✗</span> No Apostille — must queue again at DFA</li>
+            <li><span className="text-red-500 font-medium">✗</span> No authentication included — arrange DFA e-Apostille separately if required</li>
             <li><span className="text-red-500 font-medium">✗</span> Not realistic for OFWs abroad</li>
           </ul>
         </div>

@@ -242,7 +242,7 @@ export default function CenomarGuideEn() {
         items={[
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'USA (K-1 & CR-1 visa) — Physical Apostille required',
+            title: 'USA (K-1 & CR-1 visa) — Follow the current case checklist',
             description: 'Document age and authentication requirements vary by U.S. visa stage. We confirm the current USCIS, NVC, or embassy checklist before processing.',
           },
           {

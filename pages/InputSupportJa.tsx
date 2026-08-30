@@ -56,7 +56,7 @@ export default function InputSupportJa() {
             name: 'e-Certificate（電子書類）は日本の役所や法務局で使えますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'PSAはe-Certificate（電子書類）、DFAはe-Apostille（電子認証）に対応していますが、日本の市区町村役場・法務局・出入国在留管理庁では紙の原本・物理アポスティーユを求めるケースが多くあります。提出先に受け入れの事前確認が取れている場合はe-Certificate申請が有効ですが、確認が取れていない場合は紙原本ルートのフルサービスをおすすめします。',
+              text: '提出先ごとに必要な形式が異なります。PSA民事書類のDFA認証は2026年3月16日以降e-Apostille（電子PDF）のみで、SECPA紙原本は別の書類です。電子PDFの提出方法、紙原本の要否、認証の要否を提出先へ確認してください。',
             },
           },
           {
@@ -201,13 +201,11 @@ export default function InputSupportJa() {
           <div>
             <p className="text-sm font-bold text-gray-800 mb-2">日本の提出先では紙のPSA原本が必要な場合があります</p>
             <p className="text-sm text-gray-700 leading-relaxed mb-3">
-              PSAはオンラインでのe-Certificate（電子書類）、DFAはe-Apostille（電子認証）に対応しています。2026年3月以降、DFAはPSA民事書類へ物理アポスティーユ（紙）を発行しなくなり、認証はe-Apostilleに一本化されました。一方で
-              <strong>日本の市区町村役場・法務局・出入国在留管理庁では、今も紙のPSA原本を前提に運用するケースが多く</strong>
-              あります。
+              PSAはe-Certificate（電子書類）、DFAはe-Apostille（電子認証）に対応しています。2026年3月16日以降、DFAはPSA民事書類へ物理アポスティーユを発行せず、認証はe-Apostilleに一本化されました。SECPA紙原本の要否は日本の提出先・手続きごとに異なります。
             </p>
             <p className="text-sm text-gray-700 leading-relaxed mb-3">
               提出先がe-Apostille（電子認証）を受理する場合はe-Certificate申請が有効です。
-              紙のPSA原本が必要な場合は、PSA原本＋e-Apostilleを手配するフルサービスをご検討ください。
+              紙のPSA原本が必要な場合はSECPAを別途取得します。e-Apostilleはe-Certificateを認証する電子PDFであり、別注文のSECPA紙原本を認証するものとは案内しません。
             </p>
             <Link
               to="/ja/psa-ecertificate-nihon/"
