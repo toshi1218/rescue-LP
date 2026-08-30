@@ -43,7 +43,7 @@ export default function MarriageOrderJa() {
               name: 'フィリピン先行婚を選ぶと、PSA婚姻証明書はすぐに取れますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'フィリピンで婚姻が成立しても、PSAへの記録反映には時間がかかります。Metro Manilaで2〜4か月、地方では6か月以上になる場合もあります。日本への報告的届出や配偶者ビザ申請のスケジュールに影響するため、事前に把握しておくことが重要です。',
+                text: 'PSAへの記録反映時期は地域や登録状況により異なります。ただし、在フィリピン日本大使館・総領事館への婚姻届では、市区町村役場発行の原本照合済み婚姻証明書またはPSA婚姻証明書を使用できます。PSA反映を待つ必要があるかは、届出先と後続手続きに確認してください。',
               },
             },
             {
@@ -51,7 +51,7 @@ export default function MarriageOrderJa() {
               name: '日本先行婚では、どのフィリピン書類が必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '一般的に、PSA発行のCENOMAR（独身証明書）とPSA出生証明書、それぞれのDFAアポスティーユが必要です。提出先の市区町村役場によって求める書類が異なる場合があるため、事前確認が必要です。',
+                text: '一般的にPSA発行のCENOMAR（独身証明書）とPSA出生証明書が用いられますが、必要書類やアポスティーユの要否は提出先の市区町村役場によって異なります。提出前に確認してください。',
               },
             },
           ],
@@ -63,7 +63,7 @@ export default function MarriageOrderJa() {
         badges={['手続きの流れを比較', '必要書類を整理', '状況に合わせて判断']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月30日"
       />
 
       <article className="space-y-10">
@@ -89,8 +89,8 @@ export default function MarriageOrderJa() {
           <h3 className="text-sm font-bold text-gray-800 mb-3">手続きの流れ</h3>
           <ol className="space-y-3 mb-6">
             {[
-              { step: '1', title: 'フィリピン側の書類を取り寄せる', detail: 'PSA発行のCENOMAR（独身証明書）とPSA出生証明書、それぞれのDFAアポスティーユを取得。フィリピン現地に行かなくても代行取得が可能です。' },
-              { step: '2', title: '日本の市区町村役場に婚姻届を提出', detail: '戸籍謄本・婚姻届・フィリピン側書類（CENOMAR・PSA出生証明書 + DFAアポスティーユ）を提出。役場によって翻訳文の書式が異なる場合があります。' },
+              { step: '1', title: 'フィリピン側の書類を取り寄せる', detail: '一般的にPSA発行のCENOMAR（独身証明書）とPSA出生証明書を用意します。アポスティーユの要否や必要な形式は提出先の市区町村役場へ確認します。' },
+              { step: '2', title: '日本の市区町村役場に婚姻届を提出', detail: '婚姻届と、提出先が指定するフィリピン側書類・日本語訳を提出します。必要書類や翻訳文の書式は市区町村役場によって異なります。' },
               { step: '3', title: '婚姻届が受理されたら、フィリピン大使館（または総領事館）へ報告', detail: '日本で婚姻が成立した後、在日フィリピン大使館または総領事館に「Report of Marriage（婚姻の報告）」を提出します。これでフィリピン側にも婚姻が記録されます。' },
               { step: '4', title: '配偶者ビザ（在留資格）の手続きへ', detail: 'パートナーが短期滞在または観光ビザで来日中の場合は、「在留資格変更許可申請」が必要です。' },
             ].map(({ step, title, detail }) => (
@@ -117,8 +117,8 @@ export default function MarriageOrderJa() {
               </thead>
               <tbody>
                 {[
-                  { doc: 'CENOMAR（独身証明書）', issuer: 'PSA（フィリピン統計局）', apo: '原則必要', note: '提出先によっては発行から6ヶ月以内のものを求められる場合あり' },
-                  { doc: 'PSA出生証明書', issuer: 'PSA', apo: '原則必要', note: 'Certificate of Live Birth' },
+                  { doc: 'CENOMAR（独身証明書）', issuer: 'PSA（フィリピン統計局）', apo: '提出先に確認', note: '提出先によっては発行から6ヶ月以内のものを求められる場合あり' },
+                  { doc: 'PSA出生証明書', issuer: 'PSA', apo: '提出先に確認', note: 'Certificate of Live Birth' },
                   { doc: 'パスポートのコピー', issuer: 'フィリピン人本人', apo: '不要', note: '有効期限内のもの' },
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
@@ -162,11 +162,10 @@ export default function MarriageOrderJa() {
           <h3 className="text-sm font-bold text-gray-800 mb-3">手続きの流れ</h3>
           <ol className="space-y-3 mb-6">
             {[
-              { step: '1', title: '日本人側が「婚姻要件具備証明書（LCCM）」を取得', detail: '日本の法務局で発行 → 外務省でアポスティーユ → 在日フィリピン大使館で認証。この書類は「この日本人は婚姻できる状態である」という証明です。' },
+              { step: '1', title: '日本人側が「婚姻要件具備証明書（LCCM）」を取得', detail: '在フィリピン日本国大使館、在セブ日本国総領事館または在ダバオ日本国総領事館で、日本人本人が申請・受領します。日本の法務局、外務省のアポスティーユ、在日フィリピン大使館の認証は不要です。' },
               { step: '2', title: 'フィリピンでMarriage Licenseを申請', detail: 'フィリピン現地の市役所（Local Civil Registrar）に申請。申請後10日間の公示期間があり、この間は婚姻できません。' },
               { step: '3', title: '挙式（婚姻の宣誓）', detail: '牧師・裁判官・市長など挙式権限を持つ者の前で婚姻の宣誓を行います。' },
-              { step: '4', title: 'PSA婚姻証明書の取得', detail: '婚姻成立後、PSAへの記録が反映されるまで時間がかかります。Metro Manilaで2〜4か月、地方では6か月以上になる場合もあります。' },
-              { step: '5', title: '日本の市区町村役場に「報告的届出」', detail: '帰国後3か月以内に、PSA婚姻証明書を添付して日本側でも婚姻を届出します。' },
+              { step: '4', title: '日本側へ「報告的届出」', detail: '婚姻成立後3か月以内に、日本の市区町村役場または在フィリピン日本大使館・総領事館へ届け出ます。在外公館への届出は、市区町村役場発行の原本照合済み婚姻証明書またはPSA婚姻証明書を使用できます。' },
             ].map(({ step, title, detail }) => (
               <li key={step} className="flex gap-3">
                 <span className="flex-shrink-0 w-6 h-6 rounded-full bg-secondary/15 text-secondary font-bold text-xs flex items-center justify-center mt-0.5">{step}</span>
@@ -193,9 +192,9 @@ export default function MarriageOrderJa() {
             <div>
               <p className="text-sm font-bold text-amber-800 mb-1">注意点</p>
               <ul className="text-sm text-amber-700 space-y-1">
-                <li>・LCCMの取得に時間がかかる（法務局 → 外務省 → 大使館認証）</li>
+                <li>・LCCMはフィリピン所在の日本大使館・総領事館で本人申請・受領が必要</li>
                 <li>・Marriage Licenseに10日間の公示期間が必要</li>
-                <li>・<strong>PSA婚姻証明書の反映に2〜6か月以上かかる</strong>ため、配偶者ビザ申請が遅れる可能性がある</li>
+                <li>・PSAへの反映時期は地域や登録状況により異なるため、後続手続きの必要書類を確認する</li>
                 <li>・フィリピンへの渡航が必要</li>
               </ul>
             </div>
@@ -218,9 +217,9 @@ export default function MarriageOrderJa() {
                 {[
                   { situation: 'パートナーが日本在住', japan: '◎ 渡航不要で進められる', ph: '△ フィリピン渡航が必要' },
                   { situation: 'パートナーがフィリピン在住', japan: '○ 書類取り寄せが必要', ph: '○ 現地で一緒に手続きできる' },
-                  { situation: '配偶者ビザを早く取りたい', japan: '◎ PSA反映待ちがない分、早く進めやすい', ph: '△ PSA婚姻証明書の反映に数か月かかる' },
+                  { situation: '配偶者ビザを早く取りたい', japan: '◎ PSA反映待ちがない分、早く進めやすい', ph: '△ 後続手続きでPSA書類待ちとなる場合あり' },
                   { situation: '親族への挨拶・挙式を重視', japan: '△ 日本での届出のみ', ph: '◎ フィリピンで家族を呼んで挙式できる' },
-                  { situation: 'スケジュールに余裕がない', japan: '◎ 渡航・公示期間が不要', ph: '✕ Marriage License公示10日＋PSA反映待ちがある' },
+                  { situation: 'スケジュールに余裕がない', japan: '◎ 渡航・公示期間が不要', ph: '✕ Marriage License公示10日＋渡航日程が必要' },
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="p-3 border border-gray-200 text-gray-700 font-medium">{row.situation}</td>
@@ -241,7 +240,7 @@ export default function MarriageOrderJa() {
             {[
               'フィリピン側のPSA書類（CENOMAR・PSA出生証明書）の取得と確認',
               '書類に記載された名前・生年月日が日本側のパスポート等と一致しているか確認',
-              'DFAアポスティーユ（日本の提出先では原則必要）',
+              '書類の形式・アポスティーユの要否を実際の提出先に確認',
               '配偶者ビザ（在留資格）への手続きを婚姻成立後に進めること',
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
@@ -272,8 +271,8 @@ export default function MarriageOrderJa() {
         <FaqSection
           items={[
             { q: 'フィリピン人パートナーが日本在住の場合、どちらの方式が多いですか？', a: '日本在住の場合は、渡航が不要な日本先行婚を選ぶ方が多い傾向があります。ただし、婚姻届の受理後に配偶者ビザ（在留資格変更）の手続きが必要になるため、全体のスケジュールを踏まえて判断することをおすすめします。' },
-            { q: 'フィリピン先行婚を選ぶと、PSA婚姻証明書はすぐに取れますか？', a: 'フィリピンで婚姻が成立しても、PSAへの記録反映には時間がかかります。Metro Manilaで2〜4か月、地方では6か月以上になる場合もあります。日本への報告的届出や配偶者ビザ申請のスケジュールに影響するため、事前に把握しておくことが重要です。' },
-            { q: '日本先行婚では、どのフィリピン書類が必要ですか？', a: '一般的に、PSA発行のCENOMAR（独身証明書）とPSA出生証明書、それぞれのDFAアポスティーユが必要です。提出先の市区町村役場によって求める書類が異なる場合があるため、事前確認が必要です。' },
+            { q: 'フィリピン先行婚を選ぶと、PSA婚姻証明書はすぐに取れますか？', a: 'PSAへの記録反映時期は地域や登録状況により異なります。ただし、在フィリピン日本大使館・総領事館への婚姻届では、市区町村役場発行の原本照合済み婚姻証明書またはPSA婚姻証明書を使用できます。PSA反映を待つ必要があるかは、届出先と後続手続きに確認してください。' },
+            { q: '日本先行婚では、どのフィリピン書類が必要ですか？', a: '一般的にPSA発行のCENOMAR（独身証明書）とPSA出生証明書が用いられますが、必要書類やアポスティーユの要否は提出先の市区町村役場によって異なります。提出前に確認してください。' },
           ]}
           ctaTitle="状況に合わせて整理します。まずはご相談ください"
           ctaButton="無料相談フォームへ"
