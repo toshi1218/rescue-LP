@@ -22,8 +22,8 @@ export default function SpouseVisaShoryuJa() {
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: '配偶者ビザに必要な書類チェックリスト【2026年3月版】フィリピン人配偶者',
-          description: '2025年6月から結核非発病証明書が追加義務化。在留資格「日本人の配偶者等」COE申請に必要なPSA書類・CENOMAR・アポスティーユ・結核証明書を最新情報で解説。',
+          headline: '配偶者ビザに必要な書類チェックリスト【2026年8月版】フィリピン人配偶者',
+          description: '2025年6月から結核非発病証明書が追加義務化。PSA書類は案件ごとの指示を確認し、認証が必要な場合は2026年3月16日以降の電子アポスティーユに対応します。',
           url: 'https://ph-document.com/ja/haigusha-visa-shorui/',
           dateModified: '2026-03-14',
           publisher: {
@@ -41,7 +41,7 @@ export default function SpouseVisaShoryuJa() {
               name: '配偶者ビザのCOE申請に必要なフィリピン書類は？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '2026年3月時点では、PSA婚姻証明書（DFAアポスティーユ付き）、PSA出生証明書（DFAアポスティーユ付き）、CENOMAR（独身証明書）、各書類の日本語訳、そして2025年6月23日から新たに義務化された結核非発病証明書（指定Panel Clinic発行）が必要です。',
+                text: 'PSA婚姻証明書・出生証明書・CENOMARの要否と形式は案件・担当入管により異なります。外国語書類には日本語訳が必要で、対象となるCOE申請には2025年6月23日から指定Panel Clinic発行の結核非発病証明書が必要です。認証を指示された場合、PSAアポスティーユは2026年3月16日以降電子PDFで発行されます。',
               },
             },
             {
@@ -98,19 +98,19 @@ export default function SpouseVisaShoryuJa() {
             {
               '@type': 'DefinedTerm',
               name: 'DFAアポスティーユ',
-              description: 'フィリピン外務省（DFA）による国際認証。PSA民事書類（出生・婚姻・CENOMAR）は2026年3月以降、電子のe-Apostilleに一本化されています。',
+              description: 'フィリピン外務省（DFA）による国際認証。PSA民事書類（出生・婚姻・CENOMAR）は2026年3月16日以降、電子のe-Apostilleに一本化されています。',
             },
           ],
         },
       ]}
     >
       <HeroBanner
-        title="配偶者ビザに必要な書類チェックリスト【2026年3月版】"
+        title="配偶者ビザに必要な書類チェックリスト【2026年8月版】"
         subtitle="在留資格「日本人の配偶者等」COE申請に必要なフィリピン書類を最新情報でまとめています。2025年6月から結核非発病証明書が追加義務化。"
-        badges={['2026年3月最新', '結核証明書対応', '書類取得代行あり']}
+        badges={['2026年8月更新', '結核証明書対応', '書類取得代行あり']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月30日"
       />
       <article className="max-w-2xl mx-auto px-4">
 
@@ -153,7 +153,7 @@ export default function SpouseVisaShoryuJa() {
             「日本人の配偶者等」は、日本人と婚姻しているフィリピン人配偶者が日本に長期在留するための在留資格です。初めて日本に呼び寄せる場合は<strong>在留資格認定証明書（COE）の交付申請</strong>が必要で、COEが交付されてからビザ申請・入国という流れになります。
           </p>
           <p className="text-gray-700 leading-relaxed">
-            このページでは、2026年3月時点の最新情報をもとに、COE申請に必要なフィリピン書類を整理します。
+            このページでは、担当入管の最新指示を確認する前提で、COE申請で一般に確認されるフィリピン書類を整理します。
           </p>
         </section>
 
@@ -175,12 +175,12 @@ export default function SpouseVisaShoryuJa() {
                   <span className="font-semibold text-gray-500">発行機関</span>
                   <span>PSA（フィリピン統計局）</span>
                   <span className="font-semibold text-gray-500">形式</span>
-                  <span>DFAアポスティーユ付き紙の原本</span>
+                  <span>担当入管が指定する形式。認証は指示がある場合のみ</span>
                   <span className="font-semibold text-gray-500">有効期限目安</span>
                   <span>発行から6ヶ月〜1年以内（入管の判断による）</span>
                 </div>
                 <div className="rounded-lg bg-blue-50 border border-blue-200 p-2.5 text-xs text-blue-800 mt-2">
-                  <strong>ポイント：</strong>2026年3月以降、DFAの認証はe-Apostille（電子）のみ（物理アポスティーユは発行不可）。入管は従来紙の原本を前提に運用してきたため、e-Apostilleの受理可否は事前確認が重要です。
+                  <strong>ポイント：</strong>すべての案件でアポスティーユが必要とは限りません。認証を指示された場合、PSA書類のアポスティーユは2026年3月16日以降e-Apostille（電子PDF）のみです。別途取得するSECPA紙原本とは別の書類として、提出方法を担当入管へ確認してください。
                 </div>
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function SpouseVisaShoryuJa() {
                   <span className="font-semibold text-gray-500">発行機関</span>
                   <span>PSA（フィリピン統計局）</span>
                   <span className="font-semibold text-gray-500">形式</span>
-                  <span>DFAアポスティーユ付き紙の原本</span>
+                  <span>担当入管が指定する形式。認証は指示がある場合のみ</span>
                   <span className="font-semibold text-gray-500">有効期限目安</span>
                   <span>発行から1年以内（在フィリピン日本大使館基準）</span>
                 </div>
@@ -217,7 +217,7 @@ export default function SpouseVisaShoryuJa() {
                   <span className="font-semibold text-gray-500">発行機関</span>
                   <span>PSA（フィリピン統計局）</span>
                   <span className="font-semibold text-gray-500">形式</span>
-                  <span>DFAアポスティーユ付き紙の原本</span>
+                  <span>担当入管が指定する形式。認証は指示がある場合のみ</span>
                   <span className="font-semibold text-gray-500">有効期限目安</span>
                   <span>発行から6ヶ月以内（提出先による）</span>
                   <span className="font-semibold text-gray-500">用途</span>
@@ -278,7 +278,7 @@ export default function SpouseVisaShoryuJa() {
           <h2 className="text-xl font-bold text-gray-900 mb-4">書類取得のスケジュールの考え方</h2>
           <div className="space-y-4 text-sm text-gray-700">
             <p className="leading-relaxed">
-              書類には有効期限があるため、「早く取りすぎると期限切れ」「遅すぎると申請に間に合わない」という両方のリスクがあります。2026年3月時点では、以下の点に注意してください。
+              提出先から発行日の条件を指定される場合があるため、「早く取りすぎる」「遅すぎる」という両方のリスクがあります。担当入管の最新指示を確認してください。
             </p>
 
             <div className="rounded-xl bg-white border border-gray-200 p-4">
@@ -341,13 +341,13 @@ export default function SpouseVisaShoryuJa() {
 
         {/* まとめ */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">まとめ：2026年3月時点の配偶者ビザ書類</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">まとめ：担当入管の最新リストを確認</h2>
           <div className="rounded-xl bg-secondary text-white p-5">
             <div className="space-y-2">
               {[
-                { icon: '📄', text: 'PSA婚姻証明書 + DFAアポスティーユ（紙の原本）' },
-                { icon: '📄', text: 'PSA出生証明書 + DFAアポスティーユ（紙の原本）' },
-                { icon: '📄', text: 'CENOMAR（独身証明書）+ DFAアポスティーユ' },
+                { icon: '📄', text: 'PSA婚姻証明書・出生証明書・CENOMARは、担当入管から指定されたものを用意' },
+                { icon: '💻', text: '認証を指示された場合、PSAアポスティーユは2026年3月16日以降電子PDF' },
+                { icon: '📦', text: 'SECPA紙原本が必要な場合は別途取得（e-Apostilleの認証対象とは別）' },
                 { icon: '🆕', text: '結核非発病証明書（2025年6月〜必須）指定Panel Clinic発行・有効期間180日' },
                 { icon: '📝', text: '各書類の日本語翻訳（翻訳者情報の記載必要）' },
               ].map((item, i) => (

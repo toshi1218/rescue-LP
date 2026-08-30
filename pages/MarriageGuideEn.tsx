@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 export default function MarriageGuideEn() {
   useMeta(
     'Marrying a Filipino? Documents We Get for You [April 2026]',
-    'Planning to marry a Filipino/Filipina? We handle all Philippine documents — CENOMAR, PSA Birth Certificate, NBI Clearance + DFA Apostille. Shipped worldwide. Free consultation for K-1, spouse visa, and partner visa petitioners.',
+    'Planning to marry a Filipino/Filipina? We confirm the applicable checklist, arrange Philippine civil records, and add authentication only when required.',
   );
   return (
     <PageLayout
@@ -21,7 +21,7 @@ export default function MarriageGuideEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Philippine Marriage Documents Retrieval Service (CENOMAR + PSA + Apostille)',
-        description: 'We retrieve all Philippine documents needed to marry a Filipino/Filipina — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships worldwide via DHL.',
+        description: 'We arrange the Philippine civil records identified by the applicable marriage or visa checklist, with authentication only when required.',
         url: 'https://ph-document.com/en/international-marriage-guide/',
         provider: {
           '@type': 'Organization',
@@ -50,7 +50,7 @@ export default function MarriageGuideEn() {
               name: 'What documents are needed for a CR-1 visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Typically PSA Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by NVC case. We confirm for your specific case.',
+                text: 'PSA Marriage and Birth Certificates may be requested. The U.S. Embassy Manila checklist does not impose a universal DFA Apostille requirement, so we follow the current instructions for the specific case stage.',
               },
             },
             {
@@ -93,7 +93,7 @@ export default function MarriageGuideEn() {
         conclusion="Marrying a Filipino? We get all the Philippine documents you need and ship them to your door worldwide."
         points={[
           'CENOMAR, PSA Birth Certificate, and NBI Clearance retrieved in one order',
-          'DFA Apostille included for all documents',
+          'Authentication arranged only for documents whose current checklist requires it',
           'Works for K-1 visa, CR-1, partner visa, spousal sponsorship & more',
           'All-inclusive pricing with DHL Express shipping worldwide',
         ]}
@@ -141,7 +141,7 @@ export default function MarriageGuideEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided.',
+            description: 'For PSA records, required Apostilles are electronic PDFs; SECPA paper records are separate. Eligible non-PSA records use the physical authentication route.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -163,7 +163,7 @@ export default function MarriageGuideEn() {
 
       <FaqSection
         items={[
-          { q: 'What documents are needed for a CR-1 visa?', a: 'Typically PSA Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by NVC case. We confirm for your specific case.' },
+          { q: 'What documents are needed for a CR-1 visa?', a: 'PSA Marriage and Birth Certificates may be requested. The U.S. Embassy Manila checklist does not impose a universal DFA Apostille requirement, so we follow the current case-stage instructions.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.' },

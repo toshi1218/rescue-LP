@@ -50,7 +50,7 @@ export default function MarriageOrderEn() {
               name: 'What Philippine documents are needed for Japan-first marriage?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Generally, a CENOMAR (Certificate of No Marriage) and a PSA Birth Certificate from PSA, each with DFA Apostille. The exact requirements may vary by municipal office — confirm in advance.',
+                text: 'Japanese municipal-office requirements vary. A PSA Birth Certificate and proof of civil status such as a CENOMAR may be requested, with Japanese translations. Confirm whether authentication is required before ordering an Apostille.',
               },
             },
           ],
@@ -62,7 +62,7 @@ export default function MarriageOrderEn() {
         badges={['Compare Both Approaches', 'Required Documents Listed', 'Decide by Your Situation']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="August 30, 2026"
       />
 
       <article className="space-y-10">
@@ -88,8 +88,8 @@ export default function MarriageOrderEn() {
           <h3 className="text-sm font-bold text-gray-800 mb-3">Steps</h3>
           <ol className="space-y-3 mb-6">
             {[
-              { step: '1', title: 'Obtain Philippine documents', detail: 'Get a CENOMAR (Certificate of No Marriage) and PSA Birth Certificate from PSA, each with DFA Apostille. A document service can handle this without you traveling to the Philippines.' },
-              { step: '2', title: 'Submit the marriage registration at a Japanese municipal office', detail: 'Submit the marriage registration form, family register extract (koseki), and Philippine documents (CENOMAR, PSA Birth Certificate + DFA Apostille). Translation requirements may vary by office.' },
+              { step: '1', title: 'Confirm the Japanese municipal office checklist', detail: 'The required Philippine records and whether authentication is needed vary by municipality. Confirm the checklist before ordering CENOMAR, PSA Birth Certificate, translations, or Apostille.' },
+              { step: '2', title: 'Submit the marriage registration at a Japanese municipal office', detail: 'Submit the marriage registration form and the Philippine documents specified by that office, together with Japanese translations. Additional documents may be requested depending on the case.' },
               { step: '3', title: 'Report the marriage to the Philippine Embassy or Consulate', detail: 'After the marriage is registered in Japan, submit a "Report of Marriage" to the Philippine Embassy or Consulate in Japan. This records the marriage on the Philippine side as well.' },
               { step: '4', title: 'Proceed with spouse visa application', detail: 'If your partner entered Japan on a short-stay or tourist visa, a change-of-status application is required to convert to a spouse visa.' },
             ].map(({ step, title, detail }) => (
@@ -116,8 +116,8 @@ export default function MarriageOrderEn() {
               </thead>
               <tbody>
                 {[
-                  { doc: 'CENOMAR (Certificate of No Marriage)', issuer: 'PSA', apo: 'Generally required', note: 'Many offices require within 6 months of issue' },
-                  { doc: 'PSA Birth Certificate', issuer: 'PSA', apo: 'Generally required', note: 'Certificate of Live Birth' },
+                  { doc: 'CENOMAR (Certificate of No Marriage)', issuer: 'PSA', apo: 'Confirm with office', note: 'Document-age rules vary by municipality' },
+                  { doc: 'PSA Birth Certificate', issuer: 'PSA', apo: 'Confirm with office', note: 'Certificate of Live Birth' },
                   { doc: 'Passport copy', issuer: 'Filipino applicant', apo: 'Not required', note: 'Must be valid' },
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
@@ -161,11 +161,10 @@ export default function MarriageOrderEn() {
           <h3 className="text-sm font-bold text-gray-800 mb-3">Steps</h3>
           <ol className="space-y-3 mb-6">
             {[
-              { step: '1', title: 'Japanese partner obtains LCCM (Certificate of Legal Capacity to Contract Marriage)', detail: 'Issued by the Legal Affairs Bureau in Japan → apostille at the Ministry of Foreign Affairs → authentication at the Philippine Embassy in Japan. This certificate proves the Japanese national is legally eligible to marry.' },
+              { step: '1', title: 'Japanese partner obtains LCCM (Certificate of Legal Capacity to Contract Marriage)', detail: 'Apply in person at the Embassy of Japan in Manila or the Japanese Consular Offices in Cebu or Davao. A Japanese Legal Affairs Bureau, MOFA Apostille, and Philippine Embassy authentication are not part of this route.' },
               { step: '2', title: 'Apply for Marriage License in the Philippines', detail: 'Apply at the Local Civil Registrar in the Philippines. After filing, there is a mandatory 10-day public posting period before the marriage can proceed.' },
               { step: '3', title: 'Wedding ceremony (solemnization)', detail: 'A person with solemnizing authority (priest, judge, or mayor) officiates the marriage ceremony and vows.' },
-              { step: '4', title: 'Obtain PSA Marriage Certificate', detail: 'After the marriage is registered, it takes time to be reflected in PSA records. Typically 2–4 months in Metro Manila, 6+ months in provincial areas.' },
-              { step: '5', title: 'Report the marriage to a Japanese municipal office', detail: 'Within 3 months of returning to Japan, submit a reportive marriage registration with the PSA Marriage Certificate attached at your local municipal office.' },
+              { step: '4', title: 'Register the marriage and report it to Japan', detail: 'After the ceremony, the solemnizing officer registers the Certificate of Marriage with the Local Civil Registrar. Report the marriage to Japan within 3 months; at Japanese missions in the Philippines, an LCR Certified True Copy or PSA Marriage Certificate is accepted.' },
             ].map(({ step, title, detail }) => (
               <li key={step} className="flex gap-3">
                 <span className="flex-shrink-0 w-6 h-6 rounded-full bg-secondary/15 text-secondary font-bold text-xs flex items-center justify-center mt-0.5">{step}</span>
@@ -192,7 +191,7 @@ export default function MarriageOrderEn() {
             <div>
               <p className="text-sm font-bold text-amber-800 mb-1">Points to Note</p>
               <ul className="text-sm text-amber-700 space-y-1">
-                <li>· LCCM takes time to obtain (Legal Affairs Bureau → Ministry of Foreign Affairs → Embassy authentication)</li>
+                <li>· The Japanese applicant must apply for the LCCM in person at a Japanese mission in the Philippines</li>
                 <li>· Marriage License requires a 10-day public posting period</li>
                 <li>· <strong>PSA Marriage Certificate may take 2–6+ months to be reflected</strong>, delaying the spouse visa application</li>
                 <li>· Travel to the Philippines is required</li>
@@ -240,7 +239,7 @@ export default function MarriageOrderEn() {
             {[
               'Retrieve and verify Philippine PSA documents (CENOMAR, PSA Birth Certificate)',
               'Confirm that names and dates of birth match your Japanese passport exactly',
-              'DFA Apostille (generally required for Japanese submission destinations)',
+              'Confirm with the receiving authority whether an Apostille is required before ordering authentication',
               'Proceed with spouse visa (residence status) application after marriage is registered',
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
@@ -272,7 +271,7 @@ export default function MarriageOrderEn() {
           items={[
             { q: 'If my Filipino partner is already in Japan, which approach is more common?', a: 'When the Filipino partner is already in Japan, most couples choose Japan-first marriage since no travel is needed. However, after registration, a change-of-status application to spouse visa is required — factor this into your overall plan.' },
             { q: 'With Philippines-first, can we get the PSA marriage certificate right away?', a: 'No. Even after the marriage is registered in the Philippines, it takes time to be reflected in PSA records — typically 2–4 months in Metro Manila, 6+ months in provincial areas. This can delay the spouse visa application.' },
-            { q: 'What Philippine documents are needed for Japan-first marriage?', a: 'Generally a CENOMAR and PSA Birth Certificate from PSA, each with DFA Apostille. Exact requirements may vary by municipal office — confirm in advance.' },
+            { q: 'What Philippine documents are needed for Japan-first marriage?', a: 'Requirements vary by Japanese municipal office. A PSA Birth Certificate and proof of civil status such as a CENOMAR may be requested, with Japanese translations. Confirm whether authentication is required before ordering an Apostille.' },
           ]}
           ctaTitle="Let us help you figure out what's needed for your situation."
           ctaButton="Contact Us"
