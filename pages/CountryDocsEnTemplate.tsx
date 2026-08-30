@@ -116,7 +116,7 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: `${config.authLabel}`,
-            description: `We arrange ${config.authLabel} for all documents that require it. ${config.isHagueConvention ? `Paper originals provided — required by ${config.agencyAbbr}.` : `Authentication required for ${config.name} immigration.`}`,
+            description: `We arrange ${config.authLabel} only for documents identified by the current ${config.agencyAbbr} or receiving-authority checklist. PSA authentication is electronic; physical records are handled separately when required.`,
           },
           {
             icon: <Globe className="w-4 h-4" />,

@@ -14,7 +14,7 @@ import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function NewZealandDocsEn() {
   useMeta(
     `PH Documents for New Zealand Immigration [${SEO_YEAR_MONTH_EN}]`,
-    `Moving to New Zealand? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for INZ. Ships via DHL. Free consultation.`,
+    `Moving to New Zealand? We retrieve PSA records and NBI Clearance, confirm the current Immigration New Zealand format, and arrange authentication only when required.`,
   );
   return (
     <PageLayout
@@ -24,7 +24,7 @@ export default function NewZealandDocsEn() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'Philippine Documents for New Zealand Immigration (Immigration NZ)',
-          description: 'We retrieve all Philippine documents for New Zealand immigration — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships to NZ via DHL. Immigration NZ-ready.',
+          description: 'We retrieve Philippine civil records and NBI Clearance for New Zealand immigration, confirm the current checklist, and arrange authentication only when required.',
           url: 'https://ph-document.com/en/new-zealand/',
           provider: {
             '@type': 'Organization',
@@ -40,7 +40,7 @@ export default function NewZealandDocsEn() {
               '@type': 'UnitPriceSpecification',
               price: '899',
               priceCurrency: 'USD',
-              description: 'New Zealand Immigration Document Package — all documents + DFA Apostille + DHL to NZ (all-inclusive)',
+              description: 'New Zealand immigration document package — agreed documents, any required authentication, and delivery',
             },
           },
         },
@@ -53,7 +53,7 @@ export default function NewZealandDocsEn() {
               name: 'Does New Zealand require DFA Apostille on Philippine documents?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes. New Zealand is a member of the Hague Apostille Convention. Immigration New Zealand requires DFA Apostille authentication on Philippine civil documents for residence and partner visa applications.',
+                text: 'Not automatically. Hague Convention membership determines how an Apostille is recognized when one is required; it does not make Apostille mandatory for every Immigration New Zealand application. Check the current visa-specific checklist.',
               },
             },
             {
@@ -61,7 +61,7 @@ export default function NewZealandDocsEn() {
               name: 'What Philippine documents are needed for a New Zealand partner visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For a New Zealand partner visa (Residence from Family Category), you typically need: PSA Birth Certificate + DFA Apostille, CENOMAR or PSA Marriage Certificate + DFA Apostille, and NBI Clearance + DFA Apostille. Your partner\'s evidence of relationship is also required.',
+                text: 'The document list depends on the visa and circumstances. PSA civil records, relationship evidence, and a police certificate may be requested. Authentication is arranged only when the current checklist requires it.',
               },
             },
             {
@@ -69,7 +69,7 @@ export default function NewZealandDocsEn() {
               name: 'Can I get my Philippine documents apostilled and shipped to New Zealand?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes. We retrieve PSA documents, obtain DFA Apostille, and ship directly to your New Zealand address via DHL Express. Total processing time is approximately 2–4 weeks.',
+                text: 'Yes. We retrieve the agreed records and arrange authentication when required. PSA e-Apostille is delivered electronically from 16 March 2026; paper records can be shipped separately when needed.',
               },
             },
             {
@@ -77,7 +77,7 @@ export default function NewZealandDocsEn() {
               name: 'Do I need an NBI Clearance for New Zealand immigration?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Immigration NZ may require a police clearance from the Philippines for applicants who have lived there within a certain period. NBI Clearance + DFA Apostille satisfies this requirement.',
+                text: 'Immigration New Zealand may require a Philippine police certificate depending on the visa and residence history. The certificate must meet the current validity and translation rules; Apostille is not a universal requirement.',
               },
             },
           ],
@@ -86,15 +86,16 @@ export default function NewZealandDocsEn() {
     >
       <HeroBanner
         title="Philippine Documents for New Zealand Immigration"
-        subtitle="CENOMAR, PSA Birth Certificate & NBI Clearance — retrieved, apostilled, and shipped to New Zealand via DHL"
-        badges={['DFA Apostille Included', 'Ships to New Zealand via DHL', 'Free Consultation']}
+        subtitle="CENOMAR, PSA Birth Certificate & NBI Clearance — retrieved in the format your application requires"
+        badges={['Current INZ Checklist', 'Authentication When Required', 'Free Consultation']}
         ctaText="Get a Free Quote"
         ctaHref="/en/contact/"
+        lastUpdated="August 30, 2026"
       />
 
       <SummaryBlock
         conclusion="Documents Immigration NZ Requires from Filipino Applicants"
-        points={['Filipino nationals applying for New Zealand residence, partner visa, or citizenship must provide Philippine civil documents authenticated by DFA Apostille. New Zealand joined the Hague Apostille Convention, so no additional embassy legalization is required — but DFA Apostille is mandatory for all documents used in Immigration NZ applications.']}
+        points={['Immigration New Zealand requirements depend on the visa and document. Hague Convention membership does not make DFA Apostille mandatory for every application; check the current visa-specific checklist before ordering authentication.']}
       />
 
       <FeatureList
@@ -102,18 +103,18 @@ export default function NewZealandDocsEn() {
         items={[
           {
             icon: <FileCheck className="w-6 h-6 text-blue-600" />,
-            title: 'PSA Birth Certificate + DFA Apostille',
-            description: 'Required for all residence and citizenship applications. We retrieve directly from PSA and obtain DFA Apostille.',
+            title: 'PSA Birth Certificate',
+            description: 'May be requested depending on the application. If authentication is required, PSA e-Apostille is issued electronically.',
           },
           {
             icon: <FileCheck className="w-6 h-6 text-blue-600" />,
-            title: 'CENOMAR or PSA Marriage Certificate + DFA Apostille',
-            description: 'CENOMAR for single applicants; PSA Marriage Certificate for married applicants. Both require DFA Apostille.',
+            title: 'CENOMAR or PSA Marriage Certificate',
+            description: 'The appropriate civil-status record depends on the application. Apostille is arranged only when required by the receiving authority.',
           },
           {
             icon: <Shield className="w-6 h-6 text-blue-600" />,
-            title: 'NBI Clearance + DFA Apostille',
-            description: 'Philippine national police clearance required for immigration background checks. We handle NBI renewal and apostille.',
+            title: 'NBI Clearance',
+            description: 'A Philippine police certificate may be required depending on the visa and residence history. We confirm the current format before processing.',
           },
         ]}
       />
@@ -123,14 +124,14 @@ export default function NewZealandDocsEn() {
         steps={[
           { title: 'Submit your request', description: 'Fill out our form with your full name, date of birth, and the documents you need.' },
           { title: 'We retrieve from PSA / NBI', description: 'We order from official PSA channels and arrange NBI clearance (3–7 business days each).' },
-          { title: 'DFA Apostille', description: 'We bring documents to DFA for Apostille authentication (3–5 business days).' },
+          { title: 'Authentication when required', description: 'Any required PSA e-Apostille is processed online and delivered electronically; other documents follow their applicable DFA process.' },
           { title: 'DHL Express to New Zealand', description: 'We ship directly to your NZ address (3–5 business days). Tracking provided.' },
         ]}
       />
 
       <CtaBox
         title="Ready to Get Your Documents for New Zealand?"
-        description="We handle everything — PSA retrieval, DFA Apostille, and DHL shipping to New Zealand. Free quote, no hidden fees."
+        description="We confirm the current checklist, retrieve the agreed documents, and arrange authentication and paper delivery only when required."
         buttonText="Get a Free Quote"
         href="/en/contact/"
       />
@@ -139,19 +140,19 @@ export default function NewZealandDocsEn() {
         items={[
           {
             q: 'Does New Zealand require DFA Apostille on Philippine documents?',
-            a: 'Yes. New Zealand is a Hague Convention member. DFA Apostille is required for Philippine civil documents used in Immigration NZ applications.',
+            a: 'Not automatically. Hague Convention membership determines how an Apostille is recognized when one is required; it does not make Apostille mandatory for every Immigration New Zealand application.',
           },
           {
             q: 'What Philippine documents are needed for a New Zealand partner visa?',
-            a: 'PSA Birth Certificate, CENOMAR or PSA Marriage Certificate, and NBI Clearance — all with DFA Apostille.',
+            a: 'The document list depends on the visa and circumstances. PSA civil records, relationship evidence, and a police certificate may be requested. Authentication is arranged only when the current checklist requires it.',
           },
           {
             q: 'Can I get my Philippine documents apostilled and shipped to New Zealand?',
-            a: 'Yes. We retrieve, apostille, and ship via DHL Express to your New Zealand address. Total time: approximately 2–4 weeks.',
+            a: 'Yes. We retrieve the agreed records and arrange authentication when required. PSA e-Apostille is delivered electronically; paper records can be shipped separately when needed.',
           },
           {
             q: 'Do I need an NBI Clearance for New Zealand immigration?',
-            a: 'Immigration NZ typically requires a Philippine police clearance (NBI Clearance + DFA Apostille) for applicants who have lived in the Philippines.',
+            a: 'Immigration New Zealand may require a Philippine police certificate depending on the visa and residence history. Apostille is not a universal requirement.',
           },
         ]}
       />
