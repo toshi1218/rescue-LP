@@ -13,7 +13,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function PhilippinesWeddingGuideJa() {
   useMeta(
     `フィリピンで結婚する全ガイド【${SEO_YEAR_MONTH_JA}】手続きの流れ・必要書類・注意点`,
-    'フィリピンで婚姻を成立させる（フィリピン先行婚）の全手続きを解説。LCCMの取得・Marriage License・挙式・PSA婚姻証明書の反映待ち・日本への報告的届出まで、ステップ別にまとめました。',
+    'フィリピンで婚姻を成立させる（フィリピン先行婚）の手続きを公式案内に沿って解説。在フィリピン日本大使館・総領事館でのLCCM取得、Marriage License、挙式、日本への報告的届出までをまとめました。',
   );
   return (
     <PageLayout
@@ -23,7 +23,7 @@ export default function PhilippinesWeddingGuideJa() {
           '@context': 'https://schema.org',
           '@type': 'Article',
           headline: 'フィリピンで結婚する全ガイド【2026年版】手続きの流れ・必要書類・注意点',
-          description: 'フィリピンで婚姻を成立させる（フィリピン先行婚）の全手続きを解説。LCCMの取得からMarriage License・挙式・PSA婚姻証明書・日本への報告的届出まで、ステップ別にまとめました。',
+          description: 'フィリピンで婚姻を成立させる（フィリピン先行婚）の手続きを公式案内に沿って解説。在フィリピン日本大使館・総領事館でのLCCM取得からMarriage License・挙式・日本への報告的届出までをまとめました。',
           url: 'https://ph-document.com/ja/philippines-de-kekkon/',
           publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/ja/' },
         },
@@ -44,7 +44,7 @@ export default function PhilippinesWeddingGuideJa() {
               name: 'PSA婚姻証明書が取得できるまで、どのくらいかかりますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'フィリピンで婚姻が成立した後、PSAへの記録反映には時間がかかります。Metro Manilaで2〜4か月、地方では6か月以上かかることもあります。PSA婚姻証明書は日本への報告的届出や配偶者ビザ申請に必要なため、このタイムラインを事前に把握しておくことが重要です。',
+                text: 'PSAへの記録反映時期は地域や登録状況により異なります。ただし、在フィリピン日本大使館・総領事館への婚姻届では、市区町村役場発行の原本照合済み婚姻証明書またはPSA婚姻証明書のいずれかを使用できます。PSA反映を待つ必要があるかは提出先と後続手続きに確認してください。',
               },
             },
             {
@@ -52,7 +52,7 @@ export default function PhilippinesWeddingGuideJa() {
               name: 'Marriage Licenseの公示期間（10日間）は省略できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '原則として省略はできません。Market Licenseは申請後10日間の公示期間を経なければ発行されません。この期間は「この婚姻に異議がないか」を確認するためのものです。スケジュールに必ず組み込んでください。',
+                text: '原則として省略はできません。Marriage Licenseは申請後10日間の公示期間を経なければ発行されません。この期間は「この婚姻に異議がないか」を確認するためのものです。スケジュールに必ず組み込んでください。',
               },
             },
           ],
@@ -64,7 +64,7 @@ export default function PhilippinesWeddingGuideJa() {
         badges={['手続きの流れをステップ解説', '必要書類を整理', 'つまずきポイントも解説']}
         ctaText="書類の相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年8月30日"
       />
 
       <article className="space-y-10">
@@ -88,11 +88,11 @@ export default function PhilippinesWeddingGuideJa() {
 
         {/* 全体の流れ */}
         <StepList
-          heading="フィリピン先行婚の全体の流れ（6ステップ）"
+          heading="フィリピン先行婚の全体の流れ（4ステップ）"
           steps={[
             {
               title: '日本人側が「婚姻要件具備証明書（LCCM）」を取得する',
-              description: 'LCCMは「この日本人は婚姻できる状態にある」ことを証明する書類です。①日本の法務局で発行 → ②外務省でアポスティーユ → ③在日フィリピン大使館（または総領事館）で認証、という流れが必要です。トータルで1〜2か月かかることがあるため、早めに動き始めることが重要です。',
+              description: 'LCCMは、在フィリピン日本国大使館、在セブ日本国総領事館または在ダバオ日本国総領事館で、日本人本人が申請・受領します。戸籍謄（抄）本または電子戸籍パス、有効な日本旅券、フィリピン人婚約者の出生証明書などが必要です。日本の法務局での発行、外務省のアポスティーユ、在日フィリピン大使館の認証は不要です。',
             },
             {
               title: 'フィリピンでMarriage Licenseを申請する',
@@ -100,22 +100,17 @@ export default function PhilippinesWeddingGuideJa() {
             },
             {
               title: '挙式（婚姻の宣誓）を行う',
-              description: 'Marriage License発行後、挙式権限を持つ者（牧師・裁判官・市長・ムスリムの場合はイマームなど）の立会いのもと、婚姻の宣誓を行います。証人2名も必要です。挙式後、婚姻証明書（Certificate of Marriage）に署名します。',
+              description: 'Marriage License発行後、挙式権限を持つ者と成人2名以上の証人の前で婚姻を宣誓し、婚姻証明書に署名します。婚姻挙行担当官が認証することで婚姻が成立し、婚姻証明書は原則15日以内に挙行地の市区町村役場へ送付・登録されます。登録後、市区町村役場で原本照合済みの婚姻証明書謄本を取得できます。',
             },
             {
-              title: '婚姻証明書をLocal Civil Registrarに登録する',
-              description: '挙式後、挙式権限者がCertificate of MarriageをLocal Civil Registrar（地方民事登録局）に提出します。この登録をもって、フィリピンでの婚姻が法的に成立します。',
-            },
-            {
-              title: 'PSA婚姻証明書が発行されるのを待つ',
-              description: 'Local Civil RegistrarからPSAへの記録反映には時間がかかります。Metro Manilaで2〜4か月、地方では6か月以上になる場合もあります。PSA婚姻証明書は日本への届出・配偶者ビザ申請に必要なため、このタイムラインをスケジュールに組み込んでください。',
-            },
-            {
-              title: '日本の市区町村役場に「報告的届出」を行う',
-              description: '帰国後3か月以内に、PSA婚姻証明書（DFAアポスティーユ付き）を添付して日本側でも婚姻の届出を行います。これで日本の戸籍にも婚姻が記録されます。届出後は配偶者ビザ（在留資格）の手続きへ進めます。',
+              title: '3か月以内に日本側へ婚姻届を提出する',
+              description: '婚姻成立後3か月以内に、日本の市区町村役場または在フィリピン日本大使館・総領事館へ報告的届出を行います。在外公館への届出では、市区町村役場発行の原本照合済み婚姻証明書またはPSA婚姻証明書を使用でき、DFAアポスティーユは公式の必要書類に含まれていません。日本で届け出る場合は、提出先の市区町村役場へ必要書類を事前確認してください。',
             },
           ]}
         />
+        <p className="text-xs text-gray-500 -mt-7">
+          出典：<a href="https://www.ph.emb-japan.go.jp/files/100672027.pdf" target="_blank" rel="noreferrer" className="underline">在フィリピン日本国大使館「フィリピンにおいて日本人とフィリピン人が結婚するための手続き」</a>、<a href="https://www.ph.emb-japan.go.jp/itpr_ja/00_000281.html" target="_blank" rel="noreferrer" className="underline">外国方式で婚姻した場合の報告的届出</a>
+        </p>
 
         {/* 必要書類 */}
         <section className="rounded-2xl bg-white border border-gray-200 p-6">
@@ -133,11 +128,10 @@ export default function PhilippinesWeddingGuideJa() {
               </thead>
               <tbody>
                 {[
-                  { doc: '婚姻要件具備証明書（LCCM）', from: '法務局', note: '戸籍謄本を持参して申請' },
-                  { doc: '外務省アポスティーユ', from: '外務省', note: 'LCCMに付与' },
-                  { doc: 'フィリピン大使館による認証', from: '在日フィリピン大使館/総領事館', note: 'アポスティーユ後に申請' },
+                  { doc: '婚姻要件具備証明書（LCCM）', from: '在フィリピン日本大使館・総領事館', note: '日本人本人が申請・受領' },
                   { doc: 'パスポート（有効期限内）', from: '本人保有', note: '' },
-                  { doc: '戸籍謄本（全部事項証明）', from: '本籍地の市区町村', note: '原本' },
+                  { doc: '戸籍謄（抄）本または電子戸籍パス', from: '本籍地の市区町村／マイナポータル', note: '戸籍は原則3か月以内' },
+                  { doc: 'フィリピン人婚約者の出生証明書', from: 'PSAまたは市区町村役場', note: 'Certified True Copy' },
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="p-2 border border-gray-200 text-gray-700 font-medium">{row.doc}</td>
@@ -165,7 +159,7 @@ export default function PhilippinesWeddingGuideJa() {
                   { doc: 'CENOMAR（独身証明書）', from: 'PSA', note: '婚姻歴がないことの証明' },
                   { doc: 'パスポート', from: '本人保有', note: '' },
                   { doc: '婚前ガイダンス修了証', from: '地方政府機関', note: '市役所によって要求される場合あり' },
-                  { doc: '親の同意書', from: '親', note: '18〜21歳の場合は親の同意書、22〜25歳は親の通知書が必要' },
+                  { doc: '親の同意・助言に関する書類', from: '親・保護者', note: '18〜20歳は同意、21〜25歳は助言が必要' },
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="p-2 border border-gray-200 text-gray-700 font-medium">{row.doc}</td>
@@ -188,10 +182,11 @@ export default function PhilippinesWeddingGuideJa() {
               </thead>
               <tbody>
                 {[
-                  { doc: 'PSA婚姻証明書（Certificate of Marriage）', note: 'DFAアポスティーユ付きが原則必要' },
+                  { doc: '婚姻証明書（Certificate of Marriage）', note: '在外公館への届出は市区町村役場発行の原本照合済み謄本またはPSA発行のもの' },
                   { doc: '婚姻届（日本のもの）', note: '市区町村役場で入手' },
-                  { doc: '日本人側の戸籍謄本', note: '' },
                   { doc: '婚姻証明書の日本語訳', note: '翻訳者の署名が必要（本人でも可）' },
+                  { doc: '婚姻許可証・申請書・LCCMの写し', note: '在フィリピン日本大使館・総領事館へ届け出る場合' },
+                  { doc: '届出人の写真付き身分証明書', note: '旅券・運転免許証など' },
                 ].map((row, i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                     <td className="p-2 border border-gray-200 text-gray-700 font-medium">{row.doc}</td>
@@ -212,8 +207,8 @@ export default function PhilippinesWeddingGuideJa() {
           <div className="space-y-4">
             {[
               {
-                title: 'LCCMの取得に予想以上に時間がかかる',
-                detail: '法務局 → 外務省 → フィリピン大使館の3段階が必要で、トータル1〜2か月かかることがあります。スケジュール逆算で早めに着手してください。',
+                title: 'LCCMを日本で取得するものと誤解する',
+                detail: 'フィリピン婚用のLCCMは、フィリピン所在の日本大使館・総領事館で本人が申請・受領します。マニラ・セブ・ダバオの公式案内では、通常は申請の翌開館日に交付されます。',
               },
               {
                 title: 'Marriage Licenseの公示期間（10日間）を忘れていた',
@@ -221,7 +216,7 @@ export default function PhilippinesWeddingGuideJa() {
               },
               {
                 title: 'PSA婚姻証明書の反映が遅い',
-                detail: '婚姻成立後、PSAへの記録反映にMetro Manilaで2〜4か月、地方では6か月以上かかることがあります。この間はPSA婚姻証明書が取得できないため、配偶者ビザ申請も待つ必要があります。',
+                detail: 'PSAへの反映時期は地域や登録状況により異なります。ただし、日本大使館・総領事館への婚姻届は、市区町村役場発行の原本照合済み婚姻証明書でも提出できます。PSA反映を待つ前に、届出先と後続手続きの必要書類を確認してください。',
               },
               {
                 title: '書類の名前が日本のパスポートと一致しない',
@@ -241,12 +236,12 @@ export default function PhilippinesWeddingGuideJa() {
           <h2 className="text-base font-bold text-gray-900 mb-4">全体のタイムライン目安</h2>
           <div className="space-y-2">
             {[
-              { phase: 'LCCM取得', duration: '1〜2か月', note: '法務局 → 外務省 → 大使館認証' },
+              { phase: 'LCCM取得', duration: '通常2開館日', note: 'フィリピン所在の日本大使館・総領事館で本人申請・受領' },
               { phase: 'フィリピン渡航・Marriage License申請', duration: '申請後10日間の公示期間', note: '' },
-              { phase: '挙式・婚姻登録', duration: '渡航中', note: '' },
-              { phase: 'PSA婚姻証明書の取得', duration: '2〜6か月以上', note: 'Metro Manila 2〜4か月、地方6か月以上の場合あり' },
-              { phase: '日本への報告的届出', duration: '帰国後3か月以内', note: 'PSA婚姻証明書が必要' },
-              { phase: '配偶者ビザ申請', duration: '届出後に着手', note: 'PSA婚姻証明書が揃ってから' },
+              { phase: '挙式・市区町村役場への登録', duration: '挙式後15日以内に送付', note: '登録後、原本照合済み婚姻証明書謄本を取得可能' },
+              { phase: '日本への報告的届出', duration: '婚姻成立後3か月以内', note: '日本の市区町村役場または在フィリピン日本大使館・総領事館へ提出' },
+              { phase: 'PSA婚姻証明書の取得', duration: '反映後', note: '後続手続きで必要な場合に取得' },
+              { phase: '配偶者ビザ申請', duration: '必要書類確認後', note: '申請先の最新要件を確認' },
             ].map((row, i) => (
               <div key={i} className="flex gap-3 items-start text-sm">
                 <Clock className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" />
@@ -260,7 +255,7 @@ export default function PhilippinesWeddingGuideJa() {
           </div>
           <div className="mt-4 p-4 rounded-xl bg-primary/5 border border-primary/15">
             <p className="text-sm text-gray-700">
-              <strong>全体で最低でも4〜8か月は見込んでください。</strong>PSA婚姻証明書の反映が遅い場合は、配偶者ビザ申請まで1年近くかかるケースもあります。
+              <strong>婚姻許可証の10日間の公示期間は必ず日程に入れてください。</strong>日本への婚姻届はPSA反映を待たずに進められる場合があるため、挙行地の市区町村役場と日本側の届出先へ必要書類を確認するのが確実です。
             </p>
           </div>
         </section>
@@ -277,7 +272,7 @@ export default function PhilippinesWeddingGuideJa() {
         <FaqSection
           items={[
             { q: 'フィリピンで結婚するのに渡航は必ず必要ですか？', a: 'フィリピン先行婚（フィリピンで先に婚姻を成立させる方式）では、挙式に両者の出席が必要なため、日本人側のフィリピン渡航が必要です。渡航不要で手続きを進めたい場合は日本先行婚を検討してください。' },
-            { q: 'PSA婚姻証明書が取得できるまで、どのくらいかかりますか？', a: 'フィリピンで婚姻が成立した後、PSAへの記録反映にはMetro Manilaで2〜4か月、地方では6か月以上かかることもあります。この期間はPSA婚姻証明書が発行されないため、配偶者ビザ申請も待つ必要があります。' },
+            { q: 'PSA婚姻証明書が取得できるまで、どのくらいかかりますか？', a: 'PSAへの記録反映時期は地域や登録状況によって異なります。ただし、在フィリピン日本大使館・総領事館への婚姻届では、市区町村役場発行の原本照合済み婚姻証明書またはPSA婚姻証明書を使用できます。PSA反映を待つ必要があるかは、届出先と後続手続きに確認してください。' },
             { q: 'Marriage Licenseの公示期間（10日間）は省略できますか？', a: '原則として省略はできません。Marriage Licenseは申請後10日間の公示期間を経なければ発行されません。スケジュールに必ず組み込んでください。' },
           ]}
           ctaTitle="手続きの進め方について相談できます"
