@@ -40,12 +40,12 @@ export default function MarriageGuideJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '50000',
+            price: '80000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '50000',
+              price: '80000',
               priceCurrency: 'JPY',
-              description: 'PSA書類取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+              description: 'PSA出生証明書・CENOMAR各1通のe-Certificate・e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
             },
           },
         },
@@ -111,7 +111,7 @@ export default function MarriageGuideJa() {
         badges={['日本語でやり取りOK', '必要書類を整理してご案内', '進捗を随時ご報告']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年8月15日"
+        lastUpdated="2026年9月3日"
       />
 
       <SummaryBlock
@@ -130,9 +130,9 @@ export default function MarriageGuideJa() {
           <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">30,000円〜（書類1種・DFA e-Apostille〈電子〉込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※必要書類の種類・組み合わせによって変わります</dd>
+              <dt className="text-gray-500 text-xs mb-1">国際結婚2通セット（税込）</dt>
+              <dd className="font-medium text-gray-800">80,000円（DHL国際送料込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">出生証明書＋CENOMAR。単品フルセットは1通50,000円</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -254,7 +254,7 @@ export default function MarriageGuideJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類写し確認後に残金50%お支払い"
+        trustNote="2通セットは着手金40,000円・書類写し確認後に残金40,000円"
       />
 
       {/* Section 4: 当社（株式会社IGRS）の取得サポート */}

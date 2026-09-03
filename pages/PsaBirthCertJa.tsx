@@ -43,7 +43,7 @@ export default function PsaBirthCertJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: 'PSA e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
           },
         },
         },
@@ -64,7 +64,7 @@ export default function PsaBirthCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜50,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。',
+                text: 'PSA出生証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。',
               },
             },
             {
@@ -117,7 +117,7 @@ export default function PsaBirthCertJa() {
         badges={['日本語だけで取り寄せOK', 'DFAアポスティーユ込み対応', '渡航不要']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年9月3日"
       />
 
       <div className="max-w-2xl mx-auto px-4">
@@ -138,9 +138,9 @@ export default function PsaBirthCertJa() {
               <dd className="font-medium text-gray-800">Philippine Statistics Authority（PSA）</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">50,000円〜（DFAアポスティーユ込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※緊急の場合は追加料金を頂くことがあります</dd>
+              <dt className="text-gray-500 text-xs mb-1">フルセット料金（税込）</dt>
+              <dd className="font-medium text-gray-800">50,000円（DHL国際送料込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">紙原本のみ（認証なし）は30,000円・DHL込み</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -157,13 +157,13 @@ export default function PsaBirthCertJa() {
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
             <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
               <div className="px-4 py-3 font-bold">内容</div>
-              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税込）</div>
             </div>
             {[
-              { label: 'PSA出生証明書取得', price: '込み' },
-              { label: 'DFAアポスティーユ認証', price: '込み' },
-              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: '合計（DFAアポスティーユ込み）', price: '50,000円〜', bold: true },
+              { label: 'PSA e-Certificateのみ（電子納品）', price: '30,000円' },
+              { label: 'SECPA紙原本＋DHL（認証なし）', price: '30,000円' },
+              { label: 'e-Certificate＋DFA e-Apostille（電子納品）', price: '40,000円' },
+              { label: 'フルセット（電子版・e-Apostille・紙原本・DHL）', price: '50,000円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -232,7 +232,7 @@ export default function PsaBirthCertJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・納品または発送前に残金50%・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -289,7 +289,7 @@ export default function PsaBirthCertJa() {
       <FaqSection
         items={[
           { q: 'PSA出生証明書とは何ですか？', a: 'PSA出生証明書（PSA Birth Certificate）は、フィリピン統計局（PSA）が発行する公的な出生記録書類です。氏名・生年月日・出生地・両親の情報が記載されており、国際結婚・配偶者ビザ申請・帰化申請などで身元証明として提出を求められます。' },
-          { q: '料金はいくらですか？', a: 'PSA出生証明書取得＋DFAアポスティーユ認証をまとめて税抜50,000円〜です。DHL国際郵送費は実費別途となります。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA出生証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。' },
           { q: 'PSAに記録がない場合はどうなりますか？', a: 'LCR（地方民事登録局）への申請が必要になります。対応経験がありますので、まずご相談ください。追加費用が発生する場合は事前にご説明します。' },
           { q: '出生証明書とアポスティーユ、両方必要ですか？', a: '日本の提出先では通常、PSA出生証明書＋DFAアポスティーユの両方が必要です。提出先を確認した上でご案内します。' },
           { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },

@@ -37,12 +37,12 @@ export default function DfaProcessingTimeJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '30000',
+            price: '40000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '30000',
+              price: '40000',
               priceCurrency: 'JPY',
-              description: 'DFAアポスティーユ認証込み（税抜）。DHL国際郵送費は実費別途',
+              description: 'PSA e-Certificate取得とDFA e-Apostilleを含む税込総額（電子納品）',
             },
           },
         },
@@ -83,7 +83,7 @@ export default function DfaProcessingTimeJa() {
         badges={['Regular/Expedited対応', '提出期限に合わせて手配', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年8月13日"
+        lastUpdated="2026年9月3日"
       />
 
       <SummaryBlock
@@ -162,7 +162,7 @@ export default function DfaProcessingTimeJa() {
         items={[
           { q: 'DFAアポスティーユにはどのくらいかかりますか？', a: 'DFA e-ApostilleはRegular（通常5日程度）またはExpress（3日程度）で申請できます。PSAのオンライン申請とDFA e-Apostilleは数週間が目安です。NBI等の物理書類は取得・物理アポスティーユ・国際郵送を含め、おおむね1ヶ月半が目安です。' },
           { q: '提出期限に合わせてExpressで申請できますか？', a: 'はい。提出予定日をお知らせいただければ、RegularとExpressどちらが適切かを含めてご案内します。できる限り間に合うよう進めますが、現地機関の処理状況によって前後する場合があります。' },
-          { q: '料金はいくらですか？', a: 'DFAアポスティーユ・PSA取得（必要な場合）をまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA民事書類1通は、e-Certificateのみ30,000円、紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。' },
           { q: '期限に間に合うかどうか不安です', a: '提出予定日をお知らせいただければ、間に合うかどうかを確認してご案内します。まずはご相談ください。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"

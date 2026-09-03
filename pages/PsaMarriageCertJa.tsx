@@ -38,7 +38,7 @@ export default function PsaMarriageCertJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: 'PSA e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
           },
         },
         },
@@ -51,7 +51,7 @@ export default function PsaMarriageCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。',
+                text: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。',
               },
             },
             {
@@ -88,7 +88,7 @@ export default function PsaMarriageCertJa() {
         badges={['日本語だけでOK', 'アポスティーユ込み対応', '料金']}
         ctaText="必要な形式を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年9月3日"
       />
 
       <SummaryBlock
@@ -143,7 +143,7 @@ export default function PsaMarriageCertJa() {
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
-        trustNote="着手金50%・書類取得・DHL配送準備完了後に残金50%お支払い・着手前キャンセル無料"
+        trustNote="着手金50%・納品または発送前に残金50%・着手前キャンセル無料"
       />
 
       <FeatureList
@@ -191,7 +191,7 @@ export default function PsaMarriageCertJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA取得・DFAアポスティーユをまとめた料金です。（DHL国際郵送費は実費別途となります）無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。' },
           { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },
           { q: '注釈付き（Annotated）の婚姻証明書は取れますか？', a: '対応可能です。アニュルメント後や外国離婚承認後の注釈付き書類も手配できます。まずは状況をお知らせください。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
