@@ -14,7 +14,7 @@ import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function K1VisaDocsEn() {
   useMeta(
     `K-1 Visa Documents: CENOMAR, PSA & NBI [${SEO_YEAR_MONTH_EN}]`,
-    `K-1 visa petitioner? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for your Filipino fiancé(e). Ships to your US address. Free consultation.`,
+    `K-1 visa petitioner? We confirm the current petition and interview checklists, retrieve the specified PSA records and NBI Clearance, and ship paper records when required.`,
   );
   return (
     <PageLayout
@@ -39,7 +39,7 @@ export default function K1VisaDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'K-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+            description: 'K-1 document package — agreed documents and delivery',
           },
         },
         },
@@ -52,7 +52,7 @@ export default function K1VisaDocsEn() {
               name: 'What Philippine documents does USCIS require for K-1?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Typically CENOMAR, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements may vary. We confirm for your specific case.',
+                text: 'Requirements differ between petition and interview stages. PSA civil records and NBI Clearance may be requested. DFA Apostille is not a universal U.S. requirement, so we confirm the current checklist for your case.',
               },
             },
             {
@@ -60,7 +60,7 @@ export default function K1VisaDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.',
+                text: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents and delivery. Authentication is added only if specifically required.',
               },
             },
             {
@@ -85,19 +85,19 @@ export default function K1VisaDocsEn() {
     >
       <HeroBanner
         title="K-1 Fiancé Visa: Philippine Documents Retrieved and Shipped to the USA"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Current U.S. Checklist', 'No Unnecessary Authentication', 'All-Inclusive Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
       />
 
       <SummaryBlock
-        conclusion="Filing a K-1 fiance visa? We get CENOMAR, PSA Birth Certificate, and NBI Clearance with Apostille."
+        conclusion="Filing a K-1 fiancé visa? We confirm the current stage-specific checklist and retrieve only the Philippine documents your case requires."
         points={[
           'Current USCIS, NVC, and embassy-stage requirements checked before processing',
           'We handle the entire document chain from retrieval to authentication',
           'Shipped via DHL Express to your US address',
-          'All-inclusive pricing: no hidden fees for Apostille or shipping',
+          'All-inclusive pricing for the agreed scope and delivery',
         ]}
         ctaText="Free Consultation"
       />
@@ -142,8 +142,8 @@ export default function K1VisaDocsEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided.',
+            title: 'Authentication only when required',
+            description: 'DFA Apostille is not a universal K-1 requirement. We add authentication only if the specific authority instructs you to do so.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -158,7 +158,7 @@ export default function K1VisaDocsEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your K-1 case status and your target USCIS or embassy interview date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles CENOMAR, Birth Certificate, NBI Clearance, and DFA Apostille.' },
+          { title: 'Processing in the Philippines', description: 'Our team retrieves the agreed PSA records and NBI Clearance in the format required for the application stage.' },
           { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
@@ -166,7 +166,7 @@ export default function K1VisaDocsEn() {
       <FaqSection
         items={[
           { q: 'What Philippine documents does USCIS require for K-1?', a: 'Requirements differ between petition and interview stages. PSA civil records and NBI Clearance may be requested. We confirm the current official checklist for your case.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents and delivery. Authentication is added only if specifically required.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your USCIS or interview deadline and we will confirm whether priority processing is feasible.' },
         ]}
