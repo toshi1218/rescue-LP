@@ -9,11 +9,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { AlertTriangle, FileCheck, Globe, Clock } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaLateRegistrationEn() {
   useMeta(
-    'PSA No Record Found or Name Error? Late Registration & Correction | Philippine Document Service',
-    'PSA birth certificate shows no record, wrong name, or wrong date? These errors block visa applications. We explain options and help you get the corrected document.',
+    `PSA No Record Found? [${SEO_YEAR}] — Late Registration & Name Correction`,
+    'PSA says "no record found" or has a name error? This blocks K-1, CR-1, and spouse visa. We explain the late registration process and can assist. Free consultation.',
   );
   return (
     <PageLayout

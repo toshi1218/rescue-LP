@@ -9,11 +9,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import RelatedArticles from '../components/RelatedArticles';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function CenomarValidityEn() {
   useMeta(
-    'CENOMAR Validity Period — How Long Is It Valid? | Philippine Document Service',
-    'CENOMAR is valid for 6 months from issue date. Timing your request correctly is critical for visa and marriage applications. We help you get it at the right time.',
+    `CENOMAR Validity Period [${SEO_YEAR_MONTH_EN}] — Timing Guide`,
+    'CENOMAR is typically valid for 6 months. If it expires during your marriage or visa process, you\'ll need a new one. We time the retrieval perfectly. Free consultation.',
   );
   return (
     <PageLayout

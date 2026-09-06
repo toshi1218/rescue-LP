@@ -6,11 +6,12 @@ import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function GyoseishoshiVsDocServiceEn() {
   useMeta(
-    'Administrative Scrivener vs Document Acquisition Service — What\'s the Difference? [2026]',
-    'Clear comparison of what Japanese administrative scriveners (行政書士) handle vs. what a Philippine document acquisition service handles. When do you need both? A guide for Filipino-Japanese couples.',
+    `Administrative Scrivener vs Document Service [${SEO_YEAR}]`,
+    'What does a Japanese 行政書士 handle vs. a Philippine document service? Find out when you need both — a guide for Filipino-Japanese couples.',
   );
   return (
     <PageLayout

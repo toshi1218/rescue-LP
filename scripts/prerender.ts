@@ -615,8 +615,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: PHP 365 + US$349 All-In`,
-    description: `Official PSA fee: PHP 365/copy. Full price — retrieval, DFA Apostille & DHL Express: US$349 all-in, 4–6 weeks. No hidden fees. USA, UAE, Canada, UK & more.`,
+    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: ₱155 Walk-In / ₱365 Online`,
+    description: `A PSA birth certificate costs ₱155 at a PSA outlet or ₱365 through PSAHelpline domestic online delivery. International format, authentication, and delivery costs depend on the route and receiving authority.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
