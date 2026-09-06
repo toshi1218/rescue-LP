@@ -473,6 +473,18 @@ const routes: RouteConfig[] = [
     ogType: 'article',
   },
   {
+    path: '/en/prc-professional-documents/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'prc-professional-documents', 'index.html'),
+    title: `PRC Professional Documents & Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    description: 'Get Philippine PRC professional documents for overseas employment or registration. We check the document, authentication route, and DHL delivery required for your destination.',
+    canonical: `${BASE}/en/prc-professional-documents/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/prc-professional-documents/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+    datePublished: '2026-08-02',
+  },
+  {
     path: '/en/psa-ecertificate-abroad/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-ecertificate-abroad', 'index.html'),
     title: `PSA e-Certificate & DFA e-Apostille Abroad: Accepted? [${SEO_YEAR} Country Guide]`,
