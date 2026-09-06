@@ -66,6 +66,7 @@ const LicenseConversionJa = lazy(() => import('./pages/LicenseConversionJa'));
 const NaturalizationEn = lazy(() => import('./pages/NaturalizationEn'));
 const NaturalizationJa = lazy(() => import('./pages/NaturalizationJa'));
 const EApostilleFukaJa = lazy(() => import('./pages/EApostilleFukaJa'));
+const PrcApostilleJa = lazy(() => import('./pages/PrcApostilleJa'));
 const DataSecurityJa = lazy(() => import('./pages/DataSecurityJa'));
 const DataSecurityEn = lazy(() => import('./pages/DataSecurityEn'));
 const DataSecurityKo = lazy(() => import('./pages/DataSecurityKo'));
@@ -275,6 +276,8 @@ export default function App() {
         <Route path="/ja/kika-shinsei-guide/" element={<NaturalizationJa />} />
         <Route path="/ja/e-apostille-fuka" element={<Navigate to="/ja/e-apostille-fuka/" replace />} />
         <Route path="/ja/e-apostille-fuka/" element={<EApostilleFukaJa />} />
+        <Route path="/ja/prc-apostille" element={<Navigate to="/ja/prc-apostille/" replace />} />
+        <Route path="/ja/prc-apostille/" element={<PrcApostilleJa />} />
         <Route path="/ja/data-security" element={<Navigate to="/ja/data-security/" replace />} />
         <Route path="/ja/data-security/" element={<DataSecurityJa />} />
         <Route path="/en/data-security" element={<Navigate to="/en/data-security/" replace />} />
