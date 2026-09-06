@@ -35,12 +35,12 @@ export default function SpouseVisaJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '50000',
+          price: '80000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '50000',
+            price: '80000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: 'PSA出生証明書・婚姻証明書各1通のe-Certificate・e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
           },
         },
         },
@@ -90,7 +90,7 @@ export default function SpouseVisaJa() {
         badges={['日本語だけでOK', '入管要件に合わせて手配', '不要な認証は省略']}
         ctaText="必要書類を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年8月30日"
+        lastUpdated="2026年9月3日"
       />
 
       <SummaryBlock
@@ -109,9 +109,9 @@ export default function SpouseVisaJa() {
           <h2 className="text-xl font-bold text-gray-900 mb-3">料金・期間の目安</h2>
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">代行料金（税抜）</dt>
-              <dd className="font-medium text-gray-800">30,000円〜</dd>
-              <dd className="text-gray-400 text-xs mt-1">※必要書類の種類によって変わります</dd>
+              <dt className="text-gray-500 text-xs mb-1">2通フルセット（税込）</dt>
+              <dd className="font-medium text-gray-800">80,000円（DHL込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">出生証明書＋婚姻証明書</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -123,19 +123,20 @@ export default function SpouseVisaJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">DHL国際配送</dt>
-              <dd className="font-medium text-gray-800">実費別途</dd>
+              <dd className="font-medium text-gray-800">紙原本プランに含む</dd>
             </div>
           </dl>
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
             <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
               <div className="px-4 py-3 font-bold">内容</div>
-              <div className="px-4 py-3 font-bold text-center">料金（税抜）</div>
+              <div className="px-4 py-3 font-bold text-center">料金（税込）</div>
             </div>
             {[
-              { label: 'PSA書類・CENOMAR取得', price: '込み' },
-              { label: '必要な場合のDFA e-Apostille（電子）', price: '見積時に確認' },
-              { label: 'DHL国際配送（追跡付き）', price: '実費別途' },
-              { label: '合計', price: '30,000円〜', bold: true },
+              { label: 'PSA書類1通：e-Certificateのみ', price: '30,000円' },
+              { label: 'PSA書類1通：紙原本＋DHL（認証なし）', price: '30,000円' },
+              { label: 'PSA書類1通：e-Apostille付き電子版', price: '40,000円' },
+              { label: 'PSA書類1通：フルセット', price: '50,000円' },
+              { label: '出生証明書＋婚姻証明書：フルセット', price: '80,000円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
