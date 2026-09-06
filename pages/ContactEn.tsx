@@ -108,7 +108,6 @@ export default function ContactEn() {
       ) : (
       <form
         className="space-y-4 max-w-xl"
-        noValidate
         onSubmit={async (e) => {
           e.preventDefault();
           const emailInput = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value.trim();
@@ -291,7 +290,7 @@ export default function ContactEn() {
             name="message"
             required
             rows={5}
-            placeholder="Example: I am filing a K-1 visa petition and need CENOMAR, Birth Certificate, and NBI Clearance with DFA Apostille. My target USCIS submission date is [month/year]."
+            placeholder="Example: I am filing a K-1 visa petition. My current stage is [petition/NVC/interview], and my target date is [month/year]. Please confirm which Philippine documents and authentication format I need."
             className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
