@@ -132,7 +132,7 @@ export default function MarriageGuideJa() {
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">国際結婚2通セット（税込）</dt>
               <dd className="font-medium text-gray-800">80,000円（DHL国際送料込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">出生証明書＋CENOMAR。単品フルセットは1通50,000円</dd>
+              <dd className="text-gray-400 text-xs mt-1">出生証明書＋CENOMAR。単品フルセットは1通55,000円</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>

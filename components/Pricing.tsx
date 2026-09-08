@@ -53,7 +53,7 @@ const plansData = {
       price: '¥80,000',
       priceNote: '（税込・DHL込み）',
       priceBreakdown: '出生証明書・CENOMAR各1通のe-Certificate、e-Apostille、SECPA紙原本、DHL国際送料を含む総額',
-      period: '約4〜6週間',
+      period: '約3〜4週間',
       detailPath: '/ja/kokusai-kekkon-guide/',
     },
     {
@@ -69,7 +69,7 @@ const plansData = {
       price: '¥65,000',
       priceNote: '（税込・書類2種）',
       priceBreakdown: '出生証明書・CENOMAR各1通のe-Certificate＋e-ApostilleをPDFで納品。紙原本・DHL発送は含みません',
-      period: '約4〜6週間',
+      period: '約1週間',
       detailPath: '/ja/psa-ecertificate-nihon/',
     },
     {
@@ -85,7 +85,7 @@ const plansData = {
       price: '¥80,000',
       priceNote: '（税込・DHL込み）',
       priceBreakdown: '出生証明書・婚姻証明書各1通のe-Certificate、e-Apostille、SECPA紙原本、DHL国際送料を含む総額',
-      period: '約4〜6週間',
+      period: '約3〜4週間',
       detailPath: '/ja/haigusha-visa-shorui/',
     },
     {
@@ -101,8 +101,8 @@ const plansData = {
       priceNote: '〜（税込）',
       priceBreakdown: 'e-Certificateのみ、またはSECPA紙原本＋DHL（認証なし）',
       priceEApostille: '¥40,000',
-      priceEApostilleNote: 'フルセット（e-Certificate・e-Apostille・SECPA紙原本・DHL）は¥50,000（税込）',
-      period: '約4〜6週間',
+      priceEApostilleNote: 'フルセット（e-Certificate・e-Apostille・SECPA紙原本・DHL）は¥55,000（税込）',
+      period: '電子版：約1週間／紙原本：約3〜4週間',
       detailPath: '/ja/cenomar/',
     },
     {
@@ -118,8 +118,8 @@ const plansData = {
       priceNote: '〜（税込）',
       priceBreakdown: 'e-Certificateのみ、またはSECPA紙原本＋DHL（認証なし）',
       priceEApostille: '¥40,000',
-      priceEApostilleNote: 'フルセット（e-Certificate・e-Apostille・SECPA紙原本・DHL）は¥50,000（税込）',
-      period: '約4〜6週間',
+      priceEApostilleNote: 'フルセット（e-Certificate・e-Apostille・SECPA紙原本・DHL）は¥55,000（税込）',
+      period: '電子版：約1週間／紙原本：約3〜4週間',
       detailPath: '/ja/psa-shussei-cost/',
     },
     {
@@ -135,8 +135,8 @@ const plansData = {
       priceNote: '〜（税込）',
       priceBreakdown: 'e-Certificateのみ、またはSECPA紙原本＋DHL（認証なし）',
       priceEApostille: '¥40,000',
-      priceEApostilleNote: 'フルセット（e-Certificate・e-Apostille・SECPA紙原本・DHL）は¥50,000（税込）',
-      period: '約4〜6週間',
+      priceEApostilleNote: 'フルセット（e-Certificate・e-Apostille・SECPA紙原本・DHL）は¥55,000（税込）',
+      period: '電子版：約1週間／紙原本：約3〜4週間',
       detailPath: '/ja/psa-kekkon-shomeisho/',
     },
     {

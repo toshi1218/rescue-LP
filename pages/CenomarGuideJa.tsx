@@ -39,10 +39,10 @@ export default function CenomarGuideJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '50000',
+            price: '55000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '50000',
+              price: '55000',
               priceCurrency: 'JPY',
               description: 'PSA CENOMAR e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
             },
@@ -89,7 +89,7 @@ export default function CenomarGuideJa() {
               name: 'CENOMARの取得にはどのくらいかかりますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSAからの取得には通常1〜3週間かかります。DFAアポスティーユが必要な場合はさらに1〜2週間追加となり、合計で1か月〜6週間が目安です。繁忙期や現地機関の状況によって前後することがあります。',
+                text: '電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。現地機関の状況によって前後することがあります。',
               },
             },
             {
@@ -178,12 +178,12 @@ export default function CenomarGuideJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">フルセット料金（税込）</dt>
-              <dd className="font-medium text-gray-800">50,000円（DHL国際送料込み）</dd>
+              <dd className="font-medium text-gray-800">55,000円（DHL国際送料込み）</dd>
               <dd className="text-gray-400 text-xs mt-1">電子版のみ／紙原本＋DHL（認証なし）は各30,000円</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
-              <dd className="font-medium text-gray-800">約1か月〜6週間</dd>
+              <dd className="font-medium text-gray-800">電子版：約1週間／紙原本：約3〜4週間</dd>
             </div>
           </dl>
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm mt-4">
@@ -195,7 +195,7 @@ export default function CenomarGuideJa() {
               { label: 'CENOMAR e-Certificateのみ（電子納品）', price: '30,000円' },
               { label: 'SECPA紙原本＋DHL（認証なし）', price: '30,000円' },
               { label: 'e-Certificate＋DFA e-Apostille（電子納品）', price: '40,000円' },
-              { label: 'フルセット（電子版・e-Apostille・紙原本・DHL）', price: '50,000円', bold: true },
+              { label: 'フルセット（電子版・e-Apostille・紙原本・DHL）', price: '55,000円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -358,7 +358,7 @@ export default function CenomarGuideJa() {
             },
             {
               q: 'CENOMARの取得にはどのくらいかかりますか？',
-              a: 'PSAからの取得には通常1〜3週間かかります。DFAアポスティーユが必要な場合はさらに1〜2週間追加となり、合計で1か月〜6週間が目安です。繁忙期や現地機関の状況によって前後することがあります。',
+              a: '電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。現地機関の状況によって前後することがあります。',
             },
             {
               q: 'CENOMARだけあれば手続きが進められますか？',

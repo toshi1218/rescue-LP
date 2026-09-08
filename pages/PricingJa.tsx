@@ -32,7 +32,7 @@ export default function PricingJa() {
     >
       <HeroBanner
         title="料金"
-        subtitle="PSA電子版のみ／紙原本＋DHLは各¥30,000、e-Apostille付き電子版¥40,000、フルセット¥50,000。2通セットも明確な総額でご案内します。"
+        subtitle="PSA電子版のみ／紙原本＋DHLは各¥30,000、e-Apostille付き電子版¥40,000、フルセット¥55,000。2通セットも明確な総額でご案内します。"
         badges={['オンライン申請代行から対応', '無料お見積もり', '追加費用の後出しなし']}
         ctaText="無料でお見積もり"
         ctaHref="#contact"
