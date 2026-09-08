@@ -33,10 +33,10 @@ export default function PsaMarriageCertJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '50000',
+          price: '55000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '50000',
+            price: '55000',
             priceCurrency: 'JPY',
             description: 'PSA e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
           },
@@ -51,7 +51,7 @@ export default function PsaMarriageCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。',
+                text: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。',
               },
             },
             {
@@ -59,7 +59,7 @@ export default function PsaMarriageCertJa() {
               name: 'いつ届きますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。',
+                text: '電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。',
               },
             },
             {
@@ -168,7 +168,7 @@ export default function PsaMarriageCertJa() {
           { title: 'フォームで相談', description: '用途（配偶者ビザ・帰化申請など）と提出先をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得・DFAアポスティーユを現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。紙原本は約3〜4週間が目安です。' },
         ]}
       />
 
@@ -191,8 +191,8 @@ export default function PsaMarriageCertJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。' },
-          { q: 'いつ届きますか？', a: 'おおむね1ヶ月半が目安です。PSA書類の取得に2〜3週間、DFAアポスティーユ取得に約2週間、郵送に約1週間かかります。' },
+          { q: '料金はいくらですか？', a: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。' },
+          { q: 'いつ届きますか？', a: '電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。' },
           { q: '注釈付き（Annotated）の婚姻証明書は取れますか？', a: '対応可能です。アニュルメント後や外国離婚承認後の注釈付き書類も手配できます。まずは状況をお知らせください。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },
         ]}

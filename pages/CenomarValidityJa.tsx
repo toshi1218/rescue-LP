@@ -37,10 +37,10 @@ export default function CenomarValidityJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '50000',
+            price: '55000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '50000',
+              price: '55000',
               priceCurrency: 'JPY',
               description: 'CENOMAR e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
             },
@@ -163,7 +163,7 @@ export default function CenomarValidityJa() {
           { q: 'CENOMARの有効期限はどのくらいですか？', a: '法律上の有効期限はありませんが、ほとんどの提出先（大使館・市役所・入管）が発行から6ヶ月以内のものを求めます。提出スケジュールに合わせて取得時期を決めることが重要です。' },
           { q: '取得してから使うまでに時間がかかりそうです', a: '提出予定日をお知らせいただければ、逆算して最適な申請開始時期をご案内します。早すぎると有効期限切れのリスクがあります。' },
           { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
-          { q: '料金はいくらですか？', a: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。' },
+          { q: '料金はいくらですか？', a: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"

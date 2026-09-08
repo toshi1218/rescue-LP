@@ -135,7 +135,7 @@ export default function SpouseVisaJa() {
               { label: 'PSA書類1通：e-Certificateのみ', price: '30,000円' },
               { label: 'PSA書類1通：紙原本＋DHL（認証なし）', price: '30,000円' },
               { label: 'PSA書類1通：e-Apostille付き電子版', price: '40,000円' },
-              { label: 'PSA書類1通：フルセット', price: '50,000円' },
+              { label: 'PSA書類1通：フルセット', price: '55,000円' },
               { label: '出生証明書＋婚姻証明書：フルセット', price: '80,000円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
@@ -281,7 +281,7 @@ export default function SpouseVisaJa() {
           { title: 'フォームで相談（無料）', description: '申請の種類（新規・更新・変更）と必要書類をお知らせください。入管の要件を確認してご案内します。' },
           { title: '必要書類・料金の確認', description: '料金をご提示します。ご依頼時に着手金50%、書類取得・DHL配送準備完了後に残金50%をお支払いいただきます。' },
           { title: 'フィリピン現地で手配', description: 'PSAはオンライン申請＋DFA e-Apostille（電子認証）、NBI等は現地スタッフが物理取得・アポスティーユを進めます。進捗は随時ご報告します。' },
-          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+          { title: '日本へ郵送・完了', description: '書類が揃い次第、追跡付きでお届けします。紙原本は約3〜4週間が目安です。' },
         ]}
       />
 

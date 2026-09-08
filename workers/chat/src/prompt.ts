@@ -2,16 +2,19 @@ import type { ChatConfig } from './config';
 
 export type PromptLang = 'ja' | 'en';
 
-const FALLBACK_PRICING = `Package prices (tax-included, standard international courier shipping included):
-- PSA document (1 item) + Apostille: JPY 69,800 / KRW 690,000 / USD 499
-- Marriage PSA Pack — Birth Certificate + CENOMAR, each with Apostille (2 docs): JPY 129,800 / KRW 1,090,000 / USD 799  ← most popular
-- LTO Driver Record + Apostille: JPY 149,800 / KRW 1,290,000 / USD 899
-- NBI Clearance: quoted per case
+const FALLBACK_PRICING = `Japanese package prices (tax-included):
+- PSA e-Certificate only (1 item): JPY 30,000
+- PSA e-Certificate + e-Apostille (1 item): JPY 40,000
+- PSA full set — e-Certificate + e-Apostille + SECPA paper original + DHL (1 item): JPY 55,000
+- Marriage PSA Pack — Birth Certificate + CENOMAR, electronic: JPY 65,000 / full set with paper originals and DHL: JPY 80,000
+- LTO Driver Record: from JPY 99,000
+- NBI Clearance retrieval + Apostille + DHL: JPY 55,000
 Note: Remote area surcharge, urgent handling, additional documents, or re-issuance may require a separate quote.`;
 
 const FALLBACK_TURNAROUND = `Turnaround (DHL international shipping included, guideline):
-- PSA document + Apostille (Birth Certificate / CENOMAR / Marriage Certificate): approx. 4-6 weeks
-- Marriage PSA Pack (Birth Certificate + CENOMAR, both with Apostille): approx. 4-6 weeks
+- PSA electronic documents (Birth Certificate / CENOMAR / Marriage Certificate): approx. 1 week
+- PSA paper originals requiring international shipping: approx. 3-4 weeks
+- Marriage PSA Pack: electronic approx. 1 week / paper originals approx. 3-4 weeks
 - LTO Driver Record + Apostille: approx. 4 weeks
 - NBI Clearance: varies by case — please inquire for an estimate`;
 

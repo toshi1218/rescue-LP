@@ -145,7 +145,7 @@ const ja = {
   'quickfacts.docs.label': '代行できる書類',
   'quickfacts.docs.value': 'CENOMAR・PSA・NBI・DFA・LTO',
   'quickfacts.period.label': '納期目安',
-  'quickfacts.period.value': '約4〜6週間（案件により変動）',
+  'quickfacts.period.value': '電子版：約1週間／紙原本：約3〜4週間',
   'quickfacts.lang.label': '依頼方法',
   'quickfacts.lang.value': '日本語のみでOK・渡航不要',
   'quickfacts.company.label': '運営',

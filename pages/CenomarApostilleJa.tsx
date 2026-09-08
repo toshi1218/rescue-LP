@@ -38,10 +38,10 @@ export default function CenomarApostilleJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '50000',
+          price: '55000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '50000',
+            price: '55000',
             priceCurrency: 'JPY',
             description: 'CENOMAR e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
           },
@@ -56,7 +56,7 @@ export default function CenomarApostilleJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。',
+                text: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。',
               },
             },
             {
@@ -64,7 +64,7 @@ export default function CenomarApostilleJa() {
               name: 'CENOMARとDFAアポスティーユ、まとめて依頼できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。PSA CENOMAR取得からDFAアポスティーユ認証まで一括で代行します。個別に依頼するより手間がかからず、発行から認証まで一貫したスケジュールで手配できます。全体の目安はおおむね1ヶ月半です。',
+                text: 'はい。PSA CENOMAR取得からDFA e-Apostilleまで一括で代行します。電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。',
               },
             },
             {
@@ -101,7 +101,7 @@ export default function CenomarApostilleJa() {
           'PSA CENOMAR取得からDFAアポスティーユまで一括代行',
           '日本の提出先が求める「紙の原本アポスティーユ」形式で対応',
           '国際結婚・配偶者ビザ・帰化申請、どの用途にも対応',
-          '約1ヶ月〜で日本のご住所へ郵送',
+          '電子版は約1週間／紙原本は約3〜4週間',
         ]}
         ctaText="無料で相談する"
       />
@@ -154,7 +154,7 @@ export default function CenomarApostilleJa() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500">※ DFAアポスティーユの処理期間は通常1〜2週間（Regular processing）です。Expedited処理（追加料金）を利用すると短縮できる場合があります。</p>
+          <p className="text-xs text-gray-500">※ 電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。現地機関の状況により前後します。</p>
         </section>
 
         <IconCardGrid
@@ -203,7 +203,7 @@ export default function CenomarApostilleJa() {
             { label: 'CENOMAR e-Certificateのみ（電子納品）', price: '30,000円' },
             { label: 'SECPA紙原本＋DHL（認証なし）', price: '30,000円' },
             { label: 'e-Certificate＋DFA e-Apostille（電子納品）', price: '40,000円' },
-            { label: 'フルセット（電子版・e-Apostille・紙原本・DHL）', price: '50,000円', bold: true },
+            { label: 'フルセット（電子版・e-Apostille・紙原本・DHL）', price: '55,000円', bold: true },
           ].map((row, i) => (
             <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
               <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -231,14 +231,14 @@ export default function CenomarApostilleJa() {
           { title: 'フォームで相談', description: '用途（国際結婚・ビザ申請など）と提出先をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類（原則DFAアポスティーユ込み）と料金をご提示します。' },
           { title: 'フィリピン現地で手配', description: 'PSA取得→DFAアポスティーユ認証を現地スタッフが進めます。' },
-          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
+          { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。紙原本は約3〜4週間が目安です。' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。' },
-          { q: 'CENOMARとDFAアポスティーユ、まとめて依頼できますか？', a: 'はい。PSA CENOMAR取得からDFAアポスティーユ認証まで一括で代行します。個別に依頼するより手間がかからず、全体の目安はおおむね1ヶ月半です。' },
+          { q: '料金はいくらですか？', a: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。' },
+          { q: 'CENOMARとDFAアポスティーユ、まとめて依頼できますか？', a: 'はい。PSA CENOMAR取得からDFA e-Apostilleまで一括で代行します。電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。' },
           { q: '日本の入管・役所には紙の原本でないと提出できませんか？', a: '原則として紙の原本＋DFAアポスティーユが必要です。PSAのオンライン電子版（e-Apostille）は日本の入管や市区町村役場では原則として受け付けられません。当社は紙の原本形式で対応します。' },
           { q: 'フィリピン人の方が日本在住でも取得できますか？', a: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。' },
         ]}

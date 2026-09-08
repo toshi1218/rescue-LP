@@ -37,10 +37,10 @@ export default function ApostilleFeeJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '50000',
+            price: '55000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '50000',
+              price: '55000',
               priceCurrency: 'JPY',
               description: 'PSA e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
             },
@@ -122,7 +122,7 @@ export default function ApostilleFeeJa() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: '総額でいくらかかるか知りたい',
-            description: 'PSA民事書類1通は、e-Certificateのみ30,000円、紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。',
+            description: 'PSA民事書類1通は、e-Certificateのみ30,000円、紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -180,7 +180,7 @@ export default function ApostilleFeeJa() {
             { title: '書類の種類と提出先を共有', description: 'CENOMAR・PSA・NBI等の種類と、提出先（市役所・大使館・入管など）をお知らせください。アポスティーユが必要かどうかも確認します。' },
             { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めた料金をご案内します。' },
             { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（4営業日）またはExpress（翌営業日）を状況に応じて選択します。' },
-            { title: '日本へ郵送・完了', description: '追跡付きでお届けします。全体の目安はおおむね1ヶ月半。' },
+            { title: '日本へ郵送・完了', description: '追跡付きでお届けします。紙原本は約3〜4週間が目安です。' },
           ]}
         />
       </SectionDivider>
@@ -202,7 +202,7 @@ export default function ApostilleFeeJa() {
       <FaqSection
         items={[
           { q: 'DFAアポスティーユの政府手数料はいくらですか？', a: 'DFAの政府手数料は、Regularが1書類あたり100ペソ、Expressが1書類あたり200ペソです。これは認証手数料のみで、PSA書類の取得費・代行手数料・国際配送費は別に必要です。' },
-          { q: '他社より高くなりませんか？', a: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社のPSA民事書類フルセット50,000円は、e-Certificate・e-Apostille・SECPA紙原本・DHL国際送料を含む税込総額です。' },
+          { q: '他社より高くなりませんか？', a: '他社の「1通○○円〜」は書類取得費用のみの場合があります。当社のPSA民事書類フルセット55,000円は、e-Certificate・e-Apostille・SECPA紙原本・DHL国際送料を含む税込総額です。' },
           { q: '日本への提出にアポスティーユは必要ですか？', a: '提出先によって異なります。PSAの出生証明書・婚姻証明書・CENOMARなどの民事書類は、2026年3月以降DFA e-Apostille（電子）のみが発行されます。提出先がe-Apostilleを受理するかを事前に確認してください。' },
           { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告しながら進めます。' },
         ]}

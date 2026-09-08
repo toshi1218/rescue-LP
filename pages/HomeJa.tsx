@@ -164,7 +164,7 @@ export default function HomeJa() {
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
-                      <strong className="text-gray-900">納期の目安</strong>：現在ご依頼が集中しており、納期は約2ヶ月が目安です。提出期限がある方はお早めにご相談ください。
+                      <strong className="text-gray-900">納期の目安</strong>：PSAの電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。提出期限がある方はお早めにご相談ください。
                     </span>
                   </li>
                 </ul>
