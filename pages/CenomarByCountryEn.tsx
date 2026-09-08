@@ -20,7 +20,7 @@ export default function CenomarByCountryEn() {
         {
           country: '🇺🇸 United States',
           visaTypes: 'K-1 Fiancé Visa, CR-1/IR-1 Spouse Visa, IR-2',
-          apostille: 'Physical DFA Apostille required',
+          apostille: 'Confirm with the current checklist',
           validity: '6 months from issuance',
           notes: 'Requirements differ by visa stage. Confirm the current USCIS, NVC, or embassy checklist before ordering; do not assume an Apostille is required.',
           authority: 'USCIS / National Visa Center (NVC)',
@@ -99,7 +99,7 @@ export default function CenomarByCountryEn() {
         {
           country: '🇦🇪 UAE (United Arab Emirates)',
           visaTypes: 'Marriage Registration, Residency, OFW documentation',
-          apostille: 'DFA Apostille accepted',
+          apostille: 'Embassy attestation (not a Convention party)',
           validity: 'Varies by emirate',
           notes: 'Filipino nationals residing or working in the UAE often need CENOMAR for marriage registration at the Philippine consulate or local civil authorities. Requirements vary by emirate.',
           authority: 'Philippine Consulate General / UAE local authority',
@@ -107,7 +107,7 @@ export default function CenomarByCountryEn() {
         {
           country: '🇶🇦 Qatar',
           visaTypes: 'Marriage Registration, OFW documentation',
-          apostille: 'DFA Apostille accepted',
+          apostille: 'Embassy attestation (not a Convention party)',
           validity: 'Varies',
           notes: 'OFWs in Qatar may need CENOMAR for marriage registration or employer documentation. Confirm current requirements with the Philippine Embassy in Doha.',
           authority: 'Philippine Embassy in Qatar',
@@ -115,17 +115,17 @@ export default function CenomarByCountryEn() {
         {
           country: '🇸🇦 Saudi Arabia',
           visaTypes: 'Marriage Registration, OFW documentation',
-          apostille: 'DFA Apostille accepted',
+          apostille: 'DFA Apostille (Convention party since 2022)',
           validity: 'Varies',
-          notes: 'Requirements vary by region. Philippine Overseas Labor Office (POLO) may also require CENOMAR for certain processes.',
+          notes: 'Saudi Arabia has been a Contracting Party to the Apostille Convention since 7 December 2022. Some sponsors still ask for embassy attestation in practice — confirm with the receiving office.',
           authority: 'Philippine Embassy / POLO',
         },
         {
           country: '🇧🇭 Bahrain, 🇰🇼 Kuwait, 🇴🇲 Oman',
           visaTypes: 'Marriage Registration, OFW documentation',
-          apostille: 'DFA Apostille accepted',
+          apostille: 'Embassy attestation (not Convention parties)',
           validity: 'Varies',
-          notes: 'Gulf countries generally accept DFA Apostille for Philippine documents. Always confirm with the Philippine consulate in-country before submitting.',
+          notes: 'Bahrain, Kuwait, and Oman are not Contracting Parties to the Apostille Convention, so an apostille has no effect there — documents follow the DFA authentication plus embassy attestation route. Always confirm with the Philippine consulate in-country before submitting.',
           authority: 'Philippine Consulate / Embassy',
         },
       ],
@@ -146,7 +146,7 @@ export default function CenomarByCountryEn() {
           visaTypes: 'Spouse or Child of Japanese National (配偶者等), Certificate of Eligibility',
           apostille: 'Authentication required (Apostille or DFA certification)',
           validity: '6 months from issuance',
-          notes: 'Japan Immigration Services Agency requires authenticated Philippine documents. Japan joined the Hague Apostille Convention — apostilled documents are now accepted as of 2024.',
+          notes: 'Japan has been a Contracting Party to the Apostille Convention since 27 July 1970, so a DFA Apostille is the authentication route. Since March 2026 the DFA issues PSA authentication electronically, so confirm with the receiving office whether it accepts an e-Apostille or asks for a SECPA paper original.',
           authority: 'Japan Immigration Services Agency / Japanese Consulate',
         },
       ],
@@ -185,7 +185,7 @@ export default function CenomarByCountryEn() {
             {
               '@type': 'Question',
               name: 'Does Japan accept apostilled CENOMAR?',
-              acceptedAnswer: { '@type': 'Answer', text: 'Yes, as of 2024 Japan joined the Hague Apostille Convention. Apostilled Philippine documents are now accepted for spouse visa (配偶者等) applications at Japanese consulates.' },
+              acceptedAnswer: { '@type': 'Answer', text: 'Yes. Japan has been a Contracting Party to the Apostille Convention since 27 July 1970, so a DFA Apostille is the authentication route for spouse visa (配偶者等) applications. Since March 2026 the DFA issues PSA authentication electronically, so confirm whether the receiving office accepts an e-Apostille or asks for a SECPA paper original.' },
             },
             {
               '@type': 'Question',
@@ -201,7 +201,7 @@ export default function CenomarByCountryEn() {
         badges={['15+ Countries Covered', 'Updated May 2026', 'Apostille & Authentication']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="May 1, 2026"
+        lastUpdated="September 8, 2026"
       />
 
       <div className="max-w-2xl mx-auto px-4 mb-8">
@@ -260,7 +260,7 @@ export default function CenomarByCountryEn() {
         items={[
           { q: 'Does CENOMAR need an apostille for US visa applications?', a: 'Not necessarily. Requirements differ by visa type and stage. Confirm the current USCIS, NVC, or embassy checklist before ordering.' },
           { q: 'Is apostille required for CENOMAR in Canada?', a: 'Not in every case. IRCC requirements vary by application and document. Confirm the current checklist before ordering.' },
-          { q: 'Does Japan accept apostilled CENOMAR?', a: 'Yes, as of 2024 Japan joined the Hague Apostille Convention. Apostilled Philippine documents are now accepted for spouse visa (配偶者等) applications.' },
+          { q: 'Does Japan accept apostilled CENOMAR?', a: 'Yes. Japan has been a Contracting Party to the Apostille Convention since 27 July 1970, so a DFA Apostille is the authentication route for spouse visa (配偶者等) applications. Since March 2026 the DFA issues PSA authentication electronically, so confirm whether the receiving office accepts an e-Apostille or asks for a SECPA paper original.' },
           { q: 'How long is CENOMAR valid for visa applications?', a: 'Most countries require CENOMAR issued within 6 months of submission. Some authorities have stricter requirements — always confirm before ordering.' },
           { q: 'Is CENOMAR authenticated with an e-Apostille or a physical apostille?', a: 'Since March 2026, DFA issues only an electronic e-Apostille for PSA documents like CENOMAR — a physical apostille sticker is no longer available. Whether a given authority accepts the e-Apostille varies, so we confirm the specific requirement for your case before processing.' },
           { q: 'What if my country is not on this list?', a: 'Contact us. We handle CENOMAR retrieval and shipping to any country worldwide. Requirements vary — we research and confirm before starting.' },
