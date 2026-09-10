@@ -1384,7 +1384,7 @@ const routes: RouteConfig[] = [
     lang: 'ja',
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/tokusho/`,
-    lastmod: '2026-05-15',
+    lastmod: '2026-09-10',
   },
   {
     path: '/ja/kojin-joho-hogo/',

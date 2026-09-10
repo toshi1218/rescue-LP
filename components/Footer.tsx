@@ -370,13 +370,11 @@ const Footer: React.FC = () => {
             : 'Payment: Credit card · Visa · Mastercard · Amex · Apple Pay · Google Pay'}
         </p>
 
-        <div className="mt-4 flex flex-col md:flex-row justify-center items-center gap-4 text-xs text-gray-400">
+        <div className="mt-4 flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-x-4 gap-y-2 text-xs text-gray-400">
           <Link to={companyPath} className="hover:text-secondary transition-colors">{t('footer.company')}</Link>
           <Link to={privacyPath} className="hover:text-secondary transition-colors">{t('footer.privacy')}</Link>
           <Link to={termsPath} className="hover:text-secondary transition-colors">{t('footer.terms')}</Link>
-          {isJa && (
-            <Link to={tokushoPath} className="hover:text-secondary transition-colors">特定商取引法に基づく表記</Link>
-          )}
+          <Link to={tokushoPath} className="hover:text-secondary transition-colors">{t('footer.tokusho')}</Link>
           <Link to={pricingPath} className="hover:text-secondary transition-colors">{t('footer.pricingLink')}</Link>
           <Link to={contactPath} className="hover:text-secondary transition-colors">{t('footer.contactLink')}</Link>
         </div>
