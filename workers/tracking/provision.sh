@@ -74,6 +74,13 @@ if ! wr d1 execute "$D1_NAME" --command "PRAGMA table_info(trackings)" --remote 
   wr d1 execute "$D1_NAME" --command "UPDATE trackings SET access_expires_at = created_at + 2592000000 WHERE access_expires_at IS NULL" --remote --yes >/dev/null
   echo "   ✅ 既存追跡データに30日のアクセス期限を追加"
 fi
+# PR #425 の試験版が適用済みでも安全に移行できるようにする。
+if ! wr d1 execute "$D1_NAME" --command "PRAGMA table_info(crm_messages)" --remote --json | grep -q '"channel"'; then
+  wr d1 execute "$D1_NAME" --command "ALTER TABLE crm_messages ADD COLUMN channel TEXT" --remote --yes >/dev/null
+  wr d1 execute "$D1_NAME" --command "UPDATE crm_messages SET channel = (SELECT channel FROM crm_conversations WHERE crm_conversations.id = crm_messages.conversation_id) WHERE channel IS NULL" --remote --yes >/dev/null
+  echo "   ✅ 旧CRMメッセージにchannel列を追加"
+fi
+wr d1 execute "$D1_NAME" --command "CREATE UNIQUE INDEX IF NOT EXISTS idx_crm_messages_channel_provider ON crm_messages(channel, provider_message_id)" --remote --yes >/dev/null
 echo "   ✅ テーブル作成・スキーマ移行完了（再実行可）"
 
 echo "-- R2 バケット --"

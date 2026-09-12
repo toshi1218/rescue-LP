@@ -1,23 +1,12 @@
 name = "ph-document-tracking"
-main = "src/index.ts"
+main = "src/main.ts"
 compatibility_date = "2026-04-01"
 compatibility_flags = ["nodejs_compat"]
 
-# tracking.ph-document.com をこのWorkerに紐付ける（DNSレコードも wrangler が作成）。
-# ph-document.com のゾーンが同じCloudflareアカウントにある前提。別アカウントの場合は
-# この3行をコメントアウトし、ダッシュボードから手動でカスタムドメインを追加する。
 routes = [
   { pattern = "tracking.ph-document.com", custom_domain = true },
-  # ブラウザからのAPI通信は本体ドメインに集約する。顧客用APIは code + PIN のまま。
   { pattern = "ph-document.com/api/*", zone_name = "ph-document.com" }
 ]
-
-# Cloudflare Access（Zero Trust）のApplicationは、ダッシュボード側で
-# 次の両方のパスを保護対象に含めること（どちらか一方だけだと不十分）:
-#   - ph-document.com/tools/tracking-admin.html  … ページ自体を未認証で読ませない
-#     （ここを保護しないと、パスワード入力欄が誰でも閲覧できる状態になり、
-#      Safe Browsingにフィッシングとして誤検知される原因になる。2026-08-21に実際に発生）
-#   - ph-document.com/api/admin/*                … APIリクエストにcf-access-jwt-assertionを付与させる
 
 [[d1_databases]]
 binding = "DB"
@@ -31,12 +20,14 @@ bucket_name = "ph-document-tracking-uploads"
 [triggers]
 crons = ["0 3 * * *"]
 
-# Secrets (set via `wrangler secret put`):
-#   ADMIN_PASSWORD   -- password for the staff admin tool (/tools/tracking-admin.html)
-
 [vars]
 ALLOWED_ORIGIN = "https://ph-document.com"
-# Set as Worker secrets during deployment.
-#   CF_ACCESS_TEAM_DOMAIN
-#   CF_ACCESS_AUD
-#   ADMIN_ALLOWED_EMAIL
+WHATSAPP_GRAPH_VERSION = "v23.0"
+
+# Existing Worker secrets:
+#   ADMIN_PASSWORD, CF_ACCESS_TEAM_DOMAIN, CF_ACCESS_AUD, ADMIN_ALLOWED_EMAIL
+# CRM secrets:
+#   CRM_INGEST_SECRET
+#   WHATSAPP_VERIFY_TOKEN, WHATSAPP_APP_SECRET, WHATSAPP_ACCESS_TOKEN,
+#   WHATSAPP_PHONE_NUMBER_ID
+#   LINE_CHANNEL_SECRET, LINE_CHANNEL_ACCESS_TOKEN
