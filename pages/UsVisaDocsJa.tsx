@@ -11,11 +11,12 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function UsVisaDocsJa() {
   useMeta(
-    'K-1・CR-1ビザのフィリピン書類取得代行【2026年3月】',
-    'K-1・CR-1/IR-1ビザ申請に必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。アメリカ在住の請願者向け。日本語でもOK。無料相談。',
+    `米国ビザの書類代行【${SEO_YEAR_MONTH_JA}】K-1・CR-1対応`,
+    'CENOMAR・PSA出生証明書・婚姻証明書・NBI ClearanceをDFAアポスティーユ付きで一括代行。USCIS・NVC提出に対応。英語の書類も当センターが確認・手配。無料相談。',
   );
   return (
     <PageLayout

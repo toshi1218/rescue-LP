@@ -8,11 +8,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PhilippineStatisticsAuthorityEn() {
   useMeta(
-    'Philippine Statistics Authority (PSA): Documents & How to Get Them [2026]',
-    'The Philippine Statistics Authority (PSA) issues birth certificates, marriage certificates, CENOMAR, and NBI Clearance. Learn what PSA issues, how to get documents from abroad, and what Apostille is required.',
+    `Philippine Statistics Authority (PSA): Documents & How to Get Them [${SEO_YEAR}]`,
+    'The Philippine Statistics Authority (PSA) issues birth certificates, marriage certificates, CENOMAR, and more. Learn what PSA issues, how to get documents from abroad, and what Apostille is required.',
   );
   return (
     <PageLayout

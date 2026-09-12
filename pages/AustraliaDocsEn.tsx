@@ -9,11 +9,12 @@ import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function AustraliaDocsEn() {
   useMeta(
-    'PH Documents for Australia Immigration [April 2026]',
-    'Applying for Australian partner visa or PR? We handle your CENOMAR & PSA online applications with DFA e-Apostille, plus NBI Clearance retrieval with physical Apostille shipped via DHL. Free consultation.',
+    `PH Documents for Australia Immigration [${SEO_YEAR_MONTH_EN}]`,
+    'Applying for Australian partner visa or PR? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille. Ships to Australia via DHL. Free consultation.',
   );
   return (
     <PageLayout
