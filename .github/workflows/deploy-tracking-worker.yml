@@ -36,6 +36,13 @@ jobs:
           ACCESS_TEAM: ${{ secrets.CF_ACCESS_TEAM_DOMAIN }}
           ACCESS_AUD: ${{ secrets.CF_ACCESS_AUD }}
           ADMIN_EMAIL: ${{ secrets.TRACKING_ADMIN_EMAIL }}
+          CRM_SECRET: ${{ secrets.CRM_INGEST_SECRET }}
+          WA_VERIFY: ${{ secrets.WHATSAPP_VERIFY_TOKEN }}
+          WA_APP: ${{ secrets.WHATSAPP_APP_SECRET }}
+          WA_ACCESS: ${{ secrets.WHATSAPP_ACCESS_TOKEN }}
+          WA_PHONE_ID: ${{ secrets.WHATSAPP_PHONE_NUMBER_ID }}
+          LINE_SECRET: ${{ secrets.LINE_CHANNEL_SECRET }}
+          LINE_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
           missing=""
           [ -z "$CF_TOKEN" ]   && missing="$missing CLOUDFLARE_API_TOKEN"
@@ -44,11 +51,18 @@ jobs:
           [ -z "$ACCESS_TEAM" ] && missing="$missing CF_ACCESS_TEAM_DOMAIN"
           [ -z "$ACCESS_AUD" ]  && missing="$missing CF_ACCESS_AUD"
           [ -z "$ADMIN_EMAIL" ] && missing="$missing TRACKING_ADMIN_EMAIL"
+          [ -z "$CRM_SECRET" ] && missing="$missing CRM_INGEST_SECRET"
+          [ -z "$WA_VERIFY" ] && missing="$missing WHATSAPP_VERIFY_TOKEN"
+          [ -z "$WA_APP" ] && missing="$missing WHATSAPP_APP_SECRET"
+          [ -z "$WA_ACCESS" ] && missing="$missing WHATSAPP_ACCESS_TOKEN"
+          [ -z "$WA_PHONE_ID" ] && missing="$missing WHATSAPP_PHONE_NUMBER_ID"
+          [ -z "$LINE_SECRET" ] && missing="$missing LINE_CHANNEL_SECRET"
+          [ -z "$LINE_TOKEN" ] && missing="$missing LINE_CHANNEL_ACCESS_TOKEN"
           if [ -n "$missing" ]; then
             echo "::error::リポジトリの Settings → Secrets and variables → Actions に未設定のシークレットがあります:$missing"
             exit 1
           fi
-          echo "必要な6つのシークレットを確認"
+          echo "追跡・CRM用の13シークレットを確認"
 
       - name: Worker ソースの存在確認
         # このワークフローは main に先行して置かれるため、tracking のコードがまだ
@@ -80,11 +94,25 @@ jobs:
           ACCESS_TEAM: ${{ secrets.CF_ACCESS_TEAM_DOMAIN }}
           ACCESS_AUD: ${{ secrets.CF_ACCESS_AUD }}
           ADMIN_EMAIL: ${{ secrets.TRACKING_ADMIN_EMAIL }}
+          CRM_SECRET: ${{ secrets.CRM_INGEST_SECRET }}
+          WA_VERIFY: ${{ secrets.WHATSAPP_VERIFY_TOKEN }}
+          WA_APP: ${{ secrets.WHATSAPP_APP_SECRET }}
+          WA_ACCESS: ${{ secrets.WHATSAPP_ACCESS_TOKEN }}
+          WA_PHONE_ID: ${{ secrets.WHATSAPP_PHONE_NUMBER_ID }}
+          LINE_SECRET: ${{ secrets.LINE_CHANNEL_SECRET }}
+          LINE_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
           printf '%s' "$ADMIN_PW" | npx --yes wrangler secret put ADMIN_PASSWORD
           printf '%s' "$ACCESS_TEAM" | npx --yes wrangler secret put CF_ACCESS_TEAM_DOMAIN
           printf '%s' "$ACCESS_AUD" | npx --yes wrangler secret put CF_ACCESS_AUD
           printf '%s' "$ADMIN_EMAIL" | npx --yes wrangler secret put ADMIN_ALLOWED_EMAIL
+          printf '%s' "$CRM_SECRET" | npx --yes wrangler secret put CRM_INGEST_SECRET
+          printf '%s' "$WA_VERIFY" | npx --yes wrangler secret put WHATSAPP_VERIFY_TOKEN
+          printf '%s' "$WA_APP" | npx --yes wrangler secret put WHATSAPP_APP_SECRET
+          printf '%s' "$WA_ACCESS" | npx --yes wrangler secret put WHATSAPP_ACCESS_TOKEN
+          printf '%s' "$WA_PHONE_ID" | npx --yes wrangler secret put WHATSAPP_PHONE_NUMBER_ID
+          printf '%s' "$LINE_SECRET" | npx --yes wrangler secret put LINE_CHANNEL_SECRET
+          printf '%s' "$LINE_TOKEN" | npx --yes wrangler secret put LINE_CHANNEL_ACCESS_TOKEN
 
       - name: デプロイ（tracking.ph-document.com の紐付けを含む）
         working-directory: workers/tracking
