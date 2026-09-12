@@ -18,7 +18,6 @@ const Footer: React.FC = () => {
   const [submitError, setSubmitError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [referral, setReferral] = useState('');
-  const [referralError, setReferralError] = useState('');
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -35,7 +34,6 @@ const Footer: React.FC = () => {
       return;
     }
     setEmailError('');
-    setReferralError('');
     setSubmitting(true);
     setSubmitError('');
     try {
@@ -162,7 +160,6 @@ const Footer: React.FC = () => {
           className={isContactPage ? 'hidden' : 'space-y-3 text-left'}
           onSubmit={handleSubmit}
           aria-label={t('footer.formAriaLabel')}
-          noValidate
         >
           <input type="hidden" name="access_key" value={lang === 'en' ? 'b66fdc64-e552-4ae7-bac2-8ba747bfa77a' : 'c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0'} />
           <input type="hidden" name="subject" value={isJa ? '【LPお問い合わせ】フィリピン書類取得代行' : '[Philippine Document Service Inquiry - EN]'} />
@@ -258,7 +255,7 @@ const Footer: React.FC = () => {
             <select
               name="referral_source"
               value={referral}
-              onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+              onChange={e => setReferral(e.target.value)}
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white"
             >
               <option value="">{isJa ? '選択してください' : 'Select…'}</option>
@@ -291,7 +288,6 @@ const Footer: React.FC = () => {
                 maxLength={100}
               />
             )}
-            {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
           </div>
 
           <div>
