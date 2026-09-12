@@ -130,7 +130,7 @@ export default function LtoSmSeasideJa() {
           <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165139.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165139.webp"
                 alt="SMシーサイドシティセブの外観。大型ショッピングモールとLTO窓口への入口"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -141,7 +141,7 @@ export default function LtoSmSeasideJa() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165141.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165141.webp"
                 alt="SMシーサイドシティ内のLTO（陸運局）窓口方向を示す案内表示"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -154,7 +154,7 @@ export default function LtoSmSeasideJa() {
           <div className="grid grid-cols-2 gap-4 mt-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165237.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165237.webp"
                 alt="LTO SMシーサイドの入口外観。「Land Transportation Office」の看板が見える"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -165,7 +165,7 @@ export default function LtoSmSeasideJa() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165325.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165325.webp"
                 alt="LTO SMシーサイドの入口周辺の様子。利用者が入口付近に並んでいる"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -189,7 +189,7 @@ export default function LtoSmSeasideJa() {
           <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165332.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165332.webp"
                 alt="LTO SMシーサイドの入口に掲示された手続き案内。必要書類と手順が記載されている"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -200,7 +200,7 @@ export default function LtoSmSeasideJa() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165357.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165357.webp"
                 alt="LTO SMシーサイドの案内掲示。運転経歴証明書を含む各種申請の手順が掲載"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -225,7 +225,7 @@ export default function LtoSmSeasideJa() {
           <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165402.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165402.webp"
                 alt="LTO SMシーサイドの受付窓口。整然とした窓口が並び担当者が対応している"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -236,7 +236,7 @@ export default function LtoSmSeasideJa() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165408.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165408.webp"
                 alt="LTO SMシーサイドの番号発券機と待合スペース。利用者が番号を待っている"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -249,7 +249,7 @@ export default function LtoSmSeasideJa() {
           <div className="grid grid-cols-2 gap-4 mt-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165413.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165413.webp"
                 alt="LTO SMシーサイドの窓口対応の様子。担当者が書類を確認している"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -260,7 +260,7 @@ export default function LtoSmSeasideJa() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165415.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165415.webp"
                 alt="LTO SMシーサイドの支払い窓口と番号表示ディスプレイ"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -286,7 +286,7 @@ export default function LtoSmSeasideJa() {
           <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165420.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165420.webp"
                 alt="LTO SMシーサイドの運転経歴証明書申請窓口。申請書類と担当者の様子"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -297,7 +297,7 @@ export default function LtoSmSeasideJa() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165448.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165448.webp"
                 alt="LTOが発行した運転経歴証明書（Driver's Record）。運転履歴が記載された公式書類"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -310,7 +310,7 @@ export default function LtoSmSeasideJa() {
           <div className="grid grid-cols-2 gap-4 mt-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165455.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165455.webp"
                 alt="運転経歴証明書の記載内容。免許番号・有効期限・違反履歴などが記載されている"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -321,7 +321,7 @@ export default function LtoSmSeasideJa() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165503.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165503.webp"
                 alt="LTO運転経歴証明書に押されたLTOの公式スタンプと署名"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -346,7 +346,7 @@ export default function LtoSmSeasideJa() {
           <div className="grid grid-cols-2 gap-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165510.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165510.webp"
                 alt="LTO SMシーサイドの室内全景。清潔で整備された窓口エリアとCitizen's Charterの掲示"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -357,7 +357,7 @@ export default function LtoSmSeasideJa() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165512.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165512.webp"
                 alt="LTO SMシーサイドのCitizen's Charter掲示。手続きの種類・担当者・処理時間が一覧で明示"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -370,7 +370,7 @@ export default function LtoSmSeasideJa() {
           <div className="grid grid-cols-2 gap-4 mt-4">
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165520.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165520.webp"
                 alt="LTO SMシーサイドの料金表・手数料の掲示。各種手続きの費用が公式に明示されている"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -381,7 +381,7 @@ export default function LtoSmSeasideJa() {
             </figure>
             <figure>
               <img
-                src="/LTO/LTO SM SEASIDE/IMG_20251222_165526.jpg"
+                src="/LTO/LTO SM SEASIDE/IMG_20251222_165526.webp"
                 alt="LTO SMシーサイドの注意事項・案内掲示。腐敗防止・贈り物禁止ポリシーが掲示されている"
                 className="w-full rounded-xl object-cover aspect-[4/3] shadow-card"
                 loading="lazy"
@@ -393,7 +393,7 @@ export default function LtoSmSeasideJa() {
           </div>
           <figure className="mt-4">
             <img
-              src="/LTO/LTO SM SEASIDE/IMG_20251222_165529.jpg"
+              src="/LTO/LTO SM SEASIDE/IMG_20251222_165529.webp"
               alt="LTO SMシーサイドの全体的な室内の様子。整備された窓口と待合エリアが確認できる"
               className="w-full rounded-xl object-cover max-h-72 shadow-card"
               loading="lazy"
