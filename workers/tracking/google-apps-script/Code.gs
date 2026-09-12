@@ -40,7 +40,7 @@ function runIgrsAutomation() {
     const gmailEnabled = PropertiesService.getScriptProperties()
       .getProperty('ENABLE_GMAIL_INGEST') === 'true';
     if (gmailEnabled) syncGmailToD1_();
-    syncD1ToSheets_();
+    syncD1ToSheets_(gmailEnabled);
     PropertiesService.getScriptProperties().setProperty('IGRS_LAST_SUCCESS_MS', String(Date.now()));
   } finally {
     lock.releaseLock();
@@ -132,17 +132,23 @@ function syncGmailToD1_() {
   if (newestMs) props.setProperty('GMAIL_LAST_SYNC_MS', String(newestMs));
 }
 
-function syncD1ToSheets_() {
+function syncD1ToSheets_(gmailEnabled) {
   const props = PropertiesService.getScriptProperties();
   let cursor = Number(props.getProperty('CRM_SHEET_CURSOR')) || 0;
   let snapshot;
   do {
     snapshot = getJson_('/api/crm/snapshot?after_message_id=' + cursor + '&limit=1000');
-    appendMessages_(snapshot.messages || []);
+    const visibleMessages = (snapshot.messages || [])
+      .filter(m => gmailEnabled || m.channel !== 'email');
+    appendMessages_(visibleMessages);
     cursor = Number(snapshot.next_message_id) || cursor;
     props.setProperty('CRM_SHEET_CURSOR', String(cursor));
   } while ((snapshot.messages || []).length === 1000);
-  upsertPipeline_(snapshot.cases || [], snapshot.conversations || []);
+  const visibleCases = (snapshot.cases || [])
+    .filter(item => gmailEnabled || item.last_channel !== 'email');
+  const visibleConversations = (snapshot.conversations || [])
+    .filter(item => gmailEnabled || item.channel !== 'email');
+  upsertPipeline_(visibleCases, visibleConversations);
 }
 
 function appendMessages_(messages) {
