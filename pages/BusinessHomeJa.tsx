@@ -130,7 +130,7 @@ export default function BusinessHomeJa() {
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">参考料金（税抜）</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">参考料金（税込）</h2>
         </div>
         <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-white to-secondary/5 overflow-hidden">
           <div className="h-1 w-full bg-gradient-to-r from-primary via-primary/70 to-transparent" />
@@ -145,23 +145,23 @@ export default function BusinessHomeJa() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr>
-                  <td className="py-3 text-gray-700">CENOMAR + DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
+                  <td className="py-3 text-gray-700">CENOMAR（独身証明書）</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥50,000</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
-                  <td className="py-3 text-gray-700">PSA出生証明書 + DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
+                  <td className="py-3 text-gray-700">PSA出生証明書</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥50,000</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
-                  <td className="py-3 text-gray-700">NBI Clearance（更新案件）</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥50,000〜</td>
+                  <td className="py-3 text-gray-700">NBI Clearance 取得代行 ＋ DFAアポスティーユ</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥55,000</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
-                  <td className="py-3 text-gray-700">LTO運転経歴証明書 + DFAアポスティーユ<br /><span className="text-xs text-gray-400">※取得難易度が高く優先手配対応のため</span></td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥120,000〜</td>
+                  <td className="py-3 text-gray-700">LTO運転経歴証明書 ＋ DFAアポスティーユ<br /><span className="text-xs text-gray-400">※取得難易度が高く優先手配のため</span></td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥99,000〜</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
               </tbody>
@@ -173,7 +173,7 @@ export default function BusinessHomeJa() {
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                DHL国際郵送費は実費別途
+                上記は税込・DHL国際送料込みの総額です。PSA民事書類の単品料金は、電子版のみ／SECPA紙原本のみ ¥30,000、e-Apostille付き ¥40,000、フルセット（電子＋e-Apostille＋SECPA紙原本＋DHL）¥50,000（いずれも税込）です
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />

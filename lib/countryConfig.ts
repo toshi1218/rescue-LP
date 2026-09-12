@@ -35,7 +35,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     summaryPoints: [
       'New Zealand is a Hague Convention member — DFA Apostille is required on Philippine documents',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your New Zealand address',
+      'PSA records are authenticated with an electronic e-Apostille; SECPA paper originals and non-PSA records ship via DHL Express to your New Zealand address',
       'We confirm exact INZ requirements for your specific application type',
     ],
     faqs: [
@@ -73,7 +73,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     summaryPoints: [
       'Germany is a Hague Convention member — DFA Apostille is required on Philippine documents',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your German address',
+      'PSA records are authenticated with an electronic e-Apostille; SECPA paper originals and non-PSA records ship via DHL Express to your German address',
       'We confirm exact German Embassy requirements for your specific application type',
     ],
     faqs: [
@@ -111,7 +111,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     summaryPoints: [
       'The Netherlands is a Hague Convention member — DFA Apostille is required on Philippine documents',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Netherlands address',
+      'PSA records are authenticated with an electronic e-Apostille; SECPA paper originals and non-PSA records ship via DHL Express to your Netherlands address',
       'We confirm exact IND requirements for your specific MVV or residence permit application',
     ],
     faqs: [
@@ -188,7 +188,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     summaryPoints: [
       'Singapore is a Hague Convention member — DFA Apostille is required on Philippine documents',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Singapore address',
+      'PSA records are authenticated with an electronic e-Apostille; SECPA paper originals and non-PSA records ship via DHL Express to your Singapore address',
       'We confirm exact ICA requirements for your specific pass or visa application',
     ],
     faqs: [
@@ -217,26 +217,26 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     agency: 'Hong Kong Immigration Department',
     agencyAbbr: 'HKID',
     visaType: 'Dependant Visa',
-    badges: ['HK Immigration-Ready', 'Embassy Attestation Included', 'Ships to Hong Kong via DHL'],
-    isHagueConvention: false,
-    authLabel: 'Embassy Attestation',
+    badges: ['HK Immigration-Ready', 'DFA Apostille Route', 'Ships to Hong Kong via DHL'],
+    isHagueConvention: true,
+    authLabel: 'DFA Apostille',
     shippingDays: '2–4 business days',
     totalWeeks: '3–5 weeks',
     price: '899',
     summaryPoints: [
-      'Hong Kong requires Embassy Attestation — we handle DFA authentication and Philippine Embassy attestation for HKSAR submissions',
+      'The Apostille Convention continues to apply to the Hong Kong SAR — a DFA Apostille is the authentication route, not consular legalisation',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Attested originals shipped via DHL Express to your Hong Kong address',
-      'We confirm exact Hong Kong Immigration Department requirements for your specific application',
+      'PSA records are authenticated with an electronic e-Apostille; eligible non-PSA records such as NBI Clearance follow the physical route',
+      'We confirm what the Hong Kong Immigration Department asks for in your specific application before you pay',
     ],
     faqs: [
       {
         q: 'Does Hong Kong require DFA Apostille or Embassy Attestation on Philippine documents?',
-        a: 'Hong Kong (HKSAR) requires Embassy Attestation on Philippine civil documents for immigration applications. We handle the DFA authentication and Philippine Embassy attestation steps. We confirm the exact requirements for your specific case before we start.',
+        a: 'The Apostille Convention continues to apply to the Hong Kong SAR, so Philippine public documents are authenticated with a DFA Apostille rather than consular legalisation. Whether the Immigration Department asks for authentication at all depends on the application, so we confirm the current requirement before processing.',
       },
       {
         q: 'What documents are needed for a Hong Kong Dependant Visa?',
-        a: 'Typically PSA Birth Certificate and NBI Clearance with Embassy Attestation for Hong Kong Immigration applications. PSA Marriage Certificate is required for spousal dependant applications. We confirm for your specific case.',
+        a: 'PSA Birth Certificate and NBI Clearance are commonly requested for Hong Kong Immigration applications, and a PSA Marriage Certificate for spousal dependant applications. We confirm the current checklist for your specific case.',
       },
       {
         q: 'How much does it cost?',
@@ -303,7 +303,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     summaryPoints: [
       'Italy is a Hague Convention member — DFA Apostille is required on Philippine documents',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Italian address',
+      'PSA records are authenticated with an electronic e-Apostille; SECPA paper originals and non-PSA records ship via DHL Express to your Italian address',
       'We confirm exact Italian Embassy requirements for your specific application type',
     ],
     faqs: [
@@ -341,7 +341,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     summaryPoints: [
       'Norway is a Hague Convention member — DFA Apostille is required on Philippine documents',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Norwegian address',
+      'PSA records are authenticated with an electronic e-Apostille; SECPA paper originals and non-PSA records ship via DHL Express to your Norwegian address',
       'We confirm exact UDI requirements for your specific family immigration application',
     ],
     faqs: [
@@ -379,7 +379,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     summaryPoints: [
       'Sweden is a Hague Convention member — DFA Apostille is required on Philippine documents',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Swedish address',
+      'PSA records are authenticated with an electronic e-Apostille; SECPA paper originals and non-PSA records ship via DHL Express to your Swedish address',
       'We confirm exact Migrationsverket requirements for your specific residence permit application',
     ],
     faqs: [
@@ -409,30 +409,30 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     agency: 'Saudi Embassy Manila',
     agencyAbbr: 'Saudi Embassy',
     visaType: 'Family Visa (Iqama Sponsorship)',
-    badges: ['Saudi Embassy-Ready', 'Embassy Attestation Included', 'Ships to Saudi Arabia via DHL'],
-    isHagueConvention: false,
-    authLabel: 'Embassy Attestation',
+    badges: ['Saudi Family Visa', 'DFA Apostille Route', 'Ships to Saudi Arabia via DHL'],
+    isHagueConvention: true,
+    authLabel: 'DFA Apostille',
     shippingDays: '3–5 business days',
     totalWeeks: '4–6 weeks',
     price: '899',
     summaryPoints: [
-      'Saudi Arabia requires Embassy Attestation (not Apostille) — we handle DFA authentication and Saudi Embassy attestation',
+      'Saudi Arabia has been a Contracting Party to the Apostille Convention since 7 December 2022 — a DFA Apostille replaces consular legalisation',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Attested originals shipped via DHL Express to your Saudi Arabia address',
-      'We confirm exact Saudi Embassy requirements for your specific family visa application',
+      'PSA records are authenticated with an electronic e-Apostille; eligible non-PSA records such as NBI Clearance follow the physical route',
+      'Some Saudi sponsors and employers still ask for embassy attestation in practice — we confirm what your specific receiving office wants before you pay',
     ],
     faqs: [
       {
         q: 'Does Saudi Arabia require DFA Apostille or Embassy Attestation on Philippine documents?',
-        a: 'Saudi Arabia requires Embassy Attestation. Saudi Arabia is not a Hague Convention member. Philippine documents must be authenticated by the DFA and then attested by the Saudi Embassy in Manila. We handle both steps.',
+        a: 'Saudi Arabia has been a Contracting Party to the Apostille Convention since 7 December 2022, so a DFA Apostille replaces consular legalisation for Philippine public documents. Some sponsors and employers still request embassy attestation as an internal practice, so we confirm the current requirement with your specific receiving office before processing.',
       },
       {
         q: 'What documents are needed for a Saudi Arabia family visa (Iqama sponsorship)?',
-        a: 'Typically PSA Birth Certificate and NBI Clearance with Embassy Attestation. For spouse sponsorship, PSA Marriage Certificate is also required. We confirm exact requirements for your specific case.',
+        a: 'PSA Birth Certificate and NBI Clearance are commonly requested. For spouse sponsorship, a PSA Marriage Certificate is usually required as well. Requirements vary by sponsor and region, so we confirm the current checklist for your specific case.',
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, Saudi Embassy attestation, and DHL shipping to Saudi Arabia are included.',
+        a: 'We provide all-inclusive pricing after reviewing your case, covering the PSA documents, the applicable DFA authentication route, and DHL shipping to Saudi Arabia.',
       },
       {
         q: 'How long does it take to ship to Saudi Arabia?',
@@ -494,7 +494,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     summaryPoints: [
       'Switzerland is a Hague Convention member — DFA Apostille is required on Philippine documents',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'Paper Apostille originals shipped via DHL Express to your Swiss address',
+      'PSA records are authenticated with an electronic e-Apostille; SECPA paper originals and non-PSA records ship via DHL Express to your Swiss address',
       'We confirm exact SEM requirements for your specific family reunification application',
     ],
     faqs: [
