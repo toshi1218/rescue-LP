@@ -1,13 +1,15 @@
 /**
  * IGRS multichannel bridge
- * Gmail -> D1, then D1 -> Pipeline / messages / ChannelLog.
+ * D1 -> Pipeline / messages / ChannelLog.
+ * Gmail -> D1 is opt-in and disabled by default.
  *
  * Script properties required:
  *   CRM_BASE_URL       https://tracking.ph-document.com
  *   CRM_INGEST_SECRET  same value as the Worker secret
  * Optional:
- *   SHEET_ID           defaults to the bound spreadsheet
- *   GMAIL_LOOKBACK_DAYS defaults to 30 on first run
+ *   SHEET_ID            defaults to the bound spreadsheet
+ *   ENABLE_GMAIL_INGEST  set to "true" only when Gmail import is required
+ *   GMAIL_LOOKBACK_DAYS  defaults to 30 on first Gmail import
  */
 
 const IGRS = {
@@ -35,7 +37,9 @@ function runIgrsAutomation() {
   if (!lock.tryLock(1000)) return;
   try {
     validateConfiguration_();
-    syncGmailToD1_();
+    const gmailEnabled = PropertiesService.getScriptProperties()
+      .getProperty('ENABLE_GMAIL_INGEST') === 'true';
+    if (gmailEnabled) syncGmailToD1_();
     syncD1ToSheets_();
     PropertiesService.getScriptProperties().setProperty('IGRS_LAST_SUCCESS_MS', String(Date.now()));
   } finally {
