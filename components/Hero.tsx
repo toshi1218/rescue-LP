@@ -12,9 +12,9 @@ const enBadges = [
 ];
 
 const enDocItems = [
-  { label: 'Acceptance Check', sub: 'Verify what format your authority needs' },
-  { label: 'Physical PSA Document', sub: 'Original certificate, not e-Cert' },
-  { label: 'DFA e-Apostille', sub: 'Electronic apostille for immigration use' },
+  { label: 'Requirement Check', sub: 'Confirm the format your authority requires' },
+  { label: 'Physical PSA Document', sub: 'Paper original where required' },
+  { label: 'DFA e-Apostille', sub: 'Digitally signed original + verification guide' },
   { label: 'DHL Express Worldwide', sub: '→ Delivered to your address' },
 ];
 
@@ -75,9 +75,9 @@ const Hero: React.FC = () => {
             {t('hero.description')}
           </p>
           <div className="mb-4 w-full max-w-md rounded-xl border border-emerald-300/40 bg-emerald-950/55 px-4 py-3 text-left backdrop-blur-sm">
-            <p className="text-sm font-bold text-emerald-200">受理保証・当社不備は無償再対応</p>
+            <p className="text-sm font-bold text-emerald-200">日本提出対応一式＋受理保証</p>
             <p className="mt-1 text-xs leading-relaxed text-white/80">
-              当社の書類選定・取得・認証・翻訳の不備により受理されなかった場合、追加費用なしで再対応いたします。
+              書類取得だけでなく、提出目的に合わせた選定・取得・認証・翻訳・配送・電子原本の確認資料まで対応。当社不備で受理されない場合は無料で再手配し、なお不受理の場合は当社サービス料金を返金します。
             </p>
           </div>
           {/* CTA Buttons */}
@@ -196,9 +196,9 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="mb-4 w-full max-w-lg rounded-xl border border-emerald-300/40 bg-emerald-950/55 px-4 py-3 backdrop-blur-sm">
-            <p className="text-sm font-bold text-emerald-200">Acceptance Guarantee · Free Reprocessing for Our Errors</p>
+            <p className="text-sm font-bold text-emerald-200">Submission-Ready Package + Acceptance Guarantee</p>
             <p className="mt-1 text-xs leading-relaxed text-white/80">
-              If your documents are rejected due to an error in our document selection, procurement, authentication, or translation, we will correct and reprocess them at no additional charge.
+              Your fee covers requirement checks, procurement, authentication, translation, verification guidance, and delivery—not merely one certificate. If rejection is caused by our error, we will reprocess free of charge. If it is still rejected for the same reason, we will refund our service fee.
             </p>
           </div>
 
@@ -286,8 +286,8 @@ const Hero: React.FC = () => {
             {/* Authority check badge */}
             <div className="mx-5 mb-4 bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 flex items-center justify-between">
               <div>
-                <p className="text-xs font-bold text-blue-800">Authority-Accepted Format</p>
-                <p className="text-xs text-blue-600">UAE · Korea · Europe · USA · more</p>
+                <p className="text-xs font-bold text-blue-800">Submission-Ready Package</p>
+                <p className="text-xs text-blue-600">Digital verification guidance included</p>
               </div>
               <div className="w-11 h-11 rounded-full border-2 border-blue-400 flex items-center justify-center">
                 <span className="text-[8px] text-blue-600 font-bold text-center leading-tight">FORMAT<br/>VERIFIED</span>
