@@ -354,13 +354,13 @@ const Navbar: React.FC = () => {
             className="cursor-pointer text-left"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <span className="font-bold text-secondary text-xs md:text-lg tracking-tight">
+            <span className={`font-bold text-secondary text-xs md:text-lg tracking-tight ${isJa ? 'whitespace-nowrap' : ''}`}>
               {t('navbar.logo')}
             </span>
           </button>
         ) : (
           <Link to={homePath} className="text-left">
-            <span className="font-bold text-secondary text-xs md:text-lg tracking-tight">
+            <span className={`font-bold text-secondary text-xs md:text-lg tracking-tight ${isJa ? 'whitespace-nowrap' : ''}`}>
               {t('navbar.logo')}
             </span>
           </Link>
