@@ -52,17 +52,13 @@ jobs:
           [ -z "$ACCESS_AUD" ]  && missing="$missing CF_ACCESS_AUD"
           [ -z "$ADMIN_EMAIL" ] && missing="$missing TRACKING_ADMIN_EMAIL"
           [ -z "$CRM_SECRET" ] && missing="$missing CRM_INGEST_SECRET"
-          [ -z "$WA_VERIFY" ] && missing="$missing WHATSAPP_VERIFY_TOKEN"
-          [ -z "$WA_APP" ] && missing="$missing WHATSAPP_APP_SECRET"
-          [ -z "$WA_ACCESS" ] && missing="$missing WHATSAPP_ACCESS_TOKEN"
-          [ -z "$WA_PHONE_ID" ] && missing="$missing WHATSAPP_PHONE_NUMBER_ID"
           [ -z "$LINE_SECRET" ] && missing="$missing LINE_CHANNEL_SECRET"
           [ -z "$LINE_TOKEN" ] && missing="$missing LINE_CHANNEL_ACCESS_TOKEN"
           if [ -n "$missing" ]; then
             echo "::error::リポジトリの Settings → Secrets and variables → Actions に未設定のシークレットがあります:$missing"
             exit 1
           fi
-          echo "追跡・CRM用の13シークレットを確認"
+          echo "追跡・LINE CRM用の9シークレットを確認（WhatsAppは未設定でも可）"
 
       - name: Worker ソースの存在確認
         # このワークフローは main に先行して置かれるため、tracking のコードがまだ
@@ -107,10 +103,18 @@ jobs:
           printf '%s' "$ACCESS_AUD" | npx --yes wrangler secret put CF_ACCESS_AUD
           printf '%s' "$ADMIN_EMAIL" | npx --yes wrangler secret put ADMIN_ALLOWED_EMAIL
           printf '%s' "$CRM_SECRET" | npx --yes wrangler secret put CRM_INGEST_SECRET
-          printf '%s' "$WA_VERIFY" | npx --yes wrangler secret put WHATSAPP_VERIFY_TOKEN
-          printf '%s' "$WA_APP" | npx --yes wrangler secret put WHATSAPP_APP_SECRET
-          printf '%s' "$WA_ACCESS" | npx --yes wrangler secret put WHATSAPP_ACCESS_TOKEN
-          printf '%s' "$WA_PHONE_ID" | npx --yes wrangler secret put WHATSAPP_PHONE_NUMBER_ID
+          if [ -n "$WA_VERIFY" ]; then
+            printf '%s' "$WA_VERIFY" | npx --yes wrangler secret put WHATSAPP_VERIFY_TOKEN
+          fi
+          if [ -n "$WA_APP" ]; then
+            printf '%s' "$WA_APP" | npx --yes wrangler secret put WHATSAPP_APP_SECRET
+          fi
+          if [ -n "$WA_ACCESS" ]; then
+            printf '%s' "$WA_ACCESS" | npx --yes wrangler secret put WHATSAPP_ACCESS_TOKEN
+          fi
+          if [ -n "$WA_PHONE_ID" ]; then
+            printf '%s' "$WA_PHONE_ID" | npx --yes wrangler secret put WHATSAPP_PHONE_NUMBER_ID
+          fi
           printf '%s' "$LINE_SECRET" | npx --yes wrangler secret put LINE_CHANNEL_SECRET
           printf '%s' "$LINE_TOKEN" | npx --yes wrangler secret put LINE_CHANNEL_ACCESS_TOKEN
 
