@@ -217,7 +217,5 @@
 /ja/business/gyoseishoshi    /ja/business/gyoseishoshi/   301
 /ja/business/kigyou          /ja/business/kigyou/         301
 
-# ── SPA フォールバック（言語別 index を返すことで lang 属性を正しく維持） ──
-/ja/*  /ja/index.html  200
-/ko/*  /ko/index.html  200
-/*     /en/index.html  200
+# All public routes are prerendered. Do not add a wildcard SPA fallback here:
+# it turns unknown pages and missing images into indexable HTTP 200 soft-404s.
