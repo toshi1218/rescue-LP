@@ -9,7 +9,7 @@ import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Users, Shield } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_LAST_UPDATED_EN, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 import type { CountryConfig } from '../lib/countryConfig';
 
 const BASE = 'https://ph-document.com';
@@ -66,7 +66,7 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
         badges={config.badges}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated={SEO_LAST_UPDATED_EN}
+        lastUpdated="September 8, 2026"
       />
 
       <SummaryBlock
@@ -116,7 +116,7 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: `${config.authLabel}`,
-            description: `We arrange ${config.authLabel} for all documents that require it. ${config.isHagueConvention ? `Paper originals provided — required by ${config.agencyAbbr}.` : `Authentication required for ${config.name} immigration.`}`,
+            description: `We arrange ${config.authLabel} for the documents whose current checklist requires it. ${config.isHagueConvention ? 'For PSA civil records the DFA issues an electronic e-Apostille; eligible non-PSA records such as NBI Clearance follow the physical route.' : `PSA records are issued on SECPA paper with a physical DFA Certificate of Authentication, then attested by the ${config.agency}.`}`,
           },
           {
             icon: <Globe className="w-4 h-4" />,

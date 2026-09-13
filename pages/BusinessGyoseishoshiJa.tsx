@@ -36,15 +36,15 @@ export default function BusinessGyoseishoshiJa() {
       <HeroBanner
         title="行政書士の方へ"
         subtitle="国際結婚・配偶者ビザ・帰化申請に必要なフィリピン書類を、先生の案件に合わせて一括代行します。"
-        badges={['案件ごとの進捗報告', '継続割引あり', '紙の原本アポスティーユ対応']}
-        lastUpdated="2026年3月1日"
+        badges={['案件ごとの進捗報告', '継続割引あり', 'SECPA紙原本＋e-Apostille対応']}
+        lastUpdated="2026年9月8日"
       />
 
       <SummaryBlock
         conclusion="先生のクライアント案件に必要なフィリピン書類を、日本語だけで取得できます。"
         points={[
           'CENOMAR・PSA出生証明書・PSA婚姻証明書・NBI・DFAアポスティーユに対応',
-          '入管・市区町村役場・裁判所が求める「紙の原本アポスティーユ」形式で手配',
+          'PSA民事書類の認証は2026年3月16日以降e-Apostille（電子）のみ。紙原本が要る提出先にはSECPA原本を添えて手配',
           '案件ごとの進捗を受理・取得・発送の各段階でご報告',
           '継続的にご依頼いただく場合はボリュームディスカウントを適用',
         ]}
@@ -84,7 +84,7 @@ export default function BusinessGyoseishoshiJa() {
         <div className="grid gap-3 md:grid-cols-2">
           {[
             { title: '国際結婚（日本先行婚）', desc: 'CENOMAR + DFAアポスティーユ、PSA出生証明書の取得。市区町村役場への提出に対応。' },
-            { title: '配偶者ビザ申請', desc: 'PSA書類 + DFAアポスティーユを「紙の原本」形式で手配。入管の求める形式に対応。' },
+            { title: '配偶者ビザ申請', desc: 'PSA書類のe-Certificate＋e-Apostilleを手配。入管が紙原本を求める場合はSECPA原本も添えます。' },
             { title: '帰化申請', desc: 'CENOMAR・PSA出生証明書・PSA婚姻証明書のDFAアポスティーユ付き取得。法務局提出用。' },
             { title: '在留資格更新・変更', desc: '在留資格の更新時に追加で求められるフィリピン書類の取得にも対応します。' },
           ].map((item) => (
@@ -100,7 +100,7 @@ export default function BusinessGyoseishoshiJa() {
       <section className="mb-12">
         <div className="flex items-center gap-3 mb-6">
           <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
-          <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">参考料金（税抜）</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">参考料金（税込）</h2>
         </div>
         <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-white to-secondary/5 overflow-hidden">
           <div className="h-1 w-full bg-gradient-to-r from-primary via-primary/70 to-transparent" />
@@ -115,25 +115,25 @@ export default function BusinessGyoseishoshiJa() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 <tr>
-                  <td className="py-3 text-gray-700">CENOMAR + DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
+                  <td className="py-3 text-gray-700">CENOMAR（独身証明書）</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥50,000</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
-                  <td className="py-3 text-gray-700">PSA出生証明書 + DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
+                  <td className="py-3 text-gray-700">PSA出生証明書</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥50,000</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
-                  <td className="py-3 text-gray-700">PSA婚姻証明書 + DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥55,000〜</td>
+                  <td className="py-3 text-gray-700">PSA婚姻証明書</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥50,000</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
               </tbody>
             </table>
             <p className="mt-4 text-xs text-gray-500 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-              複数件・継続案件の料金はお問い合わせください・DHL国際郵送費は実費別途
+              上記は税込・DHL国際送料込みの総額です。PSA民事書類の単品料金は、電子版のみ／SECPA紙原本のみ ¥30,000、e-Apostille付き ¥40,000、フルセット（電子＋e-Apostille＋SECPA紙原本＋DHL）¥50,000（いずれも税込）です。複数件・継続案件の料金はお問い合わせください
             </p>
           </div>
         </div>
