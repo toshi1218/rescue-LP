@@ -37,7 +37,7 @@ export default function BusinessKigyouJa() {
         title="フィリピン人材を雇用する企業の方へ"
         subtitle="技能実習生・特定技能人材の在留資格申請に必要なフィリピン書類を、日本語だけで一括手配します。"
         badges={['倫理審査用の料金資料あり', '複数名分の一括対応', '請求書払い対応']}
-        lastUpdated="2026年8月23日"
+        lastUpdated="2026年9月8日"
       />
 
       <SummaryBlock
@@ -137,12 +137,12 @@ export default function BusinessKigyouJa() {
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">
-                    PSA出生証明書 + DFA e-Apostille
+                    PSA出生証明書 フルセット
                     <br />
-                    <span className="text-xs text-gray-400">SECPA紙原本の発送込み</span>
+                    <span className="text-xs text-gray-400">電子版＋e-Apostille＋SECPA紙原本＋DHL（電子版のみ／紙原本のみは ¥30,000、e-Apostille付きは ¥40,000）</span>
                   </td>
                   <td className="py-3 text-right font-semibold text-secondary">
-                    ¥40,000〜
+                    ¥50,000
                     <br />
                     <span className="text-xs font-normal text-gray-400">税込・DHL送料込み</span>
                   </td>
