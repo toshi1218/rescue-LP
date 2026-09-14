@@ -142,7 +142,7 @@ export default function BusinessKigyouJa() {
                     <span className="text-xs text-gray-400">電子版＋e-Apostille＋SECPA紙原本＋DHL（電子版のみ／紙原本のみは ¥30,000、e-Apostille付きは ¥40,000）</span>
                   </td>
                   <td className="py-3 text-right font-semibold text-secondary">
-                    ¥50,000
+                    ¥55,000
                     <br />
                     <span className="text-xs font-normal text-gray-400">税込・DHL送料込み</span>
                   </td>
