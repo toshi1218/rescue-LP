@@ -146,12 +146,12 @@ export default function BusinessHomeJa() {
               <tbody className="divide-y divide-gray-100">
                 <tr>
                   <td className="py-3 text-gray-700">CENOMAR（独身証明書）</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥50,000</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥55,000</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">PSA出生証明書</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥50,000</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥55,000</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
@@ -173,7 +173,7 @@ export default function BusinessHomeJa() {
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                上記は税込・DHL国際送料込みの総額です。PSA民事書類の単品料金は、電子版のみ／SECPA紙原本のみ ¥30,000、e-Apostille付き ¥40,000、フルセット（電子＋e-Apostille＋SECPA紙原本＋DHL）¥50,000（いずれも税込）です
+                上記は税込・DHL国際送料込みの総額です。PSA民事書類の単品料金は、電子版のみ／SECPA紙原本のみ ¥30,000、e-Apostille付き ¥40,000、フルセット（電子＋e-Apostille＋SECPA紙原本＋DHL）¥55,000（いずれも税込）です
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
