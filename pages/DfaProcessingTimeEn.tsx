@@ -8,11 +8,12 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function DfaProcessingTimeEn() {
   useMeta(
-    'DFA Apostille Processing Time [April 2026]',
-    'DFA Apostille takes 5–10 business days. Worried about your visa deadline? Our express proxy service can help you meet it. Free consultation to check your timeline.',
+    `DFA Apostille Processing Time [${SEO_YEAR}]`,
+    'DFA processing time depends on the document and route. PSA e-Apostilles are handled online; eligible non-PSA documents may follow a physical process. Check your deadline before applying.',
   );
   return (
     <PageLayout
@@ -22,7 +23,7 @@ export default function DfaProcessingTimeEn() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'DFA Apostille Service — Timed for Your Visa Deadline',
-          description: 'DFA Apostille takes 4 business days (Regular) or next business day (Express). We schedule processing to meet your immigration submission deadline worldwide. Free consultation to check your timeline.',
+          description: 'DFA processing time depends on the document and route. PSA e-Apostilles are handled online, while eligible non-PSA documents may follow a physical process. We confirm the current timeline before you apply.',
           url: 'https://ph-document.com/en/apostille-processing-time/',
           provider: {
             '@type': 'Organization',
@@ -51,7 +52,7 @@ export default function DfaProcessingTimeEn() {
               name: 'How long does DFA Apostille take?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFA Apostille can be processed Regular (4 business days) or Express (next business day). Total time including the PSA online application and DHL shipping (for physical documents) is approximately 4–6 weeks.',
+                text: 'There is no single processing time for every document. PSA e-Apostilles are handled online, while eligible non-PSA documents may use a physical appointment process. Confirm the current route and timing before setting a deadline.',
               },
             },
             {
@@ -59,7 +60,7 @@ export default function DfaProcessingTimeEn() {
               name: 'Can I request Express DFA Apostille processing?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes. If your deadline requires it, we will arrange Express DFA Apostille. Share your deadline and we will confirm what is needed.',
+                text: 'Priority availability depends on the document type and current DFA process. Share your deadline and we will confirm whether any faster option is available.',
               },
             },
             {
@@ -76,10 +77,10 @@ export default function DfaProcessingTimeEn() {
     >
       <HeroBanner
         title="DFA Apostille Processing Time: We Plan Around Your Deadline"
-        badges={['Deadline-Aware Scheduling', 'Ships via DHL', 'All-Inclusive Pricing']}
+        badges={['Current Route Confirmed', 'Digital or Physical Process', 'Deadline-Aware Planning']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="August 18, 2026"
+        lastUpdated="September 15, 2026"
       />
 
       <SummaryBlock
@@ -104,7 +105,7 @@ export default function DfaProcessingTimeEn() {
           {
             icon: <Calendar className="w-4 h-4" />,
             title: 'Have a K-1 or CR-1 interview date coming up',
-            description: 'We work backward from your target date to determine when to start — and whether Express processing is needed.',
+            description: 'We work backward from your target date and confirm whether any priority option is available for the applicable route.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -116,7 +117,7 @@ export default function DfaProcessingTimeEn() {
 
       <CtaBox
         title="Tell us your deadline — we will plan the timeline"
-        description="We calculate the optimal start date and confirm whether Express processing is needed for your case."
+        description="We confirm the current route, estimated timing, and whether any priority option is available for your case."
         buttonText="Talk to Us"
         href="#contact"
         variant="primary"
@@ -148,8 +149,8 @@ export default function DfaProcessingTimeEn() {
         heading="How It Works"
         steps={[
           { title: 'Share your target date', description: 'Tell us your visa interview, immigration submission, or other deadline.' },
-          { title: 'We plan the timeline and quote', description: 'We confirm whether Express is needed and provide all-inclusive pricing.' },
-          { title: 'We handle the applications', description: 'We complete PSA online applications and DFA e-Apostille applications; our Cebu team handles physical retrieval and Apostille for non-PSA documents (Regular or Express).' },
+          { title: 'We plan the timeline and quote', description: 'We confirm the current route, timing, and whether a priority option is available.' },
+          { title: 'We handle the applications', description: 'We complete PSA online applications and DFA e-Apostille applications; eligible non-PSA documents follow the current physical process when applicable.' },
           { title: 'DHL delivery worldwide', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
         ]}
       />

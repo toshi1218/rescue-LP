@@ -84,17 +84,17 @@ export default function CenomarApostilleEn() {
     >
       <HeroBanner
         title="CENOMAR with DFA Apostille — Shipped Worldwide"
-        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Authentication When Required', 'Electronic e-Apostille', 'Paper Record Separate']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="September 15, 2026"
       />
 
       <SummaryBlock
-        conclusion="Need DFA Apostille on your CENOMAR? We handle the entire process from PSA to Apostille and ship to your door worldwide."
+        conclusion="We first confirm whether authentication is required, then arrange the PSA e-Certificate and electronic e-Apostille or a separate SECPA paper record as needed."
         points={[
-          'DFA Apostille is required for CENOMAR to be accepted by immigration authorities worldwide',
-          'We retrieve CENOMAR from PSA and authenticate at DFA in one seamless process',
+          'Authentication depends on the receiving authority and application stage',
+          'When required, we coordinate the PSA e-Certificate and DFA e-Apostille electronically',
           'Applicable DFA e-Apostille process, confirmed against the receiving authority’s current requirements',
           'No need to visit the Philippines or coordinate with multiple agencies',
         ]}
@@ -142,7 +142,7 @@ export default function CenomarApostilleEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs. Paper original included.',
+            description: 'For PSA CENOMAR, DFA authentication is an electronic e-Apostille from March 16, 2026. A SECPA paper CENOMAR can be ordered separately when needed.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -157,7 +157,7 @@ export default function CenomarApostilleEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your use case (K-1, CR-1, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify whether Apostille is required and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille authentication.' },
+          { title: 'We use the applicable route', description: 'PSA e-Certificate and DFA e-Apostille are processed electronically. A SECPA paper CENOMAR is ordered separately when requested.' },
           { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />

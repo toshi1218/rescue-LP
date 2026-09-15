@@ -12,7 +12,7 @@ const countries = [
     name: 'United States',
     authority: 'USCIS / NVC / US Embassy Manila',
     status: 'mixed' as const,
-    label: '△ Partial — physical PSA required at interview',
+    label: '△ Check the current interview checklist',
     detail:
       'U.S. document requirements differ between petition, NVC, and interview stages. Use the current official checklist for the specific case. A PSA e-Certificate and DFA e-Apostille are digital documents; if a physical PSA original is requested, obtain the SECPA copy separately. Do not assume an Apostille is required unless the receiving authority says so.',
   },
@@ -21,7 +21,7 @@ const countries = [
     name: 'Canada',
     authority: 'IRCC (Immigration, Refugees and Citizenship Canada)',
     status: 'mixed' as const,
-    label: '△ Upload accepted, but physical PSA recommended',
+    label: '△ Check the current IRCC document format',
     detail:
       'IRCC requirements vary by application and document. Confirm whether the current checklist accepts a PSA e-Certificate, requests a scan of a physical SECPA copy, or requires authentication. An e-Apostille remains a digital document and should be submitted in its original electronic form.',
   },
@@ -30,9 +30,9 @@ const countries = [
     name: 'Australia',
     authority: 'Department of Home Affairs',
     status: 'mixed' as const,
-    label: '△ Color scan upload accepted — physical PSA safer',
+    label: '△ Check the current Home Affairs document format',
     detail:
-      'ImmiAccount applications require clear color scans of identity and civil documents. Online submissions do not require certified copies, so uploading a color scan of the physical PSA is standard. There is no official mention of e-Apostilles on Home Affairs guidance. In practice, a color scan of the PSA certificate on Security Paper is the accepted approach. Since March 2026 the DFA authentication for PSA civil documents is an electronic e-Apostille (no paper sticker); an e-Apostille PDF is valid by treaty, but printing it is invalid. Safe option: Provide the physical PSA on SECPA (color scan for upload, original on hand for possible verification) with its DFA e-Apostille.',
+      'Home Affairs requirements depend on the visa and document. Confirm whether the current checklist requests an uploaded civil record, a physical SECPA copy, or authentication. If DFA authentication is specifically required, the PSA e-Certificate and e-Apostille form the electronic authenticated set from March 16, 2026; any SECPA paper record is separate.',
   },
   {
     flag: '🇬🇧',
@@ -41,7 +41,7 @@ const countries = [
     status: 'mixed' as const,
     label: '△ PDF upload accepted — printed e-Apostille invalid',
     detail:
-      'UKVI\'s online visa system allows applicants to upload scans or photos of supporting documents. UKVI does not specifically mention e-Apostilles. If an Apostille is needed, note that since March 2026 DFA issues the PSA Apostille electronically (e-Apostille) only — there is no paper sticker on the PSA original; scans of the physical PSA document can be uploaded. Uploading a PSA e-Certificate PDF is also permitted by the system, but the underlying document integrity is what matters. Any attempt to print an e-Apostille would invalidate it. Safe option: Use scans of the physical PSA certificate with its DFA e-Apostille, or upload the e-Certificate PDF directly for digital submissions only.',
+      'UKVI requirements depend on the visa route and document. Confirm whether the current checklist requests an uploaded civil record, a physical SECPA copy, or authentication. If DFA authentication is specifically required, the PSA e-Certificate and e-Apostille form the electronic authenticated set from March 16, 2026; any SECPA paper record is separate.',
   },
   {
     flag: '🇦🇪',
@@ -63,7 +63,7 @@ const statusIcon = (status: 'ok' | 'mixed' | 'no') => {
 export default function PsaEcertificateAbroadEn() {
   useMeta(
     'PSA e-Certificate & DFA e-Apostille Abroad: Accepted? [2026 Country Guide]',
-    'PSA e-Certificate and DFA e-Apostille country guide: US, Canada, Australia, UK, UAE. Printing an e-Apostille is invalid. Most authorities still require the physical PSA on Security Paper.',
+    'PSA e-Certificate and DFA e-Apostille guide for the US, Canada, Australia, UK, and UAE. Acceptance depends on the current authority checklist and application stage.',
   );
 
   return (
@@ -109,7 +109,7 @@ export default function PsaEcertificateAbroadEn() {
               name: 'What is the difference between PSA e-Certificate and physical PSA on Security Paper?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'A physical PSA certificate is printed on special Security Paper (SECPA) with embedded security features. It can be scanned and uploaded, or submitted as an original. A PSA e-Certificate is a digital-only PDF that was never in physical form. Most overseas authorities expect scans of the physical SECPA — not the e-Certificate PDF. The e-Certificate exists solely as a digital file, while the physical PSA has both a paper original and a scannable form.',
+                text: 'A physical PSA certificate is printed on Security Paper (SECPA), while a PSA e-Certificate is a digital-only file. The receiving authority decides which format it accepts. If DFA e-Apostille is required, it authenticates the e-Certificate; it does not automatically authenticate a separately ordered SECPA paper certificate.',
               },
             },
             {
@@ -125,11 +125,11 @@ export default function PsaEcertificateAbroadEn() {
       ]}
     >
       <SummaryBlock
-        conclusion="PSA e-Certificates and DFA e-Apostilles are legally valid under the Hague Convention. However, most overseas immigration authorities still expect scans of the physical PSA on Security Paper (SECPA) — not a PSA e-certificate. Printing an e-Apostille is invalid. When in doubt, obtain the physical PSA on SECPA and confirm how your authority accepts its DFA authentication."
+        conclusion="PSA e-Certificates and DFA e-Apostilles form an electronic authenticated set for eligible Hague Convention use. The receiving authority still decides whether it accepts that set or requests a separate SECPA paper certificate."
         points={[
           'For PSA e-Certificates intended for Apostille Convention countries, DFA issues a digital e-Apostille. Non-member destinations use a physical Certificate of Authentication, while non-PSA documents may use a different route.',
           'Printing an e-Apostille invalidates it (DFA official rule). It must be submitted electronically as a PDF.',
-          'Most authorities (USCIS, IRCC, Home Affairs, UKVI) allow document uploads as scans — but expect scans of the physical SECPA, not the PSA e-certificate.',
+          'USCIS, NVC, IRCC, Home Affairs, and UKVI requirements differ by application stage; use the current authority checklist rather than assuming one format works everywhere.',
           'UAE is not a Hague member. Apostille has no legal force there; a consular attestation chain is required.',
           'In all ambiguous cases, the safest approach is: physical PSA on SECPA + e-Apostille, with the authority’s acceptance of the e-Apostille confirmed in advance.',
         ]}
@@ -229,8 +229,8 @@ export default function PsaEcertificateAbroadEn() {
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
-                ['🇺🇸 USA (USCIS)', '△ Scan OK for filing', '✗ Invalid', '✓ Required at interview'],
-                ['🇺🇸 USA (NVC/Embassy)', '△ Upload allowed', '✗ Invalid', '✓ Required at interview'],
+                ['🇺🇸 USA (USCIS)', '△ Check filing rules', '✗ Not the original file', '△ Check the interview notice'],
+                ['🇺🇸 USA (NVC/Embassy)', '△ Check case instructions', '✗ Not the original file', '△ Check the interview notice'],
                 ['🇨🇦 Canada (IRCC)', 'Check current checklist', 'Check current checklist', 'Varies by application'],
                 ['🇦🇺 Australia (DHA)', '△ Scan upload OK', '✗ Invalid', '✓ Safer with SECPA'],
                 ['🇬🇧 UK (UKVI)', '△ Upload permitted', '✗ Invalid', '✓ Safer with SECPA'],

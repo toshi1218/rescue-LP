@@ -12,7 +12,7 @@ import { useMeta } from '../lib/useMeta';
 export default function CenomarMeaningEn() {
   useMeta(
     'CENOMAR Meaning: What Is It & Why You Need It [2026]',
-    'CENOMAR stands for Certificate of No Marriage Record — an official PSA document proving a Filipino is legally single. Required for K-1 fiancé visa, CR-1, and marriage abroad.',
+    'CENOMAR means Certificate of No Marriage Record. It may be requested for marriage or immigration, depending on the current checklist and the applicant’s civil history.',
   );
   return (
     <PageLayout
@@ -88,17 +88,17 @@ export default function CenomarMeaningEn() {
     >
       <HeroBanner
         title="CENOMAR: What It Means and Why You Need It"
-        badges={['Issued by PSA Philippines', 'Required for K-1 & Spouse Visa', 'We Retrieve & Ship Worldwide']}
+        badges={['Issued by PSA Philippines', 'Checklist-Dependent Requirement', 'Available from Abroad']}
         ctaText="Get Your CENOMAR"
         ctaHref="/en/cenomar/"
-        lastUpdated="April 2026"
+        lastUpdated="September 15, 2026"
       />
 
       <SummaryBlock
         conclusion="CENOMAR (Certificate of No Marriage Record) is official PSA proof that a Filipino citizen has never been married in the Philippines."
         points={[
           'Stands for Certificate of No Marriage Record — issued only by PSA Philippines',
-          'Required for K-1 fiancé visa, spouse visa pre-registration, and marriage abroad',
+          'May be requested for fiancé, spouse, or marriage procedures',
           'Must have DFA Apostille to be accepted by foreign immigration authorities',
           'Valid for 6 months for most immigration purposes — order at the right time',
         ]}
@@ -161,7 +161,7 @@ export default function CenomarMeaningEn() {
           {[
             ['No marriage record found in PSA', 'One or more marriage records found'],
             ['Proves legally single status', 'Lists marriage details on file'],
-            ['Required for K-1 and most pre-marriage applications', 'Used to confirm existing marriage records'],
+            ['May be requested by the receiving authority', 'Used to confirm existing marriage records'],
             ['Cannot be issued if a marriage record exists', 'Issued instead of CENOMAR when married'],
           ].map(([left, right], i) => (
             <div key={i} className={`grid grid-cols-[1fr_1fr] border-t border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
@@ -182,8 +182,8 @@ export default function CenomarMeaningEn() {
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Forgetting DFA Apostille',
-            description: 'A PSA CENOMAR without DFA Apostille is not accepted by most foreign immigration authorities. The Apostille must be a physical paper original attached to the document.',
+            title: 'Assuming Apostille is always required',
+            description: 'Authentication depends on the receiving authority and application stage. When a DFA Apostille is required for CENOMAR, it is issued electronically for the PSA e-Certificate from March 16, 2026; any SECPA paper certificate is separate.',
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
