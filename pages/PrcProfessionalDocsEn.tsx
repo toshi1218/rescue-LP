@@ -8,12 +8,11 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, Heart, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 import RelatedArticles from '../components/RelatedArticles';
 
 export default function PrcProfessionalDocsEn() {
   useMeta(
-    `PRC Professional Documents & Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    'PRC Professional Documents & Apostille Service [2026]',
     'Get Philippine PRC professional documents for overseas employment or registration. We check the document, authentication route, and DHL delivery required for your destination.',
   );
 

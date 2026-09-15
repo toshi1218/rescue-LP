@@ -41,6 +41,7 @@ interface RouteConfig {
   koCanonical?: string;
   ogType?: string;
   datePublished?: string;
+  dateModified?: string;
   lastmod?: string;
   isAboutPage?: boolean;
   noindex?: boolean;
@@ -110,7 +111,7 @@ function buildArticleJsonLd(route: RouteConfig): JsonLd {
     description: route.description,
     url: route.canonical,
     datePublished: route.datePublished ?? SEO_DATE_ISO,
-    dateModified: SEO_DATE_ISO,
+    dateModified: route.dateModified ?? SEO_DATE_ISO,
     author: {
       '@type': 'Organization',
       name: 'IGRS Inc. Editorial Team',
@@ -475,7 +476,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/prc-professional-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'prc-professional-documents', 'index.html'),
-    title: `PRC Professional Documents & Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    title: 'PRC Professional Documents & Apostille Service [2026]',
     description: 'Get Philippine PRC professional documents for overseas employment or registration. We check the document, authentication route, and DHL delivery required for your destination.',
     canonical: `${BASE}/en/prc-professional-documents/`,
     lastmod: '2026-09-15',
@@ -484,6 +485,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/`,
     ogType: 'article',
     datePublished: '2026-09-15',
+    dateModified: '2026-09-15',
   },
   {
     path: '/en/psa-ecertificate-abroad/',
@@ -1197,6 +1199,7 @@ const routes: RouteConfig[] = [
     jaCanonical: `${BASE}/ja/prc-apostille/`,
     ogType: 'article',
     datePublished: '2026-09-15',
+    dateModified: '2026-09-15',
   },
   {
     path: '/ja/data-security/',
