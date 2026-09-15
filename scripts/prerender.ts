@@ -41,6 +41,7 @@ interface RouteConfig {
   koCanonical?: string;
   ogType?: string;
   datePublished?: string;
+  dateModified?: string;
   lastmod?: string;
   isAboutPage?: boolean;
   noindex?: boolean;
@@ -110,7 +111,7 @@ function buildArticleJsonLd(route: RouteConfig): JsonLd {
     description: route.description,
     url: route.canonical,
     datePublished: route.datePublished ?? SEO_DATE_ISO,
-    dateModified: SEO_DATE_ISO,
+    dateModified: route.dateModified ?? SEO_DATE_ISO,
     author: {
       '@type': 'Organization',
       name: 'IGRS Inc. Editorial Team',
@@ -471,6 +472,20 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/psa-birth-certificate/`,
     jaCanonical: `${BASE}/ja/psa-shussei-shomeisho/`,
     ogType: 'article',
+  },
+  {
+    path: '/en/prc-professional-documents/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'prc-professional-documents', 'index.html'),
+    title: 'PRC Professional Documents & Apostille Service [2026]',
+    description: 'Get Philippine PRC professional documents for overseas employment or registration. We check the document, authentication route, and DHL delivery required for your destination.',
+    canonical: `${BASE}/en/prc-professional-documents/`,
+    lastmod: '2026-09-15',
+    lang: 'en',
+    enCanonical: `${BASE}/en/prc-professional-documents/`,
+    jaCanonical: `${BASE}/ja/`,
+    ogType: 'article',
+    datePublished: '2026-09-15',
+    dateModified: '2026-09-15',
   },
   {
     path: '/en/psa-ecertificate-abroad/',
@@ -1171,6 +1186,20 @@ const routes: RouteConfig[] = [
     enCanonical: `${BASE}/en/`,
     jaCanonical: `${BASE}/ja/e-apostille-fuka/`,
     ogType: 'article',
+  },
+  {
+    path: '/ja/prc-apostille/',
+    outFile: path.join(projectRoot, 'dist', 'ja', 'prc-apostille', 'index.html'),
+    title: 'PRC証明書 アポスティーユ取得代行｜専門資格・免許の認証【IGRS】',
+    description: 'PRC発行の資格・免許証明書について、DFAアポスティーユ取得と国際発送を代行。¥39,000〜（税込・DHL込み）。書類種別・提出国・受取機関に応じた認証ルートを申請前に確認します。帰化申請・海外就労・資格承認に。',
+    canonical: `${BASE}/ja/prc-apostille/`,
+    lastmod: '2026-09-15',
+    lang: 'ja',
+    enCanonical: `${BASE}/en/`,
+    jaCanonical: `${BASE}/ja/prc-apostille/`,
+    ogType: 'article',
+    datePublished: '2026-09-15',
+    dateModified: '2026-09-15',
   },
   {
     path: '/ja/data-security/',

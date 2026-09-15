@@ -66,6 +66,7 @@ const LicenseConversionJa = lazy(() => import('./pages/LicenseConversionJa'));
 const NaturalizationEn = lazy(() => import('./pages/NaturalizationEn'));
 const NaturalizationJa = lazy(() => import('./pages/NaturalizationJa'));
 const EApostilleFukaJa = lazy(() => import('./pages/EApostilleFukaJa'));
+const PrcApostilleJa = lazy(() => import('./pages/PrcApostilleJa'));
 const DataSecurityJa = lazy(() => import('./pages/DataSecurityJa'));
 const DataSecurityEn = lazy(() => import('./pages/DataSecurityEn'));
 const DataSecurityKo = lazy(() => import('./pages/DataSecurityKo'));
@@ -146,6 +147,7 @@ const GyoseishoshiVsDocServiceEn = lazy(() => import('./pages/GyoseishoshiVsDocS
 const KojinJohoHogoEn = lazy(() => import('./pages/KojinJohoHogoEn'));
 const F6DocsEn = lazy(() => import('./pages/F6DocsEn'));
 const CountryDocsEnTemplate = lazy(() => import('./pages/CountryDocsEnTemplate'));
+const PrcProfessionalDocsEn = lazy(() => import('./pages/PrcProfessionalDocsEn'));
 const HomeKo = lazy(() => import('./pages/HomeKo'));
 const PricingKo = lazy(() => import('./pages/PricingKo'));
 const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
@@ -263,6 +265,8 @@ export default function App() {
         <Route path="/ja/haigusha-visa/" element={<SpouseVisaJa />} />
         <Route path="/en/psa-marriage-certificate" element={<Navigate to="/en/psa-marriage-certificate/" replace />} />
         <Route path="/en/psa-marriage-certificate/" element={<PsaMarriageCertEn />} />
+        <Route path="/en/prc-professional-documents" element={<Navigate to="/en/prc-professional-documents/" replace />} />
+        <Route path="/en/prc-professional-documents/" element={<PrcProfessionalDocsEn />} />
         <Route path="/ja/psa-kekkon-shomeisho" element={<Navigate to="/ja/psa-kekkon-shomeisho/" replace />} />
         <Route path="/ja/psa-kekkon-shomeisho/" element={<PsaMarriageCertJa />} />
         <Route path="/en/drivers-license-conversion" element={<Navigate to="/en/drivers-license-conversion/" replace />} />
@@ -275,6 +279,8 @@ export default function App() {
         <Route path="/ja/kika-shinsei-guide/" element={<NaturalizationJa />} />
         <Route path="/ja/e-apostille-fuka" element={<Navigate to="/ja/e-apostille-fuka/" replace />} />
         <Route path="/ja/e-apostille-fuka/" element={<EApostilleFukaJa />} />
+        <Route path="/ja/prc-apostille" element={<Navigate to="/ja/prc-apostille/" replace />} />
+        <Route path="/ja/prc-apostille/" element={<PrcApostilleJa />} />
         <Route path="/ja/data-security" element={<Navigate to="/ja/data-security/" replace />} />
         <Route path="/ja/data-security/" element={<DataSecurityJa />} />
         <Route path="/en/data-security" element={<Navigate to="/en/data-security/" replace />} />
