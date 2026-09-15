@@ -13,8 +13,8 @@ import RelatedArticles from '../components/RelatedArticles';
 
 export default function CenomarGuideEn() {
   useMeta(
-    `Get CENOMAR from Abroad [${SEO_YEAR}] — PSA + Apostille + DHL, All-Inclusive`,
-    'We retrieve CENOMAR from PSA, get DFA Apostille, and ship worldwide via DHL — from US$349 all-in. No trip to the Philippines needed. Free consultation.',
+    `Get CENOMAR from Abroad [${SEO_YEAR}] — Record & Authentication Options`,
+    'Get CENOMAR from abroad in the format your receiving authority requests. We arrange the PSA record, electronic authentication when required, and separate paper delivery when requested.',
   );
   return (
     <PageLayout
@@ -24,14 +24,14 @@ export default function CenomarGuideEn() {
         '@type': 'DefinedTerm',
         name: 'CENOMAR',
         alternateName: 'Certificate of No Marriage Record',
-        description: 'CENOMAR (Certificate of No Marriage Record) is an official document issued by the Philippine Statistics Authority (PSA) certifying that a Filipino citizen has no marriage record on file in the Philippines — proof of single status. It is required for K-1, CR-1/IR-1, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and other immigration applications involving a Filipino national.',
+        description: 'CENOMAR is an official PSA record showing that no marriage record was found for the person searched. Whether it is requested, how recent it must be, and whether authentication is needed depend on the receiving authority and application stage.',
         inDefinedTermSet: 'https://ph-document.com/#glossary',
         },
         {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
         name: 'How to Get a CENOMAR from Outside the Philippines',
-        description: 'Step-by-step process to retrieve a CENOMAR (Certificate of No Marriage Record) with DFA Apostille and ship it worldwide, without traveling to the Philippines.',
+        description: 'Step-by-step process to obtain CENOMAR from abroad, confirm the receiving authority’s format, and arrange electronic authentication or separate paper delivery when required.',
         totalTime: 'P42D',
         estimatedCost: {
           '@type': 'MonetaryAmount',
@@ -41,15 +41,15 @@ export default function CenomarGuideEn() {
         step: [
           { '@type': 'HowToStep', name: 'Submit the Consultation Form', text: 'Share your visa type, the full name on the Philippine ID, and your target deadline. We confirm eligibility before anything starts.' },
           { '@type': 'HowToStep', name: 'Receive Your All-Inclusive Quote', text: 'We send a fixed quote covering PSA retrieval, DFA Apostille (if needed), and DHL shipping — no surprise costs.' },
-          { '@type': 'HowToStep', name: 'We Request CENOMAR from PSA, Then Queue DFA Apostille', text: 'Our Cebu team submits the PSA application, receives the CENOMAR, and handles DFA Apostille authentication on-site in the Philippines.' },
-          { '@type': 'HowToStep', name: 'Original Document Delivered to You via DHL', text: 'The physical CENOMAR (with Apostille) is shipped directly to your address. Tracking number provided. Estimated 4–6 weeks from start.' },
+          { '@type': 'HowToStep', name: 'We arrange the required PSA and DFA route', text: 'If authentication is required, the PSA e-Certificate and DFA e-Apostille are processed electronically. A SECPA paper certificate is ordered separately when requested.' },
+          { '@type': 'HowToStep', name: 'Receive the correct digital or paper format', text: 'The electronic authenticated set is delivered digitally. A separately requested SECPA paper certificate is shipped with tracking.' },
         ],
         },
         {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'CENOMAR Retrieval Service (PSA + DFA Apostille)',
-        description: 'We retrieve CENOMAR from PSA with DFA Apostille and ship worldwide via DHL. Required for immigration and visa applications in the US, Canada, Australia, UK, UAE and more.',
+        name: 'CENOMAR Retrieval and Authentication Service',
+        description: 'We arrange CENOMAR in the format required by the receiving authority, including electronic DFA e-Apostille or separate SECPA paper delivery when requested.',
         url: 'https://ph-document.com/en/cenomar/',
         provider: {
           '@type': 'Organization',
@@ -86,7 +86,7 @@ export default function CenomarGuideEn() {
               name: 'What is CENOMAR used for?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'CENOMAR is required for K-1 fiancé visa applications, CR-1/IR-1 spouse visas, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and most immigration applications involving a Filipino national. It proves you are legally single in the Philippines.',
+                text: 'CENOMAR may be requested for marriage, fiancé, spouse, or immigration procedures. The current checklist determines whether CENOMAR, a PSA Marriage Certificate, or another civil-status record is appropriate.',
               },
             },
             {
@@ -102,7 +102,7 @@ export default function CenomarGuideEn() {
               name: 'How long does it take?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL international shipping takes 3–5 business days.',
+                text: 'Full-service cases are commonly estimated at 4–6 weeks, but timing depends on the PSA record, whether authentication is required, and whether a separate paper certificate must be shipped.',
               },
             },
             {
@@ -131,10 +131,10 @@ export default function CenomarGuideEn() {
     >
       <HeroBanner
         title="What Is CENOMAR? — Certificate of No Marriage Record Explained"
-        badges={['Ships Worldwide via DHL', 'Apostille Included', 'Approx. 4–6 Weeks']}
+        badges={['Correct Format Confirmed', 'Digital or Paper Delivery', 'Approx. 4–6 Weeks']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="August 8, 2026"
+        lastUpdated="September 15, 2026"
       />
 
       <div className="max-w-2xl mx-auto px-4 mb-6">
@@ -145,15 +145,15 @@ export default function CenomarGuideEn() {
           that certifies a Filipino citizen has no marriage record on file — in other words, proof that the person has never been married in the Philippines.
         </p>
         <p className="text-sm text-gray-600 leading-relaxed">
-          CENOMAR is required for K-1 fiancé visa applications, CR-1/IR-1 spouse visas, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and most immigration applications involving a Filipino national. It must typically be issued within 6 months of submission and may require a DFA Apostille depending on the destination country.
+          CENOMAR may be requested for marriage, fiancé, spouse, or immigration procedures. The receiving authority’s current checklist determines the required civil-status record, acceptable issue date, document format, and whether authentication is needed.
         </p>
       </div>
 
       <SummaryBlock
-        conclusion="We retrieve your CENOMAR from PSA, get DFA Apostille, and ship it to your address worldwide. No trip to the Philippines needed."
+        conclusion="We arrange the CENOMAR format required by the receiving authority, including e-Apostille only when authentication is requested."
         points={[
-          'All-inclusive service: PSA retrieval + DFA Apostille + DHL Express shipping',
-          'Required for visa and immigration applications in the US, Canada, Australia, UK & more',
+          'The quote covers the agreed PSA record, any required authentication, and delivery',
+          'May be requested for marriage or immigration, depending on the current checklist',
           'You consult in English; our Cebu team handles all Philippine government offices',
           'Transparent pricing with no hidden fees or surprise add-ons',
         ]}
@@ -232,8 +232,8 @@ export default function CenomarGuideEn() {
         steps={[
           { title: 'Submit the Consultation Form', description: 'Share your visa type, the full name on the Philippine ID, and your target deadline. We confirm eligibility before anything starts.' },
           { title: 'Receive Your All-Inclusive Quote', description: 'We send a fixed quote covering PSA retrieval, DFA Apostille (if needed), and DHL shipping — no surprise costs.' },
-          { title: 'We Request CENOMAR from PSA, Then Queue DFA Apostille', description: 'Our Cebu team submits the PSA application, receives the CENOMAR, and handles DFA Apostille authentication on-site in the Philippines.' },
-          { title: 'Original Document Delivered to You via DHL', description: 'The physical CENOMAR (with Apostille) is shipped directly to your address. Tracking number provided. Estimated 4–6 weeks from start.' },
+          { title: 'We arrange the required PSA and DFA route', description: 'If authentication is required, the PSA e-Certificate and DFA e-Apostille are processed electronically. A SECPA paper certificate is ordered separately when requested.' },
+          { title: 'Receive the correct digital or paper format', description: 'The electronic authenticated set is delivered digitally. A separately requested SECPA paper certificate is shipped with tracking.' },
         ]}
       />
 
@@ -242,17 +242,17 @@ export default function CenomarGuideEn() {
         items={[
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'USA (K-1 & CR-1 visa) — Physical Apostille required',
+            title: 'USA (K-1 & CR-1 visa) — Follow the current case checklist',
             description: 'Document age and authentication requirements vary by U.S. visa stage. We confirm the current USCIS, NVC, or embassy checklist before processing.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Canada, Australia, UK — Apostille or authentication required',
-            description: 'IRCC (Canada), Home Affairs (Australia), and UKVI (UK) each have specific authentication requirements. We verify the correct format for your destination country before starting.',
+            title: 'Canada, Australia, UK — Check the current authority checklist',
+            description: 'IRCC, Home Affairs, and UKVI requirements depend on the application and document. Hague membership does not make Apostille mandatory for every filing.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'UAE, Qatar, Bahrain and Gulf countries — Apostille accepted',
+            title: 'Gulf countries — Country-specific legalization rules',
             description: 'Philippine nationals residing or working in the Gulf region may need CENOMAR for marriage registration at Philippine embassies or local civil authorities. Requirements vary by emirate or country — we confirm before starting.',
           },
         ]}
@@ -261,9 +261,9 @@ export default function CenomarGuideEn() {
       <FaqSection
         items={[
           { q: 'What does CENOMAR mean?', a: 'CENOMAR stands for Certificate of No Marriage Record. It is issued by the Philippine Statistics Authority (PSA) and certifies that a Filipino citizen has no marriage record on file in the Philippines — essentially proof of single status.' },
-          { q: 'What is a CENOMAR used for?', a: 'CENOMAR is required for K-1 fiancé visa applications, CR-1/IR-1 spouse visas, Canada spousal sponsorship, Australia partner visa, UK spouse visa, and most other immigration applications involving a Filipino national.' },
+          { q: 'What is a CENOMAR used for?', a: 'CENOMAR may be requested to show that no marriage record was found for marriage, fiancé, spouse, or immigration procedures. The receiving authority’s current checklist controls.' },
           { q: 'How much does it cost?', a: 'All-inclusive from US$349 (PSA retrieval + DFA Apostille + DHL shipping). No hidden fees. See our Pricing page for the full breakdown.' },
-          { q: 'How long does it take?', a: 'Approximately 4–6 weeks. PSA issuance takes 2–3 weeks, DFA Apostille takes 1–2 weeks, and DHL international shipping takes 3–5 business days.' },
+          { q: 'How long does it take?', a: 'Full-service cases are commonly estimated at 4–6 weeks, but timing depends on the PSA record, required authentication, and whether a separate paper certificate must be shipped.' },
           { q: 'Can you handle rush orders?', a: 'Yes. Let us know your deadline and we will check if expedited processing is available.' },
           { q: 'Do I need a physical Apostille or is e-Apostille OK?', a: 'It depends on the destination and receiving authority. For PSA e-Certificates used in Apostille Convention countries, DFA currently issues an e-Apostille. We confirm the accepted route before processing.' },
           { q: 'I was previously married. Do I still need a CENOMAR?', a: 'If your previous marriage was annulled or dissolved, CENOMAR may still be required but will reflect your current civil status. For previously married applicants, additional documents proving dissolution of prior marriage may also be needed. Consult us for your specific case.' },

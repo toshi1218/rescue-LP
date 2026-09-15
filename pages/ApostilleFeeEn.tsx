@@ -8,11 +8,12 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function ApostilleFeeEn() {
   useMeta(
-    'DFA Apostille Fee [April 2026] — Full Price Breakdown',
-    'Full cost breakdown for DFA Apostille: official fees + proxy service + international shipping. Compare CENOMAR, PSA, and NBI pricing. Free quote available.',
+    `DFA Apostille Fee [${SEO_YEAR}] — Official Fee & Total Cost`,
+    'DFA e-Apostille costs ₱200 for an eligible PSA e-Certificate. Total service cost depends on document retrieval, the required authentication route, and delivery.',
   );
   return (
     <PageLayout
@@ -21,7 +22,7 @@ export default function ApostilleFeeEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service — All-Inclusive Pricing',
-        description: 'Full cost breakdown for DFA Apostille: official fees + proxy service + DHL shipping worldwide. All-inclusive pricing with no hidden fees. Free quote available for CENOMAR, PSA, and NBI.',
+        description: 'DFA e-Apostille costs ₱200 for an eligible PSA e-Certificate. Total service cost depends on retrieval, the authentication route required by the receiving authority, and delivery.',
         url: 'https://ph-document.com/en/apostille-fee/',
         provider: {
           '@type': 'Organization',
@@ -50,7 +51,7 @@ export default function ApostilleFeeEn() {
               name: 'How much does DFA Apostille cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. DFA Apostille, PSA retrieval (when needed), and DHL shipping are all included in one quote.',
+                text: 'The DFA e-Apostille government fee is ₱200 for an eligible PSA e-Certificate. Our service quote is separate and depends on document retrieval, the required route, and delivery.',
               },
             },
             {
@@ -86,13 +87,13 @@ export default function ApostilleFeeEn() {
         badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="September 15, 2026"
       />
 
       <SummaryBlock
         conclusion="DFA Apostille costs more than the government fee alone. We quote the real total upfront."
         points={[
-          'Government fee is just the base; handling, shipping, and retrieval add up',
+          'DFA e-Apostille government fee: ₱200 for an eligible PSA e-Certificate',
           'Our all-inclusive price covers DFA Apostille + document retrieval + DHL shipping',
           'No surprise add-ons after you commit',
           'Compare total costs across providers before deciding',
@@ -111,7 +112,7 @@ export default function ApostilleFeeEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Want to know the total cost before committing',
-            description: 'We provide all-inclusive pricing after a free consultation — DFA Apostille application (electronic for PSA documents, physical for others), PSA online application, and DHL shipping for physical documents included.',
+            description: 'We quote the agreed scope after confirming whether the case uses PSA e-Apostille, an eligible non-PSA physical route, or no DFA authentication.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -136,7 +137,7 @@ export default function ApostilleFeeEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille application',
-            description: 'We handle the DFA Apostille application at the Philippine Department of Foreign Affairs — electronic e-Apostille for PSA documents, physical Apostille for non-PSA documents like NBI Clearance.',
+            description: 'For eligible PSA e-Certificates, DFA issues an electronic e-Apostille. Eligible non-PSA documents may follow a physical process under the current DFA requirements.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -156,14 +157,14 @@ export default function ApostilleFeeEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us which documents need Apostille and your submission authority.' },
           { title: 'We provide all-inclusive pricing', description: 'DFA Apostille application, PSA online application, and DHL shipping for physical documents quoted together upfront.' },
-          { title: 'We handle the applications', description: 'We complete PSA online applications and DFA e-Apostille applications; our Cebu team handles physical retrieval and Apostille for non-PSA documents.' },
+          { title: 'We handle the applications', description: 'We complete PSA online applications and e-Apostille applications; eligible non-PSA documents follow the current physical process when applicable.' },
           { title: 'DHL delivery worldwide', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: 'How much does DFA Apostille cost?', a: 'We provide all-inclusive pricing after reviewing your case. The DFA Apostille application, PSA online application (when needed), and DHL shipping for physical documents are all included in one quote.' },
+          { q: 'How much does DFA Apostille cost?', a: 'The DFA e-Apostille government fee is ₱200 for an eligible PSA e-Certificate. Our service quote is separate and depends on retrieval, the required authentication route, and delivery.' },
           { q: 'Why is your price higher than some agencies?', a: 'Some agencies quote only the base fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.' },
           { q: 'Is Apostille always required?', a: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },

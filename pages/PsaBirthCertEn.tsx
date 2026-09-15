@@ -15,7 +15,7 @@ import RelatedArticles from '../components/RelatedArticles';
 export default function PsaBirthCertEn() {
   useMeta(
     `PSA Birth Certificate + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
-    `Get a PSA Birth Certificate from the Philippines without flying there. We handle retrieval + DFA Apostille + DHL delivery to your door. Free quote.`,
+    `Get a PSA Birth Certificate from abroad. We arrange the PSA record, electronic DFA Apostille when required, and separate SECPA paper delivery when requested.`,
   );
   return (
     <PageLayout
@@ -24,7 +24,7 @@ export default function PsaBirthCertEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Birth Certificate Retrieval Service (+ DFA Apostille)',
-        description: 'We retrieve PSA Birth Certificate from the Philippines with DFA Apostille and ship worldwide via DHL. Required for visa and immigration applications in the US, Canada, Australia, UK & more.',
+        description: 'We arrange a PSA Birth Certificate, electronic DFA Apostille when required, and separate SECPA paper delivery when requested by the receiving authority.',
         url: 'https://ph-document.com/en/psa-birth-certificate/',
         provider: {
           '@type': 'Organization',
@@ -86,10 +86,10 @@ export default function PsaBirthCertEn() {
     >
       <HeroBanner
         title="PSA Birth Certificate — Retrieved and Shipped Worldwide"
-        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Correct Format Confirmed', 'Authentication When Required', 'Digital or DHL Delivery']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="September 15, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
@@ -142,9 +142,9 @@ export default function PsaBirthCertEn() {
       </div>
 
       <SummaryBlock
-        conclusion="We retrieve your PSA Birth Certificate with DFA Apostille and ship it to your address worldwide. No trip to the Philippines."
+        conclusion="We arrange the PSA Birth Certificate in the format your receiving authority requests, without a trip to the Philippines."
         points={[
-          'PSA Birth Certificate is required for nearly every visa and immigration case worldwide',
+          'PSA Birth Certificate requirements depend on the receiving authority and application',
           'Authentication arranged only when the receiving authority requires it',
           'Shipped via DHL Express directly to your address anywhere in the world',
           'All-inclusive pricing: no hidden fees for Apostille or shipping',
@@ -193,7 +193,7 @@ export default function PsaBirthCertEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs. Paper original included.',
+            description: 'When required, we arrange the DFA e-Apostille for the PSA e-Certificate. Any SECPA paper certificate requested by the receiving authority is ordered separately.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -208,7 +208,7 @@ export default function PsaBirthCertEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your use case (K-1, CR-1, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify whether Apostille is required and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille authentication.' },
+          { title: 'We use the applicable route', description: 'If required, the PSA e-Certificate and DFA e-Apostille are processed electronically. A SECPA paper certificate is ordered separately when requested.' },
           { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />

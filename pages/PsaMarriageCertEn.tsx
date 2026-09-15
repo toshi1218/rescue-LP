@@ -14,7 +14,7 @@ import RelatedArticles from '../components/RelatedArticles';
 export default function PsaMarriageCertEn() {
   useMeta(
     `PSA Marriage Certificate [${SEO_YEAR}] — Retrieve + Apostille + Ship Worldwide`,
-    `Need a PSA Marriage Certificate from abroad? We retrieve the original, get DFA Apostille, and ship via DHL — from US$349 all-in. No trip needed. Free quote.`,
+    `Need a PSA Marriage Certificate from abroad? We arrange the PSA record, electronic DFA Apostille when required, and separate SECPA paper delivery when requested.`,
   );
   return (
     <PageLayout
@@ -23,7 +23,7 @@ export default function PsaMarriageCertEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PSA Marriage Certificate Retrieval Service (+ DFA Apostille)',
-        description: 'We retrieve PSA Marriage Certificate from the Philippines with DFA Apostille and ship worldwide via DHL. Required for spouse visa and immigration applications in the US, Canada, Australia, UK & more.',
+        description: 'We arrange a PSA Marriage Certificate, electronic DFA Apostille when required, and separate SECPA paper delivery when requested by the receiving authority.',
         url: 'https://ph-document.com/en/psa-marriage-certificate/',
         provider: {
           '@type': 'Organization',
@@ -85,16 +85,16 @@ export default function PsaMarriageCertEn() {
     >
       <HeroBanner
         title="PSA Marriage Certificate — Retrieved and Shipped Worldwide"
-        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Correct Format Confirmed', 'Authentication When Required', 'Digital or DHL Delivery']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="September 15, 2026"
       />
 
       <SummaryBlock
-        conclusion="We retrieve your PSA Marriage Certificate with DFA Apostille and ship it to your address worldwide."
+        conclusion="We arrange the PSA Marriage Certificate in the format your receiving authority requests."
         points={[
-          'Required for spouse visa and immigration applications worldwide',
+          'May be required for spouse visa, civil registration, or immigration applications',
           'Annotated or standard format available based on your needs',
           'Authentication arranged only when the receiving authority requires it',
           'All-inclusive pricing with DHL Express shipping worldwide',
@@ -143,7 +143,7 @@ export default function PsaMarriageCertEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs. Paper original included.',
+            description: 'When required, we arrange the DFA e-Apostille for the PSA e-Certificate. Any SECPA paper certificate requested by the receiving authority is ordered separately.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -158,7 +158,7 @@ export default function PsaMarriageCertEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your use case (CR-1, IR-1, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify whether Apostille or annotated version is required and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles PSA retrieval and DFA Apostille authentication.' },
+          { title: 'We use the applicable route', description: 'If required, the PSA e-Certificate and DFA e-Apostille are processed electronically. A SECPA paper certificate is ordered separately when requested.' },
           { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
