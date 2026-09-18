@@ -76,7 +76,6 @@ const FooterKo: React.FC = () => {
         ) : (
           <form
             className="space-y-4 text-left max-w-xl mx-auto"
-            noValidate
             onSubmit={handleSubmit}
           >
             <input type="hidden" name="access_key" value="c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0" />
