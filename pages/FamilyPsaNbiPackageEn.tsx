@@ -66,10 +66,10 @@ export default function FamilyPsaNbiPackageEn() {
             },
             {
               '@type': 'Question',
-              name: 'Are Spanish sworn translations included?',
+              name: 'Are sworn translations included?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'No. Sworn translations and other destination-country fees are separate because requirements and translator fees vary.',
+                text: 'No. Sworn translations, including Spanish sworn translations, and other destination-country fees are separate because requirements and translator fees vary.',
               },
             },
             {
@@ -97,7 +97,7 @@ export default function FamilyPsaNbiPackageEn() {
       <SummaryBlock
         conclusion="Three applicants, one coordinated case, and one fixed price: US$1,249."
         points={[
-          'Three PSA Birth Certificates with the applicable DFA e-Apostilles',
+          'Three PSA Birth Certificate packages with DFA e-Apostilles and one SECPA paper copy each when required',
           'Three first-time NBI Clearances with DFA Apostilles',
           'Authorization Letters, case review, and progress updates',
           'One consolidated DHL Express shipment to one address',
@@ -132,7 +132,7 @@ export default function FamilyPsaNbiPackageEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'PSA Birth Certificates + DFA e-Apostilles',
-            description: 'One PSA Birth Certificate package for each applicant, prepared in the format required for the receiving authority.',
+            description: 'One PSA e-Certificate and DFA e-Apostille per applicant, plus one SECPA paper copy each when the receiving authority requires it.',
           },
           {
             icon: <Fingerprint className="w-4 h-4" />,
