@@ -67,7 +67,7 @@ export default function DfaPaymentAssistanceEn() {
                 name: 'Payment Only',
                 price: '70',
                 priceCurrency: 'USD',
-                description: 'Local payment of an already-submitted DFA e-Apostille application. DFA and LinkBiz fees are separate.',
+                description: 'Payment-reference verification, Philippine local payment, available payment-status checking, and confirmation for an already-submitted DFA e-Apostille application. DFA and LinkBiz fees are separate.',
               },
               {
                 '@type': 'Offer',
@@ -124,14 +124,14 @@ export default function DfaPaymentAssistanceEn() {
             <p className="text-xs font-bold uppercase tracking-wider text-primary mb-2">Payment only</p>
             <h3 className="text-lg font-bold text-secondary mb-2">Already submitted your application?</h3>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
-              Send us the payment reference, amount, and deadline. We make the local payment and return the payment confirmation.
+              Send us the payment reference, amount, and deadline. We verify the details, make the Philippine local payment, check the available payment status, and return the confirmation.
             </p>
             <p className="text-4xl font-extrabold text-primary">US$70</p>
-            <p className="text-xs text-gray-500 mt-1">Service fee · DFA/LinkBiz amount charged separately</p>
+            <p className="text-xs text-gray-500 mt-1">Overseas payment-assistance service · DFA/LinkBiz amount charged separately</p>
             <ul className="mt-4 space-y-2 text-sm text-gray-700">
-              <li>· Review of the payment details you send</li>
+              <li>· Verification of the reference, amount, and payment deadline</li>
               <li>· Philippine local payment through an available channel</li>
-              <li>· Payment confirmation sent to you</li>
+              <li>· Available payment-status check and confirmation sent to you</li>
             </ul>
             <a href="#contact" className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
               Request Payment Only
@@ -157,7 +157,7 @@ export default function DfaPaymentAssistanceEn() {
           </div>
         </div>
         <p className="mt-3 text-xs text-gray-500 leading-relaxed">
-          These prices do not include PSA e-Certificate procurement, document correction, translation, resubmission after a DFA rejection, or any government and payment-channel charges unless specifically stated in your quote.
+          The US$70 is an overseas payment-assistance service fee, not a DFA government fee. These prices do not include PSA e-Certificate procurement, document correction, translation, resubmission after a DFA rejection, or any government and payment-channel charges unless specifically stated in your quote.
         </p>
       </section>
 
