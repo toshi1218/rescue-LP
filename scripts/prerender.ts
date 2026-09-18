@@ -490,8 +490,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/dfa-payment-assistance/',
     outFile: path.join(projectRoot, 'dist', 'en', 'dfa-payment-assistance', 'index.html'),
-    title: 'DFA e-Apostille Payment Assistance from Abroad | US$70',
-    description: 'Cannot pay DFA e-Apostille through LinkBiz from abroad? We make the local payment for a US$70 service fee, or complete the online application and payment for US$150. DFA fees are separate.',
+    title: 'DFA e-Apostille Payment Assistance from Abroad | US$90',
+    description: 'Cannot pay DFA e-Apostille through LinkBiz from abroad? We make the local payment for a US$90 service fee, or complete the online application and payment for US$180. Completion guarantee included; DFA fees are separate.',
     canonical: `${BASE}/en/dfa-payment-assistance/`,
     lastmod: '2026-09-18',
     lang: 'en',

@@ -98,8 +98,9 @@ export default function PricingEn() {
             <p className="text-sm text-gray-700 leading-relaxed mb-4">
               For an application you already submitted. We verify the payment reference, make the Philippine local payment, check the available payment status, and send the confirmation.
             </p>
-            <p className="text-2xl font-extrabold text-primary">US$70</p>
+            <p className="text-2xl font-extrabold text-primary">US$90</p>
             <p className="text-xs text-gray-500 mt-1">Overseas payment-assistance service · DFA/LinkBiz amount separate</p>
+            <p className="mt-3 text-xs font-semibold text-secondary">Payment Completion Guarantee included</p>
             <a href="/en/dfa-payment-assistance/" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
               View Payment Assistance
             </a>
@@ -110,8 +111,9 @@ export default function PricingEn() {
             <p className="text-sm text-gray-700 leading-relaxed mb-4">
               We enter the information you provide, submit the DFA online application, make the local payment, and send the confirmations.
             </p>
-            <p className="text-2xl font-extrabold text-primary">US$150</p>
+            <p className="text-2xl font-extrabold text-primary">US$180</p>
             <p className="text-xs text-gray-500 mt-1">Service fee · DFA/LinkBiz amount separate</p>
+            <p className="mt-3 text-xs font-semibold text-secondary">Submission &amp; Payment Completion Guarantee included</p>
             <a href="/en/dfa-payment-assistance/" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-secondary transition-colors hover:bg-primary-hover">
               View Full Assistance
             </a>
