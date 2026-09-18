@@ -21,7 +21,7 @@ export default function CenomarCostComparisonEn() {
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'CENOMAR Cost Comparison [2026]: PSA Direct vs Agent vs Walk-in',
+          headline: 'CENOMAR Cost Comparison: PSA Direct vs Agent vs Walk-in',
           description: 'Compare all options for getting CENOMAR from abroad: PSA online, walk-in, representative, or document service. Full cost and timeline breakdown.',
           url: 'https://ph-document.com/en/cenomar-cost-comparison/',
           datePublished: '2026-05-01',
