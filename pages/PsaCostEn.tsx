@@ -13,7 +13,7 @@ import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaCostEn() {
   useMeta(
-    `PSA Birth Certificate Cost ${SEO_YEAR}: Official Fees & Total from Abroad`,
+    `PSA Birth Certificate Cost [${SEO_YEAR}]: Official Fees & Total from Abroad`,
     'A PSA birth certificate costs ₱155 at a PSA outlet or ₱365 through PSAHelpline domestic online delivery. International format, authentication, and delivery costs depend on the route and receiving authority.',
   );
   return (
