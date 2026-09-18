@@ -51,6 +51,48 @@ export default function PricingKo() {
         </a>
       </div>
 
+      {/* DFA e-Apostille 온라인 신청·결제 대행 */}
+      <section className="mb-10">
+        <div className="mb-4">
+          <p className="text-xs font-bold tracking-wider text-primary mb-1">필리핀 국외 신청자용</p>
+          <h2 className="text-xl font-bold text-secondary">DFA e-Apostille 신청·결제 대행</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            해외 발급 카드가 LinkBiz에서 승인되지 않아 결제를 완료할 수 없는 경우, 필리핀 현지 결제를 대신 처리해 드립니다. 온라인 신청서 입력부터 함께 맡기실 수도 있습니다.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-primary mb-2">결제만 대행</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">DFA/LinkBiz 결제 대행</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              DFA 온라인 신청을 이미 제출한 분을 위한 서비스입니다. 결제 참조번호를 확인하고 필리핀 현지 결제, 확인 가능한 결제 상태 점검 및 완료 내역 전달까지 진행합니다.
+            </p>
+            <p className="text-2xl font-extrabold text-primary">US$90</p>
+            <p className="text-xs text-gray-500 mt-1">대행 수수료 · DFA/LinkBiz 청구 금액 별도</p>
+            <p className="mt-3 text-xs font-semibold text-secondary">결제 완료 보장 포함</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              결제 대행 신청
+            </a>
+          </div>
+          <div className="rounded-2xl border border-secondary/20 bg-white p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-secondary mb-2">입력부터 전체 대행</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">온라인 신청서 입력＋결제</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              제공해 주신 정보를 바탕으로 DFA 온라인 신청서를 입력·제출하고, 필리핀 현지 결제와 완료 확인까지 함께 처리합니다.
+            </p>
+            <p className="text-2xl font-extrabold text-primary">US$180</p>
+            <p className="text-xs text-gray-500 mt-1">대행 수수료 · DFA/LinkBiz 청구 금액 별도</p>
+            <p className="mt-3 text-xs font-semibold text-secondary">신청 제출·결제 완료 보장 포함</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-secondary transition-colors hover:bg-primary-hover">
+              전체 대행 신청
+            </a>
+          </div>
+        </div>
+        <p className="mt-3 text-xs text-gray-500 leading-relaxed">
+          정확하고 누락 없는 정보와 유효기간이 지나지 않은 참조번호를 받은 후에도 합의된 신청 제출 또는 현지 결제를 완료하지 못한 경우, 해당 대행 수수료를 전액 환불합니다. DFA/LinkBiz 및 기타 제3자 비용은 환불되지 않습니다. DFA의 심사, 거절, 승인, 발급 및 처리 기간은 보장 대상이 아닙니다.
+        </p>
+      </section>
+
       {/* 기관 문의 및 특수사례 조사 */}
       <section className="mb-10">
         <div className="mb-4">

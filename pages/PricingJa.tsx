@@ -49,6 +49,48 @@ export default function PricingJa() {
         trustNote="追加費用が出る場合は事前にご相談します"
       />
 
+      {/* DFA e-Apostilleオンライン申請・支払い代行 */}
+      <section className="mb-8">
+        <div className="mb-4">
+          <p className="text-xs font-bold tracking-wider text-primary mb-1">海外から申請する方へ</p>
+          <h2 className="text-xl font-bold text-secondary">DFA e-Apostille申請・支払い代行</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            海外発行のカードがLinkBizで利用できず支払いが完了しない場合に、フィリピン国内での支払いを代行します。オンライン申請の入力からまとめてお任せいただくことも可能です。
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-primary mb-2">支払いのみ</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">DFA／LinkBiz支払い代行</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              すでにDFAへの申請を完了している方向けです。支払い参照番号を確認し、フィリピン国内での支払い、確認可能な支払い状況の確認、完了画面の共有まで対応します。
+            </p>
+            <p className="text-2xl font-extrabold text-primary">US$90</p>
+            <p className="text-xs text-gray-500 mt-1">代行手数料・DFA／LinkBiz請求額は別途</p>
+            <p className="mt-3 text-xs font-semibold text-secondary">支払い完了保証付き</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              支払い代行を依頼する
+            </a>
+          </div>
+          <div className="rounded-2xl border border-secondary/20 bg-white p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-secondary mb-2">入力からすべて代行</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">オンライン申請入力＋支払い代行</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              お預かりした情報をもとにDFAオンライン申請を入力・送信し、フィリピン国内での支払いと完了確認までまとめて対応します。
+            </p>
+            <p className="text-2xl font-extrabold text-primary">US$180</p>
+            <p className="text-xs text-gray-500 mt-1">代行手数料・DFA／LinkBiz請求額は別途</p>
+            <p className="mt-3 text-xs font-semibold text-secondary">申請送信・支払い完了保証付き</p>
+            <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-secondary transition-colors hover:bg-primary-hover">
+              入力から代行を依頼する
+            </a>
+          </div>
+        </div>
+        <p className="mt-3 text-xs text-gray-500 leading-relaxed">
+          正確で不足のない情報と有効期限内の参照番号を受領した後、合意した申請送信または国内支払いを完了できなかった場合は、該当する代行手数料を全額返金します。DFA／LinkBizその他の第三者費用は返金対象外です。DFAによる審査・却下・承認・発行・処理期間は保証対象ではありません。
+        </p>
+      </section>
+
       {/* 行政・領事手続きサポート */}
       <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6 mb-6">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
