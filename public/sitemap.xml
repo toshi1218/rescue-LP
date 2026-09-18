@@ -87,6 +87,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ph-document.com/en/dfa-payment-assistance/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ph-document.com/en/psa-ecertificate-abroad/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-ecertificate-abroad/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-ecertificate-nihon/"/>
