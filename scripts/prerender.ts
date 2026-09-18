@@ -549,7 +549,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille-processing-time/',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille-processing-time', 'index.html'),
-    title: `DFA Apostille Processing Time [${SEO_YEAR}]`,
+    title: 'DFA Apostille Processing Time: How Long It Takes in the Philippines',
     description: `DFA processing time depends on the document and route. PSA e-Apostilles are handled online; eligible non-PSA documents may follow a physical process. Check your deadline before applying.`,
     canonical: `${BASE}/en/apostille-processing-time/`,
     lang: 'en',
@@ -630,7 +630,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Cost ${SEO_YEAR}: Official Fees & Total from Abroad`,
+    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: Official Fees & Total from Abroad`,
     description: `Official PSA fee: PHP 365/copy. Full price — retrieval, DFA Apostille & DHL Express: US$349 all-in, 4–6 weeks. No hidden fees. USA, UAE, Canada, UK & more.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
@@ -799,7 +799,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar-cost-comparison/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-cost-comparison', 'index.html'),
-    title: `CENOMAR Cost Comparison [${SEO_YEAR}]: PSA Direct vs Agent vs Walk-in`,
+    title: 'CENOMAR Cost Comparison: PSA Direct vs Agent vs Walk-in',
     description: `Compare all options for getting CENOMAR: PSA official online, walk-in at PSA branch, hiring a representative, or using a document service. Costs, timelines, and risks explained.`,
     canonical: `${BASE}/en/cenomar-cost-comparison/`,
     lang: 'en',
@@ -1276,7 +1276,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-ryokin/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
-    title: 'DFAアポスティーユの料金【2026年】Regular 100ペソ・Express 200ペソ｜総額の目安',
+    title: 'フィリピンDFAアポスティーユ料金｜公式手数料と代行総額',
     description: 'DFAアポスティーユの政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
     canonical: `${BASE}/ja/apostille-ryokin/`,
     lang: 'ja',
@@ -1287,7 +1287,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-koyukigen/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-koyukigen', 'index.html'),
-    title: `NBI Clearanceの有効期限【${SEO_YEAR_MONTH_JA}】提出先別の基準と再取得の判断`,
+    title: 'NBI Clearanceの有効期限｜提出先別の基準と再取得の判断',
     description: '有効期限は提出先ごとに違います。在フィリピン日本国大使館は申請日から3か月以内、在東京フィリピン大使館の非クオータ移民査証は6か月以内。提出先別の基準・再取得が必要になる条件・更新ルートで進められるかの判断を解説。',
     canonical: `${BASE}/ja/nbi-koyukigen/`,
     lang: 'ja',

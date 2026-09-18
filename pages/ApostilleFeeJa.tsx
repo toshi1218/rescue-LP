@@ -11,11 +11,10 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import { FileText, Stamp, CheckCircle, Clock, MessageSquare, Package } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function ApostilleFeeJa() {
   useMeta(
-    'DFAアポスティーユの料金【2026年】Regular 100ペソ・Express 200ペソ｜総額の目安',
+    'フィリピンDFAアポスティーユ料金｜公式手数料と代行総額',
     'DFAアポスティーユの政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
   );
   return (

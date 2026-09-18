@@ -8,11 +8,10 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR } from '../lib/seoDate';
 
 export default function DfaProcessingTimeEn() {
   useMeta(
-    `DFA Apostille Processing Time [${SEO_YEAR}]`,
+    'DFA Apostille Processing Time: How Long It Takes in the Philippines',
     'DFA processing time depends on the document and route. PSA e-Apostilles are handled online; eligible non-PSA documents may follow a physical process. Check your deadline before applying.',
   );
   return (
