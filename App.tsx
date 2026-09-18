@@ -148,6 +148,7 @@ const KojinJohoHogoEn = lazy(() => import('./pages/KojinJohoHogoEn'));
 const F6DocsEn = lazy(() => import('./pages/F6DocsEn'));
 const CountryDocsEnTemplate = lazy(() => import('./pages/CountryDocsEnTemplate'));
 const PrcProfessionalDocsEn = lazy(() => import('./pages/PrcProfessionalDocsEn'));
+const DfaPaymentAssistanceEn = lazy(() => import('./pages/DfaPaymentAssistanceEn'));
 const HomeKo = lazy(() => import('./pages/HomeKo'));
 const PricingKo = lazy(() => import('./pages/PricingKo'));
 const F6DocsKo = lazy(() => import('./pages/F6DocsKo'));
@@ -267,6 +268,8 @@ export default function App() {
         <Route path="/en/psa-marriage-certificate/" element={<PsaMarriageCertEn />} />
         <Route path="/en/prc-professional-documents" element={<Navigate to="/en/prc-professional-documents/" replace />} />
         <Route path="/en/prc-professional-documents/" element={<PrcProfessionalDocsEn />} />
+        <Route path="/en/dfa-payment-assistance" element={<Navigate to="/en/dfa-payment-assistance/" replace />} />
+        <Route path="/en/dfa-payment-assistance/" element={<DfaPaymentAssistanceEn />} />
         <Route path="/ja/psa-kekkon-shomeisho" element={<Navigate to="/ja/psa-kekkon-shomeisho/" replace />} />
         <Route path="/ja/psa-kekkon-shomeisho/" element={<PsaMarriageCertJa />} />
         <Route path="/en/drivers-license-conversion" element={<Navigate to="/en/drivers-license-conversion/" replace />} />

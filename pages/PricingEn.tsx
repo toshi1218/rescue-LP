@@ -82,6 +82,45 @@ export default function PricingEn() {
         trustNote="No commitment required — free cancellation at quote stage"
       />
 
+      {/* DFA e-Apostille online payment assistance */}
+      <section className="mb-8">
+        <div className="mb-4">
+          <p className="text-xs font-bold uppercase tracking-wider text-primary mb-1">For applicants outside the Philippines</p>
+          <h2 className="text-xl font-bold text-secondary">DFA e-Apostille payment assistance</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            If your DFA application is blocked because LinkBiz does not accept your overseas payment method, we can complete the Philippine local payment step or handle the online application entry as well.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-primary mb-2">PAYMENT ONLY</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">DFA/LinkBiz Payment Assistance</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              For an application you already submitted. We verify the payment reference, make the Philippine local payment, check the available payment status, and send the confirmation.
+            </p>
+            <p className="text-2xl font-extrabold text-primary">US$90</p>
+            <p className="text-xs text-gray-500 mt-1">Overseas payment-assistance service · DFA/LinkBiz amount separate</p>
+            <p className="mt-3 text-xs font-semibold text-secondary">Payment Completion Guarantee included</p>
+            <a href="/en/dfa-payment-assistance/" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
+              View Payment Assistance
+            </a>
+          </div>
+          <div className="rounded-2xl border border-secondary/20 bg-white p-5 md:p-6">
+            <p className="text-xs font-bold tracking-wider text-secondary mb-2">FULL ONLINE ASSISTANCE</p>
+            <h3 className="text-lg font-bold text-secondary mb-2">Application Entry + Payment</h3>
+            <p className="text-sm text-gray-700 leading-relaxed mb-4">
+              We enter the information you provide, submit the DFA online application, make the local payment, and send the confirmations.
+            </p>
+            <p className="text-2xl font-extrabold text-primary">US$180</p>
+            <p className="text-xs text-gray-500 mt-1">Service fee · DFA/LinkBiz amount separate</p>
+            <p className="mt-3 text-xs font-semibold text-secondary">Submission &amp; Payment Completion Guarantee included</p>
+            <a href="/en/dfa-payment-assistance/" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-secondary transition-colors hover:bg-primary-hover">
+              View Full Assistance
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Inquiry and feasibility assessment services */}
       <section className="mb-8">
         <div className="mb-4">
