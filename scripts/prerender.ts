@@ -832,6 +832,16 @@ const routes: RouteConfig[] = [
     lastmod: '2026-05-01',
   },
   {
+    path: '/en/family-psa-nbi-package/',
+    outFile: path.join(projectRoot, 'dist', 'en', 'family-psa-nbi-package', 'index.html'),
+    title: `3-Applicant PSA + NBI Family Package [${SEO_YEAR_MONTH_EN}]`,
+    description: 'Three family members applying together: PSA Birth Certificates, first-time NBI Clearances, DFA Apostilles, case coordination, and one DHL shipment for US$1,249.',
+    canonical: `${BASE}/en/family-psa-nbi-package/`,
+    lang: 'en',
+    enCanonical: `${BASE}/en/family-psa-nbi-package/`,
+    lastmod: '2026-09-19',
+  },
+  {
     path: '/en/company/',
     outFile: path.join(projectRoot, 'dist', 'en', 'company', 'index.html'),
     title: 'About Us | IGRS Inc. — Philippine Document Retrieval Service',
