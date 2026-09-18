@@ -630,7 +630,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Cost ${SEO_YEAR}: Official Fees & Total from Abroad`,
+    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: Official Fees & Total from Abroad`,
     description: `Official PSA fee: PHP 365/copy. Full price — retrieval, DFA Apostille & DHL Express: US$349 all-in, 4–6 weeks. No hidden fees. USA, UAE, Canada, UK & more.`,
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
@@ -799,7 +799,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar-cost-comparison/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-cost-comparison', 'index.html'),
-    title: `CENOMAR Cost Comparison [${SEO_YEAR}]: PSA Direct vs Agent vs Walk-in`,
+    title: 'CENOMAR Cost Comparison: PSA Direct vs Agent vs Walk-in',
     description: `Compare all options for getting CENOMAR: PSA official online, walk-in at PSA branch, hiring a representative, or using a document service. Costs, timelines, and risks explained.`,
     canonical: `${BASE}/en/cenomar-cost-comparison/`,
     lang: 'en',
