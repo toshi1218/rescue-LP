@@ -162,6 +162,12 @@ export default function F6DocsKo() {
                 ⚠ {doc.note}
               </p>
             )}
+            {doc.en === 'NBI Clearance' && (
+              <Link to="/ko/nbi-clearance/" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline">
+                한국에서 NBI Clearance 발급 방법 보기
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            )}
           </div>
         ))}
       </section>

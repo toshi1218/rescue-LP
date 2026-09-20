@@ -99,12 +99,12 @@ export default function NbiGuideEn() {
       </p>
 
       <SummaryBlock
-        conclusion="Renewal cases handled remotely by our Cebu team. First-time applicants receive embassy fingerprint guidance. DFA Apostille + DHL shipping included."
+        conclusion="You can obtain Philippine NBI Clearance while abroad. The required route depends on whether this is a renewal or a first-time application."
         points={[
-          'NBI Clearance is required for visa and immigration applications in the US, Canada, Australia, UK & more',
-          'Renewal cases (NBI issued 2014+, no personal info change): our Cebu team handles the process remotely',
-          'First-time applicants: we guide you through Philippine Embassy fingerprint registration in your country',
-          'DFA Apostille + DHL Express shipping worldwide — HIT cases supported',
+          'Eligibility: 2014+ renewals with no personal-information changes can usually be handled remotely; first-time applicants need embassy or consulate fingerprints',
+          'Price: from US$399 all-in for NBI retrieval, DFA Apostille, and worldwide DHL shipping',
+          'Timeline: approximately 4–6 weeks; HIT cases may take longer',
+          'Prepare: passport or ID, current address, purpose of use, and prior NBI details if available',
         ]}
         ctaText="Free Consultation"
       />

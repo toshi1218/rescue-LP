@@ -101,6 +101,12 @@ export default function CenomarTohaJa() {
         points={['CENOMAR（セノマール）は、フィリピン統計局（PSA）が発行する「独身証明書」です。正式名称はCertificate of No Marriage Recordといい、申請者がフィリピン国内で婚姻登録されていないことを公式に証明します。国際結婚・配偶者ビザ申請・帰化申請など、フィリピン人の独身・婚姻状況を証明する必要がある手続きで広く求められます。']}
       />
 
+      <p className="max-w-3xl mx-auto px-4 mt-4 text-sm text-gray-600 text-center">
+        日本からの取得方法・料金・納期は
+        <a href="/ja/cenomar/" className="ml-1 text-primary underline hover:no-underline">CENOMAR取得ガイド</a>
+        で確認できます。
+      </p>
+
       <section className="py-10 px-4 max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold mb-6">CENOMARが必要な手続き</h2>
         <ul className="space-y-3 text-gray-700">
