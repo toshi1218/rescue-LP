@@ -37,8 +37,9 @@
 ```
 【main マージ前チェック — PR #xxx】
 1. リベース: base が origin/main 最新か（古ければ先にリベース＆再ビルド）
-2. 変更ファイル: 一覧＋構造ファイル該当有無（prerender/useMeta/urlMap/sitemap/
-   robots/_redirects/seoDate/hreflang/canonical/JSON-LD のいずれかに触れるか）
+2. 変更ファイル: 一覧＋構造変更の有無。ファイル名だけで判定せず、prerender/useMeta の
+   対象ページ限定 title/meta 同期と、route/urlMap/sitemap/robots/_redirects/
+   seoDate/hreflang/canonical/JSON-LD の挙動変更を区別する
 3. 波及ページ数【実測】: npm run build 後、dist の *.html を main と比較して
    「変わったHTMLファイル数」を数える（測定不能なら保守側に倒す）
 4. レバー分類: Level4個別 / Level4大量(20+) / Level3(title等) / 共通コンポーネント / 構造
@@ -214,8 +215,9 @@ When verifying any change (code review, PR review, pre-deploy check), do NOT onl
 
 ### Change management:
 
-- SEO-related changes must be **incremental** — test on 1-2 pages first, observe Search Console for 2 weeks, then apply to all pages
-- After a major SEO fix, observe a **4-week change freeze** before making further SEO modifications
+- ページ個別の title / H1 / meta description は **1回1〜5ページを目安**に段階投入する。別URLへの次の投入に固定の待機期間は設けない
+- 同じURLの title / meta を再変更する場合は、Search Consoleで比較できるよう原則14日観察する（緊急訂正は除外）
+- URL・canonical・hreflang・robots・redirect・sitemap・共通コンポーネント・20ページ超などの大きいSEO変更後だけ、`docs/merge-schedule.md` のローリング7日ルールを適用する
 - Never make multiple SEO-destructive changes in the same day
 
 ### SEO変更の実装手順（Claude Code向け）:
@@ -223,8 +225,8 @@ When verifying any change (code review, PR review, pre-deploy check), do NOT onl
 SEO関連ファイル（`title`・`meta description`・hreflang・canonical・JSON-LD・sitemap・robots.txt等）を変更する実装タスクを受けた場合：
 
 1. **スコープを確認する**: ユーザーが対象ページを明示していない場合は、実装前に「どのページに適用しますか？」と必ず確認すること
-2. **デフォルトは1〜2ページ**: 明示的に「全ページ」「すべて」と指示されない限り、テスト対象の1〜2ページのみに適用すること
-3. **完了後に案内する**: 実装後、「残りのページへの適用は2週間後にSearch Consoleで効果を確認してから別タスクとして依頼してください」と必ず伝えること
+2. **デフォルトは1〜5ページ**: GSCデータから優先順位を付け、明示的に「全ページ」「すべて」と指示されない限り小分けに適用すること
+3. **完了後に案内する**: 同じURLを再変更する場合だけ、原則14日後にSearch Consoleで効果を確認してから行う。別URLへの段階適用は待機不要
 4. **非SEO変更は対象外**: フォーム・UI・コンテンツ文言のみの変更はこのルール対象外（制限なく全ページ適用してよい）
 
 ## 価格・納期ブロック追加スケジュール（2026-05-16 開始）
