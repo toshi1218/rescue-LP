@@ -103,6 +103,10 @@ export default function NbiClearanceOverseasEn() {
         ctaText="Get Started — Free Consultation"
       />
 
+      <p className="max-w-2xl mx-auto px-4 mt-4 text-sm text-gray-600 text-center">
+        See the <a href="/en/nbi-clearance/" className="text-primary underline hover:no-underline">complete NBI Clearance guide</a> for eligibility, required documents, pricing, and timelines.
+      </p>
+
       <FeatureList
         heading="Your Options for Getting NBI Clearance Abroad"
         items={[

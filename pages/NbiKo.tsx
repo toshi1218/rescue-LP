@@ -88,6 +88,27 @@ export default function NbiKo() {
         </div>
       </section>
 
+      {/* 빠른 답변 */}
+      <section className="mb-10" aria-labelledby="nbi-quick-answer">
+        <h2 id="nbi-quick-answer" className="text-lg font-bold text-secondary mb-4">한국에서 신청할 때 핵심 정보</h2>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {[
+            { label: '해외 신청', value: '가능합니다. 최초 신청은 주한 필리핀 대사관에서 지문 등록이 필요합니다.' },
+            { label: '예상 기간', value: 'NBI・아포스티유・DHL 배송까지 일반적으로 약 4〜6주입니다.' },
+            { label: '준비 서류', value: '여권 또는 신분증, 한국 주소, 신청 목적, 과거 NBI 발급 정보（있는 경우）입니다.' },
+            { label: '비용', value: 'F-6 풀 패키지에 포함되며, NBI 단독 신청은 사례별로 견적을 안내합니다.' },
+          ].map((item) => (
+            <div key={item.label} className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+              <p className="text-xs font-bold text-primary mb-1">{item.label}</p>
+              <p className="text-sm text-gray-600 leading-relaxed">{item.value}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-gray-500">
+          자세한 패키지 금액은 <Link to="/ko/pricing/" className="text-primary underline hover:no-underline">요금 안내</Link>에서 확인할 수 있습니다.
+        </p>
+      </section>
+
       {/* NBI Clearance란 */}
       <section className="mb-10">
         <h2 className="text-lg font-bold text-secondary mb-4">NBI Clearance란 무엇인가</h2>
