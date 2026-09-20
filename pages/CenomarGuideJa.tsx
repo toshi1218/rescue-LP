@@ -11,14 +11,14 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import SummaryBlock from '../components/SummaryBlock';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 import FaqSection from '../components/FaqSection';
 import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } from 'lucide-react';
 
 export default function CenomarGuideJa() {
   useMeta(
-    `CENOMARとは｜フィリピン独身証明書の取得方法【${SEO_YEAR_MONTH_JA}】代行可・渡航不要`,
-    'CENOMARが必要だけどフィリピンに行けない方へ。渡航不要・日本語だけで取得完了。国際結婚・配偶者ビザ・帰化申請に対応。24時間以内に返信。',
+    `CENOMARとは？日本からの取得方法・有効期限・費用【${SEO_YEAR}年】`,
+    'CENOMAR（フィリピン独身証明書）の意味、日本からの取得方法、有効期限、費用、e-Apostilleを解説。渡航不要・日本語で申請をサポート。',
   );
   return (
     <PageLayout

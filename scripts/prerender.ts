@@ -515,8 +515,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance', 'index.html'),
-    title: `NBI Clearance + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
-    description: `Need NBI Clearance for a spouse visa or work permit? We retrieve it with DFA Apostille and ship worldwide. HIT cases handled. Free quote.`,
+    title: `NBI Clearance Philippines ${SEO_YEAR}: From Abroad + Apostille`,
+    description: 'Get Philippine NBI Clearance from abroad. Renewal support, first-time fingerprint guidance, DFA Apostille, HIT assistance, and worldwide DHL shipping.',
     canonical: `${BASE}/en/nbi-clearance/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-clearance/`,
@@ -1021,8 +1021,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar', 'index.html'),
-    title: `CENOMARとは｜フィリピン独身証明書の取得方法【${SEO_YEAR_MONTH_JA}】代行可・渡航不要`,
-    description: 'CENOMARを渡航不要・日本語で取得代行。電子版は約1週間、紙原本のDHL発送は約3〜4週間。国際結婚・配偶者ビザ・帰化申請に対応。',
+    title: `CENOMARとは？日本からの取得方法・有効期限・費用【${SEO_YEAR}年】`,
+    description: 'CENOMAR（フィリピン独身証明書）の意味、日本からの取得方法、有効期限、費用、e-Apostilleを解説。渡航不要・日本語で申請をサポート。',
     canonical: `${BASE}/ja/cenomar/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -1604,8 +1604,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ko/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'ko', 'nbi-clearance', 'index.html'),
-    title: 'NBI Clearance 신청 지원 | 필리핀 범죄경력증명서 취득 서포트',
-    description: 'F-6 결혼비자용 필리핀 NBI Clearance（범죄경력증명서） 취득을 서포트. 주한 필리핀 대사관 지문 등록 예약 안내, 온라인 신청, DFA 아포스티유 수배, DHL 발송까지 원스톱. 귀화 신청에도 대응.',
+    title: '필리핀 NBI Clearance 발급 방법｜해외 신청·아포스티유',
+    description: '한국에서 필리핀 NBI Clearance를 발급받는 방법을 안내합니다. 대사관 지문 등록, 현지 신청, DFA 아포스티유, HIT 상담 및 DHL 배송을 지원합니다.',
     canonical: `${BASE}/ko/nbi-clearance/`,
     lang: 'ko',
     enCanonical: `${BASE}/en/nbi-clearance/`,
