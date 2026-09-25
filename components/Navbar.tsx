@@ -179,6 +179,7 @@ const Navbar: React.FC = () => {
     { label: 'About Us',            path: '/en/company/' },
     { label: 'Privacy Policy',      path: '/en/privacy/' },
     { label: 'Terms of Service',    path: '/en/terms/' },
+    { label: 'Legal Notice (Japan)', path: '/ja/tokusho/' },
   ];
 
   const businessTabs = isJa ? [
