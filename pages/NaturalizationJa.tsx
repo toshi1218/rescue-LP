@@ -10,16 +10,15 @@ import FaqSection from '../components/FaqSection';
 import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
-import { FileCheck, Globe, Users, Heart, FileText, Scale, Building, CheckCircle, Clock } from 'lucide-react';
+import { FileCheck, Globe, Users, Heart, FileText, Scale, Building, CheckCircle, Clock, AlertTriangle } from 'lucide-react';
 import SummaryBlock from '../components/SummaryBlock';
 import PriceSimulatorKika from '../components/PriceSimulatorKika';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function NaturalizationJa() {
   useMeta(
-    `帰化申請の書類代行【${SEO_YEAR_MONTH_JA}】PSA・NBI・アポスティーユ`,
-    'PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。法務局の要件に合わせた形式で手配。司法書士・行政書士の先生からのご依頼も対応。無料相談で必要書類を確認。',
+    '帰化申請の書類代行【2026年9月】PSA・NBI・アポスティーユ',
+    '2026年4月1日から帰化審査の運用が厳格化。PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行し、法務局の要件に合わせて手配します。',
   );
   return (
     <PageLayout
@@ -57,7 +56,15 @@ export default function NaturalizationJa() {
               name: '帰化申請に必要な書類は何ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '一般的にPSA出生証明書・婚姻証明書（DFAアポスティーユ付き）が必要です。状況によって追加書類が必要な場合もあります。無料相談で確認します。',
+                text: '本人の国籍・出生・親族関係を証明するPSA出生証明書や婚姻証明書などが一般的に必要です。必要な書類、部数、翻訳・認証方法は個別事情と管轄法務局の指示により異なります。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '帰化申請は2026年10月から厳しくなりますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '帰化審査の運用厳格化は2026年10月からではなく、2026年4月1日からすでに実施されています。国籍法上の一般的な住所条件は引き続き5年以上ですが、日本社会への融和の審査では原則10年以上の在留が必要とされ、税金・社会保険料の納付状況を確認する期間も延長されました。2026年10月1日の変更は在留資格変更・在留期間更新・永住許可などの在留許可手数料改定で、帰化申請の厳格化とは別です。',
               },
             },
             {
@@ -149,7 +156,7 @@ export default function NaturalizationJa() {
         badges={['法務局要件に対応', '書士への書類提供可', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年9月3日"
+        lastUpdated="2026年9月15日"
       />
 
       <SummaryBlock
@@ -163,6 +170,29 @@ export default function NaturalizationJa() {
         ctaText="無料で相談する"
       />
 
+      <section className="mb-10 rounded-2xl bg-amber-50 border border-amber-200 p-5">
+        <div className="flex items-start gap-3 mb-3">
+          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-amber-900">帰化審査は2026年4月1日から運用が厳格化されています</h2>
+        </div>
+        <div className="text-sm text-amber-900 leading-relaxed space-y-3">
+          <p><strong>「2026年10月から」ではありません。</strong>法務省は、2026年4月1日から帰化審査の運用を見直したと公表しています。</p>
+          <ul className="space-y-2">
+            <li><strong>在留期間・日本社会への融和：</strong>国籍法上の一般的な住所条件は引き続き「5年以上」ですが、日本社会への融和の審査では、原則として10年以上在留していることが必要とされます。</li>
+            <li><strong>税金・社会保険料：</strong>素行の善良性・生計条件について、税金や社会保険料の納付状況を確認する期間が延長されました。納税証明書・年金・健康保険などの記録は、法務局の指示に沿って準備してください。</li>
+            <li><strong>例外・個別審査：</strong>日本人の配偶者・日本人の子など、日本と特別な関係がある方には国籍法上の条件緩和があります。一律に「全員10年」とは限らないため、住所地を管轄する法務局へ確認が必要です。</li>
+          </ul>
+          <p className="text-xs text-amber-800">2026年10月1日に予定されているのは、在留資格変更・在留期間更新・永住許可などの在留許可手数料の改定です。帰化許可申請とは別の手続です。</p>
+          <p className="text-xs">
+            出典：<a href="https://www.moj.go.jp/hisho/kouhou/hisho08_00706.html" target="_blank" rel="noopener noreferrer" className="underline">法務省「法務大臣閣議後記者会見の概要」</a>
+            <span aria-hidden="true"> ／ </span>
+            <a href="https://www.moj.go.jp/MINJI/minji78" target="_blank" rel="noopener noreferrer" className="underline">法務省「国籍Q&amp;A」</a>
+            <span aria-hidden="true"> ／ </span>
+            <a href="https://www.moj.go.jp/isa/01_00644.html" target="_blank" rel="noopener noreferrer" className="underline">出入国在留管理庁「令和8年10月1日付け在留許可手数料の改定」</a>
+          </p>
+        </div>
+      </section>
+
       {/* 必要書類一覧（プレーンテキスト） */}
       <section className="mb-10 rounded-2xl bg-white border border-gray-200 p-6">
         <h2 className="text-lg font-bold text-gray-900 mb-2">帰化申請 フィリピン書類 必要書類一覧</h2>
@@ -170,11 +200,11 @@ export default function NaturalizationJa() {
           フィリピン国籍の方が日本に帰化申請する場合、法務局へ提出するフィリピン側書類は主に「国籍・身分関係に関する書面」の区分に含まれます。管轄の法務局・担当官によって必要書類は異なりますが、一般的には以下が対象になります。
         </p>
         <ul className="space-y-1.5 text-sm text-gray-700">
-          <li>・PSA出生証明書（DFAアポスティーユ付き原本）— 本人はもちろん、案件によっては父母・兄弟姉妹・子・配偶者の分も求められることがあります</li>
-          <li>・PSA婚姻証明書（DFAアポスティーユ付き原本）— 本人が既婚者の場合。父母の婚姻証明書が必要になるケースもあります</li>
-          <li>・CENOMAR（独身証明書、DFAアポスティーユ付き原本）— 本人が未婚者の場合、婚姻歴なしの証明として</li>
+          <li>・PSA出生証明書 — 本人はもちろん、案件によっては父母・兄弟姉妹・子・配偶者の分も求められることがあります</li>
+          <li>・PSA婚姻証明書 — 本人が既婚者の場合。父母の婚姻証明書が必要になるケースもあります</li>
+          <li>・CENOMAR（独身証明書）— 本人が未婚者の場合、婚姻歴なしの証明として</li>
           <li>・警察記録証明書（NBI Clearance等）— 必須書類ではなく「その他」区分として、担当官の判断で求められる場合があります</li>
-          <li>・全書類共通でDFAアポスティーユ（紙の原本）が必要です</li>
+          <li>・DFA認証を指示されたPSA民事書類は、2026年3月16日以降e-Apostille（電子PDF）で発行されます。SECPA紙原本との組み合わせや提出方法を担当法務局へ確認してください</li>
         </ul>
         <p className="text-sm text-gray-600 leading-relaxed mt-4 mb-1">あわせてご確認ください：</p>
         <ul className="space-y-1.5 text-sm text-gray-700">
@@ -192,9 +222,9 @@ export default function NaturalizationJa() {
         </p>
         <div className="grid grid-cols-2 gap-3 mb-4">
           {[
-            { icon: FileText, label: 'PSA出生証明書', note: '出生・国籍の確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-blue-50 border-blue-200' },
-            { icon: CheckCircle, label: 'PSA婚姻証明書', note: '既婚者の婚姻歴の確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-green-50 border-green-200' },
-            { icon: CheckCircle, label: 'CENOMAR（独身証明書）', note: '未婚者の婚姻歴なしの確認', format: 'DFAアポスティーユ付き原本', accent: 'bg-amber-50 border-amber-200' },
+            { icon: FileText, label: 'PSA出生証明書', note: '出生・国籍の確認', format: '認証・提出形式は法務局へ確認', accent: 'bg-blue-50 border-blue-200' },
+            { icon: CheckCircle, label: 'PSA婚姻証明書', note: '既婚者の婚姻歴の確認', format: '認証・提出形式は法務局へ確認', accent: 'bg-green-50 border-green-200' },
+            { icon: CheckCircle, label: 'CENOMAR（独身証明書）', note: '未婚者の婚姻歴なしの確認', format: '認証・提出形式は法務局へ確認', accent: 'bg-amber-50 border-amber-200' },
             { icon: FileText, label: 'NBI Clearance', note: '犯罪歴の確認', format: 'アポスティーユ付きが求められる場合あり', accent: 'bg-gray-50 border-gray-200' },
           ].map((item, i) => (
             <div key={i} className={`rounded-xl border p-4 ${item.accent}`}>
@@ -209,7 +239,7 @@ export default function NaturalizationJa() {
         <h3 className="text-sm font-bold text-gray-800 mb-3">よくある差し戻し理由</h3>
         <ul className="space-y-2">
           {[
-            { main: 'アポスティーユなし', sub: '原本だけでは不受理になります' },
+            { main: '認証・提出形式が指示と異なる', sub: 'e-ApostilleとSECPA紙原本の提出方法を事前に確認してください' },
             { main: '発行日が古い', sub: '法務局が指示する期間内のものが必要です' },
             { main: '名前のスペルが不一致', sub: '日本側の書類と一致している必要があります' },
             { main: '翻訳者情報が不足', sub: '署名・住所の記載が必要です' },
@@ -225,10 +255,10 @@ export default function NaturalizationJa() {
           heading="帰化申請に必要な書類の特徴"
           columns={3}
           cards={[
-            { icon: FileText, title: 'PSA出生証明書', description: '本人の出生・国籍を証明。アポスティーユ付き原本が法務局の要件。', accent: 'gold' },
+            { icon: FileText, title: 'PSA出生証明書', description: '本人の出生・国籍を証明。必要な認証・提出形式は担当法務局の指示を確認。', accent: 'gold' },
             { icon: Scale, title: 'NBI Clearance', description: '無犯罪証明書。フィリピン捜査局が発行。帰化申請で求められることが多い。', accent: 'blue' },
             { icon: Building, title: '法務局への提出', description: '帰化申請は法務局が窓口。担当官の指定する形式・発行日が重要。', accent: 'green' },
-            { icon: CheckCircle, title: 'アポスティーユ必須', description: 'DFAアポスティーユなしの原本だけでは不受理になる場合あり。', accent: 'teal' },
+            { icon: CheckCircle, title: '認証方法を事前確認', description: 'PSA民事書類の認証はe-Apostilleへ移行。紙原本との提出方法を法務局へ確認。', accent: 'teal' },
             { icon: Clock, title: '発行日の指定あり', description: '法務局から「○ヶ月以内に発行」と指定がある場合は発行日を指定して依頼。', accent: 'red' },
             { icon: Globe, title: '書士からの依頼も対応', description: '行政書士・司法書士の先生からのご依頼も対応。事務所への直送可。', accent: 'purple' },
           ]}
@@ -328,7 +358,8 @@ export default function NaturalizationJa() {
 
       <FaqSection
         items={[
-          { q: '帰化申請に必要な書類は何ですか？', a: '一般的にPSA出生証明書・婚姻証明書（DFAアポスティーユ付き）が必要です。状況によって追加書類が必要な場合もあります。無料相談で確認します。' },
+          { q: '帰化申請に必要な書類は何ですか？', a: '本人の国籍・出生・親族関係を証明するPSA出生証明書や婚姻証明書などが一般的に必要です。必要な書類、部数、翻訳・認証方法は個別事情と管轄法務局の指示により異なります。' },
+          { q: '帰化申請は2026年10月から厳しくなりますか？', a: '帰化審査の運用厳格化は2026年10月からではなく、2026年4月1日からすでに実施されています。国籍法上の一般的な住所条件は引き続き5年以上ですが、日本社会への融和の審査では原則10年以上の在留が必要とされ、税金・社会保険料の納付状況を確認する期間も延長されました。2026年10月1日の変更は在留資格変更・在留期間更新・永住許可などの在留許可手数料改定で、帰化申請の厳格化とは別です。' },
           { q: '料金はいくらですか？（132,500円は1通の値段ですか？）', a: 'PSA書類1通は50,000円、2通セットは80,000円、3〜5通の帰化書類パックは132,500円です（いずれも税込・e-Apostille・PSA紙原本・DHL配送込み）。6通目以降は追加1通ごとに＋26,500円です。実例として家族分6通で159,000円です。' },
           { q: '司法書士・行政書士の先生から書類取得を依頼することはできますか？', a: 'はい、対応しています。行政書士の先生がクライアントの帰化申請に必要な書類を取り寄せる場合、当社が現地取得からDFAアポスティーユまで代行し、先生の事務所へ郵送します。' },
           { q: '法務局から書類の発行日に条件がある場合、対応できますか？', a: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。取得スケジュールをその条件に合わせて調整します。' },
@@ -342,6 +373,7 @@ export default function NaturalizationJa() {
         { path: '/ja/cenomar/', label: 'CENOMAR（独身証明書）取得代行' },
         { path: '/ja/psa-shussei-shomeisho/', label: 'PSA出生証明書の取得代行' },
         { path: '/ja/nbi-clearance/', label: 'NBI Clearance（無犯罪証明書）取得代行' },
+        { path: '/ja/e-apostille-fuka/', label: '帰化申請でのe-Apostille提出方法' },
         { path: '/ja/honyaku/', label: 'フィリピン書類の日本語翻訳サービス' },
         { path: '/ja/gyouseishoshi-to-shorui-shuttoku/', label: '行政書士の仕事と書類取得サービスの違い' },
       ]} />
