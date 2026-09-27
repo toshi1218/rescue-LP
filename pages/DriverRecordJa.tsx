@@ -19,7 +19,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function DriverRecordJa() {
   useMeta(
     `LTO運転経歴証明書代行【${SEO_YEAR_MONTH_JA}】外免切替・企業採用`,
-    'フィリピン免許の外免切替に必要なLTO運転経歴証明書を代行取得。DFAアポスティーユ・オリジナルレシート込みで都道府県の免許センターへの提出形式に対応。複数名まとめ依頼可。無料相談。',
+    'フィリピン免許の外免切替に必要なLTO運転経歴証明書を代行取得。DFAアポスティーユ・DHL国際配送込みで都道府県の免許センターへの提出形式に対応。複数名まとめ依頼可。無料相談。',
   );
   return (
     <PageLayout
@@ -39,10 +39,10 @@ export default function DriverRecordJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '99000',
+          price: '49500',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '99000',
+            price: '49500',
             priceCurrency: 'JPY',
             description: 'LTO書類取得・DFAアポスティーユ込み（税込・DHL国際送料込み）',
           },
@@ -65,7 +65,7 @@ export default function DriverRecordJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'LTO取得・DFAアポスティーユ・DHL国際送料をすべて含めて99,000円（税込）〜です。無料相談後に正確な金額をご提示します。',
+                text: '通常案件は、LTO Certification・License Historyの取得、DFAアポスティーユ、DHL国際送料を含めて49,500円（税込）です。記録不一致、Official Receiptの探索・再発行、追加書類が必要な場合は、着手前に別途お見積もりします。',
               },
             },
             {
@@ -90,10 +90,10 @@ export default function DriverRecordJa() {
     >
       <HeroBanner
         title="LTO運転経歴証明書 取得代行"
-        badges={['複数名対応', 'OR・アポスティーユ込み', '外免切替専門対応']}
+        badges={['複数名対応', 'DFAアポスティーユ込み', '外免切替専門対応']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年8月23日"
+        lastUpdated="2026年9月28日"
       />
 
       <SummaryBlock
@@ -238,7 +238,7 @@ export default function DriverRecordJa() {
       <FaqSection
         items={[
           { q: '外免切替に必要な書類は何ですか？', a: '一般的にLTO運転経歴証明書（DFAアポスティーユ付き）・公式レシートが必要です。都道府県によって追加書類が必要な場合もあります。無料相談で確認します。' },
-          { q: '料金はいくらですか？', a: 'LTO取得・DFAアポスティーユ・OR・DHL国際送料をすべて含めて99,000円（税込）〜です。無料相談後に正確な金額をご提示します。' },
+          { q: '料金はいくらですか？', a: '通常案件は、LTO Certification・License Historyの取得、DFAアポスティーユ、DHL国際送料を含めて49,500円（税込）です。記録不一致、Official Receiptの探索・再発行、追加書類が必要な場合は、着手前に別途お見積もりします。' },
           { q: '複数名分まとめて依頼できますか？', a: 'はい、可能です。人数と状況をお知らせいただければ、まとめて手配します。' },
           { q: '都道府県ごとに必要書類が異なると聞きましたが、確認してもらえますか？', a: 'はい。都道府県の運転免許センターによって求める書類や書式が異なります。無料相談で提出先の都道府県をお知らせいただければ、その要件に合わせた書類を手配します。' },
         ]}

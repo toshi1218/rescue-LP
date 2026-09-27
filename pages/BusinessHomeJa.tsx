@@ -160,8 +160,8 @@ export default function BusinessHomeJa() {
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
-                  <td className="py-3 text-gray-700">LTO運転経歴証明書 ＋ DFAアポスティーユ<br /><span className="text-xs text-gray-400">※取得難易度が高く優先手配のため</span></td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥99,000〜</td>
+                  <td className="py-3 text-gray-700">LTO運転経歴証明書 ＋ DFAアポスティーユ<br /><span className="text-xs text-gray-400">税込・DHL送料込み</span></td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥49,500</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
               </tbody>

@@ -29,7 +29,7 @@ import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 export default function BusinessMenkyoKirikaeKigyouJa() {
   useMeta(
     `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR_MONTH_JA}】`,
-    '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名99,000円〜（税込・DHL送料込み）。請求書払い・複数名対応。',
+    '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名49,500円（税込・DHL送料込み）。請求書払い・複数名対応。',
   );
 
   return (
@@ -57,7 +57,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
             {
               '@type': 'Offer',
               priceCurrency: 'JPY',
-              price: '99000',
+              price: '49500',
               description: '1名プラン（LTO書類取得・DFAアポスティーユ込み、税込・DHL国際送料込み）',
             },
           ],
@@ -121,7 +121,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
       <HeroBanner
         title="フィリピン人従業員に、運転業務をさせたい会社へ"
         subtitle="介護送迎・社用車・現場移動に必要な日本免許切替（外免切替）。フィリピン側LTO書類とDFAアポスティーユの取得を一括代行します。採用前の事前確認から複数名一括対応まで。"
-        badges={['直接雇用企業向け', '1名99,000円〜', '複数名は要相談', '請求書払い対応']}
+        badges={['直接雇用企業向け', '1名49,500円', '複数名は要相談', '請求書払い対応']}
         ctaText="まず相談する"
         ctaHref="#contact"
         lastUpdated={SEO_LAST_UPDATED_JA}
@@ -314,9 +314,9 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
                     <br />
                     <span className="text-xs text-gray-400">LTO書類＋DFAアポスティーユ込み</span>
                   </td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥99,000〜</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥49,500</td>
                   <td className="py-3 text-right text-xs text-gray-500 hidden sm:table-cell">
-                    Immigration Record が必要な場合は148,000円〜
+                    Immigration Record・追加調査が必要な場合は別途見積
                   </td>
                 </tr>
                 <tr>
