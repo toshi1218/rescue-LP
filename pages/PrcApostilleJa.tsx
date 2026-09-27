@@ -178,7 +178,7 @@ export default function PrcApostilleJa() {
             </li>
             <li className="flex justify-between">
               <span>日本語翻訳が必要な場合</span>
-              <span className="font-semibold text-secondary">1部 ¥7,700〜</span>
+              <span className="font-semibold text-secondary">1部 ¥15,000〜</span>
             </li>
           </ul>
           <p className="text-xs text-gray-500 leading-relaxed">

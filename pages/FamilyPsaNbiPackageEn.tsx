@@ -13,7 +13,7 @@ import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function FamilyPsaNbiPackageEn() {
   useMeta(
     `3-Applicant PSA + NBI Family Package [${SEO_YEAR_MONTH_EN}]`,
-    'Three family members applying together: PSA Birth Certificates, first-time NBI Clearances, DFA Apostilles, case coordination, and one DHL shipment for US$1,249.',
+    'Three family members applying together: PSA Birth Certificates, first-time NBI Clearances, DFA Apostilles, case coordination, and one DHL shipment for US$999.',
   );
 
   return (
@@ -38,7 +38,7 @@ export default function FamilyPsaNbiPackageEn() {
           areaServed: 'Worldwide',
           offers: {
             '@type': 'Offer',
-            price: '1249',
+            price: '999',
             priceCurrency: 'USD',
             availability: 'https://schema.org/InStock',
             description: 'Fixed package price for three eligible applicants applying together',
@@ -50,7 +50,7 @@ export default function FamilyPsaNbiPackageEn() {
           mainEntity: [
             {
               '@type': 'Question',
-              name: 'Who qualifies for the US$1,249 family package?',
+              name: 'Who qualifies for the US$999 family package?',
               acceptedAnswer: {
                 '@type': 'Answer',
                 text: 'The fixed price applies to exactly three family members using the documents for the same country and purpose, with one consolidated shipment to one address.',
@@ -77,7 +77,7 @@ export default function FamilyPsaNbiPackageEn() {
               name: 'How is payment divided?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'The total is paid in two installments of US$624.50: the first to begin processing and the second after document copies are confirmed and before DHL shipment.',
+                text: 'The total is paid in two installments of US$499.50: the first to begin processing and the second after document copies are confirmed and before DHL shipment.',
               },
             },
           ],
@@ -87,15 +87,15 @@ export default function FamilyPsaNbiPackageEn() {
       <HeroBanner
         title="3-Applicant PSA + NBI Family Package"
         subtitle="One coordinated package for three family members applying together"
-        badges={['US$1,249 total', '6 Philippine documents + Apostilles', 'One consolidated DHL shipment']}
+        badges={['US$999 total', '6 Philippine documents + Apostilles', 'One consolidated DHL shipment']}
         ctaText="Request This Package"
         ctaHref="#contact"
         ctaService="3-Applicant PSA + NBI Family Package"
-        lastUpdated="September 19, 2026"
+        lastUpdated="September 28, 2026"
       />
 
       <SummaryBlock
-        conclusion="Three applicants, one coordinated case, and one fixed price: US$1,249."
+        conclusion="Three applicants, one coordinated case, and one fixed price: US$999."
         points={[
           'Three PSA Birth Certificate packages with DFA e-Apostilles and one SECPA paper copy each when required',
           'Three first-time NBI Clearances with DFA Apostilles',
@@ -109,9 +109,9 @@ export default function FamilyPsaNbiPackageEn() {
         <p className="text-xs font-bold uppercase tracking-wider text-primary mb-2">Family bundle</p>
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-2xl font-bold text-secondary">US$1,249 total for three applicants</h2>
+            <h2 className="text-2xl font-bold text-secondary">US$999 total for three applicants</h2>
             <p className="mt-2 text-sm text-gray-600">
-              Two payments of US$624.50. The second payment is due after you confirm the document copies and before DHL shipment.
+              Two payments of US$499.50. The second payment is due after you confirm the document copies and before DHL shipment.
             </p>
           </div>
           <p className="text-sm font-semibold text-secondary md:text-right">
@@ -177,7 +177,7 @@ export default function FamilyPsaNbiPackageEn() {
           },
           {
             title: 'Confirm copies and receive the DHL shipment',
-            description: 'After you review the document copies and pay the second US$624.50 installment, we dispatch the consolidated shipment.',
+            description: 'After you review the document copies and pay the second US$499.50 installment, we dispatch the consolidated shipment.',
           },
         ]}
       />
@@ -199,7 +199,7 @@ export default function FamilyPsaNbiPackageEn() {
       <FaqSection
         items={[
           {
-            q: 'Who qualifies for the US$1,249 family package?',
+            q: 'Who qualifies for the US$999 family package?',
             a: 'Exactly three family members using the documents for the same country and purpose, submitting their requirements together, and receiving one consolidated shipment at one address.',
           },
           {
@@ -216,7 +216,7 @@ export default function FamilyPsaNbiPackageEn() {
           },
         ]}
         ctaTitle="Three family members applying together?"
-        ctaButton="Request the US$1,249 Package"
+        ctaButton="Request the US$999 Package"
       />
     </PageLayout>
   );
