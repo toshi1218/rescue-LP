@@ -88,16 +88,16 @@ export default function HomeKo() {
               </span>
             </div>
             <h1 className="text-2xl md:text-4xl font-bold leading-snug mb-4">
-              필리핀 서류 취득,<br />처음부터 끝까지 도와드립니다
+              필리핀 서류 한 장이 아닌,<br />제출 가능한 상태까지 준비합니다
             </h1>
             <p className="text-white/70 text-sm md:text-base mb-8 max-w-xl">
-              PSA·NBI 서류 취득, DFA 인증, 국제 배송까지 필리핀 방문 없이 지원합니다.
-              PSA 민사서류의 e-Apostille과 종이 PSA 원본 중 어떤 형식이 필요한지 제출처 기준으로 먼저 확인합니다.
+              제출 목적에 맞는 서류 확인·발급·인증·번역·국제 배송과 e-Apostille 확인 안내까지 한 번에 준비합니다.
+              필리핀 방문 없이 진행할 수 있습니다.
             </p>
             <div className="mb-6 max-w-xl rounded-xl border border-emerald-300/40 bg-emerald-950/55 px-4 py-3">
-              <p className="text-sm font-bold text-emerald-200">접수 보증 · 당사 오류 시 무료 재처리</p>
+              <p className="text-sm font-bold text-emerald-200">제출 준비 패키지 + 접수 보증</p>
               <p className="mt-1 text-xs leading-relaxed text-white/80">
-                당사의 서류 선정·발급·인증·번역 오류로 접수가 거절된 경우, 추가 비용 없이 재처리해 드립니다.
+                비용은 서류 한 장이 아니라 확인·발급·인증·번역·배송·전자 원본 확인 안내를 포함합니다. 당사 오류로 접수되지 않으면 무료로 재처리하며, 같은 사유로 계속 접수되지 않을 경우 당사 서비스 수수료를 환불합니다.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
