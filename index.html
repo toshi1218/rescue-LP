@@ -6,6 +6,19 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      var analyticsConsent = 'denied';
+      try {
+        analyticsConsent = localStorage.getItem('ph-document-analytics-consent') === 'granted' ? 'granted' : 'denied';
+      } catch (e) {
+        analyticsConsent = 'denied';
+      }
+      gtag('consent', 'default', {
+        analytics_storage: analyticsConsent,
+        ad_storage: analyticsConsent,
+        ad_user_data: analyticsConsent,
+        ad_personalization: analyticsConsent,
+        wait_for_update: 500
+      });
       gtag('js', new Date());
       gtag('config', 'G-KRN6VVHJTQ');
       gtag('config', 'AW-735961307');

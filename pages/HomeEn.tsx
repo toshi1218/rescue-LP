@@ -36,7 +36,7 @@ export default function HomeEn() {
     name: 'IGRS Inc.',
     alternateName: 'ph-document.com',
     url: 'https://ph-document.com/en/',
-    logo: 'https://ph-document.com/logo.png',
+    logo: 'https://ph-document.com/favicon.svg',
     description: 'Philippine document service for overseas submission. We verify receiving-authority requirements and coordinate PSA Birth Certificates, CENOMAR, NBI Clearance, the appropriate DFA authentication, and DHL delivery when a physical document is required.',
     areaServed: [
       { '@type': 'Country', name: 'US' },
