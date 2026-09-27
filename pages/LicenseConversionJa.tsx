@@ -37,10 +37,10 @@ export default function LicenseConversionJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '99000',
+            price: '49500',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '99000',
+              price: '49500',
               priceCurrency: 'JPY',
               description: 'LTO書類取得・DFAアポスティーユ込み（税込・DHL国際送料込み）',
             },
@@ -116,7 +116,7 @@ export default function LicenseConversionJa() {
         badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり', '法人・複数名対応可']}
         ctaText="書類を確認する"
         ctaHref="#contact"
-        lastUpdated="2026年8月23日"
+        lastUpdated="2026年9月28日"
       />
 
       {/* リード文 */}
@@ -135,7 +135,7 @@ export default function LicenseConversionJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税込）</dt>
-              <dd className="font-medium text-gray-800">99,000円〜（DFAアポスティーユ込み）</dd>
+              <dd className="font-medium text-gray-800">49,500円（DFAアポスティーユ込み）</dd>
               <dd className="text-gray-400 text-xs mt-1">※DHL国際配送の送料込み</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
@@ -156,7 +156,7 @@ export default function LicenseConversionJa() {
               { label: 'LTO書類取得（Certification・License History 等）', price: '込み' },
               { label: 'DFAアポスティーユ認証', price: '込み' },
               { label: 'DHL国際配送（追跡付き）', price: '込み' },
-              { label: '合計（DFAアポスティーユ・送料込み）', price: '99,000円〜', bold: true },
+              { label: '合計（DFAアポスティーユ・送料込み）', price: '49,500円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -164,7 +164,7 @@ export default function LicenseConversionJa() {
               </div>
             ))}
           </div>
-          <p className="text-xs text-gray-500 mt-2">※必要書類の種類・案件の状況によって料金は変わります。正確な金額は無料相談後にご提示します。</p>
+          <p className="text-xs text-gray-500 mt-2">※通常案件の標準料金です。記録不一致、Official Receiptの探索・再発行、Immigration Recordなどの追加書類が必要な場合は、着手前に別途お見積もりします。</p>
           <p className="text-xs text-gray-500 mt-1">DFAアポスティーユ単体の料金・費用内訳は<a href="/ja/apostille-ryokin/" className="text-primary underline">DFAアポスティーユの料金ページ</a>で詳しく解説しています。</p>
         </SectionDivider>
       </div>

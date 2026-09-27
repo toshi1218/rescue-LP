@@ -33,10 +33,10 @@ export default function LicenseConversionEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '699',
+          price: '330',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '699',
+            price: '330',
             priceCurrency: 'USD',
             description: 'LTO retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
@@ -51,7 +51,7 @@ export default function LicenseConversionEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. LTO retrieval, DFA Apostille, and DHL shipping are all included.',
+                text: 'The standard price is US$330, including LTO Certification and License History retrieval, DFA Apostille, and DHL shipping. Record discrepancies, Official Receipt searches or reissuance, and additional documents are quoted before work begins.',
               },
             },
             {
@@ -79,7 +79,7 @@ export default function LicenseConversionEn() {
         badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="September 28, 2026"
       />
 
       <SummaryBlock
@@ -157,7 +157,7 @@ export default function LicenseConversionEn() {
       <FaqSection
         items={[
           { q: 'What documents are required for Philippine license conversion?', a: 'Typically an LTO Driver\'s Record with DFA Apostille. Some countries also require an official LTO receipt. Requirements vary by country — we confirm for your specific authority.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. LTO retrieval, DFA Apostille, and DHL shipping are all included.' },
+          { q: 'How much does it cost?', a: 'The standard price is US$330, including LTO Certification and License History retrieval, DFA Apostille, and DHL shipping. Record discrepancies, Official Receipt searches or reissuance, and additional documents are quoted before work begins.' },
           { q: 'Can you handle multiple employees at once?', a: 'Yes. Share the number of applicants and we will coordinate bulk processing.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: LTO takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
         ]}
