@@ -47,7 +47,7 @@ export default function DocumentChecklistByVisaEn() {
               name: 'What Philippine documents do I need for a CR-1 visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For a CR-1/IR-1 spouse visa, you typically need: PSA Marriage Certificate with DFA Apostille, PSA Birth Certificate with DFA Apostille, NBI Clearance with DFA Apostille. If your spouse was previously married, additional documents may be required.',
+                text: 'For a CR-1/IR-1 spouse visa, the applicable original PSA Marriage and Birth Certificates and NBI Clearance may be required. The U.S. Embassy Manila checklist does not impose a universal DFA Apostille requirement.',
               },
             },
             {
@@ -55,7 +55,7 @@ export default function DocumentChecklistByVisaEn() {
               name: 'Do all Philippine documents need DFA Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For most immigration purposes outside the Philippines, yes. DFA Apostille authenticates Philippine-issued documents for use in Hague Convention member countries. We verify the exact requirement for your destination country before we start.',
+                text: 'No. Hague Convention membership explains how an Apostille is recognized when one is required; it does not make authentication mandatory for every immigration document. Check the current authority- and visa-specific instructions.',
               },
             },
             {
@@ -85,9 +85,9 @@ export default function DocumentChecklistByVisaEn() {
       <SummaryBlock
         conclusion="The documents you need depend on your visa type. Use this checklist to identify exactly what to order — then let us retrieve everything."
         points={[
-          'K-1 fiancé visa: CENOMAR + PSA Birth Certificate + NBI Clearance (all with DFA Apostille)',
+          'K-1 fiancé visa: requirements differ between petition and interview stages',
           'CR-1/IR-1 spouse visa: PSA Marriage Certificate + PSA Birth Certificate + NBI Clearance',
-          'All documents need DFA Apostille for immigration use',
+          'Apostille is arranged only when the receiving authority specifically requires it',
           'We can retrieve multiple documents simultaneously to save time',
         ]}
         ctaText="Get All Documents in One Order"
@@ -114,7 +114,7 @@ export default function DocumentChecklistByVisaEn() {
               ['PSA Birth Certificate', '✓', '✓', '✓', '✓', '✓', '✓'],
               ['PSA Marriage Certificate', '—', '✓', '✓', '✓', '✓', '✓'],
               ['NBI Clearance', '✓', '✓', '✓', '✓', '✓', '✓'],
-              ['DFA Apostille', '✓', '✓', '✓', '✓', '✓', '✓'],
+              ['DFA Apostille', '△', '△', '△', '△', '△', '△'],
             ].map(([doc, ...checks], i) => (
               <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                 <td className="px-3 py-2.5 font-medium text-gray-700 border-t border-gray-100">{doc}</td>
@@ -133,18 +133,18 @@ export default function DocumentChecklistByVisaEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'CENOMAR with DFA Apostille',
+            title: 'CENOMAR, if requested',
             description: 'May be requested as evidence of civil status. Document age and authentication requirements depend on the current application-stage checklist.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA Birth Certificate with DFA Apostille',
-            description: 'Required for all Philippine-born applicants. Must be an original PSA security paper copy with DFA Apostille.',
+            title: 'PSA Birth Certificate',
+            description: 'The U.S. Embassy Manila checklist calls for the applicable original birth certificate. DFA Apostille is not listed as a universal requirement.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'NBI Clearance with DFA Apostille',
-            description: 'Criminal background check from the Philippine National Bureau of Investigation. Required for all K-1 applicants over 16.',
+            title: 'NBI Clearance',
+            description: 'The current Embassy checklist requires a valid NBI Clearance for applicants over 16. DFA Apostille is not listed as a universal requirement.',
           },
         ]}
       />
@@ -154,17 +154,17 @@ export default function DocumentChecklistByVisaEn() {
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA Marriage Certificate with DFA Apostille',
-            description: 'Proof of your legal marriage registered in the Philippines. Required for NVC submission with DFA Apostille.',
+            title: 'PSA Marriage Certificate',
+            description: 'Proof of a Philippine marriage. The applicable original is required; DFA Apostille is not listed as a universal U.S. requirement.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA Birth Certificate with DFA Apostille',
-            description: 'Required for the immigrant visa application. Must be a recent PSA-issued copy with DFA Apostille.',
+            title: 'PSA Birth Certificate',
+            description: 'The applicable original birth certificate is required for the immigrant visa application. Follow the current Embassy checklist.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'NBI Clearance with DFA Apostille',
+            title: 'NBI Clearance',
             description: 'Required for visa applicants 16 and older. Must be issued within 6 months. HIT cases require additional handling.',
           },
         ]}
@@ -185,12 +185,12 @@ export default function DocumentChecklistByVisaEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'Canada (IRCC spousal sponsorship)',
-            description: 'Typically requires PSA Birth Certificate, PSA Marriage Certificate, and NBI Clearance — all with DFA Apostille. CENOMAR may be needed if your partner was previously unmarried at time of sponsorship.',
+            description: 'PSA civil records and NBI Clearance may be requested depending on the application. IRCC does not impose a universal DFA Apostille requirement; confirm the current checklist.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'Australia (Department of Home Affairs partner visa)',
-            description: 'Requires NBI Clearance, PSA Birth Certificate, and PSA Marriage Certificate with DFA Apostille. CENOMAR may be required for some partner visa categories.',
+            description: 'PSA civil records and police certificates may be requested depending on the visa subclass and circumstances. Confirm the current Home Affairs checklist before ordering authentication.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -200,12 +200,12 @@ export default function DocumentChecklistByVisaEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'UAE (residence visa / family sponsorship)',
-            description: 'Requires NBI Clearance with DFA Apostille for most visa categories. PSA Birth Certificate and PSA Marriage Certificate may also be required depending on your emirate and employer.',
+            description: 'Requirements vary by emirate, employer, and visa category. Confirm the exact legalization chain before ordering PSA records or NBI Clearance.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'Japan (spouse visa)',
-            description: 'Requires PSA Marriage Certificate and PSA Birth Certificate with DFA Apostille plus certified Japanese translation. CENOMAR is needed for the pre-marriage registration stage.',
+            description: 'The required foreign marriage certificate and Japanese translation depend on the procedure. PSA Birth Certificate, CENOMAR, and Apostille are not universally required; confirm with the municipal office or immigration authority.',
           },
         ]}
       />
@@ -220,8 +220,8 @@ export default function DocumentChecklistByVisaEn() {
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Forgetting DFA Apostille',
-            description: 'PSA documents without DFA Apostille are not accepted by most immigration authorities outside the Philippines. Apostille must be the physical paper original.',
+            title: 'Ordering authentication without checking the destination',
+            description: 'Apostille is not universally required. Since 16 March 2026, PSA Apostilles for Convention countries are issued electronically and must be submitted as digital files, not paper Apostilles.',
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
@@ -233,9 +233,9 @@ export default function DocumentChecklistByVisaEn() {
 
       <FaqSection
         items={[
-          { q: 'What Philippine documents do I need for a K-1 visa?', a: 'For a K-1 fiancé visa, your Filipino partner typically needs: CENOMAR with DFA Apostille (proof of single status), PSA Birth Certificate with DFA Apostille, and NBI Clearance with DFA Apostille.' },
-          { q: 'What Philippine documents do I need for a CR-1 visa?', a: 'For a CR-1/IR-1 spouse visa, you typically need: PSA Marriage Certificate with DFA Apostille, PSA Birth Certificate with DFA Apostille, NBI Clearance with DFA Apostille.' },
-          { q: 'Do all Philippine documents need DFA Apostille?', a: 'For most immigration purposes outside the Philippines, yes. DFA Apostille authenticates Philippine-issued documents for use in Hague Convention member countries.' },
+          { q: 'What Philippine documents do I need for a K-1 visa?', a: 'Requirements differ between petition and interview stages. PSA civil records and NBI Clearance may be requested. Confirm the current USCIS and Embassy instructions before ordering.' },
+          { q: 'What Philippine documents do I need for a CR-1 visa?', a: 'The applicable original PSA Marriage and Birth Certificates and NBI Clearance may be required. The U.S. Embassy Manila checklist does not impose a universal DFA Apostille requirement.' },
+          { q: 'Do all Philippine documents need DFA Apostille?', a: 'No. Hague Convention membership explains how an Apostille is recognized when required; it does not make authentication mandatory for every immigration document.' },
           { q: 'How long does it take to get all documents ready?', a: 'Each document takes approximately 4–6 weeks. We can process multiple documents simultaneously. Plan at least 6–8 weeks before your visa interview.' },
           { q: 'Can you retrieve multiple documents at the same time?', a: 'Yes. We can process CENOMAR, PSA Birth Certificate, PSA Marriage Certificate, and NBI Clearance simultaneously. This saves significant time compared to ordering one by one.' },
         ]}

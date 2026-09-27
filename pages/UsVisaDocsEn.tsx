@@ -14,7 +14,7 @@ import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function UsVisaDocsEn() {
   useMeta(
     `K-1 / CR-1 Visa Documents Service [${SEO_YEAR_MONTH_EN}]`,
-    `US petitioner for a K-1 or CR-1/IR-1 visa? We retrieve PSA, CENOMAR, NBI + DFA Apostille and ship to your door. Free consultation for American petitioners.`,
+    `US petitioner for a K-1 or CR-1/IR-1 visa? We retrieve the PSA records and NBI Clearance specified by the current U.S. checklist and ship paper records when required.`,
   );
   return (
     <PageLayout
@@ -23,7 +23,7 @@ export default function UsVisaDocsEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'US Visa Philippine Documents Retrieval Service (K-1 / CR-1 / IR-1)',
-        description: 'We retrieve all Philippine documents for K-1, CR-1, and IR-1 visa applications — CENOMAR, PSA Birth Certificate, Marriage Certificate, NBI Clearance with DFA Apostille. Ships to USA via DHL.',
+        description: 'We retrieve Philippine civil records and NBI Clearance for K-1, CR-1, and IR-1 applications after confirming the current U.S. checklist.',
         url: 'https://ph-document.com/en/us-visa-documents/',
         provider: {
           '@type': 'Organization',
@@ -39,7 +39,7 @@ export default function UsVisaDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+            description: 'K-1/CR-1 document package — agreed documents and delivery',
           },
         },
         },
@@ -60,7 +60,7 @@ export default function UsVisaDocsEn() {
               name: 'What documents are required for a CR-1 visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Typically Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by NVC case. We confirm for your specific petition.',
+                text: 'The U.S. Embassy Manila checklist requires the applicable original PSA civil records and NBI Clearance. It does not list DFA Apostille as a universal requirement. We confirm the case and stage before processing.',
               },
             },
             {
@@ -68,7 +68,7 @@ export default function UsVisaDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.',
+                text: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents and delivery. Authentication is added only if the specific authority requires it.',
               },
             },
             {
@@ -85,14 +85,14 @@ export default function UsVisaDocsEn() {
     >
       <HeroBanner
         title="Philippine Documents for Your US Visa Petition"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Current U.S. Checklist', 'No Unnecessary Authentication', 'All-Inclusive Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="August 30, 2026"
       />
 
       <SummaryBlock
-        conclusion="K-1, CR-1, or IR-1 visa? We retrieve all required Philippine documents with Apostille and ship to you."
+        conclusion="K-1, CR-1, or IR-1 visa? We confirm the current U.S. checklist and retrieve only the Philippine documents your case requires."
         points={[
           'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
           'Authentication arranged only when the current U.S. checklist requires it',
@@ -142,8 +142,8 @@ export default function UsVisaDocsEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided.',
+            title: 'Authentication only when required',
+            description: 'The current U.S. Embassy Manila checklist does not impose a universal DFA Apostille requirement. We add authentication only if your specific authority instructs you to do so.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -158,7 +158,7 @@ export default function UsVisaDocsEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa type (K-1, CR-1, IR-1) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
+          { title: 'Processing in the Philippines', description: 'Our team retrieves the agreed PSA records and NBI Clearance in the format required for the application stage.' },
           { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
@@ -166,8 +166,8 @@ export default function UsVisaDocsEn() {
       <FaqSection
         items={[
           { q: 'What documents are required for a K-1 visa?', a: 'The checklist differs between petition, NVC, and interview stages. PSA civil records and NBI Clearance may be requested. We confirm the current official instructions for your case before quoting.' },
-          { q: 'What documents are required for a CR-1 visa?', a: 'Typically Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by NVC case. We confirm for your specific petition.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
+          { q: 'What documents are required for a CR-1 visa?', a: 'The U.S. Embassy Manila checklist requires the applicable original PSA civil records and NBI Clearance. It does not list DFA Apostille as a universal requirement. We confirm the case and stage before processing.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents and delivery. Authentication is added only if the specific authority requires it.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
@@ -179,7 +179,7 @@ export default function UsVisaDocsEn() {
           { href: '/en/k1-visa-documents/', title: 'K-1 Fiancé Visa Documents', description: 'Specific document checklist for K-1 visa petitions filed with USCIS.' },
           { href: '/en/cr1-visa-documents/', title: 'CR-1 / IR-1 Visa Documents', description: 'Specific document checklist for CR-1 and IR-1 spousal immigrant visas.' },
           { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'Certificate of No Marriage required for K-1 fiancé visa and most US immigration cases involving a Filipino national.' },
-          { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'Authentication required by US immigration for Philippine documents.' },
+          { href: '/en/apostille/', title: 'DFA Apostille Service', description: 'Authentication service for cases where the receiving authority specifically requires it.' },
         ]}
       />
     </PageLayout>
