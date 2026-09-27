@@ -158,6 +158,16 @@ export default function NbiClearanceOverseasEn() {
         ]}
       />
 
+
+      <CtaBox
+        title="Three family members applying together?"
+        description="Our US$1,249 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment."
+        buttonText="View the 3-Applicant Package"
+        href="/en/family-psa-nbi-package/"
+        variant="primary"
+        trustNote="US$1,249 total · Two payments of US$624.50"
+      />
+
       <StepList
         heading="How It Works — From Overseas"
         steps={[

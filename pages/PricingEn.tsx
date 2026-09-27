@@ -11,7 +11,7 @@ import { SEO_YEAR, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function PricingEn() {
   useMeta(
     `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
-    `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille. All plans include DHL Express worldwide shipping. Free quote.`,
+    `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille, including the US$1,249 three-applicant family package.`,
   );
   return (
     <PageLayout
@@ -70,7 +70,7 @@ export default function PricingEn() {
         ctaText="Get a Free Quote"
         ctaHref="#contact"
         ctaService="Pricing inquiry"
-        lastUpdated="August 21, 2026"
+        lastUpdated="September 19, 2026"
       />
 
       <CtaBox

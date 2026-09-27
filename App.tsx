@@ -81,6 +81,7 @@ const NbiValidityJa = lazy(() => import('./pages/NbiValidityJa'));
 const DriverRecordEn = lazy(() => import('./pages/DriverRecordEn'));
 const DriverRecordJa = lazy(() => import('./pages/DriverRecordJa'));
 const PricingEn = lazy(() => import('./pages/PricingEn'));
+const FamilyPsaNbiPackageEn = lazy(() => import('./pages/FamilyPsaNbiPackageEn'));
 const PricingJa = lazy(() => import('./pages/PricingJa'));
 const UsVisaDocsEn = lazy(() => import('./pages/UsVisaDocsEn'));
 const UsVisaDocsJa = lazy(() => import('./pages/UsVisaDocsJa'));
@@ -309,6 +310,8 @@ export default function App() {
         <Route path="/ja/driver-record/" element={<DriverRecordJa />} />
         <Route path="/en/pricing" element={<Navigate to="/en/pricing/" replace />} />
         <Route path="/en/pricing/" element={<PricingEn />} />
+        <Route path="/en/family-psa-nbi-package" element={<Navigate to="/en/family-psa-nbi-package/" replace />} />
+        <Route path="/en/family-psa-nbi-package/" element={<FamilyPsaNbiPackageEn />} />
         <Route path="/ja/ryokin" element={<Navigate to="/ja/ryokin/" replace />} />
         <Route path="/ja/ryokin/" element={<PricingJa />} />
         <Route path="/en/us-visa-documents" element={<Navigate to="/en/us-visa-documents/" replace />} />
