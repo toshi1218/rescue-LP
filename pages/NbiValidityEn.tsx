@@ -35,10 +35,10 @@ export default function NbiValidityEn() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'USD',
-            price: '399',
+            price: '299',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '399',
+              price: '299',
               priceCurrency: 'USD',
               description: 'NBI Clearance retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
             },

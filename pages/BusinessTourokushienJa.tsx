@@ -104,7 +104,7 @@ export default function BusinessTourokushienJa() {
                 </tr>
                 <tr>
                   <td className="py-3 text-gray-700">NBI Clearance 取得代行 ＋ DFAアポスティーユ</td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥55,000</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥49,500</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
               </tbody>
