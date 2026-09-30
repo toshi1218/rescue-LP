@@ -27,6 +27,16 @@ export default function GuidesEn() {
       </p>
       <GuideLinks />
 
+      <section className="mt-8">
+        <Link
+          to="/en/prc-professional-documents/"
+          className="block rounded-xl border border-primary/25 bg-primary/5 px-5 py-4 transition-colors hover:border-primary"
+        >
+          <p className="text-sm font-bold text-secondary">PRC Professional Documents</p>
+          <p className="mt-1 text-sm text-gray-600">Good Standing, Board Rating, Passing, certified registration records, authentication, and DHL delivery for professionals abroad.</p>
+        </Link>
+      </section>
+
       <section className="mt-10">
         <h2 className="text-lg font-bold text-secondary mb-3 border-b border-primary/20 pb-2">Document Requirements by Country</h2>
         <p className="text-sm text-gray-600 mb-4">Philippine document and authentication requirements vary by destination country. Select your country below.</p>

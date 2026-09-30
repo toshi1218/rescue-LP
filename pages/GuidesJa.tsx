@@ -22,6 +22,16 @@ export default function GuidesJa() {
       <p className="text-sm text-gray-600 mb-6">国際結婚・配偶者ビザ・外免切替・帰化申請に必要なフィリピン書類の代行サービス一覧です。</p>
       <GuideLinks />
 
+      <section className="mt-8">
+        <Link
+          to="/ja/prc-apostille/"
+          className="block rounded-xl border border-primary/25 bg-primary/5 px-5 py-4 transition-colors hover:border-primary"
+        >
+          <p className="text-sm font-bold text-secondary">PRC証明書の取得・認証代行</p>
+          <p className="mt-1 text-sm text-gray-600">Good Standing・Board Rating・Passingなどの取得から、アポスティーユ・海外発送まで対応します。</p>
+        </Link>
+      </section>
+
       <section className="mt-10">
         <h2 className="text-lg font-bold text-secondary mb-3 border-b border-primary/20 pb-2">海外移住・ビザ別の必要書類</h2>
         <p className="text-sm text-gray-600 mb-4">移住先・ビザの種類ごとに、必要なフィリピン書類と認証の要件が異なります。目的地を選んでください。</p>

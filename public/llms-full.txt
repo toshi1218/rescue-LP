@@ -1,7 +1,7 @@
 # フィリピン書類取得代行センター — 完全ガイド
 # Philippine Document Service — Full Reference
 
-> フィリピンの公的書類（CENOMAR・PSA・NBI・LTO）取得代行を専門とするサービス。国際結婚・配偶者ビザ・外免切替・帰化申請に必要なフィリピン書類を日本語サポートで完全代行。海外在住フィリピン人向けには英語対応でDHL国際配送。運営：株式会社IGRS（セブ市営業所）
+> フィリピンの公的書類（CENOMAR・PSA・NBI・LTO・PRC）取得代行を専門とするサービス。国際結婚・配偶者ビザ・外免切替・帰化申請・海外資格登録に必要なフィリピン書類を日本語または英語で支援。海外在住者へDHL国際配送。運営：株式会社IGRS（セブ市営業所）
 
 ---
 
@@ -77,6 +77,12 @@
 - 用途：外国免許切替（外免切替）
 - LTO SM Seaside Cebu等でも取得代行対応
 
+### PRC専門資格書類
+- 発行機関：PRC（Professional Regulation Commission / 専門職規制委員会）
+- 対象例：Certificate of Good Standing、Certificate of Board Rating、Certificate of Passing、PRC ID・Certificate of Registrationの認証コピー
+- サービス：取得可否・委任方法の確認、PRC窓口での現地対応、必要に応じたDFAアポスティーユ、DHL海外発送
+- 海外在住のPRC登録専門職は、PRC Memorandum Circular No. 1（2026年）の条件を満たす場合、スキャンした委任状と所定書類を利用できる
+
 ---
 
 ## 料金プラン
@@ -86,6 +92,7 @@
 | PSA書類（出生証明書・CENOMAR・婚姻証明書）フルセット | ¥55,000〜 | US$349〜 |
 | NBI Clearance + アポスティーユ | ¥55,000〜 | US$399〜 |
 | LTO関連書類（外免切替） | ¥49,500 | US$330 |
+| PRC証明書取得・認証 | 書類・委任方法により個別見積もり | Case-specific quote |
 | 国際結婚準備パック（PSA出生証明書+CENOMAR+DFAアポスティーユ） | ¥80,000〜 | US$899〜 |
 
 ※ 日本向け料金は税込。フルセットはe-Certificate・e-Apostille・SECPA紙原本・DHL国際配送を含みます。
@@ -253,6 +260,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 | NBI（国家捜査局・NBI Clearance申請） | https://clearance.nbi.gov.ph/ |
 | DFA（フィリピン外務省・アポスティーユ） | https://www.dfa.gov.ph/ |
 | LTO（フィリピン陸運局） | https://lto.gov.ph/ |
+| PRC（専門職規制委員会） | https://www.prc.gov.ph/ |
 | 出入国在留管理庁（在留資格・配偶者ビザ） | https://www.moj.go.jp/isa/ |
 | 法務局（帰化申請） | https://houmukyoku.moj.go.jp/ |
 | USCIS（米国移民局） | https://www.uscis.gov/ |
@@ -286,6 +294,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 - [外免切替](https://ph-document.com/ja/gaimen-kirikae-guide/) — LTO書類の代行取得
 - [帰化申請](https://ph-document.com/ja/kika-shinsei-guide/) — 帰化申請用フィリピン書類代行
 - [LTO運転経歴証明書](https://ph-document.com/ja/driver-record/) — LTO運転経歴証明書代行取得
+- [PRC証明書取得・認証](https://ph-document.com/ja/prc-apostille/) — Good Standing・Board Rating・Passing等の取得、認証、海外発送
 - [US Visaフィリピン書類](https://ph-document.com/ja/us-visa-documents/) — 米国ビザ向けフィリピン書類代行
 - [カナダ移民ビザ書類](https://ph-document.com/ja/canada/) — カナダ永住権・配偶者スポンサーシップ向けフィリピン書類代行
 - [オーストラリアビザ書類](https://ph-document.com/ja/australia/) — オーストラリアパートナービザ向けフィリピン書類代行
@@ -331,6 +340,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 - [License Conversion](https://ph-document.com/en/drivers-license-conversion/) — Philippine license conversion documents
 - [Naturalization](https://ph-document.com/en/naturalization-guide/) — Naturalization document service
 - [LTO Driver Record](https://ph-document.com/en/driver-record/) — LTO Driver's Record retrieval
+- [PRC Professional Documents](https://ph-document.com/en/prc-professional-documents/) — Good Standing, Board Rating, Passing, certified records, authentication, and delivery
 - [Document Checklist by Visa](https://ph-document.com/en/document-checklist-by-visa/) — Philippine documents by visa type
 - [US Visa Documents](https://ph-document.com/en/us-visa-documents/) — US visa Philippine document service
 - [K-1 Visa Documents](https://ph-document.com/en/k1-visa-documents/) — K-1 fiancé visa documents
