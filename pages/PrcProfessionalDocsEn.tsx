@@ -13,7 +13,7 @@ import RelatedArticles from '../components/RelatedArticles';
 export default function PrcProfessionalDocsEn() {
   useMeta(
     'PRC Document Retrieval & Apostille Service [2026]',
-    'Request Philippine PRC certificates from abroad, including Good Standing, Board Rating, Passing and certified registration records. Local processing, Apostille coordination and DHL delivery.',
+    'Get Philippine PRC certificates from abroad. One document with DFA Apostille and DHL delivery from US$399; two-document package from US$499.',
   );
 
   return (
@@ -31,12 +31,18 @@ export default function PrcProfessionalDocsEn() {
           url: 'https://ph-document.com/en/',
         },
         areaServed: ['US', 'CA', 'AU', 'AE', 'GB', 'JP', 'SA'],
+        offers: {
+          '@type': 'Offer',
+          price: '399',
+          priceCurrency: 'USD',
+          description: 'One PRC certificate retrieval, DFA Apostille, and worldwide DHL delivery',
+        },
       }]}
     >
       <HeroBanner
         title="PRC Document Retrieval & Apostille Service"
         subtitle="For Filipino nurses and other licensed professionals abroad who need PRC certificates, certified records, authentication, and international delivery."
-        badges={['Local PRC Processing', 'Apostille Route Checked', 'Worldwide DHL Delivery']}
+        badges={['1 Document US$399', '2 Documents US$499', 'DHL Included']}
         ctaText="Request a Case Check"
         ctaHref="#contact"
         lastUpdated="September 30, 2026"
@@ -140,15 +146,28 @@ export default function PrcProfessionalDocsEn() {
       <section className="mb-10">
         <div className="rounded-2xl border border-gray-200 bg-white p-6">
           <h2 className="text-lg font-bold text-gray-900 mb-3">Pricing and timing</h2>
-          <p className="text-sm text-gray-700 leading-relaxed mb-4">
-            PRC document requests are quoted individually because authorization, original-document, Apostille, and destination requirements differ by profession and receiving authority. Your quote states the government fees, local processing, authentication, and delivery scope before payment.
-          </p>
+          <div className="grid gap-4 md:grid-cols-2 mb-5">
+            <div className="rounded-xl border border-primary/25 bg-primary/5 p-5">
+              <p className="text-xs font-bold text-primary mb-1">ONE PRC DOCUMENT</p>
+              <p className="text-3xl font-extrabold text-primary">US$399</p>
+              <p className="text-xs text-gray-500 mt-1">Retrieval, DFA Apostille, and DHL included</p>
+            </div>
+            <div className="rounded-xl border border-secondary/20 bg-white p-5">
+              <p className="text-xs font-bold text-secondary mb-1">TWO-DOCUMENT PACKAGE</p>
+              <p className="text-3xl font-extrabold text-primary">US$499</p>
+              <p className="text-xs text-gray-500 mt-1">Same applicant and delivery address</p>
+            </div>
+          </div>
           <ul className="space-y-2 text-sm text-gray-700">
-            <li>• Free eligibility and requirement check</li>
+            <li>• PRC government fees and local representative processing included</li>
+            <li>• DFA Apostille and tracked DHL delivery included</li>
             <li>• Approximately 50% deposit to start</li>
             <li>• Balance after you review document photos or PDFs, before dispatch</li>
             <li>• Timeline confirmed after checking appointment availability and the requested PRC record</li>
           </ul>
+          <p className="mt-4 text-xs text-gray-500 leading-relaxed">
+            If original PIC/COR retrieval, a special authorization route, or embassy legalization is required, we provide a separate quote before starting. Apostille and DHL for an eligible PRC document already in your possession start from US$279.
+          </p>
         </div>
       </section>
 
@@ -159,6 +178,7 @@ export default function PrcProfessionalDocsEn() {
           { q: 'Which PRC documents can you process?', a: 'Common requests include Certificate of Good Standing, Certificate of Board Rating, Certificate of Passing, and certified copies of the Professional Identification Card or Certificate of Registration. Other verification requests are assessed individually.' },
           { q: 'Do I need to send an original SPA?', a: 'It depends on the case. Eligible overseas PRC-registered professionals may use the scanned authorization procedure under PRC Memorandum Circular No. 1 (s. 2026). Other requests may still require an original SPA, original PRC document, or applicant action through LERIS.' },
           { q: 'Do I need Apostille or embassy legalization?', a: 'It depends on the destination country and receiving authority. We confirm the required route before quoting so you do not order the wrong authentication.' },
+          { q: 'How much does the complete service cost?', a: 'One PRC document with retrieval, DFA Apostille, and DHL delivery starts from US$399. A two-document package for the same applicant and delivery address starts from US$499. Cases requiring original PIC/COR retrieval, a special authorization route, or embassy legalization are quoted separately.' },
           { q: 'Can you renew my PRC licence?', a: 'We first assess whether the requested renewal or replacement can be handled by a representative. This page mainly covers PRC-issued certificates, certified copies, verification, authentication, and international delivery.' },
         ]}
         ctaTitle="Share your PRC document request"

@@ -11,7 +11,7 @@ import { Award, Globe, FileCheck, Stamp } from 'lucide-react';
 export default function PrcApostilleJa() {
   useMeta(
     'PRC証明書取得・アポスティーユ代行｜海外就労・資格登録【IGRS】',
-    'PRCのGood Standing・Board Rating・Passing・資格登録書類をフィリピンで代理取得。PRC認証、DFAアポスティーユ、DHL海外発送まで対応。海外在住者の委任方法も事前確認。',
+    'PRCのGood Standing・Board Rating・Passing等をフィリピンで代理取得。DFAアポスティーユ、DHL海外発送込みで1通55,000円、2通72,000円。',
   );
 
   return (
@@ -36,9 +36,9 @@ export default function PrcApostilleJa() {
           areaServed: { '@type': 'Country', name: 'JP' },
           offers: {
             '@type': 'Offer',
-            price: '39000',
+            price: '55000',
             priceCurrency: 'JPY',
-            description: 'DFAアポスティーユ取得＋DHL国際発送（税込・送料込み）',
+            description: 'PRC証明書1通の取得＋DFAアポスティーユ＋DHL国際発送（税込）',
           },
         },
         {
@@ -74,7 +74,7 @@ export default function PrcApostilleJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'すでにお持ちのPRC書類へのDFAアポスティーユ取得と日本へのDHL発送は39,000円からです。PRCでの証明書取得を含む場合は、書類の種類、委任方法、認証、発送先を確認して個別に総額を提示します。',
+                text: 'PRC証明書1通の取得、DFAアポスティーユ、日本へのDHL発送を含めて55,000円（税込）です。2通セットは72,000円（税込）です。PIC・CORの原本取寄せが必要な案件などは別途見積もりします。',
               },
             },
           ],
@@ -84,7 +84,7 @@ export default function PrcApostilleJa() {
       <HeroBanner
         title="PRC証明書の取得・認証・海外発送"
         subtitle="Good Standing・Board Rating・PassingなどのPRC書類を、フィリピンでの代理取得から認証・DHL発送まで支援します。"
-        badges={['PRC窓口での現地対応', 'アポスティーユ対応', '世界各国へDHL発送']}
+        badges={['1通 ¥55,000', '2通 ¥72,000', 'DHL送料込み']}
         ctaText="PRC証明書について相談する"
         ctaHref="#contact"
         ctaService="PRC証明書取得・認証代行"
@@ -173,15 +173,22 @@ export default function PrcApostilleJa() {
       <section className="mb-10">
         <div className="rounded-2xl border border-gray-200 bg-white p-6">
           <h2 className="text-lg font-bold text-gray-900 mb-4">料金・納期</h2>
-          <div className="flex items-baseline gap-2 mb-1">
-            <span className="text-4xl font-extrabold text-primary">¥39,000</span>
-            <span className="text-sm text-gray-500">〜（税込・DHL国際送料込み）</span>
+          <div className="grid gap-4 md:grid-cols-2 mb-5">
+            <div className="rounded-xl border border-primary/25 bg-primary/5 p-5">
+              <p className="text-xs font-bold text-primary mb-1">PRC証明書 1通</p>
+              <p className="text-3xl font-extrabold text-primary">¥55,000</p>
+              <p className="text-xs text-gray-500 mt-1">税込・DHL国際送料込み</p>
+            </div>
+            <div className="rounded-xl border border-secondary/20 bg-white p-5">
+              <p className="text-xs font-bold text-secondary mb-1">PRC証明書 2通セット</p>
+              <p className="text-3xl font-extrabold text-primary">¥72,000</p>
+              <p className="text-xs text-gray-500 mt-1">税込・同一申請者・同一発送先</p>
+            </div>
           </div>
-          <p className="text-xs text-gray-400 mb-5">お手元のPRC書類にDFAアポスティーユを取得し、日本へ発送する場合</p>
           <ul className="space-y-2 text-sm text-gray-700 mb-5">
             <li className="flex justify-between border-b border-gray-100 pb-2">
-              <span>PRCでの証明書取得を含む場合</span>
-              <span className="font-semibold text-secondary">個別見積もり</span>
+              <span>PRC証明書の取得・窓口対応</span>
+              <span className="font-semibold text-secondary">込み</span>
             </li>
             <li className="flex justify-between border-b border-gray-100 pb-2">
               <span>DFAアポスティーユ取得代行</span>
@@ -195,13 +202,21 @@ export default function PrcApostilleJa() {
               <span>納期</span>
               <span className="font-semibold text-secondary">PRC予約状況確認後に案内</span>
             </li>
+            <li className="flex justify-between border-b border-gray-100 pb-2">
+              <span>お手元のPRC書類へのApostille＋DHL</span>
+              <span className="font-semibold text-secondary">¥39,000〜</span>
+            </li>
+            <li className="flex justify-between border-b border-gray-100 pb-2">
+              <span>PIC・COR原本の取寄せが必要な場合</span>
+              <span className="font-semibold text-secondary">別途見積もり</span>
+            </li>
             <li className="flex justify-between">
               <span>日本語翻訳が必要な場合</span>
               <span className="font-semibold text-secondary">1部 ¥7,700〜</span>
             </li>
           </ul>
           <p className="text-xs text-gray-500 leading-relaxed">
-            取得込みの案件は、PRC手数料、現地対応、認証、発送を含む総額を着手前に提示します。お支払いは着手金約50%・書類の写真またはPDF確認後に残金。着手前のキャンセルは無料です。
+            標準料金にはPRC手数料、現地対応、DFAアポスティーユ、DHL発送を含みます。原本取寄せ、特殊な委任方法、大使館認証等が必要な場合は着手前に追加料金を提示します。お支払いは着手金約50%・書類の写真またはPDF確認後に残金です。
           </p>
         </div>
       </section>
@@ -221,7 +236,7 @@ export default function PrcApostilleJa() {
           { q: 'どのPRC証明書を取得できますか？', a: '主な対象はCertificate of Good Standing、Certificate of Board Rating、Certificate of Passing、PRC IDやCertificate of Registrationの認証コピーです。その他の照会・確認書類も個別に対応可否を確認します。' },
           { q: '海外から委任して取得できますか？', a: '案件によります。2026年のPRC通達により、条件を満たす海外在住のPRC登録専門職は、委任状と所定書類のスキャンをPRC Regional Officeへ送る手続きが利用できます。対象外の案件では原本SPA等が必要になる場合があります。' },
           { q: 'PRC証明書にDFAアポスティーユを付けられますか？', a: 'はい。DFAの現行要件では、PRC書類は原本またはPRC認証済み写しとしてアポスティーユ申請対象です。提出国・受取機関に応じて必要な認証ルートを確認します。' },
-          { q: '料金はいくらですか？', a: 'すでにお持ちのPRC書類へのDFAアポスティーユ取得と日本へのDHL発送は39,000円からです。PRCでの証明書取得を含む場合は、書類の種類、委任方法、認証、発送先を確認して個別に総額を提示します。' },
+          { q: '料金はいくらですか？', a: 'PRC証明書1通の取得、DFAアポスティーユ、日本へのDHL発送を含めて55,000円（税込）です。2通セットは72,000円（税込）です。PIC・CORの原本取寄せが必要な案件などは別途見積もりします。' },
         ]}
         ctaTitle="必要な書類を一緒に整理します"
         ctaButton="無料相談フォームへ"
