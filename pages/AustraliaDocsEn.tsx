@@ -13,7 +13,7 @@ import { useMeta } from '../lib/useMeta';
 export default function AustraliaDocsEn() {
   useMeta(
     'PH Documents for Australia Immigration [April 2026]',
-    'Applying for Australian partner visa or PR? We handle your CENOMAR & PSA online applications with DFA e-Apostille, plus NBI Clearance retrieval with physical Apostille shipped via DHL. Free consultation.',
+    'Applying for an Australian partner visa or PR? We retrieve PSA records and NBI Clearance, confirm the current Home Affairs format, and arrange authentication only when required.',
   );
   return (
     <PageLayout
@@ -22,7 +22,7 @@ export default function AustraliaDocsEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Philippine Documents for Australia Immigration (Home Affairs)',
-        description: 'We retrieve all Philippine documents for Australia immigration — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships to Australia via DHL. Home Affairs-ready.',
+        description: 'We retrieve Philippine civil records and NBI Clearance for Australia immigration, confirm the current Home Affairs checklist, and arrange authentication only when required.',
         url: 'https://ph-document.com/en/australia/',
         provider: {
           '@type': 'Organization',
@@ -38,7 +38,7 @@ export default function AustraliaDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'Australia Immigration Document Package — all documents + DFA Apostille + DHL to Australia (all-inclusive)',
+            description: 'Australia immigration document package — agreed documents, any required authentication, and delivery',
           },
         },
         },
@@ -59,7 +59,7 @@ export default function AustraliaDocsEn() {
               name: 'What documents are needed for an Australian partner visa (subclass 820/801)?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Typically CENOMAR and PSA Birth Certificate with DFA Apostille. NBI Clearance may also be required. Requirements vary by visa subclass. We confirm for your specific case.',
+                text: 'The document list depends on the visa subclass and circumstances. PSA civil records and police certificates may be requested; authentication is arranged only when the current checklist requires it.',
               },
             },
             {
@@ -67,7 +67,7 @@ export default function AustraliaDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Australia are included.',
+                text: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents, any authentication actually required, and delivery.',
               },
             },
             {
@@ -84,16 +84,16 @@ export default function AustraliaDocsEn() {
     >
       <HeroBanner
         title="Philippine Documents for Australia Immigration"
-        badges={['Home Affairs-Ready', 'DFA Apostille Included', 'Ships to Australia via DHL']}
+        badges={['Current Home Affairs Checklist', 'Authentication When Required', 'Ships to Australia via DHL']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="August 30, 2026"
       />
 
       <SummaryBlock
-        conclusion="Applying for an Australian partner visa, PR, or citizenship? We retrieve all required Philippine documents with DFA Apostille and ship directly to your Australian address."
+        conclusion="Applying for an Australian partner visa, PR, or citizenship? We confirm the current checklist, retrieve the agreed Philippine documents, and arrange authentication only when required."
         points={[
-          'Australia is a Hague Convention member — DFA Apostille is required on Philippine documents',
+          'Hague Convention membership does not make Apostille mandatory for every Home Affairs document',
           'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
           'PSA e-Apostille delivered digitally; NBI and physical originals shipped via DHL when needed',
           'We confirm exact Home Affairs requirements for your specific visa subclass',
@@ -137,12 +137,12 @@ export default function AustraliaDocsEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'PSA online application + NBI Clearance retrieval',
-            description: 'We complete the PSA online applications (Birth Cert, Marriage Cert, CENOMAR) and DFA e-Apostille applications on your behalf, and handle NBI Clearance retrieval with its physical DFA Apostille, in one coordinated flow.',
+            description: 'We complete PSA applications and handle NBI Clearance retrieval in one coordinated flow. If authentication is required, PSA e-Apostille is electronic; non-PSA documents follow their applicable DFA process.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided — required by Home Affairs.',
+            description: 'We arrange authentication only when the current Home Affairs checklist or receiving authority requires it. PSA e-Apostille is delivered electronically from 16 March 2026.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -157,7 +157,7 @@ export default function AustraliaDocsEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa subclass (partner visa, PR, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents for Home Affairs and provide all-inclusive pricing.' },
-          { title: 'We handle the applications', description: 'We complete the PSA online applications and DFA e-Apostille applications; our Cebu team handles NBI Clearance retrieval and its physical DFA Apostille.' },
+          { title: 'We handle the applications', description: 'We complete the agreed PSA and NBI applications. Any required PSA e-Apostille is processed online and delivered electronically.' },
           { title: 'DHL delivery to Australia', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
@@ -165,8 +165,8 @@ export default function AustraliaDocsEn() {
       <FaqSection
         items={[
           { q: 'Does Australia require DFA Apostille on Philippine documents?', a: 'Not in every case. Australia is a Hague Convention member, but requirements vary by visa subclass and document. We verify the current Home Affairs checklist before processing.' },
-          { q: 'What documents are needed for an Australian partner visa (subclass 820/801)?', a: 'Typically CENOMAR and PSA Birth Certificate with DFA Apostille. NBI Clearance may also be required. Requirements vary by visa subclass. We confirm for your specific case.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Australia are included.' },
+          { q: 'What documents are needed for an Australian partner visa (subclass 820/801)?', a: 'The document list depends on the visa subclass and circumstances. PSA civil records and police certificates may be requested; authentication is arranged only when the current checklist requires it.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents, any authentication actually required, and delivery.' },
           { q: 'How long does it take to ship to Australia?', a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to Australia typically takes 3–5 business days after documents are ready.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"

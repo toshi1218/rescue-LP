@@ -16,7 +16,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function AustraliaDocsJa() {
   useMeta(
     `オーストラリアビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — Home Affairs対応・DHL郵送`,
-    'オーストラリアパートナービザ・永住権申請に必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。',
+    'オーストラリアパートナービザ・永住権向けのPSA書類・NBI Clearanceを代行取得。Home Affairsの現行要件を確認し、必要な場合だけ認証を手配します。',
   );
   return (
     <PageLayout
@@ -25,7 +25,7 @@ export default function AustraliaDocsJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'オーストラリアビザ向けフィリピン書類取得代行（Home Affairs対応）',
-        description: 'オーストラリアパートナービザ・永住権申請に必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。Department of Home Affairs提出対応。',
+        description: 'オーストラリアパートナービザ・永住権向けのPSA書類・NBI Clearanceを代行取得。現行要件を確認し、必要な場合だけ認証を手配。',
         url: 'https://ph-document.com/ja/australia/',
         provider: {
           '@type': 'Organization',
@@ -54,7 +54,7 @@ export default function AustraliaDocsJa() {
               name: 'オーストラリアビザ申請にはDFAアポスティーユが必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。オーストラリアはハーグ条約加盟国です。Department of Home Affairsへの提出には、PSA出生証明書・CENOMAR・NBI ClearanceにDFAアポスティーユ認証が必要です。',
+                text: '一律必須ではありません。ハーグ条約加盟は、必要な場合の認証方法を定めるもので、Home Affairsの全書類にアポスティーユを義務付けるものではありません。',
               },
             },
             {
@@ -62,7 +62,7 @@ export default function AustraliaDocsJa() {
               name: 'オーストラリアのパートナービザ（820/801）に必要な書類は？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'CENOMAR・PSA出生証明書（DFAアポスティーユ付き）が基本です。NBI Clearanceが必要な場合もあります。ビザサブクラスによって異なるため、無料相談でご確認します。',
+                text: '必要書類はビザサブクラスと事情によって異なります。PSA民事書類や警察証明書を求められる場合がありますが、認証は現行要件で必要な場合だけ手配します。',
               },
             },
             {
@@ -87,18 +87,18 @@ export default function AustraliaDocsJa() {
     >
       <HeroBanner
         title="オーストラリアビザ 書類取得代行"
-        badges={['Home Affairs対応', 'アポスティーユ込み', '費用は事前にご案内']}
+        badges={['Home Affairs現行要件', '必要な場合のみ認証', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年8月13日"
+        lastUpdated="2026年8月30日"
       />
 
       <SummaryBlock
-        conclusion="Partner Visa・永住権申請に必要なPSA・NBIクリアランスをHome Affairs対応のDFAアポスティーユ付きで一括取り寄せ。ビザ申請のボトルネックを解消します。"
+        conclusion="Home Affairsの現行チェックリストを確認し、必要なPSA書類・NBI Clearanceと、必要な場合のみ認証を一括手配します。"
         points={[
-          'オーストラリアはハーグ条約加盟国 — フィリピン書類にはDFAアポスティーユが必要',
+          'ハーグ条約加盟国でも、Home Affairsの全書類にアポスティーユが必要とは限りません',
           'CENOMAR・PSA出生証明書・NBI Clearance・婚姻証明書に対応',
-          'DFAアポスティーユ付きの原本をDHLでオーストラリアへ直送',
+          'PSA e-Apostilleは電子納品、紙原本が必要な場合のみDHLで発送',
           'ビザサブクラスごとのHome Affairs要件を事前確認してから進めます',
         ]}
         ctaText="無料で相談する"
@@ -110,7 +110,7 @@ export default function AustraliaDocsJa() {
           {
             icon: <Shield className="w-4 h-4" />,
             title: 'オーストラリアのパートナービザ・永住権を申請中',
-            description: 'Department of Home Affairsへの提出にはDFAアポスティーユ付きのフィリピン書類が必要です。必要書類を一括で手配します。',
+            description: 'ビザサブクラスによって書類と認証要件が異なります。現行チェックリストを確認して必要なものだけ手配します。',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -145,8 +145,8 @@ export default function AustraliaDocsJa() {
             },
             {
               icon: <FileCheck className="w-4 h-4" />,
-              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-              description: 'Home Affairs要件に沿ったDFAアポスティーユ認証を手配します。原本での提出が必要です。',
+              title: '必要な場合のDFA認証',
+              description: 'Home Affairsまたは提出先が求める場合のみ手配します。PSA e-Apostilleは2026年3月16日以降、電子発行です。',
             },
             {
               icon: <Globe className="w-4 h-4" />,
@@ -163,7 +163,7 @@ export default function AustraliaDocsJa() {
             { icon: FileText, title: 'PSA出生証明書', description: 'パートナービザ・永住権申請の基本書類。DFAアポスティーユ付きで手配', accent: 'gold' },
             { icon: ShieldCheck, title: 'CENOMAR', description: '独身証明書。Home Affairsへの配偶者関係証明に必要', accent: 'blue' },
             { icon: CheckCircle, title: 'NBI Clearance', description: '無犯罪証明書。永住権・市民権申請で要求されることが多い', accent: 'green' },
-            { icon: Stamp, title: 'DFAアポスティーユ', description: 'ハーグ条約加盟国への提出に必要な外務省認証', accent: 'teal' },
+            { icon: Stamp, title: 'DFAアポスティーユ', description: '提出先の現行要件で必要な場合のみ手配', accent: 'teal' },
             { icon: Plane, title: 'パートナービザ（820/801）', description: 'オンショアパートナービザ。CENOMAR・PSA出生証明書が必要', accent: 'purple' },
             { icon: Globe, title: '永住権（PR）', description: 'NBI Clearance・PSA書類一式をDFAアポスティーユ付きで対応', accent: 'gold' },
           ]}
@@ -196,8 +196,8 @@ export default function AustraliaDocsJa() {
 
       <FaqSection
         items={[
-          { q: 'オーストラリアビザ申請にはDFAアポスティーユが必要ですか？', a: 'はい。オーストラリアはハーグ条約加盟国です。Department of Home Affairsへの提出には、PSA出生証明書・CENOMAR・NBI ClearanceにDFAアポスティーユ認証が必要です。' },
-          { q: 'オーストラリアのパートナービザ（820/801）に必要な書類は？', a: 'CENOMAR・PSA出生証明書（DFAアポスティーユ付き）が基本です。NBI Clearanceが必要な場合もあります。ビザサブクラスによって異なるため、無料相談でご確認します。' },
+          { q: 'オーストラリアビザ申請にはDFAアポスティーユが必要ですか？', a: '一律必須ではありません。ハーグ条約加盟は、必要な場合の認証方法を定めるもので、Home Affairsの全書類にアポスティーユを義務付けるものではありません。' },
+          { q: 'オーストラリアのパートナービザ（820/801）に必要な書類は？', a: '必要書類はビザサブクラスと事情によって異なります。PSA民事書類や警察証明書を求められる場合がありますが、認証は現行要件で必要な場合だけ手配します。' },
           { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユ・オーストラリアへの国際郵送をまとめた料金でご案内します。無料相談後に正確な金額をご提示します。' },
           { q: 'オーストラリアへの郵送にどのくらいかかりますか？', a: '目安は全体で約4〜6週間です。書類準備後、DHLエクスプレスでオーストラリアへ3〜5営業日でお届けします。' },
         ]}
