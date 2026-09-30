@@ -10,8 +10,8 @@ import { SEO_YEAR, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 
 export default function PricingEn() {
   useMeta(
-    `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
-    `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille, including the US$1,249 three-applicant family package.`,
+    `Pricing [${SEO_YEAR_MONTH_EN}] | PSA, NBI & PRC Service`,
+    `View ${SEO_YEAR} pricing for PSA, NBI and PRC documents. PRC retrieval with DFA Apostille and DHL starts at US$399 for one document or US$499 for two.`,
   );
   return (
     <PageLayout
@@ -65,12 +65,12 @@ export default function PricingEn() {
     >
       <HeroBanner
         title="Pricing"
-        subtitle="All-inclusive pricing: PSA retrieval, DFA Apostille, and DHL shipping — quoted together with no hidden fees."
+        subtitle="All-inclusive pricing for PSA, NBI and PRC document retrieval, authentication, and DHL shipping."
         badges={['No hidden fees', 'Free quote', 'Free cancellation before start']}
         ctaText="Get a Free Quote"
         ctaHref="#contact"
         ctaService="Pricing inquiry"
-        lastUpdated="September 19, 2026"
+        lastUpdated="September 30, 2026"
       />
 
       <CtaBox
@@ -81,6 +81,28 @@ export default function PricingEn() {
         variant="primary"
         trustNote="No commitment required — free cancellation at quote stage"
       />
+
+      {/* PRC document package */}
+      <section className="mb-8">
+        <div className="mb-4">
+          <p className="text-xs font-bold uppercase tracking-wider text-primary mb-1">Overseas employment and licensing</p>
+          <h2 className="text-xl font-bold text-secondary">PRC Retrieval + DFA Apostille + DHL</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">For Good Standing, Board Rating, Passing, and other eligible PRC professional records.</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <p className="text-xs font-bold text-primary mb-2">ONE PRC DOCUMENT</p>
+            <p className="text-3xl font-extrabold text-primary">US$399</p>
+            <p className="text-xs text-gray-500 mt-1">PRC retrieval, DFA Apostille, and DHL included</p>
+          </div>
+          <div className="rounded-2xl border border-secondary/20 bg-white p-5 md:p-6">
+            <p className="text-xs font-bold text-secondary mb-2">TWO-DOCUMENT PACKAGE</p>
+            <p className="text-3xl font-extrabold text-primary">US$499</p>
+            <p className="text-xs text-gray-500 mt-1">Same applicant and delivery address</p>
+          </div>
+        </div>
+        <p className="mt-3 text-xs text-gray-500 leading-relaxed">Original PIC/COR retrieval, special authorization, or embassy legalization is quoted separately before work begins. <a href="/en/prc-professional-documents/" className="font-semibold text-secondary underline underline-offset-2">View PRC service details</a>.</p>
+      </section>
 
       {/* DFA e-Apostille online payment assistance */}
       <section className="mb-8">
