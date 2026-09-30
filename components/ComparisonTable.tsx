@@ -55,6 +55,9 @@ function ComparisonTableBase({
           <h2 className="text-xl md:text-2xl font-bold text-secondary tracking-tight">{heading}</h2>
         </div>
       )}
+      <p className="sm:hidden text-xs text-gray-400 mb-1.5 text-right" aria-hidden="true">
+        表は横にスクロールできます →
+      </p>
       <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-card">
       <div className="min-w-[480px]" role="table" aria-label={heading ?? '比較表'}>
         {/* ヘッダー */}
