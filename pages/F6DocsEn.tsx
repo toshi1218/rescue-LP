@@ -19,7 +19,7 @@ export default function F6DocsEn() {
     },
     {
       q: "Does every document need Apostille?",
-      a: "Yes. Philippine documents submitted to Korean authorities generally require DFA Apostille authentication. This applies to PSA Birth Certificate, CENOMAR, and NBI Clearance.",
+      a: "Not necessarily every document. Use the current Korean mission or immigration checklist for the specific F-6 case. If PSA authentication is requested, DFA issues an electronic e-Apostille; eligible NBI documents use the physical route.",
     },
     {
       q: "What happens if the F-6 application is rejected?",
@@ -122,14 +122,14 @@ export default function F6DocsEn() {
             title: 'PSA Birth Certificate',
             en: 'PSA Birth Certificate',
             org: 'PSA (Philippine Statistics Authority)',
-            desc: 'The official document certifying birth in the Philippines. Required as a base document for the F-6 application. DFA Apostille authentication is required for Korean submission.',
+            desc: 'The official document certifying birth in the Philippines. Prepare it, and an electronic DFA Apostille, when identified by the current F-6 checklist.',
             note: null,
           },
           {
             title: 'CENOMAR',
             en: 'Certificate of No Marriage Record',
             org: 'PSA (Philippine Statistics Authority)',
-            desc: 'Certifies that no marriage record exists. Valid for approximately one year from issuance. DFA Apostille required for Korean submission.',
+            desc: 'Certifies that no marriage record exists. Confirm the acceptable issue date and whether electronic DFA Apostille is requested by the current Korean checklist.',
             note: 'For the F-6 visa, CENOMAR alone is not sufficient — you also need an LCCM from the Philippine Embassy in Seoul.',
           },
           {
@@ -143,7 +143,7 @@ export default function F6DocsEn() {
             title: 'DFA Apostille',
             en: 'DFA Apostille Authentication',
             org: 'DFA (Department of Foreign Affairs)',
-            desc: 'All Philippine documents submitted to Korean authorities require DFA Apostille authentication. We handle Apostille for all documents above.',
+            desc: 'We arrange authentication only for the documents identified by the current Korean mission or immigration checklist, using the electronic PSA route or applicable physical non-PSA route.',
             note: null,
           },
         ].map((doc) => (

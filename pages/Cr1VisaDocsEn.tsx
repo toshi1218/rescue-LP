@@ -13,8 +13,8 @@ import { SEO_YEAR } from '../lib/seoDate';
 
 export default function Cr1VisaDocsEn() {
   useMeta(
-    `CR-1 Visa Philippine Documents [${SEO_YEAR}] — PSA + Apostille for NVC`,
-    `CR-1/IR-1 spouse visa? Get PSA Marriage Certificate, Birth Certificate, NBI Clearance + DFA Apostille ready for NVC. We handle everything from abroad. Free quote.`,
+    `CR-1 Visa Philippine Documents [${SEO_YEAR}] — PSA & NBI for NVC`,
+    `CR-1/IR-1 spouse visa? We confirm the current NVC and Embassy checklist, then retrieve the specified PSA records and NBI Clearance.`,
   );
   return (
     <PageLayout
@@ -23,7 +23,7 @@ export default function Cr1VisaDocsEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'CR-1/IR-1 Spouse Visa Philippine Documents Retrieval Service',
-        description: 'We retrieve all Philippine documents required for a CR-1/IR-1 spouse visa — PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille. NVC-ready. Ships to USA via DHL.',
+        description: 'We retrieve the Philippine civil records and NBI Clearance specified by the current CR-1/IR-1 NVC and Embassy checklist.',
         url: 'https://ph-document.com/en/cr1-visa-documents/',
         provider: {
           '@type': 'Organization',
@@ -39,7 +39,7 @@ export default function Cr1VisaDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'CR-1/IR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+            description: 'CR-1/IR-1 document package — agreed documents and delivery',
           },
         },
         },
@@ -52,7 +52,7 @@ export default function Cr1VisaDocsEn() {
               name: 'What Philippine documents does NVC require for CR-1/IR-1?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Typically PSA Marriage Certificate, Birth Certificate, and NBI Clearance with DFA Apostille. Requirements may vary. We confirm for your specific case.',
+                text: 'The U.S. Embassy Manila checklist requires the applicable original PSA civil records and NBI Clearance. It does not list DFA Apostille as a universal requirement. We confirm the case and stage before processing.',
               },
             },
             {
@@ -60,7 +60,7 @@ export default function Cr1VisaDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.',
+                text: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents and delivery. Authentication is added only if specifically required.',
               },
             },
             {
@@ -85,7 +85,7 @@ export default function Cr1VisaDocsEn() {
     >
       <HeroBanner
         title="CR-1/IR-1 Spouse Visa: Philippine Documents Retrieved and Shipped to the USA"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Current U.S. Checklist', 'No Unnecessary Authentication', 'All-Inclusive Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -94,7 +94,7 @@ export default function Cr1VisaDocsEn() {
       <SummaryBlock
         conclusion="Filing a CR-1 or IR-1 spouse visa? We retrieve all Philippine documents NVC-ready and ship to your door."
         points={[
-          'PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille',
+          'PSA Marriage Certificate, Birth Certificate, and NBI Clearance as required by the current checklist',
           'Documents formatted for NVC submission requirements',
           'We verify what your specific case needs before starting',
           'All-inclusive pricing with DHL Express shipping to USA',
@@ -142,8 +142,8 @@ export default function Cr1VisaDocsEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided.',
+            title: 'Authentication only when required',
+            description: 'The current U.S. Embassy Manila checklist does not impose a universal DFA Apostille requirement. We add authentication only if specifically instructed.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -158,7 +158,7 @@ export default function Cr1VisaDocsEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your CR-1/IR-1 case status and your NVC submission or interview deadline.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles Marriage Certificate, Birth Certificate, NBI Clearance, and DFA Apostille.' },
+          { title: 'Processing in the Philippines', description: 'Our team retrieves the agreed PSA records and NBI Clearance in the format required for the application stage.' },
           { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
@@ -166,7 +166,7 @@ export default function Cr1VisaDocsEn() {
       <FaqSection
         items={[
           { q: 'What Philippine documents does NVC require for CR-1/IR-1?', a: 'Requirements depend on the case and stage. PSA Marriage and Birth Certificates and NBI Clearance may be requested. We confirm the current official checklist before processing.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents and delivery. Authentication is added only if specifically required.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.' },
         ]}
