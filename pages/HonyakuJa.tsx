@@ -9,8 +9,8 @@ import { CheckCircle, AlertTriangle, ArrowRight, FileText, Globe, Stamp, Clock }
 
 export default function HonyakuJa() {
   useMeta(
-    'フィリピン書類の日本語翻訳サービス｜1部¥7,700（税込）〜【IGRS】',
-    'PSA出生証明書・婚姻証明書・CENOMAR・NBI Clearanceなどフィリピンの公的書類を日本語に翻訳。役所・出入国在留管理庁・法務局への提出に対応。1部¥7,700（税込）、2部目以降は半額¥3,850（税込）。お急ぎ便あり。',
+    'フィリピン書類の日本語翻訳サービス｜1部¥15,000（税込）〜【IGRS】',
+    'PSA出生証明書・婚姻証明書・CENOMAR・NBI Clearanceなどフィリピンの公的書類を日本語に翻訳。役所・出入国在留管理庁・法務局への提出に対応。1部¥15,000（税込）、2部目以降は半額¥7,500（税込）。お急ぎ便あり。',
   );
 
   return (
@@ -36,16 +36,16 @@ export default function HonyakuJa() {
           {
             '@type': 'Offer',
             name: '1部目（1枚）',
-            price: '7700',
+            price: '15000',
             priceCurrency: 'JPY',
-            description: '税込価格（税抜 ¥7,000）',
+            description: '税込価格',
           },
           {
             '@type': 'Offer',
             name: '2部目以降（1枚あたり）',
-            price: '3850',
+            price: '7500',
             priceCurrency: 'JPY',
-            description: '税込価格（税抜 ¥3,500・半額）',
+            description: '税込価格（2部目以降・半額）',
           },
         ],
       }]}
@@ -53,11 +53,11 @@ export default function HonyakuJa() {
       <HeroBanner
         title="フィリピン書類の日本語翻訳"
         subtitle="PSA出生証明書・婚姻証明書・CENOMAR・NBI Clearanceなど、フィリピンの公的書類を日本語に翻訳します。役所・入管・法務局への提出にご利用いただけます。"
-        badges={['1部 ¥7,700（税込）', '納期 5営業日以内', '2部目以降は半額', 'お急ぎ便 +¥2,500']}
+        badges={['1部 ¥15,000（税込）', '納期 5営業日以内', '2部目以降は半額', 'お急ぎ便 +¥2,500']}
         ctaText="翻訳を相談する"
         ctaHref="#contact"
         ctaService="日本語翻訳"
-        lastUpdated="2026年6月13日"
+        lastUpdated="2026年9月28日"
       />
 
       {/* こんな方に向いています */}
@@ -114,19 +114,19 @@ export default function HonyakuJa() {
         <div className="rounded-2xl border border-primary/20 bg-primary/[0.03] p-6">
           <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">翻訳料金</p>
           <div className="flex items-baseline gap-2 mb-1">
-            <span className="text-4xl font-extrabold text-primary">¥7,700</span>
+            <span className="text-4xl font-extrabold text-primary">¥15,000</span>
             <span className="text-sm text-gray-500">〜（1部・税込）</span>
           </div>
-          <p className="text-xs text-gray-400 mb-5">税抜 ¥7,000 ＋ 消費税 ¥700</p>
+          <p className="text-xs text-gray-400 mb-5">明朗な税込料金</p>
 
           <div className="space-y-2.5 mb-5">
             <div className="flex items-center justify-between rounded-lg bg-white border border-gray-100 px-4 py-3">
               <span className="text-sm text-gray-700">1部目（1枚）</span>
-              <span className="text-sm font-bold text-secondary">¥7,000（税抜）／ <span className="text-primary">¥7,700（税込）</span></span>
+              <span className="text-sm font-bold text-primary">¥15,000（税込）</span>
             </div>
             <div className="flex items-center justify-between rounded-lg bg-white border border-gray-100 px-4 py-3">
               <span className="text-sm text-gray-700">2部目以降（1枚ごと）<span className="ml-1.5 inline-block rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-bold text-primary">半額</span></span>
-              <span className="text-sm font-bold text-secondary">¥3,500（税抜）／ <span className="text-primary">¥3,850（税込）</span></span>
+              <span className="text-sm font-bold text-primary">¥7,500（税込）</span>
             </div>
             <div className="flex items-center justify-between rounded-lg bg-amber-50 border border-amber-200 px-4 py-3">
               <span className="text-sm text-gray-700">お急ぎ便（5営業日より早く）</span>
@@ -144,11 +144,11 @@ export default function HonyakuJa() {
           <div className="rounded-lg bg-white border border-gray-100 p-4 mb-5">
             <p className="text-xs font-bold text-gray-500 mb-2">料金例（税込）</p>
             <ul className="space-y-1 text-sm text-gray-700">
-              <li className="flex justify-between"><span>1枚</span><span className="font-semibold">¥7,700</span></li>
-              <li className="flex justify-between"><span>2枚（¥7,700 + ¥3,850）</span><span className="font-semibold">¥11,550</span></li>
-              <li className="flex justify-between"><span>3枚（¥7,700 + ¥3,850×2）</span><span className="font-semibold">¥15,400</span></li>
+              <li className="flex justify-between"><span>1枚</span><span className="font-semibold">¥15,000</span></li>
+              <li className="flex justify-between"><span>2枚（¥15,000 + ¥7,500）</span><span className="font-semibold">¥22,500</span></li>
+              <li className="flex justify-between"><span>3枚（¥15,000 + ¥7,500×2）</span><span className="font-semibold">¥30,000</span></li>
             </ul>
-            <p className="text-xs text-gray-400 mt-2">2部目以降は1枚増えるごとに ¥3,850（税込）が加算されます。</p>
+            <p className="text-xs text-gray-400 mt-2">2部目以降は1枚増えるごとに ¥7,500（税込）が加算されます。</p>
           </div>
 
           <a
@@ -171,7 +171,7 @@ export default function HonyakuJa() {
           },
           {
             title: 'お見積もり',
-            description: '枚数とお急ぎ希望の有無に応じて料金をご案内します。1部目¥7,700、2部目以降¥3,850（いずれも税込）が基本です。',
+            description: '枚数とお急ぎ希望の有無に応じて料金をご案内します。1部目¥15,000、2部目以降¥7,500（いずれも税込）が基本です。',
           },
           {
             title: '日本語翻訳の作成',

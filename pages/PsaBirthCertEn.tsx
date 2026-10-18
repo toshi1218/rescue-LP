@@ -35,10 +35,10 @@ export default function PsaBirthCertEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '249',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '249',
             priceCurrency: 'USD',
             description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
@@ -112,7 +112,7 @@ export default function PsaBirthCertEn() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">All-Inclusive Price</dt>
-              <dd className="font-medium text-gray-800">USD $349</dd>
+              <dd className="font-medium text-gray-800">USD $249</dd>
               <dd className="text-gray-400 text-xs mt-1">PSA + DFA Apostille + DHL shipping</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
@@ -129,7 +129,7 @@ export default function PsaBirthCertEn() {
               { label: 'PSA Birth Certificate retrieval', price: 'included' },
               { label: 'DFA Apostille authentication', price: 'included' },
               { label: 'DHL international shipping (tracked)', price: 'included' },
-              { label: 'Total (all-inclusive)', price: 'USD $349', bold: true },
+              { label: 'Total (all-inclusive)', price: 'USD $249', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -185,11 +185,11 @@ export default function PsaBirthCertEn() {
 
       <CtaBox
         title="Three family members applying together?"
-        description="Our US$1,249 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment."
+        description="Our US$999 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment."
         buttonText="View the 3-Applicant Package"
         href="/en/family-psa-nbi-package/"
         variant="primary"
-        trustNote="US$1,249 total · Two payments of US$624.50"
+        trustNote="US$999 total · Two payments of US$499.50"
       />
 
       <FeatureList

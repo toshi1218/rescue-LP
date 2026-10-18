@@ -34,12 +34,12 @@ export default function NbiHitEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '399',
+          price: '299',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '399',
+            price: '299',
             priceCurrency: 'USD',
-            description: 'NBI retrieval + HIT resolution support + DFA Apostille + DHL worldwide (all-inclusive)',
+            description: 'Standard NBI retrieval + DFA Apostille + DHL worldwide. Complex HIT, derogatory records, discrepancies, and remedial work are quoted before processing.',
           },
         },
         },

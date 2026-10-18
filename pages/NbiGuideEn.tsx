@@ -35,10 +35,10 @@ export default function NbiGuideEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '399',
+          price: '299',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '399',
+            price: '299',
             priceCurrency: 'USD',
             description: 'NBI retrieval + DFA Apostille + DHL shipping worldwide (renewal cases)',
           },
@@ -53,7 +53,7 @@ export default function NbiGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'All-inclusive from US$399 (NBI retrieval + DFA Apostille + DHL shipping). HIT resolution is included at no extra charge. See our Pricing page for the full breakdown.',
+                text: 'Standard cases are US$299 all-inclusive for NBI retrieval, DFA Apostille, and DHL shipping. Complex HIT, derogatory records, discrepancies, or remedial work are quoted before processing.',
               },
             },
             {
@@ -102,7 +102,7 @@ export default function NbiGuideEn() {
         conclusion="You can obtain Philippine NBI Clearance while abroad. The required route depends on whether this is a renewal or a first-time application."
         points={[
           'Eligibility: 2014+ renewals with no personal-information changes can usually be handled remotely; first-time applicants need embassy or consulate fingerprints',
-          'Price: from US$399 all-in for NBI retrieval, DFA Apostille, and worldwide DHL shipping',
+          'Price: US$299 all-in for standard NBI retrieval, DFA Apostille, and worldwide DHL shipping',
           'Timeline: approximately 4–6 weeks; HIT cases may take longer',
           'Prepare: passport or ID, current address, purpose of use, and prior NBI details if available',
         ]}
@@ -142,11 +142,11 @@ export default function NbiGuideEn() {
 
       <CtaBox
         title="Three family members applying together?"
-        description="Our US$1,249 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment."
+        description="Our US$999 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment."
         buttonText="View the 3-Applicant Package"
         href="/en/family-psa-nbi-package/"
         variant="primary"
-        trustNote="US$1,249 total · Two payments of US$624.50"
+        trustNote="US$999 total · Two payments of US$499.50"
       />
 
       <FeatureList
@@ -210,7 +210,7 @@ export default function NbiGuideEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'All-inclusive from US$399 (NBI retrieval + DFA Apostille + DHL shipping). HIT resolution is included at no extra charge. See our Pricing page for the full breakdown.' },
+          { q: 'How much does it cost?', a: 'Standard cases are US$299 all-inclusive for NBI retrieval, DFA Apostille, and DHL shipping. Complex HIT, derogatory records, discrepancies, or remedial work are quoted before processing.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: NBI takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'What if the NBI result shows a HIT?', a: 'A HIT means a record was found in the NBI database. This requires separate handling. Share your situation and we will advise on next steps.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },

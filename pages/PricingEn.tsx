@@ -11,7 +11,7 @@ import { SEO_YEAR, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function PricingEn() {
   useMeta(
     `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
-    `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille, including the US$1,249 three-applicant family package.`,
+    `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille, including the US$999 three-applicant family package.`,
   );
   return (
     <PageLayout
@@ -157,7 +157,7 @@ export default function PricingEn() {
               <li>· PSA, DFA, embassy, or other relevant inquiries</li>
               <li>· Written progress updates and final findings</li>
             </ul>
-            <p className="text-2xl font-extrabold text-amber-700">From US$399</p>
+            <p className="text-2xl font-extrabold text-amber-700">From US$449</p>
             <p className="text-xs text-gray-500 mt-1">Prepaid · usually 2–3 weeks</p>
             <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
               Ask About a Special Case

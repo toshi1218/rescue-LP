@@ -35,10 +35,10 @@ export default function NbiClearanceOverseasEn() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'USD',
-            price: '399',
+            price: '299',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '399',
+              price: '299',
               priceCurrency: 'USD',
               description: 'NBI retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
             },
@@ -161,11 +161,11 @@ export default function NbiClearanceOverseasEn() {
 
       <CtaBox
         title="Three family members applying together?"
-        description="Our US$1,249 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment."
+        description="Our US$999 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment."
         buttonText="View the 3-Applicant Package"
         href="/en/family-psa-nbi-package/"
         variant="primary"
-        trustNote="US$1,249 total · Two payments of US$624.50"
+        trustNote="US$999 total · Two payments of US$499.50"
       />
 
       <StepList
