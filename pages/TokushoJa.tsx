@@ -16,27 +16,71 @@ export default function TokushoJa() {
         badges={['法的表記', 'IGRS Inc.']}
         ctaText="お問い合わせはこちら"
         ctaHref="/ja/contact"
-        lastUpdated="2026年5月15日"
+        lastUpdated="2026年9月29日"
       />
 
       <div className="max-w-2xl">
 
         <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-soft">
           {([
+            { label: 'サービス名（屋号）', value: 'フィリピン書類取得代行センター' },
             { label: '販売業者', value: '株式会社IGRS（英語表記: IGRS Inc.）' },
-            { label: '代表者', value: '請求があり次第、遅滞なく開示いたします' },
-            { label: '所在地', value: '和歌山県和歌山市（詳細は請求があり次第、遅滞なく開示いたします）' },
-            { label: '電話番号', value: '当社はメールのみで対応しています。電話番号の開示をご希望の場合は、メールにてご連絡ください。' },
+            { label: '法人番号', value: '2170001016118' },
+            { label: '代表者', value: '五十嵐 俊之' },
+            { label: '所在地', value: '〒640-8323 和歌山県和歌山市新高町2番13号' },
+            { label: '営業所', value: 'フィリピン共和国 セブ州 セブ市' },
+            {
+              label: '電話番号',
+              value: (
+                <>
+                  <a href="tel:+818094705254" className="text-primary hover:underline font-medium">
+                    080-9470-5254
+                  </a>
+                  （国際: +81-80-9470-5254）
+                  <br />
+                  お問い合わせはメールまたはLINEでの受付を推奨しています。
+                </>
+              ),
+            },
             { label: 'メールアドレス', value: null },
             { label: 'ウェブサイト', value: 'https://ph-document.com/' },
             { label: 'サービス内容', value: 'フィリピン公的書類取得代行（PSA出生証明書・婚姻証明書・CENOMAR・NBI Clearance・DFAアポスティーユ等）' },
-            { label: '販売価格', value: 'サービス内容により異なります。詳細はお問い合わせ・お見積もりをご依頼ください。目安は料金ページをご確認ください。' },
+            {
+              label: '販売価格',
+              value: (
+                <>
+                  ¥30,000〜¥132,500（すべて税込）。主なプランは次のとおりです。
+                  <br />
+                  ・PSA e-Certificate取得代行 ¥30,000
+                  <br />
+                  ・CENOMAR単品／PSA出生証明書単品 ¥30,000〜（e-Apostille込み ¥40,000／フルセット ¥55,000）
+                  <br />
+                  ・DFAアポスティーユのみ（書類持込み） ¥39,000〜（DHL込み）
+                  <br />
+                  ・外免切替サポート（LTO書類） ¥49,500（DHL込み）
+                  <br />
+                  ・国際結婚準備パック（電子版） ¥65,000
+                  <br />
+                  ・国際結婚準備パック／配偶者ビザ準備書類パック 各 ¥80,000（DHL込み）
+                  <br />
+                  ・帰化申請書類パック ¥132,500（DHL込み）
+                  <br />
+                  ・行政・領事手続きサポート ¥33,000／1案件、特殊案件の取得可否調査 ¥55,000〜
+                  <br />
+                  全プランの内訳・納期は{' '}
+                  <a href="/ja/ryokin/" className="text-primary hover:underline font-medium">
+                    料金ページ
+                  </a>
+                  {' '}に掲載しています。個別案件は着手前に金額をご案内し、ご承認をいただいてから進めます。
+                </>
+              ),
+            },
             { label: '追加費用', value: 'なし（ご案内した金額以外の費用は発生しません）' },
             { label: '支払い方法', value: 'クレジットカード（Visa・Mastercard・American Express・Apple Pay・Google Pay）、銀行振込' },
             { label: '支払い時期', value: '着手時50%（入金確認後にサービス開始）、書類写し確認後に残金50%の2回払い' },
             { label: 'サービス提供時期', value: '入金確認後、順次対応開始。書類取得・認証・国際配送を含め全体で4〜6週間が目安（フィリピン政府機関の処理状況により変動）' },
             { label: 'キャンセル・返金', value: '着手前：全額返金。着手後・書類未取得：実費（PSA手数料等）を除いて返金。書類取得後・写し送付前：実費＋作業費を除いて返金。DHL発送後：返金不可。' },
-          ] as { label: string; value: string | null }[]).map(({ label, value }, i, arr) => (
+          ] as { label: string; value: React.ReactNode }[]).map(({ label, value }, i, arr) => (
             <div
               key={label}
               className={`flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-0 px-6 py-4 ${
@@ -58,9 +102,9 @@ export default function TokushoJa() {
         </div>
 
         <div className="mt-6 rounded-2xl bg-secondary/[0.03] border border-secondary/10 p-6">
-          <h2 className="text-sm font-bold text-secondary mb-3">開示請求・お問い合わせ</h2>
+          <h2 className="text-sm font-bold text-secondary mb-3">本表記に関するお問い合わせ</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
-            「代表者名」「所在地詳細」「電話番号」の開示をご希望の場合、または本表記に関するお問い合わせは、下記メールアドレスまでご連絡ください。遅滞なくご回答いたします。
+            本表記の内容に関するご質問、記載事項の詳細についてのご確認は、下記メールアドレスまでご連絡ください。遅滞なくご回答いたします。
           </p>
           <p className="mt-3 text-sm">
             <a href="mailto:igrs20200601@gmail.com" className="text-primary hover:underline font-medium">
