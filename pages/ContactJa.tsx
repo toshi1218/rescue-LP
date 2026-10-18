@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
-import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
+import { getCtaVariant, getTrafficSource, trackEvent, createInquiryFormData, trackInquirySuccess } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
 import { notifySlack } from '../lib/notifyApi';
 import { isValidEmail } from '../lib/validation';
@@ -130,7 +130,7 @@ export default function ContactJa() {
           setSubmitting(true);
           setSubmitError('');
           try {
-            const formData = new FormData(e.currentTarget);
+            const formData = createInquiryFormData(e.currentTarget);
             notifySlack('ja', formData);
             const res = await fetch(WEB3FORMS_ENDPOINT, {
               method: 'POST',
@@ -139,7 +139,7 @@ export default function ContactJa() {
             });
             const data = await res.json();
             if (res.ok && data.success) {
-              trackEvent('form_submit_success', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
+              trackInquirySuccess(formData, { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
               setSubmitted(true);
             } else {
               setSubmitError('送信に失敗しました。しばらく経ってから再度お試しください。');
