@@ -9,13 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR } from '../lib/seoDate';
+import { SEARCH_PAGE_META } from '../lib/searchPageMeta';
 
 export default function PsaCostEn() {
-  useMeta(
-    `PSA Birth Certificate Cost [${SEO_YEAR}]: Official Fees & Total from Abroad`,
-    'A PSA birth certificate costs ₱155 at a PSA outlet or ₱365 through PSAHelpline domestic online delivery. International format, authentication, and delivery costs depend on the route and receiving authority.',
-  );
+  const meta = SEARCH_PAGE_META['/en/psa-birth-certificate-cost/'];
+  useMeta(meta.title, meta.description);
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'PSA Birth Certificate Cost' }]}
@@ -104,7 +102,7 @@ export default function PsaCostEn() {
         badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="August 18, 2026"
+        lastUpdated="October 18, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
@@ -113,26 +111,41 @@ export default function PsaCostEn() {
 
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Full Cost Breakdown</h2>
-          <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
-            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
-              <div className="px-4 py-3 font-bold">Item</div>
-              <div className="px-4 py-3 font-bold text-center">Cost</div>
-            </div>
-            {[
-              { label: 'PSA outlet certificate fee', price: '₱155 / copy' },
-              { label: 'PSAHelpline online domestic delivery', price: '₱365 / copy' },
-              { label: 'DFA authentication', price: 'depends on route' },
-              { label: 'International delivery', price: 'depends on route' },
-              { label: 'Our all-inclusive service price', price: 'USD $349', bold: true },
-            ].map((row, i) => (
-              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
-                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
-                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
-              </div>
-            ))}
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Order directly or use our service?</h2>
+          <p className="text-sm text-gray-600 mb-4">These are alternative routes, not fees to add together. PSA certificate fees and our managed service package cover different work.</p>
+          <div className="overflow-x-auto rounded-xl border border-gray-100 shadow-sm text-sm">
+            <table className="w-full min-w-[540px] text-left">
+              <caption className="sr-only">PSA direct ordering compared with the IGRS service package</caption>
+              <thead className="bg-secondary text-white">
+                <tr>
+                  <th scope="col" className="px-4 py-3">Route</th>
+                  <th scope="col" className="px-4 py-3">Price and scope</th>
+                  <th scope="col" className="px-4 py-3">What you arrange</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100 text-gray-700">
+                <tr>
+                  <th scope="row" className="px-4 py-3 font-semibold">PSA outlet</th>
+                  <td className="px-4 py-3">₱155 per copy: certificate issuance</td>
+                  <td className="px-4 py-3">Appointment, eligible applicant or representative, collection, and any authentication or delivery</td>
+                </tr>
+                <tr className="bg-gray-50/60">
+                  <th scope="row" className="px-4 py-3 font-semibold">PSAHelpline direct order</th>
+                  <td className="px-4 py-3">₱365 per copy with domestic delivery. International-order shipping is additional.</td>
+                  <td className="px-4 py-3">Your application, identity checks, payment, and any required authentication</td>
+                </tr>
+                <tr>
+                  <th scope="row" className="px-4 py-3 font-semibold">IGRS managed service</th>
+                  <td className="px-4 py-3"><strong className="text-primary">US$349 standard package</strong>: retrieval, required DFA authentication, and DHL when a physical document is needed</td>
+                  <td className="px-4 py-3">Provide the applicant's identity documents, authorization, destination, and submission requirements. We confirm eligibility and the full scope before payment.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <p className="text-xs text-gray-500 mt-2">PSA and DFA routes change by document format and destination. We confirm the receiving authority's requirement before quoting.</p>
+          <p className="text-xs text-gray-500 mt-2 sm:hidden">Swipe sideways to compare all columns.</p>
+          <p className="text-xs text-gray-500 mt-3">Order directly if you only need a certificate and can complete the application yourself. Ask us for help if you need format checks, local coordination, authentication, or overseas delivery. IGRS is an independent service, not PSA; paying an agent is optional.</p>
+          <p className="text-xs text-gray-500 mt-2">Government, embassy, correction, and exceptional-case requirements vary. Any work outside the agreed package is quoted before you commit.</p>
+          <p className="text-xs text-gray-500 mt-2">Direct-order references: <a className="text-primary underline" href="https://psahelpline.ph/psa-online" target="_blank" rel="noopener noreferrer">domestic service</a> · <a className="text-primary underline" href="https://psahelpline.ph/faq/International-Order" target="_blank" rel="noopener noreferrer">international service and shipping</a>.</p>
         </SectionDivider>
       </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Send, Mail } from 'lucide-react';
-import { trackEvent } from '../lib/analytics';
+import { trackEvent, createInquiryFormData, trackInquirySuccess } from '../lib/analytics';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
@@ -27,14 +27,15 @@ const FooterKo: React.FC = () => {
     setSubmitError('');
     const purpose = (e.currentTarget.elements.namedItem('purpose') as HTMLSelectElement)?.value ?? '';
     try {
+      const formData = createInquiryFormData(e.currentTarget);
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
-        body: new FormData(e.currentTarget),
+        body: formData,
         headers: { Accept: 'application/json' },
       });
       const data = await res.json();
       if (res.ok && data.success) {
-        trackEvent('form_submit_success', { location: 'footer_ko', type: 'web3forms', lang: 'ko', service: purpose, page_path: window.location.pathname });
+        trackInquirySuccess(formData, { location: 'footer_ko', type: 'web3forms', lang: 'ko', service: purpose, page_path: window.location.pathname });
         setSubmitted(true);
       } else {
         trackEvent('form_submit_error', { location: 'footer_ko', type: 'web3forms', lang: 'ko' });
