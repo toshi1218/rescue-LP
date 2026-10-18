@@ -11,7 +11,7 @@ import { Info } from 'lucide-react';
 export default function PricingJa() {
   useMeta(
     `料金一覧${SEO_TITLE_BADGE_JA}料金・追加請求なし｜フィリピン書類取得代行`,
-    'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユ・国際郵送をまとめた料金。後から追加請求なし。無料見積もり受付中。',
+    'CENOMAR・PSA・NBI・PRC・DFAアポスティーユの代行料金一覧。PRC証明書は1通55,000円、2通72,000円。国際送料込み。',
   );
   return (
     <PageLayout
@@ -32,12 +32,12 @@ export default function PricingJa() {
     >
       <HeroBanner
         title="料金"
-        subtitle="PSA電子版のみ／紙原本＋DHLは各¥30,000、e-Apostille付き電子版¥40,000、フルセット¥55,000。2通セットも明確な総額でご案内します。"
+        subtitle="PSAフルセット¥55,000、PRC証明書1通¥55,000・2通¥72,000。取得・認証・国際配送を明確な総額でご案内します。"
         badges={['オンライン申請代行から対応', '無料お見積もり', '追加費用の後出しなし']}
         ctaText="無料でお見積もり"
         ctaHref="#contact"
         ctaService="料金のお見積もり"
-        lastUpdated="2026年9月3日"
+        lastUpdated="2026年9月30日"
       />
 
       <CtaBox
@@ -48,6 +48,28 @@ export default function PricingJa() {
         variant="primary"
         trustNote="追加費用が出る場合は事前にご相談します"
       />
+
+      {/* PRC証明書取得・認証パッケージ */}
+      <section className="mb-8">
+        <div className="mb-4">
+          <p className="text-xs font-bold tracking-wider text-primary mb-1">海外就労・資格登録</p>
+          <h2 className="text-xl font-bold text-secondary">PRC証明書取得＋DFAアポスティーユ＋DHL</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">Good Standing、Board Rating、Passingなどを、PRCでの取得から認証・海外発送まで一括対応します。</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+            <p className="text-xs font-bold text-primary mb-2">PRC証明書 1通</p>
+            <p className="text-3xl font-extrabold text-primary">¥55,000</p>
+            <p className="text-xs text-gray-500 mt-1">税込・DFAアポスティーユ・DHL送料込み</p>
+          </div>
+          <div className="rounded-2xl border border-secondary/20 bg-white p-5 md:p-6">
+            <p className="text-xs font-bold text-secondary mb-2">PRC証明書 2通セット</p>
+            <p className="text-3xl font-extrabold text-primary">¥72,000</p>
+            <p className="text-xs text-gray-500 mt-1">税込・同一申請者・同一発送先</p>
+          </div>
+        </div>
+        <p className="mt-3 text-xs text-gray-500 leading-relaxed">PIC・COR原本の取寄せ、特殊な委任、大使館認証が必要な場合は事前に別途お見積もりします。<a href="/ja/prc-apostille/" className="font-semibold text-secondary underline underline-offset-2">PRCサービスの詳細を見る</a></p>
+      </section>
 
       {/* DFA e-Apostilleオンライン申請・支払い代行 */}
       <section className="mb-8">
