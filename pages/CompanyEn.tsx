@@ -82,7 +82,7 @@ export default function CompanyEn() {
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Contact</p>
-            <p>Email and WhatsApp. We do not offer phone-call support.</p>
+            <p>Email and WhatsApp are our preferred channels. Our phone number is listed on the <a href="/ja/tokusho/" className="text-primary hover:underline">Japan Specified Commercial Transactions Act notice</a>.</p>
           </div>
           <div>
             <p className="font-semibold text-secondary mb-1">Payment methods</p>

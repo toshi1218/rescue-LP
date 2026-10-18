@@ -100,7 +100,7 @@ export default function CompanyJa() {
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">連絡手段</p>
-              <p>Eメール・LINEで承っています。電話による受付は行っていません。</p>
+              <p>Eメール・LINEでの受付を推奨しています。電話番号は<a href="/ja/tokusho/" className="text-primary hover:underline">特定商取引法に基づく表記</a>に記載しています。</p>
             </div>
             <div>
               <p className="font-semibold text-secondary mb-1">お支払い方法</p>
