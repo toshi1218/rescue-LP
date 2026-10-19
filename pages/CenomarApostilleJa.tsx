@@ -38,10 +38,10 @@ export default function CenomarApostilleJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '55000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '55000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'CENOMAR e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
           },
@@ -56,7 +56,7 @@ export default function CenomarApostilleJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。',
+                text: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）40,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。',
               },
             },
             {
@@ -201,9 +201,9 @@ export default function CenomarApostilleJa() {
           </div>
           {[
             { label: 'CENOMAR e-Certificateのみ（電子納品）', price: '30,000円' },
-            { label: 'SECPA紙原本＋DHL（認証なし）', price: '30,000円' },
+            { label: 'SECPA紙原本＋DHL（認証なし）', price: '40,000円' },
             { label: 'e-Certificate＋DFA e-Apostille（電子納品）', price: '40,000円' },
-            { label: 'フルセット（電子版・e-Apostille・紙原本・DHL）', price: '55,000円', bold: true },
+            { label: 'フルセット（電子版・e-Apostille・紙原本・DHL）', price: '50,000円', bold: true },
           ].map((row, i) => (
             <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
               <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -237,7 +237,7 @@ export default function CenomarApostilleJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。' },
+          { q: '料金はいくらですか？', a: 'CENOMAR 1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）40,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。' },
           { q: 'CENOMARとDFAアポスティーユ、まとめて依頼できますか？', a: 'はい。PSA CENOMAR取得からDFA e-Apostilleまで一括で代行します。電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。' },
           { q: '日本の入管・役所には紙の原本でないと提出できませんか？', a: '原則として紙の原本＋DFAアポスティーユが必要です。PSAのオンライン電子版（e-Apostille）は日本の入管や市区町村役場では原則として受け付けられません。当社は紙の原本形式で対応します。' },
           { q: 'フィリピン人の方が日本在住でも取得できますか？', a: 'はい。フィリピン人の方がフィリピンにいなくても、現地スタッフが代理で手続きします。委任状等の書類が必要な場合は事前にご案内します。' },
