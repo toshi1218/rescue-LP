@@ -133,9 +133,9 @@ export default function SpouseVisaJa() {
             </div>
             {[
               { label: 'PSA書類1通：e-Certificateのみ', price: '30,000円' },
-              { label: 'PSA書類1通：紙原本＋DHL（認証なし）', price: '30,000円' },
+              { label: 'PSA書類1通：紙原本＋DHL（認証なし）', price: '40,000円' },
               { label: 'PSA書類1通：e-Apostille付き電子版', price: '40,000円' },
-              { label: 'PSA書類1通：フルセット', price: '55,000円' },
+              { label: 'PSA書類1通：フルセット', price: '50,000円' },
               { label: '出生証明書＋婚姻証明書：フルセット', price: '80,000円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
