@@ -33,10 +33,10 @@ export default function PsaMarriageCertJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '55000',
+          price: '50000',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '55000',
+            price: '50000',
             priceCurrency: 'JPY',
             description: 'PSA e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
           },
@@ -51,7 +51,7 @@ export default function PsaMarriageCertJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。',
+                text: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）40,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。',
               },
             },
             {
@@ -191,7 +191,7 @@ export default function PsaMarriageCertJa() {
 
       <FaqSection
         items={[
-          { q: '料金はいくらですか？', a: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）30,000円、e-Apostille付き電子版40,000円、フルセット55,000円です（すべて税込）。' },
+          { q: '料金はいくらですか？', a: 'PSA婚姻証明書1通は、e-Certificateのみ30,000円、SECPA紙原本＋DHL（認証なし）40,000円、e-Apostille付き電子版40,000円、フルセット50,000円です（すべて税込）。' },
           { q: 'いつ届きますか？', a: '電子版は約1週間、紙原本の国際発送が必要な場合は約3〜4週間が目安です。' },
           { q: '注釈付き（Annotated）の婚姻証明書は取れますか？', a: '対応可能です。アニュルメント後や外国離婚承認後の注釈付き書類も手配できます。まずは状況をお知らせください。' },
           { q: '急ぎの場合は対応できますか？', a: '可能です。提出期限をお知らせいただければ、優先対応の可否を確認してご案内します。' },

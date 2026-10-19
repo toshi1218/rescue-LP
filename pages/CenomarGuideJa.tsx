@@ -39,10 +39,10 @@ export default function CenomarGuideJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '55000',
+            price: '50000',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '55000',
+              price: '50000',
               priceCurrency: 'JPY',
               description: 'PSA CENOMAR e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
             },
@@ -127,7 +127,7 @@ export default function CenomarGuideJa() {
       <SummaryBlock
         conclusion="日本からフィリピンへ渡航せずにCENOMARを取得できます。提出先に合わせて電子版・紙原本・e-Apostilleの必要範囲を確認します。"
         points={[
-          '料金：電子版のみ30,000円／e-Apostille付き電子版40,000円／フルセット55,000円（税込）',
+          '料金：電子版のみ30,000円／e-Apostille付き電子版40,000円／フルセット50,000円（税込）',
           '納期：電子版は約1週間、紙原本のDHL配送は約3〜4週間',
           '必要資料：本人確認書類など。提出先と申請内容を確認後に個別案内',
           '有効期限：提出先によって異なり、婚姻関連手続きでは発行6ヶ月以内が一般的',
@@ -178,8 +178,8 @@ export default function CenomarGuideJa() {
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">フルセット料金（税込）</dt>
-              <dd className="font-medium text-gray-800">55,000円（DHL国際送料込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">電子版のみ／紙原本＋DHL（認証なし）は各30,000円</dd>
+              <dd className="font-medium text-gray-800">50,000円（DHL国際送料込み）</dd>
+              <dd className="text-gray-400 text-xs mt-1">電子版のみ30,000円／紙原本＋DHL（認証なし）40,000円</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -193,9 +193,9 @@ export default function CenomarGuideJa() {
             </div>
             {[
               { label: 'CENOMAR e-Certificateのみ（電子納品）', price: '30,000円' },
-              { label: 'SECPA紙原本＋DHL（認証なし）', price: '30,000円' },
+              { label: 'SECPA紙原本＋DHL（認証なし）', price: '40,000円' },
               { label: 'e-Certificate＋DFA e-Apostille（電子納品）', price: '40,000円' },
-              { label: 'フルセット（電子版・e-Apostille・紙原本・DHL）', price: '55,000円', bold: true },
+              { label: 'フルセット（電子版・e-Apostille・紙原本・DHL）', price: '50,000円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
