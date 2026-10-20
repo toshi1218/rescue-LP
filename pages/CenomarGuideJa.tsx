@@ -388,7 +388,7 @@ export default function CenomarGuideJa() {
           { href: '/ja/psa-shussei-shomeisho/', title: 'PSA出生証明書取得代行', description: '婚姻関連以外の基本書類もあわせて確認できます。' },
           { href: '/ja/cenomar-apostille/', title: 'CENOMARのアポスティーユ', description: '提出先に合わせてアポスティーユが必要か確認できます。' },
           { href: '/ja/apostille-ryokin/', title: 'アポスティーユの料金・費用', description: 'Regular・Express別の料金とPSA・CENOMAR別の費用内訳を確認できます。' },
-          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'Regular（4営業日）・Express（翌営業日）の違いと提出期限からの逆算を解説。' },
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'Regular（約5営業日）・Express（約3営業日）の違いと提出期限からの逆算を解説。' },
         ]}
       />
     </PageLayout>
