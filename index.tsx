@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { LanguageProvider } from './lib/i18n';
-import { reportWebVitals } from './lib/analytics';
+import { getAttribution, reportWebVitals } from './lib/analytics';
 import ErrorBoundary from './components/ErrorBoundary';
 import './styles.css';
 
@@ -12,6 +12,7 @@ if (!rootElement) {
   throw new Error("Could not find root element to mount to");
 }
 
+getAttribution(); // Capture the entry page before the first SPA navigation.
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
