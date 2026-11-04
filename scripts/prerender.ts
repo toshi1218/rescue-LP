@@ -549,8 +549,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille-processing-time/',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille-processing-time', 'index.html'),
-    title: 'DFA Apostille Processing Time: How Long It Takes in the Philippines',
-    description: `DFA processing time depends on the document and route. PSA e-Apostilles are handled online; eligible non-PSA documents may follow a physical process. Check your deadline before applying.`,
+    title: `DFA Apostille Processing Time [${SEO_YEAR}]: 5 Days Regular, 3 Days Express`,
+    description: 'DFA Apostille takes about 5 business days on Regular (₱100) or 3 business days on Express (₱200), counted from when DFA receives the document. Share your deadline and we will plan the start date.',
     canonical: `${BASE}/en/apostille-processing-time/`,
     lang: 'en',
     enCanonical: `${BASE}/en/apostille-processing-time/`,
@@ -641,8 +641,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille-fee/',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille-fee', 'index.html'),
-    title: `DFA Apostille Fee [${SEO_YEAR}] — Official Fee & Total Cost`,
-    description: `DFA e-Apostille costs ₱200 for an eligible PSA e-Certificate. Total service cost depends on document retrieval, the required authentication route, and delivery.`,
+    title: `DFA Apostille Fee [${SEO_YEAR}]: ₱100 Regular, ₱200 Express`,
+    description: 'DFA Apostille government fee: ₱100 per document on Regular (about 5 business days) or ₱200 on Express (about 3 business days). We quote the full total, including retrieval and delivery, upfront.',
     canonical: `${BASE}/en/apostille-fee/`,
     lang: 'en',
     enCanonical: `${BASE}/en/apostille-fee/`,
@@ -1121,8 +1121,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-shori-kikan/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-shori-kikan', 'index.html'),
-    title: `DFAアポスティーユの処理期間【${SEO_YEAR_MONTH_JA}】Regular 4営業日・Express 翌営業日`,
-    description: 'DFAアポスティーユの処理期間はRegular（4営業日）またはExpress（翌営業日）。申請から受け取りまでの流れ・費用の違い・提出期限から逆算したスケジュールの立て方を解説。',
+    title: `DFAアポスティーユの処理期間【${SEO_YEAR}年】Regular 5営業日・Express 3営業日`,
+    description: 'DFAアポスティーユの処理期間はRegular（約5営業日・100ペソ）またはExpress（約3営業日・200ペソ）。申請から受け取りまでの流れ・費用の違い・提出期限から逆算したスケジュールの立て方を解説。',
     canonical: `${BASE}/ja/apostille-shori-kikan/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/apostille-processing-time/`,
@@ -1286,8 +1286,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-ryokin/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
-    title: 'フィリピンDFAアポスティーユ料金｜公式手数料と代行総額',
-    description: 'DFAアポスティーユの政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
+    title: `DFAアポスティーユ料金【${SEO_YEAR}年】Regular 100ペソ・Express 200ペソ｜総額の目安`,
+    description: 'DFAアポスティーユの政府手数料はRegular 100ペソ（約5営業日）・Express 200ペソ（約3営業日）。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
     canonical: `${BASE}/ja/apostille-ryokin/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/apostille-fee/`,

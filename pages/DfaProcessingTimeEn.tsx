@@ -8,11 +8,12 @@ import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function DfaProcessingTimeEn() {
   useMeta(
-    'DFA Apostille Processing Time: How Long It Takes in the Philippines',
-    'DFA processing time depends on the document and route. PSA e-Apostilles are handled online; eligible non-PSA documents may follow a physical process. Check your deadline before applying.',
+    `DFA Apostille Processing Time [${SEO_YEAR}]: 5 Days Regular, 3 Days Express`,
+    'DFA Apostille takes about 5 business days on Regular (₱100) or 3 business days on Express (₱200), counted from when DFA receives the document. Share your deadline and we will plan the start date.',
   );
   return (
     <PageLayout
@@ -22,7 +23,7 @@ export default function DfaProcessingTimeEn() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'DFA Apostille Service — Timed for Your Visa Deadline',
-          description: 'DFA processing time depends on the document and route. PSA e-Apostilles are handled online, while eligible non-PSA documents may follow a physical process. We confirm the current timeline before you apply.',
+          description: 'DFA Apostille takes about 5 business days on Regular (₱100) or 3 business days on Express (₱200), counted from when DFA receives the document. Share your deadline and we will plan the start date.',
           url: 'https://ph-document.com/en/apostille-processing-time/',
           provider: {
             '@type': 'Organization',
@@ -51,7 +52,7 @@ export default function DfaProcessingTimeEn() {
               name: 'How long does DFA Apostille take?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'There is no single processing time for every document. PSA e-Apostilles are handled online, while eligible non-PSA documents may use a physical appointment process. Confirm the current route and timing before setting a deadline.',
+                text: 'DFA Apostille takes about 5 business days on Regular (₱100 per document) or 3 business days on Express (₱200 per document), counted from when DFA receives the document. Add document retrieval and delivery time when planning around a deadline.',
               },
             },
             {
@@ -59,7 +60,7 @@ export default function DfaProcessingTimeEn() {
               name: 'Can I request Express DFA Apostille processing?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Priority availability depends on the document type and current DFA process. Share your deadline and we will confirm whether any faster option is available.',
+                text: 'Yes. Express takes about 3 business days at ₱200 per document, versus about 5 business days at ₱100 on Regular. Share your deadline and we will confirm which one you need.',
               },
             },
             {
@@ -83,10 +84,10 @@ export default function DfaProcessingTimeEn() {
       />
 
       <SummaryBlock
-        conclusion="Processing time depends on the document type and authentication route. Confirm the current DFA process before planning around a deadline."
+        conclusion="DFA Apostille takes about 5 business days on Regular (₱100) or 3 business days on Express (₱200). We plan backward from your deadline."
         points={[
           'Physical-document processing times may differ from PSA e-Apostille processing',
-          'Priority options depend on the document type and current DFA availability',
+          'Regular: about 5 business days, ₱100 per document. Express: about 3 business days, ₱200 per document',
           'Total timeline includes source-document issuance, the applicable authentication route, and shipping only when a physical document is required',
           'Share your deadline and we will confirm if we can meet it',
         ]}
@@ -156,8 +157,8 @@ export default function DfaProcessingTimeEn() {
 
       <FaqSection
         items={[
-          { q: 'How long does DFA Apostille take?', a: 'Timing depends on the document and authentication route. PSA e-Apostille processing is electronic, while physical-document routes can have different schedules. Share your deadline and we will confirm the current process.' },
-          { q: 'Can I request priority handling?', a: 'Share your deadline and document type. We will confirm whether any priority option is available for the applicable route before you commit.' },
+          { q: 'How long does DFA Apostille take?', a: 'DFA Apostille takes about 5 business days on Regular (₱100 per document) or 3 business days on Express (₱200 per document), counted from when DFA receives the document. Add document retrieval and delivery time when planning around a deadline.' },
+          { q: 'Can I request priority handling?', a: 'Yes. Express takes about 3 business days at ₱200 per document, versus about 5 business days at ₱100 on Regular. Share your deadline and we will confirm which one you need.' },
           { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. The DFA Apostille application, PSA online application (when needed), and DHL shipping for physical documents are all included.' },
           { q: 'I am worried about missing my deadline', a: 'Share your deadline and we will confirm whether it is feasible. Starting early is the best way to stay on track.' },
         ]}

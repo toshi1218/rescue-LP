@@ -11,11 +11,12 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import { FileText, Stamp, CheckCircle, Clock, MessageSquare, Package } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function ApostilleFeeJa() {
   useMeta(
-    'フィリピンDFAアポスティーユ料金｜公式手数料と代行総額',
-    'DFAアポスティーユの政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
+    `DFAアポスティーユ料金【${SEO_YEAR}年】Regular 100ペソ・Express 200ペソ｜総額の目安`,
+    'DFAアポスティーユの政府手数料はRegular 100ペソ（約5営業日）・Express 200ペソ（約3営業日）。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
   );
   return (
     <PageLayout
@@ -102,8 +103,8 @@ export default function ApostilleFeeJa() {
           <p>まず、DFA（フィリピン外務省）自体に支払う「アポスティーユ認証の公式手数料」があります。これは処理区分によって異なり、目安は次のとおりです（現地の料金改定で変わることがあります）。</p>
           <div className="rounded-xl border border-gray-100 bg-gray-50 p-4">
             <ul className="space-y-2">
-              <li><strong>Regular（通常・数営業日）</strong>：1書類あたり<strong>100ペソ</strong></li>
-              <li><strong>Express（特急・より短い日数）</strong>：1書類あたり<strong>200ペソ</strong></li>
+              <li><strong>Regular（約5営業日）</strong>：1書類あたり<strong>100ペソ</strong></li>
+              <li><strong>Express（約3営業日）</strong>：1書類あたり<strong>200ペソ</strong></li>
             </ul>
           </div>
           <p>これはあくまでDFAに支払う政府手数料の部分です。実際に日本で書類を使うためには、この前後にPSA書類の取得費用・（海外からの場合）代行手数料・日本への国際郵送費が加わります。総額の内訳は次の項目もご覧ください。</p>
@@ -178,7 +179,7 @@ export default function ApostilleFeeJa() {
           steps={[
             { title: '書類の種類と提出先を共有', description: 'CENOMAR・PSA・NBI等の種類と、提出先（市役所・大使館・入管など）をお知らせください。アポスティーユが必要かどうかも確認します。' },
             { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めた料金をご案内します。' },
-            { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（4営業日）またはExpress（翌営業日）を状況に応じて選択します。' },
+            { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（約5営業日）またはExpress（約3営業日）を状況に応じて選択します。' },
             { title: '日本へ郵送・完了', description: '追跡付きでお届けします。紙原本は約3〜4週間が目安です。' },
           ]}
         />

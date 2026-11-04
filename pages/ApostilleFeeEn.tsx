@@ -12,8 +12,8 @@ import { SEO_YEAR } from '../lib/seoDate';
 
 export default function ApostilleFeeEn() {
   useMeta(
-    `DFA Apostille Fee [${SEO_YEAR}] — Official Fee & Total Cost`,
-    'DFA e-Apostille costs ₱200 for an eligible PSA e-Certificate. Total service cost depends on document retrieval, the required authentication route, and delivery.',
+    `DFA Apostille Fee [${SEO_YEAR}]: ₱100 Regular, ₱200 Express`,
+    'DFA Apostille government fee: ₱100 per document on Regular (about 5 business days) or ₱200 on Express (about 3 business days). We quote the full total, including retrieval and delivery, upfront.',
   );
   return (
     <PageLayout
@@ -22,7 +22,7 @@ export default function ApostilleFeeEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service — All-Inclusive Pricing',
-        description: 'DFA e-Apostille costs ₱200 for an eligible PSA e-Certificate. Total service cost depends on retrieval, the authentication route required by the receiving authority, and delivery.',
+        description: 'DFA Apostille government fee: ₱100 per document on Regular (about 5 business days) or ₱200 on Express (about 3 business days). We quote the full total, including retrieval and delivery, upfront.',
         url: 'https://ph-document.com/en/apostille-fee/',
         provider: {
           '@type': 'Organization',
@@ -51,7 +51,7 @@ export default function ApostilleFeeEn() {
               name: 'How much does DFA Apostille cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'The DFA e-Apostille government fee is ₱200 for an eligible PSA e-Certificate. Our service quote is separate and depends on document retrieval, the required route, and delivery.',
+                text: 'The DFA Apostille government fee is ₱100 per document on Regular (about 5 business days) or ₱200 per document on Express (about 3 business days). Our service quote is separate and depends on document retrieval, the required authentication route, and delivery.',
               },
             },
             {
@@ -93,7 +93,7 @@ export default function ApostilleFeeEn() {
       <SummaryBlock
         conclusion="DFA Apostille costs more than the government fee alone. We quote the real total upfront."
         points={[
-          'DFA e-Apostille government fee: ₱200 for an eligible PSA e-Certificate',
+          'DFA government fee: ₱100 Regular (about 5 business days) / ₱200 Express (about 3 business days)',
           'Our all-inclusive price covers DFA Apostille + document retrieval + DHL shipping',
           'No surprise add-ons after you commit',
           'Compare total costs across providers before deciding',
@@ -164,7 +164,7 @@ export default function ApostilleFeeEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does DFA Apostille cost?', a: 'The DFA e-Apostille government fee is ₱200 for an eligible PSA e-Certificate. Our service quote is separate and depends on retrieval, the required authentication route, and delivery.' },
+          { q: 'How much does DFA Apostille cost?', a: 'The DFA Apostille government fee is ₱100 per document on Regular (about 5 business days) or ₱200 per document on Express (about 3 business days). Our service quote is separate and depends on document retrieval, the required authentication route, and delivery.' },
           { q: 'Why is your price higher than some agencies?', a: 'Some agencies quote only the base fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.' },
           { q: 'Is Apostille always required?', a: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },

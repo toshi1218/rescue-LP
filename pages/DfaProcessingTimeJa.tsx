@@ -11,12 +11,12 @@ import SectionDivider from '../components/SectionDivider';
 import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function DfaProcessingTimeJa() {
   useMeta(
-    `DFAアポスティーユの処理期間【${SEO_YEAR_MONTH_JA}】Regular 4営業日・Express 翌営業日`,
-    'DFAアポスティーユの処理期間はRegular（4営業日）またはExpress（翌営業日）。申請から受け取りまでの流れ・費用の違い・提出期限から逆算したスケジュールの立て方を解説。',
+    `DFAアポスティーユの処理期間【${SEO_YEAR}年】Regular 5営業日・Express 3営業日`,
+    'DFAアポスティーユの処理期間はRegular（約5営業日・100ペソ）またはExpress（約3営業日・200ペソ）。申請から受け取りまでの流れ・費用の違い・提出期限から逆算したスケジュールの立て方を解説。',
   );
   return (
     <PageLayout
@@ -87,7 +87,7 @@ export default function DfaProcessingTimeJa() {
       />
 
       <SummaryBlock
-        conclusion="DFAアポスティーユの処理期間は通常4〜5営業日。提出予定日を考慮してスケジュールをご案内します。"
+        conclusion="DFAアポスティーユの処理期間はRegular約5営業日（100ペソ）・Express約3営業日（200ペソ）。提出予定日から逆算してスケジュールをご案内します。"
         points={[
           'DFAアポスティーユはRegular（通常5日程度）またはExpress（3日程度）で申請可能',
           'PSAの電子版は約1週間、紙原本の国際発送は約3〜4週間。NBI等の物理書類は案件により異なります',
