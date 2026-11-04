@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Send } from 'lucide-react';
-import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
+import { getCtaVariant, getTrafficSource, trackEvent, createInquiryFormData, trackInquirySuccess } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 import LineIcon from './icons/LineIcon';
 import WhatsAppIcon from './icons/WhatsAppIcon';
@@ -40,14 +40,15 @@ const Footer: React.FC = () => {
     setSubmitError('');
     try {
       const form = e.currentTarget;
+      const formData = createInquiryFormData(form);
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
-        body: new FormData(form),
+        body: formData,
         headers: { Accept: 'application/json' },
       });
       const data = await res.json();
       if (res.ok && data.success) {
-        trackEvent('form_submit_success', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, service, lang, page_path: window.location.pathname });
+        trackInquirySuccess(formData, { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, service, lang, page_path: window.location.pathname });
         setSubmitted(true);
       } else {
         trackEvent('form_submit_error', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, lang });

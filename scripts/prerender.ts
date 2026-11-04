@@ -21,6 +21,7 @@ import {
 } from '../lib/seoDate';
 import { COUNTRY_CONFIGS } from '../lib/countryConfig';
 import { enToJa } from '../lib/urlMap';
+import { SEARCH_PAGE_META } from '../lib/searchPageMeta';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
@@ -630,8 +631,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: Official Fees & Total from Abroad`,
-    description: `Official PSA fee: PHP 365/copy. Full price — retrieval, DFA Apostille & DHL Express: US$349 all-in, 4–6 weeks. No hidden fees. USA, UAE, Canada, UK & more.`,
+    ...SEARCH_PAGE_META['/en/psa-birth-certificate-cost/'],
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -1031,8 +1031,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar', 'index.html'),
-    title: `CENOMARとは？日本からの取得方法・有効期限・費用【${SEO_YEAR}年】`,
-    description: 'CENOMAR（フィリピン独身証明書）の意味、日本からの取得方法、有効期限、費用、e-Apostilleを解説。渡航不要・日本語で申請をサポート。',
+    ...SEARCH_PAGE_META['/ja/cenomar/'],
     canonical: `${BASE}/ja/cenomar/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -1087,8 +1086,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-clearance', 'index.html'),
-    title: `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
-    description: 'フィリピンNBI Clearance（無犯罪証明書）を渡航なしで取得代行。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。無料相談。',
+    ...SEARCH_PAGE_META['/ja/nbi-clearance/'],
     canonical: `${BASE}/ja/nbi-clearance/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/nbi-clearance/`,

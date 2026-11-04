@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Send, Mail, Clock, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageLayoutKo from '../components/PageLayoutKo';
-import { trackEvent } from '../lib/analytics';
+import { trackEvent, createInquiryFormData, trackInquirySuccess } from '../lib/analytics';
 import { notifySlack } from '../lib/notifyApi';
 import { isValidEmail } from '../lib/validation';
 import WhatsAppIcon from '../components/icons/WhatsAppIcon';
@@ -47,7 +47,7 @@ export default function ContactKo() {
     setSubmitting(true);
     setSubmitError('');
     try {
-      const formData = new FormData(e.currentTarget);
+      const formData = createInquiryFormData(e.currentTarget);
       notifySlack('ko', formData);
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
@@ -56,7 +56,7 @@ export default function ContactKo() {
       });
       const data = await res.json();
       if (res.ok && data.success) {
-        trackEvent('form_submit_success', { location: 'contact_page_ko', type: 'web3forms' });
+        trackInquirySuccess(formData, { location: 'contact_page_ko', type: 'web3forms' });
         setSubmitted(true);
       } else {
         setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
