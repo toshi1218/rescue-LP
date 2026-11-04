@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
 
 # Allow major AI crawlers explicitly
 User-agent: GPTBot
