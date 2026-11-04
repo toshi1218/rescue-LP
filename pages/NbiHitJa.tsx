@@ -38,12 +38,12 @@ export default function NbiHitJa() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'JPY',
-          price: '55000',
+          price: '49500',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '55000',
+            price: '49500',
             priceCurrency: 'JPY',
-            description: 'NBI取得・HIT対応・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: '標準的なNBI取得・DFAアポスティーユ・DHL国際郵送込み（税込）。複雑なHIT・記録不一致・追加調査は着手前に別途見積もり',
           },
         },
         },

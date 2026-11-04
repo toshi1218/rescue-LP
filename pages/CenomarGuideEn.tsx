@@ -36,7 +36,7 @@ export default function CenomarGuideEn() {
         estimatedCost: {
           '@type': 'MonetaryAmount',
           currency: 'USD',
-          value: '349',
+          value: '249',
         },
         step: [
           { '@type': 'HowToStep', name: 'Submit the Consultation Form', text: 'Share your visa type, the full name on the Philippine ID, and your target deadline. We confirm eligibility before anything starts.' },
@@ -60,10 +60,10 @@ export default function CenomarGuideEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '249',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '249',
             priceCurrency: 'USD',
             description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
           },
@@ -94,7 +94,7 @@ export default function CenomarGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'All-inclusive from US$349 (PSA retrieval + DFA Apostille + DHL shipping). No hidden fees. See our Pricing page for the full breakdown.',
+                text: 'All-inclusive from US$249 (PSA retrieval + DFA Apostille + DHL shipping). No hidden fees. See our Pricing page for the full breakdown.',
               },
             },
             {
@@ -198,7 +198,7 @@ export default function CenomarGuideEn() {
 
       <CtaBox
         title="Not Sure If You Need an Apostille?"
-        description="The required PSA and authentication format varies by authority and application stage. We confirm the current official checklist before you pay. All-inclusive from US$349."
+        description="The required PSA and authentication format varies by authority and application stage. We confirm the current official checklist before you pay. All-inclusive from US$249."
         buttonText="Ask Us for Free"
         href="#contact"
         variant="primary"
@@ -262,7 +262,7 @@ export default function CenomarGuideEn() {
         items={[
           { q: 'What does CENOMAR mean?', a: 'CENOMAR stands for Certificate of No Marriage Record. It is issued by the Philippine Statistics Authority (PSA) and certifies that a Filipino citizen has no marriage record on file in the Philippines — essentially proof of single status.' },
           { q: 'What is a CENOMAR used for?', a: 'CENOMAR may be requested to show that no marriage record was found for marriage, fiancé, spouse, or immigration procedures. The receiving authority’s current checklist controls.' },
-          { q: 'How much does it cost?', a: 'All-inclusive from US$349 (PSA retrieval + DFA Apostille + DHL shipping). No hidden fees. See our Pricing page for the full breakdown.' },
+          { q: 'How much does it cost?', a: 'All-inclusive from US$249 (PSA retrieval + DFA Apostille + DHL shipping). No hidden fees. See our Pricing page for the full breakdown.' },
           { q: 'How long does it take?', a: 'Full-service cases are commonly estimated at 4–6 weeks, but timing depends on the PSA record, required authentication, and whether a separate paper certificate must be shipped.' },
           { q: 'Can you handle rush orders?', a: 'Yes. Let us know your deadline and we will check if expedited processing is available.' },
           { q: 'Do I need a physical Apostille or is e-Apostille OK?', a: 'It depends on the destination and receiving authority. For PSA e-Certificates used in Apostille Convention countries, DFA currently issues an e-Apostille. We confirm the accepted route before processing.' },

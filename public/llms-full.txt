@@ -89,8 +89,8 @@
 
 | サービス | 日本向け料金 | 海外向け料金（USD） |
 |---|---|---|
-| PSA書類（出生証明書・CENOMAR・婚姻証明書）フルセット | ¥55,000〜 | US$349〜 |
-| NBI Clearance + アポスティーユ | ¥55,000〜 | US$399〜 |
+| PSA書類（出生証明書・CENOMAR・婚姻証明書）フルセット | ¥55,000〜 | US$249〜 |
+| NBI Clearance + アポスティーユ | ¥49,500〜 | US$299〜 |
 | LTO関連書類（外免切替） | ¥49,500 | US$330 |
 | PRC証明書取得・認証 | 書類・委任方法により個別見積もり | Case-specific quote |
 | 国際結婚準備パック（PSA出生証明書+CENOMAR+DFAアポスティーユ） | ¥80,000〜 | US$899〜 |
@@ -224,8 +224,8 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 
 | サービス | 日本向け料金 | 海外向け料金（USD） |
 |---|---|---|
-| PSA書類（出生証明書・CENOMAR・婚姻証明書）フルセット | ¥55,000〜 | US$349〜 |
-| NBI Clearance + DFAアポスティーユ | ¥55,000〜 | US$399〜 |
+| PSA書類（出生証明書・CENOMAR・婚姻証明書）フルセット | ¥55,000〜 | US$249〜 |
+| NBI Clearance + DFAアポスティーユ | ¥49,500〜 | US$299〜 |
 | LTO関連書類（外免切替用） + DFAアポスティーユ | ¥49,500 | US$330 |
 | 国際結婚準備パック（PSA出生証明書+CENOMAR+DFAアポスティーユ） | ¥80,000〜 | US$899〜 |
 

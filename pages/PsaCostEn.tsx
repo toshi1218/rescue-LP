@@ -34,10 +34,10 @@ export default function PsaCostEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '249',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '249',
             priceCurrency: 'USD',
             description: 'PSA retrieval, the applicable DFA authentication route, and DHL shipping when a physical document is needed',
           },
@@ -124,7 +124,7 @@ export default function PsaCostEn() {
               { label: 'PSAHelpline online domestic delivery', price: '₱365 / copy' },
               { label: 'DFA authentication', price: 'depends on route' },
               { label: 'International delivery', price: 'depends on route' },
-              { label: 'Our all-inclusive service price', price: 'USD $349', bold: true },
+              { label: 'Our all-inclusive service price', price: 'USD $249', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -210,7 +210,7 @@ export default function PsaCostEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'Our all-inclusive price starts at USD $349, covering PSA retrieval, DFA Apostille, and DHL shipping worldwide. Urgent cases may incur an additional fee.' },
+          { q: 'How much does it cost?', a: 'Our all-inclusive price starts at USD $249, covering PSA retrieval, DFA Apostille, and DHL shipping worldwide. Urgent cases may incur an additional fee.' },
           { q: 'Why is your price higher than some agencies?', a: 'Some agencies quote only the PSA retrieval fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.' },
           { q: 'Is Apostille always required?', a: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
