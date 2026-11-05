@@ -16,7 +16,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function CanadaDocsJa() {
   useMeta(
     `カナダ移民ビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — IRCC対応・DHL郵送`,
-    'カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。',
+    'カナダ永住権・配偶者スポンサーシップ向けのPSA書類・NBI Clearanceを代行取得。IRCCの現行要件を確認し、必要な場合だけ認証を手配します。',
   );
   return (
     <PageLayout
@@ -25,7 +25,7 @@ export default function CanadaDocsJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'カナダ移民ビザ向けフィリピン書類取得代行（IRCC対応）',
-        description: 'カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。IRCC提出対応。',
+        description: 'カナダ永住権・配偶者スポンサーシップ向けのPSA書類・NBI Clearanceを代行取得。IRCCの現行要件を確認し、必要な場合だけ認証を手配。',
         url: 'https://ph-document.com/ja/canada/',
         provider: {
           '@type': 'Organization',
@@ -54,7 +54,7 @@ export default function CanadaDocsJa() {
               name: 'カナダ移民申請にはDFAアポスティーユが必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。カナダはハーグ条約加盟国です。IRCCへの申請には、PSA出生証明書・CENOMAR・NBI ClearanceにDFAアポスティーユ認証が必要です。',
+                text: '一律必須ではありません。ハーグ条約加盟は、必要な場合の認証方法を定めるもので、IRCCの全書類にアポスティーユを義務付けるものではありません。申請種別ごとの現行要件を確認します。',
               },
             },
             {
@@ -62,7 +62,7 @@ export default function CanadaDocsJa() {
               name: 'カナダ永住権・配偶者スポンサーシップに必要な書類は？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'IRCC申請の場合、NBI Clearance（DFAアポスティーユ付き）とPSA出生証明書が基本です。配偶者スポンサーシップではCENOMAR・婚姻証明書も必要な場合があります。無料相談でご確認します。',
+                text: '必要書類は申請内容によって異なります。NBI ClearanceやPSA民事書類を求められる場合がありますが、認証の要否は現行チェックリストで個別に確認します。',
               },
             },
             {
@@ -87,18 +87,18 @@ export default function CanadaDocsJa() {
     >
       <HeroBanner
         title="カナダ移民ビザ 書類取得代行"
-        badges={['IRCC対応', 'アポスティーユ込み', '費用は事前にご案内']}
+        badges={['IRCC現行要件を確認', '必要な場合のみ認証', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年8月13日"
+        lastUpdated="2026年8月30日"
       />
 
       <SummaryBlock
-        conclusion="Spousal Sponsorship・永住権申請に必要なPSA証明書・NBIクリアランスをIRCC対応のDFAアポスティーユ付きで一括手配。カナダ移民申請の書類ブロッカーを取り除きます。"
+        conclusion="IRCCの現行チェックリストを確認し、必要なPSA証明書・NBI Clearanceと、必要な場合のみ認証を一括手配します。"
         points={[
-          'カナダはハーグ条約加盟国 — フィリピン書類にはDFAアポスティーユが必要',
+          'ハーグ条約加盟国でも、IRCCの全書類にアポスティーユが必要とは限りません',
           'CENOMAR・PSA出生証明書・NBI Clearance・婚姻証明書に対応',
-          'DFAアポスティーユ付きの原本をDHLでカナダへ直送',
+          'PSA e-Apostilleは電子納品、紙原本が必要な場合のみDHLで発送',
           '申請種別ごとのIRCC要件を事前確認してから進めます',
         ]}
         ctaText="無料で相談する"
@@ -110,7 +110,7 @@ export default function CanadaDocsJa() {
           {
             icon: <Shield className="w-4 h-4" />,
             title: 'カナダ永住権・配偶者スポンサーシップを申請中',
-            description: 'IRCCへの提出にはDFAアポスティーユ付きのフィリピン書類が必要です。必要書類を一括で手配します。',
+            description: '申請種別によって書類と認証要件が異なります。現行チェックリストを確認して必要なものだけ手配します。',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -145,8 +145,8 @@ export default function CanadaDocsJa() {
             },
             {
               icon: <FileCheck className="w-4 h-4" />,
-              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-              description: 'IRCC要件に沿ったDFAアポスティーユ認証を手配します。原本での提出が必要です。',
+              title: '必要な場合のDFA認証',
+              description: 'IRCCまたは提出先が求める場合のみ手配します。PSA e-Apostilleは2026年3月16日以降、電子発行です。',
             },
             {
               icon: <Globe className="w-4 h-4" />,
@@ -163,7 +163,7 @@ export default function CanadaDocsJa() {
             { icon: FileText, title: 'PSA出生証明書', description: '永住権・スポンサーシップ申請の基本書類。DFAアポスティーユ付きで手配', accent: 'gold' },
             { icon: ShieldCheck, title: 'CENOMAR', description: '独身証明書。配偶者スポンサーシップで必要になることが多い', accent: 'blue' },
             { icon: CheckCircle, title: 'NBI Clearance', description: '無犯罪証明書。IRCC申請の基本書類の一つ', accent: 'green' },
-            { icon: Stamp, title: 'DFAアポスティーユ', description: 'ハーグ条約加盟国への提出に必要な外務省認証', accent: 'teal' },
+            { icon: Stamp, title: 'DFAアポスティーユ', description: '提出先の現行要件で必要な場合のみ手配', accent: 'teal' },
             { icon: Plane, title: '配偶者スポンサーシップ', description: 'CENOMAR・PSA婚姻証明書・NBI Clearanceが必要', accent: 'purple' },
             { icon: Globe, title: '永住権（PR）', description: 'IRCC要件に合わせた書類一式をDFAアポスティーユ付きで対応', accent: 'gold' },
           ]}
@@ -196,8 +196,8 @@ export default function CanadaDocsJa() {
 
       <FaqSection
         items={[
-          { q: 'カナダ移民申請にはDFAアポスティーユが必要ですか？', a: 'はい。カナダはハーグ条約加盟国です。IRCCへの申請には、PSA出生証明書・CENOMAR・NBI ClearanceにDFAアポスティーユ認証が必要です。' },
-          { q: 'カナダ永住権・配偶者スポンサーシップに必要な書類は？', a: 'IRCC申請の場合、NBI Clearance（DFAアポスティーユ付き）とPSA出生証明書が基本です。配偶者スポンサーシップではCENOMAR・婚姻証明書も必要な場合があります。無料相談でご確認します。' },
+          { q: 'カナダ移民申請にはDFAアポスティーユが必要ですか？', a: '一律必須ではありません。ハーグ条約加盟は、必要な場合の認証方法を定めるもので、IRCCの全書類にアポスティーユを義務付けるものではありません。' },
+          { q: 'カナダ永住権・配偶者スポンサーシップに必要な書類は？', a: '必要書類は申請内容によって異なります。NBI ClearanceやPSA民事書類を求められる場合がありますが、認証の要否は現行チェックリストで個別に確認します。' },
           { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユ・カナダへの国際郵送をまとめた料金でご案内します。無料相談後に正確な金額をご提示します。' },
           { q: 'カナダへの郵送にどのくらいかかりますか？', a: '目安は全体で約4〜6週間です。書類準備後、DHLエクスプレスでカナダへ3〜5営業日でお届けします。' },
         ]}

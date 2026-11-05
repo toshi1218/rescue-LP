@@ -14,7 +14,7 @@ import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function GermanyDocsEn() {
   useMeta(
     `PH Documents for Germany Immigration [${SEO_YEAR_MONTH_EN}]`,
-    `Moving to Germany? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for German Embassy. Ships via DHL. Free consultation.`,
+    `Moving to Germany? We retrieve the Philippine civil records and police certificates identified by your German authority, with authentication when required.`,
   );
   return (
     <PageLayout
@@ -24,7 +24,7 @@ export default function GermanyDocsEn() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: 'Philippine Documents for Germany Immigration (Ausländerbehörde)',
-          description: 'We retrieve all Philippine documents for Germany immigration — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships to Germany via DHL.',
+          description: 'We retrieve Philippine civil records and police certificates identified by the responsible German authority, with authentication and translation support when required.',
           url: 'https://ph-document.com/en/germany/',
           provider: {
             '@type': 'Organization',
@@ -53,7 +53,7 @@ export default function GermanyDocsEn() {
               name: 'Does Germany require DFA Apostille on Philippine documents?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Yes. Germany is a member of the Hague Apostille Convention. The German Ausländerbehörde and German embassies require DFA Apostille on Philippine civil documents for visa and residence permit applications.',
+                text: 'Not automatically. Hague Convention membership determines how an Apostille is recognized when proof of authenticity is requested; it does not make Apostille mandatory for every document. Follow the checklist of the responsible German mission, registry office, or immigration authority.',
               },
             },
             {
@@ -61,7 +61,7 @@ export default function GermanyDocsEn() {
               name: 'What Philippine documents are needed for a German spouse visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For a German spouse visa (Ehegattennachzug), Filipino applicants typically need: PSA Birth Certificate + DFA Apostille, PSA Marriage Certificate + DFA Apostille, and NBI Clearance + DFA Apostille. The German embassy may also require a certified German translation (sworn translator).',
+                text: 'The document set depends on the mission and local authority handling the case. PSA birth or marriage records, proof of civil status, a police certificate, authentication, and a certified German translation may be requested. Use the current case-specific checklist.',
               },
             },
             {
@@ -69,7 +69,7 @@ export default function GermanyDocsEn() {
               name: 'Do German embassies accept PSA e-certificates?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'German embassies generally require physical PSA documents on Security Paper. Contact the German Embassy in Manila or your local German embassy to confirm their current policy on PSA e-certificates before ordering.',
+                text: 'Confirm the required format with the receiving German authority. If it asks for a DFA Apostille on a PSA civil record, the Apostille has been issued electronically since March 16, 2026; a separately ordered SECPA paper certificate is not automatically authenticated by that e-Apostille.',
               },
             },
             {
@@ -86,15 +86,15 @@ export default function GermanyDocsEn() {
     >
       <HeroBanner
         title="Philippine Documents for Germany Immigration"
-        subtitle="CENOMAR, PSA Birth Certificate & NBI Clearance — retrieved, apostilled, and shipped to Germany via DHL"
-        badges={['DFA Apostille Included', 'Ships to Germany via DHL', 'Free Consultation']}
+        subtitle="Philippine civil records and police certificates — retrieved in the format required by your German authority"
+        badges={['Requirements Checked', 'Ships to Germany via DHL', 'Free Consultation']}
         ctaText="Get a Free Quote"
         ctaHref="/en/contact/"
       />
 
       <SummaryBlock
         conclusion="Documents Required for German Visa & Residence Applications"
-        points={['Filipino nationals applying for a German spouse visa (Ehegattennachzug), job seeker visa, or permanent residence must provide Philippine civil documents with DFA Apostille. Germany is a Hague Convention member, so no additional legalization by the German Embassy is required — but DFA Apostille is mandatory for all civil documents submitted to German authorities.']}
+        points={['Requirements differ by visa route, German mission, registry office, and local immigration authority. Hague Convention membership explains how an Apostille is recognized when requested; it does not make authentication mandatory for every Philippine document. Confirm the exact checklist before ordering.']}
       />
 
       <FeatureList
@@ -102,18 +102,18 @@ export default function GermanyDocsEn() {
         items={[
           {
             icon: <FileCheck className="w-6 h-6 text-blue-600" />,
-            title: 'PSA Birth Certificate + DFA Apostille',
-            description: 'Required for all visa and residence applications. We retrieve directly from PSA and obtain DFA Apostille.',
+            title: 'PSA Birth Certificate',
+            description: 'We retrieve it when listed by the responsible German authority and arrange electronic DFA Apostille only if authentication is requested.',
           },
           {
             icon: <FileCheck className="w-6 h-6 text-blue-600" />,
-            title: 'CENOMAR or PSA Marriage Certificate + DFA Apostille',
-            description: 'CENOMAR for single applicants; PSA Marriage Certificate for spouse visa (Ehegattennachzug). Both require DFA Apostille.',
+            title: 'CENOMAR or PSA Marriage Certificate',
+            description: 'The appropriate civil-status record depends on the application. Authentication and format must follow the receiving authority\'s current instructions.',
           },
           {
             icon: <Shield className="w-6 h-6 text-blue-600" />,
             title: 'NBI Clearance + DFA Apostille',
-            description: 'Philippine national police clearance required by German authorities for background verification. We handle NBI renewal and apostille.',
+            description: 'We arrange NBI Clearance and its physical Apostille when the current German checklist requests them.',
           },
         ]}
       />
@@ -123,7 +123,7 @@ export default function GermanyDocsEn() {
         steps={[
           { title: 'Submit your request', description: 'Fill out our form with your full name, date of birth, and the documents you need for Germany.' },
           { title: 'We retrieve from PSA / NBI', description: 'We order from official PSA channels and arrange NBI clearance (3–7 business days each).' },
-          { title: 'DFA Apostille', description: 'We bring documents to DFA for Apostille authentication (3–5 business days).' },
+          { title: 'Authentication when required', description: 'For PSA civil records, DFA Apostille is electronic; non-PSA documents such as NBI follow the applicable physical process.' },
           { title: 'DHL Express to Germany', description: 'We ship directly to your German address (3–5 business days). Tracking provided.' },
         ]}
       />
@@ -131,13 +131,13 @@ export default function GermanyDocsEn() {
       <section className="py-8 px-4 max-w-3xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">Note: German Translation Requirement</h2>
         <p className="text-gray-700">
-          German authorities typically require all Philippine documents to be accompanied by a certified German translation prepared by a sworn translator (beeidigter Übersetzer). We can advise on this step and, in some cases, connect you with a certified translator. Please mention this when you contact us.
+          A German authority may request a certified German translation prepared by a sworn translator (beeidigter Übersetzer). Confirm which records must be translated and whether the translation must be completed in Germany before commissioning it.
         </p>
       </section>
 
       <CtaBox
         title="Ready to Get Your Documents for Germany?"
-        description="We handle PSA retrieval, DFA Apostille, and DHL shipping to Germany. Free quote, no hidden fees."
+        description="We confirm the requested records and formats, then handle retrieval, authentication when required, and DHL shipping."
         buttonText="Get a Free Quote"
         href="/en/contact/"
       />
@@ -146,15 +146,15 @@ export default function GermanyDocsEn() {
         items={[
           {
             q: 'Does Germany require DFA Apostille on Philippine documents?',
-            a: 'Yes. Germany is a Hague Convention member. DFA Apostille is required for Philippine civil documents used in German visa and residence applications.',
+            a: 'Not automatically. Hague Convention membership determines how an Apostille is recognized when requested; it does not make authentication mandatory for every document. Follow the responsible German authority\'s current checklist.',
           },
           {
             q: 'What Philippine documents are needed for a German spouse visa?',
-            a: 'PSA Birth Certificate, PSA Marriage Certificate (or CENOMAR), and NBI Clearance — all with DFA Apostille. A sworn German translation is also typically required.',
+            a: 'The set depends on the mission and local authority. PSA civil records, an NBI Clearance, authentication, and a sworn German translation may be requested; confirm the current case-specific checklist.',
           },
           {
             q: 'Do German embassies accept PSA e-certificates?',
-            a: 'Generally, German authorities prefer physical PSA documents on Security Paper. Confirm with the German Embassy before ordering an e-certificate.',
+            a: 'Confirm the required format with the receiving authority. If it requests DFA authentication of a PSA record, the Apostille is an electronic PDF from March 16, 2026; any SECPA paper record is ordered separately.',
           },
           {
             q: 'How long does it take to get Philippine documents shipped to Germany?',

@@ -14,7 +14,7 @@ import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function UkDocsEn() {
   useMeta(
     `PH Documents for UK Immigration [${SEO_YEAR_MONTH_EN}]`,
-    `Applying for a UK spouse visa? We retrieve CENOMAR, PSA Birth Certificate & NBI Clearance with DFA Apostille for UKVI. Ships to the UK. Free consultation.`,
+    `Applying for a UK spouse visa? We retrieve PSA records and NBI Clearance, confirm the current UKVI format, and arrange authentication only when required.`,
   );
   return (
     <PageLayout
@@ -23,7 +23,7 @@ export default function UkDocsEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Philippine Documents for UK Immigration (UKVI)',
-        description: 'We retrieve all Philippine documents for UK immigration — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships to the UK via DHL. UKVI-ready.',
+        description: 'We retrieve Philippine civil records and NBI Clearance for UK immigration, confirm the current UKVI checklist, and arrange authentication only when required.',
         url: 'https://ph-document.com/en/uk/',
         provider: {
           '@type': 'Organization',
@@ -39,7 +39,7 @@ export default function UkDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'UK Immigration Document Package — all documents + DFA Apostille + DHL to UK (all-inclusive)',
+            description: 'UK immigration document package — agreed documents, any required authentication, and delivery',
           },
         },
         },
@@ -60,7 +60,7 @@ export default function UkDocsEn() {
               name: 'What documents are needed for a UK spouse visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Typically CENOMAR and PSA Birth Certificate with DFA Apostille. NBI Clearance may also be required. Requirements vary by visa type. We confirm for your specific case.',
+                text: 'The document list depends on the route and circumstances. PSA civil records, relationship evidence, or a police certificate may be requested; authentication is arranged only when the current checklist requires it.',
               },
             },
             {
@@ -68,7 +68,7 @@ export default function UkDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to the UK are included.',
+                text: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents, any authentication actually required, and delivery.',
               },
             },
             {
@@ -85,16 +85,16 @@ export default function UkDocsEn() {
     >
       <HeroBanner
         title="Philippine Documents for UK Immigration"
-        badges={['UKVI-Ready', 'DFA Apostille Included', 'Ships to UK via DHL']}
+        badges={['Current UKVI Checklist', 'Authentication When Required', 'Ships to UK via DHL']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="August 30, 2026"
       />
 
       <SummaryBlock
-        conclusion="Applying for a UK spouse visa, settlement, or citizenship? We retrieve all required Philippine documents with DFA Apostille and ship directly to your UK address."
+        conclusion="Applying for a UK spouse visa, settlement, or citizenship? We confirm the current checklist, retrieve the agreed Philippine documents, and arrange authentication only when required."
         points={[
-          'The UK is a Hague Convention member — DFA Apostille is required on Philippine documents',
+          'Hague Convention membership does not make Apostille mandatory for every UKVI document',
           'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
           'PSA e-Apostille delivered digitally; NBI and physical originals shipped via DHL when needed',
           'We confirm exact UKVI requirements for your specific visa type',
@@ -143,7 +143,7 @@ export default function UkDocsEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided — required by UKVI.',
+            description: 'We arrange authentication only when the current UKVI checklist or receiving authority requires it. PSA e-Apostille is delivered electronically from 16 March 2026.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -158,7 +158,7 @@ export default function UkDocsEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa type (spouse visa, settlement, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents for UKVI and provide all-inclusive pricing.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
+          { title: 'Processing in the Philippines', description: 'We retrieve the agreed records. Any required PSA e-Apostille is processed online and delivered electronically.' },
           { title: 'DHL delivery to the UK', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
@@ -166,8 +166,8 @@ export default function UkDocsEn() {
       <FaqSection
         items={[
           { q: 'Does the UK require DFA Apostille on Philippine documents?', a: 'Not in every case. The UK is a Hague Convention member, but requirements vary by route and document. We verify the current UKVI checklist before processing.' },
-          { q: 'What documents are needed for a UK spouse visa?', a: 'Typically CENOMAR and PSA Birth Certificate with DFA Apostille. NBI Clearance may also be required. Requirements vary by visa type. We confirm for your specific case.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to the UK are included.' },
+          { q: 'What documents are needed for a UK spouse visa?', a: 'The document list depends on the route and circumstances. PSA civil records, relationship evidence, or a police certificate may be requested; authentication is arranged only when the current checklist requires it.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case, covering the agreed documents, any authentication actually required, and delivery.' },
           { q: 'How long does it take to ship to the UK?', a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to the UK typically takes 3–5 business days after documents are ready.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
