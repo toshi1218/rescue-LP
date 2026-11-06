@@ -839,6 +839,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/family-psa-nbi-package/`,
     lang: 'en',
     enCanonical: `${BASE}/en/family-psa-nbi-package/`,
+    jaCanonical: `${BASE}/ja/`, // No Japanese equivalent; do not emit a placeholder alternate.
     lastmod: '2026-09-19',
   },
   {
@@ -2167,14 +2168,40 @@ ${entries.join('\n')}
 </urlset>`;
 
   const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
+  // Vite has already copied public/ into dist/. Publish the sitemap generated
+  // from this build, rather than shipping the previous build's public copy.
   await writeFile(sitemapPath, xml, 'utf8');
+  await writeFile(path.join(projectRoot, 'dist', 'sitemap.xml'), xml, 'utf8');
   console.log(`\nGenerated sitemap.xml with ${entries.length} URLs.`);
+}
+
+// Use the rendered head as the single source for client-side route transitions.
+// This preserves standalone/KO-only/noindex policies without a second route map.
+async function generateRouteMetadata() {
+  const metadata: Record<string, {
+    canonical: string;
+    robots: string;
+    alternates: { hreflang: string; href: string }[];
+  }> = {};
+  for (const route of routes) {
+    const html = await readFile(route.outFile, 'utf8');
+    const head = html.slice(0, html.indexOf('</head>'));
+    metadata[route.path] = {
+      canonical: route.canonical,
+      robots: head.match(/<meta name="robots" content="([^"]*)"/)?.[1] ?? 'index, follow',
+      alternates: Array.from(head.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g),
+        ([, hreflang, href]) => ({ hreflang, href })),
+    };
+  }
+  await writeFile(path.join(projectRoot, 'dist', 'route-metadata.json'), JSON.stringify(metadata), 'utf8');
+  console.log(`Generated client metadata for ${Object.keys(metadata).length} routes.`);
 }
 
 prerender()
   .then(() => validateBuild())
   .then(() => validateUrlMap())
   .then(() => generateSitemap())
+  .then(() => generateRouteMetadata())
   .catch((error) => {
     console.error('prerender failed:', error);
     process.exit(1);
