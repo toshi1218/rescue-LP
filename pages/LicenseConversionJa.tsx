@@ -11,12 +11,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { AlertTriangle, CheckCircle, ClipboardList, Car, FileText, Stamp, Clock, Globe, Users, Receipt, BarChart3, Building2, Headphones } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function LicenseConversionJa() {
   useMeta(
-    `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】渡航不要`,
-    'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
+    'フィリピン免許の外免切替｜必要書類・LTO代行49,500円',
+    'フィリピン免許から日本免許への外免切替に必要なLTO書類を日本語で取得代行。標準49,500円（税込・DFAアポスティーユ・DHL送料込み）。追加書類等は事前見積もり。受理の最終判断は免許センターによります。',
   );
   return (
     <PageLayout
@@ -111,12 +110,13 @@ export default function LicenseConversionJa() {
       ]}
     >
       <HeroBanner
-        title="外免切替"
-        subtitle="フィリピン運転免許を日本免許に切り替える（外免切替）に必要な条件・費用・LTO書類の流れをまとめています。書類の取り寄せは現地スタッフが代行します。"
-        badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり', '法人・複数名対応可']}
-        ctaText="書類を確認する"
+        title="フィリピン免許の外免切替｜LTO書類取得代行"
+        subtitle="LTO Certification・License History等の取得とDFAアポスティーユ、DHL国際配送を標準49,500円（税込）で手配。日本語でご相談いただけます。記録不一致やOR探索・追加書類は着手前に別途お見積もりします。"
+        badges={['DFA認証・DHL送料込み', '日本語でメール相談', '法人・複数名対応可']}
+        ctaText="メールで無料相談"
         ctaHref="#contact"
-        lastUpdated="2026年9月28日"
+        ctaService="免許切り替え"
+        lastUpdated="2026年11月7日"
       />
 
       {/* リード文 */}
@@ -166,6 +166,7 @@ export default function LicenseConversionJa() {
           </div>
           <p className="text-xs text-gray-500 mt-2">※通常案件の標準料金です。記録不一致、Official Receiptの探索・再発行、Immigration Recordなどの追加書類が必要な場合は、着手前に別途お見積もりします。</p>
           <p className="text-xs text-gray-500 mt-1">DFAアポスティーユ単体の料金・費用内訳は<a href="/ja/apostille-ryokin/" className="text-primary underline">DFAアポスティーユの料金ページ</a>で詳しく解説しています。</p>
+          <p className="text-sm text-gray-700 leading-relaxed mt-4">無料見積もりでは、申請予定の都道府県、フィリピン免許証が有効か、提出希望時期をフォームにご記入ください。免許センターから必要書類を案内されていれば、その名称もお知らせください。初回相談では免許番号・パスポート番号や書類画像は不要です。</p>
         </SectionDivider>
       </div>
 
@@ -253,8 +254,9 @@ export default function LicenseConversionJa() {
       <CtaBox
         title="LTO書類の取り寄せ、まず確認します"
         description="どの書類が必要か、ORの有無、現在の状況をお知らせください。必要書類と費用の目安をご案内します。"
-        buttonText="無料相談はこちら"
+        buttonText="メールで無料相談"
         href="#contact"
+        service="免許切り替え"
         variant="primary"
         trustNote="着手前キャンセル無料・返信24時間以内 ｜ 法人・複数名一括対応可"
       />
@@ -354,8 +356,9 @@ export default function LicenseConversionJa() {
       <CtaBox
         title="まずは状況のご確認から"
         description="外免切替は、LTO書類を取る前の確認がとても大事です。「自分は条件を満たしているか」「どの書類が必要になりそうか」その確認からで大丈夫です。まずはご相談ください。"
-        buttonText="無料相談はこちら"
+        buttonText="メールで無料相談"
         href="#contact"
+        service="免許切り替え"
         variant="primary"
         trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料 ｜ 法人のお客様：請求書払い・複数名一括依頼対応可"
       />
