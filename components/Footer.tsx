@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Send } from 'lucide-react';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
+import { createInquiryFormData } from '../lib/inquiryForm';
+import { notifySlack } from '../lib/notifyApi';
+import { isValidEmail } from '../lib/validation';
 import { useLanguage } from '../lib/i18n';
 import LineIcon from './icons/LineIcon';
 import WhatsAppIcon from './icons/WhatsAppIcon';
@@ -29,32 +32,42 @@ const Footer: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const emailInput = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value.trim();
-    if (!emailInput) {
-      setEmailError(lang === 'ja' ? 'メールアドレスは必須です。' : 'Email address is required.');
+    if (submitting) return;
+    const form = e.currentTarget;
+    const emailInput = form.elements.namedItem('email') as HTMLInputElement;
+    const nameInput = form.elements.namedItem('name') as HTMLInputElement;
+    emailInput.value = emailInput.value.trim();
+    nameInput.value = nameInput.value.trim();
+    if (!isValidEmail(emailInput.value)) {
+      setEmailError(!emailInput.value
+        ? (lang === 'ja' ? 'メールアドレスは必須です。' : 'Email address is required.')
+        : (lang === 'ja' ? '有効なメールアドレスを入力してください。' : 'Please enter a valid email address.'));
+      emailInput.focus();
       return;
     }
     setEmailError('');
+    if (!form.reportValidity()) return;
     setReferralError('');
     setSubmitting(true);
     setSubmitError('');
     try {
-      const form = e.currentTarget;
+      const formData = createInquiryFormData(form);
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
-        body: new FormData(form),
+        body: formData,
         headers: { Accept: 'application/json' },
       });
       const data = await res.json();
       if (res.ok && data.success) {
-        trackEvent('form_submit_success', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, service, lang, page_path: window.location.pathname });
+        notifySlack(lang === 'ja' ? 'ja' : 'en', formData);
+        trackEvent('form_submit_success', { location: 'footer', type: 'web3forms', inquiry_id: String(formData.get('inquiry_id')), variant: ctaVariant, traffic_source: trafficSource, service, lang, page_path: window.location.pathname });
         setSubmitted(true);
       } else {
-        trackEvent('form_submit_error', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, lang });
+        trackEvent('form_submit_error', { location: 'footer', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, lang });
         setSubmitError(lang === 'ja' ? '送信に失敗しました。しばらく経ってから再度お試しください。' : 'Submission failed. Please try again later.');
       }
     } catch {
-      trackEvent('form_submit_error', { location: 'contact', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, lang });
+      trackEvent('form_submit_error', { location: 'footer', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, lang });
       setSubmitError(lang === 'ja' ? '送信に失敗しました。しばらく経ってから再度お試しください。' : 'Submission failed. Please try again later.');
     } finally {
       setSubmitting(false);
@@ -169,10 +182,11 @@ const Footer: React.FC = () => {
           <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
           <input type="hidden" name="cta_variant" value={ctaVariant} />
           <input type="hidden" name="traffic_source" value={trafficSource} />
-          <input type="hidden" name="landing_page" value="https://ph-document.com/" />
 
           <div>
-            <label htmlFor="footer-name" className="block text-sm text-gray-600 mb-1">{t('footer.nameLabel')}</label>
+            <label htmlFor="footer-name" className="block text-sm text-gray-600 mb-1">
+              {t('footer.nameLabel')} <span className="text-red-500" aria-hidden="true">*</span>
+            </label>
             <input
               id="footer-name"
               name="name"
@@ -193,11 +207,13 @@ const Footer: React.FC = () => {
               name="email"
               required
               onChange={() => setEmailError('')}
+              aria-invalid={!!emailError}
+              aria-describedby={emailError ? 'footer-email-error' : undefined}
               className={`w-full rounded-lg border px-3 py-2 text-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 ${emailError ? 'border-red-400' : 'border-gray-200'}`}
               placeholder={t('footer.emailPlaceholder')}
               aria-required="true"
             />
-            {emailError && <p className="mt-1 text-xs text-red-500">{emailError}</p>}
+            {emailError && <p id="footer-email-error" role="alert" className="mt-1 text-xs text-red-500">{emailError}</p>}
           </div>
 
           <div>

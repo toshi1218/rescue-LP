@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Send, Mail, ShieldCheck, Clock } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
 import { getCtaVariant, getTrafficSource, trackEvent } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
 import { notifySlack } from '../lib/notifyApi';
 import { isValidEmail } from '../lib/validation';
+import { createInquiryFormData } from '../lib/inquiryForm';
 import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 import PaymentTrust from '../components/PaymentTrust';
 
@@ -23,7 +24,6 @@ export default function ContactEn() {
   const [emailConfirm, setEmailConfirm] = useState('');
   const [confirmError, setConfirmError] = useState('');
   const [referral, setReferral] = useState('');
-  const [referralError, setReferralError] = useState('');
   const emailConfirmRef = useRef<HTMLInputElement>(null);
   const ctaVariant = getCtaVariant();
   const trafficSource = getTrafficSource();
@@ -41,8 +41,30 @@ export default function ContactEn() {
         Tell us your case and we will confirm what documents you need, how long it takes, and the all-inclusive price.
       </p>
       <p className="text-xs text-gray-500 mb-4">
-        Fastest reply: message us on WhatsApp. You can also use the form below or email us — whichever is easiest for you.
+        Choose email or WhatsApp — whichever is easiest for you.
       </p>
+
+      <div className="mb-6 grid max-w-xl gap-3 sm:grid-cols-2">
+        <a
+          href="#contact-form"
+          onClick={() => trackEvent('cta_click', { location: 'contact_top', type: 'email_form', page_path: window.location.pathname })}
+          className="flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-4 text-sm font-bold text-secondary shadow-lg transition-colors hover:bg-primary-hover"
+        >
+          <Mail className="h-5 w-5" aria-hidden="true" />
+          Free consultation by email
+        </a>
+        <a
+          href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackEvent('cta_click', { location: 'contact_top', type: 'whatsapp', page_path: window.location.pathname })}
+          aria-label="Free consultation on WhatsApp (opens in new tab)"
+          className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-4 text-sm font-bold text-white shadow-lg transition-colors hover:bg-[#20b858]"
+        >
+          <WhatsAppIcon />
+          Free consultation on WhatsApp
+        </a>
+      </div>
 
       {/* Trust badges */}
       <div className="flex flex-wrap gap-3 mb-6">
@@ -64,26 +86,8 @@ export default function ContactEn() {
         </span>
       </div>
 
-      {/* WhatsApp fast lane — primary channel for overseas clients */}
-      <a
-        href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => trackEvent('cta_click', { location: 'contact_top', type: 'whatsapp', page_path: window.location.pathname })}
-        aria-label="Chat with us on WhatsApp (opens in new tab)"
-        className="mb-6 flex items-center gap-3 max-w-xl rounded-xl border border-[#25D366]/30 bg-[#25D366]/5 px-4 py-3 hover:bg-[#25D366]/10 transition-all"
-      >
-        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366] text-white flex-shrink-0">
-          <WhatsAppIcon />
-        </span>
-        <span className="flex-1">
-          <span className="block text-sm font-bold text-secondary">Get a faster quote on WhatsApp</span>
-          <span className="block text-xs text-gray-500">No form needed — send a document photo or tell us what you need and your deadline.</span>
-        </span>
-      </a>
-
       {submitted ? (
-        <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
+        <div id="contact-form" tabIndex={-1} role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl scroll-mt-24">
           <p className="text-3xl mb-3">✅</p>
           <p className="font-bold text-green-700 mb-2">Your message has been received!</p>
           <p className="text-sm text-gray-600 mb-4">We will review your request and reply within 24 hours.</p>
@@ -107,17 +111,29 @@ export default function ContactEn() {
         </div>
       ) : (
       <form
-        className="space-y-4 max-w-xl"
+        id="contact-form"
+        tabIndex={-1}
+        className="space-y-4 max-w-xl scroll-mt-24"
         noValidate
+        onInput={e => (e.target as HTMLInputElement).setCustomValidity?.('')}
         onSubmit={async (e) => {
           e.preventDefault();
-          const emailInput = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value.trim();
+          if (submitting) return;
+          const form = e.currentTarget;
+          setSubmitError('');
+          for (const field of form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('[required]')) {
+            field.setCustomValidity(field.value.trim() ? '' : 'Please complete this field.');
+          }
+          if (!form.reportValidity()) return;
+          const emailField = form.elements.namedItem('email') as HTMLInputElement;
+          const emailInput = emailField.value.trim();
           if (!emailInput) {
             setEmailError('Email address is required.');
             return;
           }
           if (!isValidEmail(emailInput)) {
             setEmailError('Please enter a valid email address (e.g. example@email.com).');
+            emailField.focus();
             return;
           }
           setEmailError('');
@@ -128,16 +144,9 @@ export default function ContactEn() {
             return;
           }
           setConfirmError('');
-          if (!referral) {
-            setReferralError('Please select an option.');
-            return;
-          }
-          setReferralError('');
           setSubmitting(true);
-          setSubmitError('');
           try {
-            const formData = new FormData(e.currentTarget);
-            notifySlack('en', formData);
+            const formData = createInquiryFormData(form);
             const res = await fetch(WEB3FORMS_ENDPOINT, {
               method: 'POST',
               body: formData,
@@ -145,7 +154,8 @@ export default function ContactEn() {
             });
             const data = await res.json();
             if (res.ok && data.success) {
-              trackEvent('form_submit_success', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource });
+              notifySlack('en', formData);
+              trackEvent('form_submit_success', { location: 'contact_page', type: 'web3forms', variant: ctaVariant, traffic_source: trafficSource, inquiry_id: String(formData.get('inquiry_id') || '') });
               setSubmitted(true);
             } else {
               setSubmitError('Submission failed. Please try again later.');
@@ -162,7 +172,7 @@ export default function ContactEn() {
         <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
         <input type="hidden" name="cta_variant" value={ctaVariant} />
         <input type="hidden" name="traffic_source" value={trafficSource} />
-        <input type="hidden" name="landing_page" value="https://ph-document.com/en/contact/" />
+        <h2 className="text-lg font-bold text-secondary">Free consultation by email</h2>
 
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">Name <span className="text-red-500">*</span></label>
@@ -257,12 +267,12 @@ export default function ContactEn() {
 
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">
-            How did you find us? <span className="text-red-500">*</span>
+            How did you find us? <span className="text-xs font-normal text-gray-400">(Optional)</span>
           </label>
           <select
             name="referral_source"
             value={referral}
-            onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+            onChange={e => setReferral(e.target.value)}
             className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
           >
             <option value="">Select…</option>
@@ -282,7 +292,6 @@ export default function ContactEn() {
               maxLength={100}
             />
           )}
-          {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
         </div>
 
         <div>

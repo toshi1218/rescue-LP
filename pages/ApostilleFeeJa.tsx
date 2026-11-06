@@ -178,7 +178,7 @@ export default function ApostilleFeeJa() {
           steps={[
             { title: '書類の種類と提出先を共有', description: 'CENOMAR・PSA・NBI等の種類と、提出先（市役所・大使館・入管など）をお知らせください。アポスティーユが必要かどうかも確認します。' },
             { title: '必要な認証と総額をご提示', description: 'DFAアポスティーユ・PSA取得（必要な場合）・国際郵送を含めた料金をご案内します。' },
-            { title: 'DFAアポスティーユを代行', description: '現地スタッフがDFA申請を進めます。Regular（4営業日）またはExpress（翌営業日）を状況に応じて選択します。' },
+            { title: 'DFAアポスティーユを代行', description: '書類の種類に応じて、PSA電子証明書のe-Apostilleまたは対象となる非PSA物理書類の認証経路を確認して手配します。' },
             { title: '日本へ郵送・完了', description: '追跡付きでお届けします。紙原本は約3〜4週間が目安です。' },
           ]}
         />
