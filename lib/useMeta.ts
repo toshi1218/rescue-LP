@@ -1,15 +1,9 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { createRouteMetadataController, normalizeRoutePath } from './routeMetadata';
+import type { HreflangAlternate, RouteMetadataManifest } from './routeMetadata';
 
 const BASE = 'https://ph-document.com';
-const JA_DEFAULT_TITLE = 'フィリピン書類取得代行｜CENOMAR・PSA・LTO 日本語だけで確実に取り寄せ';
-const JA_DEFAULT_DESCRIPTION =
-  'フィリピン書類の取得を日本語だけで安心おまかせ。CENOMAR（独身証明書）・PSA出生証明書・LTO・DFAアポスティーユを現地スタッフが完全代行。進捗は随時ご報告。国際結婚・外免切替・配偶者ビザに対応。無料相談受付中。';
-const EN_DEFAULT_TITLE = 'Philippine Document Retrieval Service — PSA, CENOMAR, NBI & Apostille';
-const EN_DEFAULT_DESCRIPTION =
-  'We retrieve PSA birth certificates, CENOMAR, NBI Clearance, and DFA Apostille from the Philippines and ship worldwide via DHL. English-language support. Free consultation.';
-const KO_DEFAULT_TITLE = '필리핀 서류 대행 서비스 — PSA, CENOMAR, NBI & 아포스티유';
-const KO_DEFAULT_DESCRIPTION =
-  'PSA 출생증명서, CENOMAR, NBI 클리어런스, DFA 아포스티유를 필리핀에서 대행 취득하여 전 세계로 DHL 배송. 무료 상담 가능.';
 const JA_OG_IMAGE = `${BASE}/og-image-ja.png`;
 const KO_OG_IMAGE = `${BASE}/og-image-ko.png`;
 const EN_OG_IMAGE = `${BASE}/og-image.png`;
@@ -23,8 +17,6 @@ function setCanonical(href: string) {
   const el = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
   if (el) el.setAttribute('href', href);
 }
-
-type HreflangAlternate = { hreflang: string; href: string };
 
 function setHreflangTags(alternates: HreflangAlternate[]) {
   // The prerendered HTML already contains the correct hreflang tags for the
@@ -51,9 +43,67 @@ function toAbsUrl(path: string): string {
   return `${BASE}${path.replace(/\/?$/, '/')}`;
 }
 
-export function useMeta(title: string, description: string, canonical?: string, alternates?: HreflangAlternate[]) {
+async function loadRouteMetadata(): Promise<RouteMetadataManifest> {
+  const abort = new AbortController();
+  const timeout = window.setTimeout(() => abort.abort(), 5000);
+  try {
+    const response = await fetch('/route-metadata.json', { cache: 'no-cache', signal: abort.signal });
+    if (!response.ok) throw new Error('Route metadata unavailable');
+    const value: unknown = await response.json();
+    if (!value || typeof value !== 'object' || Array.isArray(value)) {
+      throw new Error('Invalid route metadata');
+    }
+    const isSiteUrl = (href: unknown): href is string =>
+      typeof href === 'string' && href.startsWith(`${BASE}/`);
+    const normalized: RouteMetadataManifest = {};
+    for (const [route, metadata] of Object.entries(value)) {
+      if (!route.startsWith('/') || !metadata || typeof metadata !== 'object') {
+        throw new Error('Invalid route metadata');
+      }
+      const policy = metadata as RouteMetadataManifest[string];
+      if (!isSiteUrl(policy.canonical) || typeof policy.robots !== 'string' || !policy.robots ||
+          !Array.isArray(policy.alternates) || !policy.alternates.every((alternate) =>
+            alternate && typeof alternate.hreflang === 'string' && isSiteUrl(alternate.href))) {
+        throw new Error('Invalid route metadata');
+      }
+      normalized[normalizeRoutePath(route)] = policy;
+    }
+    return normalized;
+  } finally {
+    window.clearTimeout(timeout);
+  }
+}
+
+let routeMetadata: ReturnType<typeof createRouteMetadataController> | undefined;
+
+function getRouteMetadata() {
+  return routeMetadata ??= createRouteMetadataController({
+    getPathname: () => window.location.pathname,
+    setAlternates: setHreflangTags,
+    setRobots: (robots) => {
+      let element = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
+      if (!element) {
+        element = document.createElement('meta');
+        element.name = 'robots';
+        document.head.appendChild(element);
+      }
+      if (element.getAttribute('content') !== robots) element.setAttribute('content', robots);
+    },
+    loadManifest: loadRouteMetadata,
+    reload: () => window.location.reload(),
+  });
+}
+
+export function useMeta(
+  title: string,
+  description: string,
+  canonical?: string,
+  alternates?: HreflangAlternate[],
+  robots?: string,
+) {
+  const { pathname } = useLocation();
   useEffect(() => {
-    const pathname = window.location.pathname;
+    if (normalizeRoutePath(window.location.pathname) !== normalizeRoutePath(pathname)) return;
     const canonicalHref = canonical ?? toAbsUrl(pathname);
     const isJa = /\/ja(\/|$)/.test(pathname);
     const isKo = /\/ko(\/|$)/.test(pathname);
@@ -72,35 +122,8 @@ export function useMeta(title: string, description: string, canonical?: string, 
     setMeta('twitter:description', description);
     setMeta('twitter:image', ogImage);
     setCanonical(canonicalHref);
-    if (alternates && alternates.length > 0) {
-      setHreflangTags(alternates);
-    }
-
-    return () => {
-      const currentPath = window.location.pathname;
-      const isCurrentJa = /\/ja(\/|$)/.test(currentPath);
-      const isCurrentKo = /\/ko(\/|$)/.test(currentPath);
-      const defaultTitle = isCurrentJa ? JA_DEFAULT_TITLE : isCurrentKo ? KO_DEFAULT_TITLE : EN_DEFAULT_TITLE;
-      const defaultDesc = isCurrentJa ? JA_DEFAULT_DESCRIPTION : isCurrentKo ? KO_DEFAULT_DESCRIPTION : EN_DEFAULT_DESCRIPTION;
-      const defaultCanonical = isCurrentJa ? `${BASE}/ja/` : isCurrentKo ? `${BASE}/ko/` : `${BASE}/en/`;
-      const currentLocale = isCurrentJa ? 'ja_JP' : isCurrentKo ? 'ko_KR' : 'en_US';
-      const defaultOgImage = isCurrentJa ? JA_OG_IMAGE : isCurrentKo ? KO_OG_IMAGE : EN_OG_IMAGE;
-      document.title = defaultTitle;
-      setMeta('description', defaultDesc);
-      setMeta('og:title', defaultTitle, 'property');
-      setMeta('og:description', defaultDesc, 'property');
-      setMeta('og:url', defaultCanonical, 'property');
-      setMeta('og:locale', currentLocale, 'property');
-      setMeta('og:image', defaultOgImage, 'property');
-      setMeta('twitter:title', defaultTitle);
-      setMeta('twitter:description', defaultDesc);
-      setMeta('twitter:image', defaultOgImage);
-      setCanonical(defaultCanonical);
-      // Do NOT remove hreflang tags here. No page currently passes
-      // `alternates`, so wiping on unmount would permanently strip the
-      // server-rendered hreflang after any SPA navigation. The prerendered
-      // tags stay in place; a page that does pass `alternates` will replace
-      // them via setHreflangTags on mount.
-    };
-  }, [title, description, canonical, alternates]);
+    getRouteMetadata().synchronize(pathname, { alternates, robots });
+    // The incoming route owns the head. Resetting it to home-page defaults on
+    // cleanup would briefly corrupt metadata during navigation/StrictMode.
+  }, [title, description, canonical, alternates, robots, pathname]);
 }
