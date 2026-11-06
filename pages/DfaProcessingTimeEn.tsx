@@ -9,10 +9,17 @@ import SummaryBlock from '../components/SummaryBlock';
 import { Clock, Calendar, FileCheck, Globe } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
+const faqs = [
+  { q: 'How long does DFA Apostille take?', a: 'DFA lists release after 5 working days (regular), 2 (expedited), or 1 (e-Apostille). Document issuance and delivery take additional time.' },
+  { q: 'Can I request priority handling?', a: 'Share your deadline and document type. We confirm whether expedited processing is available for your route; this does not guarantee an earlier appointment or end-to-end delivery date.' },
+  { q: 'How much does your service cost?', a: 'We quote the agreed scope separately from government fees, including document retrieval, authentication when required, and shipping only when physical delivery is needed.' },
+  { q: 'I am worried about missing my deadline', a: 'Share your deadline and we will confirm whether it is feasible. Starting early is the best way to stay on track.' },
+];
+
 export default function DfaProcessingTimeEn() {
   useMeta(
-    'DFA Apostille Processing Time: How Long It Takes in the Philippines',
-    'DFA processing time depends on the document and route. PSA e-Apostilles are handled online; eligible non-PSA documents may follow a physical process. Check your deadline before applying.',
+    'DFA Apostille Processing Time: Regular, Expedited & e-Apostille',
+    'DFA lists release after 5 working days for regular, 2 for expedited, and 1 for e-Apostille. Check document issuance and delivery time separately.',
   );
   return (
     <PageLayout
@@ -45,53 +52,51 @@ export default function DfaProcessingTimeEn() {
         {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: [
-            {
-              '@type': 'Question',
-              name: 'How long does DFA Apostille take?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'There is no single processing time for every document. PSA e-Apostilles are handled online, while eligible non-PSA documents may use a physical appointment process. Confirm the current route and timing before setting a deadline.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Can I request Express DFA Apostille processing?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Priority availability depends on the document type and current DFA process. Share your deadline and we will confirm whether any faster option is available.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'I am worried about missing my visa deadline',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Share your deadline and we will confirm whether it is feasible. Starting early is the best way to stay on track.',
-              },
-            },
-          ],
+          mainEntity: faqs.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: { '@type': 'Answer', text: a },
+          })),
         },
       ]}
     >
       <HeroBanner
-        title="DFA Apostille Processing Time: We Plan Around Your Deadline"
+        title="DFA Apostille Processing Time: Official Schedule & Your Deadline"
+        subtitle="Check the DFA release schedule below, then allow for document retrieval, appointment availability, and any delivery your case requires."
         badges={['Current Route Confirmed', 'Digital or Physical Process', 'Deadline-Aware Planning']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="September 15, 2026"
+        lastUpdated="November 6, 2026"
       />
 
       <SummaryBlock
-        conclusion="Processing time depends on the document type and authentication route. Confirm the current DFA process before planning around a deadline."
+        conclusion="DFA processing is one part of your timeline. The applicable route must be confirmed before estimating when your documents will be ready to submit."
         points={[
-          'Physical-document processing times may differ from PSA e-Apostille processing',
-          'Priority options depend on the document type and current DFA availability',
-          'Total timeline includes source-document issuance, the applicable authentication route, and shipping only when a physical document is required',
-          'Share your deadline and we will confirm if we can meet it',
+          'Eligible PSA e-Certificates use the electronic e-Apostille route; eligible non-PSA documents may follow a physical process',
+          'Document issuance, appointment availability, corrections, and shipping can extend the total timeline',
+          'We check your document type, receiving authority, and deadline before quoting',
         ]}
         ctaText="Check Your Deadline"
       />
+
+      <section className="mb-10" aria-labelledby="dfa-schedule-heading">
+        <h2 id="dfa-schedule-heading" className="text-xl font-bold text-gray-900 mb-3">Official DFA release schedule</h2>
+        <div className="overflow-x-auto rounded-xl border border-gray-200">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-secondary text-white">
+              <tr><th scope="col" className="px-4 py-3">Processing</th><th scope="col" className="px-4 py-3">Release</th><th scope="col" className="px-4 py-3">Government fee / document</th></tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100 bg-white">
+              <tr><th scope="row" className="px-4 py-3 font-medium">Regular</th><td className="px-4 py-3">After 5 working days</td><td className="px-4 py-3">₱100</td></tr>
+              <tr><th scope="row" className="px-4 py-3 font-medium">Expedited</th><td className="px-4 py-3">After 2 working days</td><td className="px-4 py-3">₱200</td></tr>
+              <tr><th scope="row" className="px-4 py-3 font-medium">e-Apostille</th><td className="px-4 py-3">After 1 working day</td><td className="px-4 py-3">₱200</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 mt-3">
+          Sources: <a href="https://www.apostille.gov.ph/schedule-of-fees-tab/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">DFA Schedule of Fees</a> and <a href="https://www.apostille.gov.ph/faqs/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">DFA FAQs</a>. These are processing schedules, not a delivery guarantee. Government fees exclude source-document issuance, shipping, and our service fee. Route eligibility and current availability apply.
+        </p>
+      </section>
 
       <FeatureList
         heading="Who This Is For"
@@ -138,8 +143,8 @@ export default function DfaProcessingTimeEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your address worldwide',
-            description: 'Tracked delivery directly to your door. No forwarding needed.',
+            title: 'DHL shipping when physical delivery is needed',
+            description: 'Tracked delivery is included in the agreed physical-document scope. e-Apostilles are delivered electronically.',
           },
         ]}
       />
@@ -150,17 +155,12 @@ export default function DfaProcessingTimeEn() {
           { title: 'Share your target date', description: 'Tell us your visa interview, immigration submission, or other deadline.' },
           { title: 'We plan the timeline and quote', description: 'We confirm the current route, timing, and whether a priority option is available.' },
           { title: 'We handle the applications', description: 'We complete PSA online applications and DFA e-Apostille applications; eligible non-PSA documents follow the current physical process when applicable.' },
-          { title: 'DHL delivery worldwide', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
+          { title: 'Electronic delivery or physical shipment', description: 'Receive the e-Apostille electronically. If paper documents are required, we arrange tracked shipping and quote the total timeline for that scope.' },
         ]}
       />
 
       <FaqSection
-        items={[
-          { q: 'How long does DFA Apostille take?', a: 'Timing depends on the document and authentication route. PSA e-Apostille processing is electronic, while physical-document routes can have different schedules. Share your deadline and we will confirm the current process.' },
-          { q: 'Can I request priority handling?', a: 'Share your deadline and document type. We will confirm whether any priority option is available for the applicable route before you commit.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. The DFA Apostille application, PSA online application (when needed), and DHL shipping for physical documents are all included.' },
-          { q: 'I am worried about missing my deadline', a: 'Share your deadline and we will confirm whether it is feasible. Starting early is the best way to stay on track.' },
-        ]}
+        items={faqs}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
       />
