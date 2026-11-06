@@ -371,8 +371,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
-    title: `Get CENOMAR from Abroad [${SEO_YEAR}] — Record & Authentication Options`,
-    description: `Get CENOMAR from abroad in the format your receiving authority requests. We arrange the PSA record, electronic authentication when required, and separate paper delivery when requested.`,
+    title: `Get CENOMAR from Abroad [${SEO_YEAR}] | Fees & Delivery`,
+    description: 'Get CENOMAR from abroad. Physical PSA original + DHL: US$199; with required DFA authentication: US$349. Confirm your document format with a free email quote.',
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -630,8 +630,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: Official Fees & Total from Abroad`,
-    description: `Official PSA fee: PHP 365/copy. Full price — retrieval, DFA Apostille & DHL Express: US$349 all-in, 4–6 weeks. No hidden fees. USA, UAE, Canada, UK & more.`,
+    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: ₱155, ₱290 or ₱365?`,
+    description: 'PSA birth certificate: ₱155 outlet base, ₱290 eCert, ₱365 domestic delivery. International courier costs extra. Compare IGRS US$199/US$349 services.',
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -1166,8 +1166,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/gaimen-kirikae-guide/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'gaimen-kirikae-guide', 'index.html'),
-    title: `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】渡航不要`,
-    description: 'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
+    title: 'フィリピン免許の外免切替｜必要書類・LTO代行49,500円',
+    description: 'フィリピン免許から日本免許への外免切替に必要なLTO書類を日本語で取得代行。標準49,500円（税込・DFAアポスティーユ・DHL送料込み）。追加書類等は事前見積もり。受理の最終判断は免許センターによります。',
     canonical: `${BASE}/ja/gaimen-kirikae-guide/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,

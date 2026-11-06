@@ -5,16 +5,42 @@ import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
-import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR } from '../lib/seoDate';
 
+const faqs = [
+  {
+    q: `How much does a PSA Birth Certificate cost in ${SEO_YEAR}?`,
+    a: 'The PSA outlet base fee is ₱155 per copy; local fees may apply. PSAHelpline lists ₱290 for a birth eCert and ₱365 for a printed certificate with domestic delivery. For international orders, ₱365 is the processing fee only: you book and pay the international courier separately. These are alternative routes, not fees to add together.',
+  },
+  {
+    q: 'Does ₱365 include international delivery?',
+    a: 'No. PSAHelpline international orders charge ₱365 per copy for processing. You arrange and pay the international courier separately. Authentication, if required by your receiving authority, is a separate step.',
+  },
+  {
+    q: 'Can I use the ₱290 eCert instead of a paper certificate?',
+    a: 'Check with the authority receiving your document before ordering. An electronic certificate and a physical PSA original are different formats; the required format and any authentication depend on your submission requirements.',
+  },
+  {
+    q: 'How much is the IGRS service?',
+    a: 'Our existing US$199 package covers a physical PSA birth certificate and DHL shipping, without Apostille. The US$349 package includes retrieval, the applicable DFA authentication route, and DHL when a physical document is needed. We confirm eligibility, the required format, delivery scope, and any work outside the package before payment.',
+  },
+  {
+    q: 'Is Apostille always required?',
+    a: 'No. The receiving authority decides whether authentication is required and which document format it accepts. Share its checklist or instructions so we can check the appropriate route before quoting. Acceptance remains the receiving authority’s decision.',
+  },
+  {
+    q: 'What should I include in an email inquiry?',
+    a: 'Tell us your delivery country, receiving authority or purpose, required format if known, and deadline. If a requirement is unclear, describe your situation. We will review the scope and provide a quote before you decide whether to proceed.',
+  },
+];
+
 export default function PsaCostEn() {
   useMeta(
-    `PSA Birth Certificate Cost [${SEO_YEAR}]: Official Fees & Total from Abroad`,
-    'A PSA birth certificate costs ₱155 at a PSA outlet or ₱365 through PSAHelpline domestic online delivery. International format, authentication, and delivery costs depend on the route and receiving authority.',
+    `PSA Birth Certificate Cost [${SEO_YEAR}]: ₱155, ₱290 or ₱365?`,
+    'PSA birth certificate: ₱155 outlet base, ₱290 eCert, ₱365 domestic delivery. International courier costs extra. Compare IGRS US$199/US$349 services.',
   );
   return (
     <PageLayout
@@ -22,8 +48,8 @@ export default function PsaCostEn() {
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'PSA Birth Certificate Retrieval — All-Inclusive Pricing',
-        description: 'Cost guide for PSA Birth Certificate retrieval: PSA issuance fees, delivery choices, and the DFA authentication route when required. Free quote available for complex or overseas cases.',
+        name: 'PSA Birth Certificate Retrieval and DHL Delivery',
+        description: 'Physical PSA birth certificate retrieval and DHL shipping without Apostille. The required format, eligibility, and delivery scope are confirmed before payment.',
         url: 'https://ph-document.com/en/psa-birth-certificate-cost/',
         provider: {
           '@type': 'Organization',
@@ -34,117 +60,85 @@ export default function PsaCostEn() {
         offers: {
           '@type': 'Offer',
           priceCurrency: 'USD',
-          price: '349',
+          price: '199',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
-            price: '349',
+            price: '199',
             priceCurrency: 'USD',
-            description: 'PSA retrieval, the applicable DFA authentication route, and DHL shipping when a physical document is needed',
+            description: 'Physical PSA birth certificate retrieval and DHL shipping, without Apostille; eligibility and delivery scope confirmed before payment',
           },
         },
         },
         {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: [
-            {
-              '@type': 'Question',
-              name: 'How much does a PSA Birth Certificate cost in 2026?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'A PSA Birth Certificate costs PHP 155 at a PSA outlet. PSAHelpline lists PHP 365 for domestic online delivery; international formats and courier arrangements vary by route.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'What is the PSA Birth Certificate price with Apostille?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Our service quote is based on the required document format, authentication route, and delivery destination. We confirm the full scope before you pay.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'How much does it cost?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included in one quote.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Why is your price higher than some agencies?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Some agencies quote only the PSA retrieval fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Is Apostille always required?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Can you handle urgent cases?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.',
-              },
-            },
-          ],
+          mainEntity: faqs.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: { '@type': 'Answer', text: a },
+          })),
         },
       ]}
     >
       <HeroBanner
-        title="PSA Birth Certificate: Know the Real Total Cost Before You Start"
-        badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
-        ctaText="Free Consultation"
+        title="PSA Birth Certificate Cost: Which Fee Applies to You?"
+        badges={['Official Fees Explained', 'Direct Order or Managed Service', 'Free Email Quote']}
+        ctaText="Get My Email Quote"
         ctaHref="#contact"
-        lastUpdated="August 18, 2026"
+        ctaService="Other"
+        lastUpdated="November 7, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
-        A PSA Birth Certificate costs <strong>₱155 at a PSA outlet</strong>. PSAHelpline lists <strong>₱365 for domestic online delivery</strong>. For use abroad, the required document format, authentication route, and delivery method depend on the receiving authority.
+        A PSA Birth Certificate starts at <strong>₱155 at a PSA outlet</strong>. PSAHelpline offers a <strong>₱290 birth eCert</strong> or <strong>₱365 printed certificate with domestic delivery</strong>. For an international order, <strong>₱365 covers processing only</strong>; you arrange and pay the courier separately.
       </p>
 
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
-          <h2 className="text-xl font-bold text-gray-900 mb-3">Full Cost Breakdown</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-3">Compare your ordering options</h2>
+          <p className="text-sm text-gray-600 mb-4">Choose one route. These prices cover different services and are not fees to add together. IGRS is an independent service; using an agent is optional.</p>
           <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
-            <div className="grid grid-cols-[2fr_1fr] bg-secondary text-white">
-              <div className="px-4 py-3 font-bold">Item</div>
-              <div className="px-4 py-3 font-bold text-center">Cost</div>
-            </div>
-            {[
-              { label: 'PSA outlet certificate fee', price: '₱155 / copy' },
-              { label: 'PSAHelpline online domestic delivery', price: '₱365 / copy' },
-              { label: 'DFA authentication', price: 'depends on route' },
-              { label: 'International delivery', price: 'depends on route' },
-              { label: 'Our all-inclusive service price', price: 'USD $349', bold: true },
-            ].map((row, i) => (
-              <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
-                <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
-                <div className={`px-4 py-3 text-center ${row.bold ? 'font-bold text-primary' : 'text-gray-600'}`}>{row.price}</div>
-              </div>
-            ))}
+            <table className="w-full text-left">
+              <caption className="sr-only">Alternative PSA birth certificate ordering routes and what each price covers</caption>
+              <thead className="bg-secondary text-white">
+                <tr>
+                  <th scope="col" className="w-1/3 px-3 py-3 font-bold">Route</th>
+                  <th scope="col" className="px-3 py-3 font-bold">Price per copy and scope</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100 text-gray-700">
+                {[
+                  { route: 'PSA outlet', price: '₱155 base fee', scope: 'Certificate issuance. Local fees may apply; you arrange the application and collection.' },
+                  { route: 'PSAHelpline birth eCert', price: '₱290', scope: 'Electronic certificate. Check that your receiving authority accepts this format.' },
+                  { route: 'PSAHelpline domestic order', price: '₱365', scope: 'Printed certificate with delivery within the Philippines.' },
+                  { route: 'PSAHelpline international order', price: '₱365 + your courier cost', scope: 'Processing only. You book and pay the international courier separately; authentication is not included.' },
+                  { route: 'IGRS physical-document service', price: 'US$199', scope: 'Physical PSA birth certificate retrieval and DHL shipping, without Apostille.' },
+                  { route: 'IGRS service with authentication', price: 'US$349', scope: 'Retrieval, the applicable DFA authentication route, and DHL when a physical document is needed.' },
+                ].map((row, index) => (
+                  <tr key={row.route} className={index % 2 ? 'bg-gray-50/60' : 'bg-white'}>
+                    <th scope="row" className="px-3 py-3 align-top font-semibold">{row.route}</th>
+                    <td className="px-3 py-3 align-top">
+                      <strong className="block mb-1 text-secondary">{row.price}</strong>
+                      <span>{row.scope}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <p className="text-xs text-gray-500 mt-2">PSA and DFA routes change by document format and destination. We confirm the receiving authority's requirement before quoting.</p>
+          <p className="text-xs text-gray-500 mt-3">Direct-order sources: <a href="https://psa.gov.ph/system/files/citizens-charter/6-PSA-2025-Citizens-Charter-National-Capital-Region-External-Services.pdf" className="text-primary underline" target="_blank" rel="noopener noreferrer">PSA outlet base fee</a> · <a href="https://psahelpline.ph/faq/PSA-ECert" className="text-primary underline" target="_blank" rel="noopener noreferrer">birth eCert</a> · <a href="https://order-now.psahelpline.ph/order/choose-type?type=birth" className="text-primary underline" target="_blank" rel="noopener noreferrer">domestic order</a> · <a href="https://psahelpline.ph/faq/International-Order" className="text-primary underline" target="_blank" rel="noopener noreferrer">international processing and courier</a>.</p>
+          <p className="text-xs text-gray-500 mt-2">IGRS prices match our <a href="/en/pricing/" className="text-primary underline">published service packages</a>. We confirm the required format, authentication, eligibility, delivery scope, and any exceptional work before payment. For application requirements, see our <a href="/en/psa-birth-certificate/" className="text-primary underline">PSA birth certificate guide</a>.</p>
         </SectionDivider>
       </div>
 
-      <SummaryBlock
-        conclusion="PSA Birth Certificate costs vary by request route. Confirm the format and receiving-authority requirement before paying for authentication or delivery."
-        points={[
-          'PSA outlet and online-delivery prices are different',
-          'Authentication and international delivery depend on the document format and receiving authority',
-          'No surprise add-ons after you start the process',
-          'Compare total costs, not just base fees, when choosing a service',
-        ]}
-        ctaText="Get Your Total Quote"
+      <CtaBox
+        title="Need help arranging your birth certificate from abroad?"
+        description="Tell us your delivery country, receiving authority or purpose, required format if known, and deadline. We will check the appropriate service and quote the scope before you decide."
+        buttonText="Get My Quote by Email"
+        href="#contact"
+        service="Other"
+        variant="primary"
+        trustNote="Free consultation · No payment needed to request a quote"
       />
 
       <FeatureList
@@ -152,48 +146,39 @@ export default function PsaCostEn() {
         items={[
           {
             icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Comparing agencies by per-document price',
-            description: 'Some agencies advertise a low per-document fee but add Apostille, shipping, and handling separately. We quote everything upfront in one price.',
+            title: 'Need help coordinating from overseas',
+            description: 'Choose direct ordering if you can arrange your own application and delivery. Our managed service coordinates Philippine retrieval and the agreed delivery route.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Want to know the total cost before committing',
-            description: 'We provide all-inclusive pricing after a free consultation — PSA retrieval, DFA Apostille, and DHL shipping included.',
+            description: 'We confirm whether the US$199 physical-document service or US$349 service with applicable authentication fits your requirements before you pay.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'Want to avoid paying twice for the wrong document',
-            description: 'We confirm the required format for your submission authority before starting. No re-procurement risk.',
+            title: 'Not sure which format you need',
+            description: 'Share your receiving authority’s checklist. We review the format and authentication requirements; the authority makes the final acceptance decision.',
           },
         ]}
       />
 
-      <CtaBox
-        title="Get the real total — not just the base fee"
-        description="We quote PSA retrieval, DFA Apostille, and DHL shipping together. No surprise add-ons after you start."
-        buttonText="Talk to Us"
-        href="#contact"
-        variant="primary"
-        trustNote="Free cancellation before start · Progress updates at every stage · Pay balance only after confirming document copies"
-      />
-
       <FeatureList
-        heading="What's Included"
+        heading="What our managed service covers"
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'PSA Birth Certificate retrieval',
-            description: 'We apply to PSA and obtain the SECPA-printed original on your behalf.',
+            description: 'The US$199 package includes a physical PSA original. We confirm the required format and applicant eligibility before starting.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille when required by your submission authority.',
+            description: 'The US$349 package includes the applicable DFA authentication route when your receiving authority requires it.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'DHL shipping to your address worldwide',
-            description: 'Tracked delivery directly to your door. No forwarding needed.',
+            description: 'The physical-document service includes DHL shipping. We confirm the delivery destination and scope in your quote.',
           },
         ]}
       />
@@ -201,22 +186,23 @@ export default function PsaCostEn() {
       <StepList
         heading="How It Works"
         steps={[
-          { title: 'Submit your inquiry', description: 'Tell us your use case and submission authority.' },
-          { title: 'We provide all-inclusive pricing', description: 'PSA, Apostille, and DHL shipping quoted together upfront.' },
-          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles retrieval and authentication.' },
-          { title: 'DHL delivery worldwide', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
+          { title: 'Send your email inquiry', description: 'Tell us your delivery country, receiving authority or purpose, format if known, and deadline.' },
+          { title: 'Review the scope and quote', description: 'We confirm document format, eligibility, any required authentication, delivery, and the price before you proceed.' },
+          { title: 'Local processing in the Philippines', description: 'Our Cebu team handles the agreed retrieval and any required authentication.' },
+          { title: 'Physical-document delivery', description: 'DHL shipping for the agreed physical-document route. Estimated total: 4–6 weeks; timing varies by case.' },
         ]}
       />
 
-      <FaqSection
-        items={[
-          { q: 'How much does it cost?', a: 'Our all-inclusive price starts at USD $349, covering PSA retrieval, DFA Apostille, and DHL shipping worldwide. Urgent cases may incur an additional fee.' },
-          { q: 'Why is your price higher than some agencies?', a: 'Some agencies quote only the PSA retrieval fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.' },
-          { q: 'Is Apostille always required?', a: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.' },
-          { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
-        ]}
-        ctaTitle="Share your case and we will guide your next step"
-        ctaButton="Go to Contact Form"
+      <FaqSection items={faqs} />
+
+      <CtaBox
+        title="Ready to check your document requirements?"
+        description="Send your situation by email, even if the required format is still unclear. We will review the scope and provide a quote before you commit."
+        buttonText="Email My Requirements"
+        href="#contact"
+        service="Other"
+        variant="primary"
+        trustNote="Free cancellation before start · Pay balance after confirming document copies"
       />
     </PageLayout>
   );
