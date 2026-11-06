@@ -17,8 +17,8 @@ import { FileText, Calendar, Globe, Users, CheckCircle, AlertTriangle, Clock } f
 
 export default function CenomarGuideJa() {
   useMeta(
-    `CENOMARとは？日本からの取得方法・有効期限・費用【${SEO_YEAR}年】`,
-    'CENOMAR（フィリピン独身証明書）の意味、日本からの取得方法、有効期限、費用、e-Apostilleを解説。渡航不要・日本語で申請をサポート。',
+    `CENOMAR（独身証明書）取得代行｜日本からの申請・費用【${SEO_YEAR}年】`,
+    'CENOMAR（フィリピン独身証明書）の取得代行。日本から日本語で相談でき、電子版30,000円〜、フルセット50,000円（税込）。提出先に応じてe-Apostille・紙原本の要否、有効期限、本人確認資料をご案内します。',
   );
   return (
     <PageLayout
@@ -117,19 +117,19 @@ export default function CenomarGuideJa() {
       ]}
     >
       <HeroBanner
-        title="CENOMAR（独身証明書）"
-        subtitle="国際結婚、日本での婚姻届、配偶者ビザ準備など、提出先に応じて必要書類は変わります。CENOMARだけで足りるかを整理します。"
-        badges={['国際結婚対応', 'DFAアポスティーユ込み', '日本語でご相談OK']}
-        ctaText="無料で相談する"
+        title="CENOMAR（独身証明書）取得代行"
+        subtitle="日本にお住まいの方のCENOMAR取得を日本語でサポート。電子版30,000円〜、e-Apostille付き電子版40,000円、紙原本・DHLを含むフルセット50,000円（税込）。用途と提出先に合うプランをご案内します。"
+        badges={['日本から取得相談', '電子版・紙原本に対応', '日本語でご相談OK']}
+        ctaText="CENOMARの取得を相談・見積もり"
         ctaHref="#contact"
-        lastUpdated="2026年9月3日"
+        lastUpdated="2026年11月6日"
       />
       <SummaryBlock
-        conclusion="日本からフィリピンへ渡航せずにCENOMARを取得できます。提出先に合わせて電子版・紙原本・e-Apostilleの必要範囲を確認します。"
+        conclusion="CENOMARはPSAが発行する、婚姻記録がないことを示す書類です。日本からの取得依頼を受け付け、提出先に合う形式と必要資料を確認して手配します。"
         points={[
           '料金：電子版のみ30,000円／e-Apostille付き電子版40,000円／フルセット50,000円（税込）',
           '納期：電子版は約1週間、紙原本のDHL配送は約3〜4週間',
-          '必要資料：本人確認書類など。提出先と申請内容を確認後に個別案内',
+          '必要資料：本人確認書類や委任状など。ご本人による対応が必要な内容も申請前に個別案内',
           '有効期限：提出先によって異なり、婚姻関連手続きでは発行6ヶ月以内が一般的',
         ]}
         ctaText="無料で相談する（24時間以内に返信）"
@@ -388,7 +388,7 @@ export default function CenomarGuideJa() {
           { href: '/ja/psa-shussei-shomeisho/', title: 'PSA出生証明書取得代行', description: '婚姻関連以外の基本書類もあわせて確認できます。' },
           { href: '/ja/cenomar-apostille/', title: 'CENOMARのアポスティーユ', description: '提出先に合わせてアポスティーユが必要か確認できます。' },
           { href: '/ja/apostille-ryokin/', title: 'アポスティーユの料金・費用', description: 'Regular・Express別の料金とPSA・CENOMAR別の費用内訳を確認できます。' },
-          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: 'Regular（4営業日）・Express（翌営業日）の違いと提出期限からの逆算を解説。' },
+          { href: '/ja/apostille-shori-kikan/', title: 'アポスティーユの処理期間', description: '認証経路に応じた処理期間と、書類取得・配送を含む提出期限からの逆算を解説。' },
         ]}
       />
     </PageLayout>
