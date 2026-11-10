@@ -65,7 +65,7 @@ export default function PricingJa() {
             <p className="text-sm text-gray-700 leading-relaxed mb-4">
               すでにDFAへの申請を完了している方向けです。支払い参照番号を確認し、フィリピン国内での支払い、確認可能な支払い状況の確認、完了画面の共有まで対応します。
             </p>
-            <p className="text-2xl font-extrabold text-primary">¥33,000</p>
+            <p className="text-2xl font-extrabold text-primary">¥16,500</p>
             <p className="text-xs text-gray-500 mt-1">税込・当社代行手数料（DFA／LinkBizの実費は別途）</p>
             <p className="mt-3 text-xs font-semibold text-secondary">支払い完了保証付き</p>
             <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
@@ -78,7 +78,7 @@ export default function PricingJa() {
             <p className="text-sm text-gray-700 leading-relaxed mb-4">
               お預かりした情報をもとにDFAオンライン申請を入力・送信し、フィリピン国内での支払いと完了確認までまとめて対応します。
             </p>
-            <p className="text-2xl font-extrabold text-primary">¥55,000</p>
+            <p className="text-2xl font-extrabold text-primary">¥27,500</p>
             <p className="text-xs text-gray-500 mt-1">税込・当社代行手数料（DFA／LinkBizの実費は別途）</p>
             <p className="mt-3 text-xs font-semibold text-secondary">申請送信・支払い完了保証付き</p>
             <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-secondary transition-colors hover:bg-primary-hover">
