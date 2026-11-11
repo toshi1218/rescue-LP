@@ -64,30 +64,31 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     agency: 'German Embassy Manila',
     agencyAbbr: 'German Embassy',
     visaType: 'Ehegattennachzug (Spousal Reunification)',
-    badges: ['German Embassy-Ready', 'DFA Apostille Included', 'Ships to Germany via DHL'],
-    isHagueConvention: true,
-    authLabel: 'DFA Apostille',
+    badges: ['Paper DFA Authentication', 'German Embassy Legalization', 'Delivery to Germany'],
+    // The Apostille Convention is not in force between Germany and the Philippines.
+    isHagueConvention: false,
+    authLabel: 'DFA Authentication + German Embassy legalization',
     shippingDays: '3–5 business days',
     totalWeeks: '4–6 weeks',
     price: '899',
     summaryPoints: [
-      'Germany is a Hague Convention member — DFA Apostille is required on Philippine documents',
+      'The Apostille Convention is not in force between Germany and the Philippines; confirm whether the receiving authority requires legalization',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-      'PSA records are authenticated with an electronic e-Apostille; SECPA paper originals and non-PSA records ship via DHL Express to your German address',
+      'When legalization is required, we arrange PSA originals, a paper DFA Authentication Certificate, VFS Global submission, German Embassy legalization and delivery to Germany',
       'We confirm exact German Embassy requirements for your specific application type',
     ],
     faqs: [
       {
-        q: 'Does Germany require DFA Apostille on Philippine documents?',
-        a: 'Yes. Germany is a Hague Convention member. The German Embassy in Manila and German immigration authorities require DFA Apostille authentication on Philippine civil documents for family reunification (Familiennachzug) applications.',
+        q: 'Is a Philippine Apostille enough for Germany?',
+        a: 'No. The Apostille Convention is not in force between Germany and the Philippines. If the receiving authority requires legalization, obtain a paper DFA Authentication Certificate before German Embassy legalization. Electronic documents and e-Apostilles cannot be legalized by the Embassy.',
       },
       {
         q: 'What documents are needed for Ehegattennachzug (spousal reunification) to Germany?',
-        a: 'Typically NBI Clearance with DFA Apostille and PSA Birth Certificate. For spousal reunification, CENOMAR or PSA Marriage Certificate is also required. We confirm exact requirements for your specific case.',
+        a: 'The checklist depends on the application. PSA Birth Certificate, CENOMAR or Marriage Certificate, and sometimes NBI Clearance may be requested. We confirm the exact documents and authentication route rather than assuming all applications require the same set.',
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Germany are included.',
+        a: 'We confirm document types, copies, additional LCR requirements, DFA authentication, VFS/Embassy processing and international shipping in a written quotation before starting.',
       },
       {
         q: 'How long does it take to ship to Germany?',

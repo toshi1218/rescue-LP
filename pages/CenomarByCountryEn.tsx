@@ -70,9 +70,9 @@ export default function CenomarByCountryEn() {
         {
           country: '🇩🇪 Germany',
           visaTypes: 'Ehegattennachzug (Spouse Visa), National Visa',
-          apostille: 'DFA Apostille required',
+          apostille: 'Paper DFA Authentication + German Embassy legalization when required',
           validity: '6 months from issuance',
-          notes: 'German consulates and the Ausländerbehörde require apostilled Philippine documents. Some offices may also require a certified German translation.',
+          notes: 'The Apostille Convention is not in force between Germany and the Philippines. Confirm whether the receiving authority requires legalization. We arrange paper DFA Authentication, VFS submission, German Embassy legalization and Germany delivery; birth/LCR supporting documents may be needed.',
           authority: 'German Consulate / Ausländerbehörde',
         },
         {
