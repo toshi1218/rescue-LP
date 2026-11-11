@@ -92,8 +92,12 @@ export default function HomeEn() {
               We coordinate PSA and NBI retrieval, the appropriate DFA authentication, and international delivery. PSA e-Apostille and physical DFA Authentication Certificate routes depend on the destination. We confirm the required format before arranging delivery.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-gray-700">
-              <strong>Document authentication through VFS Global.</strong> If your destination requires authentication or verification through VFS for a Philippine document, tell us where it will be used. We check the requirements and can arrange document retrieval, DFA authentication, eligible VFS submissions, and international delivery as needed.
-              <a href="/en/apostille/#vfs-document-authentication" className="ml-1 font-bold text-secondary underline underline-offset-2">See VFS procedures by destination</a>
+              <strong>Document procedures through VFS Global.</strong> We support German Embassy legalization, UAE document attestation, and PSA record verification and educational document procedures for Italy.
+              <a href="/en/apostille/#vfs-document-authentication" className="ml-1 font-bold text-secondary underline underline-offset-2">See procedures for the three destinations</a>
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-gray-700">
+              <strong>Unreadable PSA correction documents.</strong> We can retrieve records from the local civil registrar and coordinate endorsement to PSA and reissuance when needed. From JPY 100,000 per case, with an estimated timeline of 2–3 months.
+              <a href="/en/pricing/#psa-lcr-endorsement" className="ml-1 font-bold text-secondary underline underline-offset-2">See LCR and PSA reissuance support</a>
             </p>
             <p className="mt-2 text-xs text-gray-500">Free quote · Reply within one business day. Tell us the receiving authority even if you are unsure whether an electronic or physical document is required.</p>
             <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">

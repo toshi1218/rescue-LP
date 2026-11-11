@@ -152,7 +152,7 @@ export default function ApostilleGuideJa() {
         <section id="vfs-document-authentication" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
           <h2 className="mb-3 text-xl font-bold text-gray-900">VFS Global経由のフィリピン書類認証・照合</h2>
           <p className="mb-4 leading-relaxed text-gray-700">
-            VFS Globalで認証・照合を受け付けるフィリピン発行書類は、どの提出国でもご相談いただけます。提出先の案内を確認し、書類取得、必要なDFA認証、代理で行えるVFS手続き、完成書類の受け取り・発送を手配します。
+            ドイツ、アラブ首長国連邦（UAE）、イタリアへの提出に必要なVFS Globalの書類手続きをサポートします。提出先の案内を確認し、書類取得、必要なDFA認証、代理で行えるVFS手続き、完成書類の受け取り・発送を手配します。
           </p>
           <ul className="mb-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-700">
             <li><strong>ドイツ</strong>　紙のDFA認証を取得し、PSA書類はVFSのBasic Legalizationでドイツ大使館認証へ進めます。 <a href="#germany-legalization" className="underline">ドイツ向けの詳細</a></li>

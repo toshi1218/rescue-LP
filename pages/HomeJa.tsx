@@ -198,8 +198,12 @@ export default function HomeJa() {
               PSA・NBIの取得、DFA認証、海外発送までまとめて手配します。PSA民事書類はe-Apostille（電子）が原則で、紙のPSA原本や原本発送が必要な提出先にも対応方法を確認してご案内します。
             </p>
             <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-              <strong>VFS Global経由の書類認証にも対応。</strong> フィリピン発行のCENOMAR・出生証明書などを海外に提出する際に、VFS Globalで認証や照合が必要な場合は、提出国を問わずご相談ください。必要書類の取得、DFA認証、VFSへの申請、海外発送を、提出先の要件と代理でできる範囲に合わせて手配します。
-              <a href="/ja/apostille/#vfs-document-authentication" className="ml-1 font-bold text-secondary underline underline-offset-2">国別のVFS手続き例を見る</a>
+              <strong>VFS Global経由の書類手続き。</strong> ドイツの大使館認証、アラブ首長国連邦（UAE）の書類認証、イタリアのPSA書類照合・学歴書類手続きに対応します。
+              <a href="/ja/apostille/#vfs-document-authentication" className="ml-1 font-bold text-secondary underline underline-offset-2">3か国の手続きを見る</a>
+            </p>
+            <p className="mt-3 text-sm text-gray-700 leading-relaxed">
+              <strong>PSAの訂正書類が不鮮明な場合。</strong> 登録地のLCRでの書類取得から、必要に応じたPSAへの再提出と再発行の手配まで対応します。1件10万円から、目安2〜3か月です。
+              <a href="/ja/ryokin/#psa-lcr-endorsement" className="ml-1 font-bold text-secondary underline underline-offset-2">LCR・PSA再発行サポートを見る</a>
             </p>
             <p className="mt-2 text-xs text-gray-500">見積無料・通常1営業日以内に返信。電子版・原本のどちらが必要か分からない段階でもご相談ください。</p>
             <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">

@@ -132,7 +132,7 @@ export default function ApostilleGuideEn() {
       <section id="vfs-document-authentication" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
         <h2 className="mb-3 text-xl font-bold text-secondary">Philippine document authentication and verification through VFS Global</h2>
         <p className="mb-4 leading-relaxed text-gray-700">
-          We review requests for any destination where VFS Global handles authentication or verification of Philippine documents. Depending on the receiving authority's requirements, we can arrange retrieval, the required DFA authentication, VFS steps permitted for representatives, and collection and delivery.
+          We support VFS Global document procedures for Germany, the United Arab Emirates (UAE), and Italy. Depending on the receiving authority's requirements, we can arrange retrieval, the required DFA authentication, VFS steps permitted for representatives, and collection and delivery.
         </p>
         <ul className="mb-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-700">
           <li><strong>Germany.</strong> PSA documents go through paper DFA authentication, then VFS Basic Legalization for German Embassy legalization. <a href="#germany-legalization" className="underline">Germany requirements</a></li>
