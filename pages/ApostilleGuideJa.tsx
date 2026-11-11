@@ -149,6 +149,29 @@ export default function ApostilleGuideJa() {
           </p>
         </section>
 
+        <section id="germany-legalization" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">ドイツ向け：紙のDFA認証・大使館認証・海外発送まで対応</h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            IGRSでは、ドイツの公証人・行政機関などへ提出するCENOMAR、PSA出生証明書、婚姻証明書について、取得から認証・ドイツへの発送までまとめて手配します。国際結婚・ビザ以外の、独身であることの証明などもご相談いただけます。
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            ドイツとフィリピンの間ではアポスティーユ条約による認証省略の仕組みが適用されていません。提出先が認証を求める場合は、<strong>紙のDFA Authentication Certificateを取得し、VFS Global経由でドイツ大使館のLegalization（領事認証）へ進めます</strong>。電子書類・e-Apostilleはこの大使館認証には使えません。認証の要否は提出先に確認します。
+          </p>
+          <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 leading-relaxed mb-4">
+            <li>提出先・用途・必要書類・期限を確認し、対応範囲と費用をご案内</li>
+            <li>PSAの紙原本と、紙のDFA Authentication Certificateを取得手配</li>
+            <li>委任状・本人確認書類・補足資料を揃え、VFS GlobalのBasic Legalizationで大使館認証を申請（PSA書類はDFA認証を先に取得）</li>
+            <li>完成書類を確認し、DHL・FedEx等でドイツへ発送</li>
+          </ol>
+          <p className="text-sm text-gray-700 leading-relaxed mb-3">
+            PSA書類が不鮮明な場合は、LCR Form 1Aなどの補足資料の取得可否も確認します。CENOMARには出生証明書／LCR書類の補足が必要です。大使館認証そのものにはドイツ語翻訳は不要ですが、提出先が別途翻訳を求める場合があります。納期・費用・別送の可否は必要書類と提出期限に合わせてご案内します。
+          </p>
+          <p className="text-xs text-gray-600 leading-relaxed mb-4">
+            公式案内：<a href="https://manila.diplo.de/ph-en/service/2673916-2673916" target="_blank" rel="noopener noreferrer" className="underline">ドイツ大使館</a>／<a href="https://visa.vfsglobal.com/phl/en/deu/legalizations" target="_blank" rel="noopener noreferrer" className="underline">VFS Global</a>
+          </p>
+          <a href="/ja/contact/" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">ドイツ提出用の書類を相談する</a>
+        </section>
+
         <CtaBox
           title="どの書類にアポスティーユが必要か、まず確認します"
           description="何のために使う書類か、どの書類を持っているかをお知らせください。必要な流れと費用の目安をご案内します。"

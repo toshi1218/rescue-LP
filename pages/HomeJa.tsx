@@ -145,7 +145,7 @@ export default function HomeJa() {
                 PSAデジタル化・e-Apostille対応
               </div>
               <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
-                2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）へ<span className="text-red-700">物理アポスティーユ（紙）を発行しなくなり</span>、認証は<span className="text-red-700">e-Apostille（電子）に一本化</span>されました。当社はPSA・DFA e-Apostilleのオンライン申請と支払いを日本語で代行します（NBI・LTO・PRCなどの書類は物理アポスティーユにも対応）。
+                2026年3月以降、PSA民事書類（出生・婚姻・CENOMAR等）のアポスティーユは<span className="text-red-700">e-Apostille（電子）</span>で発行されます。一方、ドイツなど別の認証ルートが必要な提出先には、<strong>紙のDFA Authentication Certificateと大使館認証</strong>を確認して手配します。当社は提出先に合わせた申請・支払いを日本語で代行します。
               </p>
               {noticeExpanded && (
                 <ul className="space-y-3 mt-4">
@@ -196,6 +196,10 @@ export default function HomeJa() {
             <h2 className="text-base md:text-lg font-bold text-secondary mb-2">取得から認証・海外発送まで、提出先に合わせて一括対応</h2>
             <p className="text-sm text-gray-700 leading-relaxed">
               PSA・NBIの取得、DFA認証、海外発送までまとめて手配します。PSA民事書類はe-Apostille（電子）が原則で、紙のPSA原本や原本発送が必要な提出先にも対応方法を確認してご案内します。
+            </p>
+            <p className="mt-3 text-sm text-gray-700 leading-relaxed">
+              <strong>ドイツ提出用にも対応：</strong>CENOMAR・出生証明書などの取得から、紙のDFA Authentication、VFS Global経由のドイツ大使館Legalization、ドイツへの発送まで一括手配します。結婚・ビザに加え、公証人への独身証明などの用途もご相談ください。
+              <a href="/ja/apostille/#germany-legalization" className="ml-1 font-bold text-secondary underline underline-offset-2">ドイツ向け認証の流れを見る</a>
             </p>
             <p className="mt-2 text-xs text-gray-500">見積無料・通常1営業日以内に返信。電子版・原本のどちらが必要か分からない段階でもご相談ください。</p>
             <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">

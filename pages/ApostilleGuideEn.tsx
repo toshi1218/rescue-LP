@@ -101,7 +101,7 @@ export default function ApostilleGuideEn() {
         conclusion="We identify the correct DFA authentication route and deliver it in the format applicable to the document."
         points={[
           'Apostille is arranged only when the receiving authority requires authentication',
-          'PSA civil records use e-Apostille; eligible non-PSA records may use a physical route',
+          'PSA Apostille applications use e-Apostille; destinations such as Germany require a different authentication route',
           'Digital e-Apostille or physical authentication delivered through the correct route',
           'Can be combined with document retrieval for a seamless one-stop service',
         ]}
@@ -128,6 +128,20 @@ export default function ApostilleGuideEn() {
           },
         ]}
       />
+
+      <section id="germany-legalization" className="mb-8 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+        <h2 className="text-xl font-bold text-secondary mb-3">Germany: paper DFA Authentication and Embassy legalization</h2>
+        <p className="text-gray-700 leading-relaxed mb-3">
+          We arrange PSA CENOMAR, Birth and Marriage Certificate retrieval, a paper DFA Authentication Certificate, German Embassy legalization through VFS Global, and international delivery. This includes documents for German notaries and proof of single status, as well as marriage and visa applications.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-3">
+          The Apostille Convention is not in force between Germany and the Philippines. When your receiving authority requires legalization, an Apostille alone is insufficient; electronic documents and e-Apostilles cannot be legalized by the German Embassy. We confirm the required route before starting.
+        </p>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          We review authorization and supporting documents, including Birth Certificate/LCR evidence for a CENOMAR. PSA certificates use VFS Basic Legalization after DFA authentication; the Advanced service does not apply to PSA documents. If PSA entries are unclear, additional LCR records may be needed. Scope, timing, embassy/VFS fees and international shipping are confirmed in advance.
+        </p>
+        <a href="/en/germany/" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">View the Germany legalization service</a>
+      </section>
 
       <CtaBox
         title="Not sure if Apostille is required? Start here."
