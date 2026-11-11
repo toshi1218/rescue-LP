@@ -12,7 +12,7 @@ export type CountryConfig = {
   authLabel: string;
   shippingDays: string;
   totalWeeks: string;
-  price: string;
+  price?: string;
   faqs: FaqItem[];
   summaryPoints: string[];
 };
@@ -69,8 +69,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
     isHagueConvention: false,
     authLabel: 'DFA Authentication + German Embassy legalization',
     shippingDays: '3–5 business days',
-    totalWeeks: '4–6 weeks',
-    price: '899',
+    totalWeeks: 'Case-specific estimate',
     summaryPoints: [
       'The Apostille Convention is not in force between Germany and the Philippines; confirm whether the receiving authority requires legalization',
       'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
@@ -92,7 +91,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How long does it take to ship to Germany?',
-        a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to Germany typically takes 3–5 business days after documents are ready.',
+        a: 'The complete timeline depends on PSA retrieval, DFA authentication, VFS appointment availability, Embassy review, additional LCR evidence and international delivery. We confirm a case-specific estimate before starting.',
       },
     ],
   },

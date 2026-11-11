@@ -138,7 +138,7 @@ export default function ApostilleGuideEn() {
           The Apostille Convention is not in force between Germany and the Philippines. When your receiving authority requires legalization, an Apostille alone is insufficient; electronic documents and e-Apostilles cannot be legalized by the German Embassy. We confirm the required route before starting.
         </p>
         <p className="text-sm text-gray-700 leading-relaxed mb-4">
-          We review authorization and supporting documents, including Birth Certificate/LCR evidence for a CENOMAR. If PSA entries are unclear, additional LCR records may be needed. Scope, timing, embassy/VFS fees and international shipping are confirmed in advance.
+          We review authorization and supporting documents, including Birth Certificate/LCR evidence for a CENOMAR. PSA certificates use VFS Basic Legalization after DFA authentication; the Advanced service does not apply to PSA documents. If PSA entries are unclear, additional LCR records may be needed. Scope, timing, embassy/VFS fees and international shipping are confirmed in advance.
         </p>
         <a href="/en/germany/" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">View the Germany legalization service</a>
       </section>

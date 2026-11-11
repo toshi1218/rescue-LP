@@ -160,7 +160,7 @@ export default function ApostilleGuideJa() {
           <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 leading-relaxed mb-4">
             <li>提出先・用途・必要書類・期限を確認し、対応範囲と費用をご案内</li>
             <li>PSAの紙原本と、紙のDFA Authentication Certificateを取得手配</li>
-            <li>委任状・本人確認書類・補足資料を揃え、VFS Global経由で大使館認証を申請</li>
+            <li>委任状・本人確認書類・補足資料を揃え、VFS GlobalのBasic Legalizationで大使館認証を申請（PSA書類はDFA認証を先に取得）</li>
             <li>完成書類を確認し、DHL・FedEx等でドイツへ発送</li>
           </ol>
           <p className="text-sm text-gray-700 leading-relaxed mb-3">

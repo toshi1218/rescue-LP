@@ -65,14 +65,8 @@ export default function GermanyDocsEn() {
           areaServed: { '@type': 'Country', name: 'DE' },
           offers: {
             '@type': 'Offer',
-            priceCurrency: 'USD',
-            price: '899',
-            priceSpecification: {
-              '@type': 'UnitPriceSpecification',
-              price: '899',
-              priceCurrency: 'USD',
-              description: 'Germany Immigration Document Package — procurement, authentication and DHL to Germany; scope confirmed before ordering',
-            },
+            url: 'https://ph-document.com/en/contact/',
+            description: 'Written quotation after confirming the documents, DFA authentication, VFS/Embassy processing, additional records and international shipping.',
           },
         },
         {
@@ -130,7 +124,7 @@ export default function GermanyDocsEn() {
           { title: 'Confirm the receiving requirements', description: 'Tell us the document type, number of copies, purpose, German receiving authority, deadline and delivery country. We confirm the scope and costs before starting.' },
           { title: 'Retrieve the PSA original', description: 'We arrange the required PSA certificates and check the entries. Additional LCR evidence may be needed for unclear records.' },
           { title: 'Obtain paper DFA Authentication', description: 'We arrange a physical DFA Authentication Certificate. Electronic documents and e-Apostilles cannot be used for German Embassy legalization.' },
-          { title: 'Submit through VFS Global', description: 'We prepare the authorization, ID copies, application and supporting evidence, then arrange an appointment and submission. VFS accepts legalization applications in Manila and Cebu.' },
+          { title: 'Submit through VFS Global', description: 'We prepare the authorization, ID copies, application and supporting evidence, then arrange an appointment and submission. PSA certificates use Basic Legalization after DFA authentication; the Advanced service does not apply to PSA documents. VFS accepts legalization applications in Manila and Cebu.' },
           { title: 'German Embassy legalization', description: 'VFS forwards the documents to the German Embassy in Manila. We collect or receive the completed originals and check them before international dispatch.' },
           { title: 'Delivery to Germany', description: 'We arrange tracked DHL/FedEx international shipping. Separate shipments can be discussed if the urgent document and its supporting evidence are complete.' },
         ]}
