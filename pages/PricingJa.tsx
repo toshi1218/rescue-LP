@@ -156,7 +156,7 @@ export default function PricingJa() {
           フィリピン書類は、提出先によってe-Certificate・e-Apostille（電子）で足りる場合と、PSA紙原本の取得・国際発送まで必要な場合があります。
         </p>
         <p className="text-sm text-gray-700 leading-relaxed mb-3">
-          <strong>PSA民事書類（出生・婚姻・CENOMAR等）のDFA認証はe-Apostille（電子）が原則</strong>です。一方、NBI・LTO・PRC等の非PSA書類では物理アポスティーユが必要になるケースがあります。
+          <strong>PSA民事書類（出生・婚姻・CENOMAR等）のDFA認証はe-Apostille（電子）が原則</strong>です。NBIは2026年10月23日以降、アポスティーユ条約が適用される提出先向けにはeGovPHのNBI eClearanceにe-Apostilleが発行されます。LTO・PRCなどは書類と提出先ごとに確認します。
         </p>
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
           IGRSでは、提出先の要件に合わせて、電子で完結する方法と、紙原本の取得・発送を含む方法を分けてご案内します。不要な取得や発送を前提にせず、必要な範囲でお見積もりします。

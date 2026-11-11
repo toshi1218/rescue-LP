@@ -104,7 +104,7 @@ export default function HomeJa() {
         {
           '@type': 'Offer',
           priceSpecification: { '@type': 'PriceSpecification', minPrice: '55000', priceCurrency: 'JPY' },
-          itemOffered: { '@type': 'Service', name: 'NBI Clearance取得代行＋DFAアポスティーユ', description: 'フィリピン国家捜査局（NBI）発行の無犯罪証明書をDFAアポスティーユ付きで代行取得。DHL配送込み。' },
+          itemOffered: { '@type': 'Service', name: 'NBI Clearance取得代行＋DFAアポスティーユ', description: 'フィリピン国家捜査局（NBI）発行の無犯罪証明書を手配。DHL配送と、必要な場合のeGovPH e-Apostille申請サポートに対応。' },
         },
         {
           '@type': 'Offer',
