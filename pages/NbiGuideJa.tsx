@@ -17,7 +17,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function NbiGuideJa() {
   useMeta(
     `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
-    'フィリピンNBI Clearance（無犯罪証明書）を渡航なしで取得代行。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。無料相談。',
+    'フィリピンNBIクリアランスの初回取得・更新をサポート。紙原本の郵送と、必要に応じたeGovPHのNBI e-Apostille申請に対応。',
   );
   return (
     <PageLayout
@@ -25,7 +25,7 @@ export default function NbiGuideJa() {
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'フィリピンNBIクリアランス（無犯罪証明書）更新サポート',
+        name: 'フィリピンNBIクリアランス（無犯罪証明書）取得・更新サポート',
         description: '2014年以降に発行されたNBIクリアランスの取得歴があり、個人情報に変更がない更新案件を中心に対応。初回取得・氏名変更がある場合は在日フィリピン大使館等でのご本人対応が必要です。日本語でご相談いただけます。',
         url: 'https://ph-document.com/ja/nbi-clearance/',
         provider: {
@@ -42,7 +42,7 @@ export default function NbiGuideJa() {
             '@type': 'UnitPriceSpecification',
             price: '55000',
             priceCurrency: 'JPY',
-            description: '初回申請・Form No.5利用プラン55,000円（税込・DFAアポスティーユ・原本のDHL国際郵送込みの総額）。更新・再発行PDF納品39,800円〜、原本郵送込み45,800円〜（DFAアポスティーユを付ける場合は+20,000円）',
+            description: '初回申請・Form No.5利用プラン55,000円（税込・必要な場合のDFA e-Apostille申請サポート・紙原本のDHL国際郵送込みの総額）。更新・再発行PDF納品39,800円〜、原本郵送込み45,800円〜（対象案件のDFA e-Apostille申請サポートは+20,000円）',
           },
         },
         },
@@ -63,7 +63,7 @@ export default function NbiGuideJa() {
               name: '初めてNBIクリアランスを取るのですが、依頼できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '初回取得は、在日フィリピン大使館・総領事館での本人による指紋対応が必要です。そのため、当社だけで完結する形ではお受けしていません。進め方の整理が必要な場合はご相談ください。',
+                text: '初回は、ご本人が在日フィリピン大使館・総領事館などで指紋を採取し、Form No. 5の原本などをマニラのNBI本局へ提出します。当社は指紋採取後の初回取得を代行し、費用を着手前にご案内します。',
               },
             },
             {
@@ -79,7 +79,7 @@ export default function NbiGuideJa() {
               name: 'どのくらいで届きますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '全体ではおおむね1か月が目安です。在外申請はNBI Main Officeで処理され、公式案内では書類到着後の処理は最大5営業日とされていますが、実際の全体日数は書類準備、配送、受取方法によって前後します。まずは現在の状況をご相談ください。',
+                text: '初回取得は、書類準備・国際配送を含めておおむね4〜6週間が目安です。NBIでの照合、eGovPHの本人認証、追加書類などで延びることがあります。',
               },
             },
           ],
@@ -88,12 +88,22 @@ export default function NbiGuideJa() {
     >
       <HeroBanner
         title="海外ビザ用NBIクリアランス"
-        subtitle="大使館の案内通りに自力で進めると2ヶ月以上。当社なら最短ルートで約1ヶ月に短縮します。"
-        badges={['納期を半分に短縮', '渡航不要・日本語対応', '進捗を随時ご報告']}
+        subtitle="初回申請・更新・紙原本の取得をサポート。アポスティーユが必要な方にはeGovPHの手続きもご案内します。"
+        badges={['初回申請・更新', '紙原本の国際配送', '日本語対応']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年8月23日"
+        lastUpdated="2026年11月11日"
       />
+
+      <SectionDivider variant="beige">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">NBI取得とe-Apostilleの流れ</h2>
+        <div className="space-y-3 text-sm leading-relaxed text-gray-700">
+          <p><strong>初めての方</strong> — 初回は、ご本人が在日フィリピン大使館・総領事館などで指紋を採取し、Form No. 5の原本などをマニラのNBI本局へ提出します。当社は指紋採取後の初回取得を代行し、費用を着手前にご案内します。 <a href="https://nbi.gov.ph/mailed-clearance-abroad/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">NBI公式の海外申請案内</a></p>
+          <p><strong>取得歴がある方</strong> — 最後の取得年と氏名などの変更有無を確認し、更新で進められるかをご案内します。</p>
+          <p><strong>アポスティーユが必要な方</strong> — 2026年10月23日以降、アポスティーユ条約が適用される提出先向けのNBI認証は、eGovPHアプリで取得したNBI eClearanceへのe-Apostille（電子認証）です。紙のNBIにDFA窓口でアポスティーユを付ける従来の方法は、この用途には使えません。 eGovPHでの申請可否を確認し、申請準備や入力・支払いをサポートします。アプリ上の本人認証はご本人に行っていただきます。外国籍の方は利用できる本人確認手段を個別に確認します。 <a href="https://www.apostille.gov.ph/documentary-requirements/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">DFA公式の必要書類</a></p>
+          <p><strong>カナダのワーキングホリデー</strong> — カナダ移民局（IRCC）は、フィリピンの警察証明として電子版NBIを受け付けていません。ワーキングホリデー（IEC）では、個別の通知に別の指定がない限り、紙で発行されたNBIを用意します。IRCCの通常案内にアポスティーユの指定はありません。 <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/philippines.html" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">IRCC公式案内</a></p>
+        </div>
+      </SectionDivider>
 
       <div className="max-w-2xl mx-auto px-4">
         <SectionDivider variant="beige">
@@ -104,11 +114,11 @@ export default function NbiGuideJa() {
             {/* 初回申請 */}
             <div className="bg-white rounded-2xl border-2 border-secondary p-4 flex flex-col">
               <div className="text-xs font-bold text-white bg-secondary rounded-full px-3 py-0.5 self-start mb-3">初回申請・Form No.5利用</div>
-              <p className="text-xs text-gray-500 mb-3 leading-relaxed">大使館で指紋採取済みの方。ポータル登録・支払い・取得・納品まで代行。</p>
+              <p className="text-xs text-gray-500 mb-3 leading-relaxed">指紋採取済みの方。申請・支払い・NBI本局への提出と受け取りをサポート。</p>
               <div className="mt-auto">
                 <div className="text-2xl font-bold text-secondary">55,000<span className="text-sm font-normal">円（税込）</span></div>
-                <div className="text-xs text-gray-500 mt-0.5">DFAアポスティーユ・原本のDHL国際郵送まで含む総額</div>
-                <div className="text-sm text-gray-700 mt-1.5">追加費用なし <span className="font-medium">55,000円で完結</span></div>
+                <div className="text-xs text-gray-500 mt-0.5">紙原本のDHL国際郵送と、必要な場合のDFA e-Apostille申請サポートを含むパッケージ</div>
+                <div className="text-sm text-gray-700 mt-1.5">初回取得から着手。取得のみの費用は事前にご案内。</div>
               </div>
             </div>
 
@@ -134,7 +144,7 @@ export default function NbiGuideJa() {
           </div>
 
           <p className="text-xs text-gray-500 leading-relaxed">
-            ※上記「初回申請・Form No.5利用」55,000円は、DFAアポスティーユと原本のDHL国際郵送を含む総額です。「更新・再発行」「ポータル入力・支払いのみ」にDFAアポスティーユを付ける場合は +20,000円。HIT（同名者照合）発生・緊急対応は追加料金が発生することがあります。更新扱いになるかは事前確認が必要です。正確な金額は無料相談後にご提示します。
+            初回取得とe-Apostille申請は別の工程です。まず初回取得の作業範囲と費用をご案内し、認証が必要な場合は、取得記録と本人認証の条件を確認して次の工程へ進みます。「更新・再発行」「ポータル入力・支払いのみ」へのe-Apostille申請サポート追加は、対象案件で +20,000円です。HITや緊急対応の費用は事前にお見積もりします。
           </p>
 
           {/* 所要期間 */}
@@ -143,31 +153,13 @@ export default function NbiGuideJa() {
               <Clock className="w-4 h-4 text-gray-400 flex-shrink-0" />
               <span>所要期間の目安</span>
             </div>
-            <div className="grid grid-cols-2 gap-2 text-center">
-              <div className="rounded-xl bg-gray-50 border border-gray-200 p-3">
-                <div className="text-xs text-gray-400 mb-1">大使館の案内通りに自力申請</div>
-                <div className="text-xl font-bold text-gray-300">2ヶ月以上</div>
-              </div>
-              <div className="rounded-xl bg-secondary/5 border border-secondary/30 p-3">
-                <div className="text-xs text-secondary font-semibold mb-1">当社代行</div>
-                <div className="text-xl font-bold text-secondary">約1ヶ月</div>
-                <div className="text-xs text-gray-500 mt-0.5">最短ルートで半分に短縮</div>
-              </div>
-            </div>
+            <p className="text-sm text-gray-700">初回取得はおおむね4〜6週間。指紋書類の配送、NBIでの照合、本人認証が必要な場合は日数が前後します。</p>
           </div>
         </SectionDivider>
       </div>
 
       {/* イントロ */}
       <div className="mb-8 space-y-3 text-sm text-gray-600 leading-relaxed">
-        <p className="text-base font-semibold text-gray-800">
-          日本から自力で申請すると、大使館の案内通りに進めて2ヶ月以上かかります。
-        </p>
-        <p>
-          当社では、フィリピン国内での申請・支払い・書類の受け取りをすべて代行し、
-          <span className="font-medium text-gray-800">取得までの最短ルートを通ることで1ヶ月以内での納品</span>を実現しています。
-          待ち時間を半分以下にして、ビザ申請のスケジュールに間に合わせます。
-        </p>
         <p className="text-xs text-gray-500">
           NBI Clearanceは<a href="http://nbi.gov.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">フィリピン国家捜査局（NBI公式サイト）</a>が発行する公的書類です。ご依頼前に条件（取得歴・氏名変更の有無）を確認し、進められる案件かどうかを先に整理したうえでご案内します。
         </p>
@@ -175,7 +167,7 @@ export default function NbiGuideJa() {
 
       <CtaBox
         title="まずは無料相談"
-        description="過去の取得年と氏名変更の有無をお知らせください。更新として進められるか確認します。"
+        description="過去の取得の有無、提出先、用途、提出期限をお知らせください。取得方法と必要な認証を確認します。"
         buttonText="無料相談はこちら"
         href="#contact"
         variant="primary"
@@ -361,9 +353,9 @@ export default function NbiGuideJa() {
       <FaqSection
         items={[
           { q: '自分が更新対象か分かりません', a: 'まずは、最後にNBIクリアランスを取った年と、その後に氏名などの変更があったかをお知らせください。更新として進めやすいかどうかを確認してご案内します。' },
-          { q: '初めてNBIクリアランスを取るのですが、依頼できますか？', a: '初回取得は、在日フィリピン大使館・総領事館での本人による指紋対応が必要です。そのため、当社だけで完結する形ではお受けしていません。進め方の整理が必要な場合はご相談ください。' },
+          { q: '初めてNBIクリアランスを取るのですが、依頼できますか？', a: '初回は、ご本人が在日フィリピン大使館・総領事館などで指紋を採取し、Form No. 5の原本などをマニラのNBI本局へ提出します。当社は指紋採取後の初回取得を代行し、費用を着手前にご案内します。' },
           { q: '結婚して姓が変わりました。更新できますか？', a: '個人情報に変更がある場合は、更新ではなく新規・初回側の手順が必要になることがあります。この場合も、まず状況を確認してご案内します。' },
-          { q: 'どのくらいで届きますか？', a: '全体ではおおむね1か月が目安です。在外申請はNBI Main Officeで処理され、公式案内では書類到着後の処理は最大5営業日とされていますが、実際の全体日数は書類準備、配送、受取方法によって前後します。まずは現在の状況をご相談ください。' },
+          { q: 'どのくらいで届きますか？', a: '初回取得は、書類準備・国際配送を含めておおむね4〜6週間が目安です。NBIでの照合、eGovPHの本人認証、追加書類などで延びることがあります。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"
         ctaButton="無料相談フォームへ"

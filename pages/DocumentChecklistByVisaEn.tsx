@@ -55,7 +55,7 @@ export default function DocumentChecklistByVisaEn() {
               name: 'Do all Philippine documents need DFA Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For most immigration purposes outside the Philippines, yes. DFA Apostille authenticates Philippine-issued documents for use in Hague Convention member countries. We verify the exact requirement for your destination country before we start.',
+                text: 'Requirements depend on the document and the receiving authority. For NBI, eGovPH eClearance is required if an Apostille is needed for a destination where the Convention applies. We verify the exact requirement for your destination country before we start.',
               },
             },
             {
@@ -87,7 +87,7 @@ export default function DocumentChecklistByVisaEn() {
         points={[
           'K-1 fiancé visa: CENOMAR + PSA Birth Certificate + NBI Clearance (all with DFA Apostille)',
           'CR-1/IR-1 spouse visa: PSA Marriage Certificate + PSA Birth Certificate + NBI Clearance',
-          'All documents need DFA Apostille for immigration use',
+          'Follow the receiving authority’s instructions for Apostille requirements',
           'We can retrieve multiple documents simultaneously to save time',
         ]}
         ctaText="Get All Documents in One Order"
@@ -114,7 +114,7 @@ export default function DocumentChecklistByVisaEn() {
               ['PSA Birth Certificate', '✓', '✓', '✓', '✓', '✓', '✓'],
               ['PSA Marriage Certificate', '—', '✓', '✓', '✓', '✓', '✓'],
               ['NBI Clearance', '✓', '✓', '✓', '✓', '✓', '✓'],
-              ['DFA Apostille', '✓', '✓', '✓', '✓', '✓', '✓'],
+              ['DFA Apostille', 'Check', 'Check', 'Check IRCC instructions', 'Check', 'Check', 'Check'],
             ].map(([doc, ...checks], i) => (
               <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                 <td className="px-3 py-2.5 font-medium text-gray-700 border-t border-gray-100">{doc}</td>
@@ -185,7 +185,7 @@ export default function DocumentChecklistByVisaEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'Canada (IRCC spousal sponsorship)',
-            description: 'Typically requires PSA Birth Certificate, PSA Marriage Certificate, and NBI Clearance — all with DFA Apostille. CENOMAR may be needed if your partner was previously unmarried at time of sponsorship.',
+            description: 'Follow your IRCC checklist for PSA documents. If a Philippine police certificate is requested, IRCC requires a paper-issued NBI Clearance. Its standard NBI instructions do not list an Apostille.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -221,7 +221,7 @@ export default function DocumentChecklistByVisaEn() {
           {
             icon: <AlertTriangle className="w-4 h-4" />,
             title: 'Forgetting DFA Apostille',
-            description: 'PSA documents without DFA Apostille are not accepted by most immigration authorities outside the Philippines. Apostille must be the physical paper original.',
+            description: 'Check whether authentication is required and which format the receiving authority accepts. DFA uses electronic Apostilles for eligible PSA e-Certificates and NBI eClearances for Convention destinations.',
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
@@ -235,7 +235,7 @@ export default function DocumentChecklistByVisaEn() {
         items={[
           { q: 'What Philippine documents do I need for a K-1 visa?', a: 'For a K-1 fiancé visa, your Filipino partner typically needs: CENOMAR with DFA Apostille (proof of single status), PSA Birth Certificate with DFA Apostille, and NBI Clearance with DFA Apostille.' },
           { q: 'What Philippine documents do I need for a CR-1 visa?', a: 'For a CR-1/IR-1 spouse visa, you typically need: PSA Marriage Certificate with DFA Apostille, PSA Birth Certificate with DFA Apostille, NBI Clearance with DFA Apostille.' },
-          { q: 'Do all Philippine documents need DFA Apostille?', a: 'For most immigration purposes outside the Philippines, yes. DFA Apostille authenticates Philippine-issued documents for use in Hague Convention member countries.' },
+          { q: 'Do all Philippine documents need DFA Apostille?', a: 'Requirements depend on the document and the receiving authority. For NBI, eGovPH eClearance is required if an Apostille is needed for a destination where the Convention applies.' },
           { q: 'How long does it take to get all documents ready?', a: 'Each document takes approximately 4–6 weeks. We can process multiple documents simultaneously. Plan at least 6–8 weeks before your visa interview.' },
           { q: 'Can you retrieve multiple documents at the same time?', a: 'Yes. We can process CENOMAR, PSA Birth Certificate, PSA Marriage Certificate, and NBI Clearance simultaneously. This saves significant time compared to ordering one by one.' },
         ]}

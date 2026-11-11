@@ -16,7 +16,7 @@
 - PRC専門資格書類 — Good Standing、Board Rating、Passing、PRC ID・Certificate of Registrationの認証コピー。取得可否確認、PRC現地対応、DFA認証、DHL発送
 
 **重要な背景情報：**
-PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応しています。2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）への紙のアポスティーユを発行しなくなり、認証はe-Apostille（電子・PDF）に一本化されました。e-Apostilleはメールで受け取り電子的に提出します（印刷は無効）。PSAオンライン申請やDFA e-Apostille申請は英語・タガログの公式サイトで行うため、日本語での入力・支払い代行や、提出先が求める書類・認証形式（e-Apostille／領事認証）の確認に、代行・相談サービスの価値があります。NBIクリアランス等の非PSA書類には引き続き紙のアポスティーユが利用でき、現地代行での取得・転送が可能です。
+PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応しています。2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）への紙のアポスティーユを発行しなくなり、認証はe-Apostille（電子・PDF）に一本化されました。e-Apostilleはメールで受け取り電子的に提出します（印刷は無効）。PSAオンライン申請やDFA e-Apostille申請は英語・タガログの公式サイトで行うため、日本語での入力・支払い代行や、提出先が求める書類・認証形式（e-Apostille／領事認証）の確認に、代行・相談サービスの価値があります。NBIは2026年10月23日以降、条約適用先向けのアポスティーユにeGovPHのNBI eClearanceが必要です。
 
 ## 料金プラン
 
@@ -38,7 +38,7 @@ PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していま
 - **帰化申請** — PSA出生証明書・NBI Clearance等の取得支援
 - **K-1 Fiancé Visa（米国）** — CENOMAR・PSA・NBI + DFAアポスティーユをDHL配送
 - **CR-1/IR-1 Spouse Visa（米国）** — PSA婚姻証明書・NBI + DFAアポスティーユをDHL配送
-- **カナダ永住権・配偶者スポンサーシップ（IRCC）** — NBI・PSA + DFAアポスティーユをカナダへDHL配送
+- **カナダ永住権・配偶者スポンサーシップ（IRCC）** — IRCC向けの紙発行NBIと必要なPSA書類を手配。NBIの通常案内ではアポスティーユの指定なし
 - **オーストラリア パートナービザ（Home Affairs）** — CENOMAR・PSA・NBI + DFAアポスティーユをオーストラリアへDHL配送
 - **英国 配偶者ビザ（UKVI）** — CENOMAR・PSA・NBI + DFAアポスティーユを英国へDHL配送
 
@@ -103,7 +103,7 @@ PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応していま
 - [PSA Birth Certificate](https://ph-document.com/en/psa-birth-certificate/) — PSA Birth Certificate retrieval
 - [PSA Birth Certificate Cost](https://ph-document.com/en/psa-birth-certificate-cost/) — Cost breakdown
 - [PSA Marriage Certificate](https://ph-document.com/en/psa-marriage-certificate/) — PSA Marriage Certificate retrieval
-- [NBI Clearance](https://ph-document.com/en/nbi-clearance/) — NBI Clearance retrieval with Apostille
+- [NBI Clearance](https://ph-document.com/en/nbi-clearance/) — Paper NBI Clearance retrieval and eGovPH e-Apostille guidance when required
 - [NBI HIT Resolution](https://ph-document.com/en/nbi-hit/) — NBI HIT resolution service
 - [NBI Validity](https://ph-document.com/en/nbi-validity/) — NBI Clearance validity and timing
 - [DFA Apostille](https://ph-document.com/en/apostille/) — DFA Apostille authentication service
@@ -149,7 +149,7 @@ A: NBI Clearance申請時に同姓同名の犯罪記録がある場合、「HIT�
 A: Yes. We ship via DHL Express to the USA, Canada, Australia, UK, Japan, Korea, and other countries worldwide.
 
 **Q: Why can't I just order Apostille documents directly from PSA Helpline or Serbilis?**
-A: PSA Helpline and Serbilis can ship regular PSA certificates internationally. Since March 2026, DFA no longer issues a paper Apostille for PSA civil documents (birth, marriage, CENOMAR) — these are authenticated with an electronic e-Apostille (a PDF submitted electronically; printing it voids it). The value of a service like ours is handling the English/Filipino online applications (PSA and DFA e-Apostille) and payment on your behalf, and confirming which document and authentication format your authority accepts. For non-PSA documents such as NBI Clearance, a paper Apostille is still available and a local intermediary can obtain and forward it.
+A: PSA Helpline and Serbilis can ship regular PSA certificates internationally. Since March 2026, DFA no longer issues a paper Apostille for PSA civil documents (birth, marriage, CENOMAR) — these are authenticated with an electronic e-Apostille (a PDF submitted electronically; printing it voids it). The value of a service like ours is handling the English/Filipino online applications (PSA and DFA e-Apostille) and payment on your behalf, and confirming which document and authentication format your authority accepts. For NBI used in Convention destinations, DFA requires eGovPH eClearance for e-Apostille applications from October 23, 2026.
 
 **Q: Do you handle K-1 and CR-1 visa documents?**
 A: Yes. We provide complete document packages for K-1 fiancé visa and CR-1/IR-1 spouse visa applications, including CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille.

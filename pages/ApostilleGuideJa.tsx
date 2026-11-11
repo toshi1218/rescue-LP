@@ -216,7 +216,7 @@ export default function ApostilleGuideJa() {
             アポスティーユは便利な認証ですが、すべての案件が同じ難易度ではありません。元書類の種類、提出先、婚姻・ビザ・外免切替などの目的によって、必要な流れは変わります。
           </p>
           <p className="text-gray-700 leading-relaxed">
-            また、NBIクリアランスやLTO書類が関係する場合は、アポスティーユ以前に、その書類自体をどの条件で取れるのかを確認しなければいけません。たとえば NBI は、2014年以降取得歴があり個人情報変更がない更新案件と、初回申請や氏名変更ありの新規扱い案件で流れが変わります。
+            また、NBIクリアランスやLTO書類が関係する場合は、アポスティーユ以前に、その書類自体をどの条件で取れるのかを確認しなければいけません。たとえば NBI は、2014年以降取得歴があり個人情報変更がない更新案件と、初回申請や氏名変更ありの新規扱い案件で流れが変わります。2026年10月23日以降、アポスティーユ条約が適用される提出先向けのNBI認証は、eGovPHアプリで取得したNBI eClearanceへのe-Apostille（電子認証）です。紙のNBIにDFA窓口でアポスティーユを付ける従来の方法は、この用途には使えません。 <a href="/ja/nbi-clearance/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">NBI取得・eGovPHの申請案内</a>
           </p>
         </section>
       </article>

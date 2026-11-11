@@ -15,7 +15,7 @@ export default function NbiKo() {
     },
     {
       q: '아포스티유가 필요한 경우는 어떤 때인가요?',
-      a: '한국 제출용（F-6 비자, F-5 영주권, 귀화 신청 등）의 경우 원칙적으로 DFA 아포스티유 인증이 필요합니다. 저희 서비스에는 아포스티유 인증이 포함되어 있습니다.',
+      a: '아포스티유가 필요한지는 제출 기관의 안내를 확인하세요. 2026년 10월 23일부터 아포스티유 협약이 적용되는 제출처에는 eGovPH 앱에서 발급된 NBI eClearance의 전자 아포스티유를 신청합니다. 본인 인증은 신청자가 직접 진행합니다.',
     },
     {
       q: 'HIT（동명이인 해당）이 뜨면 어떻게 되나요?',
@@ -71,7 +71,7 @@ export default function NbiKo() {
         <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-primary via-primary/60 to-transparent" />
         <div className="relative">
           <div className="flex flex-wrap gap-2 mb-4">
-            {['서울 대사관 지문 등록 후 대행', '아포스티유 포함', 'HIT 케이스 상담 가능'].map((b) => (
+            {['서울 대사관 지문 등록 후 대행', 'eGovPH 신청 안내', 'HIT 케이스 상담 가능'].map((b) => (
               <span key={b} className="inline-flex items-center gap-1 text-xs font-semibold bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full">
                 <span className="w-1 h-1 rounded-full bg-primary inline-block" />
                 {b}
@@ -127,7 +127,7 @@ export default function NbiKo() {
             {[
               { icon: <FileText className="w-4 h-4 text-primary" />, label: '발급 기관', value: 'NBI（필리핀 국가수사국）' },
               { icon: <Clock className="w-4 h-4 text-primary" />, label: '유효 기간', value: '발행일로부터 약 6개월' },
-              { icon: <Globe className="w-4 h-4 text-primary" />, label: '한국 제출 시', value: 'DFA 아포스티유 인증 필요' },
+              { icon: <Globe className="w-4 h-4 text-primary" />, label: '한국 제출 시', value: '제출 기관의 인증 요건 확인' },
             ].map((stat) => (
               <div key={stat.label} className="bg-gray-50 rounded-lg p-3 text-center">
                 <div className="flex justify-center mb-1">{stat.icon}</div>
@@ -172,7 +172,7 @@ export default function NbiKo() {
               { n: '1', who: '본인', text: '주한 필리핀 대사관（서울）에서 지문 등록（NBI Fingerprint Card Form No. 5）을 받습니다。예약제로 운영됩니다.' },
               { n: '2', who: '본인', text: '지문 카드와 저희가 준비한 위임장을 필리핀으로 발송합니다.' },
               { n: '3', who: '저희 대행', text: '필리핀 현지에서 NBI에 신청・NBI Clearance를 취득합니다.' },
-              { n: '4', who: '저희 대행', text: 'DFA 아포스티유 인증 후, DHL로 한국에 발송합니다.' },
+              { n: '4', who: '저희 대행', text: '종이 원본이 필요하면 DHL로 발송하고, 전자 아포스티유는 발급된 경우 별도로 전달합니다.' },
             ].map((step) => (
               <li key={step.n} className="flex gap-3 text-sm">
                 <span className="w-6 h-6 rounded-full bg-primary/10 border border-primary flex items-center justify-center shrink-0 text-xs font-bold text-primary">{step.n}</span>
@@ -218,8 +218,8 @@ export default function NbiKo() {
         <h2 className="text-lg font-bold text-secondary mb-4">아포스티유가 필요한 경우</h2>
         <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-600 leading-relaxed">
-            한국 법무부나 관공서에 제출하는 NBI Clearance에는 원칙적으로 DFA（필리핀 외무부）의 아포스티유 인증이 필요합니다.
-            저희 서비스에서는 NBI Clearance 취득 후 아포스티유 인증까지 일괄 대행합니다.
+            아포스티유가 필요한지는 제출 기관의 안내를 확인하세요. 2026년 10월 23일부터 협약 적용 제출처에는 eGovPH 앱에서 발급한 NBI eClearance의 전자 아포스티유를 신청합니다.
+            저희는 신청 준비를 지원하며, 앱에서 요구하는 본인 인증은 신청자가 직접 진행합니다. 외국 여권 소지자는 이용 가능 여부를 개별 확인합니다. <a href="https://www.apostille.gov.ph/documentary-requirements/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">DFA 공식 제출 요건</a>
           </p>
         </div>
       </section>
