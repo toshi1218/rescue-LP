@@ -129,7 +129,21 @@ export default function ApostilleGuideEn() {
         ]}
       />
 
-      <section id="germany-legalization" className="mb-8 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+      <section id="vfs-document-authentication" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+        <h2 className="mb-3 text-xl font-bold text-secondary">Philippine document authentication and verification through VFS Global</h2>
+        <p className="mb-4 leading-relaxed text-gray-700">
+          We review requests for any destination where VFS Global handles authentication or verification of Philippine documents. Depending on the receiving authority's requirements, we can arrange retrieval, the required DFA authentication, VFS steps permitted for representatives, and collection and delivery.
+        </p>
+        <ul className="mb-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-700">
+          <li><strong>Germany.</strong> PSA documents go through paper DFA authentication, then VFS Basic Legalization for German Embassy legalization. <a href="#germany-legalization" className="underline">Germany requirements</a></li>
+          <li><strong>United Arab Emirates (UAE).</strong> For eligible personal and educational documents, the VFS attestation route covers UAE Embassy and UAE Ministry of Foreign Affairs (MoFA) attestation after DFA authentication. <a href="https://services.vfsglobal.com/phl/en/atu/apply-attestation-new" target="_blank" rel="noopener noreferrer" className="underline">Official VFS guidance</a></li>
+          <li><strong>Italy.</strong> For relevant applications, we check VFS services such as PSA record verification and Declaration of Value (DOV) for educational documents. <a href="https://visa.vfsglobal.com/phl/en/ita/additional-services" target="_blank" rel="noopener noreferrer" className="underline">Official VFS guidance</a></li>
+        </ul>
+        <p className="mb-4 text-sm leading-relaxed text-gray-700">Tell us the destination, receiving authority, document type, and deadline. We check the required authentication, accepted document format, and representative eligibility before quoting.</p>
+        <a href="/en/contact/" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">Ask about your VFS document procedure</a>
+      </section>
+
+      <section id="germany-legalization" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
         <h2 className="text-xl font-bold text-secondary mb-3">Germany: paper DFA Authentication and Embassy legalization</h2>
         <p className="text-gray-700 leading-relaxed mb-3">
           We arrange PSA CENOMAR, Birth and Marriage Certificate retrieval, a paper DFA Authentication Certificate, German Embassy legalization through VFS Global, and international delivery. This includes documents for German notaries and proof of single status, as well as marriage and visa applications.

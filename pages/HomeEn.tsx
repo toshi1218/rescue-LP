@@ -92,8 +92,8 @@ export default function HomeEn() {
               We coordinate PSA and NBI retrieval, the appropriate DFA authentication, and international delivery. PSA e-Apostille and physical DFA Authentication Certificate routes depend on the destination. We confirm the required format before arranging delivery.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-gray-700">
-              <strong>Documents for Germany:</strong> We arrange CENOMAR and PSA certificate retrieval, a paper DFA Authentication Certificate, German Embassy legalization through VFS Global, and delivery to Germany. We also support proof-of-single-status requests for German notaries, beyond marriage and visa applications.
-              <a href="/en/germany/" className="ml-1 font-bold text-secondary underline underline-offset-2">See the Germany service</a>
+              <strong>Document authentication through VFS Global.</strong> If your destination requires authentication or verification through VFS for a Philippine document, tell us where it will be used. We check the requirements and can arrange document retrieval, DFA authentication, eligible VFS submissions, and international delivery as needed.
+              <a href="/en/apostille/#vfs-document-authentication" className="ml-1 font-bold text-secondary underline underline-offset-2">See VFS procedures by destination</a>
             </p>
             <p className="mt-2 text-xs text-gray-500">Free quote · Reply within one business day. Tell us the receiving authority even if you are unsure whether an electronic or physical document is required.</p>
             <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
