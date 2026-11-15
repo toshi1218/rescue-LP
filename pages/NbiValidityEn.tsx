@@ -40,7 +40,7 @@ export default function NbiValidityEn() {
               '@type': 'UnitPriceSpecification',
               price: '399',
               priceCurrency: 'USD',
-              description: 'NBI Clearance retrieval + DFA e-Apostille filing support when required + DHL shipping worldwide (all-inclusive)',
+              description: 'NBI Clearance retrieval + DFA e-Apostille filing when required + DHL shipping worldwide (all-inclusive)',
             },
           },
         },
@@ -136,7 +136,7 @@ export default function NbiValidityEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA e-Apostille (when required)',
-            description: 'Since October 23, 2026, submissions to Apostille Convention countries use a DFA e-Apostille on the NBI eClearance issued through eGovPH. We support the filing; identity verification in the app is done by the applicant.',
+            description: 'Since October 23, 2026, submissions to Apostille Convention countries use a DFA e-Apostille on the NBI eClearance issued through eGovPH. We handle the filing on your behalf; identity verification in the app is done by the applicant.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -150,8 +150,8 @@ export default function NbiValidityEn() {
         heading="How It Works"
         steps={[
           { title: 'Share your visa deadline', description: 'Tell us your interview date or submission deadline. We factor in the 1-year validity and any MATCH FOUND risk to set a safe start date.' },
-          { title: 'We confirm the timeline and quote', description: 'We provide the optimal start date and all-inclusive pricing (NBI retrieval + DFA e-Apostille filing support when required + DHL shipping).' },
-          { title: 'NBI retrieval in the Philippines', description: 'Our Cebu team handles the NBI application. If a MATCH FOUND occurs, we manage the resolution process. When an Apostille is required, we support the eGovPH e-Apostille filing.' },
+          { title: 'We confirm the timeline and quote', description: 'We provide the optimal start date and all-inclusive pricing (NBI retrieval + DFA e-Apostille filing when required + DHL shipping).' },
+          { title: 'NBI retrieval in the Philippines', description: 'Our Cebu team handles the NBI application. If a MATCH FOUND occurs, we manage the resolution process. When an Apostille is required, we handle the eGovPH e-Apostille filing.' },
           { title: 'DHL delivery to your address worldwide', description: 'Tracked shipment directly to your door. Estimated total: 4–6 weeks (longer if MATCH FOUND resolution is needed).' },
         ]}
       />
@@ -161,7 +161,7 @@ export default function NbiValidityEn() {
           { q: 'How long is NBI Clearance valid?', a: 'NBI Clearance is valid for 1 year from issuance. However, some submission authorities require a document issued within 6 months. We time retrieval to match your schedule.' },
           { q: 'How long does the full process take?', a: 'Approximately 4–6 weeks for a first-time application, including document preparation and DHL shipping. eGovPH identity verification, NBI record checks or additional documents can add time.' },
           { q: 'My NBI Clearance expired — can I get a new one quickly?', a: 'Yes. Share your new deadline and we will confirm priority options. Re-retrieval follows the same process.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. NBI retrieval, DFA e-Apostille filing support when required, and DHL shipping are all included.' },
+          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. NBI retrieval, DFA e-Apostille filing when required, and DHL shipping are all included.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"

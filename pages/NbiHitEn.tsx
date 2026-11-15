@@ -14,7 +14,7 @@ import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function NbiHitEn() {
   useMeta(
     `NBI HIT Resolution Service [${SEO_YEAR_MONTH_EN}] — We Fix It`,
-    `NBI HIT (MATCH FOUND) delaying your visa? We handle HIT resolution and NBI Clearance retrieval, plus DFA e-Apostille filing support via eGovPH. Free consultation.`,
+    `NBI HIT (MATCH FOUND) delaying your visa? We handle HIT resolution and NBI Clearance retrieval, plus DFA e-Apostille filing on your behalf via eGovPH. Free consultation.`,
   );
   return (
     <PageLayout
@@ -23,7 +23,7 @@ export default function NbiHitEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI MATCH FOUND (HIT) Resolution + NBI Clearance Retrieval Service',
-        description: 'NBI MATCH FOUND does not always mean a criminal record. We handle HIT resolution and NBI Clearance retrieval, and support DFA e-Apostille filing through eGovPH when required. Ships worldwide via DHL. Visa deadlines met.',
+        description: 'NBI MATCH FOUND does not always mean a criminal record. We handle HIT resolution and NBI Clearance retrieval, and file the DFA e-Apostille through eGovPH on your behalf when required. Ships worldwide via DHL. Visa deadlines met.',
         url: 'https://ph-document.com/en/nbi-hit/',
         provider: {
           '@type': 'Organization',
@@ -39,7 +39,7 @@ export default function NbiHitEn() {
             '@type': 'UnitPriceSpecification',
             price: '399',
             priceCurrency: 'USD',
-            description: 'NBI retrieval + HIT resolution support + DFA e-Apostille filing support when required + DHL worldwide (all-inclusive)',
+            description: 'NBI retrieval + HIT resolution support + DFA e-Apostille filing when required + DHL worldwide (all-inclusive)',
           },
         },
         },
@@ -96,7 +96,7 @@ export default function NbiHitEn() {
         points={[
           'HIT (MATCH FOUND) is common and usually caused by name similarities',
           'We handle the HIT verification and resolution process at NBI offices',
-          'NBI Clearance shipped worldwide after resolution; DFA e-Apostille filing support via eGovPH when required',
+          'NBI Clearance shipped worldwide after resolution; DFA e-Apostille filing via eGovPH when required',
           'Many applicants have met their visa deadlines with our help',
         ]}
         ctaText="Get Help Now"
@@ -143,7 +143,7 @@ export default function NbiHitEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'NBI Clearance retrieval after resolution',
-            description: 'Once the HIT is resolved, we retrieve the NBI Clearance and, when an Apostille is required, support the DFA e-Apostille filing through the eGovPH NBI eClearance service.',
+            description: 'Once the HIT is resolved, we retrieve the NBI Clearance and, when an Apostille is required, file the DFA e-Apostille through the eGovPH NBI eClearance service on your behalf.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
