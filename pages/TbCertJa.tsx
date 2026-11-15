@@ -20,15 +20,15 @@ export default function TbCertJa() {
   );
   return (
     <PageLayout
-      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '結核非発病証明書ガイド【2026年9月版】' }]}
+      breadcrumbs={[{ label: 'ホーム', href: '/ja/' }, { label: '結核非発病証明書ガイド【2026年11月版】' }]}
       jsonLd={[
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: '結核非発病証明書（JPETS）ガイド【2026年9月版】フィリピン国籍の方のCOE・査証申請に必要',
+          headline: '結核非発病証明書（JPETS）ガイド【2026年11月版】フィリピン国籍の方のCOE・査証申請に必要',
           description: '2025年6月23日から、フィリピン国籍の方が在留資格認定証明書（COE）を申請する際に結核非発病証明書の提出が必要になりました。指定Panel Clinic・費用・有効期間・手順を解説します。',
           url: 'https://ph-document.com/ja/kekkaku-shomeisho/',
-          dateModified: '2026-09-15',
+          dateModified: '2026-11-15',
           publisher: {
             '@type': 'Organization',
             name: 'IGRS Inc.',
@@ -76,7 +76,7 @@ export default function TbCertJa() {
               name: '特定技能や技能実習も対象ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '2026年9月現在、特定技能外国人は当面の間JPETSの対象外です。一方、現行の技能実習は対象です。育成就労制度は技能実習の現在の名称ではなく、2027年4月1日に運用開始予定です。制度移行後の扱いは申請時に最新のJPETS案内を確認してください。',
+                text: '2026年11月現在、特定技能外国人は当面の間JPETSの対象外です。一方、現行の技能実習は対象です。育成就労制度は技能実習の現在の名称ではなく、2027年4月1日に運用開始予定です。制度移行後の扱いは申請時に最新のJPETS案内を確認してください。',
               },
             },
           ],
@@ -88,7 +88,7 @@ export default function TbCertJa() {
         badges={['2025年6月23日〜義務化', 'フィリピン国籍対象', '有効期間180日']}
         ctaText="配偶者ビザ書類を相談する"
         ctaHref="#contact"
-        lastUpdated="2026年9月15日"
+        lastUpdated="2026年11月15日"
       />
 
       <SummaryBlock
@@ -328,14 +328,14 @@ export default function TbCertJa() {
         columns={3}
         cards={[
           { icon: Heart, title: '配偶者ビザ（日本人の配偶者等）', description: 'COE申請時に必須。フィリピン国籍の配偶者本人が受診します。', accent: 'gold' },
-          { icon: FileCheck, title: '技能実習', description: '現行の技能実習は対象です。育成就労は2027年4月1日から運用開始予定で、2026年9月時点では別の準備段階の制度です。', accent: 'blue' },
+          { icon: FileCheck, title: '技能実習', description: '現行の技能実習は対象です。育成就労は2027年4月1日から運用開始予定で、2026年11月時点では別の準備段階の制度です。', accent: 'blue' },
           { icon: ShieldCheck, title: '留学ビザ', description: '中長期在留の留学ビザも対象。政府奨学金プログラムによっては免除になる場合があります。', accent: 'green' },
         ]}
       />
 
       {/* 対象外・免除 */}
       <section className="mb-8 rounded-2xl bg-gray-50 border border-gray-200 p-5">
-        <h2 className="text-sm font-bold text-gray-800 mb-3">結核スクリーニングが対象外となる主なケース（2026年9月現在）</h2>
+        <h2 className="text-sm font-bold text-gray-800 mb-3">結核スクリーニングが対象外となる主なケース（2026年11月現在）</h2>
         <ul className="space-y-1.5 text-xs text-gray-600 leading-relaxed">
           <li className="flex items-start gap-2">
             <span className="text-green-600 font-bold flex-shrink-0">✓</span>
@@ -391,7 +391,7 @@ export default function TbCertJa() {
           { q: '結核非発病証明書の有効期間はどのくらいですか？', a: '原則として検査日（胸部エックス線実施日）から180日以内です。ただし、検査前2ヶ月以内に同居家族が活動性結核と診断された場合などは90日に短縮されます。早すぎると期限切れになるため、COE申請予定日から逆算して少なくとも1ヶ月前の受診をおすすめします。' },
           { q: 'どの医療機関で受診できますか？', a: '日本政府が指定したPanel Clinicのみで有効な証明書が発行されます。フィリピンでは現在6拠点：IOM Manila Health Centre（マカティ）、Nationwide Health Systems AUX（マカティ・バギオ・セブ・ダバオ）、St. Luke\'s Medical Center Extension Clinic（マニラ・エルミタ）が指定されています。一般的な病院では発行できません。' },
           { q: '配偶者ビザの申請でも結核証明書は必要ですか？', a: 'はい。「日本人の配偶者等」（配偶者ビザ）の在留資格認定証明書交付申請も対象です。フィリピン国籍の配偶者がいる場合、COE申請時に結核非発病証明書を添付する必要があります。' },
-          { q: '特定技能や技能実習も対象ですか？', a: '2026年9月現在、特定技能外国人は当面の間JPETSの対象外です。一方、現行の技能実習は対象です。育成就労制度は技能実習の現在の名称ではなく、2027年4月1日に運用開始予定です。制度移行後の扱いは申請時に最新のJPETS案内を確認してください。' },
+          { q: '特定技能や技能実習も対象ですか？', a: '2026年11月現在、特定技能外国人は当面の間JPETSの対象外です。一方、現行の技能実習は対象です。育成就労制度は技能実習の現在の名称ではなく、2027年4月1日に運用開始予定です。制度移行後の扱いは申請時に最新のJPETS案内を確認してください。' },
           { q: '結核と診断された場合はどうなりますか？', a: '活動性結核と診断された場合は治療が必要になります。治療完了後に再検査を受け、非発病証明書と結核治療終了報告書の両方を申請時に提出します。詳細はPanel Clinicと出入国在留管理庁にご確認ください。' },
           { q: '日本からでも手続きできますか？（配偶者がフィリピンにいる場合）', a: '結核検査はフィリピン国内の指定Panel Clinicで本人が受診する必要があります。当社では配偶者ビザ申請に必要なPSA書類・CENOMAR・DFAアポスティーユの代行を日本語のみで対応できますが、結核検査の予約・受診は配偶者本人がフィリピンの指定Panel Clinicで行う必要があります。' },
         ]}
