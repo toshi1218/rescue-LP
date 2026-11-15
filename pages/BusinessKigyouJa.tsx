@@ -129,7 +129,7 @@ export default function BusinessKigyouJa() {
                     <span className="text-xs text-gray-400">＋DFAアポスティーユ込み</span>
                   </td>
                   <td className="py-3 text-right font-semibold text-secondary">
-                    ¥99,000〜
+                    ¥49,500
                     <br />
                     <span className="text-xs font-normal text-gray-400">税込・DHL送料込み</span>
                   </td>

@@ -5,6 +5,7 @@ import PageLayoutKo from '../components/PageLayoutKo';
 import { trackEvent } from '../lib/analytics';
 import { notifySlack } from '../lib/notifyApi';
 import { isValidEmail } from '../lib/validation';
+import { createInquiryFormData } from '../lib/inquiryForm';
 import WhatsAppIcon from '../components/icons/WhatsAppIcon';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
@@ -17,18 +18,26 @@ export default function ContactKo() {
   const [emailConfirm, setEmailConfirm] = useState('');
   const [confirmError, setConfirmError] = useState('');
   const [referral, setReferral] = useState('');
-  const [referralError, setReferralError] = useState('');
   const emailConfirmRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const emailInput = (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value.trim();
+    if (submitting) return;
+    const form = e.currentTarget;
+    setSubmitError('');
+    for (const field of form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('[required]')) {
+      field.setCustomValidity(field.value.trim() ? '' : '이 항목을 입력하거나 선택해 주세요.');
+    }
+    if (!form.reportValidity()) return;
+    const emailField = form.elements.namedItem('email') as HTMLInputElement;
+    const emailInput = emailField.value.trim();
     if (!emailInput) {
       setEmailError('이메일 주소는 필수입니다.');
       return;
     }
     if (!isValidEmail(emailInput)) {
       setEmailError('이메일 주소 형식이 올바르지 않습니다 (예: example@email.com).');
+      emailField.focus();
       return;
     }
     setEmailError('');
@@ -39,16 +48,9 @@ export default function ContactKo() {
       return;
     }
     setConfirmError('');
-    if (!referral) {
-      setReferralError('어디서 알게 되셨는지 선택해 주세요.');
-      return;
-    }
-    setReferralError('');
     setSubmitting(true);
-    setSubmitError('');
     try {
-      const formData = new FormData(e.currentTarget);
-      notifySlack('ko', formData);
+      const formData = createInquiryFormData(form);
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: 'POST',
         body: formData,
@@ -56,7 +58,8 @@ export default function ContactKo() {
       });
       const data = await res.json();
       if (res.ok && data.success) {
-        trackEvent('form_submit_success', { location: 'contact_page_ko', type: 'web3forms' });
+        notifySlack('ko', formData);
+        trackEvent('form_submit_success', { location: 'contact_page_ko', type: 'web3forms', inquiry_id: String(formData.get('inquiry_id') || '') });
         setSubmitted(true);
       } else {
         setSubmitError('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
@@ -98,18 +101,26 @@ export default function ContactKo() {
         필요한 서류가 아직 정확하지 않아도 괜찮습니다. 현재 상황을 알려주시면 정리해 드립니다.
       </p>
 
-      <a
-        href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => trackEvent('cta_click', { location: 'contact_top_ko', type: 'whatsapp', page_path: window.location.pathname })}
-        className="mb-6 flex max-w-xl items-center justify-center gap-3 rounded-xl bg-[#25D366] px-4 py-4 font-bold text-white shadow-lg transition-all hover:bg-[#20b858]"
-      >
-        <WhatsAppIcon />
-        WhatsApp으로 무료 상담・견적받기（가장 빠름）
-      </a>
-      <p className="mb-6 -mt-4 text-center text-xs text-gray-500">양식 작성 없이 서류 사진・PDF 또는 필요한 서류와 기한만 보내 주세요.</p>
-      <p className="mb-3 text-sm font-bold text-secondary">WhatsApp을 사용할 수 없는 경우 이메일로 문의하세요</p>
+      <div className="mb-6 grid max-w-xl gap-3 sm:grid-cols-2">
+        <a
+          href="#contact-form"
+          onClick={() => trackEvent('cta_click', { location: 'contact_top_ko', type: 'email_form', page_path: window.location.pathname })}
+          className="flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-4 text-sm font-bold text-secondary shadow-lg transition-colors hover:bg-primary-hover"
+        >
+          <Mail className="h-5 w-5" aria-hidden="true" />
+          이메일로 무료 상담
+        </a>
+        <a
+          href="https://wa.me/639452833727?text=Hello%20IGRS%2C%20I%20would%20like%20a%20free%20document%20consultation."
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackEvent('cta_click', { location: 'contact_top_ko', type: 'whatsapp', page_path: window.location.pathname })}
+          className="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-4 text-sm font-bold text-white shadow-lg transition-colors hover:bg-[#20b858]"
+        >
+          <WhatsAppIcon />
+          WhatsApp으로 무료 상담
+        </a>
+      </div>
 
       {/* 신뢰 배지 */}
       <div className="flex flex-wrap gap-3 mb-8">
@@ -145,7 +156,7 @@ export default function ContactKo() {
 
       {/* 문의 양식 */}
       {submitted ? (
-        <div role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl">
+        <div id="contact-form" tabIndex={-1} role="status" aria-live="polite" className="bg-green-50 border border-green-200 rounded-xl p-8 text-center max-w-xl scroll-mt-24">
           <p className="text-3xl mb-3">✅</p>
           <p className="font-bold text-green-700 mb-2">문의가 접수되었습니다</p>
           <p className="text-sm text-gray-600 mb-4">내용을 확인 후 24시간 이내에 연락드립니다.</p>
@@ -166,11 +177,18 @@ export default function ContactKo() {
           </div>
         </div>
       ) : (
-        <form className="space-y-5 max-w-xl" noValidate onSubmit={handleSubmit}>
+        <form
+          id="contact-form"
+          tabIndex={-1}
+          className="space-y-5 max-w-xl scroll-mt-24"
+          noValidate
+          onInput={e => (e.target as HTMLInputElement).setCustomValidity?.('')}
+          onSubmit={handleSubmit}
+        >
           <input type="hidden" name="access_key" value="c964e168-b5bd-4aa1-a1a4-fb0a4439bbb0" />
           <input type="hidden" name="subject" value="【한국어 LP 문의】필리핀 서류 취득 대행" />
           <input type="text" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
-          <input type="hidden" name="landing_page" value="https://ph-document.com/ko/contact/" />
+          <h2 className="text-lg font-bold text-secondary">이메일로 무료 상담</h2>
 
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-1">
@@ -267,12 +285,12 @@ export default function ContactKo() {
 
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-1">
-              어디서 알게 되셨나요? <span className="text-red-500">*</span>
+              어디서 알게 되셨나요? <span className="text-xs font-normal text-gray-400">（선택）</span>
             </label>
             <select
               name="referral_source"
               value={referral}
-              onChange={e => { setReferral(e.target.value); setReferralError(''); }}
+              onChange={e => setReferral(e.target.value)}
               className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
             >
               <option value="">선택해 주세요</option>
@@ -292,7 +310,6 @@ export default function ContactKo() {
                 maxLength={100}
               />
             )}
-            {referralError && <p className="mt-1 text-xs text-red-500">{referralError}</p>}
           </div>
 
           <div>

@@ -8,14 +8,10 @@ import RelatedLinks from '../components/RelatedLinks';
 import { useMeta } from '../lib/useMeta';
 import { Award, Globe, FileCheck, Stamp } from 'lucide-react';
 
-// PRC = Philippine Professional Regulation Commission（フィリピン専門資格委員会）発行の
-// 資格・免許証明書。DFAの現行要件では、PRC原本またはPRC認証済み写しが申請対象。
-// 料金は components/Pricing.tsx の apostille-only プラン（¥39,000〜）と同一基準。
-
 export default function PrcApostilleJa() {
   useMeta(
-    'PRC証明書 アポスティーユ取得代行｜専門資格・免許の認証【IGRS】',
-    'PRC発行の資格・免許証明書について、DFAアポスティーユ取得と国際発送を代行。¥39,000〜（税込・DHL込み）。書類種別・提出国・受取機関に応じた認証ルートを申請前に確認します。帰化申請・海外就労・資格承認に。',
+    'PRC証明書取得・アポスティーユ代行｜海外就労・資格登録【IGRS】',
+    'PRCのGood Standing・Board Rating・Passing・資格登録書類をフィリピンで代理取得。PRC認証、DFAアポスティーユ、DHL海外発送まで対応。海外在住者の委任方法も事前確認。',
   );
 
   return (
@@ -23,14 +19,14 @@ export default function PrcApostilleJa() {
       breadcrumbs={[
         { label: 'ホーム', href: '/ja/' },
         { label: '料金', href: '/ja/ryokin/' },
-        { label: 'PRC証明書アポスティーユ代行' },
+        { label: 'PRC証明書取得・認証代行' },
       ]}
       jsonLd={[
         {
           '@context': 'https://schema.org',
           '@type': 'Service',
-          name: 'PRC証明書 DFAアポスティーユ取得代行',
-          description: 'PRC（フィリピン専門資格委員会）発行の資格・免許証明書のDFAアポスティーユ取得・国際発送を代行。',
+          name: 'PRC証明書取得・認証・海外発送サービス',
+          description: 'PRC（フィリピン専門資格委員会）の各種証明書について、取得、PRC認証、DFAアポスティーユ、国際発送を支援。',
           url: 'https://ph-document.com/ja/prc-apostille/',
           provider: {
             '@type': 'Organization',
@@ -51,34 +47,34 @@ export default function PrcApostilleJa() {
           mainEntity: [
             {
               '@type': 'Question',
+              name: 'どのPRC証明書を取得できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '主な対象はCertificate of Good Standing、Certificate of Board Rating、Certificate of Passing、PRC IDやCertificate of Registrationの認証コピーです。その他の照会・確認書類も個別に対応可否を確認します。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '海外から委任して取得できますか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '案件によります。2026年のPRC通達により、条件を満たす海外在住のPRC登録専門職は、委任状と所定書類のスキャンを選択したPRC Regional Officeへ送る手続きが利用できます。対象外の案件では原本のSPA等が必要になる場合があります。',
+              },
+            },
+            {
+              '@type': 'Question',
               name: 'PRC証明書にDFAアポスティーユを付けられますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。DFAの現行要件では、PRC書類は原本またはPRC認証済み写しとしてアポスティーユ申請対象に掲載されています。PSA eCertificate・CHED eCAVの全面デジタル化とは別の取扱いです。必要な形式は提出国・受取機関で異なるため、申請前に最新要件を確認します。',
+                text: 'はい。DFAの現行要件では、PRC書類は原本またはPRC認証済み写しとしてアポスティーユ申請対象です。提出国・受取機関によっては大使館認証など別の手続きが必要になるため、見積もり前に提出先の要件を確認します。',
               },
             },
             {
               '@type': 'Question',
-              name: 'PRC証明書のアポスティーユ代行はいくらですか？',
+              name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '¥39,000〜（税込・DHL国際送料込み）です。内訳はアポスティーユ代行 ¥30,000＋消費税 ¥3,000＋DHL ¥6,000。DFAでの紙のアポスティーユ取得から日本へのDHL発送までを含みます。納期の目安は約4〜6週間です。',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'PRC証明書の取得自体も代行してもらえますか？',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'PRCの証明書発行はご本人の申請・本人確認が必要になる場合が多く、書類の種類によって代行の可否が変わります。ご本人またはフィリピン国内のご家族が取得したうえで原本をIGRS宛にお送りいただければ、DFAアポスティーユの取得から国際発送までを確実に代行できます。取得自体の代行可否は書類の種類をお知らせいただければ個別にご回答します。',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: '帰化申請でPRC証明書は必要ですか？',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: '帰化申請で必ず必要になる書類ではありませんが、看護師・エンジニア・教員などの専門職として在留・就労している方は、法務局から資格を裏付ける書類としてPRC証明書を求められることがあります。必要書類は家族構成や在留状況により法務局が個別に指定するため、渡された必要書類の一覧をお見せいただければ、どの書類が紙のアポスティーユに対応し、どれがe-Apostilleになるかを整理してご案内します。',
+                text: 'すでにお持ちのPRC書類へのDFAアポスティーユ取得と日本へのDHL発送は39,000円からです。PRCでの証明書取得を含む場合は、書類の種類、委任方法、認証、発送先を確認して個別に総額を提示します。',
               },
             },
           ],
@@ -86,28 +82,47 @@ export default function PrcApostilleJa() {
       ]}
     >
       <HeroBanner
-        title="PRC証明書 アポスティーユ取得代行"
-        subtitle="PRC（フィリピン専門資格委員会）発行の資格・免許証明書のDFAアポスティーユ取得・国際発送を代行します。"
-        badges={['¥39,000〜（税込・DHL込み）', 'DFA要件を事前確認', '約4〜6週間']}
+        title="PRC証明書の取得・認証・海外発送"
+        subtitle="Good Standing・Board Rating・PassingなどのPRC書類を、フィリピンでの代理取得から認証・DHL発送まで支援します。"
+        badges={['PRC窓口での現地対応', 'アポスティーユ対応', '世界各国へDHL発送']}
         ctaText="PRC証明書について相談する"
         ctaHref="#contact"
-        ctaService="PRC証明書アポスティーユ代行"
-        lastUpdated="2026年9月15日"
+        ctaService="PRC証明書取得・認証代行"
+        lastUpdated="2026年9月30日"
       />
 
-      {/* 重要な区別（PSAとの違い） */}
       <section className="mb-10">
         <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 flex gap-3">
           <FileCheck className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
           <div>
-            <p className="text-sm font-bold text-gray-800 mb-2">PRC書類はDFAの通常申請ルートで扱われます</p>
+            <p className="text-sm font-bold text-gray-800 mb-2">2026年から海外在住者の委任手続きが改善されました</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              2026年3月16日に全面デジタル化された対象は、<strong>PSA eCertificateとCHED eCAV</strong>です。
-              <strong>PRC書類はDFAの現行要件で「PRC原本またはPRC認証済み写し」として別に掲載</strong>されており、通常のDFAアポスティーユ申請ルートを利用します。
-              必要な形式は提出国と受取機関で異なるため、申請前に最新要件を確認します。
+              PRC Memorandum Circular No. 1（2026年）により、条件を満たす海外在住のPRC登録専門職は、署名済み委任状・所定の誓約書・海外居住証明をスキャンして、選択したPRC Regional Officeへ送る手続きが利用できます。代理人は受取時に本人確認書類と所定書式を提出します。対象条件と必要書類を確認してから受任します。
             </p>
+            <a href="https://www.prc.gov.ph/prc-memorandum-circular-no-1-s-2026" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex text-sm font-semibold text-secondary underline underline-offset-2">PRC公式通達を確認する</a>
           </div>
         </div>
+      </section>
+
+      <section className="mb-10">
+        <div className="flex items-center gap-3 mb-5">
+          <div className="h-5 w-1 rounded-full bg-primary flex-shrink-0" />
+          <h2 className="text-xl md:text-2xl font-bold text-secondary">取得を相談できるPRC書類</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { title: 'Certificate of Good Standing', text: '海外の資格登録機関・雇用主等に、資格の登録状況を示す証明書。' },
+            { title: 'Certificate of Board Rating', text: 'フィリピンの資格試験における成績を示す証明書。' },
+            { title: 'Certificate of Passing', text: '資格試験への合格を示すPRC発行の証明書。' },
+            { title: 'PIC・Certificate of Registration', text: 'PRC IDや登録証明書について、PRCのCertified True Copyを取得。' },
+          ].map(({ title, text }) => (
+            <div key={title} className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
+              <p className="text-sm font-bold text-secondary mb-1">{title}</p>
+              <p className="text-sm text-gray-600 leading-relaxed">{text}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-3 text-xs text-gray-500">その他のPRC照会・資格確認書類も、提出先の指示を確認して対応可否を調査します。</p>
       </section>
 
       {/* こんな方に向いています */}
@@ -118,10 +133,10 @@ export default function PrcApostilleJa() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
-            { icon: Award, text: '帰化申請・在留資格申請で、フィリピンの資格・免許証明が必要な方' },
-            { icon: Globe, text: '海外就労・資格の海外承認で PRC証明書＋アポスティーユが必要な方' },
-            { icon: Stamp, text: '看護師・エンジニア・教員などの専門職で、資格の真正証明が必要な方' },
-            { icon: FileCheck, text: '提出先が紙の原本＋紙のアポスティーユを求めている方' },
+            { icon: Award, text: '日本や海外での就職・資格登録にPRC証明書が必要な方' },
+            { icon: Globe, text: '海外在住で、フィリピン国内に手続きを頼める人がいない方' },
+            { icon: Stamp, text: '看護師・エンジニアなど、資格の真正証明が必要な方' },
+            { icon: FileCheck, text: 'PRC取得からDFAアポスティーユ、海外発送までまとめて任せたい方' },
           ].map(({ icon: Icon, text }) => (
             <div key={text} className="flex items-start gap-3 rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
               <Icon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -136,20 +151,20 @@ export default function PrcApostilleJa() {
         heading="代行の流れ"
         steps={[
           {
-            title: '必要書類の確認',
-            description: '申請目的（帰化・海外就労・資格承認など）に合わせて、どのPRC書類が必要か、提出先が紙の原本と紙のアポスティーユを求めているかを確認します。',
+            title: '必要なPRC書類と提出形式の確認',
+            description: '職種、提出国、受取機関、期限を確認し、Good Standing・Rating・Passing・認証コピー等のどれが必要かを整理します。',
           },
           {
-            title: 'PRC証明書のご準備・IGRSへの転送',
-            description: 'PRCの証明書発行はご本人の申請・本人確認が必要な場合が多いため、ご本人またはフィリピン国内のご家族が取得のうえ、原本をIGRS宛にお送りいただきます。取得自体の代行可否は書類の種類により個別にご回答します。',
+            title: 'LERIS申請・委任書類の準備',
+            description: '必要に応じて、ご本人にLERISでの予約・支払い、委任状や海外居住証明等をご準備いただきます。案件によっては原本SPAや既存のPIC・CORが必要です。',
           },
           {
-            title: 'DFAアポスティーユ取得',
-            description: 'PRC証明書は非PSA書類のため、DFAの紙のアポスティーユを取得します。現地DFAへの予約・申請・受け取りをスタッフが代行します。',
+            title: 'PRC窓口での申請・受取',
+            description: '代理対応が認められる範囲で、現地スタッフが指定のPRC窓口へ出向き、書類の申請・受取・確認を行います。',
           },
           {
-            title: 'DHL国際発送',
-            description: 'アポスティーユ付きのPRC証明書原本を、追跡付きのDHLでお届けします。納期の目安は約4〜6週間です。',
+            title: '認証・海外発送',
+            description: '提出先に必要な場合はDFAアポスティーユ等を手配し、完成書類の写真・PDFをご確認いただいた後、DHLで発送します。',
           },
         ]}
       />
@@ -162,8 +177,12 @@ export default function PrcApostilleJa() {
             <span className="text-4xl font-extrabold text-primary">¥39,000</span>
             <span className="text-sm text-gray-500">〜（税込・DHL国際送料込み）</span>
           </div>
-          <p className="text-xs text-gray-400 mb-5">アポスティーユ代行 ¥30,000 ＋ 消費税 ¥3,000 ＋ DHL ¥6,000</p>
+          <p className="text-xs text-gray-400 mb-5">お手元のPRC書類にDFAアポスティーユを取得し、日本へ発送する場合</p>
           <ul className="space-y-2 text-sm text-gray-700 mb-5">
+            <li className="flex justify-between border-b border-gray-100 pb-2">
+              <span>PRCでの証明書取得を含む場合</span>
+              <span className="font-semibold text-secondary">個別見積もり</span>
+            </li>
             <li className="flex justify-between border-b border-gray-100 pb-2">
               <span>DFAアポスティーユ取得代行</span>
               <span className="font-semibold text-secondary">込み</span>
@@ -173,8 +192,8 @@ export default function PrcApostilleJa() {
               <span className="font-semibold text-secondary">込み</span>
             </li>
             <li className="flex justify-between border-b border-gray-100 pb-2">
-              <span>納期の目安</span>
-              <span className="font-semibold text-secondary">約4〜6週間</span>
+              <span>納期</span>
+              <span className="font-semibold text-secondary">PRC予約状況確認後に案内</span>
             </li>
             <li className="flex justify-between">
               <span>日本語翻訳が必要な場合</span>
@@ -182,27 +201,27 @@ export default function PrcApostilleJa() {
             </li>
           </ul>
           <p className="text-xs text-gray-500 leading-relaxed">
-            上記はPRC証明書の原本をIGRS宛にお送りいただく場合の料金です。お支払いは着手金50%・書類発送準備完了後に残金50%。着手前のキャンセルは無料です。
+            取得込みの案件は、PRC手数料、現地対応、認証、発送を含む総額を着手前に提示します。お支払いは着手金約50%・書類の写真またはPDF確認後に残金。着手前のキャンセルは無料です。
           </p>
         </div>
       </section>
 
       <CtaBox
-        title="PRC証明書のアポスティーユを相談する"
-        description="どのPRC書類が必要か、提出先が求める形式（紙原本・紙のアポスティーユ）も含めて、まずは無料でご相談ください。"
+        title="PRC証明書の取得可否を無料確認"
+        description="職種、必要書類、提出国、受取機関、期限をお知らせください。委任方法と認証ルートを確認してお見積もりします。"
         buttonText="無料で相談する"
         href="#contact"
         variant="primary"
         trustNote="相談・見積もり無料／着手前キャンセル無料"
-        service="PRC証明書アポスティーユ代行"
+        service="PRC証明書取得・認証代行"
       />
 
       <FaqSection
         items={[
-          { q: 'PRC証明書にDFAアポスティーユを付けられますか？', a: 'はい。DFAの現行要件では、PRC書類は原本またはPRC認証済み写しとしてアポスティーユ申請対象に掲載されています。PSA eCertificate・CHED eCAVの全面デジタル化とは別の取扱いです。必要な形式は提出国・受取機関で異なるため、申請前に最新要件を確認します。' },
-          { q: 'PRC証明書のアポスティーユ代行はいくらですか？', a: '¥39,000〜（税込・DHL国際送料込み）です。内訳はアポスティーユ代行 ¥30,000＋消費税 ¥3,000＋DHL ¥6,000。DFAでの紙のアポスティーユ取得から日本へのDHL発送までを含みます。納期の目安は約4〜6週間です。' },
-          { q: 'PRC証明書の取得自体も代行してもらえますか？', a: 'PRCの証明書発行はご本人の申請・本人確認が必要になる場合が多く、書類の種類によって代行の可否が変わります。ご本人またはフィリピン国内のご家族が取得したうえで原本をIGRS宛にお送りいただければ、DFAアポスティーユの取得から国際発送までを確実に代行できます。取得自体の代行可否は書類の種類をお知らせいただければ個別にご回答します。' },
-          { q: '帰化申請でPRC証明書は必要ですか？', a: '帰化申請で必ず必要になる書類ではありませんが、看護師・エンジニア・教員などの専門職として在留・就労している方は、法務局から資格を裏付ける書類としてPRC証明書を求められることがあります。必要書類は家族構成や在留状況により法務局が個別に指定するため、渡された必要書類の一覧をお見せいただければ、どの書類が紙のアポスティーユに対応し、どれがe-Apostilleになるかを整理してご案内します。' },
+          { q: 'どのPRC証明書を取得できますか？', a: '主な対象はCertificate of Good Standing、Certificate of Board Rating、Certificate of Passing、PRC IDやCertificate of Registrationの認証コピーです。その他の照会・確認書類も個別に対応可否を確認します。' },
+          { q: '海外から委任して取得できますか？', a: '案件によります。2026年のPRC通達により、条件を満たす海外在住のPRC登録専門職は、委任状と所定書類のスキャンをPRC Regional Officeへ送る手続きが利用できます。対象外の案件では原本SPA等が必要になる場合があります。' },
+          { q: 'PRC証明書にDFAアポスティーユを付けられますか？', a: 'はい。DFAの現行要件では、PRC書類は原本またはPRC認証済み写しとしてアポスティーユ申請対象です。提出国・受取機関に応じて必要な認証ルートを確認します。' },
+          { q: '料金はいくらですか？', a: 'すでにお持ちのPRC書類へのDFAアポスティーユ取得と日本へのDHL発送は39,000円からです。PRCでの証明書取得を含む場合は、書類の種類、委任方法、認証、発送先を確認して個別に総額を提示します。' },
         ]}
         ctaTitle="必要な書類を一緒に整理します"
         ctaButton="無料相談フォームへ"

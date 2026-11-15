@@ -7,7 +7,7 @@ const FALLBACK_PRICING = `Japanese package prices (tax-included):
 - PSA e-Certificate + e-Apostille (1 item): JPY 40,000
 - PSA full set — e-Certificate + e-Apostille + SECPA paper original + DHL (1 item): JPY 55,000
 - Marriage PSA Pack — Birth Certificate + CENOMAR, electronic: JPY 65,000 / full set with paper originals and DHL: JPY 80,000
-- LTO Driver Record: from JPY 99,000
+- LTO Driver Record + DFA Apostille + DHL: JPY 49,500
 - NBI Clearance retrieval + Apostille + DHL: JPY 55,000
 Note: Remote area surcharge, urgent handling, additional documents, or re-issuance may require a separate quote.`;
 

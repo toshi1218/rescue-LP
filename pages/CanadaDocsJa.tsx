@@ -16,7 +16,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function CanadaDocsJa() {
   useMeta(
     `カナダ移民ビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — IRCC対応・DHL郵送`,
-    'カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。',
+    'カナダのワーキングホリデー・永住権などに必要なフィリピン書類を手配。IRCC向けに紙で発行されたNBIクリアランスの取得をサポートします。',
   );
   return (
     <PageLayout
@@ -25,7 +25,7 @@ export default function CanadaDocsJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'カナダ移民ビザ向けフィリピン書類取得代行（IRCC対応）',
-        description: 'カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。IRCC提出対応。',
+        description: 'カナダのワーキングホリデー・永住権などに必要なフィリピン書類を手配。IRCC向けに紙で発行されたNBIクリアランスの取得をサポートします。',
         url: 'https://ph-document.com/ja/canada/',
         provider: {
           '@type': 'Organization',
@@ -54,7 +54,7 @@ export default function CanadaDocsJa() {
               name: 'カナダ移民申請にはDFAアポスティーユが必要ですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'はい。カナダはハーグ条約加盟国です。IRCCへの申請には、PSA出生証明書・CENOMAR・NBI ClearanceにDFAアポスティーユ認証が必要です。',
+                text: '書類と申請種別によって異なります。IRCCのフィリピン向け警察証明の通常案内にアポスティーユの指定はありません。個別のチェックリストや追加提出通知をご確認ください。',
               },
             },
             {
@@ -62,7 +62,7 @@ export default function CanadaDocsJa() {
               name: 'カナダ永住権・配偶者スポンサーシップに必要な書類は？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'IRCC申請の場合、NBI Clearance（DFAアポスティーユ付き）とPSA出生証明書が基本です。配偶者スポンサーシップではCENOMAR・婚姻証明書も必要な場合があります。無料相談でご確認します。',
+                text: '申請ごとのIRCCチェックリストに従います。フィリピンの警察証明が求められる場合は紙で発行されたNBIを手配します。PSAの出生・婚姻証明書なども、指定に応じて手配します。',
               },
             },
             {
@@ -70,7 +70,7 @@ export default function CanadaDocsJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: '必要書類・DFAアポスティーユ・カナダへの国際郵送をまとめた料金でご案内します。無料相談後に正確な金額をご提示します。',
+                text: '必要書類、個別に指定された認証、国際郵送の範囲を確認し、着手前にお見積もりします。',
               },
             },
             {
@@ -87,22 +87,28 @@ export default function CanadaDocsJa() {
     >
       <HeroBanner
         title="カナダ移民ビザ 書類取得代行"
-        badges={['IRCC対応', 'アポスティーユ込み', '費用は事前にご案内']}
+        badges={['IRCC対応', '紙のNBI原本を手配', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年8月13日"
+        lastUpdated="2026年11月11日"
       />
 
       <SummaryBlock
-        conclusion="Spousal Sponsorship・永住権申請に必要なPSA証明書・NBIクリアランスをIRCC対応のDFAアポスティーユ付きで一括手配。カナダ移民申請の書類ブロッカーを取り除きます。"
+        conclusion="カナダのワーキングホリデー・永住権・配偶者スポンサーシップなどに必要なフィリピン書類を、IRCCの指示に沿って手配します。"
         points={[
-          'カナダはハーグ条約加盟国 — フィリピン書類にはDFAアポスティーユが必要',
+          'IRCC向けの警察証明は、紙で発行されたNBIを手配',
           'CENOMAR・PSA出生証明書・NBI Clearance・婚姻証明書に対応',
-          'DFAアポスティーユ付きの原本をDHLでカナダへ直送',
+          '紙原本は追跡付きで海外発送',
           '申請種別ごとのIRCC要件を事前確認してから進めます',
         ]}
         ctaText="無料で相談する"
       />
+
+      <section className="mb-8 space-y-3 rounded-xl border border-gray-200 p-5 text-sm leading-relaxed text-gray-700">
+        <h2 className="text-xl font-bold text-gray-900">カナダのワーキングホリデー（IEC）のNBI</h2>
+        <p>カナダ移民局（IRCC）は、フィリピンの警察証明として電子版NBIを受け付けていません。ワーキングホリデー（IEC）では、個別の通知に別の指定がない限り、紙で発行されたNBIを用意します。IRCCの通常案内にアポスティーユの指定はありません。 <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/philippines.html" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">IRCCのフィリピン向け案内</a></p>
+        <p>IECの初回申請期限までに証明書が間に合わない場合、IRCCは申請領収書やオンライン申請の確認画面・メールを提出できると案内しています。追加提出の通知が届いている場合は、その通知の指示と期限に従ってください。 <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/apply-work-permit.html" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">IECの提出期限に関する公式案内</a></p>
+      </section>
 
       <FeatureList
         heading="こんな方へ"
@@ -110,12 +116,12 @@ export default function CanadaDocsJa() {
           {
             icon: <Shield className="w-4 h-4" />,
             title: 'カナダ永住権・配偶者スポンサーシップを申請中',
-            description: 'IRCCへの提出にはDFAアポスティーユ付きのフィリピン書類が必要です。必要書類を一括で手配します。',
+            description: 'IRCCのチェックリストに従い、必要書類と認証の要否を確認して手配します。',
           },
           {
             icon: <Users className="w-4 h-4" />,
             title: 'カナダ在住でフィリピンに頼める人がいない',
-            description: '現地スタッフがフィリピン国内の手続きを全て代行します。申請者情報をお知らせいただくだけでOKです。',
+            description: '現地スタッフがフィリピン側の申請を支援します。初回の指紋採取など、ご本人に必要な手続きもご案内します。',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -140,13 +146,13 @@ export default function CanadaDocsJa() {
           items={[
             {
               icon: <FileCheck className="w-4 h-4" />,
-              title: 'PSA書類取得（出生証明書・婚姻証明書・CENOMAR・NBI Clearanceなど）',
-              description: '必要なPSA書類をまとめて取得します。',
+              title: 'PSA証明書・NBIクリアランスの取得',
+              description: '出生・婚姻証明書などのPSA書類と、紙で発行されたNBIを必要に応じて手配します。',
             },
             {
               icon: <FileCheck className="w-4 h-4" />,
-              title: 'DFAアポスティーユ認証（※日本の手続きではほぼ必須です）',
-              description: 'IRCC要件に沿ったDFAアポスティーユ認証を手配します。原本での提出が必要です。',
+              title: '提出先から指定された場合のDFA認証',
+              description: '個別に認証の指定がある場合は、指定内容と認証方法を確認します。',
             },
             {
               icon: <Globe className="w-4 h-4" />,
@@ -160,12 +166,12 @@ export default function CanadaDocsJa() {
           heading="対応書類・ビザ種別"
           columns={3}
           cards={[
-            { icon: FileText, title: 'PSA出生証明書', description: '永住権・スポンサーシップ申請の基本書類。DFAアポスティーユ付きで手配', accent: 'gold' },
+            { icon: FileText, title: 'PSA出生証明書', description: '永住権・スポンサーシップで指定された場合に手配', accent: 'gold' },
             { icon: ShieldCheck, title: 'CENOMAR', description: '独身証明書。配偶者スポンサーシップで必要になることが多い', accent: 'blue' },
             { icon: CheckCircle, title: 'NBI Clearance', description: '無犯罪証明書。IRCC申請の基本書類の一つ', accent: 'green' },
-            { icon: Stamp, title: 'DFAアポスティーユ', description: 'ハーグ条約加盟国への提出に必要な外務省認証', accent: 'teal' },
+            { icon: Stamp, title: 'DFAアポスティーユ', description: '提出先の個別指示で求められる場合に確認する外務省認証', accent: 'teal' },
             { icon: Plane, title: '配偶者スポンサーシップ', description: 'CENOMAR・PSA婚姻証明書・NBI Clearanceが必要', accent: 'purple' },
-            { icon: Globe, title: '永住権（PR）', description: 'IRCC要件に合わせた書類一式をDFAアポスティーユ付きで対応', accent: 'gold' },
+            { icon: Globe, title: '永住権（PR）', description: '申請ごとのIRCCチェックリストに沿って対応', accent: 'gold' },
           ]}
         />
       </SectionDivider>
@@ -177,7 +183,7 @@ export default function CanadaDocsJa() {
           steps={[
             { title: 'フォームで相談', description: '申請種別（永住権・配偶者スポンサーシップなど）と提出目標日をお知らせください。' },
             { title: '必要書類・料金の確認', description: 'IRCC要件をもとに必要書類をリストアップし、料金をご提示します。' },
-            { title: 'フィリピン現地で手配', description: 'PSAはオンライン申請＋DFA e-Apostille（電子認証）、NBI等は現地スタッフが物理取得・アポスティーユを進めます。' },
+            { title: 'フィリピン現地で手配', description: 'PSA書類や紙で発行されるNBIを、確認した条件に沿って手配します。' },
             { title: 'カナダへ郵送', description: '書類が揃い次第、DHLで追跡付きお届け。目安は全体で約4〜6週間。' },
           ]}
         />
@@ -196,9 +202,9 @@ export default function CanadaDocsJa() {
 
       <FaqSection
         items={[
-          { q: 'カナダ移民申請にはDFAアポスティーユが必要ですか？', a: 'はい。カナダはハーグ条約加盟国です。IRCCへの申請には、PSA出生証明書・CENOMAR・NBI ClearanceにDFAアポスティーユ認証が必要です。' },
-          { q: 'カナダ永住権・配偶者スポンサーシップに必要な書類は？', a: 'IRCC申請の場合、NBI Clearance（DFAアポスティーユ付き）とPSA出生証明書が基本です。配偶者スポンサーシップではCENOMAR・婚姻証明書も必要な場合があります。無料相談でご確認します。' },
-          { q: '料金はいくらですか？', a: '必要書類・DFAアポスティーユ・カナダへの国際郵送をまとめた料金でご案内します。無料相談後に正確な金額をご提示します。' },
+          { q: 'カナダ移民申請にはDFAアポスティーユが必要ですか？', a: '書類と申請種別によって異なります。IRCCのフィリピン向け警察証明の通常案内にアポスティーユの指定はありません。個別のチェックリストや追加提出通知をご確認ください。' },
+          { q: 'カナダ永住権・配偶者スポンサーシップに必要な書類は？', a: '申請ごとのIRCCチェックリストに従います。フィリピンの警察証明が求められる場合は紙で発行されたNBIを手配します。PSAの出生・婚姻証明書なども、指定に応じて手配します。' },
+          { q: '料金はいくらですか？', a: '必要書類、個別に指定された認証、国際郵送の範囲を確認し、着手前にお見積もりします。' },
           { q: 'カナダへの郵送にどのくらいかかりますか？', a: '目安は全体で約4〜6週間です。書類準備後、DHLエクスプレスでカナダへ3〜5営業日でお届けします。' },
         ]}
         ctaTitle="まずは状況をお聞かせください"

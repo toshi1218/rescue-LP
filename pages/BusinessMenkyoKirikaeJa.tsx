@@ -56,10 +56,10 @@ export default function BusinessMenkyoKirikaeJa() {
           offers: {
             '@type': 'Offer',
             priceCurrency: 'JPY',
-            price: '99000',
+            price: '49500',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '99000',
+              price: '49500',
               priceCurrency: 'JPY',
               description: 'LTO書類取得・DFAアポスティーユ込み（税込・DHL国際送料込み）',
             },
@@ -318,7 +318,7 @@ export default function BusinessMenkyoKirikaeJa() {
                     <br />
                     <span className="text-xs text-gray-400">＋DFAアポスティーユ込み</span>
                   </td>
-                  <td className="py-3 text-right font-semibold text-secondary">¥99,000〜</td>
+                  <td className="py-3 text-right font-semibold text-secondary">¥49,500</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>

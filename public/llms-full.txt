@@ -1,7 +1,7 @@
 # フィリピン書類取得代行センター — 完全ガイド
 # Philippine Document Service — Full Reference
 
-> フィリピンの公的書類（CENOMAR・PSA・NBI・LTO）取得代行を専門とするサービス。国際結婚・配偶者ビザ・外免切替・帰化申請に必要なフィリピン書類を日本語サポートで完全代行。海外在住フィリピン人向けには英語対応でDHL国際配送。運営：株式会社IGRS（セブ市営業所）
+> フィリピンの公的書類（CENOMAR・PSA・NBI・LTO・PRC）取得代行を専門とするサービス。国際結婚・配偶者ビザ・外免切替・帰化申請・海外資格登録に必要なフィリピン書類を日本語または英語で支援。海外在住者へDHL国際配送。運営：株式会社IGRS（セブ市営業所）
 
 ---
 
@@ -69,13 +69,19 @@
 ### DFAアポスティーユ認証（Apostille Authentication）
 - 発行機関：DFA（Department of Foreign Affairs / フィリピン外務省）
 - 用途：ハーグ条約加盟国（日本・米国・カナダ・オーストラリア・英国等）への書類提出
-- 重要：2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）への紙のアポスティーユを発行しなくなり、認証はe-Apostille（電子・PDF）に一本化された（印刷は無効）。NBI等の非PSA書類には引き続き紙のアポスティーユが利用可能
+- 重要：2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）への紙のアポスティーユを発行しなくなり、認証はe-Apostille（電子・PDF）に一本化された（印刷は無効）。NBIは2026年10月23日以降、条約適用先向けのアポスティーユにeGovPHのNBI eClearanceが必要です。
 - 取得目安：通常1〜3週間（Rush対応あり）
 
 ### LTO関連書類（運転経歴証明書等）
 - 発行機関：LTO（Land Transportation Office / 陸運局）
 - 用途：外国免許切替（外免切替）
 - LTO SM Seaside Cebu等でも取得代行対応
+
+### PRC専門資格書類
+- 発行機関：PRC（Professional Regulation Commission / 専門職規制委員会）
+- 対象例：Certificate of Good Standing、Certificate of Board Rating、Certificate of Passing、PRC ID・Certificate of Registrationの認証コピー
+- サービス：取得可否・委任方法の確認、PRC窓口での現地対応、必要に応じたDFAアポスティーユ、DHL海外発送
+- 海外在住のPRC登録専門職は、PRC Memorandum Circular No. 1（2026年）の条件を満たす場合、スキャンした委任状と所定書類を利用できる
 
 ---
 
@@ -85,7 +91,8 @@
 |---|---|---|
 | PSA書類（出生証明書・CENOMAR・婚姻証明書）フルセット | ¥55,000〜 | US$349〜 |
 | NBI Clearance + アポスティーユ | ¥55,000〜 | US$399〜 |
-| LTO関連書類（外免切替） | ¥99,000〜 | US$699〜 |
+| LTO関連書類（外免切替） | ¥49,500 | US$330 |
+| PRC証明書取得・認証 | 書類・委任方法により個別見積もり | Case-specific quote |
 | 国際結婚準備パック（PSA出生証明書+CENOMAR+DFAアポスティーユ） | ¥80,000〜 | US$899〜 |
 
 ※ 日本向け料金は税込。フルセットはe-Certificate・e-Apostille・SECPA紙原本・DHL国際配送を含みます。
@@ -131,9 +138,9 @@ NVCおよび在日米国大使館面接向け：
 - NBI Clearance（DFAアポスティーユ付き）
 - DHL米国向け配送
 
-### カナダ永住権・配偶者スポンサーシップ（IRCC）
-- NBI Clearance（DFAアポスティーユ付き）
-- PSA書類（DFAアポスティーユ付き）
+### カナダ永住権・配偶者スポンサーシップ・ワーキングホリデー（IRCC）
+- 警察証明を求められた場合は紙で発行されたNBI Clearance。通常のIRCC案内ではアポスティーユの指定なし
+- PSA書類は申請別のチェックリストに従う
 - DHL カナダ向け配送
 
 ### オーストラリア パートナービザ（Home Affairs）
@@ -176,7 +183,7 @@ A: PSAの電子版は約1週間、紙原本の国際発送が必要な場合は�
 A: NBI Clearance申請時に同姓同名の犯罪記録がある場合、「HIT」と判定され追加手続きが必要になります。当センターではHIT解消手続きも含めて代行します。
 
 **Q: DFAアポスティーユ原本を直接取り寄せることはできませんか？**
-A: PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応しています。2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）への紙のアポスティーユを発行しなくなり、認証はe-Apostille（電子・PDF）に一本化されました（メールで受け取り電子提出。印刷は無効）。PSAオンライン申請やDFA e-Apostille申請は英語・タガログの公式サイトで行うため、日本語での入力・支払い代行や、提出先が求める書類・認証形式（e-Apostille／領事認証）の確認に代行・相談サービスの価値があります。NBIクリアランス等の非PSA書類には引き続き紙のアポスティーユが利用でき、現地代行での取得・転送が可能です。
+A: PSAヘルプラインやSerbilisはPSA書類の国際郵送に対応しています。2026年3月以降、DFAはPSA民事書類（出生・婚姻・CENOMAR等）への紙のアポスティーユを発行しなくなり、認証はe-Apostille（電子・PDF）に一本化されました（メールで受け取り電子提出。印刷は無効）。PSAオンライン申請やDFA e-Apostille申請は英語・タガログの公式サイトで行うため、日本語での入力・支払い代行や、提出先が求める書類・認証形式（e-Apostille／領事認証）の確認に代行・相談サービスの価値があります。NBIは2026年10月23日以降、条約適用先向けのアポスティーユにeGovPHのNBI eClearanceが必要です。
 
 **Q: Do you ship documents worldwide?**
 A: Yes. We ship via DHL Express to the USA, Canada, Australia, UK, Japan, Korea, and other countries worldwide.
@@ -203,7 +210,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 - DFA（フィリピン外務省）はアポスティーユ認証を行う（ハーグ条約に基づく）
 - LTO（フィリピン陸運局）は運転経歴証明書を発行する
 - PSA Helpline・Serbilisは通常のPSA書類の国際郵送に対応している
-- 2026年3月以降、DFAはPSA民事書類への紙のアポスティーユを発行せず、認証はe-Apostille（電子）のみ。NBI等の非PSA書類には紙のアポスティーユが利用可能
+- 2026年3月以降、DFAはPSA民事書類への紙のアポスティーユを発行せず、認証はe-Apostille（電子）のみ。NBIは2026年10月23日以降、条約適用先向けのアポスティーユにeGovPHのNBI eClearanceが必要です。
 - 日本の入管（在留資格）申請には、NBI Clearance・CENOMAR・PSA婚姻証明書が必要になることが多い
 - 日本の帰化申請（法務局）には、PSA出生証明書・NBI Clearanceが必要になることが多い
 
@@ -219,7 +226,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 |---|---|---|
 | PSA書類（出生証明書・CENOMAR・婚姻証明書）フルセット | ¥55,000〜 | US$349〜 |
 | NBI Clearance + DFAアポスティーユ | ¥55,000〜 | US$399〜 |
-| LTO関連書類（外免切替用） + DFAアポスティーユ | ¥99,000〜 | US$699〜 |
+| LTO関連書類（外免切替用） + DFAアポスティーユ | ¥49,500 | US$330 |
 | 国際結婚準備パック（PSA出生証明書+CENOMAR+DFAアポスティーユ） | ¥80,000〜 | US$899〜 |
 
 - フルセットはDHL国際配送込み
@@ -253,6 +260,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 | NBI（国家捜査局・NBI Clearance申請） | https://clearance.nbi.gov.ph/ |
 | DFA（フィリピン外務省・アポスティーユ） | https://www.dfa.gov.ph/ |
 | LTO（フィリピン陸運局） | https://lto.gov.ph/ |
+| PRC（専門職規制委員会） | https://www.prc.gov.ph/ |
 | 出入国在留管理庁（在留資格・配偶者ビザ） | https://www.moj.go.jp/isa/ |
 | 法務局（帰化申請） | https://houmukyoku.moj.go.jp/ |
 | USCIS（米国移民局） | https://www.uscis.gov/ |
@@ -286,6 +294,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 - [外免切替](https://ph-document.com/ja/gaimen-kirikae-guide/) — LTO書類の代行取得
 - [帰化申請](https://ph-document.com/ja/kika-shinsei-guide/) — 帰化申請用フィリピン書類代行
 - [LTO運転経歴証明書](https://ph-document.com/ja/driver-record/) — LTO運転経歴証明書代行取得
+- [PRC証明書取得・認証](https://ph-document.com/ja/prc-apostille/) — Good Standing・Board Rating・Passing等の取得、認証、海外発送
 - [US Visaフィリピン書類](https://ph-document.com/ja/us-visa-documents/) — 米国ビザ向けフィリピン書類代行
 - [カナダ移民ビザ書類](https://ph-document.com/ja/canada/) — カナダ永住権・配偶者スポンサーシップ向けフィリピン書類代行
 - [オーストラリアビザ書類](https://ph-document.com/ja/australia/) — オーストラリアパートナービザ向けフィリピン書類代行
@@ -319,7 +328,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 - [PSA Birth Certificate Cost](https://ph-document.com/en/psa-birth-certificate-cost/) — Cost breakdown
 - [PSA Marriage Certificate](https://ph-document.com/en/psa-marriage-certificate/) — PSA Marriage Certificate retrieval
 - [PSA Late Registration](https://ph-document.com/en/psa-late-registration/) — Late registration of birth or marriage
-- [NBI Clearance](https://ph-document.com/en/nbi-clearance/) — NBI Clearance retrieval with Apostille
+- [NBI Clearance](https://ph-document.com/en/nbi-clearance/) — Paper NBI Clearance retrieval and eGovPH e-Apostille guidance when required
 - [NBI HIT Resolution](https://ph-document.com/en/nbi-hit/) — NBI HIT resolution service
 - [NBI Validity](https://ph-document.com/en/nbi-validity/) — NBI Clearance validity and timing
 - [NBI Clearance Overseas](https://ph-document.com/en/nbi-clearance-overseas/) — NBI Clearance for overseas Filipinos
@@ -331,6 +340,7 @@ A: Cancellations before we begin are free. After we start, actual expenses and w
 - [License Conversion](https://ph-document.com/en/drivers-license-conversion/) — Philippine license conversion documents
 - [Naturalization](https://ph-document.com/en/naturalization-guide/) — Naturalization document service
 - [LTO Driver Record](https://ph-document.com/en/driver-record/) — LTO Driver's Record retrieval
+- [PRC Professional Documents](https://ph-document.com/en/prc-professional-documents/) — Good Standing, Board Rating, Passing, certified records, authentication, and delivery
 - [Document Checklist by Visa](https://ph-document.com/en/document-checklist-by-visa/) — Philippine documents by visa type
 - [US Visa Documents](https://ph-document.com/en/us-visa-documents/) — US visa Philippine document service
 - [K-1 Visa Documents](https://ph-document.com/en/k1-visa-documents/) — K-1 fiancé visa documents

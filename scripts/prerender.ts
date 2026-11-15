@@ -371,8 +371,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar', 'index.html'),
-    title: `Get CENOMAR from Abroad [${SEO_YEAR}] — Record & Authentication Options`,
-    description: `Get CENOMAR from abroad in the format your receiving authority requests. We arrange the PSA record, electronic authentication when required, and separate paper delivery when requested.`,
+    title: `Get CENOMAR from Abroad [${SEO_YEAR}] | Fees & Delivery`,
+    description: 'Get CENOMAR from abroad. Physical PSA original + DHL: US$199; with required DFA authentication: US$349. Confirm your document format with a free email quote.',
     canonical: `${BASE}/en/cenomar/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -476,16 +476,16 @@ const routes: RouteConfig[] = [
   {
     path: '/en/prc-professional-documents/',
     outFile: path.join(projectRoot, 'dist', 'en', 'prc-professional-documents', 'index.html'),
-    title: 'PRC Professional Documents & Apostille Service [2026]',
-    description: 'Get Philippine PRC professional documents for overseas employment or registration. We check the document, authentication route, and DHL delivery required for your destination.',
+    title: 'PRC Document Retrieval & Apostille Service [2026]',
+    description: 'Request Philippine PRC certificates from abroad, including Good Standing, Board Rating, Passing and certified registration records. Local processing, Apostille coordination and DHL delivery.',
     canonical: `${BASE}/en/prc-professional-documents/`,
-    lastmod: '2026-09-15',
+    lastmod: '2026-09-30',
     lang: 'en',
     enCanonical: `${BASE}/en/prc-professional-documents/`,
-    jaCanonical: `${BASE}/ja/`,
+    jaCanonical: `${BASE}/ja/prc-apostille/`,
     ogType: 'article',
     datePublished: '2026-09-15',
-    dateModified: '2026-09-15',
+    dateModified: '2026-09-30',
   },
   {
     path: '/en/psa-ecertificate-abroad/',
@@ -516,7 +516,7 @@ const routes: RouteConfig[] = [
     path: '/en/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance', 'index.html'),
     title: `NBI Clearance Philippines ${SEO_YEAR}: From Abroad + Apostille`,
-    description: 'Get Philippine NBI Clearance from abroad. Renewal support, first-time fingerprint guidance, DFA Apostille, HIT assistance, and worldwide DHL shipping.',
+    description: 'Get Philippine NBI Clearance from abroad. First-time fingerprint and renewal support, paper originals via DHL, and eGovPH e-Apostille guidance when required.',
     canonical: `${BASE}/en/nbi-clearance/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-clearance/`,
@@ -549,8 +549,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille-processing-time/',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille-processing-time', 'index.html'),
-    title: 'DFA Apostille Processing Time: How Long It Takes in the Philippines',
-    description: `DFA processing time depends on the document and route. PSA e-Apostilles are handled online; eligible non-PSA documents may follow a physical process. Check your deadline before applying.`,
+    title: 'DFA Apostille Processing Time: Regular, Expedited & e-Apostille',
+    description: 'DFA lists release after 5 working days for regular, 2 for expedited, and 1 for e-Apostille. Check document issuance and delivery time separately.',
     canonical: `${BASE}/en/apostille-processing-time/`,
     lang: 'en',
     enCanonical: `${BASE}/en/apostille-processing-time/`,
@@ -630,8 +630,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate-cost/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate-cost', 'index.html'),
-    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: Official Fees & Total from Abroad`,
-    description: `Official PSA fee: PHP 365/copy. Full price — retrieval, DFA Apostille & DHL Express: US$349 all-in, 4–6 weeks. No hidden fees. USA, UAE, Canada, UK & more.`,
+    title: `PSA Birth Certificate Cost [${SEO_YEAR}]: ₱155, ₱290 or ₱365?`,
+    description: 'PSA birth certificate: ₱155 outlet base, ₱290 eCert, ₱365 domestic delivery. International courier costs extra. Compare IGRS US$199/US$349 services.',
     canonical: `${BASE}/en/psa-birth-certificate-cost/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -641,8 +641,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille-fee/',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille-fee', 'index.html'),
-    title: `DFA Apostille Fee [${SEO_YEAR}] — Official Fee & Total Cost`,
-    description: `DFA e-Apostille costs ₱200 for an eligible PSA e-Certificate. Total service cost depends on document retrieval, the required authentication route, and delivery.`,
+    title: `DFA Apostille Fee [${SEO_YEAR}] — Regular, Expedited & e-Apostille Costs`,
+    description: 'DFA fees per document: ₱100 regular, ₱200 expedited or e-Apostille. Compare government charges with document issuance, delivery, and our service quote.',
     canonical: `${BASE}/en/apostille-fee/`,
     lang: 'en',
     enCanonical: `${BASE}/en/apostille-fee/`,
@@ -709,7 +709,7 @@ const routes: RouteConfig[] = [
     path: '/en/canada/',
     outFile: path.join(projectRoot, 'dist', 'en', 'canada', 'index.html'),
     title: `PH Documents for Canada Immigration [${SEO_YEAR_MONTH_EN}]`,
-    description: `Applying for Canada PR or spousal sponsorship? We retrieve CENOMAR, PSA & NBI Clearance with DFA Apostille for IRCC. Ships via DHL. Free consultation.`,
+    description: `Get a paper-issued NBI Clearance for Canadian Working Holiday, permanent residence, or other IRCC applications. We check your document checklist and arrange delivery.`,
     canonical: `${BASE}/en/canada/`,
     lang: 'en',
     enCanonical: `${BASE}/en/canada/`,
@@ -720,7 +720,7 @@ const routes: RouteConfig[] = [
     path: '/ja/canada/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'canada', 'index.html'),
     title: `カナダ移民ビザのフィリピン書類取得代行 [${SEO_YEAR_MONTH_JA}] — IRCC対応・DHL郵送`,
-    description: `カナダ永住権・配偶者スポンサーシップに必要なCENOMAR・PSA出生証明書・NBI ClearanceをDFAアポスティーユ付きで代行取得。日本語だけでOK。無料相談受付中。`,
+    description: `カナダのワーキングホリデー・永住権などに必要なフィリピン書類を手配。IRCC向けに紙で発行されたNBIクリアランスの取得をサポートします。`,
     canonical: `${BASE}/ja/canada/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/canada/`,
@@ -776,7 +776,7 @@ const routes: RouteConfig[] = [
     path: '/en/germany/',
     outFile: path.join(projectRoot, 'dist', 'en', 'germany', 'index.html'),
     title: `Philippine Documents for Germany Immigration [${SEO_YEAR}]`,
-    description: `Applying for a German spouse visa or residence permit? We retrieve CENOMAR, PSA Birth Certificate & NBI Clearance with DFA Apostille. Ships to Germany via DHL. Free consultation.`,
+    description: 'CENOMAR and PSA documents for Germany: retrieval, paper DFA Authentication, German Embassy legalization through VFS Global, and delivery. Free consultation.',
     canonical: `${BASE}/en/germany/`,
     lang: 'en',
     enCanonical: `${BASE}/en/germany/`,
@@ -839,6 +839,7 @@ const routes: RouteConfig[] = [
     canonical: `${BASE}/en/family-psa-nbi-package/`,
     lang: 'en',
     enCanonical: `${BASE}/en/family-psa-nbi-package/`,
+    jaCanonical: `${BASE}/ja/`, // No Japanese equivalent; do not emit a placeholder alternate.
     lastmod: '2026-09-19',
   },
   {
@@ -914,7 +915,7 @@ const routes: RouteConfig[] = [
     path: '/en/nbi-clearance-overseas/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance-overseas', 'index.html'),
     title: `NBI Clearance from Overseas [${SEO_YEAR_MONTH_EN}] — No Trip Needed`,
-    description: `Need NBI Clearance while living abroad? We retrieve it without you returning to the Philippines. HIT cases handled. DFA Apostille included. Free consultation.`,
+    description: `Need NBI Clearance from overseas? We support first-time and renewal applications, paper originals by DHL, and eGovPH e-Apostille guidance when required.`,
     canonical: `${BASE}/en/nbi-clearance-overseas/`,
     lang: 'en',
     enCanonical: `${BASE}/en/nbi-clearance-overseas/`,
@@ -1031,8 +1032,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/cenomar/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'cenomar', 'index.html'),
-    title: `CENOMARとは？日本からの取得方法・有効期限・費用【${SEO_YEAR}年】`,
-    description: 'CENOMAR（フィリピン独身証明書）の意味、日本からの取得方法、有効期限、費用、e-Apostilleを解説。渡航不要・日本語で申請をサポート。',
+    title: `CENOMAR（独身証明書）取得代行｜日本からの申請・費用【${SEO_YEAR}年】`,
+    description: 'CENOMAR（フィリピン独身証明書）の取得代行。日本から日本語で相談でき、電子版30,000円〜、フルセット50,000円（税込）。提出先に応じてe-Apostille・紙原本の要否、有効期限、本人確認資料をご案内します。',
     canonical: `${BASE}/ja/cenomar/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/cenomar/`,
@@ -1088,7 +1089,7 @@ const routes: RouteConfig[] = [
     path: '/ja/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-clearance', 'index.html'),
     title: `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
-    description: 'フィリピンNBI Clearance（無犯罪証明書）を渡航なしで取得代行。HIT（同名者あり）ケースも対応可。DFAアポスティーユ付きで日本へ郵送。配偶者ビザ・帰化申請・海外就労に。無料相談。',
+    description: 'フィリピンNBIクリアランスの初回取得・更新をサポート。紙原本の郵送と、必要に応じたeGovPHのNBI e-Apostille申請に対応。',
     canonical: `${BASE}/ja/nbi-clearance/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/nbi-clearance/`,
@@ -1121,8 +1122,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-shori-kikan/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-shori-kikan', 'index.html'),
-    title: `DFAアポスティーユの処理期間【${SEO_YEAR_MONTH_JA}】Regular 4営業日・Express 翌営業日`,
-    description: 'DFAアポスティーユの処理期間はRegular（4営業日）またはExpress（翌営業日）。申請から受け取りまでの流れ・費用の違い・提出期限から逆算したスケジュールの立て方を解説。',
+    title: `DFAアポスティーユの処理期間【${SEO_YEAR}年】通常5・特急2営業日後／電子1営業日後`,
+    description: 'DFAの公表処理期間は、物理書類の対象経路でRegularが5営業日後、Expeditedが2営業日後。e-Apostilleは1営業日後です。PSA取得・予約・配送を含む総日数は案件ごとに確認します。',
     canonical: `${BASE}/ja/apostille-shori-kikan/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/apostille-processing-time/`,
@@ -1166,8 +1167,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/gaimen-kirikae-guide/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'gaimen-kirikae-guide', 'index.html'),
-    title: `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】渡航不要`,
-    description: 'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
+    title: 'フィリピン免許の外免切替｜必要書類・LTO代行49,500円',
+    description: 'フィリピン免許から日本免許への外免切替に必要なLTO書類を日本語で取得代行。標準49,500円（税込・DFAアポスティーユ・DHL送料込み）。追加書類等は事前見積もり。受理の最終判断は免許センターによります。',
     canonical: `${BASE}/ja/gaimen-kirikae-guide/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/drivers-license-conversion/`,
@@ -1200,16 +1201,16 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/prc-apostille/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'prc-apostille', 'index.html'),
-    title: 'PRC証明書 アポスティーユ取得代行｜専門資格・免許の認証【IGRS】',
-    description: 'PRC発行の資格・免許証明書について、DFAアポスティーユ取得と国際発送を代行。¥39,000〜（税込・DHL込み）。書類種別・提出国・受取機関に応じた認証ルートを申請前に確認します。帰化申請・海外就労・資格承認に。',
+    title: 'PRC証明書取得・アポスティーユ代行｜海外就労・資格登録【IGRS】',
+    description: 'PRCのGood Standing・Board Rating・Passing・資格登録書類をフィリピンで代理取得。PRC認証、DFAアポスティーユ、DHL海外発送まで対応。海外在住者の委任方法も事前確認。',
     canonical: `${BASE}/ja/prc-apostille/`,
-    lastmod: '2026-09-15',
+    lastmod: '2026-09-30',
     lang: 'ja',
-    enCanonical: `${BASE}/en/`,
+    enCanonical: `${BASE}/en/prc-professional-documents/`,
     jaCanonical: `${BASE}/ja/prc-apostille/`,
     ogType: 'article',
     datePublished: '2026-09-15',
-    dateModified: '2026-09-15',
+    dateModified: '2026-09-30',
   },
   {
     path: '/ja/data-security/',
@@ -1263,7 +1264,7 @@ const routes: RouteConfig[] = [
     path: '/ja/psa-shussei-cost/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-cost', 'index.html'),
     title: `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】日本まで届く総額はいくら？`,
-    description: '現地PSA料金と代行費用の違いを解説。電子版または紙原本＋DHLは¥30,000、e-Apostille付き電子版¥40,000、フルセット¥55,000（税込）。',
+    description: '現地PSA料金と代行費用の違いを解説。電子版¥30,000、紙原本＋DHL¥40,000、e-Apostille付き電子版¥40,000、フルセット¥50,000（税込）。',
     canonical: `${BASE}/ja/psa-shussei-cost/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/psa-birth-certificate-cost/`,
@@ -1309,7 +1310,7 @@ const routes: RouteConfig[] = [
     path: '/ja/driver-record/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'driver-record', 'index.html'),
     title: `LTO運転経歴証明書代行【${SEO_YEAR_MONTH_JA}】外免切替・企業採用`,
-    description: 'フィリピン免許の外免切替に必要なLTO運転経歴証明書を代行取得。DFAアポスティーユ・オリジナルレシート込みで都道府県の免許センターへの提出形式に対応。複数名まとめ依頼可。無料相談。',
+    description: 'フィリピン免許の外免切替に必要なLTO運転経歴証明書を代行取得。DFAアポスティーユ・DHL国際配送込みで都道府県の免許センターへの提出形式に対応。複数名まとめ依頼可。無料相談。',
     canonical: `${BASE}/ja/driver-record/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/driver-record/`,
@@ -1545,7 +1546,7 @@ const routes: RouteConfig[] = [
     path: '/ja/business/menkyo-kirikae-kigyou/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'business', 'menkyo-kirikae-kigyou', 'index.html'),
     title: `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR_MONTH_JA}】`,
-    description: '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名99,000円〜（税込・DHL送料込み）。請求書払い・複数名対応。',
+    description: '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名49,500円（税込・DHL送料込み）。請求書払い・複数名対応。',
     canonical: `${BASE}/ja/business/menkyo-kirikae-kigyou/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/`,
@@ -1811,7 +1812,9 @@ const countryRoutes: RouteConfig[] = COUNTRY_CONFIGS.map(config => ({
   path: `/en/${config.slug}/`,
   outFile: path.join(projectRoot, 'dist', 'en', config.slug, 'index.html'),
   title: `PH Documents for ${config.name} Immigration [${SEO_YEAR_MONTH_EN}]`,
-  description: `Moving to ${config.name}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
+  description: config.slug === 'germany'
+    ? 'CENOMAR and PSA documents for Germany: retrieval, paper DFA Authentication, German Embassy legalization through VFS Global, and delivery. Free consultation.'
+    : `Moving to ${config.name}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
   canonical: `${BASE}/en/${config.slug}/`,
   lang: 'en' as const,
   enCanonical: `${BASE}/en/${config.slug}/`,
@@ -2167,14 +2170,40 @@ ${entries.join('\n')}
 </urlset>`;
 
   const sitemapPath = path.join(projectRoot, 'public', 'sitemap.xml');
+  // Vite has already copied public/ into dist/. Publish the sitemap generated
+  // from this build, rather than shipping the previous build's public copy.
   await writeFile(sitemapPath, xml, 'utf8');
+  await writeFile(path.join(projectRoot, 'dist', 'sitemap.xml'), xml, 'utf8');
   console.log(`\nGenerated sitemap.xml with ${entries.length} URLs.`);
+}
+
+// Use the rendered head as the single source for client-side route transitions.
+// This preserves standalone/KO-only/noindex policies without a second route map.
+async function generateRouteMetadata() {
+  const metadata: Record<string, {
+    canonical: string;
+    robots: string;
+    alternates: { hreflang: string; href: string }[];
+  }> = {};
+  for (const route of routes) {
+    const html = await readFile(route.outFile, 'utf8');
+    const head = html.slice(0, html.indexOf('</head>'));
+    metadata[route.path] = {
+      canonical: route.canonical,
+      robots: head.match(/<meta name="robots" content="([^"]*)"/)?.[1] ?? 'index, follow',
+      alternates: Array.from(head.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g),
+        ([, hreflang, href]) => ({ hreflang, href })),
+    };
+  }
+  await writeFile(path.join(projectRoot, 'dist', 'route-metadata.json'), JSON.stringify(metadata), 'utf8');
+  console.log(`Generated client metadata for ${Object.keys(metadata).length} routes.`);
 }
 
 prerender()
   .then(() => validateBuild())
   .then(() => validateUrlMap())
   .then(() => generateSitemap())
+  .then(() => generateRouteMetadata())
   .catch((error) => {
     console.error('prerender failed:', error);
     process.exit(1);
