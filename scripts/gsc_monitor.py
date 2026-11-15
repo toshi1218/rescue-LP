@@ -7,6 +7,7 @@ GitHub Actionsで毎日09:00 JSTに自動実行される
 import os
 import datetime
 import urllib.request
+import urllib.parse
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
@@ -94,8 +95,8 @@ def check_redirects():
                 errors.append(f'リダイレクト消滅（200応答）: {old_url} → 期待値は301 → {expected_dest}')
             except urllib.error.HTTPError as e:
                 if e.code in (301, 302, 308):
-                    location = e.headers.get('Location', '')
-                    if expected_dest not in location and location != expected_dest:
+                    location = urllib.parse.urljoin(old_url, e.headers.get('Location', ''))
+                    if location != expected_dest:
                         errors.append(f'リダイレクト先が変更: {old_url} → {location}（期待値: {expected_dest}）')
                 else:
                     errors.append(f'リダイレクトエラー {e.code}: {old_url}')
@@ -126,7 +127,10 @@ def format_report(alerts, stats):
         lines.append('')
         lines.append('## 📄 インデックス状況')
         lines.append(f'- サイトマップ登録数: {stats["sitemap_submitted"]}ページ')
-        lines.append(f'- インデックス済み: **{stats["sitemap_indexed"]}ページ**')
+        if stats["sitemap_indexed"]:
+            lines.append(f'- インデックス済み: **{stats["sitemap_indexed"]}ページ**')
+        else:
+            lines.append('- インデックス済み: APIでは取得不可（GSCの「ページ」レポートで確認）')
 
     lines.append('')
     if not alerts:
