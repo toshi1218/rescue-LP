@@ -11,7 +11,7 @@ import { Info } from 'lucide-react';
 export default function PricingJa() {
   useMeta(
     `料金一覧${SEO_TITLE_BADGE_JA}料金・追加請求なし｜フィリピン書類取得代行`,
-    'CENOMAR・PSA・NBI・PRC・DFAアポスティーユの代行料金一覧。PRC証明書は1通55,000円、2通72,000円。国際送料込み。',
+    'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユ・国際郵送をまとめた料金。後から追加請求なし。無料見積もり受付中。',
   );
   return (
     <PageLayout
@@ -37,7 +37,7 @@ export default function PricingJa() {
         ctaText="無料でお見積もり"
         ctaHref="#contact"
         ctaService="料金のお見積もり"
-        lastUpdated="2026年9月30日"
+        lastUpdated="2026年11月15日"
       />
 
       <CtaBox

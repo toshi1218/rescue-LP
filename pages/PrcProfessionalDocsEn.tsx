@@ -45,7 +45,7 @@ export default function PrcProfessionalDocsEn() {
         badges={['1 Document US$399', '2 Documents US$499', 'DHL Included']}
         ctaText="Request a Case Check"
         ctaHref="#contact"
-        lastUpdated="September 30, 2026"
+        lastUpdated="November 15, 2026"
       />
 
       <SummaryBlock

@@ -70,7 +70,7 @@ export default function PricingEn() {
         ctaText="Get a Free Quote"
         ctaHref="#contact"
         ctaService="Pricing inquiry"
-        lastUpdated="September 30, 2026"
+        lastUpdated="November 15, 2026"
       />
 
       <CtaBox

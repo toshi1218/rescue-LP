@@ -88,7 +88,7 @@ export default function PrcApostilleJa() {
         ctaText="PRC証明書について相談する"
         ctaHref="#contact"
         ctaService="PRC証明書取得・認証代行"
-        lastUpdated="2026年9月30日"
+        lastUpdated="2026年11月15日"
       />
 
       <section className="mb-10">
