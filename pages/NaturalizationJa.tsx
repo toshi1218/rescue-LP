@@ -14,10 +14,11 @@ import { FileCheck, Globe, Users, Heart, FileText, Scale, Building, CheckCircle,
 import SummaryBlock from '../components/SummaryBlock';
 import PriceSimulatorKika from '../components/PriceSimulatorKika';
 import { useMeta } from '../lib/useMeta';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function NaturalizationJa() {
   useMeta(
-    '帰化申請の書類代行【2026年9月】PSA・NBI・アポスティーユ',
+    `帰化申請の書類代行【${SEO_YEAR}年】PSA・NBI・アポスティーユ`,
     '2026年4月1日から帰化審査の運用が厳格化。PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行し、法務局の要件に合わせて手配します。',
   );
   return (
@@ -156,7 +157,7 @@ export default function NaturalizationJa() {
         badges={['法務局要件に対応', '書士への書類提供可', 'アポスティーユ込み']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年9月15日"
+        lastUpdated="2026年11月15日"
       />
 
       <SummaryBlock
@@ -340,7 +341,7 @@ export default function NaturalizationJa() {
         steps={[
           { title: 'フォームで相談', description: '帰化申請の状況・必要書類・提出期限をお知らせください。' },
           { title: '必要書類・料金の確認', description: '必要書類をリストアップし、料金をご提示します。' },
-          { title: 'フィリピン現地で手配', description: 'PSAはオンライン申請＋DFA e-Apostille（電子認証）、NBI等は現地スタッフが物理取得・アポスティーユを進めます。' },
+          { title: 'フィリピン現地で手配', description: 'PSAはオンライン申請＋DFA e-Apostille（電子認証）、NBIは取得歴と提出先に応じて、eGovPHでのe-Apostille申請または紙原本の取得で進めます。' },
           { title: '日本へ郵送', description: '書類が揃い次第、追跡付きでお届けします。目安はおおむね1ヶ月半。' },
         ]}
       />
