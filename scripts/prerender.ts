@@ -47,6 +47,23 @@ interface RouteConfig {
   noindex?: boolean;
 }
 
+const GOOGLEBOT_NOINDEX_PATHS = new Set<string>([
+  '/en/cr1-visa-documents/',
+  '/en/k1-visa-documents/',
+  '/en/saudi-arabia/',
+  '/en/kuwait/',
+  '/en/uk/',
+  '/ja/uk/',
+  '/en/uae/',
+  '/en/naturalization-guide/',
+  '/en/singapore/',
+  '/en/switzerland/',
+  '/en/us-visa-documents/',
+  '/en/italy/',
+  '/en/cenomar-apostille/',
+  '/en/netherlands/',
+]);
+
 type HreflangMode = 'none' | 'multi' | 'ko-only';
 
 function getHreflangMode(route: RouteConfig): HreflangMode {
@@ -1900,6 +1917,18 @@ function updateHead(html: string, route: RouteConfig): string {
     result = result.replace(
       /<meta name="robots" content="[^"]*"/,
       `<meta name="robots" content="noindex, follow"`
+    );
+  }
+
+  // Google-only noindex (2026-11-15, user-approved Level 2 change).
+  // Templated pages with ~zero Google impressions over 6 months. Only Googlebot is told
+  // not to index; the generic robots meta stays "index, follow" so Bing (and the
+  // ChatGPT/LLM search that relies on it) keeps these pages. Sitemap, canonical and
+  // hreflang are intentionally left unchanged. To revert: remove the path from the set.
+  if (GOOGLEBOT_NOINDEX_PATHS.has(route.path)) {
+    result = result.replace(
+      /(<meta name="robots" content="[^"]*"[^>]*>)/,
+      `$1\n    <meta name="googlebot" content="noindex, follow" />`
     );
   }
 
