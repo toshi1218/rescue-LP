@@ -538,7 +538,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/apostille/',
     outFile: path.join(projectRoot, 'dist', 'en', 'apostille', 'index.html'),
-    title: `DFA Apostille Service [${SEO_YEAR_MONTH_EN}] — No Trip Needed`,
+    title: `DFA Apostille Service [${SEO_YEAR}] — No Trip Needed`,
     description: `Need a DFA Apostille but can't go to the Philippines? We handle PSA, NBI, CENOMAR authentication — and ship to you. Free consultation available.`,
     canonical: `${BASE}/en/apostille/`,
     lang: 'en',
@@ -822,7 +822,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/pricing/',
     outFile: path.join(projectRoot, 'dist', 'en', 'pricing', 'index.html'),
-    title: `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
+    title: `Pricing [${SEO_YEAR}] | CENOMAR, PSA & NBI Service`,
     description: `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille, including the US$1,249 three-applicant family package.`,
     canonical: `${BASE}/en/pricing/`,
     lang: 'en',
@@ -1111,7 +1111,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille', 'index.html'),
-    title: `フィリピンDFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応・渡航不要`,
+    title: `フィリピンDFAアポスティーユ代行【${SEO_YEAR}年】書類取得から一括対応・渡航不要`,
     description: 'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
     canonical: `${BASE}/ja/apostille/`,
     lang: 'ja',
@@ -1144,7 +1144,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/haigusha-visa/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'haigusha-visa', 'index.html'),
-    title: `配偶者ビザ 必要書類【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI 取得代行`,
+    title: `配偶者ビザ 必要書類【${SEO_YEAR}年】PSA・CENOMAR・NBI 取得代行`,
     description: '配偶者ビザ申請に必要なPSA書類・CENOMAR・NBI・DFAアポスティーユを日本から代行取得。紙の原本対応。在留資格認定・更新・変更すべて対応。無料相談。',
     canonical: `${BASE}/ja/haigusha-visa/`,
     lang: 'ja',
@@ -1263,7 +1263,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-shussei-cost/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-cost', 'index.html'),
-    title: `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】日本まで届く総額はいくら？`,
+    title: `PSA出生証明書の費用【${SEO_YEAR}年】日本まで届く総額はいくら？`,
     description: '現地PSA料金と代行費用の違いを解説。電子版¥30,000、紙原本＋DHL¥40,000、e-Apostille付き電子版¥40,000、フルセット¥50,000（税込）。',
     canonical: `${BASE}/ja/psa-shussei-cost/`,
     lang: 'ja',

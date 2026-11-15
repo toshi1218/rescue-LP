@@ -9,11 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function ApostilleGuideEn() {
   useMeta(
-    `DFA Apostille Service [${SEO_YEAR_MONTH_EN}] — No Trip Needed`,
+    `DFA Apostille Service [${SEO_YEAR}] — No Trip Needed`,
     'Need a DFA Apostille but can\'t go to the Philippines? We handle PSA, NBI, CENOMAR authentication — and ship to you. Free consultation available.',
   );
   return (
