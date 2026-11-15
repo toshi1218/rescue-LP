@@ -149,6 +149,17 @@ export default function PricingJa() {
         </p>
       </div>
 
+      <section id="psa-lcr-endorsement" className="mb-6 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+        <h2 className="mb-2 text-lg font-bold text-secondary">不鮮明なPSA訂正書類の再発行サポート</h2>
+        <p className="mb-3 text-sm leading-relaxed text-gray-700">
+          訂正手続きが済んでいても、PSA側の訂正証明書や関連書類が不鮮明で、訂正後の証明書を取得できないことがあります。必要に応じて登録地の地方民事登録局（LCR）への現地訪問を手配し、原本に基づく鮮明な認証謄本を取得します。LCRからPSAへの正式送付（Endorsement）が必要な場合は、LCRと調整し、PSAへの反映確認から訂正後の証明書の再取得まで支援します。
+        </p>
+        <p className="text-lg font-bold text-secondary">1件 ¥100,000〜・目安2〜3か月</p>
+        <p className="mb-3 mt-1 text-sm text-gray-600">登録地と書類の状況を確認し、対応範囲・費用・納期をお見積もりします。</p>
+        <p className="mb-4 text-xs text-gray-600"><a href="https://psa.gov.ph/civilregistration/problems-and-solutions/blurred" target="_blank" rel="noopener noreferrer" className="underline">PSA公式案内（不鮮明な記録）</a></p>
+        <a href="#contact" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">PSAの再発行について相談する</a>
+      </section>
+
       {/* 電子・紙で料金が変わる理由 */}
       <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 mb-2">
         <p className="text-sm font-bold text-gray-800 mb-3">電子版で完結できるか、紙原本まで必要かで料金が変わります</p>

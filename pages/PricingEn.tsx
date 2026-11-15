@@ -169,6 +169,17 @@ export default function PricingEn() {
         </p>
       </section>
 
+      <section id="psa-lcr-endorsement" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+        <h2 className="mb-2 text-lg font-bold text-secondary">PSA reissuance support for unreadable correction records</h2>
+        <p className="mb-3 text-sm leading-relaxed text-gray-700">
+          If a correction has been completed and PSA cannot issue the corrected certificate because the correction paperwork on file is unreadable, we can obtain clear certified copies from the Local Civil Registrar (LCR) where the record was registered, including arranging a local visit when needed. If PSA requires a formal endorsement, we coordinate with the registrar, follow up on the update, and help obtain the corrected certificate.
+        </p>
+        <p className="text-lg font-bold text-secondary">From JPY 100,000 per case · Estimated 2–3 months</p>
+        <p className="mb-3 mt-1 text-sm text-gray-600">We confirm the scope, price, and timing after checking the registry office and the status of your documents.</p>
+        <p className="mb-4 text-xs text-gray-600"><a href="https://psa.gov.ph/civilregistration/problems-and-solutions/blurred" target="_blank" rel="noopener noreferrer" className="underline">PSA guidance on blurred records</a></p>
+        <a href="#contact" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">Ask about PSA reissuance</a>
+      </section>
+
       {/* Pricing cards */}
       <Pricing />
 
