@@ -38,5 +38,6 @@ jobs:
           username: ${{ secrets.ALERT_EMAIL }}
           password: ${{ secrets.ALERT_EMAIL_PASSWORD }}
           to: ${{ secrets.ALERT_EMAIL }}
+          from: ${{ secrets.ALERT_EMAIL }}
           subject: '🚨 ph-document.com GSCアラート'
           body: ${{ steps.monitor.outputs.report }}

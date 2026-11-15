@@ -11,12 +11,11 @@ import IconCardGrid from '../components/IconCardGrid';
 import ComparisonTable from '../components/ComparisonTable';
 import { AlertTriangle, CheckCircle, ClipboardList, Car, FileText, Stamp, Clock, Globe, Users, Receipt, BarChart3, Building2, Headphones } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 
 export default function LicenseConversionJa() {
   useMeta(
-    `フィリピン免許→日本免許の外免切替に必要な書類【${SEO_YEAR_MONTH_JA}】渡航不要`,
-    'フィリピン運転免許から日本免許への外免切替に必要なLTO運転経歴証明書＋DFAアポスティーユを代行取得。渡航不要、日本語だけでOK。免許センターへの提出形式に対応。まず無料相談。',
+    'フィリピン免許の外免切替｜必要書類・LTO代行49,500円',
+    'フィリピン免許から日本免許への外免切替に必要なLTO書類を日本語で取得代行。標準49,500円（税込・DFAアポスティーユ・DHL送料込み）。追加書類等は事前見積もり。受理の最終判断は免許センターによります。',
   );
   return (
     <PageLayout
@@ -63,7 +62,15 @@ export default function LicenseConversionJa() {
               name: 'フィリピン免許があれば、誰でも外免切替できますか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'いいえ。免許が有効であることに加え、免許取得後にフィリピンで通算3か月以上滞在していたことを証明できることが重要です。',
+                text: 'いいえ。免許が有効であることに加え、免許取得後にフィリピンで通算3か月以上滞在していたことを証明する必要があります。2025年10月1日以降、外国籍の方は原則として特定事項が記載された住民票の写しも必要で、観光などの短期滞在者は法令上の例外を除き申請できません。',
+              },
+            },
+            {
+              '@type': 'Question',
+              name: '2025年10月から外免切替の試験はどう変わりましたか？',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: '知識確認はイラスト中心の10問から文章を含む50問に変わり、45問以上の正解が必要になりました。技能確認も横断歩道の通過などの課題が追加され、採点基準が厳格化されています。フィリピン免許は知識確認・技能確認の免除対象ではありません。',
               },
             },
             {
@@ -111,18 +118,38 @@ export default function LicenseConversionJa() {
       ]}
     >
       <HeroBanner
-        title="外免切替"
-        subtitle="フィリピン運転免許を日本免許に切り替える（外免切替）に必要な条件・費用・LTO書類の流れをまとめています。書類の取り寄せは現地スタッフが代行します。"
-        badges={['条件・費用を解説', 'LTO書類取得代行', '無料相談あり', '法人・複数名対応可']}
-        ctaText="書類を確認する"
+        title="フィリピン免許の外免切替｜LTO書類取得代行"
+        subtitle="LTO Certification・License History等の取得とDFAアポスティーユ、DHL国際配送を標準49,500円（税込）で手配。日本語でご相談いただけます。記録不一致やOR探索・追加書類は着手前に別途お見積もりします。"
+        badges={['DFA認証・DHL送料込み', '日本語でメール相談', '法人・複数名対応可']}
+        ctaText="メールで無料相談"
         ctaHref="#contact"
-        lastUpdated="2026年9月28日"
+        ctaService="免許切り替え"
+        lastUpdated="2026年11月15日"
       />
 
       {/* リード文 */}
       <section className="mb-6 text-sm text-gray-700 leading-relaxed space-y-2">
         <p>フィリピン免許を日本の免許に切り替えるには、「免許取得後にフィリピンへ通算3か月以上滞在した」証明が必要です。免許を持っているだけでは切替できません。</p>
         <p>このページでは確認すべき条件・必要書類・よくあるつまずきを整理しています。</p>
+      </section>
+
+      <section className="mb-10 rounded-2xl bg-amber-50 border border-amber-200 p-5">
+        <div className="flex items-start gap-3 mb-3">
+          <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+          <h2 className="text-base font-bold text-amber-900">2025年10月1日から住所確認・知識確認・技能確認が厳格化</h2>
+        </div>
+        <div className="text-sm text-amber-900 leading-relaxed space-y-3">
+          <p>現在の外免切替は、2025年10月1日に施行された改正後の手続です。フィリピン免許は確認免除の対象ではないため、書類審査に加えて知識確認と技能確認を受けます。</p>
+          <ul className="space-y-2">
+            <li><strong>住所確認：</strong>住民基本台帳法の適用を受ける外国籍の方は、国籍・在留資格・在留期間・在留カード番号などの特定事項が記載された住民票の写しが必要です。観光などの短期滞在者は、法令上の例外を除き申請できません。</li>
+            <li><strong>知識確認：</strong>10問から50問に増え、45問以上の正解が合格基準です。従来のイラスト問題は廃止されました。</li>
+            <li><strong>技能確認：</strong>横断歩道の通過などの課題が追加され、合図不履行や右左折方法などの採点も厳格化されています。</li>
+          </ul>
+          <p className="text-xs text-amber-800">必要書類・予約方法は都道府県により異なります。申請前に住所地を管轄する都道府県警察の最新案内をご確認ください。</p>
+          <p className="text-xs">
+            出典：<a href="https://www.keishicho.metro.tokyo.lg.jp/menkyo/oshirase/low.html" target="_blank" rel="noopener noreferrer" className="underline">警視庁「令和7年10月1日施行・改正道路交通法施行規則について」</a>
+          </p>
+        </div>
       </section>
 
       <div className="max-w-2xl mx-auto px-4">
@@ -166,6 +193,7 @@ export default function LicenseConversionJa() {
           </div>
           <p className="text-xs text-gray-500 mt-2">※通常案件の標準料金です。記録不一致、Official Receiptの探索・再発行、Immigration Recordなどの追加書類が必要な場合は、着手前に別途お見積もりします。</p>
           <p className="text-xs text-gray-500 mt-1">DFAアポスティーユ単体の料金・費用内訳は<a href="/ja/apostille-ryokin/" className="text-primary underline">DFAアポスティーユの料金ページ</a>で詳しく解説しています。</p>
+          <p className="text-sm text-gray-700 leading-relaxed mt-4">無料見積もりでは、申請予定の都道府県、フィリピン免許証が有効か、提出希望時期をフォームにご記入ください。免許センターから必要書類を案内されていれば、その名称もお知らせください。初回相談では免許番号・パスポート番号や書類画像は不要です。</p>
         </SectionDivider>
       </div>
 
@@ -253,8 +281,9 @@ export default function LicenseConversionJa() {
       <CtaBox
         title="LTO書類の取り寄せ、まず確認します"
         description="どの書類が必要か、ORの有無、現在の状況をお知らせください。必要書類と費用の目安をご案内します。"
-        buttonText="無料相談はこちら"
+        buttonText="メールで無料相談"
         href="#contact"
+        service="免許切り替え"
         variant="primary"
         trustNote="着手前キャンセル無料・返信24時間以内 ｜ 法人・複数名一括対応可"
       />
@@ -327,7 +356,8 @@ export default function LicenseConversionJa() {
       <FaqSection
         items={[
           { q: 'フィリピン免許を日本の免許に切り替えるには何が必要ですか？', a: 'フィリピン免許を日本の免許に切り替える「外免切替」には、①有効なフィリピン運転免許証、②免許取得後にフィリピンで通算3か月以上滞在していた証明、③LTO書類（Certification with Apostille、License Historyなど）が必要です。免許センターごとに細かい要件が異なるため、管轄センターへの事前確認が重要です。' },
-          { q: 'フィリピン免許があれば、誰でも外免切替できますか？', a: 'いいえ。免許が有効であることに加え、免許取得後にフィリピンで通算3か月以上滞在していたことを証明できることが重要です。' },
+          { q: 'フィリピン免許があれば、誰でも外免切替できますか？', a: 'いいえ。免許が有効であることに加え、免許取得後にフィリピンで通算3か月以上滞在していたことを証明する必要があります。2025年10月1日以降、外国籍の方は原則として特定事項が記載された住民票の写しも必要で、観光などの短期滞在者は法令上の例外を除き申請できません。' },
+          { q: '2025年10月から外免切替の試験はどう変わりましたか？', a: '知識確認はイラスト中心の10問から文章を含む50問に変わり、45問以上の正解が必要になりました。技能確認も横断歩道の通過などの課題が追加され、採点基準が厳格化されています。フィリピン免許は知識確認・技能確認の免除対象ではありません。' },
           { q: '外免切替に必要なLTO書類はどれですか？', a: '警視庁の案内では、①フィリピン運転免許証（原本）、②Official Receipt（OR）、③License History、④Certification with Apostille、⑤Immigration Record with Apostille（パスポートで滞在歴が確認できない場合）が案内されています。' },
           { q: 'ORをなくしていても進められますか？', a: 'ケースによります。フィリピン案件では Official Receipt が案内されているため、まずは現在の状況を確認する必要があります。' },
           { q: 'Immigration Record は必ず必要ですか？', a: '必ずではありません。警視庁の一覧では、運転免許の有効期間中の滞在がすべて確認できない場合に Immigration Record with Apostille が案内されています。' },
@@ -354,8 +384,9 @@ export default function LicenseConversionJa() {
       <CtaBox
         title="まずは状況のご確認から"
         description="外免切替は、LTO書類を取る前の確認がとても大事です。「自分は条件を満たしているか」「どの書類が必要になりそうか」その確認からで大丈夫です。まずはご相談ください。"
-        buttonText="無料相談はこちら"
+        buttonText="メールで無料相談"
         href="#contact"
+        service="免許切り替え"
         variant="primary"
         trustNote="着手金50%・書類写し確認後に残金50%・着手前キャンセル無料 ｜ 法人のお客様：請求書払い・複数名一括依頼対応可"
       />

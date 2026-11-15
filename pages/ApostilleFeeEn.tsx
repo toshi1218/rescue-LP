@@ -10,10 +10,17 @@ import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import { SEO_YEAR } from '../lib/seoDate';
 
+const faqs = [
+  { q: 'How much does DFA Apostille cost?', a: 'The government fee per document is ₱100 regular or ₱200 expedited/e-Apostille. Document issuance, delivery, and service charges are separate.' },
+  { q: 'What does your service quote include?', a: 'We list the agreed document retrieval, authentication, and delivery scope before you commit. The government fee alone is not our service price.' },
+  { q: 'Is Apostille always required?', a: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.' },
+  { q: 'Can you handle urgent cases?', a: 'Share your deadline and document type. We confirm whether expedited processing is available for your route; this does not guarantee an earlier appointment or end-to-end delivery date.' },
+];
+
 export default function ApostilleFeeEn() {
   useMeta(
-    `DFA Apostille Fee [${SEO_YEAR}] — Official Fee & Total Cost`,
-    'DFA e-Apostille costs ₱200 for an eligible PSA e-Certificate. Total service cost depends on document retrieval, the required authentication route, and delivery.',
+    `DFA Apostille Fee [${SEO_YEAR}] — Regular, Expedited & e-Apostille Costs`,
+    'DFA fees per document: ₱100 regular, ₱200 expedited or e-Apostille. Compare government charges with document issuance, delivery, and our service quote.',
   );
   return (
     <PageLayout
@@ -22,7 +29,7 @@ export default function ApostilleFeeEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'DFA Apostille Authentication Service — All-Inclusive Pricing',
-        description: 'DFA e-Apostille costs ₱200 for an eligible PSA e-Certificate. Total service cost depends on retrieval, the authentication route required by the receiving authority, and delivery.',
+        description: 'We quote retrieval, the authentication route required by the receiving authority, and delivery separately from the published DFA government fee.',
         url: 'https://ph-document.com/en/apostille-fee/',
         provider: {
           '@type': 'Organization',
@@ -45,61 +52,51 @@ export default function ApostilleFeeEn() {
         {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: [
-            {
-              '@type': 'Question',
-              name: 'How much does DFA Apostille cost?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'The DFA e-Apostille government fee is ₱200 for an eligible PSA e-Certificate. Our service quote is separate and depends on document retrieval, the required route, and delivery.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Why is your price higher than some agencies?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Some agencies quote only the base fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Is Apostille always required?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Can you handle urgent cases?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.',
-              },
-            },
-          ],
+          mainEntity: faqs.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: { '@type': 'Answer', text: a },
+          })),
         },
       ]}
     >
       <HeroBanner
-        title="DFA Apostille Pricing: Know the Real Total Before You Start"
-        badges={['All-Inclusive Pricing', 'No Hidden Fees', 'Ships via DHL']}
+        title="DFA Apostille Fees: Government Charges & Service Cost"
+        subtitle="See the official fees below. Our quote covers the agreed retrieval, authentication, and delivery work your case requires."
+        badges={['Government Fees Explained', 'Upfront Service Quote', 'Electronic or Physical Delivery']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="September 15, 2026"
+        lastUpdated="November 6, 2026"
       />
 
       <SummaryBlock
-        conclusion="DFA Apostille costs more than the government fee alone. We quote the real total upfront."
+        conclusion="The DFA government fee and our service price cover different things. We confirm your required documents and quote the agreed total before starting."
         points={[
-          'DFA e-Apostille government fee: ₱200 for an eligible PSA e-Certificate',
-          'Our all-inclusive price covers DFA Apostille + document retrieval + DHL shipping',
-          'No surprise add-ons after you commit',
-          'Compare total costs across providers before deciding',
+          'Eligible PSA e-Certificates use the electronic e-Apostille route; eligible non-PSA documents may follow a physical process',
+          'Document issuance, delivery, and our service fee must be considered alongside government charges',
+          'Your quote includes only the retrieval, authentication, and physical shipping scope agreed for your case',
         ]}
         ctaText="Get Your Total Quote"
       />
+
+      <section className="mb-10" aria-labelledby="dfa-fees-heading">
+        <h2 id="dfa-fees-heading" className="text-xl font-bold text-gray-900 mb-3">Official DFA fees per document</h2>
+        <div className="overflow-x-auto rounded-xl border border-gray-200">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-secondary text-white">
+              <tr><th scope="col" className="px-4 py-3">Processing</th><th scope="col" className="px-4 py-3">Government fee</th><th scope="col" className="px-4 py-3">Release</th></tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100 bg-white">
+              <tr><th scope="row" className="px-4 py-3 font-medium">Regular</th><td className="px-4 py-3">₱100</td><td className="px-4 py-3">After 5 working days</td></tr>
+              <tr><th scope="row" className="px-4 py-3 font-medium">Expedited</th><td className="px-4 py-3">₱200</td><td className="px-4 py-3">After 2 working days</td></tr>
+              <tr><th scope="row" className="px-4 py-3 font-medium">e-Apostille</th><td className="px-4 py-3">₱200</td><td className="px-4 py-3">After 1 working day</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 mt-3">
+          Sources: <a href="https://www.apostille.gov.ph/schedule-of-fees-tab/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">DFA Schedule of Fees</a> and <a href="https://www.apostille.gov.ph/faqs/" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">DFA FAQs</a>. Availability depends on the document and route. These schedules exclude document issuance and delivery and are not an end-to-end guarantee.
+        </p>
+      </section>
 
       <FeatureList
         heading="Who This Is For"
@@ -146,8 +143,8 @@ export default function ApostilleFeeEn() {
           },
           {
             icon: <Globe className="w-4 h-4" />,
-            title: 'DHL shipping to your address worldwide',
-            description: 'Tracked delivery directly to your door. No forwarding needed.',
+            title: 'DHL shipping when physical delivery is needed',
+            description: 'Tracked delivery is included in the agreed physical-document scope. e-Apostilles are delivered electronically.',
           },
         ]}
       />
@@ -158,17 +155,12 @@ export default function ApostilleFeeEn() {
           { title: 'Submit your inquiry', description: 'Tell us which documents need Apostille and your submission authority.' },
           { title: 'We provide all-inclusive pricing', description: 'DFA Apostille application, PSA online application, and DHL shipping for physical documents quoted together upfront.' },
           { title: 'We handle the applications', description: 'We complete PSA online applications and e-Apostille applications; eligible non-PSA documents follow the current physical process when applicable.' },
-          { title: 'DHL delivery worldwide', description: 'Tracked shipment to your address. Estimated total: 4–6 weeks.' },
+          { title: 'Electronic delivery or physical shipment', description: 'Receive the e-Apostille electronically. If paper documents are required, we arrange tracked shipping and quote the total timeline for that scope.' },
         ]}
       />
 
       <FaqSection
-        items={[
-          { q: 'How much does DFA Apostille cost?', a: 'The DFA e-Apostille government fee is ₱200 for an eligible PSA e-Certificate. Our service quote is separate and depends on retrieval, the required authentication route, and delivery.' },
-          { q: 'Why is your price higher than some agencies?', a: 'Some agencies quote only the base fee and add Apostille, shipping, and handling separately. Our price includes everything — compare total costs, not base fees.' },
-          { q: 'Is Apostille always required?', a: 'It depends on your submission authority. We confirm this before quoting so you do not pay for authentication you do not need.' },
-          { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
-        ]}
+        items={faqs}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"
       />

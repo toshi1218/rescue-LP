@@ -13,7 +13,7 @@ import { useMeta } from '../lib/useMeta';
 export default function CanadaDocsEn() {
   useMeta(
     'PH Documents for Canada Immigration [April 2026]',
-    'Applying for Canada PR or spousal sponsorship? We handle your CENOMAR & PSA online applications with DFA e-Apostille for IRCC, plus NBI Clearance retrieval with physical Apostille shipped via DHL. Free consultation.',
+    'Get a paper-issued NBI Clearance for Canadian Working Holiday, permanent residence, or other IRCC applications. We check your document checklist and arrange delivery.',
   );
   return (
     <PageLayout
@@ -22,7 +22,7 @@ export default function CanadaDocsEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'Philippine Documents for Canada Immigration (IRCC)',
-        description: 'We retrieve all Philippine documents for Canada immigration — CENOMAR, PSA Birth Certificate, NBI Clearance with DFA Apostille. Ships to Canada via DHL. IRCC-ready.',
+        description: 'Get a paper-issued NBI Clearance for Canadian Working Holiday, permanent residence, or other IRCC applications. We check your document checklist and arrange delivery.',
         url: 'https://ph-document.com/en/canada/',
         provider: {
           '@type': 'Organization',
@@ -38,7 +38,7 @@ export default function CanadaDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'Canada Immigration Document Package — all documents + DFA Apostille + DHL to Canada (all-inclusive)',
+            description: 'Canada Immigration Document Package — agreed documents, any requested authentication, and DHL to Canada',
           },
         },
         },
@@ -59,7 +59,7 @@ export default function CanadaDocsEn() {
               name: 'What documents are needed for Canada PR or spouse visa?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Typically NBI Clearance with DFA Apostille and PSA Birth Certificate for IRCC applications. For spousal sponsorship, CENOMAR or PSA Marriage Certificate may also be required. We confirm for your specific case.',
+                text: 'Follow the checklist for your application. If IRCC requests a Philippine police certificate, obtain the paper-issued NBI Clearance. We can also arrange PSA documents if requested.',
               },
             },
             {
@@ -67,7 +67,7 @@ export default function CanadaDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Canada are included.',
+                text: 'We quote the agreed documents, any required authentication, and shipping before work starts.',
               },
             },
             {
@@ -84,22 +84,28 @@ export default function CanadaDocsEn() {
     >
       <HeroBanner
         title="Philippine Documents for Canada Immigration"
-        badges={['IRCC-Ready', 'DFA Apostille Included', 'Ships to Canada via DHL']}
+        badges={['IRCC-Ready', 'Paper NBI Clearance', 'Ships to Canada via DHL']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="April 1, 2026"
+        lastUpdated="November 11, 2026"
       />
 
       <SummaryBlock
-        conclusion="Applying for Canada PR, spousal sponsorship, or citizenship? We retrieve all required Philippine documents with DFA Apostille and ship directly to your Canadian address."
+        conclusion="We arrange Philippine documents for Canadian Working Holiday, permanent residence, and spousal sponsorship applications based on the applicable IRCC instructions."
         points={[
-          'Canada is a Hague Convention member — DFA Apostille is required on Philippine documents',
+          'For IRCC police certificates, request a paper-issued NBI Clearance',
           'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
-          'PSA e-Apostille delivered digitally; NBI and physical originals shipped via DHL when needed',
+          'Paper originals are available with tracked international shipping',
           'We confirm exact IRCC requirements for your specific application type',
         ]}
         ctaText="Free Consultation"
       />
+
+      <section className="mb-8 space-y-3 rounded-xl border border-gray-200 p-5 text-sm leading-relaxed text-gray-700">
+        <h2 className="text-xl font-bold text-gray-900">NBI Clearance for Canada Working Holiday</h2>
+        <p>IRCC does not accept the digital or online version of Philippine NBI Clearance as a police certificate. For International Experience Canada (IEC), including Working Holiday, obtain the paper-issued clearance unless your individual instructions specify otherwise. The standard IRCC guidance does not list an Apostille. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/philippines.html" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">IRCC guidance for the Philippines</a></p>
+        <p>If you cannot obtain the certificate by the initial IEC application deadline, IRCC allows an application receipt or an online order confirmation to be uploaded. If you already have a later request letter, follow the instructions and deadline in that letter. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/iec/apply-work-permit.html" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">Official IEC submission guidance</a></p>
+      </section>
 
       <FeatureList
         heading="Who This Is For"
@@ -112,7 +118,7 @@ export default function CanadaDocsEn() {
           {
             icon: <Users className="w-4 h-4" />,
             title: 'Filipino living in Canada with no contacts in the Philippines',
-            description: 'Our Cebu-based team handles everything locally. You just need to provide the applicant information.',
+            description: 'Our Cebu-based team handles the local steps and guides you through any applicant actions, such as fingerprinting.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
@@ -137,12 +143,12 @@ export default function CanadaDocsEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'PSA online application + NBI Clearance retrieval',
-            description: 'We complete the PSA online applications (Birth Cert, Marriage Cert, CENOMAR) and DFA e-Apostille applications on your behalf, and handle NBI Clearance retrieval with its physical DFA Apostille, in one coordinated flow.',
+            description: 'We coordinate PSA document requests and retrieval of paper-issued NBI Clearance according to your checklist.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for all documents that require it. Paper originals provided — required by IRCC.',
+            description: 'If IRCC or another receiving authority specifically requests authentication, we check the instructions and the applicable DFA process.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -157,7 +163,7 @@ export default function CanadaDocsEn() {
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your application type (PR, spousal sponsorship, etc.) and your target submission date.' },
           { title: 'We confirm scope and quote', description: 'We verify required documents for IRCC and provide all-inclusive pricing.' },
-          { title: 'We handle the applications', description: 'We complete the PSA online applications and DFA e-Apostille applications; our Cebu team handles NBI Clearance retrieval and its physical DFA Apostille.' },
+          { title: 'We handle the applications', description: 'We arrange the agreed PSA documents and paper-issued NBI Clearance.' },
           { title: 'DHL delivery to Canada', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
       />
@@ -165,8 +171,8 @@ export default function CanadaDocsEn() {
       <FaqSection
         items={[
           { q: 'Does Canada require DFA Apostille on Philippine documents?', a: 'Not in every case. Canada is a Hague Convention member, but IRCC requirements vary by application and document. Confirm the current checklist; we verify the required format before processing.' },
-          { q: 'What documents are needed for Canada PR or spouse visa?', a: 'Typically NBI Clearance with DFA Apostille and PSA Birth Certificate for IRCC applications. For spousal sponsorship, CENOMAR or PSA Marriage Certificate may also be required. We confirm for your specific case.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Canada are included.' },
+          { q: 'What documents are needed for Canada PR or spouse visa?', a: 'Follow the checklist for your application. If IRCC requests a Philippine police certificate, obtain the paper-issued NBI Clearance. We can also arrange PSA documents if requested.' },
+          { q: 'How much does it cost?', a: 'We quote the agreed documents, any required authentication, and shipping before work starts.' },
           { q: 'How long does it take to ship to Canada?', a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to Canada typically takes 3–5 business days after documents are ready.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
@@ -176,7 +182,7 @@ export default function CanadaDocsEn() {
       <RelatedArticles
         items={[
           { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Complete checklist for Canada spousal sponsorship and all other visa types.' },
-          { href: '/en/nbi-clearance/', title: 'NBI Clearance Service', description: 'NBI Clearance + DFA Apostille + DHL to Canada.' },
+          { href: '/en/nbi-clearance/', title: 'NBI Clearance Service', description: 'Paper-issued NBI Clearance and tracked international shipping.' },
           { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'CENOMAR + DFA Apostille + DHL to Canada.' },
         ]}
       />

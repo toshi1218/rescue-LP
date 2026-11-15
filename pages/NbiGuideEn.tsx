@@ -15,7 +15,7 @@ import PaymentTrust from '../components/PaymentTrust';
 export default function NbiGuideEn() {
   useMeta(
     `NBI Clearance Philippines ${SEO_YEAR}: From Abroad + Apostille`,
-    'Get Philippine NBI Clearance from abroad. Renewal support, first-time fingerprint guidance, DFA Apostille, HIT assistance, and worldwide DHL shipping.',
+    'Get Philippine NBI Clearance from abroad. First-time fingerprint and renewal support, paper originals via DHL, and eGovPH e-Apostille guidance when required.',
   );
   return (
     <PageLayout
@@ -24,7 +24,7 @@ export default function NbiGuideEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI Clearance Application Support (+ DFA Apostille)',
-        description: 'Renewal-case NBI Clearance handled remotely via our Cebu team. First-time applicants receive embassy fingerprint guidance. DFA Apostille + DHL shipping included. HIT cases supported.',
+        description: 'Support for first-time and renewal NBI applications, paper clearance delivery via DHL, and eGovPH e-Apostille applications when required and eligible.',
         url: 'https://ph-document.com/en/nbi-clearance/',
         provider: {
           '@type': 'Organization',
@@ -40,7 +40,7 @@ export default function NbiGuideEn() {
             '@type': 'UnitPriceSpecification',
             price: '399',
             priceCurrency: 'USD',
-            description: 'NBI retrieval + DFA Apostille + DHL shipping worldwide (renewal cases)',
+            description: 'NBI retrieval and DHL shipping, with e-Apostille application support when required and eligible',
           },
         },
         },
@@ -53,7 +53,7 @@ export default function NbiGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'All-inclusive from US$399 (NBI retrieval + DFA Apostille + DHL shipping). HIT resolution is included at no extra charge. See our Pricing page for the full breakdown.',
+                text: 'Packages start at US$399. We quote the first-stage fee and confirm which authentication and shipping services are required before work begins.',
               },
             },
             {
@@ -61,7 +61,7 @@ export default function NbiGuideEn() {
               name: 'How long does it take?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'Approximately 4–6 weeks total: NBI takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.',
+                text: 'A typical case takes about 4–6 weeks. Fingerprint delivery, record checks, identity verification, and shipping can extend that estimate.',
               },
             },
             {
@@ -86,7 +86,7 @@ export default function NbiGuideEn() {
     >
       <HeroBanner
         title="NBI Clearance — Application Support & Shipping Worldwide"
-        badges={['Renewal Cases Handled Remotely', 'First-Time: Embassy Guidance Included', 'Apostille + DHL Included']}
+        badges={['First-Time and Renewal Support', 'Paper Clearance via DHL', 'eGovPH Guidance']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="August 12, 2026"
@@ -98,11 +98,19 @@ export default function NbiGuideEn() {
         {' '}Required for most visa and immigration applications in the US, Canada, Australia, UK, and Japan.
       </p>
 
+      <section className="mb-8 space-y-3 rounded-xl border border-gray-200 p-5 text-sm leading-relaxed text-gray-700">
+        <h2 className="text-xl font-bold text-gray-900">NBI Clearance and the e-Apostille process</h2>
+        <p><strong>First-time applications</strong> — First-time applicants have their fingerprints taken on Form No. 5. We help submit the original fingerprint card and required documents to NBI headquarters in Manila. We confirm the first-stage fee before starting. <a href="https://nbi.gov.ph/mailed-clearance-abroad/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">Official NBI guidance for overseas applicants</a></p>
+        <p><strong>Previous NBI Clearance</strong> — Tell us when it was issued and whether your personal details have changed. We check whether you can renew.</p>
+        <p><strong>When an Apostille is required</strong> — Since October 23, 2026, DFA issues only e-Apostilles for NBI eClearances obtained through eGovPH for destinations where the Apostille Convention applies. A paper NBI Clearance cannot be submitted for Apostille through the former counter process. We check eGovPH eligibility and help with application preparation, entry, and payment where available. Applicants complete any required identity verification themselves. We check verification options for foreign passport holders individually. <a href="https://www.apostille.gov.ph/documentary-requirements/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">Official DFA requirements</a></p>
+        <p><strong>Canada Working Holiday</strong> — IRCC does not accept the digital or online version of Philippine NBI Clearance as a police certificate. For International Experience Canada (IEC), including Working Holiday, obtain the paper-issued clearance unless your individual instructions specify otherwise. The standard IRCC guidance does not list an Apostille. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/philippines.html" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">Official IRCC guidance</a></p>
+      </section>
+
       <SummaryBlock
         conclusion="You can obtain Philippine NBI Clearance while abroad. The required route depends on whether this is a renewal or a first-time application."
         points={[
           'Eligibility: 2014+ renewals with no personal-information changes can usually be handled remotely; first-time applicants need embassy or consulate fingerprints',
-          'Price: from US$399 all-in for NBI retrieval, DFA Apostille, and worldwide DHL shipping',
+          'Packages from US$399, with the first-stage fee confirmed before work begins',
           'Timeline: approximately 4–6 weeks; HIT cases may take longer',
           'Prepare: passport or ID, current address, purpose of use, and prior NBI details if available',
         ]}
@@ -160,7 +168,7 @@ export default function NbiGuideEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille at the Philippine Department of Foreign Affairs once your NBI Clearance is issued. Paper original included.',
+            description: 'We check eGovPH eligibility and help with application preparation, entry, and payment where available. Applicants complete any required identity verification themselves. We check verification options for foreign passport holders individually.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -175,8 +183,8 @@ export default function NbiGuideEn() {
         steps={[
           { title: 'Submit your inquiry with NBI status', description: 'Tell us your use case (K-1, CR-1, Canada PR, etc.), your last NBI issuance year, whether any personal info has changed, and any known HIT issues.' },
           { title: 'We confirm your case type and provide a quote', description: 'We check whether your case qualifies for remote processing (renewal) or requires embassy fingerprint registration (first-time/name change), and provide all-inclusive pricing upfront.' },
-          { title: 'Processing begins based on your case type', description: 'Renewal: our Cebu team handles the NBI process remotely. First-time: we guide you through the Philippine Embassy appointment and fingerprint process, then handle the rest once the clearance is issued.' },
-          { title: 'NBI Clearance (Apostilled) shipped to you via DHL', description: 'Once your clearance is issued and Apostilled, the original is shipped with tracking. Estimated total: 4–6 weeks (may vary for first-time cases).' },
+          { title: 'Processing begins based on your case type', description: 'For renewals, we check your previous record. For first-time cases, we guide you through fingerprinting and handle the local submission to NBI headquarters.' },
+          { title: 'Receive the agreed documents', description: 'We send the paper clearance by tracked DHL when required. If an e-Apostille is issued, we deliver the electronic document separately.' },
         ]}
       />
 
@@ -210,8 +218,8 @@ export default function NbiGuideEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'All-inclusive from US$399 (NBI retrieval + DFA Apostille + DHL shipping). HIT resolution is included at no extra charge. See our Pricing page for the full breakdown.' },
-          { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: NBI takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
+          { q: 'How much does it cost?', a: 'Packages start at US$399. We quote the first-stage fee and confirm which authentication and shipping services are required before work begins.' },
+          { q: 'How long does it take?', a: 'A typical case takes about 4–6 weeks. Fingerprint delivery, record checks, identity verification, and shipping can extend that estimate.' },
           { q: 'What if the NBI result shows a HIT?', a: 'A HIT means a record was found in the NBI database. This requires separate handling. Share your situation and we will advise on next steps.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
           { q: 'Can I get NBI Clearance without going back to the Philippines?', a: 'It depends on your situation. If you have a prior NBI Clearance issued in 2014 or later with no personal information changes, our Cebu team can handle it remotely — no Philippines trip needed. First-time applicants or those with name changes need to visit the Philippine Embassy or Consulate in your country for fingerprint registration. We provide step-by-step guidance for both paths.' },

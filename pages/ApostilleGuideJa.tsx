@@ -6,11 +6,11 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function ApostilleGuideJa() {
   useMeta(
-    `フィリピンDFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応・渡航不要`,
+    `フィリピンDFAアポスティーユ代行【${SEO_YEAR}年】書類取得から一括対応・渡航不要`,
     'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
   );
   return (
@@ -149,6 +149,43 @@ export default function ApostilleGuideJa() {
           </p>
         </section>
 
+        <section id="vfs-document-authentication" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+          <h2 className="mb-3 text-xl font-bold text-gray-900">VFS Global経由のフィリピン書類認証・照合</h2>
+          <p className="mb-4 leading-relaxed text-gray-700">
+            ドイツ、アラブ首長国連邦（UAE）、イタリアへの提出に必要なVFS Globalの書類手続きをサポートします。提出先の案内を確認し、書類取得、必要なDFA認証、代理で行えるVFS手続き、完成書類の受け取り・発送を手配します。
+          </p>
+          <ul className="mb-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-700">
+            <li><strong>ドイツ</strong>　紙のDFA認証を取得し、PSA書類はVFSのBasic Legalizationでドイツ大使館認証へ進めます。 <a href="#germany-legalization" className="underline">ドイツ向けの詳細</a></li>
+            <li><strong>アラブ首長国連邦（UAE）</strong>　対象の身分関係書類・学歴書類などは、DFA認証を経て、VFS経由でUAE大使館とUAE外務省（MoFA）の認証を手配できます。 <a href="https://services.vfsglobal.com/phl/en/atu/apply-attestation-new" target="_blank" rel="noopener noreferrer" className="underline">VFS公式案内</a></li>
+            <li><strong>イタリア</strong>　用途に応じて、VFSで受け付けるPSA書類の照合や、学歴書類のDeclaration of Value（DOV）などを確認します。 <a href="https://visa.vfsglobal.com/phl/en/ita/additional-services" target="_blank" rel="noopener noreferrer" className="underline">VFS公式案内</a></li>
+          </ul>
+          <p className="mb-4 text-sm leading-relaxed text-gray-700">提出国・提出先機関・書類名・期限をお知らせください。認証の種類、紙原本・電子版の指定、代理申請の可否を確認してからお見積もりします。</p>
+          <a href="/ja/contact/" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">VFS書類手続きを相談する</a>
+        </section>
+
+        <section id="germany-legalization" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-3">ドイツ向け：紙のDFA認証・大使館認証・海外発送まで対応</h2>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            IGRSでは、ドイツの公証人・行政機関などへ提出するCENOMAR、PSA出生証明書、婚姻証明書について、取得から認証・ドイツへの発送までまとめて手配します。国際結婚・ビザ以外の、独身であることの証明などもご相談いただけます。
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-3">
+            ドイツとフィリピンの間ではアポスティーユ条約による認証省略の仕組みが適用されていません。提出先が認証を求める場合は、<strong>紙のDFA Authentication Certificateを取得し、VFS Global経由でドイツ大使館のLegalization（領事認証）へ進めます</strong>。電子書類・e-Apostilleはこの大使館認証には使えません。認証の要否は提出先に確認します。
+          </p>
+          <ol className="list-decimal pl-5 space-y-2 text-sm text-gray-700 leading-relaxed mb-4">
+            <li>提出先・用途・必要書類・期限を確認し、対応範囲と費用をご案内</li>
+            <li>PSAの紙原本と、紙のDFA Authentication Certificateを取得手配</li>
+            <li>委任状・本人確認書類・補足資料を揃え、VFS GlobalのBasic Legalizationで大使館認証を申請（PSA書類はDFA認証を先に取得）</li>
+            <li>完成書類を確認し、DHL・FedEx等でドイツへ発送</li>
+          </ol>
+          <p className="text-sm text-gray-700 leading-relaxed mb-3">
+            PSA書類が不鮮明な場合は、LCR Form 1Aなどの補足資料の取得可否も確認します。CENOMARには出生証明書／LCR書類の補足が必要です。大使館認証そのものにはドイツ語翻訳は不要ですが、提出先が別途翻訳を求める場合があります。納期・費用・別送の可否は必要書類と提出期限に合わせてご案内します。
+          </p>
+          <p className="text-xs text-gray-600 leading-relaxed mb-4">
+            公式案内：<a href="https://manila.diplo.de/ph-en/service/2673916-2673916" target="_blank" rel="noopener noreferrer" className="underline">ドイツ大使館</a>／<a href="https://visa.vfsglobal.com/phl/en/deu/legalizations" target="_blank" rel="noopener noreferrer" className="underline">VFS Global</a>
+          </p>
+          <a href="/ja/contact/" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">ドイツ提出用の書類を相談する</a>
+        </section>
+
         <CtaBox
           title="どの書類にアポスティーユが必要か、まず確認します"
           description="何のために使う書類か、どの書類を持っているかをお知らせください。必要な流れと費用の目安をご案内します。"
@@ -193,7 +230,7 @@ export default function ApostilleGuideJa() {
             アポスティーユは便利な認証ですが、すべての案件が同じ難易度ではありません。元書類の種類、提出先、婚姻・ビザ・外免切替などの目的によって、必要な流れは変わります。
           </p>
           <p className="text-gray-700 leading-relaxed">
-            また、NBIクリアランスやLTO書類が関係する場合は、アポスティーユ以前に、その書類自体をどの条件で取れるのかを確認しなければいけません。たとえば NBI は、2014年以降取得歴があり個人情報変更がない更新案件と、初回申請や氏名変更ありの新規扱い案件で流れが変わります。
+            また、NBIクリアランスやLTO書類が関係する場合は、アポスティーユ以前に、その書類自体をどの条件で取れるのかを確認しなければいけません。たとえば NBI は、2014年以降取得歴があり個人情報変更がない更新案件と、初回申請や氏名変更ありの新規扱い案件で流れが変わります。2026年10月23日以降、アポスティーユ条約が適用される提出先向けのNBI認証は、eGovPHアプリで取得したNBI eClearanceへのe-Apostille（電子認証）です。紙のNBIにDFA窓口でアポスティーユを付ける従来の方法は、この用途には使えません。 <a href="/ja/nbi-clearance/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">NBI取得・eGovPHの申請案内</a>
           </p>
         </section>
       </article>

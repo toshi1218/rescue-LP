@@ -10,11 +10,11 @@ import { Heart, AlertTriangle, Clock, FileCheck, Globe, Users } from 'lucide-rea
 import SummaryBlock from '../components/SummaryBlock';
 import SectionDivider from '../components/SectionDivider';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function SpouseVisaJa() {
   useMeta(
-    `配偶者ビザ 必要書類【${SEO_YEAR_MONTH_JA}】PSA・CENOMAR・NBI 取得代行`,
+    `配偶者ビザ 必要書類【${SEO_YEAR}年】PSA・CENOMAR・NBI 取得代行`,
     '配偶者ビザ申請向けのPSA婚姻証明書等を日本から代行取得。入管の現行要件を確認し、紙原本やDFA e-Apostilleは必要な場合だけ手配します。',
   );
   return (
@@ -133,9 +133,9 @@ export default function SpouseVisaJa() {
             </div>
             {[
               { label: 'PSA書類1通：e-Certificateのみ', price: '30,000円' },
-              { label: 'PSA書類1通：紙原本＋DHL（認証なし）', price: '30,000円' },
+              { label: 'PSA書類1通：紙原本＋DHL（認証なし）', price: '40,000円' },
               { label: 'PSA書類1通：e-Apostille付き電子版', price: '40,000円' },
-              { label: 'PSA書類1通：フルセット', price: '55,000円' },
+              { label: 'PSA書類1通：フルセット', price: '50,000円' },
               { label: '出生証明書＋婚姻証明書：フルセット', price: '80,000円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>

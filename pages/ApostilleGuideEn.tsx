@@ -9,11 +9,11 @@ import SummaryBlock from '../components/SummaryBlock';
 import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function ApostilleGuideEn() {
   useMeta(
-    `DFA Apostille Service [${SEO_YEAR_MONTH_EN}] — No Trip Needed`,
+    `DFA Apostille Service [${SEO_YEAR}] — No Trip Needed`,
     'Need a DFA Apostille but can\'t go to the Philippines? We handle PSA, NBI, CENOMAR authentication — and ship to you. Free consultation available.',
   );
   return (
@@ -101,7 +101,7 @@ export default function ApostilleGuideEn() {
         conclusion="We identify the correct DFA authentication route and deliver it in the format applicable to the document."
         points={[
           'Apostille is arranged only when the receiving authority requires authentication',
-          'PSA civil records use e-Apostille; eligible non-PSA records may use a physical route',
+          'PSA Apostille applications use e-Apostille; destinations such as Germany require a different authentication route',
           'Digital e-Apostille or physical authentication delivered through the correct route',
           'Can be combined with document retrieval for a seamless one-stop service',
         ]}
@@ -114,7 +114,7 @@ export default function ApostilleGuideEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'Your immigration authority requires Apostille on Philippine documents',
-            description: 'We arrange DFA Apostille for PSA documents (CENOMAR, Birth Certificate, Marriage Certificate, NBI Clearance) and ship worldwide.',
+            description: 'We help with authentication for PSA records and eligible NBI eClearances. Paper originals can be shipped separately when required.',
           },
           {
             icon: <AlertTriangle className="w-4 h-4" />,
@@ -128,6 +128,34 @@ export default function ApostilleGuideEn() {
           },
         ]}
       />
+
+      <section id="vfs-document-authentication" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+        <h2 className="mb-3 text-xl font-bold text-secondary">Philippine document authentication and verification through VFS Global</h2>
+        <p className="mb-4 leading-relaxed text-gray-700">
+          We support VFS Global document procedures for Germany, the United Arab Emirates (UAE), and Italy. Depending on the receiving authority's requirements, we can arrange retrieval, the required DFA authentication, VFS steps permitted for representatives, and collection and delivery.
+        </p>
+        <ul className="mb-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-700">
+          <li><strong>Germany.</strong> PSA documents go through paper DFA authentication, then VFS Basic Legalization for German Embassy legalization. <a href="#germany-legalization" className="underline">Germany requirements</a></li>
+          <li><strong>United Arab Emirates (UAE).</strong> For eligible personal and educational documents, the VFS attestation route covers UAE Embassy and UAE Ministry of Foreign Affairs (MoFA) attestation after DFA authentication. <a href="https://services.vfsglobal.com/phl/en/atu/apply-attestation-new" target="_blank" rel="noopener noreferrer" className="underline">Official VFS guidance</a></li>
+          <li><strong>Italy.</strong> For relevant applications, we check VFS services such as PSA record verification and Declaration of Value (DOV) for educational documents. <a href="https://visa.vfsglobal.com/phl/en/ita/additional-services" target="_blank" rel="noopener noreferrer" className="underline">Official VFS guidance</a></li>
+        </ul>
+        <p className="mb-4 text-sm leading-relaxed text-gray-700">Tell us the destination, receiving authority, document type, and deadline. We check the required authentication, accepted document format, and representative eligibility before quoting.</p>
+        <a href="/en/contact/" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">Ask about your VFS document procedure</a>
+      </section>
+
+      <section id="germany-legalization" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+        <h2 className="text-xl font-bold text-secondary mb-3">Germany: paper DFA Authentication and Embassy legalization</h2>
+        <p className="text-gray-700 leading-relaxed mb-3">
+          We arrange PSA CENOMAR, Birth and Marriage Certificate retrieval, a paper DFA Authentication Certificate, German Embassy legalization through VFS Global, and international delivery. This includes documents for German notaries and proof of single status, as well as marriage and visa applications.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-3">
+          The Apostille Convention is not in force between Germany and the Philippines. When your receiving authority requires legalization, an Apostille alone is insufficient; electronic documents and e-Apostilles cannot be legalized by the German Embassy. We confirm the required route before starting.
+        </p>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          We review authorization and supporting documents, including Birth Certificate/LCR evidence for a CENOMAR. PSA certificates use VFS Basic Legalization after DFA authentication; the Advanced service does not apply to PSA documents. If PSA entries are unclear, additional LCR records may be needed. Scope, timing, embassy/VFS fees and international shipping are confirmed in advance.
+        </p>
+        <a href="/en/germany/" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">View the Germany legalization service</a>
+      </section>
 
       <CtaBox
         title="Not sure if Apostille is required? Start here."
@@ -144,12 +172,12 @@ export default function ApostilleGuideEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'PSA civil-record Apostilles are electronic PDFs from March 16, 2026. Eligible non-PSA documents may still receive physical authentication.',
+            description: 'DFA issues electronic Apostilles for PSA e-Certificates and, since October 23, 2026, for eligible NBI eClearances used in Apostille Convention destinations.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'PSA document retrieval (when needed)',
-            description: 'We can bundle PSA retrieval with Apostille. Covers CENOMAR, Birth Certificate, Marriage Certificate, and NBI Clearance.',
+            description: 'We can arrange PSA records and eligible NBI requests together with the appropriate authentication.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -164,7 +192,7 @@ export default function ApostilleGuideEn() {
         steps={[
           { title: 'Tell us which documents need Apostille and your deadline', description: 'Share the document type (CENOMAR, NBI, PSA Birth Certificate, etc.), the destination country, and your submission deadline.' },
           { title: 'We confirm authentication requirements per destination authority', description: 'Requirements differ by document and country — we verify whether an e-Apostille, Certificate of Authentication, embassy attestation, or no authentication is required.' },
-          { title: 'We use the applicable DFA route', description: 'PSA e-Certificates use the online e-Apostille process; eligible non-PSA documents follow the applicable physical process.' },
+          { title: 'We use the applicable DFA route', description: 'PSA e-Certificates and eligible NBI eClearances use their respective electronic routes where the Apostille Convention applies.' },
           { title: 'Correct format delivered digitally or by DHL', description: 'Digital authentication is emailed in its original form; physical documents are shipped with DHL tracking when needed. Estimated total: 4–6 weeks.' },
         ]}
       />
@@ -174,6 +202,7 @@ export default function ApostilleGuideEn() {
         <p className="text-sm leading-relaxed text-gray-700">There is no country-wide yes/no rule for every immigration case. The requirement depends on the document, destination, application stage, and receiving authority.</p>
         <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-gray-700">
           <li>For PSA e-Certificates intended for Apostille Convention use, DFA issues an electronic e-Apostille.</li>
+          <li>Since October 23, 2026, DFA issues only e-Apostilles for NBI eClearances obtained through eGovPH for destinations where the Apostille Convention applies. A paper NBI Clearance cannot be submitted for Apostille through the former counter process. <a href="/en/nbi-clearance/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">See the NBI service and eGovPH process</a></li>
           <li>For non-Apostille destinations, a physical Certificate of Authentication and further consular legalization may be required.</li>
           <li>Non-PSA documents, such as NBI Clearance or LTO records, can follow a different physical-document route.</li>
         </ul>
@@ -197,7 +226,7 @@ export default function ApostilleGuideEn() {
           { href: '/en/apostille-fee/', title: 'DFA Apostille Fee Breakdown', description: 'Full cost breakdown including PSA retrieval and DHL shipping.' },
           { href: '/en/dfa-apostille-cebu-report/', title: 'DFA Apostille at Cebu Window — Field Report', description: 'Step-by-step guide for obtaining DFA Apostille at the Cebu office.' },
           { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'CENOMAR retrieval with DFA Apostille included.' },
-          { href: '/en/nbi-clearance/', title: 'NBI Clearance Service', description: 'NBI Clearance retrieval with DFA Apostille included.' },
+          { href: '/en/nbi-clearance/', title: 'NBI Clearance Service', description: 'NBI Clearance retrieval and eGovPH e-Apostille guidance when required.' },
         ]}
       />
     </PageLayout>

@@ -32,7 +32,7 @@ export default function PricingJa() {
     >
       <HeroBanner
         title="料金"
-        subtitle="PSAフルセット¥55,000、PRC証明書1通¥55,000・2通¥72,000。取得・認証・国際配送を明確な総額でご案内します。"
+        subtitle="PSA電子版のみ¥30,000、紙原本＋DHL¥40,000、e-Apostille付き電子版¥40,000、フルセット¥50,000。2通セットも明確な総額でご案内します。PRC証明書は1通¥55,000・2通¥72,000です。"
         badges={['オンライン申請代行から対応', '無料お見積もり', '追加費用の後出しなし']}
         ctaText="無料でお見積もり"
         ctaHref="#contact"
@@ -87,8 +87,8 @@ export default function PricingJa() {
             <p className="text-sm text-gray-700 leading-relaxed mb-4">
               すでにDFAへの申請を完了している方向けです。支払い参照番号を確認し、フィリピン国内での支払い、確認可能な支払い状況の確認、完了画面の共有まで対応します。
             </p>
-            <p className="text-2xl font-extrabold text-primary">US$90</p>
-            <p className="text-xs text-gray-500 mt-1">代行手数料・DFA／LinkBiz請求額は別途</p>
+            <p className="text-2xl font-extrabold text-primary">¥16,500</p>
+            <p className="text-xs text-gray-500 mt-1">税込・当社代行手数料（DFA／LinkBizの実費は別途）</p>
             <p className="mt-3 text-xs font-semibold text-secondary">支払い完了保証付き</p>
             <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-secondary px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
               支払い代行を依頼する
@@ -100,8 +100,8 @@ export default function PricingJa() {
             <p className="text-sm text-gray-700 leading-relaxed mb-4">
               お預かりした情報をもとにDFAオンライン申請を入力・送信し、フィリピン国内での支払いと完了確認までまとめて対応します。
             </p>
-            <p className="text-2xl font-extrabold text-primary">US$180</p>
-            <p className="text-xs text-gray-500 mt-1">代行手数料・DFA／LinkBiz請求額は別途</p>
+            <p className="text-2xl font-extrabold text-primary">¥27,500</p>
+            <p className="text-xs text-gray-500 mt-1">税込・当社代行手数料（DFA／LinkBizの実費は別途）</p>
             <p className="mt-3 text-xs font-semibold text-secondary">申請送信・支払い完了保証付き</p>
             <a href="#contact" className="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-secondary transition-colors hover:bg-primary-hover">
               入力から代行を依頼する
@@ -171,6 +171,17 @@ export default function PricingJa() {
         </p>
       </div>
 
+      <section id="psa-lcr-endorsement" className="mb-6 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+        <h2 className="mb-2 text-lg font-bold text-secondary">不鮮明なPSA訂正書類の再発行サポート</h2>
+        <p className="mb-3 text-sm leading-relaxed text-gray-700">
+          訂正手続きが済んでいても、PSA側の訂正証明書や関連書類が不鮮明で、訂正後の証明書を取得できないことがあります。必要に応じて登録地の地方民事登録局（LCR）への現地訪問を手配し、原本に基づく鮮明な認証謄本を取得します。LCRからPSAへの正式送付（Endorsement）が必要な場合は、LCRと調整し、PSAへの反映確認から訂正後の証明書の再取得まで支援します。
+        </p>
+        <p className="text-lg font-bold text-secondary">1件 ¥100,000〜・目安2〜3か月</p>
+        <p className="mb-3 mt-1 text-sm text-gray-600">登録地と書類の状況を確認し、対応範囲・費用・納期をお見積もりします。</p>
+        <p className="mb-4 text-xs text-gray-600"><a href="https://psa.gov.ph/civilregistration/problems-and-solutions/blurred" target="_blank" rel="noopener noreferrer" className="underline">PSA公式案内（不鮮明な記録）</a></p>
+        <a href="#contact" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">PSAの再発行について相談する</a>
+      </section>
+
       {/* 電子・紙で料金が変わる理由 */}
       <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5 mb-2">
         <p className="text-sm font-bold text-gray-800 mb-3">電子版で完結できるか、紙原本まで必要かで料金が変わります</p>
@@ -178,7 +189,7 @@ export default function PricingJa() {
           フィリピン書類は、提出先によってe-Certificate・e-Apostille（電子）で足りる場合と、PSA紙原本の取得・国際発送まで必要な場合があります。
         </p>
         <p className="text-sm text-gray-700 leading-relaxed mb-3">
-          <strong>PSA民事書類（出生・婚姻・CENOMAR等）のDFA認証はe-Apostille（電子）が原則</strong>です。一方、NBI・LTO・PRC等の非PSA書類では物理アポスティーユが必要になるケースがあります。
+          <strong>PSA民事書類（出生・婚姻・CENOMAR等）のDFA認証はe-Apostille（電子）が原則</strong>です。NBIは2026年10月23日以降、アポスティーユ条約が適用される提出先向けにはeGovPHのNBI eClearanceにe-Apostilleが発行されます。LTO・PRCなどは書類と提出先ごとに確認します。
         </p>
         <p className="text-sm text-gray-600 leading-relaxed mb-4">
           IGRSでは、提出先の要件に合わせて、電子で完結する方法と、紙原本の取得・発送を含む方法を分けてご案内します。不要な取得や発送を前提にせず、必要な範囲でお見積もりします。
