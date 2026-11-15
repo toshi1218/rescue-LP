@@ -6,11 +6,11 @@ import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function ApostilleGuideJa() {
   useMeta(
-    `フィリピンDFAアポスティーユ代行【${SEO_YEAR_MONTH_JA}】書類取得から一括対応・渡航不要`,
+    `フィリピンDFAアポスティーユ代行【${SEO_YEAR}年】書類取得から一括対応・渡航不要`,
     'DFAアポスティーユはフィリピン現地での手続きが必要ですが、当センターが代行します。PSA・CENOMAR・NBI等の書類取得と同時依頼OK。紙の原本で日本へ郵送。無料相談。',
   );
   return (
@@ -147,6 +147,20 @@ export default function ApostilleGuideJa() {
           <p className="text-gray-700 leading-relaxed">
             次に多いのが、「アポスティーユはいつでも同じ方法で取れる」と思ってしまうことです。DFA の運用は固定ではなく、2025年には PSA Documents の Fully Online Apostille の案内や、Apostille Services の予約プロセス変更も出ています。つまり、「予約が必須」「必ず窓口へ行く」などと決めつけず、その時点の運用確認が必要です。
           </p>
+        </section>
+
+        <section id="vfs-document-authentication" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+          <h2 className="mb-3 text-xl font-bold text-gray-900">VFS Global経由のフィリピン書類認証・照合</h2>
+          <p className="mb-4 leading-relaxed text-gray-700">
+            ドイツ、アラブ首長国連邦（UAE）、イタリアへの提出に必要なVFS Globalの書類手続きをサポートします。提出先の案内を確認し、書類取得、必要なDFA認証、代理で行えるVFS手続き、完成書類の受け取り・発送を手配します。
+          </p>
+          <ul className="mb-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-700">
+            <li><strong>ドイツ</strong>　紙のDFA認証を取得し、PSA書類はVFSのBasic Legalizationでドイツ大使館認証へ進めます。 <a href="#germany-legalization" className="underline">ドイツ向けの詳細</a></li>
+            <li><strong>アラブ首長国連邦（UAE）</strong>　対象の身分関係書類・学歴書類などは、DFA認証を経て、VFS経由でUAE大使館とUAE外務省（MoFA）の認証を手配できます。 <a href="https://services.vfsglobal.com/phl/en/atu/apply-attestation-new" target="_blank" rel="noopener noreferrer" className="underline">VFS公式案内</a></li>
+            <li><strong>イタリア</strong>　用途に応じて、VFSで受け付けるPSA書類の照合や、学歴書類のDeclaration of Value（DOV）などを確認します。 <a href="https://visa.vfsglobal.com/phl/en/ita/additional-services" target="_blank" rel="noopener noreferrer" className="underline">VFS公式案内</a></li>
+          </ul>
+          <p className="mb-4 text-sm leading-relaxed text-gray-700">提出国・提出先機関・書類名・期限をお知らせください。認証の種類、紙原本・電子版の指定、代理申請の可否を確認してからお見積もりします。</p>
+          <a href="/ja/contact/" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">VFS書類手続きを相談する</a>
         </section>
 
         <section id="germany-legalization" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">

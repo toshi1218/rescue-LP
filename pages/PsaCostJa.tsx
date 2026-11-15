@@ -6,11 +6,11 @@ import HeroBanner from '../components/HeroBanner';
 import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaCostJa() {
   useMeta(
-    `PSA出生証明書の費用【${SEO_YEAR_MONTH_JA}】日本まで届く総額はいくら？`,
+    `PSA出生証明書の費用【${SEO_YEAR}年】日本まで届く総額はいくら？`,
     '現地PSA料金と代行費用の違いを解説。電子版¥30,000、紙原本＋DHL¥40,000、e-Apostille付き電子版¥40,000、フルセット¥50,000（税込）。',
   );
   return (

@@ -6,11 +6,11 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PricingEn() {
   useMeta(
-    `Pricing [${SEO_YEAR_MONTH_EN}] | CENOMAR, PSA & NBI Service`,
+    `Pricing [${SEO_YEAR}] | CENOMAR, PSA & NBI Service`,
     `View ${SEO_YEAR} pricing for CENOMAR, PSA Birth Certificate, NBI Clearance & DFA Apostille, including the US$1,249 three-applicant family package.`,
   );
   return (
@@ -167,6 +167,17 @@ export default function PricingEn() {
         <p className="mt-3 text-xs text-gray-500 leading-relaxed">
           A feasibility assessment does not guarantee document retrieval. Document procurement, government fees, lawyers or other professional fees, and third-party costs are not included. Any additional work or cost is quoted for your approval before it begins.
         </p>
+      </section>
+
+      <section id="psa-lcr-endorsement" className="mb-8 scroll-mt-24 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
+        <h2 className="mb-2 text-lg font-bold text-secondary">PSA reissuance support for unreadable correction records</h2>
+        <p className="mb-3 text-sm leading-relaxed text-gray-700">
+          If a correction has been completed and PSA cannot issue the corrected certificate because the correction paperwork on file is unreadable, we can obtain clear certified copies from the Local Civil Registrar (LCR) where the record was registered, including arranging a local visit when needed. If PSA requires a formal endorsement, we coordinate with the registrar, follow up on the update, and help obtain the corrected certificate.
+        </p>
+        <p className="text-lg font-bold text-secondary">From JPY 100,000 per case · Estimated 2–3 months</p>
+        <p className="mb-3 mt-1 text-sm text-gray-600">We confirm the scope, price, and timing after checking the registry office and the status of your documents.</p>
+        <p className="mb-4 text-xs text-gray-600"><a href="https://psa.gov.ph/civilregistration/problems-and-solutions/blurred" target="_blank" rel="noopener noreferrer" className="underline">PSA guidance on blurred records</a></p>
+        <a href="#contact" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white hover:bg-secondary-light">Ask about PSA reissuance</a>
       </section>
 
       {/* Pricing cards */}
