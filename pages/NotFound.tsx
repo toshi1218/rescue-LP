@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -85,14 +85,7 @@ export default function NotFound() {
     ? '찾으시는 페이지를 찾을 수 없습니다.'
     : 'The page you are looking for could not be found.';
 
-  useMeta(title, description);
-
-  useEffect(() => {
-    const el = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
-    if (el) {
-      el.setAttribute('content', 'noindex,follow');
-    }
-  }, []);
+  useMeta(title, description, undefined, [], 'noindex, follow');
 
   const homeHref = detectedLang === 'ko' ? '/ko/' : isJa ? '/ja/' : '/en/';
   const links = popularLinks[detectedLang];

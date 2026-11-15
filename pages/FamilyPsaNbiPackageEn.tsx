@@ -98,7 +98,7 @@ export default function FamilyPsaNbiPackageEn() {
         conclusion="Three applicants, one coordinated case, and one fixed price: US$1,249."
         points={[
           'Three PSA Birth Certificate packages with DFA e-Apostilles and one SECPA paper copy each when required',
-          'Three first-time NBI Clearances with DFA Apostilles',
+          'Three first-time NBI Clearances, with e-Apostille support where required and eligible',
           'Authorization Letters, case review, and progress updates',
           'One consolidated DHL Express shipment to one address',
         ]}
@@ -136,8 +136,8 @@ export default function FamilyPsaNbiPackageEn() {
           },
           {
             icon: <Fingerprint className="w-4 h-4" />,
-            title: 'First-time NBI Clearances + DFA Apostilles',
-            description: 'We process all three applications after receiving the completed original NBI Form No. 5 fingerprint cards and supporting documents.',
+            title: 'First-time NBI Clearances and e-Apostille support',
+            description: 'We process all three first-time applications after receiving the original Form No. 5 fingerprint cards. Where an NBI e-Apostille is required, we check eGovPH eligibility for each applicant, who completes any required identity verification.',
           },
           {
             icon: <Globe className="w-4 h-4" />,

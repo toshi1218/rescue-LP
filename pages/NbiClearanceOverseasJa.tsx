@@ -86,6 +86,12 @@ export default function NbiClearanceOverseasJa() {
         フィリピンに戻らなくても、NBIクリアランスを取得できるケースがあります。大切なのは、どのルートで進めるかを先に決めることです。
       </p>
 
+      <section className="mb-8 space-y-2 rounded-xl border border-gray-200 p-5 text-sm leading-relaxed text-gray-700">
+        <h2 className="font-bold text-gray-900">アポスティーユが必要な場合</h2>
+        <p>2026年10月23日以降、アポスティーユ条約が適用される提出先向けのNBI認証は、eGovPHアプリで取得したNBI eClearanceへのe-Apostille（電子認証）です。紙のNBIにDFA窓口でアポスティーユを付ける従来の方法は、この用途には使えません。 eGovPHでの申請可否を確認し、申請準備や入力・支払いをサポートします。アプリ上の本人認証はご本人に行っていただきます。外国籍の方は利用できる本人確認手段を個別に確認します。 <a href="https://www.apostille.gov.ph/documentary-requirements/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">DFA公式の必要書類</a></p>
+        <p>初回は、ご本人が在日フィリピン大使館・総領事館などで指紋を採取し、Form No. 5の原本などをマニラのNBI本局へ提出します。当社は指紋採取後の初回取得を代行し、費用を着手前にご案内します。</p>
+      </section>
+
       <SummaryBlock
         conclusion="海外在住でも、現地代理人がいればNBIクリアランスの取得を進められることがあります。HITが出る場合も、先に状況を整理すれば無駄な往復を減らせます。"
         points={[

@@ -6,14 +6,14 @@ import CtaBox from '../components/CtaBox';
 import StepList from '../components/StepList';
 import FaqSection from '../components/FaqSection';
 import SummaryBlock from '../components/SummaryBlock';
-import { FileCheck, Globe, Heart, ShieldCheck } from 'lucide-react';
+import { Award, FileCheck, Globe, Heart, ShieldCheck } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 import RelatedArticles from '../components/RelatedArticles';
 
 export default function PrcProfessionalDocsEn() {
   useMeta(
-    'PRC Professional Documents & Apostille Service [2026]',
-    'Get Philippine PRC professional documents for overseas employment or registration. We check the document, authentication route, and DHL delivery required for your destination.',
+    'PRC Document Retrieval & Apostille Service [2026]',
+    'Request Philippine PRC certificates from abroad, including Good Standing, Board Rating, Passing and certified registration records. Local processing, Apostille coordination and DHL delivery.',
   );
 
   return (
@@ -23,7 +23,7 @@ export default function PrcProfessionalDocsEn() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'PRC Professional Documents and Authentication Support',
-        description: 'Support for Philippine PRC professional documents, including Certificate of Good Standing, Certificate of Registration, certified copies and destination-specific authentication coordination.',
+        description: 'Retrieval and authentication support for Philippine PRC professional documents, including Certificate of Good Standing, Board Rating, Passing, registration records and certified copies.',
         url: 'https://ph-document.com/en/prc-professional-documents/',
         provider: {
           '@type': 'Organization',
@@ -34,26 +34,27 @@ export default function PrcProfessionalDocsEn() {
       }]}
     >
       <HeroBanner
-        title="PRC Professional Documents for Overseas Employment"
-        badges={['For Nurses & Licensed Professionals', 'Authentication Route Checked', 'Ships Worldwide via DHL']}
+        title="PRC Document Retrieval & Apostille Service"
+        subtitle="For Filipino nurses and other licensed professionals abroad who need PRC certificates, certified records, authentication, and international delivery."
+        badges={['Local PRC Processing', 'Apostille Route Checked', 'Worldwide DHL Delivery']}
         ctaText="Request a Case Check"
         ctaHref="#contact"
-        lastUpdated="September 15, 2026"
+        lastUpdated="September 30, 2026"
       />
 
       <SummaryBlock
-        conclusion="Need Philippine professional documents for an overseas job, licence registration, or credential review? We confirm the document and authentication route before processing starts."
+        conclusion="Need a Philippine professional document for an overseas job, licence registration, or credential review? Our Cebu team checks whether representative processing is permitted, then coordinates the PRC request, authentication, and delivery."
         points={[
-          'Certificate of Good Standing, Certificate of Registration and certified PRC copies',
+          'Certificate of Good Standing, Board Rating, Passing, registration records, and certified PRC copies',
           'Support for nurses and other PRC-licensed professionals',
+          'Overseas authorization route checked before any payment',
           'Destination-specific Apostille or embassy-legalization route checked before quoting',
-          'DHL dispatch available after documents are ready',
         ]}
         ctaText="Request a Case Check"
       />
 
       <FeatureList
-        heading="Documents We Can Review With You"
+        heading="PRC Documents We Can Help Request"
         items={[
           {
             icon: <Heart className="w-4 h-4" />,
@@ -62,20 +63,42 @@ export default function PrcProfessionalDocsEn() {
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'Certificate of Registration / Board Certificate',
-            description: 'For professionals who need PRC-issued registration evidence for an overseas application.',
+            title: 'Certificate of Board Rating and Certificate of Passing',
+            description: 'Official proof of licensure-examination results and passing status for employment, registration, or credential review.',
           },
           {
             icon: <ShieldCheck className="w-4 h-4" />,
-            title: 'Certified PRC documents and verification',
-            description: 'We assess whether certified copies, licence validation, or a state board verification request is the appropriate document for your receiving authority.',
+            title: 'Certified PIC / Certificate of Registration copies',
+            description: 'PRC-certified copies of a Professional Identification Card or Certificate of Registration when requested by a receiving authority.',
+          },
+          {
+            icon: <Award className="w-4 h-4" />,
+            title: 'Professional verification and other PRC records',
+            description: 'We assess the exact record and submission method required by an employer, regulator, credentialing body, or foreign authority.',
           },
         ]}
       />
 
+      <section className="mb-10">
+        <div className="rounded-xl border border-blue-100 bg-blue-50/60 p-5">
+          <p className="text-sm font-bold text-gray-800 mb-2">Overseas authorization became easier in 2026</p>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            PRC Memorandum Circular No. 1 (s. 2026) allows eligible overseas PRC-registered professionals to send a scanned authorization letter and supporting documents to the selected PRC regional office. The representative presents valid ID and the required undertaking when claiming the document. Eligibility and the exact forms depend on the applicant and requested record, so we confirm the route before accepting the case.
+          </p>
+          <a
+            href="https://www.prc.gov.ph/prc-memorandum-circular-no-1-s-2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex text-sm font-semibold text-secondary underline underline-offset-2"
+          >
+            View the official PRC circular
+          </a>
+        </div>
+      </section>
+
       <CtaBox
         title="The document name alone is not enough"
-        description="Tell us your profession, destination country, receiving authority, and deadline. We will confirm the PRC document, authorization requirements, and authentication route before giving a quote."
+        description="Tell us your profession, requested document, destination country, receiving authority, and deadline. We confirm the representative requirements and quote the complete service before you pay."
         buttonText="Check My Requirements"
         href="#contact"
         variant="primary"
@@ -107,18 +130,36 @@ export default function PrcProfessionalDocsEn() {
         heading="How It Works"
         steps={[
           { title: 'Send your profession, document request, destination, and deadline', description: 'A receiving authority or employer request letter is helpful when available.' },
-          { title: 'We confirm the correct PRC route and quote', description: 'We check whether the case needs a certificate, certified copy, verification, Apostille, or embassy legalization.' },
-          { title: 'Document processing where representative handling is permitted', description: 'Some PRC steps require the applicant’s LERIS action, original authorization, or additional documents. We confirm these first.' },
-          { title: 'Authentication and DHL dispatch', description: 'After the document is ready, we coordinate the confirmed Philippine authentication route and international delivery.' },
+          { title: 'We confirm the PRC record, authorization route, and quote', description: 'We check whether you need a certificate, certified copy, verification, Apostille, or embassy legalization.' },
+          { title: 'You complete any required LERIS and authorization steps', description: 'Depending on the request, PRC may require an appointment, payment, scanned authorization package, original SPA, or existing PIC/COR.' },
+          { title: 'Our local representative files or claims the document', description: 'Where representative handling is permitted, our team visits the designated PRC office and coordinates any permitted follow-up.' },
+          { title: 'Authentication and DHL delivery', description: 'We arrange the confirmed DFA Apostille or legalization route and send the completed documents internationally with tracking.' },
         ]}
       />
+
+      <section className="mb-10">
+        <div className="rounded-2xl border border-gray-200 bg-white p-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-3">Pricing and timing</h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            PRC document requests are quoted individually because authorization, original-document, Apostille, and destination requirements differ by profession and receiving authority. Your quote states the government fees, local processing, authentication, and delivery scope before payment.
+          </p>
+          <ul className="space-y-2 text-sm text-gray-700">
+            <li>• Free eligibility and requirement check</li>
+            <li>• Approximately 50% deposit to start</li>
+            <li>• Balance after you review document photos or PDFs, before dispatch</li>
+            <li>• Timeline confirmed after checking appointment availability and the requested PRC record</li>
+          </ul>
+        </div>
+      </section>
 
       <FaqSection
         items={[
           { q: 'Can you process PRC documents for nurses?', a: 'Yes. We review requests for nurses and other PRC-licensed professionals, then confirm the exact PRC document and receiving-authority requirements before processing.' },
-          { q: 'Can you obtain a Certificate of Good Standing?', a: 'We can assess and coordinate Certificate of Good Standing requests where the PRC requirements and authorization method allow it. The final scope is confirmed after reviewing the case.' },
+          { q: 'Can you obtain a Certificate of Good Standing?', a: 'We can assess and coordinate Certificate of Good Standing requests where PRC rules allow representative processing. We first check your PRC status, authorization method, selected regional office, and receiving-authority requirements.' },
+          { q: 'Which PRC documents can you process?', a: 'Common requests include Certificate of Good Standing, Certificate of Board Rating, Certificate of Passing, and certified copies of the Professional Identification Card or Certificate of Registration. Other verification requests are assessed individually.' },
+          { q: 'Do I need to send an original SPA?', a: 'It depends on the case. Eligible overseas PRC-registered professionals may use the scanned authorization procedure under PRC Memorandum Circular No. 1 (s. 2026). Other requests may still require an original SPA, original PRC document, or applicant action through LERIS.' },
           { q: 'Do I need Apostille or embassy legalization?', a: 'It depends on the destination country and receiving authority. We confirm the required route before quoting so you do not order the wrong authentication.' },
-          { q: 'Can you renew my PRC licence?', a: 'This service is focused on PRC-issued certificates, authenticated copies, verification, and international document handling. Renewal or personal-appearance requirements are assessed separately.' },
+          { q: 'Can you renew my PRC licence?', a: 'We first assess whether the requested renewal or replacement can be handled by a representative. This page mainly covers PRC-issued certificates, certified copies, verification, authentication, and international delivery.' },
         ]}
         ctaTitle="Share your PRC document request"
         ctaButton="Go to Contact Form"

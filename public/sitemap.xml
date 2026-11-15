@@ -82,7 +82,10 @@
   </url>
   <url>
     <loc>https://ph-document.com/en/prc-professional-documents/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/prc-professional-documents/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/prc-apostille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/prc-professional-documents/"/>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -605,7 +608,10 @@
   </url>
   <url>
     <loc>https://ph-document.com/ja/prc-apostille/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/prc-professional-documents/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/prc-apostille/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ph-document.com/en/prc-professional-documents/"/>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

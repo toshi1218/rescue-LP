@@ -72,7 +72,7 @@ export default function NbiClearanceOnlineEn() {
               name: 'Does NBI Clearance need DFA Apostille?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'For most immigration purposes outside the Philippines, yes. DFA Apostille authenticates NBI Clearance for use in Hague Convention member countries. We confirm the exact requirement for your destination country before starting.',
+                text: 'Since October 23, 2026, DFA issues only e-Apostilles for NBI eClearances obtained through eGovPH for destinations where the Apostille Convention applies. A paper NBI Clearance cannot be submitted for Apostille through the former counter process. Check whether your receiving authority requires authentication.',
               },
             },
             {
@@ -173,7 +173,7 @@ export default function NbiClearanceOnlineEn() {
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: 'DFA Apostille authentication',
-            description: 'We arrange DFA Apostille for immigration use. Paper original with Apostille stamp returned.',
+            description: 'We check eGovPH eligibility and help with application preparation, entry, and payment where available. Applicants complete any required identity verification themselves. We check verification options for foreign passport holders individually.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
@@ -189,17 +189,17 @@ export default function NbiClearanceOnlineEn() {
           { title: 'Submit your inquiry', description: 'Tell us your use case (visa, immigration, work permit) and whether this is your first NBI or a renewal.' },
           { title: 'We confirm scope and quote', description: 'We verify HIT status if applicable and provide all-inclusive pricing including Apostille and shipping.' },
           { title: 'NBI processing in the Philippines', description: 'Our Cebu team coordinates with NBI — online renewal or in-person depending on your case.' },
-          { title: 'DFA Apostille', description: 'After receiving the clearance, we arrange DFA Apostille if required for your destination authority.' },
+          { title: 'DFA Apostille', description: 'Since October 23, 2026, DFA issues only e-Apostilles for NBI eClearances obtained through eGovPH for destinations where the Apostille Convention applies. A paper NBI Clearance cannot be submitted for Apostille through the former counter process.' },
           { title: 'DHL delivery worldwide', description: 'Shipped with tracking to your international address. Estimated total: 4–6 weeks.' },
         ]}
       />
 
       <FaqSection
         items={[
-          { q: 'Can I get NBI Clearance online from abroad?', a: 'For renewals with a clean record, yes via clearance.nbi.gov.ph — but delivery is within the Philippines only. First-timers and HIT cases must appear in person. We handle everything on your behalf if you cannot travel.' },
+          { q: 'Can I get NBI Clearance online from abroad?', a: 'Some renewals can be handled online. First-time applicants have their fingerprints taken on Form No. 5. We help submit the original fingerprint card and required documents to NBI headquarters in Manila. We confirm the first-stage fee before starting. HIT cases may require additional steps.' },
           { q: 'How long does NBI Clearance take?', a: 'Online renewal: 7–10 business days within the Philippines. HIT cases: 15–30 business days. Including DFA Apostille and international shipping, plan 4–6 weeks total.' },
           { q: 'How long is NBI Clearance valid?', a: 'NBI Clearance is valid for 1 year. For most immigration purposes, it must be issued within 6 months of your submission date.' },
-          { q: 'Does NBI Clearance need DFA Apostille?', a: 'For most immigration purposes outside the Philippines, yes. We confirm the exact requirement for your destination country before starting.' },
+          { q: 'Does NBI Clearance need DFA Apostille?', a: 'Since October 23, 2026, DFA issues only e-Apostilles for NBI eClearances obtained through eGovPH for destinations where the Apostille Convention applies. A paper NBI Clearance cannot be submitted for Apostille through the former counter process. Check whether your receiving authority requires authentication.' },
           { q: 'What is an NBI HIT?', a: 'A HIT means your name matched a record in the NBI database. It requires in-person appearance at an NBI office. We handle HIT cases and coordinate the resolution process.' },
           { q: 'Can you handle NBI for someone currently outside the Philippines?', a: 'Yes. That is our primary use case. We coordinate everything locally so you do not need to travel or have a Philippines contact.' },
         ]}

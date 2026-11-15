@@ -15,6 +15,7 @@ export const enToJa: Record<string, string> = {
   '/en/psa-marriage-certificate': '/ja/psa-kekkon-shomeisho',
   '/en/drivers-license-conversion': '/ja/gaimen-kirikae-guide',
   '/en/naturalization-guide': '/ja/kika-shinsei-guide',
+  '/en/prc-professional-documents': '/ja/prc-apostille',
   '/en/guides': '/ja/guides',
   '/en/psa-birth-certificate-cost': '/ja/psa-shussei-cost',
   '/en/apostille-fee': '/ja/apostille-ryokin',
