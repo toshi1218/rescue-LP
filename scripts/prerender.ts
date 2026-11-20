@@ -1195,8 +1195,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/kika-shinsei-guide/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'kika-shinsei-guide', 'index.html'),
-    title: `帰化申請の書類代行【${SEO_YEAR_MONTH_JA}】PSA・NBI・アポスティーユ`,
-    description: 'PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行。法務局の要件に合わせた形式で手配。司法書士・行政書士の先生からのご依頼も対応。無料相談で必要書類を確認。',
+    title: `帰化申請の書類代行【${SEO_YEAR}年】PSA・NBI・アポスティーユ`,
+    description: '2026年4月1日から帰化審査の運用が厳格化。PSA出生証明書・NBI Clearance・DFAアポスティーユを一括代行し、法務局の要件に合わせて手配します。',
     canonical: `${BASE}/ja/kika-shinsei-guide/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/naturalization-guide/`,
