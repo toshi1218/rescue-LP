@@ -92,7 +92,7 @@ export default function NbiGuideJa() {
         badges={['初回申請・更新', '紙原本の国際配送', '日本語対応']}
         ctaText="無料で相談する"
         ctaHref="#contact"
-        lastUpdated="2026年11月11日"
+        lastUpdated="2026年11月15日"
       />
 
       <SectionDivider variant="beige">
@@ -101,6 +101,8 @@ export default function NbiGuideJa() {
           <p><strong>初めての方</strong> — 初回は、ご本人が在日フィリピン大使館・総領事館などで指紋を採取し、Form No. 5の原本などをマニラのNBI本局へ提出します。当社は指紋採取後の初回取得を代行し、費用を着手前にご案内します。 <a href="https://nbi.gov.ph/mailed-clearance-abroad/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">NBI公式の海外申請案内</a></p>
           <p><strong>取得歴がある方</strong> — 最後の取得年と氏名などの変更有無を確認し、更新で進められるかをご案内します。</p>
           <p><strong>アポスティーユが必要な方</strong> — 2026年10月23日以降、アポスティーユ条約が適用される提出先向けのNBI認証は、eGovPHアプリで取得したNBI eClearanceへのe-Apostille（電子認証）です。紙のNBIにDFA窓口でアポスティーユを付ける従来の方法は、この用途には使えません。 eGovPHでの申請可否を確認し、申請準備や入力・支払いをサポートします。アプリ上の本人認証はご本人に行っていただきます。外国籍の方は利用できる本人確認手段を個別に確認します。 <a href="https://www.apostille.gov.ph/documentary-requirements/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">DFA公式の必要書類</a></p>
+          <p><strong>ご自身で手続きできる場合</strong> — 過去にNBIを取得済みで、氏名などに変更がなく、eGovPHアプリの本人認証が完了している方は、アプリから更新とe-Apostilleの申請をご自身で行えます。公的手数料の目安は、NBI手数料₱130、決済手数料₱25、e-Apostille ₱200です（2026年11月時点）。</p>
+          <p><strong>代行が向いている場合</strong> — 初めてNBIを取得する方（指紋採取後のマニラでの手続き）、紙の原本が必要な方（条約が適用されない提出先や、紙を指定する提出先）、HIT（同姓同名照合）が出た方、海外の電話番号などでeGovPHの本人認証が進まない方は、当社にご相談ください。状況を確認し、必要な作業と費用を着手前にご案内します。</p>
           <p><strong>カナダのワーキングホリデー</strong> — カナダ移民局（IRCC）は、フィリピンの警察証明として電子版NBIを受け付けていません。ワーキングホリデー（IEC）では、個別の通知に別の指定がない限り、紙で発行されたNBIを用意します。IRCCの通常案内にアポスティーユの指定はありません。 <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/philippines.html" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">IRCC公式案内</a></p>
         </div>
       </SectionDivider>
