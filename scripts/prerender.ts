@@ -1608,8 +1608,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ko/f-6-philippines-documents/',
     outFile: path.join(projectRoot, 'dist', 'ko', 'f-6-philippines-documents', 'index.html'),
-    title: 'F-6 결혼비자용 필리핀 서류 준비 | PSA · CENOMAR · NBI',
-    description: 'F-6 결혼이민비자에 필요한 필리핀 측 서류（CENOMAR, PSA 출생증명서, NBI Clearance, 아포스티유）를 대행합니다. LCCM 안내도 가능. 서류 이름을 모르셔도 괜찮습니다.',
+    title: '필리핀 결혼비자（F-6）서류 준비｜PSA · CENOMAR · NBI 대행',
+    description: '필리핀 배우자와의 결혼비자（F-6）에 필요한 필리핀 측 서류（CENOMAR, PSA 출생증명서, NBI Clearance, 아포스티유）를 대행합니다. LCCM 안내도 가능. 서류 이름을 모르셔도 괜찮습니다.',
     canonical: `${BASE}/ko/f-6-philippines-documents/`,
     lang: 'ko',
     enCanonical: `${BASE}/en/`,
@@ -1632,8 +1632,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ko/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'ko', 'nbi-clearance', 'index.html'),
-    title: '필리핀 NBI Clearance 발급 방법｜해외 신청·아포스티유',
-    description: '한국에서 필리핀 NBI Clearance를 발급받는 방법을 안내합니다. 대사관 지문 등록, 현지 신청, DFA 아포스티유, HIT 상담 및 DHL 배송을 지원합니다.',
+    title: '필리핀 NBI 클리어런스（범죄경력증명서）발급 대행｜한국 거주자 신청',
+    description: 'F-6 결혼비자·귀화 등에 필요한 필리핀 NBI 클리어런스를 한국에서 신청할 수 있습니다. 주한 필리핀 대사관 지문 등록 후 현지 신청·아포스티유·DHL 배송까지 대행. 기간 약 4〜6주, HIT 상담 가능.',
     canonical: `${BASE}/ko/nbi-clearance/`,
     lang: 'ko',
     enCanonical: `${BASE}/en/nbi-clearance/`,
