@@ -29,8 +29,8 @@ export default function F6DocsKo() {
 
   return (
     <PageLayoutKo
-      title="F-6 결혼비자용 필리핀 서류 준비 | PSA · CENOMAR · NBI"
-      description="F-6 결혼이민비자에 필요한 필리핀 측 서류（CENOMAR, PSA 출생증명서, NBI Clearance, 아포스티유）를 대행합니다. LCCM 안내도 가능. 서류 이름을 모르셔도 괜찮습니다."
+      title="필리핀 결혼비자（F-6）서류 준비｜PSA · CENOMAR · NBI 대행"
+      description="필리핀 배우자와의 결혼비자（F-6）에 필요한 필리핀 측 서류（CENOMAR, PSA 출생증명서, NBI Clearance, 아포스티유）를 대행합니다. LCCM 안내도 가능. 서류 이름을 모르셔도 괜찮습니다."
       canonical="https://ph-document.com/ko/f-6-philippines-documents/"
       breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: 'F-6 결혼비자 필리핀 서류' }]}
       jsonLd={[
@@ -118,7 +118,7 @@ export default function F6DocsKo() {
 
       {/* 필리핀 측 서류 */}
       <section className="mb-10">
-        <h2 className="text-lg font-bold text-secondary mb-5">필리핀 측에서 자주 필요한 서류</h2>
+        <h2 className="text-lg font-bold text-secondary mb-5">필리핀 결혼비자（F-6）에 자주 필요한 필리핀 측 서류</h2>
 
         {[
           {

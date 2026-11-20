@@ -29,8 +29,8 @@ export default function NbiKo() {
 
   return (
     <PageLayoutKo
-      title="필리핀 NBI Clearance 발급 방법｜해외 신청·아포스티유"
-      description="한국에서 필리핀 NBI Clearance를 발급받는 방법을 안내합니다. 대사관 지문 등록, 현지 신청, DFA 아포스티유, HIT 상담 및 DHL 배송을 지원합니다."
+      title="필리핀 NBI 클리어런스（범죄경력증명서）발급 대행｜한국 거주자 신청"
+      description="F-6 결혼비자·귀화 등에 필요한 필리핀 NBI 클리어런스를 한국에서 신청할 수 있습니다. 주한 필리핀 대사관 지문 등록 후 현지 신청·아포스티유·DHL 배송까지 대행. 기간 약 4〜6주, HIT 상담 가능."
       canonical="https://ph-document.com/ko/nbi-clearance/"
       breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: 'NBI Clearance 신청 지원' }]}
       jsonLd={[
