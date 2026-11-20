@@ -28,7 +28,9 @@ function installIgrsAutomation() {
   ScriptApp.getProjectTriggers()
     .filter(t => t.getHandlerFunction() === handler)
     .forEach(t => ScriptApp.deleteTrigger(t));
-  ScriptApp.newTrigger(handler).timeBased().everyMinutes(15).create();
+  // LINE/WhatsApp reception is handled by Worker webhooks independently.
+  // Only the Sheets mirror (and opt-in Gmail import) uses this daily trigger.
+  ScriptApp.newTrigger(handler).timeBased().atHour(7).everyDays(1).inTimezone('Asia/Manila').create();
   runIgrsAutomation();
 }
 
