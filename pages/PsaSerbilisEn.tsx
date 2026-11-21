@@ -102,11 +102,18 @@ export default function PsaSerbilisEn() {
             </tbody>
           </table>
         </div>
+        <p>
+          If a checklist asks for an NSO certificate, NSO refers to the former National Statistics Office. The PSA now holds the national civil registry. Ask the receiving office whether it will accept your existing NSO copy or wants a fresh PSA copy.
+        </p>
       </section>
 
       <section className="mb-10 space-y-3 text-sm leading-relaxed text-gray-700">
-        <h2 className="text-xl font-bold text-secondary">Before you order from overseas</h2>
-        <p>Ask the office receiving your document which record it needs, whether it needs a paper original, and whether it requires authentication. In a visa case, check the requirements for your current step. An upload before the interview and a document you bring to the interview may need different formats.</p>
+        <h2 className="text-xl font-bold text-secondary">How to order PSA certificates from overseas</h2>
+        <ol className="list-decimal space-y-2 pl-5">
+          <li>Ask the receiving office which record and format it needs and whether it requires authentication. A visa upload and the interview may require different formats.</li>
+          <li>For a paper certificate, open <a href={serbilisUrl} className={sourceLink}>PSA Serbilis</a>, choose the certificate type, and enter the details as recorded on the civil registry document. Check international delivery for your address before paying.</li>
+          <li>Save the request reference and payment confirmation so you can check your order status. If the office requires a DFA e-Apostille, use the <a href={dfaPsaPortal} className={sourceLink}>designated PSA portal</a> to request the electronic set.</li>
+        </ol>
         <p>If your PSA copy is unreadable or the registry has no record, send us the rejection reason or tell us the city or municipality where the record was registered. We can check whether a follow-up with the Local Civil Registry is appropriate before you pay for another copy.</p>
       </section>
 
@@ -120,9 +127,10 @@ export default function PsaSerbilisEn() {
 
       <FaqSection items={faq} />
       <RelatedArticles items={[
-        { href: '/en/psa-birth-certificate-cost/', title: 'PSA Birth Certificate Fees and Shipping Costs' },
-        { href: '/en/psa-ecertificate-abroad/', title: 'PSA Electronic vs. Paper Certificates Abroad' },
-        { href: '/en/cenomar/', title: 'CENOMAR: Documents and Ordering from Abroad' },
+        { href: '/en/psa-birth-certificate-cost/', title: 'PSA Birth Certificate Fees and Shipping Costs', description: 'See what changes the total when you need delivery or authentication.' },
+        { href: '/en/psa-ecertificate-abroad/', title: 'PSA Electronic vs. Paper Certificates Abroad', description: 'Check which format to request for your receiving office.' },
+        { href: '/en/cenomar/', title: 'CENOMAR: Documents and Ordering from Abroad', description: 'Request a search of Philippine marriage records.' },
+        { href: '/en/psa-crs-cebu-report/', title: 'PSA Civil Registry Office in Cebu', description: 'See the location, photos, and what to expect at the office.' },
       ]} />
     </PageLayout>
   );

@@ -4,6 +4,12 @@
 /favicon.ico /favicon.svg 301
 /.well-known/llms.txt /llms.txt 200
 
+# Consolidated English PSA ordering guides
+/en/psa-online                       /en/psa-serbilis/  301
+/en/psa-online/                      /en/psa-serbilis/  301
+/en/philippine-statistics-authority   /en/psa-serbilis/  301
+/en/philippine-statistics-authority/  /en/psa-serbilis/  301
+
 # ── 旧 EN canonical (/ 系) → /en/*/ へ 301（1ホップで最終URLへ） ──
 /                           /en/                          301
 /cenomar                    /en/cenomar/                  301
