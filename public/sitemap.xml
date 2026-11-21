@@ -60,18 +60,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ph-document.com/en/philippine-statistics-authority/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ph-document.com/en/psa-online/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://ph-document.com/en/psa-birth-certificate/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://ph-document.com/en/psa-birth-certificate/"/>
     <xhtml:link rel="alternate" hreflang="ja" href="https://ph-document.com/ja/psa-shussei-shomeisho/"/>
