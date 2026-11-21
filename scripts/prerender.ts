@@ -62,6 +62,8 @@ const GOOGLEBOT_NOINDEX_PATHS = new Set<string>([
   '/en/italy/',
   '/en/cenomar-apostille/',
   '/en/netherlands/',
+  '/en/norway/',
+  '/en/sweden/',
 ]);
 
 type HreflangMode = 'none' | 'multi' | 'ko-only';
