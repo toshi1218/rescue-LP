@@ -128,6 +128,9 @@ export default function PsaCostEn() {
           </div>
           <p className="text-xs text-gray-500 mt-3">Direct-order sources: <a href="https://psa.gov.ph/system/files/citizens-charter/6-PSA-2025-Citizens-Charter-National-Capital-Region-External-Services.pdf" className="text-primary underline" target="_blank" rel="noopener noreferrer">PSA outlet base fee</a> · <a href="https://psahelpline.ph/faq/PSA-ECert" className="text-primary underline" target="_blank" rel="noopener noreferrer">birth eCert</a> · <a href="https://order-now.psahelpline.ph/order/choose-type?type=birth" className="text-primary underline" target="_blank" rel="noopener noreferrer">domestic order</a> · <a href="https://psahelpline.ph/faq/International-Order" className="text-primary underline" target="_blank" rel="noopener noreferrer">international processing and courier</a>.</p>
           <p className="text-xs text-gray-500 mt-2">IGRS prices match our <a href="/en/pricing/" className="text-primary underline">published service packages</a>. We confirm the required format, authentication, eligibility, delivery scope, and any exceptional work before payment. For application requirements, see our <a href="/en/psa-birth-certificate/" className="text-primary underline">PSA birth certificate guide</a>.</p>
+          <p className="mt-4 rounded-lg bg-gray-50 px-4 py-3 text-sm text-gray-700">
+            Ordering from overseas yourself? Compare <a href="/en/psa-serbilis/" className="text-primary underline">PSA Serbilis direct delivery and PSAHelpline courier pickup</a>. If a visa office asks for an original, check <a href="/en/psa-ecertificate-abroad/" className="text-primary underline">which PSA format it accepts</a> before paying.
+          </p>
         </SectionDivider>
       </div>
 

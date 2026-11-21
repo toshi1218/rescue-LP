@@ -1,19 +1,41 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
-import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
-import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
-import { Globe, AlertTriangle, CheckCircle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
+const title = 'PSA Serbilis: Official Website, Delivery & PSAHelpline';
+const description = 'PSA Serbilis is active at psaserbilis.com.ph. Compare direct overseas paper delivery, PSAHelpline courier pickup, and the PSA e-Certificate and DFA e-Apostille route.';
+const serbilisUrl = 'https://www.psaserbilis.com.ph/';
+const helplineUrl = 'https://psahelpline.ph/';
+const helplineInternationalUrl = 'https://psahelpline.ph/faq/International-Order';
+const psaAdvisory = 'https://psa.gov.ph/content/public-advisory-135';
+const dfaPsaPortal = 'https://apostille.psahelpline.ph/';
+const sourceLink = 'text-primary underline underline-offset-2';
+
+const faq = [
+  {
+    q: 'Is PSA Serbilis still working?',
+    a: 'Yes. The Philippine Statistics Authority lists PSA Serbilis and PSAHelpline as authorized online channels. The current Serbilis website is www.psaserbilis.com.ph.',
+  },
+  {
+    q: 'Can PSA Serbilis deliver a certificate overseas?',
+    a: 'Yes. PSA lists Serbilis as available to requesters abroad. Confirm the shipping options, delivery address, and total for your country on the official order site.',
+  },
+  {
+    q: 'What does the PSAHelpline international fee cover?',
+    a: 'It covers certificate processing. You arrange and pay for a courier separately if you want the physical certificate delivered abroad. PSAHelpline makes the digital copy available after identity verification.',
+  },
+  {
+    q: 'Can I add a DFA e-Apostille to my Serbilis paper certificate?',
+    a: 'For eligible PSA civil registry documents intended for Apostille Convention destinations, DFA authenticates the PSA electronic certificate through its designated online route. Ask your receiving office whether it needs the electronic set, a separate paper certificate, or both.',
+  },
+];
+
 export default function PsaSerbilisEn() {
-  useMeta(
-    'PSA Serbilis [2026]: What It Was & How to Get PSA Documents Now',
-    'PSA Serbilis was the PSA\'s online delivery service for civil registry documents. Now replaced by PSAHelpline.ph. Learn how to get your PSA Birth Certificate, CENOMAR, or Marriage Certificate today.',
-  );
+  useMeta(title, description);
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'PSA Serbilis' }]}
@@ -21,171 +43,87 @@ export default function PsaSerbilisEn() {
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'PSA Serbilis: What It Was and How to Get PSA Documents Now',
-          description: 'PSA Serbilis was the Philippine Statistics Authority\'s online delivery portal for civil registry documents. It has been replaced by PSAHelpline.ph.',
+          headline: title,
+          description,
           url: 'https://ph-document.com/en/psa-serbilis/',
-          publisher: {
-            '@type': 'Organization',
-            name: 'IGRS Inc.',
-            url: 'https://ph-document.com/en/',
-          },
+          datePublished: '2026-04-30',
+          dateModified: '2026-11-22',
+          publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/en/' },
         },
         {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: [
-            {
-              '@type': 'Question',
-              name: 'What was PSA Serbilis?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'PSA Serbilis (serbilis.psa.gov.ph) was the Philippine Statistics Authority\'s official online delivery service for civil registry documents including Birth Certificates, Marriage Certificates, Death Certificates, and CENOMAR. It has since been replaced by PSAHelpline.ph.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Is PSA Serbilis still working?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'PSA Serbilis is no longer the primary service. The PSA has transitioned to PSAHelpline.ph (psahelpline.ph) as its main online delivery platform. If you are trying to access old Serbilis links, please visit PSAHelpline.ph instead.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Where can I order PSA documents online now?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'You can order PSA documents (Birth Certificate, CENOMAR, Marriage Certificate) through PSAHelpline.ph. Alternatively, use a document retrieval service to handle ordering, apostille, and international shipping on your behalf.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Can I still get my PSA document delivered internationally?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'PSAHelpline.ph delivers within the Philippines. For international delivery, you need to arrange forwarding from a Philippine address, or use a retrieval service that includes DHL international shipping.',
-              },
-            },
-          ],
+          mainEntity: faq.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: { '@type': 'Answer', text: a },
+          })),
         },
       ]}
     >
       <HeroBanner
-        title="PSA Serbilis — What It Was & How to Get Documents Now"
-        subtitle="PSA Serbilis has been replaced. Here is how to get your PSA Birth Certificate, CENOMAR, or Marriage Certificate in 2026."
-        badges={['PSA + Apostille + DHL', 'Ships Worldwide', 'Free Consultation']}
-        ctaText="Get a Free Quote"
-        ctaHref="/en/contact/"
+        title="PSA Serbilis: How to Order PSA Documents Online"
+        subtitle="Use the official Serbilis site for PSA paper certificates and overseas delivery. Choose the DFA online route if your receiving authority requires an electronic Apostille."
+        lastUpdated="November 22, 2026"
       />
 
-      <SummaryBlock
-        conclusion="What Was PSA Serbilis?"
-        points={["PSA Serbilis (serbilis.psa.gov.ph) was the Philippine Statistics Authority's first online delivery portal for civil registry documents — Birth Certificates, Marriage Certificates, Death Certificates, and CENOMAR. It allowed Filipinos to order documents online and have them delivered to a Philippine address without visiting a PSA outlet. The service has now been replaced by PSAHelpline.ph, which offers the same documents plus e-certificate (digital PDF) delivery."]}
-      />
-
-      <section className="py-4 px-4 max-w-3xl mx-auto">
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex gap-3">
-          <AlertTriangle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
-          <p className="text-sm text-yellow-800">
-            <strong>PSA Serbilis is no longer the primary service.</strong> Please use <strong>PSAHelpline.ph</strong> to order PSA documents online. The old Serbilis URLs no longer process new orders.
-          </p>
-        </div>
-      </section>
-
-      <FeatureList
-        heading="How to Get PSA Documents in 2026"
-        items={[
-          {
-            icon: <Globe className="w-6 h-6 text-blue-600" />,
-            title: 'Option 1 — PSAHelpline.ph (Replacement for Serbilis)',
-            description: 'Visit psahelpline.ph to order Birth Certificates, CENOMAR, or Marriage Certificates online. Delivers within the Philippines. Identity verification required.',
-          },
-          {
-            icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-            title: 'Option 2 — Document Retrieval Service (For Overseas Filipinos)',
-            description: 'Use a retrieval service that handles PSA ordering, DFA Apostille, and DHL international shipping to your address. No Philippine address needed.',
-          },
-          {
-            icon: <Globe className="w-6 h-6 text-blue-600" />,
-            title: 'Option 3 — PSA Walk-In (Any PSA Outlet or SM Outlet)',
-            description: 'Visit any PSA CRS outlet or SM Business Center in the Philippines with a valid ID. Documents released same day.',
-          },
-        ]}
-      />
-
-      <section className="py-10 px-4 max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4">PSA Serbilis vs PSAHelpline — Key Differences</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm border-collapse">
-            <thead>
-              <tr className="bg-gray-100">
-                <th className="border border-gray-200 px-4 py-2 text-left">Feature</th>
-                <th className="border border-gray-200 px-4 py-2 text-left">PSA Serbilis (old)</th>
-                <th className="border border-gray-200 px-4 py-2 text-left">PSAHelpline.ph (current)</th>
+      <section className="mb-10 space-y-3 text-sm leading-relaxed text-gray-700">
+        <h2 className="text-xl font-bold text-secondary">PSA Serbilis and PSAHelpline are both active</h2>
+        <p>
+          The Philippine Statistics Authority (PSA) lists both as authorized online channels for civil registry records.
+          You can use them to request birth, marriage or death certificates and a Certificate of No Marriage Record (CENOMAR).
+          See the <a href={psaAdvisory} className={sourceLink}>PSA public advisory</a> for the current ordering sites.
+        </p>
+        <div className="overflow-x-auto rounded-xl border border-gray-200">
+          <table className="w-full min-w-[36rem] text-left">
+            <thead className="bg-gray-50">
+              <tr>
+                <th scope="col" className="px-4 py-3">What you need</th>
+                <th scope="col" className="px-4 py-3">Where to start</th>
+                <th scope="col" className="px-4 py-3">What to check</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="divide-y divide-gray-200">
               <tr>
-                <td className="border border-gray-200 px-4 py-2">Status</td>
-                <td className="border border-gray-200 px-4 py-2 text-red-600">Discontinued</td>
-                <td className="border border-gray-200 px-4 py-2 text-green-600">Active</td>
-              </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-200 px-4 py-2">Documents</td>
-                <td className="border border-gray-200 px-4 py-2">Birth Cert, Marriage Cert, CENOMAR</td>
-                <td className="border border-gray-200 px-4 py-2">Birth Cert, Marriage Cert, CENOMAR + e-certificate</td>
+                <th scope="row" className="px-4 py-3">A paper certificate shipped abroad</th>
+                <td className="px-4 py-3"><a href={serbilisUrl} className={sourceLink}>PSA Serbilis</a></td>
+                <td className="px-4 py-3">Confirm delivery options, cost, and timing for your address before paying.</td>
               </tr>
               <tr>
-                <td className="border border-gray-200 px-4 py-2">Delivery</td>
-                <td className="border border-gray-200 px-4 py-2">Philippines only</td>
-                <td className="border border-gray-200 px-4 py-2">Philippines only (use retrieval service for international)</td>
+                <th scope="row" className="px-4 py-3">Domestic delivery or pickup by your own international courier</th>
+                <td className="px-4 py-3"><a href={helplineUrl} className={sourceLink}>PSAHelpline</a></td>
+                <td className="px-4 py-3">For the <a href={helplineInternationalUrl} className={sourceLink}>international order service</a>, the fee covers processing. Book and pay for the courier separately.</td>
               </tr>
-              <tr className="bg-gray-50">
-                <td className="border border-gray-200 px-4 py-2">e-certificate (PDF)</td>
-                <td className="border border-gray-200 px-4 py-2">No</td>
-                <td className="border border-gray-200 px-4 py-2">Yes</td>
+              <tr>
+                <th scope="row" className="px-4 py-3">A PSA e-Certificate with a DFA e-Apostille</th>
+                <td className="px-4 py-3"><a href={dfaPsaPortal} className={sourceLink}>DFA’s designated PSA ordering portal</a></td>
+                <td className="px-4 py-3">Confirm that the receiving office accepts the electronic set for your case.</td>
               </tr>
             </tbody>
           </table>
         </div>
       </section>
 
+      <section className="mb-10 space-y-3 text-sm leading-relaxed text-gray-700">
+        <h2 className="text-xl font-bold text-secondary">Before you order from overseas</h2>
+        <p>Ask the office receiving your document which record it needs, whether it needs a paper original, and whether it requires authentication. In a visa case, check the requirements for your current step. An upload before the interview and a document you bring to the interview may need different formats.</p>
+        <p>If your PSA copy is unreadable or the registry has no record, send us the rejection reason or tell us the city or municipality where the record was registered. We can check whether a follow-up with the Local Civil Registry is appropriate before you pay for another copy.</p>
+      </section>
+
       <CtaBox
-        title="Need Your PSA Document With Apostille, Shipped Internationally?"
-        description="We retrieve your PSA document, obtain the DFA Apostille, and ship via DHL Express worldwide. No Philippines address needed."
-        buttonText="Get a Free Quote"
-        href="/en/contact/"
+        title="Need help with a PSA order from abroad?"
+        description="Tell us the certificate, receiving office, and deadline. We can check the route and quote for retrieval, authentication where required, and tracked delivery."
+        buttonText="Get an Email Quote"
+        href="#contact"
+        service="PSA document retrieval"
       />
 
-      <FaqSection
-        items={[
-          {
-            q: 'What was PSA Serbilis?',
-            a: 'PSA Serbilis was the PSA\'s original online delivery portal for civil registry documents. It has been replaced by PSAHelpline.ph.',
-          },
-          {
-            q: 'Is PSA Serbilis still working?',
-            a: 'PSA Serbilis is no longer the primary service. Use PSAHelpline.ph to order PSA documents online.',
-          },
-          {
-            q: 'Where can I order PSA documents online now?',
-            a: 'Order through PSAHelpline.ph directly, or use an application proxy service to complete the ordering and DFA e-Apostille application on your behalf.',
-          },
-          {
-            q: 'Can I still get my PSA document delivered internationally?',
-            a: 'Yes, via the PSAHelpline.ph International Service, which delivers a digital PSA E-Certificate electronically to your address abroad. A physical original requires you to arrange and pay for your own international courier pickup.',
-          },
-        ]}
-      />
-
-      <RelatedArticles
-        items={[
-          { href: '/en/psa-online/', title: 'How to Order PSA Documents Online' },
-          { href: '/en/psa-birth-certificate-cost/', title: 'PSA Birth Certificate Cost' },
-          { href: '/en/cenomar/', title: 'CENOMAR — How to Get It' },
-          { href: '/en/apostille/', title: 'DFA Apostille Service' },
-        ]}
-      />
+      <FaqSection items={faq} />
+      <RelatedArticles items={[
+        { href: '/en/psa-birth-certificate-cost/', title: 'PSA Birth Certificate Fees and Shipping Costs' },
+        { href: '/en/psa-ecertificate-abroad/', title: 'PSA Electronic vs. Paper Certificates Abroad' },
+        { href: '/en/cenomar/', title: 'CENOMAR: Documents and Ordering from Abroad' },
+      ]} />
     </PageLayout>
   );
 }

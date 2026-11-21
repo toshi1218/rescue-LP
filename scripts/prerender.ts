@@ -400,8 +400,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/cenomar-meaning/',
     outFile: path.join(projectRoot, 'dist', 'en', 'cenomar-meaning', 'index.html'),
-    title: `CENOMAR Meaning: What Is It & Why You Need It [${SEO_YEAR}]`,
-    description: `CENOMAR means Certificate of No Marriage Record. It may be requested for marriage or immigration, depending on the current checklist and the applicant’s civil history.`,
+    title: 'CENOMAR Meaning: PSA No Marriage Record vs. AOM',
+    description: 'CENOMAR means Certificate of No Marriage Record. Learn what PSA checks, how it differs from an Advisory on Marriages or a marriage certificate, and when to order each.',
     canonical: `${BASE}/en/cenomar-meaning/`,
     lang: 'en',
     enCanonical: `${BASE}/en/cenomar-meaning/`,
@@ -424,8 +424,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-serbilis/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-serbilis', 'index.html'),
-    title: `PSA Serbilis [${SEO_YEAR}]: What It Was & How to Get PSA Documents Now`,
-    description: `PSA Serbilis was the PSA's online delivery service for civil registry documents. Now replaced by PSAHelpline.ph. Learn how to get your PSA Birth Certificate, CENOMAR, or Marriage Certificate today.`,
+    title: 'PSA Serbilis: Official Website, Delivery & PSAHelpline',
+    description: 'PSA Serbilis is active at psaserbilis.com.ph. Compare direct overseas paper delivery, PSAHelpline courier pickup, and the PSA e-Certificate and DFA e-Apostille route.',
     canonical: `${BASE}/en/psa-serbilis/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-serbilis/`,
@@ -507,8 +507,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-ecertificate-abroad/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-ecertificate-abroad', 'index.html'),
-    title: `PSA e-Certificate & DFA e-Apostille Abroad: Accepted? [${SEO_YEAR} Country Guide]`,
-    description: `PSA e-Certificate and DFA e-Apostille guide for the US, Canada, Australia, UK, and UAE. Acceptance depends on the current authority checklist and application stage.`,
+    title: 'PSA e-Certificate Abroad: Paper, PDF or e-Apostille?',
+    description: 'Find out when to order a PSA e-Certificate, a paper SECPA original, or an electronic set with a DFA e-Apostille. Compare the requirements by filing stage.',
     canonical: `${BASE}/en/psa-ecertificate-abroad/`,
     lang: 'en',
     enCanonical: `${BASE}/en/psa-ecertificate-abroad/`,
