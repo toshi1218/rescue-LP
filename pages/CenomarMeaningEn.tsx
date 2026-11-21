@@ -1,19 +1,26 @@
 import React from 'react';
 import PageLayout from '../components/PageLayout';
 import HeroBanner from '../components/HeroBanner';
-import FeatureList from '../components/FeatureList';
 import CtaBox from '../components/CtaBox';
 import FaqSection from '../components/FaqSection';
-import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
-import { FileCheck, Globe, AlertTriangle } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
 
+const title = 'CENOMAR Meaning: PSA No Marriage Record vs. AOM';
+const description = 'CENOMAR means Certificate of No Marriage Record. Learn what PSA checks, how it differs from an Advisory on Marriages or a marriage certificate, and when to order each.';
+const definition = 'CENOMAR stands for Certificate of No Marriage Record. The Philippine Statistics Authority (PSA) issues it when its records search finds no marriage record for the person.';
+const sourceLink = 'text-primary underline underline-offset-2';
+
+const faq = [
+  { q: 'What does CENOMAR stand for?', a: definition },
+  { q: 'What does PSA issue if a marriage record is found?', a: 'PSA issues an Advisory on Marriages (AOM), which lists the marriage records it found for the person. A PSA Marriage Certificate is a copy of the record for one specific marriage.' },
+  { q: 'Do I need an Apostille for my CENOMAR?', a: 'Ask the receiving authority whether it requires authentication. If it requires a Philippine Apostille and the Convention applies, DFA issues an e-Apostille for the PSA electronic certificate. A paper PSA copy can be ordered separately if requested.' },
+  { q: 'How long is CENOMAR valid?', a: 'The receiving office sets how recent it must be. Ask whether it measures the age of the certificate at filing, interview, or another deadline before ordering.' },
+  { q: 'Can I get a CENOMAR from abroad?', a: 'Yes. You can check the PSA-authorized ordering channels or ask IGRS to handle the retrieval and any required authentication. Have the receiving authority, purpose, and deadline ready.' },
+];
+
 export default function CenomarMeaningEn() {
-  useMeta(
-    'CENOMAR Meaning: What Is It & Why You Need It [2026]',
-    'CENOMAR means Certificate of No Marriage Record. It may be requested for marriage or immigration, depending on the current checklist and the applicant’s civil history.',
-  );
+  useMeta(title, description);
   return (
     <PageLayout
       breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'What Is CENOMAR?' }]}
@@ -21,208 +28,87 @@ export default function CenomarMeaningEn() {
         {
           '@context': 'https://schema.org',
           '@type': 'Article',
-          headline: 'CENOMAR Meaning: What Is It and Why Do You Need It?',
-          description: 'CENOMAR stands for Certificate of No Marriage Record. Issued by the Philippine Statistics Authority (PSA), it officially certifies that a Filipino citizen has no marriage record on file — proof of being legally single.',
+          headline: title,
+          description,
           url: 'https://ph-document.com/en/cenomar-meaning/',
-          publisher: {
-            '@type': 'Organization',
-            name: 'IGRS Inc.',
-            url: 'https://ph-document.com/en/',
-          },
+          datePublished: '2026-04-30',
+          dateModified: '2026-11-22',
+          publisher: { '@type': 'Organization', name: 'IGRS Inc.', url: 'https://ph-document.com/en/' },
         },
         {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: [
-            {
-              '@type': 'Question',
-              name: 'What does CENOMAR stand for?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'CENOMAR stands for Certificate of No Marriage Record. It is an official document issued by the Philippine Statistics Authority (PSA) that certifies a Filipino citizen has no marriage record registered in the Philippines.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'What is CENOMAR used for?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'CENOMAR is used as proof of single status for immigration applications (K-1 fiancé visa, spouse visa), marriage abroad, and legal proceedings that require proof the person has never been married. It is the Philippine equivalent of a Certificate of No Impediment to Marriage.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Who issues CENOMAR?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'CENOMAR is issued exclusively by the Philippine Statistics Authority (PSA), formerly the National Statistics Office (NSO). It cannot be obtained from any other government office.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'How long is CENOMAR valid?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'For most immigration purposes, CENOMAR must be issued within 6 months of your visa application or submission date. Check with your specific authority before ordering.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'What is the difference between CENOMAR and PSA Marriage Certificate?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'CENOMAR proves someone has never been married (no record on file). PSA Marriage Certificate proves someone is legally married. K-1 visa applicants need CENOMAR; CR-1/IR-1 applicants need a PSA Marriage Certificate.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Can I get CENOMAR from outside the Philippines?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Yes. CENOMAR can be retrieved by an authorized representative or document service in the Philippines and shipped to you worldwide. You do not need to travel to the Philippines.',
-              },
-            },
-          ],
+          mainEntity: faq.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: { '@type': 'Answer', text: a },
+          })),
         },
       ]}
     >
       <HeroBanner
-        title="CENOMAR: What It Means and Why You Need It"
-        badges={['Issued by PSA Philippines', 'Checklist-Dependent Requirement', 'Available from Abroad']}
-        ctaText="Get Your CENOMAR"
-        ctaHref="/en/cenomar/"
-        lastUpdated="September 15, 2026"
+        title="What Does CENOMAR Mean?"
+        subtitle={definition}
+        lastUpdated="November 22, 2026"
       />
 
-      <SummaryBlock
-        conclusion="CENOMAR (Certificate of No Marriage Record) is official PSA proof that a Filipino citizen has never been married in the Philippines."
-        points={[
-          'Stands for Certificate of No Marriage Record — issued only by PSA Philippines',
-          'May be requested for fiancé, spouse, or marriage procedures',
-          'Must have DFA Apostille to be accepted by foreign immigration authorities',
-          'Valid for 6 months for most immigration purposes — order at the right time',
-        ]}
-        ctaText="Order CENOMAR Now"
-      />
-
-      <div className="max-w-2xl mx-auto px-4 my-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Does CENOMAR Mean?</h2>
-        <p className="text-sm text-gray-700 leading-relaxed mb-4">
-          <strong>CENOMAR</strong> is an acronym used in the Philippines for <strong>Certificate of No Marriage Record</strong>.
-          It is an official civil registry document issued by the{' '}
-          <a href="https://psaserbilis.com.ph" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">
-            Philippine Statistics Authority (PSA)
-          </a>{' '}
-          that certifies a Filipino citizen has no marriage record on file — in other words, that the person has never been legally married in the Philippines.
-        </p>
-        <p className="text-sm text-gray-700 leading-relaxed mb-4">
-          If PSA finds a marriage record when processing the request, they issue an <strong>Advisory on Marriages</strong> instead,
-          which lists the marriage details. A true CENOMAR (with "no record found") is only issued to individuals with no registered marriage.
-        </p>
-        <p className="text-sm text-gray-700 leading-relaxed">
-          CENOMAR is the Philippine equivalent of what some countries call a Certificate of No Impediment to Marriage (CNI),
-          Certificate of Single Status, or Affidavit of Single Status — though the PSA CENOMAR carries more legal weight as an official government record.
-        </p>
-      </div>
-
-      <FeatureList
-        heading="When Is CENOMAR Required?"
-        items={[
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'K-1 Fiancé Visa (USA)',
-            description: 'A CENOMAR may be requested as evidence of civil status. Authentication and document-age requirements depend on the authority and application stage.',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'Marriage registration abroad',
-            description: 'Many countries require proof of single status before registering a marriage with a Filipino national. CENOMAR with DFA Apostille fulfills this requirement.',
-          },
-          {
-            icon: <Globe className="w-4 h-4" />,
-            title: 'Spouse visa pre-registration stage',
-            description: 'For Japan COE and some other countries, CENOMAR is required at the pre-marriage registration stage. The specific timing depends on the destination country.',
-          },
-          {
-            icon: <FileCheck className="w-4 h-4" />,
-            title: 'CR-1 / IR-1 (if previously unmarried)',
-            description: 'For CR-1 and IR-1 spouse visas, CENOMAR may be required depending on the case — particularly if the Filipino spouse\'s prior marital history needs to be established.',
-          },
-        ]}
-      />
-
-      <div className="max-w-2xl mx-auto px-4 my-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">CENOMAR vs. Advisory on Marriages</h2>
-        <div className="overflow-hidden rounded-xl border border-gray-100 shadow-sm text-sm">
-          <div className="grid grid-cols-[1fr_1fr] bg-secondary text-white">
-            <div className="px-4 py-3 font-bold">CENOMAR</div>
-            <div className="px-4 py-3 font-bold">Advisory on Marriages</div>
-          </div>
-          {[
-            ['No marriage record found in PSA', 'One or more marriage records found'],
-            ['Proves legally single status', 'Lists marriage details on file'],
-            ['May be requested by the receiving authority', 'Used to confirm existing marriage records'],
-            ['Cannot be issued if a marriage record exists', 'Issued instead of CENOMAR when married'],
-          ].map(([left, right], i) => (
-            <div key={i} className={`grid grid-cols-[1fr_1fr] border-t border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
-              <div className="px-4 py-3 text-gray-700">{left}</div>
-              <div className="px-4 py-3 text-gray-700">{right}</div>
-            </div>
-          ))}
+      <section className="mb-10 space-y-3 text-sm leading-relaxed text-gray-700">
+        <h2 className="text-xl font-bold text-secondary">CENOMAR vs. AOM vs. PSA marriage certificate</h2>
+        <p>Choose the certificate by what the receiving office wants to verify. A CENOMAR reflects the PSA records search, so ask how to document a prior marriage, divorce, annulment, or widowhood if that applies to you.</p>
+        <div className="overflow-x-auto rounded-xl border border-gray-200">
+          <table className="w-full min-w-[33rem] text-left">
+            <thead className="bg-gray-50">
+              <tr>
+                <th scope="col" className="px-4 py-3">Document</th>
+                <th scope="col" className="px-4 py-3">What it shows</th>
+                <th scope="col" className="px-4 py-3">When to ask for it</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-200">
+              <tr>
+                <th scope="row" className="px-4 py-3">CENOMAR</th>
+                <td className="px-4 py-3">PSA found no marriage record for the person.</td>
+                <td className="px-4 py-3">The receiving office wants evidence of no marriage record.</td>
+              </tr>
+              <tr>
+                <th scope="row" className="px-4 py-3">Advisory on Marriages (AOM)</th>
+                <td className="px-4 py-3">PSA lists the marriage records it found.</td>
+                <td className="px-4 py-3">The office wants the applicant’s marriage records, such as an AOM named on its checklist.</td>
+              </tr>
+              <tr>
+                <th scope="row" className="px-4 py-3">PSA Marriage Certificate</th>
+                <td className="px-4 py-3">A certified record of a particular marriage.</td>
+                <td className="px-4 py-3">The office asks for evidence of that specific marriage.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
+        <p>Official reference: <a href="https://psa.gov.ph/cenomar" className={sourceLink}>PSA’s CENOMAR guide</a>.</p>
+      </section>
 
-      <FeatureList
-        heading="Common Mistakes to Avoid"
-        items={[
-          {
-            icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Ordering CENOMAR when you need a PSA Marriage Certificate',
-            description: 'CENOMAR is for people who have never been married. If your Filipino partner is already married to you, you need a PSA Marriage Certificate — not CENOMAR.',
-          },
-          {
-            icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Assuming Apostille is always required',
-            description: 'Authentication depends on the receiving authority and application stage. When a DFA Apostille is required for CENOMAR, it is issued electronically for the PSA e-Certificate from March 16, 2026; any SECPA paper certificate is separate.',
-          },
-          {
-            icon: <AlertTriangle className="w-4 h-4" />,
-            title: 'Ordering too early',
-            description: 'CENOMAR is valid for 6 months for most immigration purposes. If you order it before you are ready to submit, it may expire before your interview. Time it carefully.',
-          },
-        ]}
-      />
+      <section className="mb-10 space-y-3 text-sm leading-relaxed text-gray-700">
+        <h2 className="text-xl font-bold text-secondary">What to confirm before ordering</h2>
+        <ul className="list-disc space-y-2 pl-5">
+          <li>Check the exact document name and the acceptable issue date on the receiving office’s checklist.</li>
+          <li>For a prior marriage, check which supporting record the office asks for, such as an annotated marriage certificate or a spouse’s death certificate.</li>
+          <li>If you are applying from overseas, confirm whether the office needs an electronic certificate, an authenticated electronic set, a paper original, or more than one format.</li>
+        </ul>
+      </section>
 
       <CtaBox
-        title="Need CENOMAR with DFA Apostille?"
-        description="We retrieve CENOMAR from PSA, arrange DFA Apostille, and ship it directly to you worldwide. No trip to the Philippines required."
-        buttonText="Free Consultation"
+        title="Order a CENOMAR or confirm which PSA record you need"
+        description="Share the receiving authority, purpose, and deadline. We can check the format and give you a quote for the appropriate document."
+        buttonText="See CENOMAR Fees and Ordering"
         href="/en/cenomar/"
         variant="primary"
-        trustNote="Free cancellation before start · Progress updates at every stage · Ships via DHL Express"
       />
 
-      <FaqSection
-        items={[
-          { q: 'What does CENOMAR stand for?', a: 'CENOMAR stands for Certificate of No Marriage Record. It is an official PSA Philippines document certifying a Filipino citizen has no registered marriage on file.' },
-          { q: 'What is CENOMAR used for?', a: 'CENOMAR is used as proof of single status for K-1 fiancé visa applications, marriage registration abroad, and other legal proceedings requiring proof of unmarried status.' },
-          { q: 'Who issues CENOMAR?', a: 'CENOMAR is issued exclusively by the Philippine Statistics Authority (PSA). It cannot be obtained from any other office.' },
-          { q: 'How long is CENOMAR valid?', a: 'For most immigration purposes, CENOMAR must be issued within 6 months of your submission date. Confirm the validity requirement with your specific authority.' },
-          { q: 'What is the difference between CENOMAR and PSA Marriage Certificate?', a: 'CENOMAR proves the person has never been married (no record found). PSA Marriage Certificate proves an existing registered marriage. K-1 applicants need CENOMAR; CR-1 applicants need a Marriage Certificate.' },
-          { q: 'Can I get CENOMAR from outside the Philippines?', a: 'Yes. We retrieve CENOMAR on your behalf from PSA in the Philippines and ship it to you worldwide with DFA Apostille. No travel required.' },
-        ]}
-        ctaTitle="Questions about your case? Ask us."
-        ctaButton="Free Consultation"
-      />
-
-      <RelatedArticles
-        items={[
-          { href: '/en/cenomar/', title: 'CENOMAR Retrieval Service', description: 'Order CENOMAR with DFA Apostille — retrieved from PSA and shipped worldwide.' },
-          { href: '/en/cenomar-validity/', title: 'How Long Is CENOMAR Valid?', description: 'Validity periods for K-1, CR-1, and other immigration purposes.' },
-          { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. PSA Marriage Certificate', description: 'Which document proves what — and which one you actually need.' },
-          { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Full list of Philippine documents required for each visa type.' },
-        ]}
-      />
+      <FaqSection items={faq} />
+      <RelatedArticles items={[
+        { href: '/en/cenomar-vs-marriage-certificate/', title: 'CENOMAR vs. PSA Marriage Certificate' },
+        { href: '/en/psa-serbilis/', title: 'PSA Serbilis and PSAHelpline Ordering Options' },
+        { href: '/en/psa-ecertificate-abroad/', title: 'Choosing a PSA Electronic or Paper Certificate' },
+      ]} />
     </PageLayout>
   );
 }

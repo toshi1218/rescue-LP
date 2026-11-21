@@ -11,6 +11,14 @@ const COUNTRY_LINKS = [
   { label: 'Canada', path: '/en/canada/' },
   { label: 'Australia', path: '/en/australia/' },
   { label: 'UK', path: '/en/uk/' },
+  { label: 'Qatar', path: '/en/qatar/' },
+];
+
+const ORDERING_GUIDES = [
+  { label: 'PSA Serbilis and PSAHelpline', path: '/en/psa-serbilis/', summary: 'Compare direct delivery abroad, courier pickup and electronic ordering.' },
+  { label: 'PSA Electronic and Paper Certificates', path: '/en/psa-ecertificate-abroad/', summary: 'Check which format the receiving office requires before ordering.' },
+  { label: 'LTO Driving Records from Abroad', path: '/en/driver-record/', summary: 'Request a Philippine driving record and check the delivery and authentication options.' },
+  { label: 'LTO SM Seaside Cebu Field Report', path: '/en/lto-sm-seaside-cebu-report/', summary: 'See our Cebu office visit and what we observed when requesting LTO records.' },
 ];
 
 export default function GuidesEn() {
@@ -26,6 +34,20 @@ export default function GuidesEn() {
         All-inclusive service starting from US$349 — shipped worldwide via DHL. No trip to the Philippines needed.
       </p>
       <GuideLinks />
+
+      <section className="mt-8">
+        <h2 className="mb-3 border-b border-primary/20 pb-2 text-lg font-bold text-secondary">Ordering Documents from Abroad</h2>
+        <ul className="grid gap-3 sm:grid-cols-2">
+          {ORDERING_GUIDES.map(({ label, path, summary }) => (
+            <li key={path}>
+              <Link to={path} className="block h-full rounded-xl border border-gray-200 px-4 py-3 hover:border-primary">
+                <span className="text-sm font-semibold text-secondary">{label}</span>
+                <span className="mt-1 block text-sm text-gray-600">{summary}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <section className="mt-8">
         <Link
