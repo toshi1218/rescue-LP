@@ -1304,8 +1304,8 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/apostille-ryokin/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'apostille-ryokin', 'index.html'),
-    title: 'フィリピンDFAアポスティーユ料金｜公式手数料と代行総額',
-    description: 'DFAアポスティーユの政府手数料はRegular 100ペソ・Express 200ペソ。PSA民事書類はe-Apostille（電子）のみ。PSA取得費・国際配送を含む総額の考え方を解説。',
+    title: 'フィリピンDFAアポスティーユの費用｜紙100〜200ペソ・電子200ペソ',
+    description: 'DFAの公式手数料は、紙の通常処理が100ペソ、特急が200ペソ、e-Apostilleが200ペソ（各1書類）。PSA書類取得・日本への配送を含むIGRSの代行料金も掲載。',
     canonical: `${BASE}/ja/apostille-ryokin/`,
     lang: 'ja',
     enCanonical: `${BASE}/en/apostille-fee/`,
