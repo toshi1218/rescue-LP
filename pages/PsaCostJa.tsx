@@ -11,7 +11,7 @@ import { SEO_YEAR } from '../lib/seoDate';
 export default function PsaCostJa() {
   useMeta(
     `PSA出生証明書の費用【${SEO_YEAR}年】日本まで届く総額はいくら？`,
-    '現地PSA料金と代行費用の違いを解説。電子版¥30,000、紙原本＋DHL¥40,000、e-Apostille付き電子版¥40,000、フルセット¥50,000（税込）。',
+    '現地PSA料金と代行費用の違いを解説。電子版¥30,000、紙原本＋DHL¥50,000、e-Apostille付き電子版¥40,000、フルセット¥55,000（税込）。',
   );
   return (
     <PageLayout
@@ -131,6 +131,13 @@ export default function PsaCostJa() {
           <p className="text-gray-700 leading-relaxed mb-3">
             当社では、単に「書類を取る」だけではなく、どの書類が必要か、どの形式で受け取るべきか、日本で使う前提でどう進めるかまで含めてご案内しています。
           </p>
+          <ul className="mb-4 list-disc space-y-1 pl-5 text-gray-700">
+            <li>電子版のみ 30,000円</li>
+            <li>e-Apostille付き電子版 40,000円</li>
+            <li>紙原本＋DHL（認証なし）50,000円</li>
+            <li>フルセット（電子版・e-Apostille・紙原本・DHL）55,000円</li>
+          </ul>
+          <p className="mb-3 text-sm text-gray-700">いずれもPSA出生証明書1通の税込料金です。日本語翻訳は別料金です。</p>
           <p className="text-gray-700 leading-relaxed">
             なお、当社は「完全放置で何もしなくてよい」といった誇大な案内はしていません。案件に応じて、本人確認資料、Authorization Letter（委任状）、そのほか必要資料のご用意をお願いする場合があります。必要なものは、内容を確認したうえで当社からご案内します。
           </p>
