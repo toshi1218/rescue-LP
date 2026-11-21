@@ -70,18 +70,30 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
       />
 
       <SummaryBlock
-        conclusion={`Applying for ${config.name} ${config.visaType}? We retrieve all required Philippine documents with ${config.authLabel} and ship directly to your ${config.name} address.`}
+        conclusion={`Applying for ${config.visaType} in ${config.name}? We retrieve the Philippine records on your checklist and arrange authentication and delivery as required.`}
         points={config.summaryPoints}
         ctaText="Free Consultation"
       />
+
+      {config.applicationGuide && (
+        <section className="mb-10 space-y-3 text-sm leading-relaxed text-gray-700">
+          <h2 className="text-xl font-bold text-secondary">{config.applicationGuide.title}</h2>
+          <ol className="list-decimal space-y-3 pl-5">
+            {config.applicationGuide.steps.map(({ label, detail }) => (
+              <li key={label}><strong>{label}.</strong> {detail}</li>
+            ))}
+          </ol>
+          <p><a href={config.applicationGuide.sourceHref} className="text-primary underline underline-offset-2">{config.applicationGuide.sourceLabel}</a></p>
+        </section>
+      )}
 
       <FeatureList
         heading="Who This Is For"
         items={[
           {
             icon: <Shield className="w-4 h-4" />,
-            title: `Applying for ${config.name} ${config.visaType}`,
-            description: `${config.agencyAbbr} requires Philippine civil documents with ${config.authLabel}. We handle all required documents in one coordinated flow.`,
+            title: `Applying for ${config.visaType} in ${config.name}`,
+            description: 'Share the visa checklist or request from your receiving office. We confirm the Philippine records, formats and authentication steps it specifies.',
           },
           {
             icon: <Users className="w-4 h-4" />,
@@ -110,18 +122,20 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
         items={[
           {
             icon: <FileCheck className="w-4 h-4" />,
-            title: 'PSA document retrieval (Birth Cert, Marriage Cert, CENOMAR, NBI Clearance)',
-            description: 'We retrieve all required PSA documents in one coordinated flow.',
+            title: 'PSA civil records and NBI Clearance retrieval',
+            description: 'We retrieve the requested PSA records and coordinate NBI Clearance separately if your checklist includes it.',
           },
           {
             icon: <FileCheck className="w-4 h-4" />,
             title: `${config.authLabel}`,
-            description: `We arrange ${config.authLabel} for the documents whose current checklist requires it. ${config.isHagueConvention ? 'For PSA civil records the DFA issues an electronic e-Apostille; eligible non-PSA records such as NBI Clearance follow the physical route.' : `PSA records are issued on SECPA paper with a physical DFA Certificate of Authentication, then attested by the ${config.agency}.`}`,
+            description: config.isHagueConvention
+              ? 'When an Apostille is required, DFA uses an electronic route for eligible PSA e-Certificates and NBI eClearances. We confirm separately if you need a paper original.'
+              : 'When legalization is required, we verify the paper DFA Certificate of Authentication route and any further requirements from the receiving authority or embassy.',
           },
           {
             icon: <Globe className="w-4 h-4" />,
             title: `DHL shipping to your ${config.name} address`,
-            description: 'All documents shipped together with tracking. No forwarding needed.',
+            description: 'Paper documents are shipped with tracking. We deliver electronic records separately.',
           },
         ]}
       />
@@ -132,7 +146,7 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
           { title: 'Submit your inquiry', description: `Tell us your application type and your target submission date to ${config.agencyAbbr}.` },
           { title: 'We confirm scope and quote', description: `We verify required documents for ${config.agencyAbbr} and provide all-inclusive pricing.` },
           { title: 'Local processing in the Philippines', description: `Our Cebu team handles all PSA retrieval and ${config.authLabel}.` },
-          { title: `DHL delivery to ${config.name}`, description: `All documents shipped together with tracking. Estimated total: ${config.totalWeeks}.` },
+          { title: `Delivery to ${config.name}`, description: `We send electronic files or arrange tracked shipping for paper documents as agreed. Estimated total: ${config.totalWeeks}.` },
         ]}
       />
 

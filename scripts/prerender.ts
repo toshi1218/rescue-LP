@@ -1828,10 +1828,14 @@ const routes: RouteConfig[] = [
 const countryRoutes: RouteConfig[] = COUNTRY_CONFIGS.map(config => ({
   path: `/en/${config.slug}/`,
   outFile: path.join(projectRoot, 'dist', 'en', config.slug, 'index.html'),
-  title: `PH Documents for ${config.name} Immigration [${SEO_YEAR_MONTH_EN}]`,
+  title: config.slug === 'new-zealand'
+    ? 'Philippine Documents for a New Zealand Partner Visa'
+    : `PH Documents for ${config.name} Immigration [${SEO_YEAR_MONTH_EN}]`,
   description: config.slug === 'germany'
     ? 'CENOMAR and PSA documents for Germany: retrieval, paper DFA Authentication, German Embassy legalization through VFS Global, and delivery. Free consultation.'
-    : `Moving to ${config.name}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
+    : config.slug === 'new-zealand'
+      ? 'Check Immigration New Zealand’s partner residence visa checklist for relationship evidence, PSA civil records and Philippine police certificates before ordering.'
+      : `Moving to ${config.name}? We retrieve CENOMAR, PSA & NBI Clearance with ${config.authLabel} for ${config.agencyAbbr}. Ships via DHL. Free consultation.`,
   canonical: `${BASE}/en/${config.slug}/`,
   lang: 'en' as const,
   enCanonical: `${BASE}/en/${config.slug}/`,
