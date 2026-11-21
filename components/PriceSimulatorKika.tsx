@@ -6,7 +6,7 @@ import { Calculator, Info } from 'lucide-react';
  * 帰化書類パックの総額シミュレーター（JA・自己完結）
  *
  * 価格モデル（税込・e-Apostille・PSA紙原本・DHL配送込み）:
- *  - 書類1通のみ  : 50,000円
+ *  - 書類1通のみ  : 55,000円
  *  - 書類2通セット: 80,000円
  *  - 書類3〜5通   : 132,500円
  *  - 6通目以降    : ＋26,500円/通（税込）
@@ -17,7 +17,7 @@ import { Calculator, Info } from 'lucide-react';
  * ページのみ（共通コンポーネント・構造ファイルには非該当）。
  */
 
-const SINGLE_FROM = 50000; // 単品（税込・DHL込み）
+const SINGLE_FROM = 55000; // 単品（税込・DHL込み）
 const TWO_DOCUMENTS = 80000; // 2通セット（税込・DHL込み）
 const PACK_UP_TO_5 = 132500; // 3〜5通定額（税込・DHL込み）
 const ADD_PER_COPY = 26500; // 6通目以降 追加1通（税込・込み）
@@ -119,7 +119,7 @@ export default function PriceSimulatorKika() {
           <Info className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
           <p className="text-xs text-gray-700 leading-relaxed">
             <strong>「132,500円 × 通数」ではありません。</strong>
-            1通は50,000円、2通は80,000円、3〜5通は132,500円の定額です（いずれも税込・e-Apostille・PSA紙原本・DHL込み）。
+            1通は55,000円、2通は80,000円、3〜5通は132,500円の定額です（いずれも税込・e-Apostille・PSA紙原本・DHL込み）。
             全書類を1つの荷物に集約するため、通数が増えても<strong>国際送料は1回分のみ</strong>です。
             5通の場合の1通あたり単価は26,500円で、単品依頼より割安になります。
           </p>

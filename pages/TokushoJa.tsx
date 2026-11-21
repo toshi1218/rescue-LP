@@ -53,7 +53,7 @@ export default function TokushoJa() {
                   <br />
                   ・PSA e-Certificate取得代行 ¥30,000
                   <br />
-                  ・CENOMAR単品／PSA出生証明書単品 ¥30,000〜（e-Apostille込み ¥40,000／フルセット ¥55,000）
+                  ・CENOMAR単品／PSA出生証明書単品 ¥30,000〜（e-Apostille付き電子版 ¥40,000／紙原本＋DHL ¥50,000／フルセット ¥55,000）
                   <br />
                   ・DFAアポスティーユのみ（書類持込み） ¥39,000〜（DHL込み）
                   <br />
