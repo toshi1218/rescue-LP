@@ -47,7 +47,6 @@ const PsaEcertificateAbroadEn = lazy(() => import('./pages/PsaEcertificateAbroad
 const PsaBirthCertEn = lazy(() => import('./pages/PsaBirthCertEn'));
 const PsaBirthCertJa = lazy(() => import('./pages/PsaBirthCertJa'));
 const NbiGuideEn = lazy(() => import('./pages/NbiGuideEn'));
-const NbiClearanceOnlineEn = lazy(() => import('./pages/NbiClearanceOnlineEn'));
 const NbiGuideJa = lazy(() => import('./pages/NbiGuideJa'));
 const NbiHitEn = lazy(() => import('./pages/NbiHitEn'));
 const NbiHitJa = lazy(() => import('./pages/NbiHitJa'));
@@ -175,6 +174,11 @@ function NavigationProgress() {
   return <div key={key} className="nav-progress-bar" aria-hidden="true" />;
 }
 
+function NbiOnlineRedirect() {
+  const { search, hash } = useLocation();
+  return <Navigate to={{ pathname: '/en/nbi-clearance/', search, hash }} replace />;
+}
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   const prevPathname = useRef<string | null>(null);
@@ -238,8 +242,7 @@ export default function App() {
         <Route path="/en/psa-birth-certificate/" element={<PsaBirthCertEn />} />
         <Route path="/ja/psa-shussei-shomeisho" element={<Navigate to="/ja/psa-shussei-shomeisho/" replace />} />
         <Route path="/ja/psa-shussei-shomeisho/" element={<PsaBirthCertJa />} />
-        <Route path="/en/nbi-clearance-online" element={<Navigate to="/en/nbi-clearance-online/" replace />} />
-        <Route path="/en/nbi-clearance-online/" element={<NbiClearanceOnlineEn />} />
+        <Route path="/en/nbi-clearance-online/" element={<NbiOnlineRedirect />} />
         <Route path="/en/nbi-clearance" element={<Navigate to="/en/nbi-clearance/" replace />} />
         <Route path="/en/nbi-clearance/" element={<NbiGuideEn />} />
         <Route path="/ja/nbi-clearance" element={<Navigate to="/ja/nbi-clearance/" replace />} />

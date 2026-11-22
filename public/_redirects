@@ -152,6 +152,10 @@
 /ja/privacy                  /ja/privacy/                 301
 /ja/terms                    /ja/terms/                   301
 
+# Retired English NBI online guide
+/en/nbi-clearance-online  /en/nbi-clearance/  301
+/en/nbi-clearance-online/  /en/nbi-clearance/  301
+
 # ── trailing slash 正規化 (/en/* → trailing slash付きへ) ────────
 /en                          /en/                         301
 /en/cenomar                  /en/cenomar/                 301
