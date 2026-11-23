@@ -180,7 +180,7 @@ const plansData = {
       includes: ['LTO書類一式（Certification・License History）', 'DFAアポスティーユ認証', 'DHL国際発送（送料別）'],
       why: '外国免許を日本の免許に切り替えるには、フィリピンLTO発行の書類（運転歴証明など）の原本提出が必要です',
       outcome: '書類が揃えば、運転免許センターでの外免切替手続きを開始できます',
-      price: '¥49,500',
+      price: '¥50,000',
       priceNote: '（税込・DHL国際送料別）',
       priceBreakdown: 'LTO書類取得・DFAアポスティーユを含む料金（DHL国際送料別）。記録不一致、Official Receiptの探索・再発行、追加書類は事前に別途見積もります',
       period: '約4〜6週間',
