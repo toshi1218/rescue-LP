@@ -119,18 +119,28 @@ export default function LicenseConversionJa() {
     >
       <HeroBanner
         title="フィリピン免許の外免切替｜LTO書類取得代行"
-        subtitle="LTO Certification・License History等の取得とDFAアポスティーユ、DHL国際配送を標準49,500円（税込）で手配。日本語でご相談いただけます。記録不一致やOR探索・追加書類は着手前に別途お見積もりします。"
+        subtitle="LTOの証明書取得、DFAアポスティーユ、追跡付きDHL配送を標準49,500円（税込）で手配します。納期の目安は約1か月〜1か月半です。"
         badges={['DFA認証・DHL送料込み', '日本語でメール相談', '法人・複数名対応可']}
-        ctaText="メールで無料相談"
+        ctaText="必要書類と総額を無料で確認"
         ctaHref="#contact"
         ctaService="免許切り替え"
-        lastUpdated="2026年11月15日"
+        lastUpdated="2026年11月22日"
       />
 
-      {/* リード文 */}
-      <section className="mb-6 text-sm text-gray-700 leading-relaxed space-y-2">
-        <p>フィリピン免許を日本の免許に切り替えるには、「免許取得後にフィリピンへ通算3か月以上滞在した」証明が必要です。免許を持っているだけでは切替できません。</p>
-        <p>このページでは確認すべき条件・必要書類・よくあるつまずきを整理しています。</p>
+      <section aria-labelledby="document-options" className="mb-8 rounded-2xl border border-gray-200 p-5 text-base leading-relaxed text-gray-700">
+        <h2 id="document-options" className="mb-3 text-xl font-bold text-secondary">免許センターから何を求められましたか？</h2>
+        <dl className="space-y-3">
+          <div>
+            <dt className="font-semibold text-secondary">LTOの免許経歴・証明書</dt>
+            <dd>License History と Certification の取得、DFA認証、配送までを標準料金で手配します。Official Receipt（OR）を紛失した場合は、探索・再発行の可否と費用を先に確認します。</dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-secondary">フィリピン滞在歴の証明</dt>
+            <dd>免許取得後にフィリピンに通算3か月以上滞在したことの証明が必要です。パスポートで確認できず、免許センターから Immigration Record を求められた場合は、その書類の可否と費用を別に確認します。LTO書類を既に手配済みでもご相談ください。</dd>
+          </div>
+        </dl>
+        <p className="mt-3">ご相談には、申請する都道府県、指定された書類名、提出希望日をお書きください。初回は免許番号や身分証の画像は不要です。</p>
+        <p className="mt-3 text-sm"><Link to="/ja/lto-sm-seaside-genchi-report/" className="text-primary underline underline-offset-2">セブのLTO窓口を訪ねた現地写真と受付レポート</Link></p>
       </section>
 
       <section className="mb-10 rounded-2xl bg-amber-50 border border-amber-200 p-5">
@@ -193,7 +203,6 @@ export default function LicenseConversionJa() {
           </div>
           <p className="text-xs text-gray-500 mt-2">※通常案件の標準料金です。記録不一致、Official Receiptの探索・再発行、Immigration Recordなどの追加書類が必要な場合は、着手前に別途お見積もりします。</p>
           <p className="text-xs text-gray-500 mt-1">DFAアポスティーユ単体の料金・費用内訳は<a href="/ja/apostille-ryokin/" className="text-primary underline">DFAアポスティーユの料金ページ</a>で詳しく解説しています。</p>
-          <p className="text-sm text-gray-700 leading-relaxed mt-4">無料見積もりでは、申請予定の都道府県、フィリピン免許証が有効か、提出希望時期をフォームにご記入ください。免許センターから必要書類を案内されていれば、その名称もお知らせください。初回相談では免許番号・パスポート番号や書類画像は不要です。</p>
         </SectionDivider>
       </div>
 

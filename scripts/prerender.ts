@@ -680,8 +680,8 @@ const routes: RouteConfig[] = [
   {
     path: '/en/driver-record/',
     outFile: path.join(projectRoot, 'dist', 'en', 'driver-record', 'index.html'),
-    title: `LTO Driver's Record Service [${SEO_YEAR_MONTH_EN}]`,
-    description: `Need an LTO Driver's Record for license conversion or employment verification? We retrieve it with DFA Apostille and ship to you. Ideal for employers and spouses. Free consultation.`,
+    title: "Philippine LTO Driver's Record from Abroad | US$330",
+    description: 'Get your Philippine LTO Certification and License History from overseas. US$330 includes DFA Apostille and DHL. Allow 4–6 weeks for standard orders.',
     canonical: `${BASE}/en/driver-record/`,
     lang: 'en',
     enCanonical: `${BASE}/en/driver-record/`,
