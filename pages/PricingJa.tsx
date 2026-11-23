@@ -10,8 +10,8 @@ import { Info } from 'lucide-react';
 
 export default function PricingJa() {
   useMeta(
-    `料金一覧${SEO_TITLE_BADGE_JA}料金・追加請求なし｜フィリピン書類取得代行`,
-    'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユ・国際郵送をまとめた料金。後から追加請求なし。無料見積もり受付中。',
+    `料金一覧${SEO_TITLE_BADGE_JA}｜フィリピン書類取得代行`,
+    'CENOMAR・PSA・NBI・DFAアポスティーユの代行料金一覧。PSA取得・アポスティーユのサービス料金を掲載。紙の書類のDHL国際送料は別途お見積もりします。無料見積もり受付中。',
   );
   return (
     <PageLayout
@@ -32,7 +32,7 @@ export default function PricingJa() {
     >
       <HeroBanner
         title="料金"
-        subtitle="PSA電子版のみ¥30,000、紙原本＋DHL¥40,000、e-Apostille付き電子版¥40,000、フルセット¥50,000。2通セットも明確な総額でご案内します。"
+        subtitle="PSA電子版のみ¥30,000、紙原本¥40,000、e-Apostille付き電子版¥40,000、フルセット¥50,000。紙原本のDHL国際送料は別途お見積もりします。"
         badges={['オンライン申請代行から対応', '無料お見積もり', '追加費用の後出しなし']}
         ctaText="無料でお見積もり"
         ctaHref="#contact"

@@ -7,7 +7,7 @@ export default function PricingKo() {
   return (
     <PageLayoutKo
       title="필리핀 서류 대행 요금 | PSA · CENOMAR · NBI · 아포스티유 비용 안내"
-      description="CENOMAR, PSA 출생증명서, NBI Clearance, DFA 아포스티유 대행 요금 안내. 아포스티유 인증 + 국제 배송 포함. 추가 비용 사전 고지. 무료 견적 신청 가능."
+      description="CENOMAR, PSA 출생증명서, NBI Clearance, DFA 아포스티유 대행 요금 안내. 아포스티유 인증 포함. DHL 국제 배송비 별도. 추가 비용 사전 고지. 무료 견적 신청 가능."
       canonical="https://ph-document.com/ko/pricing/"
       breadcrumbs={[{ label: '홈', href: '/ko/' }, { label: '요금 안내' }]}
     >
@@ -24,7 +24,7 @@ export default function PricingKo() {
         <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-primary via-primary/60 to-transparent" />
         <div className="relative">
           <div className="flex flex-wrap gap-2 mb-4">
-            {['아포스티유 포함', '국제 배송 포함', '추가 비용 사전 고지'].map((b) => (
+            {['아포스티유 포함', 'DHL 국제 배송비 별도', '추가 비용 사전 고지'].map((b) => (
               <span key={b} className="inline-flex items-center gap-1 text-xs font-semibold bg-primary/20 text-primary border border-primary/30 px-3 py-1 rounded-full">
                 <span className="w-1 h-1 rounded-full bg-primary inline-block" />
                 {b}
@@ -146,21 +146,21 @@ export default function PricingKo() {
             {
               name: '단품 플랜',
               price: '₩490,000',
-              sub: '세금 포함 · DHL 포함',
+              sub: '세금 포함 · DHL 배송비 별도',
               items: ['PSA 서류 1통（CENOMAR · 출생증명서 · 혼인증명서 중 택1）', 'DFA 아포스티유 인증（물리 원본）', '국제 특송（DHL Express）'],
               featured: false,
             },
             {
               name: '국제결혼 준비 패키지',
               price: '₩890,000',
-              sub: '세금 포함 · DHL 포함',
+              sub: '세금 포함 · DHL 배송비 별도',
               items: ['PSA 출생증명서（물리 원본）', 'CENOMAR（미혼증명서）', 'DFA 아포스티유 인증（2통）', '국제 특송（DHL Express）'],
               featured: true,
             },
             {
               name: 'F-6 풀 패키지',
               price: '₩1,390,000',
-              sub: '세금 포함 · DHL 포함',
+              sub: '세금 포함 · DHL 배송비 별도',
               items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'NBI Clearance（대사관 지문 등록 후 대행）', 'DFA 아포스티유 인증（3통）', '서류 정리 안내', '국제 특송（DHL Express）'],
               featured: false,
             },
@@ -186,7 +186,7 @@ export default function PricingKo() {
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-400 mt-3">표시 요금은 서류 취득·DFA 아포스티유·DHL 국제 배송료 포함입니다. 기재 불일치·재혼·late registration·긴급 대응 등의 경우 별도 견적을 드립니다.</p>
+        <p className="text-xs text-gray-400 mt-3">표시 요금에는 서류 취득과 DFA 아포스티유가 포함됩니다. DHL 국제 배송비는 별도로 청구됩니다. 기재 불일치·재혼·late registration·긴급 대응 등의 경우 별도 견적을 드립니다.</p>
       </section>
 
       {/* 추가 옵션 */}
@@ -223,7 +223,7 @@ export default function PricingKo() {
         <h2 className="text-lg font-bold text-secondary mb-4">국제 배송 안내</h2>
         <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-600 leading-relaxed">
-            원본 서류는 DHL 국제 특송으로 한국 내 지정 주소로 발송합니다. 배송비는 패키지 요금에 포함되어 있습니다.
+            원본 서류는 DHL 국제 특송으로 한국 내 지정 주소로 발송합니다. DHL 배송비는 배송지에 따라 별도로 견적을 안내하고 청구합니다.
             추적 번호를 제공해 드리며, 통상 발송 후 3〜5 영업일 내 도착합니다.
           </p>
         </div>
