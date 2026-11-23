@@ -162,7 +162,7 @@ export default function CanadaDocsEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your application type (PR, spousal sponsorship, etc.) and your target submission date.' },
-          { title: 'We confirm scope and quote', description: 'We verify required documents for IRCC and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify required documents for IRCC and provide an itemized quote.' },
           { title: 'We handle the applications', description: 'We arrange the agreed PSA documents and paper-issued NBI Clearance.' },
           { title: 'DHL delivery to Canada', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}

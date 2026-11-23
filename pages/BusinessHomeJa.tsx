@@ -160,7 +160,7 @@ export default function BusinessHomeJa() {
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
                 <tr>
-                  <td className="py-3 text-gray-700">LTO運転経歴証明書 ＋ DFAアポスティーユ<br /><span className="text-xs text-gray-400">税込・DHL送料込み</span></td>
+                  <td className="py-3 text-gray-700">LTO運転経歴証明書 ＋ DFAアポスティーユ<br /><span className="text-xs text-gray-400">税込・DHL国際送料別</span></td>
                   <td className="py-3 text-right font-semibold text-secondary">¥49,500</td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
@@ -173,7 +173,7 @@ export default function BusinessHomeJa() {
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                上記は税込・DHL国際送料込みの総額です。PSA民事書類の単品料金は、電子版のみ ¥30,000、SECPA紙原本＋DHL（認証なし） ¥40,000、e-Apostille付き電子版 ¥40,000、フルセット（電子＋e-Apostille＋SECPA紙原本＋DHL）¥50,000（いずれも税込）です
+                上記は税込のサービス料金です。DHL国際送料は別途請求します。PSA民事書類の単品料金は、電子版のみ ¥30,000、SECPA紙原本（認証なし） ¥40,000、e-Apostille付き電子版 ¥40,000、フルセット（電子＋e-Apostille＋SECPA紙原本）¥50,000（いずれも税込）です
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />

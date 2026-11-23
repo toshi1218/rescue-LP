@@ -38,7 +38,7 @@ export default function PrcApostilleJa() {
             '@type': 'Offer',
             price: '39000',
             priceCurrency: 'JPY',
-            description: 'DFAアポスティーユ取得＋DHL国際発送（税込・送料込み）',
+            description: 'DFAアポスティーユ取得（税込・DHL国際送料別）',
           },
         },
         {
@@ -74,7 +74,7 @@ export default function PrcApostilleJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'すでにお持ちのPRC書類へのDFAアポスティーユ取得と日本へのDHL発送は39,000円からです。PRCでの証明書取得を含む場合は、書類の種類、委任方法、認証、発送先を確認して個別に総額を提示します。',
+                text: 'すでにお持ちのPRC書類へのDFAアポスティーユ取得は39,000円からです。DHL国際送料は別途請求します。PRCでの証明書取得を含む場合は、書類の種類、委任方法、認証、発送先を確認して個別に総額を提示します。',
               },
             },
           ],
@@ -175,7 +175,7 @@ export default function PrcApostilleJa() {
           <h2 className="text-lg font-bold text-gray-900 mb-4">料金・納期</h2>
           <div className="flex items-baseline gap-2 mb-1">
             <span className="text-4xl font-extrabold text-primary">¥39,000</span>
-            <span className="text-sm text-gray-500">〜（税込・DHL国際送料込み）</span>
+            <span className="text-sm text-gray-500">〜（税込・DHL国際送料別）</span>
           </div>
           <p className="text-xs text-gray-400 mb-5">お手元のPRC書類にDFAアポスティーユを取得し、日本へ発送する場合</p>
           <ul className="space-y-2 text-sm text-gray-700 mb-5">
@@ -221,7 +221,7 @@ export default function PrcApostilleJa() {
           { q: 'どのPRC証明書を取得できますか？', a: '主な対象はCertificate of Good Standing、Certificate of Board Rating、Certificate of Passing、PRC IDやCertificate of Registrationの認証コピーです。その他の照会・確認書類も個別に対応可否を確認します。' },
           { q: '海外から委任して取得できますか？', a: '案件によります。2026年のPRC通達により、条件を満たす海外在住のPRC登録専門職は、委任状と所定書類のスキャンをPRC Regional Officeへ送る手続きが利用できます。対象外の案件では原本SPA等が必要になる場合があります。' },
           { q: 'PRC証明書にDFAアポスティーユを付けられますか？', a: 'はい。DFAの現行要件では、PRC書類は原本またはPRC認証済み写しとしてアポスティーユ申請対象です。提出国・受取機関に応じて必要な認証ルートを確認します。' },
-          { q: '料金はいくらですか？', a: 'すでにお持ちのPRC書類へのDFAアポスティーユ取得と日本へのDHL発送は39,000円からです。PRCでの証明書取得を含む場合は、書類の種類、委任方法、認証、発送先を確認して個別に総額を提示します。' },
+          { q: '料金はいくらですか？', a: 'すでにお持ちのPRC書類へのDFAアポスティーユ取得は39,000円からです。DHL国際送料は別途請求します。PRCでの証明書取得を含む場合は、書類の種類、委任方法、認証、発送先を確認して個別に総額を提示します。' },
         ]}
         ctaTitle="必要な書類を一緒に整理します"
         ctaButton="無料相談フォームへ"

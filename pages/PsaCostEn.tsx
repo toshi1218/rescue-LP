@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'How much is the IGRS service?',
-    a: 'Our existing US$199 package covers a physical PSA birth certificate and DHL shipping, without Apostille. The US$349 package includes retrieval, the applicable DFA authentication route, and DHL when a physical document is needed. We confirm eligibility, the required format, delivery scope, and any work outside the package before payment.',
+    a: 'The US$199 service fee covers a physical PSA birth certificate without Apostille. The US$349 service fee covers retrieval and the applicable DFA authentication. DHL shipping is charged separately when a physical document is shipped. We confirm eligibility, the required format, delivery scope, and any work outside the package before payment.',
   },
   {
     q: 'Is Apostille always required?',
@@ -112,8 +112,8 @@ export default function PsaCostEn() {
                   { route: 'PSAHelpline birth eCert', price: '₱290', scope: 'Electronic certificate. Check that your receiving authority accepts this format.' },
                   { route: 'PSAHelpline domestic order', price: '₱365', scope: 'Printed certificate with delivery within the Philippines.' },
                   { route: 'PSAHelpline international order', price: '₱365 + your courier cost', scope: 'Processing only. You book and pay the international courier separately; authentication is not included.' },
-                  { route: 'IGRS physical-document service', price: 'US$199', scope: 'Physical PSA birth certificate retrieval and DHL shipping, without Apostille.' },
-                  { route: 'IGRS service with authentication', price: 'US$349', scope: 'Retrieval, the applicable DFA authentication route, and DHL when a physical document is needed.' },
+                  { route: 'IGRS physical-document service', price: 'US$199', scope: 'Physical PSA birth certificate retrieval without Apostille. DHL shipping is separate.' },
+                  { route: 'IGRS service with authentication', price: 'US$349', scope: 'Retrieval and the applicable DFA authentication. DHL shipping is separate when required.' },
                 ].map((row, index) => (
                   <tr key={row.route} className={index % 2 ? 'bg-gray-50/60' : 'bg-white'}>
                     <th scope="row" className="px-3 py-3 align-top font-semibold">{row.route}</th>
@@ -178,7 +178,7 @@ export default function PsaCostEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'DHL shipping to your address worldwide',
-            description: 'The physical-document service includes DHL shipping. We confirm the delivery destination and scope in your quote.',
+            description: 'DHL shipping for physical documents is quoted and charged separately based on the delivery destination.',
           },
         ]}
       />

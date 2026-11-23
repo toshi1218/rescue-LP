@@ -5,7 +5,7 @@ import { Calculator, Info } from 'lucide-react';
 /**
  * 帰化書類パックの総額シミュレーター（JA・自己完結）
  *
- * 価格モデル（税込・e-Apostille・PSA紙原本・DHL配送込み）:
+ * 価格モデル（税込・e-Apostille・PSA紙原本・DHL国際送料別）:
  *  - 書類1通のみ  : 50,000円
  *  - 書類2通セット: 80,000円
  *  - 書類3〜5通   : 132,500円
@@ -17,9 +17,9 @@ import { Calculator, Info } from 'lucide-react';
  * ページのみ（共通コンポーネント・構造ファイルには非該当）。
  */
 
-const SINGLE_FROM = 50000; // 単品（税込・DHL込み）
-const TWO_DOCUMENTS = 80000; // 2通セット（税込・DHL込み）
-const PACK_UP_TO_5 = 132500; // 3〜5通定額（税込・DHL込み）
+const SINGLE_FROM = 50000; // 単品（税込・DHL国際送料別）
+const TWO_DOCUMENTS = 80000; // 2通セット（税込・DHL国際送料別）
+const PACK_UP_TO_5 = 132500; // 3〜5通定額（税込・DHL国際送料別）
 const ADD_PER_COPY = 26500; // 6通目以降 追加1通（税込・込み）
 const PACK_INCLUDED = 5;
 
@@ -48,7 +48,7 @@ export default function PriceSimulatorKika() {
 
       <div className="p-5">
         <p className="text-sm text-gray-600 mb-3">
-          必要な書類の<strong>通数を選ぶ</strong>と、アポスティーユ・DHL国際配送まで含んだ
+          必要な書類の<strong>通数を選ぶ</strong>と、アポスティーユを含む
           <strong>総額の目安</strong>がすぐ出ます。
         </p>
 
@@ -89,7 +89,7 @@ export default function PriceSimulatorKika() {
                 {yen(SINGLE_FROM)}
               </p>
               <p className="text-xs text-gray-500 mt-1">
-                e-Certificate・e-Apostille・SECPA紙原本・DHL国際送料込み（税込）。
+                e-Certificate・e-Apostille・SECPA紙原本を含みます（税込・DHL国際送料別）。
               </p>
               <p className="text-xs text-gray-600 mt-2 bg-white rounded-lg px-3 py-2 border border-gray-100">
                 2通セットは<strong>{yen(TWO_DOCUMENTS)}</strong>です（1通あたり{yen(TWO_DOCUMENTS / 2)}）。
@@ -99,7 +99,7 @@ export default function PriceSimulatorKika() {
             <>
               <p className="text-sm text-gray-600 mb-1">
                 書類{count}
-                {count === 8 ? '通以上' : '通'}の目安（アポスティーユ・DHL配送込み・税込）
+                {count === 8 ? '通以上' : '通'}の目安（アポスティーユ・DHL国際送料別・税込）
               </p>
               <p className="text-3xl font-extrabold text-primary">
                 {yen(packTotal)}
@@ -119,7 +119,7 @@ export default function PriceSimulatorKika() {
           <Info className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
           <p className="text-xs text-gray-700 leading-relaxed">
             <strong>「132,500円 × 通数」ではありません。</strong>
-            1通は50,000円、2通は80,000円、3〜5通は132,500円の定額です（いずれも税込・e-Apostille・PSA紙原本・DHL込み）。
+            1通は50,000円、2通は80,000円、3〜5通は132,500円の定額です（いずれも税込・e-Apostille・PSA紙原本・DHL国際送料別）。
             全書類を1つの荷物に集約するため、通数が増えても<strong>国際送料は1回分のみ</strong>です。
             5通の場合の1通あたり単価は26,500円で、単品依頼より割安になります。
           </p>

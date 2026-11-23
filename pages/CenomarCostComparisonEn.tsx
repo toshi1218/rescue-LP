@@ -55,7 +55,7 @@ export default function CenomarCostComparisonEn() {
       <HeroBanner
         title="CENOMAR Cost Comparison: All Options Explained [2026]"
         badges={['PSA Direct vs Agent vs Walk-in', 'Full Cost Breakdown', 'Updated May 2026']}
-        ctaText="Get All-Inclusive Quote"
+        ctaText="Request an Itemized Quote"
         ctaHref="#contact"
         lastUpdated="May 1, 2026"
       />
@@ -67,14 +67,14 @@ export default function CenomarCostComparisonEn() {
       </div>
 
       <SummaryBlock
-        conclusion="For OFWs and Filipinos abroad, a document service (PSA + Apostille + DHL, all-inclusive) is typically the fastest and most reliable option — no need to coordinate multiple parties."
+        conclusion="For OFWs and Filipinos abroad, a document service that handles PSA retrieval and Apostille and arranges DHL shipping is typically the fastest and most reliable option — no need to coordinate multiple parties."
         points={[
           'PSA direct: ₱210 walk-in; PSAHelpline lists ₱420 for domestic online delivery',
           'PSA online international options require checking the current route, identity verification, and courier arrangements',
           'Representative: variable cost, coordination risk, no accountability',
-          'Document service: US$349 all-inclusive — PSA + Apostille + DHL worldwide',
+          'Document service: US$349 for PSA retrieval and Apostille, plus DHL shipping',
         ]}
-        ctaText="Get All-Inclusive Quote"
+        ctaText="Request an Itemized Quote"
       />
 
       {/* Comparison Table */}
@@ -118,7 +118,7 @@ export default function CenomarCostComparisonEn() {
             </tr>
             <tr className="bg-blue-50">
               <td className="p-3 border border-gray-200 font-bold text-primary">Document Service (IGRS)</td>
-              <td className="p-3 border border-gray-200 font-bold">US$349 all-inclusive</td>
+              <td className="p-3 border border-gray-200 font-bold">US$349 + DHL shipping</td>
               <td className="p-3 border border-gray-200">4–6 weeks total</td>
               <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> Required DFA route confirmed</td>
               <td className="p-3 border border-gray-200"><CheckCircle className="w-4 h-4 text-green-500 inline" /> DHL to 15+ countries</td>
@@ -171,9 +171,9 @@ export default function CenomarCostComparisonEn() {
 
         <div className="border-2 border-primary rounded-lg p-5 bg-blue-50">
           <h3 className="font-bold text-primary mb-2">Option 4: Document Retrieval Service (IGRS) — Recommended for OFWs</h3>
-          <p className="text-sm text-gray-600 mb-3">We handle the process end-to-end: PSA retrieval, the required DFA authentication route, and DHL international shipping when a physical document is needed. One fixed price, no surprises.</p>
+          <p className="text-sm text-gray-600 mb-3">We handle the process end-to-end: PSA retrieval, the required DFA authentication route, and DHL international shipping when a physical document is needed. We itemize the service fee and DHL shipping in your quote.</p>
           <ul className="text-sm space-y-1">
-            <li><span className="text-green-600 font-medium">✓</span> All-inclusive: PSA + required authentication route + DHL shipping when needed (US$349)</li>
+            <li><span className="text-green-600 font-medium">✓</span> US$349 for PSA retrieval and the required authentication route. DHL shipping is separate.</li>
             <li><span className="text-green-600 font-medium">✓</span> Authentication route matched to the receiving authority</li>
             <li><span className="text-green-600 font-medium">✓</span> Ships to USA, Canada, Australia, UK, UAE, Korea, Japan and more</li>
             <li><span className="text-green-600 font-medium">✓</span> Progress updates at every stage</li>
@@ -185,7 +185,7 @@ export default function CenomarCostComparisonEn() {
 
       <CtaBox
         title="Ready to Get Started?"
-        description="All-inclusive from US$349. PSA retrieval, the required authentication route, and DHL shipping when needed. Free consultation — no commitment until you approve the quote."
+        description="From US$349 for PSA retrieval and the required authentication route. DHL shipping is charged separately when needed. Free consultation — no commitment until you approve the quote."
         buttonText="Free Consultation"
         href="#contact"
         variant="primary"
@@ -198,7 +198,7 @@ export default function CenomarCostComparisonEn() {
           { q: 'How much does CENOMAR cost from PSA?', a: 'A CENOMAR costs ₱210 at a PSA outlet. PSAHelpline lists ₱420 for domestic online delivery. International formats, delivery, and authentication depend on the route and receiving authority.' },
           { q: 'Can I order CENOMAR online from abroad?', a: 'PSA provides online ordering options for applicants abroad. Check the current route for identity verification, document format, courier arrangements, and destination availability before paying.' },
           { q: 'How long does it take to get CENOMAR with Apostille from abroad?', a: 'Approximately 4–6 weeks total: PSA issuance (2–3 weeks) + DFA Apostille (1–2 weeks) + DHL international shipping (3–5 business days).' },
-          { q: 'Is US$349 really all-inclusive?', a: 'Yes. The US$349 covers PSA retrieval, DFA Apostille, and DHL international shipping to your address. There are no hidden fees. We confirm the full quote before you commit.' },
+          { q: 'What does the US$349 service fee cover?', a: 'The US$349 service fee covers PSA retrieval and DFA Apostille. DHL international shipping is charged separately. There are no hidden fees. We confirm the full quote before you commit.' },
           { q: 'What if I only need the PSA document without authentication?', a: "We can arrange PSA-only retrieval. Confirm the receiving authority's current requirement before deciding whether any DFA authentication is needed." },
         ]}
         ctaTitle="Have Questions?"
@@ -207,7 +207,7 @@ export default function CenomarCostComparisonEn() {
 
       <RelatedArticles
         items={[
-          { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'All-inclusive CENOMAR retrieval + Apostille + DHL shipping worldwide.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'CENOMAR retrieval and Apostille, with DHL international shipping billed separately.' },
           { href: '/en/cenomar-requirements-by-country/', title: 'CENOMAR Requirements by Country', description: 'What each country requires: apostille, authentication, validity period.' },
           { href: '/en/cenomar-apostille/', title: 'Does CENOMAR Need Apostille?', description: 'When DFA Apostille is required and when it is not.' },
           { href: '/en/cenomar-validity/', title: 'CENOMAR Validity & Timing', description: 'CENOMAR is valid for 6 months. We time retrieval to meet your deadline.' },

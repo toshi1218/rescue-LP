@@ -40,7 +40,7 @@ export default function PsaBirthCertEn() {
             '@type': 'UnitPriceSpecification',
             price: '349',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
+            description: 'PSA retrieval + DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -53,7 +53,7 @@ export default function PsaBirthCertEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.',
+                text: 'We confirm the service fee after reviewing your case. It covers PSA retrieval and DFA Apostille. DHL shipping is charged separately.',
               },
             },
             {
@@ -111,9 +111,9 @@ export default function PsaBirthCertEn() {
               <dd className="font-medium text-gray-800">Philippine Statistics Authority (PSA)</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
-              <dt className="text-gray-500 text-xs mb-1">All-Inclusive Price</dt>
+              <dt className="text-gray-500 text-xs mb-1">Service fee</dt>
               <dd className="font-medium text-gray-800">USD $349</dd>
-              <dd className="text-gray-400 text-xs mt-1">PSA + DFA Apostille + DHL shipping</dd>
+              <dd className="text-gray-400 text-xs mt-1">PSA + DFA Apostille. DHL shipping is separate.</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">Estimated Timeline</dt>
@@ -128,8 +128,8 @@ export default function PsaBirthCertEn() {
             {[
               { label: 'PSA Birth Certificate retrieval', price: 'included' },
               { label: 'DFA Apostille authentication', price: 'included' },
-              { label: 'DHL international shipping (tracked)', price: 'included' },
-              { label: 'Total (all-inclusive)', price: 'USD $349', bold: true },
+              { label: 'DHL international shipping (tracked)', price: 'Quoted separately' },
+              { label: 'Service fee', price: 'USD $349', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -147,7 +147,7 @@ export default function PsaBirthCertEn() {
           'PSA Birth Certificate requirements depend on the receiving authority and application',
           'Authentication arranged only when the receiving authority requires it',
           'Shipped via DHL Express directly to your address anywhere in the world',
-          'All-inclusive pricing: no hidden fees for Apostille or shipping',
+          'DFA Apostille is included in the stated service fee. DHL shipping is charged separately.',
         ]}
         ctaText="Free Consultation"
       />
@@ -185,11 +185,11 @@ export default function PsaBirthCertEn() {
 
       <CtaBox
         title="Three family members applying together?"
-        description="Our US$1,249 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment."
+        description="Our US$1,249 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, and case coordination. Consolidated DHL shipping is charged separately."
         buttonText="View the 3-Applicant Package"
         href="/en/family-psa-nbi-package/"
         variant="primary"
-        trustNote="US$1,249 total · Two payments of US$624.50"
+        trustNote="US$1,249 service fee · Two payments of US$624.50"
       />
 
       <FeatureList
@@ -217,7 +217,7 @@ export default function PsaBirthCertEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your use case (K-1, CR-1, etc.) and your target submission date.' },
-          { title: 'We confirm scope and quote', description: 'We verify whether Apostille is required and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify whether Apostille is required and provide an itemized quote.' },
           { title: 'We use the applicable route', description: 'If required, the PSA e-Certificate and DFA e-Apostille are processed electronically. A SECPA paper certificate is ordered separately when requested.' },
           { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
@@ -225,7 +225,7 @@ export default function PsaBirthCertEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.' },
+          { q: 'How much does it cost?', a: 'We confirm the service fee after reviewing your case. It covers PSA retrieval and DFA Apostille. DHL shipping is charged separately.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
           { q: 'Can I order CENOMAR and Birth Certificate together?', a: 'Yes. Bundling multiple documents is common for K-1 and CR-1 petitions. We handle them together at no extra coordination cost.' },

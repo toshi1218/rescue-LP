@@ -42,7 +42,7 @@ export default function NbiGuideJa() {
             '@type': 'UnitPriceSpecification',
             price: '55000',
             priceCurrency: 'JPY',
-            description: '初回申請・Form No.5利用プラン55,000円（税込・必要な場合のDFA e-Apostille申請サポート・紙原本のDHL国際郵送込みの総額）。更新・再発行PDF納品39,800円〜、原本郵送込み45,800円〜（対象案件のDFA e-Apostille申請サポートは+20,000円）',
+            description: '初回申請・Form No.5利用プラン55,000円（税込・必要な場合のDFA e-Apostille申請サポート・DHL国際送料別）。更新・再発行は39,800円〜。紙原本のDHL国際送料と対象案件のDFA e-Apostille申請サポート（+20,000円）は別途です',
           },
         },
         },
@@ -117,7 +117,7 @@ export default function NbiGuideJa() {
               <p className="text-xs text-gray-500 mb-3 leading-relaxed">指紋採取済みの方。申請・支払い・NBI本局への提出と受け取りをサポート。</p>
               <div className="mt-auto">
                 <div className="text-2xl font-bold text-secondary">55,000<span className="text-sm font-normal">円（税込）</span></div>
-                <div className="text-xs text-gray-500 mt-0.5">紙原本のDHL国際郵送と、必要な場合のDFA e-Apostille申請サポートを含むパッケージ</div>
+                <div className="text-xs text-gray-500 mt-0.5">必要な場合のDFA e-Apostille申請サポートを含みます。紙原本のDHL国際送料は別途です。</div>
                 <div className="text-sm text-gray-700 mt-1.5">初回取得から着手。取得のみの費用は事前にご案内。</div>
               </div>
             </div>
@@ -129,7 +129,7 @@ export default function NbiGuideJa() {
               <div className="mt-auto">
                 <div className="text-2xl font-bold text-gray-700">39,800<span className="text-sm font-normal">円（税込）〜</span></div>
                 <div className="text-xs text-gray-500 mt-0.5">PDF納品プラン</div>
-                <div className="text-sm text-gray-700 mt-1.5">原本を日本へ郵送 <span className="font-medium">+6,000円 → 45,800円</span></div>
+                <div className="text-sm text-gray-700 mt-1.5">紙原本を発送する場合は <span className="font-medium">DHL国際送料を別途お見積もり</span></div>
               </div>
             </div>
           </div>

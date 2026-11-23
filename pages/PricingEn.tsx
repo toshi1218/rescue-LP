@@ -25,7 +25,7 @@ export default function PricingEn() {
             name: 'Are there any hidden fees?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'No. All quoted prices are all-inclusive: PSA/CENOMAR/NBI retrieval, DFA Apostille (if required), and DHL Express shipping worldwide are quoted together as one fixed price before you pay anything.',
+              text: 'No. We itemize the service fee and any DHL Express international shipping charge before you pay. The service fee covers the agreed document retrieval and any required DFA Apostille.',
             },
           },
           {
@@ -65,7 +65,7 @@ export default function PricingEn() {
     >
       <HeroBanner
         title="Pricing"
-        subtitle="All-inclusive pricing: PSA retrieval, DFA Apostille, and DHL shipping — quoted together with no hidden fees."
+        subtitle="See our service fees for document retrieval and DFA Apostille. DHL Express international shipping is quoted and charged separately."
         badges={['No hidden fees', 'Free quote', 'Free cancellation before start']}
         ctaText="Get a Free Quote"
         ctaHref="#contact"
@@ -189,7 +189,7 @@ export default function PricingEn() {
         steps={[
           {
             title: 'Free quote',
-            description: 'We confirm which documents you need, the timeline, and the all-inclusive price. No payment required at this stage.',
+            description: 'We confirm which documents you need, the timeline, and the itemized quote. No payment required at this stage.',
           },
           {
             title: 'Deposit payment (~50%)',
@@ -225,7 +225,7 @@ export default function PricingEn() {
 
       <FaqSection
         items={[
-          { q: 'Are there any hidden fees?', a: 'No. All quoted prices are all-inclusive: PSA/CENOMAR/NBI retrieval, DFA Apostille (if required), and DHL Express shipping worldwide are quoted together as one fixed price before you pay anything.' },
+          { q: 'Are there any hidden fees?', a: 'No. We itemize the service fee and any DHL Express international shipping charge before you pay. The service fee covers the agreed document retrieval and any required DFA Apostille.' },
           { q: 'How does payment work?', a: 'Two-stage payment via Stripe (credit card): approximately 50% deposit to start, then the remaining balance after we send you photos or PDFs of the retrieved documents for your confirmation. Documents ship only after the balance is paid.' },
           { q: 'What payment methods do you accept?', a: 'Credit card via Stripe: Visa, Mastercard, American Express, Apple Pay, and Google Pay.' },
           { q: 'Can I cancel and get a refund?', a: 'Yes, free cancellation before we start work. Once processing begins, actual costs incurred and work performed are non-refundable. The balance payment is only requested after you confirm the document copies.' },

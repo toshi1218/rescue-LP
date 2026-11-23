@@ -51,6 +51,7 @@ export default function TermsEn() {
                 'All prices are quoted in JPY or USD, depending on your location and preference',
                 'We accept payment by credit card',
                 'The remaining balance is due after document copies are confirmed and before shipping',
+                'For physical documents, we itemize DHL Express international shipping by destination in your quote and charge it separately from the service fee',
                 'Quoted prices include only the items explicitly listed. Additional requests may incur additional fees',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-gray-600">

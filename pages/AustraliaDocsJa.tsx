@@ -41,7 +41,7 @@ export default function AustraliaDocsJa() {
             '@type': 'UnitPriceSpecification',
             price: '58000',
             priceCurrency: 'JPY',
-            description: 'PSA取得・DFAアポスティーユ・DHLオーストラリア送料込み総額目安（税抜、書類1通あたり）',
+            description: 'PSA取得・DFAアポスティーユ・DHL国際送料別の料金目安（税抜、書類1通あたり）',
           },
         },
         },

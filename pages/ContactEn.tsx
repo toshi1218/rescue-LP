@@ -38,7 +38,7 @@ export default function ContactEn() {
     <PageLayout breadcrumbs={[{ label: 'Home', href: '/en/' }, { label: 'Contact' }]}>
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-2">Contact Us — Free Consultation</h1>
       <p className="text-sm text-gray-600 mb-4">
-        Tell us your case and we will confirm what documents you need, how long it takes, and the all-inclusive price.
+        Tell us your case and we will confirm what documents you need, how long it takes, and the itemized quote.
       </p>
       <p className="text-xs text-gray-500 mb-4">
         Choose email or WhatsApp — whichever is easiest for you.

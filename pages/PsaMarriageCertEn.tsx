@@ -39,7 +39,7 @@ export default function PsaMarriageCertEn() {
             '@type': 'UnitPriceSpecification',
             price: '349',
             priceCurrency: 'USD',
-            description: 'PSA retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
+            description: 'PSA retrieval + DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -52,7 +52,7 @@ export default function PsaMarriageCertEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.',
+                text: 'We confirm the service fee after reviewing your case. It covers PSA retrieval and DFA Apostille. DHL shipping is charged separately.',
               },
             },
             {
@@ -97,7 +97,7 @@ export default function PsaMarriageCertEn() {
           'May be required for spouse visa, civil registration, or immigration applications',
           'Annotated or standard format available based on your needs',
           'Authentication arranged only when the receiving authority requires it',
-          'All-inclusive pricing with DHL Express shipping worldwide',
+          'DHL Express international shipping is quoted and charged separately',
         ]}
         ctaText="Free Consultation"
       />
@@ -157,7 +157,7 @@ export default function PsaMarriageCertEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your use case (CR-1, IR-1, etc.) and your target submission date.' },
-          { title: 'We confirm scope and quote', description: 'We verify whether Apostille or annotated version is required and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify whether Apostille or annotated version is required and provide an itemized quote.' },
           { title: 'We use the applicable route', description: 'If required, the PSA e-Certificate and DFA e-Apostille are processed electronically. A SECPA paper certificate is ordered separately when requested.' },
           { title: 'DHL delivery worldwide', description: 'Documents are shipped with tracking. Estimated total: 4–6 weeks.' },
         ]}
@@ -165,7 +165,7 @@ export default function PsaMarriageCertEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. PSA retrieval, DFA Apostille, and DHL shipping are all included.' },
+          { q: 'How much does it cost?', a: 'We confirm the service fee after reviewing your case. It covers PSA retrieval and DFA Apostille. DHL shipping is charged separately.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Do I need an annotated marriage certificate?', a: 'If you have gone through annulment or foreign divorce recognition, an annotated version may be required. Share your situation and we will confirm.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },

@@ -63,7 +63,7 @@ export default function PsaSerbilisEn() {
               name: 'Can I still get my PSA document delivered internationally?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSAHelpline.ph delivers within the Philippines. For international delivery, you need to arrange forwarding from a Philippine address, or use a retrieval service that includes DHL international shipping.',
+                text: 'PSAHelpline.ph delivers within the Philippines. For international delivery, you need to arrange forwarding from a Philippine address, or use a retrieval service that arranges DHL international shipping.',
               },
             },
           ],

@@ -37,7 +37,7 @@ export default function MarriageGuideEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'Immigration Document Package — all documents + DFA Apostille + DHL worldwide (all-inclusive)',
+            description: 'Immigration Document Package — all documents + DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -58,7 +58,7 @@ export default function MarriageGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.',
+                text: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping is charged separately.',
               },
             },
             {
@@ -83,7 +83,7 @@ export default function MarriageGuideEn() {
     >
       <HeroBanner
         title="Philippine Marriage Documents for Your Visa Application Worldwide"
-        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'Upfront Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -95,7 +95,7 @@ export default function MarriageGuideEn() {
           'CENOMAR, PSA Birth Certificate, and NBI Clearance retrieved in one order',
           'Authentication arranged only for documents whose current checklist requires it',
           'Works for K-1 visa, CR-1, partner visa, spousal sponsorship & more',
-          'All-inclusive pricing with DHL Express shipping worldwide',
+          'DHL Express international shipping is quoted and charged separately',
         ]}
         ctaText="Free Consultation"
       />
@@ -155,7 +155,7 @@ export default function MarriageGuideEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa type (K-1, CR-1, partner visa, spousal sponsorship, etc.) and your target submission date.' },
-          { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify required documents and provide an itemized quote.' },
           { title: 'We handle the applications', description: 'We complete the PSA online applications and DFA e-Apostille applications on your behalf, in English.' },
           { title: 'DHL delivery worldwide', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
@@ -164,7 +164,7 @@ export default function MarriageGuideEn() {
       <FaqSection
         items={[
           { q: 'What documents are needed for a CR-1 visa?', a: 'PSA Marriage and Birth Certificates may be requested. The U.S. Embassy Manila checklist does not impose a universal DFA Apostille requirement, so we follow the current case-stage instructions.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
+          { q: 'How much does it cost?', a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping is charged separately.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.' },
         ]}

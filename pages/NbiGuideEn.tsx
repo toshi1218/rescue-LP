@@ -150,11 +150,11 @@ export default function NbiGuideEn() {
 
       <CtaBox
         title="Three family members applying together?"
-        description="Our US$1,249 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment."
+        description="Our US$1,249 family package includes three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, and case coordination. Consolidated DHL shipping is charged separately."
         buttonText="View the 3-Applicant Package"
         href="/en/family-psa-nbi-package/"
         variant="primary"
-        trustNote="US$1,249 total · Two payments of US$624.50"
+        trustNote="US$1,249 service fee · Two payments of US$624.50"
       />
 
       <FeatureList
@@ -182,7 +182,7 @@ export default function NbiGuideEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry with NBI status', description: 'Tell us your use case (K-1, CR-1, Canada PR, etc.), your last NBI issuance year, whether any personal info has changed, and any known HIT issues.' },
-          { title: 'We confirm your case type and provide a quote', description: 'We check whether your case qualifies for remote processing (renewal) or requires embassy fingerprint registration (first-time/name change), and provide all-inclusive pricing upfront.' },
+          { title: 'We confirm your case type and provide a quote', description: 'We check whether your case qualifies for remote processing (renewal) or requires embassy fingerprint registration (first-time/name change), and provide an itemized quote upfront.' },
           { title: 'Processing begins based on your case type', description: 'For renewals, we check your previous record. For first-time cases, we guide you through fingerprinting and handle the local submission to NBI headquarters.' },
           { title: 'Receive the agreed documents', description: 'We send the paper clearance by tracked DHL when required. If an e-Apostille is issued, we deliver the electronic document separately.' },
         ]}

@@ -23,7 +23,7 @@ export default function GuidesEn() {
       <h1 className="text-2xl md:text-3xl font-bold text-secondary mb-4">Philippine Document Services — Guide Index</h1>
       <p className="text-sm text-gray-600 mb-6">
         We retrieve CENOMAR, PSA Birth Certificate, NBI Clearance, and DFA Apostille for Filipino nationals living abroad.
-        All-inclusive service starting from US$349 — shipped worldwide via DHL. No trip to the Philippines needed.
+        Document services from US$349, with DHL international shipping charged separately. No trip to the Philippines needed.
       </p>
       <GuideLinks />
 
@@ -56,7 +56,7 @@ export default function GuidesEn() {
       <div className="mt-10">
         <CtaBox
           title="Not sure which documents you need?"
-          description="Tell us your visa type and destination country. We confirm exactly what to order — CENOMAR, PSA, NBI, Apostille — and give you a fixed all-inclusive quote."
+          description="Tell us your visa type and destination country. We confirm exactly what to order — CENOMAR, PSA, NBI, Apostille — and give you an itemized quote."
           buttonText="Free Consultation"
           href="#contact"
           variant="primary"

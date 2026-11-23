@@ -61,7 +61,7 @@ export default function BusinessMenkyoKirikaeJa() {
               '@type': 'UnitPriceSpecification',
               price: '49500',
               priceCurrency: 'JPY',
-              description: 'LTO書類取得・DFAアポスティーユ込み（税込・DHL国際送料込み）',
+              description: 'LTO書類取得・DFAアポスティーユ込み（税込・DHL国際送料別）',
             },
           },
         },
@@ -341,7 +341,7 @@ export default function BusinessMenkyoKirikaeJa() {
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                DHL国際郵送費は料金に含まれます
+                DHL国際郵送費は送付先に応じて別途請求します
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />

@@ -40,7 +40,7 @@ export default function NewZealandDocsEn() {
               '@type': 'UnitPriceSpecification',
               price: '899',
               priceCurrency: 'USD',
-              description: 'New Zealand Immigration Document Package — all documents + DFA Apostille + DHL to NZ (all-inclusive)',
+              description: 'New Zealand Immigration Document Package — all documents + DFA Apostille (DHL shipping charged separately)',
             },
           },
         },

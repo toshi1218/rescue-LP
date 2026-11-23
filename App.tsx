@@ -195,13 +195,25 @@ function ScrollToTop() {
   return null;
 }
 
+const shippingNotice = {
+  ja: '紙の書類を発送する場合、DHL国際送料は送付先に応じて別途お見積もりのうえ、請求します。',
+  en: 'DHL Express international shipping for physical documents is quoted by destination and charged separately.',
+  ko: '종이 서류를 발송하는 경우 DHL 국제 배송비는 배송지에 따라 별도로 안내하고 청구합니다.',
+};
+
 export default function App() {
+  const { pathname } = useLocation();
+  const locale = /^\/ja(?:\/|$)/.test(pathname) ? 'ja' : /^\/ko(?:\/|$)/.test(pathname) ? 'ko' : 'en';
+
   return (
     <>
       <ScrollToTop />
       <NavigationProgress />
       <ErrorBoundary>
       <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-primary border-b-transparent animate-spin" role="status" aria-label="Loading" /></div>}>
+      <p className="border-b border-gray-200 bg-gray-50 px-4 py-2 text-center text-sm leading-snug text-gray-700" lang={locale} data-dhl-shipping-notice>
+        {shippingNotice[locale]}
+      </p>
       <Routes>
         <Route path="/en" element={<Navigate to="/en/" replace />} />
         <Route path="/en/" element={<HomeEn />} />

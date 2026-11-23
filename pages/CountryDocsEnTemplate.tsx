@@ -43,7 +43,7 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
               '@type': 'UnitPriceSpecification',
               price: config.price,
               priceCurrency: 'USD',
-              description: `${config.name} Immigration Document Package — all documents + ${config.authLabel} + DHL to ${config.name} (all-inclusive)`,
+              description: `${config.name} Immigration Document Package — all documents + ${config.authLabel} (DHL shipping charged separately)`,
             },
           },
         },
@@ -130,7 +130,7 @@ export default function CountryDocsEnTemplate({ config }: { config: CountryConfi
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: `Tell us your application type and your target submission date to ${config.agencyAbbr}.` },
-          { title: 'We confirm scope and quote', description: `We verify required documents for ${config.agencyAbbr} and provide all-inclusive pricing.` },
+          { title: 'We confirm scope and quote', description: `We verify required documents for ${config.agencyAbbr} and provide an itemized quote.` },
           { title: 'Local processing in the Philippines', description: `Our Cebu team handles all PSA retrieval and ${config.authLabel}.` },
           { title: `DHL delivery to ${config.name}`, description: `All documents shipped together with tracking. Estimated total: ${config.totalWeeks}.` },
         ]}

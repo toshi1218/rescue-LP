@@ -39,7 +39,7 @@ export default function UsVisaDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'K-1/CR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+            description: 'K-1/CR-1 Document Package — all documents + DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -68,7 +68,7 @@ export default function UsVisaDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.',
+                text: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping is charged separately.',
               },
             },
             {
@@ -85,7 +85,7 @@ export default function UsVisaDocsEn() {
     >
       <HeroBanner
         title="Philippine Documents for Your US Visa Petition"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Ships via DHL', 'Apostille Included', 'Upfront Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -97,7 +97,7 @@ export default function UsVisaDocsEn() {
           'CENOMAR, PSA Birth Certificate, NBI Clearance, Marriage Certificate available',
           'Authentication arranged only when the current U.S. checklist requires it',
           'We confirm exact requirements for your specific visa type',
-          'All-inclusive pricing with DHL Express shipping to USA',
+          'DHL Express shipping to the US is quoted and charged separately',
         ]}
         ctaText="Free Consultation"
       />
@@ -157,7 +157,7 @@ export default function UsVisaDocsEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa type (K-1, CR-1, IR-1) and your target submission date.' },
-          { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify required documents and provide an itemized quote.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
           { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
@@ -167,7 +167,7 @@ export default function UsVisaDocsEn() {
         items={[
           { q: 'What documents are required for a K-1 visa?', a: 'The checklist differs between petition, NVC, and interview stages. PSA civil records and NBI Clearance may be requested. We confirm the current official instructions for your case before quoting.' },
           { q: 'What documents are required for a CR-1 visa?', a: 'Typically Marriage Certificate and Birth Certificate with DFA Apostille. Requirements vary by NVC case. We confirm for your specific petition.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
+          { q: 'How much does it cost?', a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping is charged separately.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"

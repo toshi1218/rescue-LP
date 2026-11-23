@@ -39,7 +39,7 @@ export default function Cr1VisaDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'CR-1/IR-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+            description: 'CR-1/IR-1 Document Package — all documents + DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -60,7 +60,7 @@ export default function Cr1VisaDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.',
+                text: 'We confirm the service fee after reviewing your case. It covers all documents and DFA Apostille. DHL shipping is charged separately.',
               },
             },
             {
@@ -85,7 +85,7 @@ export default function Cr1VisaDocsEn() {
     >
       <HeroBanner
         title="CR-1/IR-1 Spouse Visa: Philippine Documents Retrieved and Shipped to the USA"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Ships via DHL', 'Apostille Included', 'Upfront Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -97,7 +97,7 @@ export default function Cr1VisaDocsEn() {
           'PSA Marriage Certificate, Birth Certificate, NBI Clearance with DFA Apostille',
           'Documents formatted for NVC submission requirements',
           'We verify what your specific case needs before starting',
-          'All-inclusive pricing with DHL Express shipping to USA',
+          'DHL Express shipping to the US is quoted and charged separately',
         ]}
         ctaText="Free Consultation"
       />
@@ -157,7 +157,7 @@ export default function Cr1VisaDocsEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your CR-1/IR-1 case status and your NVC submission or interview deadline.' },
-          { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify required documents and provide an itemized quote.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles Marriage Certificate, Birth Certificate, NBI Clearance, and DFA Apostille.' },
           { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
@@ -166,7 +166,7 @@ export default function Cr1VisaDocsEn() {
       <FaqSection
         items={[
           { q: 'What Philippine documents does NVC require for CR-1/IR-1?', a: 'Requirements depend on the case and stage. PSA Marriage and Birth Certificates and NBI Clearance may be requested. We confirm the current official checklist before processing.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.' },
+          { q: 'How much does it cost?', a: 'We confirm the service fee after reviewing your case. It covers all documents and DFA Apostille. DHL shipping is charged separately.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your NVC deadline and we will confirm whether priority processing is feasible.' },
         ]}

@@ -28,7 +28,7 @@ export default function ApostilleFeeEn() {
       jsonLd={[{
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: 'DFA Apostille Authentication Service — All-Inclusive Pricing',
+        name: 'DFA Apostille Authentication Service — Upfront Pricing',
         description: 'We quote retrieval, the authentication route required by the receiving authority, and delivery separately from the published DFA government fee.',
         url: 'https://ph-document.com/en/apostille-fee/',
         provider: {
@@ -45,7 +45,7 @@ export default function ApostilleFeeEn() {
             '@type': 'UnitPriceSpecification',
             price: '219',
             priceCurrency: 'USD',
-            description: 'DFA Apostille + DHL shipping worldwide (all-inclusive)',
+            description: 'DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -62,7 +62,7 @@ export default function ApostilleFeeEn() {
     >
       <HeroBanner
         title="DFA Apostille Fees: Government Charges & Service Cost"
-        subtitle="See the official fees below. Our quote covers the agreed retrieval, authentication, and delivery work your case requires."
+        subtitle="See the official fees below. Our quote lists the agreed service fee and any separate DHL shipping charge."
         badges={['Government Fees Explained', 'Upfront Service Quote', 'Electronic or Physical Delivery']}
         ctaText="Free Consultation"
         ctaHref="#contact"
@@ -74,7 +74,7 @@ export default function ApostilleFeeEn() {
         points={[
           'Eligible PSA e-Certificates use the electronic e-Apostille route; eligible non-PSA documents may follow a physical process',
           'Document issuance, delivery, and our service fee must be considered alongside government charges',
-          'Your quote includes only the retrieval, authentication, and physical shipping scope agreed for your case',
+          'We itemize the agreed retrieval and authentication fees and any DHL shipping charge in your quote',
         ]}
         ctaText="Get Your Total Quote"
       />
@@ -144,7 +144,7 @@ export default function ApostilleFeeEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'DHL shipping when physical delivery is needed',
-            description: 'Tracked delivery is included in the agreed physical-document scope. e-Apostilles are delivered electronically.',
+            description: 'Tracked DHL delivery for physical documents is quoted and charged separately. e-Apostilles are delivered electronically.',
           },
         ]}
       />
@@ -153,7 +153,7 @@ export default function ApostilleFeeEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us which documents need Apostille and your submission authority.' },
-          { title: 'We provide all-inclusive pricing', description: 'DFA Apostille application, PSA online application, and DHL shipping for physical documents quoted together upfront.' },
+          { title: 'We provide an itemized quote', description: 'We quote DFA Apostille and PSA application services upfront and list DHL shipping separately when physical documents are required.' },
           { title: 'We handle the applications', description: 'We complete PSA online applications and e-Apostille applications; eligible non-PSA documents follow the current physical process when applicable.' },
           { title: 'Electronic delivery or physical shipment', description: 'Receive the e-Apostille electronically. If paper documents are required, we arrange tracked shipping and quote the total timeline for that scope.' },
         ]}

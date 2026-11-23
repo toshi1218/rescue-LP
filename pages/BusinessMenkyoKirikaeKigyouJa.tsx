@@ -29,7 +29,7 @@ import { SEO_YEAR_MONTH_JA, SEO_LAST_UPDATED_JA } from '../lib/seoDate';
 export default function BusinessMenkyoKirikaeKigyouJa() {
   useMeta(
     `フィリピン人従業員 運転免許切替サポート｜介護・配送・建設向け法人プラン【${SEO_YEAR_MONTH_JA}】`,
-    '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名49,500円（税込・DHL送料込み）。請求書払い・複数名対応。',
+    '介護送迎・社用車・現場移動にフィリピン人従業員を使いたい会社向け。外免切替に必要なLTO書類取得を一括代行。1名49,500円（税込・DHL国際送料別）。請求書払い・複数名対応。',
   );
 
   return (
@@ -58,7 +58,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
               '@type': 'Offer',
               priceCurrency: 'JPY',
               price: '49500',
-              description: '1名プラン（LTO書類取得・DFAアポスティーユ込み、税込・DHL国際送料込み）',
+              description: '1名プラン（LTO書類取得・DFAアポスティーユ込み、税込・DHL国際送料別）',
             },
           ],
         },
@@ -337,7 +337,7 @@ export default function BusinessMenkyoKirikaeKigyouJa() {
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-                DHL国際郵送費は料金に含まれます
+                DHL国際郵送費は送付先に応じて別途請求します
               </p>
               <p className="text-xs text-gray-500 flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />

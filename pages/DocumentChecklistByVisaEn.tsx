@@ -76,7 +76,7 @@ export default function DocumentChecklistByVisaEn() {
     >
       <HeroBanner
         title="Philippine Document Checklist by Visa Type"
-        badges={['K-1 · CR-1 · Canada · Australia · UK · UAE · Japan', 'All-Inclusive Service', 'Free Consultation']}
+        badges={['K-1 · CR-1 · Canada · Australia · UK · UAE · Japan', 'Document Retrieval and Authentication', 'Free Consultation']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"

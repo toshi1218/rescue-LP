@@ -317,7 +317,7 @@ export default function HomeKo() {
               요금 안내
             </h2>
             <p className="text-sm text-gray-500 text-center mb-8">
-              아포스티유 인증 + 국제 배송 포함 가격입니다
+              아포스티유 인증이 포함된 서비스 요금입니다. DHL 국제 배송비는 별도입니다.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
               {[
@@ -325,7 +325,7 @@ export default function HomeKo() {
                   name: '베이직 플랜',
                   price: '₩590,000',
                   sub: '약 6.3만엔',
-                  desc: 'PSA 서류 1통 + 아포스티유 + 국제 배송',
+                  desc: 'PSA 서류 1통 + 아포스티유 · DHL 배송비 별도',
                   items: ['PSA 서류 1통 (CENOMAR 또는 출생증명서)', 'DFA 아포스티유 인증', '국제 특송 (DHL)'],
                   featured: false,
                 },
@@ -333,7 +333,7 @@ export default function HomeKo() {
                   name: '스탠다드 플랜',
                   price: '₩990,000',
                   sub: '약 10.5만엔',
-                  desc: 'PSA 출생증명서 + CENOMAR + 아포스티유 + 국제 배송',
+                  desc: 'PSA 출생증명서 + CENOMAR + 아포스티유 · DHL 배송비 별도',
                   items: ['PSA 출생증명서', 'CENOMAR（미혼증명서）', 'DFA 아포스티유 인증（2통）', '국제 특송 (DHL)'],
                   featured: true,
                 },

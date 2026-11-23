@@ -49,7 +49,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to New Zealand are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to New Zealand is charged separately.',
       },
       {
         q: 'How long does it take to ship to New Zealand?',
@@ -125,7 +125,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to the Netherlands are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to the Netherlands is charged separately.',
       },
       {
         q: 'How long does it take to ship to the Netherlands?',
@@ -164,7 +164,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, UAE Embassy attestation, and DHL shipping to the UAE are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and UAE Embassy attestation. DHL shipping to the UAE is charged separately.',
       },
       {
         q: 'How long does it take to ship to the UAE?',
@@ -202,7 +202,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Singapore are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to Singapore is charged separately.',
       },
       {
         q: 'How long does it take to ship to Singapore?',
@@ -240,7 +240,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Hong Kong are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to Hong Kong is charged separately.',
       },
       {
         q: 'How long does it take to ship to Hong Kong?',
@@ -278,7 +278,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, Qatar Embassy attestation, and DHL shipping to Qatar are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and Qatar Embassy attestation. DHL shipping to Qatar is charged separately.',
       },
       {
         q: 'How long does it take to ship to Qatar?',
@@ -317,7 +317,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Italy are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to Italy is charged separately.',
       },
       {
         q: 'How long does it take to ship to Italy?',
@@ -355,7 +355,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Norway are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to Norway is charged separately.',
       },
       {
         q: 'How long does it take to ship to Norway?',
@@ -393,7 +393,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Sweden are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to Sweden is charged separately.',
       },
       {
         q: 'How long does it take to ship to Sweden?',
@@ -432,7 +432,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case, covering the PSA documents, the applicable DFA authentication route, and DHL shipping to Saudi Arabia.',
+        a: 'After reviewing your case, we quote the PSA document service and applicable DFA authentication. DHL shipping to Saudi Arabia is charged separately.',
       },
       {
         q: 'How long does it take to ship to Saudi Arabia?',
@@ -470,7 +470,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, Kuwait Embassy attestation, and DHL shipping to Kuwait are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and Kuwait Embassy attestation. DHL shipping to Kuwait is charged separately.',
       },
       {
         q: 'How long does it take to ship to Kuwait?',
@@ -508,7 +508,7 @@ export const COUNTRY_CONFIGS: CountryConfig[] = [
       },
       {
         q: 'How much does it cost?',
-        a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Switzerland are included.',
+        a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to Switzerland is charged separately.',
       },
       {
         q: 'How long does it take to ship to Switzerland?',

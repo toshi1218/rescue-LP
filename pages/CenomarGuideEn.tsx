@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'How much does the CENOMAR service cost?',
-    a: 'The published single-document price is US$199 for a physical PSA original with DHL delivery, without Apostille. The option with required DFA authentication is US$349 in total. We confirm the document format, included work, and any urgent or complex-case costs before you pay.',
+    a: 'The service fee for a physical PSA original without Apostille is US$199. With the required DFA authentication, the service fee is US$349. DHL shipping is charged separately. We confirm the document format, included work, and any urgent or complex-case costs before you pay.',
   },
   {
     q: 'What does CENOMAR mean?',
@@ -51,7 +51,7 @@ const steps = [
 export default function CenomarGuideEn() {
   useMeta(
     `Get CENOMAR from Abroad [${SEO_YEAR}] | Fees & Delivery`,
-    'Get CENOMAR from abroad. Physical PSA original + DHL: US$199; with required DFA authentication: US$349. Confirm your document format with a free email quote.',
+    'Get CENOMAR from abroad. Physical PSA original from US$199, or US$349 with required DFA authentication. DHL shipping is separate. Confirm your document format with a free email quote.',
   );
   return (
     <PageLayout
@@ -69,7 +69,7 @@ export default function CenomarGuideEn() {
           '@context': 'https://schema.org',
           '@type': 'HowTo',
           name: 'How to Arrange a Physical CENOMAR Original with DHL from Abroad',
-          description: 'The standard US$199 package covers PSA retrieval and DHL delivery of a physical original, without Apostille. The option with required DFA authentication is US$349 total, confirmed in the quote.',
+          description: 'The US$199 service fee covers retrieval of a physical PSA original. With the required DFA authentication, the fee is US$349. DHL shipping is charged separately.',
           totalTime: 'P42D',
           estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '199' },
           step: steps.map(step => ({ '@type': 'HowToStep', name: step.title, text: step.description })),
@@ -90,7 +90,7 @@ export default function CenomarGuideEn() {
               '@type': 'UnitPriceSpecification',
               price: '199',
               priceCurrency: 'USD',
-              description: 'Physical PSA original and DHL delivery, without Apostille.',
+              description: 'Physical PSA original without Apostille. DHL shipping is charged separately.',
             },
           },
         },
@@ -112,7 +112,7 @@ export default function CenomarGuideEn() {
       <HeroBanner
         title="Get CENOMAR from Abroad"
         subtitle="We arrange your PSA document, the required authentication, and delivery in the format your receiving authority requests. Consult us in English before ordering."
-        badges={['Physical original + DHL: US$199', 'Authentication option: US$349', 'Free email quote']}
+        badges={['Physical original: US$199 + shipping', 'Authentication option: US$349', 'Free email quote']}
         ctaText="Get My Email Quote"
         ctaHref="#contact"
         ctaService="Other"
@@ -127,7 +127,7 @@ export default function CenomarGuideEn() {
       <SummaryBlock
         conclusion="Arrange CENOMAR from overseas with the required format and total cost confirmed first."
         points={[
-          'Physical PSA original with DHL: US$199, without Apostille',
+          'Physical PSA original: US$199 without Apostille, plus DHL shipping',
           'With required DFA authentication: US$349 total; the route depends on your destination',
           'Electronic authentication and a physical PSA original are separate documents',
           'Start with your destination, requested document, and deadline',
@@ -140,7 +140,7 @@ export default function CenomarGuideEn() {
           <div className="rounded-xl border border-gray-200 p-5">
             <h3 className="text-sm font-bold text-secondary">Physical PSA original + DHL</h3>
             <p className="my-2 text-2xl font-bold text-primary">US$199</p>
-            <p className="text-sm text-gray-600">PSA retrieval and DHL delivery of the physical original. Apostille is not included.</p>
+            <p className="text-sm text-gray-600">Retrieval of the physical PSA original without Apostille. DHL shipping is charged separately.</p>
           </div>
           <div className="rounded-xl border border-primary/30 bg-primary/5 p-5">
             <h3 className="text-sm font-bold text-secondary">With required DFA authentication</h3>

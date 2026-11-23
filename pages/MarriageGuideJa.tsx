@@ -45,7 +45,7 @@ export default function MarriageGuideJa() {
               '@type': 'UnitPriceSpecification',
               price: '80000',
               priceCurrency: 'JPY',
-              description: 'PSA出生証明書・CENOMAR各1通のe-Certificate・e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
+              description: 'PSA出生証明書・CENOMAR各1通のe-Certificate・e-Apostille・SECPA紙原本を含む税込料金（DHL国際送料別）',
             },
           },
         },
@@ -131,7 +131,7 @@ export default function MarriageGuideJa() {
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">国際結婚2通セット（税込）</dt>
-              <dd className="font-medium text-gray-800">80,000円（DHL国際送料込み）</dd>
+              <dd className="font-medium text-gray-800">80,000円（DHL国際送料別）</dd>
               <dd className="text-gray-400 text-xs mt-1">出生証明書＋CENOMAR。単品フルセットは1通50,000円</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">

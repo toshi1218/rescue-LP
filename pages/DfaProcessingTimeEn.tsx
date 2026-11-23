@@ -45,7 +45,7 @@ export default function DfaProcessingTimeEn() {
               '@type': 'UnitPriceSpecification',
               price: '219',
               priceCurrency: 'USD',
-              description: 'DFA Apostille authentication + DHL shipping worldwide (all-inclusive)',
+              description: 'DFA Apostille authentication (DHL shipping charged separately)',
             },
           },
         },
@@ -144,7 +144,7 @@ export default function DfaProcessingTimeEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'DHL shipping when physical delivery is needed',
-            description: 'Tracked delivery is included in the agreed physical-document scope. e-Apostilles are delivered electronically.',
+            description: 'Tracked DHL delivery for physical documents is quoted and charged separately. e-Apostilles are delivered electronically.',
           },
         ]}
       />

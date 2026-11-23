@@ -39,7 +39,7 @@ export default function ApostilleGuideEn() {
             '@type': 'UnitPriceSpecification',
             price: '349',
             priceCurrency: 'USD',
-            description: 'DFA Apostille + DHL shipping worldwide (all-inclusive)',
+            description: 'DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -52,7 +52,7 @@ export default function ApostilleGuideEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'DFA Apostille is included in all service packages starting at US$349. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.',
+                text: 'Packages starting at US$349 cover the agreed PSA or NBI retrieval and DFA Apostille. DHL international shipping is charged separately. See our Pricing page for the full breakdown.',
               },
             },
             {
@@ -85,7 +85,7 @@ export default function ApostilleGuideEn() {
     >
       <HeroBanner
         title="DFA Apostille for Philippine Documents — Shipped Worldwide"
-        badges={['Correct Authentication Route', 'Digital or DHL Delivery', 'All-Inclusive Pricing']}
+        badges={['Correct Authentication Route', 'Digital or DHL Delivery', 'Upfront Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="September 15, 2026"
@@ -211,7 +211,7 @@ export default function ApostilleGuideEn() {
 
       <FaqSection
         items={[
-          { q: 'How much does it cost?', a: 'DFA Apostille is included in all service packages starting at US$349. PSA/NBI retrieval + Apostille + DHL shipping are all covered. See our Pricing page for the full breakdown.' },
+          { q: 'How much does it cost?', a: 'Packages starting at US$349 cover the agreed PSA or NBI retrieval and DFA Apostille. DHL international shipping is charged separately. See our Pricing page for the full breakdown.' },
           { q: 'What is the difference between e-Apostille and physical authentication?', a: 'For PSA e-Certificates used in Apostille Convention countries, DFA issues a digital e-Apostille. For non-member destinations, DFA issues a physical Certificate of Authentication and the destination may require embassy attestation. The receiving authority decides which route is acceptable.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total: PSA takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },

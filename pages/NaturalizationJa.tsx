@@ -44,7 +44,7 @@ export default function NaturalizationJa() {
             '@type': 'UnitPriceSpecification',
             price: '50000',
             priceCurrency: 'JPY',
-            description: 'PSA e-Certificate・DFA e-Apostille・SECPA紙原本・DHL国際郵送を含む税込総額',
+            description: 'PSA e-Certificate・DFA e-Apostille・SECPA紙原本を含む税込料金（DHL国際送料別）',
           },
         },
         },
@@ -65,7 +65,7 @@ export default function NaturalizationJa() {
               name: '料金はいくらですか？',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'PSA書類1通は50,000円、2通セットは80,000円、3〜5通の帰化書類パックは132,500円です（いずれも税込・e-Apostille・PSA紙原本・DHL配送込み）。6通目以降は追加1通ごとに＋26,500円です。実例として家族分6通で159,000円です。',
+                text: 'PSA書類1通は50,000円、2通セットは80,000円、3〜5通の帰化書類パックは132,500円です（いずれも税込・e-Apostille・PSA紙原本・DHL国際送料別）。6通目以降は追加1通ごとに＋26,500円です。実例として家族分6通で159,000円です。',
               },
             },
             {
@@ -291,11 +291,11 @@ export default function NaturalizationJa() {
           <div className="px-4 py-3 font-bold text-center">料金</div>
         </div>
         {[
-          { label: 'PSA書類1通フルセット（e-Apostille・紙原本・DHL込み）', price: '50,000円（税込）' },
-          { label: 'PSA書類2通セット（e-Apostille・紙原本・DHL込み）', price: '80,000円（税込）' },
-          { label: '帰化書類パック：3〜5通（e-Apostille・紙原本・DHL込み）', price: '132,500円（税込）', bold: true },
+          { label: 'PSA書類1通フルセット（e-Apostille・紙原本・DHL国際送料別）', price: '50,000円（税込）' },
+          { label: 'PSA書類2通セット（e-Apostille・紙原本・DHL国際送料別）', price: '80,000円（税込）' },
+          { label: '帰化書類パック：3〜5通（e-Apostille・紙原本・DHL国際送料別）', price: '132,500円（税込）', bold: true },
           { label: '6通目以降、追加1通ごと', price: '＋26,500円（税込）' },
-          { label: '実例：家族6通（本人・父母・兄弟姉妹＋父母の婚姻証明書）', price: '159,000円（税込・一括配送込み）' },
+          { label: '実例：家族6通（本人・父母・兄弟姉妹＋父母の婚姻証明書）', price: '159,000円（税込・DHL国際送料別）' },
         ].map((row, i) => (
           <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
             <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>
@@ -329,7 +329,7 @@ export default function NaturalizationJa() {
       <FaqSection
         items={[
           { q: '帰化申請に必要な書類は何ですか？', a: '一般的にPSA出生証明書・婚姻証明書（DFAアポスティーユ付き）が必要です。状況によって追加書類が必要な場合もあります。無料相談で確認します。' },
-          { q: '料金はいくらですか？（132,500円は1通の値段ですか？）', a: 'PSA書類1通は50,000円、2通セットは80,000円、3〜5通の帰化書類パックは132,500円です（いずれも税込・e-Apostille・PSA紙原本・DHL配送込み）。6通目以降は追加1通ごとに＋26,500円です。実例として家族分6通で159,000円です。' },
+          { q: '料金はいくらですか？（132,500円は1通の値段ですか？）', a: 'PSA書類1通は50,000円、2通セットは80,000円、3〜5通の帰化書類パックは132,500円です（いずれも税込・e-Apostille・PSA紙原本・DHL国際送料別）。6通目以降は追加1通ごとに＋26,500円です。実例として家族分6通で159,000円です。' },
           { q: '司法書士・行政書士の先生から書類取得を依頼することはできますか？', a: 'はい、対応しています。行政書士の先生がクライアントの帰化申請に必要な書類を取り寄せる場合、当社が現地取得からDFAアポスティーユまで代行し、先生の事務所へ郵送します。' },
           { q: '法務局から書類の発行日に条件がある場合、対応できますか？', a: 'はい。法務局の担当官から「〇ヶ月以内に発行されたもの」という指定がある場合は、発行日を指定してお申し込みください。取得スケジュールをその条件に合わせて調整します。' },
           { q: 'フィリピンの書類は日本語訳文が必要ですか？', a: 'はい。外国語（英語・フィリピン語）で書かれた書類には、翻訳者の氏名・住所・翻訳日付を記載した日本語訳文の添付が求められます。当社で書類取得とあわせて翻訳文の手配もご相談いただけます。' },

@@ -38,7 +38,7 @@ export default function AustraliaDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'Australia Immigration Document Package — all documents + DFA Apostille + DHL to Australia (all-inclusive)',
+            description: 'Australia Immigration Document Package — all documents + DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -67,7 +67,7 @@ export default function AustraliaDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Australia are included.',
+                text: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to Australia is charged separately.',
               },
             },
             {
@@ -156,7 +156,7 @@ export default function AustraliaDocsEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your visa subclass (partner visa, PR, etc.) and your target submission date.' },
-          { title: 'We confirm scope and quote', description: 'We verify required documents for Home Affairs and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify required documents for Home Affairs and provide an itemized quote.' },
           { title: 'We handle the applications', description: 'We complete the PSA online applications and DFA e-Apostille applications; our Cebu team handles NBI Clearance retrieval and its physical DFA Apostille.' },
           { title: 'DHL delivery to Australia', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
@@ -166,7 +166,7 @@ export default function AustraliaDocsEn() {
         items={[
           { q: 'Does Australia require DFA Apostille on Philippine documents?', a: 'Not in every case. Australia is a Hague Convention member, but requirements vary by visa subclass and document. We verify the current Home Affairs checklist before processing.' },
           { q: 'What documents are needed for an Australian partner visa (subclass 820/801)?', a: 'Typically CENOMAR and PSA Birth Certificate with DFA Apostille. NBI Clearance may also be required. Requirements vary by visa subclass. We confirm for your specific case.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping to Australia are included.' },
+          { q: 'How much does it cost?', a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping to Australia is charged separately.' },
           { q: 'How long does it take to ship to Australia?', a: 'Approximately 4–6 weeks total. DHL Express delivery from the Philippines to Australia typically takes 3–5 business days after documents are ready.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"

@@ -113,7 +113,7 @@ export default function ServicePageTemplate({ lang, routePath, title, badges }: 
               { q: '提出予定日に合わせてスケジュールを組んでもらえますか？', a: '提出予定日をお知らせいただければ、逆算してスケジュールをご案内します。現地機関の処理状況により前後する場合がありますが、進捗は随時ご報告します。' },
             ]
           : [
-              { q: 'How much does it cost?', a: 'Pricing depends on your case. We provide all-inclusive pricing after review.' },
+              { q: 'How much does it cost?', a: 'Pricing depends on your case. We provide an itemized quote after review.' },
               { q: 'How long does it take?', a: 'Most cases complete in about 4-6 weeks including DHL shipping.' },
               { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm priority options first.' },
             ]}

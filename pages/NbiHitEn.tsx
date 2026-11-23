@@ -39,7 +39,7 @@ export default function NbiHitEn() {
             '@type': 'UnitPriceSpecification',
             price: '399',
             priceCurrency: 'USD',
-            description: 'NBI retrieval + HIT resolution support + DFA Apostille + DHL worldwide (all-inclusive)',
+            description: 'NBI retrieval + HIT resolution support + DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -85,7 +85,7 @@ export default function NbiHitEn() {
     >
       <HeroBanner
         title="NBI HIT Result? We Help You Resolve It"
-        badges={['English Support', 'Case-by-Case Handling', 'All-Inclusive Pricing']}
+        badges={['English Support', 'Case-by-Case Handling', 'Upfront Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"

@@ -187,7 +187,7 @@ export default function NbiClearanceOnlineEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your use case (visa, immigration, work permit) and whether this is your first NBI or a renewal.' },
-          { title: 'We confirm scope and quote', description: 'We verify HIT status if applicable and provide all-inclusive pricing including Apostille and shipping.' },
+          { title: 'We confirm scope and quote', description: 'We check for an NBI HIT where applicable and confirm the service fee, the Apostille requirements, and the separate DHL shipping charge.' },
           { title: 'NBI processing in the Philippines', description: 'Our Cebu team coordinates with NBI — online renewal or in-person depending on your case.' },
           { title: 'DFA Apostille', description: 'Since October 23, 2026, DFA issues only e-Apostilles for NBI eClearances obtained through eGovPH for destinations where the Apostille Convention applies. A paper NBI Clearance cannot be submitted for Apostille through the former counter process.' },
           { title: 'DHL delivery worldwide', description: 'Shipped with tracking to your international address. Estimated total: 4–6 weeks.' },

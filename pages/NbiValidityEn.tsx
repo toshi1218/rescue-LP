@@ -40,7 +40,7 @@ export default function NbiValidityEn() {
               '@type': 'UnitPriceSpecification',
               price: '399',
               priceCurrency: 'USD',
-              description: 'NBI Clearance retrieval + DFA Apostille + DHL shipping worldwide (all-inclusive)',
+              description: 'NBI Clearance retrieval + DFA Apostille (DHL shipping charged separately)',
             },
           },
         },
@@ -78,7 +78,7 @@ export default function NbiValidityEn() {
     >
       <HeroBanner
         title="NBI Clearance Timing: Get It Right for Your Visa Interview"
-        badges={['Ships via DHL', 'Deadline-Aware Scheduling', 'All-Inclusive Pricing']}
+        badges={['Ships via DHL', 'Deadline-Aware Scheduling', 'Upfront Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -150,7 +150,7 @@ export default function NbiValidityEn() {
         heading="How It Works"
         steps={[
           { title: 'Share your visa deadline', description: 'Tell us your interview date or submission deadline. We factor in the 1-year validity and any MATCH FOUND risk to set a safe start date.' },
-          { title: 'We confirm the timeline and quote', description: 'We provide the optimal start date and all-inclusive pricing (NBI retrieval + DFA Apostille + DHL shipping).' },
+          { title: 'We confirm the timeline and quote', description: 'We confirm when to start and quote NBI retrieval and DFA Apostille. DHL shipping is charged separately.' },
           { title: 'NBI retrieval and DFA Apostille in the Philippines', description: 'Our Cebu team handles the NBI application and DFA Apostille. If a MATCH FOUND occurs, we manage the resolution process.' },
           { title: 'DHL delivery to your address worldwide', description: 'Tracked shipment directly to your door. Estimated total: 4–6 weeks (longer if MATCH FOUND resolution is needed).' },
         ]}
@@ -161,7 +161,7 @@ export default function NbiValidityEn() {
           { q: 'How long is NBI Clearance valid?', a: 'NBI Clearance is valid for 1 year from issuance. However, some submission authorities require a document issued within 6 months. We time retrieval to match your schedule.' },
           { q: 'How long does the full process take?', a: 'Approximately 4–6 weeks: NBI takes 2–3 weeks, DFA Apostille 1–2 weeks, and DHL shipping 3–5 business days.' },
           { q: 'My NBI Clearance expired — can I get a new one quickly?', a: 'Yes. Share your new deadline and we will confirm priority options. Re-retrieval follows the same process.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. NBI retrieval, DFA Apostille, and DHL shipping are all included.' },
+          { q: 'How much does it cost?', a: 'We confirm the service fee after reviewing your case. It covers NBI retrieval and DFA Apostille. DHL shipping is charged separately.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"

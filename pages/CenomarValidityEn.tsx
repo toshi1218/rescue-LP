@@ -77,7 +77,7 @@ export default function CenomarValidityEn() {
     >
       <HeroBanner
         title="CENOMAR Timing: We Help You Get It Right the First Time"
-        badges={['Online Application Handled', 'Deadline-Aware Scheduling', 'All-Inclusive Pricing']}
+        badges={['Online Application Handled', 'Deadline-Aware Scheduling', 'Upfront Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -149,7 +149,7 @@ export default function CenomarValidityEn() {
         heading="How It Works"
         steps={[
           { title: 'Share your visa deadline', description: 'Tell us your interview date or submission deadline. We calculate when the online application must start so CENOMAR arrives within the 6-month validity window.' },
-          { title: 'We confirm the timeline and quote', description: 'We provide the optimal start date and all-inclusive pricing (PSA online application + DFA e-Apostille application).' },
+          { title: 'We confirm the timeline and quote', description: 'We provide the optimal start date and an itemized quote (PSA online application + DFA e-Apostille application).' },
           { title: 'We complete the PSA and DFA online applications', description: 'We handle the PSA application, payment, and DFA e-Apostille application on your behalf, in English. We update you on progress.' },
           { title: 'Document delivered', description: 'PSA delivers your document; the DFA e-Apostille is delivered electronically for submission. Estimated total depends on PSA/DFA processing.' },
         ]}
@@ -160,7 +160,7 @@ export default function CenomarValidityEn() {
           { q: 'How long is CENOMAR valid?', a: 'There is no legal expiration, but most submission authorities (USCIS, NVC, embassies) require a document issued within 6 months. We time retrieval to match your schedule.' },
           { q: 'How long does the full process take?', a: 'Timing depends on PSA and DFA processing queues. We confirm a current estimate for your case before you commit.' },
           { q: 'My CENOMAR expired — can I get a new one quickly?', a: 'Yes. Share your new deadline and we will confirm priority options. Re-application follows the same process.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case, covering the PSA online application and DFA e-Apostille application.' },
+          { q: 'How much does it cost?', a: 'We provide an itemized quote after reviewing your case, covering the PSA online application and DFA e-Apostille application.' },
         ]}
         ctaTitle="Share your case and we will guide your next step"
         ctaButton="Go to Contact Form"

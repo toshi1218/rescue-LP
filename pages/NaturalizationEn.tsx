@@ -38,7 +38,7 @@ export default function NaturalizationEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'Immigration Document Package — PSA + NBI + DFA Apostille + DHL worldwide (all-inclusive)',
+            description: 'Immigration Document Package — PSA + NBI + DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -59,7 +59,7 @@ export default function NaturalizationEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.',
+                text: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping is charged separately.',
               },
             },
             {
@@ -84,7 +84,7 @@ export default function NaturalizationEn() {
     >
       <HeroBanner
         title="Philippine Documents for Citizenship & Naturalization — Retrieved and Shipped Worldwide"
-        badges={['Ships Worldwide via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Ships Worldwide via DHL', 'Apostille Included', 'Upfront Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -96,7 +96,7 @@ export default function NaturalizationEn() {
           'PSA Birth Certificate, NBI Clearance, and other documents with DFA Apostille',
           'Ready for USCIS, IRCC, Home Affairs, UKVI and other authorities',
           'We confirm exact requirements for your citizenship application',
-          'All-inclusive pricing with DHL Express shipping worldwide',
+          'DHL Express international shipping is quoted and charged separately',
         ]}
         ctaText="Free Consultation"
       />
@@ -156,7 +156,7 @@ export default function NaturalizationEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your citizenship application status and your submission deadline.' },
-          { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify required documents and provide an itemized quote.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles all PSA retrieval and DFA Apostille.' },
           { title: 'DHL delivery worldwide', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
@@ -165,7 +165,7 @@ export default function NaturalizationEn() {
       <FaqSection
         items={[
           { q: 'What Philippine documents are required for citizenship or naturalization?', a: 'Requirements vary by country and case. Typically PSA Birth Certificate and/or NBI Clearance with DFA Apostille. We confirm for your specific application.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All PSA documents, DFA Apostille, and DHL shipping are included.' },
+          { q: 'How much does it cost?', a: 'We confirm the service fee after reviewing your case. It covers all PSA documents and DFA Apostille. DHL shipping is charged separately.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your submission deadline and we will confirm whether priority processing is feasible.' },
         ]}

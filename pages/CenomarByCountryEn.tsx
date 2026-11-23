@@ -271,7 +271,7 @@ export default function CenomarByCountryEn() {
 
       <RelatedArticles
         items={[
-          { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'All-inclusive CENOMAR retrieval + Apostille + DHL shipping worldwide.' },
+          { href: '/en/cenomar/', title: 'CENOMAR Service', description: 'CENOMAR retrieval and Apostille, with DHL international shipping billed separately.' },
           { href: '/en/cenomar-apostille/', title: 'Does CENOMAR Need Apostille?', description: 'When DFA Apostille is required and when it is not.' },
           { href: '/en/cenomar-validity/', title: 'CENOMAR Validity & Timing', description: 'CENOMAR is valid for 6 months. We time retrieval to meet your deadline.' },
           { href: '/en/document-checklist-by-visa/', title: 'Document Checklist by Visa Type', description: 'Full checklist of Philippine documents needed per visa type.' },

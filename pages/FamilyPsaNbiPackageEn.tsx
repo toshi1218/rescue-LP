@@ -13,7 +13,7 @@ import { SEO_YEAR_MONTH_EN } from '../lib/seoDate';
 export default function FamilyPsaNbiPackageEn() {
   useMeta(
     `3-Applicant PSA + NBI Family Package [${SEO_YEAR_MONTH_EN}]`,
-    'Three family members applying together: PSA Birth Certificates, first-time NBI Clearances, DFA Apostilles, case coordination, and one DHL shipment for US$1,249.',
+    'Three family members applying together: PSA Birth Certificates, first-time NBI Clearances, DFA Apostilles, and case coordination for US$1,249. DHL shipping is charged separately.',
   );
 
   return (
@@ -28,7 +28,7 @@ export default function FamilyPsaNbiPackageEn() {
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: '3-Applicant PSA + NBI Family Package',
-          description: 'A bundled Philippine document service for three family members applying together: three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, case coordination, and one consolidated DHL shipment.',
+          description: 'A bundled Philippine document service for three family members applying together: three PSA Birth Certificates, three first-time NBI Clearances, the applicable DFA Apostilles, and case coordination. Consolidated DHL shipping is charged separately.',
           url: 'https://ph-document.com/en/family-psa-nbi-package/',
           provider: {
             '@type': 'Organization',
@@ -53,7 +53,7 @@ export default function FamilyPsaNbiPackageEn() {
               name: 'Who qualifies for the US$1,249 family package?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'The fixed price applies to exactly three family members using the documents for the same country and purpose, with one consolidated shipment to one address.',
+                text: 'The fixed price applies to exactly three family members using the documents for the same country and purpose, with consolidated shipping available to one address. DHL shipping is charged separately.',
               },
             },
             {
@@ -77,7 +77,7 @@ export default function FamilyPsaNbiPackageEn() {
               name: 'How is payment divided?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'The total is paid in two installments of US$624.50: the first to begin processing and the second after document copies are confirmed and before DHL shipment.',
+                text: 'The service fee is paid in two installments of US$624.50: the first to begin processing and the second after you confirm the copies. The separate DHL shipping charge is due before dispatch.',
               },
             },
           ],
@@ -87,7 +87,7 @@ export default function FamilyPsaNbiPackageEn() {
       <HeroBanner
         title="3-Applicant PSA + NBI Family Package"
         subtitle="One coordinated package for three family members applying together"
-        badges={['US$1,249 total', '6 Philippine documents + Apostilles', 'One consolidated DHL shipment']}
+        badges={['US$1,249 service fee', '6 Philippine documents + Apostilles', 'One consolidated DHL shipment']}
         ctaText="Request This Package"
         ctaHref="#contact"
         ctaService="3-Applicant PSA + NBI Family Package"
@@ -95,12 +95,12 @@ export default function FamilyPsaNbiPackageEn() {
       />
 
       <SummaryBlock
-        conclusion="Three applicants, one coordinated case, and one fixed price: US$1,249."
+        conclusion="One coordinated case for three applicants. The service fee is US$1,249, with DHL shipping charged separately."
         points={[
           'Three PSA Birth Certificate packages with DFA e-Apostilles and one SECPA paper copy each when required',
           'Three first-time NBI Clearances, with e-Apostille support where required and eligible',
           'Authorization Letters, case review, and progress updates',
-          'One consolidated DHL Express shipment to one address',
+          'One consolidated DHL Express shipment to one address, quoted separately',
         ]}
         ctaText="Request This Package"
       />
@@ -109,9 +109,9 @@ export default function FamilyPsaNbiPackageEn() {
         <p className="text-xs font-bold uppercase tracking-wider text-primary mb-2">Family bundle</p>
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-2xl font-bold text-secondary">US$1,249 total for three applicants</h2>
+            <h2 className="text-2xl font-bold text-secondary">US$1,249 service fee for three applicants</h2>
             <p className="mt-2 text-sm text-gray-600">
-              Two payments of US$624.50. The second payment is due after you confirm the document copies and before DHL shipment.
+              The service fee is split into two US$624.50 payments. The second payment and the separate DHL shipping charge are due after you confirm the document copies and before dispatch.
             </p>
           </div>
           <p className="text-sm font-semibold text-secondary md:text-right">
@@ -142,7 +142,7 @@ export default function FamilyPsaNbiPackageEn() {
           {
             icon: <Globe className="w-4 h-4" />,
             title: 'One consolidated DHL shipment',
-            description: 'The completed physical documents are combined into one tracked international shipment to one address.',
+            description: 'We can combine the physical documents into one tracked international shipment to one address. DHL shipping is charged separately.',
           },
         ]}
       />
@@ -177,7 +177,7 @@ export default function FamilyPsaNbiPackageEn() {
           },
           {
             title: 'Confirm copies and receive the DHL shipment',
-            description: 'After you review the document copies and pay the second US$624.50 installment, we dispatch the consolidated shipment.',
+            description: 'We dispatch the consolidated shipment after you review the copies and pay the second US$624.50 installment and the separate DHL shipping charge.',
           },
         ]}
       />

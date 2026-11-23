@@ -111,7 +111,7 @@ export default function BusinessTourokushienJa() {
             </table>
             <p className="mt-4 text-xs text-gray-500 flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-primary flex-shrink-0" />
-              上記は税込・DHL国際送料込みの総額です。PSA民事書類の単品料金は、電子版のみ／SECPA紙原本のみ ¥30,000、e-Apostille付き ¥40,000、フルセット（電子＋e-Apostille＋SECPA紙原本＋DHL）¥55,000（いずれも税込）です。複数件・継続案件の料金はお問い合わせください
+              上記は税込のサービス料金です。DHL国際送料は別途請求します。PSA民事書類の単品料金は、電子版のみ／SECPA紙原本のみ ¥30,000、e-Apostille付き ¥40,000、フルセット（電子＋e-Apostille＋SECPA紙原本）¥55,000（いずれも税込）です。複数件・継続案件の料金はお問い合わせください
             </p>
           </div>
         </div>

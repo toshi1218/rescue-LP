@@ -39,7 +39,7 @@ export default function K1VisaDocsEn() {
             '@type': 'UnitPriceSpecification',
             price: '899',
             priceCurrency: 'USD',
-            description: 'K-1 Document Package — all documents + DFA Apostille + DHL to USA (all-inclusive)',
+            description: 'K-1 Document Package — all documents + DFA Apostille (DHL shipping charged separately)',
           },
         },
         },
@@ -60,7 +60,7 @@ export default function K1VisaDocsEn() {
               name: 'How much does it cost?',
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.',
+                text: 'We confirm the service fee after reviewing your case. It covers all documents and DFA Apostille. DHL shipping is charged separately.',
               },
             },
             {
@@ -85,7 +85,7 @@ export default function K1VisaDocsEn() {
     >
       <HeroBanner
         title="K-1 Fiancé Visa: Philippine Documents Retrieved and Shipped to the USA"
-        badges={['Ships via DHL', 'Apostille Included', 'All-Inclusive Pricing']}
+        badges={['Ships via DHL', 'Apostille Included', 'Upfront Pricing']}
         ctaText="Free Consultation"
         ctaHref="#contact"
         lastUpdated="April 1, 2026"
@@ -97,7 +97,7 @@ export default function K1VisaDocsEn() {
           'Current USCIS, NVC, and embassy-stage requirements checked before processing',
           'We handle the entire document chain from retrieval to authentication',
           'Shipped via DHL Express to your US address',
-          'All-inclusive pricing: no hidden fees for Apostille or shipping',
+          'DFA Apostille is included in the stated service fee. DHL shipping is charged separately.',
         ]}
         ctaText="Free Consultation"
       />
@@ -157,7 +157,7 @@ export default function K1VisaDocsEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us your K-1 case status and your target USCIS or embassy interview date.' },
-          { title: 'We confirm scope and quote', description: 'We verify required documents and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify required documents and provide an itemized quote.' },
           { title: 'Local processing in the Philippines', description: 'Our Cebu team handles CENOMAR, Birth Certificate, NBI Clearance, and DFA Apostille.' },
           { title: 'DHL delivery to the USA', description: 'All documents shipped together with tracking. Estimated total: 4–6 weeks.' },
         ]}
@@ -166,7 +166,7 @@ export default function K1VisaDocsEn() {
       <FaqSection
         items={[
           { q: 'What Philippine documents does USCIS require for K-1?', a: 'Requirements differ between petition and interview stages. PSA civil records and NBI Clearance may be requested. We confirm the current official checklist for your case.' },
-          { q: 'How much does it cost?', a: 'We provide all-inclusive pricing after reviewing your case. All documents, DFA Apostille, and DHL shipping are included.' },
+          { q: 'How much does it cost?', a: 'We confirm the service fee after reviewing your case. It covers all documents and DFA Apostille. DHL shipping is charged separately.' },
           { q: 'How long does it take?', a: 'Approximately 4–6 weeks total. We coordinate all documents together to minimize total time.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your USCIS or interview deadline and we will confirm whether priority processing is feasible.' },
         ]}

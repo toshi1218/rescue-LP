@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<MenuType>(null);
   const [dropdownPos, setDropdownPos] = useState<{ left: number; top: number }>({ left: 0, top: 0 });
-  const [navHeight, setNavHeight] = useState(112);
+  const [navBottom, setNavBottom] = useState(112);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const navRef = useRef<HTMLElement>(null);
   const docsRef = useRef<HTMLDivElement>(null);
@@ -218,15 +218,15 @@ const Navbar: React.FC = () => {
     closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
   };
 
-  // Measure actual nav height for mobile menu positioning
+  // Locate the navbar in the viewport when opening the mobile menu.
   useEffect(() => {
     const measure = () => {
-      if (navRef.current) setNavHeight(navRef.current.getBoundingClientRect().height);
+      if (navRef.current) setNavBottom(navRef.current.getBoundingClientRect().bottom);
     };
     measure();
     window.addEventListener('resize', measure);
     return () => window.removeEventListener('resize', measure);
-  }, []);
+  }, [mobileOpen]);
 
   // Keyboard: Escape closes dropdown / mobile menu and returns focus to trigger
   useEffect(() => {
@@ -606,7 +606,7 @@ const Navbar: React.FC = () => {
 
       {/* モバイルメニュー — nav外に配置（backdrop-filterのfixed基点バグ回避） */}
       {mobileOpen && (
-        <div id="mobile-menu" ref={mobileMenuRef} className="md:hidden fixed inset-x-0 bottom-0 z-[200] bg-white overflow-y-auto" style={{ top: navHeight }}>
+        <div id="mobile-menu" ref={mobileMenuRef} className="md:hidden fixed inset-x-0 bottom-0 z-[200] bg-white overflow-y-auto" style={{ top: navBottom }}>
           <div className="px-4 py-4 space-y-1">
             <Link to={homePath} onClick={() => setMobileOpen(false)} className="block px-3 py-3 rounded-lg text-sm font-semibold text-secondary hover:bg-gray-50">
               {t('navbar.home')}

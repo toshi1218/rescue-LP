@@ -15,7 +15,7 @@ import { useMeta } from '../lib/useMeta';
 export default function LicenseConversionJa() {
   useMeta(
     'フィリピン免許の外免切替｜必要書類・LTO代行49,500円',
-    'フィリピン免許から日本免許への外免切替に必要なLTO書類を日本語で取得代行。標準49,500円（税込・DFAアポスティーユ・DHL送料込み）。追加書類等は事前見積もり。受理の最終判断は免許センターによります。',
+    'フィリピン免許から日本免許への外免切替に必要なLTO書類を日本語で取得代行。標準49,500円（税込・DFAアポスティーユ・DHL国際送料別）。追加書類等は事前見積もり。受理の最終判断は免許センターによります。',
   );
   return (
     <PageLayout
@@ -41,7 +41,7 @@ export default function LicenseConversionJa() {
               '@type': 'UnitPriceSpecification',
               price: '49500',
               priceCurrency: 'JPY',
-              description: 'LTO書類取得・DFAアポスティーユ込み（税込・DHL国際送料込み）',
+              description: 'LTO書類取得・DFAアポスティーユ込み（税込・DHL国際送料別）',
             },
           },
         },
@@ -119,8 +119,8 @@ export default function LicenseConversionJa() {
     >
       <HeroBanner
         title="フィリピン免許の外免切替｜LTO書類取得代行"
-        subtitle="LTO Certification・License History等の取得とDFAアポスティーユ、DHL国際配送を標準49,500円（税込）で手配。日本語でご相談いただけます。記録不一致やOR探索・追加書類は着手前に別途お見積もりします。"
-        badges={['DFA認証・DHL送料込み', '日本語でメール相談', '法人・複数名対応可']}
+        subtitle="LTO Certification・License History等の取得とDFAアポスティーユを標準49,500円（税込）で手配。DHL国際送料は別途です。日本語でご相談いただけます。記録不一致やOR探索・追加書類は着手前に別途お見積もりします。"
+        badges={['DFA認証・DHL国際送料別', '日本語でメール相談', '法人・複数名対応可']}
         ctaText="メールで無料相談"
         ctaHref="#contact"
         ctaService="免許切り替え"
@@ -163,7 +163,7 @@ export default function LicenseConversionJa() {
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">代行料金（税込）</dt>
               <dd className="font-medium text-gray-800">49,500円（DFAアポスティーユ込み）</dd>
-              <dd className="text-gray-400 text-xs mt-1">※DHL国際配送の送料込み</dd>
+              <dd className="text-gray-400 text-xs mt-1">※DHL国際送料は別途請求</dd>
             </div>
             <div className="bg-white rounded-lg border border-gray-100 p-3">
               <dt className="text-gray-500 text-xs mb-1">所要期間の目安</dt>
@@ -182,8 +182,8 @@ export default function LicenseConversionJa() {
             {[
               { label: 'LTO書類取得（Certification・License History 等）', price: '込み' },
               { label: 'DFAアポスティーユ認証', price: '込み' },
-              { label: 'DHL国際配送（追跡付き）', price: '込み' },
-              { label: '合計（DFAアポスティーユ・送料込み）', price: '49,500円', bold: true },
+              { label: 'DHL国際配送（追跡付き）', price: '別途見積もり' },
+              { label: 'サービス料金（DFAアポスティーユ込み）', price: '49,500円', bold: true },
             ].map((row, i) => (
               <div key={row.label} className={`grid grid-cols-[2fr_1fr] border-b border-gray-100 last:border-0 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/60'}`}>
                 <div className={`px-4 py-3 text-gray-700 ${row.bold ? 'font-bold' : ''}`}>{row.label}</div>

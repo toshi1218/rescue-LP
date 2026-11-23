@@ -131,7 +131,7 @@ export default function BusinessKigyouJa() {
                   <td className="py-3 text-right font-semibold text-secondary">
                     ¥49,500
                     <br />
-                    <span className="text-xs font-normal text-gray-400">税込・DHL送料込み</span>
+                    <span className="text-xs font-normal text-gray-400">税込・DHL国際送料別</span>
                   </td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>
@@ -139,12 +139,12 @@ export default function BusinessKigyouJa() {
                   <td className="py-3 text-gray-700">
                     PSA出生証明書 フルセット
                     <br />
-                    <span className="text-xs text-gray-400">電子版＋e-Apostille＋SECPA紙原本＋DHL（電子版のみ／紙原本のみは ¥30,000、e-Apostille付きは ¥40,000）</span>
+                    <span className="text-xs text-gray-400">電子版＋e-Apostille＋SECPA紙原本（電子版のみ／紙原本のみは ¥30,000、e-Apostille付きは ¥40,000）</span>
                   </td>
                   <td className="py-3 text-right font-semibold text-secondary">
                     ¥55,000
                     <br />
-                    <span className="text-xs font-normal text-gray-400">税込・DHL送料込み</span>
+                    <span className="text-xs font-normal text-gray-400">税込・DHL国際送料別</span>
                   </td>
                   <td className="py-3 text-right font-semibold text-primary">要相談</td>
                 </tr>

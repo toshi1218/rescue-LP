@@ -176,7 +176,7 @@ export default function PsaOnlineEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry', description: 'Tell us which documents you need and your use case (visa, immigration, marriage registration, etc.).' },
-          { title: 'We confirm scope and quote', description: 'We verify what Apostille or format is required and provide all-inclusive pricing.' },
+          { title: 'We confirm scope and quote', description: 'We verify what Apostille or format is required and provide an itemized quote.' },
           { title: 'PSA retrieval in the Philippines', description: 'Our Cebu team applies to PSA Serbilis / PSA office and collects your documents.' },
           { title: 'DFA Apostille authentication', description: 'We submit originals to DFA for Apostille. Paper originals returned with authentication stamp.' },
           { title: 'DHL delivery to you', description: 'All documents shipped with tracking directly to your international address. Estimated total: 4–6 weeks.' },
