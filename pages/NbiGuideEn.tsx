@@ -89,7 +89,7 @@ export default function NbiGuideEn() {
         badges={['First-Time and Renewal Support', 'Paper Clearance via DHL', 'eGovPH Guidance']}
         ctaText="Free Consultation"
         ctaHref="#contact"
-        lastUpdated="August 12, 2026"
+        lastUpdated="November 22, 2026"
       />
 
       <p className="text-sm text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto text-center px-4">
@@ -99,9 +99,10 @@ export default function NbiGuideEn() {
       </p>
 
       <section className="mb-8 space-y-3 rounded-xl border border-gray-200 p-5 text-sm leading-relaxed text-gray-700">
-        <h2 className="text-xl font-bold text-gray-900">NBI Clearance and the e-Apostille process</h2>
+        <h2 className="text-xl font-bold text-gray-900">Choose an NBI Clearance route from abroad</h2>
         <p><strong>First-time applications</strong> — First-time applicants have their fingerprints taken on Form No. 5. We help submit the original fingerprint card and required documents to NBI headquarters in Manila. We confirm the first-stage fee before starting. <a href="https://nbi.gov.ph/mailed-clearance-abroad/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">Official NBI guidance for overseas applicants</a></p>
-        <p><strong>Previous NBI Clearance</strong> — Tell us when it was issued and whether your personal details have changed. We check whether you can renew.</p>
+        <p><strong>Online renewal</strong> — If you still have your previous clearance, check the <a href="https://clearance.nbi.gov.ph/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">official NBI renewal portal</a> for eligibility and delivery options before paying. If you need a paper clearance overseas, the NBI also allows many certificates issued from 2014 onward to be renewed by mail or through an authorized representative, subject to its requirements. Tell us your last issue year and whether your personal details changed so we can check the right route.</p>
+        <p><strong>If the portal cannot verify your record</strong> — Tell us whether the portal shows an error, asks you to appear, or reports a <a href="/en/nbi-hit/" className="font-semibold underline underline-offset-2">HIT</a>. We can help check what the NBI requires before you pay or book an appointment.</p>
         <p><strong>When an Apostille is required</strong> — Since October 23, 2026, DFA issues only e-Apostilles for NBI eClearances obtained through eGovPH for destinations where the Apostille Convention applies. A paper NBI Clearance cannot be submitted for Apostille through the former counter process. We check eGovPH eligibility and help with application preparation, entry, and payment where available. Applicants complete any required identity verification themselves. We check verification options for foreign passport holders individually. <a href="https://www.apostille.gov.ph/documentary-requirements/" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">Official DFA requirements</a></p>
         <p><strong>Canada Working Holiday</strong> — IRCC does not accept the digital or online version of Philippine NBI Clearance as a police certificate. For International Experience Canada (IEC), including Working Holiday, obtain the paper-issued clearance unless your individual instructions specify otherwise. The standard IRCC guidance does not list an Apostille. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/philippines.html" target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2">Official IRCC guidance</a></p>
       </section>
@@ -109,7 +110,7 @@ export default function NbiGuideEn() {
       <SummaryBlock
         conclusion="You can obtain Philippine NBI Clearance while abroad. The required route depends on whether this is a renewal or a first-time application."
         points={[
-          'Eligibility: 2014+ renewals with no personal-information changes can usually be handled remotely; first-time applicants need embassy or consulate fingerprints',
+          'Eligible renewals can often be handled remotely. First-time applicants use Form No. 5 and consular fingerprinting.',
           'Packages from US$399, with the first-stage fee confirmed before work begins',
           'Timeline: approximately 4–6 weeks; HIT cases may take longer',
           'Prepare: passport or ID, current address, purpose of use, and prior NBI details if available',
@@ -182,7 +183,7 @@ export default function NbiGuideEn() {
         heading="How It Works"
         steps={[
           { title: 'Submit your inquiry with NBI status', description: 'Tell us your use case (K-1, CR-1, Canada PR, etc.), your last NBI issuance year, whether any personal info has changed, and any known HIT issues.' },
-          { title: 'We confirm your case type and provide a quote', description: 'We check whether your case qualifies for remote processing (renewal) or requires embassy fingerprint registration (first-time/name change), and provide all-inclusive pricing upfront.' },
+          { title: 'We confirm your case type and provide a quote', description: 'We check whether remote renewal is available or a new fingerprint submission is required, and quote the scope before work starts.' },
           { title: 'Processing begins based on your case type', description: 'For renewals, we check your previous record. For first-time cases, we guide you through fingerprinting and handle the local submission to NBI headquarters.' },
           { title: 'Receive the agreed documents', description: 'We send the paper clearance by tracked DHL when required. If an e-Apostille is issued, we deliver the electronic document separately.' },
         ]}
@@ -222,7 +223,7 @@ export default function NbiGuideEn() {
           { q: 'How long does it take?', a: 'A typical case takes about 4–6 weeks. Fingerprint delivery, record checks, identity verification, and shipping can extend that estimate.' },
           { q: 'What if the NBI result shows a HIT?', a: 'A HIT means a record was found in the NBI database. This requires separate handling. Share your situation and we will advise on next steps.' },
           { q: 'Can you handle urgent cases?', a: 'Yes. Share your deadline and we will confirm whether priority processing is feasible before you commit.' },
-          { q: 'Can I get NBI Clearance without going back to the Philippines?', a: 'It depends on your situation. If you have a prior NBI Clearance issued in 2014 or later with no personal information changes, our Cebu team can handle it remotely — no Philippines trip needed. First-time applicants or those with name changes need to visit the Philippine Embassy or Consulate in your country for fingerprint registration. We provide step-by-step guidance for both paths.' },
+          { q: 'Can I get NBI Clearance without going back to the Philippines?', a: 'First-time applicants can have fingerprints taken through a Philippine embassy or consulate and submit Form No. 5 to NBI in Manila. For online renewal, check your eligibility in the NBI portal. The NBI also accepts eligible clearances issued from 2014 onward for renewal by mail or through an authorized representative. If your details have changed or NBI requests additional checks, we review the requirements for your case.' },
           { q: 'What if my name on the NBI does not match my passport?', a: 'Name discrepancies can cause problems at immigration interviews. The NBI document must match your passport exactly. Share the discrepancy details and we will advise on the appropriate correction step.' },
           { q: 'Is NBI Clearance the same as a police clearance?', a: 'No. NBI Clearance is a national-level criminal background check from the National Bureau of Investigation. Police clearance is a local-level document from your local police station. Immigration authorities typically require NBI Clearance, not local police clearance.' },
         ]}
