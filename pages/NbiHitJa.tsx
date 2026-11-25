@@ -18,7 +18,7 @@ import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
 export default function NbiHitJa() {
   useMeta(
     `NBI HITが出た——あきらめないでください【${SEO_YEAR_MONTH_JA}】HIT解消から代行取得まで対応`,
-    'NBI HITは必ずしも犯罪歴ではありません。同姓同名の別人の記録の場合も多い。当センターがHIT確認・解消・NBI取得・DFAアポスティーユまで一括代行。まず状況をご相談ください。',
+    'NBI HITは必ずしも犯罪歴ではありません。同姓同名の別人の記録の場合も多い。当センターがHIT確認・解消・NBI取得まで対応し、アポスティーユが必要な場合はeGovPHのe-Apostille申請も代行。まず状況をご相談ください。',
   );
   return (
     <PageLayout
@@ -27,7 +27,7 @@ export default function NbiHitJa() {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: 'NBI HIT（同名者あり）解消・NBI Clearance申請サポート',
-        description: 'NBI ClearanceでHIT（同名者あり）が出た場合の解消手続きからNBI取得・DFAアポスティーユまで一括代行。配偶者ビザ・就労ビザの期限を考慮してスケジュールをご案内します。',
+        description: 'NBI ClearanceでHIT（同名者あり）が出た場合の解消手続きからNBI取得まで対応。アポスティーユが必要な場合はeGovPHのNBI eClearanceへのDFA e-Apostille申請を代行します。配偶者ビザ・就労ビザの期限を考慮してスケジュールをご案内します。',
         url: 'https://ph-document.com/ja/nbi-hit/',
         provider: {
           '@type': 'Organization',
@@ -43,7 +43,7 @@ export default function NbiHitJa() {
             '@type': 'UnitPriceSpecification',
             price: '55000',
             priceCurrency: 'JPY',
-            description: 'NBI取得・HIT対応・DFAアポスティーユ込み（税抜）。DHL国際郵送費は実費別途',
+            description: 'NBI取得・HIT対応・必要な場合のDFA e-Apostille申請代行込み（税抜）。DHL国際郵送費は実費別途',
           },
         },
         },
@@ -89,17 +89,17 @@ export default function NbiHitJa() {
     >
       <HeroBanner
         title="NBI HIT 解決サポート"
-        badges={['HIT解消から一括対応', 'アポスティーユ込み', '費用は事前にご案内']}
+        badges={['HIT解消から一括対応', 'e-Apostille申請代行', '費用は事前にご案内']}
         ctaText="無料相談はこちら"
         ctaHref="#contact"
-        lastUpdated="2026年3月1日"
+        lastUpdated="2026年11月15日"
       />
 
       <SummaryBlock
         conclusion="NBI HITが出ても、あきらめないでください。HIT解消からNBI Clearance取得まで、一括で対応します。"
         points={[
           'HITは必ずしも犯罪歴ではない。同姓同名の別人の記録の場合も多い',
-          'HIT確認・解消手続き・NBI取得・DFAアポスティーユまで一括代行',
+          'HIT確認・解消手続き・NBI取得に対応。アポスティーユはeGovPHのe-Apostille申請を代行',
           'ビザ申請の期限が迫っている場合も、まず状況をご相談ください',
           '日本語だけで対応可能。フィリピンに行く必要なし',
         ]}
@@ -168,7 +168,7 @@ export default function NbiHitJa() {
             { icon: AlertTriangle, title: 'HITが突然出た', description: '身に覚えがなくても同姓同名の記録が引っかかるケースが多い。まず状況確認から', accent: 'red' },
             { icon: Fingerprint, title: 'Identity Verification', description: '指紋照合・書類提出で同名者との区別を証明する手続きを代行', accent: 'gold' },
             { icon: Clock, title: '期限が迫っている', description: 'ビザ申請の期限が近い場合も、まず相談ください。スケジュールをご案内します', accent: 'blue' },
-            { icon: ShieldCheck, title: 'HIT解消まで一括対応', description: 'NBI窓口との手続き・解消・Clearance取得・DFAアポスティーユまで代行', accent: 'green' },
+            { icon: ShieldCheck, title: 'HIT解消まで一括対応', description: 'NBI窓口との手続き・解消・Clearance取得まで対応。アポスティーユはe-Apostille申請を代行', accent: 'green' },
             { icon: Users, title: '日本語でサポート', description: 'フィリピン語・英語の手続きも当社が対応。日本語だけで完結', accent: 'gold' },
             { icon: Globe, title: 'フィリピン渡航不要', description: '現地スタッフがNBI窓口に対応。日本にいながら手続きを進められます', accent: 'blue' },
           ]}
@@ -196,7 +196,7 @@ export default function NbiHitJa() {
             {
               icon: <FileCheck className="w-4 h-4" />,
               title: 'クリアランス取得後のアポスティーユ手配',
-              description: 'HIT解消後のNBI Clearance取得・DFAアポスティーユまで一括で対応します。',
+              description: 'HIT解消後のNBI Clearance取得に続き、必要な場合はeGovPHのNBI eClearanceへのDFA e-Apostille申請を代行します（アプリの本人認証はご本人が行います）。',
             },
           ]}
         />
@@ -219,7 +219,7 @@ export default function NbiHitJa() {
           { item: 'HIT解消の手続き', self: false, agency: true },
           { item: 'NBI窓口との交渉', self: 'フィリピン語が必要', agency: true },
           { item: '日本語サポート', self: '英語のみ', agency: true },
-          { item: 'アポスティーユまで一括', self: false, agency: true },
+          { item: 'e-Apostille申請代行', self: false, agency: true },
           { item: '緊急対応の相談', self: '—', agency: true },
         ]}
       />
