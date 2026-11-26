@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { CheckCircle, ChevronDown } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { CheckCircle } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import GuideLinks from '../components/GuideLinks';
@@ -19,7 +19,6 @@ import { useMeta } from '../lib/useMeta';
 import { SEO_TITLE_BADGE_JA } from '../lib/seoDate';
 
 export default function HomeJa() {
-  const [noticeExpanded, setNoticeExpanded] = useState(false);
 
   useMeta(
     `フィリピン書類、日本語だけで確実に取り寄せできます｜CENOMAR・PSA・NBI代行${SEO_TITLE_BADGE_JA}`,
@@ -147,8 +146,7 @@ export default function HomeJa() {
               <p className="text-base md:text-lg font-bold text-secondary leading-snug mb-3">
                 2026年3月以降、PSA民事書類（出生・婚姻・CENOMAR等）のアポスティーユは<span className="text-red-700">e-Apostille（電子）</span>で発行されます。一方、ドイツなど別の認証ルートが必要な提出先には、<strong>紙のDFA Authentication Certificateと大使館認証</strong>を確認して手配します。当社は提出先に合わせた申請・支払いを日本語で代行します。
               </p>
-              {noticeExpanded && (
-                <ul className="space-y-3 mt-4">
+                              <ul className="space-y-3 mt-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-red-700 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700 leading-relaxed">
@@ -168,16 +166,6 @@ export default function HomeJa() {
                     </span>
                   </li>
                 </ul>
-              )}
-              {!noticeExpanded && (
-                <button
-                  onClick={() => setNoticeExpanded(true)}
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-red-700 hover:text-red-800 transition-colors"
-                >
-                  <ChevronDown className="w-3.5 h-3.5" />
-                  詳細を見る
-                </button>
-              )}
 
               {/* e-Certificate対応の案内 */}
               <div className="mt-5 pt-4 border-t border-gray-100 flex items-start gap-3 bg-blue-50 rounded-xl px-4 py-3">
