@@ -256,7 +256,7 @@ export default function HomeJa() {
         <FAQ />
       </main>
       <Footer />
-      <BackToTop />
+      <BackToTop side="right" />
     </div>
   );
 }

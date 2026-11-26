@@ -449,7 +449,7 @@ export default function HomeKo() {
         </section>
       </main>
 
-      <BackToTop />
+      <BackToTop side="right" label="맨 위로" />
       <FooterKo />
     </div>
   );
