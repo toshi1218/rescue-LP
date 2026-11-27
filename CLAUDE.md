@@ -575,7 +575,8 @@ npm run build    # runs lint-seo.sh → vite build → prerender.ts
 
 ## 2026-11-27 セッションサマリー（GSC落ち込み分析・トップページ整理・title月表記）
 
-ブランチ `claude/depression-causes-status-xj5iih`（main 未マージ・PR 未作成）に以下を実装済み。
+以下を PR #520 で main にマージ済み（2026-11-27・squash `0c87856`・判定🟡）。
+**2026-12-11 まで他の共通コンポーネント・構造変更を出さない**（下記4の5ページの title 再変更も同日まで行わない）。
 
 1. 3言語トップに「トップに戻る」ボタン（右下）
 2. 日英トップの「残り◯件を見る」系の開閉を廃止（FAQ のアコーディオンは維持）、JA Hero の写真に紺のオーバーレイ
@@ -584,6 +585,10 @@ npm run build    # runs lint-seo.sh → vite build → prerender.ts
    `/ja/psa-ecertificate-nihon/` `/ja/psa-shussei-shomeisho/` `/en/psa-birth-certificate/`）
 
 ### 持ち越しタスク
+
+#### 要確認: ローリングバケツの日数が食い違っている
+- 本ファイルと `docs/merge-schedule.md` は「ローリング**7日**」、`merge_pull_request` 前のフックは「ローリング**14日**」を要求する。
+- #520 は7日で判定してマージし、事後に14日へ寄せた。どちらを正とするかユーザーに確認して揃える。
 
 #### G. title に「2026年4月 / April 2026」が残るページ（残り約60ページ）
 - `lib/seoDate.ts` の `SEO_MONTH` は**書き換えない**（60ページ超の title が一斉に変わる）。
