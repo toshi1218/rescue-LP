@@ -570,3 +570,33 @@ npm run build    # runs lint-seo.sh → vite build → prerender.ts
 #### F. 継続監視
 - PR #322：CI green（seo-gate・Cloudflare Pages）・レビューコメントなし。**main mergeは絶対禁止**（2026-07-15まで、解除は「main merge」明示入力のみ）。
   状態が知りたいときにその都度確認する。**定期的な自動監視は仕掛けない**（冒頭「PR の自動監視をしない」参照）。
+
+---
+
+## 2026-11-27 セッションサマリー（GSC落ち込み分析・トップページ整理・title月表記）
+
+ブランチ `claude/depression-causes-status-xj5iih`（main 未マージ・PR 未作成）に以下を実装済み。
+
+1. 3言語トップに「トップに戻る」ボタン（右下）
+2. 日英トップの「残り◯件を見る」系の開閉を廃止（FAQ のアコーディオンは維持）、JA Hero の写真に紺のオーバーレイ
+3. JA トップの重複ブロック整理（案内箱の統合・DiyRisks 削除・GuideLinks 削除・事例 3→2 件）
+4. title の「2026年4月」を年表記へ（5ページ: `/ja/nbi-clearance/` `/en/nbi-clearance-overseas/`
+   `/ja/psa-ecertificate-nihon/` `/ja/psa-shussei-shomeisho/` `/en/psa-birth-certificate/`）
+
+### 持ち越しタスク
+
+#### G. title に「2026年4月 / April 2026」が残るページ（残り約60ページ）
+- `lib/seoDate.ts` の `SEO_MONTH` は**書き換えない**（60ページ超の title が一斉に変わる）。
+- 表示回数順に **1回5ページ** ずつ、`pages/*.tsx` の `useMeta()` と `scripts/prerender.ts` の両方を年表記へ。
+- 国別ページ（`/en/qatar/` 269impr など）は `CountryDocsEnTemplate.tsx` と `prerender.ts` の
+  テンプレート1行で全国別ページの title が変わるため、5ページ枠に収まらない。扱いはユーザーに確認する。
+- 次の候補（3か月 impressions）: `/ja/`(134)・`/en/`(132)・`/ja/ryokin/`(117)・
+  `/ja/kika-shinsei-guide/`(111)・`/ja/kokusai-kekkon-guide/`(71)
+
+#### H. 全ページ共通の評価マークアップ（aggregateRating）をトップ以外から外す — 2026-12-15 以降・単独デプロイ
+- 現状: `scripts/prerender.ts` の `buildLocalBusinessJsonLd` が全138ページに同一の
+  `aggregateRating`（4.8 / 47件）を出力。自社サイト上の自社評価は Google の星表示の対象外で、
+  評価が本文に見えないページにも入っている（ガイドライン不適合）。順位下落との因果は未確認。
+- 対応: トップページのみに残し、他ページの JSON-LD から外す。**構造変更（JSON-LD）・全ページ波及**。
+- ユーザー承認済みの方針（2026-11-27）: 11/4・11/7・11/15 の構造変更の余震期間を避け、
+  **12月中旬以降に単独で出す**。前後7〜14日は他の構造・共通コンポーネント変更を止める。

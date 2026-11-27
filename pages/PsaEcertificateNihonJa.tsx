@@ -30,7 +30,7 @@ export default function PsaEcertificateNihonJa() {
 
   // 静的title/descriptionはprerender.tsと同期管理しているため、構造変更とは分離して更新する。
   useMeta(
-    'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
+    'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年版】',
     'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
   );
 

@@ -12,11 +12,11 @@ import RelatedArticles from '../components/RelatedArticles';
 import PaymentTrust from '../components/PaymentTrust';
 import { Fingerprint, AlertTriangle, Eye, MessageSquare, ShieldCheck, CheckCircle, XCircle, Clock, Globe, Users, FileText, Mail, Smartphone, PackageSearch } from 'lucide-react';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function NbiGuideJa() {
   useMeta(
-    `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
+    `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR}年】渡航不要・HIT対応`,
     'フィリピンNBIクリアランスの初回取得・更新をサポート。紙原本の郵送と、必要に応じたeGovPHのNBI e-Apostille申請に対応。',
   );
   return (

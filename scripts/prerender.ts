@@ -482,7 +482,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/psa-birth-certificate/',
     outFile: path.join(projectRoot, 'dist', 'en', 'psa-birth-certificate', 'index.html'),
-    title: `PSA Birth Certificate + Apostille Service [${SEO_YEAR_MONTH_EN}]`,
+    title: `PSA Birth Certificate + Apostille Service [${SEO_YEAR}]`,
     description: `Get a PSA Birth Certificate from abroad. We arrange the PSA record, electronic DFA Apostille when required, and separate SECPA paper delivery when requested.`,
     canonical: `${BASE}/en/psa-birth-certificate/`,
     lang: 'en',
@@ -931,7 +931,7 @@ const routes: RouteConfig[] = [
   {
     path: '/en/nbi-clearance-overseas/',
     outFile: path.join(projectRoot, 'dist', 'en', 'nbi-clearance-overseas', 'index.html'),
-    title: `NBI Clearance from Overseas [${SEO_YEAR_MONTH_EN}] — No Trip Needed`,
+    title: `NBI Clearance from Overseas [${SEO_YEAR}] — No Trip Needed`,
     description: `Need NBI Clearance from overseas? We support first-time and renewal applications, paper originals by DHL, and eGovPH e-Apostille guidance when required.`,
     canonical: `${BASE}/en/nbi-clearance-overseas/`,
     lang: 'en',
@@ -999,7 +999,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-ecertificate-nihon/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-ecertificate-nihon', 'index.html'),
-    title: 'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年4月版】',
+    title: 'PSA電子文書・eApostilleは日本で使える？入管・市区町村の受領状況【2026年版】',
     description: 'PSA電子文書（eCertificate）とDFA eApostilleの日本国内での受領状況を解説。入管・市区町村・総領事館ごとの対応と、再提出を防ぐための確認手順。',
     canonical: `${BASE}/ja/psa-ecertificate-nihon/`,
     lang: 'ja',
@@ -1094,7 +1094,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/psa-shussei-shomeisho/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'psa-shussei-shomeisho', 'index.html'),
-    title: `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR_MONTH_JA}】PSA・アポスティーユ込み`,
+    title: `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR}年】PSA・アポスティーユ込み`,
     description: 'フィリピン出生証明書（PSA）を日本から取り寄せ代行。電子版は約1週間、紙原本の国際発送は約3〜4週間。追加請求なし。無料相談。',
     canonical: `${BASE}/ja/psa-shussei-shomeisho/`,
     lang: 'ja',
@@ -1105,7 +1105,7 @@ const routes: RouteConfig[] = [
   {
     path: '/ja/nbi-clearance/',
     outFile: path.join(projectRoot, 'dist', 'ja', 'nbi-clearance', 'index.html'),
-    title: `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR_MONTH_JA}】渡航不要・HIT対応`,
+    title: `フィリピンNBI Clearance（無犯罪証明書）取得代行【${SEO_YEAR}年】渡航不要・HIT対応`,
     description: 'フィリピンNBIクリアランスの初回取得・更新をサポート。紙原本の郵送と、必要に応じたeGovPHのNBI e-Apostille申請に対応。',
     canonical: `${BASE}/ja/nbi-clearance/`,
     lang: 'ja',
