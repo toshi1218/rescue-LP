@@ -2,13 +2,11 @@ import React, { useEffect } from 'react';
 import { CheckCircle } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import GuideLinks from '../components/GuideLinks';
 import QuickFacts from '../components/QuickFacts';
 import PainPoints from '../components/PainPoints';
 import WhyUs from '../components/WhyUs';
 import CaseStudies from '../components/CaseStudies';
 import SocialProof from '../components/SocialProof';
-import DiyRisks from '../components/DiyRisks';
 import ServicePacks from '../components/ServicePacks';
 import FAQ from '../components/FAQ';
 import FinalCta from '../components/FinalCta';
@@ -180,33 +178,11 @@ export default function HomeJa() {
               </div>
             </div>
           </section>
-          <section className="mb-10 rounded-2xl border border-primary/25 bg-primary/5 p-5 md:p-6">
-            <h2 className="text-base md:text-lg font-bold text-secondary mb-2">取得から認証・海外発送まで、提出先に合わせて一括対応</h2>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              PSA・NBIの取得、DFA認証、海外発送までまとめて手配します。PSA民事書類はe-Apostille（電子）が原則で、紙のPSA原本や原本発送が必要な提出先にも対応方法を確認してご案内します。
-            </p>
-            <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-              <strong>VFS Global経由の書類手続き。</strong> ドイツの大使館認証、アラブ首長国連邦（UAE）の書類認証、イタリアのPSA書類照合・学歴書類手続きに対応します。
-              <a href="/ja/apostille/#vfs-document-authentication" className="ml-1 font-bold text-secondary underline underline-offset-2">3か国の手続きを見る</a>
-            </p>
-            <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-              <strong>PSAの訂正書類が不鮮明な場合。</strong> 登録地のLCRでの書類取得から、必要に応じたPSAへの再提出と再発行の手配まで対応します。1件10万円から、目安2〜3か月です。
-              <a href="/ja/ryokin/#psa-lcr-endorsement" className="ml-1 font-bold text-secondary underline underline-offset-2">LCR・PSA再発行サポートを見る</a>
-            </p>
-            <p className="mt-2 text-xs text-gray-500">見積無料・通常1営業日以内に返信。電子版・原本のどちらが必要か分からない段階でもご相談ください。</p>
-            <a href="#contact" className="mt-4 inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
-              無料見積を依頼する
-            </a>
-          </section>
-
           <section className="mb-10 rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
-            <div className="mb-5">
-              <p className="text-xs font-bold tracking-wider text-primary mb-2">行政・領事手続きサポート</p>
-              <h2 className="text-xl md:text-2xl font-bold text-secondary mb-3">書類だけでなく、面倒な確認や問い合わせもサポートします</h2>
-              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                フィリピン関係の手続きでは、必要書類が分かっていても、英語での問い合わせ、窓口ごとの案内確認、提出先ごとの運用確認に時間がかかることがあります。IGRSでは、書類取得に加えて、代理可能な範囲でこうした確認作業もお引き受けします。
-              </p>
-            </div>
+            <h2 className="text-xl md:text-2xl font-bold text-secondary mb-3">取得から認証・海外発送、面倒な確認まで一括対応</h2>
+            <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-5">
+              PSA・NBIの取得、DFA認証、海外発送までまとめて手配します。PSA民事書類はe-Apostille（電子）が原則で、紙のPSA原本や原本発送が必要な提出先にも対応方法を確認してご案内します。英語での問い合わせや提出先ごとの運用確認も、代理可能な範囲でお引き受けします。
+            </p>
             <div className="grid gap-3 md:grid-cols-3 mb-5">
               {[
                 '大使館・領事館・PSA・DFA等への英語問い合わせ',
@@ -219,15 +195,23 @@ export default function HomeJa() {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-gray-500 leading-relaxed mb-4">
-              ※本人出頭・本人署名・本人確認など、ご本人にしかできない手続きは代行できません。対応範囲と費用は事前にお見積もりします。
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <strong>VFS Global経由の書類手続き。</strong> ドイツの大使館認証、アラブ首長国連邦（UAE）の書類認証、イタリアのPSA書類照合・学歴書類手続きに対応します。
+              <a href="/ja/apostille/#vfs-document-authentication" className="ml-1 font-bold text-secondary underline underline-offset-2">3か国の手続きを見る</a>
+            </p>
+            <p className="mt-3 text-sm text-gray-700 leading-relaxed">
+              <strong>PSAの訂正書類が不鮮明な場合。</strong> 登録地のLCRでの書類取得から、必要に応じたPSAへの再提出と再発行の手配まで対応します。1件10万円から、目安2〜3か月です。
+              <a href="/ja/ryokin/#psa-lcr-endorsement" className="ml-1 font-bold text-secondary underline underline-offset-2">LCR・PSA再発行サポートを見る</a>
+            </p>
+            <p className="mt-4 mb-4 text-xs text-gray-500 leading-relaxed">
+              ※本人出頭・本人署名・本人確認など、ご本人にしかできない手続きは代行できません。見積無料・通常1営業日以内に返信します。電子版・原本のどちらが必要か分からない段階でもご相談ください。
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="/ja/ryokin/" className="inline-flex items-center justify-center rounded-xl border border-secondary px-5 py-3 text-sm font-bold text-secondary transition-colors hover:bg-secondary/5">
-                サポート料金を見る
-              </a>
               <a href="#contact" className="inline-flex items-center justify-center rounded-xl bg-secondary px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-secondary-light">
-                手続き内容を相談する
+                無料見積を依頼する
+              </a>
+              <a href="/ja/ryokin/" className="inline-flex items-center justify-center rounded-xl border border-secondary px-5 py-3 text-sm font-bold text-secondary transition-colors hover:bg-secondary/5">
+                料金を見る
               </a>
             </div>
           </section>
@@ -236,10 +220,8 @@ export default function HomeJa() {
         <PainPoints />
         <WhyUs />
         <SocialProof />
-        <CaseStudies />
+        <CaseStudies maxItems={2} />
         <FinalCta />
-        <DiyRisks />
-        <GuideLinks maxItems={6} />
         <QuickFacts />
         <FAQ />
       </main>

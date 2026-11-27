@@ -81,12 +81,12 @@ const caseStudiesData = {
   ],
 };
 
-const CaseStudies: React.FC = React.memo(() => {
+const CaseStudies: React.FC<{ maxItems?: number }> = React.memo(({ maxItems }) => {
   const { lang, t } = useLanguage();
   const caseStudies = caseStudiesData[lang];
   const isJa = lang === 'ja';
 
-  const visibleCases = caseStudies;
+  const visibleCases = maxItems ? caseStudies.slice(0, maxItems) : caseStudies;
 
   return (
     <section className="py-20 bg-slate-50" aria-labelledby="case-studies-title">

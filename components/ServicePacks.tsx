@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, BadgeCheck, Car, ShieldCheck, Award, ArrowRight } from 'lucide-react';
+import { Heart, BadgeCheck, Car, ShieldCheck, Award, Map, ArrowRight } from 'lucide-react';
 
 const packs = [
   {
@@ -52,6 +52,16 @@ const packs = [
     accentBorder: 'border-violet-100',
     iconColor: 'text-violet-600',
     numColor: 'text-violet-400',
+  },
+  {
+    to: '/ja/kokusai-kekkon-roadmap/',
+    icon: Map,
+    title: '個別ロードマップ作成',
+    desc: '自分のケースに合った手続き順序・必要書類を整理できます',
+    accentBg: 'bg-sky-50',
+    accentBorder: 'border-sky-100',
+    iconColor: 'text-sky-600',
+    numColor: 'text-sky-400',
   },
 ];
 
