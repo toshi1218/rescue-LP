@@ -15,6 +15,7 @@ import DiyRisks from '../components/DiyRisks';
 import FAQ from '../components/FAQ';
 import CtaBox from '../components/CtaBox';
 import Footer from '../components/Footer';
+import BackToTop from '../components/BackToTop';
 import { trackLandingView } from '../lib/analytics';
 import { useMeta } from '../lib/useMeta';
 import { SEO_DATE_ISO, SEO_YEAR_MONTH_EN } from '../lib/seoDate';
@@ -129,6 +130,7 @@ export default function HomeEn() {
         <FAQ />
       </main>
       <Footer />
+      <BackToTop side="right" label="Back to top" />
     </div>
   );
 }

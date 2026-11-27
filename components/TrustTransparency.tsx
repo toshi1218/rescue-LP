@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Eye, MessageSquare, ShieldCheck, Clock, FileCheck, AlertCircle, ChevronDown } from 'lucide-react';
+import React from 'react';
+import { Eye, MessageSquare, ShieldCheck, Clock, FileCheck, AlertCircle } from 'lucide-react';
 import { trackEvent } from '../lib/analytics';
 import { useLanguage } from '../lib/i18n';
 
@@ -128,8 +128,7 @@ const contentData = {
 const TrustTransparency: React.FC = React.memo(() => {
   const { lang } = useLanguage();
   const c = contentData[lang];
-  const [expanded, setExpanded] = useState(false);
-  const visibleFears = expanded ? c.fears : c.fears.slice(0, 3);
+  const visibleFears = c.fears;
 
   return (
     <section className="py-16 bg-white relative overflow-hidden" aria-labelledby="trust-heading">
@@ -182,20 +181,7 @@ const TrustTransparency: React.FC = React.memo(() => {
             );
           })}
         </div>
-
-        {/* Expand button */}
-        {!expanded && (
-          <div className="text-center mb-14">
-            <button
-              onClick={() => setExpanded(true)}
-              className="inline-flex items-center gap-2 text-sm font-bold text-secondary border border-secondary/30 bg-white px-6 py-3 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-sm"
-            >
-              <ChevronDown className="w-4 h-4" />
-              {lang === 'ja' ? `残り${c.fears.length - 3}件の不安を見る` : `See ${c.fears.length - 3} more`}
-            </button>
-          </div>
-        )}
-        {expanded && <div className="mb-14" />}
+        <div className="mb-14" />
 
         {/* 3つの約束バー */}
         <div className="bg-secondary rounded-2xl p-8 mb-8">

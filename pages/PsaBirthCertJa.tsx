@@ -12,11 +12,11 @@ import { Baby, AlertTriangle, Clock, FileCheck, Globe, Users, CheckCircle } from
 import SummaryBlock from '../components/SummaryBlock';
 import RelatedArticles from '../components/RelatedArticles';
 import { useMeta } from '../lib/useMeta';
-import { SEO_YEAR_MONTH_JA } from '../lib/seoDate';
+import { SEO_YEAR } from '../lib/seoDate';
 
 export default function PsaBirthCertJa() {
   useMeta(
-    `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR_MONTH_JA}】PSA・アポスティーユ込み`,
+    `フィリピン出生証明書の取り寄せ代行【${SEO_YEAR}年】PSA・アポスティーユ込み`,
     'フィリピン出生証明書（PSA）を日本から取り寄せ代行。電子版は約1週間、紙原本の国際発送は約3〜4週間。追加請求なし。無料相談。',
     'https://ph-document.com/ja/psa-shussei-shomeisho/',
   );
